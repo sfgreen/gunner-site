@@ -5,10 +5,10 @@ export default function Home() {
     <>
       <Head>
         <title>Gunner CK — USMLE Step 2 CK Prep</title>
-        <meta name="description" content="Gunner CK is a gamified USMLE Step 2 CK study app with spaced repetition, clinical vignettes, and high-yield recall questions. Built by a med student, for med students." />
+        <meta name="description" content="Gunner CK is a gamified USMLE Step 2 CK study app with spaced repetition, clinical vignettes, and High Yield Step 2 CK GOLD questions. Built by a med student, for med students." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content="Gunner CK — USMLE Step 2 CK Prep" />
-        <meta property="og:description" content="Gamified Step 2 CK prep with spaced repetition, clinical vignettes, and high-yield buzzwords." />
+        <meta property="og:description" content="Gamified Step 2 CK prep with spaced repetition, clinical vignettes, and CK GOLD questions." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://gunner.rezumab.app" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -142,7 +142,7 @@ export default function Home() {
       <div className="hero">
         <div className="hero-badge">🔥 USMLE Step 2 CK</div>
         <h1>Study smarter. <span>Score higher.</span></h1>
-        <p>Gamified Step 2 CK prep with spaced repetition, clinical vignettes, and high-yield recall — built by a med student who gets it.</p>
+        <p>Gamified Step 2 CK prep with spaced repetition, clinical vignettes, and High Yield Step 2 CK GOLD — built by a med student who gets it.</p>
         <a href="#download" className="hero-cta">
           <span>📱</span> Coming to the App Store
         </a>
@@ -189,7 +189,7 @@ export default function Home() {
               <div className="phone-card-icon" style={{background: 'rgba(255,200,0,0.15)'}}>🏆</div>
               <div className="phone-card-text">
                 <div className="title">CK Gold</div>
-                <div className="desc">High-yield recall · 320 cards</div>
+                <div className="desc">Step 2 CK GOLD · 320 cards</div>
               </div>
             </div>
           </div>
@@ -201,7 +201,7 @@ export default function Home() {
         <div className="features-inner">
           <div className="features-header">
             <h2>Everything you need to crush CK</h2>
-            <p>No fluff. No $400 subscriptions. Just the high-yield content that actually shows up on exam day.</p>
+            <p>No fluff. No $400 subscriptions. Just the content that actually shows up on exam day.</p>
           </div>
           <div className="features-grid">
             <div className="feature-card">
@@ -217,7 +217,7 @@ export default function Home() {
             <div className="feature-card">
               <div className="feature-icon">🏆</div>
               <h3>CK Gold Questions</h3>
-              <p>High-yield recall questions that mirror actual exam content. Each one includes the teaching point, the trap, and a memory hook.</p>
+              <p>High Yield Step 2 CK GOLD questions that mirror actual exam content. Each one includes the teaching point, the trap, and a memory hook.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">⚡</div>
