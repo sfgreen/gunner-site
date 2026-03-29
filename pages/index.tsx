@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Gunner CK — USMLE Step 2 CK Prep</title>
-        <meta name="description" content="Gunner CK is a gamified USMLE Step 2 CK study app with spaced repetition, clinical vignettes, and High Yield Step 2 CK GOLD questions. Built by a med student, for med students." />
+        <title>Step Gunner — USMLE Step 2 CK Prep</title>
+        <meta name="description" content="Step Gunner is a gamified USMLE Step 2 CK study app with spaced repetition, clinical vignettes, and High Yield Step 2 CK GOLD questions. Built by a med student, for med students." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta property="og:title" content="Gunner CK — USMLE Step 2 CK Prep" />
+        <meta property="og:title" content="Step Gunner — USMLE Step 2 CK Prep" />
         <meta property="og:description" content="Gamified Step 2 CK prep with spaced repetition, clinical vignettes, and CK GOLD questions." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://gunner.rezumab.app" />
@@ -128,7 +128,7 @@ export default function Home() {
       <nav>
         <div className="nav-brand">
           <span className="icon">🎯</span>
-          <span className="name">Gunner<span>CK</span></span>
+          <span className="name">Step<span>Gunner</span></span>
         </div>
         <div className="nav-links">
           <a href="#features">Features</a>
@@ -274,7 +274,7 @@ export default function Home() {
       <footer>
         <div className="footer-inner">
           <div>
-            <div className="footer-brand">Gunner<span>CK</span></div>
+            <div className="footer-brand">Step<span>Gunner</span></div>
             <p className="footer-tagline">USMLE Step 2 CK prep that doesn&apos;t suck.<br />Built by Rezumab LLC · Texas, USA.</p>
           </div>
           <div>

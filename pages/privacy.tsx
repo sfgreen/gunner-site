@@ -4,8 +4,8 @@ export default function Privacy() {
   return (
     <>
       <Head>
-        <title>Privacy Policy — Gunner CK | Rezumab LLC</title>
-        <meta name="description" content="Privacy Policy for Gunner CK by Rezumab LLC. Your study data stays on your device." />
+        <title>Privacy Policy — Step Gunner | Rezumab LLC</title>
+        <meta name="description" content="Privacy Policy for Step Gunner by Rezumab LLC. Your study data stays on your device." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -70,7 +70,7 @@ export default function Privacy() {
       <nav>
         <a href="/" className="nav-brand">
           <span className="icon">🎯</span>
-          <span className="name">Gunner<span>CK</span></span>
+          <span className="name">Step<span>Gunner</span></span>
         </a>
         <a href="/" className="nav-back">← Back to Home</a>
       </nav>
@@ -79,18 +79,18 @@ export default function Privacy() {
         <div className="hero-bar-inner">
           <div className="app-badge">GUNNER CK</div>
           <h1>Privacy Policy</h1>
-          <p>Gunner CK by Rezumab LLC &nbsp;·&nbsp; Effective March 2026</p>
+          <p>Step Gunner by Rezumab LLC &nbsp;·&nbsp; Effective March 2026</p>
         </div>
       </div>
 
       <div className="content">
         <div className="highlight-box">
           <strong>The short version: Your study data stays on your device.</strong>
-          <p>Gunner CK is a USMLE Step 2 CK study app. All quiz progress, scores, and study history are stored locally on your iPhone. We don&apos;t collect personal information or track your usage.</p>
+          <p>Step Gunner is a USMLE Step 2 CK study app. All quiz progress, scores, and study history are stored locally on your iPhone. We don&apos;t collect personal information or track your usage.</p>
         </div>
 
         <h2>Overview</h2>
-        <p>Gunner CK is a medical education quiz application developed by Rezumab LLC. It helps medical students prepare for the USMLE Step 2 CK exam through gamified flashcard-based learning with spaced repetition. This policy describes our data practices.</p>
+        <p>Step Gunner is a medical education quiz application developed by Rezumab LLC. It helps medical students prepare for the USMLE Step 2 CK exam through gamified flashcard-based learning with spaced repetition. This policy describes our data practices.</p>
 
         <h2>Information Stored on Your Device</h2>
         <p>The following data is stored locally on your device only:</p>
@@ -105,7 +105,7 @@ export default function Privacy() {
         <p>This data never leaves your device except as described in the &ldquo;Question Reports&rdquo; section below.</p>
 
         <h2>Information We Do Not Collect</h2>
-        <p>Gunner CK does not collect, store, or transmit any of the following:</p>
+        <p>Step Gunner does not collect, store, or transmit any of the following:</p>
         <ul>
           <li>Personal information (name, email, phone number, address)</li>
           <li>Device identifiers or advertising IDs</li>
@@ -128,23 +128,23 @@ export default function Privacy() {
         <p>No personal identifiers are attached to these reports. They are used solely to identify and fix incorrect or unclear questions. Reports are transmitted via HTTPS to our secure server endpoint.</p>
 
         <h2>Third-Party Services</h2>
-        <p>Gunner CK does not integrate with any third-party analytics platforms, advertising networks, or social media SDKs. The app functions entirely offline except for the optional question report feature.</p>
+        <p>Step Gunner does not integrate with any third-party analytics platforms, advertising networks, or social media SDKs. The app functions entirely offline except for the optional question report feature.</p>
 
         <h2>Data Retention</h2>
         <p>All study data is stored on your device using Apple&apos;s local storage APIs. Deleting the app permanently removes all data. Question reports sent to our server are retained only as long as needed to review and improve question quality.</p>
 
         <h2>Children&apos;s Privacy</h2>
-        <p>Gunner CK is designed for medical students and healthcare professionals. It is not directed at children under 13, and we do not knowingly collect information from anyone under 13.</p>
+        <p>Step Gunner is designed for medical students and healthcare professionals. It is not directed at children under 13, and we do not knowingly collect information from anyone under 13.</p>
 
         <h2>Medical Disclaimer</h2>
-        <p>Gunner CK is for educational purposes only. It is not a substitute for medical education, clinical training, or professional medical advice. Always consult authoritative medical resources and supervising physicians for clinical decision-making.</p>
+        <p>Step Gunner is for educational purposes only. It is not a substitute for medical education, clinical training, or professional medical advice. Always consult authoritative medical resources and supervising physicians for clinical decision-making.</p>
 
         <h2>Changes to This Policy</h2>
         <p>If we update this privacy policy, changes will be posted on this page with an updated date.</p>
 
         <div className="contact-box">
           <h2>Contact Us</h2>
-          <p>Questions about this Privacy Policy or Gunner CK?</p>
+          <p>Questions about this Privacy Policy or Step Gunner?</p>
           <p>
             <strong>Email:</strong> <a href="mailto:rezumab.med@gmail.com">rezumab.med@gmail.com</a><br />
             <strong>Company:</strong> Rezumab LLC<br />
@@ -156,7 +156,7 @@ export default function Privacy() {
       <footer>
         <div className="footer-inner">
           <div>
-            <div className="footer-brand">Gunner<span>CK</span></div>
+            <div className="footer-brand">Step<span>Gunner</span></div>
             <p className="footer-tagline">USMLE Step 2 CK prep that doesn&apos;t suck.<br />Built by Rezumab LLC · Texas, USA.</p>
           </div>
           <div>
