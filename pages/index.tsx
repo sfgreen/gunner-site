@@ -5,12 +5,12 @@ export default function Home() {
     <>
       <Head>
         <title>Step Gunner — USMLE Step 2 CK Prep</title>
-        <meta name="description" content="Step Gunner is a gamified USMLE Step 2 CK study app with spaced repetition, clinical vignettes, and High Yield Step 2 CK GOLD questions. Built by a med student, for med students." />
+        <meta name="description" content="Step Gunner is a gamified USMLE Step 2 CK study app with spaced repetition, clinical vignettes, and high-yield questions. Built by a med student, for med students." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:title" content="Step Gunner — USMLE Step 2 CK Prep" />
-        <meta property="og:description" content="Gamified Step 2 CK prep with spaced repetition, clinical vignettes, and CK GOLD questions." />
+        <meta property="og:description" content="Gamified Step 2 CK prep with spaced repetition, clinical vignettes, and high-yield questions." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://gunner.rezumab.app" />
+        <meta property="og:url" content="https://stepgunner.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
       </Head>
@@ -133,20 +133,21 @@ export default function Home() {
         <div className="nav-links">
           <a href="#features">Features</a>
           <a href="/privacy">Privacy</a>
-          <a href="mailto:rezumab.med@gmail.com">Contact</a>
+          <a href="/terms">Terms</a>
+          <a href="/support">Support</a>
           <a href="#download" className="nav-cta">Download</a>
         </div>
       </nav>
 
       {/* HERO */}
       <div className="hero">
-        <div className="hero-badge">🔥 USMLE Step 2 CK</div>
+        <div className="hero-badge">USMLE Step 2 CK</div>
         <h1>Study smarter. <span>Score higher.</span></h1>
-        <p>Gamified Step 2 CK prep with spaced repetition, clinical vignettes, and High Yield Step 2 CK GOLD — built by a med student who gets it.</p>
+        <p>Gamified Step 2 CK prep with spaced repetition, AI-powered explanations, and over 1,000 high-yield questions &mdash; built by a med student who gets it.</p>
         <a href="#download" className="hero-cta">
-          <span>📱</span> Coming to the App Store
+          <span>🍎</span> Download on the App Store
         </a>
-        <p className="hero-sub">Free · iOS · No account required</p>
+        <p className="hero-sub">Free to start &middot; iOS 17+ &middot; Pro unlock available</p>
       </div>
 
       {/* PHONE MOCKUP */}
@@ -156,7 +157,7 @@ export default function Home() {
           <div className="phone-content">
             <div className="phone-header">
               <span className="phone-stat fire">🔥 7</span>
-              <span style={{color: 'white', fontWeight: 800, fontSize: 14, letterSpacing: 1}}>GUNNER <span style={{color: 'rgba(255,255,255,0.5)', fontWeight: 500}}>CK</span></span>
+              <span style={{color: 'white', fontWeight: 800, fontSize: 14, letterSpacing: 1}}>STEP <span style={{color: 'rgba(255,255,255,0.5)', fontWeight: 500}}>GUNNER</span></span>
               <span className="phone-stat xp">⚡ 1,240</span>
             </div>
             <div className="phone-modes">
@@ -175,21 +176,28 @@ export default function Home() {
               <div className="phone-card-icon" style={{background: 'rgba(88,204,2,0.15)'}}>📝</div>
               <div className="phone-card-text">
                 <div className="title">Buzzwords</div>
-                <div className="desc">Pure recall · 224 cards</div>
-              </div>
-            </div>
-            <div className="phone-card">
-              <div className="phone-card-icon" style={{background: 'rgba(28,176,246,0.15)'}}>🏥</div>
-              <div className="phone-card-text">
-                <div className="title">Next Best Step</div>
-                <div className="desc">Clinical vignettes · 120 cards</div>
+                <div className="desc">High-yield flashcards &middot; 360 cards</div>
               </div>
             </div>
             <div className="phone-card">
               <div className="phone-card-icon" style={{background: 'rgba(255,200,0,0.15)'}}>🏆</div>
               <div className="phone-card-text">
                 <div className="title">CK Gold</div>
-                <div className="desc">Step 2 CK GOLD · 320 cards</div>
+                <div className="desc">Clinical vignettes &middot; 759 cards</div>
+              </div>
+            </div>
+            <div className="phone-card">
+              <div className="phone-card-icon" style={{background: 'rgba(28,176,246,0.15)'}}>🏥</div>
+              <div className="phone-card-text">
+                <div className="title">Next Best Step</div>
+                <div className="desc">Management questions &middot; 118 cards</div>
+              </div>
+            </div>
+            <div className="phone-card">
+              <div className="phone-card-icon" style={{background: 'rgba(255,150,50,0.15)'}}>📋</div>
+              <div className="phone-card-text">
+                <div className="title">NBME Practice</div>
+                <div className="desc">CCSSA exam format &middot; 57 cards</div>
               </div>
             </div>
           </div>
@@ -201,38 +209,38 @@ export default function Home() {
         <div className="features-inner">
           <div className="features-header">
             <h2>Everything you need to crush CK</h2>
-            <p>No fluff. No $400 subscriptions. Just the content that actually shows up on exam day.</p>
+            <p>Smart study tools built for how med students actually learn.</p>
           </div>
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon">🧠</div>
-              <h3>Spaced Repetition</h3>
-              <p>Leitner box system automatically resurfaces cards you struggle with. Master it once, move on. Forget it, see it again.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🏥</div>
-              <h3>Clinical Vignettes</h3>
-              <p>Real-world patient scenarios with next-best-step management questions. Organized by specialty — cardio, pulm, OB, surgery, and more.</p>
+              <h3>Smart Spaced Repetition</h3>
+              <p>Leitner 5-box system adapts to your performance. Cards you miss come back more often. Cards you master fade into long-term review.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">🏆</div>
               <h3>CK Gold Questions</h3>
-              <p>High Yield Step 2 CK GOLD questions that mirror actual exam content. Each one includes the teaching point, the trap, and a memory hook.</p>
+              <p>Hundreds of high-yield clinical vignettes across 15 specialties. Each includes an explanation, the common trap, and a memory hook.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🤖</div>
+              <h3>AI Deep Dive</h3>
+              <p>On-device AI explanations powered by Apple Intelligence. Five modes: Explain More, Why Was I Wrong, Pathophysiology, Mnemonic, and ELI5.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">⚡</div>
               <h3>Rapid Fire Mode</h3>
-              <p>20 questions, 2 minutes. Perfect for quick study sessions between rotations. Speed bonus XP for fast answers.</p>
+              <p>20 questions, 2 minutes. Simulate exam-day time pressure with a mix of clinical and buzzword cards. Speed bonus XP for fast answers.</p>
             </div>
             <div className="feature-card">
-              <div className="feature-icon">🎯</div>
-              <h3>Weakness Targeting</h3>
-              <p>Smart algorithm identifies your weakest categories and drills them. Stop wasting time on what you already know.</p>
+              <div className="feature-icon">📋</div>
+              <h3>NBME Practice</h3>
+              <p>CCSSA-format practice questions from multiple exam forms. The closest thing to the real test format.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">🔥</div>
-              <h3>Streaks & XP</h3>
-              <p>Daily goals, streak tracking, XP system, and achievements. The same psychology that makes Duolingo addictive — applied to medicine.</p>
+              <h3>Streaks &amp; Achievements</h3>
+              <p>Daily goals, streak tracking, 22 achievements, weekly leaderboard, and streak freezes. Built to keep you coming back every day.</p>
             </div>
           </div>
         </div>
@@ -242,7 +250,7 @@ export default function Home() {
       <div className="stats-bar">
         <div className="stats-inner">
           <div className="stat-item">
-            <div className="num">500+</div>
+            <div className="num">1,394+</div>
             <div className="label">Practice Questions</div>
           </div>
           <div className="stat-item">
@@ -250,12 +258,12 @@ export default function Home() {
             <div className="label">Specialties Covered</div>
           </div>
           <div className="stat-item">
-            <div className="num">3</div>
+            <div className="num">5</div>
             <div className="label">Study Modes</div>
           </div>
           <div className="stat-item">
-            <div className="num">100%</div>
-            <div className="label">Free, No Ads</div>
+            <div className="num">22</div>
+            <div className="label">Achievements</div>
           </div>
         </div>
       </div>
@@ -263,11 +271,11 @@ export default function Home() {
       {/* CTA */}
       <div className="cta-section" id="download">
         <h2>Ready to start gunning?</h2>
-        <p>Join the beta. Free, no account required. Just open and start drilling.</p>
+        <p>Free to start with 360 buzzword flashcards. Unlock the full question bank with Pro.</p>
         <a href="#" className="hero-cta">
-          <span>🍎</span> Coming Soon on TestFlight
+          <span>🍎</span> Download on the App Store
         </a>
-        <p className="hero-sub" style={{marginTop: 16}}>iOS 17+ required · Works offline</p>
+        <p className="hero-sub" style={{marginTop: 16}}>iOS 17+ required &middot; Works offline &middot; 7-day free trial</p>
       </div>
 
       {/* FOOTER */}
@@ -275,7 +283,7 @@ export default function Home() {
         <div className="footer-inner">
           <div>
             <div className="footer-brand">Step<span>Gunner</span></div>
-            <p className="footer-tagline">USMLE Step 2 CK prep that doesn&apos;t suck.<br />Built by Rezumab LLC · Texas, USA.</p>
+            <p className="footer-tagline">USMLE Step 2 CK prep that doesn&apos;t suck.<br />Built by Rezumab LLC &middot; Texas, USA.</p>
           </div>
           <div>
             <div className="footer-heading">App</div>
@@ -283,6 +291,8 @@ export default function Home() {
               <li><a href="#features">Features</a></li>
               <li><a href="#download">Download</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
+              <li><a href="/terms">Terms of Use</a></li>
+              <li><a href="/support">Support</a></li>
             </ul>
           </div>
           <div>
@@ -294,7 +304,7 @@ export default function Home() {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 Rezumab LLC. All rights reserved.</span>
+          <span>&copy; 2026 Rezumab LLC. All rights reserved.</span>
           <span>rezumab.med@gmail.com</span>
         </div>
       </footer>
