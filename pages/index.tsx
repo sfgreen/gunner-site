@@ -135,7 +135,7 @@ export default function Home() {
           <a href="/privacy">Privacy</a>
           <a href="/terms">Terms</a>
           <a href="/support">Support</a>
-          <a href="#download" className="nav-cta">Download</a>
+          <a href="https://apps.apple.com/us/app/step-gunner/id6761317357" className="nav-cta">Download</a>
         </div>
       </nav>
 
@@ -144,7 +144,7 @@ export default function Home() {
         <div className="hero-badge">USMLE Step 2 CK</div>
         <h1>Study smarter. <span>Score higher.</span></h1>
         <p>Gamified Step 2 CK prep with spaced repetition, AI-powered explanations, and over 1,000 high-yield questions &mdash; built by a med student who gets it.</p>
-        <a href="#download" className="hero-cta">
+        <a href="https://apps.apple.com/us/app/step-gunner/id6761317357" className="hero-cta">
           <span>🍎</span> Download on the App Store
         </a>
         <p className="hero-sub">Free to start &middot; iOS 17+ &middot; Pro unlock available</p>
@@ -272,7 +272,7 @@ export default function Home() {
       <div className="cta-section" id="download">
         <h2>Ready to start gunning?</h2>
         <p>Free to start with 360 buzzword flashcards. Unlock the full question bank with Pro.</p>
-        <a href="#" className="hero-cta">
+        <a href="https://apps.apple.com/us/app/step-gunner/id6761317357" className="hero-cta">
           <span>🍎</span> Download on the App Store
         </a>
         <p className="hero-sub" style={{marginTop: 16}}>iOS 17+ required &middot; Works offline &middot; 7-day free trial</p>
@@ -289,7 +289,7 @@ export default function Home() {
             <div className="footer-heading">App</div>
             <ul className="footer-links">
               <li><a href="#features">Features</a></li>
-              <li><a href="#download">Download</a></li>
+              <li><a href="https://apps.apple.com/us/app/step-gunner/id6761317357">Download</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
               <li><a href="/terms">Terms of Use</a></li>
               <li><a href="/support">Support</a></li>
