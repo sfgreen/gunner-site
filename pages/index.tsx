@@ -176,8 +176,8 @@ export default function Home() {
       {/* HERO */}
       <div className="hero">
         <div className="hero-badge">USMLE Step 2 CK</div>
-        <h1>Study smarter. <span>Score higher.</span></h1>
-        <p>Gamified Step 2 CK prep with spaced repetition, AI-powered explanations, and over 1,000 high-yield questions &mdash; built by a med student who gets it.</p>
+        <h1>Get pimped. <span>Score higher.</span></h1>
+        <p>Socratic clinical rounds, 1,400+ high-yield questions, spaced repetition, weekly leaderboards. Built by a med student who gets it.</p>
         <a href="https://apps.apple.com/us/app/step-gunner/id6761317357" className="hero-cta">
           <span>🍎</span> Download on the App Store
         </a>
@@ -230,9 +230,9 @@ export default function Home() {
               <p>CCSSA-format practice questions from multiple exam forms. The closest thing to the real test format.</p>
             </div>
             <div className="feature-card">
-              <div className="feature-icon">🔥</div>
-              <h3>Streaks &amp; Achievements</h3>
-              <p>Daily goals, streak tracking, 22 achievements, weekly leaderboard, and streak freezes. Built to keep you coming back every day.</p>
+              <div className="feature-icon">🩺</div>
+              <h3>Pimp Me &middot; Socratic Rounds</h3>
+              <p>Your virtual attending walks you through 44+ full-arc clinical cases. Recognition &rarr; management &rarr; complications, with &ldquo;what-if&rdquo; branches that test how the answer changes if the patient is unstable, pregnant, or immunocompromised. Pro.</p>
             </div>
           </div>
         </div>
@@ -250,7 +250,7 @@ export default function Home() {
             <div className="label">Specialties Covered</div>
           </div>
           <div className="stat-item">
-            <div className="num">5</div>
+            <div className="num">6</div>
             <div className="label">Study Modes</div>
           </div>
           <div className="stat-item">
