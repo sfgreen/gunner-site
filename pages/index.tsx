@@ -1,5 +1,16 @@
 import Head from 'next/head';
 
+// Adaptive App-Store-style screenshot: serves light variant by default,
+// swaps to dark when the user's system / browser prefers dark mode.
+function Shot({ name, alt }: { name: string; alt: string }) {
+  return (
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcSet={`/screenshots/${name}-dark.jpg`} />
+      <img src={`/screenshots/${name}-light.jpg`} alt={alt} loading="lazy" />
+    </picture>
+  );
+}
+
 export default function Home() {
   return (
     <>
@@ -51,7 +62,30 @@ export default function Home() {
         .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--green-glow); }
         .hero-sub { font-size: 14px; color: var(--text-dim); margin-top: 16px; }
 
-        /* PHONE MOCKUP */
+        /* APP SCREENSHOTS */
+        .screenshots { padding: 0 24px 80px; max-width: 1200px; margin: 0 auto; }
+        .shot-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 24px;
+        }
+        .shot-grid picture { display: block; }
+        .shot-grid img {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 32px;
+          box-shadow: 0 12px 40px rgba(0,0,0,0.10);
+        }
+        @media (max-width: 880px) {
+          .shot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+        }
+        @media (max-width: 560px) {
+          .shot-grid { grid-template-columns: 1fr; gap: 16px; max-width: 360px; margin: 0 auto; }
+          .shot-grid img { border-radius: 28px; }
+        }
+
+        /* legacy hand-drawn mockup styles — kept for reference, unused */
         .phone-section { display: flex; justify-content: center; margin-top: -20px; padding: 0 40px 80px; }
         .phone-frame { width: 280px; height: 560px; background: var(--bg-dark); border-radius: 36px; border: 4px solid #2a2a3a; box-shadow: 0 20px 60px rgba(0,0,0,0.15); display: flex; flex-direction: column; align-items: center; padding: 20px 16px; overflow: hidden; position: relative; }
         .phone-notch { width: 120px; height: 28px; background: black; border-radius: 0 0 16px 16px; position: absolute; top: 0; }
@@ -150,57 +184,15 @@ export default function Home() {
         <p className="hero-sub">Free to start &middot; iOS 17+ &middot; Pro unlock available</p>
       </div>
 
-      {/* PHONE MOCKUP */}
-      <div className="phone-section">
-        <div className="phone-frame">
-          <div className="phone-notch" />
-          <div className="phone-content">
-            <div className="phone-header">
-              <span className="phone-stat fire">🔥 7</span>
-              <span style={{color: 'white', fontWeight: 800, fontSize: 14, letterSpacing: 1}}>STEP <span style={{color: 'rgba(255,255,255,0.5)', fontWeight: 500}}>GUNNER</span></span>
-              <span className="phone-stat xp">⚡ 1,240</span>
-            </div>
-            <div className="phone-modes">
-              <div className="phone-mode">
-                <div className="emoji">⚡</div>
-                <div className="label">Rapid Fire</div>
-                <div className="sub">20 cards, 2 min</div>
-              </div>
-              <div className="phone-mode">
-                <div className="emoji">🎯</div>
-                <div className="label">Weak Spots</div>
-                <div className="sub">12 to review</div>
-              </div>
-            </div>
-            <div className="phone-card">
-              <div className="phone-card-icon" style={{background: 'rgba(88,204,2,0.15)'}}>📝</div>
-              <div className="phone-card-text">
-                <div className="title">Buzzwords</div>
-                <div className="desc">High-yield flashcards &middot; 360 cards</div>
-              </div>
-            </div>
-            <div className="phone-card">
-              <div className="phone-card-icon" style={{background: 'rgba(255,200,0,0.15)'}}>🏆</div>
-              <div className="phone-card-text">
-                <div className="title">CK Gold</div>
-                <div className="desc">Clinical vignettes &middot; 759 cards</div>
-              </div>
-            </div>
-            <div className="phone-card">
-              <div className="phone-card-icon" style={{background: 'rgba(28,176,246,0.15)'}}>🏥</div>
-              <div className="phone-card-text">
-                <div className="title">Next Best Step</div>
-                <div className="desc">Management questions &middot; 118 cards</div>
-              </div>
-            </div>
-            <div className="phone-card">
-              <div className="phone-card-icon" style={{background: 'rgba(255,150,50,0.15)'}}>📋</div>
-              <div className="phone-card-text">
-                <div className="title">NBME Practice</div>
-                <div className="desc">CCSSA exam format &middot; 57 cards</div>
-              </div>
-            </div>
-          </div>
+      {/* APP SCREENSHOTS */}
+      <div className="screenshots">
+        <div className="shot-grid">
+          <Shot name="hero"   alt="Step Gunner home — XP, streaks, leaderboards" />
+          <Shot name="case"   alt="Quiz screen — clinical vignette with rationale" />
+          <Shot name="pimp"   alt="Pimp Me — socratic clinical rounds" />
+          <Shot name="league" alt="Weekly leaderboard — compete with other gunners" />
+          <Shot name="report" alt="Run summary — accuracy, XP, breakdown by topic" />
+          <Shot name="streak" alt="Streak tracking — daily reps that build the MD" />
         </div>
       </div>
 
