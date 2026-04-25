@@ -1,8 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { initializeApp, getApps, cert } from 'firebase-admin/app';
+import { getFirestore, FieldValue } from 'firebase-admin/firestore';
 
 // Bot token and chat ID live in Vercel env vars — never in the app binary
 const BOT_TOKEN = process.env.GUNNER_TELEGRAM_BOT_TOKEN;
 const CHAT_ID = process.env.GUNNER_TELEGRAM_CHAT_ID;
+
+// Firebase admin init (once per cold start). Service account JSON in env var.
+if (!getApps().length && process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
+  try {
+    initializeApp({
+      credential: cert(JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY)),
+      projectId: 'stepgunner-79ae7',
+    });
+  } catch (err) {
+    console.error('Firebase admin init failed:', err);
+  }
+}
 
 interface ReportBody {
   questionId?: number;
@@ -61,7 +75,30 @@ export default async function handler(
   }
   message += `\n🕐 ${new Date().toISOString()}`;
 
-  // Send to Telegram
+  // 1. Write to Firestore (system of record for the admin page)
+  if (getApps().length > 0) {
+    try {
+      const db = getFirestore();
+      await db.collection('reports').add({
+        questionText: body.questionText.slice(0, 500),
+        correctAnswer: body.correctAnswer,
+        selectedAnswer: body.selectedAnswer ?? null,
+        choices: body.choices ?? null,
+        category: body.category,
+        reason: body.reason,
+        notes: body.notes ?? null,
+        questionId: body.questionId ?? null,
+        status: 'open',
+        reportedAt: FieldValue.serverTimestamp(),
+        userAgent: req.headers['user-agent'] ?? null,
+      });
+    } catch (err) {
+      console.error('Firestore write failed:', err);
+      // Don't fail the request — Telegram alert still goes
+    }
+  }
+
+  // 2. Send to Telegram (preserves your existing notification flow)
   try {
     const telegramRes = await fetch(
       `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
