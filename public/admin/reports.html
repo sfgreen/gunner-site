@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Step Gunner · Report Triage</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #0a0e14;
+      --surface: #0e1117;
+      --surface2: #131720;
+      --border: #1f242e;
+      --text: #e8eaed;
+      --dim: #8a91a0;
+      --muted: #5a6170;
+      --accent: #58CC02;
+      --warn: #F5A524;
+      --neg: #ff4d4d;
+      --pos: #22c55e;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .mono { font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    header h1 {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    header h1 .dim { color: var(--dim); }
+    header .grow { flex: 1; }
+    header .meta {
+      font-family: ui-monospace, "SF Mono", monospace;
+      font-size: 11px;
+      color: var(--dim);
+      letter-spacing: 0.5px;
+    }
+    button {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 6px 12px;
+      font-size: 12px;
+      font-family: inherit;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    button:hover { background: var(--surface2); }
+    button.primary { background: var(--accent); border-color: var(--accent); color: #0a0e14; font-weight: 600; }
+    button.primary:hover { background: #4DB000; }
+    button.danger { color: var(--neg); border-color: var(--neg); }
+    button.danger:hover { background: rgba(255,77,77,0.1); }
+    button.warn { color: var(--warn); border-color: var(--warn); }
+
+    main { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+    /* Login screen */
+    .login-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 70vh;
+      gap: 16px;
+      text-align: center;
+    }
+    .login-screen h2 { font-size: 28px; }
+    .login-screen p { color: var(--dim); max-width: 360px; }
+
+    /* Filters */
+    .filters {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 16px;
+      align-items: center;
+    }
+    .filter-chip {
+      padding: 6px 12px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-family: ui-monospace, monospace;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      color: var(--dim);
+      border-radius: 3px;
+    }
+    .filter-chip.active { background: var(--accent); border-color: var(--accent); color: #0a0e14; }
+    .filter-chip .count { opacity: 0.7; margin-left: 4px; }
+
+    /* Reports table */
+    .reports {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .col-header {
+      display: grid;
+      grid-template-columns: 90px 110px 2fr 1fr 90px;
+      gap: 12px;
+      padding: 8px 14px;
+      background: var(--surface2);
+      font-family: ui-monospace, monospace;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 90px 110px 2fr 1fr 90px;
+      gap: 12px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+      cursor: pointer;
+    }
+    .row:hover { background: var(--surface2); }
+    .row:last-child { border-bottom: none; }
+    .row.expanded { background: var(--surface2); }
+
+    .row .when { font-family: ui-monospace, monospace; font-size: 11px; color: var(--dim); }
+    .row .reason { font-size: 13px; font-weight: 600; }
+    .row .reason.incorrect { color: var(--neg); }
+    .row .question { color: var(--dim); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .row .category { font-family: ui-monospace, monospace; font-size: 10px; letter-spacing: 1px; color: var(--warn); text-transform: uppercase; }
+    .row .status {
+      font-family: ui-monospace, monospace;
+      font-size: 10px;
+      letter-spacing: 1px;
+      padding: 2px 6px;
+      border-radius: 2px;
+      text-align: center;
+      text-transform: uppercase;
+      border: 1px solid;
+    }
+    .status-open { color: var(--accent); border-color: var(--accent); }
+    .status-resolved { color: var(--pos); border-color: var(--pos); }
+    .status-dismissed { color: var(--muted); border-color: var(--muted); }
+
+    .detail {
+      padding: 14px;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .detail h3 {
+      font-family: ui-monospace, monospace;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .detail .block { margin-bottom: 14px; }
+    .detail .block p { font-size: 14px; line-height: 1.5; }
+    .detail .choices {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .detail .choices .choice {
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      font-size: 13px;
+      display: flex;
+      gap: 8px;
+    }
+    .detail .choice.correct { border-color: var(--pos); background: rgba(34,197,94,0.06); }
+    .detail .choice.selected { border-color: var(--neg); background: rgba(255,77,77,0.06); }
+    .detail .choice .badge {
+      font-family: ui-monospace, monospace;
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+    .detail .choice.correct .badge { color: var(--pos); }
+    .detail .choice.selected .badge { color: var(--neg); }
+    .detail .actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+    .detail .meta-row {
+      font-family: ui-monospace, monospace;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 12px;
+      letter-spacing: 0.3px;
+    }
+
+    .empty {
+      padding: 60px 20px;
+      text-align: center;
+      color: var(--muted);
+    }
+    .empty .mono { font-size: 12px; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>STEP <span class="dim">GUNNER</span> · TRIAGE</h1>
+  <span class="grow"></span>
+  <span id="user-email" class="meta"></span>
+  <button id="signout-btn" style="display:none">Sign out</button>
+</header>
+
+<main>
+  <div id="login-screen" class="login-screen" style="display:none">
+    <h2>Report Triage</h2>
+    <p>Admin access only. Sign in with the Step Gunner admin Google account.</p>
+    <button class="primary" id="signin-btn">Sign in with Google</button>
+    <p id="login-error" class="meta" style="color:var(--neg);min-height:1em"></p>
+  </div>
+
+  <div id="content" style="display:none">
+    <div class="filters">
+      <span class="filter-chip active" data-filter="open">Open <span class="count" id="count-open">0</span></span>
+      <span class="filter-chip" data-filter="resolved">Resolved <span class="count" id="count-resolved">0</span></span>
+      <span class="filter-chip" data-filter="dismissed">Dismissed <span class="count" id="count-dismissed">0</span></span>
+      <span class="filter-chip" data-filter="all">All <span class="count" id="count-all">0</span></span>
+      <span class="grow" style="flex:1"></span>
+    </div>
+
+    <div class="reports">
+      <div class="col-header">
+        <span>WHEN</span>
+        <span>REASON</span>
+        <span>QUESTION</span>
+        <span>CATEGORY</span>
+        <span style="text-align:center">STATUS</span>
+      </div>
+      <div id="rows"></div>
+    </div>
+
+    <div id="empty" class="empty" style="display:none">
+      <p class="mono">— NO REPORTS IN THIS FILTER —</p>
+    </div>
+  </div>
+</main>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+  import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+  import { getFirestore, collection, query, orderBy, onSnapshot, doc, updateDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+  // Firebase web app config (project: stepgunner-79ae7)
+  // To get these values: Firebase Console → Project settings → Your apps → Add Web App → copy config
+  const firebaseConfig = {
+    apiKey: "FILL_ME_IN_WEB_API_KEY",
+    authDomain: "stepgunner-79ae7.firebaseapp.com",
+    projectId: "stepgunner-79ae7",
+    storageBucket: "stepgunner-79ae7.appspot.com",
+    messagingSenderId: "336131562975",
+    appId: "FILL_ME_IN_WEB_APP_ID"
+  };
+
+  const ADMIN_EMAIL = "sfgreen1652@gmail.com";
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  const loginScreen = document.getElementById("login-screen");
+  const content = document.getElementById("content");
+  const signinBtn = document.getElementById("signin-btn");
+  const signoutBtn = document.getElementById("signout-btn");
+  const userEmailEl = document.getElementById("user-email");
+  const loginError = document.getElementById("login-error");
+  const rowsEl = document.getElementById("rows");
+  const emptyEl = document.getElementById("empty");
+
+  let currentFilter = "open";
+  let allReports = [];
+
+  // Auth flow
+  signinBtn.addEventListener("click", async () => {
+    loginError.textContent = "";
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+    } catch (e) {
+      loginError.textContent = e.message;
+    }
+  });
+  signoutBtn.addEventListener("click", () => signOut(auth));
+
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      loginScreen.style.display = "flex";
+      content.style.display = "none";
+      signoutBtn.style.display = "none";
+      userEmailEl.textContent = "";
+      return;
+    }
+    if (user.email !== ADMIN_EMAIL) {
+      loginError.textContent = `Not authorized: ${user.email}`;
+      signOut(auth);
+      return;
+    }
+    loginScreen.style.display = "none";
+    content.style.display = "block";
+    signoutBtn.style.display = "inline-block";
+    userEmailEl.textContent = user.email;
+    subscribeReports();
+  });
+
+  // Reports subscription
+  function subscribeReports() {
+    const q = query(collection(db, "reports"), orderBy("reportedAt", "desc"));
+    onSnapshot(q, (snap) => {
+      allReports = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+      render();
+    }, (err) => {
+      loginError.textContent = "Firestore error: " + err.message;
+    });
+  }
+
+  // Filter chips
+  document.querySelectorAll(".filter-chip").forEach(chip => {
+    chip.addEventListener("click", () => {
+      document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
+      chip.classList.add("active");
+      currentFilter = chip.dataset.filter;
+      render();
+    });
+  });
+
+  function statusOf(r) { return r.status || "open"; }
+  function fmtDate(ts) {
+    if (!ts) return "—";
+    const d = ts.toDate ? ts.toDate() : new Date(ts);
+    const now = new Date();
+    const diffMs = now - d;
+    const mins = Math.floor(diffMs / 60000);
+    if (mins < 1) return "just now";
+    if (mins < 60) return `${mins}m ago`;
+    if (mins < 60 * 24) return `${Math.floor(mins / 60)}h ago`;
+    if (mins < 60 * 24 * 7) return `${Math.floor(mins / (60 * 24))}d ago`;
+    return d.toISOString().slice(0, 10);
+  }
+
+  function render() {
+    const counts = { open: 0, resolved: 0, dismissed: 0, all: allReports.length };
+    for (const r of allReports) counts[statusOf(r)] = (counts[statusOf(r)] || 0) + 1;
+    document.getElementById("count-open").textContent = counts.open || 0;
+    document.getElementById("count-resolved").textContent = counts.resolved || 0;
+    document.getElementById("count-dismissed").textContent = counts.dismissed || 0;
+    document.getElementById("count-all").textContent = counts.all || 0;
+
+    const filtered = currentFilter === "all" ? allReports : allReports.filter(r => statusOf(r) === currentFilter);
+    rowsEl.innerHTML = "";
+    if (filtered.length === 0) {
+      emptyEl.style.display = "block";
+      return;
+    }
+    emptyEl.style.display = "none";
+
+    for (const r of filtered) {
+      const row = document.createElement("div");
+      row.className = "row";
+      row.innerHTML = `
+        <span class="when">${fmtDate(r.reportedAt)}</span>
+        <span class="reason ${(r.reason || "").toLowerCase().includes("incorrect") ? "incorrect" : ""}">${escapeHtml(r.reason || "—")}</span>
+        <span class="question">${escapeHtml((r.questionText || "").slice(0, 100))}</span>
+        <span class="category">${escapeHtml(r.category || "—")}</span>
+        <span class="status status-${statusOf(r)}">${statusOf(r)}</span>
+      `;
+      const detail = document.createElement("div");
+      detail.className = "detail";
+      detail.style.display = "none";
+      detail.innerHTML = renderDetail(r);
+      row.addEventListener("click", () => {
+        const expanded = row.classList.toggle("expanded");
+        detail.style.display = expanded ? "block" : "none";
+      });
+      rowsEl.appendChild(row);
+      rowsEl.appendChild(detail);
+
+      // Wire up action buttons inside detail
+      detail.querySelector(`[data-action="resolve"]`)?.addEventListener("click", (e) => { e.stopPropagation(); markStatus(r.id, "resolved"); });
+      detail.querySelector(`[data-action="dismiss"]`)?.addEventListener("click", (e) => { e.stopPropagation(); markStatus(r.id, "dismissed"); });
+      detail.querySelector(`[data-action="reopen"]`)?.addEventListener("click", (e) => { e.stopPropagation(); markStatus(r.id, "open"); });
+    }
+  }
+
+  function renderDetail(r) {
+    const choices = r.choices || [];
+    const choicesHtml = choices.length === 0 ? "" : `
+      <div class="block">
+        <h3>CHOICES</h3>
+        <div class="choices">
+          ${choices.map(c => {
+            const isCorrect = c === r.correctAnswer;
+            const isSelected = c === r.selectedAnswer;
+            const cls = isCorrect ? "correct" : (isSelected ? "selected" : "");
+            const badge = isCorrect ? "ANS" : (isSelected ? "YOU" : "");
+            return `<div class="choice ${cls}"><span class="badge">${badge}</span><span>${escapeHtml(c)}</span></div>`;
+          }).join("")}
+        </div>
+      </div>
+    `;
+    const notesHtml = r.notes ? `<div class="block"><h3>NOTES</h3><p>${escapeHtml(r.notes)}</p></div>` : "";
+    const status = statusOf(r);
+    const actions = status === "open" ? `
+        <button class="primary" data-action="resolve">Mark resolved</button>
+        <button data-action="dismiss">Dismiss</button>
+      ` : `
+        <button data-action="reopen">Re-open</button>
+      `;
+    return `
+      <div class="block">
+        <h3>QUESTION</h3>
+        <p>${escapeHtml(r.questionText || "")}</p>
+      </div>
+      ${choicesHtml}
+      ${notesHtml}
+      <div class="meta-row">
+        ID ${r.id} ·
+        ${r.questionId != null ? `Q#${r.questionId} · ` : ""}
+        ${r.category || "—"}
+        ${r.resolvedAt ? ` · resolved ${fmtDate(r.resolvedAt)}` : ""}
+      </div>
+      <div class="actions">${actions}</div>
+    `;
+  }
+
+  async function markStatus(reportId, newStatus) {
+    try {
+      const updates = { status: newStatus };
+      if (newStatus === "resolved" || newStatus === "dismissed") {
+        updates.resolvedAt = serverTimestamp();
+      } else {
+        updates.resolvedAt = null;
+      }
+      await updateDoc(doc(db, "reports", reportId), updates);
+    } catch (e) {
+      alert("Failed to update: " + e.message);
+    }
+  }
+
+  function escapeHtml(s) {
+    return String(s ?? "").replace(/[&<>"']/g, c => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+    }[c]));
+  }
+</script>
+</body>
+</html>
