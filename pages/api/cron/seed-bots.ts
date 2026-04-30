@@ -80,8 +80,17 @@ function randInt(lo: number, hi: number): number {
 }
 
 function isoWeekKey(d: Date = new Date()): string {
-  // Standard ISO 8601 week: Monday=1, Thursday determines week-year
-  const target = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
+  // ISO 8601 week computed against America/Chicago wall-clock so the
+  // boundary is Monday 00:00 Central (matches the iOS client).
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Chicago',
+    year: 'numeric', month: '2-digit', day: '2-digit',
+  }).formatToParts(d);
+  const y = Number(parts.find(p => p.type === 'year')!.value);
+  const m = Number(parts.find(p => p.type === 'month')!.value);
+  const day = Number(parts.find(p => p.type === 'day')!.value);
+
+  const target = new Date(Date.UTC(y, m - 1, day));
   const dayNum = (target.getUTCDay() + 6) % 7;             // 0=Mon … 6=Sun
   target.setUTCDate(target.getUTCDate() - dayNum + 3);     // Thu of this ISO week
   const firstThursday = target.getTime();
