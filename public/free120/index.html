@@ -287,6 +287,43 @@
   .ws-bar > i { display:block; height:100%; border-radius:8px; }
   .ws-row .ws-num { text-align:right; font-variant-numeric:tabular-nums; color:var(--muted); }
   .ws-sub { font-size:12px; color:var(--muted); margin:14px 0 6px; text-transform:uppercase; letter-spacing:0.04em; }
+  /* Estimated-score block */
+  .est { margin-top:24px; padding:18px 20px; background:linear-gradient(180deg,#f0f7ff,#f8fbff);
+    border:1px solid #bfdbfe; border-radius:10px; }
+  body.dark .est { background:#0f1b2b; border-color:#1e3a5f; }
+  .est .est-head { font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  .est .est-num { font-size:34px; font-weight:800; color:var(--nav-blue); line-height:1.1; margin:2px 0; }
+  body.dark .est .est-num { color:#7cc4f5; }
+  .est .est-range { font-size:15px; color:var(--text); font-weight:600; }
+  .est .est-basis { font-size:12px; color:var(--muted); margin-top:10px; line-height:1.55; }
+  .est .est-try { margin-top:12px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; font-size:13px; }
+  .est .est-try input { width:64px; padding:5px 7px; border:1px solid var(--border); border-radius:6px;
+    font-size:13px; background:#fff; color:var(--text); }
+  body.dark .est .est-try input { background:#0e141b; }
+  .est .est-warn { color:#b42318; font-weight:600; }
+  /* Detailed per-question review table */
+  .detail { margin-top:28px; }
+  .detail h3 { color:var(--nav-blue); font-size:15px; margin:0 0 10px; }
+  .detail-filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+  .chip { padding:5px 12px; border:1px solid var(--border); border-radius:999px; background:#fff;
+    font-size:12.5px; cursor:pointer; color:var(--text); font-weight:600; }
+  body.dark .chip { background:#0e141b; }
+  .chip.on { background:var(--nav-blue); color:#fff; border-color:var(--nav-blue); }
+  .detail-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .detail-table th { text-align:left; padding:7px 8px; border-bottom:2px solid var(--border);
+    color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.03em; cursor:pointer; white-space:nowrap; }
+  .detail-table td { padding:7px 8px; border-bottom:1px solid #eef2f5; vertical-align:top; }
+  body.dark .detail-table td { border-bottom-color:#1b232d; }
+  .detail-table tr.row-q { cursor:pointer; }
+  .detail-table tr.row-q:hover td { background:#f1f7ff; }
+  body.dark .detail-table tr.row-q:hover td { background:#13203033; }
+  .detail-table .res-correct { color:#16a34a; font-weight:700; }
+  .detail-table .res-wrong   { color:#b42318; font-weight:700; }
+  .detail-table .res-blank   { color:var(--muted); font-weight:700; }
+  .detail-table .t-slow { color:#d97706; font-weight:600; }
+  .detail-table .chg { color:#d97706; }
+  .detail-mono { font-variant-numeric:tabular-nums; }
+  .detail-empty { font-size:13px; color:var(--muted); padding:14px 0; }
 
   /* abstract paragraphs + tabular answer-grid options */
   .qabstract p { margin:0 0 12px; }
@@ -358,6 +395,7 @@
     <button id="btn-export" class="blk-btn" style="padding:8px 14px;font-weight:600;color:var(--nav-blue);flex:0">⬇ Export progress</button>
     <button id="btn-import" class="blk-btn" style="padding:8px 14px;font-weight:600;color:var(--nav-blue);flex:0">⬆ Import progress</button>
     <button id="btn-settings-start" class="blk-btn" style="padding:8px 14px;font-weight:600;color:var(--nav-blue);flex:0">⚙ Settings</button>
+    <button id="btn-reset-start" class="blk-btn" style="padding:8px 14px;font-weight:600;color:#b42318;border-color:#fecaca;flex:0">🗑 Reset all answers</button>
     <input type="file" id="import-file" accept="application/json" style="display:none">
     <span id="io-status" style="font-size:12px;color:var(--muted)"></span>
   </div>
@@ -431,6 +469,19 @@
     <div class="stat-card"><div class="v" id="f-blank">0</div><div class="l">Blank</div></div>
     <div class="stat-card"><div class="v" id="f-time">—</div><div class="l">Total time</div></div>
   </div>
+  <div class="est" id="est-block" style="display:none">
+    <div class="est-head">Estimated Step 2 CK score</div>
+    <div class="est-num" id="est-num">—</div>
+    <div class="est-range" id="est-range"></div>
+    <div class="est-basis" id="est-basis"></div>
+    <div class="est-try">
+      <span>Try another %:</span>
+      <input id="est-input" type="number" min="0" max="100" step="1" inputmode="numeric">
+      <span>% &rarr;</span>
+      <b id="est-try-out">—</b>
+    </div>
+  </div>
+
   <h3 style="margin-top:24px;color:var(--nav-blue);font-size:15px">Per-block breakdown</h3>
   <table id="final-table" style="width:100%;max-width:620px;border-collapse:collapse;font-size:14px;margin-top:8px">
     <thead><tr style="background:#f8fafc">
@@ -443,6 +494,33 @@
   </table>
   <div id="final-insight" class="insight" style="display:none"></div>
   <div id="weakspot" class="weakspot" style="display:none"></div>
+
+  <div class="detail" id="detail-block" style="display:none">
+    <h3>Question-by-question review</h3>
+    <div class="detail-filters" id="detail-filters">
+      <button class="chip on" data-filter="all">All</button>
+      <button class="chip" data-filter="wrong">Incorrect</button>
+      <button class="chip" data-filter="blank">Blank</button>
+      <button class="chip" data-filter="changed">Changed answer</button>
+      <button class="chip" data-filter="slow">Over 2 min</button>
+    </div>
+    <table class="detail-table" id="detail-table">
+      <thead><tr>
+        <th data-sort="ord">#</th>
+        <th data-sort="res">Result</th>
+        <th data-sort="you">You</th>
+        <th data-sort="ans">Ans</th>
+        <th data-sort="t">Time</th>
+        <th data-sort="system">System</th>
+        <th data-sort="discipline">Discipline</th>
+        <th data-sort="topic">Topic</th>
+      </tr></thead>
+      <tbody id="detail-tbody"></tbody>
+    </table>
+    <div class="detail-empty" id="detail-empty" style="display:none">No questions match this filter.</div>
+    <div class="ws-sub" style="margin-top:10px">Click any row to open that question with its explanation.</div>
+  </div>
+
   <div class="actions">
     <button class="primary" id="btn-review-final">Review all answers</button>
     <button id="btn-home-final">Block menu</button>
@@ -1088,6 +1166,111 @@ function endBlock(timeUp) {
   $('intermission-progress').textContent = `${done} of ${total} blocks complete · ${total-done} remaining`;
 }
 
+/* ─── Score estimate (transparent, aggregated-anchor model) ─── */
+// [%correct, est Step 2 CK]. Aggregated self-report anchors — edit here to recalibrate.
+const SCORE_ANCHORS = [[66, 226], [81, 250]];
+const SCORE_BAND = 8;  // ± points (AMBOSS-style 7–10 pt interval)
+function estimateStep2(pct){
+  const a = SCORE_ANCHORS, [x1,y1] = a[0], [x2,y2] = a[a.length-1];
+  const slope = (y2 - y1) / (x2 - x1);
+  let s = Math.round(y1 + slope * (pct - x1));
+  s = Math.max(170, Math.min(282, s));
+  return { central:s, low:Math.max(160, s - SCORE_BAND), high:Math.min(285, s + SCORE_BAND) };
+}
+function populateEstimate(pct){
+  const box = $('est-block'); if (!box) return;
+  const e = estimateStep2(pct);
+  $('est-num').textContent = '~' + e.central;
+  $('est-range').textContent = `likely range ${e.low}–${e.high}  ·  ${pct}% correct`;
+  const basis = SCORE_ANCHORS.map(p => p[0] + '% ≈ ' + p[1]).join(', ');
+  const warn = e.central < 214
+    ? '<span class="est-warn">This projects below the 214 pass line — prioritize content review.</span> ' : '';
+  $('est-basis').innerHTML = warn +
+    `Estimate only. Linear fit through aggregated self-report anchors (${basis}), ±${SCORE_BAND} pts. ` +
+    'The Free&nbsp;120 is a moderate predictor (r≈0.6–0.75) and tends to under-predict for high scorers — ' +
+    'use it 1–2 weeks out alongside your NBME forms and UWSA2, not on its own.';
+  const inp = $('est-input'), out = $('est-try-out');
+  function recompute(){
+    const v = parseFloat(inp.value);
+    if (isNaN(v) || v < 0 || v > 100) { out.textContent = '—'; return; }
+    const r = estimateStep2(v);
+    out.textContent = `~${r.central}  (${r.low}–${r.high})`;
+  }
+  if (!inp.dataset.wired){ inp.dataset.wired = '1'; inp.addEventListener('input', recompute); }
+  inp.value = pct; recompute();
+  box.style.display = '';
+}
+
+/* ─── Detailed per-question review table ─── */
+let _detailRows = [], _detailFilter = 'all', _detailSort = { key:'ord', dir:1 };
+function buildDetailRows(prog, META){
+  const rows = [];
+  BLOCKS.forEach((b, bi) => {
+    const rec = prog[bi] || {};
+    const an = rec.answers || {}, fa = rec.firstAnswer || {}, toi = rec.timeOnItem || {};
+    b.items.forEach((it, ii) => {
+      const you = an[it.n] || null;
+      const res = !you ? 'blank' : (you === it.answer ? 'correct' : 'wrong');
+      const first = fa[it.n] || null;
+      const t = (toi[it.n] != null) ? toi[it.n] : null;
+      const m = META[it.n] || {};
+      rows.push({ bi, ii, ord: bi*1000 + ii, blockN:b.n, itemN:ii+1,
+        you: you || '—', ans: it.answer, res, first, changed: !!(first && you && first !== you),
+        t, slow:(t != null && t > 120),
+        system:m.system || '—', discipline:m.discipline || '—', topic:m.topic || '—' });
+    });
+  });
+  return rows;
+}
+function detailPasses(r, f){
+  if (f === 'wrong')   return r.res === 'wrong';
+  if (f === 'blank')   return r.res === 'blank';
+  if (f === 'changed') return r.changed;
+  if (f === 'slow')    return r.slow;
+  return true;
+}
+function renderDetailTable(){
+  const tb = $('detail-tbody'); if (!tb) return;
+  const k = _detailSort.key, dir = _detailSort.dir;
+  const rows = _detailRows.filter(r => detailPasses(r, _detailFilter)).slice().sort((a,b) => {
+    let av = a[k], bv = b[k];
+    if (k === 't'){ av = a.t == null ? -1 : a.t; bv = b.t == null ? -1 : b.t; }
+    if (typeof av === 'string') return dir * av.localeCompare(bv);
+    return dir * ((av > bv) ? 1 : (av < bv ? -1 : 0));
+  });
+  tb.innerHTML = rows.map(r => {
+    const mark = r.res === 'correct' ? '✓' : (r.res === 'wrong' ? '✗' : '○');
+    const chg = r.changed ? ` <span class="chg" title="Changed from ${escapeHtml(r.first)}">⤳</span>` : '';
+    const tcell = r.t == null ? '—' : `<span class="${r.slow ? 't-slow' : ''}">${fmtTime(r.t)}</span>`;
+    return `<tr class="row-q" data-bi="${r.bi}" data-ii="${r.ii}">
+      <td class="detail-mono">B${r.blockN} · Q${r.itemN}</td>
+      <td class="res-${r.res}">${mark}${chg}</td>
+      <td class="detail-mono">${r.res === 'blank' ? '—' : escapeHtml(r.you)}</td>
+      <td class="detail-mono">${escapeHtml(r.ans)}</td>
+      <td class="detail-mono">${tcell}</td>
+      <td>${escapeHtml(r.system)}</td>
+      <td>${escapeHtml(r.discipline)}</td>
+      <td>${escapeHtml(r.topic)}</td>
+    </tr>`;
+  }).join('');
+  $('detail-empty').style.display = rows.length ? 'none' : '';
+}
+function buildDetailTable(prog, META){
+  _detailRows = buildDetailRows(prog, META);
+  _detailFilter = 'all'; _detailSort = { key:'ord', dir:1 };
+  $('detail-filters').querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c.dataset.filter === 'all'));
+  renderDetailTable();
+  $('detail-block').style.display = '';
+}
+function resetAllProgress(){
+  const keys = [];
+  for (let i = 0; i < localStorage.length; i++){
+    const k = localStorage.key(i);
+    if (k && k.indexOf('free120') === 0 && k !== SETTINGS_KEY) keys.push(k);
+  }
+  keys.forEach(k => localStorage.removeItem(k));
+}
+
 /* ─── Final summary (only when all 6 blocks completed) ─── */
 function showFinalSummary() {
   $('start').style.display = 'none';
@@ -1195,22 +1378,28 @@ function showFinalSummary() {
   } else {
     ws.style.display = 'none';
   }
+
+  // ── Estimated Step 2 CK score + question-by-question table ──
+  populateEstimate(Math.round(100 * totalCorrect / totalItems));
+  buildDetailTable(prog, META);
 }
 
 /* ─── Review all answers across the whole 120 (post-final-summary) ─── */
-function enterFullReview() {
+function enterFullReview(bi, ii) {
   // Reload state from persisted answers so each block can be navigated in review.
+  bi = bi || 0; ii = ii || 0;
   state.reviewMode = true;
-  state.blockIdx = 0;
-  state.itemIdx = 0;
+  state.blockIdx = bi;
+  state.itemIdx = ii;
   const prog = loadProg();
-  state.answers = (prog[0] && prog[0].answers) || {};
+  state.answers = (prog[bi] && prog[bi].answers) || {};
   state.marks = {};
   $('final').style.display = 'none';
   $('exam').classList.add('live');
-  $('block-label').textContent = `Block 1 · Review`;
+  $('block-label').textContent = `Block ${BLOCKS[bi].n} · Review`;
   $('btn-pause').disabled = true;
   $('btn-pause').textContent = '✏ Review';
+  $('btn-quit').textContent = '← Results';
   $('timer').textContent = '— review —';
   $('timer').style.background = 'rgba(255,255,255,0.18)';
   stopTimer();
@@ -1561,6 +1750,7 @@ window.addEventListener('DOMContentLoaded', () => {
       state.reviewMode = false;
       $('btn-pause').disabled = false;
       $('btn-pause').textContent = '⏸ Pause';
+      $('btn-quit').textContent = '⏏ End Block';
       $('exam').classList.remove('live');
       $('timer').style.background = '';
       showFinalSummary();
@@ -1622,14 +1812,40 @@ window.addEventListener('DOMContentLoaded', () => {
     renderBlockMenu();
   }));
   // Final summary buttons
-  $('btn-review-final').addEventListener('click', enterFullReview);
+  $('btn-review-final').addEventListener('click', () => enterFullReview(0, 0));
   $('btn-reset-all').addEventListener('click', () => {
-    if (confirm('Reset the entire exam? This wipes all blocks of answers and lets you start over from scratch.')) {
-      localStorage.removeItem(PROG_KEY);
+    if (confirm('Reset the entire exam? This wipes every block of answers (both 20- and 40-question modes) and starts you over. Your uploaded PDF stays loaded.')) {
+      resetAllProgress();
+      state.answers = {}; state.marks = {};
       $('final').style.display = 'none';
       $('start').style.display = '';
       renderBlockMenu();
     }
+  });
+  $('btn-reset-start').addEventListener('click', () => {
+    if (confirm('Reset all answers? This wipes every block (both 20- and 40-question modes) and starts you over. Your uploaded PDF stays loaded.')) {
+      resetAllProgress();
+      state.answers = {}; state.marks = {};
+      renderBlockMenu();
+      const io = $('io-status'); if (io) io.textContent = 'All answers reset.';
+    }
+  });
+  // Detailed-table interactions (filter chips, column sort, row → review)
+  $('detail-filters').addEventListener('click', e => {
+    const c = e.target.closest('.chip'); if (!c) return;
+    _detailFilter = c.dataset.filter;
+    $('detail-filters').querySelectorAll('.chip').forEach(x => x.classList.toggle('on', x === c));
+    renderDetailTable();
+  });
+  $('detail-table').querySelector('thead').addEventListener('click', e => {
+    const th = e.target.closest('th'); if (!th || !th.dataset.sort) return;
+    const key = th.dataset.sort;
+    if (_detailSort.key === key) _detailSort.dir *= -1; else _detailSort = { key, dir:1 };
+    renderDetailTable();
+  });
+  $('detail-tbody').addEventListener('click', e => {
+    const tr = e.target.closest('tr.row-q'); if (!tr) return;
+    enterFullReview(parseInt(tr.dataset.bi, 10), parseInt(tr.dataset.ii, 10));
   });
   // Keyboard shortcuts
   document.addEventListener('keydown', e => {
