@@ -214,28 +214,72 @@
     return n >= 2 && blockLines.length >= 2;
   }
 
+  // ---- lab-panel aware stem rendering ----
+  // pdf.js often merges the prose intro with the first lab row and the last lab row
+  // with the trailing question. We split those off and group the whole panel into one table.
+  function labParts(ln) {                                // split at the FIRST 2+ space gap (label | value)
+    const m = ln.match(/^(\s*\S.*?\S)\s{2,}(\S.*)$/);
+    return m ? [m[1].replace(/^\s+/, ''), m[2].trim()] : null;
+  }
+  function looksLikeValue(rhs) {
+    if (/^[,;]/.test(rhs)) return false;                 // ", AST activity of..." => inline prose, not a value
+    return /^[<>≥≤(]?\s*[\d.]/.test(rhs)
+        || /^(negative|none|positive|trace|normal|moderate|present|absent|reactive|nonreactive|pending|numerous|markedly)\b/i.test(rhs)
+        || /(mg\/dL|g\/dL|mEq\/L|\/mm|U\/L|ng\/mL|mm Hg|µ[A-Za-z]|%|seconds|\/hpf|mmol|µg|pg|fL|\/min|mOsm|× ?10|\/L\b)/.test(rhs);
+  }
+  function isLabish(ln) {
+    const p = labParts(ln);
+    if (!p) return false;
+    const label = p[0];
+    if (label.length > 46) return false;                 // long => prose sentence, not a lab row
+    if (/[.?]\s/.test(label)) return false;              // sentence punctuation mid-label => prose
+    if (label.split(/\s+/).length > 7) return false;     // too many words => prose
+    return looksLikeValue(p[1]);
+  }
+  const LAB_HEADER_RE = /^\s*(Serum|Urine|Blood|Plasma|Whole blood|Hematology|Arterial blood gas(?: analysis)?|Cerebrospinal fluid|CSF|On Admission|Now)\s*:?\s*$/i;
+  function splitMixedLabLine(ln) {
+    const out = [];
+    // prose intro ("...studies show:") + first lab row on the same line
+    const pm = ln.match(/^(.*\b(?:show|shown|reveals?|follows|include|are)\s*:)\s+(\S.*\s{2,}\S.*)$/i);
+    if (pm && isLabish(pm[2])) { out.push(pm[1]); ln = pm[2]; }
+    // last lab row + trailing question ("...320,000/mm3 Which of the following...?")
+    const sm = ln.match(/^(.*?\s{2,}\S.*?)\s+([A-Z][a-z]+(?:\s+\S+){3,}\?)\s*$/);
+    if (sm && isLabish(sm[1])) { out.push(sm[1]); out.push(sm[2]); return out; }
+    out.push(ln);
+    return out;
+  }
   function parseStem(stemRaw) {
+    let lines = [];
+    for (const raw of stemRaw.split('\n')) {
+      for (const piece of splitMixedLabLine(raw.replace(/\s+$/, ''))) lines.push(piece);
+    }
     const paras = [];
-    let curRaw = [];
-    function flush() {
-      if (!curRaw.length) return;
-      if (isTabular(curRaw)) {
-        const nonEmpty = curRaw.filter(l => l.trim());
+    const blank = s => !s.trim();
+    const labRow = s => isLabish(s) || LAB_HEADER_RE.test(s);
+    let i = 0;
+    while (i < lines.length) {
+      if (blank(lines[i])) { i++; continue; }
+      if (labRow(lines[i])) {
+        const block = [];
+        while (i < lines.length) {
+          if (blank(lines[i])) {                       // allow blank lines inside a panel
+            let j = i + 1; while (j < lines.length && blank(lines[j])) j++;
+            if (j < lines.length && labRow(lines[j])) { i = j; continue; }
+            break;
+          }
+          if (labRow(lines[i])) { block.push(lines[i]); i++; } else break;
+        }
         let indent = Infinity;
-        for (const l of nonEmpty) { const i = l.length - l.replace(/^ +/, '').length; if (i < indent) indent = i; }
+        for (const l of block) { if (!l.trim()) continue; const k = l.length - l.replace(/^ +/, '').length; if (k < indent) indent = k; }
         if (!isFinite(indent)) indent = 0;
-        const tab = curRaw.map(l => l.startsWith(' '.repeat(indent)) ? l.slice(indent) : l).join('\n');
+        const tab = block.map(l => l.startsWith(' '.repeat(indent)) ? l.slice(indent) : l).join('\n');
         paras.push('[[TABLE]]\n' + tab);
       } else {
-        paras.push(curRaw.map(l => l.trim()).filter(Boolean).join(' '));
+        const block = [];
+        while (i < lines.length && !blank(lines[i]) && !labRow(lines[i])) { block.push(lines[i].trim()); i++; }
+        paras.push(block.join(' '));
       }
-      curRaw = [];
     }
-    for (const ln of stemRaw.split('\n')) {
-      if (!ln.trim()) flush();
-      else curRaw.push(ln.replace(/\s+$/, ''));
-    }
-    flush();
     return paras.filter(Boolean).join('\n\n').trim();
   }
 
