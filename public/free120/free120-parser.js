@@ -201,7 +201,9 @@
       .replace(/metanephrine\s+concentration\s+LV\s+4000\s+µJ\/24\s+K\s+1\s+140/g,
                'metanephrine concentration is 4000 µg/24 h (N=140')
       // restore the cubic-mm superscript dropped during PDF extraction (CBC counts: 1100/mm3)
-      .replace(/(\d)\/mm3?(?![A-Za-z0-9³])/g, '$1/mm³');
+      .replace(/(\d)\/mm3?(?![A-Za-z0-9³])/g, '$1/mm³')
+      // restore "cm H2O" subscript mangled to "cm H  20" (e.g. JVP "7 cm H2O")
+      .replace(/cm\s+H\s*2\s*[0O]\b/g, 'cm H₂O');
   }
   function stripMarkers(s) {
     return s
@@ -225,6 +227,8 @@
   }
   function looksLikeValue(rhs) {
     if (/^[,;]/.test(rhs)) return false;                 // ", AST activity of..." => inline prose, not a value
+    if (/[.?]\s+[A-Za-z]/.test(rhs)) return false;       // runs into another sentence => prose, not a value
+    if (rhs.split(/\s+/).length > 10) return false;      // long run of words => prose, not a lab value
     return /^[<>≥≤(]?\s*[\d.]/.test(rhs)
         || /^(negative|none|positive|trace|normal|moderate|present|absent|reactive|nonreactive|pending|numerous|markedly)\b/i.test(rhs)
         || /(mg\/dL|g\/dL|mEq\/L|\/mm|U\/L|ng\/mL|mm Hg|µ[A-Za-z]|%|seconds|\/hpf|mmol|µg|pg|fL|\/min|mOsm|× ?10|\/L\b)/.test(rhs);
