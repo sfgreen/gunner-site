@@ -287,20 +287,6 @@
   .ws-bar > i { display:block; height:100%; border-radius:8px; }
   .ws-row .ws-num { text-align:right; font-variant-numeric:tabular-nums; color:var(--muted); }
   .ws-sub { font-size:12px; color:var(--muted); margin:14px 0 6px; text-transform:uppercase; letter-spacing:0.04em; }
-  /* Estimated-score block */
-  .est { margin-top:24px; padding:18px 20px; background:linear-gradient(180deg,#f0f7ff,#f8fbff);
-    border:1px solid #bfdbfe; border-radius:10px; }
-  body.dark .est { background:#0f1b2b; border-color:#1e3a5f; }
-  .est .est-head { font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
-  .est .est-num { font-size:34px; font-weight:800; color:var(--nav-blue); line-height:1.1; margin:2px 0; }
-  body.dark .est .est-num { color:#7cc4f5; }
-  .est .est-range { font-size:15px; color:var(--text); font-weight:600; }
-  .est .est-basis { font-size:12px; color:var(--muted); margin-top:10px; line-height:1.55; }
-  .est .est-try { margin-top:12px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; font-size:13px; }
-  .est .est-try input { width:64px; padding:5px 7px; border:1px solid var(--border); border-radius:6px;
-    font-size:13px; background:#fff; color:var(--text); }
-  body.dark .est .est-try input { background:#0e141b; }
-  .est .est-warn { color:#b42318; font-weight:600; }
   /* Detailed per-question review table */
   .detail { margin-top:28px; }
   .detail h3 { color:var(--nav-blue); font-size:15px; margin:0 0 10px; }
@@ -392,10 +378,10 @@
      Lab Values reference is available in every block. Each block can be retaken; your answers reset on a new attempt.</p>
   <div id="block-grid" class="blk-grid"></div>
   <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-    <button id="btn-export" class="blk-btn" style="padding:8px 14px;font-weight:600;color:var(--nav-blue);flex:0">⬇ Export progress</button>
-    <button id="btn-import" class="blk-btn" style="padding:8px 14px;font-weight:600;color:var(--nav-blue);flex:0">⬆ Import progress</button>
-    <button id="btn-settings-start" class="blk-btn" style="padding:8px 14px;font-weight:600;color:var(--nav-blue);flex:0">⚙ Settings</button>
-    <button id="btn-reset-start" class="blk-btn" style="padding:8px 14px;font-weight:600;color:#b42318;border-color:#fecaca;flex:0">🗑 Reset all answers</button>
+    <button id="btn-export" class="blk-btn" style="padding:8px 14px;font-weight:600;color:var(--nav-blue);flex:none;white-space:nowrap">⬇ Export progress</button>
+    <button id="btn-import" class="blk-btn" style="padding:8px 14px;font-weight:600;color:var(--nav-blue);flex:none;white-space:nowrap">⬆ Import progress</button>
+    <button id="btn-settings-start" class="blk-btn" style="padding:8px 14px;font-weight:600;color:var(--nav-blue);flex:none;white-space:nowrap">⚙ Settings</button>
+    <button id="btn-reset-start" class="blk-btn" style="padding:8px 14px;font-weight:600;color:#b42318;border-color:#fecaca;flex:none;white-space:nowrap">🗑 Reset all answers</button>
     <input type="file" id="import-file" accept="application/json" style="display:none">
     <span id="io-status" style="font-size:12px;color:var(--muted)"></span>
   </div>
@@ -469,19 +455,6 @@
     <div class="stat-card"><div class="v" id="f-blank">0</div><div class="l">Blank</div></div>
     <div class="stat-card"><div class="v" id="f-time">—</div><div class="l">Total time</div></div>
   </div>
-  <div class="est" id="est-block" style="display:none">
-    <div class="est-head">Estimated Step 2 CK score</div>
-    <div class="est-num" id="est-num">—</div>
-    <div class="est-range" id="est-range"></div>
-    <div class="est-basis" id="est-basis"></div>
-    <div class="est-try">
-      <span>Try another %:</span>
-      <input id="est-input" type="number" min="0" max="100" step="1" inputmode="numeric">
-      <span>% &rarr;</span>
-      <b id="est-try-out">—</b>
-    </div>
-  </div>
-
   <h3 style="margin-top:24px;color:var(--nav-blue);font-size:15px">Per-block breakdown</h3>
   <table id="final-table" style="width:100%;max-width:620px;border-collapse:collapse;font-size:14px;margin-top:8px">
     <thead><tr style="background:#f8fafc">
@@ -1166,41 +1139,6 @@ function endBlock(timeUp) {
   $('intermission-progress').textContent = `${done} of ${total} blocks complete · ${total-done} remaining`;
 }
 
-/* ─── Score estimate (transparent, aggregated-anchor model) ─── */
-// [%correct, est Step 2 CK]. Aggregated self-report anchors — edit here to recalibrate.
-const SCORE_ANCHORS = [[66, 226], [81, 250]];
-const SCORE_BAND = 8;  // ± points (AMBOSS-style 7–10 pt interval)
-function estimateStep2(pct){
-  const a = SCORE_ANCHORS, [x1,y1] = a[0], [x2,y2] = a[a.length-1];
-  const slope = (y2 - y1) / (x2 - x1);
-  let s = Math.round(y1 + slope * (pct - x1));
-  s = Math.max(170, Math.min(282, s));
-  return { central:s, low:Math.max(160, s - SCORE_BAND), high:Math.min(285, s + SCORE_BAND) };
-}
-function populateEstimate(pct){
-  const box = $('est-block'); if (!box) return;
-  const e = estimateStep2(pct);
-  $('est-num').textContent = '~' + e.central;
-  $('est-range').textContent = `likely range ${e.low}–${e.high}  ·  ${pct}% correct`;
-  const basis = SCORE_ANCHORS.map(p => p[0] + '% ≈ ' + p[1]).join(', ');
-  const warn = e.central < 214
-    ? '<span class="est-warn">This projects below the 214 pass line — prioritize content review.</span> ' : '';
-  $('est-basis').innerHTML = warn +
-    `Estimate only. Linear fit through aggregated self-report anchors (${basis}), ±${SCORE_BAND} pts. ` +
-    'The Free&nbsp;120 is a moderate predictor (r≈0.6–0.75) and tends to under-predict for high scorers — ' +
-    'use it 1–2 weeks out alongside your NBME forms and UWSA2, not on its own.';
-  const inp = $('est-input'), out = $('est-try-out');
-  function recompute(){
-    const v = parseFloat(inp.value);
-    if (isNaN(v) || v < 0 || v > 100) { out.textContent = '—'; return; }
-    const r = estimateStep2(v);
-    out.textContent = `~${r.central}  (${r.low}–${r.high})`;
-  }
-  if (!inp.dataset.wired){ inp.dataset.wired = '1'; inp.addEventListener('input', recompute); }
-  inp.value = pct; recompute();
-  box.style.display = '';
-}
-
 /* ─── Detailed per-question review table ─── */
 let _detailRows = [], _detailFilter = 'all', _detailSort = { key:'ord', dir:1 };
 function buildDetailRows(prog, META){
@@ -1379,8 +1317,7 @@ function showFinalSummary() {
     ws.style.display = 'none';
   }
 
-  // ── Estimated Step 2 CK score + question-by-question table ──
-  populateEstimate(Math.round(100 * totalCorrect / totalItems));
+  // ── Question-by-question table ──
   buildDetailTable(prog, META);
 }
 

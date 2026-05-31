@@ -199,7 +199,9 @@
       .replace(/prolactin\s+concentration\s+RI\s+100/g, 'prolactin concentration of 100')
       // 2021 Q83 (MEN2A): "metanephrine concentration is 4000 µg/24 h (N=140-785)"
       .replace(/metanephrine\s+concentration\s+LV\s+4000\s+µJ\/24\s+K\s+1\s+140/g,
-               'metanephrine concentration is 4000 µg/24 h (N=140');
+               'metanephrine concentration is 4000 µg/24 h (N=140')
+      // restore the cubic-mm superscript dropped during PDF extraction (CBC counts: 1100/mm3)
+      .replace(/(\d)\/mm3?(?![A-Za-z0-9³])/g, '$1/mm³');
   }
   function stripMarkers(s) {
     return s
