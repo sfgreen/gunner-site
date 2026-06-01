@@ -1,0 +1,1854 @@
+<!doctype html>
+<html lang="en">
+<head><base href="/free120step/">
+<meta charset="utf-8">
+<title>Free 120 Practice Interface — StepGunner</title>
+<style>
+  :root {
+    --nav-blue: #003366;
+    --nav-blue-hi: #024a8f;
+    --accent: #1d72b1;
+    --bg: #e9eef3;
+    --panel: #fff;
+    --border: #c5cdd6;
+    --text: #1f2937;
+    --muted: #5b6573;
+    --good: #1a7f3a;
+    --bad:  #b42318;
+    --warn: #d97706;
+    --mark: #fef08a;
+  }
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; height:100%; background:var(--bg); color:var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size:15px; line-height:1.55; }
+
+  /* ── Start screen ── */
+  .start-screen { max-width:680px; margin:60px auto; padding:36px 40px; background:var(--panel);
+    border:1px solid var(--border); border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.04); }
+  .start-screen h1 { margin-top:0; font-size:22px; color:var(--nav-blue); }
+  .start-screen p { color:var(--muted); margin:8px 0 22px; }
+  .blk-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin:18px 0 24px; }
+  .blk-btn { padding:18px 12px; background:#fff; border:1.5px solid var(--border); border-radius:8px;
+    cursor:pointer; text-align:left; transition:all 0.1s; }
+  .blk-btn:hover { border-color:var(--accent); background:#f0f7fb; }
+  .blk-btn .label { font-weight:700; color:var(--nav-blue); }
+  .blk-btn .meta { font-size:12px; color:var(--muted); margin-top:4px; }
+  .blk-btn .meta.done { color:var(--good); font-weight:600; }
+
+  /* ── Exam shell ── */
+  .exam { display:none; flex-direction:column; height:100vh; }
+  .exam.live { display:flex; }
+
+  /* Top nav */
+  .topnav { background:linear-gradient(180deg, var(--nav-blue), var(--nav-blue-hi));
+    color:#fff; display:flex; align-items:center; padding:0 16px; height:48px;
+    border-bottom:2px solid #001f3f; }
+  .topnav .brand { font-weight:700; letter-spacing:0.02em; font-size:15px; }
+  .topnav .sep { width:1px; height:24px; background:rgba(255,255,255,0.25); margin:0 14px; }
+  .topnav .block-label { font-size:13px; opacity:0.9; }
+  .topnav .item-label { font-size:13px; margin-left:14px; opacity:0.9; }
+  .topnav .timer { margin-left:auto; display:flex; align-items:center; gap:8px;
+    background:rgba(0,0,0,0.18); padding:6px 12px; border-radius:6px;
+    font-variant-numeric:tabular-nums; font-weight:700; font-size:15px; }
+  .topnav .timer.paused { background:rgba(217,119,6,0.85); }
+  .topnav .timer.lowtime { background:rgba(180,35,24,0.85); animation:pulse 1.2s infinite; }
+  @keyframes pulse { 0%,100% { opacity:1 } 50% { opacity:0.6 } }
+  .topnav .nav-btn { background:transparent; border:1px solid rgba(255,255,255,0.4); color:#fff;
+    padding:6px 10px; margin-left:8px; border-radius:5px; cursor:pointer; font-size:12px; font-weight:600; }
+  .topnav .nav-btn:hover { background:rgba(255,255,255,0.12); }
+  .topnav .nav-btn.danger { border-color:rgba(255,150,150,0.7); }
+
+  /* Main area: left items list + center question + right placeholder */
+  .main { display:flex; flex:1; overflow:hidden; background:var(--bg); }
+  .item-rail { width:54px; background:#f4f6f9; border-right:1px solid var(--border);
+    overflow-y:auto; padding:6px 0; }
+  .item-rail .it { display:block; width:42px; margin:3px auto; padding:6px 0; text-align:center;
+    border:1px solid #cfd6dd; border-radius:4px; background:#fff; cursor:pointer; font-size:12px;
+    font-weight:600; color:var(--text); position:relative; }
+  .item-rail .it:hover { border-color:var(--accent); }
+  .item-rail .it.current { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .item-rail .it.answered { background:#dcfce7; border-color:#86efac; }
+  .item-rail .it.answered.current { background:var(--accent); color:#fff; }
+  .item-rail .it.marked::after { content:''; position:absolute; top:-4px; right:-4px;
+    width:10px; height:10px; background:var(--warn); border-radius:50%; border:1px solid #fff; }
+
+  .qbox { flex:1; padding:18px 28px 90px; overflow-y:auto; background:#fff; }
+  .qbox .qhead { display:flex; align-items:center; gap:14px; padding-bottom:10px;
+    border-bottom:1px solid var(--border); margin-bottom:18px; }
+  .qbox .qhead .qnum { font-weight:700; color:var(--nav-blue); font-size:15px; }
+  .qbox .qhead .mark { display:inline-flex; align-items:center; gap:6px; color:var(--muted);
+    font-size:13px; cursor:pointer; }
+  .qbox .qhead .mark input { width:16px; height:16px; }
+  .qbox .qhead .mark.marked { color:var(--warn); font-weight:600; }
+
+  .qabstract { font-size:14.5px; line-height:1.6; color:#374151; white-space:pre-wrap;
+    margin-bottom:18px; max-width:880px; padding:14px 16px; background:#fffbeb;
+    border-left:4px solid #f59e0b; border-radius:0 6px 6px 0; }
+  .qabstract::before { content:"📄 Shared abstract"; display:block; font-size:11px;
+    font-weight:700; color:#92400e; text-transform:uppercase; letter-spacing:0.06em;
+    margin-bottom:8px; }
+  .qstem { font-size:17px; line-height:1.7; color:#111;
+    margin-bottom:18px; max-width:880px; }
+  .qstem p { margin:0 0 14px; white-space:pre-wrap; }
+  pre.stem-table { margin:14px 0; padding:12px 14px; background:#f8fafc;
+    border:1px solid var(--border); border-radius:6px; overflow-x:auto;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size:13.5px; line-height:1.55; color:#1f2937;
+    white-space:pre; tab-size:4; }
+  .qimages { max-width:880px; margin-bottom:24px; display:flex; flex-direction:column; gap:10px; }
+  .qimages img { max-width:100%; border:1px solid var(--border); border-radius:6px;
+    background:#fff; cursor:zoom-in; }
+  .qimages img.zoomed { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+    max-width:90vw; max-height:90vh; z-index:80; cursor:zoom-out;
+    box-shadow:0 8px 40px rgba(0,0,0,0.5); }
+  .qimages-backdrop { position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:79;
+    display:none; }
+  .qimages-backdrop.open { display:block; }
+
+  .opts { list-style:none; padding:0; margin:0 0 30px; max-width:880px; }
+  .opts li { padding:11px 16px; border:1.5px solid var(--border); border-radius:6px;
+    margin-bottom:8px; cursor:pointer; background:#fff; display:flex; align-items:flex-start;
+    gap:14px; font-size:16px; line-height:1.55; transition:all 0.1s; }
+  .opts li:hover { border-color:var(--accent); background:#f0f7fb; }
+  .opts li.sel { background:#0c4f81; color:#fff; border-color:#0c4f81; }
+  .opts li.sel .letter { background:#fff; color:#0c4f81; }
+  .opts li .letter { display:inline-flex; align-items:center; justify-content:center;
+    width:30px; height:30px; min-width:30px; border-radius:50%; background:#e5e9ee;
+    color:var(--text); font-weight:700; font-size:13px; }
+  /* Review (post-block) coloring */
+  .opts li.review-correct { border-color:var(--good); background:#dcfce7; }
+  .opts li.review-correct .letter { background:var(--good); color:#fff; }
+  .opts li.review-wrong { border-color:var(--bad); background:#fef2f2; }
+  .opts li.review-wrong .letter { background:var(--bad); color:#fff; }
+  .opts li.review-correct-answer { outline:2px dashed var(--good); }
+
+  /* Bottom controls */
+  .controls { position:fixed; bottom:0; left:54px; right:0; background:#fff;
+    border-top:1px solid var(--border); padding:10px 24px; display:flex; align-items:center;
+    gap:10px; }
+  .controls button { padding:8px 18px; border:1px solid var(--border); background:#fff;
+    border-radius:6px; cursor:pointer; font-size:13px; font-weight:600; color:var(--text); }
+  .controls button.primary { background:var(--nav-blue); color:#fff; border-color:var(--nav-blue); }
+  .controls button.danger { background:var(--bad); color:#fff; border-color:var(--bad); }
+  .controls .status { margin-left:auto; color:var(--muted); font-size:13px; }
+
+  /* Lab values modal */
+  .modal-back { position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:50; display:none; }
+  .modal-back.open { display:block; }
+  .modal { position:fixed; top:24px; left:50%; transform:translateX(-50%); bottom:24px;
+    width:min(1080px, calc(100vw - 48px));
+    background:#fff; border-radius:10px; box-shadow:0 14px 40px rgba(0,0,0,0.28);
+    display:none; flex-direction:column; z-index:60; }
+  .modal.open { display:flex; }
+  .modal-head { padding:14px 24px; background:var(--nav-blue); color:#fff;
+    border-radius:10px 10px 0 0; display:flex; align-items:center; gap:14px; }
+  .modal-head h2 { margin:0; font-size:16px; font-weight:700; }
+  .modal-head .lab-search { margin-left:auto; padding:7px 12px; border:0; border-radius:6px;
+    background:#fff; color:#1f2937; font-size:13px; width:240px; }
+  .modal-head .lab-search:focus { outline:2px solid #93c5fd; }
+  .modal-head .close { background:transparent; border:0; color:#fff;
+    font-size:24px; cursor:pointer; line-height:1; padding:0 6px; }
+  .modal-body { padding:0; overflow-y:auto; flex:1; background:#fafbfc; }
+  .lab-section { padding:18px 24px 6px; }
+  .lab-section h3 { color:var(--nav-blue); font-size:13px; font-weight:700;
+    text-transform:uppercase; letter-spacing:0.04em;
+    margin:0 0 10px; padding-bottom:6px; border-bottom:2px solid var(--nav-blue); }
+  .lab-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));
+    gap:6px 18px; }
+  .lab-row { display:grid; grid-template-columns:1fr auto; padding:7px 10px;
+    background:#fff; border:1px solid #e5e7eb; border-radius:5px; align-items:start; }
+  .lab-row .name { font-size:13px; color:#1f2937; line-height:1.35; padding-right:8px; }
+  .lab-row .vals { text-align:right; font-variant-numeric:tabular-nums; min-width:140px; }
+  .lab-row .range { font-size:13px; font-weight:600; color:#0f172a; }
+  .lab-row .si    { display:block; font-size:11px; color:#64748b; margin-top:2px; }
+  .lab-row.hidden { display:none; }
+  .lab-section.hidden { display:none; }
+
+  /* End-block scoreboard */
+  .scoreboard { padding:30px 36px; max-width:880px; margin:30px auto; background:#fff;
+    border:1px solid var(--border); border-radius:8px; }
+  .scoreboard h1 { color:var(--nav-blue); margin-top:0; }
+  .scoreboard .score { font-size:32px; font-weight:800; color:var(--accent); }
+  .scoreboard .stat-row { display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; margin:24px 0; }
+  .scoreboard .stat-card { background:#f8fafc; border:1px solid var(--border); border-radius:6px;
+    padding:12px 14px; text-align:center; }
+  .scoreboard .stat-card .v { font-size:24px; font-weight:700; color:var(--text); }
+  .scoreboard .stat-card .l { font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em; }
+  .scoreboard .actions { margin-top:24px; display:flex; gap:10px; }
+  .scoreboard .actions button { padding:10px 18px; border-radius:6px; cursor:pointer; font-weight:600;
+    border:1px solid var(--border); background:#fff; font-size:13px; }
+  .scoreboard .actions .primary { background:var(--nav-blue); color:#fff; border-color:var(--nav-blue); }
+
+  /* ── Phase A: highlight + strikethrough ── */
+  .qstem mark.hl, .qabstract mark.hl { background:var(--mark); color:inherit; padding:0 1px; border-radius:2px; cursor:pointer; }
+  .opts li.struck { opacity:0.5; }
+  .opts li.struck .letter, .opts li.struck span:last-child { text-decoration:line-through; text-decoration-thickness:2px; }
+  .opts li.struck.sel { opacity:0.85; }
+
+  /* ── Font-size settings ── */
+  body.fs-sm .qstem { font-size:15px; } body.fs-sm .opts li { font-size:14px; } body.fs-sm .qabstract { font-size:13px; }
+  body.fs-lg .qstem { font-size:19.5px; } body.fs-lg .opts li { font-size:18px; } body.fs-lg .qabstract { font-size:16px; }
+
+  /* ── Reverse / dark mode (FRED "reverse color") ── */
+  body.dark { --bg:#0f141a; --panel:#161d26; --border:#2b3744; --text:#e6edf3; --muted:#9aa7b4; --mark:#7c6f1a; }
+  body.dark .qbox, body.dark .opts li, body.dark .modal, body.dark .modal-body, body.dark .controls,
+  body.dark .scoreboard, body.dark .start-screen { background:var(--panel); color:var(--text); }
+  body.dark .qstem, body.dark .qstem p { color:#f1f5f9; }
+  body.dark pre.stem-table { background:#0e141b; color:#dbe4ee; border-color:var(--border); }
+  body.dark .qabstract { background:#2a2410; color:#f0e6c8; }
+  body.dark .item-rail { background:#11171e; }
+  body.dark .item-rail .it { background:#1b232d; color:var(--text); border-color:#2b3744; }
+  body.dark .item-rail .it.answered { background:#14361f; border-color:#2f6b41; }
+  body.dark .opts li:hover { background:#1d2935; }
+  body.dark .opts li .letter { background:#2b3744; color:var(--text); }
+  body.dark .lab-row { background:#1b232d; border-color:#2b3744; }
+  body.dark .lab-row .range { color:#e6edf3; }
+  body.dark .stat-card { background:#1b232d; }
+
+  /* ── End-of-block review screen ── */
+  .review-screen { position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:55; display:none;
+    align-items:center; justify-content:center; }
+  .review-screen.open { display:flex; }
+  .review-card { background:var(--panel); color:var(--text); border-radius:10px; width:min(720px, 92vw);
+    max-height:88vh; overflow:auto; padding:26px 30px; box-shadow:0 14px 40px rgba(0,0,0,0.3); }
+  .review-card h2 { margin:0 0 4px; color:var(--nav-blue); }
+  .review-card .rv-sub { color:var(--muted); font-size:13px; margin-bottom:18px; }
+  .rv-grid { display:grid; grid-template-columns:repeat(10, 1fr); gap:8px; margin:16px 0 22px; }
+  .rv-cell { aspect-ratio:1; display:flex; align-items:center; justify-content:center; border-radius:6px;
+    border:1.5px solid var(--border); background:#fff; cursor:pointer; font-weight:700; font-size:13px;
+    position:relative; color:var(--text); }
+  body.dark .rv-cell { background:#1b232d; }
+  .rv-cell.answered { background:#dcfce7; border-color:#86efac; color:#166534; }
+  body.dark .rv-cell.answered { background:#14361f; border-color:#2f6b41; color:#bbf7d0; }
+  .rv-cell.blank { color:var(--bad); }
+  .rv-cell.marked::after { content:''; position:absolute; top:-3px; right:-3px; width:9px; height:9px;
+    background:var(--warn); border-radius:50%; border:1px solid #fff; }
+  .rv-legend { display:flex; gap:16px; font-size:12px; color:var(--muted); margin-bottom:18px; flex-wrap:wrap; }
+  .rv-legend span { display:inline-flex; align-items:center; gap:5px; }
+  .rv-dot { width:12px; height:12px; border-radius:3px; display:inline-block; border:1px solid var(--border); }
+  .review-card .actions { display:flex; gap:10px; margin-top:8px; }
+  .review-card .actions button { padding:10px 18px; border-radius:6px; cursor:pointer; font-weight:600;
+    border:1px solid var(--border); background:#fff; font-size:13px; }
+  body.dark .review-card .actions button { background:#1b232d; color:var(--text); }
+  .review-card .actions .primary { background:var(--nav-blue); color:#fff; border-color:var(--nav-blue); }
+
+  /* ── Settings popover ── */
+  .settings-pop { position:fixed; top:52px; right:14px; z-index:70; background:var(--panel); color:var(--text);
+    border:1px solid var(--border); border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    width:260px; padding:14px 16px; display:none; }
+  .settings-pop.open { display:block; }
+  .settings-pop h3 { margin:0 0 10px; font-size:13px; text-transform:uppercase; letter-spacing:0.05em; color:var(--muted); }
+  .settings-pop .row { display:flex; align-items:center; justify-content:space-between; margin:10px 0; font-size:13px; }
+  .settings-pop .seg { display:flex; border:1px solid var(--border); border-radius:6px; overflow:hidden; }
+  .settings-pop .seg button { border:0; background:transparent; padding:5px 10px; cursor:pointer; font-size:12px;
+    color:var(--text); }
+  .settings-pop .seg button.on { background:var(--accent); color:#fff; }
+  .settings-pop .note { font-size:11px; color:var(--muted); margin-top:6px; line-height:1.4; }
+
+  /* ── On-screen calculator ── */
+  .calc { position:fixed; top:90px; right:20px; z-index:75; width:236px; background:var(--panel);
+    border:1px solid var(--border); border-radius:10px; box-shadow:0 10px 30px rgba(0,0,0,0.28); display:none; }
+  .calc.open { display:block; }
+  .calc-head { background:var(--nav-blue); color:#fff; padding:7px 12px; border-radius:10px 10px 0 0;
+    display:flex; align-items:center; cursor:move; font-size:12px; font-weight:600; user-select:none; }
+  .calc-head .close { margin-left:auto; cursor:pointer; font-size:17px; line-height:1; }
+  .calc-disp { padding:10px 12px; text-align:right; font-size:22px; font-variant-numeric:tabular-nums;
+    background:#f8fafc; color:#0f172a; min-height:42px; word-break:break-all; }
+  body.dark .calc-disp { background:#0e141b; color:#e6edf3; }
+  .calc-keys { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border); padding:1px;
+    border-radius:0 0 10px 10px; }
+  .calc-keys button { border:0; background:var(--panel); color:var(--text); padding:12px 0; font-size:15px;
+    cursor:pointer; }
+  .calc-keys button:hover { background:var(--accent); color:#fff; }
+  .calc-keys button.op { background:#eef2f6; } body.dark .calc-keys button.op { background:#1b232d; }
+  .calc-keys button.eq { background:var(--nav-blue); color:#fff; grid-column:span 1; }
+
+  /* second-guessing stat block on final screen */
+  .insight { margin-top:20px; padding:14px 18px; background:#fffbeb; border:1px solid #fde68a; border-radius:8px; font-size:13.5px; }
+  body.dark .insight { background:#2a2410; border-color:#5c4f12; color:#f0e6c8; }
+  .insight b { color:#92400e; } body.dark .insight b { color:#fcd34d; }
+
+  /* ── Phase B: review-mode explanation + weak-spot breakdown ── */
+  .explain { max-width:880px; margin:2px 0 30px; padding:16px 18px; background:#f0f9ff;
+    border:1px solid #bae6fd; border-left:4px solid var(--accent); border-radius:0 8px 8px 0; }
+  body.dark .explain { background:#10212e; border-color:#1e3a4a; }
+  .explain .tags { font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.04em;
+    color:var(--accent); margin-bottom:8px; }
+  .explain .tags .topic { color:var(--nav-blue); } body.dark .explain .tags .topic { color:#7cc4f5; }
+  .explain .body { font-size:14.5px; line-height:1.62; color:var(--text); }
+  .weakspot { margin-top:26px; }
+  .weakspot h3 { color:var(--nav-blue); font-size:15px; margin:0 0 12px; }
+  .ws-row { display:grid; grid-template-columns:185px 1fr 88px; gap:12px; align-items:center;
+    padding:5px 0; font-size:13px; }
+  .ws-row .ws-name { color:var(--text); }
+  .ws-bar { height:15px; background:#e9edf1; border-radius:8px; overflow:hidden; }
+  body.dark .ws-bar { background:#1b232d; }
+  .ws-bar > i { display:block; height:100%; border-radius:8px; }
+  .ws-row .ws-num { text-align:right; font-variant-numeric:tabular-nums; color:var(--muted); }
+  .ws-sub { font-size:12px; color:var(--muted); margin:14px 0 6px; text-transform:uppercase; letter-spacing:0.04em; }
+  /* Detailed per-question review table */
+  .detail { margin-top:28px; }
+  .detail h3 { color:var(--nav-blue); font-size:15px; margin:0 0 10px; }
+  .detail-filters { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+  .chip { padding:5px 12px; border:1px solid var(--border); border-radius:999px; background:#fff;
+    font-size:12.5px; cursor:pointer; color:var(--text); font-weight:600; }
+  body.dark .chip { background:#0e141b; }
+  .chip.on { background:var(--nav-blue); color:#fff; border-color:var(--nav-blue); }
+  .detail-table { width:100%; border-collapse:collapse; font-size:13px; }
+  .detail-table th { text-align:left; padding:7px 8px; border-bottom:2px solid var(--border);
+    color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.03em; cursor:pointer; white-space:nowrap; }
+  .detail-table td { padding:7px 8px; border-bottom:1px solid #eef2f5; vertical-align:top; }
+  body.dark .detail-table td { border-bottom-color:#1b232d; }
+  .detail-table tr.row-q { cursor:pointer; }
+  .detail-table tr.row-q:hover td { background:#f1f7ff; }
+  body.dark .detail-table tr.row-q:hover td { background:#13203033; }
+  .detail-table .res-correct { color:#16a34a; font-weight:700; }
+  .detail-table .res-wrong   { color:#b42318; font-weight:700; }
+  .detail-table .res-blank   { color:var(--muted); font-weight:700; }
+  .detail-table .t-slow { color:#d97706; font-weight:600; }
+  .detail-table .chg { color:#d97706; }
+  .detail-mono { font-variant-numeric:tabular-nums; }
+  .detail-empty { font-size:13px; color:var(--muted); padding:14px 0; }
+
+  /* abstract paragraphs + tabular answer-grid options */
+  .qabstract p { margin:0 0 12px; }
+  .qabstract p:last-child { margin-bottom:0; }
+  .opt-header { max-width:880px; margin:0 0 8px; display:grid; gap:14px; padding:0 16px;
+    font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.03em; color:var(--muted); }
+  .opts li.gridopt { display:grid; align-items:center; gap:14px; }
+  .opts li.gridopt .cell { font-size:15px; }
+</style>
+<!-- Baked-in build: clean pre-extracted questions + manual fixes, no live PDF parsing -->
+<script src="free120_data.js"></script>
+<script src="free120_meta.js"></script>
+<style>
+  .upload-screen { max-width:640px; margin:48px auto; padding:34px 38px; background:var(--panel);
+    border:1px solid var(--border); border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.05); }
+  .upload-screen h1 { margin-top:0; color:var(--nav-blue); font-size:23px; }
+  .upload-screen p { color:var(--muted); line-height:1.6; }
+  .up-row { margin:18px 0; }
+  .up-drop { border:2px dashed var(--border); border-radius:10px; padding:30px; text-align:center;
+    cursor:pointer; transition:all .12s; background:#fafbfc; }
+  .up-drop:hover, .up-drop.over { border-color:var(--accent); background:#f0f7fb; }
+  .up-drop .big { font-size:15px; font-weight:600; color:var(--nav-blue); }
+  .up-drop .sub { font-size:12.5px; color:var(--muted); margin-top:6px; }
+  .up-controls { display:flex; gap:12px; align-items:center; margin-top:16px; flex-wrap:wrap; }
+  .up-controls select { padding:9px 12px; border:1px solid var(--border); border-radius:7px; font-size:14px; }
+  .up-controls button { padding:10px 20px; border-radius:7px; border:0; background:var(--nav-blue); color:#fff;
+    font-weight:700; font-size:14px; cursor:pointer; }
+  .up-controls button:disabled { background:#9aa7b4; cursor:default; }
+  .up-status { margin-top:14px; font-size:13.5px; color:var(--muted); min-height:18px; }
+  .up-status.err { color:var(--bad); font-weight:600; }
+  .up-note { margin-top:22px; padding-top:16px; border-top:1px solid var(--border); font-size:12px; color:var(--muted); line-height:1.55; }
+</style>
+</head>
+<body>
+
+<!-- Upload screen (shown first) -->
+<div id="upload" class="upload-screen">
+  <h1>Free 120, the real way</h1>
+  <p>Turn your own official NBME Free 120 PDF into the actual test-day interface: per-block timer,
+     lab values, mark-for-review, highlight and strikethrough, a per-system weak-spot report at the end,
+     and a written explanation for every question in review mode.</p>
+  <div class="up-row">
+    <div class="up-drop" id="up-drop">
+      <div class="big">Drop your Free 120 PDF here, or click to choose</div>
+      <div class="sub">The official PDF from the NBME site. It never leaves your browser.</div>
+    </div>
+    <input type="file" id="up-file" accept="application/pdf" style="display:none">
+  </div>
+  <div class="up-controls">
+    <label style="font-size:13px;color:var(--muted)">Which Free 120?</label>
+    <select id="up-year"><option value="2021">2021 edition</option><option value="2019">2019 edition</option></select>
+    <button id="up-build" disabled>Build my test</button>
+  </div>
+  <div class="up-status" id="up-status"></div>
+  <div class="up-note"><b>Private and local.</b> Your PDF is read in your browser to build the test;
+     nothing is uploaded to a server. The explanations and analytics are bundled with this page;
+     the questions come only from your own file.</div>
+</div>
+
+
+<!-- Start / block selection screen -->
+<div id="start" class="start-screen" style="display:none">
+  <h1>USMLE Step 2 CK — Free 120 Practice</h1>
+  <p id="start-blurb">6 blocks of 20 questions, 30 minutes each (90 sec/Q pace). The timer can be paused at any time.
+     Lab Values reference is available in every block. Each block can be retaken; your answers reset on a new attempt.</p>
+  <div id="block-grid" class="blk-grid"></div>
+  <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+    <button id="btn-export" class="blk-btn" style="padding:8px 14px;font-weight:600;color:var(--nav-blue);flex:none;white-space:nowrap">⬇ Export progress</button>
+    <button id="btn-import" class="blk-btn" style="padding:8px 14px;font-weight:600;color:var(--nav-blue);flex:none;white-space:nowrap">⬆ Import progress</button>
+    <button id="btn-settings-start" class="blk-btn" style="padding:8px 14px;font-weight:600;color:var(--nav-blue);flex:none;white-space:nowrap">⚙ Settings</button>
+    <button id="btn-reset-start" class="blk-btn" style="padding:8px 14px;font-weight:600;color:#b42318;border-color:#fecaca;flex:none;white-space:nowrap">🗑 Reset all answers</button>
+    <input type="file" id="import-file" accept="application/json" style="display:none">
+    <span id="io-status" style="font-size:12px;color:var(--muted)"></span>
+  </div>
+</div>
+
+<!-- Exam shell -->
+<div id="exam" class="exam">
+  <div class="topnav">
+    <span class="brand">USMLE Step 2 CK</span>
+    <span class="sep"></span>
+    <span class="block-label" id="block-label">Block 1</span>
+    <span class="item-label"  id="item-label">Item 1 of 20</span>
+    <span class="timer" id="timer">30:00</span>
+    <button class="nav-btn" id="btn-pause">⏸ Pause</button>
+    <button class="nav-btn" id="btn-labs">🧪 Lab Values</button>
+    <button class="nav-btn" id="btn-calc">🖩 Calculator</button>
+    <button class="nav-btn" id="btn-settings">⚙ Settings</button>
+    <button class="nav-btn danger" id="btn-quit">⏏ End Block</button>
+  </div>
+
+  <div class="main">
+    <div class="item-rail" id="item-rail"></div>
+    <div class="qbox" id="qbox">
+      <div class="qhead">
+        <span class="qnum" id="qnum">Item 1</span>
+        <label class="mark" id="mark-label">
+          <input type="checkbox" id="mark-cb"> Mark for review
+        </label>
+      </div>
+      <div class="qabstract" id="qabstract" style="display:none"></div>
+      <div class="qstem" id="qstem">Loading…</div>
+      <div class="qimages" id="qimages"></div>
+      <div class="opt-header" id="opt-header" style="display:none"></div>
+      <ul class="opts" id="opts"></ul>
+      <div class="explain" id="explanation" style="display:none"></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="btn-prev">◀ Previous</button>
+    <button id="btn-next">Next ▶</button>
+    <span class="status" id="status"></span>
+  </div>
+</div>
+
+<!-- Between-blocks intermission (no score reveal yet) -->
+<div id="intermission" class="scoreboard" style="display:none">
+  <h1 id="intermission-title">Block 1 complete</h1>
+  <p style="color:var(--muted);font-size:15px">
+    Your answers are saved. Scores and the answer key stay hidden until you finish all blocks.
+  </p>
+  <div class="stat-row" style="grid-template-columns:repeat(3,1fr);max-width:560px">
+    <div class="stat-card"><div class="v" id="im-answered">0</div><div class="l">Answered</div></div>
+    <div class="stat-card"><div class="v" id="im-blank">0</div><div class="l">Blank</div></div>
+    <div class="stat-card"><div class="v" id="im-time">—</div><div class="l">Time spent</div></div>
+  </div>
+  <p style="color:var(--muted);font-size:13px" id="intermission-progress">—</p>
+  <div class="actions">
+    <button class="primary" id="btn-next-block">Continue to next block</button>
+    <button id="btn-home">Block menu</button>
+  </div>
+</div>
+
+<!-- Final exam summary (only when all 6 blocks completed) -->
+<div id="final" class="scoreboard" style="display:none">
+  <h1>Exam complete</h1>
+  <div class="score" id="final-score-line">— / 120</div>
+  <div class="stat-row">
+    <div class="stat-card"><div class="v" id="f-correct">0</div><div class="l">Correct</div></div>
+    <div class="stat-card"><div class="v" id="f-wrong">0</div><div class="l">Incorrect</div></div>
+    <div class="stat-card"><div class="v" id="f-blank">0</div><div class="l">Blank</div></div>
+    <div class="stat-card"><div class="v" id="f-time">—</div><div class="l">Total time</div></div>
+  </div>
+  <h3 style="margin-top:24px;color:var(--nav-blue);font-size:15px">Per-block breakdown</h3>
+  <table id="final-table" style="width:100%;max-width:620px;border-collapse:collapse;font-size:14px;margin-top:8px">
+    <thead><tr style="background:#f8fafc">
+      <th style="text-align:left;padding:8px;border-bottom:1px solid var(--border)">Block</th>
+      <th style="text-align:right;padding:8px;border-bottom:1px solid var(--border)">Score</th>
+      <th style="text-align:right;padding:8px;border-bottom:1px solid var(--border)">%</th>
+      <th style="text-align:right;padding:8px;border-bottom:1px solid var(--border)">Time</th>
+    </tr></thead>
+    <tbody id="final-tbody"></tbody>
+  </table>
+  <div id="final-insight" class="insight" style="display:none"></div>
+  <div id="weakspot" class="weakspot" style="display:none"></div>
+
+  <div class="detail" id="detail-block" style="display:none">
+    <h3>Question-by-question review</h3>
+    <div class="detail-filters" id="detail-filters">
+      <button class="chip on" data-filter="all">All</button>
+      <button class="chip" data-filter="wrong">Incorrect</button>
+      <button class="chip" data-filter="blank">Blank</button>
+      <button class="chip" data-filter="changed">Changed answer</button>
+      <button class="chip" data-filter="slow">Over 2 min</button>
+    </div>
+    <table class="detail-table" id="detail-table">
+      <thead><tr>
+        <th data-sort="ord">#</th>
+        <th data-sort="res">Result</th>
+        <th data-sort="you">You</th>
+        <th data-sort="ans">Ans</th>
+        <th data-sort="t">Time</th>
+        <th data-sort="system">System</th>
+        <th data-sort="discipline">Discipline</th>
+        <th data-sort="topic">Topic</th>
+      </tr></thead>
+      <tbody id="detail-tbody"></tbody>
+    </table>
+    <div class="detail-empty" id="detail-empty" style="display:none">No questions match this filter.</div>
+    <div class="ws-sub" style="margin-top:10px">Click any row to open that question with its explanation.</div>
+  </div>
+
+  <div class="actions">
+    <button class="primary" id="btn-review-final">Review all answers</button>
+    <button id="btn-home-final">Block menu</button>
+    <button id="btn-reset-all">Reset entire exam</button>
+  </div>
+</div>
+
+<!-- End-of-block review screen (shown before submitting a block) -->
+<div class="review-screen" id="block-review">
+  <div class="review-card">
+    <h2 id="rv-title">Review — Block 1</h2>
+    <div class="rv-sub">Click any item to return to it. The timer keeps running until you submit.</div>
+    <div class="rv-legend">
+      <span><i class="rv-dot" style="background:#dcfce7;border-color:#86efac"></i> Answered</span>
+      <span><i class="rv-dot" style="background:#fff"></i> Blank</span>
+      <span><i class="rv-dot" style="background:var(--warn)"></i> Marked</span>
+    </div>
+    <div class="rv-grid" id="rv-grid"></div>
+    <div class="rv-sub" id="rv-counts"></div>
+    <div class="actions">
+      <button id="rv-return">◀ Return to block</button>
+      <button class="primary" id="rv-submit">Submit block ▶</button>
+    </div>
+  </div>
+</div>
+
+<!-- Settings popover -->
+<div class="settings-pop" id="settings-pop">
+  <h3>Display</h3>
+  <div class="row">Font size
+    <div class="seg" id="seg-font">
+      <button data-fs="sm">A−</button><button data-fs="md">A</button><button data-fs="lg">A+</button>
+    </div>
+  </div>
+  <div class="row">Reverse colors
+    <div class="seg" id="seg-dark">
+      <button data-dark="0">Light</button><button data-dark="1">Dark</button>
+    </div>
+  </div>
+  <h3 style="margin-top:14px">Exam format</h3>
+  <div class="row">Block layout
+    <div class="seg" id="seg-blocks">
+      <button data-mode="20">6 × 20</button><button data-mode="40">3 × 40</button>
+    </div>
+  </div>
+  <div class="note">3 × 40 mirrors real Step 2 delivery (40 Q / 60 min). It uses a separate saved attempt, so your 6 × 20 results are untouched. Changeable only from the block menu.</div>
+</div>
+
+<!-- On-screen calculator -->
+<div class="calc" id="calc">
+  <div class="calc-head" id="calc-head">Calculator <span class="close" id="calc-close">×</span></div>
+  <div class="calc-disp" id="calc-disp">0</div>
+  <div class="calc-keys" id="calc-keys">
+    <button class="op" data-k="C">C</button><button class="op" data-k="←">←</button><button class="op" data-k="%">%</button><button class="op" data-k="/">÷</button>
+    <button data-k="7">7</button><button data-k="8">8</button><button data-k="9">9</button><button class="op" data-k="*">×</button>
+    <button data-k="4">4</button><button data-k="5">5</button><button data-k="6">6</button><button class="op" data-k="-">−</button>
+    <button data-k="1">1</button><button data-k="2">2</button><button data-k="3">3</button><button class="op" data-k="+">+</button>
+    <button data-k="0">0</button><button data-k=".">.</button><button class="eq" data-k="=" style="grid-column:span 2">=</button>
+  </div>
+</div>
+
+<!-- Lab values modal -->
+<div class="modal-back" id="modal-back"></div>
+<div class="modal" id="modal-labs">
+  <div class="modal-head">
+    <h2>Laboratory Reference Values</h2>
+    <input type="search" id="lab-search" class="lab-search" placeholder="Search labs… (e.g. sodium, TSH)">
+    <button class="close" id="modal-close" title="Close">×</button>
+  </div>
+  <div class="modal-body" id="labs-body"></div>
+</div>
+
+<script>
+/* ─────────────────────────────────────────────────────────────
+   Lab-values reference (standard adult clinical ranges).
+   Compiled from common clinical references; values are factual
+   reference ranges, not copyrighted creative content.
+   ───────────────────────────────────────────────────────────── */
+const LABS = [
+ ["SERUM — Electrolytes & Chemistry", [
+   ["Sodium (Na+)",              "136–146 mEq/L",             "136–146 mmol/L"],
+   ["Potassium (K+)",            "3.5–5.0 mEq/L",             "3.5–5.0 mmol/L"],
+   ["Chloride (Cl–)",            "95–105 mEq/L",              "95–105 mmol/L"],
+   ["Bicarbonate (HCO3–)",       "22–28 mEq/L",               "22–28 mmol/L"],
+   ["Urea nitrogen (BUN)",       "7–18 mg/dL",                "2.5–6.4 mmol/L"],
+   ["Creatinine",                "0.6–1.2 mg/dL",             "53–106 µmol/L"],
+   ["Glucose (fasting)",         "70–100 mg/dL",              "3.8–5.6 mmol/L"],
+   ["Glucose (random, non-fast)","<140 mg/dL",                "<7.77 mmol/L"],
+   ["Calcium (total)",           "8.4–10.2 mg/dL",            "2.1–2.6 mmol/L"],
+   ["Magnesium",                 "1.5–2.0 mg/dL",             "0.75–1.0 mmol/L"],
+   ["Phosphorus (inorganic)",    "3.0–4.5 mg/dL",             "1.0–1.5 mmol/L"],
+   ["Osmolality",                "275–295 mOsmol/kg",         "275–295 mOsmol/kg"],
+   ["Uric acid",                 "3.0–8.2 mg/dL",             "0.18–0.48 mmol/L"],
+ ]],
+ ["SERUM — Hepatic & Pancreatic", [
+   ["ALT",                       "10–40 U/L", "10–40 U/L"],
+   ["AST",                       "12–38 U/L", "12–38 U/L"],
+   ["Alkaline phosphatase",      "25–100 U/L", "25–100 U/L"],
+   ["Amylase",                   "25–125 U/L", "25–125 U/L"],
+   ["Lipase",                    "10–140 U/L", "10–140 U/L"],
+   ["Bilirubin, total",          "0.1–1.0 mg/dL", "2–17 µmol/L"],
+   ["Bilirubin, direct",         "0.0–0.3 mg/dL", "0–5 µmol/L"],
+   ["Total protein",             "6.0–7.8 g/dL",  "60–78 g/L"],
+   ["Albumin",                   "3.5–5.5 g/dL",  "35–55 g/L"],
+   ["Globulin",                  "2.3–3.5 g/dL",  "23–35 g/L"],
+   ["Ammonia",                   "11–35 µmol/L",  "11–35 µmol/L"],
+ ]],
+ ["SERUM — Lipids", [
+   ["Cholesterol, total",        "Desirable <200 mg/dL",      "<5.2 mmol/L"],
+   ["HDL",                       "40–60 mg/dL",               "1.0–1.6 mmol/L"],
+   ["LDL",                       "<160 mg/dL",                "<4.2 mmol/L"],
+   ["Triglycerides",             "<150 mg/dL",                "<1.70 mmol/L"],
+ ]],
+ ["SERUM — Iron Studies", [
+   ["Ferritin (M)",              "20–250 ng/mL",              "20–250 µg/L"],
+   ["Ferritin (F)",              "10–120 ng/mL",              "10–120 µg/L"],
+   ["Iron (M)",                  "65–175 µg/dL",              "11.6–31.3 µmol/L"],
+   ["Iron (F)",                  "50–170 µg/dL",              "9.0–30.4 µmol/L"],
+   ["Total iron-binding capacity","250–400 µg/dL",            "44.8–71.6 µmol/L"],
+   ["Transferrin",               "200–360 mg/dL",             "2.0–3.6 g/L"],
+   ["Transferrin saturation",    "20%–50%",                   "0.20–0.50"],
+ ]],
+ ["SERUM — Endocrine", [
+   ["TSH",                       "0.4–4.0 µU/mL",             "0.4–4.0 mIU/L"],
+   ["Free T4",                   "0.9–1.7 ng/dL",             "12.0–21.9 pmol/L"],
+   ["Thyroxine (T4)",            "5–12 µg/dL",                "64–155 nmol/L"],
+   ["T3 (RIA)",                  "100–200 ng/dL",             "1.5–3.1 nmol/L"],
+   ["Intact PTH",                "10–60 pg/mL",               "10–60 ng/L"],
+   ["Cortisol (0800 h)",         "5–23 µg/dL",                "138–635 nmol/L"],
+   ["Cortisol (1600 h)",         "3–15 µg/dL",                "82–413 nmol/L"],
+   ["ACTH",                      "<80 pg/mL (a.m.)",          "<17.6 pmol/L"],
+   ["Prolactin (M)",             "<17 ng/mL",                 "<17 µg/L"],
+   ["Prolactin (F, non-preg)",   "<25 ng/mL",                 "<25 µg/L"],
+   ["FSH (M)",                   "4–25 mIU/mL",               "4–25 IU/L"],
+   ["FSH (F, follicular)",       "4–30 mIU/mL",               "4–30 IU/L"],
+   ["FSH (F, postmenopausal)",   "40–250 mIU/mL",             "40–250 IU/L"],
+   ["LH (M)",                    "6–23 mIU/mL",               "6–23 IU/L"],
+   ["Insulin (fasting)",         "5–20 µU/mL",                "36–144 pmol/L"],
+   ["C-peptide (fasting)",       "0.5–2.0 ng/mL",             "0.17–0.66 nmol/L"],
+   ["Hemoglobin A1c",            "≤6%",                       "≤42 mmol/mol"],
+ ]],
+ ["SERUM — Cardiac & Muscle", [
+   ["Troponin I",                "≤0.04 ng/mL",               "≤0.04 µg/L"],
+   ["BNP",                       "<100 pg/mL",                "<100 ng/L"],
+   ["NT-proBNP",                 "<300 pg/mL",                "<300 ng/L"],
+   ["Creatine kinase (M)",       "25–90 U/L",                 "25–90 U/L"],
+   ["Creatine kinase (F)",       "10–70 U/L",                 "10–70 U/L"],
+   ["CK-MB",                     "<6%",                       "<0.06"],
+   ["Lactate dehydrogenase",     "45–200 U/L",                "45–200 U/L"],
+ ]],
+ ["SERUM — Immunoglobulins", [
+   ["IgA", "76–390 mg/dL", "0.76–3.90 g/L"],
+   ["IgE", "0–380 IU/mL",   "0–380 kIU/L"],
+   ["IgG", "650–1500 mg/dL","6.5–15.0 g/L"],
+   ["IgM", "50–300 mg/dL",  "0.5–3.0 g/L"],
+ ]],
+ ["HEMATOLOGY — Complete Blood Count", [
+   ["Hematocrit (M)",            "41%–53%",                    "0.41–0.53"],
+   ["Hematocrit (F)",            "36%–46%",                    "0.36–0.46"],
+   ["Hemoglobin (M)",            "13.5–17.5 g/dL",             "135–175 g/L"],
+   ["Hemoglobin (F)",            "12.0–16.0 g/dL",             "120–160 g/L"],
+   ["MCV",                       "80–100 fL",                  "80–100 fL"],
+   ["MCH",                       "25–35 pg/cell",              "0.39–0.54 fmol/cell"],
+   ["MCHC",                      "31%–36% Hb/cell",            "4.8–5.6 mmol Hb/L"],
+   ["RDW",                       "11.5%–14.5%",                "0.115–0.145"],
+   ["WBC",                       "4500–11,000/mm³",            "4.5–11.0 × 10⁹/L"],
+   ["Neutrophils, segmented",    "54%–62%",                    "0.54–0.62"],
+   ["Neutrophils, bands",        "3%–5%",                      "0.03–0.05"],
+   ["Lymphocytes",               "25%–33%",                    "0.25–0.33"],
+   ["Monocytes",                 "3%–7%",                      "0.03–0.07"],
+   ["Eosinophils",               "1%–3%",                      "0.01–0.03"],
+   ["Basophils",                 "0%–0.75%",                   "0.00–0.0075"],
+   ["Platelet count",            "150,000–400,000/mm³",        "150–400 × 10⁹/L"],
+   ["Reticulocytes",             "0.5%–1.5%",                  "0.005–0.015"],
+   ["ESR (M)",                   "0–15 mm/h",                  "0–15 mm/h"],
+   ["ESR (F)",                   "0–20 mm/h",                  "0–20 mm/h"],
+ ]],
+ ["HEMATOLOGY — Coagulation", [
+   ["PT",                        "11–15 seconds",              "11–15 s"],
+   ["PTT (activated)",           "25–40 seconds",              "25–40 s"],
+   ["INR",                       "0.9–1.1",                    "0.9–1.1"],
+   ["D-dimer",                   "≤250 ng/mL",                 "≤1.4 nmol/L"],
+   ["Fibrinogen",                "200–400 mg/dL",              "2.0–4.0 g/L"],
+   ["Bleeding time",             "2–7 minutes",                ""],
+ ]],
+ ["BLOOD GASES (arterial, room air)", [
+   ["pH",                        "7.35–7.45",                  ""],
+   ["PaO2",                      "75–105 mm Hg",               "10.0–14.0 kPa"],
+   ["PaCO2",                     "33–45 mm Hg",                "4.4–5.9 kPa"],
+   ["HCO3–",                     "22–28 mEq/L",                "22–28 mmol/L"],
+   ["O2 saturation",             "≥95%",                       ""],
+ ]],
+ ["URINE", [
+   ["Calcium",                   "100–300 mg/24 h",            "2.5–7.5 mmol/24 h"],
+   ["Creatinine clearance (M)",  "97–137 mL/min",              ""],
+   ["Creatinine clearance (F)",  "88–128 mL/min",              ""],
+   ["Osmolality",                "50–1200 mOsmol/kg",          ""],
+   ["Proteins, total",           "<150 mg/24 h",               "<0.15 g/24 h"],
+   ["Specific gravity",          "1.001–1.035",                ""],
+   ["pH",                        "4.5–8.0",                    ""],
+   ["Sodium",                    "100–260 mEq/24 h",           "100–260 mmol/24 h"],
+   ["Microalbumin (random)",     "<30 mg/g Cr",                ""],
+ ]],
+ ["CSF", [
+   ["Opening pressure",          "70–180 mm H₂O",              ""],
+   ["Glucose",                   "40–70 mg/dL",                "2.2–3.9 mmol/L (≥60% of serum)"],
+   ["Protein",                   "<40 mg/dL",                  "<0.40 g/L"],
+   ["Cell count",                "0–5 lymphocytes/mm³",        ""],
+   ["Chloride",                  "118–132 mEq/L",              "118–132 mmol/L"],
+ ]],
+ ["VITAL / BODY", [
+   ["Body Mass Index (BMI)",     "Adult: 19–25 kg/m²",         ""],
+ ]],
+];
+
+/* ─────────────────────────────────────────────────────────────
+   App state + helpers
+   ───────────────────────────────────────────────────────────── */
+const $ = id => document.getElementById(id);
+let BLOCK_MIN = 30;
+let BLOCK_SEC = BLOCK_MIN * 60;
+// localStorage v2 stores per-block completed answers so we can reveal at the very end.
+// 6×20 keeps these exact keys so existing results load; 3×40 uses a separate namespace.
+let PROG_KEY  = "free120_prog_v2";
+// Separate key for in-progress (mid-block) state so a hard-refresh doesn't lose work.
+let INPROG_KEY = "free120_inprog_v1";
+// Active block grouping (6×20 by default; rebuilt to 3×40 when that mode is chosen).
+let BLOCKS = (window.FREE120 || {}).blocks || [];
+
+let state = {
+  blockIdx: 0,           // 0..5
+  itemIdx: 0,            // 0..N-1 within the block
+  answers: {},           // {itemNum: 'A'} for current attempt
+  marks:   {},           // {itemNum: true}
+  remaining: BLOCK_SEC,
+  paused: false,
+  startedAt: null,
+  reviewMode: false,     // becomes true only on the final "Review all answers" path
+};
+let timerHandle = null;
+
+// Per-block persisted state:
+// { 0: {answers: {1:'A',2:'C',...}, completed: true, timeSpent: 1500}, 1:{...}, ... }
+function loadProg() {
+  try { return JSON.parse(localStorage.getItem(PROG_KEY) || "{}"); } catch (e) { return {}; }
+}
+function saveProg(p) { localStorage.setItem(PROG_KEY, JSON.stringify(p)); }
+function allBlocksDone() {
+  const p = loadProg();
+  if (!BLOCKS.length) return false;
+  for (let i = 0; i < BLOCKS.length; i++) if (!p[i] || !p[i].completed) return false;
+  return true;
+}
+
+// In-progress state: persists mid-block answers + timer position to survive page refresh.
+function saveInProgress() {
+  if (!state || state.reviewMode || !state.startedAt) return;
+  // Don't save if no block is active (live class not on exam)
+  if (!$('exam').classList.contains('live')) return;
+  const payload = {
+    blockIdx: state.blockIdx,
+    itemIdx:  state.itemIdx,
+    answers:  state.answers,
+    marks:    state.marks,
+    strikes:  state.strikes,
+    timeOnItem: state.timeOnItem,
+    changes:  state.changes,
+    firstAnswer: state.firstAnswer,
+    remaining:state.remaining,
+    paused:   state.paused,
+    when:     Date.now(),
+  };
+  localStorage.setItem(INPROG_KEY, JSON.stringify(payload));
+}
+function loadInProgress() {
+  try { return JSON.parse(localStorage.getItem(INPROG_KEY) || "null"); } catch (e) { return null; }
+}
+function clearInProgress() { localStorage.removeItem(INPROG_KEY); }
+
+function escapeHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+// Render text into an element: paragraphs split on blank lines, [[TABLE]] blocks as aligned monospace
+function renderRichText(el, text){
+  el.innerHTML = '';
+  for (const para of String(text).split('\n\n')) {
+    if (para.startsWith('[[TABLE]]')) {
+      const pre = document.createElement('pre');
+      pre.className = 'stem-table';
+      pre.textContent = para.replace(/^\[\[TABLE\]\]\n?/, '');
+      el.appendChild(pre);
+    } else {
+      const p = document.createElement('p');
+      p.textContent = para;
+      el.appendChild(p);
+    }
+  }
+}
+function fmtTime(sec) {
+  if (sec < 0) sec = 0;
+  const m = Math.floor(sec/60), s = sec % 60;
+  return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
+
+/* ─── Block menu (start screen) ─── */
+function renderBlockMenu() {
+  if (!window.FREE120 || !BLOCKS) {
+    $('block-grid').innerHTML = '<div style="color:var(--bad);padding:20px;border:1px dashed var(--bad);border-radius:8px">Data file not loaded. Run <code>python3 extract_free120.py</code> in this folder, then refresh.</div>';
+    return;
+  }
+  const grid = $('block-grid');
+  const prog = loadProg();
+  grid.innerHTML = '';
+  const sb = $('start-blurb');
+  if (sb) sb.textContent = `${BLOCKS.length} blocks of ${BLOCKS[0] ? BLOCKS[0].items.length : 20} questions, ${BLOCK_MIN} minutes each (90 sec/Q pace). The timer can be paused at any time. Lab Values reference is available in every block. Each block can be retaken; your answers reset on a new attempt.`;
+  BLOCKS.forEach((b, idx) => {
+    const rec = prog[idx];
+    const btn = document.createElement('button');
+    btn.className = 'blk-btn';
+    // No score reveal until all 6 are done. Show only completion + time spent.
+    const statusHtml = rec && rec.completed
+      ? `<div class="meta done">✓ Completed · ${fmtTime(rec.timeSpent || 0)}</div>`
+      : `<div class="meta">Not yet attempted</div>`;
+    btn.innerHTML = `<div class="label">Block ${b.n}</div>
+                     <div class="meta">${b.items.length} questions · ${BLOCK_MIN} min</div>
+                     ${statusHtml}`;
+    btn.addEventListener('click', () => startBlock(idx));
+    grid.appendChild(btn);
+  });
+  // If all 6 done, show a CTA banner
+  const allDone = allBlocksDone();
+  let banner = document.getElementById('all-done-banner');
+  if (allDone) {
+    if (!banner) {
+      banner = document.createElement('div');
+      banner.id = 'all-done-banner';
+      banner.style.cssText = 'margin-top:18px;padding:14px 18px;background:#dcfce7;border:1.5px solid #86efac;border-radius:8px;display:flex;align-items:center;gap:12px';
+      banner.innerHTML = `
+        <span style="font-size:22px">🎉</span>
+        <div style="flex:1">
+          <div style="font-weight:700;color:#166534">All ${BLOCKS.length} blocks completed</div>
+          <div style="font-size:13px;color:#166534">Click below to reveal your score and the answer key.</div>
+        </div>
+        <button class="blk-btn" style="padding:10px 18px;background:#166534;color:#fff;border:0;font-weight:700;cursor:pointer">View results</button>
+      `;
+      banner.querySelector('button').addEventListener('click', showFinalSummary);
+      grid.parentNode.insertBefore(banner, grid.nextSibling);
+    }
+  } else if (banner) {
+    banner.remove();
+  }
+}
+
+/* ─── Block lifecycle ─── */
+function startBlock(idx) {
+  const block = BLOCKS[idx];
+  if (!block) return;
+  const prog = loadProg();
+  const rec = prog[idx];
+  let confirmRetake = true;
+  if (rec && rec.completed) {
+    confirmRetake = confirm(`Block ${block.n} is already completed. Retake it? Your previous answers for this block will be replaced.`);
+    if (!confirmRetake) return;
+  }
+  state = {
+    blockIdx: idx,
+    itemIdx: 0,
+    answers: {},     // start fresh on every block start (no peeking at prior answers either)
+    marks: {},
+    strikes: {},        // {itemNum: ['A','C']} crossed-out choices
+    timeOnItem: {},     // {itemNum: seconds}
+    changes: {},        // {itemNum: # of answer changes}
+    firstAnswer: {},    // {itemNum: first letter chosen}
+    remaining: BLOCK_SEC,
+    paused: false,
+    startedAt: Date.now(),
+    reviewMode: false,
+  };
+  $('start').style.display = 'none';
+  $('intermission').style.display = 'none';
+  $('final').style.display = 'none';
+  $('exam').classList.add('live');
+  $('block-label').textContent = `Block ${block.n}`;
+  $('btn-pause').disabled = false;
+  $('timer').style.background = '';
+  buildItemRail();
+  renderItem();
+  startTimer();
+}
+
+function buildItemRail() {
+  const rail = $('item-rail');
+  rail.innerHTML = '';
+  const items = BLOCKS[state.blockIdx].items;
+  items.forEach((it, i) => {
+    const cell = document.createElement('div');
+    cell.className = 'it';
+    cell.textContent = i + 1;
+    cell.dataset.idx = i;
+    cell.addEventListener('click', () => { state.itemIdx = i; renderItem(); });
+    rail.appendChild(cell);
+  });
+  updateRail();
+}
+function updateRail() {
+  const items = BLOCKS[state.blockIdx].items;
+  document.querySelectorAll('.item-rail .it').forEach((el, i) => {
+    el.classList.toggle('current',  i === state.itemIdx);
+    el.classList.toggle('answered', state.answers[items[i].n] != null);
+    el.classList.toggle('marked',   !!state.marks[items[i].n]);
+  });
+}
+
+function renderItem() {
+  const items = BLOCKS[state.blockIdx].items;
+  const it = items[state.itemIdx];
+  if (!it) return;
+  // defensive init (review mode / older saved state may lack these)
+  state.strikes = state.strikes || {}; state.timeOnItem = state.timeOnItem || {};
+  state.changes = state.changes || {}; state.firstAnswer = state.firstAnswer || {};
+  $('item-label').textContent = `Item ${state.itemIdx+1} of ${items.length}`;
+  $('qnum').textContent = `Item ${state.itemIdx+1}`;
+  // Sidecar metadata can override garbled stems/abstracts/images (survives data re-extraction)
+  const qmeta = (window.FREE120_META || {})[it.n];
+  // Shared abstract (research-abstract sets) renders ABOVE the stem
+  const ab = $('qabstract');
+  const abText = (qmeta && qmeta.abstract) || it.abstract;
+  if (abText) { renderRichText(ab, abText); ab.style.display = ''; }
+  else { ab.style.display = 'none'; }
+  // Stem; [[TABLE]] sections render as aligned monospace blocks
+  let stemText = (qmeta && qmeta.stem) || it.stem || '(no stem)';
+  if (qmeta && qmeta.optionGrid) {
+    // the option grid renders the column headers cleanly; drop the leftover header row from the stem
+    const parts = stemText.split('\n\n');
+    const last = parts[parts.length - 1].replace(/^\[\[TABLE\]\]\n?/, '');
+    if (/\S\s{2,}\S/.test(last) && last.length < 80 && !/[.?]\s*$/.test(last.trim())) {
+      parts.pop();
+      stemText = parts.join('\n\n');
+    }
+  }
+  renderRichText($('qstem'), stemText);
+  // Images (x-rays, ECGs, photographs) render between stem and options
+  const imgWrap = $('qimages');
+  imgWrap.innerHTML = '';
+  let imgList = (qmeta && qmeta.images) || it.images;
+  // figures extract lazily, per question, on first view (so the test starts instantly)
+  if ((!imgList || !imgList.length) && window._F120 && !it._figDone && window.Free120Parser.figurePageForItem) {
+    const pg = window.Free120Parser.figurePageForItem(window._F120.year, it.n);
+    if (pg) {
+      it._figDone = true;
+      imgWrap.innerHTML = '<div style="color:var(--muted);font-size:13px;padding:8px 0">Loading figure…</div>';
+      const reqN = it.n;
+      window.Free120Parser.extractOneFigure(window._F120.pdf, pg).then(url => {
+        if (url) it.images = [url];
+        const cur = BLOCKS[state.blockIdx] && BLOCKS[state.blockIdx].items[state.itemIdx];
+        if (cur && cur.n === reqN) renderItem();
+      });
+      imgList = null;
+    }
+  }
+  if (imgList && imgList.length) {
+    for (const src of imgList) {
+      const im = document.createElement('img');
+      im.src = src;
+      im.alt = 'Question figure';
+      im.addEventListener('click', () => {
+        im.classList.toggle('zoomed');
+        let bd = document.querySelector('.qimages-backdrop');
+        if (!bd) {
+          bd = document.createElement('div');
+          bd.className = 'qimages-backdrop';
+          document.body.appendChild(bd);
+          bd.addEventListener('click', () => {
+            document.querySelectorAll('.qimages img.zoomed').forEach(i => i.classList.remove('zoomed'));
+            bd.classList.remove('open');
+          });
+        }
+        bd.classList.toggle('open', im.classList.contains('zoomed'));
+      });
+      imgWrap.appendChild(im);
+    }
+  }
+  $('mark-cb').checked = !!state.marks[it.n];
+  $('mark-label').classList.toggle('marked', !!state.marks[it.n]);
+  const ul = $('opts');
+  ul.innerHTML = '';
+  // Tabular answer-grid (e.g. K+/Cl-/HCO3- "increased/decreased" matrices): render a column header
+  const oGrid = qmeta && qmeta.optionGrid;
+  const oh = $('opt-header');
+  if (oGrid && oGrid.cols) {
+    const tmpl = `34px repeat(${oGrid.cols.length}, 1fr)`;
+    oh.style.gridTemplateColumns = tmpl;
+    oh.innerHTML = '<div></div>' + oGrid.cols.map(c => `<div>${escapeHtml(c)}</div>`).join('');
+    oh.style.display = 'grid';
+  } else { oh.style.display = 'none'; }
+  it.options.forEach(opt => {
+    const li = document.createElement('li');
+    li.dataset.letter = opt.letter;
+    if (oGrid && oGrid.cols) {
+      li.classList.add('gridopt');
+      li.style.gridTemplateColumns = `34px repeat(${oGrid.cols.length}, 1fr)`;
+      const vals = opt.text.trim().split(/\s+/);
+      li.innerHTML = `<span class="letter">${opt.letter}</span>` +
+        oGrid.cols.map((c, ix) => `<span class="cell">${escapeHtml(vals[ix] || '')}</span>`).join('');
+    } else {
+      li.innerHTML = `<span class="letter">${opt.letter}</span><span>${opt.text}</span>`;
+    }
+    li.addEventListener('click', () => {
+      if (state.reviewMode) return;
+      recordAnswer(it, opt.letter);
+      saveInProgress();    // persist immediately on every answer
+      // update selection in place so stem highlights aren't wiped by a full re-render
+      ul.querySelectorAll('li').forEach(x => x.classList.toggle('sel', x.dataset.letter === opt.letter));
+      updateRail();
+      $('status').textContent = `Item ${state.itemIdx+1} of ${items.length} · ${Object.keys(state.answers).length} answered · ${Object.keys(state.marks).length} marked`;
+    });
+    // right-click to strike out a choice (toggle), like the real FRED interface
+    li.addEventListener('contextmenu', ev => {
+      ev.preventDefault();
+      if (state.reviewMode) return;
+      const set = state.strikes[it.n] || (state.strikes[it.n] = []);
+      const ix = set.indexOf(opt.letter);
+      if (ix >= 0) set.splice(ix, 1); else set.push(opt.letter);
+      li.classList.toggle('struck', set.includes(opt.letter));
+      saveInProgress();
+    });
+    if (state.answers[it.n] === opt.letter) li.classList.add('sel');
+    if ((state.strikes[it.n] || []).includes(opt.letter)) li.classList.add('struck');
+    // In review mode, color by correctness
+    if (state.reviewMode) {
+      if (opt.letter === it.answer)                              li.classList.add('review-correct-answer');
+      if (state.answers[it.n] === opt.letter && opt.letter === it.answer) li.classList.add('review-correct');
+      if (state.answers[it.n] === opt.letter && opt.letter !== it.answer) li.classList.add('review-wrong');
+    }
+    ul.appendChild(li);
+  });
+  // Review-mode explanation panel (reuses qmeta from above)
+  const ex = $('explanation');
+  if (state.reviewMode && qmeta && qmeta.explanation) {
+    ex.innerHTML = `<div class="tags"><span class="topic">${escapeHtml(qmeta.topic)}</span> · ${escapeHtml(qmeta.system)} · ${escapeHtml(qmeta.discipline)}</div><div class="body">${escapeHtml(qmeta.explanation)}</div>`;
+    ex.style.display = '';
+  } else {
+    ex.style.display = 'none';
+  }
+  $('status').textContent = state.reviewMode
+    ? `Reviewing — correct answer ${it.answer}${state.answers[it.n]?` · you chose ${state.answers[it.n]}`:''}`
+    : `Item ${state.itemIdx+1} of ${items.length} · ${Object.keys(state.answers).length} answered · ${Object.keys(state.marks).length} marked`;
+  updateRail();
+  $('qbox').scrollTo({top:0, behavior:'instant'});
+}
+
+/* ─── Timer ─── */
+function startTimer() {
+  stopTimer();
+  $('btn-pause').textContent = '⏸ Pause';
+  $('timer').classList.remove('paused');
+  timerHandle = setInterval(tick, 1000);
+  updateTimerDisplay();
+}
+function stopTimer() {
+  if (timerHandle) { clearInterval(timerHandle); timerHandle = null; }
+}
+function tick() {
+  if (state.paused || state.reviewMode) return;
+  state.remaining -= 1;
+  // accumulate time on the current item (pause-aware, since tick only runs while live)
+  state.timeOnItem = state.timeOnItem || {};
+  const cur = BLOCKS[state.blockIdx] && BLOCKS[state.blockIdx].items[state.itemIdx];
+  if (cur) state.timeOnItem[cur.n] = (state.timeOnItem[cur.n] || 0) + 1;
+  updateTimerDisplay();
+  // Save in-progress state every 5 seconds so a refresh survives
+  if (state.remaining % 5 === 0) saveInProgress();
+  if (state.remaining <= 0) endBlock(true);
+}
+function updateTimerDisplay() {
+  const t = $('timer');
+  t.textContent = fmtTime(state.remaining);
+  t.classList.toggle('lowtime', state.remaining <= 60 && !state.paused);
+}
+function togglePause() {
+  state.paused = !state.paused;
+  $('btn-pause').textContent = state.paused ? '▶ Resume' : '⏸ Pause';
+  $('timer').classList.toggle('paused', state.paused);
+  saveInProgress();
+}
+
+/* ─── Navigation ─── */
+function go(delta) {
+  const blocks = BLOCKS;
+  const N = blocks[state.blockIdx].items.length;
+  let newIdx = state.itemIdx + delta;
+  saveInProgress();
+
+  // In review mode, allow crossing block boundaries (walk the full 120)
+  if (state.reviewMode) {
+    if (newIdx < 0 && state.blockIdx > 0) {
+      state.blockIdx -= 1;
+      const prog = loadProg();
+      state.answers = (prog[state.blockIdx] && prog[state.blockIdx].answers) || {};
+      state.itemIdx = blocks[state.blockIdx].items.length - 1;
+      $('block-label').textContent = `Block ${blocks[state.blockIdx].n} · Review`;
+      buildItemRail();
+      renderItem();
+      return;
+    }
+    if (newIdx >= N && state.blockIdx < blocks.length - 1) {
+      state.blockIdx += 1;
+      const prog = loadProg();
+      state.answers = (prog[state.blockIdx] && prog[state.blockIdx].answers) || {};
+      state.itemIdx = 0;
+      $('block-label').textContent = `Block ${blocks[state.blockIdx].n} · Review`;
+      buildItemRail();
+      renderItem();
+      return;
+    }
+  }
+  state.itemIdx = Math.max(0, Math.min(N-1, newIdx));
+  renderItem();
+}
+
+/* ─── End block (no score reveal yet) ─── */
+function endBlock(timeUp) {
+  stopTimer();
+  clearInProgress();   // completed → no in-flight state to restore
+  const block = BLOCKS[state.blockIdx];
+  const answeredCount = Object.keys(state.answers).length;
+  const blank = block.items.length - answeredCount;
+  const timeSpent = BLOCK_SEC - state.remaining;
+  // Persist the user's answers (NOT the score — no reveal yet)
+  const prog = loadProg();
+  prog[state.blockIdx] = {
+    answers: {...state.answers},
+    completed: true,
+    timeSpent,
+    timeOnItem: {...state.timeOnItem},
+    changes: {...state.changes},
+    firstAnswer: {...state.firstAnswer},
+    when: Date.now(),
+  };
+  saveProg(prog);
+
+  $('exam').classList.remove('live');
+  // If all 6 done, go straight to final summary; otherwise show intermission
+  if (allBlocksDone()) {
+    showFinalSummary();
+    return;
+  }
+  $('intermission').style.display = '';
+  $('intermission-title').textContent = `Block ${block.n} ${timeUp ? '— time up' : 'complete'}`;
+  $('im-answered').textContent = answeredCount;
+  $('im-blank').textContent    = blank;
+  $('im-time').textContent     = fmtTime(timeSpent);
+  const done = Object.keys(loadProg()).filter(k => loadProg()[k] && loadProg()[k].completed).length;
+  const total = BLOCKS.length;
+  $('intermission-progress').textContent = `${done} of ${total} blocks complete · ${total-done} remaining`;
+}
+
+/* ─── Detailed per-question review table ─── */
+let _detailRows = [], _detailFilter = 'all', _detailSort = { key:'ord', dir:1 };
+function buildDetailRows(prog, META){
+  const rows = [];
+  BLOCKS.forEach((b, bi) => {
+    const rec = prog[bi] || {};
+    const an = rec.answers || {}, fa = rec.firstAnswer || {}, toi = rec.timeOnItem || {};
+    b.items.forEach((it, ii) => {
+      const you = an[it.n] || null;
+      const res = !you ? 'blank' : (you === it.answer ? 'correct' : 'wrong');
+      const first = fa[it.n] || null;
+      const t = (toi[it.n] != null) ? toi[it.n] : null;
+      const m = META[it.n] || {};
+      rows.push({ bi, ii, ord: bi*1000 + ii, blockN:b.n, itemN:ii+1,
+        you: you || '—', ans: it.answer, res, first, changed: !!(first && you && first !== you),
+        t, slow:(t != null && t > 120),
+        system:m.system || '—', discipline:m.discipline || '—', topic:m.topic || '—' });
+    });
+  });
+  return rows;
+}
+function detailPasses(r, f){
+  if (f === 'wrong')   return r.res === 'wrong';
+  if (f === 'blank')   return r.res === 'blank';
+  if (f === 'changed') return r.changed;
+  if (f === 'slow')    return r.slow;
+  return true;
+}
+function renderDetailTable(){
+  const tb = $('detail-tbody'); if (!tb) return;
+  const k = _detailSort.key, dir = _detailSort.dir;
+  const rows = _detailRows.filter(r => detailPasses(r, _detailFilter)).slice().sort((a,b) => {
+    let av = a[k], bv = b[k];
+    if (k === 't'){ av = a.t == null ? -1 : a.t; bv = b.t == null ? -1 : b.t; }
+    if (typeof av === 'string') return dir * av.localeCompare(bv);
+    return dir * ((av > bv) ? 1 : (av < bv ? -1 : 0));
+  });
+  tb.innerHTML = rows.map(r => {
+    const mark = r.res === 'correct' ? '✓' : (r.res === 'wrong' ? '✗' : '○');
+    const chg = r.changed ? ` <span class="chg" title="Changed from ${escapeHtml(r.first)}">⤳</span>` : '';
+    const tcell = r.t == null ? '—' : `<span class="${r.slow ? 't-slow' : ''}">${fmtTime(r.t)}</span>`;
+    return `<tr class="row-q" data-bi="${r.bi}" data-ii="${r.ii}">
+      <td class="detail-mono">B${r.blockN} · Q${r.itemN}</td>
+      <td class="res-${r.res}">${mark}${chg}</td>
+      <td class="detail-mono">${r.res === 'blank' ? '—' : escapeHtml(r.you)}</td>
+      <td class="detail-mono">${escapeHtml(r.ans)}</td>
+      <td class="detail-mono">${tcell}</td>
+      <td>${escapeHtml(r.system)}</td>
+      <td>${escapeHtml(r.discipline)}</td>
+      <td>${escapeHtml(r.topic)}</td>
+    </tr>`;
+  }).join('');
+  $('detail-empty').style.display = rows.length ? 'none' : '';
+}
+function buildDetailTable(prog, META){
+  _detailRows = buildDetailRows(prog, META);
+  _detailFilter = 'all'; _detailSort = { key:'ord', dir:1 };
+  $('detail-filters').querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c.dataset.filter === 'all'));
+  renderDetailTable();
+  $('detail-block').style.display = '';
+}
+function resetAllProgress(){
+  const keys = [];
+  for (let i = 0; i < localStorage.length; i++){
+    const k = localStorage.key(i);
+    if (k && k.indexOf('free120') === 0 && k !== SETTINGS_KEY) keys.push(k);
+  }
+  keys.forEach(k => localStorage.removeItem(k));
+}
+
+/* ─── Final summary (only when all 6 blocks completed) ─── */
+function showFinalSummary() {
+  $('start').style.display = 'none';
+  $('intermission').style.display = 'none';
+  $('exam').classList.remove('live');
+  $('final').style.display = '';
+  const prog = loadProg();
+  let totalCorrect = 0, totalWrong = 0, totalBlank = 0, totalTime = 0;
+  const tbody = $('final-tbody');
+  tbody.innerHTML = '';
+  BLOCKS.forEach((b, i) => {
+    const rec = prog[i] || {answers: {}, timeSpent: 0};
+    let c = 0, w = 0, bl = 0;
+    b.items.forEach(it => {
+      const a = (rec.answers || {})[it.n];
+      if (!a) bl += 1;
+      else if (a === it.answer) c += 1;
+      else w += 1;
+    });
+    totalCorrect += c; totalWrong += w; totalBlank += bl; totalTime += (rec.timeSpent || 0);
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td style="padding:8px;border-bottom:1px solid #eef2f5">Block ${b.n}</td>
+      <td style="padding:8px;border-bottom:1px solid #eef2f5;text-align:right">${c}/${b.items.length}</td>
+      <td style="padding:8px;border-bottom:1px solid #eef2f5;text-align:right">${Math.round(100*c/b.items.length)}%</td>
+      <td style="padding:8px;border-bottom:1px solid #eef2f5;text-align:right">${fmtTime(rec.timeSpent || 0)}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+  const totalItems = BLOCKS.reduce((s,b)=>s+b.items.length,0) || 120;
+  $('final-score-line').textContent = `${totalCorrect} / ${totalItems}  (${Math.round(100*totalCorrect/totalItems)}%)`;
+  $('f-correct').textContent = totalCorrect;
+  $('f-wrong').textContent   = totalWrong;
+  $('f-blank').textContent   = totalBlank;
+  $('f-time').textContent    = fmtTime(totalTime);
+
+  // ── Second-guessing + pace insight (from per-item tracking) ──
+  let changedItems=0, rightToWrong=0, wrongToRight=0;
+  let slow=0, timedItems=0, timeSum=0;
+  BLOCKS.forEach((b, i) => {
+    const rec = prog[i] || {};
+    const fa = rec.firstAnswer || {}, an = rec.answers || {}, toi = rec.timeOnItem || {};
+    b.items.forEach(it => {
+      const first = fa[it.n], fin = an[it.n];
+      if (first && fin && first !== fin) {
+        changedItems++;
+        const fc = first === it.answer, lc = fin === it.answer;
+        if (fc && !lc) rightToWrong++;
+        else if (!fc && lc) wrongToRight++;
+      }
+      if (toi[it.n] != null) { timedItems++; timeSum += toi[it.n]; if (toi[it.n] > 120) slow++; }
+    });
+  });
+  const box = $('final-insight');
+  if (changedItems > 0 || timedItems > 0) {
+    let html = '';
+    if (changedItems > 0) {
+      let verdict;
+      if (rightToWrong > wrongToRight) verdict = ` Your first instinct was better on net (${rightToWrong} right→wrong vs ${wrongToRight} wrong→right). Trust it more.`;
+      else if (wrongToRight > rightToWrong) verdict = ` Changing helped on net (${wrongToRight} wrong→right vs ${rightToWrong} right→wrong); your review caught real errors.`;
+      else verdict = ` It washed out (${rightToWrong} right→wrong vs ${wrongToRight} wrong→right).`;
+      html += `<div><b>Second-guessing:</b> you changed your answer on ${changedItems} item(s).${verdict}</div>`;
+    }
+    if (timedItems > 0) {
+      const avg = Math.round(timeSum / timedItems);
+      html += `<div style="margin-top:8px"><b>Pace:</b> ${avg}s/item average · ${slow} item(s) took over 2 min (90s/item is the target).</div>`;
+    }
+    box.innerHTML = html;
+    box.style.display = '';
+  } else {
+    box.style.display = 'none';
+  }
+
+  // ── Weak-spot breakdown by system + discipline (from sidecar metadata) ──
+  const META = window.FREE120_META || {};
+  function aggBy(key){
+    const agg = {};
+    BLOCKS.forEach((b, i) => {
+      const an = (prog[i] || {}).answers || {};
+      b.items.forEach(it => {
+        const m = META[it.n]; if (!m) return;
+        const g = m[key]; if (!g) return;
+        agg[g] = agg[g] || {c:0, t:0};
+        agg[g].t++; if (an[it.n] === it.answer) agg[g].c++;
+      });
+    });
+    return Object.entries(agg)
+      .map(([name,v]) => ({name, c:v.c, t:v.t, pct:Math.round(100*v.c/v.t)}))
+      .sort((a,b) => a.pct - b.pct || b.t - a.t);
+  }
+  function rowsHtml(rows){
+    return rows.map(r => {
+      const col = r.pct < 50 ? '#b42318' : r.pct < 70 ? '#d97706' : '#16a34a';
+      return `<div class="ws-row"><div class="ws-name">${escapeHtml(r.name)}</div>` +
+             `<div class="ws-bar"><i style="width:${r.pct}%;background:${col}"></i></div>` +
+             `<div class="ws-num">${r.c}/${r.t} · ${r.pct}%</div></div>`;
+    }).join('');
+  }
+  const ws = $('weakspot');
+  const bySys = aggBy('system');
+  if (bySys.length) {
+    ws.innerHTML = '<h3>Performance by system (weakest first)</h3>' + rowsHtml(bySys) +
+                   '<div class="ws-sub">By discipline</div>' + rowsHtml(aggBy('discipline'));
+    ws.style.display = '';
+  } else {
+    ws.style.display = 'none';
+  }
+
+  // ── Question-by-question table ──
+  buildDetailTable(prog, META);
+}
+
+/* ─── Review all answers across the whole 120 (post-final-summary) ─── */
+function enterFullReview(bi, ii) {
+  // Reload state from persisted answers so each block can be navigated in review.
+  bi = bi || 0; ii = ii || 0;
+  state.reviewMode = true;
+  state.blockIdx = bi;
+  state.itemIdx = ii;
+  const prog = loadProg();
+  state.answers = (prog[bi] && prog[bi].answers) || {};
+  state.marks = {};
+  $('final').style.display = 'none';
+  $('exam').classList.add('live');
+  $('block-label').textContent = `Block ${BLOCKS[bi].n} · Review`;
+  $('btn-pause').disabled = true;
+  $('btn-pause').textContent = '✏ Review';
+  $('btn-quit').textContent = '← Results';
+  $('timer').textContent = '— review —';
+  $('timer').style.background = 'rgba(255,255,255,0.18)';
+  stopTimer();
+  buildItemRail();
+  renderItem();
+}
+
+/* ─── Lab modal ─── */
+function buildLabsBody() {
+  const body = $('labs-body');
+  const parts = [];
+  for (const [section, rows] of LABS) {
+    parts.push(`<section class="lab-section" data-section="${section.toLowerCase()}">`);
+    parts.push(`<h3>${section}</h3>`);
+    parts.push(`<div class="lab-grid">`);
+    for (const [lab, range, si] of rows) {
+      // escape & FIRST, then < (reversing this double-encodes every "<" → "&lt;")
+      const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+      const safeLab = esc(lab);
+      const safeRange = esc(range);
+      const siHtml = si ? `<span class="si">${esc(si)}</span>` : '';
+      const tokens = (lab + ' ' + range + ' ' + (si||'')).toLowerCase();
+      parts.push(`<div class="lab-row" data-tokens="${tokens.replace(/"/g,'')}">
+        <div class="name">${safeLab}</div>
+        <div class="vals"><div class="range">${safeRange}</div>${siHtml}</div>
+      </div>`);
+    }
+    parts.push(`</div></section>`);
+  }
+  body.innerHTML = parts.join('');
+  // Wire search
+  const search = $('lab-search');
+  if (search && !search.dataset.wired) {
+    search.dataset.wired = '1';
+    search.addEventListener('input', () => {
+      const q = search.value.trim().toLowerCase();
+      const rows = body.querySelectorAll('.lab-row');
+      const sections = body.querySelectorAll('.lab-section');
+      if (!q) {
+        rows.forEach(r => r.classList.remove('hidden'));
+        sections.forEach(s => s.classList.remove('hidden'));
+        return;
+      }
+      rows.forEach(r => r.classList.toggle('hidden', r.dataset.tokens.indexOf(q) === -1));
+      sections.forEach(s => {
+        const anyVisible = s.querySelectorAll('.lab-row:not(.hidden)').length > 0;
+        s.classList.toggle('hidden', !anyVisible);
+      });
+    });
+  }
+}
+function openLabs()  { $('modal-back').classList.add('open'); $('modal-labs').classList.add('open'); }
+function closeLabs() { $('modal-back').classList.remove('open'); $('modal-labs').classList.remove('open'); }
+
+/* ─── Backup: export / import ALL free120 localStorage keys ─── */
+function exportProgress() {
+  const dump = {};
+  for (let i = 0; i < localStorage.length; i++) {
+    const k = localStorage.key(i);
+    if (k && k.startsWith('free120')) dump[k] = localStorage.getItem(k);
+  }
+  const stamp = new Date().toISOString().slice(0,10);
+  const blob = new Blob([JSON.stringify(dump, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `free120_backup_${stamp}.json`;
+  a.click();
+  const s = $('io-status');
+  if (s) s.textContent = `Exported ${Object.keys(dump).length} saved key(s) → free120_backup_${stamp}.json`;
+}
+function importProgress(file) {
+  const reader = new FileReader();
+  reader.onload = () => {
+    let obj;
+    try { obj = JSON.parse(reader.result); }
+    catch (e) { const s=$('io-status'); if (s) s.textContent = 'Import failed: not a valid backup file.'; return; }
+    let n = 0;
+    for (const k in obj) { if (k.startsWith('free120')) { localStorage.setItem(k, obj[k]); n++; } }
+    const s = $('io-status');
+    if (s) s.textContent = `Imported ${n} key(s). Reloading…`;
+    setTimeout(() => location.reload(), 700);
+  };
+  reader.readAsText(file);
+}
+
+/* ─── Settings: font size, reverse colors, block layout ─── */
+const SETTINGS_KEY = "free120_settings_v1";
+let settings = (function(){
+  try { return Object.assign({fontSize:'md', dark:false, blockMode:'20'}, JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}')); }
+  catch (e) { return {fontSize:'md', dark:false, blockMode:'20'}; }
+})();
+function saveSettings(){ localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); }
+function applySettings(){
+  document.body.classList.remove('fs-sm','fs-md','fs-lg');
+  document.body.classList.add('fs-' + (settings.fontSize || 'md'));
+  document.body.classList.toggle('dark', !!settings.dark);
+  document.querySelectorAll('#seg-font button').forEach(b => b.classList.toggle('on', b.dataset.fs === settings.fontSize));
+  document.querySelectorAll('#seg-dark button').forEach(b => b.classList.toggle('on', b.dataset.dark === (settings.dark?'1':'0')));
+  document.querySelectorAll('#seg-blocks button').forEach(b => b.classList.toggle('on', b.dataset.mode === settings.blockMode));
+}
+// Block layout: 6×20 keeps the original keys (so existing results load); 3×40 is namespaced.
+function applyMode(){
+  PROG_KEY   = settings.blockMode==='40' ? "free120_prog40_v1"   : "free120_prog_v2";
+  INPROG_KEY = settings.blockMode==='40' ? "free120_inprog40_v1" : "free120_inprog_v1";
+  BLOCK_MIN  = settings.blockMode==='40' ? 60 : 30;
+  BLOCK_SEC  = BLOCK_MIN * 60;
+  rebuildBlocks();
+}
+function rebuildBlocks(){
+  const base = (window.FREE120 || {}).blocks || [];
+  if (settings.blockMode==='40') {
+    const flat = base.flatMap(b => b.items);
+    BLOCKS = [];
+    for (let i=0; i<flat.length; i+=40) BLOCKS.push({ n: BLOCKS.length+1, items: flat.slice(i, i+40) });
+  } else {
+    BLOCKS = base;
+  }
+}
+function setSetting(key, val){
+  if (key==='blockMode') {
+    if ($('exam').classList.contains('live')) return;          // not mid-block
+    settings.blockMode = val; saveSettings(); applyMode(); applySettings(); renderBlockMenu();
+    return;
+  }
+  settings[key] = (key==='dark') ? (val==='1'||val===true) : val;
+  saveSettings(); applySettings();
+}
+
+/* ─── Highlight (stem) + strikethrough (options) ─── */
+function recordAnswer(it, letter){
+  const prev = state.answers[it.n];
+  if (prev && prev !== letter) state.changes[it.n] = (state.changes[it.n]||0) + 1;
+  if (!(it.n in state.firstAnswer)) state.firstAnswer[it.n] = letter;
+  state.answers[it.n] = letter;
+}
+function wireHighlighting(){
+  function highlightWithin(container){
+    const sel = window.getSelection();
+    if (!sel || sel.isCollapsed) return;
+    const range = sel.getRangeAt(0);
+    if (!container.contains(range.commonAncestorContainer)) return;
+    try {
+      const mark = document.createElement('mark');
+      mark.className = 'hl';
+      mark.appendChild(range.extractContents());
+      range.insertNode(mark);
+      sel.removeAllRanges();
+    } catch (e) { /* selection crossed element boundaries — ignore */ }
+  }
+  ['qstem','qabstract'].forEach(id => {
+    $(id).addEventListener('mouseup', () => { if (!state.reviewMode) setTimeout(() => highlightWithin($(id)), 0); });
+  });
+  // click a highlight to remove it
+  $('qbox').addEventListener('click', e => {
+    const m = e.target.closest && e.target.closest('mark.hl');
+    if (m) { const p = m.parentNode; while (m.firstChild) p.insertBefore(m.firstChild, m); p.removeChild(m); p.normalize(); }
+  });
+}
+
+/* ─── End-of-block review screen ─── */
+function openBlockReview(){
+  const items = BLOCKS[state.blockIdx].items;
+  const grid = $('rv-grid'); grid.innerHTML = '';
+  let answered = 0, marked = 0;
+  items.forEach((it, i) => {
+    const c = document.createElement('div');
+    c.className = 'rv-cell';
+    c.textContent = i + 1;
+    if (state.answers[it.n] != null) { c.classList.add('answered'); answered++; }
+    else c.classList.add('blank');
+    if (state.marks[it.n]) { c.classList.add('marked'); marked++; }
+    c.addEventListener('click', () => { closeBlockReview(); state.itemIdx = i; renderItem(); });
+    grid.appendChild(c);
+  });
+  $('rv-title').textContent = `Review — Block ${BLOCKS[state.blockIdx].n}`;
+  $('rv-counts').textContent = `${answered} answered · ${items.length - answered} blank · ${marked} marked for review`;
+  $('block-review').classList.add('open');
+}
+function closeBlockReview(){ $('block-review').classList.remove('open'); }
+
+/* ─── On-screen calculator (safe arithmetic, no eval) ─── */
+function wireCalc(){
+  let expr = '';
+  const disp = $('calc-disp');
+  const render = () => { disp.textContent = expr || '0'; };
+  function evalExpr(s){
+    const tokens = s.match(/(\d+\.?\d*|[+\-*/])/g);
+    if (!tokens) return 0;
+    const nums = [], ops = [];
+    const prec = o => (o==='*'||o==='/') ? 2 : 1;
+    const apply = () => { const b = nums.pop(), a = nums.pop(), o = ops.pop();
+      nums.push(o==='+'?a+b : o==='-'?a-b : o==='*'?a*b : a/b); };
+    for (const t of tokens) {
+      if (/^[+\-*/]$/.test(t)) { while (ops.length && prec(ops[ops.length-1]) >= prec(t)) apply(); ops.push(t); }
+      else nums.push(parseFloat(t));
+    }
+    while (ops.length) apply();
+    const r = nums.length ? nums[0] : 0;
+    return Math.round((r + Number.EPSILON) * 1e6) / 1e6;
+  }
+  $('calc-keys').addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    const k = b.dataset.k;
+    if (k==='C') expr = '';
+    else if (k==='←') expr = expr.slice(0, -1);
+    else if (k==='=') { try { expr = String(evalExpr(expr)); } catch(_) { expr = 'Error'; } }
+    else if (k==='%') { try { expr = String(evalExpr(expr) / 100); } catch(_) {} }
+    else { if (expr==='Error') expr=''; expr += k; }
+    render();
+  });
+  // draggable header
+  const head = $('calc-head'); let drag = null;
+  head.addEventListener('mousedown', e => {
+    if (e.target.id==='calc-close') return;
+    const c = $('calc'); drag = {x:e.clientX, y:e.clientY, l:c.offsetLeft, t:c.offsetTop}; e.preventDefault();
+  });
+  document.addEventListener('mousemove', e => {
+    if (!drag) return; const c = $('calc');
+    c.style.left = (drag.l + e.clientX - drag.x) + 'px';
+    c.style.top  = (drag.t + e.clientY - drag.y) + 'px';
+    c.style.right = 'auto';
+  });
+  document.addEventListener('mouseup', () => { drag = null; });
+  $('calc-close').addEventListener('click', () => $('calc').classList.remove('open'));
+}
+
+/* ─── Upload + parse (browser-side, user's own PDF) ─── */
+let _selectedFile = null;
+function buildMetaFor(year){
+  return (window.FREE120_EXPLANATIONS && window.FREE120_EXPLANATIONS[year]) || {};
+}
+async function buildFromPDF(file, year){
+  const st = $('up-status');
+  st.classList.remove('err');
+  if (!window.pdfjsLib) { st.textContent = 'PDF engine did not load (check your connection and refresh).'; st.classList.add('err'); return; }
+  try {
+    st.textContent = 'Reading PDF…';
+    const buf = await file.arrayBuffer();
+    const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
+    st.textContent = 'Extracting ' + pdf.numPages + ' pages…';
+    const { full } = await window.Free120Parser.pdfToText(pdf);
+    st.textContent = 'Parsing questions…';
+    const data = window.Free120Parser.parse(full);
+    const nQ = data.questions ? data.questions.length : 0;
+    const nA = data._answers || 0;
+    if (nQ < 100 || nA < 100) {
+      st.textContent = 'Could not read a full 120 from that file (' + nQ + ' questions, ' + nA + ' answers). Make sure it is the official Free 120 PDF, not a scan.';
+      st.classList.add('err');
+      return;
+    }
+    // figures load lazily (per question, on first view) so the test starts instantly
+    window._F120 = { pdf: pdf, year: year };
+    window.FREE120 = data;
+    window.FREE120_META = buildMetaFor(year);
+    $('upload').style.display = 'none';
+    $('start').style.display = '';
+    applyMode();
+    renderBlockMenu();
+    setTimeout(resumeInProgressIfAny, 50);
+  } catch (e) {
+    st.textContent = 'Failed to read that PDF: ' + (e && e.message ? e.message : e);
+    st.classList.add('err');
+  }
+}
+function wireUpload(){
+  const drop = $('up-drop'), input = $('up-file'), build = $('up-build'), st = $('up-status');
+  function pick(f){
+    if (!f) return;
+    if (f.type && f.type.indexOf('pdf') === -1 && !/\.pdf$/i.test(f.name)) { st.textContent = 'Please choose a PDF file.'; st.classList.add('err'); return; }
+    _selectedFile = f; build.disabled = false; st.classList.remove('err');
+    st.textContent = 'Ready: ' + f.name + '  (' + Math.round(f.size/1024) + ' KB). Click Build my test.';
+  }
+  drop.addEventListener('click', () => input.click());
+  input.addEventListener('change', e => pick(e.target.files[0]));
+  drop.addEventListener('dragover', e => { e.preventDefault(); drop.classList.add('over'); });
+  drop.addEventListener('dragleave', () => drop.classList.remove('over'));
+  drop.addEventListener('drop', e => { e.preventDefault(); drop.classList.remove('over'); pick(e.dataTransfer.files[0]); });
+  build.addEventListener('click', () => { if (_selectedFile) buildFromPDF(_selectedFile, $('up-year').value); });
+}
+
+/* ─── Wire it all up ─── */
+function bakedBoot() {
+  // Questions + fixes are already loaded (free120_data.js sets window.FREE120 with .blocks;
+  // free120_meta.js sets window.FREE120_META). Wire each figure item to its pre-extracted PNG.
+  const FIGS = {
+    25:'img/page-022-002.png', 26:'img/page-023-003.png', 33:'img/page-025-004.png',
+    53:'img/page-032-005.png', 54:'img/page-032-005.png', 60:'img/page-035-006.png',
+    76:'img/page-040-007.png', 80:'img/page-042-008.png', 87:'img/page-045-009.png',
+    107:'img/page-053-010.png', 114:'img/page-055-011.png'
+  };
+  const META = window.FREE120_META = window.FREE120_META || {};
+  for (const n in FIGS) {
+    META[n] = META[n] || {};
+    if (!(META[n].images && META[n].images.length)) META[n].images = [FIGS[n]];
+  }
+  // Clean residual font garble in the baked data (same transforms as the live parser):
+  // mojibake glyphs, control-char spacing, dropped /mm3 and cm H2O subscripts.
+  const deGarble = s => s == null ? s : String(s)
+    .replace(/ȝ/g,'µ').replace(/ȕ/g,'β').replace(/Į/g,'α').replace(/í/g,'−')
+    .replace(/[\x01-\x08\x0e-\x1f]/g, c => String.fromCharCode(c.charCodeAt(0) + 29))
+    .replace(/[\x80-\x9f]/g,'')
+    .replace(/(\d)\/mm3?(?![A-Za-z0-9³])/g,'$1/mm³')
+    .replace(/cm\s+H\s*2\s*[0O]\b/g,'cm H₂O');
+  (window.FREE120.questions || []).forEach(q => {
+    q.stem = deGarble(q.stem);
+    (q.options || []).forEach(o => o.text = deGarble(o.text));
+  });
+  // Q120 has a Caesar-shifted sentence the general pass cannot safely fix; hand-corrected here.
+  META['120'] = META['120'] || {};
+  META['120'].stem = "A 47-year-old woman comes to the office because of a 2-month history of progressive weakness and numbness of her right leg. She has a 3-year history of type 2 diabetes mellitus treated with metformin. She has worked as a stock person in a storeroom for 12 years; she often moves and lifts heavy objects and sometimes crawls into tight spaces. On neurologic examination, muscle strength is 5−/5 in the hip extensor, thigh abductor, hamstring, and gastrocnemius muscles on the right and intact on the left. Muscle strength is intact in the iliopsoas, thigh adductor, quadriceps, and tibial anterior muscles bilaterally. Deep tendon reflexes are 1+ in the right ankle and 2+ in the left ankle. Sensation to light touch is mildly decreased over the lateral and inferior aspects of the right foot. Sensation otherwise is intact. Which of the following is the most likely diagnosis?";
+  const up = document.getElementById('upload'); if (up) up.style.display = 'none';
+  $('start').style.display = '';
+  applyMode();
+  renderBlockMenu();
+  setTimeout(resumeInProgressIfAny, 50);
+}
+function resumeInProgressIfAny() {
+  const ip = loadInProgress();
+  if (!ip) return false;
+  // Only resume if the block isn't already marked completed in PROG_KEY
+  const prog = loadProg();
+  if (prog[ip.blockIdx] && prog[ip.blockIdx].completed) {
+    clearInProgress();
+    return false;
+  }
+  const block = window.FREE120 && BLOCKS && BLOCKS[ip.blockIdx];
+  if (!block) return false;
+  const ageMin = Math.round((Date.now() - ip.when) / 60000);
+  const remMin = Math.ceil(ip.remaining / 60);
+  const ansN   = Object.keys(ip.answers || {}).length;
+  const ok = confirm(
+    `Resume Block ${block.n}?\n\n` +
+    `${ansN} answered · ${remMin} min left on timer · saved ${ageMin} min ago\n\n` +
+    `OK = resume from where you left off  ·  Cancel = discard and return to block menu`
+  );
+  if (!ok) { clearInProgress(); return false; }
+  // Hydrate state from saved snapshot and re-enter the exam
+  state = {
+    blockIdx: ip.blockIdx,
+    itemIdx:  ip.itemIdx || 0,
+    answers:  ip.answers || {},
+    marks:    ip.marks || {},
+    strikes:  ip.strikes || {},
+    timeOnItem: ip.timeOnItem || {},
+    changes:  ip.changes || {},
+    firstAnswer: ip.firstAnswer || {},
+    remaining:ip.remaining,
+    paused:   true,         // auto-pause on resume so user can re-orient
+    startedAt:Date.now(),
+    reviewMode: false,
+  };
+  $('start').style.display = 'none';
+  $('intermission').style.display = 'none';
+  $('final').style.display = 'none';
+  $('exam').classList.add('live');
+  $('block-label').textContent = `Block ${block.n}`;
+  $('btn-pause').disabled = false;
+  $('btn-pause').textContent = '▶ Resume';
+  $('timer').classList.add('paused');
+  $('timer').style.background = '';
+  buildItemRail();
+  renderItem();
+  startTimer();
+  // startTimer flipped paused off in some branches; force it back on so timer is held
+  state.paused = true;
+  updateTimerDisplay();
+  return true;
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  applySettings();      // font size + reverse colors
+  wireHighlighting();
+  wireCalc();
+  buildLabsBody();
+  bakedBoot();          // questions are baked in; go straight to the block menu
+  $('btn-prev').addEventListener('click', () => go(-1));
+  $('btn-next').addEventListener('click', () => go(+1));
+  $('btn-pause').addEventListener('click', togglePause);
+  $('btn-labs').addEventListener('click', openLabs);
+  $('btn-quit').addEventListener('click', () => {
+    if (state.reviewMode) {
+      // Exit review back to final summary
+      state.reviewMode = false;
+      $('btn-pause').disabled = false;
+      $('btn-pause').textContent = '⏸ Pause';
+      $('btn-quit').textContent = '⏏ End Block';
+      $('exam').classList.remove('live');
+      $('timer').style.background = '';
+      showFinalSummary();
+      return;
+    }
+    // Show the end-of-block review screen (timer keeps running) instead of an instant submit.
+    openBlockReview();
+  });
+  $('modal-close').addEventListener('click', closeLabs);
+  $('modal-back').addEventListener('click', closeLabs);
+  // Backup buttons (start screen)
+  $('btn-export').addEventListener('click', exportProgress);
+  $('btn-import').addEventListener('click', () => $('import-file').click());
+  $('import-file').addEventListener('change', e => { if (e.target.files[0]) importProgress(e.target.files[0]); });
+  // Settings popover (openable from start screen and exam topnav)
+  function toggleSettings(e){ e.stopPropagation(); $('settings-pop').classList.toggle('open'); }
+  $('btn-settings').addEventListener('click', toggleSettings);
+  $('btn-settings-start').addEventListener('click', toggleSettings);
+  document.addEventListener('click', e => {
+    if (!e.target.closest('#settings-pop') && !e.target.closest('#btn-settings') && !e.target.closest('#btn-settings-start'))
+      $('settings-pop').classList.remove('open');
+  });
+  $('seg-font').addEventListener('click',   e => { const b=e.target.closest('button'); if (b) setSetting('fontSize',  b.dataset.fs); });
+  $('seg-dark').addEventListener('click',   e => { const b=e.target.closest('button'); if (b) setSetting('dark',      b.dataset.dark); });
+  $('seg-blocks').addEventListener('click', e => { const b=e.target.closest('button'); if (b) setSetting('blockMode', b.dataset.mode); });
+  // Calculator
+  $('btn-calc').addEventListener('click', () => $('calc').classList.toggle('open'));
+  // End-of-block review screen
+  $('rv-return').addEventListener('click', closeBlockReview);
+  $('rv-submit').addEventListener('click', () => { closeBlockReview(); endBlock(false); });
+  $('mark-cb').addEventListener('change', e => {
+    const it = BLOCKS[state.blockIdx].items[state.itemIdx];
+    if (e.target.checked) state.marks[it.n] = true; else delete state.marks[it.n];
+    $('mark-label').classList.toggle('marked', e.target.checked);
+    updateRail();
+    saveInProgress();
+  });
+  // Intermission buttons
+  $('btn-next-block').addEventListener('click', () => {
+    // Find the next un-completed block; if all are done, go to final summary
+    const prog = loadProg();
+    let nextIdx = -1;
+    for (let i = 0; i < BLOCKS.length; i++) {
+      if (!prog[i] || !prog[i].completed) { nextIdx = i; break; }
+    }
+    if (nextIdx === -1) { showFinalSummary(); return; }
+    startBlock(nextIdx);
+  });
+  // home (intermission & block menu)
+  document.querySelectorAll('#btn-home, #btn-home-final').forEach(b => b.addEventListener('click', () => {
+    state.reviewMode = false;
+    $('btn-pause').disabled = false;
+    $('btn-pause').textContent = '⏸ Pause';
+    $('timer').style.background = '';
+    $('intermission').style.display = 'none';
+    $('final').style.display = 'none';
+    $('exam').classList.remove('live');
+    $('start').style.display = '';
+    renderBlockMenu();
+  }));
+  // Final summary buttons
+  $('btn-review-final').addEventListener('click', () => enterFullReview(0, 0));
+  $('btn-reset-all').addEventListener('click', () => {
+    if (confirm('Reset the entire exam? This wipes every block of answers (both 20- and 40-question modes) and starts you over. Your uploaded PDF stays loaded.')) {
+      resetAllProgress();
+      state.answers = {}; state.marks = {};
+      $('final').style.display = 'none';
+      $('start').style.display = '';
+      renderBlockMenu();
+    }
+  });
+  $('btn-reset-start').addEventListener('click', () => {
+    if (confirm('Reset all answers? This wipes every block (both 20- and 40-question modes) and starts you over. Your uploaded PDF stays loaded.')) {
+      resetAllProgress();
+      state.answers = {}; state.marks = {};
+      renderBlockMenu();
+      const io = $('io-status'); if (io) io.textContent = 'All answers reset.';
+    }
+  });
+  // Detailed-table interactions (filter chips, column sort, row → review)
+  $('detail-filters').addEventListener('click', e => {
+    const c = e.target.closest('.chip'); if (!c) return;
+    _detailFilter = c.dataset.filter;
+    $('detail-filters').querySelectorAll('.chip').forEach(x => x.classList.toggle('on', x === c));
+    renderDetailTable();
+  });
+  $('detail-table').querySelector('thead').addEventListener('click', e => {
+    const th = e.target.closest('th'); if (!th || !th.dataset.sort) return;
+    const key = th.dataset.sort;
+    if (_detailSort.key === key) _detailSort.dir *= -1; else _detailSort = { key, dir:1 };
+    renderDetailTable();
+  });
+  $('detail-tbody').addEventListener('click', e => {
+    const tr = e.target.closest('tr.row-q'); if (!tr) return;
+    enterFullReview(parseInt(tr.dataset.bi, 10), parseInt(tr.dataset.ii, 10));
+  });
+  // Keyboard shortcuts
+  document.addEventListener('keydown', e => {
+    if (!$('exam').classList.contains('live')) return;
+    if (e.target.tagName === 'INPUT') return;
+    if (e.key === 'ArrowRight' || e.key.toLowerCase() === 'n') { go(+1); e.preventDefault(); }
+    if (e.key === 'ArrowLeft'  || e.key.toLowerCase() === 'p') { go(-1); e.preventDefault(); }
+    if (e.key === ' ') { togglePause(); e.preventDefault(); }
+    // A-F selects an option (if available)
+    const k = e.key.toUpperCase();
+    if (/^[A-F]$/.test(k) && !state.reviewMode) {
+      const it = BLOCKS[state.blockIdx].items[state.itemIdx];
+      const opt = it.options.find(o => o.letter === k);
+      if (opt) {
+        recordAnswer(it, k);
+        saveInProgress();
+        document.querySelectorAll('#opts li').forEach(x => x.classList.toggle('sel', x.dataset.letter === k));
+        updateRail();
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>
