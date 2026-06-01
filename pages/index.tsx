@@ -1,198 +1,197 @@
 import Head from 'next/head';
 
-// Adaptive App-Store-style screenshot: serves light variant by default,
-// swaps to dark when the user's system / browser prefers dark mode.
-function Shot({ name, alt }: { name: string; alt: string }) {
+// The app's wordmark, on the web: ● STEP (accent blue) GUNNER (dim),
+// SF Mono / system monospaced, all-caps, tracked — matches the splash +
+// home header in the iOS app.
+function Wordmark({ size = 18 }: { size?: number }) {
   return (
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcSet={`/screenshots/${name}-dark.jpg`} />
-      <img src={`/screenshots/${name}-light.jpg`} alt={alt} loading="lazy" />
-    </picture>
+    <span className="wm" style={{ fontSize: size }}>
+      <span className="wm-dot" />
+      <span className="wm-step">STEP</span>
+      <span className="wm-gun">GUNNER</span>
+    </span>
   );
 }
 
 export default function Home() {
+  const APP = 'https://apps.apple.com/us/app/step-gunner/id6761317357';
   return (
     <>
       <Head>
         <title>Step Gunner — USMLE Step 2 CK Prep</title>
-        <meta name="description" content="Step Gunner is a gamified USMLE Step 2 CK study app with spaced repetition, clinical vignettes, and high-yield questions. Built by a med student, for med students." />
+        <meta name="description" content="Step Gunner is a gamified USMLE Step 2 CK study app: clinical case missions, Socratic rounds, 1,400+ high-yield questions, spaced repetition, and weekly leagues. Built by a med student, for med students." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#0a0b0d" />
         <meta property="og:title" content="Step Gunner — USMLE Step 2 CK Prep" />
-        <meta property="og:description" content="Gamified Step 2 CK prep with spaced repetition, clinical vignettes, and high-yield questions." />
+        <meta property="og:description" content="Gun for honors. Clinical case missions, Socratic rounds, weekly leagues, and a streak that won't let you coast." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://stepgunner.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>
 
       <style jsx global>{`
         :root {
-          --green: #58cc02; --green-dark: #46a302; --green-glow: rgba(88,204,2,0.15);
-          --gold: #ffc800; --blue: #1cb0f6; --red: #ff4b4b;
-          --purple: #af52ff; --orange: #ff9632;
-          --bg: #fafbfc; --bg-dark: #131420;
-          --text: #1e2030; --text-dim: #6b7c93;
-          --card: #ffffff; --border: #e8eff5;
+          --bg: #0a0b0d; --bg-2: #0d0e13;
+          --panel: #121317; --panel-2: #16181d;
+          --hair: rgba(255,255,255,0.08); --hair-strong: rgba(255,255,255,0.14);
+          --ink: #f4f6f8; --ink-dim: #9aa1ab; --ink-faint: #5c636e;
+          --green: #46d877; --green-dark: #2f9e57; --green-glow: rgba(70,216,119,0.18);
+          --blue: #5090f7; --blue-glow: rgba(80,144,247,0.22);
+          --gold: #e3b542; --red: #ef6d6d; --purple: #af52ff;
+          --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+          --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'DM Sans', sans-serif; color: var(--text); background: var(--bg); }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--sans); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
         a { color: inherit; text-decoration: none; }
+        ::selection { background: var(--blue); color: #fff; }
+
+        /* WORDMARK */
+        .wm { display: inline-flex; align-items: center; gap: 7px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; line-height: 1; white-space: nowrap; }
+        .wm-dot { width: 0.4em; height: 0.4em; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green-glow); }
+        .wm-step { color: var(--blue); }
+        .wm-gun { color: var(--ink); font-weight: 500; opacity: 0.9; }
 
         /* NAV */
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-        .nav-brand { display: flex; align-items: center; gap: 10px; }
-        .nav-brand .icon { font-size: 28px; }
-        .nav-brand .name { font-family: 'DM Serif Display', serif; font-size: 22px; }
-        .nav-brand .name span { color: var(--green); }
-        .nav-links { display: flex; gap: 32px; align-items: center; }
-        .nav-links a { font-size: 14px; font-weight: 600; color: var(--text-dim); transition: color 0.2s; }
-        .nav-links a:hover { color: var(--text); }
-        .nav-cta { background: var(--green); color: white !important; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 700; transition: transform 0.2s, box-shadow 0.2s; }
-        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px var(--green-glow); }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,11,13,0.78); backdrop-filter: blur(14px); border-bottom: 1px solid var(--hair); padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { font-family: var(--mono); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-dim); transition: color 0.2s; }
+        .nav-links a:hover { color: var(--ink); }
+        .nav-cta { background: var(--blue); color: #fff !important; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 4px 18px var(--blue-glow); }
+        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px var(--blue-glow); }
 
         /* HERO */
-        .hero { padding: 140px 40px 100px; text-align: center; background: linear-gradient(180deg, var(--bg) 0%, white 100%); position: relative; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; top: 80px; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, var(--green-glow) 0%, transparent 70%); pointer-events: none; }
-        .hero-badge { display: inline-block; background: var(--green-glow); color: var(--green-dark); font-size: 13px; font-weight: 700; padding: 6px 18px; border-radius: 20px; margin-bottom: 24px; letter-spacing: 1px; text-transform: uppercase; }
-        .hero h1 { font-family: 'DM Serif Display', serif; font-size: 56px; line-height: 1.1; margin-bottom: 20px; max-width: 700px; margin-left: auto; margin-right: auto; }
-        .hero h1 span { color: var(--green); }
-        .hero p { font-size: 20px; color: var(--text-dim); max-width: 560px; margin: 0 auto 40px; line-height: 1.6; }
-        .hero-cta { display: inline-flex; align-items: center; gap: 10px; background: var(--green); color: white; font-size: 18px; font-weight: 700; padding: 16px 36px; border-radius: 16px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 20px var(--green-glow); }
-        .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--green-glow); }
-        .hero-sub { font-size: 14px; color: var(--text-dim); margin-top: 16px; }
+        .hero { position: relative; padding: 150px 24px 70px; text-align: center; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; inset: 0; background:
+          radial-gradient(620px 360px at 50% -4%, var(--blue-glow), transparent 60%),
+          radial-gradient(500px 320px at 50% 8%, var(--green-glow), transparent 62%);
+          pointer-events: none; }
+        .hero::after { content: ''; position: absolute; inset: 0; background-image:
+          linear-gradient(var(--hair) 1px, transparent 1px),
+          linear-gradient(90deg, var(--hair) 1px, transparent 1px);
+          background-size: 38px 38px; mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 70%); opacity: 0.5; pointer-events: none; }
+        .hero-inner { position: relative; z-index: 1; }
+        .hero-badge { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--green); border: 1px solid rgba(70,216,119,0.3); background: rgba(70,216,119,0.06); padding: 6px 16px; border-radius: 999px; margin-bottom: 26px; }
+        .hero h1 { font-size: 68px; font-weight: 800; line-height: 1.02; letter-spacing: -2px; max-width: 760px; margin: 0 auto 22px; }
+        .hero h1 .a { color: var(--green); }
+        .hero p { font-size: 19px; color: var(--ink-dim); max-width: 580px; margin: 0 auto 36px; line-height: 1.6; }
+        .btn-store { display: inline-flex; align-items: center; gap: 10px; background: var(--blue); color: #fff; font-size: 17px; font-weight: 700; padding: 16px 34px; border-radius: 14px; transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 6px 28px var(--blue-glow); }
+        .btn-store:hover { transform: translateY(-2px); box-shadow: 0 12px 40px var(--blue-glow); }
+        .hero-sub { font-family: var(--mono); font-size: 12px; letter-spacing: 0.5px; color: var(--ink-faint); margin-top: 18px; }
 
-        /* APP SCREENSHOTS */
-        .screenshots { padding: 0 24px 80px; max-width: 1200px; margin: 0 auto; }
-        .shot-grid {
-          display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 24px;
-        }
-        .shot-grid picture { display: block; }
-        .shot-grid img {
-          width: 100%;
-          height: auto;
-          display: block;
-          border-radius: 32px;
-          box-shadow: 0 12px 40px rgba(0,0,0,0.10);
-        }
-        @media (max-width: 880px) {
-          .shot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-        }
-        @media (max-width: 560px) {
-          .shot-grid { grid-template-columns: 1fr; gap: 16px; max-width: 360px; margin: 0 auto; }
-          .shot-grid img { border-radius: 28px; }
-        }
-
-        /* legacy hand-drawn mockup styles — kept for reference, unused */
-        .phone-section { display: flex; justify-content: center; margin-top: -20px; padding: 0 40px 80px; }
-        .phone-frame { width: 280px; height: 560px; background: var(--bg-dark); border-radius: 36px; border: 4px solid #2a2a3a; box-shadow: 0 20px 60px rgba(0,0,0,0.15); display: flex; flex-direction: column; align-items: center; padding: 20px 16px; overflow: hidden; position: relative; }
-        .phone-notch { width: 120px; height: 28px; background: black; border-radius: 0 0 16px 16px; position: absolute; top: 0; }
-        .phone-content { margin-top: 36px; width: 100%; }
-        .phone-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-        .phone-stat { display: flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 700; }
-        .phone-stat.fire { color: var(--orange); }
-        .phone-stat.xp { color: var(--gold); }
-        .phone-stat.heart { color: var(--red); }
-        .phone-modes { display: flex; gap: 8px; margin-bottom: 16px; }
-        .phone-mode { flex: 1; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px 8px; text-align: center; }
-        .phone-mode .emoji { font-size: 18px; }
-        .phone-mode .label { font-size: 11px; color: white; font-weight: 600; margin-top: 4px; }
-        .phone-mode .sub { font-size: 9px; color: rgba(255,255,255,0.4); margin-top: 2px; }
-        .phone-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 14px; margin-bottom: 10px; display: flex; align-items: center; gap: 12px; }
-        .phone-card-icon { font-size: 24px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 12px; }
-        .phone-card-text .title { font-size: 13px; color: white; font-weight: 700; }
-        .phone-card-text .desc { font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+        /* SHOWCASE STRIP */
+        .showcase { padding: 0 0 96px; }
+        .showcase-head { text-align: center; max-width: 600px; margin: 0 auto 30px; padding: 0 20px; }
+        .showcase-head .eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; }
+        .showcase-head h2 { font-size: 34px; font-weight: 800; letter-spacing: -1px; }
+        .showcase-strip { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 10px 40px 28px; -webkit-overflow-scrolling: touch; }
+        .showcase-strip::-webkit-scrollbar { height: 8px; }
+        .showcase-strip::-webkit-scrollbar-track { background: transparent; }
+        .showcase-strip::-webkit-scrollbar-thumb { background: var(--hair-strong); border-radius: 4px; }
+        .showcase-strip img { flex: 0 0 auto; width: 300px; height: auto; display: block; border-radius: 30px; scroll-snap-align: center; border: 1px solid var(--hair); box-shadow: 0 18px 50px rgba(0,0,0,0.5); }
 
         /* FEATURES */
-        .features { padding: 100px 40px; background: white; }
+        .features { padding: 90px 40px; }
         .features-inner { max-width: 1100px; margin: 0 auto; }
-        .features-header { text-align: center; margin-bottom: 64px; }
-        .features-header h2 { font-family: 'DM Serif Display', serif; font-size: 40px; margin-bottom: 16px; }
-        .features-header p { font-size: 18px; color: var(--text-dim); max-width: 500px; margin: 0 auto; }
-        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        .feature-card { background: var(--bg); border: 1px solid var(--border); border-radius: 20px; padding: 32px; transition: transform 0.2s, box-shadow 0.2s; }
-        .feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.06); }
-        .feature-icon { font-size: 36px; margin-bottom: 16px; }
-        .feature-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-        .feature-card p { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
+        .features-header { text-align: center; margin-bottom: 56px; }
+        .features-header .eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 14px; }
+        .features-header h2 { font-size: 40px; font-weight: 800; letter-spacing: -1.4px; margin-bottom: 14px; }
+        .features-header p { font-size: 17px; color: var(--ink-dim); max-width: 520px; margin: 0 auto; }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+        .feature-card { background: var(--panel); border: 1px solid var(--hair); border-radius: 18px; padding: 28px; transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
+        .feature-card:hover { transform: translateY(-4px); border-color: var(--hair-strong); box-shadow: 0 16px 44px rgba(0,0,0,0.45); }
+        .feature-icon { font-size: 30px; margin-bottom: 16px; }
+        .feature-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 9px; letter-spacing: -0.3px; }
+        .feature-card p { font-size: 14px; color: var(--ink-dim); line-height: 1.65; }
 
-        /* STATS BAR */
-        .stats-bar { padding: 80px 40px; background: linear-gradient(135deg, #1a2a1a 0%, #2d4a2d 100%); }
-        .stats-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
-        .stat-item .num { font-family: 'DM Serif Display', serif; font-size: 44px; color: var(--green); }
-        .stat-item .label { font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 8px; font-weight: 500; }
+        /* STATS */
+        .stats-bar { padding: 70px 40px; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); background:
+          radial-gradient(600px 200px at 50% 0%, var(--green-glow), transparent 70%), var(--bg-2); }
+        .stats-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; text-align: center; }
+        .stat-item .num { font-size: 46px; font-weight: 800; letter-spacing: -1.5px; color: var(--green); }
+        .stat-item .label { font-family: var(--mono); font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-faint); margin-top: 8px; }
 
-        /* CTA SECTION */
-        .cta-section { padding: 100px 40px; text-align: center; background: var(--bg); }
-        .cta-section h2 { font-family: 'DM Serif Display', serif; font-size: 40px; margin-bottom: 16px; }
-        .cta-section p { font-size: 18px; color: var(--text-dim); margin-bottom: 40px; max-width: 480px; margin-left: auto; margin-right: auto; }
+        /* CTA */
+        .cta-section { position: relative; padding: 110px 40px; text-align: center; overflow: hidden; }
+        .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(600px 320px at 50% 50%, var(--blue-glow), transparent 65%); pointer-events: none; }
+        .cta-inner { position: relative; z-index: 1; }
+        .cta-section h2 { font-size: 44px; font-weight: 800; letter-spacing: -1.6px; margin-bottom: 16px; }
+        .cta-section p { font-size: 17px; color: var(--ink-dim); margin: 0 auto 36px; max-width: 480px; }
 
         /* FOOTER */
-        footer { background: #0f172a; color: rgba(255,255,255,0.6); padding: 60px 40px; }
-        .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .footer-brand { font-family: 'DM Serif Display', serif; font-size: 24px; color: white; margin-bottom: 12px; }
-        .footer-brand span { color: var(--green); }
-        .footer-tagline { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.4); }
-        .footer-heading { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.35); margin-bottom: 20px; }
+        footer { background: var(--bg-2); border-top: 1px solid var(--hair); color: var(--ink-dim); padding: 56px 40px 36px; }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 56px; padding-bottom: 40px; border-bottom: 1px solid var(--hair); }
+        .footer-tagline { font-size: 14px; line-height: 1.7; color: var(--ink-faint); margin-top: 14px; max-width: 280px; }
+        .footer-heading { font-family: var(--mono); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.8px; color: var(--ink-faint); margin-bottom: 18px; }
         .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-        .footer-links a { color: rgba(255,255,255,0.6); font-size: 14px; transition: color 0.2s; }
-        .footer-links a:hover { color: white; }
-        .footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 32px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+        .footer-links a { color: var(--ink-dim); font-size: 14px; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--ink); }
+        .footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.5px; color: var(--ink-faint); }
 
+        @media (max-width: 900px) {
+          .features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 768px) {
-          nav { padding: 0 20px; }
-          .nav-links { display: none; }
-          .hero { padding: 120px 20px 60px; }
-          .hero h1 { font-size: 36px; }
+          nav { padding: 0 18px; }
+          .nav-links a:not(.nav-cta) { display: none; }
+          .hero { padding: 120px 20px 50px; }
+          .hero h1 { font-size: 42px; letter-spacing: -1.2px; }
           .hero p { font-size: 16px; }
-          .features { padding: 60px 20px; }
+          .showcase-strip { padding: 10px 20px 24px; gap: 14px; }
+          .showcase-strip img { width: 80vw; max-width: 320px; border-radius: 26px; }
+          .features { padding: 64px 20px; }
           .features-grid { grid-template-columns: 1fr; }
+          .features-header h2 { font-size: 30px; }
           .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-          .stat-item .num { font-size: 32px; }
-          .cta-section { padding: 60px 20px; }
-          .footer-inner { grid-template-columns: 1fr; }
+          .stat-item .num { font-size: 36px; }
+          .cta-section { padding: 70px 20px; }
+          .cta-section h2 { font-size: 32px; }
+          .footer-inner { grid-template-columns: 1fr; gap: 32px; }
           .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-          .phone-section { padding: 0 20px 60px; }
         }
       `}</style>
 
       {/* NAV */}
       <nav>
-        <div className="nav-brand">
-          <span className="icon">🎯</span>
-          <span className="name">Step<span>Gunner</span></span>
-        </div>
+        <Wordmark size={18} />
         <div className="nav-links">
           <a href="#features">Features</a>
           <a href="/privacy">Privacy</a>
-          <a href="/terms">Terms</a>
           <a href="/support">Support</a>
-          <a href="https://apps.apple.com/us/app/step-gunner/id6761317357" className="nav-cta">Download</a>
+          <a href={APP} className="nav-cta">Download</a>
         </div>
       </nav>
 
       {/* HERO */}
       <div className="hero">
-        <div className="hero-badge">USMLE Step 2 CK</div>
-        <h1>Get pimped. <span>Score higher.</span></h1>
-        <p>Socratic clinical rounds, 1,400+ high-yield questions, spaced repetition, weekly leaderboards. Built by a med student who gets it.</p>
-        <a href="https://apps.apple.com/us/app/step-gunner/id6761317357" className="hero-cta">
-          <span>🍎</span> Download on the App Store
-        </a>
-        <p className="hero-sub">Free to start &middot; iOS 17+ &middot; Pro unlock available</p>
+        <div className="hero-inner">
+          <div className="hero-badge">USMLE Step 2 CK</div>
+          <h1>Gun for <span className="a">honors.</span></h1>
+          <p>Clinical case missions, Socratic rounds, 1,400+ high-yield questions, weekly leagues, and a streak that won&apos;t let you coast.</p>
+          <a href={APP} className="btn-store"><span>🍎</span> Download on the App Store</a>
+          <p className="hero-sub">FREE TO START &middot; iOS 17+ &middot; BUILT BY A MED STUDENT</p>
+        </div>
       </div>
 
-      {/* APP SCREENSHOTS */}
-      <div className="screenshots">
-        <div className="shot-grid">
-          <Shot name="hero"   alt="Step Gunner home — XP, streaks, leaderboards" />
-          <Shot name="case"   alt="Quiz screen — clinical vignette with rationale" />
-          <Shot name="pimp"   alt="Pimp Me — socratic clinical rounds" />
-          <Shot name="league" alt="Weekly leaderboard — compete with other gunners" />
-          <Shot name="report" alt="Run summary — accuracy, XP, breakdown by topic" />
-          <Shot name="streak" alt="Streak tracking — daily reps that build the MD" />
+      {/* SHOWCASE */}
+      <div className="showcase">
+        <div className="showcase-head">
+          <div className="eyebrow">See it in action</div>
+          <h2>Your Step 2 CK cockpit</h2>
+        </div>
+        <div className="showcase-strip">
+          <img src="/screenshots/showcase/01-home.jpg" alt="Home — your Step 2 CK cockpit" loading="lazy" />
+          <img src="/screenshots/showcase/05-results.jpg" alt="Run summary — every round scored to the accuracy ring" loading="lazy" />
+          <img src="/screenshots/showcase/02-cases.jpg" alt="Case Missions — work the wards" loading="lazy" />
+          <img src="/screenshots/showcase/03-caseplay.jpg" alt="Case play — reason it out, beat by beat" loading="lazy" />
+          <img src="/screenshots/showcase/04-path.jpg" alt="Skill-tree paths — Step 2 CK mapped like a game" loading="lazy" />
+          <img src="/screenshots/showcase/09-league.jpg" alt="Weekly leagues — promotion and relegation" loading="lazy" />
+          <img src="/screenshots/showcase/06-profile.jpg" alt="Profile — 30-day consistency heatmap" loading="lazy" />
+          <img src="/screenshots/showcase/07-share.jpg" alt="Share cards — flex the streak" loading="lazy" />
+          <img src="/screenshots/showcase/08-pimping.jpg" alt="Pimp Me — Socratic rounds in private" loading="lazy" />
+          <img src="/screenshots/showcase/10-pro.jpg" alt="Step Gunner Pro" loading="lazy" />
         </div>
       </div>
 
@@ -200,88 +199,92 @@ export default function Home() {
       <div className="features" id="features">
         <div className="features-inner">
           <div className="features-header">
-            <h2>Everything you need to crush CK</h2>
-            <p>Smart study tools built for how med students actually learn.</p>
+            <div className="eyebrow">Everything you need</div>
+            <h2>Built for how gunners actually study</h2>
+            <p>Smart tools that turn the Step 2 grind into a streak you don&apos;t want to break.</p>
           </div>
           <div className="features-grid">
             <div className="feature-card">
-              <div className="feature-icon">🧠</div>
-              <h3>Smart Spaced Repetition</h3>
-              <p>Leitner 5-box system adapts to your performance. Cards you miss come back more often. Cards you master fade into long-term review.</p>
+              <div className="feature-icon">🩺</div>
+              <h3>Case Missions</h3>
+              <p>Work 36 clinical cases across 11 services, from presentation to disposition. Reason it out beat by beat. Nail the call and the management for honors.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🎯</div>
+              <h3>Scored to the Ring</h3>
+              <p>Every round ends on one clean accuracy ring, with your misses surfaced first so you fix what actually moves the needle.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">🏆</div>
+              <h3>Weekly Leagues</h3>
+              <p>Promotion and relegation, reset every Monday. Top three move up, bottom three drop. No coasting.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🧠</div>
+              <h3>Smart Spaced Repetition</h3>
+              <p>A Leitner box system that brings back what you miss and retires what you&apos;ve mastered into long-term review.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🏅</div>
               <h3>CK Gold Questions</h3>
-              <p>Hundreds of high-yield clinical vignettes across 15 specialties. Each includes an explanation, the common trap, and a memory hook.</p>
+              <p>High-yield clinical vignettes across 15 specialties, each with the explanation, the common trap, and a memory hook.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">🤖</div>
-              <h3>AI Deep Dive</h3>
-              <p>On-device AI explanations powered by Apple Intelligence. Five modes: Explain More, Why Was I Wrong, Pathophysiology, Mnemonic, and ELI5.</p>
+              <h3>Pimp Me &middot; Socratic Rounds</h3>
+              <p>Private rounds with a virtual attending. Miss one and it asks the follow-up. Recognition &rarr; management &rarr; complications, nobody watching.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">📅</div>
+              <h3>Don&apos;t Miss a Day</h3>
+              <p>A 30-day consistency heatmap plus your weak systems. Tap any day to see exactly what you did.</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">📲</div>
+              <h3>Shareable Progress</h3>
+              <p>Turn a perfect round or a long streak into a story-style card worth sending to the group chat.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">⚡</div>
-              <h3>Rapid Fire Mode</h3>
-              <p>20 questions, 2 minutes. Simulate exam-day time pressure with a mix of clinical and buzzword cards. Speed bonus XP for fast answers.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">📋</div>
-              <h3>NBME Practice</h3>
-              <p>CCSSA-format practice questions from multiple exam forms. The closest thing to the real test format.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🩺</div>
-              <h3>Pimp Me &middot; Socratic Rounds</h3>
-              <p>Your virtual attending walks you through 44+ full-arc clinical cases. Recognition &rarr; management &rarr; complications, with &ldquo;what-if&rdquo; branches that test how the answer changes if the patient is unstable, pregnant, or immunocompromised. Pro.</p>
+              <h3>Rapid Fire</h3>
+              <p>Twenty questions, two minutes. Exam-day time pressure with speed-bonus XP for fast answers.</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* STATS BAR */}
+      {/* STATS */}
       <div className="stats-bar">
         <div className="stats-inner">
-          <div className="stat-item">
-            <div className="num">1,394+</div>
-            <div className="label">Practice Questions</div>
-          </div>
-          <div className="stat-item">
-            <div className="num">15</div>
-            <div className="label">Specialties Covered</div>
-          </div>
-          <div className="stat-item">
-            <div className="num">6</div>
-            <div className="label">Study Modes</div>
-          </div>
-          <div className="stat-item">
-            <div className="num">22</div>
-            <div className="label">Achievements</div>
-          </div>
+          <div className="stat-item"><div className="num">1,400+</div><div className="label">Practice Questions</div></div>
+          <div className="stat-item"><div className="num">36</div><div className="label">Clinical Cases</div></div>
+          <div className="stat-item"><div className="num">15</div><div className="label">Specialties</div></div>
+          <div className="stat-item"><div className="num">22</div><div className="label">Achievements</div></div>
         </div>
       </div>
 
       {/* CTA */}
       <div className="cta-section" id="download">
-        <h2>Ready to start gunning?</h2>
-        <p>Free to start with 360 buzzword flashcards. Unlock the full question bank with Pro.</p>
-        <a href="https://apps.apple.com/us/app/step-gunner/id6761317357" className="hero-cta">
-          <span>🍎</span> Download on the App Store
-        </a>
-        <p className="hero-sub" style={{marginTop: 16}}>iOS 17+ required &middot; Works offline &middot; 7-day free trial</p>
+        <div className="cta-inner">
+          <h2>Ready to start gunning?</h2>
+          <p>Free to start. Clinical case missions, Socratic rounds, weekly leagues, and the question bank that doesn&apos;t suck.</p>
+          <a href={APP} className="btn-store"><span>🍎</span> Download on the App Store</a>
+          <p className="hero-sub">iOS 17+ &middot; WORKS OFFLINE &middot; KEEP GUNNING</p>
+        </div>
       </div>
 
       {/* FOOTER */}
       <footer>
         <div className="footer-inner">
           <div>
-            <div className="footer-brand">Step<span>Gunner</span></div>
-            <p className="footer-tagline">USMLE Step 2 CK prep that doesn&apos;t suck.<br />Built by Rezumab LLC &middot; Texas, USA.</p>
+            <Wordmark size={18} />
+            <p className="footer-tagline">USMLE Step 2 CK prep that doesn&apos;t suck. Built by Rezumab LLC &middot; Texas, USA.</p>
           </div>
           <div>
             <div className="footer-heading">App</div>
             <ul className="footer-links">
               <li><a href="#features">Features</a></li>
-              <li><a href="https://apps.apple.com/us/app/step-gunner/id6761317357">Download</a></li>
+              <li><a href={APP}>Download</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
               <li><a href="/terms">Terms of Use</a></li>
               <li><a href="/support">Support</a></li>
