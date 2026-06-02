@@ -32,6 +32,7 @@
     box-shadow:0 2px 10px rgba(0,0,0,0.10); transition:transform .12s ease, box-shadow .12s ease; }
   .sg-banner:hover { transform:translateY(-2px); box-shadow:0 7px 20px rgba(0,0,0,0.18); }
   .sg-banner img { width:100%; height:auto; display:block; }
+  .sg-banner-im { max-width:600px; margin:26px auto 4px; }
   .blk-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin:18px 0 24px; }
   .blk-btn { padding:18px 12px; background:#fff; border:1.5px solid var(--border); border-radius:8px;
     cursor:pointer; text-align:left; transition:all 0.1s; }
@@ -447,9 +448,20 @@
     <button class="primary" id="btn-next-block">Continue to next block</button>
     <button id="btn-home">Block menu</button>
   </div>
+  <a class="sg-banner sg-banner-im" href="https://apps.apple.com/us/app/step-gunner/id6761317357" target="_blank" rel="noopener noreferrer" aria-label="Get the StepGunner app on the App Store"><img id="im-banner" src="sg-cycle-1.jpg" alt="Take a break - prep with StepGunner"></a>
 </div>
 
 <!-- Final exam summary (only when all 6 blocks completed) -->
+<div id="exit-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(15,23,42,.55);align-items:center;justify-content:center;padding:20px">
+  <div style="background:#fff;border-radius:12px;padding:24px 26px;max-width:430px;box-shadow:0 20px 60px rgba(0,0,0,.3)">
+    <div style="font-size:18px;font-weight:700;color:#0f172a;margin-bottom:8px">End this block?</div>
+    <div id="exit-modal-body" style="font-size:14px;color:#475569;line-height:1.5;margin-bottom:22px">You're on the last question. Continuing will end the block.</div>
+    <div style="display:flex;gap:10px;justify-content:flex-end">
+      <button id="exit-cancel" style="padding:9px 16px;background:#fff;border:1px solid #cbd5e1;border-radius:7px;cursor:pointer;font-weight:600;color:#334155">Keep working</button>
+      <button id="exit-confirm" style="padding:9px 18px;background:var(--nav-blue);color:#fff;border:0;border-radius:7px;cursor:pointer;font-weight:700">End block</button>
+    </div>
+  </div>
+</div>
 <div id="final" class="scoreboard" style="display:none">
   <h1>Exam complete</h1>
   <div class="score" id="final-score-line">— / 120</div>
@@ -1103,6 +1115,13 @@ function togglePause() {
 }
 
 /* ─── Navigation ─── */
+function confirmEndBlock(){
+  var m = document.getElementById('exit-modal');
+  if (!m){ endBlock(false); return; }
+  var b = document.getElementById('exit-modal-body');
+  if (b) b.textContent = "You're on the last question of Block " + BLOCKS[state.blockIdx].n + ". Continuing will end the block, and you won't be able to return to it.";
+  m.style.display = 'flex';
+}
 function go(delta) {
   const blocks = BLOCKS;
   const N = blocks[state.blockIdx].items.length;
@@ -1132,6 +1151,7 @@ function go(delta) {
       return;
     }
   }
+  if (!state.reviewMode && newIdx >= N && document.getElementById('exam').classList.contains('live')) { confirmEndBlock(); return; }
   state.itemIdx = Math.max(0, Math.min(N-1, newIdx));
   renderItem();
 }
@@ -1168,6 +1188,8 @@ function endBlock(timeUp) {
     const done = Object.keys(loadProg()).filter(k => loadProg()[k] && loadProg()[k].completed).length;
     const total = BLOCKS.length;
     $('intermission-progress').textContent = `${done} of ${total} blocks complete · ${total-done} remaining`;
+    var _imb = document.getElementById('im-banner');
+    if (_imb) _imb.src = (state.blockIdx % 2 === 0) ? 'sg-cycle-1.jpg' : 'sg-cycle-2.jpg';
   });
 }
 
@@ -1746,6 +1768,7 @@ window.addEventListener('DOMContentLoaded', () => {
   bakedBoot();          // questions are baked in; go straight to the block menu
   $('btn-prev').addEventListener('click', () => go(-1));
   $('btn-next').addEventListener('click', () => go(+1));
+  { var _xc=document.getElementById('exit-cancel'); if(_xc) _xc.addEventListener('click',function(){document.getElementById('exit-modal').style.display='none';}); var _xo=document.getElementById('exit-confirm'); if(_xo) _xo.addEventListener('click',function(){document.getElementById('exit-modal').style.display='none'; endBlock(false);}); }
   $('btn-pause').addEventListener('click', togglePause);
   $('btn-labs').addEventListener('click', openLabs);
   $('btn-quit').addEventListener('click', () => {
