@@ -43,6 +43,7 @@
   /* ── Exam shell ── */
   .exam { display:none; flex-direction:column; height:100vh; }
   .exam.live { display:flex; }
+  #start,#exam,#intermission,#final,#upload{transition:opacity .16s ease}
 
   /* Top nav */
   .topnav { background:linear-gradient(180deg, var(--nav-blue), var(--nav-blue-hi));
@@ -853,6 +854,20 @@ function renderBlockMenu() {
 }
 
 /* ─── Block lifecycle ─── */
+function fadeSwap(swapFn){
+  var views=['start','exam','intermission','final','upload']
+    .map(function(id){return document.getElementById(id);}).filter(Boolean);
+  function vis(){return views.filter(function(el){return getComputedStyle(el).display!=='none';})[0];}
+  var cur=vis();
+  function run(){
+    swapFn();
+    try{window.scrollTo({top:0,behavior:'instant'});}catch(e){window.scrollTo(0,0);}
+    var nv=vis();
+    views.forEach(function(el){ if(el!==nv) el.style.opacity='1'; });
+    if(nv){ nv.style.opacity='0'; void nv.offsetWidth; nv.style.opacity='1'; }
+  }
+  if(cur){ cur.style.opacity='0'; setTimeout(run,160); } else { run(); }
+}
 function startBlock(idx) {
   const block = BLOCKS[idx];
   if (!block) return;
@@ -877,16 +892,18 @@ function startBlock(idx) {
     startedAt: Date.now(),
     reviewMode: false,
   };
-  $('start').style.display = 'none';
-  $('intermission').style.display = 'none';
-  $('final').style.display = 'none';
-  $('exam').classList.add('live');
-  $('block-label').textContent = `Block ${block.n}`;
-  $('btn-pause').disabled = false;
-  $('timer').style.background = '';
-  buildItemRail();
-  renderItem();
-  startTimer();
+  fadeSwap(() => {
+    $('start').style.display = 'none';
+    $('intermission').style.display = 'none';
+    $('final').style.display = 'none';
+    $('exam').classList.add('live');
+    $('block-label').textContent = `Block ${block.n}`;
+    $('btn-pause').disabled = false;
+    $('timer').style.background = '';
+    buildItemRail();
+    renderItem();
+    startTimer();
+  });
 }
 
 function buildItemRail() {
@@ -1140,20 +1157,18 @@ function endBlock(timeUp) {
   };
   saveProg(prog);
 
-  $('exam').classList.remove('live');
-  // If all 6 done, go straight to final summary; otherwise show intermission
-  if (allBlocksDone()) {
-    showFinalSummary();
-    return;
-  }
-  $('intermission').style.display = '';
-  $('intermission-title').textContent = `Block ${block.n} ${timeUp ? '— time up' : 'complete'}`;
-  $('im-answered').textContent = answeredCount;
-  $('im-blank').textContent    = blank;
-  $('im-time').textContent     = fmtTime(timeSpent);
-  const done = Object.keys(loadProg()).filter(k => loadProg()[k] && loadProg()[k].completed).length;
-  const total = BLOCKS.length;
-  $('intermission-progress').textContent = `${done} of ${total} blocks complete · ${total-done} remaining`;
+  fadeSwap(() => {
+    $('exam').classList.remove('live');
+    if (allBlocksDone()) { showFinalSummary(); return; }
+    $('intermission').style.display = '';
+    $('intermission-title').textContent = `Block ${block.n} ${timeUp ? '— time up' : 'complete'}`;
+    $('im-answered').textContent = answeredCount;
+    $('im-blank').textContent    = blank;
+    $('im-time').textContent     = fmtTime(timeSpent);
+    const done = Object.keys(loadProg()).filter(k => loadProg()[k] && loadProg()[k].completed).length;
+    const total = BLOCKS.length;
+    $('intermission-progress').textContent = `${done} of ${total} blocks complete · ${total-done} remaining`;
+  });
 }
 
 /* ─── Detailed per-question review table ─── */
