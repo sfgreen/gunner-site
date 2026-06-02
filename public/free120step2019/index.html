@@ -782,6 +782,7 @@ function saveInProgress() {
     timeOnItem: state.timeOnItem,
     changes:  state.changes,
     firstAnswer: state.firstAnswer,
+    highlights: state.highlights,
     remaining:state.remaining,
     paused:   state.paused,
     when:     Date.now(),
@@ -947,7 +948,7 @@ function renderItem() {
   if (!it) return;
   // defensive init (review mode / older saved state may lack these)
   state.strikes = state.strikes || {}; state.timeOnItem = state.timeOnItem || {};
-  state.changes = state.changes || {}; state.firstAnswer = state.firstAnswer || {};
+  state.changes = state.changes || {}; state.firstAnswer = state.firstAnswer || {}; state.highlights = state.highlights || {};
   $('item-label').textContent = `Item ${state.itemIdx+1} of ${items.length}`;
   $('qnum').textContent = `Item ${state.itemIdx+1}`;
   // Sidecar metadata can override garbled stems/abstracts/images (survives data re-extraction)
@@ -969,6 +970,11 @@ function renderItem() {
     }
   }
   renderRichText($('qstem'), stemText);
+  if (state.highlights && state.highlights[it.n]) {
+    const _hl = state.highlights[it.n];
+    if (typeof _hl.qstem === 'string') $('qstem').innerHTML = _hl.qstem;
+    if (typeof _hl.qabstract === 'string' && $('qabstract').style.display !== 'none') $('qabstract').innerHTML = _hl.qabstract;
+  }
   // Images (x-rays, ECGs, photographs) render between stem and options
   const imgWrap = $('qimages');
   imgWrap.innerHTML = '';
@@ -1526,6 +1532,14 @@ function recordAnswer(it, letter){
   if (!(it.n in state.firstAnswer)) state.firstAnswer[it.n] = letter;
   state.answers[it.n] = letter;
 }
+function captureHighlights(){
+  const _items = BLOCKS[state.blockIdx] && BLOCKS[state.blockIdx].items;
+  const _it = _items && _items[state.itemIdx];
+  if (!_it) return;
+  state.highlights = state.highlights || {};
+  state.highlights[_it.n] = { qstem: $('qstem').innerHTML, qabstract: $('qabstract').innerHTML };
+  saveInProgress();
+}
 function wireHighlighting(){
   function highlightWithin(container){
     const sel = window.getSelection();
@@ -1541,12 +1555,12 @@ function wireHighlighting(){
     } catch (e) { /* selection crossed element boundaries — ignore */ }
   }
   ['qstem','qabstract'].forEach(id => {
-    $(id).addEventListener('mouseup', () => { if (!state.reviewMode) setTimeout(() => highlightWithin($(id)), 0); });
+    $(id).addEventListener('mouseup', () => { if (!state.reviewMode) setTimeout(() => { highlightWithin($(id)); captureHighlights(); }, 0); });
   });
   // click a highlight to remove it
   $('qbox').addEventListener('click', e => {
     const m = e.target.closest && e.target.closest('mark.hl');
-    if (m) { const p = m.parentNode; while (m.firstChild) p.insertBefore(m.firstChild, m); p.removeChild(m); p.normalize(); }
+    if (m) { const p = m.parentNode; while (m.firstChild) p.insertBefore(m.firstChild, m); p.removeChild(m); p.normalize(); captureHighlights(); }
   });
 }
 
@@ -1733,6 +1747,7 @@ function resumeInProgressIfAny() {
     timeOnItem: ip.timeOnItem || {},
     changes:  ip.changes || {},
     firstAnswer: ip.firstAnswer || {},
+    highlights: ip.highlights || {},
     remaining:ip.remaining,
     paused:   true,         // auto-pause on resume so user can re-orient
     startedAt:Date.now(),
