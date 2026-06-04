@@ -1523,7 +1523,7 @@ function wireCalc(){
   const disp = $('calc-disp');
   const render = () => { disp.textContent = expr || '0'; };
   function evalExpr(s){
-    const tokens = s.match(/(\d+\.?\d*|[+\-*/])/g);
+    const tokens = s.match(/(\d*\.\d+|\d+\.?\d*|[+\-*/])/g);
     if (!tokens) return 0;
     const nums = [], ops = [];
     const prec = o => (o==='*'||o==='/') ? 2 : 1;
@@ -1544,7 +1544,11 @@ function wireCalc(){
     else if (k==='←') expr = expr.slice(0, -1);
     else if (k==='=') { try { expr = String(evalExpr(expr)); } catch(_) { expr = 'Error'; } }
     else if (k==='%') { try { expr = String(evalExpr(expr) / 100); } catch(_) {} }
-    else { if (expr==='Error') expr=''; expr += k; }
+    else {
+      if (expr==='Error') expr='';
+      if (k==='.') { const cur = expr.split(/[+\-*/]/).pop(); if (!cur.includes('.')) { if (cur==='') expr += '0'; expr += k; } }
+      else expr += k;
+    }
     render();
   });
   // draggable header
