@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["7VWVW5227Q.com.gunner.step2ck"],
+        "components": [
+          { "/": "/", "?": { "ref": "*" }, "comment": "referral deep link: stepgunner.com/?ref=CODE opens the app" },
+          { "/": "/r/*", "comment": "short referral links (reserved for future use)" }
+        ]
+      }
+    ]
+  }
+}

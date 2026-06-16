@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useState, useEffect } from 'react';
 
 // The app's wordmark, on the web: ● STEP (accent blue) GUNNER (dim),
 // SF Mono / system monospaced, all-caps, tracked — matches the splash +
@@ -15,6 +16,20 @@ function Wordmark({ size = 18 }: { size?: number }) {
 
 export default function Home() {
   const APP = 'https://apps.apple.com/us/app/step-gunner/id6761317357';
+  // Referral bridge: read ?ref=CODE, show a banner, and copy a GUNNERREF:CODE
+  // sentinel to the clipboard on the App Store tap so the code survives the
+  // install — the app reads UIPasteboard once on first launch and applies it.
+  const [refCode, setRefCode] = useState<string | null>(null);
+  useEffect(() => {
+    const r = new URLSearchParams(window.location.search).get('ref');
+    if (r && r.trim()) setRefCode(r.trim().toUpperCase());
+  }, []);
+  const copyRef = () => {
+    if (refCode) {
+      try { navigator.clipboard.writeText(`GUNNERREF:${refCode}`); }
+      catch { /* clipboard blocked; manual code entry in-app still works */ }
+    }
+  };
   return (
     <>
       <Head>
@@ -80,6 +95,9 @@ export default function Home() {
         .btn-store { display: inline-flex; align-items: center; gap: 10px; background: var(--blue); color: #fff; font-size: 17px; font-weight: 700; padding: 16px 34px; border-radius: 14px; transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 6px 28px var(--blue-glow); }
         .btn-store:hover { transform: translateY(-2px); box-shadow: 0 12px 40px var(--blue-glow); }
         .hero-sub { font-family: var(--mono); font-size: 12px; letter-spacing: 0.5px; color: var(--ink-faint); margin-top: 18px; }
+        .ref-banner { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.2px; color: var(--ink); background: rgba(70,216,119,0.08); border: 1px solid rgba(70,216,119,0.32); padding: 9px 16px; border-radius: 999px; margin-bottom: 22px; max-width: 92vw; line-height: 1.45; }
+        .ref-banner strong { color: var(--green); font-weight: 700; }
+        .ref-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green-glow); flex: 0 0 auto; }
 
         /* SHOWCASE STRIP */
         .showcase { padding: 0 0 96px; }
@@ -160,17 +178,23 @@ export default function Home() {
           <a href="#features">Features</a>
           <a href="/privacy">Privacy</a>
           <a href="/support">Support</a>
-          <a href={APP} className="nav-cta">Download</a>
+          <a href={APP} onClick={copyRef} className="nav-cta">Download</a>
         </div>
       </nav>
 
       {/* HERO */}
       <div className="hero">
         <div className="hero-inner">
+          {refCode && (
+            <div className="ref-banner">
+              <span className="ref-dot" />
+              <span>Invite locked in <strong>{refCode}</strong> &middot; you and your friend each get <strong>250 XP</strong> when you join.</span>
+            </div>
+          )}
           <div className="hero-badge">USMLE Step 2 CK</div>
           <h1>Gun for <span className="a">honors.</span></h1>
           <p>Clinical case missions, Socratic rounds, 1,400+ high-yield questions, weekly leagues, and a streak that won&apos;t let you coast.</p>
-          <a href={APP} className="btn-store"><span>🍎</span> Download on the App Store</a>
+          <a href={APP} onClick={copyRef} className="btn-store"><span>🍎</span> Download on the App Store</a>
           <p className="hero-sub">FREE TO START &middot; iOS 17+ &middot; BUILT BY A MED STUDENT</p>
         </div>
       </div>
@@ -268,7 +292,7 @@ export default function Home() {
         <div className="cta-inner">
           <h2>Ready to start gunning?</h2>
           <p>Free to start. Clinical case missions, Socratic rounds, weekly leagues, and the question bank that doesn&apos;t suck.</p>
-          <a href={APP} className="btn-store"><span>🍎</span> Download on the App Store</a>
+          <a href={APP} onClick={copyRef} className="btn-store"><span>🍎</span> Download on the App Store</a>
           <p className="hero-sub">iOS 17+ &middot; WORKS OFFLINE &middot; KEEP GUNNING</p>
         </div>
       </div>
@@ -284,7 +308,7 @@ export default function Home() {
             <div className="footer-heading">App</div>
             <ul className="footer-links">
               <li><a href="#features">Features</a></li>
-              <li><a href={APP}>Download</a></li>
+              <li><a href={APP} onClick={copyRef}>Download</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>
               <li><a href="/terms">Terms of Use</a></li>
               <li><a href="/support">Support</a></li>
