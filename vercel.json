@@ -4,5 +4,13 @@
       "path": "/api/cron/seed-bots",
       "schedule": "7 13 * * *"
     }
+  ],
+  "headers": [
+    {
+      "source": "/.well-known/apple-app-site-association",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    }
   ]
 }
