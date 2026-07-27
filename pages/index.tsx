@@ -94,6 +94,10 @@ export default function Home() {
         .hero p { font-size: 19px; color: var(--ink-dim); max-width: 580px; margin: 0 auto 36px; line-height: 1.6; }
         .btn-store { display: inline-flex; align-items: center; gap: 10px; background: var(--blue); color: #fff; font-size: 17px; font-weight: 700; padding: 16px 34px; border-radius: 14px; transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 6px 28px var(--blue-glow); }
         .btn-store:hover { transform: translateY(-2px); box-shadow: 0 12px 40px var(--blue-glow); }
+        .btn-store .apple { width: 16px; height: 19px; flex: 0 0 auto; }
+        .hero-cta-row { display: flex; gap: 14px; justify-content: center; align-items: center; flex-wrap: wrap; }
+        .btn-ghost { display: inline-flex; align-items: center; gap: 8px; color: var(--green); font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.3px; border: 1px solid rgba(70,216,119,0.35); background: rgba(70,216,119,0.06); padding: 15px 22px; border-radius: 14px; transition: border-color 0.2s, background 0.2s; }
+        .btn-ghost:hover { border-color: var(--green); background: rgba(70,216,119,0.12); transform: translateY(-2px); }
         .hero-sub { font-family: var(--mono); font-size: 12px; letter-spacing: 0.5px; color: var(--ink-faint); margin-top: 18px; }
         .ref-banner { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.2px; color: var(--ink); background: rgba(70,216,119,0.08); border: 1px solid rgba(70,216,119,0.32); padding: 9px 16px; border-radius: 999px; margin-bottom: 22px; max-width: 92vw; line-height: 1.45; }
         .ref-banner strong { color: var(--green); font-weight: 700; }
@@ -194,7 +198,10 @@ export default function Home() {
           <div className="hero-badge">USMLE Step 2 CK</div>
           <h1>Gun for <span className="a">honors.</span></h1>
           <p>Clinical case missions, Socratic rounds, 1,400+ high-yield questions, weekly leagues, and a streak that won&apos;t let you coast.</p>
-          <a href={APP} onClick={copyRef} className="btn-store"><span>🍎</span> Download on the App Store</a>
+          <div className="hero-cta-row">
+            <a href={APP} onClick={copyRef} className="btn-store"><svg className="apple" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> Download on the App Store</a>
+            <a href="/readiness" className="btn-ghost">See your readiness, free &rarr;</a>
+          </div>
           <p className="hero-sub">FREE TO START &middot; iOS 17+ &middot; BUILT BY A MED STUDENT</p>
         </div>
       </div>
@@ -292,7 +299,7 @@ export default function Home() {
         <div className="cta-inner">
           <h2>Ready to start gunning?</h2>
           <p>Free to start. Clinical case missions, Socratic rounds, weekly leagues, and the question bank that doesn&apos;t suck.</p>
-          <a href={APP} onClick={copyRef} className="btn-store"><span>🍎</span> Download on the App Store</a>
+          <a href={APP} onClick={copyRef} className="btn-store"><svg className="apple" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> Download on the App Store</a>
           <p className="hero-sub">iOS 17+ &middot; WORKS OFFLINE &middot; KEEP GUNNING</p>
         </div>
       </div>
