@@ -4,45 +4,67 @@ import { useState } from 'react';
 
 const APP = 'https://apps.apple.com/us/app/step-gunner/id6761317357';
 const PASS = 218; // USMLE Step 2 CK minimum passing score
+const MEAN = 245; // approx US MD Step 2 CK average
+const GMIN = 205, GMAX = 275; // range-gauge scale
 
-// Rough projected-range band by how close the assessment is to exam day.
-// Grounded in how self-reported NBME/UWSA scores track with real Step 2
-// outcomes: the farther out an assessment, the wider the miss. This is a
-// deliberately honest, approximate band, not a point prediction.
-function project(nbme: number, days: number | null) {
-  const s = Math.max(130, Math.min(300, nbme));
-  let band: number;
-  let tier: string;
-  if (days == null || Number.isNaN(days)) { band = 14; tier = 'Rough (timing unknown)'; }
-  else if (days <= 14) { band = 8; tier = 'Tight'; }
-  else if (days <= 30) { band = 12; tier = 'Moderate'; }
-  else if (days <= 60) { band = 16; tier = 'Wide'; }
-  else { band = 22; tier = 'Very wide (exam far out)'; }
-  const low = Math.max(180, Math.round(s - band));
-  const high = Math.min(300, Math.round(s + band));
-  let verdict: string;
-  if (low >= PASS) verdict = `Clears the ${PASS} pass line.`;
-  else if (high >= PASS) verdict = `Straddles the ${PASS} pass line. Keep building.`;
-  else verdict = `Below the ${PASS} pass line. There is time to build.`;
-  return { low, high, band, tier, verdict };
+type Entry = { score: string; days: string };
+
+function clamp(v: number, lo: number, hi: number) { return Math.max(lo, Math.min(hi, v)); }
+
+// Projected-range band by how close the freshest assessment is to exam day.
+// The farther out, the wider the honest miss. Not a point prediction.
+function bandForDays(days: number | null): { band: number; tier: string } {
+  if (days == null || Number.isNaN(days)) return { band: 14, tier: 'Rough (add your exam date)' };
+  if (days <= 14) return { band: 8, tier: 'Tight' };
+  if (days <= 30) return { band: 12, tier: 'Moderate' };
+  if (days <= 60) return { band: 16, tier: 'Wide' };
+  return { band: 22, tier: 'Very wide (exam far out)' };
 }
+function gpct(v: number) { return ((clamp(v, GMIN, GMAX) - GMIN) / (GMAX - GMIN)) * 100; }
+
+type Proj = { low: number; high: number; band: number; tier: string; verdict: string; vclass: string; center: number };
 
 export default function Readiness() {
-  const [score, setScore] = useState('');
-  const [days, setDays] = useState('');
-  const n = parseInt(score, 10);
-  const d = days === '' ? null : parseInt(days, 10);
-  const valid = !Number.isNaN(n) && n >= 130 && n <= 300;
-  const r = valid ? project(n, d) : null;
+  const [entries, setEntries] = useState<Entry[]>([{ score: '', days: '' }]);
+
+  const parsed = entries
+    .map((e) => ({ s: parseInt(e.score, 10), d: e.days === '' ? null : parseInt(e.days, 10) }))
+    .filter((p) => !Number.isNaN(p.s) && p.s >= 130 && p.s <= 300);
+  const dated = parsed.filter((p) => p.d != null && !Number.isNaN(p.d)) as { s: number; d: number }[];
+  const freshest = dated.length
+    ? dated.reduce((a, b) => (b.d < a.d ? b : a))
+    : parsed.length ? { s: parsed[parsed.length - 1].s, d: null as number | null } : null;
+
+  let proj: Proj | null = null;
+  if (freshest) {
+    const { band, tier } = bandForDays(freshest.d);
+    const low = clamp(Math.round(freshest.s - band), 180, 300);
+    const high = clamp(Math.round(freshest.s + band), 180, 300);
+    let verdict: string, vclass: string;
+    if (low >= PASS) { verdict = `Clears the ${PASS} pass line.`; vclass = 'ok'; }
+    else if (high >= PASS) { verdict = `Straddles the ${PASS} pass line. Keep building.`; vclass = 'warn'; }
+    else { verdict = `Below the ${PASS} pass line. There is time to build.`; vclass = 'low'; }
+    proj = { low, high, band, tier, verdict, vclass, center: freshest.s };
+  }
+
+  const setEntry = (i: number, patch: Partial<Entry>) =>
+    setEntries((es) => es.map((e, j) => (j === i ? { ...e, ...patch } : e)));
+  const addEntry = () => setEntries((es) => (es.length < 8 ? [...es, { score: '', days: '' }] : es));
+  const removeEntry = (i: number) => setEntries((es) => (es.length > 1 ? es.filter((_, j) => j !== i) : es));
+  const onlyNum = (v: string, n: number) => v.replace(/[^0-9]/g, '').slice(0, n);
+
+  const showTrajectory = dated.length >= 2 && !!proj;
 
   return (
     <>
       <Head>
         <title>Step 2 Readiness Check — Step Gunner</title>
-        <meta name="description" content="Enter your latest NBME or UWSA score and see a projected Step 2 CK range, free. Step Gunner tracks every practice test and projects your score over time." />
+        <meta name="description" content="Enter your NBME or UWSA scores and see a projected Step 2 CK range and trajectory, free. Step Gunner tracks every practice test and projects your score to exam day." />
         <meta property="og:title" content="Step 2 Readiness Check — Step Gunner" />
-        <meta property="og:description" content="See your projected Step 2 CK range from your latest NBME, free." />
+        <meta property="og:description" content="See your projected Step 2 CK range and trajectory from your NBMEs, free." />
         <meta property="og:url" content="https://stepgunner.com/readiness" />
+        <meta property="og:image" content="https://stepgunner.com/screenshots/showcase/01-home.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#0a0b0d" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -51,44 +73,46 @@ export default function Readiness() {
 
       <div className="page">
         <nav className="nav">
-          <Link href="/" className="wm"><span className="dot" /> STEP<span className="g">GUNNER</span></Link>
+          <Link href="/" className="wm"><span className="dot" /><span className="wt">STEP <b className="g">GUNNER</b></span></Link>
           <a href={APP} className="nav-cta">Download</a>
         </nav>
 
         <main className="wrap">
           <span className="badge">Free readiness check</span>
           <h1>How ready are you for Step 2 CK?</h1>
-          <p className="sub">Drop in your most recent NBME or UWSA score and see a projected Step 2 range. No sign-up.</p>
+          <p className="sub">Drop in your NBME or UWSA scores and see a projected Step 2 range and trajectory. No sign-up.</p>
 
           <div className="tool">
-            <div className="fields">
-              <label className="field">
-                <span>Latest NBME / UWSA score</span>
-                <input
-                  inputMode="numeric" placeholder="e.g. 248" value={score}
-                  onChange={(e) => setScore(e.target.value.replace(/[^0-9]/g, '').slice(0, 3))}
-                />
-              </label>
-              <label className="field">
-                <span>Days until your exam <em>(optional)</em></span>
-                <input
-                  inputMode="numeric" placeholder="e.g. 21" value={days}
-                  onChange={(e) => setDays(e.target.value.replace(/[^0-9]/g, '').slice(0, 3))}
-                />
-              </label>
-            </div>
+            {entries.map((e, i) => (
+              <div className="entry" key={i}>
+                <label className="field">
+                  {i === 0 && <span>NBME / UWSA score</span>}
+                  <input inputMode="numeric" placeholder="e.g. 248" value={e.score}
+                    onChange={(ev) => setEntry(i, { score: onlyNum(ev.target.value, 3) })} />
+                </label>
+                <label className="field">
+                  {i === 0 && <span>Days until exam <em>(optional)</em></span>}
+                  <input inputMode="numeric" placeholder="e.g. 21" value={e.days}
+                    onChange={(ev) => setEntry(i, { days: onlyNum(ev.target.value, 3) })} />
+                </label>
+                <button className="rm" aria-label="remove" onClick={() => removeEntry(i)} style={{ visibility: i === 0 ? 'hidden' : 'visible' }}>✕</button>
+              </div>
+            ))}
+            <button className="add" onClick={addEntry}>+ Add another NBME / UWSA</button>
 
-            {r ? (
+            {proj ? (
               <div className="result">
+                {showTrajectory ? <Trajectory dated={dated} proj={proj} /> : <Gauge proj={proj} />}
                 <div className="rk">Projected Step 2 CK</div>
-                <div className="rv">{r.low}<span className="dash"> to </span>{r.high}</div>
+                <div className="rv">{proj.low}<span className="d"> to </span>{proj.high}</div>
                 <div className="chips">
-                  <span className="chip">{r.tier} range</span>
-                  <span className={'chip ' + (r.low >= PASS ? 'ok' : r.high >= PASS ? 'warn' : 'low')}>{r.verdict}</span>
+                  <span className="chip">{proj.tier} range</span>
+                  <span className={'chip ' + proj.vclass}>{proj.verdict}</span>
                 </div>
                 <p className="fine">
-                  A rough range, not a guarantee. It widens the farther your test is from exam day,
-                  because early scores drift more before the real thing.
+                  {showTrajectory
+                    ? 'Green dots are your real scores; the gold band is your projected range at exam day. A rough estimate, not a guarantee.'
+                    : 'A rough range, not a guarantee. It widens the farther your test is from exam day. Add another NBME to see your trajectory.'}
                 </p>
               </div>
             ) : (
@@ -101,14 +125,14 @@ export default function Readiness() {
           </div>
 
           <section className="upsell">
-            <div className="ueyebrow">One score only tells you so much</div>
-            <h2>Track every NBME and watch your trajectory.</h2>
+            <div className="ueyebrow">This is one snapshot. The app tracks the whole climb.</div>
+            <h2>Get the full trajectory and your own share card.</h2>
             <p>
-              Step Gunner logs each practice test, plots your score over time, projects it forward to
-              your exam date, and shows a live readiness gauge. Plus 1,400+ high-yield questions,
-              spaced repetition, and weekly leagues. Free to start.
+              Step Gunner logs every NBME, plots your score over time, projects it to your exam date,
+              and turns it into a share-ready score card. Plus a deep question bank, spaced repetition,
+              and weekly leagues. Free to start.
             </p>
-            <a href={APP} className="btn-store"><span aria-hidden>{'▸'}</span> Get Step Gunner on the App Store</a>
+            <a href={APP} className="btn-store"><svg className="apple" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> Get Step Gunner on the App Store</a>
           </section>
 
           <footer className="foot">
@@ -134,56 +158,132 @@ export default function Readiness() {
       `}</style>
 
       <style jsx>{`
-        .page {
-          min-height: 100vh;
-          background:
-            radial-gradient(90% 55% at 50% -8%, rgba(70,216,119,0.08), transparent 60%),
-            linear-gradient(var(--hair) 1px, transparent 1px) 0 0/26px 26px,
-            linear-gradient(90deg, var(--hair) 1px, transparent 1px) 0 0/26px 26px,
-            var(--bg);
-        }
-        .nav { display: flex; align-items: center; justify-content: space-between; max-width: 900px; margin: 0 auto; padding: 20px 22px; }
+        .page { min-height: 100vh; background:
+          radial-gradient(90% 55% at 50% -8%, rgba(70,216,119,0.08), transparent 60%),
+          linear-gradient(var(--hair) 1px, transparent 1px) 0 0/26px 26px,
+          linear-gradient(90deg, var(--hair) 1px, transparent 1px) 0 0/26px 26px, var(--bg); }
+        .nav { display: flex; align-items: center; justify-content: space-between; max-width: 660px; margin: 0 auto; padding: 20px 22px; }
         .wm { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; font-size: 14px; }
-        .wm .g { color: var(--blue); }
-        .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); }
+        .wm .wt b.g { color: var(--blue); font-weight: 700; }
+        .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); flex: 0 0 auto; }
         .nav-cta { background: var(--blue); color: #fff; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; }
 
-        .wrap { max-width: 620px; margin: 0 auto; padding: 34px 22px 80px; }
+        .wrap { max-width: 640px; margin: 0 auto; padding: 30px 22px 80px; }
         .badge { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--green); border: 1px solid rgba(70,216,119,0.3); background: rgba(70,216,119,0.06); padding: 6px 15px; border-radius: 999px; }
         h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1; margin: 20px 0 10px; }
-        .sub { color: var(--ink-dim); font-size: 16px; margin: 0 0 26px; max-width: 34ch; }
+        .sub { color: var(--ink-dim); font-size: 16px; margin: 0 0 26px; max-width: 36ch; }
 
         .tool { border: 1px solid var(--hair-strong); background: var(--bg-2); border-radius: 16px; padding: 18px; }
-        .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-        @media (max-width: 460px) { .fields { grid-template-columns: 1fr; } }
+        .entry { display: grid; grid-template-columns: 1fr 1fr 30px; gap: 12px; align-items: end; margin-bottom: 12px; }
         .field span { display: block; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.6px; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 7px; }
         .field em { color: var(--ink-faint); font-style: normal; text-transform: none; letter-spacing: 0; }
-        .field input { width: 100%; background: var(--bg-3); border: 1px solid var(--hair-strong); border-radius: 10px; color: var(--ink); font-family: var(--mono); font-size: 20px; font-weight: 700; padding: 12px 14px; outline: none; }
+        .field input { width: 100%; background: var(--bg-3); border: 1px solid var(--hair-strong); border-radius: 10px; color: var(--ink); font-family: var(--mono); font-size: 19px; font-weight: 700; padding: 11px 13px; outline: none; }
         .field input:focus { border-color: var(--green); }
         .field input::placeholder { color: var(--ink-faint); font-weight: 500; }
+        .rm { height: 44px; background: transparent; border: 1px solid var(--hair); border-radius: 10px; color: var(--ink-faint); font-size: 12px; cursor: pointer; }
+        .rm:hover { color: var(--red); border-color: rgba(239,109,109,0.4); }
+        .add { width: 100%; margin-top: 2px; background: transparent; border: 1px dashed var(--hair-strong); border-radius: 10px; color: var(--ink-dim); font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.4px; padding: 11px; cursor: pointer; }
+        .add:hover { border-color: var(--green); color: var(--green); }
 
         .result { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--hair); text-align: center; }
         .rk { font-family: var(--mono); font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); }
         .rv { font-family: var(--mono); font-size: 44px; font-weight: 800; letter-spacing: -1.5px; color: var(--gold); line-height: 1.05; margin-top: 4px; }
         .rv.muted { color: var(--ink-faint); }
-        .rv .dash { font-size: 20px; color: var(--ink-dim); font-weight: 600; }
+        .rv .d { font-size: 20px; color: var(--ink-dim); font-weight: 600; }
         .chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 12px 0 4px; }
-        .chip { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.4px; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--hair-strong); color: var(--ink-dim); }
+        .chip { font-family: var(--mono); font-size: 11px; font-weight: 700; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--hair-strong); color: var(--ink-dim); }
         .chip.ok { color: var(--green); border-color: rgba(70,216,119,0.4); }
         .chip.warn { color: var(--gold); border-color: rgba(227,181,66,0.4); }
         .chip.low { color: var(--red); border-color: rgba(239,109,109,0.4); }
-        .fine { color: var(--ink-faint); font-size: 12.5px; line-height: 1.5; margin: 12px auto 0; max-width: 42ch; }
+        .fine { color: var(--ink-faint); font-size: 12.5px; line-height: 1.5; margin: 12px auto 0; max-width: 44ch; }
 
         .upsell { margin-top: 40px; border: 1px solid var(--hair); background: var(--bg-2); border-radius: 16px; padding: 26px 22px; }
-        .ueyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); }
+        .ueyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-faint); }
         .upsell h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; margin: 10px 0 10px; }
         .upsell p { color: var(--ink-dim); font-size: 15px; line-height: 1.55; margin: 0 0 20px; }
         .btn-store { display: inline-flex; align-items: center; gap: 9px; background: var(--green); color: #05130a; font-family: var(--mono); font-weight: 800; font-size: 13px; letter-spacing: 0.4px; padding: 13px 20px; border-radius: 12px; box-shadow: 0 6px 26px rgba(70,216,119,0.28); }
-        .btn-store span { font-size: 11px; }
+        .btn-store .apple { width: 14px; height: 17px; flex: 0 0 auto; }
 
-        .foot { display: flex; justify-content: space-between; align-items: center; margin-top: 34px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.5px; color: var(--ink-faint); }
+        .foot { display: flex; justify-content: space-between; align-items: center; margin-top: 34px; font-family: var(--mono); font-size: 11px; color: var(--ink-faint); }
         .foot :global(a) { color: var(--ink-dim); }
+
+        @media (max-width: 460px) { .entry { grid-template-columns: 1fr 1fr 26px; } }
       `}</style>
     </>
+  );
+}
+
+// Always-on range gauge: the projected band on a 205-275 scale, with pass + mean markers.
+function Gauge({ proj }: { proj: Proj }) {
+  return (
+    <div className="gauge">
+      <div className="track">
+        <div className="band" style={{ left: gpct(proj.low) + '%', width: (gpct(proj.high) - gpct(proj.low)) + '%' }} />
+        <div className="mk pass" style={{ left: gpct(PASS) + '%' }} />
+        <div className="mk mean" style={{ left: gpct(MEAN) + '%' }} />
+        <div className="lbl pass" style={{ left: gpct(PASS) + '%' }}>218 pass</div>
+        <div className="lbl mean" style={{ left: gpct(MEAN) + '%' }}>avg 245</div>
+      </div>
+      <div className="scale"><span>{GMIN}</span><span>{GMAX}</span></div>
+      <style jsx>{`
+        .gauge { margin: 0 auto 18px; max-width: 340px; }
+        .track { position: relative; height: 12px; background: var(--bg-3); border: 1px solid var(--hair); border-radius: 999px; margin-top: 30px; }
+        .band { position: absolute; top: -1px; bottom: -1px; background: linear-gradient(90deg, rgba(227,181,66,0.5), var(--gold)); border-radius: 999px; box-shadow: 0 0 14px rgba(227,181,66,0.4); }
+        .mk { position: absolute; top: -4px; width: 2px; height: 20px; transform: translateX(-1px); }
+        .mk.pass { background: var(--red); } .mk.mean { background: var(--ink-dim); }
+        .lbl { position: absolute; top: -26px; transform: translateX(-50%); font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.4px; white-space: nowrap; }
+        .lbl.pass { color: var(--red); } .lbl.mean { color: var(--ink-dim); }
+        .scale { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 9px; color: var(--ink-faint); margin-top: 8px; }
+      `}</style>
+    </div>
+  );
+}
+
+// Trajectory chart: real scores over days-before-exam, projected to exam day, with band + refs.
+function Trajectory({ dated, proj }: { dated: { s: number; d: number }[]; proj: Proj }) {
+  const pts = [...dated].sort((a, b) => b.d - a.d); // oldest (max days) first, left to right
+  const maxD = Math.max(pts[0].d, 1);
+  const W = 340, H = 176, L = 30, R = 328, T = 14, B = 140;
+  const allS = pts.map((p) => p.s).concat([proj.low, proj.high, PASS]);
+  const yMin = Math.min(...allS) - 4, yMax = Math.max(...allS) + 4;
+  const xForD = (d: number) => L + ((maxD - d) / maxD) * (R - L);
+  const yForS = (s: number) => B - ((s - yMin) / (yMax - yMin)) * (B - T);
+  const line = pts.map((p) => `${xForD(p.d)},${yForS(p.s)}`).join(' ');
+  const last = pts[pts.length - 1];
+  const refs = [PASS, MEAN].filter((v) => v > yMin && v < yMax);
+
+  return (
+    <div className="chart">
+      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Your NBME scores over time, projected to exam day">
+        {refs.map((v) => (
+          <g key={v}>
+            <line x1={L} y1={yForS(v)} x2={R} y2={yForS(v)} stroke={v === PASS ? 'rgba(239,109,109,0.35)' : '#2a3038'} strokeWidth={1} strokeDasharray="4 3" />
+            <text x={R} y={yForS(v) - 3} fill={v === PASS ? '#ef6d6d' : '#5c636e'} fontFamily="ui-monospace, monospace" fontSize={7.5} textAnchor="end">{v === PASS ? 'PASS 218' : 'AVG 245'}</text>
+          </g>
+        ))}
+        {/* projection band to exam day */}
+        <path d={`M${xForD(last.d)},${yForS(last.s)} L${R},${yForS(proj.high)} L${R},${yForS(proj.low)} Z`} fill="rgba(227,181,66,0.13)" />
+        {/* connecting line through real scores */}
+        <polyline points={line} fill="none" stroke="#46d877" strokeWidth={2.2} />
+        {/* dashed forward to projected center at exam day */}
+        <line x1={xForD(last.d)} y1={yForS(last.s)} x2={R} y2={yForS(proj.center)} stroke="#e3b542" strokeWidth={2.2} strokeDasharray="5 4" opacity={0.85} />
+        {/* dots + score labels */}
+        {pts.map((p, i) => (
+          <g key={i}>
+            <circle cx={xForD(p.d)} cy={yForS(p.s)} r={4} fill="#46d877" stroke="#0a0b0d" strokeWidth={1.5} />
+            <text x={xForD(p.d)} y={yForS(p.s) - 9} fill="#f4f6f8" fontFamily="ui-monospace, monospace" fontSize={9} fontWeight={800} textAnchor="middle">{p.s}</text>
+            <text x={xForD(p.d)} y={B + 13} fill="#9aa1ab" fontFamily="ui-monospace, monospace" fontSize={7.5} textAnchor="middle">{p.d}d</text>
+          </g>
+        ))}
+        {/* projected point at exam day */}
+        <circle cx={R} cy={yForS(proj.center)} r={4.5} fill="none" stroke="#e3b542" strokeWidth={2} />
+        <text x={R} y={B + 13} fill="#e3b542" fontFamily="ui-monospace, monospace" fontSize={7.5} fontWeight={700} textAnchor="middle">EXAM</text>
+        <text x={W / 2} y={H - 2} fill="#5c636e" fontFamily="ui-monospace, monospace" fontSize={7} letterSpacing={1} textAnchor="middle">DAYS BEFORE EXAM</text>
+      </svg>
+      <style jsx>{`
+        .chart { margin: 0 auto 16px; max-width: 360px; }
+        .chart svg { display: block; width: 100%; height: auto; }
+      `}</style>
+    </div>
   );
 }
