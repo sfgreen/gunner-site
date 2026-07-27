@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const APP = 'https://apps.apple.com/us/app/step-gunner/id6761317357';
 const PASS = 218; // USMLE Step 2 CK minimum passing score
-const MEAN = 245; // approx US MD Step 2 CK average
+const MEAN = 250; // US LCME first-taker Step 2 CK mean, 2024-2025 (SD 15), USMLE Score Interpretation Guidelines
 const GMIN = 205, GMAX = 275; // range-gauge scale
 
 type Entry = { score: string; days: string };
@@ -222,7 +222,7 @@ function Gauge({ proj }: { proj: Proj }) {
         <div className="mk pass" style={{ left: gpct(PASS) + '%' }} />
         <div className="mk mean" style={{ left: gpct(MEAN) + '%' }} />
         <div className="lbl pass" style={{ left: gpct(PASS) + '%' }}>218 pass</div>
-        <div className="lbl mean" style={{ left: gpct(MEAN) + '%' }}>avg 245</div>
+        <div className="lbl mean" style={{ left: gpct(MEAN) + '%' }}>avg {MEAN}</div>
       </div>
       <div className="scale"><span>{GMIN}</span><span>{GMAX}</span></div>
       <style jsx>{`
@@ -258,7 +258,7 @@ function Trajectory({ dated, proj }: { dated: { s: number; d: number }[]; proj: 
         {refs.map((v) => (
           <g key={v}>
             <line x1={L} y1={yForS(v)} x2={R} y2={yForS(v)} stroke={v === PASS ? 'rgba(239,109,109,0.35)' : '#2a3038'} strokeWidth={1} strokeDasharray="4 3" />
-            <text x={R} y={yForS(v) - 3} fill={v === PASS ? '#ef6d6d' : '#5c636e'} fontFamily="ui-monospace, monospace" fontSize={7.5} textAnchor="end">{v === PASS ? 'PASS 218' : 'AVG 245'}</text>
+            <text x={R} y={yForS(v) - 3} fill={v === PASS ? '#ef6d6d' : '#5c636e'} fontFamily="ui-monospace, monospace" fontSize={7.5} textAnchor="end">{v === PASS ? `PASS ${PASS}` : `AVG ${MEAN}`}</text>
           </g>
         ))}
         {/* projection band to exam day */}
