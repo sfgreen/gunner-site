@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 import { useState, useEffect, useRef } from 'react';
 import {
-  PASS, MEAN, GMIN, GMAX, FORMS,
+  PASS, PASS_COMFORT, MEAN, GMIN, GMAX, FORMS,
   percentile, ordinal, gpct, computeReadiness, decodeShare, buildCardCore, ogMeta, SHARE_BASE,
   type Entry, type Proj,
 } from '../lib/readiness';
@@ -138,7 +138,11 @@ export default function Readiness({ og }: { og: OG }) {
                 <div className={'rv' + (actualNum < PASS ? ' muted' : '')}>{actualNum}</div>
                 <div className="chips">
                   <span className="chip pctl">{ordinal(percentile(actualNum))} %ile</span>
-                  <span className={'chip ' + (actualNum >= PASS ? 'ok' : 'low')}>{actualNum >= PASS ? `Clears ${PASS}` : `Below ${PASS}`}</span>
+                  {actualNum < PASS
+                    ? <span className="chip low">Below {PASS}</span>
+                    : actualNum <= PASS_COMFORT
+                      ? <span className="chip ok">Clears {PASS}</span>
+                      : null}
                 </div>
                 <p className="fine">Your actual score, plotted against your practice trajectory. Percentile vs US first-takers.</p>
               </div>
@@ -150,7 +154,7 @@ export default function Readiness({ og }: { og: OG }) {
                 <div className="chips">
                   <span className="chip pctl">proj. {ordinal(percentile(proj.center))} %ile</span>
                   <span className="chip">{proj.tier} range</span>
-                  <span className={'chip ' + proj.vclass}>{proj.verdict}</span>
+                  {proj.verdict && <span className={'chip ' + proj.vclass}>{proj.verdict}</span>}
                 </div>
                 <p className="fine">
                   {showTrajectory

@@ -10,6 +10,10 @@
 //            gain), band = a days-out table, plus a low-anchor guardrail.
 
 export const PASS = 218; // USMLE Step 2 CK minimum passing score
+// At/above this, a pass is not in question, so the "Clears 218" chip is dropped as
+// obvious (a 262 does not need to be told it cleared the pass line). ~1.4 residual
+// SD above PASS, ~10th percentile. Below it, the pass-line framing is real signal.
+export const PASS_COMFORT = 230;
 export const MEAN = 250; // US LCME first-taker Step 2 CK mean, 2024-2025 (SD 15)
 export const GMIN = 205,
   GMAX = 275; // range-gauge scale
@@ -120,10 +124,12 @@ export function computeReadiness(entries: Entry[]) {
 
     const low = clamp(center - band, CAL.floor, CAL.ceiling);
     const high = clamp(center + band, CAL.floor, CAL.ceiling);
-    let verdict: string, vclass: string;
-    if (low >= PASS) { verdict = `Clears the ${PASS} pass line.`; vclass = 'ok'; }
-    else if (high >= PASS) { verdict = `Straddles the ${PASS} pass line. Keep building.`; vclass = 'warn'; }
-    else { verdict = `Below the ${PASS} pass line. There is time to build.`; vclass = 'low'; }
+    // Pass-line verdict only when passing is genuinely in question; a projection
+    // that comfortably clears leaves it empty (the percentile carries it).
+    let verdict = '', vclass = '';
+    if (high < PASS) { verdict = `Below the ${PASS} pass line. There is time to build.`; vclass = 'low'; }
+    else if (low < PASS) { verdict = `Straddles the ${PASS} pass line. Keep building.`; vclass = 'warn'; }
+    else if (low <= PASS_COMFORT) { verdict = `Clears the ${PASS} pass line.`; vclass = 'ok'; }
     proj = { low, high, band, tier, verdict, vclass, center, lowAnchor };
   }
   return { parsed, dated, freshest: freshestP, proj, showTrajectory: dated.length >= 2 && !!proj };
@@ -186,15 +192,18 @@ export function buildCardCore(entries: Entry[], actualStr: string, status: strin
     ? `${ordinal(pct)} percentile of US first-takers`
     : `proj. ${ordinal(pct)} %ile (est.)`;
 
+  // Pass-line chip only when passing is in question; a comfortably-passing score
+  // (or projection) drops it as obvious, letting the percentile speak.
   let verdictChip: string | null = null;
   let verdictKey: VerdictKey = 'dim';
   if (hasActual) {
-    verdictChip = (actual as number) >= PASS ? `Clears ${PASS}` : `Below ${PASS}`;
-    verdictKey = (actual as number) >= PASS ? 'green' : 'dim';
+    const a = actual as number;
+    if (a < PASS) { verdictChip = `Below ${PASS}`; verdictKey = 'dim'; }
+    else if (a <= PASS_COMFORT) { verdictChip = `Clears ${PASS}`; verdictKey = 'green'; }
   } else if (proj) {
-    if (proj.low >= PASS) { verdictChip = `Clears ${PASS}`; verdictKey = 'green'; }
-    else if (proj.high >= PASS) { verdictChip = `Straddles ${PASS}`; verdictKey = 'gold'; }
-    else { verdictChip = `Below ${PASS}`; verdictKey = 'red'; }
+    if (proj.high < PASS) { verdictChip = `Below ${PASS}`; verdictKey = 'red'; }
+    else if (proj.low < PASS) { verdictChip = `Straddles ${PASS}`; verdictKey = 'gold'; }
+    else if (proj.low <= PASS_COMFORT) { verdictChip = `Clears ${PASS}`; verdictKey = 'green'; }
   }
   const tierChip = !hasActual && proj ? `${shortTier(proj.tier)} range` : null;
   const fromScore = parsed.length ? parsed[0].s : null;
