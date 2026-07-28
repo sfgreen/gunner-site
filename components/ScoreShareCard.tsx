@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import {
   buildCopyText, computeReadiness, shareUrl, redditSubmitUrl, type Entry,
 } from '../lib/readiness';
+import { track } from '../lib/analytics';
 import { buildCardModel, drawScoreCard, CARD_W, CARD_H } from '../lib/scoreCard';
 
 type Props = { entries: Entry[]; actual: string; status: string };
@@ -71,6 +72,7 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
   const ping = (k: 'text' | 'link' | 'img' | 'reddit') => { setFlash(k); setTimeout(() => setFlash(null), 1600); };
 
   const copyWriteup = async () => {
+    track('share_action', { method: 'writeup' });
     try {
       await navigator.clipboard.writeText(buildCopyText(entries, actual, status, proj));
       ping('text');
@@ -78,6 +80,7 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
   };
 
   const copyLink = async () => {
+    track('share_action', { method: 'link' });
     try { await navigator.clipboard.writeText(link); ping('link'); }
     catch { /* ignore */ }
   };
@@ -98,6 +101,7 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
 
   // Mobile: native share sheet (attaches the card). Desktop: download the PNG.
   const shareCard = () => {
+    track('share_action', { method: nativeShare ? 'native_share' : 'download' });
     withBlob((blob) => {
       const file = new File([blob], 'step-gunner-readiness.png', { type: 'image/png' });
       const nav = navigator as Navigator & {
@@ -118,6 +122,7 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
   // Desktop one-click: copy the write-up (for the first comment / a text post),
   // download the card to drag in, and open the r/step2 composer with the title in.
   const postToReddit = () => {
+    track('share_action', { method: 'reddit' });
     navigator.clipboard?.writeText(buildCopyText(entries, actual, status, proj)).catch(() => { /* still selectable */ });
     window.open(redditSubmitUrl(entries, actual, status), '_blank', 'noopener,noreferrer');
     withBlob(download);
