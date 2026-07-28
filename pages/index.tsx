@@ -33,11 +33,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Step Gunner — USMLE Step 2 CK Prep</title>
+        <title>Step Gunner | USMLE Step 2 CK Prep</title>
         <meta name="description" content="Step Gunner is a gamified USMLE Step 2 CK study app: clinical case missions, Socratic rounds, 1,400+ high-yield questions, spaced repetition, and weekly leagues. Built by a med student, for med students." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#0a0b0d" />
-        <meta property="og:title" content="Step Gunner — USMLE Step 2 CK Prep" />
+        <meta property="og:title" content="Step Gunner | USMLE Step 2 CK Prep" />
         <meta property="og:description" content="Gun for honors. Clinical case missions, Socratic rounds, weekly leagues, and a streak that won't let you coast." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://stepgunner.com" />

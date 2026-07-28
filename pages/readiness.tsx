@@ -1,72 +1,53 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import type { GetServerSideProps } from 'next';
 import { useState, useEffect, useRef } from 'react';
+import {
+  PASS, MEAN, GMIN, GMAX, FORMS,
+  percentile, ordinal, gpct, computeReadiness, decodeShare, buildCardCore, ogMeta, SHARE_BASE,
+  type Entry, type Proj,
+} from '../lib/readiness';
+import ScoreShareCard from '../components/ScoreShareCard';
 
 const APP = 'https://apps.apple.com/us/app/step-gunner/id6761317357';
-const PASS = 218; // USMLE Step 2 CK minimum passing score
-const MEAN = 250; // US LCME first-taker Step 2 CK mean, 2024-2025 (SD 15), USMLE Score Interpretation Guidelines
-const GMIN = 205, GMAX = 275; // range-gauge scale
-const FORMS = ['NBME 9', 'NBME 10', 'NBME 11', 'NBME 12', 'NBME 13', 'NBME 14', 'NBME 15', 'NBME 16', 'UWSA 1', 'UWSA 2', 'UWSA 3'];
 
-// Step 2 CK percentile norm table (USMLE Score Interpretation Guidelines, Table 2,
-// LCME first-takers July 2022 - June 2025, N=67,934). Linearly interpolated.
-const NORM: [number, number][] = [
-  [200, 0], [205, 1], [210, 1], [215, 2], [220, 4], [225, 6], [230, 10], [235, 16],
-  [240, 24], [245, 34], [250, 47], [255, 60], [260, 74], [265, 85], [270, 94], [275, 98], [300, 100],
-];
-function clamp(v: number, lo: number, hi: number) { return Math.max(lo, Math.min(hi, v)); }
-function percentile(score: number): number {
-  const s = clamp(score, 200, 300);
-  for (let i = 0; i < NORM.length - 1; i++) {
-    const [x0, y0] = NORM[i], [x1, y1] = NORM[i + 1];
-    if (s >= x0 && s <= x1) return Math.round(y0 + ((y1 - y0) * (s - x0)) / (x1 - x0));
-  }
-  return s >= 300 ? 100 : 0;
-}
-function ordinal(n: number) { const s = ['th', 'st', 'nd', 'rd'], v = n % 100; return n + (s[(v - 20) % 10] || s[v] || s[0]); }
-function bandForDays(days: number | null): { band: number; tier: string } {
-  if (days == null || Number.isNaN(days)) return { band: 14, tier: 'Rough (add your exam date)' };
-  if (days <= 14) return { band: 8, tier: 'Tight' };
-  if (days <= 30) return { band: 12, tier: 'Moderate' };
-  if (days <= 60) return { band: 16, tier: 'Wide' };
-  return { band: 22, tier: 'Very wide (exam far out)' };
-}
-function gpct(v: number) { return ((clamp(v, GMIN, GMAX) - GMIN) / (GMAX - GMIN)) * 100; }
+type OG = { title: string; desc: string; image: string; url: string };
 
-type Entry = { form: string; score: string; days: string };
-type Proj = { low: number; high: number; band: number; tier: string; verdict: string; vclass: string; center: number };
-
-export default function Readiness() {
+export default function Readiness({ og }: { og: OG }) {
   const [entries, setEntries] = useState<Entry[]>([{ form: '', score: '', days: '' }]);
+  const [actual, setActual] = useState('');
+  const [status, setStatus] = useState('');
   const lastSent = useRef('');
 
-  // Persist on this device.
+  // Restore on load. A shared ?e= link wins over local storage so a shared link
+  // recreates the exact inputs + card; otherwise fall back to this device's saved run.
   useEffect(() => {
-    try { const s = localStorage.getItem('gunner_readiness'); if (s) { const p = JSON.parse(s); if (Array.isArray(p) && p.length) setEntries(p); } } catch { /* ignore */ }
+    try {
+      const q = new URLSearchParams(window.location.search).get('e');
+      if (q) {
+        const s = decodeShare(q);
+        if (s) { setEntries(s.entries); setActual(s.actual); setStatus(s.status); return; }
+      }
+    } catch { /* ignore */ }
+    try {
+      const s = localStorage.getItem('gunner_readiness');
+      if (s) { const p = JSON.parse(s); if (Array.isArray(p) && p.length) setEntries(p); }
+      const a = localStorage.getItem('gunner_readiness_actual'); if (a) setActual(a);
+      const st = localStorage.getItem('gunner_readiness_status'); if (st) setStatus(st);
+    } catch { /* ignore */ }
   }, []);
   useEffect(() => {
-    try { localStorage.setItem('gunner_readiness', JSON.stringify(entries)); } catch { /* ignore */ }
-  }, [entries]);
+    try {
+      localStorage.setItem('gunner_readiness', JSON.stringify(entries));
+      localStorage.setItem('gunner_readiness_actual', actual);
+      localStorage.setItem('gunner_readiness_status', status);
+    } catch { /* ignore */ }
+  }, [entries, actual, status]);
 
-  const parsed = entries
-    .map((e) => ({ s: parseInt(e.score, 10), d: e.days === '' ? null : parseInt(e.days, 10), form: e.form }))
-    .filter((p) => !Number.isNaN(p.s) && p.s >= 130 && p.s <= 300);
-  const dated = parsed.filter((p) => p.d != null && !Number.isNaN(p.d)) as { s: number; d: number; form: string }[];
-  const freshest = dated.length
-    ? dated.reduce((a, b) => (b.d < a.d ? b : a))
-    : parsed.length ? { s: parsed[parsed.length - 1].s, d: null as number | null } : null;
-
-  let proj: Proj | null = null;
-  if (freshest) {
-    const { band, tier } = bandForDays(freshest.d);
-    const low = clamp(Math.round(freshest.s - band), 180, 300);
-    const high = clamp(Math.round(freshest.s + band), 180, 300);
-    let verdict: string, vclass: string;
-    if (low >= PASS) { verdict = `Clears the ${PASS} pass line.`; vclass = 'ok'; }
-    else if (high >= PASS) { verdict = `Straddles the ${PASS} pass line. Keep building.`; vclass = 'warn'; }
-    else { verdict = `Below the ${PASS} pass line. There is time to build.`; vclass = 'low'; }
-    proj = { low, high, band, tier, verdict, vclass, center: freshest.s };
-  }
+  const { dated, proj, showTrajectory } = computeReadiness(entries);
+  const actualNum = actual === '' ? NaN : parseInt(actual, 10);
+  const actualValid = !Number.isNaN(actualNum) && actualNum >= 130 && actualNum <= 300;
+  const canShare = !!proj || actualValid;
 
   // Save each settled check anonymously (aggregate dataset). Debounced + de-duped.
   useEffect(() => {
@@ -85,18 +66,20 @@ export default function Readiness() {
   const addEntry = () => setEntries((es) => (es.length < 12 ? [...es, { form: '', score: '', days: '' }] : es));
   const removeEntry = (i: number) => setEntries((es) => (es.length > 1 ? es.filter((_, j) => j !== i) : es));
   const onlyNum = (v: string, n: number) => v.replace(/[^0-9]/g, '').slice(0, n);
-  const showTrajectory = dated.length >= 2 && !!proj;
 
   return (
     <>
       <Head>
-        <title>Step 2 Readiness Check — Step Gunner</title>
+        <title>{og.title}</title>
         <meta name="description" content="Enter your NBME or UWSA scores and see a projected Step 2 CK range, percentile, and trajectory, free. Step Gunner tracks every practice test to exam day." />
-        <meta property="og:title" content="Step 2 Readiness Check — Step Gunner" />
-        <meta property="og:description" content="See your projected Step 2 CK range, percentile, and trajectory from your NBMEs, free." />
-        <meta property="og:url" content="https://stepgunner.com/readiness" />
-        <meta property="og:image" content="https://stepgunner.com/screenshots/showcase/01-home.jpg" />
+        <meta property="og:title" content={og.title} />
+        <meta property="og:description" content={og.desc} />
+        <meta property="og:url" content={og.url} />
+        <meta property="og:image" content={og.image} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={og.image} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#0a0b0d" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -137,6 +120,17 @@ export default function Readiness() {
             ))}
             <button className="add" onClick={addEntry}>+ Add another NBME / UWSA</button>
 
+            <div className="extra">
+              <label className="field">
+                <span>Actual Step 2 <em>(if you have it)</em></span>
+                <input inputMode="numeric" placeholder="250" value={actual} onChange={(ev) => setActual(onlyNum(ev.target.value, 3))} />
+              </label>
+              <label className="field">
+                <span>Status line <em>(opt.)</em></span>
+                <input className="txt" type="text" maxLength={60} placeholder="US MD, targeting IM" value={status} onChange={(ev) => setStatus(ev.target.value)} />
+              </label>
+            </div>
+
             {proj ? (
               <div className="result">
                 {showTrajectory ? <Trajectory dated={dated} proj={proj} /> : <Gauge proj={proj} />}
@@ -162,6 +156,8 @@ export default function Readiness() {
             )}
           </div>
           <p className="saved">Your entries stay on this device and are saved anonymously (no name or email) to sharpen these projections.</p>
+
+          {canShare && <ScoreShareCard entries={entries} actual={actual} status={status} />}
 
           <section className="upsell">
             <div className="ueyebrow">This is one snapshot. The app tracks the whole climb.</div>
@@ -224,6 +220,10 @@ export default function Readiness() {
         .rm:hover { color: var(--red); border-color: rgba(239,109,109,0.4); }
         .add { width: 100%; margin-top: 2px; background: transparent; border: 1px dashed var(--hair-strong); border-radius: 10px; color: var(--ink-dim); font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.4px; padding: 11px; cursor: pointer; }
         .add:hover { border-color: var(--green); color: var(--green); }
+
+        .extra { display: grid; grid-template-columns: 140px 1fr; gap: 10px; margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--hair); }
+        .field input.txt { font-family: var(--sans); font-weight: 500; font-size: 14px; }
+        @media (max-width: 480px) { .extra { grid-template-columns: 1fr; } }
 
         .result { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--hair); text-align: center; }
         .rk { font-family: var(--mono); font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); }
@@ -326,3 +326,26 @@ function Trajectory({ dated, proj }: { dated: { s: number; d: number; form: stri
     </div>
   );
 }
+
+// SSR the OG meta so a shared ?e= link unfurls as the student's own card. Crawlers
+// (Reddit, X, iMessage) do not run the client JS, so the og:image must be in the
+// server HTML; it points at the dynamic /api/og route with the same ?e= payload.
+export const getServerSideProps: GetServerSideProps<{ og: OG }> = async (ctx) => {
+  const ORIGIN = SHARE_BASE.replace('/readiness', '');
+  const e = typeof ctx.query.e === 'string' ? ctx.query.e : '';
+  const decoded = e ? decodeShare(e) : null;
+  const core = decoded ? buildCardCore(decoded.entries, decoded.actual, decoded.status) : null;
+  const meta = ogMeta(core);
+  const qs = core ? `?e=${encodeURIComponent(e)}` : '';
+  ctx.res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
+  return {
+    props: {
+      og: {
+        title: meta.title,
+        desc: meta.desc,
+        image: `${ORIGIN}/api/og${qs}`,
+        url: `${ORIGIN}/readiness${qs}`,
+      },
+    },
+  };
+};
