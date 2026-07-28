@@ -189,7 +189,7 @@ export function buildCardCore(entries: Entry[], actualStr: string, status: strin
   const pctSource = hasActual ? (actual as number) : proj ? proj.center : 0;
   const pct = percentile(pctSource);
   const pctChip = hasActual
-    ? `${ordinal(pct)} percentile of US first-takers`
+    ? `${ordinal(pct)} percentile`
     : `proj. ${ordinal(pct)} %ile (est.)`;
 
   // Pass-line chip only when passing is in question; a comfortably-passing score
