@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import {
-  buildCopyText, computeReadiness, shareUrl, type Entry,
+  buildCopyText, computeReadiness, shareUrl, redditSubmitUrl, type Entry,
 } from '../lib/readiness';
 import { buildCardModel, drawScoreCard, CARD_W, CARD_H } from '../lib/scoreCard';
 
@@ -13,7 +13,17 @@ type Props = { entries: Entry[]; actual: string; status: string };
 export default function ScoreShareCard({ entries, actual, status }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [fontsReady, setFontsReady] = useState(false);
-  const [flash, setFlash] = useState<'text' | 'link' | 'img' | null>(null);
+  const [flash, setFlash] = useState<'text' | 'link' | 'img' | 'reddit' | null>(null);
+  // Phones can hand the PNG straight to the Reddit app via the share sheet;
+  // desktop cannot, so it gets the guided download + composer flow instead.
+  const [nativeShare, setNativeShare] = useState(false);
+  useEffect(() => {
+    try {
+      const probe = new File([new Blob()], 'probe.png', { type: 'image/png' });
+      const nav = navigator as Navigator & { canShare?: (d: unknown) => boolean };
+      setNativeShare(!!(nav.canShare && nav.canShare({ files: [probe] })));
+    } catch { setNativeShare(false); }
+  }, []);
 
   const model = useMemo(() => buildCardModel(entries, actual, status), [entries, actual, status]);
   const proj = useMemo(() => computeReadiness(entries).proj, [entries]);
@@ -49,7 +59,7 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
     drawScoreCard(ctx, model, scale);
   }, [model, fontsReady]);
 
-  const ping = (k: 'text' | 'link' | 'img') => { setFlash(k); setTimeout(() => setFlash(null), 1600); };
+  const ping = (k: 'text' | 'link' | 'img' | 'reddit') => { setFlash(k); setTimeout(() => setFlash(null), 1600); };
 
   const copyWriteup = async () => {
     try {
@@ -63,11 +73,23 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
     catch { /* ignore */ }
   };
 
-  const downloadOrShare = () => {
+  const withBlob = (cb: (blob: Blob) => void) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    canvas.toBlob((blob) => {
-      if (!blob) return;
+    canvas.toBlob((blob) => { if (blob) cb(blob); }, 'image/png');
+  };
+
+  const download = (blob: Blob) => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'step-gunner-readiness.png';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+  };
+
+  // Mobile: native share sheet (attaches the card). Desktop: download the PNG.
+  const shareCard = () => {
+    withBlob((blob) => {
       const file = new File([blob], 'step-gunner-readiness.png', { type: 'image/png' });
       const nav = navigator as Navigator & {
         canShare?: (d: unknown) => boolean;
@@ -79,13 +101,18 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
           .catch(() => { /* user dismissed */ });
         return;
       }
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = file.name;
-      document.body.appendChild(a); a.click(); a.remove();
-      setTimeout(() => URL.revokeObjectURL(url), 4000);
+      download(blob);
       ping('img');
-    }, 'image/png');
+    });
+  };
+
+  // Desktop one-click: copy the write-up (for the first comment / a text post),
+  // download the card to drag in, and open the r/step2 composer with the title in.
+  const postToReddit = () => {
+    navigator.clipboard?.writeText(buildCopyText(entries, actual, status, proj)).catch(() => { /* still selectable */ });
+    window.open(redditSubmitUrl(entries, actual, status), '_blank', 'noopener,noreferrer');
+    withBlob(download);
+    ping('reddit');
   };
 
   if (!model) return null;
@@ -104,19 +131,39 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
       </div>
 
       <div className="actions">
-        <button className="act primary" onClick={downloadOrShare}>
-          {flash === 'img' ? 'Saved' : 'Download card'}
-        </button>
-        <button className="act" onClick={copyWriteup}>
-          {flash === 'text' ? 'Copied' : 'Copy write-up'}
-        </button>
-        <button className="act ghost" onClick={copyLink}>
-          {flash === 'link' ? 'Link copied' : 'Copy link'}
-        </button>
+        {nativeShare ? (
+          <>
+            <button className="act primary wide" onClick={shareCard}>
+              {flash === 'img' ? 'Shared' : 'Share card'}
+            </button>
+            <button className="act" onClick={copyWriteup}>
+              {flash === 'text' ? 'Copied' : 'Copy write-up'}
+            </button>
+            <button className="act ghost" onClick={copyLink}>
+              {flash === 'link' ? 'Link copied' : 'Copy link'}
+            </button>
+          </>
+        ) : (
+          <>
+            <button className="act primary wide" onClick={postToReddit}>
+              {flash === 'reddit' ? 'Opening r/step2' : 'Post to r/step2'}
+            </button>
+            <button className="act" onClick={shareCard}>
+              {flash === 'img' ? 'Saved' : 'Download card'}
+            </button>
+            <button className="act" onClick={copyWriteup}>
+              {flash === 'text' ? 'Copied' : 'Copy write-up'}
+            </button>
+            <button className="act ghost wide" onClick={copyLink}>
+              {flash === 'link' ? 'Link copied' : 'Copy link'}
+            </button>
+          </>
+        )}
       </div>
       <p className="share-fine">
-        Write-up pastes as plain text for comment threads. The card is a PNG with a QR to your saved link.
-        Nothing here needs a sign-up.
+        {nativeShare
+          ? 'Share card opens your phone share sheet with the card attached. Pick Reddit for an image post, or send it anywhere.'
+          : 'Post to r/step2 downloads your card, copies your write-up, and opens the composer. Switch to Images, drag the card in, and paste your write-up as the first comment.'}
       </p>
 
       <style jsx>{`
@@ -131,11 +178,12 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
         .act:hover { border-color: var(--ink-dim); }
         .act:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
         .act.primary { background: var(--green); color: #05130a; border-color: transparent; box-shadow: 0 6px 22px rgba(70,216,119,0.24); }
-        .act.primary:hover { border-color: transparent; }
-        .act.ghost { grid-column: 1 / -1; background: transparent; color: var(--ink-dim); border-style: dashed; }
+        .act.primary:hover { border-color: transparent; transform: translateY(-1px); }
+        .act.wide { grid-column: 1 / -1; }
+        .act.ghost { background: transparent; color: var(--ink-dim); border-style: dashed; }
         .act.ghost:hover { color: var(--green); border-color: var(--green); }
         .share-fine { color: var(--ink-faint); font-size: 12px; line-height: 1.5; margin: 12px 2px 0; }
-        @media (max-width: 380px) { .actions { grid-template-columns: 1fr; } .act.ghost { grid-column: auto; } }
+        @media (max-width: 380px) { .actions { grid-template-columns: 1fr; } }
       `}</style>
     </section>
   );

@@ -295,6 +295,30 @@ export function shareUrl(entries: Entry[], actual: string, status: string): stri
   return `${SHARE_BASE}?e=${encodeShare(entries, actual, status)}`;
 }
 
+// ---- Reddit r/step2 submit deep link ----
+// Title is built from the student's OWN numbers (and status line) so it reads
+// personal and varies per user, never a templated string a mod would flag.
+export function redditTitle(entries: Entry[], actual: string, status: string): string {
+  const core = buildCardCore(entries, actual, status);
+  if (!core) return 'My Step 2 CK readiness';
+  const st = core.status ? `, ${core.status}` : '';
+  if (core.fail) return `Regrouping for a Step 2 CK retake${st}`;
+  if (core.actual != null) {
+    if (core.fromScore != null && core.fromScore !== core.actual) {
+      return `${core.fromScore} to ${core.actual} on Step 2 CK${st}`;
+    }
+    return `Step 2 CK: ${core.actual}${st}`;
+  }
+  if (core.proj) return `Projected ${core.proj.low} to ${core.proj.high} on Step 2 CK${st}`;
+  return `My Step 2 CK readiness${st}`;
+}
+
+// Lands the user in the r/step2 composer with the title prefilled. Reddit cannot
+// pre-attach a file via URL, so the image is downloaded client-side to drag in.
+export function redditSubmitUrl(entries: Entry[], actual: string, status: string): string {
+  return `https://www.reddit.com/r/step2/submit?title=${encodeURIComponent(redditTitle(entries, actual, status))}`;
+}
+
 // ---- native r/step2 copy-as-text write-up ----
 export function buildCopyText(entries: Entry[], actual: string, status: string, proj: Proj | null): string {
   const lines: string[] = [];
