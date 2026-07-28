@@ -19,9 +19,18 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
   const [nativeShare, setNativeShare] = useState(false);
   useEffect(() => {
     try {
+      const nav = navigator as Navigator & {
+        canShare?: (d: unknown) => boolean;
+        userAgentData?: { mobile?: boolean };
+      };
       const probe = new File([new Blob()], 'probe.png', { type: 'image/png' });
-      const nav = navigator as Navigator & { canShare?: (d: unknown) => boolean };
-      setNativeShare(!!(nav.canShare && nav.canShare({ files: [probe] })));
+      const canShareFiles = !!(nav.canShare && nav.canShare({ files: [probe] }));
+      // Desktop Chrome also reports canShare(files)=true but has no Reddit app in
+      // its share dialog, so only use the native sheet on an actual touch device;
+      // everything else gets the guided Post-to-r/step2 flow.
+      const coarse = typeof window.matchMedia === 'function' && window.matchMedia('(pointer: coarse)').matches;
+      const isMobile = nav.userAgentData?.mobile === true || coarse;
+      setNativeShare(canShareFiles && isMobile);
     } catch { setNativeShare(false); }
   }, []);
 
