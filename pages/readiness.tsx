@@ -88,7 +88,7 @@ export default function Readiness({ og }: { og: OG }) {
 
       <div className="page">
         <nav className="nav">
-          <Link href="/" className="wm"><span className="dot" /><span className="wt">STEP <b className="g">GUNNER</b></span></Link>
+          <a href="/" className="wm"><span className="dot" /><span className="wt">STEP <b className="g">GUNNER</b></span></a>
           <a href={APP} className="nav-cta">Download</a>
         </nav>
 
@@ -122,7 +122,7 @@ export default function Readiness({ og }: { og: OG }) {
 
             <div className="extra">
               <label className="field">
-                <span>Actual Step 2 <em>(if you have it)</em></span>
+                <span>Actual Step 2 <em>(opt.)</em></span>
                 <input inputMode="numeric" placeholder="250" value={actual} onChange={(ev) => setActual(onlyNum(ev.target.value, 3))} />
               </label>
               <label className="field">
@@ -131,7 +131,18 @@ export default function Readiness({ og }: { og: OG }) {
               </label>
             </div>
 
-            {proj ? (
+            {actualValid ? (
+              <div className="result">
+                {showTrajectory && proj ? <Trajectory dated={dated} proj={proj} /> : proj ? <Gauge proj={proj} /> : null}
+                <div className="rk">Your Step 2 CK</div>
+                <div className={'rv' + (actualNum < PASS ? ' muted' : '')}>{actualNum}</div>
+                <div className="chips">
+                  <span className="chip pctl">{ordinal(percentile(actualNum))} %ile</span>
+                  <span className={'chip ' + (actualNum >= PASS ? 'ok' : 'low')}>{actualNum >= PASS ? `Clears ${PASS}` : `Below ${PASS}`}</span>
+                </div>
+                <p className="fine">Your actual score, plotted against your practice trajectory. Percentile vs US first-takers.</p>
+              </div>
+            ) : proj ? (
               <div className="result">
                 {showTrajectory ? <Trajectory dated={dated} proj={proj} /> : <Gauge proj={proj} />}
                 <div className="rk">Projected Step 2 CK</div>
@@ -149,9 +160,8 @@ export default function Readiness({ og }: { og: OG }) {
               </div>
             ) : (
               <div className="result empty">
-                <div className="rk">Projected Step 2 CK</div>
-                <div className="rv muted">, to ,</div>
-                <p className="fine">Enter a score between 130 and 300 to see your range.</p>
+                <div className="emptytitle">Your projection appears here</div>
+                <p className="emptysub">Add an NBME or UWSA score above to see your Step 2 range, percentile, and trajectory.</p>
               </div>
             )}
           </div>
@@ -199,9 +209,10 @@ export default function Readiness({ og }: { og: OG }) {
           linear-gradient(90deg, var(--hair) 1px, transparent 1px) 0 0/26px 26px, var(--bg); }
         .nav { display: flex; align-items: center; justify-content: space-between; max-width: 660px; margin: 0 auto; padding: 20px 22px; }
         .wm { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; font-size: 14px; }
-        .wm .wt b.g { color: var(--blue); font-weight: 700; }
+        .wm .wt b.g { color: var(--green); font-weight: 700; }
         .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); flex: 0 0 auto; }
-        .nav-cta { background: var(--blue); color: #fff; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+        .nav-cta { background: var(--green); color: #05130a; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 4px 18px rgba(70,216,119,0.24); transition: transform 0.15s ease, box-shadow 0.2s ease; }
+        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(70,216,119,0.32); }
 
         .wrap { max-width: 640px; margin: 0 auto; padding: 30px 22px 80px; }
         .badge { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--green); border: 1px solid rgba(70,216,119,0.3); background: rgba(70,216,119,0.06); padding: 6px 15px; border-radius: 999px; }
@@ -221,7 +232,8 @@ export default function Readiness({ og }: { og: OG }) {
         .add { width: 100%; margin-top: 2px; background: transparent; border: 1px dashed var(--hair-strong); border-radius: 10px; color: var(--ink-dim); font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.4px; padding: 11px; cursor: pointer; }
         .add:hover { border-color: var(--green); color: var(--green); }
 
-        .extra { display: grid; grid-template-columns: 140px 1fr; gap: 10px; margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--hair); }
+        .extra { display: grid; grid-template-columns: 150px 1fr; gap: 10px; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--hair); }
+        .extra .field span { white-space: normal; }
         .field input.txt { font-family: var(--sans); font-weight: 500; font-size: 14px; }
         @media (max-width: 480px) { .extra { grid-template-columns: 1fr; } }
 
@@ -238,6 +250,9 @@ export default function Readiness({ og }: { og: OG }) {
         .chip.low { color: var(--red); border-color: rgba(239,109,109,0.4); }
         .fine { color: var(--ink-faint); font-size: 12.5px; line-height: 1.5; margin: 12px auto 0; max-width: 46ch; }
         .saved { text-align: center; color: var(--ink-faint); font-family: var(--mono); font-size: 10.5px; margin: 14px 0 0; letter-spacing: 0.2px; }
+        .result.empty { padding: 24px 0 10px; }
+        .emptytitle { font-family: var(--mono); font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-dim); }
+        .emptysub { color: var(--ink-faint); font-size: 13.5px; line-height: 1.55; margin: 9px auto 0; max-width: 40ch; }
 
         .upsell { margin-top: 34px; border: 1px solid var(--hair); background: var(--bg-2); border-radius: 16px; padding: 26px 22px; }
         .ueyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-faint); }
