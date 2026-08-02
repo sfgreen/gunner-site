@@ -110,8 +110,9 @@ export type Parsed = { s: number; d: number | null; form: string };
 // Effective days-out for each parsed self-assessment (smaller = fresher). 1:1 with
 // ReadinessEstimate.effectiveDays / anchor_weighting.py::effective_days: the real
 // days-out when entered, else imputed from the within-student (formNumber -> days)
-// least-squares line (needs >= 2 distinct known forms), else a form-number-order
-// fallback (later form = fresher, synthetic 7/17/27... scale).
+// least-squares line (needs >= 2 distinct known forms), else an ENTRY-ORDER fallback
+// (later-entered row = fresher; array index IS entry order here, mirroring the app's
+// seq-based fallback, so form-16-then-form-10 entry order calls form 10 the fresher take).
 export function effectiveDays(parsed: Parsed[]): number[] {
   const eff: (number | null)[] = parsed.map((p) => (p.d != null && !Number.isNaN(p.d) ? p.d : null));
   const missing = parsed.map((_, i) => i).filter((i) => eff[i] == null);
@@ -134,18 +135,12 @@ export function effectiveDays(parsed: Parsed[]): number[] {
 
   const still = parsed.map((_, i) => i).filter((i) => eff[i] == null);
   if (still.length) {
-    // Stable form-number sort (ties -> original index), matching Python's sort.
-    const order = parsed
-      .map((_, i) => i)
-      .sort((a, b) => {
-        const fa = formNumber(parsed[a].form) ?? -1e9;
-        const fb = formNumber(parsed[b].form) ?? -1e9;
-        return fa !== fb ? fa - fb : a - b;
-      });
-    const rank = new Map<number, number>();
-    order.forEach((idx, r) => rank.set(idx, r));
+    // Entry-order fallback: the array index IS the order the user added rows, so the
+    // last-entered row is the freshest. Mirrors the app's seq-based fallback and
+    // handles form-16-then-form-10 entry order (form 10 added later = fresher), which
+    // a form-number sort would get backwards.
     const n = parsed.length;
-    for (const i of still) eff[i] = 7 + (n - 1 - (rank.get(i) ?? 0)) * 10;
+    for (const i of still) eff[i] = 7 + (n - 1 - i) * 10;
   }
   return eff as number[];
 }
