@@ -14,7 +14,7 @@ type Props = { entries: Entry[]; actual: string; status: string };
 export default function ScoreShareCard({ entries, actual, status }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [fontsReady, setFontsReady] = useState(false);
-  const [flash, setFlash] = useState<'text' | 'link' | 'img' | 'reddit' | null>(null);
+  const [flash, setFlash] = useState<'text' | 'link' | 'img' | 'reddit' | 'embed' | null>(null);
   // Phones can hand the PNG straight to the Reddit app via the share sheet;
   // desktop cannot, so it gets the guided download + composer flow instead.
   const [nativeShare, setNativeShare] = useState(false);
@@ -38,6 +38,12 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
   const model = useMemo(() => buildCardModel(entries, actual, status), [entries, actual, status]);
   const proj = useMemo(() => computeReadiness(entries).proj, [entries]);
   const link = useMemo(() => shareUrl(entries, actual, status), [entries, actual, status]);
+  // The frameable /embed URL is the share link with /readiness swapped for /embed, so
+  // the encoding stays single-sourced in shareUrl. The snippet is what a blog pastes.
+  const embedCode = useMemo(
+    () => `<iframe src="${link.replace('/readiness?', '/embed?')}" width="480" height="620" style="border:0;border-radius:16px;max-width:100%" loading="lazy" title="Step 2 CK readiness"></iframe>`,
+    [link],
+  );
 
   // Ensure the two card faces (DM Sans display + system mono) are resident before
   // the first paint, else the canvas falls back to a default face.
@@ -69,7 +75,7 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
     drawScoreCard(ctx, model, scale);
   }, [model, fontsReady]);
 
-  const ping = (k: 'text' | 'link' | 'img' | 'reddit') => { setFlash(k); setTimeout(() => setFlash(null), 1600); };
+  const ping = (k: 'text' | 'link' | 'img' | 'reddit' | 'embed') => { setFlash(k); setTimeout(() => setFlash(null), 1600); };
 
   const copyWriteup = async () => {
     track('share_action', { method: 'writeup' });
@@ -82,6 +88,12 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
   const copyLink = async () => {
     track('share_action', { method: 'link' });
     try { await navigator.clipboard.writeText(link); ping('link'); }
+    catch { /* ignore */ }
+  };
+
+  const copyEmbed = async () => {
+    track('share_action', { method: 'embed' });
+    try { await navigator.clipboard.writeText(embedCode); ping('embed'); }
     catch { /* ignore */ }
   };
 
@@ -156,6 +168,9 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
             <button className="act ghost" onClick={copyLink}>
               {flash === 'link' ? 'Link copied' : 'Copy link'}
             </button>
+            <button className="act ghost wide" onClick={copyEmbed}>
+              {flash === 'embed' ? 'Embed copied' : 'Copy embed'}
+            </button>
           </>
         ) : (
           <>
@@ -168,8 +183,11 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
             <button className="act" onClick={copyWriteup}>
               {flash === 'text' ? 'Copied' : 'Copy write-up'}
             </button>
-            <button className="act ghost wide" onClick={copyLink}>
+            <button className="act ghost" onClick={copyLink}>
               {flash === 'link' ? 'Link copied' : 'Copy link'}
+            </button>
+            <button className="act ghost" onClick={copyEmbed}>
+              {flash === 'embed' ? 'Embed copied' : 'Copy embed'}
             </button>
           </>
         )}
