@@ -3,11 +3,13 @@
 // copy-as-text write-up so the interactive readout, the card, and the link
 // preview never drift.
 //
-// The projection is PORTED 1:1 from the app's ReadinessEstimate.swift (task #48)
-// so the range on the site matches the range in the app for the same NBMEs:
-//   center = 250 + 0.79 * (anchor - 250) + 6   (range-restriction-corrected
+// The projection is PORTED 1:1 from the app's ReadinessEstimate.swift (task #48,
+// refit in decision 0008) so the range on the site matches the range in the app for
+// the same NBMEs:
+//   center = 250 + 0.79 * (anchor - 250) + 9   (range-restriction-corrected
 //            regression toward the population mean + the measured practice->real
-//            gain), band = a days-out table, plus a low-anchor guardrail.
+//            gain; anchor = a RECENCY-DECAY weighted mean of the self-assessments,
+//            tau=30, decision 0008), band = a days-out table, plus a low-anchor guardrail.
 
 export const PASS = 218; // USMLE Step 2 CK minimum passing score
 // At/above this, a pass is not in question, so the "Clears 218" chip is dropped as
@@ -26,7 +28,8 @@ export const FORMS = [
 export const CAL = {
   mean: 250,      // populationMean the anchor is shrunk toward
   slope: 0.79,    // Thorndike Case II range-restriction-corrected regression slope
-  delta: 6,       // level offset: cohort outscores its own NBME (practice->real gain)
+  delta: 9,       // level offset: cohort outscores its (recency-decay) anchor; refit +6 -> +9 (decision 0008)
+  tau: 30,        // recency-decay time constant for the anchor weights (half-life ~21 days)
   residualSD: 8.4,
   floor: 200,
   ceiling: 280,
@@ -75,6 +78,26 @@ export function bandHalfWidth(days: number | null): { band: number; tier: string
   return { band: 18, tier: 'Very wide (exam far out)' };
 }
 
+// Last run of digits in a form label ('NBME 9' -> 9, 'UWSA 2' -> 2), mirroring the
+// app's ReadinessEstimate.formNumber / anchor_weighting.py's float(form).
+export function formNumber(form: string): number | null {
+  const m = form.match(/\d+/g);
+  return m ? parseInt(m[m.length - 1], 10) : null;
+}
+
+function leastSquares(pts: { x: number; y: number }[]): { slope: number; intercept: number } | null {
+  const n = pts.length;
+  if (!n) return null;
+  const sx = pts.reduce((a, p) => a + p.x, 0);
+  const sy = pts.reduce((a, p) => a + p.y, 0);
+  const sxx = pts.reduce((a, p) => a + p.x * p.x, 0);
+  const sxy = pts.reduce((a, p) => a + p.x * p.y, 0);
+  const denom = n * sxx - sx * sx;
+  if (Math.abs(denom) < 1e-12) return null;
+  const slope = (n * sxy - sx * sy) / denom;
+  return { slope, intercept: (sy - slope * sx) / n };
+}
+
 export type Entry = { form: string; score: string; days: string };
 export type Proj = {
   low: number; high: number; band: number; tier: string;
@@ -83,6 +106,63 @@ export type Proj = {
 };
 export type Dated = { s: number; d: number; form: string };
 export type Parsed = { s: number; d: number | null; form: string };
+
+// Effective days-out for each parsed self-assessment (smaller = fresher). 1:1 with
+// ReadinessEstimate.effectiveDays / anchor_weighting.py::effective_days: the real
+// days-out when entered, else imputed from the within-student (formNumber -> days)
+// least-squares line (needs >= 2 distinct known forms), else a form-number-order
+// fallback (later form = fresher, synthetic 7/17/27... scale).
+export function effectiveDays(parsed: Parsed[]): number[] {
+  const eff: (number | null)[] = parsed.map((p) => (p.d != null && !Number.isNaN(p.d) ? p.d : null));
+  const missing = parsed.map((_, i) => i).filter((i) => eff[i] == null);
+  if (missing.length === 0) return eff as number[];
+
+  const known: { x: number; y: number }[] = [];
+  parsed.forEach((p, i) => {
+    const f = formNumber(p.form);
+    if (eff[i] != null && f != null) known.push({ x: f, y: eff[i] as number });
+  });
+  if (new Set(known.map((k) => k.x)).size >= 2) {
+    const line = leastSquares(known);
+    if (line) {
+      for (const i of missing) {
+        const f = formNumber(parsed[i].form);
+        if (f != null) eff[i] = Math.max(0, line.slope * f + line.intercept);
+      }
+    }
+  }
+
+  const still = parsed.map((_, i) => i).filter((i) => eff[i] == null);
+  if (still.length) {
+    // Stable form-number sort (ties -> original index), matching Python's sort.
+    const order = parsed
+      .map((_, i) => i)
+      .sort((a, b) => {
+        const fa = formNumber(parsed[a].form) ?? -1e9;
+        const fb = formNumber(parsed[b].form) ?? -1e9;
+        return fa !== fb ? fa - fb : a - b;
+      });
+    const rank = new Map<number, number>();
+    order.forEach((idx, r) => rank.set(idx, r));
+    const n = parsed.length;
+    for (const i of still) eff[i] = 7 + (n - 1 - (rank.get(i) ?? 0)) * 10;
+  }
+  return eff as number[];
+}
+
+// Recency-decay weighted anchor (decision 0008): sum(exp(-eff/tau) * score) /
+// sum(exp(-eff/tau)). 1:1 with ReadinessEstimate.decayAnchor.
+export function decayAnchor(parsed: Parsed[]): number {
+  if (!parsed.length) return 0;
+  const eff = effectiveDays(parsed);
+  let num = 0, den = 0;
+  parsed.forEach((p, i) => {
+    const w = Math.exp(-eff[i] / CAL.tau);
+    num += p.s * w;
+    den += w;
+  });
+  return den > 0 ? num / den : parsed[0].s;
+}
 
 // One pass over the raw entry rows -> everything the page + card + OG need.
 export function computeReadiness(entries: Entry[]) {
@@ -106,13 +186,8 @@ export function computeReadiness(entries: Entry[]) {
 
   let proj: Proj | null = null;
   if (freshestP) {
-    // Recency-weighted anchor: the freshest carries ~2x weight (app parity).
-    let num = 0, den = 0;
-    for (const p of parsed) {
-      const w = p === freshestP ? 2 : 1;
-      num += p.s * w; den += w;
-    }
-    const anchor = Math.round(num / den);
+    // Recency-decay weighted anchor (decision 0008), 1:1 with ReadinessEstimate.decayAnchor.
+    const anchor = Math.round(decayAnchor(parsed));
     const center = calibratedCenter(anchor);
 
     let { band, tier } = bandHalfWidth(freshestP.d);
