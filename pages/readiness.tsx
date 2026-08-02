@@ -114,13 +114,16 @@ export default function Readiness({ og }: { og: OG }) {
                   <input inputMode="numeric" placeholder="248" value={e.score} onChange={(ev) => setEntry(i, { score: onlyNum(ev.target.value, 3) })} />
                 </label>
                 <label className="field">
-                  {i === 0 && <span>Days out <em>(opt.)</em></span>}
+                  {i === 0 && <span>Days before exam <em>(opt.)</em></span>}
                   <input inputMode="numeric" placeholder="21" value={e.days} onChange={(ev) => setEntry(i, { days: onlyNum(ev.target.value, 3) })} />
                 </label>
                 <button className="rm" aria-label="remove" onClick={() => removeEntry(i)} style={{ visibility: i === 0 ? 'hidden' : 'visible' }}>✕</button>
               </div>
             ))}
             <button className="add" onClick={addEntry}>+ Add another NBME / UWSA</button>
+            <p style={{ fontSize: '12px', color: 'var(--ink-faint)', marginTop: '10px', lineHeight: 1.5 }}>
+              Add days before exam for each and the projection leans on your most recent scores, the ones that best predict test day. Skip it for a rough read.
+            </p>
 
             <div className="extra">
               <label className="field">
