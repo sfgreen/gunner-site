@@ -174,7 +174,7 @@ export default function Readiness({ og }: { og: OG }) {
               </div>
             )}
           </div>
-          <p className="saved">Your entries stay on this device and are saved anonymously (no name or email) to sharpen these projections.</p>
+          <p className="saved">Your entries stay on this device and are saved anonymously (no name or email) to sharpen these projections. <Link href="/readiness/methodology">How this projection works</Link></p>
 
           {canShare && <ScoreShareCard entries={entries} actual={actual} status={status} />}
 
@@ -259,6 +259,8 @@ export default function Readiness({ og }: { og: OG }) {
         .chip.low { color: var(--red); border-color: rgba(239,109,109,0.4); }
         .fine { color: var(--ink-faint); font-size: 12.5px; line-height: 1.5; margin: 12px auto 0; max-width: 46ch; }
         .saved { text-align: center; color: var(--ink-faint); font-family: var(--mono); font-size: 10.5px; margin: 14px 0 0; letter-spacing: 0.2px; }
+        .saved :global(a) { color: var(--ink-dim); text-decoration: underline; text-underline-offset: 2px; }
+        .saved :global(a):hover { color: var(--green); }
         .result.empty { padding: 24px 0 10px; }
         .emptytitle { font-family: var(--mono); font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-dim); }
         .emptysub { color: var(--ink-faint); font-size: 13.5px; line-height: 1.55; margin: 9px auto 0; max-width: 40ch; }
