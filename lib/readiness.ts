@@ -107,12 +107,20 @@ export type Proj = {
 export type Dated = { s: number; d: number; form: string };
 export type Parsed = { s: number; d: number | null; form: string };
 
+const isUWSA = (form: string): boolean => /uwsa/i.test(form);
+// numpy-style median (even length -> mean of the two middles), so the app, web, and
+// analysis all agree to the point.
+function medianOf(xs: number[]): number {
+  const s = [...xs].sort((a, b) => a - b);
+  const m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+}
+
 // Effective days-out for each parsed self-assessment (smaller = fresher). 1:1 with
 // ReadinessEstimate.effectiveDays / anchor_weighting.py::effective_days: the real
 // days-out when entered, else imputed from the within-student (formNumber -> days)
-// least-squares line (needs >= 2 distinct known forms), else an ENTRY-ORDER fallback
-// (later-entered row = fresher; array index IS entry order here, mirroring the app's
-// seq-based fallback, so form-16-then-form-10 entry order calls form 10 the fresher take).
+// least-squares line (needs >= 2 distinct known forms), else a HYBRID entry-order
+// fallback (see the fallback block below).
 export function effectiveDays(parsed: Parsed[]): number[] {
   const eff: (number | null)[] = parsed.map((p) => (p.d != null && !Number.isNaN(p.d) ? p.d : null));
   const missing = parsed.map((_, i) => i).filter((i) => eff[i] == null);
@@ -135,12 +143,21 @@ export function effectiveDays(parsed: Parsed[]): number[] {
 
   const still = parsed.map((_, i) => i).filter((i) => eff[i] == null);
   if (still.length) {
-    // Entry-order fallback: the array index IS the order the user added rows, so the
-    // last-entered row is the freshest. Mirrors the app's seq-based fallback and
-    // handles form-16-then-form-10 entry order (form 10 added later = fresher), which
-    // a form-number sort would get backwards.
+    // Hybrid entry-order fallback (RESULTS_anchor_fallback_2026-08-03). Base = entry
+    // order: the array index IS the order rows were added, so the last-added row is the
+    // freshest (handles form-16-then-form-10, which a form-number sort gets backwards).
+    // But a UWSA is pinned to the MEDIAN NBME recency, so a UWSA listed last cannot pose
+    // as "just took this" by listing convention alone (62% of students list a UWSA last,
+    // only 36% of the time is it actually the freshest). NBME-to-NBME order is untouched.
+    // Degrades to plain entry order when there is no NBME to anchor the median.
     const n = parsed.length;
-    for (const i of still) eff[i] = 7 + (n - 1 - i) * 10;
+    const base = new Map<number, number>();
+    for (const i of still) base.set(i, 7 + (n - 1 - i) * 10);
+    const nbmeEff = still.filter((i) => !isUWSA(parsed[i].form)).map((i) => base.get(i) as number);
+    const med = nbmeEff.length ? medianOf(nbmeEff) : null;
+    for (const i of still) {
+      eff[i] = med != null && isUWSA(parsed[i].form) ? med : (base.get(i) as number);
+    }
   }
   return eff as number[];
 }
