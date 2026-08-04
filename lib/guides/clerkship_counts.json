@@ -1,0 +1,162 @@
+{
+  "_generated_by": "scripts/gen_clerkship_counts.py",
+  "_source": "scripts/clerkship_rotations.json",
+  "rotations": {
+    "pediatrics": {
+      "displayName": "Pediatrics",
+      "decks": {
+        "ckGold": 145,
+        "nbs": 179,
+        "buzzwords": 43,
+        "dxBuzzwords": 0,
+        "visualDx": 0
+      },
+      "total": 367,
+      "display": {
+        "ckGold": "145+",
+        "nbs": "179+",
+        "buzzwords": "43+",
+        "dxBuzzwords": "0+",
+        "visualDx": "0+",
+        "total": "350+"
+      }
+    },
+    "internal_medicine": {
+      "displayName": "Internal Medicine",
+      "decks": {
+        "ckGold": 1109,
+        "nbs": 1112,
+        "buzzwords": 580,
+        "dxBuzzwords": 0,
+        "visualDx": 102
+      },
+      "total": 2903,
+      "display": {
+        "ckGold": "1100+",
+        "nbs": "1100+",
+        "buzzwords": "550+",
+        "dxBuzzwords": "0+",
+        "visualDx": "102+",
+        "total": "2900+"
+      }
+    },
+    "surgery": {
+      "displayName": "Surgery",
+      "decks": {
+        "ckGold": 47,
+        "nbs": 90,
+        "buzzwords": 0,
+        "dxBuzzwords": 0,
+        "visualDx": 0
+      },
+      "total": 137,
+      "display": {
+        "ckGold": "47+",
+        "nbs": "90+",
+        "buzzwords": "0+",
+        "dxBuzzwords": "0+",
+        "visualDx": "0+",
+        "total": "137+"
+      }
+    },
+    "obgyn": {
+      "displayName": "OB/GYN",
+      "decks": {
+        "ckGold": 201,
+        "nbs": 259,
+        "buzzwords": 152,
+        "dxBuzzwords": 0,
+        "visualDx": 6
+      },
+      "total": 618,
+      "display": {
+        "ckGold": "200+",
+        "nbs": "250+",
+        "buzzwords": "152+",
+        "dxBuzzwords": "0+",
+        "visualDx": "6+",
+        "total": "600+"
+      }
+    },
+    "psychiatry": {
+      "displayName": "Psychiatry",
+      "decks": {
+        "ckGold": 179,
+        "nbs": 132,
+        "buzzwords": 41,
+        "dxBuzzwords": 0,
+        "visualDx": 0
+      },
+      "total": 352,
+      "display": {
+        "ckGold": "179+",
+        "nbs": "132+",
+        "buzzwords": "41+",
+        "dxBuzzwords": "0+",
+        "visualDx": "0+",
+        "total": "350+"
+      }
+    },
+    "neurology": {
+      "displayName": "Neurology",
+      "decks": {
+        "ckGold": 164,
+        "nbs": 144,
+        "buzzwords": 90,
+        "dxBuzzwords": 0,
+        "visualDx": 6
+      },
+      "total": 404,
+      "display": {
+        "ckGold": "164+",
+        "nbs": "144+",
+        "buzzwords": "90+",
+        "dxBuzzwords": "0+",
+        "visualDx": "6+",
+        "total": "400+"
+      }
+    },
+    "family_medicine": {
+      "displayName": "Family Medicine",
+      "decks": {
+        "ckGold": 54,
+        "nbs": 94,
+        "buzzwords": 0,
+        "dxBuzzwords": 0,
+        "visualDx": 0
+      },
+      "total": 148,
+      "display": {
+        "ckGold": "54+",
+        "nbs": "94+",
+        "buzzwords": "0+",
+        "dxBuzzwords": "0+",
+        "visualDx": "0+",
+        "total": "148+"
+      }
+    },
+    "emergency_medicine": {
+      "displayName": "Emergency Medicine",
+      "decks": {
+        "ckGold": 66,
+        "nbs": 83,
+        "buzzwords": 16,
+        "dxBuzzwords": 0,
+        "visualDx": 567
+      },
+      "total": 732,
+      "display": {
+        "ckGold": "66+",
+        "nbs": "83+",
+        "buzzwords": "16+",
+        "dxBuzzwords": "0+",
+        "visualDx": "550+",
+        "total": "700+"
+      }
+    }
+  },
+  "_confirmed": [
+    "pediatrics",
+    "internal_medicine"
+  ]
+}

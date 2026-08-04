@@ -67,7 +67,8 @@ export interface ResourceItem {
 }
 
 export interface FitStat {
-  /** Big number, e.g. "145+". */
+  /** Big number, e.g. "145+". Auto-filled from lib/guides/clerkship_counts.json via
+   *  fitStats() in ./counts; do not hand-type it. */
   n: string;
   /** Label under the number. */
   k: string;
@@ -87,7 +88,8 @@ export interface StepGunnerFit {
   cardTitle: string;
   cardIntro: string;
   stats: FitStat[];
-  /** Total line under the stats, e.g. "**367+** Pediatrics-tagged cards ...". Rich. */
+  /** Total line under the stats, e.g. "**350+** Pediatrics-tagged cards ...". The
+   *  number comes from clerkship_counts.json display.total; do not hand-type it. Rich. */
   total: string;
   coverageHeading: string;
   coverage: CoverageRow[];

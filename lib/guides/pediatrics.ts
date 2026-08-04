@@ -1,10 +1,15 @@
 import type { GuideData } from './types';
+import { deckCounts, fitStats, modeWord } from './counts';
 
-// Pediatrics clerkship guide. Every count in `fit` is verified from the current
-// app content build (counted August 2026); the trailing plus is intentional.
-// Trust-strip figures (App Store 4.8, 1,200+ students, the two 5-star reviews)
-// are real and verified. To clone a rotation, copy this file, swap the content,
-// and register it in ./index.ts. No em or en dashes.
+// Pediatrics clerkship guide. The `fit` deck counts + total are AUTO-COMPUTED from
+// lib/guides/clerkship_counts.json (generated in the app repo from live card data),
+// keyed by rotation id "pediatrics", so adding questions updates them with no edit
+// here; the numbers are the rounded "N+" display strings from that file. Trust-strip figures (App Store 4.8,
+// 1,200+ students, the two 5-star reviews) are real and verified. To clone a
+// rotation, copy this file, swap the content, and register it in ./index.ts. No em
+// or en dashes.
+const c = deckCounts('pediatrics');
+
 export const pediatrics: GuideData = {
   meta: {
     slug: 'pediatrics',
@@ -110,24 +115,29 @@ export const pediatrics: GuideData = {
     cardTitle: 'What is actually in the app for Peds.',
     cardIntro:
       'Three question decks are tagged Pediatrics, each a different study mode. These are real counts from the current build, not projections.',
-    stats: [
+    stats: fitStats('pediatrics', [
       {
-        n: '145+',
+        deck: 'ckGold',
         k: 'CK Gold, Peds',
         d: 'Diagnosis and next-step questions across neonatology, development, congenital, and well-child.',
       },
       {
-        n: '179+',
+        deck: 'nbs',
         k: 'Next Best Step, Peds',
         d: 'Management-chain questions: given the presentation, what do you do next, and then what.',
       },
       {
-        n: '43+',
+        deck: 'buzzwords',
         k: 'Buzzwords, Peds',
         d: 'Rapid pattern triggers: read the cardinal clue, name the diagnosis, move on.',
       },
-    ],
-    total: '**367+** Pediatrics-tagged cards across three study modes.',
+      {
+        deck: 'visualDx',
+        k: 'Visual Dx, Peds',
+        d: 'Classic Pediatrics images: name the diagnosis from the rash, film, or exam finding.',
+      },
+    ]),
+    total: `**${c.display.total}** Pediatrics-tagged cards across ${modeWord('pediatrics')} study modes.`,
     coverageHeading: 'CK Gold Peds coverage, by subtopic',
     coverage: [
       { name: 'Neonatology', count: 32 },

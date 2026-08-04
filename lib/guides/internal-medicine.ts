@@ -1,17 +1,17 @@
 import type { GuideData } from './types';
+import { deckCounts, fitStats, modeWord } from './counts';
 
 // Internal Medicine clerkship guide. Cloned from pediatrics.ts (same GuideData
-// schema + voice). IM is an AGGREGATE of the medicine subspecialty worlds, so the
-// counts in `fit` are summed across decks and verified from the current app build
-// (counted August 2026), never rounded up:
-//   CK Gold IM      = ck_cardio 185 + ck_id 177 + ck_endo 168 + ck_heme 161
-//                     + ck_gi 152 + ck_pulm 146 + ck_renal 118 + ck_allergy 2 = 1109
-//   Next Best Step  = cardio 229 + id 210 + gi 187 + heme_onc 132 + renal 121
-//                     + endo 109 + pulm 106 + allergy 18 = 1112
-//   Buzzwords       = gi_stems 125 + cardio_stems 116 + id_stems 102 + pulm_stems 62
-//                     + renal_stems 61 + endo_stems 49 + heme_stems 45 = 560
-//   Total = 2781. Visual Dx has no IM tag, so no number is quoted (real images named).
-// FAQ answers and any medical claim are pending Danny's sign-off. No em or en dashes.
+// schema + voice). IM is an AGGREGATE of the medicine subspecialty worlds, so its
+// `fit` deck counts + total are AUTO-COMPUTED from lib/guides/clerkship_counts.json
+// (generated in the app repo from live card data), keyed by rotation id
+// "internal_medicine". The gen script sums every medicine subspecialty deck, so the
+// numbers update as content ships with no edit here: CK Gold, Next Best Step,
+// Buzzwords, and the 102 IM-tagged Visual Dx images (an earlier hand count wrongly
+// showed none, which is why IM now carries a Visual Dx row). FAQ answers and any
+// medical claim are pending Danny's sign-off. No em or en dashes.
+const c = deckCounts('internal_medicine');
+
 export const internalMedicine: GuideData = {
   meta: {
     slug: 'internal-medicine',
@@ -115,25 +115,30 @@ export const internalMedicine: GuideData = {
     tag: 'Step Gunner, Internal Medicine content',
     cardTitle: 'What is actually in the app for medicine.',
     cardIntro:
-      'Internal Medicine is not one deck, it is every medicine subspecialty added together. Three study modes are tagged across cardiology, ID, endocrine, heme, GI, pulmonology, and renal. These are real counts from the current build, not projections.',
-    stats: [
+      'Internal Medicine is not one deck, it is every medicine subspecialty added together, tagged across cardiology, ID, endocrine, heme, GI, pulmonology, and renal. These are real counts from the current build, not projections.',
+    stats: fitStats('internal_medicine', [
       {
-        n: '1,109+',
+        deck: 'ckGold',
         k: 'CK Gold, IM',
         d: 'Diagnosis and next-step questions across cardiology, ID, endocrine, heme, GI, pulm, and renal.',
       },
       {
-        n: '1,112+',
+        deck: 'nbs',
         k: 'Next Best Step, IM',
         d: 'Management-chain questions: given the presentation, what do you do next, and then what.',
       },
       {
-        n: '560+',
+        deck: 'buzzwords',
         k: 'Buzzwords, IM',
         d: 'Rapid pattern triggers: read the cardinal clue, name the diagnosis, move on.',
       },
-    ],
-    total: '**2,781+** Internal Medicine cards across three study modes.',
+      {
+        deck: 'visualDx',
+        k: 'Visual Dx, IM',
+        d: 'Classic medicine images: ECGs, blood smears, and biopsy histology, read the film, name the diagnosis.',
+      },
+    ]),
+    total: `**${c.display.total}** Internal Medicine cards across ${modeWord('internal_medicine')} study modes.`,
     coverageHeading: 'CK Gold IM coverage, by subspecialty',
     coverage: [
       { name: 'Cardiology', count: 185 },
@@ -158,7 +163,7 @@ export const internalMedicine: GuideData = {
       'Diabetic nephropathy, renal biopsy',
     ],
     visualDxNote:
-      'The Visual Dx image bank has no dedicated Internal Medicine tag, so we are not quoting a number for it. It does carry the classic IM visuals above, from ECGs to blood smears to biopsy histology, worth a few reps before the shelf.',
+      'The Visual Dx image bank carries the classic IM visuals above, from ECGs to blood smears to biopsy histology, worth a few reps before the shelf.',
     honest:
       '**The honest part:** this is a supplement, not a spine. It will not replace UWorld, Step-Up, Anki, or your reading. It replaces the ten minutes you would otherwise spend scrolling. The core is free to study; the Visual Dx image bank is the paid upgrade.',
     quote: {

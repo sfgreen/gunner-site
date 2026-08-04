@@ -294,6 +294,10 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
         .sg p { color: var(--dim); font-size: 15px; line-height: 1.65; margin: 0 0 14px; max-width: 60ch; }
         .sg p b { color: var(--ink); font-weight: 600; }
         .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 18px 0 6px; }
+        /* A rotation with 4 study modes (e.g. IM, which carries Visual Dx) lays out
+           as a comfortable 2x2 above the mobile breakpoint; below it, the rule at
+           max-width 560px collapses every stats grid to a single column. */
+        @media (min-width: 561px) { .stats.stats-4 { grid-template-columns: repeat(2, 1fr); } }
         .stat { border: 1px solid var(--hair); background: var(--bg1); border-radius: 12px; padding: 15px 14px; }
         .stat .n { font-size: 30px; font-weight: 800; letter-spacing: -1.2px; color: var(--green); line-height: 1; }
         .stat .k { font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); margin-top: 9px; }
@@ -445,7 +449,7 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
               <h3>{fit.cardTitle}</h3>
               <p>{fit.cardIntro}</p>
 
-              <div className="stats">
+              <div className={`stats${fit.stats.length === 4 ? ' stats-4' : ''}`}>
                 {fit.stats.map((s) => (
                   <div className="stat" key={s.k}>
                     <div className="n">{s.n}</div>
