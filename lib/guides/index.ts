@@ -1,18 +1,19 @@
 import type { GuideData, ComingSoonGuide } from './types';
 import { pediatrics } from './pediatrics';
+import { internalMedicine } from './internal-medicine';
 
 // Registry of live clerkship guides, keyed by slug. Add a rotation by writing
 // lib/guides/<slug>.ts and adding one line here; the route (pages/guides/[slug]),
 // the hub (pages/guides), and the sitemap all read from this map.
 export const guides: Record<string, GuideData> = {
   pediatrics,
+  'internal-medicine': internalMedicine,
 };
 
 // Announced but not yet written. Shown as disabled cards on the hub so the
 // section reads as a growing library, not a single orphan page. These do NOT
 // generate routes or sitemap entries until promoted into `guides` above.
 export const comingSoon: ComingSoonGuide[] = [
-  { slug: 'internal-medicine', clerkship: 'Internal Medicine', teaser: 'The longest rotation, the densest shelf.' },
   { slug: 'surgery', clerkship: 'Surgery', teaser: 'Pre-op, intra-op, and the shelf that hides medicine inside it.' },
   { slug: 'obgyn', clerkship: 'OB/GYN', teaser: 'Two specialties, one shelf, a lot of algorithms.' },
   { slug: 'psychiatry', clerkship: 'Psychiatry', teaser: 'High-yield, pattern-heavy, and very learnable.' },
