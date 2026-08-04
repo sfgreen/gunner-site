@@ -123,6 +123,7 @@ export default function DocLayout({
           <div>
             <div className="footer-heading">App</div>
             <ul className="footer-links">
+              <li><a href="/guides">Clerkship Guides</a></li>
               <li><a href="/#features">Features</a></li>
               <li><a href="/#download">Download</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>

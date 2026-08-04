@@ -318,6 +318,7 @@ export default function Home() {
             <div className="footer-heading">App</div>
             <ul className="footer-links">
               <li><a href="/readiness">Score Predictor</a></li>
+              <li><a href="/guides">Clerkship Guides</a></li>
               <li><a href="#features">Features</a></li>
               <li><a href={APP} onClick={copyRef}>Download</a></li>
               <li><a href="/privacy">Privacy Policy</a></li>

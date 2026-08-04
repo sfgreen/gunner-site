@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://stepgunner.com/sitemap.xml
