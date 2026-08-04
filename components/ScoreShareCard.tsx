@@ -3,7 +3,7 @@ import {
   buildCopyText, computeReadiness, shareUrl, redditSubmitUrl, type Entry,
 } from '../lib/readiness';
 import { track } from '../lib/analytics';
-import { buildCardModel, drawScoreCard, CARD_W, CARD_H } from '../lib/scoreCard';
+import { buildCardModel, drawScoreCard, cardHeight, CARD_W } from '../lib/scoreCard';
 
 type Props = { entries: Entry[]; actual: string; status: string };
 
@@ -67,9 +67,9 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas || !model) return;
-    const scale = 2; // 2160x2700 backing store -> crisp on retina + crisp PNG export
+    const scale = 2; // 2x backing store -> crisp on retina + crisp PNG export
     canvas.width = CARD_W * scale;
-    canvas.height = CARD_H * scale;
+    canvas.height = cardHeight(model) * scale;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     drawScoreCard(ctx, model, scale);
@@ -153,7 +153,7 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
       </div>
 
       <div className="canvas-wrap">
-        <canvas ref={canvasRef} role="img" aria-label={aria} style={{ aspectRatio: `${CARD_W} / ${CARD_H}` }} />
+        <canvas ref={canvasRef} role="img" aria-label={aria} style={{ aspectRatio: `${CARD_W} / ${cardHeight(model)}` }} />
       </div>
 
       <div className="actions">

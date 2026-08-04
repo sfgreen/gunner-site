@@ -1,10 +1,12 @@
 // Canvas renderer + model for the shareable Step 2 score card. One renderer is
 // both the on-page preview and the downloaded PNG (no divergence, no html2canvas).
-// Design space is 1080x1350 (4:5); the caller sets the backing store and passes a
-// scale so the export is crisp. Tokens mirror the /readiness page exactly.
+// Design space is 1080 wide; the HEIGHT is content-driven (see cardHeight /
+// layoutCard) so the card fits its blocks with no empty void. The caller sets the
+// backing store from cardHeight(model) and passes a scale so the export is crisp.
+// Tokens mirror the /readiness page exactly.
 import qrcode from 'qrcode-generator';
 import {
-  PASS, MEAN, shareUrl, buildCardCore,
+  PASS, MEAN, clamp, shareUrl, buildCardCore,
   type Entry,
 } from './readiness';
 
@@ -13,6 +15,7 @@ export const K = {
   hair: 'rgba(255,255,255,0.08)', hairS: 'rgba(255,255,255,0.14)',
   ink: '#f4f6f8', dim: '#9aa1ab', faint: '#5c636e',
   green: '#46d877', gold: '#e3b542', red: '#ef6d6d', violet: '#af52ff', ref: '#2a3038',
+  track: '#1b2230', axis: '#2a3646',
 };
 const MONO = 'ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace';
 const SANS = '"DM Sans", -apple-system, system-ui, sans-serif';
@@ -43,7 +46,14 @@ export type CardModel = {
 };
 
 export const CARD_W = 1080;
-export const CARD_H = 1350;
+// The card width is fixed; the height is derived by layoutCard so no fixed void is
+// left under the content. M / AX_L / AX_R define the ONE axis the projected-range
+// band chart and the ranked ladder both draw on, so their columns line up.
+const M = 64;                    // side margin
+const AX_L = M + 112;            // 176: shared chart axis left (gutter for ladder form labels)
+const AX_R = CARD_W - M - 72;    // 944: shared chart axis right
+// score (200..280) -> x on the shared axis, matching the OG image / embed geometry.
+const axisX = (s: number) => AX_L + ((clamp(s, 200, 280) - 200) / 80) * (AX_R - AX_L);
 
 // entries + optional actual + status -> everything the renderer draws. The
 // semantic model (hero, chips, tags) comes from the shared buildCardCore so the
@@ -101,8 +111,8 @@ function tracked(ctx: Ctx, text: string, x: number, y: number, sp: number, align
 function fit(ctx: Ctx, text: string, maxW: number) {
   if (ctx.measureText(text).width <= maxW) return text;
   let t = text;
-  while (t.length > 4 && ctx.measureText(t + '…').width > maxW) t = t.slice(0, -1);
-  return t + '…';
+  while (t.length > 4 && ctx.measureText(t + '...').width > maxW) t = t.slice(0, -1);
+  return t + '...';
 }
 function niceY(scores: number[]) {
   let lo = Math.min(...scores), hi = Math.max(...scores);
@@ -149,6 +159,8 @@ function starPath(ctx: Ctx, cx: number, cy: number, r: number) {
 }
 
 /* ---------------- trajectory chart (canvas) ---------------- */
+// Drawn for the DATED case (>= 2 dated tests): a real time axis exists, so the
+// climb into the projected band at exam day is an honest trajectory.
 function drawChart(ctx: Ctx, m: CardModel, bx: number, by: number, bw: number, bh: number) {
   const fail = m.fail;
   const accent = fail ? K.dim : K.gold;
@@ -274,6 +286,189 @@ function drawChart(ctx: Ctx, m: CardModel, bx: number, by: number, bw: number, b
   }
 }
 
+/* ---------------- projected-range band chart (canvas) ---------------- */
+// Ported from the embed / OG "Chart" geometry onto the shared 200..280 axis: the
+// gold projection band (low..high), the center marker + label, the dashed green
+// 218 pass line, and the ticks. For an actual score it swaps the band for a marker
+// (gold star on a pass, dim diamond on a fail) over a faint practice-range band.
+// This is the focal visual of the undated readiness card, where a trajectory would
+// be a false temporal claim.
+function drawBandChart(ctx: Ctx, m: CardModel, by: number, bh: number) {
+  const fail = m.fail;
+  const yAxis = by + bh - 46;
+  const bandBot = yAxis - 8;
+  const bandTop = bandBot - 46;
+  const midY = (bandTop + bandBot) / 2;
+
+  // axis
+  ctx.strokeStyle = K.axis; ctx.lineWidth = 1.4;
+  ctx.beginPath(); ctx.moveTo(AX_L, yAxis); ctx.lineTo(AX_R, yAxis); ctx.stroke();
+
+  // projection band + center marker (readiness)
+  if (m.actual == null && m.proj) {
+    const xl = axisX(m.proj.low), xr = axisX(m.proj.high);
+    rr(ctx, xl, bandTop, Math.max(6, xr - xl), bandBot - bandTop, 9);
+    ctx.fillStyle = 'rgba(227,181,66,0.16)'; ctx.fill();
+    ctx.strokeStyle = 'rgba(227,181,66,0.55)'; ctx.lineWidth = 1.6; ctx.stroke();
+    const cx = axisX(m.proj.center);
+    ctx.strokeStyle = K.gold; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(cx, bandTop - 22); ctx.lineTo(cx, yAxis); ctx.stroke();
+    ctx.beginPath(); ctx.arc(cx, midY, 7, 0, Math.PI * 2);
+    ctx.fillStyle = K.gold; ctx.fill(); ctx.lineWidth = 2; ctx.strokeStyle = K.bg; ctx.stroke();
+    ctx.font = fmono(27, 800); ctx.fillStyle = K.gold; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+    ctx.fillText(String(m.proj.center), cx, bandTop - 30);
+  }
+
+  // actual marker (journey) over a faint practice-range band
+  if (m.actual != null) {
+    if (m.proj) {
+      const xl = axisX(m.proj.low), xr = axisX(m.proj.high);
+      rr(ctx, xl, midY - 8, Math.max(6, xr - xl), 16, 5);
+      ctx.fillStyle = 'rgba(154,161,171,0.12)'; ctx.fill();
+      ctx.strokeStyle = 'rgba(154,161,171,0.28)'; ctx.lineWidth = 1.2; ctx.stroke();
+    }
+    const ax = axisX(m.actual), mc = fail ? K.dim : K.gold;
+    ctx.strokeStyle = mc; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(ax, bandTop - 22); ctx.lineTo(ax, yAxis); ctx.stroke();
+    if (fail) {
+      ctx.beginPath();
+      ctx.moveTo(ax, midY - 11); ctx.lineTo(ax + 11, midY); ctx.lineTo(ax, midY + 11); ctx.lineTo(ax - 11, midY); ctx.closePath();
+      ctx.fillStyle = K.bg; ctx.fill(); ctx.strokeStyle = mc; ctx.lineWidth = 3; ctx.stroke();
+    } else {
+      ctx.save(); ctx.shadowColor = 'rgba(227,181,66,0.6)'; ctx.shadowBlur = 20;
+      starPath(ctx, ax, midY, 13); ctx.fillStyle = K.gold; ctx.fill(); ctx.restore();
+    }
+    ctx.font = fmono(27, 800); ctx.fillStyle = mc; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+    ctx.fillText(String(m.actual), ax, bandTop - 30);
+  }
+
+  // dashed 218 pass line
+  const px = axisX(PASS);
+  ctx.strokeStyle = K.green; ctx.lineWidth = 1.8; ctx.setLineDash([4, 4]);
+  ctx.beginPath(); ctx.moveTo(px, bandTop - 6); ctx.lineTo(px, yAxis); ctx.stroke(); ctx.setLineDash([]);
+  ctx.font = fmono(18, 700); ctx.fillStyle = K.green; ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic';
+  ctx.fillText('PASS ' + PASS, px, bandTop - 14);
+
+  // ticks
+  ctx.font = fmono(19); ctx.fillStyle = K.faint; ctx.textAlign = 'center';
+  [200, 220, 240, 260, 280].forEach((t) => ctx.fillText(String(t), axisX(t), yAxis + 32));
+}
+
+/* ---------------- ranked score ladder (canvas) ---------------- */
+// A Cleveland dot plot on the SAME 200..280 axis as the band chart, high to low.
+// Position on a common scale is the most readable comparison, and it makes no
+// temporal claim, so it is the honest undated view. The freshest test is gold (it
+// drives the projection most); the projection band is tinted behind the rows.
+function parseDaysLabel(d?: string): number | null {
+  if (!d) return null;
+  const mt = d.match(/^(\d+)d out$/);
+  return mt ? parseInt(mt[1], 10) : null;
+}
+// Index (into m.ledger) of the freshest practice test: the smallest days-out among
+// dated rows, else the last-entered practice row (entry order = the app's undated
+// recency order). Mirrors computeReadiness's freshest pick. Never the actual row.
+function freshIndex(m: CardModel): number | null {
+  const dated = m.ledger
+    .map((r, i) => ({ i, days: parseDaysLabel(r.d) }))
+    .filter((x) => x.days != null) as { i: number; days: number }[];
+  if (dated.length) return dated.reduce((a, b) => (b.days < a.days ? b : a)).i;
+  const practice = m.ledger.map((r, i) => i).filter((i) => m.ledger[i].k !== 'Actual Step 2');
+  return practice.length ? practice[practice.length - 1] : null;
+}
+function drawScoreLadder(ctx: Ctx, m: CardModel, top: number, rowH: number, x1: number) {
+  const fi = freshIndex(m);
+  const rows = m.ledger.map((r, i) => ({
+    k: r.k, v: r.v, score: parseInt(r.v, 10) || 0, idx: i, isActual: !!r.gold, fresh: i === fi,
+  }));
+  // score desc, then the freshest floats to the top of its tie group, then entry order.
+  rows.sort((a, b) => (b.score - a.score) || ((a.fresh ? 0 : 1) - (b.fresh ? 0 : 1)) || (a.idx - b.idx));
+  const n = rows.length;
+  const bottom = top + n * rowH;
+
+  // projection band backdrop (aligned to the band chart above)
+  if (m.proj) {
+    const xl = axisX(m.proj.low), xr = axisX(m.proj.high), cx = axisX(m.proj.center);
+    ctx.fillStyle = 'rgba(227,181,66,0.05)'; ctx.fillRect(xl, top, Math.max(6, xr - xl), bottom - top);
+    ctx.strokeStyle = 'rgba(227,181,66,0.22)'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(xl, top); ctx.lineTo(xl, bottom); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(xr, top); ctx.lineTo(xr, bottom); ctx.stroke();
+    ctx.strokeStyle = 'rgba(227,181,66,0.30)'; ctx.setLineDash([2, 6]);
+    ctx.beginPath(); ctx.moveTo(cx, top); ctx.lineTo(cx, bottom); ctx.stroke(); ctx.setLineDash([]);
+  }
+
+  rows.forEach((row, i) => {
+    const cyr = top + i * rowH + rowH / 2;
+    const gold = row.fresh || row.isActual;
+    // guide line
+    ctx.strokeStyle = K.track; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(AX_L, cyr); ctx.lineTo(AX_R, cyr); ctx.stroke();
+    // form label
+    const label = row.isActual ? 'ACTUAL' : row.k;
+    ctx.font = fmono(21, gold ? 700 : 400); ctx.fillStyle = gold ? K.gold : K.dim;
+    ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+    ctx.fillText(label, AX_L - 16, cyr);
+    // dot
+    const dx = axisX(row.score), r = gold ? 11 : 8.5;
+    ctx.beginPath(); ctx.arc(dx, cyr, r, 0, Math.PI * 2);
+    ctx.fillStyle = gold ? K.gold : K.ink; ctx.fill();
+    ctx.lineWidth = 2.4; ctx.strokeStyle = K.bg; ctx.stroke();
+    // value
+    ctx.font = fmono(25, 800); ctx.fillStyle = gold ? K.gold : K.ink;
+    ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+    ctx.fillText(row.v, x1, cyr);
+  });
+  ctx.textBaseline = 'alphabetic';
+}
+
+/* ---------------- section slab + caption ---------------- */
+function drawSlab(ctx: Ctx, x0: number, x1: number, y: number, left: string, right?: string) {
+  ctx.textBaseline = 'alphabetic';
+  ctx.font = fmono(17, 700); ctx.fillStyle = K.faint;
+  tracked(ctx, left.toUpperCase(), x0, y, 2, 'left');
+  if (right) {
+    ctx.font = fmono(16, 700); ctx.fillStyle = K.faint;
+    ctx.textAlign = 'right'; ctx.textBaseline = 'alphabetic';
+    ctx.fillText(right.toUpperCase(), x1, y);
+    ctx.textAlign = 'left';
+  }
+}
+function drawCaption(ctx: Ctx, x0: number, x1: number, y: number, text: string) {
+  const sw = 26;
+  ctx.fillStyle = K.gold; rr(ctx, x0, y - 11, sw, 5, 2.5); ctx.fill();
+  ctx.font = fsans(17, 500); ctx.fillStyle = K.faint;
+  ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+  ctx.fillText(fit(ctx, text, x1 - x0 - sw - 14), x0 + sw + 14, y);
+}
+
+/* ---------------- hero (range + pills) ---------------- */
+function drawHeroValue(ctx: Ctx, m: CardModel, x: number, y: number, big: number) {
+  ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+  const parts = m.isRange ? m.heroValue.split(' to ') : null;
+  const gold = () => { if (!m.fail) { ctx.save(); ctx.shadowColor = 'rgba(227,181,66,0.42)'; ctx.shadowBlur = 42; } ctx.fillStyle = m.fail ? K.ink : K.gold; };
+  const ungold = () => { if (!m.fail) ctx.restore(); };
+  if (parts && parts.length === 2) {
+    ctx.font = fmono(big, 800); gold(); ctx.fillText(parts[0], x, y); const w0 = ctx.measureText(parts[0]).width; ungold();
+    ctx.font = fmono(Math.round(big * 0.42), 600); ctx.fillStyle = K.dim; ctx.fillText('to', x + w0 + 18, y); const wto = ctx.measureText('to').width;
+    ctx.font = fmono(big, 800); gold(); ctx.fillText(parts[1], x + w0 + 18 + wto + 18, y); ungold();
+  } else {
+    ctx.font = fmono(big, 800); gold(); ctx.fillText(m.heroValue, x, y); ungold();
+  }
+}
+function drawPills(ctx: Ctx, pills: { t: string; c: string }[], x: number, top: number, h: number) {
+  ctx.font = fmono(19, 700);
+  let px = x;
+  const padX = 20;
+  pills.forEach((p) => {
+    const w = ctx.measureText(p.t).width + padX * 2;
+    rr(ctx, px, top, w, h, h / 2);
+    ctx.strokeStyle = p.c; ctx.globalAlpha = 0.55; ctx.lineWidth = 1.6; ctx.stroke(); ctx.globalAlpha = 1;
+    ctx.fillStyle = p.c; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(p.t, px + w / 2, top + h / 2 + 1);
+    px += w + 14;
+  });
+  ctx.textBaseline = 'alphabetic';
+}
+
 /* ---------------- QR: dark modules on a light rounded panel ---------------- */
 function drawQR(ctx: Ctx, url: string, x: number, y: number, size: number) {
   const qr = qrcode(0, 'M');
@@ -289,13 +484,79 @@ function drawQR(ctx: Ctx, url: string, x: number, y: number, size: number) {
   }
 }
 
+/* ---------------- layout (content-driven height) ---------------- */
+type Layout = {
+  isDated: boolean;
+  statusY: number | null;
+  kickerY: number; rangeY: number; heroFont: number;
+  pillsTop: number; pillH: number; tagY: number;
+  slab1Y: number;
+  bandTop: number; bandH: number; slab2Y: number; ladderTop: number; rowH: number; ladderRows: number;
+  trajTop: number; trajH: number;
+  capY: number; footerRuleY: number; qrSize: number;
+  h: number;
+};
+// One pass over the model -> every y coordinate + the final height. Pure (no ctx):
+// block heights are fixed constants and the ladder row count is known, so the card
+// fits its content exactly. The caller sizes the canvas from h.
+function layoutCard(m: CardModel): Layout {
+  const isDated = m.dated.length >= 2;
+  const isRange = m.isRange;
+
+  let y = 108; // baseline of the brand rule
+  let statusY: number | null = null;
+  if (m.status) { statusY = y + 30; y += 42; }
+
+  const kickerY = y + 36;
+  const heroFont = isRange ? 96 : 148;
+  const rangeY = kickerY + (isRange ? 96 : 132);
+  const pillsTop = rangeY + 28;
+  const pillH = 48;
+  const tagY = pillsTop + pillH + 36;
+  y = tagY + 12;
+
+  const slab1Y = y + 42;
+
+  let bandTop = 0; const bandH = 168; let slab2Y = 0, ladderTop = 0; const rowH = 46; let ladderRows = 0;
+  let trajTop = 0; const trajH = 384;
+  let capY = 0;
+
+  if (isDated) {
+    trajTop = slab1Y + 20;
+    capY = trajTop + trajH + 40;
+  } else {
+    bandTop = slab1Y + 20;
+    slab2Y = bandTop + bandH + 44;
+    ladderRows = m.ledger.length;
+    ladderTop = slab2Y + 24;
+    capY = ladderTop + ladderRows * rowH + 40;
+  }
+
+  const footerRuleY = capY + 24;
+  const qrSize = 100;
+  const h = footerRuleY + 18 + qrSize + 22;
+
+  return {
+    isDated, statusY, kickerY, rangeY, heroFont, pillsTop, pillH, tagY, slab1Y,
+    bandTop, bandH, slab2Y, ladderTop, rowH, ladderRows, trajTop, trajH, capY, footerRuleY, qrSize, h,
+  };
+}
+
+// Content-fit height for a given model. Used by the React canvas to size its
+// backing store + aspect ratio so there is no fixed void.
+export function cardHeight(m: CardModel): number {
+  return layoutCard(m).h;
+}
+
 /* ---------------- the card ---------------- */
 export function drawScoreCard(ctx: Ctx, m: CardModel, scale = 1) {
-  const W = CARD_W, H = CARD_H;
+  const L = layoutCard(m);
+  const W = CARD_W, H = L.h;
   ctx.save();
   ctx.scale(scale, scale);
   ctx.clearRect(0, 0, W, H);
 
+  // background: flat ink, a top gold glow, a faint grid, and the inner frame.
   ctx.fillStyle = K.bg; ctx.fillRect(0, 0, W, H);
   const glow = ctx.createRadialGradient(W / 2, -60, 0, W / 2, -60, 760);
   glow.addColorStop(0, m.fail ? 'rgba(154,161,171,0.06)' : 'rgba(227,181,66,0.10)');
@@ -306,7 +567,7 @@ export function drawScoreCard(ctx: Ctx, m: CardModel, scale = 1) {
   for (let gy = 0; gy <= H; gy += 36) { ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(W, gy); ctx.stroke(); }
   rr(ctx, 4, 4, W - 8, H - 8, 26); ctx.strokeStyle = K.hairS; ctx.lineWidth = 2; ctx.stroke();
 
-  const M = 64, x0 = M, x1 = W - M;
+  const x0 = M, x1 = W - M;
 
   // brand
   ctx.save(); ctx.shadowColor = K.green; ctx.shadowBlur = 16;
@@ -317,118 +578,53 @@ export function drawScoreCard(ctx: Ctx, m: CardModel, scale = 1) {
   ctx.fillStyle = K.green; tracked(ctx, 'GUNNER', x0 + 34 + stepW + 14, 76, 3, 'left');
   ctx.font = fmono(19, 700); ctx.fillStyle = K.faint; ctx.textAlign = 'right';
   tracked(ctx, ('STEP 2 CK . ' + m.kind).toUpperCase(), x1, 74, 2, 'right');
-
   ctx.strokeStyle = K.hair; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(x0, 108); ctx.lineTo(x1, 108); ctx.stroke();
 
-  // TL;DR anchor
+  // optional status line
+  if (L.statusY != null) {
+    ctx.font = fsans(24, 600); ctx.fillStyle = K.dim; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+    ctx.fillText(fit(ctx, m.status, x1 - x0), x0, L.statusY);
+  }
+
+  // hero: kicker, big gold range, percentile pill (+ pass-line pill when in question)
   ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
-  if (m.status) { ctx.font = fsans(25, 600); ctx.fillStyle = K.dim; ctx.fillText(fit(ctx, m.status, 460), x0, 150); }
-  ctx.textAlign = 'right';
-  ctx.font = fmono(30, 800);
-  const hw = ctx.measureText(m.heroValue).width;
-  ctx.fillStyle = m.fail ? K.ink : K.gold; ctx.fillText(m.heroValue, x1, 150);
-  if (m.fromLabel) {
-    ctx.font = fmono(24, 400); ctx.fillStyle = K.faint;
-    ctx.fillText(m.fromLabel + '  → ', x1 - hw - 8, 150);
-  }
-
-  let cy = 150;
-
-  // chart
-  if (m.dated.length >= 2) {
-    drawChart(ctx, m, x0, 176, x1 - x0, 372);
-    cy = 176 + 372;
-    ctx.textBaseline = 'alphabetic';
-    let lx = x0 + 2; const ly = cy + 8;
-    const leg = (color: string, dash: boolean, label: string) => {
-      ctx.strokeStyle = color; ctx.lineWidth = 3; ctx.setLineDash(dash ? [6, 4] : []);
-      ctx.beginPath(); ctx.moveTo(lx, ly - 5); ctx.lineTo(lx + 22, ly - 5); ctx.stroke(); ctx.setLineDash([]);
-      ctx.font = fmono(15); ctx.fillStyle = K.faint; ctx.textAlign = 'left'; ctx.fillText(label, lx + 30, ly);
-      lx += 30 + ctx.measureText(label).width + 26;
-    };
-    leg(m.fail ? K.dim : K.green, false, 'PRACTICE');
-    leg(m.fail ? K.dim : K.gold, true, m.actual != null ? 'TO ACTUAL' : 'PROJECTED');
-    cy = ly + 26;
-  } else {
-    cy = 210;
-  }
-
-  // hero
-  const heroBig = m.isRange ? 92 : 148;
-  ctx.textAlign = 'center';
   ctx.font = fmono(21, 600); ctx.fillStyle = K.faint;
-  tracked(ctx, m.heroKicker.toUpperCase(), W / 2, cy + 52, 3, 'center');
-  ctx.font = fmono(heroBig, 800);
-  if (m.fail) { ctx.fillStyle = K.ink; }
-  else { ctx.save(); ctx.shadowColor = 'rgba(227,181,66,0.45)'; ctx.shadowBlur = 44; ctx.fillStyle = K.gold; }
-  const heroY = cy + 52 + (m.isRange ? 96 : 132);
-  ctx.textBaseline = 'alphabetic';
-  ctx.fillText(m.heroValue, W / 2, heroY);
-  if (!m.fail) ctx.restore();
-  ctx.font = fsans(23, 500); ctx.fillStyle = K.dim; ctx.textAlign = 'center';
-  if (m.heroTag) ctx.fillText(fit(ctx, m.heroTag, 820), W / 2, heroY + 42);
+  tracked(ctx, m.heroKicker.toUpperCase(), x0, L.kickerY, 3, 'left');
+  drawHeroValue(ctx, m, x0, L.rangeY, L.heroFont);
+  const pills: { t: string; c: string }[] = [{ t: m.pctChip.toUpperCase(), c: K.violet }];
+  if (m.verdictChip) pills.push({ t: m.verdictChip.toUpperCase(), c: m.verdictColor });
+  drawPills(ctx, pills, x0, L.pillsTop, L.pillH);
+  if (m.heroTag) {
+    ctx.font = fsans(23, 500); ctx.fillStyle = K.dim; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+    ctx.fillText(fit(ctx, m.heroTag, x1 - x0), x0, L.tagY);
+  }
 
-  cy = heroY + 42 + 26;
+  if (L.isDated) {
+    // DATED: a real trajectory into the projected band at exam day.
+    drawSlab(ctx, x0, x1, L.slab1Y, 'Your trajectory', 'tracked to exam day');
+    drawChart(ctx, m, x0, L.trajTop, x1 - x0, L.trajH);
+    drawCaption(ctx, x0, x1, L.capY, 'Green line: your tests in order. Dashed gold: projected lift to exam day.');
+  } else {
+    // UNDATED: focal band chart, then the ranked ladder on the same axis.
+    const bandRight = m.actual != null ? undefined
+      : m.dated.length === 0 ? 'rough . add exam date to tighten'
+        : (m.tierChip || undefined);
+    drawSlab(ctx, x0, x1, L.slab1Y, 'Projected range', bandRight);
+    drawBandChart(ctx, m, L.bandTop, L.bandH);
+    drawSlab(ctx, x0, x1, L.slab2Y, m.actual != null ? 'Scores, ranked' : 'Practice scores, ranked', 'n = ' + L.ladderRows);
+    drawScoreLadder(ctx, m, L.ladderTop, L.rowH, x1);
+    drawCaption(ctx, x0, x1, L.capY, m.actual != null
+      ? 'Gold marks your projection band and your actual Step 2 score.'
+      : 'Gold marks your projection band and your freshest test, which drives it most.');
+  }
 
-  // chips
-  const chips: { t: string; c: string }[] = [{ t: m.pctChip, c: K.violet }];
-  if (m.tierChip) chips.push({ t: m.tierChip, c: K.dim });
-  if (m.verdictChip) chips.push({ t: m.verdictChip, c: m.verdictColor });
-  ctx.font = fmono(19, 700);
-  const chipH = 46, gap = 14, padX = 20;
-  let totalW = 0;
-  const ws = chips.map((ch) => { const w = ctx.measureText(ch.t).width + padX * 2; totalW += w; return w; });
-  totalW += gap * (chips.length - 1);
-  let chx = W / 2 - totalW / 2; const chy = cy + 18;
-  chips.forEach((ch, i) => {
-    rr(ctx, chx, chy, ws[i], chipH, chipH / 2);
-    ctx.strokeStyle = ch.c; ctx.globalAlpha = 0.5; ctx.lineWidth = 1.4; ctx.stroke(); ctx.globalAlpha = 1;
-    ctx.fillStyle = ch.c; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillText(ch.t, chx + ws[i] / 2, chy + chipH / 2 + 1);
-    chx += ws[i] + gap;
-  });
-  ctx.textBaseline = 'alphabetic';
-  cy = chy + chipH + 20;
-
-  // ledger
-  const footerRuleY = H - 114;
-  ctx.fillStyle = K.faint; ctx.font = fmono(17, 700); ctx.textAlign = 'left';
-  tracked(ctx, 'PRACTICE SCORES', x0, cy + 22, 2, 'left');
-  let lty = cy + 22 + 30;
-  const rows = m.ledger;
-  const avail = footerRuleY - 22 - lty;
-  const rowH = Math.max(30, Math.min(50, avail / Math.max(rows.length, 1)));
-  const rfs = Math.min(27, rowH - 6);
-  rows.forEach((row) => {
-    const yb = lty + rowH * 0.68;
-    ctx.font = fmono(rfs, row.brand ? 700 : 400);
-    ctx.fillStyle = row.brand ? K.green : row.gold ? K.gold : K.dim;
-    ctx.textAlign = 'left'; ctx.fillText(row.k, x0, yb);
-    const kW = ctx.measureText(row.k).width;
-    ctx.font = fmono(rfs, 800); ctx.fillStyle = row.gold ? K.gold : row.brand ? K.green : K.ink;
-    ctx.textAlign = 'right'; ctx.fillText(row.v, x1, yb);
-    const vW = ctx.measureText(row.v).width;
-    let dW = 0;
-    if (row.d) {
-      ctx.font = fmono(rfs - 3, 600); ctx.fillStyle = K.faint;
-      ctx.fillText(row.d, x1 - vW - 10, yb);
-      dW = ctx.measureText(row.d).width + 20;
-    }
-    const dStart = x0 + kW + 14, dEnd = x1 - vW - (row.d ? dW : 10);
-    if (dEnd > dStart) {
-      ctx.strokeStyle = K.hair; ctx.lineWidth = 1; ctx.setLineDash([1, 6]);
-      ctx.beginPath(); ctx.moveTo(dStart, yb - 6); ctx.lineTo(dEnd, yb - 6); ctx.stroke(); ctx.setLineDash([]);
-    }
-    lty += rowH;
-  });
-
-  // footer
-  ctx.strokeStyle = K.hair; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(x0, footerRuleY); ctx.lineTo(x1, footerRuleY); ctx.stroke();
-  const qrSize = 94, qrX = x1 - qrSize, qrY = footerRuleY + 16;
+  // footer: CTA + share QR
+  ctx.strokeStyle = K.hair; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(x0, L.footerRuleY); ctx.lineTo(x1, L.footerRuleY); ctx.stroke();
+  const qrSize = L.qrSize, qrX = x1 - qrSize, qrY = L.footerRuleY + 18;
   drawQR(ctx, m.shareUrl, qrX, qrY, qrSize);
-  ctx.textAlign = 'left';
-  ctx.font = fsans(27, 700); ctx.fillStyle = K.ink; ctx.fillText(m.footerCta, x0, footerRuleY + 42);
-  ctx.font = fmono(19, 500); ctx.fillStyle = K.dim; ctx.fillText('stepgunner.com/readiness', x0, footerRuleY + 72);
+  ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+  ctx.font = fsans(28, 700); ctx.fillStyle = K.ink; ctx.fillText(m.footerCta, x0, L.footerRuleY + 46);
+  ctx.font = fmono(19, 500); ctx.fillStyle = K.dim; ctx.fillText('stepgunner.com/readiness', x0, L.footerRuleY + 78);
 
   ctx.restore();
 }
