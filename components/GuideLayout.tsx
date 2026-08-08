@@ -473,15 +473,17 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
                 <p className="src">{fit.coverageSource}</p>
               </div>
 
-              <div className="vdx">
-                <div className="vh">{fit.visualDxHeading}</div>
-                <div className="chips">
-                  {fit.visualDxChips.map((chip) => (
-                    <span className="chip" key={chip}>{chip}</span>
-                  ))}
+              {fit.visualDxChips.length > 0 && (
+                <div className="vdx">
+                  <div className="vh">{fit.visualDxHeading}</div>
+                  <div className="chips">
+                    {fit.visualDxChips.map((chip) => (
+                      <span className="chip" key={chip}>{chip}</span>
+                    ))}
+                  </div>
+                  <p className="vnote">{fit.visualDxNote}</p>
                 </div>
-                <p className="vnote">{fit.visualDxNote}</p>
-              </div>
+              )}
 
               <div className="honest">
                 <span className="g">i</span>

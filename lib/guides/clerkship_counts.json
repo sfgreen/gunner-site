@@ -5,58 +5,58 @@
     "pediatrics": {
       "displayName": "Pediatrics",
       "decks": {
-        "ckGold": 145,
-        "nbs": 179,
-        "buzzwords": 43,
+        "ckGold": 415,
+        "nbs": 307,
+        "buzzwords": 66,
         "dxBuzzwords": 0,
         "visualDx": 0
       },
-      "total": 367,
+      "total": 788,
       "display": {
-        "ckGold": "145+",
-        "nbs": "179+",
-        "buzzwords": "43+",
+        "ckGold": "400+",
+        "nbs": "300+",
+        "buzzwords": "66+",
         "dxBuzzwords": "0+",
         "visualDx": "0+",
-        "total": "350+"
+        "total": "750+"
       }
     },
     "internal_medicine": {
       "displayName": "Internal Medicine",
       "decks": {
-        "ckGold": 1109,
-        "nbs": 1112,
+        "ckGold": 949,
+        "nbs": 1046,
         "buzzwords": 580,
         "dxBuzzwords": 0,
-        "visualDx": 102
+        "visualDx": 233
       },
-      "total": 2903,
+      "total": 2808,
       "display": {
-        "ckGold": "1100+",
-        "nbs": "1100+",
+        "ckGold": "900+",
+        "nbs": "1000+",
         "buzzwords": "550+",
         "dxBuzzwords": "0+",
-        "visualDx": "102+",
-        "total": "2900+"
+        "visualDx": "200+",
+        "total": "2800+"
       }
     },
     "surgery": {
       "displayName": "Surgery",
       "decks": {
-        "ckGold": 47,
-        "nbs": 90,
-        "buzzwords": 0,
+        "ckGold": 219,
+        "nbs": 241,
+        "buzzwords": 116,
         "dxBuzzwords": 0,
-        "visualDx": 0
+        "visualDx": 3
       },
-      "total": 137,
+      "total": 579,
       "display": {
-        "ckGold": "47+",
-        "nbs": "90+",
-        "buzzwords": "0+",
+        "ckGold": "200+",
+        "nbs": "200+",
+        "buzzwords": "116+",
         "dxBuzzwords": "0+",
-        "visualDx": "0+",
-        "total": "137+"
+        "visualDx": "3+",
+        "total": "550+"
       }
     },
     "obgyn": {
@@ -119,20 +119,39 @@
     "family_medicine": {
       "displayName": "Family Medicine",
       "decks": {
-        "ckGold": 54,
-        "nbs": 94,
+        "ckGold": 143,
+        "nbs": 176,
+        "buzzwords": 29,
+        "dxBuzzwords": 0,
+        "visualDx": 104
+      },
+      "total": 452,
+      "display": {
+        "ckGold": "143+",
+        "nbs": "176+",
+        "buzzwords": "29+",
+        "dxBuzzwords": "0+",
+        "visualDx": "104+",
+        "total": "450+"
+      }
+    },
+    "foundations": {
+      "displayName": "Ethics & Biostats",
+      "decks": {
+        "ckGold": 292,
+        "nbs": 141,
         "buzzwords": 0,
         "dxBuzzwords": 0,
         "visualDx": 0
       },
-      "total": 148,
+      "total": 433,
       "display": {
-        "ckGold": "54+",
-        "nbs": "94+",
+        "ckGold": "250+",
+        "nbs": "141+",
         "buzzwords": "0+",
         "dxBuzzwords": "0+",
         "visualDx": "0+",
-        "total": "148+"
+        "total": "400+"
       }
     },
     "emergency_medicine": {
@@ -157,6 +176,13 @@
   },
   "_confirmed": [
     "pediatrics",
-    "internal_medicine"
+    "internal_medicine",
+    "surgery",
+    "obgyn",
+    "psychiatry",
+    "neurology",
+    "family_medicine",
+    "emergency_medicine",
+    "foundations"
   ]
 }
