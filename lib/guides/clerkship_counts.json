@@ -5,13 +5,13 @@
     "pediatrics": {
       "displayName": "Pediatrics",
       "decks": {
-        "ckGold": 415,
+        "ckGold": 416,
         "nbs": 307,
         "buzzwords": 66,
         "dxBuzzwords": 0,
         "visualDx": 0
       },
-      "total": 788,
+      "total": 789,
       "display": {
         "ckGold": "400+",
         "nbs": "300+",
@@ -24,15 +24,15 @@
     "internal_medicine": {
       "displayName": "Internal Medicine",
       "decks": {
-        "ckGold": 949,
+        "ckGold": 960,
         "nbs": 1046,
         "buzzwords": 580,
         "dxBuzzwords": 0,
         "visualDx": 233
       },
-      "total": 2808,
+      "total": 2819,
       "display": {
-        "ckGold": "900+",
+        "ckGold": "950+",
         "nbs": "1000+",
         "buzzwords": "550+",
         "dxBuzzwords": "0+",
