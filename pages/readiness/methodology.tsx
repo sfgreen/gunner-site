@@ -347,6 +347,22 @@ export default function Methodology() {
             </div>
           </section>
 
+          {/* 2b. FORM SCALE QUIRKS (decision 0013) */}
+          <section className="block">
+            <div className="beyebrow"><i>02b</i> Form scale quirks</div>
+            <h2>Three forms print off the common scale, so they get translated.</h2>
+            <p>
+              Fit on 160 students and 1,043 dated forms with person and timing controls: old
+              <b> NBME 9 prints about 5.5 low</b> (we credit it back), <b>UWSA 2 prints about 4.8
+              hot</b> (translated down), and <b>UWSA 3 about 6.3 low</b> on thinner data. Modern
+              NBMEs, forms 10 through 16, are equated by NBME itself and enter at face value: a
+              printed NBME score is never counted down here. NBME 16 does print a few points high,
+              but students who print high on 16 really do score high, so translating it away would
+              under-project; it stays at face value. And no, forms do not carry hidden weights
+              beyond their dates: we tested that too, and recency carries all of it.
+            </p>
+          </section>
+
           {/* 3. CALIBRATION AND LIMITS */}
           <section className="block">
             <div className="beyebrow"><i>03</i> Calibration and its limits</div>

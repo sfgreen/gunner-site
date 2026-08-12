@@ -181,7 +181,7 @@ export default function Home() {
       <nav>
         <Wordmark size={18} />
         <div className="nav-links">
-          <a href="/readiness" className="nav-pred">Predictor</a>
+          <a href="/step-2-score-predictor" className="nav-pred">Predictor</a>
           <a href="#features">Features</a>
           <a href="/privacy">Privacy</a>
           <a href="/support">Support</a>
@@ -318,6 +318,7 @@ export default function Home() {
             <div className="footer-heading">App</div>
             <ul className="footer-links">
               <li><a href="/readiness">Score Predictor</a></li>
+              <li><a href="/step-2-score-predictor">Score Predictor</a></li>
               <li><a href="/guides">Clerkship Guides</a></li>
               <li><a href="#features">Features</a></li>
               <li><a href={APP} onClick={copyRef}>Download</a></li>

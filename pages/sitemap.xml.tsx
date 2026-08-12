@@ -13,6 +13,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const staticPages = [
     urlNode('/', 'weekly', '1.0'),
     urlNode('/readiness', 'weekly', '0.9'),
+    urlNode('/step-2-score-predictor', 'weekly', '0.9'),
     urlNode('/guides', 'weekly', '0.8'),
     urlNode('/support', 'yearly', '0.4'),
     urlNode('/privacy', 'yearly', '0.3'),

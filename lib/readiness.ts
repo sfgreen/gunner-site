@@ -35,6 +35,26 @@ export const CAL = {
   ceiling: 280,
 };
 
+// Per-form scale corrections (decision 0013, shipped in app 2.0.0): a form's
+// printed score is translated onto the common NBME-equivalent scale BEFORE it
+// enters the anchor. Only three forms carry one (fit on 160 students / 1,043
+// dated forms with person + timing controls): ancient NBME 9 prints ~5.5 low
+// (credited back), UWSA 2 prints ~4.8 hot, UWSA 3 ~6.3 low (thin n, shrunk).
+// Modern NBMEs (10-16) are vendor-equated: zero by policy, and a printed NBME
+// score is never DISPLAYED reduced anywhere; the translation lives in the math.
+// Mirrors ReadinessEstimate.formOffset / correctedScore.
+export const FORM_OFFSETS: Record<string, number> = {
+  'NBME 9': 5.5,
+  'UWSA 2': -4.8,
+  'UWSA 3': 6.3,
+};
+export function formOffset(form: string): number {
+  return FORM_OFFSETS[form] ?? 0;
+}
+export function correctedScore(form: string, printed: number): number {
+  return printed + formOffset(form);
+}
+
 // Step 2 CK percentile norm table (USMLE Score Interpretation Guidelines, Table 2,
 // LCME first-takers July 2022 - June 2025, N=67,934). Linearly interpolated.
 export const NORM: [number, number][] = [
@@ -170,10 +190,10 @@ export function decayAnchor(parsed: Parsed[]): number {
   let num = 0, den = 0;
   parsed.forEach((p, i) => {
     const w = Math.exp(-eff[i] / CAL.tau);
-    num += p.s * w;
+    num += correctedScore(p.form, p.s) * w;
     den += w;
   });
-  return den > 0 ? num / den : parsed[0].s;
+  return den > 0 ? num / den : correctedScore(parsed[0].form, parsed[0].s);
 }
 
 // One pass over the raw entry rows -> everything the page + card + OG need.

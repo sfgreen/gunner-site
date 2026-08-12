@@ -174,7 +174,7 @@ export default function Readiness({ og }: { og: OG }) {
               </div>
             )}
           </div>
-          <p className="saved">Your entries stay on this device and are saved anonymously (no name or email) to sharpen these projections. <Link href="/readiness/methodology">How this projection works</Link></p>
+          <p className="saved">Your entries stay on this device and are saved anonymously (no name or email) to sharpen these projections. <Link href="/readiness/methodology">How this projection works</Link> &middot; <Link href="/step-2-score-predictor">How it did on a blind test</Link></p>
 
           {canShare && <ScoreShareCard entries={entries} actual={actual} status={status} />}
 
