@@ -14,6 +14,7 @@ if (!getApps().length && process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
 interface Body {
   entries?: { form?: string; score?: unknown; days?: unknown }[];
   projected?: { low?: unknown; high?: unknown };
+  actual?: unknown; // the user's real Step 2 score, when they typed one (130-300)
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -33,10 +34,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!clean.length) return res.status(400).json({ error: 'no valid entries' });
 
     const num = (v: unknown) => (Number.isFinite(Number(v)) ? Math.round(Number(v)) : null);
+    const actualNum = num(body.actual);
     await getFirestore().collection('readinessChecks').add({
       entries: clean,
       projLow: num(body.projected?.low),
       projHigh: num(body.projected?.high),
+      actual: actualNum != null && actualNum >= 130 && actualNum <= 300 ? actualNum : null,
       ref: (req.headers['referer'] || '').toString().slice(0, 200),
       ua: (req.headers['user-agent'] || '').toString().slice(0, 200),
       createdAt: Timestamp.now(),

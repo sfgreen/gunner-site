@@ -53,7 +53,7 @@ export default function Readiness({ og }: { og: OG }) {
   // Save each settled check anonymously (aggregate dataset). Debounced + de-duped.
   useEffect(() => {
     if (!proj) return;
-    const payload = JSON.stringify({ entries: entries.filter((e) => e.score !== ''), projected: { low: proj.low, high: proj.high } });
+    const payload = JSON.stringify({ entries: entries.filter((e) => e.score !== ''), projected: { low: proj.low, high: proj.high }, actual: actualValid ? actualNum : null });
     if (payload === lastSent.current) return;
     const t = setTimeout(() => {
       lastSent.current = payload;
@@ -62,7 +62,7 @@ export default function Readiness({ og }: { og: OG }) {
     }, 2500);
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [entries]);
+  }, [entries, actual]);
 
   const setEntry = (i: number, patch: Partial<Entry>) => setEntries((es) => es.map((e, j) => (j === i ? { ...e, ...patch } : e)));
   const addEntry = () => setEntries((es) => (es.length < 12 ? [...es, { form: '', score: '', days: '' }] : es));
