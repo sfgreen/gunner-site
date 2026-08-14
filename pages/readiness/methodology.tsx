@@ -406,6 +406,55 @@ export default function Methodology() {
             </p>
           </section>
 
+          {/* 04. THE BLIND TEST (out-of-sample, Aug 2026 wave) */}
+          <section className="block">
+            <div className="beyebrow"><i>04</i> The blind test</div>
+            <h2>Fit on the past, scored on the future.</h2>
+            <p>
+              Most score converters have never been tested on people they were not fit on. This one has.
+              Before the August 2026 score release, the model's projections were locked for <b>32 students</b>
+              from the newest release thread, none of whom were in the calibration set. When their real
+              scores dropped: <b>average miss 4.1 points</b>, average signed error <b>+0.97</b> (essentially
+              unbiased), <b>88% landed within 7 points</b> and 94% within 8. Those numbers are what the band
+              width claims they should be, which is the whole point of publishing them.
+            </p>
+          </section>
+
+          {/* 05. THE BEAT CURVE */}
+          <section className="block">
+            <div className="beyebrow"><i>05</i> The beat curve</div>
+            <h2>How far past their last practice form do people actually land?</h2>
+            <p>
+              Across <b>150 reports</b> with an exact outcome and a dated final form, actual score minus the
+              freshest practice form has a <b>median of +9</b>. Half of students land between <b>+1 and +14</b>.
+              The full range runs <b>-20 to +35</b>, and about <b>1 in 6 land below</b> their freshest form,
+              which is why a projection that just adds a fixed bonus to your last NBME is flattering rather
+              than honest. The model earns the middle of this curve through recency weighting and calibration,
+              and the band width covers its tails.
+            </p>
+            <div className="norm" role="figure" aria-label="Beat distribution percentiles">
+              <div className="ncell"><span className="ns">p10</span><span className="np">-3</span></div>
+              <div className="ncell"><span className="ns">p25</span><span className="np">+1</span></div>
+              <div className="ncell near"><span className="ns">median</span><span className="np">+9</span></div>
+              <div className="ncell"><span className="ns">p75</span><span className="np">+14</span></div>
+              <div className="ncell"><span className="ns">p90</span><span className="np">+18</span></div>
+            </div>
+          </section>
+
+          {/* 06. CLOSING THE LOOP */}
+          <section className="block">
+            <div className="beyebrow"><i>06</i> Closing the loop</div>
+            <h2>Predictions locked before the exam, paired with real scores after.</h2>
+            <p>
+              Since July 2026 the app freezes every student's projection on their exam day, before any result
+              exists. When they later report their real score, one tap in the app or from an email, the pair
+              becomes a true blind data point: what the model said then, against what actually happened. These
+              app-native pairs have none of the good-news bias of public score threads, and as they accumulate
+              they drive the next refit. Scores are anonymous, linked only to the account, and only ever used
+              in aggregate.
+            </p>
+          </section>
+
           {/* 4. SOFT CTA */}
           <section className="cta">
             <p className="ctline">Help make it sharper. When you get your real Step 2 score, log it, every real outcome pulls these numbers closer to the truth.</p>
