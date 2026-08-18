@@ -119,6 +119,23 @@ function leastSquares(pts: { x: number; y: number }[]): { slope: number; interce
 }
 
 export type Entry = { form: string; score: string; days: string };
+
+/** "When" field, forgiving: plain digits = days before the exam; anything
+ *  date-shaped ("Jun 20", "6/20", "2026-06-20") = the taken date, converted
+ *  to days-ago (a date typed for a month ahead is read as LAST year, the
+ *  usual off-by-a-year typo on a recall). Returns null when unparseable. */
+export function smartDays(raw: string): number | null {
+  const t = (raw || '').trim();
+  if (!t) return null;
+  if (/^\d{1,3}$/.test(t)) return parseInt(t, 10);
+  const yr = new Date().getFullYear();
+  let ms = Date.parse(`${t}, ${yr}`);
+  if (Number.isNaN(ms)) ms = Date.parse(t);
+  if (Number.isNaN(ms)) return null;
+  if (ms > Date.now() + 2 * 86400000) ms -= 365.25 * 86400000;
+  const days = Math.floor((Date.now() - ms) / 86400000);
+  return days >= 0 && days <= 400 ? days : null;
+}
 export type Proj = {
   low: number; high: number; band: number; tier: string;
   verdict: string; vclass: string; center: number;
@@ -199,7 +216,7 @@ export function decayAnchor(parsed: Parsed[]): number {
 // One pass over the raw entry rows -> everything the page + card + OG need.
 export function computeReadiness(entries: Entry[]) {
   const parsed: Parsed[] = entries
-    .map((e) => ({ s: parseInt(e.score, 10), d: e.days === '' ? null : parseInt(e.days, 10), form: e.form }))
+    .map((e) => ({ s: parseInt(e.score, 10), d: smartDays(e.days), form: e.form }))
     .filter((p) => !Number.isNaN(p.s) && p.s >= 130 && p.s <= 300);
   const dated = parsed.filter((p) => p.d != null && !Number.isNaN(p.d)) as Dated[];
 

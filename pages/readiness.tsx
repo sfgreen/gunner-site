@@ -5,8 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import {
   PASS, PASS_COMFORT, MEAN, GMIN, GMAX, FORMS,
   percentile, ordinal, gpct, computeReadiness, decodeShare, buildCardCore, ogMeta, SHARE_BASE,
-  type Entry, type Proj,
-} from '../lib/readiness';
+  type Entry, type Proj, smartDays } from '../lib/readiness';
 import ScoreShareCard from '../components/ScoreShareCard';
 import { track, referrerHost, appStoreUrl } from '../lib/analytics';
 
@@ -113,16 +112,20 @@ export default function Readiness({ og }: { og: OG }) {
                   {i === 0 && <span>Score</span>}
                   <input inputMode="numeric" placeholder="248" value={e.score} onChange={(ev) => setEntry(i, { score: onlyNum(ev.target.value, 3) })} />
                 </label>
-                <label className="field">
-                  {i === 0 && <span>Days before exam <em>(opt.)</em></span>}
-                  <input inputMode="numeric" placeholder="21" value={e.days} onChange={(ev) => setEntry(i, { days: onlyNum(ev.target.value, 3) })} />
+                <label className="field when">
+                  {i === 0 && <span>When <em>(opt.)</em></span>}
+                  <input placeholder="21 or Jun 20" value={e.days}
+                    onChange={(ev) => setEntry(i, { days: ev.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12) })} />
+                  {(() => { const d = smartDays(e.days);
+                    return d != null && !/^\d{1,3}$/.test(e.days.trim())
+                      ? <i className="dhint">&asymp;{d}d</i> : null; })()}
                 </label>
                 <button className="rm" aria-label="remove" onClick={() => removeEntry(i)} style={{ visibility: i === 0 ? 'hidden' : 'visible' }}>✕</button>
               </div>
             ))}
             <button className="add" onClick={addEntry}>+ Add another NBME / UWSA</button>
             <p style={{ fontSize: '12px', color: 'var(--ink-faint)', marginTop: '10px', lineHeight: 1.5 }}>
-              Add days before exam for each and the projection leans on your most recent scores, the ones that best predict test day. Skip it for a rough read.
+              Add when you took each, either days before your exam (21) or the date (Jun 20). The projection leans on your freshest scores, the ones that best predict test day. Skip it for a rough read.
             </p>
 
             <div className="extra">
@@ -275,7 +278,14 @@ export default function Readiness({ og }: { og: OG }) {
         .foot { display: flex; justify-content: space-between; align-items: center; margin-top: 34px; font-family: var(--mono); font-size: 11px; color: var(--ink-faint); }
         .foot :global(a) { color: var(--ink-dim); }
 
-        @media (max-width: 480px) { .entry { grid-template-columns: 1fr 1fr; } .field.rmwrap { display: none; } .rm { grid-column: 2; } }
+        .field { position: relative; }
+        .dhint { position: absolute; right: 8px; bottom: 14px; font-family: var(--mono); font-style: normal; font-size: 10px; font-weight: 700; color: var(--green); pointer-events: none; }
+        @media (max-width: 480px) {
+          .entry { grid-template-columns: 1.25fr 0.75fr 1fr 20px; gap: 6px; margin-bottom: 8px; }
+          .field input, .field select { padding: 9px 8px; height: 42px; }
+          .field span { font-size: 8.5px; margin-bottom: 5px; }
+          .rm { width: 20px; }
+        }
       `}</style>
     </>
   );
