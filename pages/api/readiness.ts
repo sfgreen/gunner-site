@@ -15,6 +15,7 @@ interface Body {
   entries?: { form?: string; score?: unknown; days?: unknown }[];
   projected?: { low?: unknown; high?: unknown };
   actual?: unknown; // the user's real Step 2 score, when they typed one (130-300)
+  source?: unknown; // 'readiness' (full tool) | 'predictor' (quick convert)
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -40,6 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       projLow: num(body.projected?.low),
       projHigh: num(body.projected?.high),
       actual: actualNum != null && actualNum >= 130 && actualNum <= 300 ? actualNum : null,
+      source: typeof body.source === 'string' ? body.source.slice(0, 24) : 'readiness',
       ref: (req.headers['referer'] || '').toString().slice(0, 200),
       ua: (req.headers['user-agent'] || '').toString().slice(0, 200),
       createdAt: Timestamp.now(),

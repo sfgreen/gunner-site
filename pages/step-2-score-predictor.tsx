@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   FORMS, CAL, formOffset, correctedScore, calibratedCenter, bandHalfWidth,
-  percentile, ordinal,
+  percentile, ordinal, smartDays,
 } from '../lib/readiness';
 import { track, referrerHost, appStoreUrl } from '../lib/analytics';
 
@@ -46,7 +46,7 @@ export default function Predictor() {
 
   const printed = parseInt(score, 10);
   const valid = !Number.isNaN(printed) && printed >= 130 && printed <= 300;
-  const d = days === '' ? null : parseInt(days, 10);
+  const d = smartDays(days);
   const off = formOffset(form);
   const counted = valid ? correctedScore(form, printed) : NaN;
   const center = valid ? calibratedCenter(counted) : NaN;
@@ -58,6 +58,24 @@ export default function Predictor() {
     setScore(v.replace(/[^0-9]/g, '').slice(0, 3));
     if (v.length === 3) track('predictor_quick_convert', { form, ref: referrerHost() });
   };
+
+  // Anonymous capture of settled conversions (same sink + shape as the full
+  // calculator, source-tagged): fires 2.5s after the inputs stop changing.
+  const lastSent = useRef('');
+  useEffect(() => {
+    if (!valid) return;
+    const payload = JSON.stringify({
+      entries: [{ form, score: printed, days: d }],
+      projected: { low: lo, high: hi }, actual: null, source: 'predictor',
+    });
+    if (payload === lastSent.current) return;
+    const t = setTimeout(() => {
+      lastSent.current = payload;
+      fetch('/api/readiness', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload }).catch(() => { /* ignore */ });
+    }, 2500);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [form, score, days]);
 
   return (
     <>
@@ -118,9 +136,10 @@ export default function Predictor() {
                 <span>Printed score</span>
                 <input inputMode="numeric" placeholder="245" value={score} onChange={(e) => onCompute(e.target.value)} />
               </label>
-              <label className="field">
-                <span>Days before exam <em>(opt.)</em></span>
-                <input inputMode="numeric" placeholder="14" value={days} onChange={(e) => setDays(e.target.value.replace(/[^0-9]/g, '').slice(0, 3))} />
+              <label className="field when">
+                <span>When <em>(opt.)</em></span>
+                <input placeholder="14 or Jul 2" value={days} onChange={(e) => setDays(e.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12))} />
+                {d != null && !/^\d{1,3}$/.test(days.trim()) ? <i className="dhint">&asymp;{d}d</i> : null}
               </label>
             </div>
 
@@ -256,7 +275,13 @@ export default function Predictor() {
 
         .tool { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 18px; padding: 20px; }
         .qrow { display: grid; grid-template-columns: 1.2fr 1fr 1.2fr; gap: 10px; }
-        @media (max-width: 560px) { .qrow { grid-template-columns: 1fr 1fr; } }
+        .field { position: relative; }
+        .dhint { position: absolute; right: 8px; bottom: 13px; font-family: var(--mono, ui-monospace); font-style: normal; font-size: 10px; font-weight: 700; color: #42d392; pointer-events: none; }
+        @media (max-width: 560px) {
+          .qrow { grid-template-columns: 1.1fr 0.75fr 1fr; gap: 6px; }
+          .field input, .field select { padding: 9px 8px; height: 42px; }
+          .field span { font-size: 8.5px; margin-bottom: 5px; }
+        }
         .field { display: flex; flex-direction: column; gap: 6px; }
         .field span { font-family: var(--mono); font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--ink-faint); }
         .field em { font-style: normal; opacity: 0.7; text-transform: none; letter-spacing: 0; }

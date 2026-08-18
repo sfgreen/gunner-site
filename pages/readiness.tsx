@@ -52,7 +52,7 @@ export default function Readiness({ og }: { og: OG }) {
   // Save each settled check anonymously (aggregate dataset). Debounced + de-duped.
   useEffect(() => {
     if (!proj) return;
-    const payload = JSON.stringify({ entries: entries.filter((e) => e.score !== ''), projected: { low: proj.low, high: proj.high }, actual: actualValid ? actualNum : null });
+    const payload = JSON.stringify({ entries: entries.filter((e) => e.score !== ''), projected: { low: proj.low, high: proj.high }, actual: actualValid ? actualNum : null, source: 'readiness' });
     if (payload === lastSent.current) return;
     const t = setTimeout(() => {
       lastSent.current = payload;
