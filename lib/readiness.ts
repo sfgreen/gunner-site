@@ -118,7 +118,16 @@ function leastSquares(pts: { x: number; y: number }[]): { slope: number; interce
   return { slope, intercept: (sy - slope * sx) / n };
 }
 
-export type Entry = { form: string; score: string; days: string };
+export type Entry = { form: string; score: string; days: string; exact?: boolean };
+
+// Taken control: plain-language buckets (value = days ago) + an exact-date escape hatch.
+export const TAKEN_OPTS: [string, string][] = [
+  ['', 'optional'], ['3', 'this week'], ['7', '~1 wk ago'], ['14', '~2 wks ago'],
+  ['21', '~3 wks ago'], ['30', '~1 mo ago'], ['60', '2+ mo ago'], ['x', 'exact date\u2026'],
+];
+export function takenIsExact(days: string, flag?: boolean): boolean {
+  return !!flag || (days !== '' && !TAKEN_OPTS.some(([v]) => v === days));
+}
 
 /** "When" field, forgiving: plain digits = days before the exam; anything
  *  date-shaped ("Jun 20", "6/20", "2026-06-20") = the taken date, converted

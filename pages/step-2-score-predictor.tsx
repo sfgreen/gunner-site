@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import {
   FORMS, CAL, formOffset, correctedScore, calibratedCenter, bandHalfWidth,
-  percentile, ordinal, smartDays,
+  percentile, ordinal, smartDays, TAKEN_OPTS, takenIsExact,
 } from '../lib/readiness';
 import { track, referrerHost, appStoreUrl } from '../lib/analytics';
 
@@ -43,6 +43,7 @@ export default function Predictor() {
   const [form, setForm] = useState('NBME 15');
   const [score, setScore] = useState('');
   const [days, setDays] = useState('');
+  const [takenExact, setTakenExact] = useState(false);
 
   const printed = parseInt(score, 10);
   const valid = !Number.isNaN(printed) && printed >= 130 && printed <= 300;
@@ -137,9 +138,20 @@ export default function Predictor() {
                 <input inputMode="numeric" placeholder="245" value={score} onChange={(e) => onCompute(e.target.value)} />
               </label>
               <label className="field when">
-                <span>Taken <em>(opt.)</em></span>
-                <input placeholder="21d, or Jul 2" value={days} onChange={(e) => setDays(e.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12))} />
-                {d != null && !/^\d{1,3}$/.test(days.trim()) ? <i className="dhint">&asymp;{d}d</i> : null}
+                <span>Taken</span>
+                {takenIsExact(days, takenExact) ? (
+                  <>
+                    <input autoFocus placeholder="Jul 2, or 21" value={days}
+                      onChange={(e) => setDays(e.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12))}
+                      onBlur={(e) => { if (!e.target.value.trim()) { setTakenExact(false); setDays(''); } }} />
+                    {d != null ? <i className="dhint">&asymp;{d}d ago</i> : null}
+                  </>
+                ) : (
+                  <select value={days} style={{ color: days === '' ? '#9aa0ab' : undefined }}
+                    onChange={(e) => { const v = e.target.value; if (v === 'x') { setTakenExact(true); setDays(''); } else setDays(v); }}>
+                    {TAKEN_OPTS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+                  </select>
+                )}
               </label>
             </div>
 

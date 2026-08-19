@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import {
   PASS, PASS_COMFORT, MEAN, GMIN, GMAX, FORMS,
   percentile, ordinal, gpct, computeReadiness, decodeShare, buildCardCore, ogMeta, SHARE_BASE,
-  type Entry, type Proj, smartDays } from '../lib/readiness';
+  type Entry, type Proj, smartDays, TAKEN_OPTS, takenIsExact } from '../lib/readiness';
 import ScoreShareCard from '../components/ScoreShareCard';
 import { track, referrerHost, appStoreUrl } from '../lib/analytics';
 
@@ -113,19 +113,28 @@ export default function Readiness({ og }: { og: OG }) {
                   <input inputMode="numeric" placeholder="248" value={e.score} onChange={(ev) => setEntry(i, { score: onlyNum(ev.target.value, 3) })} />
                 </label>
                 <label className="field when">
-                  {i === 0 && <span>Taken <em>(opt.)</em></span>}
-                  <input placeholder="21d, or Jun 20" value={e.days}
-                    onChange={(ev) => setEntry(i, { days: ev.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12) })} />
-                  {(() => { const d = smartDays(e.days);
-                    return d != null && !/^\d{1,3}$/.test(e.days.trim())
-                      ? <i className="dhint">&asymp;{d}d</i> : null; })()}
+                  {i === 0 && <span>Taken</span>}
+                  {takenIsExact(e.days, e.exact) ? (
+                    <>
+                      <input autoFocus placeholder="Jun 20, or 21" value={e.days}
+                        onChange={(ev) => setEntry(i, { days: ev.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12) })}
+                        onBlur={(ev) => { if (!ev.target.value.trim()) setEntry(i, { exact: false, days: '' }); }} />
+                      {(() => { const d = smartDays(e.days);
+                        return d != null ? <i className="dhint">&asymp;{d}d ago</i> : null; })()}
+                    </>
+                  ) : (
+                    <select value={e.days} style={{ color: e.days === '' ? 'var(--ink-faint)' : undefined }}
+                      onChange={(ev) => { const v = ev.target.value; if (v === 'x') setEntry(i, { exact: true, days: '' }); else setEntry(i, { days: v, exact: false }); }}>
+                      {TAKEN_OPTS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+                    </select>
+                  )}
                 </label>
                 <button className="rm" aria-label="remove" onClick={() => removeEntry(i)} style={{ visibility: i === 0 ? 'hidden' : 'visible' }}>✕</button>
               </div>
             ))}
             <button className="add" onClick={addEntry}>+ Add another NBME / UWSA</button>
             <p style={{ fontSize: '12px', color: 'var(--ink-faint)', marginTop: '10px', lineHeight: 1.5 }}>
-              Add when you took each, either days before your exam (21) or the date (Jun 20). The projection leans on your freshest scores, the ones that best predict test day. Skip it for a rough read.
+              Add roughly when you took each form. A rough pick is plenty; use exact date if you know it. The projection leans on your freshest scores, the ones that best predict test day. Skip it for a rough read.
             </p>
 
             <div className="extra">
