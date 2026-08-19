@@ -82,7 +82,7 @@ export default function Readiness({ og }: { og: OG }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={og.image} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#0a0b0d" />
+        <meta name="theme-color" content="#faf9f6" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>
@@ -201,10 +201,10 @@ export default function Readiness({ og }: { og: OG }) {
 
       <style jsx global>{`
         :root {
-          --bg: #0a0b0d; --bg-2: #0d0e13; --bg-3: #121317;
-          --hair: rgba(255,255,255,0.08); --hair-strong: rgba(255,255,255,0.14);
-          --ink: #f4f6f8; --ink-dim: #9aa1ab; --ink-faint: #5c636e;
-          --green: #46d877; --gold: #e3b542; --blue: #5090f7; --red: #ef6d6d; --violet: #af52ff;
+          --bg: #faf9f6; --bg-2: #ffffff; --bg-3: #ffffff;
+          --hair: rgba(25,28,35,0.10); --hair-strong: rgba(25,28,35,0.17);
+          --ink: #191c23; --ink-dim: #5d6470; --ink-faint: #9aa0ab;
+          --green: #0d9448; --gold: #e08e00; --blue: #2f6fed; --red: #d64545; --violet: #af52ff;
           --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
           --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
         }
@@ -216,18 +216,17 @@ export default function Readiness({ og }: { og: OG }) {
 
       <style jsx>{`
         .page { min-height: 100vh; background:
-          radial-gradient(90% 55% at 50% -8%, rgba(70,216,119,0.08), transparent 60%),
-          linear-gradient(var(--hair) 1px, transparent 1px) 0 0/26px 26px,
-          linear-gradient(90deg, var(--hair) 1px, transparent 1px) 0 0/26px 26px, var(--bg); }
+          radial-gradient(90% 55% at 50% -8%, rgba(13,148,72,0.08), transparent 60%),
+          radial-gradient(56% 22% at 50% 0%, rgba(240,180,41,0.13), transparent 62%), var(--bg); }
         .nav { display: flex; align-items: center; justify-content: space-between; max-width: 660px; margin: 0 auto; padding: 20px 22px; }
         .wm { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; font-size: 14px; }
         .wm .wt b.g { color: var(--green); font-weight: 700; }
         .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); flex: 0 0 auto; }
-        .nav-cta { background: var(--green); color: #05130a; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 4px 18px rgba(70,216,119,0.24); transition: transform 0.15s ease, box-shadow 0.2s ease; }
-        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(70,216,119,0.32); }
+        .nav-cta { background: var(--ink); color: #ffffff; padding: 9px 18px; border-radius: 999px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 3px 12px rgba(25,28,35,0.18); transition: transform 0.15s ease, box-shadow 0.2s ease; }
+        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(13,148,72,0.32); }
 
         .wrap { max-width: 640px; margin: 0 auto; padding: 30px 22px 80px; }
-        .badge { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--green); border: 1px solid rgba(70,216,119,0.3); background: rgba(70,216,119,0.06); padding: 6px 15px; border-radius: 999px; }
+        .badge { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #b57400; border: 1px solid rgba(224,142,0,0.35); background: rgba(240,180,41,0.10); padding: 6px 15px; border-radius: 999px; }
         h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1; margin: 20px 0 10px; }
         .sub { color: var(--ink-dim); font-size: 16px; margin: 0 0 26px; max-width: 38ch; }
 
@@ -257,7 +256,7 @@ export default function Readiness({ og }: { og: OG }) {
         .chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 12px 0 4px; }
         .chip { font-family: var(--mono); font-size: 11px; font-weight: 700; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--hair-strong); color: var(--ink-dim); }
         .chip.pctl { color: var(--violet); border-color: rgba(175,82,255,0.4); }
-        .chip.ok { color: var(--green); border-color: rgba(70,216,119,0.4); }
+        .chip.ok { color: var(--green); border-color: rgba(13,148,72,0.4); }
         .chip.warn { color: var(--gold); border-color: rgba(227,181,66,0.4); }
         .chip.low { color: var(--red); border-color: rgba(239,109,109,0.4); }
         .fine { color: var(--ink-faint); font-size: 12.5px; line-height: 1.5; margin: 12px auto 0; max-width: 46ch; }
@@ -272,7 +271,7 @@ export default function Readiness({ og }: { og: OG }) {
         .ueyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-faint); }
         .upsell h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; margin: 10px 0 10px; }
         .upsell p { color: var(--ink-dim); font-size: 15px; line-height: 1.55; margin: 0 0 20px; }
-        .btn-store { display: inline-flex; align-items: center; gap: 9px; background: var(--green); color: #05130a; font-family: var(--mono); font-weight: 800; font-size: 13px; letter-spacing: 0.4px; padding: 13px 20px; border-radius: 12px; box-shadow: 0 6px 26px rgba(70,216,119,0.28); }
+        .btn-store { display: inline-flex; align-items: center; gap: 9px; background: var(--green); color: #05130a; font-family: var(--mono); font-weight: 800; font-size: 13px; letter-spacing: 0.4px; padding: 13px 20px; border-radius: 12px; box-shadow: 0 6px 26px rgba(13,148,72,0.28); }
         .btn-store .apple { width: 14px; height: 17px; flex: 0 0 auto; }
 
         .foot { display: flex; justify-content: space-between; align-items: center; margin-top: 34px; font-family: var(--mono); font-size: 11px; color: var(--ink-faint); }
@@ -341,13 +340,13 @@ function Trajectory({ dated, proj }: { dated: { s: number; d: number; form: stri
           </g>
         ))}
         <path d={`M${xForD(last.d)},${yForS(last.s)} L${R},${yForS(proj.high)} L${R},${yForS(proj.low)} Z`} fill="rgba(227,181,66,0.13)" />
-        <polyline points={line} fill="none" stroke="#46d877" strokeWidth={2.2} />
+        <polyline points={line} fill="none" stroke="#0d9448" strokeWidth={2.2} />
         <line x1={xForD(last.d)} y1={yForS(last.s)} x2={R} y2={yForS(proj.center)} stroke="#e3b542" strokeWidth={2.2} strokeDasharray="5 4" opacity={0.85} />
         {pts.map((p, i) => (
           <g key={i}>
-            <circle cx={xForD(p.d)} cy={yForS(p.s)} r={4} fill="#46d877" stroke="#0a0b0d" strokeWidth={1.5} />
+            <circle cx={xForD(p.d)} cy={yForS(p.s)} r={4} fill="#0d9448" stroke="#ffffff" strokeWidth={1.5} />
             <text x={xForD(p.d)} y={yForS(p.s) - 16} fill="#5c636e" fontFamily="ui-monospace, monospace" fontSize={6.5} textAnchor="middle">{shortForm(p.form)}</text>
-            <text x={xForD(p.d)} y={yForS(p.s) - 8} fill="#f4f6f8" fontFamily="ui-monospace, monospace" fontSize={9} fontWeight={800} textAnchor="middle">{p.s}</text>
+            <text x={xForD(p.d)} y={yForS(p.s) - 8} fill="#191c23" fontFamily="ui-monospace, monospace" fontSize={9} fontWeight={800} textAnchor="middle">{p.s}</text>
             <text x={xForD(p.d)} y={B + 13} fill="#9aa1ab" fontFamily="ui-monospace, monospace" fontSize={7.5} textAnchor="middle">{p.d}d</text>
           </g>
         ))}

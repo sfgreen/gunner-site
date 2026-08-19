@@ -90,7 +90,7 @@ export default function Predictor() {
         <meta property="og:description" content="Fit on 258 real score reports. Tested blind on 32 more: average miss ~4 points. NBME 9-16 and UWSA conversions, free." />
         <meta property="og:url" content={CANONICAL} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#0a0b0d" />
+        <meta name="theme-color" content="#faf9f6" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
         <script
@@ -244,10 +244,10 @@ export default function Predictor() {
 
       <style jsx global>{`
         :root {
-          --bg: #0a0b0d; --bg-2: #0d0e13; --bg-3: #121317;
-          --hair: rgba(255,255,255,0.08); --hair-strong: rgba(255,255,255,0.14);
-          --ink: #f4f6f8; --ink-dim: #9aa1ab; --ink-faint: #5c636e;
-          --green: #46d877; --gold: #e3b542; --blue: #5090f7; --red: #ef6d6d;
+          --bg: #faf9f6; --bg-2: #ffffff; --bg-3: #ffffff;
+          --hair: rgba(25,28,35,0.10); --hair-strong: rgba(25,28,35,0.17);
+          --ink: #191c23; --ink-dim: #5d6470; --ink-faint: #9aa0ab;
+          --green: #0d9448; --gold: #e08e00; --blue: #2f6fed; --red: #d64545;
           --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
           --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
         }
@@ -259,24 +259,23 @@ export default function Predictor() {
 
       <style jsx>{`
         .page { min-height: 100vh; background:
-          radial-gradient(90% 55% at 50% -8%, rgba(70,216,119,0.08), transparent 60%),
-          linear-gradient(var(--hair) 1px, transparent 1px) 0 0/26px 26px,
-          linear-gradient(90deg, var(--hair) 1px, transparent 1px) 0 0/26px 26px, var(--bg); }
+          radial-gradient(90% 55% at 50% -8%, rgba(13,148,72,0.08), transparent 60%),
+          radial-gradient(56% 22% at 50% 0%, rgba(240,180,41,0.13), transparent 62%), var(--bg); }
         .nav { display: flex; align-items: center; justify-content: space-between; max-width: 660px; margin: 0 auto; padding: 20px 22px; }
         .wm { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; font-size: 14px; }
         .wm .wt b.g { color: var(--green); font-weight: 700; }
         .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); flex: 0 0 auto; }
-        .nav-cta { background: var(--green); color: #05130a; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 4px 18px rgba(70,216,119,0.24); }
+        .nav-cta { background: var(--ink); color: #ffffff; padding: 9px 18px; border-radius: 999px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 3px 12px rgba(25,28,35,0.18); }
 
         .wrap { max-width: 640px; margin: 0 auto; padding: 30px 22px 80px; }
-        .badge { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--green); border: 1px solid rgba(70,216,119,0.3); background: rgba(70,216,119,0.06); padding: 6px 15px; border-radius: 999px; }
+        .badge { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #b57400; border: 1px solid rgba(224,142,0,0.35); background: rgba(240,180,41,0.10); padding: 6px 15px; border-radius: 999px; }
         h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1; margin: 20px 0 10px; }
         .sub { color: var(--ink-dim); font-size: 16px; margin: 0 0 26px; max-width: 44ch; }
 
-        .tool { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 18px; padding: 20px; }
+        .tool { background: var(--bg-2); border: 1px solid var(--hair); border-radius: 18px; padding: 20px; box-shadow: 0 2px 18px rgba(25,28,35,0.06); }
         .qrow { display: grid; grid-template-columns: 1.2fr 1fr 1.2fr; gap: 10px; }
         .field { position: relative; }
-        .dhint { position: absolute; right: 8px; bottom: 13px; font-family: var(--mono, ui-monospace); font-style: normal; font-size: 10px; font-weight: 700; color: #42d392; pointer-events: none; }
+        .dhint { position: absolute; right: 8px; bottom: 13px; font-family: var(--mono, ui-monospace); font-style: normal; font-size: 10px; font-weight: 700; color: #0d9448; pointer-events: none; }
         @media (max-width: 560px) {
           .qrow { grid-template-columns: 1.1fr 0.75fr 1fr; gap: 6px; }
           .field input, .field select { padding: 9px 8px; height: 42px; }
@@ -286,7 +285,7 @@ export default function Predictor() {
         .field span { font-family: var(--mono); font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--ink-faint); }
         .field em { font-style: normal; opacity: 0.7; text-transform: none; letter-spacing: 0; }
         .field select, .field input { background: var(--bg-3); border: 1px solid var(--hair-strong); border-radius: 10px; color: var(--ink); font-family: var(--mono); font-size: 15px; padding: 11px 12px; width: 100%; }
-        .field select:focus, .field input:focus { outline: none; border-color: rgba(70,216,119,0.5); }
+        .field select:focus, .field input:focus { outline: none; border-color: rgba(13,148,72,0.5); }
 
         .result { margin-top: 18px; border-top: 1px solid var(--hair); padding-top: 18px; text-align: center; }
         .result.empty { color: var(--ink-faint); }
@@ -297,8 +296,8 @@ export default function Predictor() {
         .rv .d { font-size: 20px; color: var(--ink-dim); font-weight: 500; }
         .chips { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin: 8px 0 4px; }
         .chip { font-family: var(--mono); font-size: 11px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--hair-strong); color: var(--ink-dim); }
-        .chip.pctl { color: var(--green); border-color: rgba(70,216,119,0.35); }
-        .chip.up { color: var(--green); border-color: rgba(70,216,119,0.35); }
+        .chip.pctl { color: var(--green); border-color: rgba(13,148,72,0.35); }
+        .chip.up { color: var(--green); border-color: rgba(13,148,72,0.35); }
         .chip.hot { color: var(--gold); border-color: rgba(227,181,66,0.4); }
         .fine { font-size: 12.5px; color: var(--ink-faint); margin: 10px auto 0; max-width: 46ch; line-height: 1.55; }
         .fine :global(a) { color: var(--green); }
@@ -316,11 +315,11 @@ export default function Predictor() {
         .faq summary::-webkit-details-marker { display: none; }
         .faq details p { color: var(--ink-dim); font-size: 14px; line-height: 1.6; margin: 0 0 14px; }
 
-        .upsell { margin-top: 46px; border: 1px solid rgba(70,216,119,0.28); background: linear-gradient(165deg, rgba(70,216,119,0.07), var(--bg-2)); border-radius: 18px; padding: 24px 22px; text-align: center; }
+        .upsell { margin-top: 46px; border: 1px solid rgba(13,148,72,0.28); background: linear-gradient(165deg, rgba(13,148,72,0.07), var(--bg-2)); border-radius: 18px; padding: 24px 22px; text-align: center; }
         .ueyebrow { font-family: var(--mono); font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--green); }
         .upsell h2 { font-size: 22px; font-weight: 800; margin: 10px 0 8px; }
         .upsell p { color: var(--ink-dim); font-size: 14.5px; line-height: 1.6; max-width: 46ch; margin: 0 auto 16px; }
-        .btn-store { display: inline-flex; align-items: center; gap: 9px; background: var(--green); color: #05130a; font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.6px; padding: 13px 22px; border-radius: 12px; box-shadow: 0 6px 22px rgba(70,216,119,0.26); }
+        .btn-store { display: inline-flex; align-items: center; gap: 9px; background: var(--green); color: #05130a; font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.6px; padding: 13px 22px; border-radius: 12px; box-shadow: 0 6px 22px rgba(13,148,72,0.26); }
 
         .foot { display: flex; gap: 18px; justify-content: center; margin-top: 44px; font-family: var(--mono); font-size: 11.5px; color: var(--ink-faint); flex-wrap: wrap; }
         .foot :global(a):hover { color: var(--ink-dim); }
