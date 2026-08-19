@@ -114,7 +114,7 @@ export default function Readiness({ og }: { og: OG }) {
                 </label>
                 <label className="field when">
                   {i === 0 && <span>Taken <em>(opt.)</em></span>}
-                  <input placeholder="days out, or Jun 20" value={e.days}
+                  <input placeholder="21d, or Jun 20" value={e.days}
                     onChange={(ev) => setEntry(i, { days: ev.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12) })} />
                   {(() => { const d = smartDays(e.days);
                     return d != null && !/^\d{1,3}$/.test(e.days.trim())

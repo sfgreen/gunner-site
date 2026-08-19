@@ -138,7 +138,7 @@ export default function Predictor() {
               </label>
               <label className="field when">
                 <span>Taken <em>(opt.)</em></span>
-                <input placeholder="days before exam, or Jul 2" value={days} onChange={(e) => setDays(e.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12))} />
+                <input placeholder="21d, or Jul 2" value={days} onChange={(e) => setDays(e.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12))} />
                 {d != null && !/^\d{1,3}$/.test(days.trim()) ? <i className="dhint">&asymp;{d}d</i> : null}
               </label>
             </div>
