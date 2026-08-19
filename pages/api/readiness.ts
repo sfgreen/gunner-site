@@ -24,13 +24,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const body = (req.body || {}) as Body;
+    // Number('') === 0 and Number(null) === 0, which silently turned blank dates
+    // into days:0 (35% of historical rows). Blank stays null; a true today clamps
+    // to 1 so days==0 never appears again (historical 0s = treat as missing).
+    const numv = (v: unknown): number | null => {
+      if (v == null || (typeof v === 'string' && v.trim() === '')) return null;
+      const n = Number(v);
+      return Number.isFinite(n) ? n : null;
+    };
     const clean = (Array.isArray(body.entries) ? body.entries : [])
       .slice(0, 14)
-      .map((e) => ({
-        form: typeof e.form === 'string' ? e.form.slice(0, 24) : '',
-        score: Number.isFinite(Number(e.score)) ? Math.max(0, Math.min(300, Math.round(Number(e.score)))) : null,
-        days: Number.isFinite(Number(e.days)) ? Math.max(0, Math.min(999, Math.round(Number(e.days)))) : null,
-      }))
+      .map((e) => {
+        const sv = numv(e.score);
+        const dv = numv(e.days);
+        return {
+          form: typeof e.form === 'string' ? e.form.slice(0, 24) : '',
+          score: sv != null ? Math.max(0, Math.min(300, Math.round(sv))) : null,
+          days: dv != null ? Math.max(1, Math.min(999, Math.round(dv))) : null,
+        };
+      })
       .filter((e) => e.score != null);
     if (!clean.length) return res.status(400).json({ error: 'no valid entries' });
 
