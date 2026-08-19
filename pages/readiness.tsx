@@ -113,8 +113,8 @@ export default function Readiness({ og }: { og: OG }) {
                   <input inputMode="numeric" placeholder="248" value={e.score} onChange={(ev) => setEntry(i, { score: onlyNum(ev.target.value, 3) })} />
                 </label>
                 <label className="field when">
-                  {i === 0 && <span>When <em>(opt.)</em></span>}
-                  <input placeholder="21 or Jun 20" value={e.days}
+                  {i === 0 && <span>Taken <em>(opt.)</em></span>}
+                  <input placeholder="days out, or Jun 20" value={e.days}
                     onChange={(ev) => setEntry(i, { days: ev.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12) })} />
                   {(() => { const d = smartDays(e.days);
                     return d != null && !/^\d{1,3}$/.test(e.days.trim())
