@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import {
   FORMS, CAL, formOffset, correctedScore, calibratedCenter, bandHalfWidth,
-  percentile, ordinal, smartDays, TAKEN_OPTS, takenIsExact,
+  percentile, ordinal, smartDays, TAKEN_OPTS, takenIsExact, takenSource, MODEL_VERSION, visitorIdentity,
 } from '../lib/readiness';
 import { track, referrerHost, appStoreUrl } from '../lib/analytics';
 
@@ -65,9 +65,12 @@ export default function Predictor() {
   const lastSent = useRef('');
   useEffect(() => {
     if (!valid) return;
+    const ident = visitorIdentity();
     const payload = JSON.stringify({
-      entries: [{ form, score: printed, days: d }],
+      entries: [{ form, score: printed, days: d, dateSource: takenSource(days, takenExact), raw: days.slice(0, 12) }],
       projected: { low: lo, high: hi }, actual: null, source: 'predictor',
+      modelVersion: MODEL_VERSION,
+      visitor: ident ? { id: ident.vid, session: ident.sid, firstSeen: ident.firstSeen } : null,
     });
     if (payload === lastSent.current) return;
     const t = setTimeout(() => {

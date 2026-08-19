@@ -12,10 +12,12 @@ if (!getApps().length && process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
 }
 
 interface Body {
-  entries?: { form?: string; score?: unknown; days?: unknown }[];
-  projected?: { low?: unknown; high?: unknown };
+  entries?: { form?: string; score?: unknown; days?: unknown; dateSource?: unknown; raw?: unknown }[];
+  projected?: { low?: unknown; high?: unknown } | null;
   actual?: unknown; // the user's real Step 2 score, when they typed one (130-300)
   source?: unknown; // 'readiness' (full tool) | 'predictor' (quick convert)
+  modelVersion?: unknown; // which shipped web model produced the projection
+  visitor?: { id?: unknown; session?: unknown; firstSeen?: unknown } | null; // anonymous uuids
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -41,19 +43,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           form: typeof e.form === 'string' ? e.form.slice(0, 24) : '',
           score: sv != null ? Math.max(0, Math.min(300, Math.round(sv))) : null,
           days: dv != null ? Math.max(1, Math.min(999, Math.round(dv))) : null,
+          dateSource: e.dateSource === 'bucket' || e.dateSource === 'exact' || e.dateSource === 'none' ? e.dateSource : null,
+          raw: typeof e.raw === 'string' ? e.raw.slice(0, 12) : null,
         };
       })
       .filter((e) => e.score != null);
-    if (!clean.length) return res.status(400).json({ error: 'no valid entries' });
 
-    const num = (v: unknown) => (Number.isFinite(Number(v)) ? Math.round(Number(v)) : null);
+    const num = (v: unknown) =>
+      v == null || (typeof v === 'string' && v.trim() === '') || !Number.isFinite(Number(v))
+        ? null
+        : Math.round(Number(v));
     const actualNum = num(body.actual);
+    const actualOk = actualNum != null && actualNum >= 130 && actualNum <= 300;
+    // An outcome with no forms is still a row (share-link visitors reporting
+    // a real score); only reject when there is neither.
+    if (!clean.length && !actualOk) return res.status(400).json({ error: 'no valid entries' });
     await getFirestore().collection('readinessChecks').add({
       entries: clean,
       projLow: num(body.projected?.low),
       projHigh: num(body.projected?.high),
-      actual: actualNum != null && actualNum >= 130 && actualNum <= 300 ? actualNum : null,
+      actual: actualOk ? actualNum : null,
       source: typeof body.source === 'string' ? body.source.slice(0, 24) : 'readiness',
+      modelVersion: typeof body.modelVersion === 'string' ? body.modelVersion.slice(0, 24) : null,
+      visitorId: typeof body.visitor?.id === 'string' ? body.visitor.id.slice(0, 48) : null,
+      sessionId: typeof body.visitor?.session === 'string' ? body.visitor.session.slice(0, 48) : null,
+      visitorFirstSeen: num(body.visitor?.firstSeen),
       ref: (req.headers['referer'] || '').toString().slice(0, 200),
       ua: (req.headers['user-agent'] || '').toString().slice(0, 200),
       createdAt: Timestamp.now(),

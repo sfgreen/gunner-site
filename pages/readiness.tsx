@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import {
   PASS, PASS_COMFORT, MEAN, GMIN, GMAX, FORMS,
   percentile, ordinal, gpct, computeReadiness, decodeShare, buildCardCore, ogMeta, SHARE_BASE,
-  type Entry, type Proj, smartDays, TAKEN_OPTS, takenIsExact } from '../lib/readiness';
+  type Entry, type Proj, smartDays, TAKEN_OPTS, takenIsExact, takenSource, MODEL_VERSION, visitorIdentity } from '../lib/readiness';
 import ScoreShareCard from '../components/ScoreShareCard';
 import { track, referrerHost, appStoreUrl } from '../lib/analytics';
 
@@ -51,13 +51,25 @@ export default function Readiness({ og }: { og: OG }) {
 
   // Save each settled check anonymously (aggregate dataset). Debounced + de-duped.
   useEffect(() => {
-    if (!proj) return;
-    const payload = JSON.stringify({ entries: entries.filter((e) => e.score !== ''), projected: { low: proj.low, high: proj.high }, actual: actualValid ? actualNum : null, source: 'readiness' });
+    // actual-only sessions (share-link visitors reporting a real score with no
+    // forms) are rows too; requiring proj here silently dropped every one.
+    if (!proj && !actualValid) return;
+    const ident = visitorIdentity();
+    const payload = JSON.stringify({
+      entries: entries.filter((e) => e.score !== '').map((e) => ({
+        form: e.form, score: e.score, days: e.days, dateSource: takenSource(e.days, e.exact),
+      })),
+      projected: proj ? { low: proj.low, high: proj.high } : null,
+      actual: actualValid ? actualNum : null,
+      source: 'readiness',
+      modelVersion: MODEL_VERSION,
+      visitor: ident ? { id: ident.vid, session: ident.sid, firstSeen: ident.firstSeen } : null,
+    });
     if (payload === lastSent.current) return;
     const t = setTimeout(() => {
       lastSent.current = payload;
       fetch('/api/readiness', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload }).catch(() => { /* ignore */ });
-      track('readiness_computed', { low: proj.low, high: proj.high, hasActual: actualValid, ref: referrerHost() });
+      if (proj) track('readiness_computed', { low: proj.low, high: proj.high, hasActual: actualValid, ref: referrerHost() });
     }, 2500);
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps

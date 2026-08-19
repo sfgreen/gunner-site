@@ -133,6 +133,43 @@ export function takenIsExact(days: string, flag?: boolean): boolean {
   return !!flag || (days !== '' && !TAKEN_OPTS.some(([v]) => v === days));
 }
 
+// How a Taken value was provided; stored per entry so heaped bucket values are
+// never mistaken for exact recall in later analysis.
+export function takenSource(days: string, exactFlag?: boolean): 'none' | 'bucket' | 'exact' {
+  if (days === '') return 'none';
+  return takenIsExact(days, exactFlag) ? 'exact' : 'bucket';
+}
+
+// Which shipped web model produced a stored projection. Bump on ANY model
+// change (weights, offsets, delta, floor) or stored (projection, actual)
+// pairs become uninterpretable across eras.
+export const MODEL_VERSION = 'w3-decay30-off3-d9';
+
+// Anonymous visitor identity for the capture pipeline: random uuids, minted
+// client-side, no PII and no fingerprinting. Lets analysis collapse the
+// debounced write stream into visitor-sessions and link a return visit that
+// adds a real score to the projection frozen in an earlier session.
+export function visitorIdentity(): { vid: string; sid: string; firstSeen: number } | null {
+  if (typeof window === 'undefined') return null;
+  const uuid = () => {
+    const c = globalThis.crypto as unknown as { randomUUID?: () => string } | undefined;
+    return c?.randomUUID?.() ?? Math.random().toString(36).slice(2) + Date.now().toString(36);
+  };
+  try {
+    let vid = localStorage.getItem('gunner_vid');
+    let firstSeen = Number(localStorage.getItem('gunner_vid_t')) || 0;
+    if (!vid) {
+      vid = uuid();
+      firstSeen = Date.now();
+      localStorage.setItem('gunner_vid', vid);
+      localStorage.setItem('gunner_vid_t', String(firstSeen));
+    }
+    let sid = sessionStorage.getItem('gunner_sid');
+    if (!sid) { sid = uuid(); sessionStorage.setItem('gunner_sid', sid); }
+    return { vid, sid, firstSeen };
+  } catch { return null; }
+}
+
 /** "When" field, forgiving: plain digits = days before the exam; anything
  *  date-shaped ("Jun 20", "6/20", "2026-06-20") = the taken date, converted
  *  to days-ago (a date typed for a month ahead is read as LAST year, the
