@@ -318,7 +318,7 @@ export default function Home() {
           <div>
             <div className="footer-heading">App</div>
             <ul className="footer-links">
-              <li><a href="/readiness">Score Predictor</a></li>
+              <li><a href="/readiness">Readiness Calculator</a></li>
               <li><a href="/step-2-score-predictor">Score Predictor</a></li>
               <li><a href="/guides">Clerkship Guides</a></li>
               <li><a href="#features">Features</a></li>
