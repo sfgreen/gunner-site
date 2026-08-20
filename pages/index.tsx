@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { appStoreUrl } from '../lib/analytics';
 import { useState, useEffect } from 'react';
 
 // The app's wordmark, on the web: ● STEP (accent blue) GUNNER (dim),
@@ -15,7 +16,7 @@ function Wordmark({ size = 18 }: { size?: number }) {
 }
 
 export default function Home() {
-  const APP = 'https://apps.apple.com/us/app/step-gunner/id6761317357';
+  const APP = appStoreUrl('home');
   // Referral bridge: read ?ref=CODE, show a banner, and copy a GUNNERREF:CODE
   // sentinel to the clipboard on the App Store tap so the code survives the
   // install — the app reads UIPasteboard once on first launch and applies it.

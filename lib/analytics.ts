@@ -27,6 +27,10 @@ export function referrerHost(): string {
 // App Store campaign token (App Store Connect -> App Analytics -> Campaigns) so
 // installs originating from the readiness funnel are attributable.
 export const APP_STORE = 'https://apps.apple.com/us/app/step-gunner/id6761317357';
+// pt = the account-wide App Analytics provider token (from the ASC campaign-link
+// generator, 2026-08-20). Without pt + mt=8 Apple IGNORES ct for attribution,
+// which is why the Campaigns page sat empty. ct varies per surface.
+const APP_STORE_PT = '128505861';
 export function appStoreUrl(campaign: string): string {
-  return `${APP_STORE}?ct=${encodeURIComponent(campaign)}`;
+  return `${APP_STORE}?pt=${APP_STORE_PT}&ct=${encodeURIComponent(campaign)}&mt=8`;
 }
