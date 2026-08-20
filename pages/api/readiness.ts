@@ -18,6 +18,8 @@ interface Body {
   source?: unknown; // 'readiness' (full tool) | 'predictor' (quick convert)
   modelVersion?: unknown; // which shipped web model produced the projection
   visitor?: { id?: unknown; session?: unknown; firstSeen?: unknown } | null; // anonymous uuids
+  specialty?: unknown; // target specialty picked on the predictor (NRMP key)
+  examInDays?: unknown; // signed days until the exam (negative = already taken)
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -68,6 +70,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       visitorId: typeof body.visitor?.id === 'string' ? body.visitor.id.slice(0, 48) : null,
       sessionId: typeof body.visitor?.session === 'string' ? body.visitor.session.slice(0, 48) : null,
       visitorFirstSeen: num(body.visitor?.firstSeen),
+      specialty: typeof body.specialty === 'string' ? body.specialty.slice(0, 40) : null,
+      examInDays: num(body.examInDays),
       ref: (req.headers['referer'] || '').toString().slice(0, 200),
       ua: (req.headers['user-agent'] || '').toString().slice(0, 200),
       createdAt: Timestamp.now(),

@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import {
   PASS, PASS_COMFORT, MEAN, GMIN, GMAX, FORMS,
   percentile, ordinal, gpct, computeReadiness, decodeShare, buildCardCore, ogMeta, SHARE_BASE,
-  type Entry, type Proj, smartDays, TAKEN_OPTS, takenIsExact, takenSource, MODEL_VERSION, visitorIdentity } from '../lib/readiness';
+  type Entry, type Proj, smartDays, examDaysUntil, TAKEN_OPTS, takenIsExact, takenSource, MODEL_VERSION, visitorIdentity } from '../lib/readiness';
 import ScoreShareCard from '../components/ScoreShareCard';
 import { track, referrerHost, appStoreUrl } from '../lib/analytics';
 
@@ -16,6 +16,8 @@ type OG = { title: string; desc: string; image: string; url: string };
 export default function Readiness({ og }: { og: OG }) {
   const [entries, setEntries] = useState<Entry[]>([{ form: '', score: '', days: '' }]);
   const [actual, setActual] = useState('');
+  const [examRaw, setExamRaw] = useState('');
+  const [nudge, setNudge] = useState(false);
   const [status, setStatus] = useState('');
   const lastSent = useRef('');
 
@@ -34,6 +36,7 @@ export default function Readiness({ og }: { og: OG }) {
       if (s) { const p = JSON.parse(s); if (Array.isArray(p) && p.length) setEntries(p); }
       const a = localStorage.getItem('gunner_readiness_actual'); if (a) setActual(a);
       const st = localStorage.getItem('gunner_readiness_status'); if (st) setStatus(st);
+      const ex = localStorage.getItem('gunner_readiness_exam'); if (ex) setExamRaw(ex);
     } catch { /* ignore */ }
   }, []);
   useEffect(() => {
@@ -41,10 +44,12 @@ export default function Readiness({ og }: { og: OG }) {
       localStorage.setItem('gunner_readiness', JSON.stringify(entries));
       localStorage.setItem('gunner_readiness_actual', actual);
       localStorage.setItem('gunner_readiness_status', status);
+      localStorage.setItem('gunner_readiness_exam', examRaw);
     } catch { /* ignore */ }
-  }, [entries, actual, status]);
+  }, [entries, actual, status, examRaw]);
 
   const { dated, proj, showTrajectory } = computeReadiness(entries);
+  const ed = examDaysUntil(examRaw);
   const actualNum = actual === '' ? NaN : parseInt(actual, 10);
   const actualValid = !Number.isNaN(actualNum) && actualNum >= 130 && actualNum <= 300;
   const canShare = !!proj || actualValid;
@@ -62,6 +67,7 @@ export default function Readiness({ og }: { og: OG }) {
       projected: proj ? { low: proj.low, high: proj.high } : null,
       actual: actualValid ? actualNum : null,
       source: 'readiness',
+      examInDays: ed,
       modelVersion: MODEL_VERSION,
       visitor: ident ? { id: ident.vid, session: ident.sid, firstSeen: ident.firstSeen } : null,
     });
@@ -73,7 +79,19 @@ export default function Readiness({ og }: { og: OG }) {
     }, 2500);
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [entries, actual]);
+  }, [entries, actual, examRaw]);
+
+  // Return-score nudge: a visitor whose saved forms are weeks old, or whose
+  // own exam date has passed, probably HAS a real score now. Inviting it here
+  // is what turns an old projection into an anonymous blind pair.
+  useEffect(() => {
+    if (actual !== '') { setNudge(false); return; }
+    const ident = visitorIdentity();
+    const stale = !!ident && ident.firstSeen > 0 && Date.now() - ident.firstSeen > 14 * 86400000;
+    const hasForms = entries.some((e) => e.score !== '');
+    const examPassed = ed != null && ed < 0;
+    setNudge((stale && hasForms) || examPassed);
+  }, [entries, actual, examRaw, ed]);
 
   const setEntry = (i: number, patch: Partial<Entry>) => setEntries((es) => es.map((e, j) => (j === i ? { ...e, ...patch } : e)));
   const addEntry = () => setEntries((es) => (es.length < 12 ? [...es, { form: '', score: '', days: '' }] : es));
@@ -149,6 +167,21 @@ export default function Readiness({ og }: { og: OG }) {
               Add roughly when you took each form. A rough pick is plenty; use exact date if you know it. The projection leans on your freshest scores, the ones that best predict test day. Skip it for a rough read.
             </p>
 
+            <div className="examrow">
+              <label className="field exam">
+                <span>Exam date <em>(opt.)</em></span>
+                <input placeholder="Sep 20, or 32" value={examRaw}
+                  onChange={(ev) => setExamRaw(ev.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12))} />
+                {ed != null ? <i className="dhint">{ed >= 0 ? `\u2248${ed}d out` : `${-ed}d ago`}</i> : null}
+              </label>
+              <p className="examwhy">With an exam date the projection can say how much runway is left, and forms age against the right day.</p>
+            </div>
+
+            {nudge && (
+              <div className="nudge">
+                <b>Been tested since?</b> Add your real score below. It grades our projection in public and tightens the model for the next student.
+              </div>
+            )}
             <div className="extra">
               <label className="field">
                 <span>Actual Step 2 <em>(opt.)</em></span>
@@ -300,6 +333,12 @@ export default function Readiness({ og }: { og: OG }) {
 
         .field { position: relative; }
         .dhint { position: absolute; right: 8px; bottom: 14px; font-family: var(--mono); font-style: normal; font-size: 10px; font-weight: 700; color: var(--green); pointer-events: none; }
+        .examrow { display: flex; gap: 14px; align-items: flex-end; margin-top: 16px; border-top: 1px dashed var(--hair); padding-top: 14px; }
+        .field.exam { max-width: 200px; flex: 0 0 auto; }
+        .examwhy { font-size: 11.5px; color: var(--ink-faint); line-height: 1.5; margin: 0 0 4px; }
+        @media (max-width: 560px) { .examrow { flex-direction: column; align-items: stretch; gap: 8px; } .field.exam { max-width: none; } }
+        .nudge { margin-top: 18px; background: #ecfbf2; border: 1px dashed rgba(13,148,72,0.45); border-radius: 12px; padding: 12px 15px; font-size: 13.5px; color: var(--ink-dim); }
+        .nudge b { color: var(--green); }
         @media (max-width: 480px) {
           .entry { grid-template-columns: 1.25fr 0.75fr 1fr 20px; gap: 6px; margin-bottom: 8px; }
           .field input, .field select { padding: 9px 8px; height: 42px; }

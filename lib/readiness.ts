@@ -186,6 +186,28 @@ export function smartDays(raw: string): number | null {
   const days = Math.floor((Date.now() - ms) / 86400000);
   return days >= 0 && days <= 400 ? days : null;
 }
+
+// Exam-date parser, future-oriented: digits = days until the exam; a date
+// string wraps FORWD across New Year ("Jan 5" typed in December). Returns
+// signed days (negative = the exam already happened |d| days ago), so a
+// recently-past exam is still expressible.
+export function examDaysUntil(raw: string): number | null {
+  const t = (raw || '').trim();
+  if (!t) return null;
+  if (/^\d{1,3}$/.test(t)) {
+    const n = parseInt(t, 10);
+    return n <= 400 ? n : null;
+  }
+  const yr = new Date().getFullYear();
+  for (const cand of [`${t}, ${yr}`, `${t}, ${yr + 1}`, t]) {
+    const ms = Date.parse(cand);
+    if (!Number.isNaN(ms)) {
+      const d = Math.round((ms - Date.now()) / 86400000);
+      if (d >= -45 && d <= 400) return d;
+    }
+  }
+  return null;
+}
 export type Proj = {
   low: number; high: number; band: number; tier: string;
   verdict: string; vclass: string; center: number;
