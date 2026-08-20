@@ -235,21 +235,32 @@ export default function Readiness({ og }: { og: OG }) {
 
           {canShare && <ScoreShareCard entries={entries} actual={actual} status={status} />}
 
-          <section className="upsell">
-            <div className="ueyebrow">This is one snapshot. The app tracks the whole climb.</div>
-            <h2>Get the full trajectory and your own share card.</h2>
+          <section className="pitch">
+            <div className="pk">The part you control</div>
+            <h2>Your forms are the floor. The next weeks decide the beat.</h2>
+            <div className="pstat">
+              <div className="ps"><span className="pn">+9</span><span className="plb">median beat</span></div>
+              <div className="ps"><span className="pn">+10 to 11</span><span className="plb">with 3+ weeks of grind</span></div>
+            </div>
             <p>
-              Step Gunner logs every NBME, plots your score over time, projects it to your exam date,
-              and turns it into a share-ready score card. Plus a deep question bank, spaced repetition,
-              and weekly leagues. Free to start.
+              The gap between practice forms and the real thing is not luck. It is the reps you put in
+              after. Step Gunner runs those weeks: 7,000+ Step 2 CK questions, a projection that moves
+              with your accuracy, and a planner that says exactly what your next form needs.
             </p>
-            <a href={APP} className="btn-store" onClick={() => track('store_click', { source: 'readiness', location: 'upsell', ref: referrerHost() })}><svg className="apple" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> Get Step Gunner on the App Store</a>
+            <a href={APP} className="btn-store" onClick={() => track('store_click', { source: 'readiness', location: 'pitch', ref: referrerHost() })}><svg className="apple" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> Get Step Gunner free</a>
+            <div className="ptrust">Free to start. This calculator stays free either way.</div>
+            <div className="ptrust dim">146 tracked reports. The biggest beats belong to students who kept working.</div>
           </section>
 
           <footer className="foot">
             <Link href="/">stepgunner.com</Link>
+            <Link href="/step-2-score-predictor">Score Predictor</Link>
             <span>Rezumab LLC</span>
           </footer>
+
+          {proj != null && (
+            <a href={APP} className="msticky" onClick={() => track('store_click', { source: 'readiness', location: 'sticky', ref: referrerHost() })}>Get Step Gunner free</a>
+          )}
         </main>
       </div>
 
@@ -321,10 +332,23 @@ export default function Readiness({ og }: { og: OG }) {
         .emptytitle { font-family: var(--mono); font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-dim); }
         .emptysub { color: var(--ink-faint); font-size: 13.5px; line-height: 1.55; margin: 9px auto 0; max-width: 40ch; }
 
-        .upsell { margin-top: 34px; border: 1px solid var(--hair); background: var(--bg-2); border-radius: 16px; padding: 26px 22px; }
-        .ueyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-faint); }
-        .upsell h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.3px; margin: 10px 0 10px; }
-        .upsell p { color: var(--ink-dim); font-size: 15px; line-height: 1.55; margin: 0 0 20px; }
+        .pitch { margin-top: 34px; background: var(--ink); border-radius: 18px; padding: 24px 22px 22px; color: #ffffff; position: relative; overflow: hidden; }
+        .pitch:before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 90% at 85% 0%, rgba(240,180,41,0.22), transparent 60%); }
+        .pitch > * { position: relative; }
+        .pk { font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: #f0b429; }
+        .pitch h2 { font-size: 23px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2; margin: 8px 0 0; max-width: 26ch; color: #ffffff; }
+        .pstat { display: flex; margin-top: 14px; border-top: 1px solid rgba(255,255,255,0.14); padding-top: 12px; max-width: 400px; }
+        .ps { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+        .ps + .ps { border-left: 1px solid rgba(255,255,255,0.14); padding-left: 16px; }
+        .pn { font-family: var(--mono); font-size: 20px; font-weight: 800; color: #f0b429; letter-spacing: -0.5px; }
+        .plb { font-family: var(--mono); font-size: 9px; letter-spacing: 1.2px; text-transform: uppercase; color: #8b94a3; }
+        .pitch p { color: #b7bdc9; font-size: 14px; line-height: 1.6; margin: 12px 0 16px; max-width: 54ch; }
+        .ptrust { font-size: 11.5px; color: #8b94a3; margin-top: 10px; }
+        .ptrust.dim { margin-top: 4px; }
+        .msticky { display: none; }
+        @media (max-width: 560px) {
+          .msticky { position: fixed; left: 16px; right: 16px; bottom: calc(14px + env(safe-area-inset-bottom)); display: flex; justify-content: center; background: var(--ink); color: #ffffff; padding: 15px; border-radius: 999px; font-size: 14px; font-weight: 800; box-shadow: 0 10px 30px rgba(25,28,35,0.35); z-index: 50; }
+        }
         .btn-store { display: inline-flex; align-items: center; gap: 9px; background: var(--green); color: #05130a; font-family: var(--mono); font-weight: 800; font-size: 13px; letter-spacing: 0.4px; padding: 13px 20px; border-radius: 12px; box-shadow: 0 6px 26px rgba(13,148,72,0.28); }
         .btn-store .apple { width: 14px; height: 17px; flex: 0 0 auto; }
 
