@@ -111,7 +111,7 @@ export default function Methodology() {
         <meta name="twitter:description" content={DESC} />
         <meta name="twitter:image" content="https://stepgunner.com/api/og" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#05070b" />
+        <meta name="theme-color" content="#faf9f6" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

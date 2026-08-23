@@ -146,7 +146,7 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#05070b" />
+        <meta name="theme-color" content="#faf9f6" />
         <link rel="canonical" href={canonical} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={meta.ogTitle} />
@@ -183,10 +183,11 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
 
       <style jsx global>{`
         :root {
-          --bg: #05070b; --bg1: #0a0d13; --bg2: #0f1520; --bg3: #131a27;
-          --ink: #eaf0f8; --dim: #8a97a8; --faint: #5a6676;
-          --hair: #1e2836; --hair2: rgba(30,40,54,0.55);
-          --green: #46d877; --gold: #f0b429; --blue: #5b9dff; --red: #f2637a;
+          /* Score Report register (light) */
+          --bg: #faf9f6; --bg1: #ffffff; --bg2: #ffffff; --bg3: #f3f2ee;
+          --ink: #191c23; --dim: #5d6470; --faint: #9aa0ab;
+          --hair: rgba(25,28,35,0.12); --hair2: rgba(25,28,35,0.08);
+          --green: #0d9448; --gold: #e08e00; --blue: #2f6fed; --red: #d64545;
           --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
           --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
         }
@@ -195,14 +196,14 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
         body { font-family: var(--sans); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
         a { color: inherit; text-decoration: none; }
 
-        .page { min-height: 100vh; background: radial-gradient(1100px 640px at 50% -10%, #0c1220, var(--bg)); }
+        .page { min-height: 100vh; background: radial-gradient(90% 55% at 50% -8%, rgba(13,148,72,0.08), transparent 60%), radial-gradient(56% 22% at 50% 0%, rgba(240,180,41,0.13), transparent 62%), var(--bg); }
 
         .nav { display: flex; align-items: center; justify-content: space-between; max-width: 720px; margin: 0 auto; padding: 20px 22px; }
         .wm { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; font-size: 14px; }
         .wm .wt b.g { color: var(--green); font-weight: 700; }
         .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); flex: 0 0 auto; }
-        .nav-cta { background: var(--green); color: #05130a; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 4px 18px rgba(70,216,119,0.24); transition: transform 0.15s ease, box-shadow 0.2s ease; }
-        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(70,216,119,0.32); }
+        .nav-cta { background: var(--green); color: #ffffff; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 4px 18px rgba(13,148,72,0.24); transition: transform 0.15s ease, box-shadow 0.2s ease; }
+        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(13,148,72,0.32); }
 
         .wrap { max-width: 720px; margin: 0 auto; padding: 20px 22px 90px; line-height: 1.5; }
 
@@ -217,9 +218,9 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
         .lede b { color: var(--ink); font-weight: 600; }
 
         .author { display: flex; align-items: center; gap: 12px; margin: 18px 0 2px; padding: 11px 14px; border: 1px solid var(--hair); background: var(--bg1); border-radius: 12px; }
-        .author .ava { width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(180deg, #12331f, #0b1f13); border: 1px solid rgba(70,216,119,0.35); color: var(--green); font-family: var(--mono); font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; letter-spacing: 0.5px; }
+        .author .ava { width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(180deg, rgba(13,148,72,0.22), rgba(13,148,72,0.10)); border: 1px solid rgba(13,148,72,0.35); color: var(--green); font-family: var(--mono); font-weight: 800; font-size: 12px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; letter-spacing: 0.5px; }
         .author .aline { font-size: 13.5px; font-weight: 600; color: var(--ink); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-        .author .verified { display: inline-flex; align-items: center; gap: 4px; font-family: var(--mono); font-size: 9.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--green); border: 1px solid rgba(70,216,119,0.35); border-radius: 999px; padding: 2px 8px; }
+        .author .verified { display: inline-flex; align-items: center; gap: 4px; font-family: var(--mono); font-size: 9.5px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--green); border: 1px solid rgba(13,148,72,0.35); border-radius: 999px; padding: 2px 8px; }
         .author .verified svg { width: 9px; height: 9px; fill: none; stroke: var(--green); stroke-width: 3; }
         .author .ameta { font-family: var(--mono); font-size: 11px; color: var(--faint); margin-top: 4px; letter-spacing: 0.2px; line-height: 1.45; }
 
@@ -251,7 +252,7 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
         .rating-track, .rating-fill { position: absolute; top: 0; left: 0; height: 16px; overflow: hidden; }
         .rating-track { width: 100%; }
         .rating .rowsvg { display: block; width: 86px; height: 16px; }
-        .rating-track .rowsvg { fill: #384253; }
+        .rating-track .rowsvg { fill: #d9d7d0; }
         .rating-fill .rowsvg { fill: var(--gold); }
         .tm .tmv { font-size: 13px; color: var(--dim); font-weight: 500; }
         .tm .tmn { color: var(--gold); font-family: var(--mono); font-weight: 800; }
@@ -265,11 +266,11 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
         .sgcta { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--hair); display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
         .sgcta .sgcta-note { font-family: var(--mono); font-size: 11px; color: var(--faint); letter-spacing: 0.2px; }
 
-        .stickybar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: rgba(10,13,19,0.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--hair); transform: translateY(110%); visibility: hidden; transition: transform 0.28s ease, visibility 0.28s ease; }
+        .stickybar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: rgba(250,249,246,0.9); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--hair); transform: translateY(110%); visibility: hidden; transition: transform 0.28s ease, visibility 0.28s ease; }
         .stickybar.show { transform: translateY(0); visibility: visible; }
         .sb-inner { max-width: 720px; margin: 0 auto; padding: 10px 22px calc(10px + env(safe-area-inset-bottom)); display: flex; align-items: center; justify-content: space-between; gap: 14px; }
         .sb-label { font-size: 13px; color: var(--dim); font-weight: 500; }
-        .sb-cta { background: var(--green); color: #05130a; font-family: var(--mono); font-weight: 800; font-size: 12px; letter-spacing: 0.3px; padding: 10px 16px; border-radius: 10px; box-shadow: 0 4px 18px rgba(70,216,119,0.24); flex: 0 0 auto; white-space: nowrap; transition: transform 0.15s ease; }
+        .sb-cta { background: var(--green); color: #ffffff; font-family: var(--mono); font-weight: 800; font-size: 12px; letter-spacing: 0.3px; padding: 10px 16px; border-radius: 10px; box-shadow: 0 4px 18px rgba(13,148,72,0.24); flex: 0 0 auto; white-space: nowrap; transition: transform 0.15s ease; }
         .sb-cta:hover { transform: translateY(-1px); }
 
         .block { margin-top: 46px; padding-top: 30px; border-top: 1px solid var(--hair); }
@@ -288,7 +289,7 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
         .res .note { font-size: 13px; line-height: 1.55; color: var(--faint); margin: 0; max-width: 58ch; }
         .res .tier { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.05em; color: var(--faint); text-transform: uppercase; margin-left: 8px; border: 1px solid var(--hair); border-radius: 999px; padding: 2px 7px; vertical-align: 1px; }
 
-        .sg { margin: 24px 0 8px; background: linear-gradient(180deg, var(--bg2), var(--bg1)); border: 1px solid rgba(70,216,119,0.32); border-radius: 18px; padding: 24px 24px 20px; box-shadow: 0 0 0 1px rgba(70,216,119,0.05), 0 22px 60px -34px rgba(70,216,119,0.55); }
+        .sg { margin: 24px 0 8px; background: linear-gradient(180deg, var(--bg2), var(--bg1)); border: 1px solid rgba(13,148,72,0.32); border-radius: 18px; padding: 24px 24px 20px; box-shadow: 0 0 0 1px rgba(13,148,72,0.06), 0 22px 60px -34px rgba(13,148,72,0.55); }
         .sg .tag { font-family: var(--mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); }
         .sg h3 { font-size: 19px; font-weight: 800; letter-spacing: -0.3px; margin: 8px 0 8px; }
         .sg p { color: var(--dim); font-size: 15px; line-height: 1.65; margin: 0 0 14px; max-width: 60ch; }
@@ -323,7 +324,7 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
         .lean li { position: relative; padding-left: 18px; color: var(--dim); font-size: 14.5px; line-height: 1.6; margin-bottom: 6px; max-width: 58ch; }
         .lean li::before { content: ""; position: absolute; left: 2px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
         .lean li b { color: var(--ink); font-weight: 600; }
-        .slot { display: flex; gap: 10px; align-items: flex-start; background: linear-gradient(90deg, rgba(70,216,119,0.06), transparent); border-left: 2px solid var(--green); border-radius: 0 10px 10px 0; padding: 11px 14px; }
+        .slot { display: flex; gap: 10px; align-items: flex-start; background: linear-gradient(90deg, rgba(13,148,72,0.07), transparent); border-left: 2px solid var(--green); border-radius: 0 10px 10px 0; padding: 11px 14px; }
         .slot .sk { font-family: var(--mono); font-weight: 700; font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); flex: 0 0 auto; margin-top: 2px; }
         .slot p { margin: 0; color: var(--dim); font-size: 13.5px; line-height: 1.6; max-width: 54ch; }
         .slot p b { color: var(--ink); font-weight: 600; }
@@ -331,7 +332,7 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
         .cta { margin-top: 46px; padding-top: 30px; border-top: 1px solid var(--hair); }
         .ctline { color: var(--ink); font-size: 16px; font-weight: 500; line-height: 1.6; margin: 0 0 18px; max-width: 60ch; }
         .ctrow { display: flex; gap: 12px; flex-wrap: wrap; }
-        .ct-primary { background: var(--green); color: #05130a; font-family: var(--mono); font-weight: 800; font-size: 13px; letter-spacing: 0.3px; padding: 13px 20px; border-radius: 12px; box-shadow: 0 6px 26px rgba(70,216,119,0.28); transition: transform 0.15s ease; }
+        .ct-primary { background: var(--green); color: #ffffff; font-family: var(--mono); font-weight: 800; font-size: 13px; letter-spacing: 0.3px; padding: 13px 20px; border-radius: 12px; box-shadow: 0 6px 26px rgba(13,148,72,0.28); transition: transform 0.15s ease; }
         .ct-primary:hover { transform: translateY(-1px); }
         .ct-secondary { border: 1px solid var(--hair); color: var(--ink); font-family: var(--mono); font-weight: 700; font-size: 13px; letter-spacing: 0.3px; padding: 13px 20px; border-radius: 12px; transition: border-color 0.15s ease, color 0.15s ease; }
         .ct-secondary:hover { border-color: var(--green); color: var(--green); }

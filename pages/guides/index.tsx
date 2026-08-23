@@ -35,7 +35,7 @@ export default function GuidesHub({ live, soon }: { live: LiveCard[]; soon: Comi
           content="Honest, resource-by-role study guides for the NBME shelf exams: the real resource stack, a 6 to 8 week plan, and a plain-English FAQ for each clerkship. Written by a med student who has been through it."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#05070b" />
+        <meta name="theme-color" content="#faf9f6" />
         <link rel="canonical" href={canonical} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Clerkship Shelf Study Guides" />
@@ -54,10 +54,11 @@ export default function GuidesHub({ live, soon }: { live: LiveCard[]; soon: Comi
 
       <style jsx global>{`
         :root {
-          --bg: #05070b; --bg1: #0a0d13; --bg2: #0f1520;
-          --ink: #eaf0f8; --dim: #8a97a8; --faint: #5a6676;
-          --hair: #1e2836; --hair2: rgba(30,40,54,0.55);
-          --green: #46d877; --gold: #f0b429;
+          /* Score Report register (light) */
+          --bg: #faf9f6; --bg1: #ffffff; --bg2: #ffffff;
+          --ink: #191c23; --dim: #5d6470; --faint: #9aa0ab;
+          --hair: rgba(25,28,35,0.12); --hair2: rgba(25,28,35,0.08);
+          --green: #0d9448; --gold: #e08e00;
           --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
           --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
         }
@@ -65,14 +66,14 @@ export default function GuidesHub({ live, soon }: { live: LiveCard[]; soon: Comi
         html, body { margin: 0; padding: 0; }
         body { font-family: var(--sans); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
         a { color: inherit; text-decoration: none; }
-        .page { min-height: 100vh; background: radial-gradient(1100px 640px at 50% -10%, #0c1220, var(--bg)); }
+        .page { min-height: 100vh; background: radial-gradient(90% 55% at 50% -8%, rgba(13,148,72,0.08), transparent 60%), radial-gradient(56% 22% at 50% 0%, rgba(240,180,41,0.13), transparent 62%), var(--bg); }
 
         .nav { display: flex; align-items: center; justify-content: space-between; max-width: 860px; margin: 0 auto; padding: 20px 22px; }
         .wm { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; font-size: 14px; }
         .wm .g { color: var(--green); }
         .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); flex: 0 0 auto; }
-        .nav-cta { background: var(--green); color: #05130a; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 4px 18px rgba(70,216,119,0.24); transition: transform 0.15s ease, box-shadow 0.2s ease; }
-        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(70,216,119,0.32); }
+        .nav-cta { background: var(--green); color: #ffffff; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 4px 18px rgba(13,148,72,0.24); transition: transform 0.15s ease, box-shadow 0.2s ease; }
+        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(13,148,72,0.32); }
 
         .wrap { max-width: 860px; margin: 0 auto; padding: 26px 22px 90px; }
         .crumb { font-family: var(--mono); font-size: 11px; color: var(--faint); margin-bottom: 20px; letter-spacing: 0.4px; }
@@ -85,7 +86,7 @@ export default function GuidesHub({ live, soon }: { live: LiveCard[]; soon: Comi
 
         .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 30px; }
         .card { border: 1px solid var(--hair); background: linear-gradient(180deg, var(--bg1), var(--bg)); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-height: 150px; }
-        .card.live { border-color: rgba(70,216,119,0.32); box-shadow: 0 20px 54px -36px rgba(70,216,119,0.5); transition: transform 0.15s ease, border-color 0.2s ease; }
+        .card.live { border-color: rgba(13,148,72,0.32); box-shadow: 0 20px 54px -36px rgba(13,148,72,0.5); transition: transform 0.15s ease, border-color 0.2s ease; }
         .card.live:hover { transform: translateY(-2px); border-color: var(--green); }
         .card.soon { opacity: 0.72; }
         .card .ctag { font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }

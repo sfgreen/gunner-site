@@ -19,18 +19,19 @@ export default function DocLayout({
         <title>{metaTitle}</title>
         <meta name="description" content={metaDesc} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#0a0b0d" />
+        <meta name="theme-color" content="#faf9f6" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>
 
       <style jsx global>{`
         :root {
-          --bg: #0a0b0d; --bg-2: #0d0e13;
-          --panel: #121317; --hair: rgba(255,255,255,0.08); --hair-strong: rgba(255,255,255,0.14);
-          --ink: #f4f6f8; --ink-dim: #9aa1ab; --ink-faint: #5c636e;
-          --green: #46d877; --green-glow: rgba(70,216,119,0.18);
-          --blue: #5090f7; --blue-glow: rgba(80,144,247,0.22); --gold: #e3b542;
+          /* Score Report register (light): shared with /readiness, /research, guides */
+          --bg: #faf9f6; --bg-2: #ffffff;
+          --panel: #ffffff; --hair: rgba(25,28,35,0.10); --hair-strong: rgba(25,28,35,0.17);
+          --ink: #191c23; --ink-dim: #5d6470; --ink-faint: #9aa0ab;
+          --green: #0d9448; --green-glow: rgba(13,148,72,0.14);
+          --blue: #2f6fed; --blue-glow: rgba(47,111,237,0.14); --gold: #e08e00;
           --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
           --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
         }
@@ -47,7 +48,7 @@ export default function DocLayout({
         .wm-gun { color: var(--ink); font-weight: 500; opacity: 0.9; }
 
         /* nav */
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,11,13,0.78); backdrop-filter: blur(14px); border-bottom: 1px solid var(--hair); padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,249,246,0.82); backdrop-filter: blur(14px); border-bottom: 1px solid var(--hair); padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
         .nav-back { font-family: var(--mono); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-dim); }
         .nav-back:hover { color: var(--ink); text-decoration: none; }
 

@@ -62,7 +62,7 @@ function Chart({ core }: { core: CardCore }) {
     const { low, high, center } = core.proj;
     shapes.push(<rect key={key()} x={sx(low)} y={34} width={Math.max(4, sx(high) - sx(low))} height={24} rx={6} fill="rgba(240,180,41,.16)" stroke="rgba(240,180,41,.5)" />);
     shapes.push(<line key={key()} x1={sx(center)} y1={24} x2={sx(center)} y2={AY} stroke="#f0b429" strokeWidth={2} />);
-    shapes.push(<circle key={key()} cx={sx(center)} cy={46} r={4.5} fill="#f0b429" stroke="#0a0d13" strokeWidth={1.5} />);
+    shapes.push(<circle key={key()} cx={sx(center)} cy={46} r={4.5} fill="#e08e00" stroke="#ffffff" strokeWidth={1.5} />);
     shapes.push(<text key={key()} x={sx(center)} y={18} fill="#f0b429" fontSize={12} fontWeight={800} fontFamily="ui-monospace, monospace" textAnchor="middle">{center}</text>);
   }
 
@@ -74,7 +74,7 @@ function Chart({ core }: { core: CardCore }) {
     const mc = fail ? '#8a97a8' : '#f0b429';
     shapes.push(<line key={key()} x1={ax} y1={24} x2={ax} y2={AY} stroke={mc} strokeWidth={2} />);
     if (fail) {
-      shapes.push(<path key={key()} d={`M${ax},40 L${ax + 7},47 L${ax},54 L${ax - 7},47 Z`} fill="#0a0d13" stroke={mc} strokeWidth={2} />);
+      shapes.push(<path key={key()} d={`M${ax},40 L${ax + 7},47 L${ax},54 L${ax - 7},47 Z`} fill="#ffffff" stroke={mc} strokeWidth={2} />);
     } else {
       shapes.push(<path key={key()} d={starPath(ax, 46, 7.5)} fill={mc} />);
     }
@@ -255,7 +255,7 @@ export default function Embed({ core, pill, href }: EmbedProps) {
         <title>Step 2 CK readiness | Step Gunner</title>
         <meta name="description" content="A projected Step 2 CK range, percentile, and trajectory from your practice tests. Powered by Step Gunner." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#05070b" />
+        <meta name="theme-color" content="#faf9f6" />
         <meta name="robots" content="noindex, follow" />
       </Head>
 
@@ -263,9 +263,10 @@ export default function Embed({ core, pill, href }: EmbedProps) {
 
       <style jsx global>{`
         :root {
-          --bg: #05070b; --bg2: #0f1520; --bg3: #131a27; --card: #0a0d13;
-          --ink: #eaf0f8; --dim: #8a97a8; --faint: #5a6676; --hair: #1e2836;
-          --green: #46d877; --gold: #f0b429; --blue: #5b9dff; --red: #f2637a;
+          /* Score Report register (light) */
+          --bg: #faf9f6; --bg2: #ffffff; --bg3: #f3f2ee; --card: #ffffff;
+          --ink: #191c23; --dim: #5d6470; --faint: #9aa0ab; --hair: rgba(25,28,35,0.12);
+          --green: #0d9448; --gold: #e08e00; --blue: #2f6fed; --red: #d64545;
           --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
           --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
         }

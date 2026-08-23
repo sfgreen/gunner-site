@@ -6,10 +6,10 @@
 // record pulled server-side from the track_record_json endpoint (decision 0015).
 // No em or en dashes anywhere in the copy (site rule).
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
 import type { GetServerSideProps } from 'next';
 import LabLayout from '../../components/LabLayout';
-import { FORMS, computeReadiness, calibratedCenter, CAL, FORM_OFFSETS, type Entry } from '../../lib/readiness';
+import { CAL, FORM_OFFSETS } from '../../lib/readiness';
+import ReadinessCheck from '../../components/ReadinessCheck';
 import { appStoreUrl, track, referrerHost } from '../../lib/analytics';
 
 const CAMPAIGN = 'research_nbme_step2';
@@ -26,47 +26,6 @@ function Fig({ src, alt, caption, n }: { src: string; alt: string; caption: stri
       <img src={src} alt={alt} loading="lazy" />
       <figcaption><b>Figure {n}.</b> {caption}</figcaption>
     </figure>
-  );
-}
-
-// The inline calculator: three rows, same engine as /readiness.
-function TryIt() {
-  const [rows, setRows] = useState<Entry[]>([
-    { form: 'NBME 14', score: '240', days: '21' },
-    { form: 'UWSA 2', score: '250', days: '7' },
-    { form: 'NBME 9', score: '', days: '' },
-  ]);
-  const res = useMemo(() => computeReadiness(rows), [rows]);
-  const set = (i: number, k: keyof Entry, v: string) =>
-    setRows((r) => r.map((row, j) => (j === i ? { ...row, [k]: v } : row)));
-  const proj = res.proj;
-  return (
-    <div className="tryit">
-      <div className="tryit-h">Try it with your own forms</div>
-      <div className="tryit-sub">Same math as the calculator in the app and at <Link href="/readiness">/readiness</Link>. Nothing you type leaves the page.</div>
-      {rows.map((r, i) => (
-        <div className="tryit-row" key={i}>
-          <select value={r.form} onChange={(e) => set(i, 'form', e.target.value)} aria-label="Form">
-            {FORMS.map((f) => <option key={f} value={f}>{f}</option>)}
-          </select>
-          <input inputMode="numeric" placeholder="score" value={r.score} onChange={(e) => set(i, 'score', e.target.value)} aria-label="Score" />
-          <input inputMode="numeric" placeholder="days before exam" value={r.days} onChange={(e) => set(i, 'days', e.target.value)} aria-label="Days before exam" />
-        </div>
-      ))}
-      <div className="tryit-out">
-        {proj ? (
-          <>
-            <div className="tryit-num">{proj.low}<span>to</span>{proj.high}</div>
-            <div className="tryit-cap">Most likely about <b>{proj.center}</b>. {proj.tier} band, half-width {proj.band}.{proj.lowAnchor ? ' Low anchor: the band is widened on purpose.' : ''}</div>
-          </>
-        ) : (
-          <div className="tryit-cap">Enter at least one three-digit NBME or UWSA score.</div>
-        )}
-      </div>
-      <div className="tryit-foot">
-        Form offsets applied before the anchor: {Object.entries(FORM_OFFSETS).map(([f, v]) => `${f} ${v > 0 ? '+' : ''}${v}`).join(', ')}. Recency half-life about {Math.round(CAL.tau * Math.log(2))} days. Projection = {CAL.mean} + {CAL.slope} x (anchor minus {CAL.mean}) + {CAL.delta}.
-      </div>
-    </div>
   );
 }
 
@@ -145,15 +104,6 @@ export default function Research({ record }: { record: Record }) {
         .live .c { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 12px; padding: 14px; }
         .live .c .n { font-family: var(--mono); font-size: 26px; font-weight: 800; color: var(--ink); line-height: 1; } .live .c .n span { font-size: 13px; color: var(--ink-faint); font-weight: 500; }
         .live .c .l { font-family: var(--mono); font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-faint); margin-top: 8px; line-height: 1.5; }
-        .tryit { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 16px; padding: 18px; margin: 16px 0 28px; }
-        .tryit-h { font-size: 16px; font-weight: 800; } .tryit-sub { font-size: 13px; color: var(--ink-dim); margin: 4px 0 14px; } .tryit-sub a { color: var(--blue); }
-        .tryit-row { display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: 8px; margin-bottom: 8px; }
-        .tryit select, .tryit input { background: var(--bg-3); border: 1px solid var(--hair-strong); border-radius: 10px; color: var(--ink); font-family: var(--mono); font-size: 13px; padding: 10px 11px; width: 100%; }
-        .tryit select:focus, .tryit input:focus { border-color: var(--green); outline: none; }
-        .tryit-out { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--hair); text-align: center; }
-        .tryit-num { font-family: var(--mono); font-size: 40px; font-weight: 800; letter-spacing: -1px; color: var(--gold); } .tryit-num span { font-size: 15px; color: var(--ink-dim); margin: 0 8px; font-weight: 600; }
-        .tryit-cap { font-size: 13.5px; color: var(--ink-dim); margin-top: 6px; } .tryit-cap b { color: var(--ink); }
-        .tryit-foot { font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint); margin-top: 12px; line-height: 1.6; text-align: left; }
         .cta { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 28px 0 10px; }
         .cta a { display: block; text-align: center; padding: 16px 14px; border-radius: 12px; font-weight: 800; font-size: 14px; }
         .cta a:hover { filter: brightness(1.05); }
@@ -259,7 +209,8 @@ export default function Research({ record }: { record: Record }) {
       <p>On the Reddit posters the frozen model did about as well as in-sample, which is the result you hope for. On the app users it did worse: {app ? app.n : 7} students so far, {app ? app.inside : 4} inside their range, one of them a 40-point miss from a single stale form. Seven is not enough to conclude anything. I am posting it anyway, and it updates every Monday{asOf ? ` (numbers above as of ${asOf})` : ''}, inside the app under the readiness gauge and on the <Link href="/readiness/methodology">methodology page</Link>. If the app population keeps missing worse than the forum population, the model gets refit for that population, not the other way round.</p>
 
       <h2>4. Try it</h2>
-      <TryIt />
+      <ReadinessCheck surface="research_nbme_step2" title="Your forms, the model's projection" initial={[{ form: 'NBME 14', score: '240', days: '21' }, { form: 'UWSA 2', score: '250', days: '7' }, { form: 'NBME 9', score: '', days: '' }]} />
+      <p style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--ink-faint)', marginTop: -16 }}>Form offsets applied before the anchor: {Object.entries(FORM_OFFSETS).map(([f, v]) => `${f} ${v > 0 ? '+' : ''}${v}`).join(', ')}. Recency half-life about {Math.round(CAL.tau * Math.log(2))} days. Projection = {CAL.mean} + {CAL.slope} x (anchor minus {CAL.mean}) + {CAL.delta}.</p>
 
       <h2>5. Limitations</h2>
       <ul>

@@ -1,346 +1,288 @@
+// Homepage in the Score Report register (2026-08-24): the readiness check IS the
+// hero, because /readiness was the only page producing store clicks while the
+// homepage took 90% of organic landings. Paper + ink + mono numerals + one green
+// verdict + one gold action; the ink "pitch" band is the single dark surface.
+// Live track record numbers come from track_record_json (server-side, 1h cache).
+// Reviews are verbatim App Store reviews already cited on the guides; never
+// paraphrased. No em or en dashes in copy.
 import Head from 'next/head';
-import { appStoreUrl } from '../lib/analytics';
-import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import type { GetServerSideProps } from 'next';
+import ReadinessCheck from '../components/ReadinessCheck';
+import { appStoreUrl, track, referrerHost } from '../lib/analytics';
 
-// The app's wordmark, on the web: ● STEP (accent blue) GUNNER (dim),
-// SF Mono / system monospaced, all-caps, tracked — matches the splash +
-// home header in the iOS app.
-function Wordmark({ size = 18 }: { size?: number }) {
-  return (
-    <span className="wm" style={{ fontSize: size }}>
-      <span className="wm-dot" />
-      <span className="wm-step">STEP</span>
-      <span className="wm-gun">GUNNER</span>
-    </span>
-  );
+const CAMPAIGN = 'home';
+const TRACK_RECORD_URL = 'https://us-central1-stepgunner-79ae7.cloudfunctions.net/track_record_json';
+
+type Row = { forms: number; err: number; inside: boolean; source?: string };
+type Summary = { n: number; inside: number; within7Pct: number; medianAbsErr?: number };
+type TrackRecord = { n: number; insideOf10: number; shown: number; medianAbsErr: number; last10: Row[];
+  bySource?: { app?: Summary; forum?: Summary }; forumFit?: { n: number; within7Pct: number }; computedAt?: number } | null;
+
+const FALLBACK: NonNullable<TrackRecord> = {
+  n: 47, insideOf10: 8, shown: 10, medianAbsErr: 6,
+  last10: [{ forms: 2, err: 6, inside: true }, { forms: 1, err: -6, inside: true }, { forms: 1, err: 4, inside: true, source: 'forum' },
+    { forms: 7, err: -2, inside: true, source: 'forum' }, { forms: 3, err: 13, inside: false, source: 'forum' }, { forms: 5, err: 2, inside: true, source: 'forum' },
+    { forms: 2, err: -4, inside: true, source: 'forum' }, { forms: 1, err: 40, inside: false }],
+  bySource: { app: { n: 7, inside: 4, within7Pct: 43 }, forum: { n: 40, inside: 33, within7Pct: 80, medianAbsErr: 4 } },
+  forumFit: { n: 239, within7Pct: 70 },
+};
+
+const REVIEWS = [
+  { quote: 'This app makes studying so effortless and fun. Highly recommend.', cite: '5-star App Store review, "Best Step 2 supplement"' },
+  { quote: 'Gotten me multiple questions on practice tests. Helpful for those not keen on the Anki burden but who like spaced repetition.', cite: '5-star App Store review' },
+];
+
+function AppleIcon() {
+  return <svg viewBox="0 0 384 512" aria-hidden="true" style={{ width: 16, height: 16, fill: 'currentColor' }}><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>;
 }
 
-export default function Home() {
-  const APP = appStoreUrl('home');
-  // Referral bridge: read ?ref=CODE, show a banner, and copy a GUNNERREF:CODE
-  // sentinel to the clipboard on the App Store tap so the code survives the
-  // install — the app reads UIPasteboard once on first launch and applies it.
+export default function Home({ record }: { record: TrackRecord }) {
+  const rec = record && record.last10?.length ? record : FALLBACK;
+  const forum = rec.bySource?.forum;
+  const APP = appStoreUrl(CAMPAIGN);
+
+  // Referral bridge: ?ref=CODE shows a banner and copies GUNNERREF:CODE to the
+  // clipboard on the store tap; the app reads UIPasteboard once on first launch.
   const [refCode, setRefCode] = useState<string | null>(null);
   useEffect(() => {
     const r = new URLSearchParams(window.location.search).get('ref');
     if (r && r.trim()) setRefCode(r.trim().toUpperCase());
   }, []);
-  const copyRef = () => {
-    if (refCode) {
-      try { navigator.clipboard.writeText(`GUNNERREF:${refCode}`); }
-      catch { /* clipboard blocked; manual code entry in-app still works */ }
-    }
+  const store = (location: string) => () => {
+    if (refCode) { try { navigator.clipboard.writeText(`GUNNERREF:${refCode}`); } catch { /* manual entry still works */ } }
+    track('store_click', { source: CAMPAIGN, location, ref: referrerHost() });
   };
+
+  const jsonLd = {
+    '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'Step Gunner',
+    operatingSystem: 'iOS', applicationCategory: 'EducationalApplication',
+    url: 'https://stepgunner.com', description: 'USMLE Step 2 CK prep with a calibrated score projection that shows its track record.',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    author: { '@type': 'Organization', name: 'Rezumab LLC' },
+  };
+
   return (
     <>
       <Head>
-        <title>Step Gunner | USMLE Step 2 CK Prep</title>
-        <meta name="description" content="Step Gunner is a gamified USMLE Step 2 CK study app: clinical case missions, Socratic rounds, 1,400+ high-yield questions, spaced repetition, and weekly leagues. Built by a med student, for med students." />
+        <title>Step Gunner | Know your Step 2 CK number before exam day</title>
+        <meta name="description" content="Enter your NBME and UWSA forms and get the range a calibrated model projects, checked against real students every week. Then study in the app that carries the same gauge: 7,700+ Step 2 CK questions, next-best-step chains, spaced repetition." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#0a0b0d" />
-        <meta property="og:title" content="Step Gunner | USMLE Step 2 CK Prep" />
-        <meta property="og:description" content="Gun for honors. Clinical case missions, Socratic rounds, weekly leagues, and a streak that won't let you coast." />
+        <meta name="theme-color" content="#faf9f6" />
+        <meta property="og:title" content="Step Gunner | Know your Step 2 CK number before exam day" />
+        <meta property="og:description" content="A calibrated score projection that shows its track record, and the study app that moves it." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://stepgunner.com" />
+        <meta property="og:image" content="https://stepgunner.com/og/research-nbme-step2.png" />
+        <link rel="canonical" href="https://stepgunner.com/" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
-
       <style jsx global>{`
         :root {
-          --bg: #0a0b0d; --bg-2: #0d0e13;
-          --panel: #121317; --panel-2: #16181d;
-          --hair: rgba(255,255,255,0.08); --hair-strong: rgba(255,255,255,0.14);
-          --ink: #f4f6f8; --ink-dim: #9aa1ab; --ink-faint: #5c636e;
-          --green: #46d877; --green-dark: #2f9e57; --green-glow: rgba(70,216,119,0.18);
-          --blue: #5090f7; --blue-glow: rgba(80,144,247,0.22);
-          --gold: #e3b542; --red: #ef6d6d; --purple: #af52ff;
+          --bg: #faf9f6; --bg-2: #ffffff; --bg-3: #f3f2ee;
+          --hair: rgba(25,28,35,0.10); --hair-strong: rgba(25,28,35,0.17);
+          --ink: #191c23; --ink-dim: #5d6470; --ink-faint: #9aa0ab;
+          --green: #0d9448; --gold: #e08e00; --blue: #2f6fed; --red: #d64545; --violet: #af52ff;
           --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
           --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; } html, body { margin: 0; padding: 0; }
         body { font-family: var(--sans); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
         a { color: inherit; text-decoration: none; }
-        ::selection { background: var(--blue); color: #fff; }
-
-        /* WORDMARK */
-        .wm { display: inline-flex; align-items: center; gap: 7px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; line-height: 1; white-space: nowrap; }
-        .wm-dot { width: 0.4em; height: 0.4em; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green-glow); }
-        .wm-step { color: var(--blue); }
-        .wm-gun { color: var(--ink); font-weight: 500; opacity: 0.9; }
-
-        /* NAV */
-        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,11,13,0.78); backdrop-filter: blur(14px); border-bottom: 1px solid var(--hair); padding: 0 40px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
-        .nav-links { display: flex; gap: 30px; align-items: center; }
-        .nav-links a { font-family: var(--mono); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-dim); transition: color 0.2s; }
-        .nav-links a:hover { color: var(--ink); }
-        .nav-pred { color: var(--green) !important; }
-        .nav-pred:hover { color: var(--green) !important; opacity: 0.82; }
-        .nav-cta { background: var(--blue); color: #fff !important; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 4px 18px var(--blue-glow); }
-        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px var(--blue-glow); }
-
-        /* HERO */
-        .hero { position: relative; padding: 150px 24px 70px; text-align: center; overflow: hidden; }
-        .hero::before { content: ''; position: absolute; inset: 0; background:
-          radial-gradient(620px 360px at 50% -4%, var(--blue-glow), transparent 60%),
-          radial-gradient(500px 320px at 50% 8%, var(--green-glow), transparent 62%);
-          pointer-events: none; }
-        .hero::after { content: ''; position: absolute; inset: 0; background-image:
-          linear-gradient(var(--hair) 1px, transparent 1px),
-          linear-gradient(90deg, var(--hair) 1px, transparent 1px);
-          background-size: 38px 38px; mask-image: radial-gradient(circle at 50% 30%, #000 0%, transparent 70%); opacity: 0.5; pointer-events: none; }
-        .hero-inner { position: relative; z-index: 1; }
-        .hero-badge { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--green); border: 1px solid rgba(70,216,119,0.3); background: rgba(70,216,119,0.06); padding: 6px 16px; border-radius: 999px; margin-bottom: 26px; }
-        .hero h1 { font-size: 68px; font-weight: 800; line-height: 1.02; letter-spacing: -2px; max-width: 760px; margin: 0 auto 22px; }
-        .hero h1 .a { color: var(--green); }
-        .hero p { font-size: 19px; color: var(--ink-dim); max-width: 580px; margin: 0 auto 36px; line-height: 1.6; }
-        .btn-store { display: inline-flex; align-items: center; gap: 10px; background: var(--blue); color: #fff; font-size: 17px; font-weight: 700; padding: 16px 34px; border-radius: 14px; transition: transform 0.15s, box-shadow 0.2s; box-shadow: 0 6px 28px var(--blue-glow); }
-        .btn-store:hover { transform: translateY(-2px); box-shadow: 0 12px 40px var(--blue-glow); }
-        .btn-store .apple { width: 16px; height: 19px; flex: 0 0 auto; }
-        .hero-cta-row { display: flex; gap: 14px; justify-content: center; align-items: center; flex-wrap: wrap; }
-        .btn-ghost { display: inline-flex; align-items: center; gap: 8px; color: var(--green); font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.3px; border: 1px solid rgba(70,216,119,0.35); background: rgba(70,216,119,0.06); padding: 15px 22px; border-radius: 14px; transition: border-color 0.2s, background 0.2s; }
-        .btn-ghost:hover { border-color: var(--green); background: rgba(70,216,119,0.12); transform: translateY(-2px); }
-        .hero-sub { font-family: var(--mono); font-size: 12px; letter-spacing: 0.5px; color: var(--ink-faint); margin-top: 18px; }
-        .ref-banner { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.2px; color: var(--ink); background: rgba(70,216,119,0.08); border: 1px solid rgba(70,216,119,0.32); padding: 9px 16px; border-radius: 999px; margin-bottom: 22px; max-width: 92vw; line-height: 1.45; }
-        .ref-banner strong { color: var(--green); font-weight: 700; }
-        .ref-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green-glow); flex: 0 0 auto; }
-
-        /* SHOWCASE STRIP */
-        .showcase { padding: 0 0 96px; }
-        .showcase-head { text-align: center; max-width: 600px; margin: 0 auto 30px; padding: 0 20px; }
-        .showcase-head .eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 12px; }
-        .showcase-head h2 { font-size: 34px; font-weight: 800; letter-spacing: -1px; }
-        .showcase-strip { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 10px 40px 28px; -webkit-overflow-scrolling: touch; }
-        .showcase-strip::-webkit-scrollbar { height: 8px; }
-        .showcase-strip::-webkit-scrollbar-track { background: transparent; }
-        .showcase-strip::-webkit-scrollbar-thumb { background: var(--hair-strong); border-radius: 4px; }
-        .showcase-strip img { flex: 0 0 auto; width: 300px; height: auto; display: block; border-radius: 30px; scroll-snap-align: center; border: 1px solid var(--hair); box-shadow: 0 18px 50px rgba(0,0,0,0.5); }
-
-        /* FEATURES */
-        .features { padding: 90px 40px; }
-        .features-inner { max-width: 1100px; margin: 0 auto; }
-        .features-header { text-align: center; margin-bottom: 56px; }
-        .features-header .eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 14px; }
-        .features-header h2 { font-size: 40px; font-weight: 800; letter-spacing: -1.4px; margin-bottom: 14px; }
-        .features-header p { font-size: 17px; color: var(--ink-dim); max-width: 520px; margin: 0 auto; }
-        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-        .feature-card { background: var(--panel); border: 1px solid var(--hair); border-radius: 18px; padding: 28px; transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; position: relative; overflow: hidden; }
-        .feature-card:hover { transform: translateY(-4px); border-color: var(--hair-strong); box-shadow: 0 16px 44px rgba(0,0,0,0.45); }
-        .feature-icon { font-size: 30px; margin-bottom: 16px; }
-        .feature-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 9px; letter-spacing: -0.3px; }
-        .feature-card p { font-size: 14px; color: var(--ink-dim); line-height: 1.65; }
-
-        /* STATS */
-        .stats-bar { padding: 70px 40px; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); background:
-          radial-gradient(600px 200px at 50% 0%, var(--green-glow), transparent 70%), var(--bg-2); }
-        .stats-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; text-align: center; }
-        .stat-item .num { font-size: 46px; font-weight: 800; letter-spacing: -1.5px; color: var(--green); }
-        .stat-item .label { font-family: var(--mono); font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-faint); margin-top: 8px; }
-
-        /* CTA */
-        .cta-section { position: relative; padding: 110px 40px; text-align: center; overflow: hidden; }
-        .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(600px 320px at 50% 50%, var(--blue-glow), transparent 65%); pointer-events: none; }
-        .cta-inner { position: relative; z-index: 1; }
-        .cta-section h2 { font-size: 44px; font-weight: 800; letter-spacing: -1.6px; margin-bottom: 16px; }
-        .cta-section p { font-size: 17px; color: var(--ink-dim); margin: 0 auto 36px; max-width: 480px; }
-
-        /* FOOTER */
-        footer { background: var(--bg-2); border-top: 1px solid var(--hair); color: var(--ink-dim); padding: 56px 40px 36px; }
-        .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 56px; padding-bottom: 40px; border-bottom: 1px solid var(--hair); }
-        .footer-tagline { font-size: 14px; line-height: 1.7; color: var(--ink-faint); margin-top: 14px; max-width: 280px; }
-        .footer-heading { font-family: var(--mono); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.8px; color: var(--ink-faint); margin-bottom: 18px; }
-        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-        .footer-links a { color: var(--ink-dim); font-size: 14px; transition: color 0.2s; }
-        .footer-links a:hover { color: var(--ink); }
-        .footer-bottom { max-width: 1100px; margin: 0 auto; padding-top: 28px; display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 11px; letter-spacing: 0.5px; color: var(--ink-faint); }
-
-        @media (max-width: 900px) {
-          .features-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) {
-          nav { padding: 0 18px; }
-          .nav-links a:not(.nav-cta) { display: none; }
-          .hero { padding: 120px 20px 50px; }
-          .hero h1 { font-size: 42px; letter-spacing: -1.2px; }
-          .hero p { font-size: 16px; }
-          .showcase-strip { padding: 10px 20px 24px; gap: 14px; }
-          .showcase-strip img { width: 80vw; max-width: 320px; border-radius: 26px; }
-          .features { padding: 64px 20px; }
-          .features-grid { grid-template-columns: 1fr; }
-          .features-header h2 { font-size: 30px; }
-          .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-          .stat-item .num { font-size: 36px; }
-          .cta-section { padding: 70px 20px; }
-          .cta-section h2 { font-size: 32px; }
-          .footer-inner { grid-template-columns: 1fr; gap: 32px; }
-          .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-        }
+        ::selection { background: var(--gold); color: #fff; }
+      `}</style>
+      <style jsx>{`
+        .page { min-height: 100vh; background: radial-gradient(90% 55% at 50% -8%, rgba(13,148,72,0.08), transparent 60%), radial-gradient(56% 22% at 50% 0%, rgba(240,180,41,0.13), transparent 62%), var(--bg); }
+        .nav { display: flex; align-items: center; justify-content: space-between; max-width: 1040px; margin: 0 auto; padding: 20px 22px; }
+        .wm { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; font-size: 14px; }
+        .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); } .wm b { color: var(--green); }
+        .navlinks { display: flex; gap: 22px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-dim); }
+        .navlinks :global(a):hover { color: var(--ink); }
+        .nav-cta { background: var(--ink); color: #fff; padding: 9px 18px; border-radius: 999px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+        @media (max-width: 720px) { .navlinks { display: none; } }
+        .hero { max-width: 1040px; margin: 0 auto; padding: 26px 22px 10px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 36px; align-items: start; }
+        @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
+        .badge { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #b57400; border: 1px solid rgba(224,142,0,0.35); background: rgba(240,180,41,0.10); border-radius: 999px; padding: 5px 11px; }
+        h1 { font-size: 46px; font-weight: 800; letter-spacing: -1.2px; line-height: 1.04; margin: 18px 0 12px; } h1 .g { color: var(--green); }
+        @media (max-width: 520px) { h1 { font-size: 36px; } }
+        .sub { color: var(--ink-dim); font-size: 17px; line-height: 1.6; max-width: 46ch; margin-bottom: 20px; }
+        .proof { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+        .proof span { font-family: var(--mono); font-size: 11px; font-weight: 700; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--hair-strong); background: var(--bg-2); color: var(--ink-dim); }
+        .proof span b { color: var(--ink); }
+        .store { display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: #1a1403; font-weight: 800; font-size: 15px; padding: 14px 20px; border-radius: 12px; box-shadow: 0 10px 30px rgba(224,142,0,0.25); transition: transform .15s ease; }
+        .store:hover { transform: translateY(-1px); }
+        .tiny { font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint); letter-spacing: 0.3px; margin-top: 10px; }
+        .ref-banner { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 12.5px; color: var(--ink); background: rgba(13,148,72,0.08); border: 1px solid rgba(13,148,72,0.32); padding: 9px 16px; border-radius: 999px; margin-bottom: 18px; max-width: 92vw; line-height: 1.45; }
+        .ref-banner strong { color: var(--green); }
+        .receipts { max-width: 1040px; margin: 30px auto 0; padding: 0 22px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        @media (max-width: 860px) { .receipts { grid-template-columns: repeat(2, 1fr); } }
+        .rc { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 14px; padding: 16px; }
+        .rc .n { font-family: var(--mono); font-size: 30px; font-weight: 800; letter-spacing: -1px; line-height: 1; } .rc .n span { font-size: 14px; color: var(--ink-faint); font-weight: 600; }
+        .rc .l { font-family: var(--mono); font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-faint); margin-top: 8px; line-height: 1.5; }
+        .rc.green .n { color: var(--green); }
+        section { max-width: 1040px; margin: 0 auto; padding: 54px 22px 0; }
+        .sh { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; margin-bottom: 16px; flex-wrap: wrap; }
+        .sh h2 { font-size: 28px; font-weight: 800; letter-spacing: -0.6px; } .sh :global(a.more) { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--green); }
+        .sh p { color: var(--ink-dim); font-size: 15px; max-width: 62ch; width: 100%; }
+        .tr { display: grid; grid-template-columns: 1.1fr 1fr; gap: 22px; } @media (max-width: 860px) { .tr { grid-template-columns: 1fr; } }
+        .led { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 16px; padding: 16px 18px; }
+        .led .k { font-family: var(--mono); font-size: 10px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--ink-faint); display: flex; justify-content: space-between; }
+        .led .big { font-family: var(--mono); font-size: 40px; font-weight: 800; letter-spacing: -1.5px; margin: 8px 0 2px; } .led .big span { font-size: 16px; color: var(--ink-faint); font-weight: 600; }
+        .led .s { font-size: 13.5px; color: var(--ink-dim); line-height: 1.5; margin-bottom: 12px; }
+        .lrow { display: grid; grid-template-columns: 64px 1fr 40px; align-items: center; gap: 10px; height: 18px; font-family: var(--mono); font-size: 10.5px; }
+        .lrow .t { position: relative; height: 18px; } .lrow .t:before { content: ""; position: absolute; left: 0; right: 0; top: 8.5px; height: 1px; background: var(--hair-strong); }
+        .band { position: absolute; top: 1px; height: 16px; left: 41.1%; width: 17.8%; background: rgba(224,142,0,0.10); border-left: 1px dashed rgba(224,142,0,0.55); border-right: 1px dashed rgba(224,142,0,0.55); border-radius: 3px; }
+        .dot { position: absolute; top: 4px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; border: 2px solid var(--bg-2); } .dot.in { background: var(--green); } .dot.out { background: var(--red); }
+        .lrow .e { text-align: right; font-weight: 700; color: var(--ink-dim); } .lrow .e.out { color: var(--red); }
+        .lrow .f { color: var(--ink-faint); white-space: nowrap; } .lrow .f i { font-style: normal; font-size: 8px; border: 1px solid var(--hair-strong); border-radius: 3px; padding: 0 3px; margin-left: 3px; }
+        .led .foot { font-family: var(--mono); font-size: 10px; color: var(--ink-faint); margin-top: 10px; line-height: 1.6; }
+        .why { display: flex; flex-direction: column; gap: 10px; }
+        .why .c { background: var(--bg-2); border: 1px solid var(--hair); border-radius: 14px; padding: 14px 16px; }
+        .why .c b { display: block; font-size: 15px; margin-bottom: 4px; } .why .c p { font-size: 13.5px; color: var(--ink-dim); line-height: 1.55; } .why .c :global(a) { color: var(--blue); }
+        .pitch { max-width: 1040px; margin: 54px auto 0; background: var(--ink); border-radius: 22px; padding: 34px 30px; color: #fff; position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 1.1fr; gap: 26px; align-items: center; }
+        .pitch:before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 90% at 85% 0%, rgba(240,180,41,0.22), transparent 60%); }
+        .pitch > * { position: relative; }
+        @media (max-width: 860px) { .pitch { grid-template-columns: 1fr; margin: 54px 22px 0; } }
+        .pitch .pk { font-family: var(--mono); font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+        .pitch h2 { font-size: 30px; font-weight: 800; letter-spacing: -0.6px; margin: 8px 0 10px; line-height: 1.1; }
+        .pitch p { font-size: 15px; color: rgba(255,255,255,0.74); line-height: 1.65; max-width: 48ch; margin-bottom: 16px; }
+        .pitch ul { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; margin: 0 0 18px; padding: 0; }
+        .pitch li { font-size: 13.5px; color: rgba(255,255,255,0.85); display: flex; gap: 8px; align-items: flex-start; } .pitch li:before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #46d877; margin-top: 7px; flex: 0 0 auto; }
+        .shots { display: flex; gap: 12px; justify-content: center; }
+        .shots img { width: 31%; border-radius: 18px; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+        .shots img:nth-child(2) { transform: translateY(-14px); }
+        .ptrust { font-family: var(--mono); font-size: 10.5px; color: rgba(255,255,255,0.5); margin-top: 12px; }
+        .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; } @media (max-width: 860px) { .cards { grid-template-columns: 1fr; } }
+        .card { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 16px; padding: 18px; display: flex; flex-direction: column; gap: 8px; transition: transform .15s ease; }
+        .card:hover { transform: translateY(-2px); }
+        .card .k { font-family: var(--mono); font-size: 10px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--ink-faint); }
+        .card b { font-size: 16px; line-height: 1.3; } .card p { font-size: 13.5px; color: var(--ink-dim); line-height: 1.55; flex: 1; margin: 0; }
+        .card .go { font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--green); font-weight: 700; }
+        .quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; } @media (max-width: 860px) { .quotes { grid-template-columns: 1fr; } }
+        .q { background: var(--bg-2); border: 1px solid var(--hair); border-radius: 14px; padding: 16px; }
+        .q .stars { color: var(--gold); font-size: 13px; letter-spacing: 2px; } .q p { font-size: 14.5px; color: var(--ink); line-height: 1.55; margin: 8px 0; } .q .who { font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint); }
+        .final { max-width: 1040px; margin: 54px auto 0; padding: 0 22px; text-align: center; }
+        .final h2 { font-size: 32px; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 10px; } .final p { color: var(--ink-dim); font-size: 16px; margin-bottom: 20px; }
+        footer { max-width: 1040px; margin: 60px auto 0; padding: 22px 22px 50px; border-top: 1px solid var(--hair); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-family: var(--mono); font-size: 11px; color: var(--ink-faint); }
+        footer :global(a) { color: var(--ink-dim); margin-right: 14px; }
       `}</style>
 
-      {/* NAV */}
-      <nav>
-        <Wordmark size={18} />
-        <div className="nav-links">
-          <a href="/step-2-score-predictor" className="nav-pred">Predictor</a>
-          <a href="#features">Features</a>
-          <a href="/privacy">Privacy</a>
-          <a href="/support">Support</a>
-          <a href={APP} onClick={copyRef} className="nav-cta">Download</a>
-        </div>
-      </nav>
+      <div className="page">
+        <nav className="nav">
+          <a href="/" className="wm"><span className="dot" />STEP <b>GUNNER</b></a>
+          <div className="navlinks"><Link href="/readiness">Readiness check</Link><Link href="/research/nbme-to-step-2">Research</Link><Link href="/guides">Guides</Link><Link href="/readiness/methodology">Methodology</Link></div>
+          <a href={APP} className="nav-cta" onClick={store('nav')}>Get the app</a>
+        </nav>
 
-      {/* HERO */}
-      <div className="hero">
-        <div className="hero-inner">
-          {refCode && (
-            <div className="ref-banner">
-              <span className="ref-dot" />
-              <span>Invite locked in <strong>{refCode}</strong> &middot; you and your friend each get <strong>250 XP</strong> when you join.</span>
-            </div>
-          )}
-          <div className="hero-badge">USMLE Step 2 CK</div>
-          <h1>Gun for <span className="a">honors.</span></h1>
-          <p>Clinical case missions, Socratic rounds, 1,400+ high-yield questions, weekly leagues, and a streak that won&apos;t let you coast.</p>
-          <div className="hero-cta-row">
-            <a href={APP} onClick={copyRef} className="btn-store"><svg className="apple" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> Download on the App Store</a>
-            <a href="/readiness" className="btn-ghost">Predict your Step 2 score, free &rarr;</a>
-          </div>
-          <p className="hero-sub">FREE TO START &middot; iOS 17+ &middot; BUILT BY A MED STUDENT</p>
-        </div>
-      </div>
-
-      {/* SHOWCASE */}
-      <div className="showcase">
-        <div className="showcase-head">
-          <div className="eyebrow">See it in action</div>
-          <h2>Your Step 2 CK cockpit</h2>
-        </div>
-        <div className="showcase-strip">
-          <img src="/screenshots/showcase/01-home.jpg" alt="Home — your Step 2 CK cockpit" loading="lazy" />
-          <img src="/screenshots/showcase/05-results.jpg" alt="Run summary — every round scored to the accuracy ring" loading="lazy" />
-          <img src="/screenshots/showcase/02-cases.jpg" alt="Case Missions — work the wards" loading="lazy" />
-          <img src="/screenshots/showcase/03-caseplay.jpg" alt="Case play — reason it out, beat by beat" loading="lazy" />
-          <img src="/screenshots/showcase/04-path.jpg" alt="Skill-tree paths — Step 2 CK mapped like a game" loading="lazy" />
-          <img src="/screenshots/showcase/09-league.jpg" alt="Weekly leagues — promotion and relegation" loading="lazy" />
-          <img src="/screenshots/showcase/06-profile.jpg" alt="Profile — 30-day consistency heatmap" loading="lazy" />
-          <img src="/screenshots/showcase/07-share.jpg" alt="Share cards — flex the streak" loading="lazy" />
-          <img src="/screenshots/showcase/08-pimping.jpg" alt="Pimp Me — Socratic rounds in private" loading="lazy" />
-          <img src="/screenshots/showcase/10-pro.jpg" alt="Step Gunner Pro" loading="lazy" />
-        </div>
-      </div>
-
-      {/* FEATURES */}
-      <div className="features" id="features">
-        <div className="features-inner">
-          <div className="features-header">
-            <div className="eyebrow">Everything you need</div>
-            <h2>Built for how gunners actually study</h2>
-            <p>Smart tools that turn the Step 2 grind into a streak you don&apos;t want to break.</p>
-          </div>
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon">🩺</div>
-              <h3>Case Missions</h3>
-              <p>Work 36 clinical cases across 11 services, from presentation to disposition. Reason it out beat by beat. Nail the call and the management for honors.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🎯</div>
-              <h3>Scored to the Ring</h3>
-              <p>Every round ends on one clean accuracy ring, with your misses surfaced first so you fix what actually moves the needle.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🏆</div>
-              <h3>Weekly Leagues</h3>
-              <p>Promotion and relegation, reset every Monday. Top three move up, bottom three drop. No coasting.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🧠</div>
-              <h3>Smart Spaced Repetition</h3>
-              <p>A Leitner box system that brings back what you miss and retires what you&apos;ve mastered into long-term review.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🏅</div>
-              <h3>CK Gold Questions</h3>
-              <p>High-yield clinical vignettes across 15 specialties, each with the explanation, the common trap, and a memory hook.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🤖</div>
-              <h3>Pimp Me &middot; Socratic Rounds</h3>
-              <p>Private rounds with a virtual attending. Miss one and it asks the follow-up. Recognition &rarr; management &rarr; complications, nobody watching.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">📅</div>
-              <h3>Don&apos;t Miss a Day</h3>
-              <p>A 30-day consistency heatmap plus your weak systems. Tap any day to see exactly what you did.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">📲</div>
-              <h3>Shareable Progress</h3>
-              <p>Turn a perfect round or a long streak into a story-style card worth sending to the group chat.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">⚡</div>
-              <h3>Rapid Fire</h3>
-              <p>Twenty questions, two minutes. Exam-day time pressure with speed-bonus XP for fast answers.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* STATS */}
-      <div className="stats-bar">
-        <div className="stats-inner">
-          <div className="stat-item"><div className="num">1,400+</div><div className="label">Practice Questions</div></div>
-          <div className="stat-item"><div className="num">36</div><div className="label">Clinical Cases</div></div>
-          <div className="stat-item"><div className="num">15</div><div className="label">Specialties</div></div>
-          <div className="stat-item"><div className="num">22</div><div className="label">Achievements</div></div>
-        </div>
-      </div>
-
-      {/* CTA */}
-      <div className="cta-section" id="download">
-        <div className="cta-inner">
-          <h2>Ready to start gunning?</h2>
-          <p>Free to start. Clinical case missions, Socratic rounds, weekly leagues, and the question bank that doesn&apos;t suck.</p>
-          <a href={APP} onClick={copyRef} className="btn-store"><svg className="apple" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> Download on the App Store</a>
-          <p className="hero-sub">iOS 17+ &middot; WORKS OFFLINE &middot; KEEP GUNNING</p>
-        </div>
-      </div>
-
-      {/* FOOTER */}
-      <footer>
-        <div className="footer-inner">
+        <div className="hero">
           <div>
-            <Wordmark size={18} />
-            <p className="footer-tagline">USMLE Step 2 CK prep that doesn&apos;t suck. Built by Rezumab LLC &middot; Texas, USA.</p>
+            {refCode && <div className="ref-banner"><strong>{refCode}</strong> A classmate invited you. Tap the store button and the code comes along.</div>}
+            <span className="badge">USMLE Step 2 CK</span>
+            <h1>Know your number <span className="g">before</span> exam day.</h1>
+            <p className="sub">Enter your NBME and UWSA forms. Get the range a calibrated model projects, see how it did on real students, then drill the weak system in the app that carries the same gauge.</p>
+            <div className="proof">
+              <span><b>269</b> real score reports</span>
+              <span><b>{forum ? forum.within7Pct : 80}%</b> within 7 points, out of sample</span>
+              <span><b>7,700+</b> questions</span>
+              <span>App Store <b>4.8</b></span>
+            </div>
+            <a href={APP} className="store" onClick={store('hero')}><AppleIcon /> Get Step Gunner free</a>
+            <div className="tiny">FREE TO START · iOS 17+ · BUILT BY A MED STUDENT WHO SCORED 270</div>
           </div>
-          <div>
-            <div className="footer-heading">App</div>
-            <ul className="footer-links">
-              <li><a href="/readiness">Readiness Calculator</a></li>
-              <li><a href="/step-2-score-predictor">Score Predictor</a></li>
-              <li><a href="/guides">Clerkship Guides</a></li>
-              <li><a href="#features">Features</a></li>
-              <li><a href={APP} onClick={copyRef}>Download</a></li>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/terms">Terms of Use</a></li>
-              <li><a href="/support">Support</a></li>
-            </ul>
+          <ReadinessCheck surface="home_hero" />
+        </div>
+
+        <div className="receipts">
+          <div className="rc green"><div className="n">{forum ? forum.inside : 33}<span> / {forum ? forum.n : 40}</span></div><div className="l">r/step2 posters the model never trained on landed inside their range</div></div>
+          <div className="rc"><div className="n">+9</div><div className="l">average climb from practice average to the real score, at the middle</div></div>
+          <div className="rc"><div className="n">{forum?.medianAbsErr != null ? forum.medianAbsErr : 4}</div><div className="l">median points off, out of sample, updated every Monday</div></div>
+          <div className="rc"><div className="n">6</div><div className="l">forms a typical student takes; the last two weeks are the signal</div></div>
+        </div>
+
+        <section>
+          <div className="sh"><h2>It shows its work, every Monday.</h2><Link href="/research/nbme-to-step-2" className="more">The full record &rarr;</Link><p>Every new student who gets a real score is judged against the frozen model. The misses stay on the board. This is the same card that sits under the readiness gauge in the app.</p></div>
+          <div className="tr">
+            <div className="led">
+              <div className="k"><span>Track record</span><span>updates every Monday</span></div>
+              <div className="big">{rec.insideOf10}<span>/{rec.shown}</span></div>
+              <div className="s">of the last {rec.shown} students to get their real score landed inside the range the model gave them. Typical miss {Math.round(rec.medianAbsErr)} points.</div>
+              {rec.last10.slice(0, 8).map((r, i) => {
+                const left = 50 + 50 * Math.max(-1, Math.min(1, r.err / 45));
+                return (
+                  <div className="lrow" key={i}>
+                    <span className="f">{r.forms === 1 ? '1 form' : `${r.forms} forms`}{r.source === 'forum' && <i>r/</i>}</span>
+                    <div className="t"><div className="band" /><span className={`dot ${r.inside ? 'in' : 'out'}`} style={{ left: `${left}%` }} /></div>
+                    <span className={`e${r.inside ? '' : ' out'}`}>{r.err > 0 ? `+${r.err}` : r.err}</span>
+                  </div>
+                );
+              })}
+              <div className="foot">Points off, newest first. r/ marks an r/step2 score report. Calibrated on {rec.forumFit?.n ?? 239} published outcomes: {rec.forumFit?.within7Pct ?? 70}% within 7 points.</div>
+            </div>
+            <div className="why">
+              <div className="c"><b>Why the model is flatter than "add 10"</b><p>Students under 235 climbed about 20 points; students over 265 climbed about 2. The line bends because low averages contain bad days. <Link href="/research/nbme-to-step-2">The data, 269 students &rarr;</Link></p></div>
+              <div className="c"><b>Why your last form counts most</b><p>A form from three weeks out carries half the weight of one from this week. Old forms read low because of when they were taken, not which form.</p></div>
+              <div className="c"><b>Which forms lie</b><p>NBME 9 prints about 6 points low, UWSA 2 about 5 high, UWSA 3 about 8 low. Modern NBMEs are equated and left alone. The corrections are applied for you.</p></div>
+            </div>
           </div>
+        </section>
+
+        <div className="pitch">
           <div>
-            <div className="footer-heading">Company</div>
-            <ul className="footer-links">
-              <li><a href="https://rezumab.app">Rezumab</a></li>
-              <li><a href="mailto:rezumab.med@gmail.com">Contact</a></li>
-            </ul>
+            <div className="pk">The app</div>
+            <h2>The same projection, with a gauge that moves when you study.</h2>
+            <p>7,700 questions written the way a Step 2 attending asks them: pattern to diagnosis, then the next best step as a full management chain. Spaced repetition that drains your misses. A readiness gauge with its track record attached.</p>
+            <ul><li>Buzzwords, CK Gold, Next Best Step chains</li><li>Visual Dx: 890+ images</li><li>Weekly leagues and a results screen that scores every round</li><li>Readiness gauge with the track record</li></ul>
+            <a href={APP} className="store" onClick={store('pitch')}><AppleIcon /> Get Step Gunner free</a>
+            <div className="ptrust">Free to start. Pro unlocks the full bank and the coach. 1,200+ students.</div>
+          </div>
+          <div className="shots">
+            <img src="/screenshots/showcase/01-home.jpg" alt="Step Gunner home screen" loading="lazy" />
+            <img src="/screenshots/showcase/05-results.jpg" alt="Round results with the accuracy ring" loading="lazy" />
+            <img src="/screenshots/showcase/09-league.jpg" alt="Weekly league" loading="lazy" />
           </div>
         </div>
-        <div className="footer-bottom">
-          <span>&copy; 2026 Rezumab LLC. All rights reserved.</span>
-          <span>rezumab.med@gmail.com</span>
+
+        <section>
+          <div className="sh"><h2>Read the evidence.</h2><p>Everything on this site is grounded in data you can check: published score reports, a frozen model, a public record.</p></div>
+          <div className="cards">
+            <Link href="/research/nbme-to-step-2" className="card"><span className="k">Research</span><b>I pulled 269 NBME to Step 2 score pairs off Reddit. Here is what actually predicts your score.</b><p>Climb by starting band, the recency half-life, which forms read off scale, and the model's out-of-sample record.</p><span className="go">Read &rarr;</span></Link>
+            <Link href="/guides" className="card"><span className="k">Guides</span><b>Clerkship guides with honest resource stacks</b><p>What to do each week of the rotation and where Step Gunner fits, with real deck counts.</p><span className="go">Browse &rarr;</span></Link>
+            <Link href="/readiness/methodology" className="card"><span className="k">Methodology</span><b>How the predictor works, constant by constant</b><p>The anchor, the shrinkage, the band widths, the form offsets, and the live out-of-sample numbers, imported from the same code that runs the calculator.</p><span className="go">Open &rarr;</span></Link>
+          </div>
+        </section>
+
+        <section>
+          <div className="sh"><h2>From the App Store</h2><p>Verbatim, from 5-star reviews.</p></div>
+          <div className="quotes">
+            {REVIEWS.map((r) => <div className="q" key={r.cite}><div className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>&ldquo;{r.quote}&rdquo;</p><div className="who">{r.cite}</div></div>)}
+          </div>
+        </section>
+
+        <div className="final">
+          <h2>Run your numbers, then go study.</h2>
+          <p>The calculator is free and stays free. The app is where the number starts moving.</p>
+          <a href={APP} className="store" onClick={store('final')}><AppleIcon /> Get Step Gunner free</a>
         </div>
-      </footer>
+
+        <footer>
+          <span>stepgunner.com</span>
+          <span><Link href="/readiness">Readiness check</Link><Link href="/research/nbme-to-step-2">Research</Link><Link href="/guides">Guides</Link><Link href="/support">Support</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></span>
+          <span>Rezumab LLC</span>
+        </footer>
+      </div>
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+  res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
+  let record: TrackRecord = null;
+  try {
+    const r = await fetch(TRACK_RECORD_URL, { headers: { accept: 'application/json' } });
+    if (r.ok) record = (await r.json()) as TrackRecord;
+  } catch { record = null; }
+  return { props: { record } };
+};
