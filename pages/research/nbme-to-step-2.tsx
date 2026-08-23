@@ -5,13 +5,12 @@
 // runs the SAME lib/readiness math the predictor uses, and the live out-of-sample
 // record pulled server-side from the track_record_json endpoint (decision 0015).
 // No em or en dashes anywhere in the copy (site rule).
-import Head from 'next/head';
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import type { GetServerSideProps } from 'next';
-import DocLayout from '../../components/DocLayout';
+import LabLayout from '../../components/LabLayout';
 import { FORMS, computeReadiness, calibratedCenter, CAL, FORM_OFFSETS, type Entry } from '../../lib/readiness';
-import { appStoreUrl, track } from '../../lib/analytics';
+import { appStoreUrl, track, referrerHost } from '../../lib/analytics';
 
 const CAMPAIGN = 'research_nbme_step2';
 const TRACK_RECORD_URL = 'https://us-central1-stepgunner-79ae7.cloudfunctions.net/track_record_json';
@@ -93,13 +92,15 @@ export default function Research({ record }: { record: Record }) {
   };
 
   return (
-    <DocLayout
+    <LabLayout
+      eyebrow="Research"
       title="What actually predicts your Step 2 score"
-      subtitle={`269 r/step2 score reports, one calibrated model, and its out-of-sample record. Published ${PUBLISHED}.`}
+      lede={<>269 r/step2 score reports, one calibrated model, and its out-of-sample record, updated every Monday. Written by a medical student who believed the folklore until he checked it.</>}
+      crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research/nbme-to-step-2', label: 'Research' }]}
       metaTitle="NBME to Step 2 CK: what 269 Reddit score reports actually show | Step Gunner Research"
       metaDesc={desc}
-    >
-      <Head>
+      campaign={CAMPAIGN}
+      head={<>
         <link rel="canonical" href="https://stepgunner.com/research/nbme-to-step-2" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
@@ -107,45 +108,62 @@ export default function Research({ record }: { record: Record }) {
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      </Head>
+      </>}
+    >
       <style jsx global>{`
-        .byline { display: flex; flex-wrap: wrap; gap: 10px 18px; font-family: var(--mono); font-size: 11.5px; color: var(--ink-faint); letter-spacing: 0.3px; margin-bottom: 30px; }
+        .prose h2 { font-size: 23px; font-weight: 800; letter-spacing: -0.4px; margin: 44px 0 12px; }
+        .prose h3 { font-size: 17px; font-weight: 700; margin: 26px 0 8px; }
+        .prose p { color: var(--ink-dim); font-size: 15.5px; line-height: 1.75; margin: 0 0 14px; }
+        .prose p strong, .prose li strong { color: var(--ink); }
+        .prose ul { margin: 0 0 16px 22px; } .prose li { color: var(--ink-dim); font-size: 15.5px; line-height: 1.7; margin-bottom: 7px; } .prose li::marker { color: var(--green); }
+        .prose a { color: var(--blue); } .prose a:hover { text-decoration: underline; }
+        .byline { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 11px; color: var(--ink-faint); letter-spacing: 0.3px; margin: -8px 0 24px; }
         .byline b { color: var(--ink-dim); font-weight: 600; }
-        .abstract { background: var(--panel); border: 1px solid var(--hair-strong); border-radius: 14px; padding: 22px 24px; margin-bottom: 36px; }
-        .abstract .k { font-family: var(--mono); font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--green); margin-bottom: 10px; }
-        .abstract p { font-size: 15px; margin-bottom: 0; color: var(--ink); line-height: 1.75; }
-        .fig { margin: 26px 0 30px; }
-        .fig img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--hair); background: #05070b; display: block; }
-        .fig figcaption { font-size: 13px; color: var(--ink-dim); line-height: 1.6; margin-top: 10px; }
-        .fig figcaption b { color: var(--ink); }
-        .tbl { width: 100%; border-collapse: collapse; margin: 8px 0 26px; font-size: 14.5px; }
-        .tbl th { text-align: left; font-family: var(--mono); font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); padding: 8px 10px; border-bottom: 1px solid var(--hair-strong); }
-        .tbl td { padding: 9px 10px; border-bottom: 1px solid var(--hair); color: var(--ink-dim); }
-        .tbl td.n, .tbl th.n { text-align: right; font-family: var(--mono); }
-        .tbl td.n b { color: var(--ink); }
-        .eq { font-family: var(--mono); font-size: 14px; color: var(--ink); background: var(--panel); border: 1px solid var(--hair); border-radius: 10px; padding: 12px 16px; margin: 10px 0 18px; overflow-x: auto; }
-        .live { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0 22px; }
-        .live .c { background: var(--panel); border: 1px solid var(--hair); border-radius: 12px; padding: 14px; }
-        .live .c .n { font-family: var(--mono); font-size: 26px; font-weight: 800; color: var(--ink); line-height: 1; }
-        .live .c .n span { font-size: 13px; color: var(--ink-faint); font-weight: 500; }
+        .abstract { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 16px; padding: 20px 22px; margin-bottom: 18px; }
+        .abstract .k { font-family: var(--mono); font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
+        .abstract p { font-size: 15px; margin: 0; color: var(--ink); line-height: 1.75; }
+        .pitch { margin: 18px 0 8px; background: var(--ink); border-radius: 18px; padding: 22px 22px 20px; color: #ffffff; position: relative; overflow: hidden; }
+        .pitch:before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 90% at 85% 0%, rgba(240,180,41,0.22), transparent 60%); }
+        .pitch > * { position: relative; }
+        .pitch .pk { font-family: var(--mono); font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+        .pitch .ph { font-size: 19px; font-weight: 800; margin: 6px 0 6px; letter-spacing: -0.3px; }
+        .pitch .ps { font-size: 14px; color: rgba(255,255,255,0.72); line-height: 1.6; max-width: 56ch; margin: 0 0 14px; }
+        .pitch .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+        .pitch .btn-store { display: inline-flex; align-items: center; gap: 9px; background: var(--gold); color: #1a1403; font-weight: 800; font-size: 14px; padding: 12px 18px; border-radius: 12px; }
+        .pitch .btn-store:hover { filter: brightness(1.06); }
+        .pitch .btn-calc { display: inline-flex; align-items: center; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.28); color: #fff; font-weight: 700; font-size: 14px; }
+        .pitch .ptrust { font-family: var(--mono); font-size: 10.5px; color: rgba(255,255,255,0.5); margin-top: 12px; }
+        .fig { margin: 22px 0 28px; }
+        .fig img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--hair); background: var(--bg); display: block; }
+        .fig figcaption { font-size: 13px; color: var(--ink-dim); line-height: 1.6; margin-top: 10px; } .fig figcaption b { color: var(--ink); }
+        .tbl { width: 100%; border-collapse: collapse; margin: 8px 0 24px; font-size: 14.5px; background: var(--bg-2); border: 1px solid var(--hair); border-radius: 12px; overflow: hidden; }
+        .tbl th { text-align: left; font-family: var(--mono); font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); padding: 9px 12px; border-bottom: 1px solid var(--hair-strong); background: var(--bg-3); }
+        .tbl td { padding: 9px 12px; border-bottom: 1px solid var(--hair); color: var(--ink-dim); } .tbl tr:last-child td { border-bottom: 0; }
+        .tbl td.n, .tbl th.n { text-align: right; font-family: var(--mono); } .tbl td.n b { color: var(--ink); }
+        .eq { font-family: var(--mono); font-size: 14px; color: var(--ink); background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 10px; padding: 12px 16px; margin: 10px 0 16px; overflow-x: auto; }
+        .live { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0 20px; }
+        .live .c { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 12px; padding: 14px; }
+        .live .c .n { font-family: var(--mono); font-size: 26px; font-weight: 800; color: var(--ink); line-height: 1; } .live .c .n span { font-size: 13px; color: var(--ink-faint); font-weight: 500; }
         .live .c .l { font-family: var(--mono); font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-faint); margin-top: 8px; line-height: 1.5; }
-        .tryit { background: var(--panel); border: 1px solid var(--hair-strong); border-radius: 14px; padding: 20px; margin: 18px 0 30px; }
-        .tryit-h { font-size: 16px; font-weight: 800; color: var(--ink); } .tryit-sub { font-size: 13px; color: var(--ink-dim); margin: 4px 0 14px; }
+        .tryit { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 16px; padding: 18px; margin: 16px 0 28px; }
+        .tryit-h { font-size: 16px; font-weight: 800; } .tryit-sub { font-size: 13px; color: var(--ink-dim); margin: 4px 0 14px; } .tryit-sub a { color: var(--blue); }
         .tryit-row { display: grid; grid-template-columns: 1.3fr 1fr 1.2fr; gap: 8px; margin-bottom: 8px; }
-        .tryit select, .tryit input { background: var(--bg); border: 1px solid var(--hair-strong); border-radius: 9px; color: var(--ink); font-family: var(--mono); font-size: 13px; padding: 9px 10px; width: 100%; }
-        .tryit-out { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--hair); }
-        .tryit-num { font-family: var(--mono); font-size: 34px; font-weight: 800; color: var(--gold); } .tryit-num span { font-size: 14px; color: var(--ink-faint); margin: 0 8px; font-weight: 500; }
+        .tryit select, .tryit input { background: var(--bg-3); border: 1px solid var(--hair-strong); border-radius: 10px; color: var(--ink); font-family: var(--mono); font-size: 13px; padding: 10px 11px; width: 100%; }
+        .tryit select:focus, .tryit input:focus { border-color: var(--green); outline: none; }
+        .tryit-out { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--hair); text-align: center; }
+        .tryit-num { font-family: var(--mono); font-size: 40px; font-weight: 800; letter-spacing: -1px; color: var(--gold); } .tryit-num span { font-size: 15px; color: var(--ink-dim); margin: 0 8px; font-weight: 600; }
         .tryit-cap { font-size: 13.5px; color: var(--ink-dim); margin-top: 6px; } .tryit-cap b { color: var(--ink); }
-        .tryit-foot { font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint); margin-top: 12px; line-height: 1.6; }
-        .cta { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 30px 0 10px; }
-        .cta a { display: block; text-align: center; padding: 16px 14px; border-radius: 12px; font-weight: 800; font-size: 14px; text-decoration: none; }
-        .cta a:hover { text-decoration: none; filter: brightness(1.08); }
-        .cta .pri { background: var(--green); color: #05130a; } .cta .sec { border: 1px solid var(--hair-strong); color: var(--ink); background: var(--panel); }
-        .cta small { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.7; margin-top: 4px; font-weight: 600; }
-        .refs li { font-size: 13.5px; color: var(--ink-dim); }
+        .tryit-foot { font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint); margin-top: 12px; line-height: 1.6; text-align: left; }
+        .cta { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 28px 0 10px; }
+        .cta a { display: block; text-align: center; padding: 16px 14px; border-radius: 12px; font-weight: 800; font-size: 14px; }
+        .cta a:hover { filter: brightness(1.05); }
+        .cta .pri { background: var(--ink); color: #fff; } .cta .sec { border: 1px solid var(--hair-strong); color: var(--ink); background: var(--bg-2); }
+        .cta small { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.65; margin-top: 4px; font-weight: 600; }
+        .refs li { font-size: 13.5px; }
         @media (max-width: 640px) { .live { grid-template-columns: 1fr; } .tryit-row { grid-template-columns: 1fr; } .cta { grid-template-columns: 1fr; } }
       `}</style>
 
+      <div className="prose">
       <div className="byline">
         <span><b>Danny Varghese</b>, MS4, Texas A&amp;M College of Medicine</span>
         <span>Published {PUBLISHED}</span>
@@ -157,6 +175,17 @@ export default function Research({ record }: { record: Record }) {
         <div className="k">Summary</div>
         <p>I parsed 269 r/step2 score reports into practice-form histories and real Step 2 CK scores. For the 239 with a three-digit NBME or UWSA on file, the real score beat the practice average 92% of the time, by a median of about 11 points, but the size of that climb depends on where you start: about +20 for averages under 235, about +2 at 265 and up. The most recent form predicts best (half-life about three weeks). Three forms read off scale after controlling for who took them and when: NBME 9 about 6 points low, UWSA 2 about 5 high, UWSA 3 about 8 low. A shrinkage-linear model fit to this data lands within 7 points for 70% of students in-sample; on {forum ? forum.n : 40} later posters it had never seen, {forum ? forum.within7Pct : 80}% within 7. On the first {app ? app.n : 7} users who entered scores in the app it is noticeably worse, and I show that too.</p>
       </div>
+
+      <section className="pitch">
+        <div className="pk">The same model, with its record attached</div>
+        <div className="ph">Run your forms through it, then watch how it does on real students every Monday.</div>
+        <p className="ps">The app carries this projection under a readiness gauge, keeps the track record on the same screen, and lets you add a form in ten seconds. Free to start.</p>
+        <div className="row">
+          <a href={store} className="btn-store" onClick={() => track('store_click', { source: CAMPAIGN, location: 'pitch_top', ref: referrerHost() })}><svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true" style={{ width: 15, height: 15 }}><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> Get Step Gunner free</a>
+          <Link href="/readiness" className="btn-calc" onClick={() => track('cta_predictor', { surface: CAMPAIGN, location: 'pitch_top' })}>Or use the web calculator</Link>
+        </div>
+        <div className="ptrust">{forum ? `${forum.inside} of ${forum.n}` : '33 of 40'} r/step2 posters it never trained on landed inside their range. The misses are on this page too.</div>
+      </section>
 
       <h2>1. Why I did this</h2>
       <p>Every score release thread has the same comment under it: "add 10 to your NBME average." Sometimes it's 8, sometimes 15. UWSA 2 is "inflated." NBME 9 is "useless." I believed all of these during dedicated and repeated some of them. After my own exam I wanted to know which were true, and the data to check them is sitting in public on Reddit: people post their forms, then come back weeks later and post the real number.</p>
@@ -249,7 +278,7 @@ export default function Research({ record }: { record: Record }) {
       </ul>
 
       <div className="cta">
-        <a className="pri" href={store} onClick={() => track('cta_app_store', { surface: CAMPAIGN })}>Get Step Gunner<small>the same projection, plus its live track record</small></a>
+        <a className="pri" href={store} onClick={() => track('store_click', { source: CAMPAIGN, location: 'end', ref: referrerHost() })}>Get Step Gunner<small>the same projection, plus its live track record</small></a>
         <Link className="sec" href="/readiness" onClick={() => track('cta_predictor', { surface: CAMPAIGN })}>Run the full calculator<small>free, with exam date and percentile</small></Link>
       </div>
 
@@ -263,7 +292,8 @@ export default function Research({ record }: { record: Record }) {
         <li>Thorndike RL. Personnel Selection: Test and Measurement Techniques. Wiley, 1949 (range-restriction correction, Case II).</li>
         <li>r/step2 score-report threads, 2025 to 2026, parsed with usernames removed at ingest.</li>
       </ul>
-    </DocLayout>
+      </div>
+    </LabLayout>
   );
 }
 

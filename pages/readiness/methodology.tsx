@@ -473,10 +473,11 @@ export default function Methodology() {
 
       <style jsx global>{`
         :root {
-          --bg: #05070b; --bg1: #0a0d13; --bg2: #0f1520; --bg3: #131a27;
-          --ink: #eaf0f8; --dim: #8a97a8; --faint: #5a6676;
-          --hair: #1e2836; --hair2: rgba(30,40,54,0.55);
-          --green: #46d877; --gold: #f0b429; --blue: #5b9dff; --red: #f2637a;
+          /* lab-memo LIGHT (the tools register; /readiness is the reference) */
+          --bg: #faf9f6; --bg1: #ffffff; --bg2: #ffffff; --bg3: #f3f2ee;
+          --ink: #191c23; --dim: #5d6470; --faint: #9aa0ab;
+          --hair: rgba(25,28,35,0.12); --hair2: rgba(25,28,35,0.08);
+          --green: #0d9448; --gold: #e08e00; --blue: #2f6fed; --red: #d64545;
           --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
           --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
         }
@@ -488,13 +489,13 @@ export default function Methodology() {
 
       <style jsx>{`
         .page { min-height: 100vh; background:
-          radial-gradient(1100px 640px at 50% -10%, #0c1220, var(--bg)); }
+          radial-gradient(90% 55% at 50% -8%, rgba(13,148,72,0.08), transparent 60%), radial-gradient(56% 22% at 50% 0%, rgba(240,180,41,0.13), transparent 62%), var(--bg); }
         .nav { display: flex; align-items: center; justify-content: space-between; max-width: 720px; margin: 0 auto; padding: 20px 22px; }
         .wm { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; font-size: 14px; }
         .wm .wt b.g { color: var(--green); font-weight: 700; }
         .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); flex: 0 0 auto; }
-        .nav-cta { background: var(--green); color: #05130a; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 4px 18px rgba(70,216,119,0.24); transition: transform 0.15s ease, box-shadow 0.2s ease; }
-        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(70,216,119,0.32); }
+        .nav-cta { background: var(--ink); color: #ffffff; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 4px 18px rgba(13,148,72,0.24); transition: transform 0.15s ease, box-shadow 0.2s ease; }
+        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(13,148,72,0.32); }
 
         .wrap { max-width: 720px; margin: 0 auto; padding: 20px 22px 90px; line-height: 1.5; }
         .crumb { font-family: var(--mono); font-size: 11px; color: var(--faint); display: flex; align-items: center; gap: 9px; margin-bottom: 20px; letter-spacing: 0.4px; }
@@ -516,8 +517,8 @@ export default function Methodology() {
 
         /* worked-example card */
         .card { margin: 24px 0 10px; background: linear-gradient(180deg, var(--bg2), var(--bg1));
-          border: 1px solid rgba(70,216,119,0.32); border-radius: 18px; padding: 22px 24px; position: relative; overflow: hidden;
-          box-shadow: 0 0 0 1px rgba(70,216,119,0.05), 0 22px 60px -34px rgba(70,216,119,0.55); }
+          border: 1px solid rgba(13,148,72,0.32); border-radius: 18px; padding: 22px 24px; position: relative; overflow: hidden;
+          box-shadow: 0 0 0 1px rgba(13,148,72,0.06), 0 22px 60px -34px rgba(13,148,72,0.55); }
         .tag { font-family: var(--mono); font-weight: 700; font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); }
         .num { font-size: 62px; font-weight: 800; letter-spacing: -2px; line-height: 0.95; margin: 10px 0 2px; color: var(--green); }
         .num small { font-size: 21px; font-weight: 700; color: var(--dim); letter-spacing: -0.4px; }
@@ -556,9 +557,9 @@ export default function Methodology() {
         .wpin { display: block; font-family: var(--mono); font-weight: 600; font-size: 9px; color: var(--faint); letter-spacing: 0.02em; margin-top: 2px; }
         .wbar { position: relative; height: 24px; background: var(--bg3); border: 1px solid var(--hair); border-radius: 6px; overflow: hidden; }
         .wfill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 5px 0 0 5px; }
-        .wrow.nbme .wfill { background: linear-gradient(90deg, #2b5c3a, var(--green)); }
-        .wrow.uwsa .wfill { background: linear-gradient(90deg, #274063, var(--blue)); }
-        .wwt { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); font-family: var(--mono); font-weight: 700; font-size: 11.5px; color: var(--ink); text-shadow: 0 1px 2px rgba(0,0,0,0.6); }
+        .wrow.nbme .wfill { background: linear-gradient(90deg, rgba(13,148,72,0.45), var(--green)); }
+        .wrow.uwsa .wfill { background: linear-gradient(90deg, rgba(47,111,237,0.45), var(--blue)); }
+        .wwt { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); font-family: var(--mono); font-weight: 700; font-size: 11.5px; color: var(--ink); text-shadow: 0 1px 2px rgba(25,28,35,0.12); }
         .wlead { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); font-family: var(--mono); font-weight: 700; font-size: 9px; letter-spacing: 0.08em; color: rgba(255,255,255,0.82); text-transform: uppercase; }
         .pfoot { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--hair); color: var(--faint); font-size: 12.5px; line-height: 1.6; max-width: 60ch; }
 
@@ -590,7 +591,7 @@ export default function Methodology() {
         .cta { margin-top: 46px; padding-top: 30px; border-top: 1px solid var(--hair); }
         .ctline { color: var(--ink); font-size: 16px; font-weight: 500; line-height: 1.6; margin: 0 0 18px; max-width: 60ch; }
         .ctrow { display: flex; gap: 12px; flex-wrap: wrap; }
-        .ct-primary { background: var(--green); color: #05130a; font-family: var(--mono); font-weight: 800; font-size: 13px; letter-spacing: 0.3px; padding: 13px 20px; border-radius: 12px; box-shadow: 0 6px 26px rgba(70,216,119,0.28); transition: transform 0.15s ease; }
+        .ct-primary { background: var(--green); color: #ffffff; font-family: var(--mono); font-weight: 800; font-size: 13px; letter-spacing: 0.3px; padding: 13px 20px; border-radius: 12px; box-shadow: 0 6px 26px rgba(13,148,72,0.28); transition: transform 0.15s ease; }
         .ct-primary:hover { transform: translateY(-1px); }
         .ct-secondary { border: 1px solid var(--hair); color: var(--ink); font-family: var(--mono); font-weight: 700; font-size: 13px; letter-spacing: 0.3px; padding: 13px 20px; border-radius: 12px; }
         .ct-secondary:hover { border-color: var(--green); color: var(--green); }
@@ -636,7 +637,7 @@ function BandDiagram({ low, high, center }: { low: number; high: number; center:
         .bd { margin: 6px 0 4px; max-width: 440px; }
         .track { position: relative; height: 12px; background: var(--bg3); border: 1px solid var(--hair); border-radius: 999px; margin-top: 34px; }
         .band { position: absolute; top: -1px; bottom: -1px; background: linear-gradient(90deg, rgba(240,180,41,0.5), var(--gold)); border-radius: 999px; box-shadow: 0 0 14px rgba(240,180,41,0.4); }
-        .ctr { position: absolute; top: -3px; width: 2px; height: 18px; background: #fff; transform: translateX(-1px); box-shadow: 0 0 6px rgba(255,255,255,0.5); }
+        .ctr { position: absolute; top: -3px; width: 2px; height: 18px; background: var(--ink); transform: translateX(-1px); box-shadow: 0 0 6px rgba(25,28,35,0.35); }
         .mk { position: absolute; top: -4px; width: 2px; height: 20px; transform: translateX(-1px); }
         .mk.pass { background: var(--red); } .mk.mean { background: var(--dim); }
         .lbl { position: absolute; top: -28px; transform: translateX(-50%); font-family: var(--mono); font-size: 9px; letter-spacing: 0.3px; white-space: nowrap; }
