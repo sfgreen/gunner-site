@@ -41,8 +41,6 @@ function AppleIcon() {
 export default function Home({ record }: { record: TrackRecord }) {
   const rec = record && record.last10?.length ? record : FALLBACK;
   const forum = rec.bySource?.forum;
-  const APP = appStoreUrl(CAMPAIGN);
-
   // Referral bridge: ?ref=CODE shows a banner and copies GUNNERREF:CODE to the
   // clipboard on the store tap; the app reads UIPasteboard once on first launch.
   const [refCode, setRefCode] = useState<string | null>(null);
@@ -50,9 +48,13 @@ export default function Home({ record }: { record: TrackRecord }) {
     const r = new URLSearchParams(window.location.search).get('ref');
     if (r && r.trim()) setRefCode(r.trim().toUpperCase());
   }, []);
+  // A referred visit is its own acquisition channel: ct=referral (vs ct=home)
+  // so Apple's campaign report can trend installs that came from a share link.
+  const campaign = refCode ? 'referral' : CAMPAIGN;
+  const APP = appStoreUrl(campaign);
   const store = (location: string) => () => {
     if (refCode) { try { navigator.clipboard.writeText(`GUNNERREF:${refCode}`); } catch { /* manual entry still works */ } }
-    track('store_click', { source: CAMPAIGN, location, ref: referrerHost() });
+    track('store_click', { source: campaign, location, ref: referrerHost() });
   };
 
   const jsonLd = {
