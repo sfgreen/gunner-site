@@ -1,0 +1,38 @@
+# Verifies the SEO contract against the DEPLOYED page, not the source.
+#
+# Source can be right while production is wrong: a component refactor moves a
+# <Head>, a layout swap drops a canonical, a new page never reaches the sitemap.
+# This runs after Vercel reports a successful deployment and checks what Google
+# would actually receive.
+name: seo-verify
+
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      base:
+        description: Origin to verify (defaults to production)
+        required: false
+        default: https://stepgunner.com
+
+jobs:
+  verify:
+    # deployment_status fires for every state; only act on a live success, and
+    # only for production so preview URLs do not fail on absolute canonicals.
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       github.event.deployment_status.environment == 'Production')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install certifi
+        run: pip install --quiet certifi
+
+      - name: Verify production HTML
+        run: python3 scripts/seo_verify.py --base "${{ github.event.inputs.base || 'https://stepgunner.com' }}"

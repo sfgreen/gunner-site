@@ -134,14 +134,16 @@ export default function Predictor() {
     <>
       <Head>
         <title>Step 2 Score Predictor | NBME + UWSA Score Conversion, Calibrated</title>
-        <meta
-          name="description"
-          content="Free Step 2 CK score predictor and NBME score conversion for forms 9 to 16 and UWSA 1 to 3. Fit on 258 real score reports, tested blind: average miss 4.1 points. Honest ranges, not promises."
-        />
+        <meta name="description" content="Free Step 2 CK score predictor and NBME score conversion for forms 9 to 16 and UWSA 1 to 3. Fit on 258 real score reports, average miss 4.1 points." />
         <link rel="canonical" href={CANONICAL} />
         <meta property="og:title" content="Step 2 Score Predictor: NBME score conversion that shows its work" />
         <meta property="og:description" content="Fit on 258 real score reports. Tested blind on 32 more: average miss 4.1 points. NBME 9-16 and UWSA conversions, free." />
         <meta property="og:url" content={CANONICAL} />
+        <meta property="og:image" content="https://stepgunner.com/api/og" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://stepgunner.com/api/og" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#faf9f6" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -35,7 +35,7 @@ export default function Research({ record }: { record: Record }) {
   const asOf = record?.computedAt ? new Date(record.computedAt * 1000).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : null;
   const store = appStoreUrl(CAMPAIGN);
   const title = 'I pulled 269 NBME to Step 2 score pairs off Reddit. Here is what actually predicts your score.';
-  const desc = 'A medical student\'s analysis of 269 r/step2 score reports: how far above your NBME average you land, which forms read high or low, how much recency matters, and how the model does on students it never trained on.';
+  const desc = 'An analysis of 269 r/step2 score reports: how far above your NBME average you land, which forms read high or low, and how much recency matters.';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ScholarlyArticle',
@@ -56,7 +56,7 @@ export default function Research({ record }: { record: Record }) {
       title="What actually predicts your Step 2 score"
       lede={<>269 r/step2 score reports, one calibrated model, and its out-of-sample record, updated every Monday. Written by a medical student who believed the folklore until he checked it.</>}
       crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research/nbme-to-step-2', label: 'Research' }]}
-      metaTitle="NBME to Step 2 CK: what 269 Reddit score reports actually show | Step Gunner Research"
+      metaTitle="NBME to Step 2 CK: What 269 Real Score Reports Show"
       metaDesc={desc}
       campaign={CAMPAIGN}
       head={<>

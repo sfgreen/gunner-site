@@ -81,7 +81,7 @@ export default function Methodology() {
 
   const CANON = 'https://stepgunner.com/readiness/methodology';
   const TITLE = 'How the Step 2 CK score predictor works';
-  const DESC = 'A full, honest walkthrough of the Step Gunner Step 2 CK score predictor: how NBME and UWSA practice scores become a projected range, the exact constants, and where the model stops. The only Step 2 CK predictor that shows its work.';
+  const DESC = 'How the Step 2 CK score predictor works: how NBME and UWSA practice scores become a projected range, the exact constants used, and where the model stops.';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',

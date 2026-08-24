@@ -12,9 +12,9 @@ export const neurology: GuideData = {
   meta: {
     slug: 'neurology',
     clerkship: 'Neurology',
-    title: 'How to Study for the Neurology Shelf: Resources and a Week-by-Week Plan | Step Gunner',
+    title: 'How to Study for the Neurology Shelf: Resources and a Plan',
     description:
-      'How to study for the NBME Neurology shelf: the honest clerkship resource stack (UWorld, Blueprints Neurology, Case Files, OnlineMedEd, Anki, Divine Intervention, AMBOSS), a week-by-week plan, and answers to the questions students actually search.',
+      'The honest Neurology shelf resource stack (UWorld, Blueprints Neurology, Case Files, OnlineMedEd, Anki), plus a week-by-week plan from an MS4.',
     ogTitle: 'How to Study for the Neurology Shelf: Resources and a Week-by-Week Plan',
     ogDescription:
       'The real MS3 resource stack for the neurology shelf, positioned by role, a week-by-week plan, and a plain-English shelf FAQ. Written by an MS4 who has been through it.',

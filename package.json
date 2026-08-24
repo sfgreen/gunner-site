@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "verify:seo": "python3 scripts/seo_verify.py"
   },
   "dependencies": {
     "firebase-admin": "^13.8.0",

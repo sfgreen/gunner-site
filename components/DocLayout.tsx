@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import { ReactNode } from 'react';
 
 // Shared dark "terminal" chrome for the legal / support pages, matching the
@@ -13,11 +14,17 @@ export default function DocLayout({
   metaDesc: string;
   children: ReactNode;
 }) {
+  // Self-referential canonical off the route, so every page through this layout
+  // gets one without each having to remember. Query strings are dropped: a
+  // legal page is the same document however it was linked.
+  const canonical = `https://stepgunner.com${useRouter().pathname}`;
+
   return (
     <>
       <Head>
         <title>{metaTitle}</title>
         <meta name="description" content={metaDesc} />
+        <link rel="canonical" href={canonical} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#faf9f6" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

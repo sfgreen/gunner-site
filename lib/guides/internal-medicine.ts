@@ -16,9 +16,9 @@ export const internalMedicine: GuideData = {
   meta: {
     slug: 'internal-medicine',
     clerkship: 'Internal Medicine',
-    title: 'How to Study for the Internal Medicine Shelf: Resources and a Week-by-Week Plan | Step Gunner',
+    title: 'How to Study for the Internal Medicine Shelf: Resources and Plan',
     description:
-      'How to study for the NBME Internal Medicine (medicine) shelf: the honest clerkship resource stack (UWorld, Step-Up to Medicine, OnlineMedEd, Anki, Divine Intervention, AMBOSS, Pretest), a week-by-week plan, and answers to the questions students actually search.',
+      'The honest IM shelf resource stack (UWorld, Step-Up to Medicine, OnlineMedEd, Anki, Divine Intervention, AMBOSS), plus a week-by-week plan from an MS4.',
     ogTitle: 'How to Study for the Internal Medicine Shelf: Resources and a Week-by-Week Plan',
     ogDescription:
       'The real MS3 resource stack for the medicine shelf, positioned by role, a week-by-week plan, and a plain-English shelf FAQ. Written by an MS4 who has been through it.',

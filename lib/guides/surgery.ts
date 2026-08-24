@@ -13,9 +13,9 @@ export const surgery: GuideData = {
   meta: {
     slug: 'surgery',
     clerkship: 'Surgery',
-    title: 'How to Study for the Surgery Shelf: Resources and a Week-by-Week Plan | Step Gunner',
+    title: 'How to Study for the Surgery Shelf: Resources and a Plan',
     description:
-      'How to study for the NBME Surgery shelf: the honest clerkship resource stack (UWorld, Pestana, De Virgilio, Case Files, OnlineMedEd, Anki, Divine Intervention, AMBOSS, Pretest), a week-by-week plan, and answers to the questions students actually search.',
+      'The honest Surgery shelf resource stack (UWorld, Pestana, De Virgilio, Case Files, OnlineMedEd, Anki), plus a week-by-week plan from an MS4.',
     ogTitle: 'How to Study for the Surgery Shelf: Resources and a Week-by-Week Plan',
     ogDescription:
       'The real MS3 resource stack for the surgery shelf, positioned by role, a week-by-week plan, and a plain-English shelf FAQ. Written by an MS4 who has been through it.',

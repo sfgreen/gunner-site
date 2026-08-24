@@ -14,9 +14,9 @@ export const pediatrics: GuideData = {
   meta: {
     slug: 'pediatrics',
     clerkship: 'Pediatrics',
-    title: 'How to Study for the Pediatrics Shelf: Resources and a 6 to 8 Week Plan | Step Gunner',
+    title: 'How to Study for the Pediatrics Shelf: Resources and a Plan',
     description:
-      'How to study for the NBME Pediatrics shelf: the honest clerkship resource stack (UWorld, Anki, OnlineMedEd, Case Files, BRS, Divine Intervention, AMBOSS, Pretest), a 6 to 8 week plan, and answers to the questions students actually search.',
+      'The honest Pediatrics shelf resource stack (UWorld, Anki, OnlineMedEd, Case Files, BRS, Divine Intervention), plus a 6 to 8 week plan from an MS4.',
     ogTitle: 'How to Study for the Pediatrics Shelf: Resources and a 6 to 8 Week Plan',
     ogDescription:
       'The real MS3 resource stack for the Peds shelf, positioned by role, a week-by-week plan, and a plain-English shelf FAQ. Written by an MS4 who has been through it.',

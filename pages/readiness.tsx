@@ -106,6 +106,11 @@ export default function Readiness({ og }: { og: OG }) {
         <meta property="og:title" content={og.title} />
         <meta property="og:description" content={og.desc} />
         <meta property="og:url" content={og.url} />
+        {/* Always the bare page: a shared ?e= card is the same content with a
+            different payload, so every share must consolidate here rather than
+            becoming its own indexable near-duplicate. og:url above keeps the
+            payload so the unfurl still shows the student's own card. */}
+        <link rel="canonical" href="https://stepgunner.com/readiness" />
         <meta property="og:image" content={og.image} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />

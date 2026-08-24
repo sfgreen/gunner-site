@@ -32,7 +32,7 @@ export default function GuidesHub({ live, soon }: { live: LiveCard[]; soon: Comi
         <title>Clerkship Shelf Study Guides | Step Gunner</title>
         <meta
           name="description"
-          content="Honest, resource-by-role study guides for the NBME shelf exams: the real resource stack, a 6 to 8 week plan, and a plain-English FAQ for each clerkship. Written by a med student who has been through it."
+          content="Study guides for all nine NBME shelf exams: the real resource stack, a week-by-week plan, and a plain-English FAQ, written by a med student who took them."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#faf9f6" />

@@ -13,9 +13,9 @@ export const familyMedicine: GuideData = {
   meta: {
     slug: 'family-medicine',
     clerkship: 'Family Medicine',
-    title: 'How to Study for the Family Medicine Shelf: Resources and a Week-by-Week Plan | Step Gunner',
+    title: 'How to Study for the Family Medicine Shelf: Resources and Plan',
     description:
-      'How to study for the NBME Family Medicine shelf: the honest clerkship resource stack (UWorld, AAFP questions, Case Files, OnlineMedEd, Anki, USPSTF guidelines, Divine Intervention, AMBOSS), a week-by-week plan, and answers to the questions students actually search.',
+      'The honest Family Medicine shelf resource stack (UWorld, AAFP questions, Case Files, OnlineMedEd, USPSTF), plus a week-by-week plan from an MS4.',
     ogTitle: 'How to Study for the Family Medicine Shelf: Resources and a Week-by-Week Plan',
     ogDescription:
       'The real MS3 resource stack for the family medicine shelf, positioned by role, a week-by-week plan, and a plain-English shelf FAQ. Written by an MS4 who has been through it.',

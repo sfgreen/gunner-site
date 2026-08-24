@@ -14,9 +14,9 @@ export const foundations: GuideData = {
   meta: {
     slug: 'foundations',
     clerkship: 'Ethics & Biostats',
-    title: 'How to Study Biostatistics and Ethics for Step 2 CK: Resources and a Plan | Step Gunner',
+    title: 'How to Study Biostatistics and Ethics for Step 2 CK',
     description:
-      'How to study the biostatistics and medical ethics that show up on every NBME shelf and on Step 2 CK: the honest resource stack (UWorld, Randy Neil, First Aid, Divine Intervention, Anki), a simple plan, and answers to the questions students actually search.',
+      'The biostats and ethics that show up on every shelf and on Step 2 CK: the resource stack (UWorld, Randy Neil, First Aid, Anki) and a simple plan.',
     ogTitle: 'How to Study Biostatistics and Ethics for Step 2 CK',
     ogDescription:
       'The cross-cutting block that appears on every shelf: biostatistics and ethics, positioned by resource, a running plan, and a plain-English FAQ. Written by an MS4 who has been through it.',

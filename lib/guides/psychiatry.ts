@@ -12,9 +12,9 @@ export const psychiatry: GuideData = {
   meta: {
     slug: 'psychiatry',
     clerkship: 'Psychiatry',
-    title: 'How to Study for the Psychiatry Shelf: Resources and a Week-by-Week Plan | Step Gunner',
+    title: 'How to Study for the Psychiatry Shelf: Resources and a Plan',
     description:
-      'How to study for the NBME Psychiatry shelf: the honest clerkship resource stack (UWorld, First Aid for the Psychiatry Clerkship, Case Files, OnlineMedEd, Anki, Divine Intervention, AMBOSS), a week-by-week plan, and answers to the questions students actually search.',
+      'The honest Psychiatry shelf resource stack (UWorld, First Aid for the Psychiatry Clerkship, Case Files, Anki), plus a week-by-week plan from an MS4.',
     ogTitle: 'How to Study for the Psychiatry Shelf: Resources and a Week-by-Week Plan',
     ogDescription:
       'The real MS3 resource stack for the psychiatry shelf, positioned by role, a week-by-week plan, and a plain-English shelf FAQ. Written by an MS4 who has been through it.',

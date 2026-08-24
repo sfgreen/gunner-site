@@ -69,7 +69,7 @@ export default function Home({ record }: { record: TrackRecord }) {
     <>
       <Head>
         <title>Step Gunner | Know your Step 2 CK number before exam day</title>
-        <meta name="description" content="Enter your NBME and UWSA forms and get the range a calibrated model projects, checked against real students every week. Then study in the app that carries the same gauge: 7,700+ Step 2 CK questions, next-best-step chains, spaced repetition." />
+        <meta name="description" content="Enter your NBME and UWSA forms and get the Step 2 CK range a calibrated model projects, checked against real students every week. Then study in the app." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#faf9f6" />
         <meta property="og:title" content="Step Gunner | Know your Step 2 CK number before exam day" />

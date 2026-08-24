@@ -12,9 +12,9 @@ export const obgyn: GuideData = {
   meta: {
     slug: 'obgyn',
     clerkship: 'OB/GYN',
-    title: 'How to Study for the OB/GYN Shelf: Resources and a Week-by-Week Plan | Step Gunner',
+    title: 'How to Study for the OB/GYN Shelf: Resources and a Plan',
     description:
-      'How to study for the NBME Obstetrics and Gynecology shelf: the honest clerkship resource stack (UWorld, uWise, Case Files, Blueprints, OnlineMedEd, Anki, Divine Intervention, AMBOSS), a week-by-week plan, and answers to the questions students actually search.',
+      'The honest OB/GYN shelf resource stack (UWorld, uWise, Case Files, Blueprints, OnlineMedEd, Anki), plus a week-by-week plan from an MS4.',
     ogTitle: 'How to Study for the OB/GYN Shelf: Resources and a Week-by-Week Plan',
     ogDescription:
       'The real MS3 resource stack for the OB/GYN shelf, positioned by role, a week-by-week plan, and a plain-English shelf FAQ. Written by an MS4 who has been through it.',

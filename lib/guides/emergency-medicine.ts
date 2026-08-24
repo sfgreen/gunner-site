@@ -13,9 +13,9 @@ export const emergencyMedicine: GuideData = {
   meta: {
     slug: 'emergency-medicine',
     clerkship: 'Emergency Medicine',
-    title: 'How to Study for the Emergency Medicine Shelf: Resources and a Plan | Step Gunner',
+    title: 'How to Study for the Emergency Medicine Shelf: A Study Plan',
     description:
-      'How to study for the NBME Emergency Medicine subject exam: the honest clerkship resource stack (UWorld, Case Files, OnlineMedEd, Anki, WikEM, Divine Intervention, AMBOSS), a week-by-week plan, and answers to the questions students actually search.',
+      'The honest EM shelf resource stack (UWorld, Case Files, OnlineMedEd, Anki, WikEM, Divine Intervention), plus a week-by-week plan from an MS4.',
     ogTitle: 'How to Study for the Emergency Medicine Shelf: Resources and a Plan',
     ogDescription:
       'The real MS3 resource stack for the emergency medicine subject exam, positioned by role, a week-by-week plan, and a plain-English FAQ. Written by an MS4 who has been through it.',
