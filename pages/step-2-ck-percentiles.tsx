@@ -110,7 +110,12 @@ export default function Percentiles() {
               {STEPS.map((s) => (
                 <tr key={s.lo} className={s === STEEPEST ? 'peak' : ''}>
                   <td className="n">{s.lo} to {s.hi}</td>
-                  <td className="r n"><b>+{s.gain}</b></td>
+                  <td className="r n">
+                    <span className="mag">
+                      <span className="magbar"><i style={{ width: `${s.gain / 27 * 100}%` }} /></span>
+                      <b>+{s.gain}</b>
+                    </span>
+                  </td>
                   <td className="how">
                     {s.gain >= 25 ? 'the steepest stretch on the curve'
                       : s.gain >= 20 ? 'dense: points move you a lot'
@@ -249,6 +254,15 @@ export default function Percentiles() {
         tr.peak td { background: rgba(47, 111, 237, 0.08); }
         tr.mine td { background: rgba(13, 148, 72, 0.09); }
         .r { text-align: right; }
+        /* Bar carries the shape of the curve at a glance; the number beside it
+           is the precise read and the label that keeps the fill accessible. */
+        .mag { display: inline-flex; align-items: center; gap: 9px; justify-content: flex-end; width: 100%; }
+        .magbar {
+          flex: 1 1 auto; max-width: 110px; height: 7px; border-radius: 999px;
+          background: var(--bg-3); overflow: hidden; display: block;
+        }
+        .magbar i { display: block; height: 100%; background: var(--blue); border-radius: 999px; }
+        .mag b { min-width: 32px; text-align: right; font-variant-numeric: tabular-nums; }
         .n { font-variant-numeric: tabular-nums; white-space: nowrap; }
         .how { font-size: 13.5px; color: var(--ink-dim); }
         .fail { color: var(--gold); }

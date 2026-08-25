@@ -159,7 +159,14 @@ export default function ScoreBySpecialty() {
                 return (
                   <tr key={b} className={mine ? 'mine' : ''}>
                     <td className="n"><b>{bandLabel(b)}</b>{mine ? <i className="you">you</i> : null}</td>
-                    <td className="r n">{p == null ? '--' : `${p}%`}</td>
+                    <td className="r n">
+                      {p == null ? '--' : (
+                        <span className="mag">
+                          <span className="magbar"><i style={{ width: `${p}%` }} /></span>
+                          <b>{p}%</b>
+                        </span>
+                      )}
+                    </td>
                     <td className="r n">{cn.toLocaleString()}</td>
                     <td className="solid">
                       {cn === 0 ? 'no data'
@@ -203,7 +210,12 @@ export default function ScoreBySpecialty() {
                     <td>{l.name}</td>
                     <td className="r n">{p['230-239']}%</td>
                     <td className="r n">{p['250+']}%</td>
-                    <td className="r n"><b>{l.gain > 0 ? `+${l.gain}` : l.gain}</b></td>
+                    <td className="r n">
+                      <span className="mag">
+                        <span className="magbar"><i style={{ width: `${Math.max(0, l.gain) / 43 * 100}%` }} /></span>
+                        <b>{l.gain > 0 ? `+${l.gain}` : l.gain}</b>
+                      </span>
+                    </td>
                   </tr>
                 );
               })}
@@ -251,8 +263,8 @@ export default function ScoreBySpecialty() {
           </li>
         </ol>
         <p className="fine">
-          {META.note} Passing score {PASS}, which is the current standard; pages still quoting 214
-          are using the pre-2022 number.
+          {META.note} Pages still quoting 214 as the passing score are using the pre-2022 number;
+          it has been {PASS} since.
         </p>
       </section>
 
@@ -308,6 +320,16 @@ export default function ScoreBySpecialty() {
         tr.hot td { background: rgba(224, 142, 0, 0.07); }
         tr.flat td { color: var(--ink-dim); }
         .r { text-align: right; }
+        /* Magnitude encoded as a bar, with the value always beside it. The bar
+           is the fast read; the number is the precise one and doubles as the
+           label that keeps a low-contrast fill accessible. */
+        .mag { display: inline-flex; align-items: center; gap: 9px; justify-content: flex-end; width: 100%; }
+        .magbar {
+          flex: 1 1 auto; max-width: 92px; height: 7px; border-radius: 999px;
+          background: var(--bg-3); overflow: hidden; display: block;
+        }
+        .magbar i { display: block; height: 100%; background: var(--green); border-radius: 999px; }
+        .mag b { min-width: 40px; text-align: right; font-variant-numeric: tabular-nums; }
         .n { font-variant-numeric: tabular-nums; white-space: nowrap; }
         .you {
           font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase;
