@@ -17,6 +17,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     urlNode('/step-2-score-predictor', 'weekly', '0.9'),
     urlNode('/guides', 'weekly', '0.8'),
     urlNode('/research/nbme-to-step-2', 'weekly', '0.9'),
+    urlNode('/step-2-score-by-specialty', 'monthly', '0.9'),
+    urlNode('/step-2-ck-percentiles', 'monthly', '0.9'),
     urlNode('/readiness/methodology', 'monthly', '0.7'),
     // The Free 120 interfaces are static pages under public/, so they are easy to
     // forget here; scripts/seo_verify.py fails the build if a live route goes
