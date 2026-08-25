@@ -137,7 +137,10 @@ export default function Home({ record }: { record: TrackRecord }) {
         .lrow { display: grid; grid-template-columns: 64px 1fr 40px; align-items: center; gap: 10px; height: 18px; font-family: var(--mono); font-size: 10.5px; }
         .lrow .t { position: relative; height: 18px; } .lrow .t:before { content: ""; position: absolute; left: 0; right: 0; top: 8.5px; height: 1px; background: var(--hair-strong); }
         .band { position: absolute; top: 1px; height: 16px; left: 41.1%; width: 17.8%; background: rgba(224,142,0,0.10); border-left: 1px dashed rgba(224,142,0,0.55); border-right: 1px dashed rgba(224,142,0,0.55); border-radius: 3px; }
-        .dot { position: absolute; top: 4px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; border: 2px solid var(--bg-2); } .dot.in { background: var(--green); } .dot.out { background: var(--red); }
+        /* Scoped to the holdout chart. Unscoped, this rule also matched the wordmark
+           dot in the nav and absolutely positioned it out of the flex row, which is
+           why the logo dot floated up and left of "STEP GUNNER". */
+        .lrow .t .dot { position: absolute; top: 4px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; border: 2px solid var(--bg-2); } .lrow .t .dot.in { background: var(--green); } .lrow .t .dot.out { background: var(--red); }
         .lrow .e { text-align: right; font-weight: 700; color: var(--ink-dim); } .lrow .e.out { color: var(--red); }
         .lrow .f { color: var(--ink-faint); white-space: nowrap; } .lrow .f i { font-style: normal; font-size: 8px; border: 1px solid var(--hair-strong); border-radius: 3px; padding: 0 3px; margin-left: 3px; }
         .led .foot { font-family: var(--mono); font-size: 10px; color: var(--ink-faint); margin-top: 10px; line-height: 1.6; }
