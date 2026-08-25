@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import SiteShell from '../../components/SiteShell';
 import Link from 'next/link';
 import {
   PASS, MEAN, GMIN, GMAX, CAL, NORM,
@@ -117,13 +118,8 @@ export default function Methodology() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
 
-      <div className="page">
-        <nav className="nav">
-          <a href="/" className="wm"><span className="dot" /><span className="wt">STEP <b className="g">GUNNER</b></span></a>
-          <Link href="/readiness" className="nav-cta" onClick={() => track('methodology_run_check', { location: 'nav', ref: referrerHost() })}>Run the check</Link>
-        </nav>
-
-        <main className="wrap">
+      <SiteShell campaign={'methodology_web'} measure="article">
+        <div className="wrap">
           <div className="crumb"><Link href="/readiness">Readiness check</Link><span className="sep">/</span><span>Methodology</span></div>
           <span className="eyebrow">Methodology</span>
           <h1>How the Step 2 CK score predictor works</h1>
@@ -463,41 +459,18 @@ export default function Methodology() {
               <a href={APP} className="ct-secondary" onClick={() => track('store_click', { source: 'methodology', location: 'cta', ref: referrerHost() })}>Get Step Gunner</a>
             </div>
           </section>
-
-          <footer className="foot">
-            <Link href="/">stepgunner.com</Link>
-            <span>Rezumab LLC</span>
-          </footer>
-        </main>
-      </div>
+        </div>
+      </SiteShell>
 
       <style jsx global>{`
-        :root {
-          /* lab-memo LIGHT (the tools register; /readiness is the reference) */
-          --bg: #faf9f6; --bg1: #ffffff; --bg2: #ffffff; --bg3: #f3f2ee;
-          --ink: #191c23; --dim: #5d6470; --faint: #9aa0ab;
-          --hair: rgba(25,28,35,0.12); --hair2: rgba(25,28,35,0.08);
-          --green: #0d9448; --gold: #e08e00; --blue: #2f6fed; --red: #d64545;
-          --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
-          --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
-        }
-        * { box-sizing: border-box; }
-        html, body { margin: 0; padding: 0; }
-        body { font-family: var(--sans); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
-        a { color: inherit; text-decoration: none; }
-      `}</style>
+`}</style>
 
       <style jsx>{`
-        .page { min-height: 100vh; background:
           radial-gradient(90% 55% at 50% -8%, rgba(13,148,72,0.08), transparent 60%), radial-gradient(56% 22% at 50% 0%, rgba(240,180,41,0.13), transparent 62%), var(--bg); }
-        .nav { display: flex; align-items: center; justify-content: space-between; max-width: 720px; margin: 0 auto; padding: 20px 22px; }
-        .wm { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; font-size: 14px; }
         .wm .wt b.g { color: var(--green); font-weight: 700; }
-        .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); flex: 0 0 auto; }
-        .nav-cta { background: var(--ink); color: #ffffff; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 4px 18px rgba(13,148,72,0.24); transition: transform 0.15s ease, box-shadow 0.2s ease; }
         .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(13,148,72,0.32); }
 
-        .wrap { max-width: 720px; margin: 0 auto; padding: 20px 22px 90px; line-height: 1.5; }
+        .wrap { padding: 4px 0 30px; }
         .crumb { font-family: var(--mono); font-size: 11px; color: var(--faint); display: flex; align-items: center; gap: 9px; margin-bottom: 20px; letter-spacing: 0.4px; }
         .crumb :global(a) { color: var(--dim); }
         .crumb :global(a):hover { color: var(--green); }
@@ -596,7 +569,6 @@ export default function Methodology() {
         .ct-secondary { border: 1px solid var(--hair); color: var(--ink); font-family: var(--mono); font-weight: 700; font-size: 13px; letter-spacing: 0.3px; padding: 13px 20px; border-radius: 12px; }
         .ct-secondary:hover { border-color: var(--green); color: var(--green); }
 
-        .foot { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; font-family: var(--mono); font-size: 11px; color: var(--faint); }
         .foot :global(a) { color: var(--dim); }
 
         @media (max-width: 560px) {
@@ -611,7 +583,6 @@ export default function Methodology() {
           .ttier { display: none; }
         }
         @media (prefers-reduced-motion: reduce) {
-          .nav-cta, .ct-primary { transition: none; }
         }
       `}</style>
     </>

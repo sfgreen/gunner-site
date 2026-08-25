@@ -6,6 +6,7 @@
 // Reviews are verbatim App Store reviews already cited on the guides; never
 // paraphrased. No em or en dashes in copy.
 import Head from 'next/head';
+import SiteShell from '../components/SiteShell';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import type { GetServerSideProps } from 'next';
@@ -83,27 +84,10 @@ export default function Home({ record }: { record: TrackRecord }) {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
       <style jsx global>{`
-        :root {
-          --bg: #faf9f6; --bg-2: #ffffff; --bg-3: #f3f2ee;
-          --hair: rgba(25,28,35,0.10); --hair-strong: rgba(25,28,35,0.17);
-          --ink: #191c23; --ink-dim: #5d6470; --ink-faint: #9aa0ab;
-          --green: #0d9448; --gold: #e08e00; --blue: #2f6fed; --red: #d64545; --violet: #af52ff;
-          --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
-          --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
-        }
-        * { box-sizing: border-box; } html, body { margin: 0; padding: 0; }
-        body { font-family: var(--sans); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
-        a { color: inherit; text-decoration: none; }
-        ::selection { background: var(--gold); color: #fff; }
-      `}</style>
+`}</style>
       <style jsx>{`
-        .page { min-height: 100vh; background: radial-gradient(90% 55% at 50% -8%, rgba(13,148,72,0.08), transparent 60%), radial-gradient(56% 22% at 50% 0%, rgba(240,180,41,0.13), transparent 62%), var(--bg); }
-        .nav { display: flex; align-items: center; justify-content: space-between; max-width: 1040px; margin: 0 auto; padding: 20px 22px; }
-        .wm { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; font-size: 14px; }
         .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); } .wm b { color: var(--green); }
-        .navlinks { display: flex; gap: 22px; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--ink-dim); }
         .navlinks :global(a):hover { color: var(--ink); }
-        .nav-cta { background: var(--ink); color: #fff; padding: 9px 18px; border-radius: 999px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; }
         @media (max-width: 720px) { .navlinks { display: none; } }
         .hero { max-width: 1040px; margin: 0 auto; padding: 26px 22px 10px; display: grid; grid-template-columns: 1.05fr 1fr; gap: 36px; align-items: start; }
         @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
@@ -171,17 +155,9 @@ export default function Home({ record }: { record: TrackRecord }) {
         .q .stars { color: var(--gold); font-size: 13px; letter-spacing: 2px; } .q p { font-size: 14.5px; color: var(--ink); line-height: 1.55; margin: 8px 0; } .q .who { font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint); }
         .final { max-width: 1040px; margin: 54px auto 0; padding: 0 22px; text-align: center; }
         .final h2 { font-size: 32px; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 10px; } .final p { color: var(--ink-dim); font-size: 16px; margin-bottom: 20px; }
-        footer { max-width: 1040px; margin: 60px auto 0; padding: 22px 22px 50px; border-top: 1px solid var(--hair); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-family: var(--mono); font-size: 11px; color: var(--ink-faint); }
-        footer :global(a) { color: var(--ink-dim); margin-right: 14px; }
       `}</style>
 
-      <div className="page">
-        <nav className="nav">
-          <a href="/" className="wm"><span className="dot" />STEP <b>GUNNER</b></a>
-          <div className="navlinks"><Link href="/readiness">Readiness check</Link><Link href="/research/nbme-to-step-2">Research</Link><Link href="/guides">Guides</Link><Link href="/readiness/methodology">Methodology</Link></div>
-          <a href={APP} className="nav-cta" onClick={store('nav')}>Get the app</a>
-        </nav>
-
+      <SiteShell campaign="home" measure="wide">
         <div className="hero">
           <div>
             {refCode && <div className="ref-banner"><strong>{refCode}</strong> A classmate invited you. Tap the store button and the code comes along.</div>}
@@ -271,13 +247,7 @@ export default function Home({ record }: { record: TrackRecord }) {
           <p>The calculator is free and stays free. The app is where the number starts moving.</p>
           <a href={APP} className="store" onClick={store('final')}><AppleIcon /> Get Step Gunner free</a>
         </div>
-
-        <footer>
-          <span>stepgunner.com</span>
-          <span><Link href="/readiness">Readiness check</Link><Link href="/research/nbme-to-step-2">Research</Link><Link href="/guides">Guides</Link><Link href="/support">Support</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></span>
-          <span>Rezumab LLC</span>
-        </footer>
-      </div>
+      </SiteShell>
     </>
   );
 }

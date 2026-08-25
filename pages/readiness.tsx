@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import SiteShell from '../components/SiteShell';
 import type { GetServerSideProps } from 'next';
 import { useState, useEffect, useRef } from 'react';
 import {
@@ -122,13 +123,8 @@ export default function Readiness({ og }: { og: OG }) {
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>
 
-      <div className="page">
-        <nav className="nav">
-          <a href="/" className="wm"><span className="dot" /><span className="wt">STEP <b className="g">GUNNER</b></span></a>
-          <a href={APP} className="nav-cta" onClick={() => track('store_click', { source: 'readiness', location: 'nav', ref: referrerHost() })}>Download</a>
-        </nav>
-
-        <main className="wrap">
+      <SiteShell campaign="readiness" measure="tool">
+        <div className="wrap">
           <span className="badge">Free readiness check</span>
           <h1>How ready are you for Step 2 CK?</h1>
           <p className="sub">Drop in your NBME or UWSA scores and see a projected Step 2 range, percentile, and trajectory. No sign-up.</p>
@@ -257,45 +253,21 @@ export default function Readiness({ og }: { og: OG }) {
             <div className="ptrust dim">146 tracked reports. The biggest beats belong to students who kept working.</div>
           </section>
 
-          <footer className="foot">
-            <Link href="/">stepgunner.com</Link>
-            <Link href="/step-2-score-predictor">Score Predictor</Link>
-            <span>Rezumab LLC</span>
-          </footer>
-
           {proj != null && (
             <a href={APP} className="msticky" onClick={() => track('store_click', { source: 'readiness', location: 'sticky', ref: referrerHost() })}>Get Step Gunner free</a>
           )}
-        </main>
-      </div>
+        </div>
+      </SiteShell>
 
       <style jsx global>{`
-        :root {
-          --bg: #faf9f6; --bg-2: #ffffff; --bg-3: #ffffff;
-          --hair: rgba(25,28,35,0.10); --hair-strong: rgba(25,28,35,0.17);
-          --ink: #191c23; --ink-dim: #5d6470; --ink-faint: #9aa0ab;
-          --green: #0d9448; --gold: #e08e00; --blue: #2f6fed; --red: #d64545; --violet: #af52ff;
-          --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
-          --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
-        }
-        * { box-sizing: border-box; }
-        html, body { margin: 0; padding: 0; }
-        body { font-family: var(--sans); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
-        a { color: inherit; text-decoration: none; }
-      `}</style>
+`}</style>
 
       <style jsx>{`
         .page { min-height: 100vh; background:
           radial-gradient(90% 55% at 50% -8%, rgba(13,148,72,0.08), transparent 60%),
           radial-gradient(56% 22% at 50% 0%, rgba(240,180,41,0.13), transparent 62%), var(--bg); }
-        .nav { display: flex; align-items: center; justify-content: space-between; max-width: 660px; margin: 0 auto; padding: 20px 22px; }
-        .wm { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; font-size: 14px; }
-        .wm .wt b.g { color: var(--green); font-weight: 700; }
-        .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); flex: 0 0 auto; }
-        .nav-cta { background: var(--ink); color: #ffffff; padding: 9px 18px; border-radius: 999px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 3px 12px rgba(25,28,35,0.18); transition: transform 0.15s ease, box-shadow 0.2s ease; }
-        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(13,148,72,0.32); }
 
-        .wrap { max-width: 640px; margin: 0 auto; padding: 30px 22px 80px; }
+        .wrap { padding: 4px 0 30px; }
         .badge { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #b57400; border: 1px solid rgba(224,142,0,0.35); background: rgba(240,180,41,0.10); padding: 6px 15px; border-radius: 999px; }
         h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1; margin: 20px 0 10px; }
         .sub { color: var(--ink-dim); font-size: 16px; margin: 0 0 26px; max-width: 38ch; }
@@ -357,8 +329,6 @@ export default function Readiness({ og }: { og: OG }) {
         .btn-store { display: inline-flex; align-items: center; gap: 9px; background: var(--green); color: #05130a; font-family: var(--mono); font-weight: 800; font-size: 13px; letter-spacing: 0.4px; padding: 13px 20px; border-radius: 12px; box-shadow: 0 6px 26px rgba(13,148,72,0.28); }
         .btn-store .apple { width: 14px; height: 17px; flex: 0 0 auto; }
 
-        .foot { display: flex; justify-content: space-between; align-items: center; margin-top: 34px; font-family: var(--mono); font-size: 11px; color: var(--ink-faint); }
-        .foot :global(a) { color: var(--ink-dim); }
 
         .field { position: relative; }
         .dhint { position: absolute; right: 8px; bottom: 14px; font-family: var(--mono); font-style: normal; font-size: 10px; font-weight: 700; color: var(--green); pointer-events: none; }

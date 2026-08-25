@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import SiteShell from '../../components/SiteShell';
 import type { GetStaticProps } from 'next';
 import { comingSoon, liveGuideCards } from '../../lib/guides';
 import type { ComingSoonGuide } from '../../lib/guides/types';
@@ -53,70 +54,10 @@ export default function GuidesHub({ live, soon }: { live: LiveCard[]; soon: Comi
       />
 
       <style jsx global>{`
-        :root {
-          /* Score Report register (light) */
-          --bg: #faf9f6; --bg1: #ffffff; --bg2: #ffffff;
-          --ink: #191c23; --dim: #5d6470; --faint: #9aa0ab;
-          --hair: rgba(25,28,35,0.12); --hair2: rgba(25,28,35,0.08);
-          --green: #0d9448; --gold: #e08e00;
-          --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
-          --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
-        }
-        * { box-sizing: border-box; }
-        html, body { margin: 0; padding: 0; }
-        body { font-family: var(--sans); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
-        a { color: inherit; text-decoration: none; }
-        .page { min-height: 100vh; background: radial-gradient(90% 55% at 50% -8%, rgba(13,148,72,0.08), transparent 60%), radial-gradient(56% 22% at 50% 0%, rgba(240,180,41,0.13), transparent 62%), var(--bg); }
+`}</style>
 
-        .nav { display: flex; align-items: center; justify-content: space-between; max-width: 860px; margin: 0 auto; padding: 20px 22px; }
-        .wm { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; font-size: 14px; }
-        .wm .g { color: var(--green); }
-        .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); flex: 0 0 auto; }
-        .nav-cta { background: var(--green); color: #ffffff; padding: 9px 18px; border-radius: 10px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 4px 18px rgba(13,148,72,0.24); transition: transform 0.15s ease, box-shadow 0.2s ease; }
-        .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 8px 26px rgba(13,148,72,0.32); }
-
-        .wrap { max-width: 860px; margin: 0 auto; padding: 26px 22px 90px; }
-        .crumb { font-family: var(--mono); font-size: 11px; color: var(--faint); margin-bottom: 20px; letter-spacing: 0.4px; }
-        .crumb a { color: var(--dim); }
-        .crumb a:hover { color: var(--green); }
-        .eyebrow { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
-        h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.12; margin: 10px 0 14px; text-wrap: balance; }
-        .lede { color: var(--dim); font-size: 17px; line-height: 1.6; margin: 0 0 6px; max-width: 62ch; }
-        .lede b { color: var(--ink); font-weight: 600; }
-
-        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 30px; }
-        .card { border: 1px solid var(--hair); background: linear-gradient(180deg, var(--bg1), var(--bg)); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-height: 150px; }
-        .card.live { border-color: rgba(13,148,72,0.32); box-shadow: 0 20px 54px -36px rgba(13,148,72,0.5); transition: transform 0.15s ease, border-color 0.2s ease; }
-        .card.live:hover { transform: translateY(-2px); border-color: var(--green); }
-        .card.soon { opacity: 0.72; }
-        .card .ctag { font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
-        .card.live .ctag { color: var(--green); }
-        .card.soon .ctag { color: var(--faint); border: 1px solid var(--hair); border-radius: 999px; padding: 3px 9px; align-self: flex-start; }
-        .card h2 { font-size: 20px; font-weight: 800; letter-spacing: -0.3px; margin: 0; }
-        .card p { color: var(--dim); font-size: 14px; line-height: 1.55; margin: 0; flex: 1 1 auto; }
-        .card .go { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.3px; color: var(--green); }
-        .card.soon .go { color: var(--faint); }
-
-        .foot { display: flex; justify-content: space-between; align-items: center; margin-top: 44px; padding-top: 22px; border-top: 1px solid var(--hair); font-family: var(--mono); font-size: 11px; color: var(--faint); }
-        .foot a { color: var(--dim); }
-        .foot a:hover { color: var(--green); }
-
-        @media (max-width: 620px) {
-          h1 { font-size: 28px; }
-          .grid { grid-template-columns: 1fr; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .nav-cta, .card.live { transition: none; }
-        }
-      `}</style>
-
-      <div className="page">
-        <nav className="nav">
-          <a href="/" className="wm"><span className="dot" /><span>STEP <span className="g">GUNNER</span></span></a>
-          <a href="/readiness" className="nav-cta">Free score predictor</a>
-        </nav>
-
-        <main className="wrap">
+      <SiteShell campaign={'guides'} measure="wide">
+        <div className="wrap">
           <div className="crumb"><a href="/">Home</a> / Clerkship guides</div>
           <span className="eyebrow">Clerkship guides</span>
           <h1>Shelf study guides, one rotation at a time.</h1>
@@ -144,13 +85,8 @@ export default function GuidesHub({ live, soon }: { live: LiveCard[]; soon: Comi
               </div>
             ))}
           </div>
-
-          <div className="foot">
-            <a href="/">stepgunner.com</a>
-            <span>Rezumab LLC</span>
-          </div>
-        </main>
-      </div>
+        </div>
+      </SiteShell>
     </>
   );
 }

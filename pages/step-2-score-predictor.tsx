@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import SiteShell from '../components/SiteShell';
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
 import {
@@ -166,13 +167,8 @@ export default function Predictor() {
         />
       </Head>
 
-      <div className="page">
-        <nav className="nav">
-          <a href="/" className="wm"><span className="dot" /><span className="wt">STEP <b className="g">GUNNER</b></span></a>
-          <a href={APP} className="nav-cta" onClick={() => track('store_click', { source: 'predictor', location: 'nav', ref: referrerHost() })}>Download</a>
-        </nav>
-
-        <main className="wrap">
+      <SiteShell campaign={'predictor'} measure="article">
+        <div className="wrap">
           <span className="badge">Free &middot; No sign-up &middot; Shows its work</span>
           <h1>Step 2 score predictor that shows its work</h1>
           <p className="sub">
@@ -412,46 +408,22 @@ export default function Predictor() {
             <span className="bline">The predictor is a snapshot. <b>The app is the film.</b></span>
             <a href={APP} className="bcta" onClick={() => track('store_click', { source: 'predictor', location: 'bridge', ref: referrerHost() })}>Get the app</a>
           </div>
-
-          <footer className="foot">
-            <Link href="/">stepgunner.com</Link>
-            <Link href="/readiness">Full calculator</Link>
-            <Link href="/guides">Clerkship guides</Link>
-            <span>Rezumab LLC</span>
-          </footer>
-        </main>
+        </div>
 
         {valid && (
           <a href={APP} className="msticky" onClick={() => track('store_click', { source: 'predictor', location: 'sticky', ref: referrerHost() })}>Get Step Gunner free</a>
         )}
-      </div>
+      </SiteShell>
 
       <style jsx global>{`
-        :root {
-          --bg: #faf9f6; --bg-2: #ffffff; --bg-3: #ffffff;
-          --hair: rgba(25,28,35,0.10); --hair-strong: rgba(25,28,35,0.17);
-          --ink: #191c23; --ink-dim: #5d6470; --ink-faint: #9aa0ab;
-          --green: #0d9448; --gold: #e08e00; --blue: #2f6fed; --red: #d64545;
-          --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
-          --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
-        }
-        * { box-sizing: border-box; }
-        html, body { margin: 0; padding: 0; }
-        body { font-family: var(--sans); color: var(--ink); background: var(--bg); -webkit-font-smoothing: antialiased; }
-        a { color: inherit; text-decoration: none; }
-      `}</style>
+`}</style>
 
       <style jsx>{`
-        .page { min-height: 100vh; background:
           radial-gradient(90% 55% at 50% -8%, rgba(13,148,72,0.08), transparent 60%),
           radial-gradient(56% 22% at 50% 0%, rgba(240,180,41,0.13), transparent 62%), var(--bg); }
-        .nav { display: flex; align-items: center; justify-content: space-between; max-width: 660px; margin: 0 auto; padding: 20px 22px; }
-        .wm { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-weight: 700; letter-spacing: 2.5px; font-size: 14px; }
         .wm .wt b.g { color: var(--green); font-weight: 700; }
-        .wm .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px var(--green); flex: 0 0 auto; }
-        .nav-cta { background: var(--ink); color: #ffffff; padding: 9px 18px; border-radius: 999px; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; box-shadow: 0 3px 12px rgba(25,28,35,0.18); }
 
-        .wrap { max-width: 640px; margin: 0 auto; padding: 30px 22px 80px; }
+        .wrap { padding: 4px 0 30px; }
         .badge { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #b57400; border: 1px solid rgba(224,142,0,0.35); background: rgba(240,180,41,0.10); padding: 6px 15px; border-radius: 999px; }
         h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1; margin: 20px 0 10px; }
         .sub { color: var(--ink-dim); font-size: 16px; margin: 0 0 26px; max-width: 46ch; }
@@ -585,12 +557,11 @@ export default function Predictor() {
         .bline b { color: var(--green); }
         .bcta { margin-left: auto; background: var(--ink); color: #ffffff; border-radius: 999px; font-size: 12px; font-weight: 800; padding: 9px 16px; }
 
-        .foot { display: flex; gap: 18px; justify-content: center; margin-top: 26px; font-family: var(--mono); font-size: 11.5px; color: var(--ink-faint); flex-wrap: wrap; }
         .foot :global(a):hover { color: var(--ink-dim); }
 
         .msticky { display: none; }
         @media (max-width: 560px) {
-          .wrap { padding-bottom: 120px; }
+        .wrap { padding: 4px 0 30px; }
           .msticky { position: fixed; left: 16px; right: 16px; bottom: calc(14px + env(safe-area-inset-bottom)); display: flex; justify-content: center; background: var(--ink); color: #ffffff; padding: 15px; border-radius: 999px; font-size: 14px; font-weight: 800; box-shadow: 0 10px 30px rgba(25,28,35,0.35); z-index: 50; }
         }
       `}</style>
