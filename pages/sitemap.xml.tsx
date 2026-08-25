@@ -1,5 +1,6 @@
 import type { GetServerSideProps } from 'next';
 import { allGuideSlugs } from '../lib/guides';
+import { allFormSlugs } from '../lib/forms';
 
 // The site's XML sitemap, generated on request so new clerkship guides appear the
 // moment they are registered in lib/guides/index.ts (no build step to remember).
@@ -28,11 +29,14 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     urlNode('/terms', 'yearly', '0.3'),
   ];
   const guidePages = allGuideSlugs().map((slug) => urlNode(`/guides/${slug}`, 'monthly', '0.8'));
+  // Per-form conversion pages: the hub owns the broad query, each child owns
+  // its own form query, so they do not compete.
+  const formPages = allFormSlugs().map((slug) => urlNode(`/step-2-score-predictor/${slug}`, 'monthly', '0.8'));
 
   const xml =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    [...staticPages, ...guidePages].join('\n') +
+    [...staticPages, ...guidePages, ...formPages].join('\n') +
     `\n</urlset>\n`;
 
   res.setHeader('Content-Type', 'application/xml');

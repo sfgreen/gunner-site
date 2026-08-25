@@ -8,6 +8,7 @@ import {
 } from '../lib/readiness';
 import { track, referrerHost, appStoreUrl } from '../lib/analytics';
 import benchmarks from '../lib/specialty_benchmarks.json';
+import { FORM_PAGES } from '../lib/forms';
 
 const APP = appStoreUrl('predictor');
 const CANONICAL = 'https://stepgunner.com/step-2-score-predictor';
@@ -391,6 +392,22 @@ export default function Predictor() {
             ))}
           </section>
 
+          {/* Hub to children. Each form page owns its own query ("nbme 15 score
+              conversion"); this page owns the broad one. Linking them here is
+              what keeps the authority on the hub instead of stranding eleven
+              orphans that only the sitemap knows about. */}
+          <section className="forms">
+            <h2>One form at a time</h2>
+            <p>Every form, what it prints, and a full conversion table.</p>
+            <ul>
+              {FORM_PAGES.map((f) => (
+                <li key={f.slug}>
+                  <Link href={`/step-2-score-predictor/${f.slug}`}>{f.form}</Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+
           <div className="bridge">
             <span className="bline">The predictor is a snapshot. <b>The app is the film.</b></span>
             <a href={APP} className="bcta" onClick={() => track('store_click', { source: 'predictor', location: 'bridge', ref: referrerHost() })}>Get the app</a>
@@ -554,6 +571,15 @@ export default function Predictor() {
         .faq summary::-webkit-details-marker { display: none; }
         .faq details p { color: var(--ink-dim); font-size: 14px; line-height: 1.6; margin: 0 0 14px; }
 
+        .forms { margin: 0 0 26px; }
+        .forms h2 { font-size: 20px; margin: 0 0 4px; }
+        .forms p { color: var(--ink-dim); margin: 0 0 12px; }
+        .forms ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+        .forms li a {
+          display: inline-block; border: 1px solid var(--hair-strong); border-radius: 999px;
+          padding: 6px 14px; font-family: var(--mono); font-size: 13px; color: var(--ink);
+        }
+        .forms li a:hover { border-color: var(--ink); }
         .bridge { margin-top: 44px; border-top: 1px solid var(--hair); padding-top: 16px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
         .bline { font-size: 14px; font-weight: 650; }
         .bline b { color: var(--green); }
