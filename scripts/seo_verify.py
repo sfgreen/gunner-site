@@ -48,6 +48,7 @@ SITEMAP_EXCLUDED = {
     "/embed",     # widget iframe, has no standalone value in search
     "/partner",   # study-partner invite landing, reached only by code
     "/admin",     # operator surface
+    "/readiness/paste",  # internal tool for answering score threads, noindex
 }
 
 TITLE_MAX = 65
