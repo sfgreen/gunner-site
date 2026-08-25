@@ -91,6 +91,30 @@ export default function ScoreBySpecialty() {
       )}
     >
       <section className="block">
+        <div className="keystat">
+          <div>
+            <span className="k">Plastic Surgery</span>
+            <span className="v up">+43</span>
+            <span className="cap">points of match probability, going from the 230s to 250 and up</span>
+          </div>
+          <div>
+            <span className="k">Family Medicine</span>
+            <span className="v flat">+1</span>
+            <span className="cap">the same twenty points, in a specialty that already matches nearly everyone</span>
+          </div>
+          <div>
+            <span className="k">Specialties covered</span>
+            <span className="v">22</span>
+            <span className="cap">US MD seniors, NRMP pooled 2020 to 2024</span>
+          </div>
+        </div>
+        <p className="pull">
+          Twenty more points is the same amount of work in every specialty.{' '}
+          <b>What it buys differs by a factor of forty.</b>
+        </p>
+      </section>
+
+      <section className="block">
         <h2>The average is the wrong number</h2>
         <p>
           &quot;The average matched dermatologist scored 253&quot; is the most repeated sentence in
@@ -223,11 +247,10 @@ export default function ScoreBySpecialty() {
           </table>
         </div>
         <p>
-          In Plastic Surgery those twenty points are worth <b>43 points of match probability</b>.
-          In Family Medicine, Pediatrics and Internal Medicine they are worth <b>one</b>, because
-          those specialties already match nearly everyone who applies with a score in the 230s.
           If you are going into primary care with a 235, the honest advice is that more Step 2
           points are close to the least valuable thing you can buy with your remaining weeks.
+          If you are going into a surgical subspecialty at the same score, they may be the most
+          valuable thing available to you.
         </p>
         <p className="cta-line">
           <Link href="/readiness" className="btn">See where your practice forms project</Link>

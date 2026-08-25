@@ -103,6 +103,45 @@ export default function LabLayout({
           border: 1px solid var(--hair); border-radius: 5px; padding: 1.5px 5px;
         }
 
+        /* ---- key figures ----
+           These pages were reading as plain text because their findings were
+           sentences. A finding that is a number should LOOK like a number: the
+           form heuristic is that a single headline value wants a stat tile, not
+           a chart and not a paragraph. */
+        .lab .body .keystat {
+          display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 1px; background: var(--hair-strong);
+          border: 1px solid var(--hair-strong); border-radius: var(--radius);
+          overflow: hidden; margin: 0 0 22px; box-shadow: var(--lift);
+        }
+        .lab .body .keystat > div { background: var(--panel); padding: 20px 18px 18px; }
+        .lab .body .keystat .k {
+          display: block; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.11em;
+          text-transform: uppercase; color: var(--ink-faint); margin-bottom: 9px;
+        }
+        .lab .body .keystat .v {
+          display: block; font-size: 40px; font-weight: 800; letter-spacing: -0.035em;
+          line-height: 1; font-variant-numeric: tabular-nums;
+        }
+        .lab .body .keystat .v.up { color: var(--green); }
+        .lab .body .keystat .v.flat { color: var(--ink-faint); }
+        .lab .body .keystat .v.warn { color: var(--gold-ink); }
+        .lab .body .keystat .cap {
+          display: block; font-size: 13.5px; color: var(--ink-dim); margin-top: 8px;
+          line-height: 1.4; white-space: normal;
+        }
+
+        /* One claim per page gets to be loud. */
+        .lab .body .pull {
+          border-left: 3px solid var(--green); background: var(--green-soft);
+          padding: 18px 22px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+          margin: 24px 0; font-size: 18.5px; line-height: 1.45; font-weight: 500;
+        }
+        .lab .body .pull b { font-weight: 800; }
+        .lab .body .pull.warn { border-left-color: var(--gold); background: var(--gold-soft); }
+        .lab .body .pull.red { border-left-color: var(--red); background: var(--red-soft); }
+        .lab .body .pull p { margin: 0; max-width: none; font-size: inherit; }
+
         /* Tables: one house style, and they scroll rather than push the page. */
         .lab .body .tw {
           overflow-x: auto; -webkit-overflow-scrolling: touch;
@@ -125,6 +164,8 @@ export default function LabLayout({
 
         @media (max-width: 560px) {
           .lab .body > section { padding-top: 34px; }
+          .lab .body .keystat .v { font-size: 33px; }
+          .lab .body .pull { font-size: 17px; padding: 15px 17px; }
           .lab .body table { font-size: 14px; }
           .lab .body th, .lab .body td { padding: 10px 12px; }
         }

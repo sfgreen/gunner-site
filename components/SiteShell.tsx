@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { ReactNode, useState } from 'react';
 import { appStoreUrl, track, referrerHost } from '../lib/analytics';
 
@@ -40,6 +41,10 @@ export default function SiteShell({
 }) {
   const [open, setOpen] = useState(false);
   const store = appStoreUrl(campaign);
+  const path = useRouter().pathname;
+  // A nav link should say where you are, not just where you could go. Without
+  // this the row reads as four pieces of grey text rather than as navigation.
+  const isActive = (href: string) => path === href || (href !== '/' && path.startsWith(href));
 
   return (
     <div className={'shell' + (dark ? ' dark' : '')}>
@@ -50,7 +55,16 @@ export default function SiteShell({
         </Link>
 
         <div className="links">
-          {NAV_LINKS.map((l) => <Link key={l.href} href={l.href}>{l.label}</Link>)}
+          {NAV_LINKS.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className={isActive(l.href) ? 'on' : undefined}
+              aria-current={isActive(l.href) ? 'page' : undefined}
+            >
+              {l.label}
+            </Link>
+          ))}
         </div>
 
         <div className="right">
@@ -127,13 +141,26 @@ export default function SiteShell({
         }
         .shell :global(a.lg) :global(b) { color: var(--green); font-weight: 700; }
 
-        .links { display: flex; gap: 20px; }
+        .links { display: flex; gap: 4px; }
+        /* Mono uppercase is the brand register, so the affordance has to come
+           from weight, contrast and a rule that answers on hover rather than
+           from changing the typeface. Base weight 600 and ink-dim rather than
+           faint: at 11px, light grey small caps read as a caption, not a link. */
         .links :global(a) {
-          font-family: var(--mono); font-size: 11px; letter-spacing: 0.09em;
-          text-transform: uppercase; color: var(--ink-dim); text-decoration: none;
-          white-space: nowrap; padding: 4px 0;
+          position: relative; font-family: var(--mono); font-size: 11.5px; font-weight: 600;
+          letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-dim);
+          text-decoration: none; white-space: nowrap; padding: 7px 11px;
+          border-radius: 7px; transition: color .16s ease, background .16s ease;
         }
-        .links :global(a:hover) { color: var(--ink); }
+        .links :global(a)::after {
+          content: ""; position: absolute; left: 11px; right: 11px; bottom: 3px;
+          height: 2px; border-radius: 2px; background: var(--green);
+          transform: scaleX(0); transform-origin: left; transition: transform .18s ease;
+        }
+        .links :global(a:hover) { color: var(--ink); background: var(--bg-3); }
+        .links :global(a:hover)::after { transform: scaleX(1); }
+        .links :global(a.on) { color: var(--ink); }
+        .links :global(a.on)::after { transform: scaleX(1); }
 
         .right { display: flex; align-items: center; gap: 10px; }
         .shell :global(a.cta), .cta {

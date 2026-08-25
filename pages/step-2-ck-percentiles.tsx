@@ -76,6 +76,26 @@ export default function Percentiles() {
       </section>
 
       <section className="block">
+        <div className="keystat">
+          <div>
+            <span className="k">Passing score</span>
+            <span className="v">218</span>
+            <span className="cap">not 214, which is what pages ranking for this still print</span>
+          </div>
+          <div>
+            <span className="k">National mean</span>
+            <span className="v">250</span>
+            <span className="cap">so a 250 is the exact middle, not a good score</span>
+          </div>
+          <div>
+            <span className="k">Steepest 10 points</span>
+            <span className="v up">+27</span>
+            <span className="cap">percentile bought between 250 and 260, the densest stretch</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="block">
         <h2>The passing score is 218, not 214</h2>
         <p>
           A surprising number of pages ranking for this question still quote 214. That was the
