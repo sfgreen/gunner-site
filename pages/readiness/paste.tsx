@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import { useMemo, useState } from 'react';
 import { parseScoreList } from '../../lib/parseScores';
-import { computeReadiness, percentile, ordinal, shortTier, PASS } from '../../lib/readiness';
+import {
+  computeReadiness, percentile, ordinal, shortTier, PASS, encodeShare, SHARE_BASE,
+} from '../../lib/readiness';
 
 // Internal tool: paste a Reddit score list, get the reply back.
 //
@@ -29,12 +31,20 @@ export default function Paste() {
   const [footer, setFooter] = useState(DEFAULT_FOOTER);
   const [actual, setActual] = useState('');
   const [copied, setCopied] = useState(false);
+  const [copiedLink, setCopiedLink] = useState(false);
+  const [usePrefill, setUsePrefill] = useState(true);
 
   const parsed = useMemo(() => parseScoreList(raw), [raw]);
   const { proj } = useMemo(
     () => computeReadiness(parsed.entries.map((e) => ({ form: e.form, score: e.score, days: e.days }))),
     [parsed],
   );
+
+  const shareLink = useMemo(() => {
+    if (!parsed.entries.length) return '';
+    const es = parsed.entries.map((e) => ({ form: e.form, score: e.score, days: e.days }));
+    return `${SHARE_BASE}?e=${encodeShare(es, actual, '')}`;
+  }, [parsed, actual]);
 
   const output = useMemo(() => {
     if (!parsed.entries.length) return '';
@@ -49,9 +59,20 @@ export default function Paste() {
     const act = parseInt(actual, 10);
     if (!Number.isNaN(act)) lines.push(`Actual Step 2 CK: ${act}`);
     else if (proj) lines.push(`Projected Step 2 CK: ${proj.low} to ${proj.high} (est.)`);
-    if (footer.trim()) { lines.push(''); lines.push(footer.trim()); }
+    if (footer.trim()) {
+      lines.push('');
+      lines.push(usePrefill && shareLink ? `${footer.trim().replace(/https?:\/\/\S+$/, '').trim()} ${shareLink}` : footer.trim());
+    }
     return lines.join('\n');
-  }, [parsed, proj, footer, actual]);
+  }, [parsed, proj, footer, actual, usePrefill, shareLink]);
+
+  const copyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(shareLink);
+      setCopiedLink(true);
+      setTimeout(() => setCopiedLink(false), 1600);
+    } catch { setCopiedLink(false); }
+  };
 
   const copy = async () => {
     try {
@@ -121,6 +142,22 @@ export default function Paste() {
               )}
             </label>
             <textarea id="out" readOnly value={output} placeholder="Output appears here." spellCheck={false} />
+
+            {shareLink && (
+              <div className="link">
+                <label className="tog">
+                  <input type="checkbox" checked={usePrefill} onChange={(e) => setUsePrefill(e.target.checked)} />
+                  <span>Close with a link that pre-fills their scores</span>
+                </label>
+                <div className="linkrow">
+                  <code>{shareLink.slice(0, 46)}...</code>
+                  <button type="button" className={'copy sm' + (copiedLink ? ' done' : '')} onClick={copyLink}>
+                    {copiedLink ? 'Copied' : 'Copy link'}
+                  </button>
+                  <a href={shareLink} target="_blank" rel="noreferrer" className="open">open</a>
+                </div>
+              </div>
+            )}
 
             {proj && (
               <div className="meta">
@@ -233,6 +270,16 @@ export default function Paste() {
           font: inherit; font-size: 14px; padding: 8px 11px; border-radius: 7px;
           border: 1px solid var(--hair-strong); background: var(--bg-2); color: var(--ink);
         }
+        .link { margin-top: 12px; }
+        .tog { display: flex; align-items: center; gap: 7px; font-size: 13.5px; cursor: pointer; }
+        .tog input { width: 15px; height: 15px; accent-color: var(--green); }
+        .linkrow { display: flex; align-items: center; gap: 8px; margin-top: 7px; flex-wrap: wrap; }
+        .linkrow code {
+          font-family: var(--mono); font-size: 11.5px; color: var(--ink-dim);
+          background: var(--bg-3); border: 1px solid var(--hair); border-radius: 6px; padding: 4px 8px;
+        }
+        .copy.sm { font-size: 11.5px; padding: 4px 10px; }
+        .open { font-size: 12.5px; color: #2f6fed; }
         .meta {
           display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 10px;
           font-family: var(--mono); font-size: 12px; color: var(--ink-dim);
