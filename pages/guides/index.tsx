@@ -54,6 +54,34 @@ export default function GuidesHub({ live, soon }: { live: LiveCard[]; soon: Comi
       />
 
       <style jsx global>{`
+* { box-sizing: border-box; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 26px 22px 90px; }
+.crumb { font-family: var(--mono); font-size: 11px; color: var(--faint); margin-bottom: 20px; letter-spacing: 0.4px; }
+.crumb a { color: var(--dim); }
+.crumb a:hover { color: var(--green); }
+.eyebrow { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); }
+h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.6px; line-height: 1.12; margin: 10px 0 14px; text-wrap: balance; }
+.lede { color: var(--dim); font-size: 17px; line-height: 1.6; margin: 0 0 6px; max-width: 62ch; }
+.lede b { color: var(--ink); font-weight: 600; }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 30px; }
+.card { border: 1px solid var(--hair); background: linear-gradient(180deg, var(--bg1), var(--bg)); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 10px; min-height: 150px; }
+.card.live { border-color: rgba(13,148,72,0.32); box-shadow: 0 20px 54px -36px rgba(13,148,72,0.5); transition: transform 0.15s ease, border-color 0.2s ease; }
+.card.live:hover { transform: translateY(-2px); border-color: var(--green); }
+.card.soon { opacity: 0.72; }
+.card .ctag { font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+.card.live .ctag { color: var(--green); }
+.card.soon .ctag { color: var(--faint); border: 1px solid var(--hair); border-radius: 999px; padding: 3px 9px; align-self: flex-start; }
+.card h2 { font-size: 20px; font-weight: 800; letter-spacing: -0.3px; margin: 0; }
+.card p { color: var(--dim); font-size: 14px; line-height: 1.55; margin: 0; flex: 1 1 auto; }
+.card .go { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.3px; color: var(--green); }
+.card.soon .go { color: var(--faint); }
+@media (max-width: 620px) {
+h1 { font-size: 28px; }
+.grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+.card.live { transition: none; }
+}
 `}</style>
 
       <SiteShell campaign={'guides'} measure="wide">
