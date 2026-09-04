@@ -36,3 +36,12 @@ jobs:
 
       - name: Verify production HTML
         run: python3 scripts/seo_verify.py --base "${{ github.event.inputs.base || 'https://stepgunner.com' }}"
+
+      # The SEO contract can be perfect while the page renders as raw stacked
+      # links. dd8743e deleted the entire style block from GuideLayout.tsx and
+      # guides/index.tsx; /guides and every /guides/<slug> were unstyled for TEN
+      # DAYS and seo_verify passed the whole time, because the markup, canonicals
+      # and metadata were all still correct. This asks whether the CSS shipped
+      # with the page actually has rules for the classes the page uses.
+      - name: Verify production styling
+        run: python3 scripts/style_verify.py --base "${{ github.event.inputs.base || 'https://stepgunner.com' }}"
