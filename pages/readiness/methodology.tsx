@@ -561,7 +561,11 @@ export default function Methodology() {
         .willsharpen { color: var(--dim); font-size: 15px; line-height: 1.65; max-width: 62ch; }
 
         /* cta */
-        .cta { margin-top: 46px; padding-top: 30px; border-top: 1px solid var(--hair); }
+        /* Scoped to section.cta on purpose. This block is styled-jsx GLOBAL and
+   SiteShell's nav button is an <a> with class cta, so an unscoped .cta rule
+   put a 46px top margin on the NAV button and pushed it below the wordmark
+   and the links. */
+section.cta { margin-top: 46px; padding-top: 30px; border-top: 1px solid var(--hair); }
         .ctline { color: var(--ink); font-size: 16px; font-weight: 500; line-height: 1.6; margin: 0 0 18px; max-width: 60ch; }
         .ctrow { display: flex; gap: 12px; flex-wrap: wrap; }
         .ct-primary { background: var(--green); color: #ffffff; font-family: var(--mono); font-weight: 800; font-size: 13px; letter-spacing: 0.3px; padding: 13px 20px; border-radius: 12px; box-shadow: 0 6px 26px rgba(13,148,72,0.28); transition: transform 0.15s ease; }
