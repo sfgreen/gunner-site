@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import SiteShell from './SiteShell';
 import { useEffect, useRef, useState } from 'react';
-import { appStoreUrl } from '../lib/analytics';
+import { appStoreUrl, track } from '../lib/analytics';
 import type { GuideData } from '../lib/guides/types';
 
 // Renders one clerkship guide from its GuideData. This is the design template the
@@ -328,9 +328,11 @@ h2 { font-size: 22px; }
       <SiteShell
         campaign={`guides_${meta.slug}`}
         measure="article"
-        // A cold search reader gets the free tool, not the store. The store ask
-        // lives mid-page and at the end, after the guide has earned it.
-        cta={{ label: guide.navCta, href: '/readiness' }}
+        // Every CTA on a guide sells the app. appHref is the ATTRIBUTED link
+        // (pt=128505861 + ct=guides_<slug> + mt=8), so installs from this page
+        // land on the App Analytics Campaigns page tagged by rotation. Apple
+        // ignores ct without pt and mt=8, so the raw store URL is never used.
+        cta={{ label: guide.navCta, href: appHref }}
       >
         <div className="wrap">
           <div className="crumb">
@@ -458,7 +460,15 @@ h2 { font-size: 22px; }
               </figure>
 
               <div className="sgcta">
-                <a href={appHref} target="_blank" rel="noopener noreferrer" className="ct-primary">{fit.ctaLabel}</a>
+                <a
+                  href={appHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ct-primary"
+                  onClick={() => track('store_click', { source: `guides_${meta.slug}`, location: 'mid' })}
+                >
+                  {fit.ctaLabel}
+                </a>
                 <span className="sgcta-note">{fit.ctaNote}</span>
               </div>
             </div>
@@ -510,8 +520,16 @@ h2 { font-size: 22px; }
           <section className="cta" ref={endRef}>
             <p className="ctline">{guide.ctaLine}</p>
             <div className="ctrow">
-              <a href="/readiness" className="ct-primary">{guide.endPrimaryLabel}</a>
-              <a href={appHref} target="_blank" rel="noopener noreferrer" className="ct-secondary">{guide.endSecondaryLabel}</a>
+              <a
+                href={appHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ct-primary"
+                onClick={() => track('store_click', { source: `guides_${meta.slug}`, location: 'end' })}
+              >
+                {guide.endPrimaryLabel}
+              </a>
+              <a href="/readiness" className="ct-secondary">{guide.endSecondaryLabel}</a>
             </div>
             <div className="bridge">
               <span className="b">{guide.bridge.label}</span>
@@ -528,7 +546,15 @@ h2 { font-size: 22px; }
       <div className={`stickybar${stickyShow ? ' show' : ''}`}>
         <div className="sb-inner">
           <span className="sb-label">{guide.sticky.label}</span>
-          <a href="/readiness" className="sb-cta">{guide.sticky.cta}</a>
+          <a
+            href={appHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sb-cta"
+            onClick={() => track('store_click', { source: `guides_${meta.slug}`, location: 'sticky' })}
+          >
+            {guide.sticky.cta}
+          </a>
         </div>
       </div>
     </>

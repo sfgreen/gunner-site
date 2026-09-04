@@ -163,7 +163,7 @@ export const emergencyMedicine: GuideData = {
       text: 'This app makes studying so effortless and fun. Highly recommend.',
       cite: 'From a 5-star App Store review titled "Best Step 2 supplement"',
     },
-    ctaLabel: 'Get Step Gunner, free',
+    ctaLabel: 'Get Step Gunner free, emergency medicine decks included',
     ctaNote: 'No account needed to start. The core emergency medicine decks are free.',
   },
 
@@ -250,8 +250,8 @@ export const emergencyMedicine: GuideData = {
   ],
 
   ctaLine: 'Two free things worth doing before the exam, and one for later.',
-  endPrimaryLabel: 'Check your readiness, free',
-  endSecondaryLabel: 'Study emergency medicine in Step Gunner',
+  endPrimaryLabel: 'Get the free emergency medicine deck',
+  endSecondaryLabel: 'Check your readiness, free',
   bridge: {
     label: 'later',
     pre: "Leaning toward Emergency Medicine as a specialty? When you get there, Rezumab's free ",
@@ -261,8 +261,8 @@ export const emergencyMedicine: GuideData = {
   },
 
   sticky: {
-    label: 'Free Step 2 score predictor. No sign-up.',
-    cta: 'Free score predictor',
+    label: 'Free EM decks. No sign-up.',
+    cta: 'Get the app',
   },
-  navCta: 'Free score predictor',
+  navCta: 'Get the free EM deck',
 };

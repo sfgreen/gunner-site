@@ -171,7 +171,7 @@ export const internalMedicine: GuideData = {
       text: 'This app makes studying so effortless and fun. Highly recommend.',
       cite: 'From a 5-star App Store review titled "Best Step 2 supplement"',
     },
-    ctaLabel: 'Get Step Gunner, free',
+    ctaLabel: 'Get Step Gunner free, medicine decks included',
     ctaNote: 'No account needed to start. The core medicine decks are free.',
   },
 
@@ -259,8 +259,8 @@ export const internalMedicine: GuideData = {
   ],
 
   ctaLine: 'Two free things worth doing before the shelf, and one for later.',
-  endPrimaryLabel: 'Check your readiness, free',
-  endSecondaryLabel: 'Study medicine in Step Gunner',
+  endPrimaryLabel: 'Get the free medicine deck',
+  endSecondaryLabel: 'Check your readiness, free',
   bridge: {
     label: 'later',
     pre: "Leaning toward Internal Medicine as a specialty? When you get there, Rezumab's free ",
@@ -270,8 +270,8 @@ export const internalMedicine: GuideData = {
   },
 
   sticky: {
-    label: 'Free Step 2 score predictor. No sign-up.',
-    cta: 'Free score predictor',
+    label: 'Free Medicine decks. No sign-up.',
+    cta: 'Get the app',
   },
-  navCta: 'Free score predictor',
+  navCta: 'Get the free Medicine deck',
 };

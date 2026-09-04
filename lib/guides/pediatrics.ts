@@ -171,7 +171,7 @@ export const pediatrics: GuideData = {
       text: 'Gotten me multiple questions on practice tests. Helpful for those not keen on the Anki burden but who like spaced repetition.',
       cite: 'From a 5-star App Store review titled "Solid Step 2 studying addon"',
     },
-    ctaLabel: 'Get Step Gunner, free',
+    ctaLabel: 'Get Step Gunner free, Peds decks included',
     ctaNote: 'No account needed to start. The core Peds decks are free.',
   },
 
@@ -263,8 +263,8 @@ export const pediatrics: GuideData = {
   ],
 
   ctaLine: 'Two free things worth doing before the shelf, and one for later.',
-  endPrimaryLabel: 'Check your readiness, free',
-  endSecondaryLabel: 'Study Peds in Step Gunner',
+  endPrimaryLabel: 'Get the free Peds deck',
+  endSecondaryLabel: 'Check your readiness, free',
   bridge: {
     label: 'later',
     pre: "Leaning toward Pediatrics as a specialty? When you get there, Rezumab's free ",
@@ -274,8 +274,8 @@ export const pediatrics: GuideData = {
   },
 
   sticky: {
-    label: 'Free Step 2 score predictor. No sign-up.',
-    cta: 'Free score predictor',
+    label: 'Free Peds decks. No sign-up.',
+    cta: 'Get the app',
   },
-  navCta: 'Free score predictor',
+  navCta: 'Get the free Peds deck',
 };

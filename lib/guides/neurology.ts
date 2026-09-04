@@ -159,7 +159,7 @@ export const neurology: GuideData = {
       text: 'This app makes studying so effortless and fun. Highly recommend.',
       cite: 'From a 5-star App Store review titled "Best Step 2 supplement"',
     },
-    ctaLabel: 'Get Step Gunner, free',
+    ctaLabel: 'Get Step Gunner free, neurology decks included',
     ctaNote: 'No account needed to start. The core neurology decks are free.',
   },
 
@@ -246,8 +246,8 @@ export const neurology: GuideData = {
   ],
 
   ctaLine: 'Two free things worth doing before the shelf, and one for later.',
-  endPrimaryLabel: 'Check your readiness, free',
-  endSecondaryLabel: 'Study neurology in Step Gunner',
+  endPrimaryLabel: 'Get the free neurology deck',
+  endSecondaryLabel: 'Check your readiness, free',
   bridge: {
     label: 'later',
     pre: "Leaning toward Neurology as a specialty? When you get there, Rezumab's free ",
@@ -257,8 +257,8 @@ export const neurology: GuideData = {
   },
 
   sticky: {
-    label: 'Free Step 2 score predictor. No sign-up.',
-    cta: 'Free score predictor',
+    label: 'Free Neuro decks. No sign-up.',
+    cta: 'Get the app',
   },
-  navCta: 'Free score predictor',
+  navCta: 'Get the free Neuro deck',
 };

@@ -148,7 +148,7 @@ export const psychiatry: GuideData = {
       text: 'Gotten me multiple questions on practice tests. Helpful for those not keen on the Anki burden but who like spaced repetition.',
       cite: 'From a 5-star App Store review titled "Solid Step 2 studying addon"',
     },
-    ctaLabel: 'Get Step Gunner, free',
+    ctaLabel: 'Get Step Gunner free, psychiatry decks included',
     ctaNote: 'No account needed to start. The core psychiatry decks are free.',
   },
 
@@ -235,8 +235,8 @@ export const psychiatry: GuideData = {
   ],
 
   ctaLine: 'Two free things worth doing before the shelf, and one for later.',
-  endPrimaryLabel: 'Check your readiness, free',
-  endSecondaryLabel: 'Study psychiatry in Step Gunner',
+  endPrimaryLabel: 'Get the free psychiatry deck',
+  endSecondaryLabel: 'Check your readiness, free',
   bridge: {
     label: 'later',
     pre: "Leaning toward Psychiatry as a specialty? When you get there, Rezumab's free ",
@@ -246,8 +246,8 @@ export const psychiatry: GuideData = {
   },
 
   sticky: {
-    label: 'Free Step 2 score predictor. No sign-up.',
-    cta: 'Free score predictor',
+    label: 'Free Psych decks. No sign-up.',
+    cta: 'Get the app',
   },
-  navCta: 'Free score predictor',
+  navCta: 'Get the free Psych deck',
 };
