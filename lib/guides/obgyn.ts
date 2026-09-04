@@ -37,7 +37,7 @@ export const obgyn: GuideData = {
   answer: {
     question: 'How do you study for the OB/GYN shelf?',
     body:
-      'To study for the OB/GYN shelf, make **UWorld Step 2 CK** your backbone and read every explanation. Add the free **APGO uWise** question bank for OB/GYN-specific reps, read **Case Files** or **Blueprints OB/GYN**, build frameworks with **OnlineMedEd**, and keep **Anki** running. Then take an **NBME practice shelf** before exam day.',
+      'To study for the OB/GYN shelf, make **UWorld Step 2 CK** your backbone and read every explanation. Add the free **APGO uWise** question bank for OB/GYN-specific reps, read **Case Files** or **Blueprints OB/GYN**, build frameworks with **OnlineMedEd**, and keep a daily spaced-repetition habit running in **Step Gunner**. Then take an **NBME practice shelf** before exam day.',
   },
 
   trust: {
@@ -87,8 +87,9 @@ export const obgyn: GuideData = {
     },
     {
       role: 'Spaced repetition',
-      name: 'AnKing, on Anki',
-      use: 'keeping what you already learned from leaking out. Unsuspend the OB/GYN subdecks as you cover topics, then do your reviews daily.',
+      name: 'Step Gunner',
+      also: 'AnKing, on Anki',
+      use: 'keeping what you already learned from leaking out. Study the OB/GYN decks as you cover each topic and let the review queue bring them back; if you already run AnKing, keep it.',
       note: 'The habit that makes week 6 not erase week 1. Skip it and you relearn the same facts three times.',
     },
     {
@@ -161,7 +162,7 @@ export const obgyn: GuideData = {
     visualDxNote:
       'The Visual Dx image bank carries the classic gynecologic and breast slides above, worth a few reps before the shelf.',
     honest:
-      '**The honest part:** this is a supplement, not a spine. It will not replace UWorld, uWise, Anki, or your reading. It replaces the ten minutes you would otherwise spend scrolling. The core is free to study; the Visual Dx image bank is the paid upgrade.',
+      '**The honest part:** this is a supplement, not a spine. It will not replace UWorld, uWise or your reading. It replaces the ten minutes you would otherwise spend scrolling. The core is free to study; the Visual Dx image bank is the paid upgrade.',
     quote: {
       text: 'This app makes studying so effortless and fun. Highly recommend.',
       cite: 'From a 5-star App Store review titled "Best Step 2 supplement"',

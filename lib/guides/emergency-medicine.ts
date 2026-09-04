@@ -38,7 +38,7 @@ export const emergencyMedicine: GuideData = {
   answer: {
     question: 'How do you study for the Emergency Medicine shelf?',
     body:
-      'To study for the Emergency Medicine subject exam, think in terms of the sickest-first differential and the immediate next step: make **UWorld Step 2 CK** your backbone and read every explanation. Read **Case Files Emergency Medicine**, build frameworks with **OnlineMedEd**, drill toxicology antidotes and reading films fast, and keep **Anki** running. Then take an **NBME practice exam** before test day.',
+      'To study for the Emergency Medicine subject exam, think in terms of the sickest-first differential and the immediate next step: make **UWorld Step 2 CK** your backbone and read every explanation. Read **Case Files Emergency Medicine**, build frameworks with **OnlineMedEd**, drill toxicology antidotes and reading films fast, and keep a daily spaced-repetition habit running in **Step Gunner**. Then take an **NBME practice exam** before test day.',
   },
 
   trust: {
@@ -87,8 +87,9 @@ export const emergencyMedicine: GuideData = {
     },
     {
       role: 'Spaced repetition',
-      name: 'AnKing, on Anki',
-      use: 'keeping antidotes, ECG patterns, and acute management steps from leaking out. Unsuspend the relevant subdecks as you cover topics, then review daily.',
+      name: 'Step Gunner',
+      also: 'AnKing, on Anki',
+      use: 'keeping antidotes, ECG patterns, and acute management steps from leaking out. Study the relevant decks as you cover each topic and let the review queue bring them back; if you already run AnKing, keep it.',
       note: 'Shift work is irregular, so a steady review habit matters more than long sit-down sessions.',
     },
     {
@@ -157,7 +158,7 @@ export const emergencyMedicine: GuideData = {
     visualDxNote:
       'Reading a film or ECG fast is an EM skill in itself, and this is the largest image set in the app. Worth steady reps before the exam.',
     honest:
-      '**The honest part:** this is a supplement, not a spine. It will not replace UWorld, your reading, or Anki. It replaces the ten minutes you would otherwise spend scrolling. The core is free to study; the Visual Dx imaging bank is the paid upgrade, and it is EM\'s strongest surface.',
+      '**The honest part:** this is a supplement, not a spine. It will not replace UWorld or your reading. It replaces the ten minutes you would otherwise spend scrolling. The core is free to study; the Visual Dx imaging bank is the paid upgrade, and it is EM\'s strongest surface.',
     quote: {
       text: 'This app makes studying so effortless and fun. Highly recommend.',
       cite: 'From a 5-star App Store review titled "Best Step 2 supplement"',

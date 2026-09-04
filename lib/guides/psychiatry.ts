@@ -37,7 +37,7 @@ export const psychiatry: GuideData = {
   answer: {
     question: 'How do you study for the Psychiatry shelf?',
     body:
-      'To study for the Psychiatry shelf, make **UWorld Step 2 CK** your backbone and read every explanation. Read **First Aid for the Psychiatry Clerkship** for the diagnostic criteria and first-line treatments, build frameworks with **OnlineMedEd**, and keep **Anki** running. Psych is pattern-heavy and very learnable, so daily reps pay off. Then take an **NBME practice shelf** before exam day.',
+      'To study for the Psychiatry shelf, make **UWorld Step 2 CK** your backbone and read every explanation. Read **First Aid for the Psychiatry Clerkship** for the diagnostic criteria and first-line treatments, build frameworks with **OnlineMedEd**, and keep a daily spaced-repetition habit running in **Step Gunner**. Psych is pattern-heavy and very learnable, so daily reps pay off. Then take an **NBME practice shelf** before exam day.',
   },
 
   trust: {
@@ -81,8 +81,9 @@ export const psychiatry: GuideData = {
     },
     {
       role: 'Spaced repetition',
-      name: 'AnKing, on Anki',
-      use: 'keeping the criteria and first-line drugs from blurring together. Unsuspend the psych subdecks as you cover topics, then do your reviews daily.',
+      name: 'Step Gunner',
+      also: 'AnKing, on Anki',
+      use: 'keeping the criteria and first-line drugs from blurring together. Study the psych decks as you cover each topic and let the review queue bring them back; if you already run AnKing, keep it.',
       note: 'Psych rewards clean recall of criteria and treatments, exactly what spaced repetition is for.',
     },
     {
@@ -142,7 +143,7 @@ export const psychiatry: GuideData = {
     visualDxChips: [],
     visualDxNote: '',
     honest:
-      '**The honest part:** this is a supplement, not a spine. It will not replace UWorld, your reading, or Anki. It replaces the ten minutes you would otherwise spend scrolling. The core is free to study; the Visual Dx image bank is the paid upgrade, though psychiatry leans on the text decks rather than images.',
+      '**The honest part:** this is a supplement, not a spine. It will not replace UWorld or your reading. It replaces the ten minutes you would otherwise spend scrolling. The core is free to study; the Visual Dx image bank is the paid upgrade, though psychiatry leans on the text decks rather than images.',
     quote: {
       text: 'Gotten me multiple questions on practice tests. Helpful for those not keen on the Anki burden but who like spaced repetition.',
       cite: 'From a 5-star App Store review titled "Solid Step 2 studying addon"',

@@ -325,7 +325,13 @@ h2 { font-size: 22px; }
 }
 `}</style>
 
-      <SiteShell campaign={`guides_${meta.slug}`} measure="article">
+      <SiteShell
+        campaign={`guides_${meta.slug}`}
+        measure="article"
+        // A cold search reader gets the free tool, not the store. The store ask
+        // lives mid-page and at the end, after the guide has earned it.
+        cta={{ label: guide.navCta, href: '/readiness' }}
+      >
         <div className="wrap">
           <div className="crumb">
             <a href="/guides">Clerkship guides</a>

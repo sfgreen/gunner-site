@@ -38,7 +38,7 @@ export const surgery: GuideData = {
   answer: {
     question: 'How do you study for the Surgery shelf?',
     body:
-      'To study for the Surgery shelf, remember most of it is medicine in a surgical patient: make **UWorld Step 2 CK** your backbone and read every explanation. Use **Pestana Surgery Notes** for the high-yield decision rules, add **Case Files** or **De Virgilio** for case reasoning, build frameworks with **OnlineMedEd**, and keep **Anki** running. Then take an **NBME practice shelf** before exam day.',
+      'To study for the Surgery shelf, remember most of it is medicine in a surgical patient: make **UWorld Step 2 CK** your backbone and read every explanation. Use **Pestana Surgery Notes** for the high-yield decision rules, add **Case Files** or **De Virgilio** for case reasoning, build frameworks with **OnlineMedEd**, and keep a daily spaced-repetition habit running in **Step Gunner**. Then take an **NBME practice shelf** before exam day.',
   },
 
   trust: {
@@ -88,8 +88,9 @@ export const surgery: GuideData = {
     },
     {
       role: 'Spaced repetition',
-      name: 'AnKing, on Anki',
-      use: 'keeping what you already learned from leaking out. Unsuspend the surgery-relevant subdecks as you cover topics, then do your reviews daily.',
+      name: 'Step Gunner',
+      also: 'AnKing, on Anki',
+      use: 'keeping what you already learned from leaking out. Study the surgery-relevant decks as you cover each topic and let the review queue bring them back; if you already run AnKing, keep it.',
       note: 'Long service hours make retention the whole game. Skip reviews and you relearn the same facts three times.',
     },
     {
@@ -156,7 +157,7 @@ export const surgery: GuideData = {
     visualDxNote:
       'The Visual Dx image bank carries a small set of classic bone and soft-tissue images, worth a few reps before the shelf. Most surgical decision-making lives in the text decks above.',
     honest:
-      '**The honest part:** this is a supplement, not a spine. It will not replace UWorld, Pestana, Anki, or your reading. It replaces the ten minutes you would otherwise spend scrolling. The core is free to study; the Visual Dx image bank is the paid upgrade.',
+      '**The honest part:** this is a supplement, not a spine. It will not replace UWorld, Pestana or your reading. It replaces the ten minutes you would otherwise spend scrolling. The core is free to study; the Visual Dx image bank is the paid upgrade.',
     quote: {
       text: 'Gotten me multiple questions on practice tests. Helpful for those not keen on the Anki burden but who like spaced repetition.',
       cite: 'From a 5-star App Store review titled "Solid Step 2 studying addon"',

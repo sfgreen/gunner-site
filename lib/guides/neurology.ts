@@ -37,7 +37,7 @@ export const neurology: GuideData = {
   answer: {
     question: 'How do you study for the Neurology shelf?',
     body:
-      'To study for the Neurology shelf, learn to **localize first, then treat**: make **UWorld Step 2 CK** your backbone and read every explanation. Read **Blueprints Neurology** or **Case Files** for the localization and workup logic, build frameworks with **OnlineMedEd**, and keep **Anki** running. Then take an **NBME practice shelf** before exam day.',
+      'To study for the Neurology shelf, learn to **localize first, then treat**: make **UWorld Step 2 CK** your backbone and read every explanation. Read **Blueprints Neurology** or **Case Files** for the localization and workup logic, build frameworks with **OnlineMedEd**, and keep a daily spaced-repetition habit running in **Step Gunner**. Then take an **NBME practice shelf** before exam day.',
   },
 
   trust: {
@@ -81,8 +81,9 @@ export const neurology: GuideData = {
     },
     {
       role: 'Spaced repetition',
-      name: 'AnKing, on Anki',
-      use: 'keeping the localization patterns and drug names from leaking out. Unsuspend the neuro subdecks as you cover topics, then do your reviews daily.',
+      name: 'Step Gunner',
+      also: 'AnKing, on Anki',
+      use: 'keeping the localization patterns and drug names from leaking out. Study the neuro decks as you cover each topic and let the review queue bring them back; if you already run AnKing, keep it.',
       note: 'Neuro is detail-dense, so retention is the whole game. Skip reviews and you relearn the same facts three times.',
     },
     {
@@ -153,7 +154,7 @@ export const neurology: GuideData = {
     visualDxNote:
       'The Visual Dx image bank carries a small set of classic neuropathology slides, worth a few reps before the shelf.',
     honest:
-      '**The honest part:** this is a supplement, not a spine. It will not replace UWorld, Blueprints, Anki, or your reading. It replaces the ten minutes you would otherwise spend scrolling. The core is free to study; the Visual Dx image bank is the paid upgrade.',
+      '**The honest part:** this is a supplement, not a spine. It will not replace UWorld, Blueprints or your reading. It replaces the ten minutes you would otherwise spend scrolling. The core is free to study; the Visual Dx image bank is the paid upgrade.',
     quote: {
       text: 'This app makes studying so effortless and fun. Highly recommend.',
       cite: 'From a 5-star App Store review titled "Best Step 2 supplement"',

@@ -39,7 +39,7 @@ export const pediatrics: GuideData = {
   answer: {
     question: 'How do you study for the Pediatrics shelf?',
     body:
-      'To study for the Pediatrics shelf, make **UWorld Step 2 CK** your backbone: do every Peds-tagged question and read each explanation. Build frameworks early with **OnlineMedEd**, lock facts in with **Anki**, and read **Case Files** or **BRS** for weak areas. Add short daily pattern-recognition reps, then take an **NBME practice shelf** before exam day.',
+      'To study for the Pediatrics shelf, make **UWorld Step 2 CK** your backbone: do every Peds-tagged question and read each explanation. Build frameworks early with **OnlineMedEd**, lock facts in with daily spaced repetition in **Step Gunner**, and read **Case Files** or **BRS** for weak areas. Add short daily pattern-recognition reps, then take an **NBME practice shelf** before exam day.',
   },
 
   trust: {
@@ -70,8 +70,9 @@ export const pediatrics: GuideData = {
     },
     {
       role: 'Spaced repetition',
-      name: 'AnKing, on Anki',
-      use: 'keeping what you already learned from leaking out. Unsuspend the Peds subdecks as you cover topics, then do your reviews daily.',
+      name: 'Step Gunner',
+      also: 'AnKing, on Anki',
+      use: 'keeping what you already learned from leaking out. Study the Peds decks as you cover each topic and let the review queue bring them back; if you already run AnKing, keep it.',
       note: 'The habit that makes week 6 not erase week 1. Skip it and you relearn the same facts three times.',
     },
     {
@@ -165,7 +166,7 @@ export const pediatrics: GuideData = {
     visualDxNote:
       'The Visual Dx image bank has no dedicated Peds tag, so we are not quoting a number for it. It does carry the classic Peds visuals above, worth a few reps before the shelf.',
     honest:
-      '**The honest part:** this is a supplement, not a spine. It will not replace UWorld, Anki, or your reading. It replaces the ten minutes you would otherwise spend scrolling. The core is free to study; the Visual Dx image bank is the paid upgrade.',
+      '**The honest part:** this is a supplement, not a spine. It will not replace UWorld or your reading. It replaces the ten minutes you would otherwise spend scrolling. The core is free to study; the Visual Dx image bank is the paid upgrade.',
     quote: {
       text: 'Gotten me multiple questions on practice tests. Helpful for those not keen on the Anki burden but who like spaced repetition.',
       cite: 'From a 5-star App Store review titled "Solid Step 2 studying addon"',

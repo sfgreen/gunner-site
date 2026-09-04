@@ -89,7 +89,8 @@ export const foundations: GuideData = {
     },
     {
       role: 'Spaced repetition',
-      name: 'AnKing, on Anki',
+      name: 'Step Gunner',
+      also: 'AnKing, on Anki',
       use: 'keeping the formulas and ethics patterns sharp between the exams that test them. A small, steady deck is all you need.',
       note: 'Because these points appear all year, a light daily habit beats a cram the night before.',
     },

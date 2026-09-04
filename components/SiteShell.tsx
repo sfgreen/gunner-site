@@ -28,7 +28,7 @@ const NAV_LINKS: { href: string; label: string }[] = [
 ];
 
 export default function SiteShell({
-  children, campaign, measure = 'article', crumb, dark = false, footer = true,
+  children, campaign, measure = 'article', crumb, dark = false, footer = true, cta,
 }: {
   children: ReactNode;
   /** ct= for the nav store button, and the analytics `source`. */
@@ -38,6 +38,20 @@ export default function SiteShell({
   /** The homepage is the one dark surface; every other page is Score Report light. */
   dark?: boolean;
   footer?: boolean;
+  /**
+   * Per-page nav CTA. Defaults to the App Store ("Get the app"), which is the
+   * right ask for someone already on the homepage and the WRONG one for a cold
+   * reader who arrived from a search for "how do you study for the peds shelf".
+   * That reader has had nothing from us yet; an App Store link is the highest
+   * friction thing we can put in front of them. The guides therefore point the
+   * nav at a free web tool instead and keep the store ask for later in the page,
+   * after the guide has actually been useful.
+   *
+   * The guide data model has carried `navCta` since launch. SiteShell simply
+   * never read it (dd8743e), so every guide has been rendering the generic
+   * store button.
+   */
+  cta?: { label: string; href: string };
 }) {
   const [open, setOpen] = useState(false);
   const store = appStoreUrl(campaign);
@@ -69,11 +83,18 @@ export default function SiteShell({
 
         <div className="right">
           <a
-            href={store}
+            href={cta ? cta.href : store}
             className="cta"
-            onClick={() => track('store_click', { source: campaign, location: 'nav', ref: referrerHost() })}
+            onClick={() =>
+              track(cta ? 'nav_cta_click' : 'store_click', {
+                source: campaign,
+                location: 'nav',
+                target: cta ? cta.href : 'app_store',
+                ref: referrerHost(),
+              })
+            }
           >
-            Get the app
+            {cta ? cta.label : 'Get the app'}
           </a>
           <button
             type="button"
