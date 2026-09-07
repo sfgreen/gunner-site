@@ -1,0 +1,456 @@
+{
+ "_source": "Self-reported practice-form and real Step 2 CK scores posted to public forums, paired per student. Posters skew toward good news, so read these as an optimistic ceiling, not a population average.",
+ "_generated_by": "scripts/gen_form_outcomes.py",
+ "totalStudents": 269,
+ "forms": {
+  "nbme-9": {
+   "form": "NBME 9",
+   "n": 114,
+   "medianPrinted": 236,
+   "medianActual": 260,
+   "medianDelta": 24.0,
+   "bands": [
+    {
+     "label": "below 230",
+     "n": 47,
+     "median": 252,
+     "p25": 248,
+     "p75": 261
+    },
+    {
+     "label": "230 to 239",
+     "n": 21,
+     "median": 257,
+     "p25": 254,
+     "p75": 262
+    },
+    {
+     "label": "240 to 249",
+     "n": 15,
+     "median": 263,
+     "p25": 258,
+     "p75": 268
+    },
+    {
+     "label": "250 to 259",
+     "n": 21,
+     "median": 268,
+     "p25": 263,
+     "p75": 270
+    },
+    {
+     "label": "260 and up",
+     "n": 10,
+     "median": 270,
+     "p25": 268,
+     "p75": 273
+    }
+   ]
+  },
+  "nbme-10": {
+   "form": "NBME 10",
+   "n": 189,
+   "medianPrinted": 240,
+   "medianActual": 259,
+   "medianDelta": 17.0,
+   "bands": [
+    {
+     "label": "below 230",
+     "n": 59,
+     "median": 252,
+     "p25": 246,
+     "p75": 258
+    },
+    {
+     "label": "230 to 239",
+     "n": 29,
+     "median": 257,
+     "p25": 250,
+     "p75": 264
+    },
+    {
+     "label": "240 to 249",
+     "n": 37,
+     "median": 258,
+     "p25": 253,
+     "p75": 263
+    },
+    {
+     "label": "250 to 259",
+     "n": 39,
+     "median": 264,
+     "p25": 260,
+     "p75": 270
+    },
+    {
+     "label": "260 and up",
+     "n": 25,
+     "median": 270,
+     "p25": 266,
+     "p75": 274
+    }
+   ]
+  },
+  "nbme-11": {
+   "form": "NBME 11",
+   "n": 204,
+   "medianPrinted": 243,
+   "medianActual": 259,
+   "medianDelta": 16.0,
+   "bands": [
+    {
+     "label": "below 230",
+     "n": 44,
+     "median": 251,
+     "p25": 246,
+     "p75": 258
+    },
+    {
+     "label": "230 to 239",
+     "n": 37,
+     "median": 257,
+     "p25": 251,
+     "p75": 260
+    },
+    {
+     "label": "240 to 249",
+     "n": 55,
+     "median": 259,
+     "p25": 253,
+     "p75": 264
+    },
+    {
+     "label": "250 to 259",
+     "n": 42,
+     "median": 265,
+     "p25": 258,
+     "p75": 270
+    },
+    {
+     "label": "260 and up",
+     "n": 26,
+     "median": 269,
+     "p25": 264,
+     "p75": 273
+    }
+   ]
+  },
+  "nbme-12": {
+   "form": "NBME 12",
+   "n": 188,
+   "medianPrinted": 244,
+   "medianActual": 259,
+   "medianDelta": 14.5,
+   "bands": [
+    {
+     "label": "below 230",
+     "n": 30,
+     "median": 251,
+     "p25": 246,
+     "p75": 258
+    },
+    {
+     "label": "230 to 239",
+     "n": 45,
+     "median": 254,
+     "p25": 250,
+     "p75": 260
+    },
+    {
+     "label": "240 to 249",
+     "n": 42,
+     "median": 258,
+     "p25": 253,
+     "p75": 261
+    },
+    {
+     "label": "250 to 259",
+     "n": 39,
+     "median": 264,
+     "p25": 261,
+     "p75": 270
+    },
+    {
+     "label": "260 and up",
+     "n": 32,
+     "median": 270,
+     "p25": 264,
+     "p75": 273
+    }
+   ]
+  },
+  "nbme-13": {
+   "form": "NBME 13",
+   "n": 222,
+   "medianPrinted": 246,
+   "medianActual": 259,
+   "medianDelta": 12.0,
+   "bands": [
+    {
+     "label": "below 230",
+     "n": 35,
+     "median": 252,
+     "p25": 246,
+     "p75": 259
+    },
+    {
+     "label": "230 to 239",
+     "n": 42,
+     "median": 254,
+     "p25": 249,
+     "p75": 259
+    },
+    {
+     "label": "240 to 249",
+     "n": 54,
+     "median": 257,
+     "p25": 252,
+     "p75": 261
+    },
+    {
+     "label": "250 to 259",
+     "n": 44,
+     "median": 263,
+     "p25": 258,
+     "p75": 268
+    },
+    {
+     "label": "260 and up",
+     "n": 47,
+     "median": 269,
+     "p25": 264,
+     "p75": 273
+    }
+   ]
+  },
+  "nbme-14": {
+   "form": "NBME 14",
+   "n": 225,
+   "medianPrinted": 249,
+   "medianActual": 259,
+   "medianDelta": 11.0,
+   "bands": [
+    {
+     "label": "below 230",
+     "n": 34,
+     "median": 250,
+     "p25": 246,
+     "p75": 255
+    },
+    {
+     "label": "230 to 239",
+     "n": 30,
+     "median": 252,
+     "p25": 249,
+     "p75": 257
+    },
+    {
+     "label": "240 to 249",
+     "n": 51,
+     "median": 258,
+     "p25": 252,
+     "p75": 261
+    },
+    {
+     "label": "250 to 259",
+     "n": 62,
+     "median": 261,
+     "p25": 255,
+     "p75": 267
+    },
+    {
+     "label": "260 and up",
+     "n": 48,
+     "median": 268,
+     "p25": 264,
+     "p75": 272
+    }
+   ]
+  },
+  "nbme-15": {
+   "form": "NBME 15",
+   "n": 220,
+   "medianPrinted": 249,
+   "medianActual": 259,
+   "medianDelta": 8.5,
+   "bands": [
+    {
+     "label": "below 230",
+     "n": 26,
+     "median": 250,
+     "p25": 243,
+     "p75": 259
+    },
+    {
+     "label": "230 to 239",
+     "n": 32,
+     "median": 252,
+     "p25": 247,
+     "p75": 258
+    },
+    {
+     "label": "240 to 249",
+     "n": 55,
+     "median": 255,
+     "p25": 251,
+     "p75": 259
+    },
+    {
+     "label": "250 to 259",
+     "n": 52,
+     "median": 261,
+     "p25": 256,
+     "p75": 265
+    },
+    {
+     "label": "260 and up",
+     "n": 55,
+     "median": 269,
+     "p25": 263,
+     "p75": 271
+    }
+   ]
+  },
+  "nbme-16": {
+   "form": "NBME 16",
+   "n": 65,
+   "medianPrinted": 253,
+   "medianActual": 257,
+   "medianDelta": 1.0,
+   "bands": [
+    {
+     "label": "240 to 249",
+     "n": 12,
+     "median": 248,
+     "p25": 243,
+     "p75": 254
+    },
+    {
+     "label": "250 to 259",
+     "n": 21,
+     "median": 257,
+     "p25": 252,
+     "p75": 260
+    },
+    {
+     "label": "260 and up",
+     "n": 23,
+     "median": 265,
+     "p25": 259,
+     "p75": 270
+    }
+   ]
+  },
+  "uwsa-1": {
+   "form": "UWSA 1",
+   "n": 108,
+   "medianPrinted": 246,
+   "medianActual": 260,
+   "medianDelta": 13.5,
+   "bands": [
+    {
+     "label": "below 230",
+     "n": 25,
+     "median": 251,
+     "p25": 246,
+     "p75": 256
+    },
+    {
+     "label": "230 to 239",
+     "n": 10,
+     "median": 256,
+     "p25": 250,
+     "p75": 260
+    },
+    {
+     "label": "240 to 249",
+     "n": 29,
+     "median": 261,
+     "p25": 256,
+     "p75": 267
+    },
+    {
+     "label": "250 to 259",
+     "n": 18,
+     "median": 265,
+     "p25": 258,
+     "p75": 269
+    },
+    {
+     "label": "260 and up",
+     "n": 26,
+     "median": 270,
+     "p25": 264,
+     "p75": 272
+    }
+   ]
+  },
+  "uwsa-2": {
+   "form": "UWSA 2",
+   "n": 137,
+   "medianPrinted": 253,
+   "medianActual": 260,
+   "medianDelta": 4.0,
+   "bands": [
+    {
+     "label": "below 230",
+     "n": 15,
+     "median": 251,
+     "p25": 246,
+     "p75": 257
+    },
+    {
+     "label": "230 to 239",
+     "n": 8,
+     "median": 252,
+     "p25": 236,
+     "p75": 258
+    },
+    {
+     "label": "240 to 249",
+     "n": 30,
+     "median": 253,
+     "p25": 248,
+     "p75": 258
+    },
+    {
+     "label": "250 to 259",
+     "n": 34,
+     "median": 260,
+     "p25": 253,
+     "p75": 266
+    },
+    {
+     "label": "260 and up",
+     "n": 50,
+     "median": 268,
+     "p25": 263,
+     "p75": 271
+    }
+   ]
+  },
+  "uwsa-3": {
+   "form": "UWSA 3",
+   "n": 39,
+   "medianPrinted": 243,
+   "medianActual": 263,
+   "medianDelta": 18.0,
+   "bands": [
+    {
+     "label": "below 230",
+     "n": 12,
+     "median": 254,
+     "p25": 246,
+     "p75": 259
+    },
+    {
+     "label": "250 to 259",
+     "n": 14,
+     "median": 270,
+     "p25": 264,
+     "p75": 271
+    }
+   ]
+  }
+ }
+}

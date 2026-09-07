@@ -58,7 +58,7 @@ export const FORM_PAGES: FormPage[] = [
     form: 'NBME 9',
     title: 'NBME 9 Score Conversion for Step 2 CK',
     description:
-      'NBME 9 prints about 5 to 6 points low, so the conversion credits it back. See the projected Step 2 CK range for any printed NBME 9 score.',
+      'What 114 students who posted an NBME 9 score actually got on Step 2 CK: median 236 became 260. Plus the full conversion table.',
     h1: 'NBME 9 to Step 2 CK',
     lede: 'The oldest form still in circulation, and the one most likely to be read wrong.',
     note:
@@ -87,7 +87,7 @@ export const FORM_PAGES: FormPage[] = [
     form: 'NBME 10',
     title: 'NBME 10 Score Conversion for Step 2 CK',
     description:
-      'Convert a printed NBME 10 score into a projected Step 2 CK range, from a model fit on 258 real score reports and tested blind on 32 more.',
+      'What 189 students who posted an NBME 10 score actually got on Step 2 CK: median 240 became 259. Plus the full conversion table.',
     h1: 'NBME 10 to Step 2 CK',
     lede: 'Vendor-equated, so it enters the projection exactly as printed.',
     note: EQUATED_NOTE,
@@ -98,7 +98,7 @@ export const FORM_PAGES: FormPage[] = [
     form: 'NBME 11',
     title: 'NBME 11 Score Conversion for Step 2 CK',
     description:
-      'Convert a printed NBME 11 score into a projected Step 2 CK range, with the honest band rather than a single number pulled from a formula.',
+      'What 204 students who posted an NBME 11 score actually got on Step 2 CK: median 243 became 259. Plus the full conversion table.',
     h1: 'NBME 11 to Step 2 CK',
     lede: 'Vendor-equated, so it enters the projection exactly as printed.',
     note: EQUATED_NOTE,
@@ -109,7 +109,7 @@ export const FORM_PAGES: FormPage[] = [
     form: 'NBME 12',
     title: 'NBME 12 Score Conversion for Step 2 CK',
     description:
-      'Convert a printed NBME 12 score into a projected Step 2 CK range, and see how much the date you took it changes the answer.',
+      'What 188 students who posted an NBME 12 score actually got on Step 2 CK: median 244 became 259. Plus the full conversion table.',
     h1: 'NBME 12 to Step 2 CK',
     lede: 'Vendor-equated, so it enters the projection exactly as printed.',
     note: EQUATED_NOTE,
@@ -120,7 +120,7 @@ export const FORM_PAGES: FormPage[] = [
     form: 'NBME 13',
     title: 'NBME 13 Score Conversion for Step 2 CK',
     description:
-      'Convert a printed NBME 13 score into a projected Step 2 CK range, from a calibrated model that publishes how often it is right.',
+      'What 222 students who posted an NBME 13 score actually got on Step 2 CK: median 246 became 259. Plus the full conversion table.',
     h1: 'NBME 13 to Step 2 CK',
     lede: 'Vendor-equated, so it enters the projection exactly as printed.',
     note: EQUATED_NOTE,
@@ -131,7 +131,7 @@ export const FORM_PAGES: FormPage[] = [
     form: 'NBME 14',
     title: 'NBME 14 Score Conversion for Step 2 CK',
     description:
-      'Convert a printed NBME 14 score into a projected Step 2 CK range, with a band that widens honestly the further out your exam is.',
+      'What 225 students who posted an NBME 14 score actually got on Step 2 CK: median 249 became 259. Plus the full conversion table.',
     h1: 'NBME 14 to Step 2 CK',
     lede: 'Vendor-equated, so it enters the projection exactly as printed.',
     note: EQUATED_NOTE,
@@ -142,7 +142,7 @@ export const FORM_PAGES: FormPage[] = [
     form: 'NBME 15',
     title: 'NBME 15 Score Conversion for Step 2 CK',
     description:
-      'Convert a printed NBME 15 score into a projected Step 2 CK range. No correction is applied: form 15 is equated onto the common scale.',
+      'What 220 students who posted an NBME 15 score actually got on Step 2 CK: median 249 became 259. Plus the full conversion table.',
     h1: 'NBME 15 to Step 2 CK',
     lede: 'Vendor-equated, so it enters the projection exactly as printed.',
     note: EQUATED_NOTE,
@@ -153,7 +153,7 @@ export const FORM_PAGES: FormPage[] = [
     form: 'NBME 16',
     title: 'NBME 16 Score Conversion for Step 2 CK',
     description:
-      'NBME 16 prints higher than the older forms, and it is counted at face value. See the projected Step 2 CK range for any printed 16.',
+      'What 65 students who posted an NBME 16 score actually got on Step 2 CK: median 253 became 257. Plus the full conversion table.',
     h1: 'NBME 16 to Step 2 CK',
     lede: 'The newest form, and one of the strongest single signals you can get.',
     note:
@@ -175,7 +175,7 @@ export const FORM_PAGES: FormPage[] = [
     form: 'UWSA 1',
     title: 'UWSA 1 Score Conversion for Step 2 CK',
     description:
-      'UWSA 1 sits roughly on the NBME scale, so it converts without a correction. See the projected Step 2 CK range for any printed UWSA 1.',
+      'What 108 students who posted an UWSA 1 score actually got on Step 2 CK: median 246 became 260. Plus the full conversion table.',
     h1: 'UWSA 1 to Step 2 CK',
     lede: 'The UWorld self-assessment that sits closest to the NBME scale.',
     note:
@@ -203,7 +203,7 @@ export const FORM_PAGES: FormPage[] = [
     form: 'UWSA 2',
     title: 'UWSA 2 Score Conversion: Does It Print High?',
     description:
-      'UWSA 2 prints about 4.8 points hot against the NBME scale, so it is translated down before projecting. See the honest Step 2 CK range.',
+      'What 137 students who posted an UWSA 2 score actually got on Step 2 CK: median 253 became 260. Plus the full conversion table.',
     h1: 'UWSA 2 to Step 2 CK',
     lede: 'The form most often accused of running hot, and the accusation is roughly right.',
     note:
@@ -231,7 +231,7 @@ export const FORM_PAGES: FormPage[] = [
     form: 'UWSA 3',
     title: 'UWSA 3 Score Conversion for Step 2 CK',
     description:
-      'UWSA 3 reads a few points low on thinner data, so the correction is shrunk toward zero. See the projected Step 2 CK range and the caveat.',
+      'What 39 students who posted an UWSA 3 score actually got on Step 2 CK: median 243 became 263. Plus the full conversion table.',
     h1: 'UWSA 3 to Step 2 CK',
     lede: 'The newest UWorld form, and the one with the least data behind its correction.',
     note:
