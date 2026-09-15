@@ -142,7 +142,7 @@ export default function Research({ record }: { record: Record }) {
 
       <h2>2. Methods</h2>
       <h3>Data</h3>
-      <p>Score-report posts from r/step2 (the aggregate scrape plus the 07-29, 08-05 and 08-19 threads), parsed into one row per assessment: form, printed score, days before the exam when available, and the actual three-digit Step 2 CK result. 269 students, 3,737 assessments. Usernames were dropped at parse time; records carry only an id, the forms, the days and the outcome. Free 120 percentages were kept but do not enter the model.</p>
+      <p>Score-report posts from r/step2 (the aggregate scrape plus the 07-29, 08-05 and 08-19 threads), parsed into one row per assessment: form, printed score, days before the exam when available, and the actual three-digit Step 2 CK result. 269 students, 3,737 assessments. Usernames were dropped at parse time; records carry only an id, the forms, the days and the outcome. Free 120 percentages were kept but do not enter the model; they are analysed separately in <Link href="/research/free-120-to-step-2">the Free 120 post</Link>.</p>
       <h3>Inclusion</h3>
       <p>A student enters the fit when at least one NBME or UWSA three-digit score and a real Step 2 score are present (n=239). Implausible actuals (outside 155 to 300) are dropped. Scores recorded fewer than 13 days after the exam date are excluded on principle, since USMLE releases reports on Wednesdays about two to four weeks after the test and a "score" before then cannot be real.</p>
       <h3>Model</h3>
