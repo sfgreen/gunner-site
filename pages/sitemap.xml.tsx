@@ -18,6 +18,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     urlNode('/guides', 'weekly', '0.8'),
     urlNode('/research/nbme-to-step-2', 'weekly', '0.9'),
     urlNode('/research/free-120-to-step-2', 'monthly', '0.9'),
+    urlNode('/research/dedicated-calendar', 'monthly', '0.9'),
     urlNode('/step-2-score-by-specialty', 'monthly', '0.9'),
     urlNode('/step-2-ck-percentiles', 'monthly', '0.9'),
     urlNode('/readiness/methodology', 'monthly', '0.7'),

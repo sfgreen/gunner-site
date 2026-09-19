@@ -168,6 +168,7 @@ export default function FreeOneTwenty() {
       <p><strong>Take it twice.</strong> Once around three to four weeks out, when the number can still change what you do, and once in the last week if you want the familiarity of the interface.</p>
       <p>The first sitting is the one that earns its keep. A 71% with a month left is a different object from a 71% with three days left: it is still a problem you can work on. The timing evidence from the <Link href="/research/nbme-to-step-2">NBME analysis</Link> applies here too, so an early Free 120 should be weighted like any other early form rather than treated as a verdict.</p>
       <p>The second sitting is for the interface, the lab value pop-ups and the pacing, and you should expect it to read a little high because you have seen the questions.</p>
+      <p>The whole form calendar has the same shape, and I mapped it in <Link href="/research/dedicated-calendar">the dedicated schedule post</Link>: the most informative reads all cluster in the last fortnight.</p>
       <p>The obvious objection is that there is only one current form, so taking it early spends it. That is real. My answer is that a number you can act on is worth more than a number you cannot, and the second sitting still gives you the interface even if it no longer gives you a clean score.</p>
 
       <section className="pitch">
