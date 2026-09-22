@@ -2,6 +2,54 @@
 <html lang="en">
 <head><base href="/free120step2019/">
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Social cards. This page is shared in r/step2 more than it is searched for,
+     so the unfurl is a distribution surface, not a nicety. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Step Gunner">
+<meta property="og:url" content="https://stepgunner.com/free120step2019">
+<meta property="og:title" content="Step 2 CK Free 120 (2019 form), timed and free">
+<meta property="og:description" content="Sit the official Step 2 CK Free 120 in a real exam interface. Per-block timer, lab values, and a weak-spot report at the end.">
+<meta property="og:image" content="https://stepgunner.com/og/free120-2019.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Step 2 CK Free 120 (2019 form), timed and free">
+<meta name="twitter:description" content="Sit the official Step 2 CK Free 120 in a real exam interface. Per-block timer, lab values, and a weak-spot report at the end.">
+<meta name="twitter:image" content="https://stepgunner.com/og/free120-2019.png">
+
+<!-- GA4. These pages are static files under public/, so they never run _app.tsx
+     and had no analytics at all until now. Mirrors lib/analytics.ts: every call
+     is guarded, because analytics must never throw into a click handler. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDKSK4Z5DW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-LDKSK4Z5DW');
+
+  var SG = (function () {
+    // pt is the account-wide App Analytics provider token. Without pt + mt=8
+    // Apple ignores ct entirely, which is why the Campaigns page sat empty.
+    var STORE = 'https://apps.apple.com/us/app/step-gunner/id6761317357';
+    var PT = '128505861';
+    var CT = 'free120_2019';
+
+    function storeUrl() {
+      return STORE + '?pt=' + PT + '&ct=' + encodeURIComponent(CT) + '&mt=8';
+    }
+    function track(event, params) {
+      try { if (window.gtag) window.gtag('event', event, params || {}); } catch (e) {}
+    }
+    function referrerHost() {
+      try {
+        return document.referrer
+          ? new URL(document.referrer).hostname.replace(/^www\./, '')
+          : 'direct';
+      } catch (e) { return 'unknown'; }
+    }
+    return { storeUrl: storeUrl, track: track, referrerHost: referrerHost, CT: CT };
+  })();
+</script>
 <title>Step 2 CK Free 120 (2019 Form): Practice Online with Answers</title>
 <meta name="description" content="The 2019 official Step 2 CK Free 120 sample questions in a timed, exam-style interface. Answer the block, then review every question with explanations.">
 <link rel="canonical" href="https://stepgunner.com/free120step2019">
@@ -30,11 +78,46 @@
     border:1px solid var(--border); border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.04); }
   .start-screen h2 { margin-top:0; font-size:22px; color:var(--nav-blue); }
   .start-screen p { color:var(--muted); margin:8px 0 22px; }
-  .sg-banner { display:block; max-width:480px; margin:24px auto; border-radius:10px; overflow:hidden; line-height:0;
-    box-shadow:0 2px 10px rgba(0,0,0,0.10); transition:transform .12s ease, box-shadow .12s ease; }
-  .sg-banner:hover { transform:translateY(-2px); box-shadow:0 7px 20px rgba(0,0,0,0.18); }
-  .sg-banner img { width:100%; height:auto; display:block; }
-  .sg-banner-im { max-width:600px; margin:26px auto 4px; }
+  /* ── Step Gunner surfaces (start bar, intermission pitch, result band) ── */
+  .sg { margin:26px 0 0; border:1px solid var(--border); border-radius:8px; overflow:hidden;
+    background:linear-gradient(180deg, #f7fbff, #f2f7fc); }
+  body.dark .sg { background:linear-gradient(180deg, #16202b, #131b24); }
+  .sg-in { padding:20px 22px; }
+  .sg-k { font-size:11px; text-transform:uppercase; letter-spacing:.07em; font-weight:700;
+    color:var(--accent); margin:0 0 6px; }
+  .sg-h { font-size:19px; font-weight:750; color:var(--nav-blue); margin:0 0 8px; line-height:1.3; }
+  body.dark .sg-h { color:#7fb3e0; }
+  .sg-p { font-size:13.5px; color:var(--muted); margin:0 0 8px; max-width:66ch; }
+  .sg-p b { color:var(--text); font-weight:650; }
+  .sg-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; align-items:center; }
+  .sg-btn { display:inline-flex; flex-direction:column; justify-content:center; min-height:44px;
+    padding:10px 18px; border-radius:7px; background:var(--nav-blue); color:#fff; text-decoration:none;
+    font-weight:700; font-size:13.5px; border:1px solid var(--nav-blue); }
+  body.dark .sg-btn { background:var(--accent); border-color:var(--accent); color:#0b1218; }
+  .sg-btn:hover { background:var(--nav-blue-hi); }
+  .sg-btn small { display:block; font-size:11px; font-weight:500; opacity:.78; margin-top:2px; }
+  .sg-alt { display:inline-flex; align-items:center; min-height:44px; padding:10px 16px; border-radius:7px;
+    color:var(--accent); text-decoration:none; font-weight:650; font-size:13.5px; border:1px solid var(--border); }
+  .sg-alt:hover { border-color:var(--accent); }
+  .sg-fine { font-size:11.5px; color:var(--muted); margin:10px 0 0; }
+  .sg-bar { display:flex; gap:14px; align-items:center; flex-wrap:wrap;
+    margin:22px 0 0; padding:12px 16px; border:1px solid var(--border); border-radius:7px;
+    background:#f7fbff; font-size:13px; color:var(--muted); }
+  body.dark .sg-bar { background:#16202b; }
+  .sg-bar .dot { width:7px; height:7px; border-radius:50%; background:var(--accent); flex:none; }
+  .sg-bar .t { flex:1; min-width:260px; }
+  .sg-bar .t b { color:var(--text); font-weight:650; }
+  .sg-bar a { color:var(--accent); font-weight:650; text-decoration:none; white-space:nowrap; }
+  .sg-bar a:hover { text-decoration:underline; }
+  .sg-band { display:flex; margin:12px 0 4px; border:1px solid var(--border);
+    border-radius:7px; overflow:hidden; background:var(--panel); }
+  .sg-band > div { flex:1; padding:10px 12px; border-right:1px solid var(--border); }
+  .sg-band > div:last-child { border-right:0; }
+  .sg-band .bv { font-size:19px; font-weight:800; color:var(--accent);
+    font-variant-numeric:tabular-nums; line-height:1.2; }
+  .sg-band .bl { font-size:10.5px; text-transform:uppercase; letter-spacing:.05em;
+    color:var(--muted); margin-top:2px; }
+  @media (prefers-reduced-motion: reduce) { .sg-btn, .sg-alt { transition:none; } }
   .blk-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin:18px 0 24px; }
   .blk-btn { padding:18px 12px; background:#fff; border:1.5px solid var(--border); border-radius:8px;
     cursor:pointer; text-align:left; transition:all 0.1s; }
@@ -392,6 +475,11 @@
     <input type="file" id="import-file" accept="application/json" style="display:none">
     <span id="io-status" style="font-size:12px;color:var(--muted)"></span>
   </div>
+  <div class="sg-bar">
+    <span class="dot"></span>
+    <span class="t">Free, no account, nothing leaves your browser. From <b>Step Gunner</b>: master the Next Best Step.</span>
+    <a id="sg-start-link" href="#" target="_blank" rel="noopener noreferrer">Get the app</a>
+  </div>
 </div>
 
 <!-- Exam shell -->
@@ -450,7 +538,7 @@
     <button class="primary" id="btn-next-block">Continue to next block</button>
     <button id="btn-home">Block menu</button>
   </div>
-  <a class="sg-banner sg-banner-im" href="https://apps.apple.com/us/app/step-gunner/id6761317357" target="_blank" rel="noopener noreferrer" aria-label="Get the StepGunner app on the App Store"><img id="im-banner" src="sg-cycle-1.jpg" alt="Take a break - prep with StepGunner"></a>
+  <div class="sg" id="sg-im" style="max-width:640px"></div>
 </div>
 
 <!-- Final exam summary (only when all 6 blocks completed) -->
@@ -486,9 +574,7 @@
   <div id="final-insight" class="insight" style="display:none"></div>
   <div id="weakspot" class="weakspot" style="display:none"></div>
 
-  <a class="sg-banner" href="https://apps.apple.com/us/app/step-gunner/id6761317357" target="_blank" rel="noopener noreferrer" aria-label="Get the StepGunner app on the App Store">
-    <img src="stepgunner-banner.jpg" alt="StepGunner — High-Yield Step 2 Prep. Get the app on the App Store.">
-  </a>
+  <div class="sg" id="sg-result"></div>
 
   <div class="detail" id="detail-block" style="display:none">
     <h3>Question-by-question review</h3>
@@ -1196,8 +1282,7 @@ function endBlock(timeUp) {
     const done = Object.keys(loadProg()).filter(k => loadProg()[k] && loadProg()[k].completed).length;
     const total = BLOCKS.length;
     $('intermission-progress').textContent = `${done} of ${total} blocks complete · ${total-done} remaining`;
-    var _imb = document.getElementById('im-banner');
-    if (_imb) _imb.src = (state.blockIdx % 2 === 0) ? 'sg-cycle-1.jpg' : 'sg-cycle-2.jpg';
+    SG.renderIntermission(state.blockIdx);
   });
 }
 
@@ -1306,6 +1391,7 @@ function showFinalSummary() {
   $('f-wrong').textContent   = totalWrong;
   $('f-blank').textContent   = totalBlank;
   $('f-time').textContent    = fmtTime(totalTime);
+  SG.renderResult(Math.round(100 * totalCorrect / totalItems));
 
   // ── Second-guessing + pace insight (from per-item tracking) ──
   let changedItems=0, rightToWrong=0, wrongToRight=0;
@@ -1912,6 +1998,141 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+</script>
+
+<script>
+/* ── Step Gunner surfaces ─────────────────────────────────────────────────────
+   The result pitch reads the student's own percentage against the band table in
+   /research/free-120-to-step-2 (215 r/step2 reports carrying a current-form
+   percentage and a real three-digit score). Under 65 percent deliberately has
+   NO band: only six students in the whole set scored there, and the research
+   refuses to band six people. Inventing a number for the weakest readers is the
+   one thing that would make every other band unbelievable.
+   ------------------------------------------------------------------------- */
+(function () {
+  var BANDS = [
+    { min: 85, med: 270, iqr: '265 to 273', n: 48,
+      p1: 'Top band in the set. Middle half landed 265 to 273.',
+      p2: '<b>Most people sit this three days out</b>, when a good number is just relief. Three weeks out, it buys you a plan.' },
+    { min: 80, med: 261, iqr: '255 to 267', n: 50,
+      p1: 'Middle half landed 255 to 267. Read the spread, not the point.',
+      p2: '<b>Most people sit this three days out</b>, when a good number is just relief. Three weeks out, it buys you a plan.' },
+    { min: 75, med: 256, iqr: '252 to 261', n: 68,
+      p1: 'Middle half landed 252 to 261. Read the spread, not the point.',
+      p2: '<b>Most people sit this three days out</b>, when the number changes nothing. You still have time.' },
+    { min: 70, med: 250, iqr: '246 to 258', n: 31,
+      p1: 'Middle half landed 246 to 258. Twelve points of room.',
+      p2: '<b>A PCT with a month left is a problem. A PCT with three days left is a mood.</b> Most people get the second one.' },
+    { min: 65, med: 247, iqr: '242 to 251', n: 12,
+      p1: 'Middle half landed 242 to 251. Only twelve students sit in this band, so hold it loosely.',
+      p2: '<b>Most people sit this three days out</b>, when the number changes nothing. You still have time.' }
+  ];
+
+  var IM_ROTATION = [
+    { h: 'Master the Next Best Step.',
+      p: 'Every question you just answered asked what you do next. Step Gunner drills that, one chain a day. Free.' },
+    { h: 'The diagnosis was never the hard part.',
+      p: 'Step 2 asks what you do next. Step Gunner drills the order until it is automatic. Free.' },
+    { h: 'One form a year. Or one chain a day.',
+      p: 'Step Gunner is the daily version of what you are doing right now. Free.' }
+  ];
+
+  function bandFor(pct) {
+    for (var i = 0; i < BANDS.length; i++) { if (pct >= BANDS[i].min) return BANDS[i]; }
+    return null;
+  }
+
+  function storeBtn(location, extra) {
+    var a = document.createElement('a');
+    a.className = 'sg-btn';
+    a.href = SG.storeUrl();
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.innerHTML = 'Get Step Gunner free<small>management chains, drilled daily</small>';
+    a.addEventListener('click', function () {
+      var params = { source: SG.CT, location: location, ref: SG.referrerHost() };
+      if (extra) { for (var k in extra) params[k] = extra[k]; }
+      SG.track('store_click', params);
+    });
+    return a;
+  }
+
+  window.SG.renderIntermission = function (blockIdx) {
+    var host = document.getElementById('sg-im');
+    if (!host) return;
+    var copy = IM_ROTATION[blockIdx % IM_ROTATION.length];
+    host.innerHTML = '';
+    var box = document.createElement('div');
+    box.className = 'sg-in';
+    box.innerHTML = '<p class="sg-h">' + copy.h + '</p><p class="sg-p">' + copy.p + '</p>';
+    var row = document.createElement('div');
+    row.className = 'sg-row';
+    row.appendChild(storeBtn('intermission'));
+    box.appendChild(row);
+    host.appendChild(box);
+  };
+
+  window.SG.renderResult = function (pct) {
+    var host = document.getElementById('sg-result');
+    if (!host) return;
+    var b = bandFor(pct);
+    var box = document.createElement('div');
+    box.className = 'sg-in';
+
+    var head = '<p class="sg-k">Your ' + pct + '%, against 215 real score reports</p>';
+    if (b) {
+      head += '<p class="sg-h">Median Step 2 at this band: ' + b.med + '.</p>' +
+        '<div class="sg-band">' +
+          '<div><div class="bv">' + b.med + '</div><div class="bl">Median real Step 2</div></div>' +
+          '<div><div class="bv">' + b.iqr + '</div><div class="bl">Middle half</div></div>' +
+          '<div><div class="bv">' + b.n + '</div><div class="bl">Students in band</div></div>' +
+        '</div>' +
+        '<p class="sg-p">' + b.p1 + '</p>' +
+        '<p class="sg-p">' + b.p2.replace(/PCT/g, pct) + '</p>';
+    } else {
+      head += '<p class="sg-h">No band for this one.</p>' +
+        '<p class="sg-p">Six students in the set scored under 65. Six is not a band, so nobody can ' +
+        'honestly tell you what this converts to.</p>' +
+        '<p class="sg-p"><b>Here is what the data does say.</b> Most people sit this three days out. ' +
+        'If you have weeks, that is the whole difference.</p>';
+    }
+    box.innerHTML = head;
+
+    var row = document.createElement('div');
+    row.className = 'sg-row';
+    row.appendChild(storeBtn('result', { band: b ? String(b.min) : 'under65' }));
+
+    var alt = document.createElement('a');
+    alt.className = 'sg-alt';
+    alt.href = '/step-2-score-predictor';
+    alt.textContent = 'Add it to your readiness';
+    alt.addEventListener('click', function () {
+      SG.track('cta_predictor', { surface: SG.CT, location: 'result' });
+    });
+    row.appendChild(alt);
+    box.appendChild(row);
+
+    var fine = document.createElement('p');
+    fine.className = 'sg-fine';
+    fine.textContent = '215 r/step2 score reports with a current-form percentage and a real score. ' +
+      'Correlation 0.55. Sample skews high.';
+    box.appendChild(fine);
+
+    host.innerHTML = '';
+    host.appendChild(box);
+  };
+
+  // Start-screen bar. Href is set here rather than in markup so the attributed
+  // URL has exactly one definition on the page.
+  document.addEventListener('DOMContentLoaded', function () {
+    var link = document.getElementById('sg-start-link');
+    if (!link) return;
+    link.href = SG.storeUrl();
+    link.addEventListener('click', function () {
+      SG.track('store_click', { source: SG.CT, location: 'start', ref: SG.referrerHost() });
+    });
+  });
+})();
 </script>
 </body>
 </html>
