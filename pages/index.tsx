@@ -171,7 +171,7 @@ export default function Home({ record }: { record: TrackRecord }) {
               <span>App Store <b>4.8</b></span>
             </div>
             <a href={APP} className="store" onClick={store('hero')}><AppleIcon /> Get Step Gunner free</a>
-            <div className="tiny">FREE TO START · iOS 17+ · BUILT BY A MED STUDENT WHO SCORED 270</div>
+            <div className="tiny">FREE TO START · iOS 17+</div>
           </div>
           <ReadinessCheck surface="home_hero" />
         </div>
