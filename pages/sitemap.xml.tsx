@@ -28,6 +28,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     urlNode('/free120', 'monthly', '0.9'),
     urlNode('/free120step2021', 'monthly', '0.8'),
     urlNode('/free120step2019', 'monthly', '0.8'),
+    // Chiefs program page only: /c/<code> and /chiefs/me are per-person and noindex.
+    urlNode('/chiefs', 'monthly', '0.5'),
     urlNode('/support', 'yearly', '0.4'),
     urlNode('/privacy', 'yearly', '0.3'),
     urlNode('/terms', 'yearly', '0.3'),

@@ -49,6 +49,7 @@ SITEMAP_EXCLUDED = {
     "/partner",   # study-partner invite landing, reached only by code
     "/admin",     # operator surface
     "/readiness/paste",  # internal tool for answering score threads, noindex
+    "/chiefs/me",  # a Chief's private stats, token-gated, noindex
 }
 
 TITLE_MAX = 65
