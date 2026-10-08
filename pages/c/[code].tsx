@@ -1,6 +1,7 @@
 import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
-import { useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import qrcode from 'qrcode-generator';
 import SiteShell from '../../components/SiteShell';
 import { appStoreUrl, track, referrerHost } from '../../lib/analytics';
 import { CHIEF_YEARLY, LIST_YEARLY, normalizeCode, possessive, redeemUrl, usd, type PublicChief } from '../../lib/chiefs';
@@ -41,6 +42,22 @@ export default function ChiefLink({ chief, asked }: Props) {
   useEffect(() => {
     track('chief_link_view', { code, active: live, ref: referrerHost() });
   }, [code, live]);
+
+  // Apple's redeem link only works on an iPhone or iPad. A Chief's link opened
+  // from a class group chat on a laptop gets a QR code to finish on the phone.
+  // Decided after mount so the server HTML is the same for every device.
+  const [onIOS, setOnIOS] = useState(true);
+  useEffect(() => {
+    const ua = navigator.userAgent;
+    setOnIOS(/iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
+  }, []);
+  const qrSvg = useMemo(() => {
+    if (!live) return '';
+    const qr = qrcode(0, 'M');
+    qr.addData(`https://stepgunner.com/c/${code}`);
+    qr.make();
+    return qr.createSvgTag({ cellSize: 5, margin: 3, scalable: true });
+  }, [live, code]);
 
   const title = live ? `${possessive(name)} Chief code` : 'This code is not active';
 
@@ -89,7 +106,21 @@ export default function ChiefLink({ chief, asked }: Props) {
                   Opens the App Store with the code filled in. For new subscribers on the yearly plan.
                   Year two renews at the regular price, and you can cancel any time in Settings.
                 </p>
+                <p className="note">
+                  Already have Step Gunner? In the newest version, open Settings and tap
+                  {' '}<b>Redeem a Chief code</b>, or tap <b>Have a Chief code?</b> on the Pro screen.
+                </p>
               </div>
+
+              {!onIOS && (
+                <div className="qr" aria-label="QR code to open this page on your iPhone">
+                  <div className="qrimg" dangerouslySetInnerHTML={{ __html: qrSvg }} />
+                  <p>
+                    <b>On a computer?</b> Step Gunner is an iPhone app, and Apple only redeems codes on the
+                    phone. Scan this with your iPhone camera to open this page there.
+                  </p>
+                </div>
+              )}
 
               <a
                 href={store}
@@ -178,6 +209,13 @@ export default function ChiefLink({ chief, asked }: Props) {
         .go:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
         .cl > .go { width: auto; display: inline-flex; }
         .note { margin: 16px 0 0; font-size: 14px; line-height: 1.5; color: var(--ink-dim); }
+        .note b { color: var(--ink); font-weight: 600; }
+        .qr { display: flex; gap: 18px; align-items: center; margin: 22px 0 0; padding: 18px; border: 1px solid var(--hair-strong, #e3dfd6); border-radius: 16px; background: var(--bg-2, #fff); }
+        .qrimg { width: 132px; height: 132px; flex: none; }
+        .qrimg :global(svg) { width: 100%; height: 100%; display: block; }
+        .qr p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--ink-dim); }
+        .qr p b { color: var(--ink); }
+        @media (max-width: 420px) { .qr { flex-direction: column; align-items: flex-start; } }
         .alt {
           display: inline-flex; align-items: center; min-height: 44px; margin-top: 16px;
           font-weight: 700; color: var(--ink); text-decoration: underline;
