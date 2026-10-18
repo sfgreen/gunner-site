@@ -3,7 +3,7 @@ import { FormEvent, useEffect, useRef, useState } from 'react';
 import SiteShell from '../../components/SiteShell';
 import { track, referrerHost } from '../../lib/analytics';
 import {
-  AUDIENCES, CHANNELS, CHIEF_YEARLY, COMMISSION, HOLD_DAYS, LIST_YEARLY, PROCEEDS, YEARS,
+  AUDIENCES, CHANNELS, CHIEF_YEARLY, COMMISSION, DISCOUNT_PCT, HOLD_DAYS, LIST_YEARLY, PAYOUT_PCT, PROCEEDS, YEARS,
   usd, type FieldErrors,
 } from '../../lib/chiefs';
 
@@ -19,7 +19,7 @@ import {
 
 const PAGE_TITLE = 'Step Gunner Chiefs | By invitation';
 const PAGE_DESC =
-  'Step Gunner Chiefs share Step Gunner with a code of their own. Friends get the first year of Pro at half price, and the Chief earns half of what we make.';
+  'Step Gunner Chiefs share Step Gunner with a code of their own. Friends get the first year of Pro at 40% off, and the Chief earns 40% of what we make.';
 
 type Status = 'idle' | 'sending' | 'done' | 'error';
 
@@ -120,7 +120,7 @@ export default function Chiefs() {
         <meta name="theme-color" content="#faf9f6" />
         <link rel="canonical" href="https://stepgunner.com/chiefs" />
         <meta property="og:title" content="Step Gunner Chiefs" />
-        <meta property="og:description" content="By invitation. A code of your own, half off for your friends, half of what we make for you." />
+        <meta property="og:description" content="By invitation. A code of your own, 40% off for your friends, 40% of what we make for you." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://stepgunner.com/chiefs" />
       </Head>
@@ -162,7 +162,7 @@ export default function Chiefs() {
               </div>
             </dl>
             <p className="math">
-              Apple keeps 15% of {usd(CHIEF_YEARLY)}. Step Gunner keeps {usd(PROCEEDS)}. Half of that is yours.
+              Apple keeps 15% of {usd(CHIEF_YEARLY)}. Step Gunner keeps {usd(PROCEEDS)}. {PAYOUT_PCT}% of that is yours.
             </p>
           </section>
 
@@ -172,15 +172,15 @@ export default function Chiefs() {
             <ol className="rows">
               <li>
                 <span className="n" aria-hidden="true">01</span>
-                <div><b>Your own code and link.</b> Something like MAYA50, plus a link that opens the App Store with the code already filled in.</div>
+                <div><b>Your own code and link.</b> Something like MAYA40, plus a link that opens the App Store with the code already filled in.</div>
               </li>
               <li>
                 <span className="n" aria-hidden="true">02</span>
-                <div><b>Half off for your friends.</b> New subscribers get the first year of Pro for {usd(CHIEF_YEARLY)} instead of {usd(LIST_YEARLY)}. Year two renews at the regular price.</div>
+                <div><b>{DISCOUNT_PCT}% off for your friends.</b> New subscribers get the first year of Pro for {usd(CHIEF_YEARLY)} instead of {usd(LIST_YEARLY)}. Year two renews at the regular price.</div>
               </li>
               <li>
                 <span className="n" aria-hidden="true">03</span>
-                <div><b>Half of what we make.</b> About {usd(COMMISSION)} for every first-year signup, paid monthly. No cap.</div>
+                <div><b>{PAYOUT_PCT}% of what we make.</b> About {usd(COMMISSION)} for every first-year signup, paid monthly. No cap.</div>
               </li>
               <li>
                 <span className="n" aria-hidden="true">04</span>

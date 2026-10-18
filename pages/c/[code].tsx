@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import qrcode from 'qrcode-generator';
 import SiteShell from '../../components/SiteShell';
 import { appStoreUrl, track, referrerHost } from '../../lib/analytics';
-import { CHIEF_YEARLY, LIST_YEARLY, normalizeCode, possessive, redeemUrl, usd, type PublicChief } from '../../lib/chiefs';
+import { CHIEF_YEARLY, DISCOUNT_PCT, LIST_YEARLY, normalizeCode, possessive, redeemUrl, usd, type PublicChief } from '../../lib/chiefs';
 
 // /c/[code]: the link a Chief shares. Server-rendered so the Chief's name and the
 // offer are in the HTML that iMessage and Instagram unfurl. Unknown, malformed
@@ -64,14 +64,14 @@ export default function ChiefLink({ chief, asked }: Props) {
   return (
     <>
       <Head>
-        <title>{live ? `${title} | Step Gunner Pro at half price` : 'Step Gunner'}</title>
+        <title>{live ? `${title} | Step Gunner Pro at ${DISCOUNT_PCT}% off` : 'Step Gunner'}</title>
         <meta name="description" content={live
           ? `Your first year of Step Gunner Pro for ${usd(CHIEF_YEARLY)} instead of ${usd(LIST_YEARLY)}. Step 2 CK prep for the clerkship year.`
           : 'Step Gunner is Step 2 CK prep for the clerkship year.'} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#faf9f6" />
         <meta name="robots" content="noindex, follow" />
-        <meta property="og:title" content={live ? `${title}: Step Gunner Pro at half price` : 'Step Gunner'} />
+        <meta property="og:title" content={live ? `${title}: Step Gunner Pro at ${DISCOUNT_PCT}% off` : 'Step Gunner'} />
         <meta property="og:description" content={live
           ? `First year of Pro for ${usd(CHIEF_YEARLY)} instead of ${usd(LIST_YEARLY)}.`
           : 'Step 2 CK prep for the clerkship year.'} />
@@ -86,7 +86,7 @@ export default function ChiefLink({ chief, asked }: Props) {
               <span className="eyebrow">Chief code</span>
               <h1>{title}</h1>
               <p className="lede">
-                Your first year of Step Gunner Pro at half price:{' '}
+                Your first year of Step Gunner Pro at {DISCOUNT_PCT}% off:{' '}
                 <b>{usd(CHIEF_YEARLY)}</b> instead of {usd(LIST_YEARLY)}.
               </p>
 

@@ -5,7 +5,7 @@ export default function Terms() {
     <DocLayout
       title="Terms of Use"
       subtitle="Step Gunner by Rezumab LLC · Effective April 2026"
-      metaTitle="Terms of Use — Step Gunner | Rezumab LLC"
+      metaTitle="Terms of Use | Step Gunner | Rezumab LLC"
       metaDesc="Terms of Use for Step Gunner by Rezumab LLC."
     >
       <h2>Acceptance of Terms</h2>
@@ -17,10 +17,10 @@ export default function Terms() {
       <h2>Subscriptions</h2>
       <p>Step Gunner offers auto-renewable subscription plans:</p>
       <ul>
-        <li><strong>Step Gunner Pro Monthly</strong> &mdash; $5.99/month</li>
-        <li><strong>Step Gunner Pro Yearly</strong> &mdash; $49.99/year</li>
+        <li><strong>Step Gunner Pro Monthly</strong>: $9.99/month</li>
+        <li><strong>Step Gunner Pro Yearly</strong>: $99.99/year</li>
       </ul>
-      <p>Subscriptions include a 7-day free trial for new subscribers. Payment is charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period at the same price.</p>
+      <p>Payment is charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period at the same price.</p>
       <p>You can manage and cancel your subscriptions by going to your App Store account settings after purchase.</p>
 
       <h2>Account Registration</h2>

@@ -4,16 +4,17 @@
 // bundle (a component importing a module that initializes firebase-admin would
 // drag the whole SDK client-side).
 
-// ---- the deal (contract, Danny 2026-10-07) ----
+// ---- the deal (contract, Danny 2026-10-18, decision 0041 amended) ----
 // Kept here so the copy on every Chiefs page moves together when a price does.
-// LIST_YEARLY must match App Store Connect before /chiefs ships; terms.tsx still
-// lists the old $49.99 yearly price.
-export const LIST_YEARLY = 59.99;
-export const CHIEF_YEARLY = 29.99;
+// LIST_YEARLY must match App Store Connect (yearly $99.99 from 2026-10-20).
+export const LIST_YEARLY = 99.99;
+export const DISCOUNT_PCT = 40; // a Chief code takes 40% off the first year
+export const CHIEF_YEARLY = 59.99;
 export const PROCEEDS_RATE = 0.85; // Small Business Program: Apple keeps 15%
-export const PAYOUT_RATE = 0.5;
-export const PROCEEDS = Math.round(CHIEF_YEARLY * PROCEEDS_RATE * 100) / 100; // 25.49
-export const COMMISSION = Math.round(CHIEF_YEARLY * PROCEEDS_RATE * PAYOUT_RATE * 100) / 100; // 12.75
+export const PAYOUT_RATE = 0.4; // the Chief earns 40% of our proceeds
+export const PAYOUT_PCT = Math.round(PAYOUT_RATE * 100);
+export const PROCEEDS = Math.round(CHIEF_YEARLY * PROCEEDS_RATE * 100) / 100; // 50.99
+export const COMMISSION = Math.round(CHIEF_YEARLY * PROCEEDS_RATE * PAYOUT_RATE * 100) / 100; // 20.40
 export const HOLD_DAYS = 30;
 export const APP_ID = '6761317357';
 

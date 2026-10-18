@@ -1,6 +1,6 @@
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getFirestore, Timestamp, type Firestore } from 'firebase-admin/firestore';
-import { HOLD_DAYS, type ChiefStats, type LedgerRow, type PublicChief, type RowStatus } from './chiefs';
+import { COMMISSION, HOLD_DAYS, type ChiefStats, type LedgerRow, type PublicChief, type RowStatus } from './chiefs';
 
 // Step Gunner Chiefs, server half (see chiefs.ts for the client-safe half).
 // Server-only: imported by getServerSideProps and
@@ -26,11 +26,11 @@ export function chiefsDb(): Firestore | null {
 }
 
 // Local design preview. `next dev` with CHIEFS_PREVIEW=1 and no credential
-// serves one labeled fake Chief (code PREVIEW50, token preview-token-0000) so
+// serves one labeled fake Chief (code PREVIEW40, token preview-token-0000) so
 // the active states can be reviewed without production Firestore. Unreachable
 // in a build: NODE_ENV is 'production' on every Vercel deployment.
 const PREVIEW_ON = process.env.NODE_ENV === 'development' && process.env.CHIEFS_PREVIEW === '1';
-export const PREVIEW_CODE = 'PREVIEW50';
+export const PREVIEW_CODE = 'PREVIEW40';
 const PREVIEW_TOKEN = 'preview-token-0000';
 
 // ---- time: everything a Chief sees is in Central ----
@@ -149,15 +149,15 @@ function previewStats(): ChiefStats {
   const now = Date.now();
   const at = (d: number) => dateCT(now - d * day);
   const rows: LedgerRow[] = [
-    { date: at(2), amount: 12.75, status: 'pending' },
-    { date: at(9), amount: 12.75, status: 'pending' },
-    { date: at(33), amount: 12.75, status: 'eligible' },
-    { date: at(41), amount: 12.75, status: 'refunded' },
-    { date: at(64), amount: 12.75, status: 'paid' },
+    { date: at(2), amount: COMMISSION, status: 'pending' },
+    { date: at(9), amount: COMMISSION, status: 'pending' },
+    { date: at(33), amount: COMMISSION, status: 'eligible' },
+    { date: at(41), amount: COMMISSION, status: 'refunded' },
+    { date: at(64), amount: COMMISSION, status: 'paid' },
   ];
   return {
     code: PREVIEW_CODE, displayName: 'Maya', active: true,
-    monthCount: 2, allCount: 5, pendingUSD: 25.5, eligibleUSD: 12.75, paidUSD: 12.75,
+    monthCount: 2, allCount: 5, pendingUSD: round2(2 * COMMISSION), eligibleUSD: COMMISSION, paidUSD: COMMISSION,
     refundCount: 1, deductUSD: 0, rows, asOf: stampCT(now), preview: true,
   };
 }
