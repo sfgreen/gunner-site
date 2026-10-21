@@ -1,0 +1,1946 @@
+{
+ "slug": "abg-interpretation",
+ "title": "ABG interpretation, step by step",
+ "seo_title": "ABG Interpretation: Step-by-Step Method and Formulas",
+ "meta_description": "Read any ABG in six steps: pH, primary process, Winter's formula, anion gap with albumin, delta-delta and A-a gradient. Formulas and worked cases.",
+ "h1": "ABG interpretation, step by step",
+ "disclaimer": "Exam prep and clinical teaching, not clinical advice. Labs set their own reference ranges; read the gas with your team and the patient.",
+ "short_answer": {
+  "lead": "Read every gas in the same order. Six steps, about a minute once you have done twenty of them.",
+  "steps": [
+   {
+    "n": 1,
+    "text": "pH: under 7.35 is acidemia, over 7.45 is alkalemia.",
+    "sources": [
+     {
+      "docId": "pmid:40336441",
+      "where": "Step 2"
+     },
+     {
+      "docId": "pmid:40336441",
+      "where": "Table 1"
+     }
+    ]
+   },
+   {
+    "n": 2,
+    "text": "Primary process: on the acid side, a low HCO3 means metabolic acidosis and a high PaCO2 means respiratory acidosis. Flip both for the alkaline side.",
+    "sources": [
+     {
+      "docId": "pmid:40336441",
+      "where": "Step 3"
+     },
+     {
+      "docId": "pmid:40483586",
+      "where": "Table 3, Step 2"
+     },
+     {
+      "docId": "pmid:40483586",
+      "where": "Table 3, Step 3"
+     }
+    ]
+   },
+   {
+    "n": 3,
+    "text": "Compensation: in a metabolic acidosis, Winter's formula predicts PaCO2 = 1.5 x HCO3 + 8, plus or minus 2. A PaCO2 outside that range is a second, respiratory disorder.",
+    "sources": [
+     {
+      "docId": "pmid:40336441",
+      "where": "Table 2"
+     },
+     {
+      "docId": "pmid:28846305",
+      "where": "Compensatory respiratory alkalosis"
+     }
+    ]
+   },
+   {
+    "n": 4,
+    "text": "Anion gap: Na minus (Cl + HCO3). Normal is 8 to 12. If albumin is low, add 2.5 for every 1 g/dL under 4.0.",
+    "sources": [
+     {
+      "docId": "pmid:40336441",
+      "where": "Step 4"
+     },
+     {
+      "docId": "pmid:28846305",
+      "where": "Hypoalbuminemia"
+     }
+    ]
+   },
+   {
+    "n": 5,
+    "text": "If the gap is high, run the delta-delta: compare the rise in the gap (AG minus 12) with the fall in HCO3 (24 minus HCO3). A ratio under 1 means a second, normal gap acidosis; over 2 means a metabolic alkalosis too.",
+    "sources": [
+     {
+      "docId": "pmid:28846305",
+      "where": "Delta/delta or delta gap"
+     },
+     {
+      "docId": "pmid:22500110",
+      "where": "Section 5, point 4"
+     }
+    ]
+   },
+   {
+    "n": 6,
+    "text": "Oxygenation: A-a gradient = PAO2 minus PaO2, where PAO2 = FiO2 x (760 minus 47) minus PaCO2 / 0.8. A normal gradient with a high PaCO2 means hypoventilation; a raised one means V/Q mismatch, shunt or diffusion limitation.",
+    "sources": [
+     {
+      "docId": "pmid:33922829",
+      "where": "Materials and Methods"
+     },
+     {
+      "docId": "pmid:29493941",
+      "where": "Evaluation"
+     },
+     {
+      "docId": "pmid:34295389",
+      "where": "Answer 1"
+     },
+     {
+      "docId": "pmid:34295389",
+      "where": "Table 3"
+     }
+    ]
+   }
+  ],
+  "pro_tip": "If the numbers will not fit together, check the gas against Henderson-Hasselbalch before you build a diagnosis on it.",
+  "pro_tip_sources": [
+   {
+    "docId": "pmid:40336441",
+    "where": "Verify the consistency of the ABG report"
+   }
+  ]
+ },
+ "formulas": [
+  {
+   "id": "reference_ranges",
+   "name": "Normal arterial values",
+   "formula": "pH 7.35 to 7.45 | PaCO2 35 to 45 mmHg | HCO3 22 to 26 mmol/L | PaO2 80 to 100 mmHg",
+   "variables": [],
+   "normal": "Midpoints used in the formulas below: pH 7.40, PaCO2 40 mmHg, HCO3 24 mmol/L. Inside the normal pH range, 7.40 is the cutoff: 7.37 counts as the acid side, 7.42 as the alkaline side.",
+   "explanation": "The ranges tell you what is abnormal; the midpoints are the baseline that the compensation and delta formulas measure from. Ranges vary a little between labs and with age.",
+   "conflicts": [
+    "Normal PaO2: 80 to 100 mmHg (Habib) or 75 to 100 mmHg (StatPearls)."
+   ],
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 1"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Table 3, Step 1"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Table 4 footnote"
+    },
+    {
+     "docId": "pmid:30725604",
+     "where": "Results, Reporting, and Critical Findings"
+    }
+   ]
+  },
+  {
+   "id": "henderson_hasselbalch",
+   "name": "Internal consistency check (Henderson-Hasselbalch)",
+   "formula": "pH = 6.1 + log10( HCO3 / (0.03 x PaCO2) )",
+   "variables": [
+    {
+     "symbol": "HCO3",
+     "meaning": "bicarbonate",
+     "unit": "mmol/L"
+    },
+    {
+     "symbol": "PaCO2",
+     "meaning": "arterial CO2 tension",
+     "unit": "mmHg"
+    },
+    {
+     "symbol": "6.1",
+     "meaning": "pKa of carbonic acid at body temperature",
+     "unit": ""
+    },
+    {
+     "symbol": "0.03",
+     "meaning": "solubility of CO2 in blood",
+     "unit": "mmol/L per mmHg"
+    }
+   ],
+   "normal": "If the calculated pH differs from the reported pH by more than 0.05, suspect an error and repeat the gas.",
+   "explanation": "A quick way to catch a bad sample or a typo before you interpret it. The HCO3 on a gas is a calculated number, so the three values should agree.",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Verify the consistency of the ABG report"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Box 1"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Blood gas analysis"
+    }
+   ]
+  },
+  {
+   "id": "anion_gap",
+   "name": "Anion gap",
+   "formula": "AG = Na - (Cl + HCO3)",
+   "variables": [
+    {
+     "symbol": "Na",
+     "meaning": "serum sodium",
+     "unit": "mmol/L"
+    },
+    {
+     "symbol": "Cl",
+     "meaning": "serum chloride",
+     "unit": "mmol/L"
+    },
+    {
+     "symbol": "HCO3",
+     "meaning": "serum bicarbonate",
+     "unit": "mmol/L"
+    }
+   ],
+   "normal": "8 to 12 mmol/L; over 12 is a high gap. A gap of 20 or more means a metabolic acidosis is present whatever the pH or HCO3.",
+   "explanation": "The gap is the anions the panel does not measure, mostly albumin. Added acids raise it (ketoacids in DKA, lactate, salicylate); losing bicarbonate (often from the gut) or gaining chloride (saline) lowers HCO3 without raising it. In DKA a gap over 12 fits the diagnosis, but the ADA treats it as second line to ketones.",
+   "conflicts": [
+    "Some labs and the UK DKA guideline add potassium: (Na + K) minus (Cl + HCO3). JBDS counts a gap over 16 on that version as a marker of severe DKA. StatPearls also prints the potassium version.",
+    "A 2009 poisoning review gives the normal range for the same formula as 8 to 16 mEq/L. Use your own lab's range."
+   ],
+   "reuse_note": "Same formula and cutoff as the anion_gap calculator in the dka_hhs pathway (ADA 2024, Section 3).",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 4"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Table 3, Step 4"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 3, DKA criteria"
+    },
+    {
+     "docId": "pmid:28846305",
+     "where": "High anion gap metabolic acidosis, Anion gap"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Assessment of severity"
+    },
+    {
+     "docId": "pmid:19563673",
+     "where": "Laboratory analysis"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 4, normal anion gap"
+    }
+   ]
+  },
+  {
+   "id": "anion_gap_albumin",
+   "name": "Albumin-corrected anion gap",
+   "formula": "AG corrected = AG + 2.5 x (4.0 - albumin)",
+   "variables": [
+    {
+     "symbol": "AG",
+     "meaning": "measured anion gap",
+     "unit": "mmol/L"
+    },
+    {
+     "symbol": "albumin",
+     "meaning": "serum albumin",
+     "unit": "g/dL"
+    }
+   ],
+   "normal": "Read the corrected gap against the same 8 to 12. Example: a gap of 10 with albumin 2.0 g/dL corrects to 15, a high gap acidosis that the raw number hid.",
+   "explanation": "Albumin is the main unmeasured anion, so a low albumin pulls the gap down and can hide a high gap acidosis. It matters most where albumin runs low: sepsis, malnutrition, liver disease, chronic illness.",
+   "conflicts": [
+    "The reference albumin differs: StatPearls' formula and worked example use 4.0 g/dL (Habib gives the same correction as 0.25 per g/L under 40 g/L); Tucker and StatPearls' own text use 4.5 g/dL. The calculator defaults to 4.0 and offers 4.5."
+   ],
+   "sources": [
+    {
+     "docId": "pmid:28846305",
+     "where": "Hypoalbuminemia"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 4"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Table 3, Step 4"
+    }
+   ]
+  },
+  {
+   "id": "winters",
+   "name": "Winter's formula (expected PaCO2 in a metabolic acidosis)",
+   "formula": "Expected PaCO2 = 1.5 x HCO3 + 8, plus or minus 2",
+   "variables": [
+    {
+     "symbol": "HCO3",
+     "meaning": "measured bicarbonate",
+     "unit": "mmol/L"
+    },
+    {
+     "symbol": "Expected PaCO2",
+     "meaning": "what the lungs should bring the CO2 down to",
+     "unit": "mmHg"
+    }
+   ],
+   "normal": "PaCO2 above the range: a concurrent respiratory acidosis. Below it: a concurrent respiratory alkalosis.",
+   "explanation": "Use it only when the primary process is a metabolic acidosis. Per StatPearls, the compensating hyperventilation develops within 12 to 24 hours. A PaCO2 that looks normal in a patient with HCO3 14 is not normal: Winter's says it should be about 29.",
+   "conflicts": [
+    "Tucker states the same idea as PaCO2 falling 1.25 times the fall in HCO3; the numbers are close but not identical. The calculator uses Winter's."
+   ],
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2"
+    },
+    {
+     "docId": "pmid:28846305",
+     "where": "Compensatory respiratory alkalosis"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Table 4"
+    }
+   ]
+  },
+  {
+   "id": "metabolic_alkalosis_comp",
+   "name": "Expected PaCO2 in a metabolic alkalosis",
+   "formula": "Expected PaCO2 = 0.7 x HCO3 + 20, plus or minus 5",
+   "variables": [
+    {
+     "symbol": "HCO3",
+     "meaning": "measured bicarbonate",
+     "unit": "mmol/L"
+    }
+   ],
+   "normal": "Above the range: a concurrent respiratory acidosis. Below it: a concurrent respiratory alkalosis.",
+   "explanation": "The lungs hold on to CO2 to blunt the alkalosis. Then sort the cause by urine chloride: under 20 mmol/L is chloride responsive (vomiting, diuretics, volume depletion) and responds to saline; over 20 is chloride resistant (euvolemic or fluid overloaded, often from mineralocorticoid excess).",
+   "conflicts": [
+    "Tucker uses PaCO2 rising 0.6 times the rise in HCO3. The calculator uses Habib's 0.7 x HCO3 + 20."
+   ],
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 3, metabolic alkalosis"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Table 4"
+    }
+   ]
+  },
+  {
+   "id": "respiratory_acidosis_comp",
+   "name": "Expected HCO3 in a respiratory acidosis",
+   "formula": "Acute: HCO3 = 24 + 0.1 x (PaCO2 - 40) | Chronic: HCO3 = 24 + 0.4 x (PaCO2 - 40)",
+   "variables": [
+    {
+     "symbol": "PaCO2",
+     "meaning": "measured CO2 tension",
+     "unit": "mmHg"
+    }
+   ],
+   "normal": "Acute means under 3 to 5 days; chronic means over 3 to 5 days. A measured HCO3 more than 10% off the expected value points to a second, metabolic disorder.",
+   "explanation": "Acutely, only buffering acts: about 1 mmol/L of HCO3 per 10 mmHg of CO2. Over 3 to 5 days the kidneys add about 3.5 to 4 per 10. That is why the COPD patient below, with a PaCO2 of 66, has a pH of 7.32; with acute compensation only, the same CO2 would give about 7.23.",
+   "conflicts": [
+    "Chronic slope: Habib and Tucker use 4 per 10 (0.4); Bruno uses 3.5 per 10. The calculator uses 0.4 with a 10% tolerance, which covers both."
+   ],
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2 footnote"
+    },
+    {
+     "docId": "pmid:22500110",
+     "where": "Section 3"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Table 4"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Blood gas analysis"
+    }
+   ]
+  },
+  {
+   "id": "respiratory_alkalosis_comp",
+   "name": "Expected HCO3 in a respiratory alkalosis",
+   "formula": "Acute: HCO3 = 24 - 0.2 x (40 - PaCO2) | Chronic: HCO3 = 24 - 0.4 to 0.5 x (40 - PaCO2)",
+   "variables": [
+    {
+     "symbol": "PaCO2",
+     "meaning": "measured CO2 tension",
+     "unit": "mmHg"
+    }
+   ],
+   "normal": "Tucker adds that HCO3 usually does not fall under 18 mmol/L acutely, or under 14 chronically.",
+   "explanation": "Over days, the kidneys lower the bicarbonate to match a CO2 that stays low. Pulmonary embolism and asthma cause acute respiratory alkalosis through fast breathing.",
+   "conflicts": [
+    "Chronic slope: Habib 5 per 10 (0.5), Tucker 0.4. The calculator accepts anything between the two, with a 10% tolerance."
+   ],
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Table 4"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Respiratory alkalosis"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Respiratory acid-base disorders"
+    }
+   ]
+  },
+  {
+   "id": "delta_gap",
+   "name": "Delta gap (the delta-delta, as a difference)",
+   "formula": "Delta gap = (AG - 12) - (24 - HCO3)",
+   "variables": [
+    {
+     "symbol": "AG",
+     "meaning": "anion gap, albumin-corrected if albumin is known",
+     "unit": "mmol/L"
+    },
+    {
+     "symbol": "HCO3",
+     "meaning": "measured bicarbonate",
+     "unit": "mmol/L"
+    }
+   ],
+   "normal": "-6 to +6: no second metabolic process. Over +6: an added metabolic alkalosis. Under -6: an added hyperchloremic (normal gap) acidosis.",
+   "explanation": "In a simple high gap acidosis, HCO3 falls about 1 mmol/L for every 1 mmol/L rise in the gap. If HCO3 is higher than the gap predicts, something added base (vomiting, diuretics); if lower, something removed bicarbonate without adding a gap (diarrhea, saline). Only run it when the gap is high.",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 5"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 3, metabolic alkalosis"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 4, normal anion gap"
+    },
+    {
+     "docId": "pmid:28846305",
+     "where": "Etiology, NAGMA"
+    }
+   ]
+  },
+  {
+   "id": "delta_ratio",
+   "name": "Delta ratio (the delta-delta, as a ratio)",
+   "formula": "Delta ratio = (AG - 12) / (24 - HCO3)",
+   "variables": [
+    {
+     "symbol": "AG",
+     "meaning": "anion gap, albumin-corrected if albumin is known",
+     "unit": "mmol/L"
+    },
+    {
+     "symbol": "HCO3",
+     "meaning": "measured bicarbonate (the ratio is undefined at 24 or more)",
+     "unit": "mmol/L"
+    }
+   ],
+   "normal": "1 to 2: a pure high gap acidosis. Under 1: a concurrent normal gap acidosis. Over 2: an added metabolic alkalosis, or a high baseline HCO3 from chronic respiratory acidosis.",
+   "explanation": "Pure is 1 to 2, not exactly 1, because cells buffer some of the acid while the anions stay outside the cells, so the gap rises a little more than the bicarbonate falls.",
+   "conflicts": [
+    "Tucker uses tighter bands: under 0.8 mixed, 0.8 to 1.2 pure, over 1.2 alkalosis added. StatPearls and Bruno use 1 and 2. Near the cutoffs the ratio and the delta gap can disagree; call that borderline."
+   ],
+   "sources": [
+    {
+     "docId": "pmid:28846305",
+     "where": "Delta/delta or delta gap"
+    },
+    {
+     "docId": "pmid:22500110",
+     "where": "Section 5, point 4"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Table 5"
+    }
+   ]
+  },
+  {
+   "id": "aa_gradient",
+   "name": "Alveolar gas equation and A-a gradient",
+   "formula": "PAO2 = FiO2 x (760 - 47) - PaCO2 / 0.8 | A-a gradient = PAO2 - PaO2",
+   "variables": [
+    {
+     "symbol": "FiO2",
+     "meaning": "inspired oxygen fraction (0.21 on room air)",
+     "unit": "fraction"
+    },
+    {
+     "symbol": "760",
+     "meaning": "atmospheric pressure at sea level",
+     "unit": "mmHg"
+    },
+    {
+     "symbol": "47",
+     "meaning": "water vapor pressure",
+     "unit": "mmHg"
+    },
+    {
+     "symbol": "0.8",
+     "meaning": "respiratory quotient",
+     "unit": ""
+    },
+    {
+     "symbol": "PaO2, PaCO2",
+     "meaning": "from the gas",
+     "unit": "mmHg"
+    }
+   ],
+   "normal": "Expected on room air, three published versions: age / 4 + 4 (StatPearls), (age + 10) / 4 (Breathe 2021), 2.5 + 0.21 x age (Secco 2021). For a 64-year-old: 20, 18.5 and about 16.",
+   "explanation": "The gradient splits hypoxemia into two groups. Normal gradient: hypoventilation (the PaCO2 is high) or low inspired oxygen (altitude). Raised gradient: V/Q mismatch (chronic bronchitis, emphysema, pulmonary embolism), shunt (pneumonia, atelectasis, pulmonary edema) or diffusion limitation (interstitial lung disease). Shunt barely improves with 100% oxygen.",
+   "conflicts": [
+    "Three age formulas, all published; they differ by a few mmHg. The calculator calls a gradient raised only above all three, normal only at or below all three, and borderline in between (our rule, not a source's).",
+    "StatPearls and Secco give the same mmHg constants (760, 47, 0.8); Breathe prints the equation in kPa with an RQ of about 0.82.",
+    "The expected gradient assumes room air and is less accurate on supplemental oxygen (StatPearls)."
+   ],
+   "sources": [
+    {
+     "docId": "pmid:29493941",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:33922829",
+     "where": "Materials and Methods"
+    },
+    {
+     "docId": "pmid:34295389",
+     "where": "Answer 1"
+    },
+    {
+     "docId": "pmid:34295389",
+     "where": "Table 3"
+    },
+    {
+     "docId": "pmid:30725604",
+     "where": "Clinical Significance"
+    }
+   ]
+  },
+  {
+   "id": "expected_pao2",
+   "name": "Quick oxygenation checks",
+   "formula": "Expected PaO2 is about FiO2 (as %) x 5 | Age-adjusted room-air PaO2 = 100 - 0.3 x age",
+   "variables": [
+    {
+     "symbol": "FiO2",
+     "meaning": "as a percent, 21 on room air",
+     "unit": "%"
+    }
+   ],
+   "normal": "On room air: PaO2 60 to 79 is mild hypoxemia, 40 to 59 moderate, under 40 severe.",
+   "explanation": "A bedside sanity check before you do the full alveolar gas equation. A PaO2 of 90 on 50% oxygen looks fine until you see it should be about 250.",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 1"
+    }
+   ]
+  }
+ ],
+ "interpreter_spec": {
+  "purpose": "An on-page calculator that reads an ABG with the same steps as the article. Website only; it runs in JavaScript (Math.log10 is needed for step 0, which the app's restricted calculator grammar does not have).",
+  "inputs": [
+   {
+    "id": "ph",
+    "label": "pH",
+    "unit": "",
+    "required": true,
+    "min": 6.8,
+    "max": 7.8,
+    "step": 0.01
+   },
+   {
+    "id": "paco2",
+    "label": "PaCO2",
+    "unit": "mmHg",
+    "required": true,
+    "min": 10,
+    "max": 150,
+    "step": 1
+   },
+   {
+    "id": "hco3",
+    "label": "HCO3",
+    "unit": "mmol/L",
+    "required": true,
+    "min": 2,
+    "max": 60,
+    "step": 1
+   },
+   {
+    "id": "na",
+    "label": "Sodium",
+    "unit": "mmol/L",
+    "required": false,
+    "min": 100,
+    "max": 180,
+    "step": 1
+   },
+   {
+    "id": "cl",
+    "label": "Chloride",
+    "unit": "mmol/L",
+    "required": false,
+    "min": 60,
+    "max": 140,
+    "step": 1
+   },
+   {
+    "id": "albumin",
+    "label": "Albumin",
+    "unit": "g/dL",
+    "required": false,
+    "min": 0.5,
+    "max": 6.0,
+    "step": 0.1
+   },
+   {
+    "id": "albumin_ref",
+    "label": "Normal albumin used",
+    "choices": [
+     {
+      "label": "4.0 g/dL (StatPearls formula, Habib)",
+      "value": 4.0
+     },
+     {
+      "label": "4.5 g/dL (Tucker)",
+      "value": 4.5
+     }
+    ],
+    "default": 4.0
+   },
+   {
+    "id": "timing",
+    "label": "Respiratory process",
+    "choices": [
+     {
+      "label": "Acute (under 3 to 5 days)",
+      "value": "acute"
+     },
+     {
+      "label": "Chronic (over 3 to 5 days)",
+      "value": "chronic"
+     }
+    ],
+    "default": "acute"
+   },
+   {
+    "id": "pao2",
+    "label": "PaO2",
+    "unit": "mmHg",
+    "required": false,
+    "min": 20,
+    "max": 600,
+    "step": 1
+   },
+   {
+    "id": "fio2",
+    "label": "FiO2",
+    "unit": "fraction",
+    "required": false,
+    "min": 0.21,
+    "max": 1.0,
+    "step": 0.01,
+    "default": 0.21
+   },
+   {
+    "id": "age",
+    "label": "Age",
+    "unit": "years",
+    "required": false,
+    "min": 0,
+    "max": 110,
+    "step": 1
+   }
+  ],
+  "constants": [
+   {
+    "name": "PATM",
+    "value": 760,
+    "unit": "mmHg",
+    "sources": [
+     {
+      "docId": "pmid:33922829",
+      "where": "Materials and Methods"
+     },
+     {
+      "docId": "pmid:29493941",
+      "where": "Evaluation"
+     }
+    ],
+    "note": "Sea level; the calculator assumes sea level."
+   },
+   {
+    "name": "PH2O",
+    "value": 47,
+    "unit": "mmHg",
+    "sources": [
+     {
+      "docId": "pmid:33922829",
+      "where": "Materials and Methods"
+     },
+     {
+      "docId": "pmid:29493941",
+      "where": "Evaluation"
+     }
+    ],
+    "note": "Water vapor at 37 C."
+   },
+   {
+    "name": "RQ",
+    "value": 0.8,
+    "unit": "",
+    "sources": [
+     {
+      "docId": "pmid:33922829",
+      "where": "Materials and Methods"
+     },
+     {
+      "docId": "pmid:29493941",
+      "where": "Evaluation"
+     }
+    ]
+   }
+  ],
+  "steps": [
+   {
+    "id": "s0_consistency",
+    "when": "always",
+    "compute": {
+     "calc_ph": "6.1 + log10(hco3 / (0.03 * paco2))"
+    },
+    "rule": "if abs(calc_ph - ph) > 0.05: show 'Calculated pH {calc_ph, 2 dp} does not match {ph}: check the sample or the numbers.' Continue anyway.",
+    "sources": [
+     {
+      "docId": "pmid:40336441",
+      "where": "Verify the consistency of the ABG report"
+     }
+    ]
+   },
+   {
+    "id": "s1_ph",
+    "when": "always",
+    "rule": "status = 'acidemia' if ph < 7.35; 'alkalemia' if ph > 7.45; else 'pH in the normal range'. side = 'acid' if ph < 7.40; 'alkaline' if ph > 7.40; else 'neutral'.",
+    "sources": [
+     {
+      "docId": "pmid:40336441",
+      "where": "Step 2"
+     },
+     {
+      "docId": "pmid:40483586",
+      "where": "Table 3, Step 1"
+     },
+     {
+      "docId": "pmid:30725604",
+      "where": "Results, Reporting, and Critical Findings"
+     }
+    ]
+   },
+   {
+    "id": "s2_primary",
+    "when": "always",
+    "rule": "side acid: hco3 < 24 -> 'metabolic acidosis'; else paco2 > 40 -> 'respiratory acidosis'; else -> no primary, show 'The pH and values do not point the same way: recheck.' side alkaline: hco3 > 24 -> 'metabolic alkalosis'; else paco2 < 40 -> 'respiratory alkalosis'; else -> same recheck message. side neutral: paco2 > 45 and hco3 > 26 -> 'respiratory acidosis plus metabolic alkalosis'; paco2 < 35 and hco3 < 22 -> 'metabolic acidosis plus respiratory alkalosis'; else 'no primary disorder on the gas' (still run s4). Advisory, any side: if status is the normal range and (paco2 > 45 and hco3 > 26, or paco2 < 35 and hco3 < 22), show 'A normal pH with PaCO2 and HCO3 both abnormal is a clue to a mixed disorder.'",
+    "judgment": "Using 7.40 inside the normal range follows StatPearls. When HCO3 and PaCO2 both point the same way, naming the metabolic process primary and letting the compensation check find the respiratory one is our rule; the final read (both present) does not depend on which is called primary.",
+    "sources": [
+     {
+      "docId": "pmid:40483586",
+      "where": "Table 3, Step 2"
+     },
+     {
+      "docId": "pmid:40483586",
+      "where": "Table 3, Step 3"
+     },
+     {
+      "docId": "pmid:40336441",
+      "where": "Step 3"
+     },
+     {
+      "docId": "pmid:40336441",
+      "where": "Step 2"
+     },
+     {
+      "docId": "pmid:22500110",
+      "where": "Section 5, point 2"
+     },
+     {
+      "docId": "pmid:30725604",
+      "where": "Results, Reporting, and Critical Findings"
+     }
+    ]
+   },
+   {
+    "id": "s3_compensation",
+    "when": "a single primary process was named in s2",
+    "rule": "metabolic acidosis: exp = 1.5*hco3 + 8; range exp-2 to exp+2. paco2 > exp+2 -> 'plus a respiratory acidosis'; paco2 < exp-2 -> 'plus a respiratory alkalosis'; else 'appropriate respiratory compensation'. metabolic alkalosis: exp = 0.7*hco3 + 20; range exp-5 to exp+5; same three outputs. respiratory acidosis: d = paco2 - 40; exp = 24 + 0.1*d (acute) or 24 + 0.4*d (chronic); range 0.9*exp to 1.1*exp. hco3 below -> 'plus a metabolic acidosis'; above -> 'plus a metabolic alkalosis'; else 'appropriate {timing} compensation'. Also show the other timing's expected value. respiratory alkalosis: d = 40 - paco2; acute exp = 24 - 0.2*d, range 0.9*exp to 1.1*exp; chronic range 0.9*(24 - 0.5*d) to 1.1*(24 - 0.4*d). Same outputs.",
+    "sources": [
+     {
+      "docId": "pmid:40336441",
+      "where": "Table 2"
+     },
+     {
+      "docId": "pmid:28846305",
+      "where": "Compensatory respiratory alkalosis"
+     },
+     {
+      "docId": "pmid:40483586",
+      "where": "Table 4"
+     },
+     {
+      "docId": "pmid:40483586",
+      "where": "Blood gas analysis"
+     },
+     {
+      "docId": "pmid:22500110",
+      "where": "Section 3"
+     }
+    ]
+   },
+   {
+    "id": "s4_anion_gap",
+    "when": "na and cl entered",
+    "compute": {
+     "ag": "na - (cl + hco3)",
+     "ag_corr": "ag + 2.5 * (albumin_ref - albumin)  (only if albumin entered)",
+     "ag_used": "ag_corr if albumin entered, else ag"
+    },
+    "rule": "ag_used > 12 and (s2 named a metabolic acidosis, or ag_used >= 20) -> 'high anion gap metabolic acidosis'; if ag_used >= 20 add 'A gap of 20 or more means a metabolic acidosis whatever the pH.' ag_used > 12 and under 20 with no metabolic acidosis on the gas -> 'Gap mildly raised without a low HCO3: read it with the clinical picture.' ag_used 8 to 12 with a metabolic acidosis -> 'normal anion gap (hyperchloremic) acidosis: bicarbonate loss (often GI) or chloride gain (saline); a urine anion gap separates gut from kidney.' ag_used < 8 -> 'low gap: check albumin, then paraproteins, calcium, magnesium, lithium.'",
+    "judgment": "The 13 to 19 band without a low HCO3 is our wording; the sources give 12 as the cutoff and 20 as the always-acidosis line.",
+    "sources": [
+     {
+      "docId": "pmid:40336441",
+      "where": "Step 4"
+     },
+     {
+      "docId": "pmid:28846305",
+      "where": "Hypoalbuminemia"
+     },
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 3, DKA criteria"
+     },
+     {
+      "docId": "pmid:40336441",
+      "where": "Step 4, normal anion gap"
+     },
+     {
+      "docId": "pmid:40336441",
+      "where": "Step 4, low anion gap"
+     }
+    ]
+   },
+   {
+    "id": "s5_delta",
+    "when": "s4 called a high anion gap metabolic acidosis",
+    "compute": {
+     "delta_gap": "(ag_used - 12) - (24 - hco3)",
+     "delta_ratio": "(ag_used - 12) / (24 - hco3)  (only if hco3 < 24)"
+    },
+    "rule": "delta_gap > 6 -> 'plus a metabolic alkalosis'; < -6 -> 'plus a normal gap acidosis'; else 'no second metabolic process'. delta_ratio < 1 -> 'plus a normal gap acidosis'; > 2 -> 'plus a metabolic alkalosis, or a high baseline HCO3'; else 'pure high gap acidosis'. If hco3 >= 24, skip the ratio and say the delta gap decides. If the two disagree, show both and the word 'borderline'.",
+    "sources": [
+     {
+      "docId": "pmid:40336441",
+      "where": "Step 5"
+     },
+     {
+      "docId": "pmid:28846305",
+      "where": "Delta/delta or delta gap"
+     },
+     {
+      "docId": "pmid:22500110",
+      "where": "Section 5, point 4"
+     }
+    ]
+   },
+   {
+    "id": "s6_oxygenation",
+    "when": "pao2 and fio2 entered",
+    "compute": {
+     "pAo2": "fio2 * (760 - 47) - paco2 / 0.8",
+     "aa": "pAo2 - pao2",
+     "pao2_expected_rough": "fio2 * 100 * 5",
+     "aa_expected_1": "(age + 10) / 4  (room air and age entered)",
+     "aa_expected_2": "2.5 + 0.21 * age  (room air and age entered)",
+     "aa_expected_3": "age / 4 + 4  (room air and age entered)"
+    },
+    "rule": "Room air only: grade PaO2 80 or more none, 60 to 79 mild, 40 to 59 moderate, under 40 severe; age-adjusted PaO2 = 100 - 0.3*age. aa <= all three expected -> 'normal for age': with paco2 > 45 say 'hypoventilation explains the hypoxemia'; with a normal PaCO2 say 'consider low inspired oxygen (altitude)'. aa > all three -> 'raised: V/Q mismatch, shunt or diffusion limitation'. Otherwise -> 'borderline'. On supplemental oxygen, show PAO2 and the gradient but no age comparison.",
+    "judgment": "Limiting the age comparison to room air follows StatPearls (the expected gradient assumes room air). The raised, borderline or normal rule across three formulas is ours.",
+    "sources": [
+     {
+      "docId": "pmid:33922829",
+      "where": "Materials and Methods"
+     },
+     {
+      "docId": "pmid:29493941",
+      "where": "Evaluation"
+     },
+     {
+      "docId": "pmid:34295389",
+      "where": "Answer 1"
+     },
+     {
+      "docId": "pmid:34295389",
+      "where": "Table 3"
+     },
+     {
+      "docId": "pmid:40336441",
+      "where": "Step 1"
+     },
+     {
+      "docId": "pmid:30725604",
+      "where": "Clinical Significance"
+     }
+    ]
+   }
+  ],
+  "output_order": [
+   "consistency warning (if any)",
+   "pH status",
+   "primary process",
+   "compensation",
+   "anion gap (raw and corrected)",
+   "delta gap and ratio",
+   "oxygenation and A-a gradient",
+   "one-sentence summary"
+  ],
+  "tests_note": "Each test's `expect` holds the numbers and labels the calculator must reproduce (numbers rounded to 2 dp; compare within 0.01). `findings` is the reference implementation's wording, for orientation only; the UI copy is in steps[].rule. Every gas is Henderson-Hasselbalch consistent within 0.05 except inconsistent_gas, which tests the warning.",
+  "tests": [
+   {
+    "name": "dka_pure_hagma",
+    "note": "Worked case 1",
+    "inputs": {
+     "ph": 7.24,
+     "paco2": 24,
+     "hco3": 10,
+     "na": 134,
+     "cl": 98
+    },
+    "expect": {
+     "calc_pH": 7.24,
+     "status": "acidemia",
+     "side": "acid",
+     "primary": "metabolic acidosis",
+     "expected_paco2": 23.0,
+     "expected_range": [
+      21.0,
+      25.0
+     ],
+     "ag": 26,
+     "ag_used": 26,
+     "delta_gap": 0,
+     "delta_ratio": 1.0
+    },
+    "findings": [
+     "appropriate respiratory compensation (within Winter's range)",
+     "high anion gap metabolic acidosis",
+     "gap 20 or more: a metabolic acidosis is present whatever the pH or HCO3",
+     "delta gap -6 to +6: no second metabolic process",
+     "delta ratio 1 to 2: pure high gap acidosis"
+    ]
+   },
+   {
+    "name": "vomiting_met_alk",
+    "note": "Worked case 2",
+    "inputs": {
+     "ph": 7.51,
+     "paco2": 47,
+     "hco3": 36,
+     "na": 138,
+     "cl": 90
+    },
+    "expect": {
+     "calc_pH": 7.51,
+     "status": "alkalemia",
+     "side": "alkaline",
+     "primary": "metabolic alkalosis",
+     "expected_paco2": 45.2,
+     "expected_range": [
+      40.2,
+      50.2
+     ],
+     "ag": 12,
+     "ag_used": 12
+    },
+    "findings": [
+     "appropriate respiratory compensation"
+    ]
+   },
+   {
+    "name": "copd_chronic_resp_acid",
+    "note": "Worked case 3",
+    "inputs": {
+     "ph": 7.32,
+     "paco2": 66,
+     "hco3": 33,
+     "na": 140,
+     "cl": 96,
+     "timing": "chronic",
+     "pao2": 44,
+     "fio2": 0.21,
+     "age": 64
+    },
+    "expect": {
+     "calc_pH": 7.32,
+     "status": "acidemia",
+     "side": "acid",
+     "primary": "respiratory acidosis",
+     "expected_range": [
+      30.96,
+      37.84
+     ],
+     "expected_hco3_acute": 26.6,
+     "expected_hco3_chronic": 34.4,
+     "ag": 11,
+     "ag_used": 11,
+     "PAO2": 67.23,
+     "Aa": 23.23,
+     "Aa_expected_breathe": 18.5,
+     "Aa_expected_secco": 15.94,
+     "Aa_expected_statpearls": 20.0,
+     "Aa_class": "raised",
+     "hypoxemia_grade": "moderate"
+    },
+    "findings": [
+     "appropriate chronic renal compensation"
+    ]
+   },
+   {
+    "name": "aspirin_mixed",
+    "note": "Worked case 4",
+    "inputs": {
+     "ph": 7.43,
+     "paco2": 22,
+     "hco3": 14,
+     "na": 140,
+     "cl": 104,
+     "timing": "acute"
+    },
+    "expect": {
+     "calc_pH": 7.43,
+     "status": "normal range",
+     "side": "alkaline",
+     "primary": "respiratory alkalosis",
+     "expected_range": [
+      18.36,
+      22.44
+     ],
+     "expected_hco3_acute": 20.4,
+     "expected_hco3_chronic": [
+      15.0,
+      16.8
+     ],
+     "ag": 22,
+     "ag_used": 22,
+     "delta_gap": 0,
+     "delta_ratio": 1.0
+    },
+    "findings": [
+     "ADVISORY: normal pH with PaCO2 and HCO3 both abnormal is a clue to a mixed disorder (Habib, Bruno); the compensation check decides",
+     "plus a metabolic acidosis (HCO3 more than 10% below the acute expected)",
+     "high anion gap metabolic acidosis",
+     "gap 20 or more: a metabolic acidosis is present whatever the pH or HCO3",
+     "delta gap -6 to +6: no second metabolic process",
+     "delta ratio 1 to 2: pure high gap acidosis"
+    ]
+   },
+   {
+    "name": "hagma_plus_nagma",
+    "note": "Delta below the line",
+    "inputs": {
+     "ph": 7.22,
+     "paco2": 20,
+     "hco3": 8,
+     "na": 136,
+     "cl": 110
+    },
+    "expect": {
+     "calc_pH": 7.22,
+     "status": "acidemia",
+     "side": "acid",
+     "primary": "metabolic acidosis",
+     "expected_paco2": 20.0,
+     "expected_range": [
+      18.0,
+      22.0
+     ],
+     "ag": 18,
+     "ag_used": 18,
+     "delta_gap": -10,
+     "delta_ratio": 0.38
+    },
+    "findings": [
+     "appropriate respiratory compensation (within Winter's range)",
+     "high anion gap metabolic acidosis",
+     "delta gap under -6: an added normal gap (hyperchloremic) acidosis",
+     "delta ratio under 1: concurrent normal gap acidosis"
+    ]
+   },
+   {
+    "name": "albumin_hidden_gap",
+    "note": "Albumin correction",
+    "inputs": {
+     "ph": 7.36,
+     "paco2": 37,
+     "hco3": 20,
+     "na": 138,
+     "cl": 108,
+     "albumin": 1.6,
+     "albumin_ref": 4.0
+    },
+    "expect": {
+     "calc_pH": 7.36,
+     "status": "normal range",
+     "side": "acid",
+     "primary": "metabolic acidosis",
+     "expected_paco2": 38.0,
+     "expected_range": [
+      36.0,
+      40.0
+     ],
+     "ag": 10,
+     "ag_corrected": 16.0,
+     "ag_used": 16.0,
+     "delta_gap": 0.0,
+     "delta_ratio": 1.0
+    },
+    "findings": [
+     "appropriate respiratory compensation (within Winter's range)",
+     "high anion gap metabolic acidosis",
+     "delta gap -6 to +6: no second metabolic process",
+     "delta ratio 1 to 2: pure high gap acidosis"
+    ]
+   },
+   {
+    "name": "neutral_ph_mixed",
+    "note": "pH exactly 7.40",
+    "inputs": {
+     "ph": 7.4,
+     "paco2": 60,
+     "hco3": 36,
+     "na": 138,
+     "cl": 92
+    },
+    "expect": {
+     "calc_pH": 7.4,
+     "status": "normal range",
+     "side": "neutral",
+     "primary": "mixed: respiratory acidosis and metabolic alkalosis",
+     "ag": 10,
+     "ag_used": 10
+    },
+    "findings": [
+     "ADVISORY: normal pH with PaCO2 and HCO3 both abnormal is a clue to a mixed disorder (Habib, Bruno); the compensation check decides"
+    ]
+   },
+   {
+    "name": "inconsistent_gas",
+    "note": "Consistency failure",
+    "inputs": {
+     "ph": 7.3,
+     "paco2": 40,
+     "hco3": 24
+    },
+    "expect": {
+     "calc_pH": 7.4,
+     "status": "acidemia",
+     "side": "acid"
+    },
+    "findings": [
+     "CHECK: calculated pH 7.40 differs from reported 7.3 by more than 0.05; suspect a sample or entry error",
+     "CHECK: pH and values do not fit one direction; recheck the sample"
+    ]
+   },
+   {
+    "name": "opioid_hypoventilation",
+    "note": "Quick check 3",
+    "inputs": {
+     "ph": 7.26,
+     "paco2": 60,
+     "hco3": 26,
+     "pao2": 60,
+     "fio2": 0.21,
+     "age": 72,
+     "timing": "acute"
+    },
+    "expect": {
+     "calc_pH": 7.26,
+     "status": "acidemia",
+     "side": "acid",
+     "primary": "respiratory acidosis",
+     "expected_range": [
+      23.4,
+      28.6
+     ],
+     "expected_hco3_acute": 26.0,
+     "expected_hco3_chronic": 32.0,
+     "PAO2": 74.73,
+     "Aa": 14.73,
+     "Aa_expected_breathe": 20.5,
+     "Aa_expected_secco": 17.62,
+     "Aa_expected_statpearls": 22.0,
+     "Aa_class": "normal for age",
+     "hypoxemia_grade": "mild"
+    },
+    "findings": [
+     "appropriate acute renal compensation"
+    ]
+   },
+   {
+    "name": "sepsis_resp_acid_added",
+    "note": "Quick check 1",
+    "inputs": {
+     "ph": 7.19,
+     "paco2": 38,
+     "hco3": 14,
+     "na": 138,
+     "cl": 102
+    },
+    "expect": {
+     "calc_pH": 7.19,
+     "status": "acidemia",
+     "side": "acid",
+     "primary": "metabolic acidosis",
+     "expected_paco2": 29.0,
+     "expected_range": [
+      27.0,
+      31.0
+     ],
+     "ag": 22,
+     "ag_used": 22,
+     "delta_gap": 0,
+     "delta_ratio": 1.0
+    },
+    "findings": [
+     "concurrent respiratory acidosis (PaCO2 above Winter's range)",
+     "high anion gap metabolic acidosis",
+     "gap 20 or more: a metabolic acidosis is present whatever the pH or HCO3",
+     "delta gap -6 to +6: no second metabolic process",
+     "delta ratio 1 to 2: pure high gap acidosis"
+    ]
+   },
+   {
+    "name": "dka_plus_vomiting",
+    "note": "Quick check 2",
+    "inputs": {
+     "ph": 7.37,
+     "paco2": 41,
+     "hco3": 23,
+     "na": 140,
+     "cl": 90
+    },
+    "expect": {
+     "calc_pH": 7.37,
+     "status": "normal range",
+     "side": "acid",
+     "primary": "metabolic acidosis",
+     "expected_paco2": 42.5,
+     "expected_range": [
+      40.5,
+      44.5
+     ],
+     "ag": 27,
+     "ag_used": 27,
+     "delta_gap": 14,
+     "delta_ratio": 15.0
+    },
+    "findings": [
+     "appropriate respiratory compensation (within Winter's range)",
+     "high anion gap metabolic acidosis",
+     "gap 20 or more: a metabolic acidosis is present whatever the pH or HCO3",
+     "delta gap over +6: an added metabolic alkalosis",
+     "delta ratio over 2: added metabolic alkalosis or a high baseline HCO3"
+    ]
+   }
+  ]
+ },
+ "worked_cases": [
+  {
+   "id": "dka",
+   "title": "Diabetic ketoacidosis: a pure high gap acidosis",
+   "vignette": "A 19-year-old man with type 1 diabetes has vomited for 2 days and is breathing deep and fast. Glucose 520 mg/dL, beta-hydroxybutyrate 5.8 mmol/L. Alert.",
+   "gas": {
+    "pH": 7.24,
+    "PaCO2": 24,
+    "HCO3": 10,
+    "Na": 134,
+    "Cl": 98
+   },
+   "steps": [
+    "pH 7.24: acidemia.",
+    "HCO3 10 is low and PaCO2 is low: a primary metabolic acidosis, with the low PaCO2 as compensation.",
+    "Winter's: 1.5 x 10 + 8 = 23, so the PaCO2 should be 21 to 25. It is 24: appropriate compensation, no second respiratory disorder.",
+    "Anion gap: 134 - (98 + 10) = 26. High.",
+    "Delta: the gap rose 14 (26 - 12) and HCO3 fell 14 (24 - 10). Delta gap 0, ratio 1.0: a pure high gap acidosis.",
+    "Glucose 200 or more, ketones 3.0 or more and an acidosis fit DKA. By the ADA's grading, pH 7.0 to 7.25 and HCO3 10 to under 15 in an alert patient is moderate."
+   ],
+   "bottom_line": "High anion gap metabolic acidosis with appropriate respiratory compensation: DKA. The ADA diagnoses DKA and calls its resolution on ketones with pH or bicarbonate; the gap is second line.",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 4"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 5"
+    },
+    {
+     "docId": "pmid:28846305",
+     "where": "Delta/delta or delta gap"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 3, DKA criteria"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Table 2"
+    }
+   ]
+  },
+  {
+   "id": "vomiting",
+   "title": "Vomiting: metabolic alkalosis with expected compensation",
+   "vignette": "A 34-year-old woman has vomited for 4 days with gastroenteritis. Dry mucous membranes, BP 98/60. Urine chloride 12 mmol/L.",
+   "gas": {
+    "pH": 7.51,
+    "PaCO2": 47,
+    "HCO3": 36,
+    "Na": 138,
+    "Cl": 90
+   },
+   "steps": [
+    "pH 7.51: alkalemia.",
+    "HCO3 36 is high and PaCO2 is high: a primary metabolic alkalosis, with the high PaCO2 as compensation.",
+    "Expected PaCO2: 0.7 x 36 + 20 = 45.2, range 40 to 50. It is 47: appropriate compensation.",
+    "Anion gap: 138 - (90 + 36) = 12. Normal, so no hidden gap acidosis.",
+    "Urine chloride 12, under 20: chloride responsive, from volume depletion. These patients respond to saline."
+   ],
+   "bottom_line": "Chloride-responsive metabolic alkalosis with appropriate respiratory compensation, from vomiting.",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 3, metabolic alkalosis"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 4"
+    }
+   ]
+  },
+  {
+   "id": "copd",
+   "title": "COPD: compensated chronic respiratory acidosis",
+   "vignette": "A 64-year-old woman with severe COPD who uses home oxygen is admitted with a hip fracture. She says her breathing is at baseline. Gas drawn on room air, at sea level.",
+   "gas": {
+    "pH": 7.32,
+    "PaCO2": 66,
+    "HCO3": 33,
+    "PaO2": 44,
+    "FiO2": 0.21,
+    "Na": 140,
+    "Cl": 96
+   },
+   "steps": [
+    "pH 7.32: acidemia.",
+    "PaCO2 66 is high and HCO3 is high: a primary respiratory acidosis, with renal compensation.",
+    "PaCO2 is up 26. Acutely HCO3 would rise only about 2.6, to 26.6. Chronically it rises about 4 per 10, to about 34 (3.5 per 10 gives about 33). HCO3 33 matches chronic: compensated chronic respiratory acidosis, no extra metabolic process.",
+    "Anion gap: 140 - (96 + 33) = 11. Normal. The low-normal chloride fits chronic CO2 retention.",
+    "A-a gradient: PAO2 = 0.21 x (760 - 47) - 66 / 0.8 = 149.7 - 82.5 = 67.2. Gradient 67.2 - 44 = 23. Expected for 64 is about 16 to 20 by the three published formulas, so it is raised: hypoventilation alone does not explain the hypoxemia; V/Q mismatch adds to it.",
+    "PaO2 44 on room air is moderate hypoxemia."
+   ],
+   "bottom_line": "Chronic respiratory acidosis with appropriate renal compensation, plus hypoxemia from both hypoventilation and V/Q mismatch. Do not try to correct the high bicarbonate: it is the compensation.",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2 footnote"
+    },
+    {
+     "docId": "pmid:22500110",
+     "where": "Section 3"
+    },
+    {
+     "docId": "pmid:22500110",
+     "where": "Section 5"
+    },
+    {
+     "docId": "pmid:33922829",
+     "where": "Materials and Methods"
+    },
+    {
+     "docId": "pmid:29493941",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:34295389",
+     "where": "Answer 1"
+    },
+    {
+     "docId": "pmid:34295389",
+     "where": "Table 3"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 1"
+    }
+   ]
+  },
+  {
+   "id": "aspirin",
+   "title": "Aspirin overdose: a normal pH hiding two disorders",
+   "vignette": "A 39-year-old man took most of a bottle of aspirin 3 hours ago. Ringing in his ears, vomiting, breathing fast. Salicylate level pending.",
+   "gas": {
+    "pH": 7.43,
+    "PaCO2": 22,
+    "HCO3": 14,
+    "Na": 140,
+    "Cl": 104
+   },
+   "steps": [
+    "pH 7.43: in the normal range, but PaCO2 and HCO3 are both far off. A normal pH with both abnormal is a clue to a mixed disorder.",
+    "On the alkaline side with a low PaCO2: a respiratory alkalosis.",
+    "An acute respiratory alkalosis lowers HCO3 only about 2 per 10: expected about 20 (24 - 0.2 x 18). HCO3 14 is far lower, so a metabolic acidosis is there too.",
+    "Check it from the other side: if the metabolic acidosis were alone, Winter's predicts PaCO2 1.5 x 14 + 8 = 29 (27 to 31). It is 22, lower: a respiratory alkalosis on top. Same answer.",
+    "Anion gap: 140 - (104 + 14) = 22. High; a gap of 20 or more means a metabolic acidosis whatever the pH.",
+    "Delta: gap up 10, HCO3 down 10. Delta gap 0, ratio 1.0: no third process."
+   ],
+   "bottom_line": "Respiratory alkalosis plus a high anion gap metabolic acidosis: the classic salicylate pattern. Sedatives or opioids can blunt the respiratory alkalosis, which lowers the pH and worsens toxicity.",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 2"
+    },
+    {
+     "docId": "pmid:22500110",
+     "where": "Section 5, point 2"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Table 4"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 4"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 5"
+    },
+    {
+     "docId": "pmid:41049912",
+     "where": "ED evaluation"
+    },
+    {
+     "docId": "pmid:41049912",
+     "where": "Clinical presentation"
+    }
+   ]
+  }
+ ],
+ "step2_angle": {
+  "intro": "Gases show up on Step 2 CK because the exam tests what you do with lab results. The first two points are facts about how the exam is built; the rest are teaching points, not claims about any specific question.",
+  "points": [
+   {
+    "kind": "exam fact",
+    "text": "USMLE classifies every Step 2 CK item by competency. Patient Care: Laboratory/Diagnostic Studies is 13 to 17% of items, and its task list includes interpreting lab findings and predicting the most likely lab result. USMLE says the percentages can change.",
+    "sources": [
+     {
+      "docId": "url:62e229954344",
+      "where": "Physician Tasks/Competencies Specifications"
+     },
+     {
+      "docId": "url:62e229954344",
+      "where": "Table 2"
+     },
+     {
+      "docId": "url:6f6cf4a5b429",
+      "where": "Diagnosis: Selecting and Interpreting Laboratory and Diagnostic Studies"
+     }
+    ]
+   },
+   {
+    "kind": "exam fact",
+    "text": "The same list includes selecting a lab after a change in the patient's status and choosing management from a mixed set of tests, drugs and procedures, which is where a gas becomes a next-step question.",
+    "sources": [
+     {
+      "docId": "url:6f6cf4a5b429",
+      "where": "Diagnosis: Selecting and Interpreting Laboratory and Diagnostic Studies"
+     },
+     {
+      "docId": "url:6f6cf4a5b429",
+      "where": "Management: Selecting Clinical Interventions (Mixed Management)"
+     }
+    ]
+   },
+   {
+    "kind": "teaching point",
+    "text": "Two shapes to expect: name the disorder from a gas, or pick the gas that fits a vignette. For the second, predict the gas before you read the options (vomiting: high HCO3 with a high PaCO2).",
+    "sources": [
+     {
+      "docId": "url:6f6cf4a5b429",
+      "where": "Diagnosis: Selecting and Interpreting Laboratory and Diagnostic Studies"
+     },
+     {
+      "docId": "pmid:40336441",
+      "where": "Table 2"
+     }
+    ]
+   },
+   {
+    "kind": "teaching point",
+    "text": "A normal pH is not a normal gas. Check PaCO2, HCO3 and the gap every time.",
+    "sources": [
+     {
+      "docId": "pmid:40336441",
+      "where": "Step 2"
+     },
+     {
+      "docId": "pmid:22500110",
+      "where": "Section 5, point 2"
+     }
+    ]
+   },
+   {
+    "kind": "teaching point",
+    "text": "In a significant metabolic acidosis, a 'normal' PaCO2 can be too high: with HCO3 14, Winter's expects 27 to 31, so a PaCO2 of 38 means a concurrent respiratory acidosis.",
+    "sources": [
+     {
+      "docId": "pmid:40336441",
+      "where": "Table 2"
+     }
+    ]
+   },
+   {
+    "kind": "teaching point",
+    "text": "Low albumin hides a high gap. Correct before you call it a normal gap acidosis.",
+    "sources": [
+     {
+      "docId": "pmid:28846305",
+      "where": "Hypoalbuminemia"
+     }
+    ]
+   },
+   {
+    "kind": "teaching point",
+    "text": "DKA after liters of saline: the gap closes and the ketones clear while the HCO3 stays low with a high chloride. That is a self-limiting hyperchloremic acidosis, not persistent DKA, and mistaking it delays the switch to subcutaneous insulin.",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 3, DKA criteria"
+     },
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 4, Resolution"
+     },
+     {
+      "docId": "pmid:39052901",
+      "where": "Table 3"
+     },
+     {
+      "docId": "pmid:30725604",
+      "where": "Results, Reporting, and Critical Findings"
+     }
+    ]
+   },
+   {
+    "kind": "teaching point",
+    "text": "Salicylates give respiratory alkalosis plus a high gap acidosis. Sedation can remove the alkalosis and drop the pH.",
+    "sources": [
+     {
+      "docId": "pmid:41049912",
+      "where": "ED evaluation"
+     },
+     {
+      "docId": "pmid:41049912",
+      "where": "Clinical presentation"
+     }
+    ]
+   },
+   {
+    "kind": "teaching point",
+    "text": "Hypoxemia plus a high PaCO2 with a normal A-a gradient is hypoventilation (sedatives, neuromuscular disease). A raised gradient means V/Q mismatch, shunt or diffusion limitation.",
+    "sources": [
+     {
+      "docId": "pmid:34295389",
+      "where": "Answer 1"
+     },
+     {
+      "docId": "pmid:34295389",
+      "where": "Table 3"
+     },
+     {
+      "docId": "pmid:29493941",
+      "where": "Evaluation"
+     }
+    ]
+   }
+  ],
+  "cta_hint": "Step Gunner's CK Gold and Next Best Step decks include anion gap and A-a gradient questions (lead: confirm the CTA copy)."
+ },
+ "quick_checks": [
+  {
+   "id": "abg_q1",
+   "stem": "A 67-year-old man with pneumonia is confused and breathing 30 times a minute. Arterial blood gas on 4 L nasal cannula: pH 7.19, PaCO2 38 mm Hg, HCO3 14 mEq/L. Serum sodium 138 mEq/L, chloride 102 mEq/L.",
+   "question": "Which best describes his acid-base status?",
+   "options": [
+    "High anion gap metabolic acidosis with appropriate respiratory compensation",
+    "High anion gap metabolic acidosis with a concurrent respiratory acidosis",
+    "High anion gap metabolic acidosis with a concurrent respiratory alkalosis",
+    "High anion gap metabolic acidosis with a concurrent metabolic alkalosis",
+    "Normal anion gap metabolic acidosis with a concurrent respiratory acidosis"
+   ],
+   "answer_index": 1,
+   "why": "Gap 138 - (102 + 14) = 22: high. Winter's predicts PaCO2 1.5 x 14 + 8 = 29 (27 to 31). His PaCO2 of 38 is above that, so the lungs are not keeping up: a concurrent respiratory acidosis, even though 38 looks normal. Delta gap (22 - 12) - (24 - 14) = 0 rules out a metabolic alkalosis, and the gap of 22 rules out a normal gap acidosis. Calling it appropriate compensation is the trap.",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 4"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 5"
+    }
+   ]
+  },
+  {
+   "id": "abg_q2",
+   "stem": "A 30-year-old woman with type 1 diabetes has vomited for 3 days. Glucose 450 mg/dL, beta-hydroxybutyrate 5.0 mmol/L. Arterial blood gas: pH 7.37, PaCO2 41 mm Hg, HCO3 23 mEq/L. Serum sodium 140 mEq/L, chloride 90 mEq/L.",
+   "question": "Which best explains these findings?",
+   "options": [
+    "High anion gap metabolic acidosis with a concurrent metabolic alkalosis",
+    "High anion gap metabolic acidosis with a concurrent normal gap acidosis",
+    "High anion gap metabolic acidosis with a concurrent respiratory alkalosis",
+    "Metabolic alkalosis with appropriate respiratory compensation",
+    "No acid-base disorder; the blood gas is normal"
+   ],
+   "answer_index": 0,
+   "why": "pH, PaCO2 and HCO3 all sit in their normal ranges, but the gap is 140 - (90 + 23) = 27, and a gap of 20 or more means a metabolic acidosis whatever the pH. The delta gap is (27 - 12) - (24 - 23) = +14, well over +6: HCO3 is far higher than the gap predicts, so vomiting has added a metabolic alkalosis that offsets the ketoacidosis on the gas. Winter's predicts PaCO2 1.5 x 23 + 8 = 42.5 (40.5 to 44.5), and 41 fits, so there is no added respiratory alkalosis. A normal gap acidosis would push the delta gap below -6.",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 4"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 5"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 2"
+    },
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2"
+    }
+   ]
+  },
+  {
+   "id": "abg_q3",
+   "stem": "A 72-year-old woman is drowsy the morning after hip fracture repair; she received IV morphine overnight. Respirations 10 a minute. Arterial blood gas on room air at sea level: pH 7.26, PaCO2 60 mm Hg, HCO3 26 mEq/L, PaO2 60 mm Hg.",
+   "question": "Which is the most likely mechanism of her hypoxemia?",
+   "options": [
+    "Alveolar hypoventilation",
+    "Ventilation-perfusion mismatch",
+    "Right-to-left shunt",
+    "Diffusion limitation",
+    "Low inspired oxygen tension"
+   ],
+   "answer_index": 0,
+   "why": "PAO2 = 0.21 x (760 - 47) - 60 / 0.8 = 149.7 - 75 = 74.7, so the A-a gradient is 74.7 - 60 = 15, normal for 72 (expected about 18 to 22 by the three published formulas). A normal gradient with a high PaCO2 is hypoventilation. Pulmonary embolism after a hip fracture is the near miss, but V/Q mismatch, shunt and diffusion limitation all raise the gradient. Low inspired oxygen also keeps the gradient normal, but she is at sea level on room air and the high PaCO2 points to ventilation.",
+   "sources": [
+    {
+     "docId": "pmid:33922829",
+     "where": "Materials and Methods"
+    },
+    {
+     "docId": "pmid:29493941",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:34295389",
+     "where": "Answer 1"
+    },
+    {
+     "docId": "pmid:34295389",
+     "where": "Table 3"
+    }
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "What is a normal anion gap?",
+   "a": "With Na minus (Cl + HCO3), 8 to 12 mmol/L; over 12 is high, and the ADA uses over 12 for DKA. Some sources print 8 to 16, and labs that add potassium run higher, so use your lab's range. Correct for albumin first if it is low.",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 4"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 3, DKA criteria"
+    },
+    {
+     "docId": "pmid:19563673",
+     "where": "Laboratory analysis"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Assessment of severity"
+    },
+    {
+     "docId": "pmid:28846305",
+     "where": "Hypoalbuminemia"
+    }
+   ]
+  },
+  {
+   "q": "When do you use Winter's formula?",
+   "a": "Only when the primary problem is a metabolic acidosis. It predicts the PaCO2 the lungs should reach: 1.5 x HCO3 + 8, plus or minus 2. Higher than that means a respiratory acidosis too; lower means a respiratory alkalosis too.",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2"
+    },
+    {
+     "docId": "pmid:28846305",
+     "where": "Compensatory respiratory alkalosis"
+    }
+   ]
+  },
+  {
+   "q": "What does the delta-delta tell you?",
+   "a": "Whether a high gap acidosis is alone. You compare the rise in the gap with the fall in HCO3. If HCO3 fell less than expected, a metabolic alkalosis is hiding (vomiting); if it fell more, a normal gap acidosis is hiding (diarrhea, saline).",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Step 5"
+    },
+    {
+     "docId": "pmid:28846305",
+     "where": "Delta/delta or delta gap"
+    }
+   ]
+  },
+  {
+   "q": "What is a normal A-a gradient?",
+   "a": "It rises with age. Published room-air formulas include age / 4 + 4, (age + 10) / 4 and 2.5 + 0.21 x age, which give about 9 to 12 at age 30 and about 17 to 22 at age 70. Calculate PAO2 with FiO2 x (760 - 47) - PaCO2 / 0.8; on supplemental oxygen the age values fit less well.",
+   "sources": [
+    {
+     "docId": "pmid:29493941",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:34295389",
+     "where": "Answer 1"
+    },
+    {
+     "docId": "pmid:33922829",
+     "where": "Materials and Methods"
+    },
+    {
+     "docId": "pmid:30725604",
+     "where": "Clinical Significance"
+    }
+   ]
+  },
+  {
+   "q": "Can I use a venous gas instead?",
+   "a": "For pH and bicarbonate, often yes: a venous gas is useful in DKA, and the ADA uses venous pH for DKA. For oxygenation and ventilation, you need an arterial gas. Either way, the gas HCO3 is calculated; it should be within about 2 mmol/L of the chemistry panel's.",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Resolution"
+    },
+    {
+     "docId": "pmid:40483586",
+     "where": "Blood gas analysis"
+    }
+   ]
+  },
+  {
+   "q": "How do I tell acute from chronic respiratory acidosis?",
+   "a": "Look at how much the HCO3 has risen. Acutely, about 1 mmol/L per 10 mmHg of CO2; after the kidneys catch up over 3 to 5 days, about 3.5 to 4 per 10. A value in between is hard to call from the gas alone; read it with the history.",
+   "sources": [
+    {
+     "docId": "pmid:40336441",
+     "where": "Table 2"
+    },
+    {
+     "docId": "pmid:22500110",
+     "where": "Section 3"
+    }
+   ]
+  }
+ ],
+ "related": [
+  "dka-hhs",
+  "electrolytes",
+  "dyspnea",
+  "overdose",
+  "sepsis",
+  "altered-mental-status"
+ ],
+ "sources": [
+  {
+   "docId": "pmid:40336441",
+   "label": "Habib 2025",
+   "title": "Mastering blood gas interpretation: a practical guide for primary care providers (S Afr Fam Pract 2025;67:a6058)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40336441/",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "docId": "pmid:22500110",
+   "label": "Bruno 2012",
+   "title": "Acid-base disorders in patients with chronic obstructive pulmonary disease: a pathophysiological review (J Biomed Biotechnol 2012:915150)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22500110/",
+   "licence": "CC BY"
+  },
+  {
+   "docId": "pmid:40483586",
+   "label": "Tucker 2025, a review",
+   "title": "Breathing and balance: clinical insights and management strategies of respiratory acid-base disorders (Nutr Clin Pract 2025;40:774-792)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40483586/",
+   "licence": "CC BY-NC 4.0 (facts restated)"
+  },
+  {
+   "docId": "pmid:28846305",
+   "label": "StatPearls: anion gap, a review",
+   "title": "Anion Gap and Non-Anion Gap Metabolic Acidosis (StatPearls, updated 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846305/",
+   "licence": "CC BY-NC-ND 4.0 (facts restated)"
+  },
+  {
+   "docId": "pmid:30725604",
+   "label": "StatPearls: ABG analysis, a review",
+   "title": "Arterial Blood Gas Analysis: Fundamentals, Interpretation, and Clinical Utility (StatPearls, updated 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30725604/",
+   "licence": "CC BY-NC-ND 4.0 (facts restated)"
+  },
+  {
+   "docId": "pmid:29493941",
+   "label": "StatPearls: hypoxemia, a review",
+   "title": "Hypoxia and Hypoxemia (StatPearls, updated 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29493941/",
+   "licence": "CC BY-NC-ND 4.0 (facts restated)"
+  },
+  {
+   "docId": "pmid:34295389",
+   "label": "Breathe 2021, a teaching case",
+   "title": "A case of hypercapnic respiratory failure (Breathe 2021;17:200217)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34295389/",
+   "licence": "CC BY-NC 4.0 (facts restated)"
+  },
+  {
+   "docId": "pmid:33922829",
+   "label": "Secco 2021",
+   "title": "Can alveolar-arterial difference and lung ultrasound help the clinical decision making in patients with COVID-19? (Diagnostics 2021;11:761), methods",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33922829/",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "docId": "pmid:41049912",
+   "label": "Sidlak 2025",
+   "title": "Acute salicylate toxicity: a narrative review for emergency clinicians (Cureus 2025;17:e91505)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41049912/",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "docId": "pmid:19563673",
+   "label": "Poisoning review 2009",
+   "title": "Management of the critically poisoned patient (Scand J Trauma Resusc Emerg Med 2009)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19563673/",
+   "licence": "CC BY"
+  },
+  {
+   "docId": "pmid:39052901",
+   "label": "ADA/EASD 2024",
+   "title": "Hyperglycemic crises in adults with diabetes: a consensus report (ADA, EASD, JBDS, AACE, DTS), Diabetes Care 2024",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39052901/",
+   "licence": "Educational, not for profit, unaltered (facts restated)"
+  },
+  {
+   "docId": "url:c7d4d9169e59",
+   "label": "JBDS DKA 2023",
+   "title": "The Management of Diabetic Ketoacidosis in Adults, Joint British Diabetes Societies for Inpatient Care (JBDS 02), March 2023 revision",
+   "url": "https://abcd.care/sites/default/files/site_uploads/JBDS_Guidelines_Current/JBDS_02_DKA_Guideline_with_QR_code_March_2023.pdf",
+   "licence": "Published guideline PDF, already in the DKA pathway's trail"
+  },
+  {
+   "docId": "url:62e229954344",
+   "label": "USMLE Step 2 CK outline",
+   "title": "Step 2 CK content outline and specifications (USMLE, FSMB and NBME)",
+   "url": "https://www.usmle.org/exam-resources/step-2-ck-materials/step-2-ck-content-outline-specifications",
+   "licence": "All rights reserved; cited for facts about the exam only"
+  },
+  {
+   "docId": "url:6f6cf4a5b429",
+   "label": "USMLE tasks and competencies",
+   "title": "USMLE Physician Tasks/Competencies (PDF)",
+   "url": "https://www.usmle.org/sites/default/files/2022-01/USMLE_Physician_Tasks_Competencies_2.pdf",
+   "licence": "All rights reserved; cited for facts about the exam only"
+  }
+ ]
+}

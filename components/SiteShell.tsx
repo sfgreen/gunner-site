@@ -21,6 +21,7 @@ import { appStoreUrl, track, referrerHost } from '../lib/analytics';
 export type Measure = 'wide' | 'article' | 'tool';
 
 const NAV_LINKS: { href: string; label: string }[] = [
+  { href: '/wards', label: 'On the wards' },
   { href: '/readiness', label: 'Readiness check' },
   { href: '/step-2-score-predictor', label: 'Predictor' },
   { href: '/research/nbme-to-step-2', label: 'Research' },
@@ -130,6 +131,7 @@ export default function SiteShell({
         <footer className={'measure ' + measure}>
           <div className="foot">
             <Link href="/">stepgunner.com</Link>
+            <Link href="/wards">On the wards</Link>
             <Link href="/readiness">Readiness check</Link>
             <Link href="/step-2-score-by-specialty">By specialty</Link>
             <Link href="/guides">Guides</Link>

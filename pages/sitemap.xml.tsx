@@ -14,6 +14,9 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   const staticPages = [
     urlNode('/', 'weekly', '1.0'),
     urlNode('/readiness', 'weekly', '0.9'),
+    urlNode('/wards', 'weekly', '0.8'),
+    urlNode('/wards/abg-interpretation', 'monthly', '0.8'),
+    urlNode('/wards/soap-note', 'monthly', '0.8'),
     urlNode('/step-2-score-predictor', 'weekly', '0.9'),
     urlNode('/guides', 'weekly', '0.8'),
     urlNode('/research/nbme-to-step-2', 'weekly', '0.9'),

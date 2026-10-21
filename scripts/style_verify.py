@@ -54,6 +54,9 @@ ROUTES = [
     "/research/nbme-to-step-2",   # /research itself has no index page
     "/step-2-ck-percentiles",
     "/partner",
+    "/wards",
+    "/wards/abg-interpretation",
+    "/wards/soap-note",
 ]
 
 # Classes that legitimately carry no CSS of their own.

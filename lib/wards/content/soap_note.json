@@ -1,0 +1,1076 @@
+{
+ "slug": "soap-note",
+ "title": "How to write a SOAP note (template and example)",
+ "seo_title": "SOAP Note Template and Example for Medical Students",
+ "meta_description": "Copy a SOAP progress note template and an H&P skeleton, see a full day-2 DKA note, learn what goes in each section, and present it on rounds.",
+ "h1": "How to write a SOAP note: template and example",
+ "disclaimer": "Exam prep and clinical teaching, not clinical advice. Follow your school's and hospital's documentation rules; the example patient is fictional.",
+ "short_answer": {
+  "lead": "A SOAP note is the daily progress note: Subjective, Objective, Assessment, Plan. Copy the template, fill it from today's data only, and organize the plan by problem.",
+  "steps": [
+   {
+    "letter": "S",
+    "text": "What the patient tells you today: symptoms, concerns, overnight events.",
+    "sources": [
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, Subjective"
+     },
+     {
+      "docId": "pmid:42181334",
+      "where": "Table 1"
+     }
+    ]
+   },
+   {
+    "letter": "O",
+    "text": "What you measured and saw: vitals as ranges, a focused exam, new labs and studies.",
+    "sources": [
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, item 2"
+     },
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, item 5"
+     },
+     {
+      "docId": "pmid:42181334",
+      "where": "V: Vitals"
+     }
+    ]
+   },
+   {
+    "letter": "A",
+    "text": "A one-sentence summary, then each problem with its status and your reasoning.",
+    "sources": [
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, item 8"
+     },
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, item 12"
+     }
+    ]
+   },
+   {
+    "letter": "P",
+    "text": "For each problem, a brief, clear plan; then prophylaxis, code status and disposition.",
+    "sources": [
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, item 17"
+     },
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, item 12"
+     }
+    ]
+   }
+  ],
+  "bar": "The RED checklist's standard for a progress note: truthful, reasoned, updated, succinct.",
+  "bar_sources": [
+   {
+    "docId": "pmid:35475068",
+    "where": "Appendix, RED checklist, summary"
+   }
+  ]
+ },
+ "template_text": {
+  "progress_note": "PROGRESS NOTE | [Service] | Hospital day [#] | [Date, time]\n[Patient name], [age] [sex]\n\nOne-liner: [Age] [sex] with [only the history that matters] admitted [when] for [problem], now [today's status].\n\nS\nOvernight: [events: falls, rapid responses, new symptoms, held doses] or \"No acute events overnight.\"\nToday: [how they feel, in their words; each symptom that matters to an active problem]\n[Pain | eating | nausea | bowels | urine | walking | sleep: only what matters for this patient]\n\nO\nVitals (last 24 h): T [max]; HR [range]; BP [range]; RR [range]; SpO2 [range] on [room air / O2]\nI/O (24 h): in [ ] / out [ ]   Weight: [ ]\nLines, drains, infusions: [what is running, at what rate]\nExam: [General]; [systems tied to today's symptoms]; [what changed since yesterday, or \"unchanged from [date]\"]\nLabs: [new results only, with the trend: Na 138 (134)]\nImaging and studies: [new results only, your own read in a line]\nMedication changes: [started, stopped, held in the last 24 h]\n\nA/P\nSummary: [one sentence: who, why here, how today is going]\n\n#1 [Diagnosis, or symptom with a differential], [improving / worsening / stable / resolved / new]\n   [One or two lines of reasoning that cite today's data]\n   - [Diagnostics]\n   - [Treatment]\n   - [Monitoring, and what would change the plan]\n#2 [Problem], [status]\n   ...\nFEN: [fluids, electrolytes, diet]\nProphylaxis: [VTE], [other]\nCode status: [ ]   Contact: [ ]\nDispo: [where, when, what stands in the way]\n\n[Your name], MS3. Discussed with [resident / attending].",
+  "admission_hp": "ADMISSION H&P | [Service] | [Date, time]\n[Patient name], [age] [sex]   Source: [patient / family / chart]   Reliability: [ ]\n\nCC: \"[In the patient's words]\" for [duration]\nHPI: [Onset, timing, character, severity, what makes it better or worse, associated symptoms, what has been tried. Pertinent positives and negatives for your differential.]\nPMH: [ ]\nPSH: [ ]\nMedications: [name, dose, frequency; adherence; last dose]\nAllergies: [drug: reaction]\nFamily history: [ ]\nSocial history: [home, work, tobacco, alcohol, drugs, access to medicines, food and transport]\nROS: [positives and negatives not already in the HPI]\n\nExam\nVitals: T [ ]; HR [ ]; BP [ ]; RR [ ]; SpO2 [ ] on [ ]; weight [ ]\nGeneral | HEENT | Neck | CV | Lungs | Abdomen | Extremities | Skin | Neuro | Psych\n\nData\nLabs: [ ]   ECG: [ ]   Imaging: [your read]   Micro: [ ]\n\nAssessment\nSummary statement: [age] [sex] with [key risk factors] presenting with [problem, with qualifiers: acute vs chronic, severity] and [key exam and data], most consistent with [leading diagnosis].\nDifferential: [leading diagnosis and why] | [must-not-miss alternatives and why they are less likely]\n\nPlan by problem\n#1 [Problem]: [diagnostics]; [treatment]; [monitoring]\n#2 [Problem]: ...\nFEN | Prophylaxis | Code status | Contact | Dispo\n\n[Your name], MS3. Discussed with [resident / attending].",
+  "notes": "Square brackets are prompts; delete what does not apply. Every prompt maps to a RED checklist item or a presentation framework cited under 'What goes in each section'.",
+  "sources": [
+   {
+    "docId": "pmid:35475068",
+    "where": "Appendix, RED checklist, Subjective"
+   },
+   {
+    "docId": "pmid:35475068",
+    "where": "Appendix, RED checklist, item 2"
+   },
+   {
+    "docId": "pmid:35475068",
+    "where": "Appendix, RED checklist, item 4"
+   },
+   {
+    "docId": "pmid:35475068",
+    "where": "Appendix, RED checklist, item 5"
+   },
+   {
+    "docId": "pmid:35475068",
+    "where": "Appendix, RED checklist, item 8"
+   },
+   {
+    "docId": "pmid:35475068",
+    "where": "Appendix, RED checklist, item 12"
+   },
+   {
+    "docId": "pmid:42181334",
+    "where": "Table 1"
+   },
+   {
+    "docId": "pmid:42181334",
+    "where": "V: Vitals"
+   },
+   {
+    "docId": "pmid:38320116",
+    "where": "Table 1"
+   }
+  ]
+ },
+ "example_note": {
+  "patient": "Fictional. Built from the dka_hhs pathway's 'Moderate DKA after missed insulin' case (24-year-old woman, type 1 diabetes, 60 kg, out of insulin 2 days; admission glucose 486, beta-hydroxybutyrate 5.1, venous pH 7.14, HCO3 11, anion gap 25, K 4.6; resolved at hour 14).",
+  "text": "PROGRESS NOTE | Medicine | Hospital day 2 | 06:45\nMs. R., 24-year-old woman\n\nOne-liner: 24-year-old woman with type 1 diabetes admitted yesterday afternoon with moderate DKA after 2 days without insulin; DKA resolved at 06:00 and she is ready to eat.\n\nS\nOvernight: No acute events. Nausea stopped around midnight; no vomiting since admission.\nToday: \"I feel so much better. Can I eat?\" Abdominal pain gone. No dysuria, cough or fever.\nHistory update: she ran out of insulin 2 days before admission. Her refill lapsed when her insurance changed, and she could not pay the cash price; she stretched her last pen first.\n\nO\nVitals (last 24 h): Tmax 37.2 °C; HR 76 to 92 (98 on arrival); BP 112 to 124 / 68 to 76; RR 14 to 18 (28 on arrival); SpO2 98 to 100% on room air\nI/O (since admission): in 5.4 L IV / out 3.1 L urine   Weight: 60 kg\nInfusions: insulin 3 units/h (0.05 units/kg/h) since 21:00; 5% dextrose in 0.9% saline with KCl 20 mmol/L\nExam: Alert, comfortable, sitting up. Mucous membranes moist (dry on admission). Breathing quiet and unlabored; no deep, rapid breathing. Heart regular, no murmur. Lungs clear. Abdomen soft, nontender (diffusely tender yesterday). IV site clean.\nLabs 06:00: beta-hydroxybutyrate 0.4 mmol/L (5.1 on admission, 2.4 at 21:00); venous pH 7.34 (7.14); Na 138 (134), K 4.2 (4.6), Cl 107 (98), HCO3 19 (11), BUN 12 (24), Cr 0.9 (1.3), glucose 168 (486). Anion gap 12 (25).\nFingerstick glucose overnight: 156 to 198.\n\nA/P\nSummary: Young woman with type 1 diabetes whose moderate DKA from 2 days of missed insulin resolved overnight on fluids and fixed-rate insulin; today's work is a safe switch to subcutaneous insulin and fixing why she ran out.\n\n#1 DKA, moderate, resolved at 06:00\n   Ketones 0.4 (under 0.6) with venous pH 7.34 (7.3 or more) and HCO3 19 (18 or more) meet the ADA resolution criteria. Gap 12, but the gap is not used to call resolution.\n   - Restart her home basal-bolus insulin at her pre-admission doses, confirmed with her and the pharmacy record; first doses with breakfast.\n   - Keep the insulin infusion running 1 to 2 hours after the first subcutaneous dose, then stop it.\n   - Fingerstick glucose per the unit's subcutaneous insulin protocol after the switch.\n#2 Insulin omission from cost-related rationing (the trigger), persistent until access is fixed\n   Missed insulin is one of the most common DKA triggers. No sign of another one: afebrile, admission urinalysis negative, lungs clear, admission ECG without ischemia, pregnancy test negative.\n   - Social work and case management today: insurance and insulin cost, before discharge.\n   - Diabetes team to see her today, within 24 hours of admission.\n   - Education before discharge: injection technique and sites, glucose monitoring, blood or urine ketone testing, and when to call for help.\n   - Follow-up within 2 to 4 weeks of discharge.\n#3 Potassium, stable on replacement\n   K 4.2 on KCl 20 mmol/L in each liter; in the 4 to 5 target.\n   - Continue while the IV fluids run.\n#4 Raised creatinine on admission, resolved\n   Cr 1.3 on admission, 0.9 today with fluids. No change to the plan.\n\nFEN: dextrose and saline with KCl run until the infusion stops. Diet: breakfast today, per the unit's diabetes diet.\nProphylaxis: VTE: prophylactic-dose low molecular weight heparin.\nCode status: Full code.   Contact: her mother, number in the chart.\nDispo: home once she is stable on subcutaneous insulin, has insulin she can afford, has had the teaching, and the diabetes team has seen her; likely tomorrow.\n\nR. Patel, MS3. Discussed with Dr. Lopez (resident).",
+  "plan_sources": [
+   {
+    "line": "Moderate DKA on admission (venous pH 7.14, HCO3 11, ketones 5.1, alert)",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Table 2"
+     }
+    ]
+   },
+   {
+    "line": "DKA resolution: ketones under 0.6 with venous pH 7.3 or more, or HCO3 18 or more",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 4, Resolution"
+     },
+     {
+      "docId": "url:c7d4d9169e59",
+      "where": "6 to 12 hours, Action 2"
+     }
+    ]
+   },
+   {
+    "line": "The anion gap is not used to call resolution",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 4, Resolution"
+     }
+    ]
+   },
+   {
+    "line": "Course already given: insulin 0.1 units/kg/h, then 0.05 units/kg/h with 5 to 10% dextrose once glucose fell under 250 mg/dL",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 4, Insulin"
+     }
+    ]
+   },
+   {
+    "line": "Glucose kept about 150 to 200 mg/dL overnight (8.3 to 11.0 mmol/L)",
+    "sources": [
+     {
+      "docId": "pmid:38907161",
+      "where": "Fig. 4"
+     }
+    ]
+   },
+   {
+    "line": "Known diabetes: restart insulin at the pre-admission doses",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 4, Transition"
+     }
+    ]
+   },
+   {
+    "line": "Overlap: subcutaneous insulin 1 to 2 hours before stopping the infusion (JBDS: stop 30 to 60 minutes after short-acting insulin with a meal)",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 4, Transition"
+     },
+     {
+      "docId": "pmid:38907161",
+      "where": "Fig. 5"
+     },
+     {
+      "docId": "url:c7d4d9169e59",
+      "where": "12 to 24 hours"
+     }
+    ]
+   },
+   {
+    "line": "Missed insulin as a common trigger",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 1, Risk factors"
+     }
+    ]
+   },
+   {
+    "line": "Assess social determinants of health before discharge; cost-related insulin rationing is a recognized problem",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 7, Prevention"
+     },
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 8, Future directions"
+     }
+    ]
+   },
+   {
+    "line": "Diabetes team review within 24 hours of admission",
+    "sources": [
+     {
+      "docId": "url:c7d4d9169e59",
+      "where": "Conversion to subcutaneous insulin"
+     }
+    ]
+   },
+   {
+    "line": "Education: injection technique and sites, glucose monitoring, ketone testing, when to call",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 7, Prevention"
+     }
+    ]
+   },
+   {
+    "line": "Follow-up within 2 to 4 weeks of discharge",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 7, Prevention"
+     }
+    ]
+   },
+   {
+    "line": "Potassium target 4 to 5; KCl 20 mmol/L per liter (ADA text 20 to 30; ADA Figure 4 prints 10 to 20; JBDS gives 40)",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 4, Potassium"
+     },
+     {
+      "docId": "pmid:38907161",
+      "where": "Fig. 4"
+     }
+    ]
+   },
+   {
+    "line": "Prophylactic-dose low molecular weight heparin unless thrombosis is suspected",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Table 3"
+     }
+    ]
+   }
+  ],
+  "not_from_sources": [
+   "Fingerstick glucose after the switch is deferred to the unit's protocol on purpose: the DKA pathway's sources set monitoring only until resolution.",
+   "Her home insulin doses are left out on purpose: they are patient data, and a dose printed in an example reads like advice.",
+   "Stopping KCl and dextrose when the infusion stops, the diet line, the creatinine line and the discharge timing are routine team decisions, not pathway thresholds; none carries a number."
+  ],
+  "teaching_callouts": [
+   {
+    "text": "The admission ECG, urinalysis and pregnancy test are not repeated in O: they were in yesterday's H&P. Studies go in a note only on the first day they are new; the A/P can still mention them.",
+    "sources": [
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, item 6"
+     },
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, item 14"
+     }
+    ]
+   },
+   {
+    "text": "Every problem carries a status word (resolved, persistent, stable).",
+    "sources": [
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, item 12"
+     }
+    ]
+   },
+   {
+    "text": "The trigger is its own problem. That is where the most useful plan of the day lives: insulin access.",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 7, Prevention"
+     }
+    ]
+   }
+  ]
+ },
+ "sections": [
+  {
+   "key": "S",
+   "name": "Subjective",
+   "belongs": [
+    "Today's concerns and symptoms, from the patient or family",
+    "Overnight events, first; if none, say so",
+    "The patient's own words for the main complaint",
+    "History updates you learned today (like why she ran out of insulin)"
+   ],
+   "does_not_belong": [
+    "Vitals, exam findings, labs",
+    "Your assessment ('appears fluid overloaded' is an assessment, not a symptom)",
+    "Every detail of the conversation"
+   ],
+   "common_mistakes": [
+    "Putting objective data in S, or slipping your assessment into the HPI.",
+    "Writing down the whole conversation instead of what bears on today's problems.",
+    "Dropping the patient's own voice and preferences."
+   ],
+   "sources": [
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, Subjective"
+    },
+    {
+     "docId": "pmid:42181334",
+     "where": "Table 1"
+    },
+    {
+     "docId": "pmid:26996436",
+     "where": "Methods"
+    },
+    {
+     "docId": "pmid:40120527",
+     "where": "Results, Theme 2"
+    },
+    {
+     "docId": "pmid:40120527",
+     "where": "Results"
+    }
+   ]
+  },
+  {
+   "key": "O",
+   "name": "Objective",
+   "belongs": [
+    "Vitals as 24-hour ranges",
+    "An exam of every system that matches today's symptoms, with what changed",
+    "New labs, with the trend",
+    "New studies, summarized in your own words",
+    "Infusions and lines"
+   ],
+   "does_not_belong": [
+    "Every set of vitals",
+    "Yesterday's labs and studies repeated",
+    "Pasted radiology or ECG reports"
+   ],
+   "common_mistakes": [
+    "Listing vitals from three or more time points instead of a range.",
+    "Copying yesterday's exam forward unchanged without saying so.",
+    "Pasting a full report instead of a one-line read; look at the image yourself."
+   ],
+   "sources": [
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 2"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 3"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 4"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 5"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 6"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 7"
+    },
+    {
+     "docId": "pmid:42181334",
+     "where": "V: Vitals"
+    },
+    {
+     "docId": "pmid:42181334",
+     "where": "L: Labs"
+    },
+    {
+     "docId": "pmid:42181334",
+     "where": "R: Radiology"
+    }
+   ]
+  },
+  {
+   "key": "A",
+   "name": "Assessment",
+   "belongs": [
+    "A one-sentence summary statement, separate from the problem list and rewritten daily",
+    "Problems listed as diagnoses, or as symptoms with a differential",
+    "A status for each problem: improving, worsening, persistent, stable, resolved, new or inactive",
+    "A line of reasoning for each active problem",
+    "An interpretation of every new abnormal lab and every new study"
+   ],
+   "does_not_belong": [
+    "The one-liner repeated as the whole assessment",
+    "The full past medical history",
+    "An organ-system list for a floor patient"
+   ],
+   "common_mistakes": [
+    "A summary statement identical to yesterday's.",
+    "Repeating the one-liner and calling it the assessment.",
+    "Problems with no status, or with no reason given."
+   ],
+   "sources": [
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 8"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 9"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 11"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 12"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 13"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 14"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 15"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 16"
+    },
+    {
+     "docId": "pmid:32699721",
+     "where": "Table, rating tool item 9"
+    },
+    {
+     "docId": "pmid:40120527",
+     "where": "Results"
+    },
+    {
+     "docId": "pmid:40120527",
+     "where": "Results, Theme 1"
+    }
+   ]
+  },
+  {
+   "key": "P",
+   "name": "Plan",
+   "belongs": [
+    "A brief, clear plan under each problem: tests, treatment, monitoring",
+    "Every plan item tied to a problem",
+    "Structural lines: FEN, prophylaxis, code status, contact, disposition",
+    "What stands between the patient and discharge"
+   ],
+   "does_not_belong": [
+    "Orders that answer no listed problem",
+    "Yesterday's plan carried forward word for word"
+   ],
+   "common_mistakes": [
+    "Copying the plan forward from yesterday.",
+    "Building the plan on a billing template organized by organ system, when the problems are what matter.",
+    "Leaving out disposition and what is blocking it."
+   ],
+   "sources": [
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 17"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 18"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 12"
+    },
+    {
+     "docId": "pmid:32699721",
+     "where": "Table, rating tool item 12"
+    },
+    {
+     "docId": "pmid:40120527",
+     "where": "Results, Theme 1"
+    },
+    {
+     "docId": "pmid:42181334",
+     "where": "A&P"
+    }
+   ]
+  }
+ ],
+ "one_liner": {
+  "formula": "[Age]-year-old [sex] with [only the history that matters for this problem] admitted [when] for [problem, with qualifiers], now [today's status].",
+  "why": "One sentence that pulls together the history, exam and data. Qualifiers are the short, usually paired words that narrow a problem: acute or chronic, moderate or severe, one side or both.",
+  "examples": [
+   {
+    "text": "24-year-old woman with type 1 diabetes admitted yesterday with moderate DKA after 2 days without insulin, now resolved and moving to subcutaneous insulin.",
+    "note": "The example patient."
+   },
+   {
+    "text": "68-year-old man with COPD on home inhalers admitted 2 days ago with community-acquired right lower lobe pneumonia, now afebrile and back on room air.",
+    "note": "Only the history that bears on the problem."
+   },
+   {
+    "text": "50-year-old woman on post-op day 3 after laparoscopic cholecystectomy for acute cholecystitis, tolerating a full diet and walking.",
+    "note": "Surgical form: operation, indication, post-op day."
+   }
+  ],
+  "bad_example": {
+   "text": "24F PMH T1DM, childhood asthma, appendectomy age 12, seasonal allergies, presenting with DKA.",
+   "why_bad": "Lists every past problem, carries no severity, and says nothing about today. Long, cluttered one-liners that list the whole past history are a common student pattern."
+  },
+  "ap_pattern": {
+   "formula": "#[Problem], [status]: [one line of reasoning with today's numbers]. Plan: [tests]; [treatment]; [monitoring]; [who you are calling].",
+   "example": "#1 DKA, moderate, resolved: ketones 0.4, venous pH 7.34, HCO3 19. Plan: home basal-bolus insulin with breakfast; stop the infusion 1 to 2 hours after the first dose."
+  },
+  "sources": [
+   {
+    "docId": "pmid:32699721",
+    "where": "Table, rating tool item 9"
+   },
+   {
+    "docId": "pmid:38320116",
+    "where": "Table 1"
+   },
+   {
+    "docId": "pmid:40120527",
+    "where": "Results"
+   },
+   {
+    "docId": "pmid:40120527",
+    "where": "Methods, assessment form"
+   },
+   {
+    "docId": "pmid:42181334",
+    "where": "Table 1"
+   },
+   {
+    "docId": "pmid:35475068",
+    "where": "Appendix, RED checklist, item 16"
+   },
+   {
+    "docId": "pmid:39052901",
+    "where": "Section 4, Resolution"
+   },
+   {
+    "docId": "pmid:39052901",
+    "where": "Section 4, Transition"
+   }
+  ]
+ },
+ "oral_presentation": {
+  "how": [
+   {
+    "text": "Open with the one-liner and the hospital day.",
+    "sources": [
+     {
+      "docId": "pmid:42181334",
+      "where": "Table 1"
+     },
+     {
+      "docId": "pmid:32699721",
+      "where": "Table, rating tool item 9"
+     }
+    ]
+   },
+   {
+    "text": "Overnight events next. If there were none, say so in one line.",
+    "sources": [
+     {
+      "docId": "pmid:42181334",
+      "where": "Table 1"
+     },
+     {
+      "docId": "pmid:37226142",
+      "where": "Methods, EAP format"
+     }
+    ]
+   },
+   {
+    "text": "Subjective in a sentence or two: how they feel, in their words.",
+    "sources": [
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, Subjective"
+     }
+    ]
+   },
+   {
+    "text": "Vitals as 24-hour ranges, not every set.",
+    "sources": [
+     {
+      "docId": "pmid:42181334",
+      "where": "V: Vitals"
+     },
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, item 2"
+     }
+    ]
+   },
+   {
+    "text": "Exam: only what is relevant and what changed.",
+    "sources": [
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, item 3"
+     },
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, item 4"
+     }
+    ]
+   },
+   {
+    "text": "Labs as trends, new ones only.",
+    "sources": [
+     {
+      "docId": "pmid:42181334",
+      "where": "L: Labs"
+     },
+     {
+      "docId": "pmid:35475068",
+      "where": "Appendix, RED checklist, item 5"
+     }
+    ]
+   },
+   {
+    "text": "Assessment and plan by problem, most important first, each with a brief plan.",
+    "sources": [
+     {
+      "docId": "pmid:32699721",
+      "where": "Table, rating tool item 10"
+     },
+     {
+      "docId": "pmid:32699721",
+      "where": "Table, rating tool item 12"
+     },
+     {
+      "docId": "pmid:37226142",
+      "where": "Methods, EAP format"
+     }
+    ]
+   },
+   {
+    "text": "Expect to be interrupted, and be ready to pick up where you left off.",
+    "sources": [
+     {
+      "docId": "pmid:42181334",
+      "where": "Polished presentations"
+     }
+    ]
+   }
+  ],
+  "principle": "The written note is the record and can be complete; the presentation is an argument for your plan and should be succinct. Experienced physicians hear a presentation as a story that makes a case, not a data dump.",
+  "principle_sources": [
+   {
+    "docId": "pmid:37226142",
+    "where": "Background"
+   }
+  ],
+  "timing_note": "Our judgment, not a sourced rule: aim for about 60 to 90 seconds for a stable follow-up patient, longer for a new admission, and ask your resident what the team expects. The sample below runs about 200 words, roughly 80 to 90 seconds at a normal speaking pace.",
+  "sample_script": "This is Ms. R., a 24-year-old woman with type 1 diabetes admitted yesterday with moderate DKA after two days without insulin; today is hospital day 2. No events overnight. Her glucose fell under 250 by 9 p.m., so dextrose went in and the insulin came down to 0.05 units per kilo an hour. This morning she feels well, no nausea or belly pain, and she wants breakfast. Afebrile, heart rate 76 to 92, systolic 112 to 124, on room air. She looks comfortable, breathing quietly, belly soft. At 6 a.m. her beta-hydroxybutyrate is 0.4, venous pH 7.34, bicarb 19, potassium 4.2, gap 12, and creatinine is back to 0.9 from 1.3. So her DKA has resolved by ADA criteria. Plan: her home basal-bolus insulin with breakfast, and the drip comes off 1 to 2 hours after the first dose. The trigger was a refill she could not afford, so I would like social work and case management today, the diabetes team to see her, injection and ketone teaching, and follow-up in 2 to 4 weeks. She is on prophylactic heparin and full code, and she could go home tomorrow if she is stable and has insulin she can afford.",
+  "sample_built_from": "The example note above."
+ },
+ "step2_angle": {
+  "intro": "Writing the note and taking the exam use the same muscle. The first two points are facts about how Step 2 CK is built; the rest are teaching points.",
+  "points": [
+   {
+    "kind": "exam fact",
+    "text": "USMLE describes Step 2 CK as testing whether you can apply knowledge to patient care under supervision. Each question tests one competency; mixed management alone is 12 to 16% of items, labs and diagnostic studies 13 to 17%, pharmacotherapy 8 to 12% (USMLE says the percentages can change).",
+    "sources": [
+     {
+      "docId": "url:62e229954344",
+      "where": "Content Outline page, overview"
+     },
+     {
+      "docId": "url:62e229954344",
+      "where": "Physician Tasks/Competencies Specifications"
+     },
+     {
+      "docId": "url:62e229954344",
+      "where": "Table 2"
+     },
+     {
+      "docId": "url:62e229954344",
+      "where": "Table 2 footnote"
+     }
+    ]
+   },
+   {
+    "kind": "exam fact",
+    "text": "History and physical exam skills are 0% of Step 2 CK as their own competency; USMLE tests them on Step 1 and Step 3.",
+    "sources": [
+     {
+      "docId": "url:62e229954344",
+      "where": "Table 2"
+     },
+     {
+      "docId": "url:62e229954344",
+      "where": "Table 2 footnote"
+     }
+    ]
+   },
+   {
+    "kind": "teaching point",
+    "text": "So on Step 2 CK the history and exam are the setup, and the questions grade your A/P: what you conclude and what you do next.",
+    "sources": [
+     {
+      "docId": "url:62e229954344",
+      "where": "Table 2"
+     },
+     {
+      "docId": "url:6f6cf4a5b429",
+      "where": "Management: Selecting Clinical Interventions (Mixed Management)"
+     }
+    ]
+   },
+   {
+    "kind": "teaching point",
+    "text": "A vignette is a compressed S and O. The question is one line of your A/P: the next test, the next drug, the priority in an acute case.",
+    "sources": [
+     {
+      "docId": "url:6f6cf4a5b429",
+      "where": "Management: Clinical Interventions/Treatment"
+     },
+     {
+      "docId": "url:6f6cf4a5b429",
+      "where": "Management: Selecting Clinical Interventions (Mixed Management)"
+     }
+    ]
+   },
+   {
+    "kind": "teaching point",
+    "text": "Writing the plan by problem, in order, rehearses next-step thinking every day. The DKA patient shows it: three potassium values on arrival lead to three different next steps.",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 4, Potassium"
+     },
+     {
+      "docId": "pmid:38907161",
+      "where": "Fig. 4"
+     }
+    ]
+   },
+   {
+    "kind": "teaching point",
+    "text": "Status words matter on the exam too. 'Resolved' DKA changes the next step (switch to subcutaneous insulin with an overlap); 'improving' DKA keeps the infusion running until the ketoacidosis resolves.",
+    "sources": [
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 4, Resolution"
+     },
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 4, Transition"
+     },
+     {
+      "docId": "pmid:39052901",
+      "where": "Section 4, Insulin"
+     }
+    ]
+   }
+  ],
+  "cta_hint": "Step Gunner's Next Best Step deck is built as management chains (lead: confirm the CTA copy)."
+ },
+ "quick_checks": [
+  {
+   "id": "soap_q1",
+   "stem": "Same patient on arrival: 24-year-old woman with type 1 diabetes, out of insulin for 2 days. Glucose 486 mg/dL, beta-hydroxybutyrate 5.1 mmol/L, venous pH 7.14, bicarbonate 11 mEq/L. The first liter of 0.9% saline is running. Suppose her potassium had come back at 3.1 mEq/L; she is passing urine.",
+   "question": "Which is the most appropriate next step?",
+   "options": [
+    "IV potassium now; start insulin once potassium is above 3.5",
+    "Insulin 0.1 units/kg/h with potassium 20 mmol in each liter",
+    "Insulin 0.1 units/kg/h, recheck potassium in 2 hours",
+    "IV sodium bicarbonate, then start the insulin infusion",
+    "IV insulin bolus 0.1 units/kg, then IV potassium"
+   ],
+   "answer_index": 0,
+   "why": "Potassium under 3.5 before insulin means potassium first: the ADA consensus starts replacement and delays insulin until potassium is above 3.5, because insulin lowers serum potassium and the drop can cause arrhythmias and respiratory muscle weakness. Insulin with potassium in the fluids is the answer for 3.5 to 5.0; insulin with no potassium and a 2-hour recheck is the answer above 5.0. Bicarbonate is considered only under pH 7.0, and it raises the risk of hypokalemia. An insulin bolus is for when the infusion will be delayed, and it would push potassium lower still. (JBDS, the UK guideline, reviews the potassium regimen with a senior and does not state an insulin hold; the US consensus does.)",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Potassium"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Insulin"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Bicarbonate"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Single page pathway, potassium replacement"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Complications 1, potassium"
+    }
+   ]
+  },
+  {
+   "id": "soap_q2",
+   "stem": "Same patient, hospital day 2, on the insulin infusion with dextrose. Suppose her 06:00 labs had instead shown beta-hydroxybutyrate 0.4 mmol/L, venous pH 7.32, sodium 139 mEq/L, chloride 113 mEq/L, bicarbonate 16 mEq/L (anion gap 10), glucose 170 mg/dL. She is hungry.",
+   "question": "Which is the most appropriate next step?",
+   "options": [
+    "Start subcutaneous insulin with breakfast; stop the infusion 1 to 2 hours later",
+    "Continue the insulin infusion until the serum bicarbonate reaches 18 or more",
+    "Give IV sodium bicarbonate for the low serum bicarbonate, then reassess",
+    "Stop the insulin infusion now and start subcutaneous insulin with lunch",
+    "Recheck beta-hydroxybutyrate in 4 hours before changing the insulin plan"
+   ],
+   "answer_index": 0,
+   "why": "Ketones under 0.6 with a venous pH of 7.3 or more meet the ADA definition of resolution, and JBDS says not to use bicarbonate at this stage. The low bicarbonate with a high chloride and a normal gap is a hyperchloremic acidosis from saline: self-limiting, and mistaking it for persistent DKA delays the switch, which is the trap in the second option. Stopping the infusion before the subcutaneous insulin has started removes the overlap the consensus requires. Bicarbonate is not indicated, and waiting 4 hours delays a decision the labs already support.",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Resolution"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "6 to 12 hours, Action 2"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 3, DKA criteria"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Table 3"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Transition"
+    }
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "What is the difference between a SOAP note and an H&P?",
+   "a": "The H&P is the admission write-up: the history, the physical exam and the data, then an assessment that reasons toward a diagnosis and its differential, and the first plan. The SOAP note is the daily progress note: updated from yesterday's, it says how the patient is now and what happens today. SOAP comes from Lawrence Weed's problem-oriented medical record of 1968.",
+   "sources": [
+    {
+     "docId": "pmid:33204844",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:33204844",
+     "where": "Educational Objectives"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, summary"
+    },
+    {
+     "docId": "pmid:37226142",
+     "where": "Background"
+    }
+   ]
+  },
+  {
+   "q": "How long should a progress note be?",
+   "a": "No source sets a length. The RED checklist's bar is truthful, reasoned, updated and succinct, and studies of student notes describe copy-paste and 'note bloat'. Our rule of thumb: if a line does not change what you think or do today, cut it.",
+   "sources": [
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, summary"
+    },
+    {
+     "docId": "pmid:35475068",
+     "where": "Introduction"
+    }
+   ]
+  },
+  {
+   "q": "What goes in subjective versus objective?",
+   "a": "Subjective is what the patient or family tells you: symptoms, concerns, overnight events. Objective is what you measure or observe: vitals, exam, labs, imaging. Putting objective data in S, or your assessment in the history or exam, is one of the most common misplacements in student notes.",
+   "sources": [
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, Subjective"
+    },
+    {
+     "docId": "pmid:40120527",
+     "where": "Results, Theme 2"
+    }
+   ]
+  },
+  {
+   "q": "Should the plan be organized by problem or by organ system?",
+   "a": "By problem for floor patients: the RED checklist scores a problem-based assessment, and reviewers of student notes found system-based plans harder to digest. For ICU patients, a surgical clerkship guide recommends a systems-based approach so nothing in a complex patient gets missed.",
+   "sources": [
+    {
+     "docId": "pmid:35475068",
+     "where": "Appendix, RED checklist, item 11"
+    },
+    {
+     "docId": "pmid:40120527",
+     "where": "Results, Theme 1"
+    },
+    {
+     "docId": "pmid:42181334",
+     "where": "A&P"
+    }
+   ]
+  },
+  {
+   "q": "What is a one-liner?",
+   "a": "One sentence that sums up the patient: age, sex, only the history that matters, the problem with qualifiers like acute or severe, and today's status. It opens the presentation and the assessment. The usual mistake is making it long by listing the whole past history.",
+   "sources": [
+    {
+     "docId": "pmid:32699721",
+     "where": "Table, rating tool item 9"
+    },
+    {
+     "docId": "pmid:38320116",
+     "where": "Table 1"
+    },
+    {
+     "docId": "pmid:40120527",
+     "where": "Results"
+    }
+   ]
+  },
+  {
+   "q": "Can a medical student's note count in the chart?",
+   "a": "Since CMS's 2018 revision, teaching physicians can use medical student documentation for billable services with appropriate supervision. Whether your notes go in the chart is still up to your school and hospital.",
+   "sources": [
+    {
+     "docId": "pmid:35475068",
+     "where": "Introduction"
+    }
+   ]
+  }
+ ],
+ "related": [
+  "dka-hhs"
+ ],
+ "sources": [
+  {
+   "docId": "pmid:35475068",
+   "label": "Kim 2022 (RED checklist)",
+   "title": "Improving medical student inpatient documentation through feedback using a note assessment tool (Cureus 2022;14:e23369); appendix: the Responsible Electronic Documentation checklist",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35475068/",
+   "licence": "CC BY 3.0"
+  },
+  {
+   "docId": "pmid:40120527",
+   "label": "Naaseh 2025",
+   "title": "Improving medical student surgery notes through near-peer targeted education: a qualitative analysis (J Surg Res 2025;308:224-232)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40120527/",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "docId": "pmid:32699721",
+   "label": "Krawiec 2020",
+   "title": "Remote assessment of video-recorded oral presentations centered on a virtual case-based module (Cureus 2020;12:e8726)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32699721/",
+   "licence": "CC BY 3.0"
+  },
+  {
+   "docId": "pmid:37226142",
+   "label": "Appold 2023",
+   "title": "Comparing oral case presentation formats on internal medicine inpatient rounds: a survey study (BMC Med Educ 2023;23:377)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37226142/",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "docId": "pmid:42181334",
+   "label": "Alexander 2026",
+   "title": "The surgical clerkship guide: a practical framework for confidence and competence (Cureus 2026;18:e107603), consensus-based",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42181334/",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "docId": "pmid:38320116",
+   "label": "Ovitsh 2024",
+   "title": "Minding the gap: towards a shared clinical reasoning lexicon across the pre-clerkship/clerkship transition (Med Educ Online 2024;29:2307715)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38320116/",
+   "licence": "CC BY-NC 4.0 (definition restated)"
+  },
+  {
+   "docId": "pmid:26996436",
+   "label": "Seo 2016",
+   "title": "A pilot study on the evaluation of medical student documentation: assessment of SOAP notes (Korean J Med Educ 2016;28:237-41)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26996436/",
+   "licence": "CC BY-NC 3.0 (restated)"
+  },
+  {
+   "docId": "pmid:33204844",
+   "label": "Khera 2020",
+   "title": "Skill session on writing patient assessments for pediatric clerkship students (MedEdPORTAL 2020;16:11029)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33204844/",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "docId": "pmid:39052901",
+   "label": "ADA/EASD 2024",
+   "title": "Hyperglycemic crises in adults with diabetes: a consensus report (ADA, EASD, JBDS, AACE, DTS), Diabetes Care 2024",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39052901/",
+   "licence": "Educational, not for profit, unaltered (facts restated)"
+  },
+  {
+   "docId": "pmid:38907161",
+   "label": "ADA/EASD 2024 figures",
+   "title": "Hyperglycaemic crises in adults with diabetes: a consensus report, Diabetologia 2024 co-publication (Figures 4 and 5)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38907161/",
+   "licence": "CC BY 4.0"
+  },
+  {
+   "docId": "url:c7d4d9169e59",
+   "label": "JBDS DKA 2023",
+   "title": "The Management of Diabetic Ketoacidosis in Adults, Joint British Diabetes Societies for Inpatient Care (JBDS 02), March 2023 revision",
+   "url": "https://abcd.care/sites/default/files/site_uploads/JBDS_Guidelines_Current/JBDS_02_DKA_Guideline_with_QR_code_March_2023.pdf",
+   "licence": "Published guideline PDF, already in the DKA pathway's trail"
+  },
+  {
+   "docId": "url:62e229954344",
+   "label": "USMLE Step 2 CK outline",
+   "title": "Step 2 CK content outline and specifications (USMLE, FSMB and NBME)",
+   "url": "https://www.usmle.org/exam-resources/step-2-ck-materials/step-2-ck-content-outline-specifications",
+   "licence": "All rights reserved; cited for facts about the exam only"
+  },
+  {
+   "docId": "url:6f6cf4a5b429",
+   "label": "USMLE tasks and competencies",
+   "title": "USMLE Physician Tasks/Competencies (PDF)",
+   "url": "https://www.usmle.org/sites/default/files/2022-01/USMLE_Physician_Tasks_Competencies_2.pdf",
+   "licence": "All rights reserved; cited for facts about the exam only"
+  }
+ ]
+}

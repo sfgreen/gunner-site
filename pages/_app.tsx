@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import '../styles/wards.css';
 import type { AppProps } from 'next/app';
 import Script from 'next/script';
 import { useRouter } from 'next/router';

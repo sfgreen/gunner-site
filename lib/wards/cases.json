@@ -1,0 +1,225 @@
+{
+ "abg": {
+  "id": 1020,
+  "world": "emergency",
+  "diagnosis": "Diabetic ketoacidosis",
+  "triggerMarked": "22M, Type 1 DM, glucose 450, [+pH 7.15], bicarb 8, [+ketones] positive, [+K+ 5.8]",
+  "question": "What do you do first?",
+  "correctAnswer": "IV normal saline bolus",
+  "choices": [
+   "IV normal saline bolus",
+   "IV insulin drip",
+   "IV potassium",
+   "IV bicarbonate"
+  ],
+  "whyRight": "DKA management: fluids FIRST. Patients are profoundly dehydrated (average 6-9L deficit). Insulin without fluids → cardiovascular collapse. Insulin starts after the first liter once the potassium is confirmed at or above 3.5 mmol/L (the 2024 ADA/EASD consensus threshold; older sources say 3.3, so recognise both).",
+  "whyWrong": "Insulin without fluids → cardiovascular collapse. Bicarbonate is considered only below a pH of 6.9 and does nothing about ongoing ketogenesis; at 7.15 it mainly drives potassium into cells and deepens the deficit.",
+  "trap": null,
+  "chain": [
+   "Give an IV normal saline bolus (1 L over the first hour)",
+   "Start an IV regular insulin infusion at 0.1 unit/kg/h",
+   "Add potassium to the fluids once K+ falls below 5.2",
+   "Add dextrose to the fluids when glucose falls below 250 and continue insulin until the gap closes",
+   "Transition to subcutaneous basal insulin, overlapping 1 to 2 hours before stopping the drip",
+   "Identify and treat the precipitant (infection, missed insulin)"
+  ],
+  "chainAnswer": 0,
+  "chainDistractors": [
+   [],
+   [
+    "Give IV sodium bicarbonate to correct the pH of 7.15",
+    "Add IV potassium now before any other therapy",
+    "Start IV phosphate and/or magnesium replacement right away"
+   ],
+   [
+    "Recheck the electrolytes only once daily on the drip",
+    "Switch the fluids to dextrose 5 percent right now",
+    "Give IV calcium gluconate for the K+ of 5.8"
+   ],
+   [
+    "Stop the drip as soon as the sugar is under 250 and cover with sliding-scale injections",
+    "Give IV bicarbonate once the sugar reaches 250 so the acidosis resolves more quickly",
+    "Push the drip rate up to bring the sugar under 150 within the first few hours of treatment"
+   ],
+   [
+    "Stop the IV drip as soon as he can eat, then cover meals with rapid-acting doses alone",
+    "Switch to an oral metformin regimen once he is eating and the gap has closed",
+    "Keep him on the IV drip for a further 48 hours after the anion gap has fully closed"
+   ],
+   [
+    "Start empiric broad-spectrum antibiotics",
+    "Check serum C-peptide now",
+    "Order abdominopelvic and chest CT"
+   ]
+  ],
+  "vitalsStrip": [
+   {
+    "label": "HR",
+    "value": "118",
+    "unit": null,
+    "trend": "up",
+    "level": "crit"
+   },
+   {
+    "label": "BP",
+    "value": "106/66",
+    "unit": null,
+    "trend": null,
+    "level": null
+   },
+   {
+    "label": "RR",
+    "value": "26",
+    "unit": null,
+    "trend": "up",
+    "level": "crit"
+   },
+   {
+    "label": "T",
+    "value": "98.6",
+    "unit": "°F",
+    "trend": null,
+    "level": null
+   },
+   {
+    "label": "Glu",
+    "value": "450",
+    "unit": null,
+    "trend": "up",
+    "level": "crit"
+   },
+   {
+    "label": "pH",
+    "value": "7.15",
+    "unit": null,
+    "trend": "down",
+    "level": "panic"
+   },
+   {
+    "label": "HCO₃⁻",
+    "value": "8",
+    "unit": null,
+    "trend": "down",
+    "level": "panic"
+   },
+   {
+    "label": "K⁺",
+    "value": "5.8",
+    "unit": null,
+    "trend": "up",
+    "level": "crit"
+   }
+  ],
+  "evidence": {
+   "body": "ADA EASD",
+   "title": "Hyperglycemic Crises in Adults With Diabetes, Consensus Report",
+   "year": 2024,
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39052901/"
+  }
+ },
+ "soap": {
+  "id": 1021,
+  "world": "emergency",
+  "diagnosis": "Hypokalemia during DKA treatment",
+  "triggerMarked": "22M in DKA, started on insulin drip, K+ now 3.1",
+  "question": "What do you do first?",
+  "correctAnswer": "Stop insulin, replace potassium",
+  "choices": [
+   "Stop insulin, replace potassium",
+   "Continue insulin, add potassium",
+   "Give IV bicarbonate",
+   "Switch to subcutaneous insulin"
+  ],
+  "whyRight": "K+ <3.5 = HOLD insulin until potassium is repleted. Insulin drives K+ into cells → can cause fatal arrhythmias. The 2024 ADA/EASD consensus moved this threshold from 3.3 to 3.5 mmol/L; older sources still say 3.3, so recognise both.",
+  "whyWrong": "Alkalinization shifts potassium into cells and would worsen the very problem at hand, and the acidosis resolves once ketogenesis stops. Changing the route does not change the physiology, since subcutaneous insulin also drives potassium into cells, and absorption is unreliable in a volume-depleted patient.",
+  "trap": "Never continue insulin when K+ is critically low. The hypokalemia will kill the patient before the acidosis does.",
+  "chain": [
+   "Hold the insulin infusion and give IV potassium chloride",
+   "Check magnesium and replete it, since hypomagnesemia makes hypokalemia refractory",
+   "Recheck potassium hourly and continue fluids with potassium added",
+   "Resume the insulin infusion once potassium is at or above 3.5",
+   "Add dextrose when glucose falls below 250 and continue insulin until the anion gap closes",
+   "Transition to subcutaneous basal insulin with a 1 to 2 hour overlap"
+  ],
+  "chainAnswer": 0,
+  "chainDistractors": [
+   [],
+   [
+    "Switch to oral potassium tablets and recheck the level tomorrow morning",
+    "Restart the drip at half its former rate while the K is still being replaced",
+    "Switch to subcutaneous insulin so that the shift into the cells happens more slowly"
+   ],
+   [
+    "Stop the IV fluids until the electrolytes have been corrected",
+    "Order a 24-hour urine collection to look for renal tubular losses first",
+    "Give a 2 liter normal saline bolus to dilute the acidosis quickly"
+   ],
+   [
+    "Give IV sodium bicarbonate while the drip is on hold to correct the pH",
+    "Transfer to the general medical floor now that the drip has been paused",
+    "Give IV calcium to protect the heart from the low K level"
+   ],
+   [
+    "Stop the drip once the sugar is under 200 and the patient is able to eat breakfast",
+    "Double the drip rate to bring the blood sugar to normal within a few hours",
+    "Give IV bicarbonate when the sugar reaches 250 to clear the remaining acidosis faster"
+   ],
+   [
+    "Stop the drip when the patient eats and give sliding-scale doses alone",
+    "Keep the IV drip running for a full day after the gap has closed",
+    "Discharge on a mealtime-only regimen without a long-acting dose"
+   ]
+  ],
+  "vitalsStrip": [
+   {
+    "label": "HR",
+    "value": "108",
+    "unit": null,
+    "trend": "up",
+    "level": "crit"
+   },
+   {
+    "label": "BP",
+    "value": "110/70",
+    "unit": null,
+    "trend": null,
+    "level": null
+   },
+   {
+    "label": "pH",
+    "value": "7.24",
+    "unit": null,
+    "trend": "down",
+    "level": "crit"
+   },
+   {
+    "label": "HCO₃⁻",
+    "value": "16",
+    "unit": null,
+    "trend": "down",
+    "level": "crit"
+   },
+   {
+    "label": "K⁺",
+    "value": "3.1",
+    "unit": null,
+    "trend": "down",
+    "level": "crit"
+   },
+   {
+    "label": "Glu",
+    "value": "280",
+    "unit": null,
+    "trend": "up",
+    "level": "crit"
+   }
+  ],
+  "evidence": {
+   "body": "ADA EASD",
+   "title": "Hyperglycemic Crises in Adults With Diabetes, Consensus Report",
+   "year": 2024,
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39052901/",
+   "kind": "guideline"
+  }
+ }
+}

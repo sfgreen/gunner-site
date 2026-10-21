@@ -1,0 +1,343 @@
+{
+ "locs": [
+  "nav",
+  "hero",
+  "top",
+  "result",
+  "after_copy",
+  "quiz",
+  "inline",
+  "end",
+  "sticky",
+  "case",
+  "footer"
+ ],
+ "live": [
+  [
+   "6,000+ Step 2 CK cards",
+   "Step 2 CK question cards, organized by system and by rotation."
+  ],
+  [
+   "Next Best Step management chains",
+   "A case, one decision at a time, the way the exam asks it."
+  ],
+  [
+   "Spaced repetition",
+   "What you miss comes back until it sticks."
+  ],
+  [
+   "Your readiness range",
+   "The same model as the web readiness check, inside the app."
+  ],
+  [
+   "Weekly leagues",
+   "A small bracket that resets every week."
+  ]
+ ],
+ "coming": [
+  [
+   "ED Pathways",
+   "Every ED presentation as a branching chain. Ships in a later release."
+  ],
+  [
+   "Calculators",
+   "The bedside math from these pages, in the app. Ships in a later release."
+  ]
+ ],
+ "groups": [
+  {
+   "id": "labs",
+   "t": "Reading labs and ABGs",
+   "icon": "flask",
+   "when": "When the gas or the BMP comes back and someone asks what it means"
+  },
+  {
+   "id": "notes",
+   "t": "Writing notes",
+   "icon": "note",
+   "when": "Before pre-rounds end and the note is due"
+  },
+  {
+   "id": "fluids",
+   "t": "Fluids and insulin",
+   "icon": "drop",
+   "when": "Writing the admission orders"
+  },
+  {
+   "id": "ekg",
+   "t": "EKG and imaging",
+   "icon": "pulse",
+   "when": "When the tracing or the film is handed to you"
+  },
+  {
+   "id": "scores",
+   "t": "Bedside scores",
+   "icon": "gauge",
+   "when": "When the plan depends on a risk score"
+  }
+ ],
+ "pages": [
+  {
+   "id": "anion-gap",
+   "g": "labs",
+   "t": "Anion gap",
+   "get": [
+    "Calculator",
+    "Step by step"
+   ],
+   "d": "Calculate the gap, correct it for albumin, then work through what raises it.",
+   "kw": "anion gap agap metabolic acidosis albumin mudpiles"
+  },
+  {
+   "id": "abg",
+   "g": "labs",
+   "t": "ABG interpretation, step by step",
+   "get": [
+    "Interpreter",
+    "Step by step",
+    "Worked cases"
+   ],
+   "d": "Type in the gas and get the read: primary disorder, compensation, gap, delta-delta and A-a gradient.",
+   "kw": "abg arterial blood gas interpretation acid base acidosis alkalosis ph pco2 hco3",
+   "href": "/wards/abg-interpretation"
+  },
+  {
+   "id": "winters",
+   "g": "labs",
+   "t": "Winter's formula",
+   "get": [
+    "Section",
+    "Calculator"
+   ],
+   "d": "Is the breathing keeping up with a metabolic acidosis? A section of ABG interpretation.",
+   "kw": "winters formula expected pco2 compensation",
+   "in": "ABG interpretation",
+   "href": "/wards/abg-interpretation#abg-fx-winters"
+  },
+  {
+   "id": "calcium",
+   "g": "labs",
+   "t": "Corrected calcium",
+   "get": [
+    "Calculator"
+   ],
+   "d": "Correct a total calcium for albumin, with the formula and its source.",
+   "kw": "corrected calcium albumin hypocalcemia"
+  },
+  {
+   "id": "crcl",
+   "g": "labs",
+   "t": "Creatinine clearance",
+   "get": [
+    "Calculator"
+   ],
+   "d": "Cockcroft-Gault from age, weight and creatinine, for dosing on the wards.",
+   "kw": "creatinine clearance calculator cockcroft gault crcl renal dosing gfr"
+  },
+  {
+   "id": "fishbone",
+   "g": "labs",
+   "t": "Lab fishbone diagrams",
+   "get": [
+    "Template"
+   ],
+   "d": "The BMP and CBC skeletons, which value goes where, and how to draw them in a note.",
+   "kw": "lab fishbone diagram bmp cbc skeleton shorthand"
+  },
+  {
+   "id": "delta",
+   "g": "labs",
+   "t": "Delta-delta gap",
+   "get": [
+    "Section"
+   ],
+   "d": "Find the second disorder under an anion gap acidosis. A section of ABG interpretation.",
+   "kw": "delta delta gap ratio mixed disorder",
+   "in": "ABG interpretation",
+   "href": "/wards/abg-interpretation#abg-fx-delta_gap"
+  },
+  {
+   "id": "aa",
+   "g": "labs",
+   "t": "A-a gradient",
+   "get": [
+    "Section",
+    "Calculator"
+   ],
+   "d": "Low oxygen from hypoventilation, or from the lung? A section of ABG interpretation.",
+   "kw": "a-a gradient aa gradient alveolar arterial hypoxemia",
+   "in": "ABG interpretation",
+   "href": "/wards/abg-interpretation#abg-fx-aa_gradient"
+  },
+  {
+   "id": "soap",
+   "g": "notes",
+   "t": "How to write a SOAP note",
+   "get": [
+    "Template",
+    "Example",
+    "One-liner builder"
+   ],
+   "d": "A template to paste into the chart, a filled example, and what attendings actually read.",
+   "kw": "soap note template example progress note subjective objective assessment plan",
+   "href": "/wards/soap-note"
+  },
+  {
+   "id": "sbar",
+   "g": "notes",
+   "t": "SBAR handoff",
+   "get": [
+    "Template",
+    "Example"
+   ],
+   "d": "Situation, background, assessment, recommendation: the call to a resident or a nurse, scripted.",
+   "kw": "sbar handoff situation background assessment recommendation page call"
+  },
+  {
+   "id": "hp",
+   "g": "notes",
+   "t": "H&P template",
+   "get": [
+    "Template"
+   ],
+   "d": "The admission history and physical, ready to paste. The H&P tab of the SOAP note page.",
+   "kw": "h&p template history and physical admission note",
+   "in": "How to write a SOAP note",
+   "href": "/wards/soap-note#soap-tool"
+  },
+  {
+   "id": "progress",
+   "g": "notes",
+   "t": "Progress note template",
+   "get": [
+    "Template"
+   ],
+   "d": "The daily SOAP progress note, ready to paste. Lives on the SOAP note page.",
+   "kw": "progress note template daily note",
+   "in": "How to write a SOAP note",
+   "href": "/wards/soap-note#soap-tool"
+  },
+  {
+   "id": "ssi",
+   "g": "fluids",
+   "t": "Sliding scale insulin",
+   "get": [
+    "Step by step"
+   ],
+   "d": "What a correctional scale is, how it pairs with basal insulin, and how the order is written.",
+   "kw": "sliding scale insulin correctional insulin ssi basal bolus"
+  },
+  {
+   "id": "mivf",
+   "g": "fluids",
+   "t": "Maintenance fluids and the 4-2-1 rule",
+   "get": [
+    "Calculator",
+    "Step by step"
+   ],
+   "d": "An hourly maintenance rate from weight, and when the rule does not apply.",
+   "kw": "maintenance fluids 4 2 1 rule holliday segar ivf rate"
+  },
+  {
+   "id": "nslr",
+   "g": "fluids",
+   "t": "Normal saline vs lactated Ringer's",
+   "get": [
+    "Comparison"
+   ],
+   "d": "What is in each bag, and when the choice matters.",
+   "kw": "normal saline vs lactated ringers ns lr crystalloid balanced"
+  },
+  {
+   "id": "ekg",
+   "g": "ekg",
+   "t": "How to read an EKG",
+   "get": [
+    "Step by step",
+    "Worked tracings"
+   ],
+   "d": "Rate, rhythm, axis, intervals, then ischemia: a read you can say out loud on rounds.",
+   "kw": "how to read an ekg ecg interpretation rate rhythm axis intervals"
+  },
+  {
+   "id": "cxr",
+   "g": "ekg",
+   "t": "Chest X-ray, a systematic read",
+   "get": [
+    "Step by step"
+   ],
+   "d": "One order for every film, so nothing gets skipped when you present it.",
+   "kw": "chest x-ray cxr systematic read abcde"
+  },
+  {
+   "id": "wells",
+   "g": "scores",
+   "t": "Wells and PERC for pulmonary embolism",
+   "get": [
+    "Calculator"
+   ],
+   "d": "Pretest probability, then whether to test at all, each criterion with its source.",
+   "kw": "wells score perc pe pulmonary embolism dvt"
+  },
+  {
+   "id": "heart",
+   "g": "scores",
+   "t": "HEART and CURB-65",
+   "get": [
+    "Calculator"
+   ],
+   "d": "Chest pain risk and pneumonia severity, scored the way the pathways use them.",
+   "kw": "heart score curb-65 chest pain pneumonia severity"
+  }
+ ],
+ "homeWards": [
+  "abg",
+  "soap",
+  "winters",
+  "aa",
+  "hp",
+  "progress"
+ ],
+ "shelf": [
+  [
+   "IM",
+   "Internal medicine",
+   "internal-medicine"
+  ],
+  [
+   "SURG",
+   "Surgery",
+   "surgery"
+  ],
+  [
+   "PEDS",
+   "Pediatrics",
+   "pediatrics"
+  ],
+  [
+   "OBGYN",
+   "OB/GYN",
+   "obgyn"
+  ],
+  [
+   "PSYCH",
+   "Psychiatry",
+   "psychiatry"
+  ],
+  [
+   "NEURO",
+   "Neurology",
+   "neurology"
+  ],
+  [
+   "FM",
+   "Family medicine",
+   "family-medicine"
+  ],
+  [
+   "EM",
+   "Emergency medicine",
+   "emergency-medicine"
+  ]
+ ]
+}
