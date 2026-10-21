@@ -16,7 +16,7 @@ export default function Home({ within7 }: { within7: number }) {
   const jsonLd = {
     '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: 'Step Gunner',
     operatingSystem: 'iOS', applicationCategory: 'EducationalApplication',
-    url: 'https://stepgunner.com', description: 'USMLE Step 2 CK prep for the clerkship year: Step 2 CK cards, Next Best Step chains and a calibrated readiness range.',
+    url: 'https://stepgunner.com', description: 'Step 2 CK prep for the clerkship year: short sessions between patients, spaced review and a calibrated readiness range.',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     author: { '@type': 'Organization', name: 'Rezumab LLC' },
   };
@@ -26,8 +26,8 @@ export default function Home({ within7 }: { within7: number }) {
       html={homeHtml({ within7 })}
       mountOpts={{ referral: true }}
       head={{
-        title: 'Step Gunner | The clerkship year, then your Step 2 CK score',
-        description: 'Templates and lab reads for the wards, shelf guides by rotation, and a Step 2 CK readiness check that shows its track record. Then study in the app.',
+        title: 'Step Gunner | Know the next step, on the wards and on Step 2 CK',
+        description: 'Sound sharp on rounds, honor the shelf and know your Step 2 CK number before exam day: short sessions between patients and a readiness range with its track record.',
         path: '/',
         jsonLd: [jsonLd],
       }}

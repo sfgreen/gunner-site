@@ -12,38 +12,6 @@
   "case",
   "footer"
  ],
- "live": [
-  [
-   "6,000+ Step 2 CK cards",
-   "Step 2 CK question cards, organized by system and by rotation."
-  ],
-  [
-   "Next Best Step management chains",
-   "A case, one decision at a time, the way the exam asks it."
-  ],
-  [
-   "Spaced repetition",
-   "What you miss comes back until it sticks."
-  ],
-  [
-   "Your readiness range",
-   "The same model as the web readiness check, inside the app."
-  ],
-  [
-   "Weekly leagues",
-   "A small bracket that resets every week."
-  ]
- ],
- "coming": [
-  [
-   "ED Pathways",
-   "Every ED presentation as a branching chain. Ships in a later release."
-  ],
-  [
-   "Calculators",
-   "The bedside math from these pages, in the app. Ships in a later release."
-  ]
- ],
  "groups": [
   {
    "id": "labs",

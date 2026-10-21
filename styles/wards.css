@@ -1044,3 +1044,25 @@
 .mk .rd-dev .win { max-width: 340px; }
 @media (min-width: 760px) { .mk .hero-win { max-width: 420px; } }
 @media (min-width: 1040px) { .mk .hero-win { max-width: 440px; } .mk .rd-dev .win { max-width: 380px; } .mk .hub-stage .win { max-width: 380px; } }
+
+/* ---------- outcome pass: the mood reel, reviews ---------- */
+.mk .mood-band .reel-w { margin-top: 0; }
+.mk .rl-cap { padding: 72px 16px 18px; }
+.mk .rl-w { display: block; font: 800 20px/1.1 var(--f-mono); letter-spacing: .04em; text-transform: uppercase; color: var(--wc); text-shadow: 0 0 24px var(--wc); }
+@media (min-width: 1040px) { .mk .rl-w { font-size: 18px; } }
+.mk .ic.star { fill: currentColor; stroke: none; }
+.mk .rv-avg { display: inline-flex; align-items: center; gap: 12px; color: var(--ink-2); }
+.mk .stars { display: inline-flex; gap: 2px; color: var(--step2); }
+.mk .stars .ic { width: 18px; height: 18px; }
+.mk .revs { display: grid; gap: 16px; margin-top: 32px; }
+.mk .rev { display: grid; gap: 16px; align-content: space-between; padding: 28px; border-radius: var(--r-lg); background: var(--card); box-shadow: inset 0 0 0 1px var(--line), 0 24px 48px -32px var(--shadow-b); }
+.mk .rev blockquote { margin: 0; }
+.mk .rev blockquote p { font: 700 23px/1.4 var(--f-sans); letter-spacing: -.01em; color: var(--ink); text-wrap: pretty; }
+.mk .rev-c { font: 600 13px/1.4 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); }
+@media (min-width: 760px) { .mk .revs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; } .mk .rev { padding: 36px; } .mk .rev blockquote p { font-size: 26px; } }
+.mk .walk { position: relative; }
+.mk .walk-hd { max-width: 48em; }
+.mk .walk-st .tx { min-width: 0; }
+.mk .rd-cta { display: block; }
+.mk .c-ed .badge { background: var(--bad-tint); color: var(--bad); }
+.mk .c-ed .code { color: var(--bad); }
