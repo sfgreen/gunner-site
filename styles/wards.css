@@ -924,7 +924,7 @@
 .mk .tapring::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; box-shadow: 0 0 0 2px var(--st-blue); opacity: 0; animation: tap-pulse 1600ms var(--ease) infinite; }
 @keyframes tap-pulse { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(1.6); opacity: 0; } }
 .mk .walk-g { display: grid; gap: 32px; margin-top: 32px; }
-.mk .walk-steps { display: grid; gap: 4px; }
+.mk .walk-steps { position: relative; z-index: 2; display: grid; gap: 4px; }
 .mk .walk-st { position: relative; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 0 12px; width: 100%; min-height: 44px; padding: 16px; border: 0; border-radius: var(--r-md); background: transparent; color: var(--st-ink-2); text-align: left; cursor: pointer; overflow: hidden; transition: background-color var(--d-move) var(--ease), box-shadow var(--d-move) var(--ease); }
 .mk .walk-st:hover { background: var(--st-card-2); }
 .mk .walk-st::before { content: ""; position: absolute; left: 0; top: 16px; bottom: 16px; width: 3px; border-radius: 3px; background: var(--wc); opacity: 0; transition: opacity var(--d-move) var(--ease); }
@@ -1003,4 +1003,16 @@
   .mk .tapring::after, .mk .walk-hud .rec { animation: none; }
   .mk .walk-dev, .mk .rl { transition: none; }
   .mk .rl:hover { transform: rotate(var(--r)) translateY(var(--y)); }
+}
+
+/* ---------- the ED Pathways preview: the same player, mirrored, marked Preview ---------- */
+.mk .pw-w { margin-top: 96px; padding-top: 64px; box-shadow: inset 0 1px 0 var(--st-line); }
+.mk .pv-badge { display: inline-flex; align-items: center; padding: 0 8px; border-radius: 8px; font: 700 12px/24px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--st-on-gold); background: var(--st-gold); }
+.mk .walk-flip .walk-hud .rec { background: var(--st-gold); box-shadow: 0 0 0 3px var(--ring-gold); }
+@media (min-width: 960px) {
+  .mk .walk-flip .walk-g { grid-template-columns: minmax(0, 440px) minmax(0, 1fr); }
+  .mk .walk-flip .walk-stage { order: -1; }
+  .mk .walk-flip .walk-dev { --ry: 8deg; }
+  .mk .walk-flip .walk-stage:hover .walk-dev { --ry: 0deg; }
+  .mk .walk-flip .walk-ghost { right: auto; left: calc(50% + 96px); }
 }
