@@ -26,8 +26,8 @@ export default function Home({ within7 }: { within7: number }) {
       html={homeHtml({ within7 })}
       mountOpts={{ referral: true }}
       head={{
-        title: 'Step Gunner | Step 2 CK score predictor, shelf and ward prep',
-        description: 'Turn NBME and UWSA scores into a Step 2 CK range checked against 269 real score reports, then study between patients: SOAP notes, ABGs and shelf guides.',
+        title: 'Step Gunner | Shelf exams and Step 2 CK, built for the 270',
+        description: 'Honor every shelf and see how far you are from 270: pin your rotation, study between patients, and turn NBME and UWSA scores into a Step 2 CK range.',
         path: '/',
         jsonLd: [jsonLd],
       }}
