@@ -910,3 +910,97 @@
 .mk .card.soon { cursor: default; box-shadow: inset 0 0 0 1px var(--line); background: transparent; }
 .mk .card.soon .card-t, .mk .card.soon .card-d { color: var(--ink-3); }
 .mk .card.soon .tag.soon { color: var(--ink-3); box-shadow: inset 0 0 0 1px var(--line-2); }
+
+/* ---------- the walkthrough (home): the live app, chapter by chapter ---------- */
+.mk .c-blue { --wc: var(--st-blue); }
+.mk .c-gold { --wc: var(--st-gold); }
+.mk .c-purple { --wc: var(--st-purple); }
+.mk .c-green { --wc: var(--st-green); }
+.mk .c-red { --wc: var(--st-red); }
+.mk .app-band .wrap { position: relative; z-index: 1; }
+.mk .walk-aura { position: absolute; top: 0; right: -20%; width: 900px; height: 900px; max-width: 120vw; border-radius: 50%; background: var(--wc); opacity: .16; filter: blur(140px); pointer-events: none; transition: background-color 800ms var(--ease); }
+.mk .tapkey { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; color: var(--st-ink); }
+.mk .tapring { position: relative; width: 16px; height: 16px; border-radius: 50%; box-shadow: inset 0 0 0 2px var(--st-blue); flex: none; }
+.mk .tapring::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; box-shadow: 0 0 0 2px var(--st-blue); opacity: 0; animation: tap-pulse 1600ms var(--ease) infinite; }
+@keyframes tap-pulse { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(1.6); opacity: 0; } }
+.mk .walk-g { display: grid; gap: 32px; margin-top: 32px; }
+.mk .walk-steps { display: grid; gap: 4px; }
+.mk .walk-st { position: relative; display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 0 12px; width: 100%; min-height: 44px; padding: 16px; border: 0; border-radius: var(--r-md); background: transparent; color: var(--st-ink-2); text-align: left; cursor: pointer; overflow: hidden; transition: background-color var(--d-move) var(--ease), box-shadow var(--d-move) var(--ease); }
+.mk .walk-st:hover { background: var(--st-card-2); }
+.mk .walk-st::before { content: ""; position: absolute; left: 0; top: 16px; bottom: 16px; width: 3px; border-radius: 3px; background: var(--wc); opacity: 0; transition: opacity var(--d-move) var(--ease); }
+.mk .walk-st .n { font: 700 14px/24px var(--f-mono); color: var(--st-ink-3); transition: color var(--d-move) var(--ease); }
+.mk .walk-st b { display: block; font: 700 18px/24px var(--f-sans); letter-spacing: -.01em; color: var(--st-ink); }
+.mk .walk-st .dsc { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--d-move) var(--ease); }
+.mk .walk-st .dsc > span { overflow: hidden; font-size: 15px; line-height: 1.5; color: var(--st-ink-2); }
+.mk .walk-st .pr { position: absolute; left: 16px; right: 16px; bottom: 0; height: 2px; border-radius: 2px; background: var(--st-line); opacity: 0; }
+.mk .walk-st .pr i { display: block; width: calc(var(--p, 0) * 100%); height: 100%; border-radius: inherit; background: var(--wc); box-shadow: 0 0 8px var(--wc); }
+.mk .walk-st[aria-current] { background: var(--st-card); box-shadow: inset 0 0 0 1px var(--st-line-2); }
+.mk .walk-st[aria-current]::before { opacity: 1; box-shadow: 0 0 12px var(--wc); }
+.mk .walk-st[aria-current] .n { color: var(--wc); }
+.mk .walk-st[aria-current] .dsc { grid-template-rows: 1fr; }
+.mk .walk-st[aria-current] .dsc > span { padding-top: 4px; }
+.mk .walk-st[aria-current] .pr { opacity: 1; }
+.mk .walk-stage { position: relative; display: flex; flex-direction: column; align-items: center; gap: 16px; order: -1; }
+.mk .walk-hud { display: flex; align-items: center; gap: 8px; }
+.mk .walk-hud .rec { width: 8px; height: 8px; border-radius: 50%; background: var(--st-red); box-shadow: 0 0 0 3px var(--st-bad-tint); animation: rec-blink 1600ms steps(2, jump-none) infinite; }
+@keyframes rec-blink { 50% { opacity: .3; } }
+.mk .walk-hud .lbl { color: var(--st-ink-2); }
+.mk .walk-bars { display: flex; gap: 4px; width: min(100%, 320px); }
+.mk .walk-bars span { flex-basis: 0; height: 4px; border-radius: 4px; background: var(--st-line-2); overflow: hidden; }
+.mk .walk-bars i { display: block; width: calc(var(--p, 0) * 100%); height: 100%; background: var(--st-ink); }
+.mk .walk-bars .now i { background: var(--wc); box-shadow: 0 0 8px var(--wc); }
+.mk .walk-dev-w { position: relative; display: grid; place-items: center; width: 100%; padding-block: 8px; }
+.mk .walk-ghost { display: none; position: absolute; top: 46%; right: calc(50% + 96px); transform: translateY(-50%); font: 800 clamp(160px, 44vw, 320px)/1 var(--f-mono); letter-spacing: -.08em; color: transparent; -webkit-text-stroke: 1px var(--st-line-2); pointer-events: none; user-select: none; transition: opacity 240ms var(--ease); }
+.mk .walk-ghost.out { opacity: 0; }
+.mk .walk-dev { width: 256px; box-shadow: inset 0 0 0 1px var(--st-bezel-hi), 0 40px 80px -20px var(--st-shadow), 0 0 160px -40px var(--wc); transform: perspective(1600px) rotateY(var(--ry, 0deg)); transition: transform 600ms var(--ease), box-shadow 800ms var(--ease); }
+.mk .walk-dev .dv { position: relative; aspect-ratio: 600 / 1304; }
+.mk .walk-v { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 240ms var(--ease); }
+.mk .walk-v.on { opacity: 1; }
+.mk .walk-play { position: absolute; left: 16px; right: 16px; bottom: 32px; z-index: 2; display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; border: 0; border-radius: 16px; background: var(--st-act); color: var(--st-on-act); font: 600 16px/1.2 var(--f-sans); cursor: pointer; box-shadow: 0 12px 32px -8px var(--st-glow-a); }
+.mk .walk-ctl { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; }
+.mk .walk-now { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+.mk .walk-now .lbl { color: var(--wc); }
+.mk .walk-now b { color: var(--st-ink); font-weight: 700; }
+.mk .walk-pp { display: grid; place-items: center; width: 44px; height: 44px; flex: none; border: 0; border-radius: 50%; background: var(--st-card); box-shadow: inset 0 0 0 1px var(--st-line-2); color: var(--st-ink); cursor: pointer; }
+.mk .walk-pp:hover { box-shadow: inset 0 0 0 1px var(--st-ink-3); }
+.mk .walk-pp .i-pause { width: 12px; height: 14px; border-left: 4px solid currentColor; border-right: 4px solid currentColor; }
+.mk .walk-pp .i-play { width: 0; height: 0; margin-left: 4px; border-left: 12px solid currentColor; border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+.mk .walk-pp[aria-pressed="false"] .i-play, .mk .walk-pp[aria-pressed="true"] .i-pause { display: none; }
+@media (min-width: 960px) {
+  .mk .walk-g { grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: 48px; align-items: center; }
+  .mk .walk-stage { order: 0; }
+  .mk .walk-dev { width: 300px; --ry: -8deg; }
+  .mk .walk-stage:hover .walk-dev { --ry: 0deg; }
+  .mk .walk-now { display: none; }
+  .mk .walk-ghost { display: block; }
+}
+
+/* ---------- the reel: the AI gunner clips ---------- */
+.mk .reel-w { margin-top: 96px; }
+.mk .reel-hd { align-items: center; }
+.mk .reel-pp { min-height: 44px; padding: 0 4px; border: 0; background: none; color: var(--st-ink-3); cursor: pointer; text-decoration: underline; text-decoration-color: var(--st-line-2); text-underline-offset: .3em; }
+.mk .reel-pp:hover { color: var(--st-ink); }
+.mk .reel { display: flex; gap: 12px; margin: 32px -16px 0; padding: 8px 16px 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.mk .reel::-webkit-scrollbar { display: none; }
+.mk .rl { position: relative; flex: 0 0 min(64vw, 240px); aspect-ratio: 480 / 854; border-radius: 24px; overflow: hidden; background: var(--st-card); box-shadow: inset 0 0 0 1px var(--st-line-2), 0 24px 48px -24px var(--st-shadow); scroll-snap-align: center; }
+.mk .rl video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mk .rl::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px var(--wc); opacity: 0; pointer-events: none; transition: opacity 360ms var(--ease); }
+.mk .rl-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 96px 16px 16px; background: linear-gradient(transparent, var(--st-shadow) 30%, var(--st-bg) 62%); }
+.mk .rl-cap .lbl { color: var(--wc); }
+.mk .rl-cap p { margin-top: 4px; font-size: 14px; line-height: 1.45; color: var(--st-ink); }
+.mk .app-hd { margin-top: 96px; }
+@media (min-width: 760px) { .mk .reel { margin-inline: -40px; padding-inline: 40px; } }
+@media (min-width: 1040px) {
+  .mk .reel { justify-content: center; gap: 16px; margin-inline: 0; padding: 48px 0 32px; overflow: visible; }
+  .mk .rl { flex: 0 0 172px; transform: rotate(var(--r)) translateY(var(--y)); transition: transform 400ms var(--ease), box-shadow 400ms var(--ease); }
+  .mk .rl:nth-child(1), .mk .rl:nth-child(6) { z-index: 1; }
+  .mk .rl:nth-child(2), .mk .rl:nth-child(5) { z-index: 2; }
+  .mk .rl:nth-child(3), .mk .rl:nth-child(4) { z-index: 3; }
+  .mk .rl:hover { z-index: 5; transform: rotate(0deg) translateY(-16px) scale(1.06); box-shadow: inset 0 0 0 1px var(--st-line-2), 0 32px 64px -24px var(--st-shadow), 0 0 96px -24px var(--wc); }
+  .mk .rl:hover::after { opacity: .9; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mk .tapring::after, .mk .walk-hud .rec { animation: none; }
+  .mk .walk-dev, .mk .rl { transition: none; }
+  .mk .rl:hover { transform: rotate(var(--r)) translateY(var(--y)); }
+}
