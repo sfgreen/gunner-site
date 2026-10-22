@@ -42,7 +42,7 @@ export default function FreeOneTwenty() {
       eyebrow="Research"
       title="What a Free 120 percentage is actually worth"
       lede={<>215 students who posted a current-form Free 120 percentage and then a real Step 2 score. The conversion table nobody publishes, and the reason most people get nothing out of it.</>}
-      crumb={[{ href: '/free120', label: 'Free 120' }, { href: '/research/free-120-to-step-2', label: 'Research' }]}
+      crumb={[{ href: '/free120', label: 'Free 120' }, { href: '/research', label: 'Research' }]}
       metaTitle="Free 120 to Step 2 CK Score: Conversion Table from 215 Real Reports"
       metaDesc={desc}
       campaign={CAMPAIGN}

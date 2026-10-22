@@ -42,7 +42,7 @@ export default function DedicatedCalendar() {
       eyebrow="Research"
       title="The dedicated schedule nobody wrote down"
       lede={<>269 students, 3,737 practice scores, and the form calendar almost all of them converged on without being told. When each NBME actually gets sat, how many people take, and what another week is worth.</>}
-      crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research/dedicated-calendar', label: 'Research' }]}
+      crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research', label: 'Research' }]}
       metaTitle="Step 2 CK Dedicated Schedule: When to Take Each NBME, from 269 Real Reports"
       metaDesc={desc}
       campaign={CAMPAIGN}
