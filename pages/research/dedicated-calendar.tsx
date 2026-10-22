@@ -157,6 +157,7 @@ export default function DedicatedCalendar() {
       <p>The median student sits <strong>seven</strong> NBME or UWSA forms, middle half five to eight, most anyone took eleven. Only <strong>4%</strong> took one.</p>
       <p>That 4% matters more than it looks, because it is the group whose number you should trust least. Running the predictor across the whole set, students with a single form on file miss their real score by <strong>10.9 points</strong> on average. Students with several miss by about five. The buckets in between hold nine to thirteen students each, so I am not going to pretend there is a clean curve. The only claim the data supports is that one is not enough, and it supports that clearly.</p>
       <p>If you have taken exactly one form and you are making decisions off it, you are working from the noisiest possible version of your own ability.</p>
+      <p>Once you have several, expect them to disagree. The median student&apos;s best and worst forms sat 23 points apart, and what that gap is made of is in <Link href="/research/which-nbme-is-most-predictive">which NBME is the real you</Link>.</p>
 
       <h2>4. What the calendar converts into</h2>
       <p>A schedule is only useful if it tells you what moving it buys. From the same set, 178 students with three or more dated forms improved at a median of <strong>1.73 points per week</strong>. The fast quarter managed 3.5, the slow quarter 0.8, and 91% improved at all.</p>
