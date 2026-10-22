@@ -92,7 +92,7 @@ export default function Research({ record }: { record: Record }) {
             body="The app carries this projection under a readiness gauge, keeps the track record on the same screen, and lets you add a form in ten seconds. Free to start."
             primary={{ store: true, loc: 'top', label: 'Get Step Gunner free' }}
             secondary={{ href: '/readiness', label: 'Or use the web calculator', onClick: () => track('cta_predictor', { surface: CAMPAIGN, location: 'pitch_top' }) }}
-            trust={<>{forum ? `${forum.inside} of ${forum.n}` : '33 of 40'} r/step2 posters it never trained on landed inside their range. The misses are on this page too.</>}
+            trust={<>{forum ? `${forum.inside} of ${forum.n}` : '32 of 40'} r/step2 posters it never trained on landed inside their range. The misses are on this page too.</>}
           />
         </Hero>
 
@@ -173,7 +173,7 @@ export default function Research({ record }: { record: Record }) {
               { value: <>{forum ? forum.within7Pct : 80}<small>%</small></>, label: 'of those posters within 7 points' },
               { value: <>{app ? app.inside : 4}<small> / {app ? app.n : 7}</small></>, label: 'app users inside their range' },
             ]} />
-            <p className="prs">On the Reddit posters the frozen model did about as well as in-sample, which is the result you hope for. On the app users it did worse: {app ? app.n : 7} students so far, {app ? app.inside : 4} inside their range, one of them a 40-point miss from a single stale form. Seven is not enough to conclude anything. I am posting it anyway, and it updates every Monday{asOf ? ` (numbers above as of ${asOf})` : ''}, inside the app under the readiness gauge and on the <Link href="/readiness/methodology">methodology page</Link>. If the app population keeps missing worse than the forum population, the model gets refit for that population, not the other way round. It did keep missing worse, and the refit failed its own test; <Link href="/research/model-misses-app-users">the follow-up</Link> is about who it misses and why.</p>
+            <p className="prs">On the Reddit posters the frozen model did about as well as in-sample, which is the result you hope for. On the app users it did worse: {app ? app.n : 29} students so far, {app ? app.inside : 18} inside their range. That is still a small group. I am posting it anyway, and it updates every Monday{asOf ? ` (numbers above as of ${asOf})` : ''}, inside the app under the readiness gauge and on the <Link href="/readiness/methodology">methodology page</Link>. If the app population keeps missing worse than the forum population, the model gets refit for that population, not the other way round. It did keep missing worse, and the refit failed its own test; <Link href="/research/model-misses-app-users">the follow-up</Link> is about who it misses and why.</p>
           </Section>
         </ArticleBody>
 
@@ -188,7 +188,7 @@ export default function Research({ record }: { record: Record }) {
             <ul className="rs-ul">
               <li><strong>Self-selection.</strong> People who did well post more. The fit set averages 258 against a national mean of about 250, and the lowest real score in it is 216. The &quot;+20 under 235&quot; figure rests on 35 students.</li>
               <li><strong>Recall.</strong> Days-before-exam are what people remembered when they posted; about a third of forms had no usable date and were imputed from form order.</li>
-              <li><strong>Small out-of-sample n.</strong> 47 students, 7 of them app users. The in-app population reaches lower than Reddit does and may need its own constants.</li>
+              <li><strong>Small out-of-sample n.</strong> {forum && app ? forum.n + app.n : 69} students, {app ? app.n : 29} of them app users. The in-app population reaches lower than Reddit does and may need its own constants.</li>
               <li><strong>One predictor.</strong> The model uses forms only. Cards answered, accuracy by system and study pacing are measured in the app but are not in the projection until there are enough real outcomes to fit them honestly.</li>
             </ul>
           </Section>
@@ -230,7 +230,8 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
   let record: Record = null;
   try {
-    const r = await fetch(TRACK_RECORD_URL, { headers: { accept: 'application/json' } });
+    // A cold function must not hold the page: give it 1.5 s, then fall back to the static numbers.
+    const r = await fetch(TRACK_RECORD_URL, { headers: { accept: 'application/json' }, signal: AbortSignal.timeout(1500) });
     if (r.ok) record = (await r.json()) as Record;
   } catch {
     record = null;   // static fallbacks in the page

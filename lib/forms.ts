@@ -62,8 +62,8 @@ export const FORM_PAGES: FormPage[] = [
     h1: 'NBME 9 to Step 2 CK',
     lede: 'The oldest form still in circulation, and the one most likely to be read wrong.',
     note:
-      'NBME 9 prints roughly 5.5 points low against the common scale, so the converter credits '
-      + 'those points back before projecting. Your printed number does not change on screen. It is '
+      'The converter credits those points back before projecting.'
+      + ' Your printed number does not change on screen. It is '
       + 'an old form and it fades quickly under recency weighting, but it is not worthless: a '
       + 'recent 9 still carries real signal.',
     faq: [
@@ -207,8 +207,8 @@ export const FORM_PAGES: FormPage[] = [
     h1: 'UWSA 2 to Step 2 CK',
     lede: 'The form most often accused of running hot, and the accusation is roughly right.',
     note:
-      'UWSA 2 prints about 4.8 points hot against the NBME scale, so the converter translates it '
-      + 'down before projecting. This is the single most common reason a student is disappointed on '
+      'The converter translates it down to the NBME scale before projecting.'
+      + ' Running hot is the single most common reason a student is disappointed on '
       + 'exam day: they anchored on a UWSA 2 taken at face value. Your printed number is never '
       + 'changed on screen, only inside the math.',
     faq: [
@@ -235,7 +235,7 @@ export const FORM_PAGES: FormPage[] = [
     h1: 'UWSA 3 to Step 2 CK',
     lede: 'The newest UWorld form, and the one with the least data behind its correction.',
     note:
-      'UWSA 3 reads about 6.3 points low against the NBME scale, so those points are credited back. '
+      'Those points are credited back to put it on the NBME scale. '
       + 'The honest caveat: that estimate rests on thinner data than the others, so it is deliberately '
       + 'shrunk toward zero rather than applied at full strength. Treat a UWSA 3 projection as '
       + 'slightly less certain than an NBME one.',

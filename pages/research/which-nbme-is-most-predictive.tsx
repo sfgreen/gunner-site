@@ -27,7 +27,7 @@ import {
 import {
   BodyCont, ChoicePair, PageHead, Pitch, ResearchStyles, StageHead, Summary, W820,
 } from '../../components/app/research';
-import { FORMS, FORM_OFFSETS } from '../../lib/readiness';
+import { FORMS, FORM_OFFSETS, ordinal } from '../../lib/readiness';
 import { track } from '../../lib/analytics';
 import CALC from '../../lib/which_nbme_calc.json';
 
@@ -146,7 +146,7 @@ function SpreadCheck() {
           </div>
           <div className="rs-sc-stat">
             <span className="lbl">Compared with {ref.label}</span>
-            <span className="v">{rank}<small>th percentile</small></span>
+            <span className="v">{rank}<small>{ordinal(rank).slice(String(rank).length)} percentile</small></span>
             <span className="c">Wider than about {rank}% of the {ref.n.toLocaleString('en-US')} {ref.unit}.</span>
           </div>
         </div>
