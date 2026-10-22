@@ -47,7 +47,7 @@ export function StoreButton({
 
 /** The white inline card with the blue button: the ask right under the page header. */
 export function CtaCard({
-  title, sub, button, fine, loc = 'top', placement = 'top', stickyStart = false,
+  title, sub, button, fine, loc = 'top', placement = 'top', stickyStart = false, ct, params,
 }: {
   title: ReactNode;
   /** One line under the title; hidden on phones, as on the wards pages. */
@@ -59,6 +59,9 @@ export function CtaCard({
   placement?: 'top' | 'inline';
   /** The phone sticky bar appears once this card has scrolled past. */
   stickyStart?: boolean;
+  /** Override the page's App Store campaign; extra GA4 params. Passed to StoreButton. */
+  ct?: string;
+  params?: Record<string, unknown>;
 }) {
   return (
     <div className="mk isl">
@@ -66,7 +69,7 @@ export function CtaCard({
         <div className="strip">
           <div className="st"><b>{title}</b>{sub && <span>{sub}</span>}</div>
           <div className="sa">
-            <StoreButton loc={loc}>{button || 'Get Step Gunner free'}</StoreButton>
+            <StoreButton loc={loc} ct={ct} params={params}>{button || 'Get Step Gunner free'}</StoreButton>
             <span className="fine">{fine || `${CARDS} Step 2 CK cards. Free to start on iPhone.`}</span>
           </div>
         </div>
@@ -77,7 +80,7 @@ export function CtaCard({
 
 /** The dark app card: the ask after a moment of intent (a tool result, a quiz reveal). */
 export function DrillCard({
-  kicker = 'Step Gunner', title, body, button, fine, loc = 'inline', stickyStart = false, id,
+  kicker = 'Step Gunner', title, body, button, fine, loc = 'inline', stickyStart = false, id, ct, params,
 }: {
   kicker?: ReactNode;
   title: ReactNode;
@@ -87,6 +90,8 @@ export function DrillCard({
   loc?: StoreLoc;
   stickyStart?: boolean;
   id?: string;
+  ct?: string;
+  params?: Record<string, unknown>;
 }) {
   return (
     <div className="mk isl">
@@ -96,7 +101,7 @@ export function DrillCard({
           <p className="t">{title}</p>
           {body && <p className="b">{body}</p>}
           <div className="act">
-            <StoreButton loc={loc}>{button || 'Get Step Gunner free'}</StoreButton>
+            <StoreButton loc={loc} ct={ct} params={params}>{button || 'Get Step Gunner free'}</StoreButton>
             <span className="fine">{fine || FREE}</span>
           </div>
         </div>
@@ -107,7 +112,7 @@ export function DrillCard({
 
 /** The full-bleed dark closing band. The phone sticky bar hides while it is on screen. */
 export function EndBand({
-  id = 'end', kicker = 'Step Gunner for iPhone', title, body, button, fine, secondary,
+  id = 'end', kicker = 'Step Gunner for iPhone', title, body, button, fine, secondary, ct, params,
 }: {
   id?: string;
   kicker?: ReactNode;
@@ -117,6 +122,8 @@ export function EndBand({
   fine?: ReactNode;
   /** A second, quiet link under the button, e.g. { href: '/readiness', label: 'Check your readiness, free' }. */
   secondary?: { href: string; label: ReactNode };
+  ct?: string;
+  params?: Record<string, unknown>;
 }) {
   return (
     <div className="mk isl">
@@ -128,7 +135,7 @@ export function EndBand({
             {body && <p className="band-b">{body}</p>}
           </div>
           <div className="band-act">
-            <StoreButton loc="end" lg>{button || 'Get Step Gunner free'}</StoreButton>
+            <StoreButton loc="end" lg ct={ct} params={params}>{button || 'Get Step Gunner free'}</StoreButton>
             <p className="fine">{fine || `${FREE}.`}</p>
             {secondary && <a className="lnk on-dark" href={secondary.href}>{secondary.label}</a>}
           </div>
@@ -142,12 +149,12 @@ export function EndBand({
  *  `sticky` slot. It shows once the first visible [data-sticky-start] has scrolled past
  *  (CtaCard, DrillCard and Stage take a stickyStart prop) and hides while the EndBand is
  *  on screen; without a start marker it never shows. */
-export function StickyStoreBar({ title, sub = FREE, button = 'Get it free' }: { title: ReactNode; sub?: ReactNode; button?: ReactNode }) {
+export function StickyStoreBar({ title, sub = FREE, button = 'Get it free', ct, params }: { title: ReactNode; sub?: ReactNode; button?: ReactNode; ct?: string; params?: Record<string, unknown> }) {
   return (
     <div className="mk isl">
       <div className="sticky" role="region" aria-label="Get the app">
         <div className="sticky-t"><b>{title}</b><span>{sub}</span></div>
-        <StoreButton loc="sticky">{button}</StoreButton>
+        <StoreButton loc="sticky" ct={ct} params={params}>{button}</StoreButton>
       </div>
     </div>
   );

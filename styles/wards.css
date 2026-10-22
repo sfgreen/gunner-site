@@ -125,7 +125,7 @@
   var(--st-bg); }
 .mk .stage-band .lbl, .mk .stage .lbl { color: var(--st-ink-3); }
 .mk .stage-band .h-2, .mk .stage-band .h-3, .mk .stage-band b { color: var(--st-ink); }
-.mk .stage-band .sec-sub, .mk .stage-band p { color: var(--st-ink-2); }
+.mk .stage-band .sec-sub, .mk .stage-band :where(p) { color: var(--st-ink-2); }
 .mk .stage-band .key { color: var(--st-blue); }
 .mk .stage-band.c-step2 .key { color: var(--st-gold); }
 .mk .stage-band .kick { color: var(--st-ink-2); }
@@ -447,6 +447,7 @@
 .mk .tip { margin-top: 16px; padding: 16px 20px; border-radius: var(--r-md); background: var(--wards-tint); }
 .mk .tip .lbl { display: flex; align-items: center; gap: 8px; color: var(--wards); }
 .mk .tip p + p { margin-top: 4px; }
+.mk .tip .tt { margin-top: 4px; font-weight: 600; }
 .mk .fxl { display: grid; gap: 16px; margin-top: 16px; }
 .mk .fxi { padding: 20px; border-radius: var(--r-lg); background: var(--card); box-shadow: 0 1px 2px var(--shadow-a), inset 0 0 0 1px var(--line); scroll-margin-top: 88px; }
 .mk .fxf { margin-top: 12px; padding: 12px 16px; border-radius: var(--r-sm); background: var(--st-card); color: var(--st-ink); font: 500 17px/1.6 var(--f-mono); font-feature-settings: "zero" 1; overflow-wrap: anywhere; }
