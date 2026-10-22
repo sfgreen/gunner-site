@@ -41,7 +41,7 @@ export default function DedicatedCalendar() {
     <LabLayout
       eyebrow="Research"
       title="The dedicated schedule nobody wrote down"
-      lede={<>269 students, 3,737 practice scores, and the form calendar almost all of them converged on without being told. When each NBME actually gets sat, how many people take, and what another week is worth.</>}
+      lede={<>269 students, 2,042 reported practice scores, and the form calendar almost all of them converged on without being told. When each NBME actually gets sat, how many people take, and what another week is worth.</>}
       crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research', label: 'Research' }]}
       metaTitle="Step 2 CK Dedicated Schedule: When to Take Each NBME, from 269 Real Reports"
       metaDesc={desc}
@@ -190,7 +190,7 @@ export default function DedicatedCalendar() {
       <ul>
         <li><strong>It is descriptive, not prescriptive.</strong> This is what a self-selected group of high scorers did. It is not evidence the order caused the scores, and I have not tried to test that, because with this data I could not separate the schedule from the person following it.</li>
         <li><strong>Dates come from what people reported.</strong> Not every post carried them. Rows run from 25 students on UWSA 3 to 165 on NBME 14 and 15, and the n is on every row so you can weight them yourself. I would not plan around the UWSA 3 line.</li>
-        <li><strong>The sample posts.</strong> Mean real score 258 against a national mean near 251, lowest in the set a 216. If you are aiming below that range the timing probably transfers but the score levels do not.</li>
+        <li><strong>The sample posts.</strong> Mean real score 258 against a national mean of about 250, lowest in the set a 216. If you are aiming below that range the timing probably transfers but the score levels do not.</li>
       </ul>
 
       <h2>7. The short version</h2>
@@ -204,7 +204,7 @@ export default function DedicatedCalendar() {
       </div>
 
       <h2>Data and method</h2>
-      <p>Score-report posts from r/step2, parsed into one row per assessment with usernames dropped at ingest. 269 students, 3,737 assessments; 239 have a real Step 2 score and at least one three-digit practice form, and 199 reported dates for at least one form. Form rows show the median days before the exam among students who dated that form. Prediction error by form count uses the same shrinkage-linear model as the <Link href="/readiness/methodology">predictor</Link>. Improvement rate is a within-student regression of offset-corrected form score against date, for the 178 students with three or more dated forms. Figures rebuild from the source data rather than being stored.</p>
+      <p>Score-report posts from r/step2, parsed into one row per assessment with usernames dropped at ingest. 269 students and 3,737 parsed rows (2,042 reported practice scores); 239 have a real Step 2 score and at least one three-digit practice form, and 199 reported dates for at least one form. Form rows show the median days before the exam among students who dated that form. Prediction error by form count uses the same shrinkage-linear model as the <Link href="/readiness/methodology">predictor</Link>. Improvement rate is a within-student regression of offset-corrected form score against date, for the 178 students with three or more dated forms. Figures rebuild from the source data rather than being stored.</p>
       </div>
     </LabLayout>
   );

@@ -5,7 +5,7 @@ export default function Privacy() {
     <DocLayout
       title="Privacy Policy"
       subtitle="Step Gunner by Rezumab LLC · Effective April 2026"
-      metaTitle="Privacy Policy — Step Gunner | Rezumab LLC"
+      metaTitle="Privacy Policy | Step Gunner | Rezumab LLC"
       metaDesc="Privacy Policy for Step Gunner by Rezumab LLC. Your study data stays on your device."
     >
       <div className="highlight-box">
@@ -63,9 +63,9 @@ export default function Privacy() {
       <h2>Third-Party Services</h2>
       <p>The App uses the following third-party services:</p>
       <ul>
-        <li><strong>Firebase Authentication</strong> (Google LLC) &mdash; for sign-in via Google and Apple</li>
-        <li><strong>Cloud Firestore</strong> (Google LLC) &mdash; for securely storing user profiles, study progress, and leaderboard data</li>
-        <li><strong>Apple Foundation Models</strong> &mdash; for on-device AI explanations (processed entirely on your device, no data sent to external servers)</li>
+        <li><strong>Firebase Authentication</strong> (Google LLC): for sign-in via Google and Apple</li>
+        <li><strong>Cloud Firestore</strong> (Google LLC): for securely storing user profiles, study progress, and leaderboard data</li>
+        <li><strong>Apple Foundation Models</strong>: for on-device AI explanations (processed entirely on your device, no data sent to external servers)</li>
       </ul>
 
       <h2>Data Storage &amp; Security</h2>

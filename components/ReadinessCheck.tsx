@@ -38,7 +38,7 @@ export default function ReadinessCheck({ surface, initial, title = 'Your practic
         .result { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--hair); text-align: center; }
         .rk { font-family: var(--mono); font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); }
         .rv { font-family: var(--mono); font-size: 44px; font-weight: 800; letter-spacing: -1.5px; color: var(--gold); line-height: 1.05; margin-top: 4px; }
-        .rv.muted { color: var(--ink-faint); }
+        .rv.muted { color: var(--ink-faint); font-size: 22px; letter-spacing: -0.3px; padding: 10px 0; }
         .rv .d { font-size: 18px; color: var(--ink-dim); font-weight: 600; margin: 0 8px; }
         .chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 10px 0 4px; }
         .chip { font-family: var(--mono); font-size: 11px; font-weight: 700; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--hair-strong); color: var(--ink-dim); }
@@ -78,7 +78,7 @@ export default function ReadinessCheck({ surface, initial, title = 'Your practic
           </>
         ) : (
           <>
-            <div className="rv muted">&mdash;</div>
+            <div className="rv muted">No range yet</div>
             <div className="fine">Enter at least one three-digit NBME or UWSA score. Nothing you type leaves this page. <Link href="/readiness/methodology">How it works</Link></div>
           </>
         )}
