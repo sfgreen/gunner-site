@@ -1,0 +1,403 @@
+{
+  "id": "scrotal_pain",
+  "slug": "scrotal-pain",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Testicular Torsion vs Epididymitis: Scrotal Pain Algorithm",
+  "metaDescription": "Acute scrotum in the ED, fork by fork: the TWIST score, when to skip the ultrasound, manual detorsion, epididymitis regimens, Fournier gangrene, rupture.",
+  "h1": "Scrotal pain and testicular torsion: the ED algorithm, fork by fork",
+  "dek": "For the student on an EM, urology or pediatrics rotation with an acute scrotum and a resident about to ask what is next: the first exam, the TWIST score, when to skip the ultrasound, detorsion, the operation, epididymitis regimens, Fournier gangrene, trauma, the hernia and the painless lump.",
+  "jumpLinks": [
+    {
+      "label": "First exam",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "TWIST and the scans",
+      "stage": "Result"
+    },
+    {
+      "label": "Endpoints",
+      "stage": "Outcome"
+    },
+    {
+      "label": "Surgery and antibiotics",
+      "stage": "Manage"
+    },
+    {
+      "label": "Ultrasound",
+      "stage": "Imaging"
+    },
+    {
+      "label": "TWIST score, hernia",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Epididymitis tests",
+      "stage": "Labs"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Torsion until proven otherwise.",
+      "text": "Vitals and a full exam of both testes, the groin and the perineum; urology is called as soon as torsion is possible, not after the tests.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "lead": "Score it with TWIST.",
+      "text": "Testicular swelling 2, hard testis 2, absent cremasteric reflex 1, nausea or vomiting 1, high-riding testis 1. 5 or more: the operating room; 3 to 4: ultrasound now; 0 to 2: low risk.",
+      "refs": [
+        "twist",
+        "calc:twist"
+      ]
+    },
+    {
+      "lead": "TWIST 5 or more: emergency exploration, no ultrasound first.",
+      "text": "Before puberty (Tanner 1 to 2) the validation advised ultrasound even at a high score.",
+      "refs": [
+        "high_go"
+      ]
+    },
+    {
+      "lead": "Hours from the operating room: manual detorsion outward.",
+      "text": "Medial to lateral, repeated as needed; pain relief and returning Doppler flow mark success, and no relief may mean the twist runs the other way. Not with scrotal wall thickening, inflammation or a reactive hydrocele. Exploration and fixation still follow.",
+      "refs": [
+        "detorsion"
+      ]
+    },
+    {
+      "lead": "In the operating room: untwist and fix both sides.",
+      "text": "A dead testis comes out and the other is still fixed. Salvage is about 90% within 6 hours and under 10% after 24.",
+      "refs": [
+        "explore"
+      ]
+    },
+    {
+      "lead": "Epididymitis in a sexually active or older man: treat the same day, by likely cause.",
+      "text": "Ceftriaxone 500 mg IM once (1 g at 150 kg or more) plus doxycycline 100 mg twice daily for 10 days; ceftriaxone plus levofloxacin after insertive anal sex; levofloxacin alone for enteric organisms once a stain rules out gonorrhea.",
+      "refs": [
+        "tx_sti",
+        "tx_anal",
+        "tx_enteric",
+        "epid_who"
+      ]
+    },
+    {
+      "lead": "Fournier gangrene: debridement as soon as possible, within 6 hours of admission.",
+      "text": "No imaging delay; broad MRSA and gram-negative cover with clindamycin or linezolid; re-explore every 12 to 24 hours.",
+      "refs": [
+        "fg_surgery",
+        "fg_abx"
+      ]
+    },
+    {
+      "lead": "Blunt trauma: ultrasound for the tunica.",
+      "text": "A broken tunica or a large hematocele goes to exploration; repair within 72 hours saves close to 90% of testes.",
+      "refs": [
+        "trauma_us",
+        "trauma_explore"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What is the first step for acute scrotal pain?",
+      "intro": "Vitals and a full exam of both testes, the groin for a hernia and the perineum for necrosis, with urology called as soon as torsion is possible.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "What do the exam, the TWIST score and the ultrasound tell you?",
+      "intro": "The forks read the first look, the TWIST score, the Doppler, access to the operating room, the operative findings, the trauma scan, the hernia and the epididymitis history.",
+      "refs": [
+        "front",
+        "twist_result",
+        "doppler_result",
+        "or_access",
+        "explore_find",
+        "explore_result",
+        "trauma_result",
+        "hernia_result",
+        "epid_who",
+        "epid_cause"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How are testicular torsion, epididymitis and Fournier gangrene treated?",
+      "intro": "Exploration and fixation for torsion with detorsion as a bridge, CDC regimens for epididymitis, emergency debridement for Fournier gangrene, and repair or reduction for rupture and hernia.",
+      "refs": [
+        "explore",
+        "high_go",
+        "detorsion",
+        "tx_sti",
+        "tx_anal",
+        "tx_enteric",
+        "fg_surgery",
+        "trauma_explore",
+        "hernia_reduce",
+        "appendix_care",
+        "mumps_care",
+        "peds_epid"
+      ]
+    },
+    {
+      "stage": "Imaging",
+      "heading": "When does scrotal pain need an ultrasound?",
+      "intro": "Color Doppler of both testes now for low or intermediate torsion risk, after blunt trauma to check the tunica, and for a painless lump.",
+      "refs": [
+        "doppler",
+        "trauma_us",
+        "mass_step"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "How do you calculate the TWIST score, and assess an irreducible hernia?",
+      "intro": "Five findings sort the torsion risk; signs of strangulation decide whether a groin hernia is reduced or repaired now.",
+      "refs": [
+        "twist",
+        "hernia_assess"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "Which tests for suspected epididymitis?",
+      "intro": "A urethral stain or urine white cells, a urine NAAT for gonorrhea and chlamydia, a urine culture, and HIV and syphilis tests, with treatment the same day.",
+      "refs": [
+        "epid_tests"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Where does each acute scrotum end up?",
+      "intro": "Every branch ends on a named diagnosis and its plan, from fixation of both testes to supportive care for a twisted appendage.",
+      "refs": [
+        "end_viable",
+        "end_nonviable",
+        "end_no_torsion",
+        "end_epid",
+        "end_appendix",
+        "end_fg"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "TWIST score at the bedside",
+    "items": [
+      {
+        "text": "Testicular swelling: 2 points.",
+        "refs": [
+          "calc:twist"
+        ]
+      },
+      {
+        "text": "Hard testis: 2 points.",
+        "refs": [
+          "calc:twist"
+        ]
+      },
+      {
+        "text": "Absent cremasteric reflex: 1 point.",
+        "refs": [
+          "calc:twist"
+        ]
+      },
+      {
+        "text": "Nausea or vomiting: 1 point.",
+        "refs": [
+          "calc:twist"
+        ]
+      },
+      {
+        "text": "High-riding testis: 1 point.",
+        "refs": [
+          "calc:twist"
+        ]
+      },
+      {
+        "text": "0 to 2: low risk. 3 to 4: ultrasound. 5 or more: urgent urology and surgery.",
+        "refs": [
+          "calc:twist"
+        ]
+      },
+      {
+        "text": "Cut-offs vary, and the score is less accurate before puberty: ultrasound there even at a high score.",
+        "refs": [
+          "calc:twist",
+          "twist"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "16-year-old with right testicular torsion at a rural ED: 2 hours of sudden right testicular pain with nausea, not in shock. Exam: right testis swollen, hard and high-riding, cremasteric reflex absent; TWIST 7, so no ultrasound and straight to urology for exploration. There is no urologist on site and the nearest is 3 hours away, so manual detorsion outward, medial to lateral, while transfer is arranged, judged by pain relief and returning Doppler flow. Exploration and fixation follow regardless: after transfer, a residual 180-degree twist, and the testis was viable once untwisted, so both testes were fixed.",
+    "presentRefs": [
+      "case:torsion_rural",
+      "twist",
+      "high_go",
+      "detorsion",
+      "explore",
+      "explore_result"
+    ],
+    "pimp": [
+      {
+        "q": "Why not get the ultrasound first?",
+        "a": "A TWIST of 5 or more carried a 100% positive predictive value, and a scan first spends the testis's time.",
+        "refs": [
+          "high_go"
+        ]
+      },
+      {
+        "q": "The cremasteric reflex is present. Torsion excluded?",
+        "a": "No. A normal cremasteric reflex, or pain past 24 hours, does not exclude torsion.",
+        "refs": [
+          "twist"
+        ]
+      },
+      {
+        "q": "Which way do you detorse?",
+        "a": "Outward, medial to lateral, because torsion usually twists medially. About 40% twist the other way, so pain that does not settle means the direction may be wrong.",
+        "refs": [
+          "detorsion"
+        ]
+      },
+      {
+        "q": "Why fix the other testis?",
+        "a": "A viable testis is fixed in the same operation with the other side explored and fixed too, and after an orchiectomy the opposite testis is still fixed.",
+        "refs": [
+          "explore",
+          "explore_result"
+        ]
+      },
+      {
+        "q": "Why doxycycline for 10 days and not 7?",
+        "a": "Epididymitis gets 10 days, longer than the 7 days of uncomplicated chlamydia, and azithromycin is not part of the 2021 regimen.",
+        "refs": [
+          "tx_sti"
+        ]
+      },
+      {
+        "q": "Blue dot at the upper pole and normal testicular flow. Treatment?",
+        "a": "A torsed appendage is self-limiting: analgesia, cooling and less activity; surgery only for pain that will not settle.",
+        "refs": [
+          "appendix_care"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "Ultrasound before the exam, or before urology is called. Urology is called as soon as torsion is possible.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "text": "A positive urinalysis as proof it is not torsion. It favors epididymo-orchitis without excluding torsion.",
+      "refs": [
+        "triage",
+        "twist"
+      ]
+    },
+    {
+      "text": "Manual detorsion, then discharge once the pain settles. Exploration and fixation follow in every case.",
+      "refs": [
+        "detorsion",
+        "high_go"
+      ]
+    },
+    {
+      "text": "Fixing only the twisted side. Both testes are fixed.",
+      "refs": [
+        "explore"
+      ]
+    },
+    {
+      "text": "Ceftriaxone plus azithromycin for epididymitis. CDC 2021 pairs ceftriaxone with doxycycline for 10 days.",
+      "refs": [
+        "tx_sti"
+      ]
+    },
+    {
+      "text": "Levofloxacin alone before a stain has ruled out gonorrhea. That regimen needs a stain without diplococci.",
+      "refs": [
+        "tx_enteric",
+        "tx_anal"
+      ]
+    },
+    {
+      "text": "A CT to confirm gas before calling surgery for Fournier gangrene. Imaging must not delay debridement.",
+      "refs": [
+        "fg_surgery"
+      ]
+    },
+    {
+      "text": "A trans-scrotal biopsy of a painless testicular mass. Radical inguinal orchiectomy; a scrotal approach risks tumor seeding.",
+      "refs": [
+        "mass_step"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the TWIST score?",
+      "a": "A bedside score for testicular torsion: testicular swelling 2 points, a hard testis 2, an absent cremasteric reflex 1, nausea or vomiting 1, and a high-riding testis 1. 0 to 2 is low risk, 3 to 4 intermediate and sent for ultrasound, and 5 or more high risk for urgent urology and surgery. Cut-offs vary, and it is less accurate before puberty.",
+      "refs": [
+        "calc:twist",
+        "twist"
+      ]
+    },
+    {
+      "q": "Do you need an ultrasound before surgery for testicular torsion?",
+      "a": "Not with a high TWIST. A score of 5 or more carried a 100% positive predictive value, and those patients go to urgent urology and exploration without waiting for imaging. Low or intermediate risk gets color Doppler of both testes without delay, and any doubt about flow still means exploration. Before puberty the validation advised ultrasound even at a high score.",
+      "refs": [
+        "high_go",
+        "doppler"
+      ]
+    },
+    {
+      "q": "How do you do manual detorsion?",
+      "a": "Rotate the testis outward, medial to lateral, which the reviews describe as clockwise for the left testis and counterclockwise for the right, repeating 2 to 4 times if needed. Success is instant pain relief and returning Doppler flow; no relief may mean the twist runs the other way. It buys time and never replaces exploration and fixation.",
+      "refs": [
+        "detorsion"
+      ]
+    },
+    {
+      "q": "What is the treatment for epididymitis?",
+      "a": "Same-day treatment by likely cause (CDC 2021): ceftriaxone 500 mg IM once (1 g at 150 kg or more) plus doxycycline 100 mg twice daily for 10 days for chlamydia or gonorrhea; ceftriaxone plus levofloxacin 500 mg daily for 10 days after insertive anal sex; levofloxacin alone for enteric organisms once a stain rules out gonorrhea. Add rest, scrotal elevation and an NSAID.",
+      "refs": [
+        "tx_sti",
+        "tx_anal",
+        "tx_enteric"
+      ]
+    },
+    {
+      "q": "How long does a torsed testis survive?",
+      "a": "Salvage is about 90% within 6 hours of onset, 50% by 12 hours and under 10% after 24 hours, in figures a scoping review quotes from the EAU. That is why exploration happens as soon as possible, ideally within 4 to 6 hours, and why a likely torsion goes to the operating room without waiting for imaging.",
+      "refs": [
+        "explore",
+        "end_nonviable"
+      ]
+    },
+    {
+      "q": "How do you tell torsion of the appendix testis from testicular torsion?",
+      "a": "On Doppler: an avascular nodule beside the upper pole with normal, symmetric testicular flow. A blue dot at the upper pole is its sign, though scrotal edema often hides it, and it is the commonest acute scrotum before puberty. It settles with analgesia, cooling and less activity; surgery only for pain that will not settle.",
+      "refs": [
+        "doppler_result",
+        "appendix_care"
+      ]
+    }
+  ],
+  "related": [
+    "peds_vomiting",
+    "sepsis_fever",
+    "flank_pain",
+    "abdominal_pain"
+  ]
+}

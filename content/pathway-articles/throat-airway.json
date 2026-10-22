@@ -1,0 +1,417 @@
+{
+  "id": "throat_airway",
+  "slug": "throat-airway",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Sore Throat and Airway Emergencies: McIsaac to Epiglottitis",
+  "metaDescription": "Sore throat, stridor and nosebleeds in the ED, fork by fork: McIsaac and the strep test, epiglottitis, deep neck abscesses, croup, angioedema and packing.",
+  "h1": "Sore throat, stridor and epistaxis: the ED algorithm, fork by fork",
+  "dek": "For the student on an EM, ENT or pediatrics rotation with a sore throat, a stridulous child or a nosebleed and a resident about to ask what is next: the airway first, McIsaac and the strep test, deep neck abscesses, croup, angioedema, nasal packing, and the traps.",
+  "jumpLinks": [
+    {
+      "label": "Airway first",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Picture and scores",
+      "stage": "Result"
+    },
+    {
+      "label": "Scope, mono, McIsaac",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Antibiotics, croup, packing",
+      "stage": "Manage"
+    },
+    {
+      "label": "Endpoints",
+      "stage": "Outcome"
+    },
+    {
+      "label": "Neck CT",
+      "stage": "Imaging"
+    },
+    {
+      "label": "Rapid strep test",
+      "stage": "Labs"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Airway first.",
+      "text": "Drooling, stridor, a tripod posture, a muffled voice, trismus or swelling under the jaw: keep the patient upright and calm and call the most skilled airway team. No throat exam, IV line or film in a child with suspected epiglottitis.",
+      "refs": [
+        "triage",
+        "airway_first"
+      ]
+    },
+    {
+      "lead": "Pediatric epiglottitis goes to the operating room.",
+      "text": "Controlled intubation by anesthesia and ENT with a tracheostomy ready, then cultures and IV ceftriaxone or another third-generation cephalosporin. An adult not in extremis gets flexible nasolaryngoscopy by ENT, sitting up.",
+      "refs": [
+        "epig_or",
+        "epig_abx",
+        "scope"
+      ]
+    },
+    {
+      "lead": "Score the pharyngitis with McIsaac.",
+      "text": "Centor plus 1 point at age 3 to 14 and minus 1 at 45 or older. 1 or less: no test, no antibiotic. 2 or more: a rapid strep test. One review tests adults only at Centor 3 or more, and NICE prescribes by score without a routine test.",
+      "refs": [
+        "score",
+        "calc:mcisaac",
+        "score_result"
+      ]
+    },
+    {
+      "lead": "Positive test: penicillin V or amoxicillin for 10 days (NICE: 5 to 10).",
+      "text": "Or one IM dose of benzathine penicillin G. A child with a negative rapid test gets a backup throat culture (one source says it may be done); adults do not.",
+      "refs": [
+        "abx",
+        "rst"
+      ]
+    },
+    {
+      "lead": "Mono: test for EBV, and no amoxicillin.",
+      "text": "EBV-specific antibodies or a heterophile test, plus an HIV test; supportive care; no contact sports for at least 3 to 4 weeks.",
+      "refs": [
+        "mono",
+        "end_mono"
+      ]
+    },
+    {
+      "lead": "Deep neck infection: CT neck with IV contrast once the airway is safe.",
+      "text": "Ludwig angina gets awake fiberoptic nasotracheal intubation with a surgical airway ready first. A peritonsillar abscess gets needle aspiration or incision and drainage, plus antibiotics; the sources disagree on whether every one needs draining.",
+      "refs": [
+        "rpa_ct",
+        "ludwig",
+        "pta"
+      ]
+    },
+    {
+      "lead": "Croup: dexamethasone at every grade.",
+      "text": "0.6 mg/kg by mouth is the usual dose. Stridor at rest or a Westley score of 3 or more adds nebulized epinephrine and 3 to 4 hours of observation after the last dose.",
+      "refs": [
+        "croup_dex",
+        "croup_epi",
+        "end_croup"
+      ]
+    },
+    {
+      "lead": "Nosebleed: lean forward, pinch the soft nose for 10 to 15 minutes.",
+      "text": "Then a vasoconstrictor, cautery to one side of the septum only, anterior packing, and a posterior or double-balloon pack with admission when anterior measures fail.",
+      "refs": [
+        "compress",
+        "cautery",
+        "pack",
+        "posterior"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What is the first step with drooling, stridor or a heavy nosebleed?",
+      "intro": "The airway, then the circulation. Keep the patient upright and calm, call anesthesia and ENT, and plan for failure, front-of-neck access included.",
+      "refs": [
+        "triage",
+        "airway_first",
+        "epig_or",
+        "ludwig",
+        "acei_tube",
+        "choke_act",
+        "nose_resus"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "How do the first look, the scores and the scans sort a sore throat?",
+      "intro": "The forks read the airway picture, the throat and neck exam, the Westley and McIsaac scores, the rapid strep test, the CT, and the bleeding after each step.",
+      "refs": [
+        "front",
+        "airway_look",
+        "throat_look",
+        "score_result",
+        "croup_sev",
+        "ct_result",
+        "compress_result",
+        "pack_result"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "Epiglottitis, mono or strep: who needs a strep test?",
+      "intro": "Nasolaryngoscopy for the adult with a muffled voice and a near-normal mouth, EBV testing for the mono picture, McIsaac for the rest, and bronchoscopy for a suspected inhaled foreign body.",
+      "refs": [
+        "scope",
+        "mono",
+        "score",
+        "fb"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How are strep throat, peritonsillar abscess, croup and epistaxis treated?",
+      "intro": "Antibiotics by diagnosis, drainage for an abscess, dexamethasone and epinephrine for croup, stopping the ACE inhibitor for angioedema, and pressure, cautery and packing for a nosebleed.",
+      "refs": [
+        "abx",
+        "epig_abx",
+        "pta",
+        "croup_dex",
+        "croup_epi",
+        "acei",
+        "compress",
+        "cautery",
+        "pack",
+        "posterior"
+      ]
+    },
+    {
+      "stage": "Imaging",
+      "heading": "When do you get a CT for a sore throat or neck swelling?",
+      "intro": "For a suspected deep neck infection: CT neck with IV contrast once the airway is safe or secured, with an airway clinician present if it is at risk.",
+      "refs": [
+        "rpa_ct"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "How is the rapid strep test done, and when is a backup culture needed?",
+      "intro": "Both tonsils and the posterior pharynx swabbed before any antibiotic; a child with a negative rapid test gets a backup throat culture, necessary in one source and optional in another.",
+      "refs": [
+        "rst"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Where does each throat and airway patient end up?",
+      "intro": "Every branch ends on a named diagnosis and its plan, from intensive care for epiglottitis to home after an hour of observation for a settled nosebleed.",
+      "refs": [
+        "end_epig",
+        "end_strep",
+        "end_viral",
+        "end_croup",
+        "end_settled",
+        "end_posterior"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "McIsaac score at the bedside",
+    "items": [
+      {
+        "text": "Tonsillar exudates: 1 point.",
+        "refs": [
+          "calc:mcisaac"
+        ]
+      },
+      {
+        "text": "Swollen, tender anterior cervical nodes: 1 point.",
+        "refs": [
+          "calc:mcisaac"
+        ]
+      },
+      {
+        "text": "Cough absent: 1 point.",
+        "refs": [
+          "calc:mcisaac"
+        ]
+      },
+      {
+        "text": "Temperature over 38 C: 1 point.",
+        "refs": [
+          "calc:mcisaac"
+        ]
+      },
+      {
+        "text": "Age 3 to 14: plus 1. Age 15 to 44: 0. Age 45 or older: minus 1.",
+        "refs": [
+          "calc:mcisaac"
+        ]
+      },
+      {
+        "text": "1 or less: no test and no antibiotic. 2 or more: rapid strep test.",
+        "refs": [
+          "calc:mcisaac",
+          "score"
+        ]
+      },
+      {
+        "text": "Under 3: testing may be omitted unless a sibling has confirmed strep.",
+        "refs": [
+          "score"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "8-year-old boy, 26 kg, with group A strep pharyngitis: 1 day of sore throat, fever to 38.9 and a stomachache, no cough or runny nose. Airway safe, with a normal voice and no drooling or stridor; no tonsillar bulge, neck supple, spleen not felt, so no abscess, neck or mono features. McIsaac 4 (tender anterior nodes, fever, no cough, age 3 to 14; no exudate), so a rapid antigen test, which is positive. Plan: penicillin V or amoxicillin by mouth for 10 days, acetaminophen or an NSAID, back to school after 24 hours of antibiotic, and reassess if he is not better within 5 days.",
+    "presentRefs": [
+      "case:strep_pos",
+      "throat_look",
+      "score",
+      "rst",
+      "abx",
+      "end_strep"
+    ],
+    "pimp": [
+      {
+        "q": "Why no lateral neck film in a child with suspected epiglottitis?",
+        "a": "Imaging waits for the airway, and about 20% of lateral neck films miss it. It is a clinical diagnosis.",
+        "refs": [
+          "airway_first",
+          "epig_or"
+        ]
+      },
+      {
+        "q": "Exudative sore throat and a palpable spleen. Why not amoxicillin?",
+        "a": "This is mono until tested: antibiotics are not indicated, and amoxicillin brings a maculopapular rash in up to 30%.",
+        "refs": [
+          "mono"
+        ]
+      },
+      {
+        "q": "Why penicillin and not azithromycin for strep?",
+        "a": "Penicillin is the only antibiotic shown to cut rheumatic fever, and no penicillin resistance has been documented. Macrolides are for penicillin allergy, with resistance widely documented.",
+        "refs": [
+          "abx"
+        ]
+      },
+      {
+        "q": "Why not a beta-agonist nebulizer for croup?",
+        "a": "Beta-agonists can worsen upper airway obstruction. Nebulized epinephrine is for stridor at rest or moderate to severe croup.",
+        "refs": [
+          "croup_dex",
+          "croup_epi"
+        ]
+      },
+      {
+        "q": "ACE inhibitor angioedema with stridor. Why not epinephrine, steroids and antihistamines first?",
+        "a": "Bradykinin-mediated swelling often resists them, so the airway is secured early by an awake technique, surgical airway ready.",
+        "refs": [
+          "acei_tube"
+        ]
+      },
+      {
+        "q": "Why cauterize only one side of the septum?",
+        "a": "Cauterizing both sides risks a perforation.",
+        "refs": [
+          "cautery"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "Lying a drooling, stridulous patient flat to look at the throat. Upright and calm, no tongue blade, the airway team first.",
+      "refs": [
+        "triage",
+        "airway_first"
+      ]
+    },
+    {
+      "text": "A lateral neck film before the airway team in suspected epiglottitis. Imaging waits for the airway.",
+      "refs": [
+        "airway_first",
+        "epig_or"
+      ]
+    },
+    {
+      "text": "Calling a cough or runny nose proof of a virus. It makes strep less likely without ruling it out; the score decides the test.",
+      "refs": [
+        "score"
+      ]
+    },
+    {
+      "text": "Antistreptolysin O titers to diagnose strep throat. They reflect past infection; the rapid antigen test is the primary test.",
+      "refs": [
+        "score",
+        "rst"
+      ]
+    },
+    {
+      "text": "Amoxicillin for mono. Antibiotics are not indicated, and amoxicillin brings a rash in up to 30%.",
+      "refs": [
+        "mono"
+      ]
+    },
+    {
+      "text": "Switching ACE inhibitor angioedema to another ACE inhibitor. Every ACE inhibitor is contraindicated after it.",
+      "refs": [
+        "acei"
+      ]
+    },
+    {
+      "text": "Abdominal thrusts for a child who is still coughing. She is left to cough; thrusts are for the child who cannot cough, speak or breathe, and a normal chest film does not exclude the foreign body.",
+      "refs": [
+        "fb",
+        "choke_act"
+      ]
+    },
+    {
+      "text": "Head tilted back for a nosebleed. Lean forward and pinch the soft nose, not the bony bridge.",
+      "refs": [
+        "compress",
+        "nose_resus"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the McIsaac score?",
+      "a": "The Centor criteria plus an age adjustment: 1 point each for tonsillar exudates, tender anterior cervical nodes, absent cough and a temperature over 38 C, plus 1 at age 3 to 14 and minus 1 at 45 or older. A score of 1 or less needs no test; 2 or more gets a rapid strep test. At 15 to 44 it equals the Centor score.",
+      "refs": [
+        "calc:mcisaac",
+        "score"
+      ]
+    },
+    {
+      "q": "Who needs a rapid strep test?",
+      "a": "Anyone without abscess, neck or mono signs whose McIsaac (or Centor at 15 to 44) is 2 or more. The sources disagree for adults: the Acute Pharyngitis review tests adults at a Centor of 3 or more, and NICE does not recommend rapid tests routinely, prescribing by score instead. Testing may be omitted under 3 unless a sibling has confirmed strep.",
+      "refs": [
+        "score",
+        "rst"
+      ]
+    },
+    {
+      "q": "What is the treatment for strep throat?",
+      "a": "Penicillin V or amoxicillin by mouth for 10 days (NICE: 5 to 10 days), or one IM dose of benzathine penicillin G, with acetaminophen or an NSAID for pain. Without an immediate-type allergy, cephalexin or cefadroxil; after an immediate reaction, clindamycin or a macrolide. Back to school or work after 24 hours of antibiotic, and reassess if not better within 5 days.",
+      "refs": [
+        "abx",
+        "end_strep"
+      ]
+    },
+    {
+      "q": "How is a peritonsillar abscess treated?",
+      "a": "Airway first if there is drooling, tripoding or labored breathing. Then needle aspiration or incision and drainage, sitting up with topical anesthetic, plus antibiotics such as clindamycin, ampicillin-sulbactam or amoxicillin-clavulanate, with analgesia, IV fluids and a steroid to consider. Point-of-care ultrasound can confirm it, and the sources disagree on whether every abscess needs drainage.",
+      "refs": [
+        "pta"
+      ]
+    },
+    {
+      "q": "What is the dexamethasone dose for croup?",
+      "a": "One dose by mouth, 0.6 mg/kg being the usual one; 0.15 and 0.3 mg/kg appear equally effective. It goes IM or IV if the child cannot swallow, is vomiting or is in severe distress. Stridor at rest or a Westley score of 3 or more adds nebulized epinephrine, with 3 to 4 hours of observation after the last dose.",
+      "refs": [
+        "croup_dex",
+        "croup_epi"
+      ]
+    },
+    {
+      "q": "How do you stop an anterior nosebleed?",
+      "a": "Sit up, lean forward and pinch the soft, cartilaginous nose for 10 to 15 minutes. If it keeps bleeding, suction the clots and apply a topical vasoconstrictor such as oxymetazoline. A visible anterior point gets silver nitrate on one side of the septum only; otherwise anterior packing. Home after at least 1 hour of stable observation, with follow-up within a week.",
+      "refs": [
+        "compress",
+        "cautery",
+        "pack",
+        "compress_result"
+      ]
+    }
+  ],
+  "related": [
+    "peds_breathing",
+    "dyspnea",
+    "environmental",
+    "rash"
+  ]
+}

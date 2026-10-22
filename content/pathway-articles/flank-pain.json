@@ -1,0 +1,396 @@
+{
+  "id": "flank_pain",
+  "slug": "flank-pain",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Flank Pain Workup: Renal Colic, Pyelonephritis, Retention",
+  "metaDescription": "Flank pain in the ED: renal colic analgesia and CT, stone size and tamsulosin, the infected obstructed kidney, pyelonephritis antibiotics, and retention.",
+  "h1": "Flank pain and urinary retention in the ED: colic, infection, obstruction",
+  "dek": "For the student on an EM, IM or urology rotation with flank pain, or a man who cannot pass urine, and a resident asking what is next. The mimics to exclude first, analgesia and imaging for colic, the infected obstructed kidney that cannot wait, pyelonephritis antibiotics, and how to drain a bladder.",
+  "jumpLinks": [
+    {
+      "label": "First moves",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Retention",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Fever and cultures",
+      "stage": "Labs"
+    },
+    {
+      "label": "CT or ultrasound",
+      "stage": "Imaging"
+    },
+    {
+      "label": "Treatment",
+      "stage": "Manage"
+    },
+    {
+      "label": "Pyelonephritis at home",
+      "stage": "Disposition"
+    },
+    {
+      "label": "Will it pass?",
+      "stage": "Outcome"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Exclude the mimics first.",
+      "text": "Vital signs, a pulsatile mass, a palpable bladder, a urinalysis and a urine hCG in women of reproductive age; an aneurysm, appendicitis, diverticulitis and ectopic pregnancy all mimic renal colic.",
+      "refs": [
+        "triage",
+        "front"
+      ]
+    },
+    {
+      "lead": "Colic: an NSAID first.",
+      "text": "Ketorolac 30 mg IV once (15 mg if 65 or older, renally impaired or under 50 kg); if contraindicated or not enough, IV paracetamol then an opioid (NICE) or IV morphine (US practice); no antispasmodics.",
+      "refs": [
+        "colic_pain"
+      ]
+    },
+    {
+      "lead": "Low-dose noncontrast CT within 24 hours.",
+      "text": "Ultrasound instead in pregnancy and in children; a US consensus would skip CT in a younger patient whose typical pain is controlled.",
+      "refs": [
+        "colic_imaging",
+        "preg_us"
+      ]
+    },
+    {
+      "lead": "Size decides the stone plan.",
+      "text": "With pain controlled and no urgent criterion: under 5 mm, about 90% pass within 4 weeks. Distal 5 to under 10 mm: tamsulosin 0.4 mg daily. 10 mm or more: treatment offered within 48 hours.",
+      "refs": [
+        "colic_result",
+        "colic_met",
+        "end_refer48"
+      ]
+    },
+    {
+      "lead": "Fever behind a stone is a surgical emergency.",
+      "text": "Cultures, IV ceftriaxone and an urgent CT, then a stent or nephrostomy with the antibiotics running; the stone waits 1 to 2 weeks.",
+      "refs": [
+        "fs_workup",
+        "fs_decompress"
+      ]
+    },
+    {
+      "lead": "Pyelonephritis: culture first, image only if high risk.",
+      "text": "Mild cases go home on an oral agent chosen by local resistance; vomiting, sepsis or high risk means IV ceftriaxone; pregnancy means admission and an IV cephalosporin.",
+      "refs": [
+        "pyelo_first",
+        "pyelo_dispo",
+        "pyelo_oral",
+        "pyelo_iv",
+        "pyelo_preg"
+      ]
+    },
+    {
+      "lead": "Retention: drain it all, at once.",
+      "text": "A 16 French urethral catheter, full drainage, left in if over 400 mL drains; watch for post-obstructive diuresis over 1500 mL.",
+      "refs": [
+        "ret_cath"
+      ]
+    },
+    {
+      "lead": "Prostate retention: tamsulosin before the trial.",
+      "text": "Start it when the catheter goes in; the trial without catheter follows in 2 to 7 days.",
+      "refs": [
+        "ret_twoc"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do first for flank pain or acute urinary retention?",
+      "intro": "Vital signs, an abdominal exam for a pulsatile mass and a palpable bladder, a urinalysis, and a urine hCG in women of reproductive age. Suspected renal colic then gets an NSAID first.",
+      "refs": [
+        "triage",
+        "colic_pain"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Which findings separate renal colic from infection, obstruction and the mimics?",
+      "intro": "Shock, a pulsatile mass, a positive hCG, fever with a stone feature, fever without one, and a full bladder each open a different route. Then the CT findings and the stone size decide the stone plan, and the cause of a retention, whether prostate, drug, clot or a neurological cause, decides its plan.",
+      "refs": [
+        "front",
+        "fs_result",
+        "colic_result",
+        "ret_volume",
+        "ret_cause"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "How do you confirm acute urinary retention?",
+      "intro": "A bladder scan when unsure, without delaying the catheter when retention is obvious: over 400 mL typically means retention, and under 200 mL makes acute retention unlikely.",
+      "refs": [
+        "ret_scan"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "When does fever with flank pain need cultures, antibiotics and urgent imaging?",
+      "intro": "Fever with a stone feature gets a urine culture, IV ceftriaxone and an urgent CT for obstruction; fever without stone features gets a culture before antibiotics and imaging only if high risk.",
+      "refs": [
+        "fs_workup",
+        "pyelo_first"
+      ]
+    },
+    {
+      "stage": "Imaging",
+      "heading": "Which imaging for a kidney stone: CT or ultrasound?",
+      "intro": "Low-dose noncontrast CT within 24 hours in most adults, ultrasound in pregnancy and in children, and contrast CT for pyelonephritis still febrile at 72 hours.",
+      "refs": [
+        "colic_imaging",
+        "preg_us",
+        "pyelo_fail"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How are stones, infected obstructed kidneys, pyelonephritis and retention treated?",
+      "intro": "Tamsulosin for distal stones of 5 to under 10 mm, urgent urology for an urgent criterion, a stent or nephrostomy for an infected obstructed kidney, IV ceftriaxone when pyelonephritis needs admission, and full drainage with a urethral catheter for retention.",
+      "refs": [
+        "colic_met",
+        "colic_urgent",
+        "fs_decompress",
+        "pyelo_iv",
+        "pyelo_preg",
+        "ret_cath",
+        "ret_twoc",
+        "ret_clot"
+      ]
+    },
+    {
+      "stage": "Disposition",
+      "heading": "Which antibiotic for pyelonephritis going home?",
+      "intro": "An oral agent chosen by local resistance and switched by the culture: ciprofloxacin where fluoroquinolone resistance is 10% or less in US practice, cefalexin first in NICE.",
+      "refs": [
+        "pyelo_oral"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Which stones pass, which need surgery, and when is it not a stone?",
+      "intro": "About 90% of stones under 5 mm pass within 4 weeks, and a stone of 10 mm or more is offered treatment within 48 hours. No stone on CT means another cause, from an aneurysm to appendicitis.",
+      "refs": [
+        "colic_result",
+        "end_pass",
+        "end_refer48",
+        "end_no_stone",
+        "end_decompress"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "After the ED: what to watch, and when to come back",
+    "items": [
+      {
+        "text": "Retention over 1500 mL drained: watch for post-obstructive diuresis; if IV fluid is needed, replace 50 to 75% of the previous 1 to 2 hours' urine output with isotonic saline.",
+        "refs": [
+          "ret_cath"
+        ]
+      },
+      {
+        "text": "Admit with retention for urosepsis, malignant obstruction, acute myelopathy, acute renal failure, a residual over 1500 mL, or a sodium disturbance.",
+        "refs": [
+          "ret_cath"
+        ]
+      },
+      {
+        "text": "Pyelonephritis on IV antibiotics: review by 48 hours and step down to oral when improving.",
+        "refs": [
+          "pyelo_iv"
+        ]
+      },
+      {
+        "text": "Still febrile at 72 hours on the right antibiotic: contrast CT, not another 72 hours of waiting.",
+        "refs": [
+          "pyelo_review",
+          "pyelo_fail"
+        ]
+      },
+      {
+        "text": "Home with pyelonephritis: return if not better within 48 hours; symptoms that persist to 72 hours need imaging.",
+        "refs": [
+          "pyelo_oral",
+          "end_pyelo_home"
+        ]
+      },
+      {
+        "text": "Passing a stone at home: urology if it has not passed in 4 to 6 weeks, sooner for fever, uncontrolled pain or worsening kidney function.",
+        "refs": [
+          "colic_met",
+          "end_pass"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the fever and the stone, because together they set the clock. One-liner: 45-year-old man with a past stone and 2 days of colicky right flank pain, shivering since this morning, temperature 38.9, HR 108, BP 128/78; right costovertebral angle tenderness, and urine with blood 3+, many white cells and nitrite positive; no pulsatile mass. Urine culture, then IV ceftriaxone 1 to 2 g and an urgent CT: a 6 mm proximal right ureteric stone with moderate hydronephrosis and perinephric stranding, lactate 1.6, creatinine 1.3 mg/dL. This is an infected, obstructed kidney: urgent decompression by stent or nephrostomy with the antibiotics running, without waiting for him to settle, kidney urine sent for culture, and the stone treated once the infection is controlled, typically 1 to 2 weeks later. No tamsulosin and no ureteroscopy now.",
+    "presentRefs": ["case:fs_obstructed", "front", "fs_workup", "fs_result", "fs_decompress"],
+    "pimp": [
+      {
+        "q": "Why an NSAID before morphine for renal colic?",
+        "a": "Against opioids, antispasmodics and IV paracetamol, NSAIDs cut the need for rescue medication and reduced pain with fewer adverse effects. Opioids come later: after IV paracetamol in NICE, straight after ketorolac in US practice.",
+        "refs": [
+          "colic_pain"
+        ]
+      },
+      {
+        "q": "Why not send the febrile patient with a stone home on tamsulosin?",
+        "a": "Pyelonephritis cannot be told from an obstructed, infected kidney without imaging, and the obstructed kidney is a surgical emergency: antibiotics alone are insufficient, and a delay of more than 2 days raises mortality by about 30%.",
+        "refs": [
+          "fs_workup",
+          "fs_decompress"
+        ]
+      },
+      {
+        "q": "Who gets tamsulosin for a ureteric stone?",
+        "a": "A distal ureteric stone of 5 to under 10 mm with controlled pain, where the benefit is largest (number needed to treat 6). It adds little under 5 mm, and alpha blockers are not shown to help proximal stones.",
+        "refs": [
+          "colic_met",
+          "colic_result"
+        ]
+      },
+      {
+        "q": "Why not image every first pyelonephritis?",
+        "a": "Imaging is not beneficial in a first, uncomplicated pyelonephritis, since nearly all are afebrile by 72 hours. It is kept for diabetes, immune compromise, a stone history, pregnancy or no response.",
+        "refs": [
+          "pyelo_first"
+        ]
+      },
+      {
+        "q": "Should you clamp the catheter after draining a liter in retention?",
+        "a": "No. Rapid, complete drainage is best even for very large volumes: clamping or partial drainage does not reduce hematuria, hypotension or post-obstructive diuresis.",
+        "refs": [
+          "ret_cath"
+        ]
+      },
+      {
+        "q": "Why start tamsulosin before the trial without catheter?",
+        "a": "With BPH as the likely cause it makes the trial more likely to succeed and lowers the risk of recurrent retention. It needs about 72 hours for full effect, so it starts when the catheter goes in; finasteride needs at least 6 months.",
+        "refs": [
+          "ret_twoc"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "Calling it renal colic in a 72-year-old smoker who is hypotensive. A ruptured aneurysm mimics colic; shock without fever, or a pulsatile mass, goes down the aneurysm route.",
+      "refs": [
+        "triage",
+        "front",
+        "case:aaa"
+      ]
+    },
+    {
+      "text": "Morphine first, or an antispasmodic. An NSAID comes first, and antispasmodics are not offered.",
+      "refs": [
+        "colic_pain"
+      ]
+    },
+    {
+      "text": "CT first in a pregnant woman with colic. Kidney and bladder ultrasound first, and dilatation alone is common in pregnancy.",
+      "refs": [
+        "preg_us"
+      ]
+    },
+    {
+      "text": "Ureteroscopy or tamsulosin for an infected obstructed kidney. Decompress first with a stent or nephrostomy; the stone waits.",
+      "refs": [
+        "fs_decompress"
+      ]
+    },
+    {
+      "text": "Nitrofurantoin, fosfomycin or a 3-day course for pyelonephritis. Nitrofurantoin is not indicated, fosfomycin is not recommended for it in the US, and cystitis courses are too short.",
+      "refs": [
+        "pyelo_oral",
+        "pyelo_first"
+      ]
+    },
+    {
+      "text": "Waiting for a fever before calling urology when pain and vomiting will not settle. An urgent criterion means admission, nil by mouth and urology today.",
+      "refs": [
+        "colic_urgent"
+      ]
+    },
+    {
+      "text": "Draining 500 mL and clamping in acute retention. Drain the bladder fully at once.",
+      "refs": [
+        "ret_cath"
+      ]
+    },
+    {
+      "text": "A smaller catheter for clot retention. A large three-way catheter, 22 French or more, with washout and continuous irrigation.",
+      "refs": [
+        "ret_clot"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the best pain medicine for a kidney stone?",
+      "a": "An NSAID first, for example ketorolac 30 mg IV once, or 15 mg if 65 or older, renally impaired or under 50 kg. If NSAIDs are contraindicated or not enough, NICE moves to IV paracetamol and then an opioid, while US practice reaches for IV morphine after ketorolac. Antispasmodics are not offered, and IV fluids treat dehydration rather than flush out the stone.",
+      "refs": [
+        "colic_pain"
+      ]
+    },
+    {
+      "q": "Does every kidney stone need a CT?",
+      "a": "NICE offers low-dose noncontrast CT within 24 hours to every adult with suspected renal colic. A US multispecialty consensus accepts ultrasound or no imaging in a younger patient, about 35, with typical, controlled pain, but scans at about 55 without a stone history, in older patients, and whenever the pain cannot be relieved. Pregnancy and children get ultrasound first.",
+      "refs": [
+        "colic_imaging",
+        "preg_us"
+      ]
+    },
+    {
+      "q": "What size kidney stone passes on its own?",
+      "a": "About 90% of ureteric stones under 5 mm pass within 4 weeks. Over 7 mm they are much less likely to pass, and stones over 10 mm generally need surgery, so NICE offers treatment within 48 hours. Distal stones of 5 to under 10 mm with controlled pain get tamsulosin and watchful waiting, with urology if not passed in 4 to 6 weeks.",
+      "refs": [
+        "colic_result",
+        "end_refer48",
+        "colic_met"
+      ]
+    },
+    {
+      "q": "What is an infected obstructed kidney, and how is it treated?",
+      "a": "Infection behind an obstructing ureteric stone. It is a surgical emergency: cultures, IV antibiotics such as ceftriaxone, and urgent decompression by retrograde stent or percutaneous nephrostomy, without waiting for the patient to become more stable. In a septic, hypotensive patient ACR rates a nephrostomy usually appropriate. Definitive stone treatment waits until the infection is controlled, typically 1 to 2 weeks.",
+      "refs": [
+        "fs_decompress",
+        "fs_workup"
+      ]
+    },
+    {
+      "q": "What antibiotic for pyelonephritis going home?",
+      "a": "An oral agent chosen by local resistance and switched by the culture. In US practice, ciprofloxacin 500 mg twice a day for 7 days where fluoroquinolone resistance is 10% or less, with an IV dose of ceftriaxone first if it is higher; NICE starts with cefalexin and keeps ciprofloxacin for when others are unsuitable. TMP-SMX waits for susceptibility, and nitrofurantoin is not indicated.",
+      "refs": [
+        "pyelo_oral"
+      ]
+    },
+    {
+      "q": "How do you manage acute urinary retention?",
+      "a": "Catheterize at once when it is obvious, or confirm it with a bladder scan when unsure. A 16 French urethral catheter drains the bladder fully at once and stays in if over 400 mL drains; watch for post-obstructive diuresis over 1500 mL. With an enlarged prostate, start tamsulosin and try without the catheter after 2 to 7 days; with back pain and saddle numbness, think cauda equina.",
+      "refs": [
+        "ret_scan",
+        "ret_cath",
+        "ret_twoc",
+        "end_ces"
+      ]
+    }
+  ],
+  "related": [
+    "sepsis_fever",
+    "abdominal_pain",
+    "back_pain",
+    "pregnancy_bleeding"
+  ]
+}

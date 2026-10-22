@@ -1,0 +1,79 @@
+{
+  "id": "limb_injury",
+  "slug": "limb-injury",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Limb Injury in the ED: Fractures, Dislocations, Ottawa Rules",
+  "metaDescription": "Limb injury for EM and ortho rotations: the pulseless limb, open fracture antibiotics, compartment syndrome, dislocations, Ottawa rules, hip and scaphoid.",
+  "h1": "Limb injury in the ED: fractures, dislocations and compartment syndrome, fork by fork",
+  "dek": "For the student on an EM or ortho rotation with an injured limb and a resident about to ask what is next: the pulseless limb, open fracture orders, compartment syndrome, shoulder and knee dislocations, the Ottawa rules, hip and scaphoid, the child's elbow and the fracture that does not fit the story, and what you will be pimped on.",
+  "jumpLinks": [
+    {"label": "First moves", "stage": "Stabilize"},
+    {"label": "Where it forks", "stage": "Result"},
+    {"label": "Surgery and orders", "stage": "Manage"},
+    {"label": "Exam and x-ray rules", "stage": "Diagnose"},
+    {"label": "Hip imaging", "stage": "Imaging"},
+    {"label": "Outcomes", "stage": "Outcome"}
+  ],
+  "shortAnswer": [
+    {"lead": "Patient before limb.", "text": "Primary survey; stop bleeding with direct pressure, packing or a tourniquet as distal as possible, never blind clamping. Document nerves, motor grade and pulses in both limbs, timed.", "refs": ["triage"]},
+    {"lead": "Hard signs mean a vascular injury.", "text": "No palpable pulse, continued bleeding or an expanding hematoma; a Doppler signal or capillary refill cannot exclude one. Pulseless and deformed: realign and splint now. Still pulseless: surgery, with revascularization begun within an hour of arrival.", "refs": ["triage", "realign", "revasc"]},
+    {"lead": "Open fracture: antibiotics within the hour.", "text": "Cefazolin, plus gram-negative cover such as gentamicin for Gustilo III; tetanus by history; photograph, saline-soaked dressing, splint. No washout in the ED.", "refs": ["open_abx"]},
+    {"lead": "Compartment syndrome is a clinical call.", "text": "Pain out of proportion and pain on passive stretch; the pulse goes late, if ever. Split casts to the skin and recheck in 30 minutes; signs that persist mean fasciotomy of every involved compartment.", "refs": ["acs_release", "acs_exam", "fasciotomy"]},
+    {"lead": "Cannot examine? Measure the gap.", "text": "Diastolic minus compartment pressure under 30 mmHg: fasciotomy (TQIP). BOAST calls it an increased risk and leaves the call to a consultant.", "refs": ["acs_pressure", "acs_gap"]},
+    {"lead": "Dislocations: nerves before and after.", "text": "Shoulder: axillary nerve documented, AP plus an axial view; an anterior dislocation gets closed reduction and films in two planes, a posterior one CT first. Knee: reduce, splint and measure an ABI; under 0.90 or an unequal pulse goes to CT angiography (the ACR also rates CT angiography first for every dislocated knee).", "refs": ["shoulder_prep", "shoulder_reduce", "knee_reduce", "knee_abi", "shoulder_xr"]},
+    {"lead": "Film by the rule.", "text": "The Ottawa ankle and foot rules (over age 5) and knee rule (over age 2) decide who needs an x-ray. A tender snuffbox is immobilized even when the first film is clear.", "refs": ["ottawa", "scaphoid"]},
+    {"lead": "Hip fracture: analgesia, then surgery by the next day.", "text": "Paracetamol, opioids and a nerve block if needed, no NSAIDs; x-rays, then MRI if clear; operate on the day of or the day after admission (US: within 48 hours).", "refs": ["hip_xr", "hip_surgery"]}
+  ],
+  "sections": [
+    {"stage": "Stabilize", "heading": "What do you do first with a limb injury in the ED?", "intro": "Treat the patient before the limb: primary survey, bleeding control and a timed neurovascular record of both limbs. A pulseless deformed limb is realigned at once, and a tense limb has its casts split to the skin.", "refs": ["triage", "realign", "acs_release", "knee_reduce"]},
+    {"stage": "Result", "heading": "Pulseless, open, tense or dislocated: which fork is this limb on?", "intro": "The primary survey and the limb pick the route: major trauma, a child, no pulse, an open wound, feared compartment syndrome, a dislocated shoulder or knee, or none of these and the injury site.", "refs": ["front", "realign_result", "acs_exam", "acs_gap", "disloc", "shoulder_xr", "knee_abi", "site", "ottawa_result", "child_front", "sc_result"]},
+    {"stage": "Manage", "heading": "How are open fractures, compartment syndrome and dislocations treated?", "intro": "Revascularization begun within the hour, antibiotics within the hour for an open fracture, decompression of every involved compartment, closed reduction for the anterior shoulder, the hip operated on by the day after admission, and urgent pinning for the supracondylar fracture with poor perfusion.", "refs": ["revasc", "open_abx", "fasciotomy", "shoulder_reduce", "hip_surgery", "sc_urgent"]},
+    {"stage": "Diagnose", "heading": "Who needs an x-ray, and what do you document first?", "intro": "The Ottawa rules for the ankle, foot and knee, scaphoid views with immobilization for a tender snuffbox, the axillary nerve before a shoulder reduction, the three nerves in a child's elbow, compartment pressures when the exam fails, and a skeletal survey when the story does not fit.", "refs": ["ottawa", "scaphoid", "shoulder_prep", "sc_exam", "acs_pressure", "nai_step"]},
+    {"stage": "Imaging", "heading": "Hip pain after a fall and a clear x-ray: what next?", "intro": "Analgesia first, then hip films; if they are clear and a fracture is still suspected, MRI, or CT when MRI is not available within 24 hours or is contraindicated.", "refs": ["hip_xr"]},
+    {"stage": "Outcome", "heading": "Where does each limb injury end up?", "intro": "The operating room for the pulseless limb, the open fracture and compartment syndrome; reduction and a sling for the anterior shoulder; admission for observation after a knee dislocation with a normal ABI; a brace for a child's low-risk ankle.", "refs": ["end_revasc", "end_open", "end_fasciotomy", "end_shoulder", "end_knee_obs", "end_child_low", "end_hip", "end_nai", "end_major"]}
+  ],
+  "checklist": {
+    "heading": "Open fracture: the ED order set",
+    "items": [
+      {"text": "IV antibiotics as soon as possible, ideally within 1 hour: cefazolin for Gustilo I and II.", "refs": ["open_abx"]},
+      {"text": "Gustilo III: add gram-negative cover, such as gentamicin. Severe contamination or impaired vascularity: add anaerobic cover, such as penicillin.", "refs": ["open_abx"]},
+      {"text": "Tetanus-prone wound: Td or Tdap 0.5 mL IM if fewer than 3 doses, an unknown history, or 5 or more years since the last dose (ACIP's text says more than 5); TIG as well if fewer than 3 doses or unknown, and regardless of history with HIV or severe immunodeficiency.", "refs": ["open_abx"]},
+      {"text": "Remove gross contamination and photograph the wound; no washout in the ED.", "refs": ["open_abx"]},
+      {"text": "Saline-soaked gauze under an occlusive film.", "refs": ["open_abx"]},
+      {"text": "Realign and splint, repeating the neurovascular exam after every maneuver.", "refs": ["open_abx"]},
+      {"text": "Wound excision: immediately if highly contaminated or with vascular compromise, within 12 hours if high energy, within 24 hours otherwise.", "refs": ["open_abx", "end_open"]}
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the limb's neurovascular status and the timeline, then the decision. For example: 19-year-old man with a closed tibial shaft fracture from a football tackle, in an above-knee backslab for 5 hours, with leg pain far worse despite repeated morphine. The calf is tense, the foot warm with pulses present, and passive toe extension makes him cry out. The backslab and bandage were split to the skin; 30 minutes later the pain and the pain on passive stretch are unchanged, and he is awake with a reliable exam, so this is compartment syndrome on clinical grounds. Plan: emergency fasciotomy of all involved compartments, a two-incision four-compartment release with the wounds left open, plastic surgery within 24 hours and a re-look within 72; every morphine dose recorded.",
+    "presentRefs": ["case:acs_clinical", "acs_release", "acs_exam", "fasciotomy"],
+    "pimp": [
+      {"q": "Why does a palpable pulse not rule out compartment syndrome?", "a": "Paralysis, pallor and pulselessness are very late and may never appear. Pain out of proportion and pain on passive stretch of the compartment's muscles are the key early findings.", "refs": ["acs_release"]},
+      {"q": "What is the pressure gap, and what does it change?", "a": "Diastolic pressure minus compartment pressure, with the BP taken at the same time. Under 30 mmHg means fasciotomy in US trauma guidance; BOAST calls it an increased risk with a consultant deciding, and considers decompression at an absolute pressure over 40.", "refs": ["acs_pressure"]},
+      {"q": "Why an axial view of the shoulder?", "a": "A posterior dislocation, associated with seizures and electric shock, is easily missed: its signs on the AP film are unreliable. A posterior dislocation gets CT before any closed reduction.", "refs": ["shoulder_prep", "shoulder_xr"]},
+      {"q": "Foot pulses are present after a knee dislocation. Safe?", "a": "No. Collaterals can keep foot pulses palpable for a time even with a transected popliteal artery. Measure an ABI: under 0.90 goes to CT angiography, 0.90 or more is admitted for frequent pulse checks.", "refs": ["knee_reduce", "knee_abi"]},
+      {"q": "What are the Ottawa ankle rules?", "a": "With pain in the malleolar or midfoot zone, x-ray for bone tenderness at the posterior edge or tip of either malleolus, the navicular or the base of the fifth metatarsal, or inability to take 4 steps both right after the injury and in the department.", "refs": ["ottawa"]},
+      {"q": "Pink hand, no radial pulse, displaced supracondylar fracture. Explore the artery?", "a": "Not first. Urgent closed reduction and pinning; most vascular impairment resolves with reduction. A pink, perfused hand without a pulse is observed, and only a hand that stays ischemic has the brachial artery explored.", "refs": ["sc_urgent"]}
+    ]
+  },
+  "traps": [
+    {"text": "A Doppler signal or brisk capillary refill taken as proof the artery is fine. Neither excludes a vascular injury.", "refs": ["triage", "knee_reduce"]},
+    {"text": "Angiography before realigning a pulseless deformed limb. Realign and splint now, then recheck.", "refs": ["realign"]},
+    {"text": "Washing out an open fracture in the ED and closing it. Photograph, dressing and splint; wound excision belongs in the operating room.", "refs": ["open_abx"]},
+    {"text": "Waiting for the pulse to fade before calling compartment syndrome.", "refs": ["acs_release"]},
+    {"text": "Fixing the fracture before the fasciotomy, or a single small incision. Every involved compartment, left open.", "refs": ["fasciotomy"]},
+    {"text": "Discharging a tender snuffbox without support because the first film is clear.", "refs": ["scaphoid"]},
+    {"text": "An NSAID for hip fracture pain, or holding analgesia until the surgeon has examined the hip.", "refs": ["hip_xr"]},
+    {"text": "Treating an infant's unexplained femoral fracture and sending him home. Skeletal survey, head CT and a child protection referral.", "refs": ["nai_step"]}
+  ],
+  "faq": [
+    {"q": "What antibiotics are given for an open fracture?", "a": "IV antibiotics as soon as possible, ideally within an hour of injury: cefazolin for Gustilo I and II, plus gram-negative cover such as gentamicin for type III, and anaerobic cover such as penicillin with severe contamination or impaired vascularity. The guidance read gives no doses and asks each network to publish its own. Add tetanus by history, then wound excision in the operating room.", "refs": ["open_abx"]},
+    {"q": "How do you diagnose compartment syndrome?", "a": "Clinically, in an awake patient: pain out of proportion and pain on passive stretch of the compartment's muscles, with paraesthesias; pulselessness comes very late. Split casts to the skin and recheck in 30 minutes. When the exam cannot be relied on, measure the compartment pressure with a concurrent BP: diastolic minus compartment pressure under 30 mmHg means fasciotomy in US guidance.", "refs": ["acs_release", "acs_pressure"]},
+    {"q": "What are the Ottawa knee rules?", "a": "Over age 2, x-ray the knee for any of: age 55 or more, isolated patellar tenderness, fibular head tenderness, inability to flex to 90 degrees, or inability to bear weight both right after the injury and in the department. Pooled sensitivity is 98% with a specificity of 43%. After a clear film with an occult fracture still suspected, MRI is next.", "refs": ["ottawa", "ottawa_result"]},
+    {"q": "What imaging for a suspected scaphoid fracture?", "a": "Wrist radiographs with scaphoid views first in US practice, with the wrist immobilized; NICE considers MRI as first-line. A clear first film does not end it: about 3.7% of patients with these signs and normal films had an occult fracture. Next, MRI, CT or repeat radiographs at 10 to 14 days are all usually appropriate (ACR).", "refs": ["scaphoid", "end_scaphoid"]},
+    {"q": "How soon should a hip fracture go to surgery?", "a": "NICE: on the day of, or the day after, admission, correcting problems such as anemia, anticoagulation and volume depletion without letting them delay it; US trauma guidance says as soon as able, preferably within 48 hours. Analgesia comes first, with a nerve block when paracetamol and opioids fall short. A displaced intracapsular fracture gets arthroplasty.", "refs": ["hip_surgery", "hip_xr"]},
+    {"q": "When is a fracture in a child suspicious for abuse?", "a": "When the explanation is absent or does not fit and no bone-weakening condition is known, above all in a child not yet walking. At 24 months or younger, a skeletal survey and a non-contrast head CT are usually appropriate, with a repeat survey at 10 to 14 days if both are negative. Record exactly what is seen and said, and refer for child protection.", "refs": ["nai_step", "child_front"]}
+  ],
+  "related": ["trauma", "leg_swelling", "hot_joint", "back_pain"]
+}

@@ -20,7 +20,7 @@ import { fileURLToPath } from 'node:url';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(HERE, '..');
-const DEFAULT_SRC = '/Users/dannyvarghese/.openclaw/workspace/gunner-2212/content_staging/pathways';
+const DEFAULT_SRC = '/Users/dannyvarghese/.openclaw/workspace/gunner/content_staging/pathways'; // trunk, the OTA source
 const SRC = path.resolve(process.argv[2] || process.env.PATHWAYS_SRC || DEFAULT_SRC);
 const DEST = path.join(ROOT, 'content', 'pathways');
 

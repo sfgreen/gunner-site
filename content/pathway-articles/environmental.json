@@ -1,0 +1,384 @@
+{
+  "id": "environmental",
+  "slug": "environmental",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Environmental Emergencies: Heat Stroke, Hypothermia, Bites",
+  "metaDescription": "Environmental emergencies in the ED: core temperature, heat stroke cooling, hypothermia and ECLS, drowning, electrical injury, antivenom and rabies PEP.",
+  "h1": "Environmental emergencies in the ED: heat, cold, water, current, bites, altitude and dives",
+  "dek": "For the student on an EM rotation when the patient was too hot, too cold, underwater, shocked, bitten or up a mountain, and a resident asks what is next. The core temperature first, then the treatment each exposure needs, with the doses.",
+  "jumpLinks": [
+    {
+      "label": "First moves",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Which exposure",
+      "stage": "Result"
+    },
+    {
+      "label": "Assessment",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Treatment",
+      "stage": "Manage"
+    },
+    {
+      "label": "Disposition",
+      "stage": "Outcome"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Core temperature on the right probe.",
+      "text": "Esophageal, bladder or rectal (rectal after exertion in the heat), on a thermometer that reads below 35 °C (a thermistor epitympanic probe also works in the cold); infrared tympanic, oral and temporal readings mislead.",
+      "refs": [
+        "triage",
+        "heat_assess"
+      ]
+    },
+    {
+      "lead": "Heat stroke: cool first, transport second, with medical staff on site.",
+      "text": "Cold-water immersion where feasible, aiming under 38.9 °C within 30 minutes of collapse, and stopping active cooling at 38 to 39 °C (NATA: 38.9 °C). No antipyretics, no dantrolene.",
+      "refs": [
+        "hs_cool"
+      ]
+    },
+    {
+      "lead": "Hypothermia: gentle, horizontal, staged by the core.",
+      "text": "Mild 32 to 35 °C, moderate 28 to 32 °C, severe under 28 °C. A stable circulation gets external rewarming and warmed fluids; a high-risk patient goes to an ECLS center.",
+      "refs": [
+        "hypo_stage",
+        "hypo_result",
+        "rewarm",
+        "ecls"
+      ]
+    },
+    {
+      "lead": "Hypothermic arrest: resuscitate until warm.",
+      "text": "A core under 30 °C with no sign of irreversible death gets continuous CPR and ECLS rewarming, with termination judged at the target temperature rather than after a fixed time; a HOPE estimate under 10% argues against ECLS.",
+      "refs": [
+        "cold_arrest",
+        "ca_result"
+      ]
+    },
+    {
+      "lead": "Drowning: breaths before compressions.",
+      "text": "5 rescue breaths, then CPR with ventilations and oxygen; no Heimlich, and spinal immobilization only after a dive, a fall or signs of trauma.",
+      "refs": [
+        "drown_arrest"
+      ]
+    },
+    {
+      "lead": "Electrical injury: the burns understate it.",
+      "text": "ECG and monitoring for every adult, CK and urine for myoglobin, and a compartment check, because current destroys deep tissue under small burns.",
+      "refs": [
+        "current"
+      ]
+    },
+    {
+      "lead": "Pit viper: antivenom for venom effects, not fang marks.",
+      "text": "Mark the swelling edge every 15 to 30 minutes and repeat the coagulation labs; CroFab 4 to 6 vials (or Anavip 10) once the swelling spreads, the labs turn or systemic signs appear (8 to 12 vials for shock or serious active bleeding). No tourniquet, ice or incision.",
+      "refs": [
+        "snake",
+        "snake_result",
+        "antivenom"
+      ]
+    },
+    {
+      "lead": "Rabies, never vaccinated: HRIG plus vaccine.",
+      "text": "HRIG 20 IU/kg into and around the wound and vaccine on days 0, 3, 7 and 14 (ACIP; the vaccine labels still list a day 28 dose, which ACIP keeps for the immunocompromised), never in the buttock.",
+      "refs": [
+        "pep"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do first in an environmental emergency?",
+      "intro": "Airway, breathing and a central pulse, a core temperature on a low-reading probe, a glucose and an ECG. A drowning arrest gets 5 rescue breaths first, and a hypothermic arrest gets continuous CPR toward ECLS rewarming.",
+      "refs": [
+        "triage",
+        "drown_arrest",
+        "cold_arrest"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Which findings decide the route in an environmental emergency?",
+      "intro": "Pulse, core temperature and what happened sort arrests, anaphylaxis and trauma first. Then the exposure, and within it the core temperature, mental status, tone, perfusion or the animal, picks the treatment.",
+      "refs": [
+        "front",
+        "exposure",
+        "heat_result",
+        "hypo_result",
+        "bite_kind",
+        "rabies_risk"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "How do you assess heat illness, hypothermia, drowning, electrical injury and altitude illness?",
+      "intro": "A rectal temperature and the mental status sort heat illness; core temperature and consciousness stage hypothermia; oxygen and observation follow submersion; an ECG and a deep-tissue search follow a current; gait, mind and lungs sort AMS, HACE and HAPE.",
+      "refs": [
+        "heat_assess",
+        "hypo_stage",
+        "drown",
+        "current",
+        "alt"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How do you treat heat stroke, hypothermia, frostbite, snakebite and rabies exposure?",
+      "intro": "Cold-water immersion for heat stroke, external rewarming or ECLS by risk for hypothermia, rapid rewarming then iloprost or tPA for deep frostbite, antivenom once venom effects appear, wound care and antibiotics for mammal bites, and HRIG with vaccine for a high-risk rabies exposure in a never-vaccinated patient.",
+      "refs": [
+        "hs_cool",
+        "rewarm",
+        "ecls",
+        "frost",
+        "frost_lysis",
+        "snake",
+        "antivenom",
+        "coral",
+        "widow",
+        "mammal",
+        "pep",
+        "dive"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Who goes home, who is admitted, and who moves to another pathway?",
+      "intro": "A well drowning patient goes home after 4 to 8 hours of observation, a low-risk electrical injury with a normal ECG can go home, and a dry-looking pit viper bite is watched for at least 8 hours. Serotonin and stimulant hyperthermia move to the toxicology pathway and neuroleptic malignant syndrome to the agitation pathway; malignant hyperthermia gets dantrolene here.",
+      "refs": [
+        "end_drown_well",
+        "end_current_low",
+        "end_dry",
+        "end_drug_heat"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "Watch lists: what to recheck, and for how long",
+    "items": [
+      {
+        "text": "Heat stroke: continuous rectal or esophageal temperature during cooling; stop active cooling at 38 to 39 °C (NATA: 38.9 °C) to avoid overcooling.",
+        "refs": [
+          "hs_cool"
+        ]
+      },
+      {
+        "text": "After cooling: repeat CK, potassium, creatinine, liver tests, platelets and coagulation.",
+        "refs": [
+          "hs_cool",
+          "cool_labs"
+        ]
+      },
+      {
+        "text": "Hypothermia: continuous core temperature; a rectal probe can lag behind the core by up to an hour during rewarming.",
+        "refs": [
+          "hypo_stage"
+        ]
+      },
+      {
+        "text": "Pit viper bite: mark the leading edge of swelling every 15 to 30 minutes, with serial PT, fibrinogen, platelets and hemoglobin, and coagulation and platelets within 1 hour of each antivenom dose.",
+        "refs": [
+          "snake",
+          "antivenom"
+        ]
+      },
+      {
+        "text": "Dry-looking pit viper bite: observe at least 8 hours, longer in children and leg bites, with the labs repeated before discharge.",
+        "refs": [
+          "end_dry"
+        ]
+      },
+      {
+        "text": "Coral snake bite: ICU observation for at least 24 hours with serial neurological checks; antivenin at the first neurological sign.",
+        "refs": [
+          "coral"
+        ]
+      },
+      {
+        "text": "Submersion with mild or no symptoms: observe 4 to 8 hours before discharge.",
+        "refs": [
+          "drown"
+        ]
+      },
+      {
+        "text": "Bark scorpion sting with local pain only: observe at least 4 hours.",
+        "refs": [
+          "end_scorpion"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the core temperature and the brain, then the cooling clock. One-liner: 19-year-old linebacker who collapsed at a preseason practice on a humid afternoon, combative and confused with a GCS of 12, rectal temperature 41.6 °C, sweating, no rigidity or clonus and no medicines: exertional heat stroke. Pulse 146, BP 104/58, airway open, no fall. Cooled at once in an ice-water tub, reaching 38.9 °C in 24 minutes, inside the 30-minute target, and now waking. After cooling his CK is 52,000, creatinine 2.3 mg/dL, potassium 5.7, platelets 88,000 and INR 1.6, so this is heat stroke with organ injury: intensive care, IV fluids for rhabdomyolysis titrated to urine output, the potassium treated as an emergency, and blood products for DIC by bleeding and labs. No antipyretics and no dantrolene.",
+    "presentRefs": ["case:exertional_heat_stroke", "front", "heat_assess", "heat_result", "hs_cool", "cool_labs", "end_hs_organ"],
+    "pimp": [
+      {
+        "q": "Why a rectal temperature and not a tympanic one in a collapsed athlete?",
+        "a": "After exercise in the heat only a rectal temperature is valid, and a falsely low tympanic reading delays rapid cooling, the one treatment shown to cut mortality.",
+        "refs": [
+          "triage",
+          "heat_assess"
+        ]
+      },
+      {
+        "q": "What separates heat exhaustion from heat stroke?",
+        "a": "The brain. Heat stroke is central nervous system dysfunction, such as delirium, ataxia or seizures, with a core temperature typically over 40 °C (NATA uses over 40.5 °C); heat exhaustion is alert and oriented, with a core usually under 40 °C.",
+        "refs": [
+          "heat_assess",
+          "heat_result"
+        ]
+      },
+      {
+        "q": "Why handle a hypothermic patient gently and keep them flat?",
+        "a": "Rough handling can trigger fatal dysrhythmias in moderate or severe hypothermia, the rescue collapse. A patient found lying down walks only after calories and about 30 minutes of shivering.",
+        "refs": [
+          "hypo_stage"
+        ]
+      },
+      {
+        "q": "Why 5 rescue breaths in a drowning arrest?",
+        "a": "Hypoxia causes the arrest and drives the brain injury, so airway and breathing come before compressions. Shockable rhythms are uncommon, 2 to 12%, so the AED must not delay breaths and compressions.",
+        "refs": [
+          "drown_arrest"
+        ]
+      },
+      {
+        "q": "Why not give antivenom for every rattlesnake bite?",
+        "a": "About 20 to 25% of pit viper bites are dry, so antivenom waits for venom effects: progressive swelling, abnormal coagulation or platelets, or systemic signs. Children get the adult dose, because antivenom neutralizes venom rather than matching weight.",
+        "refs": [
+          "snake",
+          "antivenom"
+        ]
+      },
+      {
+        "q": "A previously vaccinated patient is bitten by a bat. HRIG?",
+        "a": "No. An immunocompetent patient with a complete prior series gets vaccine on days 0 and 3 only, because HRIG may blunt the booster response. Immunocompromised patients get vaccine with immune globulin as if unvaccinated.",
+        "refs": [
+          "rabies_risk",
+          "end_prior"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "An infrared tympanic or oral temperature in a hypothermic or overheated patient. Management turns on the core temperature, measured close to the core.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "text": "Acetaminophen or dantrolene for heat stroke. Neither helps; cooling is the treatment.",
+      "refs": [
+        "hs_cool",
+        "triage"
+      ]
+    },
+    {
+      "text": "Transport first, cooling later. With medical staff on site, cool first and transport second.",
+      "refs": [
+        "hs_cool"
+      ]
+    },
+    {
+      "text": "Stopping a hypothermic arrest after 30 minutes. Resuscitation continues until the patient is warm, and in Paal 2022 fixed dilated pupils and apparent rigor mortis are not reasons to stop (the Korean 2025 guideline still lists rigor mortis).",
+      "refs": [
+        "cold_arrest",
+        "end_ca_stop"
+      ]
+    },
+    {
+      "text": "Rubbing frostbite, or thawing it where it could refreeze. Rapid rewarming in 37 to 39 °C water until pliable once refreezing can be prevented (AHA first aid: 37 to 40 °C).",
+      "refs": [
+        "frost"
+      ]
+    },
+    {
+      "text": "A tourniquet, ice or incision for a snakebite. They do not help; immobilize, elevate and watch the swelling edge.",
+      "refs": [
+        "snake"
+      ]
+    },
+    {
+      "text": "Coral snake antivenin for a symptom-free bite. It is given at the first neurological sign, with ICU observation for at least 24 hours.",
+      "refs": [
+        "coral"
+      ]
+    },
+    {
+      "text": "A head-down or left lateral position after a dive. Horizontal, 100% oxygen and recompression, with a chest x-ray first for a pneumothorax.",
+      "refs": [
+        "dive"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do you treat exertional heat stroke?",
+      "a": "Cool at once, before transport: cold-water immersion up to the neck in stirred ice water, about 1 °C every 5 minutes, aiming under 38.9 °C within 30 minutes of collapse, with a continuous rectal or esophageal temperature. Stop active cooling at 38 to 39 °C to avoid overcooling; NATA stops at 38.9 °C. Antipyretics and dantrolene have no role. Then recheck CK, potassium, creatinine, liver tests, platelets and clotting.",
+      "refs": [
+        "hs_cool",
+        "cool_labs"
+      ]
+    },
+    {
+      "q": "What are the stages of hypothermia, and how is each rewarmed?",
+      "a": "Mild is 32 to 35 °C, moderate 28 to 32 °C and severe under 28 °C, staged by core temperature and consciousness, not shivering. A stable circulation gets passive and active external rewarming: insulation, forced air and heat packs to the trunk, and warmed IV fluids. A core under 30 °C (32 °C if old or ill), a systolic under 90 or VT means direct transfer to an ECLS center.",
+      "refs": [
+        "hypo_stage",
+        "hypo_result",
+        "rewarm",
+        "ecls"
+      ]
+    },
+    {
+      "q": "What is the CroFab dose for a rattlesnake bite?",
+      "a": "4 to 6 vials IV in 250 mL saline over 60 minutes, or 8 to 12 vials for shock or serious active bleeding, repeated until initial control, with coagulation and platelets rechecked within 1 hour of each dose. Anavip is 10 vials, repeated hourly until control. Children get the same dose as adults. It is given once venom effects appear, not for fang marks alone.",
+      "refs": [
+        "antivenom",
+        "snake_result"
+      ]
+    },
+    {
+      "q": "Who needs rabies post-exposure prophylaxis, and what is the schedule?",
+      "a": "A never-vaccinated person exposed to a high-risk animal, such as a bat, raccoon, skunk or fox, or a sick or unavailable dog or cat, gets HRIG 20 IU/kg infiltrated into and around the wound plus vaccine on days 0, 3, 7 and 14 (ACIP; the labels still list day 28), with day 28 added if immunocompromised. A healthy dog, cat or ferret can instead be observed for 10 days.",
+      "refs": [
+        "rabies_risk",
+        "pep",
+        "end_observe"
+      ]
+    },
+    {
+      "q": "How is drowning managed in the ED?",
+      "a": "In arrest, 5 rescue breaths, then CPR with ventilations and oxygen, with no Heimlich maneuver and spinal immobilization only after a dive, a fall or signs of trauma. With a pulse, oxygen to a saturation of 92 to 96% and a chest exam; the Korean 2025 guideline keeps a hypoxic patient at 94% or more during transport. Patients with mild or no symptoms are observed for 4 to 8 hours before discharge.",
+      "refs": [
+        "drown_arrest",
+        "drown"
+      ]
+    },
+    {
+      "q": "How do you treat altitude sickness, HACE and HAPE?",
+      "a": "AMS: stop the ascent, acetazolamide 250 mg every 12 hours or dexamethasone, and descend if symptoms persist or progress. HACE: descend now, oxygen to a saturation over 90% and dexamethasone 8 mg then 4 mg every 6 hours, with a portable hyperbaric chamber while descent waits. HAPE: oxygen and descent; nifedipine only when neither is possible, and no acetazolamide or diuretics for treatment.",
+      "refs": [
+        "alt_result",
+        "end_ams",
+        "end_hace",
+        "end_hape"
+      ]
+    }
+  ],
+  "related": [
+    "throat_airway",
+    "burns",
+    "tox",
+    "agitation"
+  ]
+}

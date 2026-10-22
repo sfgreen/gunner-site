@@ -1,0 +1,384 @@
+{
+  "id": "electrolytes",
+  "slug": "electrolytes",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Electrolyte Emergencies: Hyperkalemia, Sodium, Calcium",
+  "metaDescription": "Electrolyte emergencies in the ED: the hyperkalemia treatment order, potassium replacement, sodium correction limits, hypernatremia and hypercalcemia.",
+  "h1": "Electrolyte emergencies in the ED: potassium, sodium, calcium and magnesium",
+  "dek": "For the student on an EM or IM rotation when the lab calls a critical value and a resident asks what is next. The ECG first, the order for hyperkalemia, how fast to fix the sodium in either direction, and the calcium, magnesium and refeeding traps.",
+  "jumpLinks": [
+    {
+      "label": "ECG first",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Which electrolyte",
+      "stage": "Result"
+    },
+    {
+      "label": "Treatment",
+      "stage": "Manage"
+    },
+    {
+      "label": "Repeat and urine tests",
+      "stage": "Labs"
+    },
+    {
+      "label": "Pseudo, potomania, SIADH",
+      "stage": "Outcome"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "ECG first, with the ABCs.",
+      "text": "A 12-lead and a cardiac monitor, with a blood gas potassium while the lab runs; UKKA wants the urgent ECG at a potassium of 6.0 or more.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "lead": "Hyperkalemia with ECG changes: calcium first.",
+      "text": "Calcium gluconate 1 g IV (US consensus; UK gives an equivalent 6.8 mmol, about three times more), repeated if the ECG has not improved in 5 to 10 minutes. It improves the ECG within about 3 minutes but does not lower the potassium.",
+      "refs": [
+        "hk_calcium"
+      ]
+    },
+    {
+      "lead": "Then shift, then remove.",
+      "text": "Insulin 10 units IV with glucose plus nebulized albuterol 10 to 20 mg; then dialysis for a dialysis patient, a renal replacement decision if still 6.5 or more or oliguric, or the culprit drugs stopped and a binder if it stays high.",
+      "refs": [
+        "hk_shift",
+        "hk_after",
+        "hk_dialysis",
+        "hk_rrt",
+        "hk_drugs"
+      ]
+    },
+    {
+      "lead": "Confirm an odd high potassium with a normal ECG.",
+      "text": "Repeat it on a blood gas or a fresh free-flowing sample before treating; pseudohyperkalemia is common.",
+      "refs": [
+        "hk_repeat",
+        "hk_confirm"
+      ]
+    },
+    {
+      "lead": "Low potassium: saline, a pump and a ceiling.",
+      "text": "Oral for 2.5 to 3.4 with a normal ECG. IV potassium chloride in saline by pump for under 2.5, ECG changes or paralysis: up to 10 mEq/h while the potassium is above 2.5, and up to 40 mEq/h only under 2.0 with ECG changes or paralysis, on a monitor; the labels set no rate for 2.0 to 2.5. Check magnesium. Periodic paralysis is oral first.",
+      "refs": [
+        "hypok_oral",
+        "hypok_iv",
+        "hypok_mg",
+        "hypok_pp"
+      ]
+    },
+    {
+      "lead": "Severe low-sodium symptoms: 3% saline now.",
+      "text": "150 mL over 20 minutes, repeated until the sodium has risen about 5 mmol/L, then stop; the urine studies come after.",
+      "refs": [
+        "hypona_3"
+      ]
+    },
+    {
+      "lead": "Respect the 24-hour limit.",
+      "text": "SfE: 10 mmol/L in the first 24 hours and 18 in 48; StatPearls: 6 to 8 when the hyponatremia is chronic or of unknown duration. Past it, stop the hypertonic fluid and get expert help with 5% dextrose, with or without desmopressin.",
+      "refs": [
+        "na_over",
+        "na_check"
+      ]
+    },
+    {
+      "lead": "High calcium: saline before the bisphosphonate.",
+      "text": "0.9% saline 4 to 6 L over 24 hours, then zoledronic acid 4 mg over at least 15 minutes if it is still high; furosemide only for fluid overload.",
+      "refs": [
+        "hc_fluids",
+        "hc_bisph"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do first for a critical electrolyte value?",
+      "intro": "ABC, a cardiac monitor and a 12-lead ECG, with a blood gas potassium while the laboratory panel runs. Hyperkalemia with ECG changes gets IV calcium first, and tetany, seizure or a long QT with a low calcium gets IV calcium gluconate.",
+      "refs": [
+        "triage",
+        "hk_calcium",
+        "hypoca_iv"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Which results decide the electrolyte route?",
+      "intro": "The ECG and the first results sort out the emergencies: hyperkalemic ECG changes, arrest or shock, torsades, low-potassium paralysis, tetany and severe low-sodium symptoms. Everyone else goes by which electrolyte is off and by how much.",
+      "refs": [
+        "front",
+        "which",
+        "hk_after",
+        "na_type",
+        "hc_after"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How do you treat hyperkalemia, hypokalemia, sodium and calcium emergencies?",
+      "intro": "Shift then remove potassium, replace a low potassium at a safe rate in saline, raise a dangerously low sodium about 5 mmol/L and then hold the 24-hour limit, lower a high sodium slowly, and rehydrate before a bisphosphonate in hypercalcemia.",
+      "refs": [
+        "hk_shift",
+        "hk_dialysis",
+        "hk_rrt",
+        "hk_drugs",
+        "hypok_iv",
+        "hypok_oral",
+        "hypona_3",
+        "na_over",
+        "hn_water",
+        "hc_fluids",
+        "hc_bisph",
+        "mg_iv",
+        "refeed"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "Which tests come next: repeat potassium, magnesium, urine studies?",
+      "intro": "Confirm an unexplained high potassium with a normal ECG before treating it, check magnesium when potassium will not correct, and define hyponatremia with serum and urine osmolality, urine sodium and the volume exam.",
+      "refs": [
+        "hk_repeat",
+        "hypok_mg",
+        "na_workup"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "When is it pseudohyperkalemia, beer potomania or SIADH?",
+      "intro": "A normal repeat on a blood gas or plasma sample is pseudohyperkalemia, needing no treatment. Urine osmolality under 100 means polydipsia or low solute intake, at very high risk of an overly rapid rise. Euvolemic hyponatremia with concentrated urine and a urine sodium over 30, off diuretics, is SIADH once thyroid and cortisol are normal.",
+      "refs": [
+        "end_pseudo",
+        "end_na_potomania",
+        "end_siadh",
+        "end_hk",
+        "na_type"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "The recheck schedule",
+    "items": [
+      {
+        "text": "After insulin with glucose: potassium at 1, 2, 4, 6 and 24 hours, and blood glucose at intervals for up to 12 hours.",
+        "refs": [
+          "hk_shift"
+        ]
+      },
+      {
+        "text": "Continuous ECG monitoring with hyperkalemic ECG features or a potassium of 6.5 or more.",
+        "refs": [
+          "hk_calcium"
+        ]
+      },
+      {
+        "text": "IV potassium replacement: potassium every 2 to 4 hours, with magnesium checked and replaced.",
+        "refs": [
+          "hypok_iv",
+          "hypok_mg"
+        ]
+      },
+      {
+        "text": "Periodic paralysis: potassium followed for 24 hours after treatment, for rebound hyperkalemia.",
+        "refs": [
+          "hypok_pp"
+        ]
+      },
+      {
+        "text": "3% saline: sodium checked while the second 150 mL runs; after the 5 mmol/L rise, sodium at 6 and 12 hours, then daily.",
+        "refs": [
+          "hypona_3"
+        ]
+      },
+      {
+        "text": "Hypovolemic hyponatremia on IV saline: sodium every 4 to 6 hours, hourly if severely deranged, since the rise can be fast once volume returns.",
+        "refs": [
+          "na_hypo"
+        ]
+      },
+      {
+        "text": "Hypernatremia: sodium every 2 to 4 hours; a seizure during correction means cerebral edema, so stop the hypotonic fluid.",
+        "refs": [
+          "hn_water"
+        ]
+      },
+      {
+        "text": "Calcium gluconate infusion: calcium every 1 to 4 hours.",
+        "refs": [
+          "hypoca_after"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the ECG, then the confirmed number, then the cause. One-liner: 74-year-old man with heart failure on lisinopril and spironolactone, started on trimethoprim 5 days ago, now tired, with a potassium of 6.8 that is not hemolyzed and a creatinine up from 1.3 to 1.8 mg/dL. ECG: sinus rhythm with normal T waves and QRS, so no IV calcium. Confirmed at 6.7 on the blood gas with normal platelets and white cells, so it is real: insulin 10 units IV with glucose and nebulized albuterol. At 2 hours the potassium is 5.6 and he is passing 80 mL of urine an hour, so no renal replacement. Plan: withhold the trimethoprim, lisinopril and spironolactone during the acute illness, a binder if it stays high, potassium at 1, 2, 4, 6 and 24 hours and glucose for up to 12 hours after the insulin, and community potassium checks after discharge.",
+    "presentRefs": ["case:spiro_tmp", "triage", "which", "hk_repeat", "hk_confirm", "hk_shift", "hk_after", "hk_drugs"],
+    "pimp": [
+      {
+        "q": "Why IV calcium first when the ECG shows hyperkalemia?",
+        "a": "ECG changes mean the heart is at risk, and calcium improves the ECG within about 3 minutes, though it does not lower the potassium and lasts only 30 to 60 minutes; it is repeated if there is no effect in 5 to 10 minutes. Gluconate is preferred peripherally because chloride causes tissue necrosis if it extravasates.",
+        "refs": [
+          "hk_calcium"
+        ]
+      },
+      {
+        "q": "Why not sodium polystyrene sulfonate for acute hyperkalemia?",
+        "a": "It acts over hours to days and is not recommended in the acute setting, and it is never given with sorbitol because of intestinal necrosis. The newer binders are preferred, and the US labels say binders are not emergency treatment.",
+        "refs": [
+          "hk_drugs",
+          "hk_rrt"
+        ]
+      },
+      {
+        "q": "Why does the potassium refuse to correct in some patients?",
+        "a": "A low magnesium increases urinary potassium loss and hinders replacement, so potassium alone may not correct until magnesium is replaced; the pair also raises the risk of torsades.",
+        "refs": [
+          "hypok_mg"
+        ]
+      },
+      {
+        "q": "Why potassium chloride in saline rather than dextrose?",
+        "a": "Dextrose lowers potassium. Concentrated potassium chloride is diluted, given by pump at a controlled rate, and premixed rather than added to bags on the ward.",
+        "refs": [
+          "hypok_iv"
+        ]
+      },
+      {
+        "q": "Why is SIADH treated with fluid restriction rather than saline?",
+        "a": "Isotonic saline may not correct SIADH and can make it worse, because the urine is more concentrated than the saline. Restriction is the mainstay once hypothyroidism and adrenal insufficiency are excluded, and the cause is treated.",
+        "refs": [
+          "na_siadh"
+        ]
+      },
+      {
+        "q": "How fast do you lower a chronic high sodium?",
+        "a": "No faster than 0.5 mmol/L an hour, 12 a day, replacing the free water deficit over 48 to 72 hours, because rapid correction risks cerebral edema. A fall of 1 to 2 mmol/L an hour is only for acute sodium loading within 48 hours. KJIM adds that adult studies have not linked faster correction to harm.",
+        "refs": [
+          "hn_water"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "Insulin before calcium when the ECG shows hyperkalemic changes. ECG changes mean the heart is at risk, so calcium comes first.",
+      "refs": [
+        "hk_calcium"
+      ]
+    },
+    {
+      "text": "Albuterol alone in severe hyperkalemia. It is an adjunct to insulin with glucose.",
+      "refs": [
+        "hk_shift"
+      ]
+    },
+    {
+      "text": "Treating a hemolyzed 6.9 in a well patient with a normal ECG. Repeat it on a blood gas or a fresh sample first.",
+      "refs": [
+        "hk_repeat",
+        "case:hemolyzed"
+      ]
+    },
+    {
+      "text": "A 20 mEq potassium chloride IV push. Concentrated potassium is diluted and run by pump; rapid infusion can cause cardiac arrest.",
+      "refs": [
+        "hypok_iv"
+      ]
+    },
+    {
+      "text": "Correcting a low sodium back to 135 within 24 hours. Aim for about 5 mmol/L with 3% saline, then hold the 24-hour limit.",
+      "refs": [
+        "hypona_3",
+        "na_over"
+      ]
+    },
+    {
+      "text": "0.9% saline for SIADH. It can make the sodium worse; restrict fluid.",
+      "refs": [
+        "na_siadh",
+        "triage"
+      ]
+    },
+    {
+      "text": "IV furosemide first for hypercalcemia. Rehydrate with saline; diuretics wait until hypovolemia is corrected and do not lower the calcium.",
+      "refs": [
+        "hc_fluids"
+      ]
+    },
+    {
+      "text": "Full feeds to fix a low phosphate in refeeding. Slow the feed, replace phosphate, potassium and magnesium, and give thiamine.",
+      "refs": [
+        "refeed"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the treatment order for hyperkalemia?",
+      "a": "ECG first. With hyperkalemic changes the heart is at risk, so IV calcium gluconate comes first, repeated if the ECG does not improve. Then shift potassium into cells with insulin 10 units IV with glucose and nebulized albuterol. Then remove it: urgent dialysis for a dialysis patient, a renal replacement decision if it stays at 6.5 or more or the patient is oliguric, or stop the culprit drugs and use a binder if it stays high.",
+      "refs": [
+        "hk_calcium",
+        "hk_shift",
+        "hk_after",
+        "hk_dialysis",
+        "hk_rrt",
+        "hk_drugs"
+      ]
+    },
+    {
+      "q": "How fast can you correct hyponatremia?",
+      "a": "For severe symptoms, 3% saline to raise the sodium about 5 mmol/L in the first hour, then stop. The 24-hour limit differs by source: SfE allows 10 mmol/L in the first 24 hours and 18 in 48, while StatPearls keeps chronic or unknown-duration hyponatremia to 6 to 8 a day. Past the limit, stop the hypertonic fluid and consider 5% dextrose with or without desmopressin, with expert help.",
+      "refs": [
+        "hypona_3",
+        "na_over"
+      ]
+    },
+    {
+      "q": "How do you work up hyponatremia?",
+      "a": "Serum osmolality, glucose and lipids to exclude pseudohyponatremia, then urine osmolality, urine sodium and the volume exam. Urine osmolality under 100 points to polydipsia or low solute intake; at 100 or more, a urine sodium under 30 points to low effective volume and over 30 to SIADH, drugs, salt wasting or adrenal insufficiency. Diuretics make the urine sodium unreliable, and TSH and cortisol come before calling SIADH.",
+      "refs": [
+        "na_workup",
+        "na_type"
+      ]
+    },
+    {
+      "q": "How do you replace potassium safely?",
+      "a": "By mouth for 2.5 to 3.4 with a normal ECG: 40 to 100 mEq a day, no more than 40 mEq per dose. IV potassium chloride in saline, premixed and by pump, for under 2.5, ECG changes or paralysis: up to 10 mEq/h above 2.5, and up to 40 mEq/h only under 2.0 with ECG changes or paralysis on continuous monitoring; the labels set no rate for 2.0 to 2.5. Check and replace magnesium.",
+      "refs": [
+        "hypok_oral",
+        "hypok_iv",
+        "hypok_mg"
+      ]
+    },
+    {
+      "q": "How do you calculate the free water deficit?",
+      "a": "Total body water times (sodium divided by 140, minus 1), plus ongoing losses. Total body water is 0.6 x weight in men and 0.5 in women and older men, with 0.45 in an older woman, and the sources differ for the older man. Replace it over 48 to 72 hours, by mouth where possible, keeping a chronic high sodium falling no faster than 0.5 mmol/L an hour.",
+      "refs": [
+        "hn_water",
+        "calc:free_water_deficit"
+      ]
+    },
+    {
+      "q": "What is the treatment for severe hypercalcemia?",
+      "a": "IV 0.9% saline, 4 to 6 L over 24 hours, watching fluid balance in older patients and renal impairment. If the calcium is still high, zoledronic acid 4 mg IV over at least 15 minutes once rehydrated, with its nadir at 2 to 4 days. StatPearls adds calcitonin for a faster fall; SfE keeps it second line. Glucocorticoids are for lymphoma, granulomatous disease or vitamin D excess.",
+      "refs": [
+        "hc_fluids",
+        "hc_bisph",
+        "hc_after"
+      ]
+    }
+  ],
+  "related": [
+    "ams",
+    "palpitations",
+    "seizure",
+    "flank_pain"
+  ]
+}

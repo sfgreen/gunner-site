@@ -1917,7 +1917,7 @@
       },
       {
        "item": "Severe-range BP",
-       "dose": "Systolic 160 or more or diastolic 110 or more is severe hypertension in pregnancy and is treated urgently; the agent and dose table is reprinted from ACOG and waits for Danny's ruling",
+       "dose": "Systolic 160 or more or diastolic 110 or more is severe hypertension in pregnancy and is treated urgently; the agent and dose table is reprinted from ACOG and is not shown here",
        "status": "ok",
        "sources": [
         {
@@ -2015,7 +2015,7 @@
      "where": "Variant 2 table"
     }
    ],
-   "note": "The 2025 AHS assessment of parenteral ED treatment (read in abstract only; the full text sat behind a bot check) rates IV prochlorperazine must offer; IV metoclopramide, IV ketorolac and SC sumatriptan should offer; IV dexamethasone may offer; IV hydromorphone must not offer.",
+   "note": "The 2025 AHS assessment of parenteral ED treatment (read in abstract only; the full text was not openly accessible) rates IV prochlorperazine must offer; IV metoclopramide, IV ketorolac and SC sumatriptan should offer; IV dexamethasone may offer; IV hydromorphone must not offer.",
    "orders": [
     {
      "item": "Metoclopramide or prochlorperazine",
@@ -2376,7 +2376,7 @@
    "id": "end_pe",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "New hypertension with proteinuria in pregnancy or after delivery: possible pre-eclampsia. Hand over to the obstetric team now. A systolic of 160 or more or a diastolic of 110 or more is severe-range and is treated urgently (AHA/ACC 2025); its agent and dose table is reprinted from ACOG and waits for Danny's ruling. Magnesium and delivery timing are outside this pathway's sources."
+   "summary": "New hypertension with proteinuria in pregnancy or after delivery: possible pre-eclampsia. Hand over to the obstetric team now. A systolic of 160 or more or a diastolic of 110 or more is severe-range and is treated urgently (AHA/ACC 2025); its agent and dose table is reprinted from ACOG and is not shown here. Magnesium and delivery timing are outside this pathway's sources."
   },
   {
    "id": "end_mig",

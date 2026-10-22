@@ -2003,7 +2003,7 @@
        "where": "1.6.1"
       }
      ],
-     "note": "US exams use the Confusion Assessment Method; no US source in the trail"
+     "note": "US exams use the Confusion Assessment Method; no US source in the sources read"
     }
    ]
   },
@@ -2523,11 +2523,11 @@
     },
     {
      "item": "Precipitant search",
-     "dose": "With ascites, a diagnostic paracentesis for SBP; also GI bleeding, infection, electrolytes and sedatives; pending, EASL 2022 not readable (Danny to download)",
+     "dose": "With ascites, a diagnostic paracentesis for SBP; also GI bleeding, infection, electrolytes and sedatives; pending, EASL 2022 not readable here",
      "status": "pending"
     }
    ],
-   "note": "EASL 2022 recommends lactulose and rifaximin, but its text was behind a bot check; the doses here are from the US labels."
+   "note": "EASL 2022 recommends lactulose and rifaximin, but its full text was not openly accessible; the doses here are from the US labels."
   },
   {
    "id": "end_he",

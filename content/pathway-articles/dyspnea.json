@@ -1,0 +1,435 @@
+{
+  "id": "dyspnea",
+  "slug": "dyspnea",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Shortness of Breath in the ED: Dyspnea Workup Algorithm",
+  "metaDescription": "Shortness of breath in the ED: oxygen targets, tension and anaphylaxis, asthma, COPD and NIV, pulmonary edema, pneumonia antibiotics, and the PE workup.",
+  "h1": "Acute dyspnea in the ED: from the oxygen target to the diagnosis",
+  "dek": "For the student on an EM or IM rotation with a breathless patient and a resident asking what is next. The oxygen target, the bedside forks of tension, anaphylaxis, ischemia and shock, then asthma, COPD, heart failure, pneumonia, pneumothorax and PE, each with its doses.",
+  "jumpLinks": [
+    {
+      "label": "First moves",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Imaging",
+      "stage": "Imaging"
+    },
+    {
+      "label": "Grading",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Labs",
+      "stage": "Labs"
+    },
+    {
+      "label": "Going home",
+      "stage": "Disposition"
+    },
+    {
+      "label": "PE thrombolysis",
+      "stage": "Reperfuse"
+    },
+    {
+      "label": "Treatment",
+      "stage": "Manage"
+    },
+    {
+      "label": "PE excluded",
+      "stage": "Outcome"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Oxygen to a target.",
+      "text": "94 to 98% for most; 88 to 92% if at risk of hypercapnic failure, such as COPD, until the gas shows the CO2. In shock or anaphylaxis, a reservoir mask at 15 L/min until oximetry is reliable.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "lead": "Tension pneumothorax: decompress on the signs.",
+      "text": "No imaging first; a chest drain follows.",
+      "refs": [
+        "needle"
+      ]
+    },
+    {
+      "lead": "Anaphylaxis: IM epinephrine first.",
+      "text": "0.01 mg/kg, maximum 0.5 mg, into the anterolateral thigh, repeated every 5 to 15 minutes; antihistamines and steroids are second line.",
+      "refs": [
+        "anaph_epi"
+      ]
+    },
+    {
+      "lead": "Asthma: grade it at once and treat.",
+      "text": "Albuterol every 20 minutes for 3 doses, with a systemic steroid if there is no immediate response; add ipratropium when severe, and IV magnesium if still under 40% after an hour.",
+      "refs": [
+        "asthma_assess",
+        "asthma_mm",
+        "asthma_severe",
+        "asthma_mag"
+      ]
+    },
+    {
+      "lead": "COPD: controlled oxygen, then NIV for persisting acidosis.",
+      "text": "88 to 92%, bronchodilators, a 5-day oral steroid (prednisolone 30 mg in NICE; prednisone 40 mg in US practice), an antibiotic when the sputum has changed, and NIV for a pH under 7.35 with a raised PaCO2 despite treatment.",
+      "refs": [
+        "copd_meds",
+        "copd_niv",
+        "copd_gas"
+      ]
+    },
+    {
+      "lead": "Pulmonary edema: CPAP or NIV when acidemic, IV loop diuretic for all.",
+      "text": "An IV nitrate is added for severe hypertension; no routine opiates or inotropes, and no nitroprusside (NICE).",
+      "refs": [
+        "ahf_niv",
+        "ahf_diuretic",
+        "ahf_nitrate"
+      ]
+    },
+    {
+      "lead": "PE: probability first.",
+      "text": "Stable: two-level Wells score. PE unlikely with PERC not satisfied gets a D-dimer; PE likely goes straight to CTPA.",
+      "refs": [
+        "pe_prob",
+        "pe_score",
+        "pe_ddimer",
+        "pe_ctpa"
+      ]
+    },
+    {
+      "lead": "Thrombolysis only for high-risk PE.",
+      "text": "Shock with a dilated right ventricle: alteplase 100 mg over 2 hours with heparin. Normotensive with a strained right ventricle: admit and anticoagulate.",
+      "refs": [
+        "pe_lysis",
+        "pe_admit"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do first for an acutely breathless patient?",
+      "intro": "Airway, oxygen to a target saturation, monitoring and an ECG. Tension pneumothorax is decompressed on clinical signs, anaphylaxis gets IM epinephrine, and impending respiratory arrest in asthma gets intubated.",
+      "refs": [
+        "triage",
+        "needle",
+        "anaph_epi",
+        "anaph_refractory",
+        "asthma_intubate"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Which findings decide the cause of dyspnea?",
+      "intro": "The bedside forks come first: tension, anaphylaxis, ischemia on the ECG and shock. Then the history and exam pick asthma, COPD, heart failure, pneumonia, pneumothorax or PE.",
+      "refs": [
+        "front",
+        "findings"
+      ]
+    },
+    {
+      "stage": "Imaging",
+      "heading": "Which imaging for dyspnea: echo, chest x-ray or CTPA?",
+      "intro": "Bedside echo for shock, a chest x-ray for fever with focal signs or one-sided pleuritic pain, and CTPA when PE is likely or the D-dimer is positive.",
+      "refs": [
+        "shock_echo",
+        "cap_cxr",
+        "ptx_cxr",
+        "pe_ctpa"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "How do you grade asthma, pneumonia and pulmonary embolism?",
+      "intro": "Asthma by speech, vitals, saturation and PEF; pneumonia site of care by clinical judgment with the PSI or CURB-65; PE by the two-level Wells score, then by sPESI, the right ventricle and troponin.",
+      "refs": [
+        "asthma_assess",
+        "cap_severity",
+        "pe_prob",
+        "pe_risk"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "Which labs for COPD, heart failure and a low-probability PE?",
+      "intro": "An arterial gas with the inspired oxygen recorded in COPD, a natriuretic peptide in new suspected heart failure, and a D-dimer only when PE is unlikely and PERC is not satisfied.",
+      "refs": [
+        "copd_tests",
+        "ahf_tests",
+        "pe_ddimer"
+      ]
+    },
+    {
+      "stage": "Disposition",
+      "heading": "Who goes home after anaphylaxis or a pulmonary embolism?",
+      "intro": "Settled anaphylaxis is observed for a biphasic reaction and leaves with auto-injectors and an action plan; low-risk PE with support at home goes home on apixaban or rivaroxaban.",
+      "refs": [
+        "anaph_obs",
+        "pe_home"
+      ]
+    },
+    {
+      "stage": "Reperfuse",
+      "heading": "When does a pulmonary embolism get thrombolysis?",
+      "intro": "High-risk PE, shock with a dilated right ventricle, gets systemic thrombolysis with heparin; a normotensive patient with a strained right ventricle does not.",
+      "refs": [
+        "pe_lysis",
+        "pe_admit"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How do you treat asthma, COPD, heart failure, pneumonia and pneumothorax?",
+      "intro": "SABA and steroids for asthma, with ipratropium when severe; controlled oxygen, steroids and NIV for persisting acidosis in COPD; an IV loop diuretic for pulmonary edema, with CPAP or NIV when acidemic; antibiotics by site of care for pneumonia; and pneumothorax care by symptoms rather than size.",
+      "refs": [
+        "asthma_mm",
+        "asthma_severe",
+        "asthma_mag",
+        "copd_meds",
+        "copd_niv",
+        "ahf_niv",
+        "ahf_diuretic",
+        "cap_out",
+        "cap_ward",
+        "cap_icu",
+        "ptx_conservative",
+        "ptx_intervene",
+        "ptx_drain"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "When is PE excluded, and what happens next?",
+      "intro": "A negative D-dimer with PE unlikely, or a normal CTPA, sets PE aside, and PERC negative with low suspicion needs no testing. Breathlessness with ST elevation continues in the chest pain pathway.",
+      "refs": [
+        "end_pe_excluded",
+        "end_pe_perc",
+        "end_acs"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "Rechecks in the first hours",
+    "items": [
+      {
+        "text": "Controlled oxygen at 88 to 92%: recheck the blood gas at 30 to 60 minutes, and move to 94 to 98% if the PCO2 is normal (unless the patient has needed NIV or invasive ventilation before).",
+        "refs": [
+          "triage",
+          "copd_tests"
+        ]
+      },
+      {
+        "text": "Asthma: PEF or FEV1 on arrival and 30 to 60 minutes after treatment, except in a life-threatening attack.",
+        "refs": [
+          "asthma_assess"
+        ]
+      },
+      {
+        "text": "Asthma response: PEF 70% or more sustained 60 minutes with no distress is good; 40 to 69% is incomplete; under 40% means IV magnesium and the ICU.",
+        "refs": [
+          "asthma_response",
+          "asthma_mag"
+        ]
+      },
+      {
+        "text": "COPD after an hour of treatment: a pH under 7.35 with a raised PaCO2 means NIV.",
+        "refs": [
+          "copd_gas",
+          "copd_niv"
+        ]
+      },
+      {
+        "text": "Anaphylaxis: observe for a biphasic reaction, since about half come within 6 to 12 hours.",
+        "refs": [
+          "anaph_obs"
+        ]
+      },
+      {
+        "text": "Heart failure on an IV diuretic: renal function, weight and urine output.",
+        "refs": [
+          "ahf_diuretic"
+        ]
+      },
+      {
+        "text": "PE unlikely: the D-dimer result within 4 hours if possible, or interim anticoagulation while waiting.",
+        "refs": [
+          "pe_ddimer"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "Say what you excluded at the bedside, then walk the PE forks in order. One-liner: 36-year-old woman with 2 days of breathlessness after a long flight and a painful swollen right calf; HR 92, BP 126/80, SpO2 95%, no tension, anaphylaxis, shock or ischemic ECG. Chest clear; right calf swollen and tender along the deep veins. Two-level Wells 6 (DVT signs 3, no other diagnosis more likely than PE 3), so PE likely: straight to CTPA without a D-dimer, with interim anticoagulation if the scan cannot be done at once. CTPA: segmental filling defects in the right lower lobe. Risk graded: sPESI 0, RV/LV ratio normal on CT, troponin normal, so low risk. Plan: home with her partner on apixaban 10 mg twice daily for 7 days then 5 mg twice daily, or rivaroxaban, for at least 3 months, with written warning signs and direct contact with a thrombosis team.",
+    "presentRefs": ["case:pe_home", "front", "findings", "pe_prob", "pe_score", "pe_ctpa", "ctpa_result", "pe_risk", "pe_risk_result", "pe_home"],
+    "pimp": [
+      {
+        "q": "Why 88 to 92% in COPD rather than 98%?",
+        "a": "Patients at risk of hypercapnic respiratory failure get controlled oxygen to 88 to 92% until the gas shows the CO2; if the PCO2 is normal, the target moves to 94 to 98%.",
+        "refs": [
+          "triage",
+          "copd_tests"
+        ]
+      },
+      {
+        "q": "Why not diphenhydramine first in anaphylaxis?",
+        "a": "IM epinephrine is first line. Antihistamines mainly ease the skin and glucocorticoids may be of no benefit acutely, and an IV epinephrine bolus can cause fatal arrhythmias.",
+        "refs": [
+          "anaph_epi"
+        ]
+      },
+      {
+        "q": "Why not NIV in a severe asthma attack?",
+        "a": "NIV is not used in acute asthma with hypercapnic respiratory failure. Impending arrest means intubation, which is not delayed for magnesium or a gas.",
+        "refs": [
+          "asthma_severe",
+          "asthma_intubate"
+        ]
+      },
+      {
+        "q": "When is a D-dimer the wrong test for PE?",
+        "a": "When clinical probability is high: a normal result does not exclude PE there, so a likely Wells score goes straight to CTPA. With low suspicion and PERC negative, no test is needed at all.",
+        "refs": [
+          "pe_prob",
+          "pe_ctpa",
+          "pe_perc"
+        ]
+      },
+      {
+        "q": "Normotensive PE, dilated right ventricle, raised troponin. Do you lyse?",
+        "a": "No. Routine primary thrombolysis is not recommended without instability, even with RV dysfunction, because the bleeding risk outweighs the benefit. Admit, anticoagulate and monitor, keeping rescue thrombolysis for deterioration.",
+        "refs": [
+          "pe_admit",
+          "case:pe_intermediate"
+        ]
+      },
+      {
+        "q": "What rules out acute heart failure in the ED?",
+        "a": "A single natriuretic peptide: BNP under 100 or NT-proBNP under 300 ng/L rules it out in new suspected acute heart failure. A raised level calls for an echo, ideally within 48 hours.",
+        "refs": [
+          "ahf_tests",
+          "ahf_bnp"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "A chest x-ray before decompressing a tension pneumothorax. It is diagnosed on clinical signs and treated without imaging.",
+      "refs": [
+        "needle"
+      ]
+    },
+    {
+      "text": "An IV epinephrine bolus, or an antihistamine first, in anaphylaxis. IM epinephrine into the thigh comes first.",
+      "refs": [
+        "anaph_epi"
+      ]
+    },
+    {
+      "text": "A reservoir mask to a saturation of 100% in a COPD exacerbation. Controlled oxygen to 88 to 92% until the gas is back.",
+      "refs": [
+        "triage",
+        "copd_tests"
+      ]
+    },
+    {
+      "text": "NIV for a severe asthma attack. It is not used in acute asthma with hypercapnic failure; intubate when needed.",
+      "refs": [
+        "asthma_severe",
+        "asthma_intubate"
+      ]
+    },
+    {
+      "text": "A D-dimer for everyone with possible PE. Probability comes first, and a likely Wells score goes to CTPA.",
+      "refs": [
+        "triage",
+        "pe_prob"
+      ]
+    },
+    {
+      "text": "Thrombolysis for a normotensive PE with right ventricular strain. Admit and anticoagulate; lysis is for instability.",
+      "refs": [
+        "pe_admit"
+      ]
+    },
+    {
+      "text": "A mandatory chest drain because the pneumothorax rim is over 2 cm. Size no longer decides on intervention; symptoms and risk do.",
+      "refs": [
+        "ptx_intervene"
+      ]
+    },
+    {
+      "text": "Waiting for the procalcitonin before treating confirmed pneumonia. Antibiotics start whatever it shows.",
+      "refs": [
+        "cap_cxr"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the first step for acute shortness of breath?",
+      "a": "Check the airway, give oxygen to a target saturation, monitor and get an ECG, since breathlessness can be an anginal equivalent. The target is 94 to 98% for most and 88 to 92% if at risk of hypercapnic failure; in shock or anaphylaxis, a reservoir mask at 15 L/min until oximetry is reliable. Then look for tension pneumothorax, anaphylaxis, ischemia and shock before working through the history.",
+      "refs": [
+        "triage",
+        "front"
+      ]
+    },
+    {
+      "q": "What is the oxygen target in COPD?",
+      "a": "88 to 92% before the blood gas, using a 24% Venturi mask at 2 to 3 L/min, a 28% Venturi at 4 L/min, or nasal cannulae at 1 to 2 L/min. Recheck the gas at 30 to 60 minutes and move to 94 to 98% if the PCO2 is normal, unless the patient has needed NIV or invasive ventilation before.",
+      "refs": [
+        "triage",
+        "copd_tests"
+      ]
+    },
+    {
+      "q": "How do you work up a suspected pulmonary embolism?",
+      "a": "In a stable patient, start with the two-level Wells score. More than 4 points: CTPA immediately, or V/Q if contrast is a problem, with interim anticoagulation if it is delayed. 4 or less: PERC if suspicion is low, and if PERC is not satisfied a D-dimer, age-adjusted over 50, with CTPA only if it is positive. In shock, bedside echo or emergency CTPA.",
+      "refs": [
+        "pe_prob",
+        "pe_score",
+        "pe_perc",
+        "pe_ddimer",
+        "pe_ctpa",
+        "shock_echo"
+      ]
+    },
+    {
+      "q": "When does a COPD exacerbation need NIV?",
+      "a": "When hypercapnic respiratory failure persists despite optimal medical therapy: a pH under 7.35 with a raised PaCO2, over 49 mm Hg (6.5 kPa) in BTS/ICS terms, while US references use 45 mm Hg. It runs with a full face mask in a dedicated area, oxygen at 88 to 92% and a plan for deterioration, and it never delays intubation when that is more appropriate.",
+      "refs": [
+        "copd_gas",
+        "copd_niv"
+      ]
+    },
+    {
+      "q": "What is the treatment for a severe asthma attack in the ED?",
+      "a": "Oxygen, nebulized albuterol 2.5 to 5 mg with ipratropium 0.5 mg every 20 minutes for 3 doses, or continuous albuterol, and prednisone 40 to 80 mg a day orally. Still under 40% after an hour: IV magnesium sulfate, 2 g in adults in the trials cited, and the ICU. Drowsy or too breathless to speak: intubate. NIV is not used.",
+      "refs": [
+        "asthma_severe",
+        "asthma_mag",
+        "asthma_intubate"
+      ]
+    },
+    {
+      "q": "What antibiotics for community-acquired pneumonia?",
+      "a": "Outpatient and healthy: amoxicillin 1 g three times daily or doxycycline 100 mg twice daily. Outpatient with comorbidity: amoxicillin-clavulanate or a cephalosporin plus a macrolide or doxycycline, or a respiratory fluoroquinolone alone. Ward: a beta-lactam such as ceftriaxone plus azithromycin, or levofloxacin alone. Severe: a beta-lactam with a macrolide or a fluoroquinolone. MRSA or Pseudomonas cover only for validated risk factors.",
+      "refs": [
+        "cap_out",
+        "cap_ward",
+        "cap_icu"
+      ]
+    }
+  ],
+  "related": [
+    "chest_pain",
+    "peds_breathing",
+    "syncope",
+    "leg_swelling"
+  ]
+}

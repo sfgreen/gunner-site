@@ -1,0 +1,81 @@
+{
+  "id": "hot_joint",
+  "slug": "hot-joint",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Hot Swollen Joint: Septic Arthritis vs Gout, Step by Step",
+  "metaDescription": "The hot swollen joint for EM, IM and peds rotations: when to tap, synovial fluid cutoffs, antibiotics by Gram stain, gout, pseudogout, the limping child.",
+  "h1": "The hot swollen joint: septic arthritis, gout and the workup, fork by fork",
+  "dek": "For the student on an EM, IM or peds rotation with a hot, swollen joint and a resident about to ask what is next: the three questions before the needle, what the fluid means, antibiotics by Gram stain, gout and pseudogout flares, the limping child, and what you will be pimped on.",
+  "jumpLinks": [
+    {"label": "First moves", "stage": "Stabilize"},
+    {"label": "What the fluid shows", "stage": "Result"},
+    {"label": "Special joints", "stage": "Diagnose"},
+    {"label": "Antibiotics and drainage", "stage": "Manage"},
+    {"label": "The tap and labs", "stage": "Labs"},
+    {"label": "Who goes home", "stage": "Disposition"},
+    {"label": "Outcomes", "stage": "Outcome"}
+  ],
+  "shortAnswer": [
+    {"lead": "Three questions before the needle.", "text": "Septic? A joint replacement? A bleeding disorder or an anticoagulant? Sepsis means antibiotics within the hour, a prosthesis goes to orthopedics, and hemophilia gets factor before any tap.", "refs": ["triage", "front"]},
+    {"lead": "Tap before antibiotics.", "text": "Stable native joint: arthrocentesis for culture, Gram stain, crystals and a white cell count with differential, plus two sets of blood cultures. An anticoagulant is not a bar to the tap.", "refs": ["aspirate"]},
+    {"lead": "Read the count, not just the crystals.", "text": "A WBC over 50,000 with 90% neutrophils suggests a bacterial joint; under 50,000 does not rule infection out, and crystals do not rule out a septic joint alongside them.", "refs": ["abx_empiric", "fluid"]},
+    {"lead": "Antibiotics by the Gram stain.", "text": "Gram-positive cocci: IV vancomycin. Gram-negative rods: vancomycin plus ceftriaxone, or plus ceftazidime 2 g IV every 12 hours with injection drug use. Stain negative but septic: vancomycin plus a third-generation cephalosporin.", "refs": ["abx_gpc", "abx_gnr", "abx_gnr_other", "abx_empiric"]},
+    {"lead": "A septic native joint gets drained.", "text": "Arthrotomy, arthroscopy or daily needle aspiration, chosen by orthopedics; nongonococcal: about 2 weeks IV, then oral, 3 to 4 weeks in all (4 to 6 with Pseudomonas).", "refs": ["drain", "abx_gnr"]},
+    {"lead": "Gout flare: pick by comorbidity.", "text": "An NSAID, colchicine 1.2 mg then 0.6 mg an hour later, or prednisone 0.5 mg/kg/day or more for 5 to 10 days. Established allopurinol keeps going, and the culture is still followed.", "refs": ["gout_tx", "ult_continue"]},
+    {"lead": "Gonococcal arthritis is not a single shot.", "text": "Ceftriaxone 1 g IV or IM every 24 hours, plus doxycycline 100 mg twice daily for 7 days unless chlamydia is excluded, with specimens from every exposed site.", "refs": ["dgi_tests", "dgi_treat"]},
+    {"lead": "The limping child: ultrasound, labs, Kocher.", "text": "An effusion with risk features gets an ultrasound-guided aspirate, and a septic aspirate gets urgent irrigation and debridement. Low risk: rest, an NSAID and observation when unsure.", "refs": ["hip_tests", "hip_result", "hip_aspirate", "hip_drain", "ts_care"]}
+  ],
+  "sections": [
+    {"stage": "Stabilize", "heading": "What do you do first for a hot swollen joint?", "intro": "Consider septic arthritis in every hot, swollen joint, and ask three questions before the needle: sepsis, a joint replacement, and a bleeding disorder or anticoagulant.", "refs": ["triage", "sepsis_first", "factor"]},
+    {"stage": "Result", "heading": "What do the synovial fluid results mean?", "intro": "The Gram stain picks the antibiotic, the count and the fever decide whether a negative stain is still treated, and crystals with a count under 50,000, or blood, send the joint down their own branch. The hip aspirate, the Kocher criteria and the urate history fork the same way.", "refs": ["front", "fluid", "hip_result", "hip_fluid", "gout_ult", "inflam_result"]},
+    {"stage": "Diagnose", "heading": "Prosthetic joint, gonococcus or a septic hip: what changes the workup?", "intro": "A joint replacement is aspirated by orthopedics; suspected disseminated gonococcal infection needs specimens from every exposed site; a child's hip with risk features is aspirated under ultrasound; inflammatory fluid without crystals or organisms gets Lyme serology after tick exposure and trigger testing.", "refs": ["pji", "dgi_tests", "hip_aspirate", "inflam_next"]},
+    {"stage": "Manage", "heading": "What antibiotics for septic arthritis, and how is gout treated?", "intro": "Empiric cover by the Gram stain with antistaphylococcal cover in every septic joint and drainage by orthopedics; gout, pseudogout, gonococcal and Lyme arthritis each have their own regimen.", "refs": ["abx_gpc", "abx_gnr", "abx_gnr_other", "abx_empiric", "drain", "hip_drain", "gout_tx", "ult_continue", "ult_start", "cppd_tx", "dgi_treat", "lyme_tx"]},
+    {"stage": "Labs", "heading": "Which labs, and how do you tap a hot joint?", "intro": "Adult native joint: synovial fluid for culture, Gram stain, crystals and cell count, two sets of blood cultures, CBC, ESR and CRP. Limping child: hip ultrasound and x-ray with WBC, ESR and CRP.", "refs": ["aspirate", "hip_tests"]},
+    {"stage": "Disposition", "heading": "Transient synovitis or a first gout flare: who goes home?", "intro": "Transient synovitis is supportive care, with observation when the diagnosis is unclear; after a first uncomplicated gout flare ACR 2020 conditionally advises against starting urate-lowering therapy, and the urate is rechecked once it settles.", "refs": ["ts_care", "ult_defer"]},
+    {"stage": "Outcome", "heading": "Where does each hot joint end up?", "intro": "Native septic joints to drainage and 3 to 4 weeks of antibiotics (a child's septic hip about 10 to 14 days when uncomplicated; a joint replacement usually surgery and 6 weeks or more IV), crystal flares to treatment with the culture still followed, and the joints this pathway does not cover to their next workup.", "refs": ["end_septic", "end_gout", "end_cppd", "end_pji", "end_hip_septic", "end_ts", "end_inflam_other", "end_noninflam"]}
+  ],
+  "checklist": {
+    "heading": "Before and after the tap: the hot joint checklist",
+    "items": [
+      {"text": "Sepsis screen first: septic and unstable means antibiotics within 1 hour, with cultures first only if that adds under 45 minutes.", "refs": ["triage", "sepsis_first"]},
+      {"text": "Joint replacement: orthopedics aspirates, and no antibiotic before the cultures unless septic.", "refs": ["pji"]},
+      {"text": "Hemophilia: factor VIII before any imaging or needle.", "refs": ["factor"]},
+      {"text": "Synovial fluid: white cell count with differential, Gram stain, culture, crystals.", "refs": ["aspirate"]},
+      {"text": "Two sets of blood cultures; CBC, ESR and CRP.", "refs": ["aspirate"]},
+      {"text": "Crystals found: follow the culture anyway.", "refs": ["fluid", "gout_tx"]},
+      {"text": "Sexually active with tenosynovitis or skin lesions: NAAT or culture of every exposed site, plus HIV and syphilis tests.", "refs": ["dgi_tests"]}
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the joint and the three screening questions, then the fluid and the plan. For example: 61-year-old man with knee osteoarthritis and a corticosteroid injection into the left knee 10 days ago, now 2 days of a hot, swollen left knee and unable to bear weight; temperature 38.6 C, HR 102, BP 138/82, stable, native joint, no joint replacement or bleeding disorder. Aspirate: turbid fluid, WBC 86,000 with 92% neutrophils, gram-positive cocci in clusters, no crystals; two sets of blood cultures sent. Plan: IV vancomycin dosed to renal function and levels, narrowed on the culture; orthopedics to drain the joint by arthroscopy, arthrotomy or daily needle aspiration; about 2 weeks IV then oral, 3 to 4 weeks in all; re-aspirate if no better in 5 to 6 days.",
+    "presentRefs": ["case:septic_gpc", "front", "aspirate", "fluid", "abx_gpc", "drain"],
+    "pimp": [
+      {"q": "Why does the serum urate not settle gout in the ED?", "a": "It can be under 6 mg/dL during a flare. NICE repeats it at least 2 weeks after the flare settles.", "refs": ["triage"]},
+      {"q": "Urate crystals and a WBC of 88,000. Is it gout?", "a": "Not safely: crystals do not rule out a septic joint alongside them. A septic-range count with a negative stain is treated with vancomycin plus a third-generation cephalosporin while the culture runs.", "refs": ["fluid", "abx_empiric", "case:crystal_septic"]},
+      {"q": "What are the Kocher criteria?", "a": "Fever over 38.5 C (101.3 F), refusal to bear weight, ESR over 40 mm/h and WBC over 12,000/uL. The risk of a septic hip is 3% with one, 40% with two, 93% with three and 99% with all four.", "refs": ["hip_tests", "hip_aspirate"]},
+      {"q": "Gram-negative rods in someone who injects drugs. Why ceftazidime over ceftriaxone?", "a": "Ceftazidime's label lists Pseudomonas aeruginosa among its bone and joint pathogens; ceftriaxone's bone and joint indication does not. StatPearls links joint infection in injection drug use to Serratia and Pseudomonas.", "refs": ["abx_gnr"]},
+      {"q": "Why not a single 500 mg dose of ceftriaxone for gonococcal arthritis?", "a": "That is the regimen for uncomplicated cervical, urethral or rectal infection. Disseminated infection gets 1 g IV or IM every 24 hours, with doxycycline unless chlamydia is excluded.", "refs": ["dgi_treat"]},
+      {"q": "Gout flare on allopurinol. Stop it?", "a": "No. Established urate-lowering therapy continues without interruption during a flare, and the dose is titrated by monthly urate levels toward under 6 mg/dL once it settles.", "refs": ["ult_continue"]}
+    ]
+  },
+  "traps": [
+    {"text": "Antibiotics before the tap in a stable patient. They wait until synovial fluid has been taken, then start promptly.", "refs": ["triage", "aspirate"]},
+    {"text": "Calling it gout because crystals are seen. Crystals do not rule out a septic joint; the culture is followed.", "refs": ["fluid", "gout_tx"]},
+    {"text": "Calling it not septic because the synovial WBC is under 50,000. That does not rule infection out.", "refs": ["abx_empiric", "inflam_next"]},
+    {"text": "Stopping allopurinol during a flare. Established urate-lowering therapy continues.", "refs": ["ult_continue"]},
+    {"text": "Colchicine 0.6 mg every hour until the pain eases. Low dose: 1.2 mg, then 0.6 mg an hour later.", "refs": ["gout_tx"]},
+    {"text": "Tapping a hemophilic knee before factor. Factor VIII first; any tap only under factor cover.", "refs": ["factor"]},
+    {"text": "Ceftriaxone 500 mg IM once for gonococcal arthritis. That is the uncomplicated regimen, not the disseminated one.", "refs": ["dgi_treat"]},
+    {"text": "Antibiotics alone for a septic hip in a child. It is an orthopedic emergency: urgent irrigation and debridement.", "refs": ["hip_drain"]}
+  ],
+  "faq": [
+    {"q": "What synovial fluid WBC count means septic arthritis?", "a": "A WBC over 50,000 with 90% neutrophils suggests a bacterial source, but a count under 50,000 does not rule infection out, and crystals do not rule out a septic joint alongside them. A joint replacement uses far lower cutoffs: over 1,700 cells/uL supports a knee infection and over 4,200 a hip, with neutrophils over 80% typical; another StatPearls chapter gives 1,100 with 64%.", "refs": ["abx_empiric", "pji"]},
+    {"q": "What antibiotics are used for septic arthritis?", "a": "Every septic joint gets antistaphylococcal cover, usually IV vancomycin when MRSA is possible. Gram-negative rods add ceftriaxone 1 to 2 g IV daily, or ceftazidime 2 g IV every 12 hours with injection drug use. A negative Gram stain with a septic picture gets vancomycin plus a third-generation cephalosporin. Drainage is part of treatment; nongonococcal joints get about 2 weeks IV, 3 to 4 weeks in all. Gonococcal arthritis has its own regimen.", "refs": ["abx_gpc", "abx_gnr", "abx_gnr_other", "abx_empiric", "drain", "dgi_treat"]},
+    {"q": "How do you treat an acute gout flare?", "a": "An NSAID at full anti-inflammatory dose, low-dose colchicine (1.2 mg, then 0.6 mg an hour later, maximum 1.8 mg over 1 hour), or prednisone at least 0.5 mg/kg/day for 5 to 10 days, chosen by comorbidity and past response. IL-1 inhibitors wait until these fail or cannot be used. Established allopurinol continues, and the culture is still followed.", "refs": ["gout_tx", "ult_continue"]},
+    {"q": "When do you start allopurinol after a gout flare?", "a": "When indicated: tophi, 2 or more flares a year, CKD stage 3 or more, or a first flare with a urate over 9 mg/dL or stones. After a first uncomplicated flare ACR 2020 conditionally advises against it. ACR conditionally favors starting during the flare, NICE 2 to 4 weeks after it settles. Start at 100 mg a day or less with colchicine prophylaxis, titrated to a urate under 6 mg/dL.", "refs": ["gout_ult", "ult_defer", "ult_start"]},
+    {"q": "How do you tell transient synovitis from a septic hip?", "a": "Hip ultrasound and x-ray with WBC, ESR and CRP, then the Kocher criteria: fever over 38.5 C (101.3 F), refusal to bear weight, ESR over 40 mm/h, WBC over 12,000/uL. An effusion with risk features is aspirated under ultrasound; a synovial WBC over 50,000, a positive Gram stain or glucose under 40 mg/dL means a septic hip and urgent drainage.", "refs": ["hip_tests", "hip_result", "hip_fluid", "hip_drain"]},
+    {"q": "How is Lyme arthritis treated?", "a": "After two-tier serology, an EIA then an immunoblot or a second FDA-cleared EIA: oral doxycycline 100 mg twice daily or 200 mg once daily for 28 days, with amoxicillin as the alternative. A partial response gets a second oral course; minimal or no response gets IV ceftriaxone for 2 to 4 weeks. Synovial PCR is for a diagnosis still in doubt.", "refs": ["inflam_next", "lyme_tx"]}
+  ],
+  "related": ["sepsis_fever", "peds_fever", "limb_injury", "back_pain"]
+}

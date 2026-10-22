@@ -1,0 +1,394 @@
+{
+  "id": "peds_breathing",
+  "slug": "peds-breathing",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Pediatric Respiratory Distress: Bronchiolitis, Asthma, BRUE",
+  "metaDescription": "The child who cannot breathe, for peds and EM rotations: bronchiolitis care, asthma doses by severity, pneumonia antibiotics, pertussis and BRUE.",
+  "h1": "The child who cannot breathe: bronchiolitis, asthma and pneumonia, fork by fork",
+  "dek": "For the student on a peds or EM rotation with a breathless child and a resident about to ask what is next: the first look, anaphylaxis and the failing airway, bronchiolitis and what not to give, asthma doses by severity, pneumonia antibiotics, pertussis, BRUE, and what you will be pimped on.",
+  "jumpLinks": [
+    {
+      "label": "First look",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Where it forks",
+      "stage": "Result"
+    },
+    {
+      "label": "Handoffs and outcomes",
+      "stage": "Outcome"
+    },
+    {
+      "label": "Which tests",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Treatment by cause",
+      "stage": "Manage"
+    },
+    {
+      "label": "Home or admit",
+      "stage": "Disposition"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Look first, then oximetry and a weight.",
+      "text": "Appearance, work of breathing and circulation to the skin from the doorway, then ABCDE, pulse oximetry, oxygen if low, and a weight for every dose. Blood gases are not routine.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "lead": "Anaphylaxis: IM epinephrine in the thigh.",
+      "text": "0.01 mg/kg, maximum 0.5 mg, into the mid-anterolateral thigh, repeated every 5 to 15 minutes; by age, 0.15 mg at 1 to 5 years and 0.3 mg at 6 to 12. Not subcutaneous.",
+      "refs": [
+        "anaph_epi"
+      ]
+    },
+    {
+      "lead": "Apneic with a pulse: bag-mask first.",
+      "text": "Open the airway, give oxygen, and ventilate to visible chest rise at 30 breaths a minute for an infant, 20 for a child, 12 for an adolescent while the pulse is over 60; bradycardia with poor perfusion adds compressions. Still failing: a cuffed tube, age/4 + 3.5 mm (one source uses + 3.0 under 2 years).",
+      "refs": [
+        "bvm",
+        "intubate"
+      ]
+    },
+    {
+      "lead": "Bronchiolitis is supportive care.",
+      "text": "A clinical diagnosis with oximetry: no routine x-ray, bloods or viral swab, and no albuterol, epinephrine, steroids or hypertonic saline in the ED, and no antibiotics without a bacterial infection. Suction, oxygen and fluids as needed.",
+      "refs": [
+        "bronch_dx",
+        "bronch_tx"
+      ]
+    },
+    {
+      "lead": "Oxygen by threshold, low-flow first.",
+      "text": "NICE and PREDICT: persistently under 90%, or under 92% under 6 weeks or with a health condition (AAP: may withhold over 90%). Low-flow nasal oxygen first, high-flow if it fails, CPAP for impending failure.",
+      "refs": [
+        "bronch_sev",
+        "bronch_o2",
+        "bronch_hfnc"
+      ]
+    },
+    {
+      "lead": "Asthma: albuterol 3 times in the first hour, and a steroid.",
+      "text": "Albuterol by spacer 4 to 8 puffs, or nebulized 0.15 mg/kg (minimum 2.5 mg; SIGN: 2.5 mg at 2 to 5 years, 5 mg over 5), every 20 minutes for 3 doses; add ipratropium when severe; an oral steroid. Life-threatening, or still severe after an hour: IV magnesium 25 to 75 mg/kg, maximum 2 g (EPR-3; SIGN 40 mg/kg after a poor response).",
+      "refs": [
+        "asthma_mm",
+        "asthma_severe",
+        "asthma_mag"
+      ]
+    },
+    {
+      "lead": "Pneumonia: amoxicillin, and oxygen under 92%.",
+      "text": "Mild: oral amoxicillin 45 mg/kg twice daily for 5 days (some sources use a standard dose). School-age atypical picture: azithromycin. Saturation under 92% or danger signs: admit, x-ray, blood culture, IV ampicillin or penicillin G (SATS: amoxicillin-clavulanate).",
+      "refs": [
+        "pna_amox",
+        "pna_atyp",
+        "pna_admit"
+      ]
+    },
+    {
+      "lead": "Young infant with coughing fits: treat for pertussis now.",
+      "text": "Admit, monitor for apnea, send a nasopharyngeal PCR and start azithromycin before the result; prophylaxis for every household contact within 21 days of the cough onset.",
+      "refs": [
+        "pert_start",
+        "pert_contacts"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What are the first steps for a child in respiratory distress?",
+      "intro": "A hands-off look, then ABCDE, oximetry and a weight. Anaphylaxis gets IM epinephrine, a child who is apneic or only gasping gets bag-mask ventilation, and imminent arrest in asthma means intubation.",
+      "refs": [
+        "triage",
+        "anaph_epi",
+        "bvm",
+        "intubate",
+        "asthma_intubate"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Bronchiolitis, asthma, pneumonia or pertussis: which fork is this child on?",
+      "intro": "The first look sorts arrest, anaphylaxis, failure, stridor, choking and shock; then age, history and the chest pick the branch, and severity decides home, ward or intensive care.",
+      "refs": [
+        "front",
+        "findings",
+        "bvm_resp",
+        "bronch_sev",
+        "asthma_sev",
+        "asthma_resp",
+        "pna_sev",
+        "brue_risk"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "Which tests does a wheezy or breathless child actually need?",
+      "intro": "Bronchiolitis and mild pneumonia need oximetry, not an x-ray or bloods; a BRUE needs a careful history and exam before the risk criteria decide anything.",
+      "refs": [
+        "bronch_dx",
+        "pna_assess",
+        "brue_assess"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How do you treat bronchiolitis, asthma, pneumonia and pertussis in children?",
+      "intro": "Supportive care for bronchiolitis; albuterol, ipratropium, steroids and magnesium by asthma severity; amoxicillin or azithromycin for pneumonia; azithromycin for pertussis; a targeted first-tier workup for a higher-risk BRUE.",
+      "refs": [
+        "bronch_tx",
+        "bronch_o2",
+        "bronch_hfnc",
+        "bronch_fluids",
+        "bronch_severe",
+        "asthma_mm",
+        "asthma_severe",
+        "asthma_mag",
+        "pna_amox",
+        "pna_atyp",
+        "pna_admit",
+        "pert_start",
+        "brue_high"
+      ]
+    },
+    {
+      "stage": "Disposition",
+      "heading": "When can a child with bronchiolitis, asthma or a BRUE go home?",
+      "intro": "Mild bronchiolitis with red-flag advice; asthma with a good response sustained an hour after the last dose; a lower-risk BRUE with education and CPR training; and pertussis contacts given prophylaxis.",
+      "refs": [
+        "bronch_home",
+        "asthma_home",
+        "brue_low",
+        "pert_contacts"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Where does each breathless child end up?",
+      "intro": "Stridor and choking go to the throat and airway pathway, septic shock to the febrile child pathway; the rest go home with a plan or are admitted at the level their breathing needs.",
+      "refs": [
+        "end_stridor",
+        "end_choke",
+        "end_shock",
+        "end_bronch_home",
+        "end_bronch_icu",
+        "end_asthma_home",
+        "end_asthma_icu",
+        "end_pna_admit",
+        "end_pert"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "Bronchiolitis: what not to order or give",
+    "items": [
+      {
+        "text": "No albuterol; AAP 2014 dropped the trial its 2006 version allowed.",
+        "refs": [
+          "bronch_tx"
+        ]
+      },
+      {
+        "text": "No nebulized epinephrine.",
+        "refs": [
+          "bronch_tx"
+        ]
+      },
+      {
+        "text": "No systemic corticosteroids (AAP: in any setting; only PREDICT 2025 considers one with epinephrine at ICU level).",
+        "refs": [
+          "bronch_tx",
+          "bronch_severe"
+        ]
+      },
+      {
+        "text": "No hypertonic saline in the ED.",
+        "refs": [
+          "bronch_tx"
+        ]
+      },
+      {
+        "text": "No antibiotics without a concomitant bacterial infection, or a strong suspicion of one.",
+        "refs": [
+          "bronch_tx"
+        ]
+      },
+      {
+        "text": "No chest physiotherapy.",
+        "refs": [
+          "bronch_tx"
+        ]
+      },
+      {
+        "text": "No routine chest x-ray, blood tests, blood gas or viral testing.",
+        "refs": [
+          "bronch_dx"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "Lead with age, weight and the work of breathing, then the saturation, intake and the support she needs. For example: 3-month-old girl, 5.8 kg, born at term, with 3 days of cough after a cold, her first episode; HR 150, RR 58, moderate recession, diffuse fine crackles and wheeze. Saturation persistently 86 to 88% in air, no apnea, taking 80% of feeds, no grunting. Clinical bronchiolitis, so no x-ray, bloods or viral swab. Admitted for persistently low saturation; low-flow nasal oxygen has brought her to 95% with RR 50, and she is settling to feed. No albuterol, steroids or antibiotics. Discharge once she is clinically stable, feeding adequately and holding her saturation in air for 4 hours including sleep.",
+    "presentRefs": ["case:bronch_lowsat", "bronch_dx", "bronch_o2", "bronch_tx", "end_bronch_ward"],
+    "pimp": [
+      {
+        "q": "Why no chest x-ray in bronchiolitis?",
+        "a": "Its changes can mimic pneumonia and should not decide antibiotics. It is considered only if intensive care is proposed, the course is not that of bronchiolitis, or an airway complication such as pneumothorax is suspected.",
+        "refs": [
+          "bronch_dx"
+        ]
+      },
+      {
+        "q": "Why not a trial of albuterol in bronchiolitis?",
+        "a": "NICE, PREDICT, the Italian guideline and AAP 2014 all rule it out; AAP dropped the trial its 2006 version allowed. Only a review still allows one in severe respiratory compromise.",
+        "refs": [
+          "bronch_tx"
+        ]
+      },
+      {
+        "q": "What size endotracheal tube for a child?",
+        "a": "Cuffed: age in years divided by 4, plus 3.5 mm (uncuffed: plus 4), with the depth at 3 times the tube size. Under 2 years one StatPearls chapter uses plus 3.0 instead.",
+        "refs": [
+          "intubate"
+        ]
+      },
+      {
+        "q": "Oral or IV steroid in a pediatric asthma attack?",
+        "a": "Oral: it works as well as IV when the child can swallow, and given early it reduces admissions and relapse. IV is for a child who cannot keep oral medicine down.",
+        "refs": [
+          "asthma_mm",
+          "asthma_severe"
+        ]
+      },
+      {
+        "q": "Why azithromycin for walking pneumonia?",
+        "a": "Mycoplasma pneumoniae has no cell wall, so it resists beta-lactams such as amoxicillin. A child not improving after 48 to 72 hours may have macrolide-resistant mycoplasma or another diagnosis.",
+        "refs": [
+          "pna_atyp"
+        ]
+      },
+      {
+        "q": "Pertussis in a 3-week-old: azithromycin or erythromycin?",
+        "a": "Azithromycin. Erythromycin is not preferred under 1 month because of infantile hypertrophic pyloric stenosis; severe pertussis outweighs azithromycin's small risk, with monitoring for pyloric stenosis.",
+        "refs": [
+          "pert_start"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "Lying a distressed child flat, away from the parent, to examine the chest. A comfortable position, with calm reassurance.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "text": "Subcutaneous epinephrine, or albuterol or diphenhydramine first, in anaphylaxis. IM epinephrine into the thigh.",
+      "refs": [
+        "anaph_epi"
+      ]
+    },
+    {
+      "text": "A chest x-ray or an RSV swab in typical bronchiolitis.",
+      "refs": [
+        "bronch_dx"
+      ]
+    },
+    {
+      "text": "Albuterol, steroids or hypertonic saline in the ED for bronchiolitis.",
+      "refs": [
+        "bronch_tx"
+      ]
+    },
+    {
+      "text": "High-flow nasal cannula as the first support in moderate hypoxemic bronchiolitis. Low-flow oxygen first.",
+      "refs": [
+        "bronch_o2"
+      ]
+    },
+    {
+      "text": "Waiting for a blood gas or IV magnesium when arrest is imminent in asthma. Intubation is not delayed once it is needed.",
+      "refs": [
+        "asthma_intubate"
+      ]
+    },
+    {
+      "text": "Amoxicillin alone for a school-age child with a week of dry cough and headache. Think mycoplasma: azithromycin.",
+      "refs": [
+        "pna_atyp"
+      ]
+    },
+    {
+      "text": "Labs, a chest x-ray, admission or acid suppression for a lower-risk BRUE.",
+      "refs": [
+        "brue_low"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When does a child with bronchiolitis need oxygen?",
+      "a": "NICE and PREDICT give oxygen when saturation is persistently under 90% at 6 weeks and older, or under 92% under 6 weeks or with an underlying health condition. AAP 2014 lets clinicians withhold it above 90%, except with acidosis or fever, and the Italian guideline uses 92% at any age. Low-flow nasal oxygen comes first; high-flow only if that fails.",
+      "refs": [
+        "bronch_sev",
+        "bronch_o2"
+      ]
+    },
+    {
+      "q": "What is the treatment for bronchiolitis?",
+      "a": "Supportive care: superficial nasal suction for distress or feeding trouble from secretions, oxygen below the saturation threshold, and fluids by nasogastric tube or IV isotonic fluid when intake falls. No albuterol, nebulized epinephrine, steroids, chest physiotherapy, or hypertonic saline in the ED, and no antibiotics without a bacterial infection. Symptoms usually peak at 3 to 5 days, and the cough resolves within 3 weeks in 90%.",
+      "refs": [
+        "bronch_tx",
+        "bronch_fluids",
+        "bronch_home"
+      ]
+    },
+    {
+      "q": "What is the albuterol dose for an asthma attack in a child?",
+      "a": "By MDI with a valved holding chamber, 4 to 8 puffs every 20 minutes for 3 doses, with a mask under 4 years; or nebulized 0.15 mg/kg with a 2.5 mg minimum every 20 minutes for 3 doses. StatPearls caps the nebulized dose at 5 mg, and SIGN uses 2.5 mg at 2 to 5 years and 5 mg over 5. Continuous nebulization runs at 0.5 mg/kg an hour.",
+      "refs": [
+        "asthma_mm",
+        "asthma_severe"
+      ]
+    },
+    {
+      "q": "When is IV magnesium given in pediatric asthma?",
+      "a": "For a life-threatening attack, or one still severe after an hour of albuterol, ipratropium and a steroid: 25 to 75 mg/kg, maximum 2 g (EPR-3), given over 20 minutes from age 4 in StatPearls. SIGN 158 gives 40 mg/kg, maximum 2 g, after a poor response to first-line treatment. Kidney failure is a relative contraindication, and intubation is never delayed once needed.",
+      "refs": [
+        "asthma_mag"
+      ]
+    },
+    {
+      "q": "What antibiotic for pneumonia in a child?",
+      "a": "Mild, not admitted: oral amoxicillin 45 mg/kg twice daily for 5 days (SATS), reviewed at 3 days; a review cites 50 mg/kg a day as equally effective where resistance is rare. A school-age child with an atypical picture: azithromycin 10 mg/kg on day 1, then 5 mg/kg on days 2 to 5 (SATS: 10 mg/kg daily for 5 days). Saturation under 92% or danger signs: admit for IV ampicillin or penicillin G.",
+      "refs": [
+        "pna_amox",
+        "pna_atyp",
+        "pna_admit"
+      ]
+    },
+    {
+      "q": "What makes a BRUE lower risk?",
+      "a": "All of: age over 60 days, born at 32 weeks or later with a postconceptional age of 45 weeks or more, a first event lasting under a minute, no CPR by a trained provider, and nothing concerning on history or exam. Lower-risk infants get education and CPR training, not routine tests, admission or acid suppression. Most infants, 94%, miss at least one criterion.",
+      "refs": [
+        "brue_risk",
+        "brue_low",
+        "brue_high"
+      ]
+    }
+  ],
+  "related": [
+    "throat_airway",
+    "dyspnea",
+    "peds_vomiting",
+    "peds_fever"
+  ]
+}

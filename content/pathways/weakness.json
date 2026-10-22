@@ -1340,7 +1340,7 @@
      "status": "pending"
     }
    ],
-   "note": "The EAN/PNS 2023 GBS guideline was not readable here (bot check); the doses are from the 2019 international ten-step guideline.",
+   "note": "The EAN/PNS 2023 GBS guideline was not readable here; the doses are from the 2019 international ten-step guideline.",
    "next": "gbs_icu",
    "sources": [
     {

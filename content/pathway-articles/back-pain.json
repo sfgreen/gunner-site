@@ -1,0 +1,70 @@
+{
+  "id": "back_pain",
+  "slug": "back-pain",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Low Back Pain Red Flags: ED Workup and When to MRI",
+  "metaDescription": "Back pain in the ED: the red flags, when to MRI, cauda equina and cord compression, spinal infection, compression fractures, and nonspecific pain care.",
+  "h1": "Back pain in the ED: red flags first, then the right scan",
+  "dek": "For the student on an EM, IM or orthopedics rotation with a back pain patient and a resident asking what is next. The red flags that change the plan, how fast each scan is needed, and what to do for cauda equina, cord compression, infection, fractures and the nonspecific majority.",
+  "jumpLinks": [
+    {"label": "First exam", "stage": "Stabilize"},
+    {"label": "Red flags", "stage": "Result"},
+    {"label": "Infection labs", "stage": "Labs"},
+    {"label": "When to MRI", "stage": "Imaging"},
+    {"label": "Treatment", "stage": "Manage"},
+    {"label": "Discharge advice", "stage": "Disposition"}
+  ],
+  "shortAnswer": [
+    {"lead": "Find the few who are not benign.", "text": "Vital signs, an abdominal exam for a pulsatile mass, the red-flag history and a full lower-limb neurological exam come before any imaging.", "refs": ["triage", "front"]},
+    {"lead": "No red flags, no imaging.", "text": "Uncomplicated low back pain, with or without sciatica, is benign and self-limited; imaging waits for red flags, or for a surgical candidate still limited after about 6 weeks.", "refs": ["ns_imaging"]},
+    {"lead": "Cauda equina: MRI within 4 hours of the request, whatever the bladder scan.", "text": "The scan is an adjunct: 60% of patients who needed emergency decompression had a residual under 200 mL. Catheterize over 600 mL, keep nil by mouth, and do not wait for retention.", "refs": ["ces_bladder", "ces_pvr", "ces_mri"]},
+    {"lead": "Cancer plus new neurological signs: dexamethasone first.", "text": "16 mg orally (or the IV equivalent) now, oncology at once, whole-spine MRI within 24 hours; then surgery if suitable, or radiotherapy within 24 hours.", "refs": ["mscc_dex", "mscc_treat"]},
+    {"lead": "Fever or IV drug use: cultures, ESR, CRP, then gadolinium MRI.", "text": "Emergently when an epidural abscess is suspected, and no lumbar puncture until one is ruled out.", "refs": ["inf_labs", "inf_mri"]},
+    {"lead": "Epidural abscess: antibiotics and surgeons now.", "text": "Blood cultures, then empiric IV vancomycin plus a third or fourth generation cephalosporin, and decompression at once for any deficit.", "refs": ["sea_treat", "inf_result"]},
+    {"lead": "Osteoporotic compression fracture: treat the bone.", "text": "AP and lateral x-rays, analgesia and mobilization, DXA, and an osteoporosis drug regardless of BMD; vertebroplasty is not generally recommended.", "refs": ["frac_xray", "frac_mgmt"]},
+    {"lead": "Nonspecific pain: stay active and take an NSAID.", "text": "Ibuprofen or naproxen at the lowest effective dose for the shortest time; no bed rest, routine opioid, systemic steroid, or paracetamol alone.", "refs": ["ns_manage"]}
+  ],
+  "sections": [
+    {"stage": "Stabilize", "heading": "What do you check first in a patient with back pain?", "intro": "Vital signs, an abdominal exam for a pulsatile mass, the red-flag history and a full lower-limb neurological exam. Known cancer with new neurological signs gets dexamethasone before the scan.", "refs": ["triage", "mscc_dex"]},
+    {"stage": "Result", "heading": "Which back pain red flags change the plan?", "intro": "Shock or a pulsatile mass, fever or IV drug use, known cancer, bladder or saddle symptoms, high-energy trauma and osteoporosis each open a different route. No red flags means no imaging.", "refs": ["front", "ces_pvr", "inf_result", "ns_type"]},
+    {"stage": "Labs", "heading": "Which labs for suspected spinal infection?", "intro": "Two sets of blood cultures, ESR and CRP. No lumbar puncture until an epidural abscess is ruled out.", "refs": ["inf_labs"]},
+    {"stage": "Diagnose", "heading": "Does a low post-void residual rule out cauda equina, and when is a spine biopsy needed?", "intro": "A bladder scan never decides the MRI on its own. In vertebral osteomyelitis, blood cultures come first and an image-guided biopsy follows when they do not grow a typical organism.", "refs": ["ces_bladder", "nvo_cultures"]},
+    {"stage": "Imaging", "heading": "When does back pain need an MRI, and how fast?", "intro": "Within 4 hours of the request for suspected cauda equina, emergently with gadolinium for infection, within 24 hours for cord compression and within a week for suspected metastases; x-rays for a fracture risk, and nothing for back pain without red flags.", "refs": ["ces_mri", "inf_mri", "mscc_dex", "mets_mri", "frac_xray", "ns_imaging", "ns_persist"]},
+    {"stage": "Manage", "heading": "How is back pain treated, from epidural abscess to nonspecific pain?", "intro": "Decompression for cauda equina and for an abscess with a deficit, surgery as soon as possible or radiotherapy within 24 hours for cord compression, a bone drug for an osteoporotic fracture whatever the T-score, and staying active with an NSAID when no serious cause is found.", "refs": ["ces_surgery", "sea_treat", "mscc_treat", "frac_mgmt", "ns_manage"]},
+    {"stage": "Disposition", "heading": "What do you tell a back pain patient before discharge?", "intro": "The cauda equina warning symptoms, and to keep up work and normal activities rather than wait for the pain to go.", "refs": ["ns_dispo"]},
+    {"stage": "Outcome", "heading": "What if the pain persists at 6 weeks, or the MRI is clear?", "intro": "Back pain not improving after 6 weeks is reassessed, because failure to improve is itself a red flag for cancer or infection. Persisting sciatica in a surgical candidate gets an MRI and a spinal surgical opinion, and a clear MRI means looking for another cause.", "refs": ["end_ns_not_improving", "end_ns_refer", "end_ces_none", "end_inf_neg"]}
+  ],
+  "checklist": null,
+  "rounds": {
+    "present": "Lead with the red flags you found, because they set the clock. One-liner: 39-year-old man with 5 days of low back pain and sciatica now in both legs, and since this morning numbness when he wipes and a weak stream; no cancer history, afebrile. Exam: no pulsatile mass, reduced pinprick around the anus, ankle plantarflexion 4/5 on both sides. He voided 300 mL with a post-void residual of 120 mL, which does not exclude cauda equina syndrome, so the emergency MRI is requested, due within 4 hours of the request, and he is nil by mouth. MRI: a large L5 to S1 disc prolapse compressing the cauda equina. Plan: immediate referral to the spinal surgeons for decompression as quickly as possible, catheterized before surgery.",
+    "presentRefs": ["case:ces_low_residual", "front", "ces_bladder", "ces_pvr", "ces_mri", "ces_result", "ces_surgery"],
+    "pimp": [
+      {"q": "The post-void residual is 120 mL. Can you cancel the MRI?", "a": "No. A bladder scan is an adjunct and never decides the MRI on its own: 60% of patients who needed emergency decompression had a residual under 200 mL.", "refs": ["ces_bladder", "case:ces_low_residual"]},
+      {"q": "Why dexamethasone before the MRI in suspected cord compression?", "a": "The steroid does not wait for the scan: 16 mg goes in as soon as possible, and it stops if the MRI rules out both metastases and compression.", "refs": ["mscc_dex", "mscc_result"]},
+      {"q": "Why is a normal spine x-ray not reassuring in a patient with cancer?", "a": "Half the bone must be eroded before a metastasis shows, so a plain film never rules out metastases or compression and never replaces the MRI.", "refs": ["mets_mri", "mscc_dex"]},
+      {"q": "Why no lumbar puncture in suspected spinal infection?", "a": "It is avoided until an epidural abscess has been ruled out. Blood cultures, ESR and CRP come first: ESR and CRP together are 94 to 100% sensitive for vertebral osteomyelitis, while the white count is raised in only about two-thirds.", "refs": ["inf_labs"]},
+      {"q": "Vertebral osteomyelitis, stable, no abscess. Why hold the antibiotics?", "a": "Management rests on the organism. Blood cultures come first, and if they do not grow S. aureus, S. lugdunensis or Brucella an image-guided biopsy follows; an antibiotic-free period improves its yield. Sepsis or a deficit needing surgery is the exception.", "refs": ["nvo_cultures"]},
+      {"q": "Why does a vertebral compression fracture get a bone drug before the DXA result?", "a": "A hip or vertebral fracture is an indication to treat osteoporosis regardless of BMD. DXA is still done, secondary causes are ruled out, and hypocalcemia is corrected before a bisphosphonate.", "refs": ["frac_mgmt"]}
+    ]
+  },
+  "traps": [
+    {"text": "A lumbar x-ray for nonspecific back pain. No red flags, no imaging.", "refs": ["ns_imaging"]},
+    {"text": "Cancelling the cauda equina MRI because the residual is under 200 mL. The bladder scan never decides the MRI.", "refs": ["ces_bladder"]},
+    {"text": "Waiting for the spinal surgeons to approve the MRI. Discussing it first only adds delay; the scan is done within 4 hours of the request.", "refs": ["ces_mri"]},
+    {"text": "Holding dexamethasone until the MRI proves cord compression. In known cancer with new neurological signs it goes in first.", "refs": ["mscc_dex"]},
+    {"text": "Plain films to rule out metastases or infection. Half the bone must be eroded before a metastasis shows, and MRI finds infection before bone destruction shows on a film.", "refs": ["mets_mri", "inf_mri"]},
+    {"text": "Holding antibiotics for a CT-guided aspirate in an epidural abscess. Empiric IV antibiotics start now, with an emergency spine surgery review.", "refs": ["sea_treat"]},
+    {"text": "A bone drug only if the T-score is -2.5 or lower after a vertebral fracture. The fracture alone is the indication.", "refs": ["frac_mgmt"]},
+    {"text": "Bed rest, paracetamol alone, or a short course of prednisone for nonspecific back pain. Stay active with an NSAID at the lowest effective dose.", "refs": ["ns_manage"]}
+  ],
+  "faq": [
+    {"q": "What are the red flags for low back pain?", "a": "Cancer or infection: a history of cancer, unexplained weight loss, immunosuppression, IV drug use, a urinary infection, prolonged corticosteroids, or pain not improving with conservative care. Fracture: significant trauma, or a minor fall or heavy lift in an older or osteoporotic person. Cauda equina: urinary retention or overflow incontinence, fecal incontinence or loss of anal tone, saddle anesthesia, or bilateral or progressive leg weakness.", "refs": ["triage"]},
+    {"q": "When does low back pain need an MRI?", "a": "Emergently for suspected cauda equina syndrome, within 4 hours of the request, and for suspected spinal infection, with gadolinium. With known cancer and new neurological signs, a whole-spine MRI within 24 hours; with suspected metastases and an intact exam, within a week. Without red flags, no imaging unless a surgical candidate is still limited after about 6 weeks.", "refs": ["ces_mri", "inf_mri", "mscc_dex", "mets_mri", "ns_imaging", "ns_persist"]},
+    {"q": "Does a normal post-void residual rule out cauda equina syndrome?", "a": "No. A bladder scan is a useful adjunct but never decides the MRI or surgery on its own: 60% of patients who needed emergency decompression had a residual under 200 mL. Over 200 mL makes CES 20 times more likely, and over 600 mL means catheterizing. Record perianal sensation and request the emergency MRI whatever the residual.", "refs": ["ces_bladder", "ces_pvr"]},
+    {"q": "What is the dexamethasone dose for metastatic spinal cord compression?", "a": "NICE NG234 gives 16 mg orally, or the equivalent IV dose, as soon as possible, then 16 mg daily while awaiting surgery or radiotherapy, reduced gradually afterwards, with blood glucose monitoring and a proton pump inhibitor. It stops if the MRI rules out both metastases and compression. US regimens were not among the sources read for this pathway.", "refs": ["mscc_dex", "mscc_result", "source:url:565d0d449838"]},
+    {"q": "What is the best treatment for acute nonspecific low back pain?", "a": "Advice to stay active and keep up normal activities, with an oral NSAID at the lowest effective dose for the shortest time, such as ibuprofen 400 mg every 4 to 6 hours as needed or naproxen 500 mg then 250 mg every 6 to 8 hours. Bed rest, paracetamol alone, routine opioids, systemic steroids and routine imaging are not recommended.", "refs": ["ns_manage"]},
+    {"q": "How is a spinal epidural abscess treated?", "a": "Blood cultures, then empiric IV antibiotics covering staphylococci including MRSA, streptococci and gram-negative bacilli, such as vancomycin plus a third or fourth generation cephalosporin, narrowed to the organism, usually for 4 to 8 weeks (one review gives 4 to 16). A neurological deficit means immediate surgical decompression; antibiotics alone are an option only without a deficit and with a known organism, under close watch, since 30 to 40% fail.", "refs": ["sea_treat", "inf_result"]}
+  ],
+  "related": ["flank_pain", "abdominal_pain", "sepsis_fever", "hot_joint"]
+}

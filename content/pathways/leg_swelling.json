@@ -1394,7 +1394,7 @@
    "orders": [
     {
      "item": "Leg elevation",
-     "dose": "Not stated in the open sources read; IDSA 2014 was not reachable (bot check)",
+     "dose": "Not stated in the open sources read; IDSA 2014 was not openly accessible",
      "status": "pending"
     },
     {
@@ -2056,7 +2056,7 @@
      ]
     }
    ],
-   "note": "CHEST 2021 and ESVS 2021 are quoted from an open 2025 review; their own texts sit behind bot checks. CHEST lists unwillingness to have repeat scans among the reasons to anticoagulate instead."
+   "note": "CHEST 2021 and ESVS 2021 are quoted from an open 2025 review; their own texts were not openly accessible. CHEST lists unwillingness to have repeat scans among the reasons to anticoagulate instead."
   },
   {
    "id": "end_distal",

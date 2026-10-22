@@ -1,0 +1,400 @@
+{
+  "id": "syncope",
+  "slug": "syncope",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Syncope Workup in the ED: Red Flags, ECG, Risk Scores",
+  "metaDescription": "Syncope in the ED, fork by fork: the 12-lead ECG, red flags that need cardiology within 24 hours, heart block, aortic stenosis, HCM, and who goes home.",
+  "h1": "Syncope workup: the ED algorithm, fork by fork",
+  "dek": "For the student on an EM, IM or cardiology rotation with a patient who collapsed and a resident about to ask what is next: the first moves, what is not syncope, the ECG and red flags, heart block, structural disease, who goes home, what to say on rounds, and the traps.",
+  "jumpLinks": [
+    {
+      "label": "First moves",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Rhythm, history, red flags",
+      "stage": "Result"
+    },
+    {
+      "label": "Endpoints and handoffs",
+      "stage": "Outcome"
+    },
+    {
+      "label": "Was it syncope?",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Pacing, valve, HCM",
+      "stage": "Manage"
+    },
+    {
+      "label": "Who goes home",
+      "stage": "Disposition"
+    },
+    {
+      "label": "Echo",
+      "stage": "Imaging"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Everyone gets a 12-lead ECG.",
+      "text": "Monitor and vitals, lying and standing pressure where appropriate, a glucose if it could be low, and the account from the patient and witnesses of before, during and after.",
+      "refs": [
+        "triage",
+        "look"
+      ]
+    },
+    {
+      "lead": "Treat what the monitor shows first.",
+      "text": "Bradycardia with shock: IV atropine, then pacing. Unstable sustained VT: synchronized cardioversion. Hypotension that persists after coming round is not a faint: resuscitate and find the source.",
+      "refs": [
+        "front",
+        "brady_unstable",
+        "end_vt",
+        "end_shock"
+      ]
+    },
+    {
+      "lead": "Look for what is not a simple faint.",
+      "text": "Not a blackout at all, hypoglycemia, a seizure, GI bleeding, a positive pregnancy test, new breathlessness, chest pain or a sudden severe headache each send the patient down another route.",
+      "refs": [
+        "event",
+        "look"
+      ]
+    },
+    {
+      "lead": "Red flags (NICE) mean cardiology within 24 hours.",
+      "text": "An ECG abnormality, heart failure, syncope on exertion, a family history of sudden death under 40 or an inherited heart condition, new breathlessness or a murmur; consider it over 65 without warning. Troponin is not on the list.",
+      "refs": [
+        "risk_step"
+      ]
+    },
+    {
+      "lead": "High-grade AV block: pace.",
+      "text": "Mobitz II, infranodal 2:1, high-degree or complete block gets a permanent pacemaker whatever the symptoms, once a correctable cause is excluded.",
+      "refs": [
+        "pace"
+      ]
+    },
+    {
+      "lead": "Exertional syncope: echo before any exercise test.",
+      "text": "Severe aortic stenosis gets valve replacement. HCM gets a beta blocker, no vasodilators or diuretics, and no exercise until assessed.",
+      "refs": [
+        "echo",
+        "as_step",
+        "hcm_step"
+      ]
+    },
+    {
+      "lead": "No red flags: the history and the standing pressure sort it.",
+      "text": "A fall of 20 mm Hg systolic or 10 diastolic after at least 1 minute standing is postural hypotension; a posture, a trigger and warning symptoms make an uncomplicated faint.",
+      "refs": [
+        "lowrisk_step",
+        "type"
+      ]
+    },
+    {
+      "lead": "A faint goes home; unexplained syncope gets follow-up.",
+      "text": "Uncomplicated faint: reassurance, salt and fluids, counter-pressure maneuvers, no tilt test. Unexplained: specialist cardiovascular assessment and an ambulatory ECG, with no driving while waiting.",
+      "refs": [
+        "reflex_step",
+        "unexplained_step"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do first when a patient collapses?",
+      "intro": "Monitor, vitals, a 12-lead ECG and the story. Bradycardia with shock gets IV atropine, then pacing.",
+      "refs": [
+        "triage",
+        "brady_unstable"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "What do the monitor, the history and the ECG tell you after syncope?",
+      "intro": "The forks read the monitor and vitals, the history and bedside tests, the ECG and red flags, the echo, and the standing pressure.",
+      "refs": [
+        "front",
+        "event",
+        "flags",
+        "echo_result",
+        "type"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "Was it syncope, and is it high risk?",
+      "intro": "The account decides whether it was a blackout at all; the ECG and the red-flag screen decide how urgent the cardiac assessment is; the standing pressure and the history sort the rest.",
+      "refs": [
+        "look",
+        "risk_step",
+        "lowrisk_step"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How are heart block, aortic stenosis, HCM and postural hypotension treated?",
+      "intro": "A permanent pacemaker for high-grade block, valve replacement for symptomatic severe aortic stenosis, a beta blocker for HCM, and a drug review for postural hypotension.",
+      "refs": [
+        "pace",
+        "as_step",
+        "hcm_step",
+        "oh_step"
+      ]
+    },
+    {
+      "stage": "Disposition",
+      "heading": "Who can go home after syncope?",
+      "intro": "An uncomplicated faint goes home with reassurance; unexplained syncope without red flags goes home with specialist follow-up and an ambulatory ECG; red flags stay monitored for review within 24 hours.",
+      "refs": [
+        "reflex_step",
+        "unexplained_step",
+        "monitor",
+        "ecg_risky"
+      ]
+    },
+    {
+      "stage": "Imaging",
+      "heading": "When does syncope need an echo?",
+      "intro": "With exertion, a murmur, heart failure or a family history of sudden death under 40: echo and urgent cardiology assessment within 24 hours.",
+      "refs": [
+        "echo"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Where does each syncope patient end up?",
+      "intro": "Many branches end by handing on: a seizure, a GI bleed, a positive pregnancy test, breathlessness, chest pain or a sudden headache each continues in its own pathway.",
+      "refs": [
+        "end_seizure",
+        "end_gi_bleed",
+        "end_ectopic",
+        "end_dyspnea",
+        "end_chest_pain",
+        "end_headache",
+        "end_pacing",
+        "end_reflex"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "Red flags that need cardiology within 24 hours",
+    "items": [
+      {
+        "text": "An ECG abnormality: a conduction abnormality (bundle branch block or any degree of heart block), a long or short QT, or any ST segment or T wave abnormality.",
+        "refs": [
+          "triage",
+          "risk_step"
+        ]
+      },
+      {
+        "text": "On a manual read: persistent bradycardia, any ventricular arrhythmia, QTc over 450 ms or under 350 ms, a Brugada pattern, pre-excitation, ventricular hypertrophy, abnormal T wave inversion, pathological Q waves, a sustained atrial arrhythmia, a paced rhythm.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "Heart failure.",
+        "refs": [
+          "risk_step"
+        ]
+      },
+      {
+        "text": "A blackout during exertion.",
+        "refs": [
+          "risk_step"
+        ]
+      },
+      {
+        "text": "A family history of sudden death under 40, or an inherited heart condition.",
+        "refs": [
+          "risk_step"
+        ]
+      },
+      {
+        "text": "New or unexplained breathlessness.",
+        "refs": [
+          "risk_step"
+        ]
+      },
+      {
+        "text": "A heart murmur.",
+        "refs": [
+          "risk_step"
+        ]
+      },
+      {
+        "text": "Consider it for anyone over 65 who blacked out without warning.",
+        "refs": [
+          "risk_step"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "79-year-old man with exertional syncope from severe calcific aortic stenosis: he fainted halfway up a hill and came round within a minute, after months of tiring more easily on hills. Monitor: sinus rhythm 76, BP 128/84. No jerking or tongue bite; glucose 110 mg/dL, hemoglobin 13.8 g/dL; not breathless. Red flags: syncope on exertion and a harsh ejection systolic murmur at the right upper sternal border radiating to the neck; ECG shows left ventricular hypertrophy. Echo: severe calcific aortic stenosis, ejection fraction normal. Plan: refer for aortic valve replacement, surgical or TAVI by surgical risk; no exercise test, and no exercise until reassessed.",
+    "presentRefs": [
+      "case:aortic_stenosis",
+      "risk_step",
+      "echo",
+      "as_step"
+    ],
+    "pimp": [
+      {
+        "q": "Why not a Holter instead of the 12-lead?",
+        "a": "A Holter never replaces the 12-lead, and for infrequent blackouts it is not usually offered unless the 12-lead shows a conduction abnormality.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "q": "The limbs jerked. Is it epilepsy?",
+        "a": "Brief jerking happens in ordinary faints and is not by itself epilepsy. A bitten tongue, head turning, prolonged jerking or confusion afterward point to a seizure.",
+        "refs": [
+          "look",
+          "event"
+        ]
+      },
+      {
+        "q": "Mobitz II, and he feels fine now. Why not wait for another event?",
+        "a": "Pacing is indicated for second-degree type 2 block whatever the symptoms, once a transient, correctable cause is excluded.",
+        "refs": [
+          "pace"
+        ]
+      },
+      {
+        "q": "Why not an exercise test for exertional syncope?",
+        "a": "Syncope during exercise does earn one, but not before imaging when aortic stenosis or HCM is possible.",
+        "refs": [
+          "echo"
+        ]
+      },
+      {
+        "q": "Why no furosemide in HCM?",
+        "a": "Hypovolemia, diuretics and vasodilators can each trigger syncope in HCM. The treatment is a beta blocker.",
+        "refs": [
+          "hcm_step"
+        ]
+      },
+      {
+        "q": "Why not a tilt test after a classic faint?",
+        "a": "A tilt test is not offered once the history has made the diagnosis, and it is not a first-line investigation.",
+        "refs": [
+          "reflex_step",
+          "triage"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "An EEG or an epilepsy referral because the limbs jerked. Brief jerking happens in faints, and EEG is not a routine test for a blackout.",
+      "refs": [
+        "look",
+        "triage"
+      ]
+    },
+    {
+      "text": "Full recovery and normal vitals now, so discharge. The ECG and the red-flag screen come before any disposition.",
+      "refs": [
+        "risk_step"
+      ]
+    },
+    {
+      "text": "Admitting only if the troponin is raised. Troponin is not on the red-flag list.",
+      "refs": [
+        "risk_step"
+      ]
+    },
+    {
+      "text": "Watching a bradycardia with shock on the monitor. IV atropine, then pacing if the rate and pressure do not respond.",
+      "refs": [
+        "brady_unstable"
+      ]
+    },
+    {
+      "text": "Echo review every 6 to 12 months for syncope with severe aortic stenosis. Syncope is a symptom, and symptomatic severe disease gets valve replacement.",
+      "refs": [
+        "as_step"
+      ]
+    },
+    {
+      "text": "A vasodilator or furosemide for HCM with an outflow gradient. Both can trigger syncope; a beta blocker is the treatment.",
+      "refs": [
+        "hcm_step"
+      ]
+    },
+    {
+      "text": "Fludrocortisone after a first faint. Drugs are for frequent faints; after an occasional one, reassure and teach.",
+      "refs": [
+        "reflex_step"
+      ]
+    },
+    {
+      "text": "A tilt-table test before the ambulatory ECG in unexplained syncope. The ambulatory ECG comes first, and the patient does not drive while waiting.",
+      "refs": [
+        "unexplained_step",
+        "monitor"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What are the red flags in syncope?",
+      "a": "An ECG abnormality, heart failure, a blackout during exertion, a family history of sudden death under 40 or an inherited heart condition, new or unexplained breathlessness, or a heart murmur; consider it in anyone over 65 who blacked out without warning. Any of them means urgent cardiovascular assessment by a specialist within 24 hours. This list follows NICE; the 2017 US guideline's list was not checked.",
+      "refs": [
+        "risk_step"
+      ]
+    },
+    {
+      "q": "How do you check for orthostatic hypotension?",
+      "a": "Measure the blood pressure lying or seated, then again after standing at least 1 minute; the pathway repeats it at 3 minutes. A fall in systolic of 20 mm Hg or more, or in diastolic of 10 or more, confirms postural hypotension. Then review the drug list, diuretics above all, explain the cause, and recheck standing pressures later.",
+      "refs": [
+        "lowrisk_step",
+        "oh_step"
+      ]
+    },
+    {
+      "q": "What is the Canadian Syncope Risk Score?",
+      "a": "A score from -3 to 11 for ED syncope: vasovagal predisposition -1; heart disease +1; any ED systolic under 90 or over 180 +2; troponin above the 99th percentile +2; abnormal QRS axis +1; QRS over 130 ms +1; QTc over 480 ms +2; ED diagnosis vasovagal -2 or cardiac +2. -2 or lower is very low risk. The sources print some items differently.",
+      "refs": [
+        "lowrisk_step"
+      ]
+    },
+    {
+      "q": "When does syncope need a pacemaker?",
+      "a": "With third-degree, second-degree type 2, infranodal 2:1 or high-degree AV block, a permanent pacemaker is indicated whatever the symptoms, implanted promptly once the criteria are met. Labs and the drug list come first, because pacing is not recommended for a transient, correctable cause. Bradycardia with shock gets IV atropine, then temporary pacing as the bridge.",
+      "refs": [
+        "pace",
+        "brady_unstable"
+      ]
+    },
+    {
+      "q": "Can a patient go home after a simple faint?",
+      "a": "Yes, when the ECG is normal, there are no red flags and the history makes an uncomplicated faint or situational syncope: explain the mechanism, advise on triggers, promote salt and fluids unless contraindicated, and teach counter-pressure maneuvers. No admission, no tilt test, and no fludrocortisone after an occasional faint. Driving advice is given at this first presentation.",
+      "refs": [
+        "reflex_step",
+        "lowrisk_step"
+      ]
+    },
+    {
+      "q": "Which ambulatory ECG for unexplained syncope?",
+      "a": "Chosen by how often the blackouts come: a Holter for several a week, an external event recorder for every 1 to 2 weeks, and an implantable recorder when they come less often than every 2 weeks. A Holter is not usually offered for infrequent blackouts unless the 12-lead shows a conduction abnormality. No tilt test first, and no driving while waiting.",
+      "refs": [
+        "monitor",
+        "unexplained_step"
+      ]
+    }
+  ],
+  "related": [
+    "palpitations",
+    "chest_pain",
+    "seizure",
+    "vertigo"
+  ]
+}

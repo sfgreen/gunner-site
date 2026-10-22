@@ -1,0 +1,81 @@
+{
+  "id": "gi_bleed",
+  "slug": "gi-bleed",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "GI Bleed Management Algorithm: Upper and Lower, Step by Step",
+  "metaDescription": "Upper and lower GI bleed management for EM and IM rotations: resuscitation, Blatchford score, endoscopy timing, PPI doses, varices, TIPS and reversal.",
+  "h1": "GI bleeding in the ED: the management algorithm, fork by fork",
+  "dek": "For the student on an EM or IM rotation with a GI bleed in the department and a resident about to ask what is next: resuscitation, who goes home, when to scope, the ulcer and variceal order sets, the unstable lower bleed, and what you will be pimped on.",
+  "jumpLinks": [
+    {"label": "Resuscitate", "stage": "Stabilize"},
+    {"label": "Where it forks", "stage": "Result"},
+    {"label": "Score and scope", "stage": "Diagnose"},
+    {"label": "Who goes home", "stage": "Disposition"},
+    {"label": "Ulcers and varices", "stage": "Manage"},
+    {"label": "Unstable lower bleed", "stage": "Imaging"},
+    {"label": "Outcomes", "stage": "Outcome"}
+  ],
+  "shortAnswer": [
+    {"lead": "Resuscitate before you scope.", "text": "Two large-bore IVs (16 to 18G), crossmatch, blood count, electrolytes and clotting; crystalloid, not colloid. Ask about antiplatelets, anticoagulants and liver disease. Endoscopy comes once resuscitation is under way.", "refs": ["triage"]},
+    {"lead": "Restrictive blood.", "text": "Red cells below 7 to 8 g/dL, higher with heart disease; a target of 7 to 8 in variceal bleeding. Massive bleeding follows the massive transfusion protocol. Platelets and plasma are not routine.", "refs": ["transfuse", "vasoactive"]},
+    {"lead": "Score the stable upper bleed.", "text": "Glasgow-Blatchford 0 or 1 is very low risk: home with outpatient endoscopy (NICE considers early discharge at 0). 2 or more: admit and scope within 24 hours of presentation.", "refs": ["gbs", "gbs_result", "outpatient", "egd_timing", "calc:gbs"]},
+    {"lead": "Treat high-risk stigmata, then high-dose PPI.", "text": "A spurting or oozing ulcer or a visible vessel gets clips or thermal coagulation, usually with epinephrine, never epinephrine alone. Then 80 mg IV bolus and 8 mg/h for 72 hours, oral twice daily to day 14, and an H. pylori test.", "refs": ["endo_therapy", "post_hemostasis"]},
+    {"lead": "Cirrhosis: drugs before the scope.", "text": "Octreotide 50 micrograms IV, then 25 to 50 micrograms an hour (or terlipressin 2 mg IV every 4 hours), plus ceftriaxone 1 g IV every 24 hours from admission. Endoscopy within 12 hours; band ligation for esophageal varices.", "refs": ["vasoactive", "varix_scope", "evl"]},
+    {"lead": "High-risk varices get early TIPS.", "text": "Child-Pugh C under 14, or B over 7 with active bleeding at endoscopy: pre-emptive covered TIPS within 72 hours, ideally within 24. Not high risk and controlled: the vasoactive drug for 2 to 5 days, then a beta blocker or carvedilol plus repeat banding. Still bleeding: a bridge to rescue TIPS.", "refs": ["tips_risk", "ptips", "secondary", "rescue"]},
+    {"lead": "Reverse the drug, never delay the scope.", "text": "Active bleeding on warfarin: prothrombin complex concentrate with vitamin K (the North American GI guideline suggests against vitamin K and gives PCC only if needed). Apixaban or rivaroxaban: stop it and scope; andexanet is off the US market (NICE still allows it in the UK). Low-dose aspirin for secondary prevention continues once hemostasis is achieved.", "refs": ["warfarin_rev", "xa_rev", "meds"]},
+    {"lead": "Lower bleed: stable or not.", "text": "Stable: colonoscopy after bowel preparation. Still hypotensive despite blood: CT angiography now, then embolization of any bleeding point, with upper endoscopy first if an upper source is likely.", "refs": ["lower_colo", "lower_shock", "embolize"]}
+  ],
+  "sections": [
+    {"stage": "Stabilize", "heading": "What are the first steps in managing a GI bleed?", "intro": "Access, bloods and the drug history first: they decide transfusion, reversal and the next fork. In shock, blood under the massive transfusion protocol comes before the endoscope.", "refs": ["triage", "transfuse", "shock_scope", "warfarin_rev", "xa_rev", "antiplatelet"]},
+    {"stage": "Result", "heading": "Upper or lower, stable or in shock: which fork is this bleed on?", "intro": "The drug history and the vitals after the first fluids pick the route; the Blatchford score, the endoscopy findings and the next 72 hours steer everything after.", "refs": ["meds", "first_look", "gbs_result", "egd_result", "rebleed_check", "varix_result", "tips_risk", "lower_sev", "cta_result"]},
+    {"stage": "Diagnose", "heading": "How soon does a GI bleed need endoscopy?", "intro": "Admitted upper bleed: within 24 hours of presentation (WSES: within 12 in its high-risk group). Suspected varices: within 12 hours, after resuscitation. A normal study at one end sends you to the other, then to the small bowel.", "refs": ["gbs", "egd_timing", "varix_scope", "neg_egd", "lower_colo", "neg_colo"]},
+    {"stage": "Disposition", "heading": "Which GI bleed patients can go home?", "intro": "A Blatchford score of 0 or 1 goes home with outpatient endoscopy (NICE: 0); a small lower bleed that has stopped gets an elective colonoscopy.", "refs": ["outpatient", "lower_minor"]},
+    {"stage": "Manage", "heading": "How do you treat a bleeding ulcer or a variceal bleed?", "intro": "Ulcer with high-risk stigmata: endoscopic hemostasis and a high-dose PPI, repeat endoscopy for a stable rebleed, embolization after two failures (surgery where it is unavailable or fails). Varices: vasoactive drug and antibiotics, banding or glue, and TIPS for the high-risk or the refractory bleed.", "refs": ["endo_therapy", "post_hemostasis", "repeat_egd", "tae", "low_risk_ulcer", "vasoactive", "evl", "ptips", "secondary", "rescue", "glue", "embolize", "cta_upper_scope"]},
+    {"stage": "Imaging", "heading": "Hematochezia with shock: CT angiography or colonoscopy first?", "intro": "CT angiography now, or upper endoscopy first when an upper source is likely. A tagged red cell scan takes an hour or more and has no role here.", "refs": ["lower_shock"]},
+    {"stage": "Outcome", "heading": "Where does each GI bleed end up?", "intro": "Home with outpatient endoscopy, an ulcer or variceal order set, embolization or surgery, or the small bowel work-up. A few routes, such as a Mallory-Weiss tear, an unstable rebleed or a negative CT angiogram in a patient who stays unstable, are not walked further.", "refs": ["end_outpatient", "end_ulcer", "end_tae", "end_varix", "end_ptips", "end_rescue", "end_embolize", "end_neg_egd", "end_neg_colo", "end_mallory_weiss", "end_rebleed_unstable", "end_cta_neg_unstable"]}
+  ],
+  "checklist": {
+    "heading": "Before the endoscopist arrives: the GI bleed checklist",
+    "items": [
+      {"text": "Two 16 to 18G cannulae; crossmatch, blood count, electrolytes and coagulation sent.", "refs": ["triage"]},
+      {"text": "Antiplatelets, anticoagulants and liver disease asked about, since each changes the next step.", "refs": ["triage", "meds"]},
+      {"text": "Red cells below 7 to 8 g/dL, higher with heart disease; the massive transfusion protocol in shock.", "refs": ["transfuse", "shock_scope"]},
+      {"text": "Platelets only for active bleeding with a count under 50 x 10^9/L; plasma only for active bleeding with a PT (INR) or aPTT over 1.5 times normal, and not in variceal bleeding.", "refs": ["transfuse"]},
+      {"text": "Stable upper bleed: Glasgow-Blatchford score before the admission decision.", "refs": ["gbs", "calc:gbs"]},
+      {"text": "Suspected varices: vasoactive drug and ceftriaxone now; erythromycin 250 mg IV 30 to 120 minutes before endoscopy unless the QT is prolonged; intubate first with altered consciousness or active hematemesis.", "refs": ["vasoactive"]},
+      {"text": "Warfarin with active bleeding: PCC with vitamin K. Factor Xa inhibitor: stop it. Neither delays endoscopy.", "refs": ["warfarin_rev", "xa_rev"]}
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the bleed, the risk score and what endoscopy found, then the drugs. For example: 66-year-old man with a drug-eluting coronary stent placed 4 months ago, on aspirin and clopidogrel, with 2 days of black stools; stable after 1 L of crystalloid, hemoglobin 12.4, BUN 21, Glasgow-Blatchford 4, so admitted. Endoscopy showed a 1 cm duodenal ulcer with a non-bleeding visible vessel, treated endoscopically; he is on an 80 mg IV PPI bolus and 8 mg an hour for 72 hours, then oral twice daily to day 14, with an H. pylori test. Aspirin continues; clopidogrel is held briefly and restarts with cardiology, not off more than 5 days with a drug-eluting stent. No rebleeding over 72 hours, hemoglobin steady at 11.8.",
+    "presentRefs": ["case:dapt_visible_vessel", "antiplatelet", "gbs", "gbs_result", "egd_result", "endo_therapy", "post_hemostasis", "rebleed_check"],
+    "pimp": [
+      {"q": "Why not epinephrine injection alone on a visible vessel?", "a": "It is not enough: clips beat it for rebleeding, and NICE rules it out as monotherapy. Clips or thermal coagulation, usually combined with epinephrine; WSES prefers two modalities.", "refs": ["endo_therapy"]},
+      {"q": "Why Glasgow-Blatchford and not AIMS65 or Rockall in the ED?", "a": "Blatchford is the pre-endoscopy tool and misclassifies 1% or fewer of high-risk patients as low risk. AIMS65 can miss about 20% at low cut-offs, and the full Rockall score belongs after endoscopy.", "refs": ["gbs"]},
+      {"q": "Why not give plasma for the INR in a variceal bleed?", "a": "Plasma does not correct the coagulopathy of cirrhosis and can worsen portal hypertension. Variceal bleeding is driven by portal pressure, not the clotting tests; tranexamic acid and factor VIIa are not recommended either.", "refs": ["vasoactive", "rescue"]},
+      {"q": "Which antibiotic in a variceal bleed?", "a": "Ceftriaxone 1 g IV every 24 hours from admission: more effective than oral norfloxacin against Gram-negative sepsis (BSG). Baveno VII names it for advanced cirrhosis, common quinolone resistance and patients already on quinolone prophylaxis.", "refs": ["vasoactive"]},
+      {"q": "Who gets pre-emptive TIPS?", "a": "Child-Pugh C under 14, or B over 7 with active bleeding at the first endoscopy: PTFE-covered TIPS within 72 hours, ideally under 24. In the trial behind it, treatment failure fell from 50% to 3%.", "refs": ["ptips", "tips_risk"]},
+      {"q": "Hematochezia with shock and no hematemesis. Why think upper?", "a": "A minority of upper bleeds present with hematochezia, and up to 15% of suspected lower bleeds have an upper source, so upper endoscopy comes first when an upper source is likely.", "refs": ["first_look", "lower_shock", "neg_colo"]}
+    ]
+  },
+  "traps": [
+    {"text": "Endoscopy, or waiting for the hemoglobin, before resuscitation in shock. The hemoglobin lags behind the loss: blood under the massive transfusion protocol, then endoscopy as soon as resuscitated.", "refs": ["shock_scope", "triage"]},
+    {"text": "Waiting for endoscopy to confirm varices before the vasoactive drug and antibiotics. Both start before the scope.", "refs": ["vasoactive", "varix_scope"]},
+    {"text": "Plasma or tranexamic acid in a variceal bleed. Neither is recommended; the bleed is driven by portal pressure, not the clotting tests.", "refs": ["vasoactive", "rescue"]},
+    {"text": "Epinephrine injection alone for a spurting ulcer or a visible vessel. Clips or thermal coagulation, usually with epinephrine.", "refs": ["endo_therapy"]},
+    {"text": "Stopping both antiplatelets 4 months after a drug-eluting stent. Aspirin continues; clopidogrel is off no more than 5 days.", "refs": ["antiplatelet"]},
+    {"text": "Idarucizumab for apixaban. It reverses dabigatran, not the factor Xa inhibitors, and endoscopy never waits for the drug to clear.", "refs": ["xa_rev"]},
+    {"text": "Banding an isolated gastric varix. That one gets cyanoacrylate glue, with TIPS if it fails.", "refs": ["glue", "evl"]},
+    {"text": "A tagged red cell scan for hematochezia with shock. It takes an hour or more; CT angiography now.", "refs": ["lower_shock"]}
+  ],
+  "faq": [
+    {"q": "What is the first step in managing an upper GI bleed?", "a": "Resuscitation: two large-bore IVs (16 to 18G), crossmatch, blood count, electrolytes and clotting, with crystalloid rather than colloid. Ask about antiplatelets, anticoagulants and liver disease, since each changes the next step. Endoscopy comes once resuscitation is under way; in shock, blood under the massive transfusion protocol first, then endoscopy as soon as the patient is resuscitated.", "refs": ["triage", "shock_scope"]},
+    {"q": "What hemoglobin do you transfuse at in a GI bleed?", "a": "A restrictive threshold, which lowers mortality and rebleeding: below 7 to 8 g/dL, higher with cardiovascular disease. The International Consensus transfuses below 8 without cardiovascular disease, WSES keeps the hemoglobin above 7, and Baveno VII targets 7 to 8 in variceal bleeding. In massive bleeding the hemoglobin lags behind the loss, so the massive transfusion protocol leads.", "refs": ["transfuse"]},
+    {"q": "What PPI dose do you give for a bleeding ulcer?", "a": "Before endoscopy the sources differ: WSES starts a PPI as soon as possible, NICE does not offer acid suppression before endoscopy, and the Asia-Pacific group rejects routine IV PPI; it never delays the scope. After endoscopic treatment of high-risk stigmata: 80 mg IV bolus, then 8 mg an hour for 72 hours, then oral twice daily through day 14.", "refs": ["egd_timing", "post_hemostasis"]},
+    {"q": "How is an acute variceal bleed managed?", "a": "A vasoactive drug (octreotide 50 micrograms IV, then 25 to 50 micrograms an hour, or terlipressin 2 mg IV every 4 hours) and ceftriaxone 1 g IV every 24 hours start before endoscopy, with red cells to 7 to 8 g/dL. Endoscopy within 12 hours with band ligation for esophageal varices; pre-emptive covered TIPS for the high-risk patient; the drug runs 2 to 5 days.", "refs": ["vasoactive", "varix_scope", "evl", "ptips", "secondary"]},
+    {"q": "What Glasgow-Blatchford score is safe for discharge?", "a": "A score of 0 or 1 marks very low risk of rebleeding or death: no admission, no inpatient endoscopy, and endoscopy as an outpatient. NICE is stricter and considers early discharge at 0. A score of 2 or more means admission and upper endoscopy within 24 hours of presentation.", "refs": ["outpatient", "gbs_result", "egd_timing", "calc:gbs"]},
+    {"q": "How do you reverse warfarin in a GI bleed?", "a": "Active bleeding on warfarin calls for prothrombin complex concentrate with vitamin K, without delaying endoscopy. Kcentra for acute major bleeding is 25 units/kg for an INR of 2 to under 4, 35 units/kg for 4 to 6 and 50 units/kg over 6, capped at 2,500, 3,500 and 5,000 units. Plasma is the fallback only without PCC; the North American GI guideline suggests against vitamin K and plasma and gives PCC only if needed.", "refs": ["warfarin_rev"]}
+  ],
+  "related": ["syncope", "abdominal_pain", "palpitations", "trauma"]
+}

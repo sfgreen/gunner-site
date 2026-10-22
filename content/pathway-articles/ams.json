@@ -1,0 +1,399 @@
+{
+  "id": "ams",
+  "slug": "ams",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Altered Mental Status Workup: The ED Approach",
+  "metaDescription": "Altered mental status in the ED: glucose first, naloxone, when to CT, the AMS labs, sodium and calcium emergencies, and delirium care, for your rotation.",
+  "h1": "Altered mental status: the ED workup, from glucose to delirium",
+  "dek": "For the student on an EM or IM rotation with a confused or unresponsive patient and a resident asking what is next. The bedside checks that come first, the forks that send the patient elsewhere, the labs and scans, and how to manage delirium without making it worse.",
+  "jumpLinks": [
+    {
+      "label": "First checks",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Treatment by cause",
+      "stage": "Manage"
+    },
+    {
+      "label": "History and delirium",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "When to CT",
+      "stage": "Imaging"
+    },
+    {
+      "label": "Labs and the 4AT",
+      "stage": "Labs"
+    },
+    {
+      "label": "Handoffs",
+      "stage": "Outcome"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Glucose in the first assessment.",
+      "text": "A capillary glucose is part of the ABCDE of every confused or drowsy adult. Under 72 mg/dL (4 mmol/L, the JBDS threshold): treat now, IV if not safe to swallow, without waiting for the lab result.",
+      "refs": [
+        "triage",
+        "front",
+        "hypo_tx"
+      ]
+    },
+    {
+      "lead": "Thiamine goes with the glucose, never at the cost of a delay.",
+      "text": "In a heavy drinker or a malnourished patient, thiamine is given with the IV dextrose (AES gives it just before); neither source holds the glucose back for it.",
+      "refs": [
+        "hypo_tx",
+        "etoh"
+      ]
+    },
+    {
+      "lead": "Opioid picture: ventilate, then titrate naloxone.",
+      "text": "0.4 to 2 mg IV, repeated every 2 to 3 minutes. In someone dependent on opioids one large push risks acute withdrawal, and some opioids outlast naloxone.",
+      "refs": [
+        "nalox"
+      ]
+    },
+    {
+      "lead": "GCS 8 or less: airway, then CT.",
+      "text": "Glucose normal and no opioid picture: secure the airway and scan now; blood cultures and antibiotics first if there is any fever, stiff neck or rash, and the lumbar puncture waits for the scan.",
+      "refs": [
+        "coma"
+      ]
+    },
+    {
+      "lead": "CO2 retention: controlled oxygen.",
+      "text": "88 to 92% in COPD, neither switched off nor pushed toward normal; NIV if the respiratory acidosis persists despite optimal medical therapy.",
+      "refs": [
+        "co2",
+        "triage"
+      ]
+    },
+    {
+      "lead": "Fever and confusion: antibiotics within the hour.",
+      "text": "Blood cultures, then IV antibiotics within 1 hour of arrival, with dexamethasone with or before the first dose when bacterial meningitis is suspected. Neither the scan nor the CSF holds them up.",
+      "refs": [
+        "mening"
+      ]
+    },
+    {
+      "lead": "Bloods and a 4AT when the bedside is unrevealing.",
+      "text": "Electrolytes with calcium, renal and liver tests, a blood count, urine and an ECG. Severe symptomatic hyponatremia gets 3% saline for a 5 mmol/L rise in the first hour.",
+      "refs": [
+        "labs",
+        "hypona"
+      ]
+    },
+    {
+      "lead": "Delirium: find the cause, not a sedative.",
+      "text": "Review the medicines, bladder, bowel, pain and infection. Haloperidol is only for distress or danger after de-escalation, short term and at the lowest dose.",
+      "refs": [
+        "delirium",
+        "agit"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you check first in a confused or unresponsive patient?",
+      "intro": "ABC, oxygen saturation, a capillary glucose, vital signs with temperature and the GCS. A low glucose is treated at once, an opioid picture gets ventilation and naloxone, and a GCS of 8 or less gets the airway secured and a CT.",
+      "refs": [
+        "triage",
+        "hypo_tx",
+        "nalox",
+        "coma"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Which bedside findings point to the cause of altered mental status?",
+      "intro": "Glucose, breathing, pressure and consciousness come first. Then the witness history, temperature and focal exam route to stroke, meningitis, head injury, seizure, toxins, alcohol, thyroid or temperature, and finally the bloods and the 4AT.",
+      "refs": [
+        "front",
+        "clues",
+        "coma_clues",
+        "lab_result"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How are the metabolic and toxic causes of confusion treated?",
+      "intro": "Controlled oxygen for CO2 retention, antibiotics within the hour for possible meningitis, thiamine for a malnourished drinker, 3% saline for severe hyponatremia, saline then zoledronic acid if the calcium stays high, lactulose for hepatic encephalopathy, and specific treatment for thyroid storm and myxedema coma.",
+      "refs": [
+        "co2",
+        "mening",
+        "etoh",
+        "hypona",
+        "calcium",
+        "ca_bisph",
+        "he",
+        "storm",
+        "myx"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "How do you find the cause once glucose and airway are safe?",
+      "intro": "A witness history, the medicines and alcohol, the temperature and a focal neurologic exam decide the route. In delirium, look for drugs, bladder, bowel, pain and infection.",
+      "refs": [
+        "look",
+        "delirium"
+      ]
+    },
+    {
+      "stage": "Imaging",
+      "heading": "When does a confused patient need a CT head first?",
+      "intro": "A new focal deficit gets a non-contrast CT now, with the time last known well fixed. After a fall or a blow to the head, a GCS still under 15 at 2 hours after the injury, or another NICE risk factor, gets a CT within 1 hour, before any period of observation.",
+      "refs": [
+        "stroke_ct",
+        "head_ct"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "Which labs for altered mental status when the bedside is unrevealing?",
+      "intro": "Electrolytes with calcium adjusted for albumin, glucose, renal and liver tests, a blood count, urine and an ECG, a venous gas and ketones in diabetes, and a 4AT if the patient is awake.",
+      "refs": [
+        "labs"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Which causes of confusion hand off to another pathway?",
+      "intro": "Sepsis and meningitis, hyperglycemic crisis, stroke, seizure, poisoning and hypoxemia each continue in their own pathway. Normal labs with no delirium on the 4AT send you back to the history.",
+      "refs": [
+        "end_sepsis",
+        "end_dka",
+        "end_stroke",
+        "end_seizure",
+        "end_tox",
+        "end_hypox",
+        "end_labs_normal"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "Rechecks you own after the first treatment",
+    "items": [
+      {
+        "text": "Hypoglycemia: recheck the glucose at 10 minutes and repeat the treatment if it is still under 72 mg/dL (4.0 mmol/L, JBDS).",
+        "refs": [
+          "hypo_tx",
+          "front"
+        ]
+      },
+      {
+        "text": "After a sulfonylurea or long-acting insulin: keep checking, because the risk can persist 24 to 36 hours after the last dose.",
+        "refs": [
+          "hypo_tx",
+          "end_hypo"
+        ]
+      },
+      {
+        "text": "After naloxone: watch for re-sedation and repeat doses as needed, and check a blood gas for CO2 retention after any respiratory depressant.",
+        "refs": [
+          "nalox",
+          "end_tox"
+        ]
+      },
+      {
+        "text": "3% saline: check the sodium while the second 150 mL runs, and stop at a 5 mmol/L rise with improving symptoms.",
+        "refs": [
+          "hypona",
+          "hypona_limit"
+        ]
+      },
+      {
+        "text": "After the 3%: sodium at 6 and 12 hours, then daily; no more than 10 mmol/L in the first 24 hours (SfE; StatPearls gives 6 to 8 when the duration is 48 hours or more or unknown), then 8 a day until 130.",
+        "refs": [
+          "hypona_limit",
+          "end_hypona_mod"
+        ]
+      },
+      {
+        "text": "Hypercalcemia: watch fluid balance on 4 to 6 L of saline, check a creatinine before zoledronic acid, expect the calcium nadir at 2 to 4 days, and no retreatment for at least 7 days.",
+        "refs": [
+          "calcium",
+          "ca_bisph"
+        ]
+      },
+      {
+        "text": "Haloperidol in delirium: monitor the ECG if it is given IV, and keep the course short, usually 1 week or less.",
+        "refs": [
+          "agit"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "Say what you excluded at the bedside before you name the cause. One-liner: 84-year-old man with mild memory problems, more confused for 2 days, who fell out of bed overnight at his nursing home. Glucose normal, GCS 14 and protecting his airway, afebrile. Because he hit his head and was still GCS 14 more than 2 hours after the fall, he had a CT head within 1 hour: no bleed and no fracture. Sodium, calcium, renal and liver tests and blood count are normal, and the 4AT shows inattention and fluctuation, so delirium. The cause: diphenhydramine started for sleep 3 days ago on top of oxybutynin, with a bladder scan of 650 mL. Plan: stop the diphenhydramine and keep anticholinergics to a minimum, catheterize the full bladder as needed after a head injury, and non-drug care with reorientation, family, sleep, mobility and the same staff and room; he is calm, so no antipsychotic or benzodiazepine.",
+    "presentRefs": ["case:drug_delirium", "front", "clues", "head_ct", "head_result", "labs", "lab_result", "drug_step", "calm_step"],
+    "pimp": [
+      {
+        "q": "Why not give thiamine first and hold the glucose?",
+        "a": "Hypoglycemia is treated without delay. Thiamine is indicated when IV dextrose goes to someone with marginal thiamine status, and neither source holds the glucose back for it.",
+        "refs": [
+          "hypo_tx"
+        ]
+      },
+      {
+        "q": "Why titrate naloxone instead of giving 10 mg at once?",
+        "a": "In someone dependent on opioids an abrupt, complete reversal can precipitate acute withdrawal. The label gives 0.4 to 2 mg IV every 2 to 3 minutes, and if 10 mg brings no response, the diagnosis is questioned.",
+        "refs": [
+          "nalox"
+        ]
+      },
+      {
+        "q": "A COPD patient got drowsier on high-flow oxygen in the ambulance. What is the oxygen target?",
+        "a": "88 to 92%: controlled oxygen in hypercapnic respiratory failure, neither switched off nor pushed toward normal, with NIV if the acidosis persists despite optimal medical therapy. Naloxone is for opiate poisoning, not CO2 narcosis.",
+        "refs": [
+          "co2",
+          "case:copd_co2"
+        ]
+      },
+      {
+        "q": "The urine dipstick is positive in a confused older patient. Is that the cause?",
+        "a": "Not on its own. IDSA recommends looking for other causes and observing, not treating, when an older patient with delirium has bacteriuria but no urinary symptoms or systemic signs of infection.",
+        "refs": [
+          "look",
+          "labs",
+          "delirium"
+        ]
+      },
+      {
+        "q": "How fast do you correct severe symptomatic hyponatremia?",
+        "a": "A 5 mmol/L rise in the first hour with 150 mL of 3% saline over 20 minutes, repeated, then stop: no more than 10 mmol/L in the first 24 hours and 8 a day after that until 130 (SfE), because over-correction risks osmotic demyelination.",
+        "refs": [
+          "hypona",
+          "hypona_limit"
+        ]
+      },
+      {
+        "q": "Why a steroid before levothyroxine in myxedema coma?",
+        "a": "Thyroid hormone can precipitate an adrenal crisis, so an IV glucocorticoid at stress doses goes first until adrenal function is assessed. The levothyroxine is IV, not oral, and is started without waiting.",
+        "refs": [
+          "myx"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "A CT head before the glucose. A capillary glucose belongs in the first assessment, and a low one is treated without waiting for the lab.",
+      "refs": [
+        "triage",
+        "hypo_tx"
+      ]
+    },
+    {
+      "text": "Calling it intoxication because there is alcohol on the breath. A depressed conscious level is put down to intoxication only after an important brain injury has been excluded.",
+      "refs": [
+        "triage",
+        "look"
+      ]
+    },
+    {
+      "text": "One large naloxone push. Titrate 0.4 to 2 mg; abrupt reversal precipitates withdrawal in someone dependent on opioids.",
+      "refs": [
+        "nalox"
+      ]
+    },
+    {
+      "text": "A lumbar puncture before antibiotics in a febrile, comatose patient. Cultures and antibiotics first, then the scan, then the tap when safe.",
+      "refs": [
+        "coma",
+        "mening"
+      ]
+    },
+    {
+      "text": "Treating bacteriuria as the cause of delirium. Without urinary symptoms or systemic signs of infection, look for other causes and observe.",
+      "refs": [
+        "labs",
+        "delirium"
+      ]
+    },
+    {
+      "text": "Furosemide first for hypercalcemia. Rehydration with 0.9% saline comes first; loop diuretics do not lower the calcium and are only for fluid overload.",
+      "refs": [
+        "calcium"
+      ]
+    },
+    {
+      "text": "Correcting the sodium to 135 within a day. Stop the 3% at a 5 mmol/L rise once symptoms improve, and keep the rise to 10 mmol/L in the first 24 hours (SfE).",
+      "refs": [
+        "hypona",
+        "hypona_limit"
+      ]
+    },
+    {
+      "text": "Haloperidol or a benzodiazepine for a calm delirious patient. Care is non-drug; haloperidol is only for distress or danger, and never in Parkinson's disease or Lewy body dementia.",
+      "refs": [
+        "calm_step",
+        "agit"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the first step in a patient with altered mental status?",
+      "a": "ABC, oxygen saturation, a capillary glucose, vital signs with temperature and the GCS. A low glucose is treated at once; pinpoint pupils with slow breathing get ventilation and naloxone; a GCS of 8 or less gets the airway secured and an immediate CT head, with cultures and antibiotics first if there is fever, a stiff neck or a rash.",
+      "refs": [
+        "triage",
+        "front",
+        "nalox",
+        "coma"
+      ]
+    },
+    {
+      "q": "What labs do you order for altered mental status?",
+      "a": "Once the bedside checks and history are unrevealing: sodium, potassium, calcium adjusted for albumin, glucose, urea and creatinine, liver tests, a blood count, urine and an ECG, with a venous gas and ketones in anyone with diabetes and a 4AT if the patient is awake. Bacteriuria without urinary symptoms or systemic signs is not treated as the cause.",
+      "refs": [
+        "labs"
+      ]
+    },
+    {
+      "q": "Should thiamine be given before glucose?",
+      "a": "Not at the cost of a delay. Hypoglycemia is treated at once, and thiamine goes with IV dextrose when thiamine status is marginal, as in a heavy drinker or a malnourished patient. For suspected Wernicke encephalopathy, high-dose parenteral thiamine goes before or with any glucose, for at least 5 days unless Wernicke is excluded; guidelines differ on the exact dose.",
+      "refs": [
+        "hypo_tx",
+        "etoh"
+      ]
+    },
+    {
+      "q": "When does a confused patient need a CT head?",
+      "a": "Immediately, after the airway, for a GCS of 8 or less. With a new focal deficit, a non-contrast CT now, with the time last known well fixed. After a fall or a blow to the head, within 1 hour for a GCS under 15 at 2 hours after the injury or another NICE risk factor; on an anticoagulant with no other indication, consider CT within 8 hours.",
+      "refs": [
+        "coma",
+        "stroke_ct",
+        "head_ct"
+      ]
+    },
+    {
+      "q": "How is hepatic encephalopathy treated?",
+      "a": "Lactulose: 30 to 45 mL hourly at the start, then 30 to 45 mL three or four times a day adjusted to 2 or 3 soft stools, or as a retention enema when coma brings an aspiration risk. Treat the trigger, constipation being a common one, and add rifaximin 550 mg twice daily to reduce recurrence; rifaximin alone is not the first treatment.",
+      "refs": [
+        "he"
+      ]
+    },
+    {
+      "q": "How do you manage delirium in an older patient?",
+      "a": "Find and treat the cause: review the medicines, especially anticholinergics, benzodiazepines, Z-drugs and opioids, and check bladder, bowel, pain, hydration, oxygen and infection. Care is non-drug: reorientation, family, sleep, mobility and the same staff and room. Haloperidol is only for distress or danger once de-escalation fails, short term at the lowest dose, and physical restraints are avoided.",
+      "refs": [
+        "delirium",
+        "calm_step",
+        "agit"
+      ]
+    }
+  ],
+  "related": [
+    "seizure",
+    "agitation",
+    "stroke",
+    "electrolytes"
+  ]
+}

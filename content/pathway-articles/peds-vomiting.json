@@ -1,0 +1,400 @@
+{
+  "id": "peds_vomiting",
+  "slug": "peds-vomiting",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Vomiting Child: Pyloric Stenosis, Volvulus, Intussusception",
+  "metaDescription": "The vomiting child for peds and EM rotations: shock and glucose, red flags, ORS and ondansetron, pyloric stenosis, volvulus and intussusception.",
+  "h1": "The vomiting child: dehydration, bile and the surgical causes, fork by fork",
+  "dek": "For the student on a peds or EM rotation with a vomiting child and a resident about to ask what is next: weight, perfusion and glucose first, the red flags that rule out gastroenteritis, ORS, ondansetron and IV fluids by weight, pyloric stenosis, green vomit, intussusception, appendicitis, bloody diarrhea, and what you will be pimped on.",
+  "jumpLinks": [
+    {
+      "label": "First moves",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Red flags and forks",
+      "stage": "Result"
+    },
+    {
+      "label": "Handoffs and outcomes",
+      "stage": "Outcome"
+    },
+    {
+      "label": "Dehydration and scores",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Fluids and treatment",
+      "stage": "Manage"
+    },
+    {
+      "label": "Which scan",
+      "stage": "Imaging"
+    },
+    {
+      "label": "Bloody diarrhea",
+      "stage": "Labs"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Weight, perfusion, glucose.",
+      "text": "Every fluid and dose is per kg. Shock is a bedside diagnosis; a fingerstick glucose under 60 mg/dL is treated at once (WHO's chart treats under 45), and a high one is checked for ketoacidosis.",
+      "refs": [
+        "triage",
+        "front"
+      ]
+    },
+    {
+      "lead": "Shock: isotonic bolus, then reassess.",
+      "text": "Glucose-free isotonic crystalloid: NICE 10 mL/kg over less than 10 minutes, WHO and StatPearls 20 mL/kg (US practice uses 20). Never 5% glucose as a resuscitation fluid.",
+      "refs": [
+        "shock_bolus"
+      ]
+    },
+    {
+      "lead": "Green vomit is volvulus until proven otherwise.",
+      "text": "Surgeon now, nasogastric decompression, IV fluid and broad-spectrum antibiotics; an upper GI series in a stable infant (StatPearls now prefers ultrasound first); peritonitis, sepsis or instability goes to the operating room without waiting for imaging.",
+      "refs": [
+        "bile"
+      ]
+    },
+    {
+      "lead": "Red flags before you call it gastroenteritis.",
+      "text": "Bile, blood or mucus in the stool, severe or localized pain, distension, a head injury, altered consciousness, a bulging fontanelle, a non-blanching rash, fever of 38 or more under 3 months (39 from 3 months), the testes, and ingestions.",
+      "refs": [
+        "flags"
+      ]
+    },
+    {
+      "lead": "Dehydration is graded at the bedside.",
+      "text": "No routine bloods. Clinical dehydration: low-osmolarity ORS in small, frequent sips, 50 mL/kg over 4 hours plus maintenance (NICE; WHO 75 mL/kg).",
+      "refs": [
+        "dehyd_assess",
+        "ors"
+      ]
+    },
+    {
+      "lead": "Ondansetron once, then ORS again.",
+      "text": "One oral dose by weight: 2 mg at 8 to 15 kg, 4 mg over 15 to 30 kg, 8 mg over 30 kg; not with a prolonged QT. WHO advises against antiemetics in young children with diarrhea.",
+      "refs": [
+        "ondans"
+      ]
+    },
+    {
+      "lead": "IV rehydration: isotonic, deficit plus maintenance.",
+      "text": "0.9% saline, with or without 5% glucose: a deficit of 100 mL/kg after shock boluses or 50 mL/kg without, added to maintenance (100, then 50, then 20 mL/kg/day by weight). WHO plan C gives 100 mL/kg over 3 to 6 hours.",
+      "refs": [
+        "iv_rehyd"
+      ]
+    },
+    {
+      "lead": "Projectile, non-bilious, at 2 weeks to 3 months: ultrasound the pylorus.",
+      "text": "Rehydrate and correct the alkalosis, potassium included, before the pyloromyotomy; pyloric stenosis is not truly urgent.",
+      "refs": [
+        "pyl_us",
+        "pyl_fluids"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do first for a vomiting child?",
+      "intro": "Weigh the child, then the airway, perfusion and a fingerstick glucose. Shock gets an isotonic bolus by weight, and a perfused child with a low glucose gets 10% glucose 5 mL/kg IV.",
+      "refs": [
+        "triage",
+        "shock_bolus",
+        "hypo_tx"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Which red flags mean it is not gastroenteritis?",
+      "intro": "Perfusion, glucose and ketones sort the first look; the red flags then send bile, colic, right lower quadrant pain, torsion, head injury, ingestion, fever and bloody diarrhea down their own routes, and the age and the pattern of vomiting sort the rest.",
+      "refs": [
+        "front",
+        "shock_after",
+        "flags_result",
+        "pattern",
+        "dehyd_result",
+        "ors_result",
+        "pyl_result",
+        "intuss_result",
+        "enema_result",
+        "appy_risk",
+        "hus_result"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "How dehydrated is the child, and could it be appendicitis?",
+      "intro": "Dehydration is graded from the clinical signs, not from bloods or stool counts; right lower quadrant pain that came before the vomiting is scored with the PAS, a blood count and CRP before any imaging.",
+      "refs": [
+        "flags",
+        "dehyd_assess",
+        "appy_score"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How do you rehydrate a vomiting child, and what does each surgical cause need?",
+      "intro": "ORS first, ondansetron once if it comes back, IV isotonic fluid when oral rehydration fails; the alkalosis corrected before a pyloromyotomy; enema reduction for a stable intussusception.",
+      "refs": [
+        "ors",
+        "ondans",
+        "iv_rehyd",
+        "pyl_fluids",
+        "enema"
+      ]
+    },
+    {
+      "stage": "Imaging",
+      "heading": "Which scan for pyloric stenosis, volvulus, intussusception and appendicitis?",
+      "intro": "Ultrasound first for the pylorus, the target sign and the appendix; an upper GI series for green vomit in a stable infant; plain films only for free air or obstruction; MRI or CT with IV contrast when the ultrasound is equivocal, WSES preferring MRI in a child.",
+      "refs": [
+        "pyl_us",
+        "bile",
+        "intuss_us",
+        "appy_us"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "Bloody diarrhea in a child: which tests, and when do you worry about HUS?",
+      "intro": "Stool for Shiga toxin and culture, a blood count with a film, creatinine, LDH and haptoglobin, and no antimotility drugs. HUS begins 5 to 13 days after the diarrhea starts.",
+      "refs": [
+        "hus_labs"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Where does each vomiting child end up?",
+      "intro": "DKA follows ISPAD, torsion and head injury hand off to their own pathways, and the rest leave with home care advice, an IV plan, an operation or a reduced intussusception.",
+      "refs": [
+        "end_dka",
+        "end_shock_surgical",
+        "end_torsion",
+        "end_head",
+        "end_home",
+        "end_iv",
+        "end_pyl",
+        "end_ladd",
+        "end_reduced",
+        "end_appy",
+        "end_hus"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "The red flags that rule out simple gastroenteritis",
+    "items": [
+      {
+        "text": "Green (bilious) vomit.",
+        "refs": [
+          "flags"
+        ]
+      },
+      {
+        "text": "Blood or mucus in the stool.",
+        "refs": [
+          "flags"
+        ]
+      },
+      {
+        "text": "Severe or localized abdominal pain, distension or rebound.",
+        "refs": [
+          "flags"
+        ]
+      },
+      {
+        "text": "Fever of 38 or more under 3 months, or 39 or more from 3 months.",
+        "refs": [
+          "flags"
+        ]
+      },
+      {
+        "text": "Altered consciousness, neck stiffness or a bulging fontanelle.",
+        "refs": [
+          "flags"
+        ]
+      },
+      {
+        "text": "A non-blanching rash, or breathlessness.",
+        "refs": [
+          "flags"
+        ]
+      },
+      {
+        "text": "A head injury, a painful testis or groin, or a possible ingestion.",
+        "refs": [
+          "flags",
+          "flags_result"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the weight, perfusion and glucose, then the red flags you excluded, the dehydration grade and what the child kept down. For example: 4-year-old boy, 16 kg, with 12 hours of vomiting and watery stools; HR 132, BP 100/62, warm with capillary refill 2 seconds, glucose 88 mg/dL. No red flags: no bile or blood, soft abdomen, testes normal, no rash or injury. Clinical dehydration with dry lips and less urine, perfused, so no bloods. He vomited most sips of ORS over an hour, so he had a single 4 mg oral ondansetron dose for the over 15 to 30 kg band, then kept the ORS down over the next 4 hours and passed urine. Plan: home with ORS and home care advice, returning if he looks more unwell, becomes lethargic or passes less urine.",
+    "presentRefs": ["case:ge_ondans", "triage", "flags", "dehyd_assess", "ors", "ondans", "end_home"],
+    "pimp": [
+      {
+        "q": "Why is green vomit an emergency?",
+        "a": "It is malrotation with volvulus until proven otherwise, and volvulus can progress to necrosis within hours, so the surgeon comes first and the stomach is decompressed.",
+        "refs": [
+          "bile"
+        ]
+      },
+      {
+        "q": "What are the electrolytes in pyloric stenosis, and why correct them first?",
+        "a": "A hypochloremic, hypokalemic metabolic alkalosis, now found in under half because the diagnosis comes earlier. It is generally assumed the alkalosis should be corrected before surgery to prevent apnea, and StatPearls follows the bicarbonate because of the risk of hypoventilation.",
+        "refs": [
+          "pyl_us",
+          "pyl_fluids"
+        ]
+      },
+      {
+        "q": "Why not a 5% dextrose bolus for a shocked, dry child?",
+        "a": "Glucose solutions are not resuscitation fluids: 5% glucose risks hyponatremia and cerebral edema. A low glucose is treated on its own with 10% glucose.",
+        "refs": [
+          "shock_bolus"
+        ]
+      },
+      {
+        "q": "What does the ultrasound show in intussusception?",
+        "a": "A target or doughnut sign on the transverse view and a pseudokidney on the longitudinal, with pooled sensitivity and specificity of 94 to 97%. A 2-view film is only 62% sensitive.",
+        "refs": [
+          "intuss_us"
+        ]
+      },
+      {
+        "q": "Why avoid antibiotics in bloody diarrhea?",
+        "a": "In STEC infection, antibiotics, above all beta-lactams, and antimotility drugs are linked to HUS and worse outcomes. WHO 2024 still gives antibiotics for blood in the stool, so the sources conflict.",
+        "refs": [
+          "hus_labs"
+        ]
+      },
+      {
+        "q": "What goes into the Pediatric Appendicitis Score?",
+        "a": "Cough, percussion or hopping tenderness 2 and right lower quadrant tenderness 2; anorexia, fever, nausea or vomiting, a white count over 10,000, neutrophils over 7,500 and migration of pain 1 each: 10 points.",
+        "refs": [
+          "appy_score",
+          "calc:pas"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "A plain film or bloods before the examination in a perfused vomiting child. The history and red flags decide the route.",
+      "refs": [
+        "triage",
+        "flags"
+      ]
+    },
+    {
+      "text": "5% glucose or hypotonic saline to resuscitate or rehydrate in gastroenteritis. Isotonic fluid only.",
+      "refs": [
+        "shock_bolus",
+        "iv_rehyd"
+      ]
+    },
+    {
+      "text": "Treating green vomit as gastroenteritis with ondansetron and an ORS trial.",
+      "refs": [
+        "bile"
+      ]
+    },
+    {
+      "text": "Calling malrotation excluded because the SMA and SMV look normal on ultrasound.",
+      "refs": [
+        "bile"
+      ]
+    },
+    {
+      "text": "Metoclopramide or promethazine for a vomiting child. Not recommended in children.",
+      "refs": [
+        "ondans"
+      ]
+    },
+    {
+      "text": "Pyloromyotomy tonight with the alkalosis uncorrected. Rehydrate and correct first.",
+      "refs": [
+        "pyl_fluids"
+      ]
+    },
+    {
+      "text": "Antibiotics before an enema reduction, or an enema at all with peritonitis or free air.",
+      "refs": [
+        "enema"
+      ]
+    },
+    {
+      "text": "Loperamide for bloody diarrhea, or for any child with gastroenteritis.",
+      "refs": [
+        "hus_labs",
+        "ors"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do you rehydrate a dehydrated child?",
+      "a": "Grade it at the bedside. Clinical dehydration without shock: low-osmolarity ORS in small, frequent amounts, 50 mL/kg over 4 hours plus maintenance (NICE; WHO about 75 mL/kg), by nasogastric tube if the child cannot drink it. IV isotonic fluid is for shock, deterioration despite ORS or persistent vomiting (WHO also for severe dehydration): a 50 mL/kg deficit, or 100 mL/kg after shock boluses, added to maintenance.",
+      "refs": [
+        "dehyd_assess",
+        "ors",
+        "iv_rehyd",
+        "dehyd_result"
+      ]
+    },
+    {
+      "q": "What is the ondansetron dose for a vomiting child?",
+      "a": "One oral dose by weight band: 2 mg at 8 to 15 kg, 4 mg over 15 to 30 kg and 8 mg over 30 kg, repeated if vomited within 15 minutes; a trial in children aged 6 months to 6 years used 0.1 mg/kg. Avoid it with a prolonged QT. WHO advises against antiemetics in young children with diarrhea, and NICE is silent.",
+      "refs": [
+        "ondans"
+      ]
+    },
+    {
+      "q": "How is pyloric stenosis diagnosed and treated?",
+      "a": "Projectile non-bilious vomiting at 2 weeks to 3 months gets an ultrasound of the pylorus (ACR: muscle 4 mm or more and length over 18 mm; StatPearls uses 3 mm and 15 mm) with electrolytes and a venous gas. Rehydrate and correct the hypochloremic, hypokalemic alkalosis with potassium in the fluid, then a pyloromyotomy, which is curative.",
+      "refs": [
+        "pyl_us",
+        "pyl_fluids",
+        "end_pyl"
+      ]
+    },
+    {
+      "q": "What is the first test for bilious vomiting in an infant?",
+      "a": "The surgeon comes before any test: decompress the stomach and start IV fluid and broad-spectrum antibiotics. In a stable infant ACR rates the upper GI series usually appropriate, the reference standard; StatPearls now prefers ultrasound first, but a normal SMA and SMV relationship does not exclude malrotation. Peritonitis, sepsis or instability goes to the operating room without waiting for imaging.",
+      "refs": [
+        "bile"
+      ]
+    },
+    {
+      "q": "How is intussusception treated?",
+      "a": "Image-guided air or liquid enema reduction for a stable child with an ileocolic intussusception and no peritonitis, with the surgeon available; pooled success is 82%, and antibiotics beforehand are unnecessary. Peritonitis, free air or shock mean surgery instead. After reduction the child can be discharged from the ED, and it recurs in about 9 to 15%.",
+      "refs": [
+        "enema",
+        "end_reduced",
+        "end_intuss_surgery"
+      ]
+    },
+    {
+      "q": "When should you worry about HUS?",
+      "a": "In a child with bloody diarrhea: HUS begins 5 to 13 days after the diarrhea starts, most often under 5 years. Send stool for Shiga toxin and culture, a blood count with a film for schistocytes, creatinine, LDH and haptoglobin, and avoid antimotility drugs. HUS is anemia with schistocytes, low platelets and kidney injury, managed with careful volume repletion and early nephrology.",
+      "refs": [
+        "hus_labs",
+        "hus_result",
+        "end_hus"
+      ]
+    }
+  ],
+  "related": [
+    "abdominal_pain",
+    "scrotal_pain",
+    "dka_hhs",
+    "peds_fever"
+  ]
+}

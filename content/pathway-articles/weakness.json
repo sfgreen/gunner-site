@@ -1,0 +1,408 @@
+{
+  "id": "weakness",
+  "slug": "weakness",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Acute Weakness in the ED: GBS, Myasthenic Crisis, Botulism",
+  "metaDescription": "Acute weakness, fork by fork: the 20/30/40 rule, GBS and IVIG, myasthenic versus cholinergic crisis, botulism antitoxin, tick paralysis and cord signs.",
+  "h1": "Acute weakness: the ED algorithm, fork by fork",
+  "dek": "For the student on an EM or neurology rotation with a weak patient and a resident about to ask what is next: measuring the breathing, the glucose and potassium, cord signs, the bedside pattern, GBS, myasthenic and cholinergic crisis, botulism, tick paralysis, functional weakness, and the traps.",
+  "jumpLinks": [
+    {
+      "label": "Breathing first",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "What each finding means",
+      "stage": "Result"
+    },
+    {
+      "label": "Endpoints and handoffs",
+      "stage": "Outcome"
+    },
+    {
+      "label": "Spine MRI",
+      "stage": "Imaging"
+    },
+    {
+      "label": "IVIG, antitoxin, crisis care",
+      "stage": "Manage"
+    },
+    {
+      "label": "Bedside pattern",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "LP for GBS",
+      "stage": "Labs"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Measure the breathing; do not eyeball it.",
+      "text": "Bedside FVC, MIP and MEP for generalized or bulbar weakness. The 20/30/40 rule: FVC under 20 mL/kg, MIP under 30 or MEP under 40 cm H2O means respiratory failure is coming. Oximetry and the blood gas fail late.",
+      "refs": [
+        "triage",
+        "front"
+      ]
+    },
+    {
+      "lead": "Fingerstick glucose and potassium early.",
+      "text": "A low glucose or an abnormal potassium with flaccid weakness has its own route, and a sudden focal deficit goes to the stroke pathway.",
+      "refs": [
+        "triage",
+        "front",
+        "end_k"
+      ]
+    },
+    {
+      "lead": "Breathing at risk: intensive care before the gas fails.",
+      "text": "In GBS, intubate with no succinylcholine and no noninvasive ventilation; in myasthenic crisis, noninvasive ventilation first if parameters allow.",
+      "refs": [
+        "intubate"
+      ]
+    },
+    {
+      "lead": "A sensory level means the cord.",
+      "text": "Emergency whole-spine MRI with and without gadolinium. Known cancer: dexamethasone 16 mg and an MRI within 24 hours. Myelitis without compression: high-dose IV steroids.",
+      "refs": [
+        "front",
+        "mri",
+        "tm_step"
+      ]
+    },
+    {
+      "lead": "The bedside pattern sorts it.",
+      "text": "Ascending with absent reflexes is GBS; descending from the cranial nerves in an alert, afebrile patient is botulism; fatigable with normal reflexes is myasthenia. Search the skin for a tick.",
+      "refs": [
+        "pattern"
+      ]
+    },
+    {
+      "lead": "GBS that cannot walk 10 m: IVIG or plasma exchange.",
+      "text": "IVIG 0.4 g/kg daily for 5 days within 2 weeks of onset, or plasma exchange within 4 weeks, avoided with autonomic instability; never steroids.",
+      "refs": [
+        "gbs_tx"
+      ]
+    },
+    {
+      "lead": "Weaker on pyridostigmine: look for cholinergic signs first.",
+      "text": "Small pupils, secretions, fasciculations and a slow pulse are cholinergic crisis: stop all anticholinesterases and give atropine. Without them it is myasthenic crisis: IVIG or plasma exchange in intensive care.",
+      "refs": [
+        "mg_look",
+        "chol_step",
+        "mg_crisis"
+      ]
+    },
+    {
+      "lead": "Botulism: antitoxin on clinical grounds.",
+      "text": "Call the health department now for BAT from CDC; draw serum before it runs, but never delay it. An infant gets BabyBIG.",
+      "refs": [
+        "bot_step",
+        "infant_step"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What are the first steps for acute weakness in the ED?",
+      "intro": "Airway, cough and swallow, a fingerstick glucose, and bedside spirometry for generalized or bulbar weakness. When the breathing is at risk, intensive care before the blood gas fails.",
+      "refs": [
+        "triage",
+        "intubate"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "How do the breathing numbers, labs, cord signs and CSF route a weak patient?",
+      "intro": "The forks read the first look, the recheck once breathing is supported, the spine MRI, the bedside pattern, the CSF, walking and time from onset, the ICU criteria, the myasthenia workup and the botulism exposure.",
+      "refs": [
+        "front",
+        "recheck",
+        "mri_result",
+        "pattern_result",
+        "csf",
+        "gbs_severity",
+        "gbs_icu",
+        "mg_type",
+        "bot_source"
+      ]
+    },
+    {
+      "stage": "Imaging",
+      "heading": "When does weakness need an MRI of the spine?",
+      "intro": "A sensory level without cancer, fever or drug use gets an emergency whole-spine MRI with and without gadolinium; red flags go straight to the back pain pathway.",
+      "refs": [
+        "mri",
+        "front"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How are GBS, myasthenic crisis, cholinergic crisis and botulism treated?",
+      "intro": "IVIG or plasma exchange for GBS and myasthenic crisis, atropine for cholinergic crisis, antitoxin for botulism, removal for tick paralysis, steroids for myelitis, and CBT with physiotherapy for functional weakness.",
+      "refs": [
+        "gbs_tx",
+        "mg_crisis",
+        "chol_step",
+        "bot_step",
+        "infant_step",
+        "tick_step",
+        "tm_step",
+        "func_step"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "GBS, myasthenia, botulism or a tick: how does the bedside exam tell them apart?",
+      "intro": "The history of infection, food, wounds and drugs, then pupils, eye movements, bulbar muscles, fatigability, reflexes, sensation and a full skin search.",
+      "refs": [
+        "pattern",
+        "mg_look"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "What does the LP show in GBS?",
+      "intro": "A raised protein with a normal cell count, though the protein is normal in 30 to 50% in the first week.",
+      "refs": [
+        "gbs_lp"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Where does each weak patient end up?",
+      "intro": "Every branch closes on a diagnosis and its plan, and some hand on: a low glucose to altered mental status, a sudden focal deficit to stroke, cord signs with a red flag to back pain.",
+      "refs": [
+        "end_gbs_icu",
+        "end_mg",
+        "end_bot",
+        "end_tick",
+        "end_spine",
+        "end_stroke"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "Neuromuscular breathing: the bedside checks",
+    "items": [
+      {
+        "text": "FVC, MIP and MEP for generalized or bulbar weakness, repeated.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "The 20/30/40 rule: FVC under 20 mL/kg, MIP under 30 cm H2O, MEP under 40 cm H2O.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "Face too weak to seal the mouthpiece: a mask device, or the single breath count or sniff nasal inspiratory pressure.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "Infant with suspected botulism: continuous end-tidal CO2.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "Oximetry and the blood gas are late markers, not early ones.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "Pooled secretions, a weak cough or severe swallowing trouble: intensive care.",
+        "refs": [
+          "front",
+          "intubate"
+        ]
+      },
+      {
+        "text": "In myasthenia, vital capacity and gases do not reliably predict the need for ventilation: observe continuously.",
+        "refs": [
+          "mg_crisis"
+        ]
+      },
+      {
+        "text": "GBS on the ward: intensive care for FVC under 20 mL/kg, dysautonomia, bulbar palsy or fast decline.",
+        "refs": [
+          "gbs_icu"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "29-year-old woman, 60 kg, with Guillain-Barre syndrome: 6 days of tingling hands and feet, then legs giving way, after a flu-like illness 3 weeks ago. Breathing safe: FVC 3.1 L (52 mL/kg), MIP 70 cm H2O, strong cough; glucose and potassium normal; no sensory level, saddle sensation and bladder normal. Exam: symmetric weakness, legs 3/5 and arms 4/5, reflexes absent, pupils, eye movements and swallow normal, no tick. CSF: raised protein with 3 white cells per microliter. She cannot walk 10 m without help at day 6, so IVIG 0.4 g/kg daily for 5 days. Plan: serial FVC, MIP and MEP, swallow and cough checks, ECG and blood pressure for dysautonomia, and pressure ulcer and DVT prevention; FVC is steady at 3.0 L over 24 hours, so she stays on the ward, moving to intensive care if respiratory, bulbar or autonomic failure appears.",
+    "presentRefs": [
+      "case:gbs_ward",
+      "triage",
+      "pattern",
+      "gbs_lp",
+      "gbs_tx",
+      "end_gbs_ward"
+    ],
+    "pimp": [
+      {
+        "q": "Her saturation is 98%. Why worry about her breathing?",
+        "a": "Hypoxia and hypercapnia come late in neuromuscular respiratory failure. FVC, MIP and MEP are what show it coming.",
+        "refs": [
+          "triage",
+          "case:gbs_ward"
+        ]
+      },
+      {
+        "q": "Why not succinylcholine to intubate a GBS patient?",
+        "a": "It can precipitate hyperkalemia.",
+        "refs": [
+          "intubate"
+        ]
+      },
+      {
+        "q": "Why not steroids for GBS?",
+        "a": "Eight trials of corticosteroids showed no benefit, and oral steroids worsened outcome.",
+        "refs": [
+          "gbs_tx"
+        ]
+      },
+      {
+        "q": "Why not plasma exchange followed by IVIG?",
+        "a": "It is no better than either alone.",
+        "refs": [
+          "gbs_tx"
+        ]
+      },
+      {
+        "q": "A myasthenic patient is weaker. Why not more pyridostigmine?",
+        "a": "It may be a cholinergic crisis, and more anticholinesterase in a cholinergic crisis can have grave consequences. Look for small pupils, secretions, fasciculations and a slow pulse first.",
+        "refs": [
+          "mg_look"
+        ]
+      },
+      {
+        "q": "Why draw serum before the botulism antitoxin?",
+        "a": "The antitoxin neutralizes the toxin, so the serum specimen comes first; but the antitoxin is never delayed for it.",
+        "refs": [
+          "bot_step"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "Judging the breathing by the oximeter or a blood gas. Both fail late; measure FVC, MIP and MEP.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "text": "Oxygen or noninvasive ventilation on a ward for GBS with an FVC under 20 mL/kg. Intensive care; noninvasive ventilation is not recommended in GBS.",
+      "refs": [
+        "intubate"
+      ]
+    },
+    {
+      "text": "Waiting for antiganglioside antibodies or nerve conduction studies before treating GBS. Treatment does not wait, and nerve conduction can be normal in the first week.",
+      "refs": [
+        "pattern",
+        "gbs_lp"
+      ]
+    },
+    {
+      "text": "Ruling out GBS on a normal CSF protein. It is normal in 30 to 50% in the first week.",
+      "refs": [
+        "gbs_lp"
+      ]
+    },
+    {
+      "text": "Levofloxacin for a chest infection in myasthenia. Fluoroquinolones are avoided in MG, and aminoglycosides are used only with caution.",
+      "refs": [
+        "mg_look",
+        "mg_type"
+      ]
+    },
+    {
+      "text": "IV methylprednisolone alone for myasthenic crisis. Steroids alone can transiently worsen weakness; they go alongside IVIG or plasma exchange.",
+      "refs": [
+        "mg_crisis"
+      ]
+    },
+    {
+      "text": "A skin test before botulism antitoxin, or IVIG for botulism. Antitoxin on clinical grounds, with no routine skin test.",
+      "refs": [
+        "bot_step"
+      ]
+    },
+    {
+      "text": "IVIG for tick paralysis. Remove the whole tick and search for more.",
+      "refs": [
+        "tick_step"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the 20/30/40 rule?",
+      "a": "Bedside thresholds for neuromuscular respiratory failure: a forced vital capacity under 20 mL/kg, a maximal inspiratory pressure under 30 cm H2O, or a maximal expiratory pressure under 40 cm H2O. Any of them puts the patient at risk of respiratory failure and means intensive care. They are repeated, because hypoxia and hypercapnia on oximetry or a blood gas come late.",
+      "refs": [
+        "triage",
+        "front",
+        "intubate"
+      ]
+    },
+    {
+      "q": "What is the treatment for Guillain-Barre syndrome?",
+      "a": "For a patient who cannot walk 10 m unaided: IVIG 0.4 g/kg daily for 5 days within 2 weeks of the onset of weakness, or plasma exchange of 200 to 250 mL/kg over five sessions within 4 weeks; they are equally effective. Steroids do not help, and plasma exchange followed by IVIG is no better than either alone. Monitor breathing, swallow and autonomic function.",
+      "refs": [
+        "gbs_tx"
+      ]
+    },
+    {
+      "q": "What are the CSF findings in GBS?",
+      "a": "A raised protein with a normal cell count, albuminocytologic dissociation. The protein is normal in 30 to 50% in the first week, so a normal result does not rule GBS out. Cells of 10 to 50 per microliter are compatible but should prompt other diagnoses, and over 50 point away from GBS. Draw it before IVIG if possible.",
+      "refs": [
+        "gbs_lp",
+        "csf"
+      ]
+    },
+    {
+      "q": "How do you tell myasthenic crisis from cholinergic crisis?",
+      "a": "Look for cholinergic signs: small pupils, salivation and bronchial secretions, sweating, diarrhea, cramps, fasciculations and a slow pulse. With them it is cholinergic crisis: stop all anticholinesterases and give atropine. Without them it is myasthenic crisis: IVIG or plasma exchange in intensive care. No more pyridostigmine until cholinergic crisis is excluded.",
+      "refs": [
+        "mg_look",
+        "mg_type",
+        "chol_step",
+        "mg_crisis"
+      ]
+    },
+    {
+      "q": "How is botulism treated?",
+      "a": "With antitoxin on clinical grounds, as early as possible and best within 2 days: call the local or state health department at once for BAT from CDC, one vial IV in adults. Draw serum before it, but never delay the antitoxin for a specimen, and skip the skin test. Infants get BabyBIG instead, and wound botulism also gets debridement.",
+      "refs": [
+        "bot_step",
+        "infant_step",
+        "bot_source"
+      ]
+    },
+    {
+      "q": "What is the Hoover sign?",
+      "a": "A positive sign of functional weakness: the weak leg presses down when the other leg lifts against resistance. With inconsistent weakness and normal reflexes, tone and plantars, it supports a diagnosis made on positive signs. The symptoms are real and not deliberate, and the treatment is CBT and physiotherapy with regular follow-up, without confrontation.",
+      "refs": [
+        "func_step",
+        "pattern_result"
+      ]
+    }
+  ],
+  "related": [
+    "back_pain",
+    "electrolytes",
+    "stroke",
+    "tox"
+  ]
+}

@@ -289,7 +289,7 @@
      ]
     }
    ],
-   "note": "Not in this version: traumatic cardiac arrest and resuscitative thoracotomy (the ERC 2025 guideline is bot-checked), burns (pw_burns), drowning (pw_environmental), field triage, blunt cardiac and aortic injury, diaphragm and urethral injury beyond a flag, the obtunded patient's spine, thoracolumbar injury, a small hemothorax and a positive FAST with a pelvic fracture. The headache pathway does not cover head injury; its CT rules are walked here. Head CT rules here are the NICE rules for 16 and over; a child's rules (NICE under 16 and PECARN) are in pw_peds_vomiting."
+   "note": "Not in this version: traumatic cardiac arrest and resuscitative thoracotomy (the ERC 2025 guideline was not openly accessible), burns (pw_burns), drowning (pw_environmental), field triage, blunt cardiac and aortic injury, diaphragm and urethral injury beyond a flag, the obtunded patient's spine, thoracolumbar injury, a small hemothorax and a positive FAST with a pelvic fracture. The headache pathway does not cover head injury; its CT rules are walked here. Head CT rules here are the NICE rules for 16 and over; a child's rules (NICE under 16 and PECARN) are in pw_peds_vomiting."
   },
   {
    "id": "airway",

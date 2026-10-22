@@ -1,0 +1,434 @@
+{
+  "id": "leg_swelling",
+  "slug": "leg-swelling",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "DVT Workup: Wells Score, D-Dimer, Ultrasound and Treatment",
+  "metaDescription": "The painful or swollen leg for EM and IM rotations: limb ischemia, necrotizing infection, Wells score, D-dimer and ultrasound, DVT doses, and cellulitis.",
+  "h1": "The painful or swollen leg: DVT, ischemia and cellulitis, fork by fork",
+  "dek": "For the student on an EM or IM rotation with a swollen or painful leg and a resident about to ask what is next: the limb and life threats first, the Wells score, D-dimer and ultrasound rules, DVT doses and duration, cellulitis and abscess antibiotics, and what you will be pimped on.",
+  "jumpLinks": [
+    {
+      "label": "Limb threats first",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Where it forks",
+      "stage": "Result"
+    },
+    {
+      "label": "Treatment",
+      "stage": "Manage"
+    },
+    {
+      "label": "Outcomes",
+      "stage": "Outcome"
+    },
+    {
+      "label": "Wells score",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Ultrasound",
+      "stage": "Imaging"
+    },
+    {
+      "label": "D-dimer",
+      "stage": "Labs"
+    },
+    {
+      "label": "How long to treat",
+      "stage": "Disposition"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Limb and life threats first.",
+      "text": "Vitals, then both legs: pulses (handheld Doppler if impalpable), color, warmth, sensation, movement and the skin. A cold pulseless foot, a tense blue leg or pain out of proportion changes the route before DVT is scored.",
+      "refs": [
+        "triage",
+        "front"
+      ]
+    },
+    {
+      "lead": "Cold, pale, pulseless: heparin and a surgeon.",
+      "text": "IV unfractionated heparin on diagnosis unless contraindicated, and an emergency bedside viability assessment, with no imaging delay. Salvageable: revascularize. Insensate and paralyzed with no Doppler signals: amputation.",
+      "refs": [
+        "ali_hep",
+        "ali_revasc",
+        "ali_amp"
+      ]
+    },
+    {
+      "lead": "Necrotizing signs: the operating room.",
+      "text": "Emergency debridement within 6 hours of admission (WSES 2022; its 2018 consensus said 12) with broad antibiotics plus clindamycin or linezolid. Imaging and a low LRINEC score never delay it.",
+      "refs": [
+        "nsti_surg"
+      ]
+    },
+    {
+      "lead": "Score before you test.",
+      "text": "Two-level Wells: 1 point or less goes to a D-dimer (age-adjusted over 50), 2 or more to compression ultrasound within 4 hours. A negative D-dimer ends it; a positive one goes to ultrasound, never straight to treatment.",
+      "refs": [
+        "wells",
+        "dd",
+        "us",
+        "calc:wells_dvt"
+      ]
+    },
+    {
+      "lead": "Apixaban or rivaroxaban, no heparin lead-in.",
+      "text": "Not pregnant, no active cancer: apixaban 10 mg twice daily for 7 days, then 5 mg twice daily; or rivaroxaban 15 mg twice daily with food for 21 days, then 20 mg daily. Dabigatran and edoxaban need 5 to 10 days of heparin first. At home for uncomplicated DVT.",
+      "refs": [
+        "tx_doac",
+        "tx_setting"
+      ]
+    },
+    {
+      "lead": "Provoked 3 months; unprovoked indefinitely.",
+      "text": "Stop at 3 months after a transient factor that has passed; continue indefinitely after an unprovoked clot when the bleeding risk allows, reviewed at least yearly.",
+      "refs": [
+        "dur_prov",
+        "dur_unprov"
+      ]
+    },
+    {
+      "lead": "Pregnancy and cancer change the drug.",
+      "text": "Pregnant: compression ultrasound including the iliac veins, then LMWH, never warfarin or a DOAC. Active cancer: a DOAC, used carefully in GI cancers, or LMWH if a DOAC is unsuitable.",
+      "refs": [
+        "preg_us",
+        "preg_tx",
+        "cancer"
+      ]
+    },
+    {
+      "lead": "Cellulitis: streptococci first.",
+      "text": "No MRSA risk: cephalexin 500 mg every 6 hours (NICE: flucloxacillin) for 5 days, IV cefazolin if unwell. MRSA risk: add TMP-SMX or doxycycline, or IV vancomycin if unwell. Pus: incision and drainage.",
+      "refs": [
+        "cell_strep",
+        "cell_mrsa",
+        "abscess"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you check first in a painful or swollen leg?",
+      "intro": "The limb or life threat: acute limb ischemia judged at the bedside with a handheld Doppler, necrotizing infection from its clinical signs. Only then is DVT scored.",
+      "refs": [
+        "triage",
+        "ali_hep"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Ischemia, infection, DVT or both legs: which fork is this leg on?",
+      "intro": "Pulses, color and the skin pick the first route; then the Wells score, the D-dimer, the ultrasound, cancer and what provoked the clot steer the DVT branch.",
+      "refs": [
+        "front",
+        "findings",
+        "ali_cat",
+        "wells_result",
+        "dd_result",
+        "us_result",
+        "distal_risk",
+        "tx_group",
+        "provoke"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How do you treat DVT, limb ischemia, necrotizing fasciitis and cellulitis?",
+      "intro": "Revascularize or amputate by viability, debride necrotizing infection now, a beta-lactam for cellulitis, a DOAC for most DVT and LMWH in pregnancy.",
+      "refs": [
+        "ali_revasc",
+        "ali_amp",
+        "phleg",
+        "nsti_surg",
+        "cell_strep",
+        "cell_mrsa",
+        "abscess",
+        "cell_care",
+        "preg_tx",
+        "baker",
+        "tx_doac",
+        "cancer"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "How do you use the Wells score for DVT?",
+      "intro": "Two-level Wells: 1 point each for nine findings, minus 2 when another diagnosis is at least as likely; 2 or more is DVT likely. Both legs swollen is a different workup: the drug list, NT-proBNP and urine protein.",
+      "refs": [
+        "wells",
+        "bilat",
+        "calc:wells_dvt"
+      ]
+    },
+    {
+      "stage": "Imaging",
+      "heading": "Which ultrasound for suspected DVT, and when do you repeat it?",
+      "intro": "Compression ultrasound, proximal or whole leg, within 4 hours; the iliac veins included in pregnancy; a repeat in about a week when DVT is likely and the first scan is clear (NICE: if a D-dimer is positive); serial scans for a low-risk calf clot.",
+      "refs": [
+        "us",
+        "repeat",
+        "preg_us",
+        "distal_serial"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "When does a D-dimer rule out DVT?",
+      "intro": "Only when DVT is unlikely on Wells: a negative result ends the workup and a positive one goes to ultrasound. Consider an age-adjusted cutoff over 50; it helps little in hospitalized, postsurgical or pregnant patients.",
+      "refs": [
+        "dd"
+      ]
+    },
+    {
+      "stage": "Disposition",
+      "heading": "How long do you anticoagulate a DVT?",
+      "intro": "At least 3 months: stop then after a transient factor that has passed, and continue indefinitely after an unprovoked clot when the bleeding risk allows.",
+      "refs": [
+        "dur_prov",
+        "dur_unprov"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Where does each swollen leg end up?",
+      "intro": "Revascularization or amputation, the operating room, antibiotics with a marked edge, home on a DOAC, or DVT excluded with clear advice on when to come back.",
+      "refs": [
+        "end_ali",
+        "end_nsti",
+        "end_cell",
+        "end_dvt_tx",
+        "end_dvt_out",
+        "end_cancer",
+        "end_pe",
+        "end_shock"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "The swollen leg: what to check before you order a test",
+    "items": [
+      {
+        "text": "Vitals: shock is resuscitated first.",
+        "refs": [
+          "triage",
+          "front",
+          "end_shock"
+        ]
+      },
+      {
+        "text": "Pulses in both legs, with a handheld Doppler if they cannot be felt.",
+        "refs": [
+          "triage",
+          "ali_hep"
+        ]
+      },
+      {
+        "text": "Color, warmth, sensation and movement of the foot.",
+        "refs": [
+          "triage",
+          "ali_cat"
+        ]
+      },
+      {
+        "text": "Pain out of proportion, edema past the redness, bullae or crepitus.",
+        "refs": [
+          "triage",
+          "front"
+        ]
+      },
+      {
+        "text": "Breathlessness, pleuritic pain, hypoxia or hemoptysis: the PE route.",
+        "refs": [
+          "front",
+          "end_pe"
+        ]
+      },
+      {
+        "text": "One leg or both; pregnant or not.",
+        "refs": [
+          "front",
+          "findings"
+        ]
+      },
+      {
+        "text": "Pus or fluctuance, and MRSA risk factors such as injection drug use.",
+        "refs": [
+          "findings",
+          "cell_mrsa"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the threats you excluded, then the score, the scan and the plan. For example: 62-year-old man 3 weeks after a left knee replacement, now walking, with a swollen, painful left leg; no ischemia, necrotizing signs or PE symptoms. Wells 4 (major surgery within 12 weeks, entire leg swollen, calf 4 cm larger, pitting edema of that leg only), so DVT likely, and compression ultrasound shows non-compressible left popliteal and femoral veins. No cancer, CrCl 78 mL/min, no bleeding history. Plan: apixaban 10 mg twice daily for 7 days, then 5 mg twice daily, at home since his pain is controlled by mouth and his wife is with him; provoked by surgery that has passed, so 3 months, then stop if uncomplicated, with written warning signs and a thrombosis contact; no thrombophilia testing.",
+    "presentRefs": ["case:provoked_home", "front", "findings", "wells", "wells_result", "us", "us_result", "tx_group", "tx_doac", "tx_setting", "provoke", "dur_prov"],
+    "pimp": [
+      {
+        "q": "Why not send a D-dimer on everyone?",
+        "a": "It is for the patient in whom DVT is unlikely; a likely Wells score goes straight to ultrasound. It helps little in hospitalized, postsurgical or pregnant patients, in whom it is often positive, and a positive result alone never diagnoses DVT.",
+        "refs": [
+          "dd",
+          "us",
+          "wells"
+        ]
+      },
+      {
+        "q": "Why no heparin lead-in with apixaban or rivaroxaban?",
+        "a": "Each starts at a higher dose instead: for 7 days with apixaban and 3 weeks with rivaroxaban. Dabigatran and edoxaban need 5 to 10 days of heparin first.",
+        "refs": [
+          "tx_doac"
+        ]
+      },
+      {
+        "q": "How long does skeletal muscle tolerate acute ischemia?",
+        "a": "About 4 to 6 hours, which is why heparin goes in on diagnosis and imaging before treatment is usually unnecessary.",
+        "refs": [
+          "ali_hep"
+        ]
+      },
+      {
+        "q": "Why not revascularize a category III limb?",
+        "a": "The damage is irreversible, and reperfusion of the ischemic metabolites can cause multiorgan failure and cardiovascular collapse. Revascularizing nonviable tissue is Class 3: Harm; amputation is the index procedure.",
+        "refs": [
+          "ali_amp"
+        ]
+      },
+      {
+        "q": "Why not TMP-SMX alone for cellulitis?",
+        "a": "WSES 2022 says TMP-SMX and doxycycline have no activity against group A and B streptococci, so with an MRSA risk they go with a beta-lactam such as cephalexin.",
+        "refs": [
+          "cell_strep",
+          "cell_mrsa"
+        ]
+      },
+      {
+        "q": "What does a ruptured Baker cyst mimic, and what proves it?",
+        "a": "DVT: synovial fluid leaks into the calf. The duplex excludes the clot, which is why it comes first, and anticoagulation without a DVT is the misdiagnosis to avoid.",
+        "refs": [
+          "baker"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "A D-dimer before the leg is scored. Wells first; the D-dimer only when DVT is unlikely.",
+      "refs": [
+        "wells",
+        "dd",
+        "triage"
+      ]
+    },
+    {
+      "text": "Treating a positive D-dimer as DVT. It goes to ultrasound.",
+      "refs": [
+        "dd"
+      ]
+    },
+    {
+      "text": "Discharging after one clear scan when DVT was likely. Repeat in about a week (NICE: if a D-dimer is positive).",
+      "refs": [
+        "repeat"
+      ]
+    },
+    {
+      "text": "CT angiography before heparin in acute limb ischemia. Heparin on diagnosis; imaging before treatment is usually unnecessary.",
+      "refs": [
+        "ali_hep"
+      ]
+    },
+    {
+      "text": "Waiting for gas on CT, a high LRINEC or 24 hours of antibiotics before operating on necrotizing infection. Debridement comes now; imaging and a low score never delay it.",
+      "refs": [
+        "nsti_surg"
+      ]
+    },
+    {
+      "text": "Warfarin or a DOAC for DVT in pregnancy. LMWH, once or twice daily.",
+      "refs": [
+        "preg_tx"
+      ]
+    },
+    {
+      "text": "Anticoagulating a ruptured Baker cyst. The duplex showed no DVT.",
+      "refs": [
+        "baker"
+      ]
+    },
+    {
+      "text": "An IVC filter in place of anticoagulation. Only when anticoagulation is contraindicated.",
+      "refs": [
+        "phleg",
+        "distal_serial"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do you work up suspected DVT?",
+      "a": "Score it with the two-level Wells score. 1 point or less: a D-dimer, age-adjusted over 50; negative rules DVT out, positive goes to ultrasound. 2 points or more: compression ultrasound, proximal or whole leg, within 4 hours, with interim anticoagulation if the result will take longer. A likely score with a clear scan gets a repeat in about a week.",
+      "refs": [
+        "wells",
+        "dd",
+        "us",
+        "repeat",
+        "calc:wells_dvt"
+      ]
+    },
+    {
+      "q": "What is the apixaban dose for DVT?",
+      "a": "10 mg twice daily for 7 days, then 5 mg twice daily, with no heparin lead-in. Rivaroxaban is 15 mg twice daily with food for 21 days, then 20 mg once daily with food. Treat for at least 3 months. For extended treatment, the labels give a lower dose, apixaban 2.5 mg twice daily or rivaroxaban 10 mg daily, after at least 6 months.",
+      "refs": [
+        "tx_doac",
+        "dur_unprov"
+      ]
+    },
+    {
+      "q": "How long do you treat a provoked versus an unprovoked DVT?",
+      "a": "Provoked by a transient factor that has passed: 3 months, then stop if the course was uncomplicated. Unprovoked: indefinitely when the bleeding risk allows, reviewed at least yearly; NICE suggests discussing stopping if the HAS-BLED score is 4 or more and cannot be modified. No thrombophilia testing after a provoked DVT or while anticoagulation continues.",
+      "refs": [
+        "dur_prov",
+        "dur_unprov"
+      ]
+    },
+    {
+      "q": "Do you treat an isolated calf DVT?",
+      "a": "Not always. With mild symptoms and no risk factor for extension, CHEST suggests serial ultrasound over 2 weeks instead of anticoagulation, treating only if it extends; ESVS repeats a whole-leg scan at 1 week. Severe symptoms or a risk factor, such as cancer, a clot over 5 cm or more than one vein, mean the same anticoagulation as a proximal DVT.",
+      "refs": [
+        "distal_risk",
+        "distal_serial"
+      ]
+    },
+    {
+      "q": "What antibiotic for cellulitis of the leg?",
+      "a": "Without pus or an MRSA risk: oral cephalexin 500 mg every 6 hours (NICE: flucloxacillin) for 5 days, longer if not resolved; IV cefazolin 2 g every 8 hours if systemically unwell. With an MRSA risk such as injection drug use: TMP-SMX or doxycycline added to cephalexin, or IV vancomycin or linezolid if unwell. Mark the edge; reassess at 2 to 3 days.",
+      "refs": [
+        "cell_strep",
+        "cell_mrsa",
+        "cell_care"
+      ]
+    },
+    {
+      "q": "How is acute limb ischemia managed?",
+      "a": "IV unfractionated heparin on diagnosis unless contraindicated, and an emergency bedside assessment of viability by a clinician who can revascularize, with a handheld Doppler; imaging first is usually unnecessary. Categories I to IIb are revascularized, by surgical embolectomy or catheter-directed lysis, watching for compartment syndrome. Category III, insensate and paralyzed with no Doppler signals, gets amputation.",
+      "refs": [
+        "ali_hep",
+        "ali_cat",
+        "ali_revasc",
+        "ali_amp"
+      ]
+    }
+  ],
+  "related": [
+    "rash",
+    "sepsis_fever",
+    "dyspnea",
+    "chest_pain"
+  ]
+}

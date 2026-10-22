@@ -668,7 +668,7 @@
        "where": "Treatment of arthritis and arthritis-dermatitis syndrome"
       }
      ],
-     "note": "The PMC copy and the trail copy print '>7 days'. The CDC web page, reported to read 'at least 7 days', could not be read (cdc.gov Access Denied, 2026-10-19)."
+     "note": "The PMC copy and the copy read print '>7 days'. The CDC web page, reported to read 'at least 7 days', could not be read (cdc.gov Access Denied, 2026-10-19)."
     },
     {
      "item": "Partners and retest",
@@ -918,7 +918,7 @@
     },
     {
      "item": "Cefazolin, nafcillin, oxacillin and clindamycin doses",
-     "dose": "Not in the trail; the PIDS/IDSA 2023 pediatric guideline sits behind a bot check",
+     "dose": "Not in the sources read; the PIDS/IDSA 2023 pediatric guideline was not openly accessible",
      "status": "pending"
     },
     {
@@ -1213,7 +1213,7 @@
       },
       {
        "item": "Apixaban reversal",
-       "dose": "Agent and dose not in the trail",
+       "dose": "Agent and dose not in the sources read",
        "status": "pending"
       },
       {
@@ -1902,7 +1902,7 @@
     "Methotrexate as first-line therapy"
    ],
    "answer": 0,
-   "chainStep": "NSAID, colchicine (within 12 hours of onset) or a corticosteroid such as prednisone 30 mg daily (duration not stated in the trail); follow the culture; calcium, magnesium, phosphate, PTH, iron studies and TSH",
+   "chainStep": "NSAID, colchicine (within 12 hours of onset) or a corticosteroid such as prednisone 30 mg daily (duration not stated in the sources read); follow the culture; calcium, magnesium, phosphate, PTH, iron studies and TSH",
    "why": "Acute CPP crystal arthritis is treated like a gout flare: NSAIDs, colchicine, or systemic or intra-articular corticosteroids by age and comorbidity, with colchicine given early, within 12 hours of onset. No therapy dissolves CPP deposits, and methotrexate is a second-line drug for chronic CPP inflammatory arthritis, not the acute attack. Crystals do not exclude infection, so the culture is followed.",
    "next": "end_cppd",
    "sources": [
@@ -1918,7 +1918,7 @@
    "orders": [
     {
      "item": "Acute treatment",
-     "dose": "NSAIDs, colchicine or systemic corticosteroids by age and comorbidity; the 2023 COLCHICORT trial used prednisone 30 mg daily first line (duration not stated in the trail)",
+     "dose": "NSAIDs, colchicine or systemic corticosteroids by age and comorbidity; the 2023 COLCHICORT trial used prednisone 30 mg daily first line (duration not stated in the sources read)",
      "status": "ok",
      "sources": [
       {
@@ -1973,7 +1973,7 @@
      ]
     }
    ],
-   "note": "The EULAR 2011 CPPD recommendations were not read (bot check, restricted repository copy); StatPearls' summary of them stands in."
+   "note": "The EULAR 2011 CPPD recommendations were not read (no open copy); StatPearls' summary of them stands in."
   },
   {
    "id": "inflam_next",
@@ -2171,7 +2171,7 @@
      ]
     }
    ],
-   "note": "The IDSA/AAN/ACR 2020 Lyme guideline was not read (bot check); the 28-day oral course here comes from StatPearls and NICE NG95."
+   "note": "The IDSA/AAN/ACR 2020 Lyme guideline was not read (no open copy); the 28-day oral course here comes from StatPearls and NICE NG95."
   },
   {
    "id": "end_sepsis",

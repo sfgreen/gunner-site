@@ -2405,7 +2405,7 @@
    "orders": [
     {
      "item": "IV loop diuretic dose",
-     "dose": "NICE gives no dose; the 2021 ESC dosing is behind a bot check and was not read",
+     "dose": "NICE gives no dose; the 2021 ESC dosing was not openly accessible and was not read",
      "status": "pending"
     },
     {

@@ -501,7 +501,7 @@
     },
     {
      "item": "Antibiotic doses",
-     "dose": "Not stated in the open review read; the IDSA 2015 vertebral osteomyelitis guideline was blocked by a bot check",
+     "dose": "Not stated in the open review read; the IDSA 2015 vertebral osteomyelitis guideline was not openly accessible",
      "status": "pending"
     },
     {
@@ -1597,7 +1597,7 @@
     },
     {
      "item": "Superficial heat",
-     "dose": "ACP 2017 recommends it for acute or subacute pain (moderate-quality evidence); read from the abstract only, because the full text sits behind a bot check",
+     "dose": "ACP 2017 recommends it for acute or subacute pain (moderate-quality evidence); read from the abstract only, because the full text is not openly accessible",
      "status": "pending"
     },
     {

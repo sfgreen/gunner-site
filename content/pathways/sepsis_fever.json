@@ -1905,7 +1905,7 @@
    "orders": [
     {
      "item": "Ceftriaxone",
-     "dose": "Highest meningitis dose: NICE defers to the BNF; WHO 2025 says maximum dosage every 12 hours with no mg; IDSA 2004 Table 6 is an image in the trail copy and not read; StatPearls meningococcemia gives 80 mg/kg a day in 1 or 2 doses (shown in pw_rash), not a meningitis dose",
+     "dose": "Highest meningitis dose: NICE defers to the BNF; WHO 2025 says maximum dosage every 12 hours with no mg; IDSA 2004 Table 6 is an image in the copy read and was not read; StatPearls meningococcemia gives 80 mg/kg a day in 1 or 2 doses (shown in pw_rash), not a meningitis dose",
      "status": "pending"
     },
     {
@@ -2323,7 +2323,7 @@
    "answer": 0,
    "chainStep": "Midstream urine culture, then an oral antibiotic by local resistance, switched by the culture: ciprofloxacin 500 mg twice a day for 7 days (StatPearls: 14 days in men) where fluoroquinolone resistance is 10% or less (one IV dose of ceftriaxone first if it is higher); NICE first choice cefalexin 500 mg two or three times a day for 7 to 10 days; return if not better in 48 hours",
    "why": "Send a midstream urine culture before antibiotics, offer an antibiotic chosen with local resistance in mind, and give it orally when the patient can take it and is not ill enough to need IV. Seek help if it worsens or does not improve within 48 hours; signs of sepsis mean hospital.",
-   "note": "NICE NG111 restricts ciprofloxacin to when other first choices are unsuitable; US teaching gives an oral fluoroquinolone first. The current US guideline, IDSA 2025 complicated UTI (pmid:41419213), is abstract-only in the trail, and its abstract names no agent.",
+   "note": "NICE NG111 restricts ciprofloxacin to when other first choices are unsuitable; US teaching gives an oral fluoroquinolone first. The current US guideline, IDSA 2025 complicated UTI (pmid:41419213), was read in abstract only, and its abstract names no agent.",
    "orders": [
     {
      "item": "Cefalexin",

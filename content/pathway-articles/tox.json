@@ -1,0 +1,406 @@
+{
+  "id": "tox",
+  "slug": "tox",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Overdose Management Algorithm: Antidotes, Doses, Toxidromes",
+  "metaDescription": "Overdose in the ED, fork by fork: naloxone, bicarbonate for a wide QRS, the acetaminophen nomogram and NAC, salicylate, toxic alcohols and antidote doses.",
+  "h1": "Overdose and poisoning management: the ED algorithm, fork by fork",
+  "dek": "For the student on an EM or IM rotation with an overdose and a resident about to ask what is next: the first moves, the toxidromes, every antidote dose the sources give, the acetaminophen nomogram, when to dialyze, the psychiatric assessment, and the traps.",
+  "jumpLinks": [
+    {
+      "label": "First moves",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Toxidromes and forks",
+      "stage": "Result"
+    },
+    {
+      "label": "Endpoints",
+      "stage": "Outcome"
+    },
+    {
+      "label": "Antidotes and doses",
+      "stage": "Manage"
+    },
+    {
+      "label": "Levels to send",
+      "stage": "Labs"
+    },
+    {
+      "label": "Acetaminophen nomogram",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Before discharge",
+      "stage": "Disposition"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "ABCs, glucose, ECG, poison center.",
+      "text": "A fingerstick glucose for hypoglycemia, a 12-lead ECG for the QRS and QTc, IV access and a metabolic panel, and 1-800-222-1222. A urine drug screen does not come first.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "lead": "Naloxone for slow, shallow breathing.",
+      "text": "0.4 to 2 mg IV, repeated every 2 to 3 minutes; question the diagnosis if 10 mg brings no response. Observe at least 4 hours after reversal. No flumazenil in benzodiazepine dependence or a mixed overdose with a cyclic antidepressant.",
+      "refs": [
+        "naloxone",
+        "nalox_resp",
+        "sed_step"
+      ]
+    },
+    {
+      "lead": "QRS 0.10 seconds or more: sodium bicarbonate.",
+      "text": "To a serum pH of 7.45 to 7.55, avoiding a pH over 7.60; no class 1A or 1C antiarrhythmics, no flumazenil, no physostigmine.",
+      "refs": [
+        "bicarb"
+      ]
+    },
+    {
+      "lead": "Every intentional ingestion gets acetaminophen and salicylate levels.",
+      "text": "The acetaminophen level is drawn at least 4 hours after ingestion and plotted; the US treatment line starts at 150 mcg/mL at 4 hours, the UK line at 100 mg/L. Unknown or staggered timing, or more than 8 hours since ingestion: load acetylcysteine now.",
+      "refs": [
+        "levels",
+        "apap_plot",
+        "apap_unk"
+      ]
+    },
+    {
+      "lead": "IV acetylcysteine is 300 mg/kg.",
+      "text": "150 mg/kg over 1 hour, 50 mg/kg over 4 hours, 100 mg/kg over 16 hours, with weight counted up to 100 kg. The oral regimen is 140 mg/kg, then 70 mg/kg every 4 hours for 17 doses.",
+      "refs": [
+        "nac"
+      ]
+    },
+    {
+      "lead": "Salicylate: alkalinize, and avoid intubation where possible.",
+      "text": "Bicarbonate 1 to 2 mEq/kg, then an infusion to a serum pH of 7.50 to 7.55 and a urine pH over 7.5, with potassium. Dialysis for altered mental status, hypoxia, a level over 100 mg/dL or failing therapy.",
+      "refs": [
+        "sal_step",
+        "end_sal_hd"
+      ]
+    },
+    {
+      "lead": "Antidotes by picture.",
+      "text": "Organophosphate: oxygen first, then atropine 2 to 4 mg IV every 5 to 10 minutes until secretions dry, then pralidoxime. Digoxin: digoxin immune fab, 20 vials for an acute ingestion of unknown amount. Toxic alcohol: fomepizole 15 mg/kg. Fire smoke with soot and altered mental status: hydroxocobalamin 5 g.",
+      "refs": [
+        "atropine",
+        "digifab",
+        "fomepizole",
+        "cyanokit"
+      ]
+    },
+    {
+      "lead": "Medically clear is not discharge.",
+      "text": "A psychiatric assessment of suicide risk and safety by a mental health professional, started at the earliest opportunity; no risk scale decides it.",
+      "refs": [
+        "dispo"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What are the first steps in a suspected overdose?",
+      "intro": "ABCs, a fingerstick glucose and a 12-lead ECG, then whatever the first look demands: dextrose for a low glucose, naloxone for slow, shallow breathing.",
+      "refs": [
+        "triage",
+        "hypo_tx",
+        "naloxone"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Which toxidrome is it, and where does each finding send you?",
+      "intro": "The first look sorts breathing, the QRS, the pulse, cholinergic signs and smoke; the exam sorts pupils, skin, temperature and tone; the levels and the nomogram sort the rest.",
+      "refs": [
+        "front",
+        "tox_exam",
+        "brady_cause",
+        "decon_time",
+        "levels_result",
+        "apap_line"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "What is the antidote and dose for each overdose?",
+      "intro": "Bicarbonate, digoxin immune fab, glucagon, calcium, high-dose insulin, atropine and pralidoxime, hydroxocobalamin, physostigmine, acetylcysteine, fomepizole and deferoxamine, and dialysis where it removes the drug.",
+      "refs": [
+        "bicarb",
+        "digifab",
+        "bb_step",
+        "ccb_step",
+        "hdi",
+        "atropine",
+        "cyanokit",
+        "antichol_step",
+        "nac",
+        "fomepizole",
+        "iron_step",
+        "lithium_step"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "Which levels do you send after an intentional overdose?",
+      "intro": "Acetaminophen and salicylate for every intentional ingestion, a metabolic panel with the anion gap, an osmolal gap when a toxic alcohol is possible, and a level of any drug named or found.",
+      "refs": [
+        "levels"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "How do you use the Rumack-Matthew nomogram?",
+      "intro": "One ingestion at a known time and a level at 4 hours or later, plotted against the treatment line.",
+      "refs": [
+        "apap_plot"
+      ]
+    },
+    {
+      "stage": "Disposition",
+      "heading": "What has to happen before an overdose patient goes home?",
+      "intro": "A psychiatric assessment of suicide risk and safety, with a care plan and aftercare.",
+      "refs": [
+        "dispo"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Where does each overdose end up?",
+      "intro": "Every branch closes on a diagnosis and its plan, and every intentional ingestion closes on acetaminophen and salicylate levels and a psychiatric assessment.",
+      "refs": [
+        "end_opioid",
+        "end_tca",
+        "end_dig",
+        "end_alc_hd",
+        "end_dispo",
+        "end_arrest"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "Every overdose: the bedside list",
+    "items": [
+      {
+        "text": "Airway: intubate for coma that leaves it unprotected; on high-flow oxygen a normal saturation can hide failing ventilation.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "Fingerstick glucose.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "12-lead ECG: QRS 0.10 seconds or more; QTc over 440 ms in men or 460 ms in women.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "At least one large-bore IV, two if hypotensive; a metabolic panel with the anion gap.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "Poison center: 1-800-222-1222.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "Intentional ingestion: acetaminophen (at least 4 hours after ingestion) and salicylate levels.",
+        "refs": [
+          "levels"
+        ]
+      },
+      {
+        "text": "Charcoal within about an hour, for a drug it binds, with the airway safe; later only for salicylate or a massive digoxin ingestion.",
+        "refs": [
+          "charcoal",
+          "decon_time",
+          "sal_step",
+          "digifab"
+        ]
+      },
+      {
+        "text": "Psychiatric assessment of suicide risk and safety before discharge.",
+        "refs": [
+          "dispo"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "22-year-old woman, 60 kg, after a single intentional ingestion of 40 tablets of 500 mg acetaminophen at a known time; she feels well. She arrived at 40 minutes, alert and protecting her airway, so she had activated charcoal by mouth. The 4-hour level was 180 mcg/mL, above the treatment line that starts at 150, so she is on IV acetylcysteine: 150 mg/kg over 1 hour, 50 mg/kg over 4 hours, then 100 mg/kg over 16 hours. Salicylate undetectable, ALT 22. After the last bag, acetaminophen is undetectable, ALT 30 and INR 1.0, so no further dosing. Plan: the psychiatric assessment of suicide risk and safety, which does not wait for the course to end, and a care plan with aftercare before discharge.",
+    "presentRefs": [
+      "case:apap_above_line",
+      "charcoal",
+      "apap_plot",
+      "nac",
+      "nac_after",
+      "dispo"
+    ],
+    "pimp": [
+      {
+        "q": "Why not wait for the urine drug screen?",
+        "a": "It is of questionable benefit routinely, and most screens miss fentanyl, ketamine and GHB.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "q": "Why not flumazenil for a benzodiazepine overdose?",
+        "a": "Its boxed statement links it to seizures, most often after long-term benzodiazepine sedation or with a serious cyclic antidepressant overdose. Airway and breathing support instead.",
+        "refs": [
+          "sed_step"
+        ]
+      },
+      {
+        "q": "Organophosphate: what is the endpoint for atropine?",
+        "a": "Dry secretions, not the pupils. 2 to 4 mg IV every 5 to 10 minutes, once the hypoxemia has improved.",
+        "refs": [
+          "atropine"
+        ]
+      },
+      {
+        "q": "Digoxin overdose with a potassium of 6.4. Why not calcium?",
+        "a": "Calcium is avoided in patients on cardiac glycosides because of arrhythmias. Digoxin immune fab treats it.",
+        "refs": [
+          "digifab",
+          "case:digoxin"
+        ]
+      },
+      {
+        "q": "Why avoid intubating a salicylate overdose?",
+        "a": "Apnea lets the pH fall and drives salicylate into the tissues. If it cannot be avoided: bicarbonate 2 mEq/kg 5 to 10 minutes before induction and a high minute ventilation afterward.",
+        "refs": [
+          "sal_step"
+        ]
+      },
+      {
+        "q": "What separates sympathomimetic from anticholinergic toxicity?",
+        "a": "Sweating. Both have big pupils and a fast pulse, but anticholinergic skin is hot, flushed and dry.",
+        "refs": [
+          "symp_step",
+          "tox_exam"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "Waiting for the laboratory glucose. 50% dextrose, 20 to 50 mL, goes in without awaiting the result.",
+      "refs": [
+        "hypo_tx"
+      ]
+    },
+    {
+      "text": "Naloxone 10 mg as a single push. It starts at 0.4 to 2 mg; 10 mg without a response means question the diagnosis.",
+      "refs": [
+        "naloxone"
+      ]
+    },
+    {
+      "text": "Procainamide for the wide-complex rhythm of a tricyclic overdose. Class 1A and 1C antiarrhythmics are generally contraindicated; bicarbonate is the treatment.",
+      "refs": [
+        "bicarb"
+      ]
+    },
+    {
+      "text": "An acetaminophen level only when acetaminophen is reported. Every intentional overdose gets one; the reported amount is often inaccurate.",
+      "refs": [
+        "levels"
+      ]
+    },
+    {
+      "text": "Plotting an unknown-time or staggered ingestion on the nomogram. The nomogram does not apply: load acetylcysteine now.",
+      "refs": [
+        "apap_unk"
+      ]
+    },
+    {
+      "text": "Dialysis for a salicylate level over 30 mg/dL. That is the threshold for bicarbonate, not for dialysis.",
+      "refs": [
+        "sal_step"
+      ]
+    },
+    {
+      "text": "Charcoal for iron, lithium or a toxic alcohol. None of them binds.",
+      "refs": [
+        "charcoal"
+      ]
+    },
+    {
+      "text": "Discharge on a low suicide risk score. Risk scales do not decide who is treated or discharged.",
+      "refs": [
+        "dispo"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "When do you give NAC for an acetaminophen overdose?",
+      "a": "When a level drawn 4 hours or more after one ingestion at a known time plots at or above the treatment line, which starts at 150 mcg/mL at 4 hours in US practice (100 mg/L in the UK). Load at once when the time is unknown or the ingestion was staggered, or when more than 8 hours have passed. The US label also considers treating below the line with chronic alcoholism, malnutrition or CYP2E1-inducing drugs.",
+      "refs": [
+        "apap_plot",
+        "apap_unk",
+        "apap_line"
+      ]
+    },
+    {
+      "q": "What is the IV NAC dose?",
+      "a": "300 mg/kg in total, with weight counted up to 100 kg. The three-bag schedule is 150 mg/kg over 1 hour, 50 mg/kg over 4 hours, then 100 mg/kg over 16 hours; at 41 kg or more, two bags of 200 mg/kg over 4 hours, then 100 mg/kg over 16 hours. The oral regimen is 140 mg/kg, then 70 mg/kg every 4 hours for 17 doses. After the last bag, check acetaminophen, ALT and INR.",
+      "refs": [
+        "nac"
+      ]
+    },
+    {
+      "q": "What QRS width needs sodium bicarbonate in a tricyclic overdose?",
+      "a": "A limb-lead QRS of 0.10 seconds or more. IV sodium bicarbonate holds the serum pH at 7.45 to 7.55; hyperventilation only with extreme caution, and a pH over 7.60 or a PCO2 under 20 is undesirable. Monitor for at least 6 hours, intubate early for CNS depression, give benzodiazepines for seizures, and avoid class 1A and 1C antiarrhythmics.",
+      "refs": [
+        "bicarb"
+      ]
+    },
+    {
+      "q": "When does salicylate toxicity need dialysis?",
+      "a": "As the open review reports EXTRIP: recommended for altered mental status, hypoxia needing oxygen, a level over 100 mg/dL (over 90 with impaired kidney function) or failure of standard therapy, and suggested for a level over 90 (80 with impaired kidneys) or a pH under 7.20. Intermittent hemodialysis is preferred, continued until clinical improvement and a level under 19 mg/dL where levels are available.",
+      "refs": [
+        "end_sal_hd",
+        "sal_resp"
+      ]
+    },
+    {
+      "q": "What is the fomepizole dose for a toxic alcohol?",
+      "a": "15 mg/kg IV over 30 minutes, then 10 mg/kg every 12 hours for 4 doses, then 15 mg/kg every 12 hours, dosed every 4 hours during dialysis. Start it on suspicion, such as an anion gap acidosis with a raised osmolal gap, without waiting for levels, and continue until the level is undetectable or under 20 mg/dL with the patient asymptomatic and the pH normal.",
+      "refs": [
+        "fomepizole"
+      ]
+    },
+    {
+      "q": "How do you treat a beta blocker or calcium channel blocker overdose?",
+      "a": "Fluids and atropine first, though both poisonings often fail atropine and pacing. Then glucagon for the beta blocker or IV calcium for the calcium channel blocker, with norepinephrine as the pressure requires; their doses are not in the open sources read. Persistent shock gets high-dose insulin, 1 unit/kg, then 0.5 to 1 unit/kg/h, with dextrose and frequent glucose and potassium checks.",
+      "refs": [
+        "front",
+        "bb_step",
+        "ccb_step",
+        "hdi"
+      ]
+    }
+  ],
+  "related": [
+    "agitation",
+    "ams",
+    "burns",
+    "headache"
+  ]
+}

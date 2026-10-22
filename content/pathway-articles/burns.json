@@ -1,0 +1,78 @@
+{
+  "id": "burns",
+  "slug": "burns",
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Burns in the ED: Parkland Formula, Airway and Referral",
+  "metaDescription": "Burns in the ED for your EM or surgery rotation: airway first, when to intubate, cooling, the rule of nines, Parkland fluids by urine output, and transfer.",
+  "h1": "Burns in the ED: airway, cooling, sizing and the Parkland formula",
+  "dek": "For the student on an EM, surgery or trauma rotation with a burned patient and a resident asking what is next. What comes before the burn, when to intubate, how to cool and size it, how much lactated Ringer's, and who goes to a burn center.",
+  "jumpLinks": [
+    {"label": "First moves", "stage": "Stabilize"},
+    {"label": "Sizing the burn", "stage": "Assess"},
+    {"label": "Fluids and escharotomy", "stage": "Manage"},
+    {"label": "Burn center criteria", "stage": "Disposition"},
+    {"label": "Next steps", "stage": "Outcome"}
+  ],
+  "shortAnswer": [
+    {"lead": "Airway before the burn.", "text": "Stop the burning, then a primary survey led by the airway, with 100% oxygen after smoke or with facial burns. The burn is sized after the primary and secondary surveys.", "refs": ["triage"]},
+    {"lead": "Intubate early when the airway is threatened.", "text": "Stridor, hoarseness, deep facial or mouth burns or trouble swallowing: intubate before the swelling closes the airway. Soot or singed nasal hair alone gets oxygen, a COHb and a repeated look at the larynx (ABLS; the Denver criteria add them to the intubation list).", "refs": ["intubate", "airway_watch"]},
+    {"lead": "Cool, do not ice.", "text": "Within 3 hours of the burn, cool water for 20 minutes, limited in large burns, small children and the frail (a StatPearls chapter gives 3 to 5 minutes); after 3 hours, cover without cooling.", "refs": ["cool"]},
+    {"lead": "Count only partial- and full-thickness skin.", "text": "Rule of nines in adults, Lund-Browder in children; superficial burns do not count toward the TBSA.", "refs": ["size"]},
+    {"lead": "Parkland for adult burns over 20% TBSA.", "text": "Lactated Ringer's 4 mL/kg/%TBSA over 24 hours (modified Brooke: 2), half in the first 8 hours from the time of the burn, minus fluid already given.", "refs": ["parkland", "calc:burn_fluids"]},
+    {"lead": "Urine output runs the drip.", "text": "0.5 to 1 mL/kg/h in an adult, 1 to 1.5 mL/kg/h in a child under 30 kg (pediatric targets vary slightly by source); change the rate hourly, with no bolus unless there is hypovolemia.", "refs": ["uo_check", "uo_low", "uo_high", "calc:burn_urine", "parkland", "peds_fluids"]},
+    {"lead": "Hypotension on arrival: look for another cause.", "text": "Burn shock is often a late finding; look for hemothorax, tamponade, neurogenic shock or abdominal and pelvic bleeding, and cyanide after closed-space smoke.", "refs": ["early_shock", "end_shock"]},
+    {"lead": "No prophylactic antibiotics, no creams before transfer.", "text": "Clean, cover with cling film or a nonadherent dressing, give IV analgesia and tetanus by history, and call the burn center.", "refs": ["major_care", "cool", "refer_step"]}
+  ],
+  "sections": [
+    {"stage": "Stabilize", "heading": "What do you do first for a burn patient?", "intro": "Stop the burning, then a primary survey led by the airway, with 100% oxygen after smoke. Intubate early when the airway is threatened, brush and rinse chemicals off with running water, and treat hypotension on arrival as shock from another cause.", "refs": ["triage", "intubate", "chem_step", "early_shock", "cool"]},
+    {"stage": "Result", "heading": "Which findings decide the route for a burn?", "intro": "A threatened airway, smoke with confusion or low pressure, other injuries, current or chemicals come first. Then depth and size decide superficial, minor, burn center or formal resuscitation, and hourly urine output decides the fluid rate.", "refs": ["front", "burn_size", "uo_check", "circ_check"]},
+    {"stage": "Assess", "heading": "How do you calculate burn TBSA?", "intro": "Count partial- and full-thickness skin only, by the rule of nines in adults and the Lund-Browder chart in children; the patient's palm with fingers is about 1% for scattered burns, though it overestimates.", "refs": ["size"]},
+    {"stage": "Manage", "heading": "How much fluid does a burn need, and when do you cut the eschar?", "intro": "Lactated Ringer's by Parkland or modified Brooke for adult burns over 20% TBSA, half in the first 8 hours from the burn, titrated hourly to urine output; escharotomy when a full-thickness eschar threatens a limb or ventilation (on the chest, even if it is not circumferential).", "refs": ["parkland", "peds_fluids", "uo_low", "uo_high", "esch_limb", "esch_chest", "hf_step", "minor_care"]},
+    {"stage": "Disposition", "heading": "Which burns go to a burn center?", "intro": "Partial thickness or deeper of 10% TBSA or more, special sites, full thickness of any size, chemical, electrical and inhalation injury, and trauma; a child's burn that suggests abuse is reported to child protective services.", "refs": ["refer_step", "major_care", "safeguard"]},
+    {"stage": "Outcome", "heading": "What happens next: transfer, discharge or another pathway?", "intro": "Major burns transfer with the hourly fluid and urine record, minor burns go home with rechecks every few days, and smoke toxicity, trauma and electrical injury continue in their own pathways.", "refs": ["end_major", "end_minor", "end_tox", "end_trauma", "end_electrical"]}
+  ],
+  "checklist": {
+    "heading": "Running a burn resuscitation: the hourly checklist",
+    "items": [
+      {"text": "Start the clock at the burn, not at arrival, and subtract any fluid given before arrival from the first 8 hours.", "refs": ["parkland", "triage", "calc:burn_fluids"]},
+      {"text": "Urinary catheter in; record fluids, vital signs and urine output every hour.", "refs": ["parkland"]},
+      {"text": "Targets: urine 0.5 to 1 mL/kg/h in an adult or a child over 30 kg (about 30 to 50 mL/h in an adult); 1 to 1.5 mL/kg/h in a child under 30 kg.", "refs": ["uo_check", "calc:burn_urine"]},
+      {"text": "Below target: raise the rate, not a bolus; mannitol is no more effective than fluid. Above target: lower the rate, but do not stop it.", "refs": ["uo_low", "uo_high"]},
+      {"text": "Volumes running far above the formula with low urine: measure the bladder pressure for abdominal compartment syndrome.", "refs": ["uo_low"]},
+      {"text": "Circumferential full-thickness burns: check limb perfusion and chest movement; a fading Doppler signal, or rising airway pressures with equal breath sounds and a stiff chest eschar, mean escharotomy.", "refs": ["circ_check", "esch_limb", "esch_chest"]},
+      {"text": "Children: maintenance fluid with dextrose on top of the formula, with close glucose checks.", "refs": ["peds_fluids"]}
+    ]
+  },
+  "rounds": {
+    "present": "Give the clock and the numbers, because the plan is arithmetic. One-liner: 56-year-old woman, 75 kg, with 36% TBSA partial- and full-thickness burns of the front of the trunk and the whole left leg from a bonfire flare 2 hours before arrival; airway clear, no soot, no other injury, no IV fluid so far. Fluids: lactated Ringer's by Parkland, 4 x 75 x 36 = 10,800 mL in 24 hours, so half, 5,400 mL, is due in the first 8 hours from the burn; with 6 hours of that window left it runs at 900 mL/h (450 mL/h by modified Brooke). Urine 50 mL/h, 0.67 mL/kg/h, on target, so the rate stays. No circumferential full-thickness burn; pulses and Doppler signals normal. Plan: burn center transfer with the hourly fluid and urine record, catheter and nasogastric tube, IV opioid, tetanus by history, wounds covered without creams, kept warm, and no prophylactic antibiotics.",
+    "presentRefs": ["case:bonfire_late", "parkland", "calc:burn_fluids", "uo_check", "circ_check", "major_care", "refer_step"],
+    "pimp": [
+      {"q": "Why does the 8-hour clock start at the burn and not at arrival?", "a": "Half the 24-hour volume is due in the first 8 hours from the time of the burn, with fluid given before arrival subtracted. Arriving 2 hours after the burn with no fluid yet, the first half goes in over the next 6 hours.", "refs": ["parkland", "case:bonfire_late"]},
+      {"q": "Why lactated Ringer's and not normal saline?", "a": "Large volumes of normal saline cause a hyperchloremic acidosis, and hypotonic fluids add edema. Boluses without hypovolemia only worsen the burn edema.", "refs": ["parkland"]},
+      {"q": "Which burns count toward the TBSA?", "a": "Partial- and full-thickness burns only; superficial burns are left out. A young child's head can be 19% of TBSA against 9% in an adult, so children are sized with the Lund-Browder chart.", "refs": ["size"]},
+      {"q": "Burned and hypotensive on arrival. Is it burn shock?", "a": "Not until other causes are excluded. Hypotension is often a late finding in burn shock, so look for hemothorax, cardiac tamponade, neurogenic shock or abdominal and pelvic bleeding, and cyanide after closed-space smoke.", "refs": ["early_shock", "end_shock"]},
+      {"q": "Why is pulse oximetry misleading after smoke?", "a": "It may read falsely high with carbon monoxide, so the COHb is measured on a blood gas, and 100% oxygen goes to anyone exposed to smoke or with facial burns.", "refs": ["airway_watch", "triage"]},
+      {"q": "What is the hallmark of a hydrofluoric acid burn, and the antidote?", "a": "Pain far beyond the look of the wound. After irrigation, 2.5% calcium gluconate gel is massaged in, with subcutaneous 5% calcium gluconate if the pain persists, and calcium, magnesium, potassium and an ECG are checked.", "refs": ["hf_step"]}
+    ]
+  },
+  "traps": [
+    {"text": "Sizing the burn before the airway. Every burn patient is a trauma patient first, and the burn is sized after the surveys.", "refs": ["triage"]},
+    {"text": "Waiting for the stridor to worsen before intubating. Stridor appears only once the airway is critically narrow, and steroids are not proven to help.", "refs": ["intubate"]},
+    {"text": "Ice on the burn. It deepens the injury through prolonged vasoconstriction and risks hypothermia.", "refs": ["cool"]},
+    {"text": "Counting red, superficial skin in the TBSA. Only partial- and full-thickness burns count.", "refs": ["size"]},
+    {"text": "Starting the 8-hour clock at arrival. It starts at the time of the burn.", "refs": ["parkland"]},
+    {"text": "A saline bolus for a low urine output. Raise the lactated Ringer's rate and recheck hourly.", "refs": ["uo_low"]},
+    {"text": "Neutralizing a chemical burn with an acid or bicarbonate. Brush off dry powder, then irrigate with running water; neutralizing adds heat.", "refs": ["chem_step"]},
+    {"text": "Prophylactic antibiotics or silver sulfadiazine before transfer. Clean, cover without creams, and call the burn center.", "refs": ["major_care", "refer_step"]}
+  ],
+  "faq": [
+    {"q": "How do you calculate the Parkland formula?", "a": "Lactated Ringer's at 4 mL x weight in kg x %TBSA of partial- and full-thickness burns, over 24 hours; the modified Brooke uses 2 mL. Half goes in over the first 8 hours from the time of the burn, minus any fluid already given, and the rest over the next 16 hours. The result is only a starting rate: titrate it hourly to urine output.", "refs": ["parkland", "calc:burn_fluids"]},
+    {"q": "When does a burn need formal fluid resuscitation?", "a": "In adults, partial- and full-thickness burns over 20% TBSA; below that the sources disagree, with some starting fluids above 10 to 15% or expecting shock from 15 to 20%. Children need it at smaller sizes, over 10% TBSA in some sources and over 15% in a pediatric review, with maintenance fluid with dextrose on top. Small burns in patients who can eat and drink need none.", "refs": ["parkland", "burn_size", "peds_fluids", "minor_care"]},
+    {"q": "What is the rule of nines for burns?", "a": "In an adult: head 9%, each arm 9%, the front of the trunk 18%, the back of the trunk 18%, each leg 18% and the groin 1%. Only partial- and full-thickness burns count. A young child's head can be 19% of TBSA, so children are sized with the Lund-Browder chart, and for small or scattered burns the patient's palm with fingers is about 1%.", "refs": ["size"]},
+    {"q": "When should a burn patient be intubated?", "a": "Early, before the swelling closes the airway: hoarseness, stridor, accessory muscle use, extensive deep facial burns, burns inside the mouth, significant edema, trouble swallowing, reduced consciousness with impaired airway reflexes, or a burn over 40 to 50% TBSA. Soot or singed nasal hair alone gets oxygen, a COHb and repeated laryngoscopy rather than a tube under ABLS, though the Denver criteria add them.", "refs": ["intubate", "airway_watch"]},
+    {"q": "Which burns should be transferred to a burn center?", "a": "Partial thickness or deeper of 10% TBSA or more; burns of the face, hands, feet, genitals, perineum or major joints; full thickness of any size; chemical, electrical and inhalation injury; burns with trauma or significant medical problems; special social or rehabilitation needs; children where pediatric burn care is lacking; and adults over 50 with more than 10% TBSA.", "refs": ["refer_step"]},
+    {"q": "What is the urine output goal in burn resuscitation?", "a": "0.5 to 1 mL/kg/h in an adult or a child over 30 kg, about 30 to 50 mL/h in an adult, and 1 to 1.5 mL/kg/h in a child under 30 kg, though pediatric targets vary slightly by source. Below target, raise the infusion rate rather than give a bolus; above target, lower it without stopping. A urinary catheter and hourly records make this possible.", "refs": ["uo_check", "uo_low", "uo_high", "calc:burn_urine", "peds_fluids"]}
+  ],
+  "related": ["tox", "environmental", "headache", "trauma"]
+}
