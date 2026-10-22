@@ -11,7 +11,7 @@ import LabLayout from '../components/LabLayout';
 import { appStoreUrl, track, referrerHost } from '../lib/analytics';
 
 const CAMPAIGN = 'article_ed_next_best_step';
-const PUBLISHED = '2026-10-19';
+const PUBLISHED = '2026-10-22';
 const PATH = '/step-2-ck-emergency-medicine';
 
 type Presentation = {
@@ -32,16 +32,16 @@ const GROUPS: Group[] = [
       {
         id: 'chest-pain',
         name: 'Chest pain',
-        first: 'A 12-lead ECG within 10 minutes of arrival. Everything after it forks on that tracing.',
+        first: 'A 12-lead ECG within 10 minutes of first contact, with the pressure in both arms. Everything after it forks on that tracing.',
         steps: [
           'Inferior ST elevation: right-sided leads (V4R) before any nitroglycerin.',
           'STEMI with PCI reachable in time: primary PCI, first contact to device within 90 minutes, or 120 with a transfer. PCI more than 120 minutes away: fibrinolysis now, then transfer.',
           'No ST elevation: high-sensitivity troponin now and again at 1 to 2 hours. NSTEMI: heparin 60 IU/kg bolus (max 4,000), then 12 IU/kg/h (max 1,000).',
-          'Low HEART score with both troponins below the 99th percentile: home without urgent cardiac testing.',
-          'Aortic features (tearing pain, pulse deficit, arm pressure gap): CT angiography of the chest, abdomen and pelvis; an IV beta blocker is the first drug.',
+          'Both troponins below the 99th percentile: score HEART. 3 or less: home without urgent cardiac testing. 4 to 6: intermediate, further testing. 7 or more: high risk despite the negative troponins, so invasive coronary angiography.',
+          'Aortic features (abrupt severe chest or back pain with a pulse deficit or an arm pressure gap): CT angiography of the chest, abdomen and pelvis; an IV beta blocker is the first drug.',
         ],
         trap: 'A prior stroke or TIA rules out prasugrel as the P2Y12 load.',
-        sources: 'ACC/AHA ACS 2025, ACC/AHA chest pain 2021, ACC/AHA aortic 2022',
+        sources: 'ACC/AHA ACS 2025, ACC/AHA chest pain 2021, ACC/AHA aortic 2022, HEART score guide 2018',
       },
       {
         id: 'palpitations',
@@ -63,7 +63,7 @@ const GROUPS: Group[] = [
         steps: [
           'Bradycardia with shock: IV atropine, then pacing if rate and pressure do not respond. High-grade AV block once stable: look for a reversible cause, then a permanent pacemaker.',
           'Long QT, a Brugada pattern or pre-excitation: cardiac monitoring and cardiology assessment within 24 hours.',
-          'Exertional syncope, a murmur, heart failure or a family history of sudden death: echo and monitoring. Severe aortic stenosis: valve replacement. HCM with a gradient: beta blocker, no vasodilators or diuretics.',
+          'Exertional syncope, a murmur, heart failure or a family history of sudden death under 40: echo and monitoring. Severe aortic stenosis: valve replacement. HCM with a gradient: beta blocker, no vasodilators or diuretics.',
           'Uncomplicated faint, normal ECG, no red flags: home with reassurance, salt and fluids, and counter-pressure maneuvers.',
         ],
         trap: 'Syncope on exertion is never filed as a simple faint until the echo is back.',
@@ -109,11 +109,11 @@ const GROUPS: Group[] = [
           'Tension pneumothorax: decompress now on the clinical signs, then a chest drain.',
           'Anaphylaxis: IM epinephrine 0.01 mg/kg (max 0.5 mg) into the outer thigh. Refractory on a beta blocker: an IV epinephrine infusion, fluids and IV glucagon.',
           'Shock with a dilated right ventricle on bedside echo (high-risk PE): systemic thrombolysis with unfractionated heparin.',
-          'Stable possible PE: Wells, then PERC, then D-dimer, then CTPA (V/Q if contrast is a problem). Low-risk PE on sPESI with support at home: home on apixaban or rivaroxaban.',
+          'Stable possible PE: the two-level Wells score. Over 4 (likely): CTPA now, with no D-dimer (V/Q if contrast is a problem). 4 or less: PERC if suspicion is low; not satisfied, a D-dimer (age-adjusted over 50), and CTPA only if it is positive. Low-risk PE (sPESI 0, normal right ventricle and troponin) with support at home: home on apixaban or rivaroxaban.',
           'Severe asthma: high-dose SABA plus ipratropium and a systemic steroid; still under 40% of predicted after an hour: IV magnesium. COPD with persistent acidosis: oxygen to 88 to 92% and NIV.',
         ],
         trap: 'A normotensive PE with a strained right ventricle is admitted and anticoagulated, not routinely thrombolysed.',
-        sources: 'BTS oxygen 2017, WAO anaphylaxis 2020, ESC PE 2019, NICE NG115 and NG114, ATS/IDSA CAP 2019',
+        sources: 'BTS oxygen 2017, WAO anaphylaxis 2020, ESC PE 2019, NICE NG158, NG115 and NG114, NAEPP EPR-3 2007, ATS/IDSA CAP 2019',
       },
       {
         id: 'throat',
@@ -121,13 +121,13 @@ const GROUPS: Group[] = [
         first: 'Airway first: look for drooling, stridor, distress or swelling, and keep the patient calm.',
         steps: [
           'Child with fever, drooling and a tripod posture: controlled intubation in the operating room by anesthesia and ENT. No throat exam in the ED.',
-          'Croup with stridor at rest, or a Westley score of 3 or more: nebulized epinephrine plus dexamethasone, then observe 3 to 4 hours after the last dose. No stridor at rest: a single oral dose of dexamethasone, then home.',
-          'Sore throat: score it (Centor or McIsaac) and test at intermediate or high risk; confirmed strep gets penicillin V or amoxicillin for 10 days. A mono picture: EBV testing and no amoxicillin.',
+          'Croup with stridor at rest, or a Westley score of 3 or more: nebulized epinephrine plus dexamethasone, then observe 3 to 4 hours after the last dose. No stridor at rest and Westley 2 or less: a single oral dose of dexamethasone, then home.',
+          'Sore throat: score it with McIsaac (the Centor criteria plus 1 at age 3 to 14, minus 1 at 45 or older) and test at 2 or more; confirmed strep gets penicillin V or amoxicillin for 10 days. A mono picture: EBV testing and no amoxicillin.',
           'Tongue swelling on an ACE inhibitor: stop it for good; stridor or drooling means early awake fiberoptic intubation with a surgical airway ready.',
-          'Nosebleed: lean forward and pinch the soft nose for 10 to 15 minutes, then cautery to a visible point, then anterior packing.',
+          'Nosebleed: lean forward and pinch the soft nose for 10 to 15 minutes; still bleeding, a topical vasoconstrictor such as oxymetazoline; then silver nitrate to a visible point on one side only, or anterior packing if none is seen.',
         ],
         trap: 'A child who choked on a peanut and is now wheezing gets chest films and then rigid bronchoscopy, even if the films are normal.',
-        sources: 'NICE NG84, Singapore BCLS and PLS 2026, StatPearls croup, epiglottitis, peritonsillar abscess and epistaxis',
+        sources: 'NICE NG84, Singapore BCLS and PLS 2026, StatPearls acute and streptococcal pharyngitis, croup, epiglottitis, peritonsillar abscess and epistaxis',
       },
     ],
   },
@@ -142,10 +142,10 @@ const GROUPS: Group[] = [
           'Deficit persists: non-contrast CT now, plus CT angiography if thrombectomy is possible.',
           'No bleed, under 4.5 hours, disabling: a lytic once the pressure is below 185/110 (alteplase 0.9 mg/kg, max 90 mg, 10% as a bolus over 1 minute).',
           'Proximal anterior occlusion within 6 hours, NIHSS over 5: thrombectomy as soon as possible. From 4.5 to 24 hours: CT angiography plus CT perfusion or diffusion MRI to find brain worth saving.',
-          'Symptoms fully resolved (TIA): aspirin 300 mg now and specialist assessment within 24 hours; high-risk TIA or minor stroke gets aspirin plus clopidogrel for 21 days.',
+          'Symptoms fully resolved (TIA): aspirin 300 mg now and specialist assessment within 24 hours; a high-risk TIA (ABCD2 4 or more) or a minor stroke (NIHSS 3 or less) within 24 hours gets aspirin plus clopidogrel for 21 days.',
           'Hemorrhage on warfarin: 4-factor PCC with IV vitamin K. On dabigatran: idarucizumab. On apixaban or rivaroxaban: stop it and give 4-factor PCC off-label.',
         ],
-        trap: 'Andexanet alfa is no longer an option in the US: it was withdrawn from the market in December 2025 after the FDA judged its risks to outweigh its benefits. Anything written before then may still list it.',
+        trap: 'Andexanet alfa is no longer an option in the US: its US sales ended on 22 December 2025, and the FDA considers its risks to outweigh its benefits. Anything written before then may still list it.',
         sources: 'NICE NG128, ESO 2021 and 2024, FDA Activase, Kcentra and Praxbind labels, FDA andexanet communication 2025',
       },
       {
@@ -215,7 +215,7 @@ const GROUPS: Group[] = [
         steps: [
           'Suspected ruptured AAA in shock: permissive hypotension and straight to repair; CT only if stable enough.',
           'Right upper quadrant with fever: ultrasound with liver tests. Acute cholecystitis, fit for surgery: laparoscopic cholecystectomy within 7 days of admission and 10 of symptoms.',
-          'Right lower quadrant: score it (AIR or AAS) and image; ultrasound first in a child or pregnancy, then low-dose CT if unclear. Uncomplicated appendicitis: appendectomy within 24 hours, or antibiotics first after discussing recurrence.',
+          'Right lower quadrant: score it (AIR or AAS) and image with ultrasound first; if unclear, MRI in pregnancy and low-dose CT in other adults, with no routine CT in a child. Uncomplicated appendicitis: appendectomy within 24 hours, or antibiotics first after discussing recurrence, but never with an appendicolith or in pregnancy.',
           'Acute pancreatitis without organ failure: early isotonic crystalloid, reassessed often, and no prophylactic antibiotics.',
           'Pain out of proportion: lactate and CT angiography without delay for mesenteric ischemia.',
         ],
@@ -270,7 +270,7 @@ const GROUPS: Group[] = [
           'Early pregnancy in shock with free fluid and an empty uterus: emergency surgery for a ruptured ectopic.',
           'Early pregnancy, stable: transvaginal ultrasound for location and heartbeat, with a speculum exam.',
           'Bleeding after 20 weeks: the placental site from earlier scans or ultrasound before any digital exam, and continuous fetal monitoring.',
-          'Postpartum hemorrhage: call for help, uterine massage, IV oxytocin, tranexamic acid 1 g IV and fluids, then find the cause.',
+          'Postpartum hemorrhage: call for help, uterine massage, IV oxytocin, tranexamic acid 1 g IV within 3 hours of birth, and fluids, then find the cause.',
           'RhD negative and not sensitized, bleeding after 20 weeks: anti-D within 72 hours.',
         ],
         trap: 'Second-line uterotonics have contraindications Step 2 loves: no methylergonovine with high blood pressure, no carboprost with asthma (misoprostol 800 micrograms instead).',
@@ -279,7 +279,7 @@ const GROUPS: Group[] = [
     ],
   },
   {
-    title: 'Metabolic and electrolytes',
+    title: 'Metabolic, electrolytes and sepsis',
     items: [
       {
         id: 'dka',
@@ -289,7 +289,7 @@ const GROUPS: Group[] = [
           'First hours: 0.9% saline or a balanced crystalloid at 500 to 1,000 mL/h for 2 to 4 hours.',
           'Potassium before insulin. Below 3.5 mmol/L: hold the insulin and give IV potassium. 3.5 to 5.0: insulin with potassium in every liter. Over 5.0: insulin, no potassium yet.',
           'Insulin: a fixed-rate IV infusion at 0.1 units/kg/h. Once glucose is under 250 mg/dL with ketones still raised: add 5 to 10% dextrose and drop to 0.05 units/kg/h, without stopping it.',
-          'Bicarbonate only for a venous pH under 7.0.',
+          'Bicarbonate is considered only for a venous pH under 7.0.',
           'HHS: saline first; insulin (0.05 units/kg/h) only once the glucose stops falling on fluid alone.',
         ],
         trap: 'Euglycemic DKA on an SGLT2 inhibitor needs dextrose with the saline from the start, plus insulin. A normal glucose does not mean no DKA.',
@@ -302,7 +302,7 @@ const GROUPS: Group[] = [
         steps: [
           'High potassium with ECG changes: IV calcium gluconate now, repeated if the ECG has not improved; then insulin 10 units IV with glucose, plus nebulized albuterol.',
           'High potassium with a normal ECG: confirm it on a blood gas or a fresh free-flowing sample, since pseudohyperkalemia is common.',
-          'Potassium under 2.5, or low with ECG changes: IV potassium chloride in saline by pump on a monitor, and check the magnesium.',
+          'Potassium under 2.5, or low with ECG changes: IV potassium chloride in saline by pump on a monitor, and check the magnesium. A shift from periodic paralysis gets oral potassium first.',
           'Low sodium with severe symptoms: 3% saline now for a rise of about 5 mmol/L. Euvolemic with a concentrated urine: fluid restriction once TSH and cortisol are normal.',
           'Calcium of 3.0 mmol/L (12 mg/dL) or more, or symptomatic: IV saline, 4 to 6 L over 24 hours, then zoledronic acid if it stays high with a cancer.',
         ],
@@ -316,11 +316,11 @@ const GROUPS: Group[] = [
         steps: [
           'Slow, shallow breathing: naloxone 0.4 to 2 mg IV, repeated every 2 to 3 minutes.',
           'QRS of 0.10 seconds or more: IV sodium bicarbonate to a serum pH of 7.45 to 7.55.',
-          'Beta blocker overdose: IV glucagon. Calcium channel blocker: IV calcium. Still in shock: high-dose insulin, 1 unit/kg, then 0.5 to 1 unit/kg/h.',
+          'Beta blocker overdose: IV glucagon. Calcium channel blocker: IV calcium. Still in shock on the antidote and norepinephrine: high-dose insulin, 1 unit/kg, then 0.5 to 1 unit/kg/h.',
           'Acetaminophen at a known time: plot a level at 4 hours or later on the nomogram. Time unknown or staggered: start acetylcysteine now (150 mg/kg over 1 hour, 50 over 4 hours, 100 over 16 hours).',
           'Toxic alcohol: fomepizole 15 mg/kg IV. Organophosphate: atropine 2 to 4 mg IV every 5 to 10 minutes until the secretions dry.',
         ],
-        trap: 'No flumazenil for a benzodiazepine overdose; support the airway and breathing instead.',
+        trap: 'No flumazenil for a regular benzodiazepine user or a mixed overdose: it can bring on seizures. Support the airway and breathing instead.',
         sources: 'FDA Acetadote, naloxone, flumazenil, fomepizole, DigiFab and atropine labels, EXTRIP 2023',
       },
       {
@@ -400,7 +400,7 @@ const GROUPS: Group[] = [
       {
         id: 'eye',
         name: 'Red eye and sudden vision loss',
-        first: 'A chemical splash is irrigated at once, before anything else; every other eye gets the visual acuity checked.',
+        first: 'ABCs and the story first; a chemical splash is irrigated at once, and every other eye gets the visual acuity checked.',
         steps: [
           'Chemical splash: irrigate after an anesthetic drop until the pH reads 7.0 to 7.4.',
           'Possible open globe: a rigid shield with no pressure, an antiemetic, IV antibiotics, nil by mouth, CT orbits and ophthalmology.',
@@ -420,8 +420,8 @@ const ALL = GROUPS.flatMap((g) => g.items);
 const DISAGREE: { topic: string; sides: string; answer: string }[] = [
   {
     topic: 'Blood pressure after an intracerebral hemorrhage',
-    sides: 'AHA/ACC 2025 aims for a systolic of 130 to 139 and stops below 130; NICE aims for 140 or below.',
-    answer: 'Smooth lowering, never below 130. The answers overlap at 130 to 140.',
+    sides: 'AHA/ACC 2025 aims for a systolic of 130 to 139 and stops below 130; NICE aims for 140 or below, falling no more than 60 in the first hour; the British and Irish society calls 140 to 180 appropriate.',
+    answer: 'Smooth lowering, never below 130 and no more than 60 down in the first hour. The US and NICE targets overlap at 130 to 140.',
   },
   {
     topic: 'Potassium before insulin in DKA',
@@ -435,8 +435,13 @@ const DISAGREE: { topic: string; sides: string; answer: string }[] = [
   },
   {
     topic: 'How fast to correct chronic low sodium',
-    sides: 'The UK endocrine guidance stops at 10 mmol/L in 24 hours; StatPearls uses 8, or 6 to 8 when the low sodium has lasted 48 hours or more.',
+    sides: 'The UK endocrine guidance stops at 10 mmol/L in 24 hours and 18 in 48; StatPearls gives 8 to 12 a day, 6 to 8 when the low sodium has lasted 48 hours or more or for an unknown time, and its SIADH chapter no more than 8.',
     answer: 'Stay within 8 to 10 mmol/L in 24 hours, and go slower when the patient is high risk (alcohol, malnutrition, liver disease, low potassium).',
+  },
+  {
+    topic: 'Fluid for sepsis-induced hypoperfusion',
+    sides: 'Surviving Sepsis gives at least 30 mL/kg of crystalloid within 3 hours; NICE NG253 (2025) gives 250 mL boluses over 10 to 15 minutes, up to 1,000 mL in all, reassessing after each.',
+    answer: 'The US exam answer is at least 30 mL/kg of balanced crystalloid within 3 hours, with antibiotics inside the first hour.',
   },
   {
     topic: 'Observation after nebulized epinephrine in croup',
@@ -453,7 +458,7 @@ const DISAGREE: { topic: string; sides: string; answer: string }[] = [
 const FAQ: { q: string; a: string }[] = [
   {
     q: 'What is the first step for chest pain on Step 2 CK?',
-    a: 'A 12-lead ECG within 10 minutes of arrival. ST elevation goes to reperfusion (primary PCI within 90 minutes of first contact, or fibrinolysis when PCI is more than 120 minutes away); no ST elevation goes to high-sensitivity troponin now and at 1 to 2 hours; aortic features go to CT angiography.',
+    a: 'A 12-lead ECG within 10 minutes of first contact. ST elevation goes to reperfusion (primary PCI within 90 minutes of first contact, or fibrinolysis when PCI is more than 120 minutes away); no ST elevation goes to high-sensitivity troponin now and at 1 to 2 hours; aortic features go to CT angiography.',
   },
   {
     q: 'What is the next best step for hyperkalemia with ECG changes?',
@@ -461,11 +466,11 @@ const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'When do you give bicarbonate in DKA?',
-    a: 'Only when the venous pH is under 7.0. Above that, fluid and insulin clear the acidosis on their own.',
+    a: 'It is considered only when the venous pH is under 7.0, and then only to bring it above 7.0. Above that, fluid and insulin clear the acidosis on their own.',
   },
   {
     q: 'Do you need a CT before the LP in suspected meningitis?',
-    a: 'Only when a CT criterion or an LP contraindication is present. With neither, the LP goes first and dexamethasone and antibiotics follow at once. When the LP has to wait, blood cultures, dexamethasone and antibiotics go first and are never held for the scan.',
+    a: 'Only when a CT criterion is present: altered consciousness, focal signs, papilledema, a new seizure, immunocompromise or CNS disease. With none, and nothing else making the LP unsafe, the LP goes first and dexamethasone and antibiotics follow at once. When the LP has to wait, blood cultures, dexamethasone and antibiotics go first and are never held for the scan.',
   },
   {
     q: 'What is the next best step for suspected testicular torsion?',
@@ -616,7 +621,7 @@ export default function EdNextBestStep() {
       <h2>How the ED question is built</h2>
       <p>Most ED stems run the same way. Read them in this order and the answer choices sort themselves:</p>
       <ol className="rules">
-        <li><strong>Is the patient unstable?</strong> Shock, a threatened airway or a falling GCS gets its own route before any diagnosis. An unstable patient never goes to the scanner as the next step.</li>
+        <li><strong>Is the patient unstable?</strong> Shock, a threatened airway or a falling GCS gets its own route before any diagnosis. A patient in shock never goes to the scanner as the next step; a threatened airway is secured first, and a falling GCS then goes straight to a non-contrast CT.</li>
         <li><strong>What is the one bedside test?</strong> ECG, fingerstick glucose, pregnancy test, blood gas, bedside echo. If the stem has not given you its result, ordering it is usually the answer.</li>
         <li><strong>Does treatment beat the test?</strong> Tension pneumothorax, anaphylaxis, meningitis, cord compression from cancer, a retrobulbar hemorrhage and a hemophilia joint bleed are all treated before anyone images them.</li>
         <li><strong>Which result is the fork?</strong> The stem usually hands you a number (a potassium, a pH, a score, a time since onset). The answer changes on which side of the line it falls.</li>
@@ -640,7 +645,7 @@ export default function EdNextBestStep() {
           {gi === 2 && (
             <section className="pitch">
               <div className="pk">The part between the algorithms</div>
-              <div className="ph">You will see each of these as a vignette with four plausible answers.</div>
+              <div className="ph">You will see each of these as a vignette with several plausible answers.</div>
               <p className="ps">Step Gunner turns the chain into questions: which step comes next, which drug, which dose, which contraindication. Misses come back on a schedule until you get them right cold.</p>
               <div className="row">
                 <a href={store} className="btn-store" onClick={storeClick('pitch_mid')}>Get Step Gunner free</a>
@@ -680,8 +685,8 @@ export default function EdNextBestStep() {
       </div>
 
       <h2>How this was built</h2>
-      <p>Each presentation started as a full branching pathway: every result an ED workup can return, the patient who walks each branch, and the orders with their doses. Every dose, threshold and time window in those pathways was checked word for word against the guideline text it cites, and then a second, independent pass went through each one trying to break it. Where the sources disagree, the pathway shows both sides instead of picking one quietly. This page condenses {ALL.length} of those pathways to the steps Step 2 CK asks about.</p>
-      <p>Guidelines are named under each presentation. Where a US and a European source differ, the US exam answer is kept. This page is for exam preparation and is not clinical advice; real patients get local protocols and a senior.</p>
+      <p>Each presentation started as a full branching pathway: every result an ED workup can return, the patient who walks each branch, and the orders with their doses. Every dose, threshold and time window in those pathways was checked word for word against the source it cites (a guideline, a drug label or a named review), and then a second, independent pass went through each one trying to break it. Where the sources disagree, the pathway shows both sides instead of picking one quietly. This page condenses {ALL.length} of those pathways to the steps Step 2 CK asks about.</p>
+      <p>Guidelines are named under each presentation. Where US and UK or European sources differ, the pathway records both; this page gives the answer the pathway keys and flags the split where a question could turn on it. This page is for exam preparation and is not clinical advice; real patients get local protocols and a senior.</p>
       </div>
     </LabLayout>
   );
