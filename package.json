@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "verify:seo": "python3 scripts/seo_verify.py"
+    "verify:seo": "python3 scripts/seo_verify.py",
+    "sync:pathways": "node scripts/sync_pathways.mjs",
+    "test:calcs": "node --test scripts/test_pathway_calcs.mjs"
   },
   "dependencies": {
     "firebase-admin": "^13.8.0",

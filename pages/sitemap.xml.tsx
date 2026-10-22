@@ -1,6 +1,7 @@
 import type { GetServerSideProps } from 'next';
 import { allGuideSlugs } from '../lib/guides';
 import { allFormSlugs } from '../lib/forms';
+import { sitemapPathways } from '../lib/pathways/data';
 
 // The site's XML sitemap, generated on request so new clerkship guides appear the
 // moment they are registered in lib/guides/index.ts (no build step to remember).
@@ -41,11 +42,17 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   // Per-form conversion pages: the hub owns the broad query, each child owns
   // its own form query, so they do not compete.
   const formPages = allFormSlugs().map((slug) => urlNode(`/step-2-score-predictor/${slug}`, 'monthly', '0.8'));
+  // ED pathways enter one at a time, on Danny's medical sign-off (signedOff in
+  // content/pathway-articles/<slug>.json); the hub joins with the first. lastmod
+  // is the article's own date, the one signal Google reads here.
+  const pathwayPages = sitemapPathways().map(
+    (p) => `  <url><loc>${BASE}${p.path}</loc>${p.lastmod ? `<lastmod>${p.lastmod}</lastmod>` : ''}</url>`,
+  );
 
   const xml =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
     `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    [...staticPages, ...guidePages, ...formPages].join('\n') +
+    [...staticPages, ...guidePages, ...formPages, ...pathwayPages].join('\n') +
     `\n</urlset>\n`;
 
   res.setHeader('Content-Type', 'application/xml');

@@ -1,0 +1,3607 @@
+{
+ "id": "pw_burns",
+ "title": "Burns",
+ "world": "surgery",
+ "synonyms": [
+  "burn",
+  "burns",
+  "thermal burn",
+  "scald",
+  "flame burn",
+  "contact burn",
+  "smoke inhalation",
+  "inhalation injury",
+  "airway burn",
+  "singed nasal hair",
+  "carbonaceous sputum",
+  "stridor after a fire",
+  "rule of nines",
+  "Lund-Browder",
+  "palm method",
+  "TBSA",
+  "total body surface area",
+  "Parkland formula",
+  "modified Brooke formula",
+  "burn resuscitation",
+  "burn shock",
+  "fluid creep",
+  "urine output",
+  "escharotomy",
+  "circumferential burn",
+  "chemical burn",
+  "alkali burn",
+  "lime burn",
+  "hydrofluoric acid",
+  "calcium gluconate gel",
+  "electrical burn",
+  "burn center referral",
+  "burn unit",
+  "non-accidental burn",
+  "immersion scald",
+  "cigarette burn",
+  "child abuse burn",
+  "superficial burn",
+  "partial-thickness burn",
+  "full-thickness burn",
+  "first-degree burn",
+  "second-degree burn",
+  "third-degree burn",
+  "cool running water",
+  "burn first aid",
+  "tetanus burn"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:32896144",
+   "label": "Allorto 2020 (SAFP review)",
+   "title": "Primary management of burn injuries: balancing best practice with pragmatism (S Afr Fam Pract 2020), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32896144/"
+  },
+  {
+   "docId": "pmid:38343901",
+   "label": "Burns Trauma consensus 2024",
+   "title": "Consensus on the treatment of second-degree burn wounds, 2024 edition (Burns Trauma)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38343901/"
+  },
+  {
+   "docId": "url:0bc82ef6dbb8",
+   "label": "WHO burns fact sheet",
+   "title": "Burns: WHO fact sheet (2023)",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/burns"
+  },
+  {
+   "docId": "url:77b1607e3dd6",
+   "label": "NICE CG89",
+   "title": "Child maltreatment: when to suspect maltreatment in under 18s (NICE CG89, updated 2025)",
+   "url": "https://www.nice.org.uk/guidance/cg89"
+  },
+  {
+   "docId": "pmid:29083602",
+   "label": "StatPearls: child abuse",
+   "title": "Child Abuse and Neglect (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29083602/"
+  },
+  {
+   "docId": "pmid:28613524",
+   "label": "StatPearls: thermal burns",
+   "title": "Thermal Burns (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613524/"
+  },
+  {
+   "docId": "pmid:28613481",
+   "label": "StatPearls: acute thermal burn care",
+   "title": "Acute and Chronic Thermal Burn Evaluation and Management (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613481/"
+  },
+  {
+   "docId": "pmid:30480960",
+   "label": "StatPearls: burn fluid resuscitation",
+   "title": "Burn Fluid Resuscitation (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30480960/"
+  },
+  {
+   "docId": "pmid:30725875",
+   "label": "StatPearls: Parkland formula",
+   "title": "Parkland Formula (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30725875/"
+  },
+  {
+   "docId": "pmid:30020659",
+   "label": "StatPearls: rule of nines",
+   "title": "Rule of Nines (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30020659/"
+  },
+  {
+   "docId": "pmid:37983357",
+   "label": "StatPearls: rule of tens",
+   "title": "EMS Burn Rule of Tens (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37983357/"
+  },
+  {
+   "docId": "pmid:30969595",
+   "label": "StatPearls: burn classification",
+   "title": "Burn Classification (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30969595/"
+  },
+  {
+   "docId": "pmid:30020633",
+   "label": "StatPearls: inhalation injury",
+   "title": "Inhalation Injury (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30020633/"
+  },
+  {
+   "docId": "pmid:32644716",
+   "label": "StatPearls: facial burns",
+   "title": "Facial Burns (StatPearls, updated 2023), a review, with the ABLS early intubation criteria",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32644716/"
+  },
+  {
+   "docId": "pmid:34283483",
+   "label": "StatPearls: anesthesia in burns",
+   "title": "Anesthesia for Patients With Burns (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34283483/"
+  },
+  {
+   "docId": "pmid:35118322",
+   "label": "Mediastinum 2021 review",
+   "title": "Smoke inhalation injury: a narrative review (Mediastinum 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35118322/"
+  },
+  {
+   "docId": "pmid:29489153",
+   "label": "StatPearls: escharotomy",
+   "title": "Escharotomy (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29489153/"
+  },
+  {
+   "docId": "pmid:29763063",
+   "label": "StatPearls: chemical burns",
+   "title": "Chemical Burns (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29763063/"
+  },
+  {
+   "docId": "pmid:28722859",
+   "label": "StatPearls: hydrofluoric acid",
+   "title": "Hydrofluoric Acid Toxicity (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722859/"
+  },
+  {
+   "docId": "pmid:28846317",
+   "label": "StatPearls: electrical injuries",
+   "title": "Electrical Injuries (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846317/"
+  },
+  {
+   "docId": "pmid:32644434",
+   "label": "StatPearls: tetanus prophylaxis",
+   "title": "Tetanus Prophylaxis (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32644434/"
+  },
+  {
+   "docId": "pmid:31971933",
+   "label": "CDC/ACIP 2020",
+   "title": "Use of Tdap and Td vaccines: updated ACIP recommendations, 2019 (MMWR 2020)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31971933/"
+  },
+  {
+   "docId": "pmid:30252371",
+   "label": "StatPearls: morphine",
+   "title": "Morphine (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30252371/"
+  },
+  {
+   "docId": "pmid:28879205",
+   "label": "Burns Trauma 2017 pediatric review",
+   "title": "Pediatric burn resuscitation: past, present, and future (Burns Trauma 2017), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28879205/"
+  },
+  {
+   "docId": "pmid:20156911",
+   "label": "BMJ 2010 meta-analysis",
+   "title": "Prophylactic antibiotics for burns patients: systematic review and meta-analysis (BMJ 2010)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20156911/"
+  },
+  {
+   "docId": "url:be86a08e2cd9",
+   "label": "ACS TQIP geriatric 2023",
+   "title": "ACS TQIP Best Practices Guidelines: Geriatric Trauma Management (2023)",
+   "url": "https://www.facs.org/media/ubyj2ubl/best-practices-guidelines-geriatric-trauma.pdf"
+  },
+  {
+   "docId": "pmid:33191592",
+   "label": "Emerg Med Australas 2021",
+   "title": "Adequacy of cool running water first aid by healthcare professionals in paediatric burns (Emerg Med Australas 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33191592/"
+  },
+  {
+   "docId": "url:31e161088a7b",
+   "label": "FDA label: HyperTET",
+   "title": "HyperTET (tetanus immune globulin, human) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=393fa198-7e07-4162-bd0a-9d873f1544a9"
+  },
+  {
+   "docId": "pmid:32491811",
+   "label": "StatPearls: carbon monoxide poisoning",
+   "title": "Carbon Monoxide Poisoning (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32491811/"
+  },
+  {
+   "docId": "pmid:42345981",
+   "label": "Eur Burn J 2026 evidence synthesis",
+   "title": "Bridging the evidence-practice gap in early burn injury care: an evidence synthesis of guidelines, consensus and systematic reviews (Eur Burn J 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42345981/"
+  }
+ ],
+ "differential": [
+  "Inhalation injury",
+  "Carbon monoxide poisoning",
+  "Cyanide poisoning",
+  "Associated trauma",
+  "Burn shock",
+  "Electrical injury",
+  "Chemical burn",
+  "Hydrofluoric acid burn",
+  "Superficial burn",
+  "Partial-thickness burn",
+  "Eschar constriction",
+  "Non-accidental burn"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Burn patient arriving. First moves?",
+   "options": [
+    "Stop the burning, then a primary survey led by the airway, with oxygen after smoke",
+    "Size the burn by the rule of nines before anything else, since fluids depend on it",
+    "Cool the burns under running water first, then start the primary survey",
+    "Peel off the melted clothing stuck to the skin first, then cover the burns and assess"
+   ],
+   "answer": 0,
+   "chainStep": "Stop the burning: remove burning or hot items, clothing, belts and jewelry, leaving melted or stuck clothing to experienced staff; primary survey as for any trauma patient, airway first; 100% oxygen after smoke or with facial burns; major burn: two large-bore IV lines, through unburned skin if possible; ask about an enclosed space, a fall, blast or jump, and any fluid given en route",
+   "why": "Every burn patient is a trauma patient first: airway, breathing and circulation come before the burn, and the burn is sized after the primary and secondary surveys. The first step of burn care is still to stop the burning, by removing hot and burning items, clothing and jewelry, because burned areas swell; clothing that has melted onto or stuck to the wound is left to experienced staff. Cooling matters but does not come before the airway. Oxygen goes to anyone exposed to smoke or with facial burns, for carbon monoxide or cyanide. The history asks about an enclosed space (inhalation injury), an explosion or a jump (other injuries), and any fluid given on the way in.",
+   "orders": [
+    {
+     "item": "Stop the burning",
+     "dose": "Remove burning and hot items, clothing, belts and jewelry; leave melted or firmly stuck clothing to experienced staff",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613524",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:32896144",
+       "where": "First aid for burns"
+      },
+      {
+       "docId": "pmid:28613481",
+       "where": "Deterrence and Patient Education"
+      },
+      {
+       "docId": "pmid:38343901",
+       "where": "Recommendation 1"
+      }
+     ]
+    },
+    {
+     "item": "Rescuer safety",
+     "dose": "Make the scene safe first: switch off any current, gloves for chemicals",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0bc82ef6dbb8",
+       "where": "First aid: what not to do"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen",
+     "dose": "100% oxygen after smoke exposure or with facial burns, for carbon monoxide or cyanide",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30020633",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:32644716",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "IV access",
+     "dose": "Major burn: two large-bore peripheral lines, preferably through unburned skin (through burned skin if needed); central or intraosseous access if peripheral access fails",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725875",
+       "where": "Preparation"
+      }
+     ]
+    },
+    {
+     "item": "Fluid given en route",
+     "dose": "Ask the volume and type; it counts toward the first 8 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613481",
+       "where": "History and Physical"
+      },
+      {
+       "docId": "pmid:30725875",
+       "where": "Technique or Treatment"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: radiation and friction burns, frostbite and cold injury (pw_environmental), caustic ingestion, burn wound infection and sepsis after the first day, grafting, nutrition and rehabilitation. Burn mimics such as toxic epidermal necrolysis and staphylococcal scalded skin are in the rash pathway (pw_rash).",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "pmid:30725875",
+     "where": "Introduction; Preparation"
+    },
+    {
+     "docId": "pmid:28613481",
+     "where": "Treatment / Management; History and Physical"
+    },
+    {
+     "docId": "pmid:28613524",
+     "where": "History and Physical; Treatment / Management"
+    },
+    {
+     "docId": "pmid:32896144",
+     "where": "First aid for burns"
+    },
+    {
+     "docId": "pmid:32644716",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:0bc82ef6dbb8",
+     "where": "First aid"
+    }
+   ]
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Airway, smoke, mechanism and circulation",
+   "outcomes": [
+    {
+     "id": "airway",
+     "if": "Airway threatened; stridor, hoarseness, deep facial or mouth burns, trouble swallowing, or airway reflexes lost",
+     "ddx": {
+      "lead": [
+       "Inhalation injury"
+      ],
+      "out": []
+     },
+     "next": "intubate"
+    },
+    {
+     "id": "smoke_tox",
+     "if": "Smoke, confused or hypotensive; closed-space fire, no other injury, airway reflexes intact, no stridor, hoarseness or deep facial burns",
+     "ddx": {
+      "lead": [
+       "Carbon monoxide poisoning",
+       "Cyanide poisoning"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Carbon monoxide",
+       "dose": "Pulse oximetry may read falsely high; measure the COHb on a blood gas",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30020633",
+         "where": "Evaluation"
+        }
+       ]
+      },
+      {
+       "item": "Cyanide",
+       "dose": "Soot in the mouth, pharynx or sputum plus confusion, coma or seizures, slow breathing, shock or low pressure, a lactate of 7.5 mmol/L or more, or a metabolic acidosis: hydroxocobalamin as early as possible (pw_tox)",
+       "status": "conflict",
+       "note": "Lactate cutoffs differ: 7.5 mmol/L (Mediastinum) against 10 mmol/L (Cyanokit label, pw_tox); StatPearls thermal burns adds a low COHb."
+      }
+     ],
+     "next": "end_tox"
+    },
+    {
+     "id": "smoke_watch",
+     "if": "Smoke signs, alert; soot or singed nasal hair, voice and breathing normal, pressure normal, no other injury",
+     "ddx": {
+      "lead": [
+       "Inhalation injury"
+      ],
+      "out": []
+     },
+     "next": "airway_watch"
+    },
+    {
+     "id": "trauma",
+     "if": "Injured as well, airway open; a blast, fall, jump or crash, with or without smoke",
+     "ddx": {
+      "lead": [
+       "Associated trauma"
+      ],
+      "out": []
+     },
+     "next": "end_trauma"
+    },
+    {
+     "id": "electrical",
+     "if": "Electrical injury; a current or lightning, no other injury, airway safe",
+     "ddx": {
+      "lead": [
+       "Electrical injury"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "ECG",
+       "dose": "Every adult: ECG and cardiac monitoring, treated as both a trauma and a cardiac patient",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846317",
+         "where": "Evaluation"
+        }
+       ]
+      },
+      {
+       "item": "Hidden injury",
+       "dose": "The skin burns do not measure it; electrolytes, creatinine, CK and a urinalysis for myoglobin",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846317",
+         "where": "Evaluation"
+        }
+       ]
+      },
+      {
+       "item": "Urine target with myoglobinuria",
+       "dose": "1 to 2 mL/kg/h (StatPearls electrical injuries) or 1 mL/kg/h (StatPearls burn fluid resuscitation, for rhabdomyolysis)",
+       "status": "conflict",
+       "note": "Two StatPearls chapters give different urine targets for burns with rhabdomyolysis. pw_environmental also shows 200 to 300 mL/h (StatPearls Rhabdomyolysis)."
+      },
+      {
+       "item": "Contact burns",
+       "dose": "Cover and protect; routine cooling is not recommended",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:38343901",
+         "where": "Recommendation 14"
+        }
+       ]
+      },
+      {
+       "item": "Admission",
+       "dose": "Arrest, loss of consciousness, chest pain, hypoxia, arrhythmia, significant trauma or burns, or an abnormal ECG",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846317",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ],
+     "next": "end_electrical"
+    },
+    {
+     "id": "chem_eye",
+     "if": "Chemical in an eye; a splash with pain, redness or blurring, no other injury, airway and pressure holding",
+     "ddx": {
+      "lead": [
+       "Chemical burn"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Eye first",
+       "dose": "Copious irrigation of the eye at once; skin decontamination alongside",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29763063",
+         "where": "History and Physical"
+        },
+        {
+         "docId": "url:0bc82ef6dbb8",
+         "where": "First aid: what to do"
+        }
+       ]
+      }
+     ],
+     "next": "end_eye"
+    },
+    {
+     "id": "chemical",
+     "if": "Chemical on the skin, eyes spared; acid, alkali or powder, no other injury, airway and pressure holding",
+     "ddx": {
+      "lead": [
+       "Chemical burn"
+      ],
+      "out": []
+     },
+     "next": "chem_step"
+    },
+    {
+     "id": "shock",
+     "if": "Hypotensive, no smoke, injury or current; low pressure on arrival, airway safe",
+     "ddx": {
+      "lead": [
+       "Associated trauma"
+      ],
+      "out": []
+     },
+     "next": "early_shock"
+    },
+    {
+     "id": "thermal",
+     "if": "Thermal burn, ABCs holding; no smoke signs, injury, current or chemical",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "cool"
+    },
+    {
+     "id": "other",
+     "if": "Not heat, current or chemical; frostbite, radiation or friction",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_other"
+    }
+   ]
+  },
+  {
+   "id": "end_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Not in this version: frostbite and cold injury (pw_environmental), radiation and friction burns; burn mimics are in pw_rash."
+  },
+  {
+   "id": "intubate",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Burned airway at risk: stridor, hoarseness, or deep facial or mouth burns. Next?",
+   "options": [
+    "Intubate early, before the swelling closes the airway, with a difficult airway plan",
+    "Nebulized epinephrine and IV dexamethasone first, intubating if the stridor worsens",
+    "High-flow oxygen by mask, with a repeat airway check in an hour",
+    "Bronchoscopy first, to prove an inhalation injury before placing a tube"
+   ],
+   "answer": 0,
+   "chainStep": "Early intubation with a difficult airway plan (fiberoptic intubation for supraglottic swelling), before the edema closes the airway; secure the tube firmly; semi-upright if stable; COHb and lactate on a blood gas",
+   "why": "Hoarseness, stridor, accessory muscle use, deep facial burns, burns inside the mouth, swelling or trouble swallowing are indications for early intubation. Burn edema progresses over the first 24 hours, fluid creep adds to it, and stridor appears only once the airway is already critically narrow, so the decision is made before the swelling; if there is any doubt, it is safer to intubate. A swollen supraglottis makes laryngoscopy hard, so a fiberoptic approach that keeps spontaneous breathing is the accepted safe route. Steroids, inhaled or IV, are not proven to help, and waiting for a bronchoscopy or a later check risks losing the airway.",
+   "orders": [
+    {
+     "item": "Early intubation (ABLS)",
+     "dose": "Hoarseness, stridor, accessory muscle use or sternal retraction; extensive deep facial burns; burns inside the mouth; significant edema or risk of it; trouble swallowing; failing to clear secretions, tiring, or poor oxygenation or ventilation; reduced consciousness with impaired airway reflexes; a burn over 40 to 50% TBSA; a transfer with an airway issue and no one to intubate en route",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644716",
+       "where": "History and Physical: ABLS criteria"
+      }
+     ]
+    },
+    {
+     "item": "Difficult airway",
+     "dose": "Fiberoptic intubation for supraglottic swelling; ketamine preserves hemodynamic stability",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34283483",
+       "where": "Airway management"
+      }
+     ]
+    },
+    {
+     "item": "Paralysis",
+     "dose": "Succinylcholine can be used in the acute burn but is avoided from about 24 to 48 hours (hyperkalemia); rocuronium 1.2 mg/kg gives reasonable conditions after a major burn",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34283483",
+       "where": "Neuromuscular blockade"
+      },
+      {
+       "docId": "pmid:32644716",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Steroids",
+     "dose": "Inhaled or IV: not proven beneficial",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30020633",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "The tube",
+     "dose": "Fix it very securely; keep the patient semi-upright if hemodynamically stable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35118322",
+       "where": "Treatment: airway"
+      }
+     ]
+    }
+   ],
+   "next": "post_tube",
+   "sources": [
+    {
+     "docId": "pmid:32644716",
+     "where": "History and Physical: ABLS criteria"
+    },
+    {
+     "docId": "pmid:34283483",
+     "where": "Anesthetic considerations; Airway management"
+    },
+    {
+     "docId": "pmid:30020633",
+     "where": "History and Physical; Treatment / Management"
+    },
+    {
+     "docId": "pmid:35118322",
+     "where": "Diagnosis and treatment: airway"
+    },
+    {
+     "docId": "pmid:28613524",
+     "where": "Treatment / Management"
+    }
+   ]
+  },
+  {
+   "id": "post_tube",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Blood gas after the airway is secured",
+   "outcomes": [
+    {
+     "id": "tox",
+     "if": "COHb or lactate raised; carbon monoxide or cyanide likely",
+     "ddx": {
+      "lead": [
+       "Carbon monoxide poisoning",
+       "Cyanide poisoning"
+      ],
+      "out": []
+     },
+     "next": "end_tox"
+    },
+    {
+     "id": "clear",
+     "if": "COHb and lactate normal, skin burned; airway secured",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "A late normal COHb",
+       "dose": "Does not exclude inhalation injury: on 100% oxygen the COHb falls within hours, so a level taken several hours after the injury can be low",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613481",
+         "where": "Evaluation"
+        },
+        {
+         "docId": "pmid:32491811",
+         "where": "Toxicokinetics"
+        }
+       ]
+      }
+     ],
+     "next": "cool"
+    },
+    {
+     "id": "tube_only",
+     "if": "COHb and lactate normal, no skin burn; airway secured",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_smoke_only"
+    }
+   ]
+  },
+  {
+   "id": "airway_watch",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Soot or singed nasal hair after a fire; voice, breathing and pressure normal. Next?",
+   "options": [
+    "100% oxygen, a COHb, and a look at the larynx, repeated as the swelling evolves",
+    "Intubate now, since singed nasal hair confirms that an inhalation injury is present",
+    "Room air with pulse oximetry, as a normal saturation excludes carbon monoxide",
+    "A chest film, as a clear film rules out an inhalation injury at this stage"
+   ],
+   "answer": 0,
+   "chainStep": "100% oxygen; COHb on a blood gas; direct or fiberoptic laryngoscopy for edema, repeated as edema progresses over 24 hours; semi-upright; intubate if swelling, hoarseness or stridor appears",
+   "why": "Soot shows smoke exposure but on its own does not diagnose an inhalation injury or its severity, and facial burns, carbonaceous sputum and singed nasal hair predict airway swelling poorly. Hot smoke without facial burns can be watched closely if there is no severe upper airway edema. A direct or fiberoptic look at the larynx is quick and can avoid an unneeded tube, and because edema progresses over 24 hours the look is repeated. Pulse oximetry can read falsely high with carbon monoxide, so the COHb comes from a blood gas, and chest films are often normal early.",
+   "orders": [
+    {
+     "item": "Airway look",
+     "dose": "Direct or fiberoptic laryngoscopy for edema, redness or ulceration; repeated, as edema progresses over 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35118322",
+       "where": "Diagnosis: upper airway damage"
+      },
+      {
+       "docId": "pmid:32644716",
+       "where": "History and Physical"
+      }
+     ]
+    },
+    {
+     "item": "Carbon monoxide",
+     "dose": "100% oxygen; COHb on a blood gas, as pulse oximetry may read falsely high",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30020633",
+       "where": "Evaluation; Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Position",
+     "dose": "Semi-upright if hemodynamically stable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35118322",
+       "where": "Treatment: airway"
+      }
+     ]
+    },
+    {
+     "item": "Delayed symptoms",
+     "dose": "Onset can be delayed; warn the patient",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30020633",
+       "where": "History and Physical"
+      }
+     ]
+    },
+    {
+     "item": "Intubate on smoke signs alone?",
+     "dose": "ABLS omits soot and singed hair; the Denver criteria add suspected smoke inhalation and singed facial hair",
+     "status": "conflict",
+     "note": "StatPearls facial burns gives both; the key follows ABLS and repeats the look."
+    }
+   ],
+   "next": "watch_result",
+   "sources": [
+    {
+     "docId": "pmid:35118322",
+     "where": "Diagnosis: upper and lower airway damage; Treatment: airway"
+    },
+    {
+     "docId": "pmid:32644716",
+     "where": "History and Physical"
+    },
+    {
+     "docId": "pmid:30020633",
+     "where": "History and Physical; Evaluation"
+    }
+   ]
+  },
+  {
+   "id": "watch_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Laryngoscopy and the COHb",
+   "outcomes": [
+    {
+     "id": "swelling",
+     "if": "Airway swelling; edema on the scope, or hoarseness or stridor develops",
+     "ddx": {
+      "lead": [
+       "Inhalation injury"
+      ],
+      "out": []
+     },
+     "next": "intubate"
+    },
+    {
+     "id": "co",
+     "if": "COHb raised, airway clear; no edema on the scope, voice normal",
+     "ddx": {
+      "lead": [
+       "Carbon monoxide poisoning"
+      ],
+      "out": []
+     },
+     "next": "end_tox"
+    },
+    {
+     "id": "clear",
+     "if": "Airway clear, COHb normal, skin burned; no edema on the scope",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "cool"
+    },
+    {
+     "id": "smoke_only",
+     "if": "Smoke only, airway clear, COHb normal; no edema, no skin burn",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_smoke_only"
+    }
+   ]
+  },
+  {
+   "id": "end_smoke_only",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Smoke without a skin burn, COHb and lactate normal: symptoms can be delayed and airway edema progresses over 24 hours, so keep the patient semi-upright, repeat the look at the larynx, intubate at the first edema, hoarseness or stridor, and warn about delayed symptoms before any discharge. A patient already intubated keeps the tube very securely fixed and stays semi-upright. No steroids, no prophylactic antibiotics."
+  },
+  {
+   "id": "end_tox",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Smoke with confusion, low pressure, or a raised COHb or lactate: carbon monoxide and cyanide come first; pulse oximetry can read falsely normal, so the COHb is measured on a blood gas. Soot with confusion, coma, seizures, slow breathing, shock or a metabolic acidosis continues in the toxicology pathway (pw_tox) for hydroxocobalamin without waiting for a cyanide level. An alert patient with a raised COHb continues in the headache pathway (pw_headache) for 100% oxygen and the hyperbaric criteria. The larynx is examined as after any smoke, and the burn is then cooled, sized and resuscitated as in this pathway, with fluids timed from the burn."
+  },
+  {
+   "id": "end_trauma",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Burns with other injuries: the trauma primary survey comes first in the major trauma pathway (pw_trauma), because life threats from the injury or the airway take priority over transfer to a burn center. Stop the burning and give oxygen meanwhile, and do not let the visible burn distract from less obvious injuries. The burn is sized at the secondary survey, fluids are timed from the burn, and burns with concomitant trauma meet the burn center criteria. After closed-space smoke, the COHb is measured and cyanide considered as in pw_tox."
+  },
+  {
+   "id": "end_electrical",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Electrical or lightning injury: continue in the environmental injury pathway (pw_environmental) for the ECG, monitoring, admission and myoglobinuria fluids titrated to the urine output. Current damages deep tissue under small or absent burns, so the CK, urine and compartments are checked. Contact burns are covered, not routinely cooled; any skin burn is sized as here, knowing the size understates the injury. Electrical burns meet the burn center criteria."
+  },
+  {
+   "id": "early_shock",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Burned, hypotensive on arrival, no smoke or injury yet seen. Next?",
+   "options": [
+    "Treat it as shock from another cause and search for it: bleeding, chest, cord",
+    "Burn shock from the capillary leak: double the formula rate until the pressure recovers",
+    "Start norepinephrine for burn vasoplegia, then size the burn",
+    "Cool the burns and give the first 8 hours of the formula as a bolus"
+   ],
+   "answer": 0,
+   "chainStep": "Hypotension soon after a burn: resuscitate and search for another cause (hemothorax, cardiac tamponade, neurogenic shock, abdominal or pelvic bleeding) by the trauma pathway; cyanide after closed-space smoke",
+   "why": "Hypotension is often a late finding in burn shock, so a burned patient who arrives hypotensive has another cause until shown otherwise: hemothorax, cardiac tamponade, neurogenic shock, or abdominal and pelvic bleeding. The visible burn must not distract from injuries that are less apparent. Extra burn fluid or a vasopressor does not find the cause, and boluses beyond need worsen the burn edema.",
+   "orders": [
+    {
+     "item": "Causes to seek",
+     "dose": "Hemothorax, cardiac tamponade, neurogenic shock, internal abdominal and pelvic bleeding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725875",
+       "where": "Preparation"
+      }
+     ]
+    },
+    {
+     "item": "Look past the burn",
+     "dose": "Airway, hemorrhage control and the trauma survey; do not let the visible burn hide other injuries",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30480960",
+       "where": "Indications"
+      }
+     ]
+    }
+   ],
+   "next": "end_shock",
+   "sources": [
+    {
+     "docId": "pmid:30725875",
+     "where": "Preparation"
+    },
+    {
+     "docId": "pmid:30480960",
+     "where": "Indications"
+    }
+   ]
+  },
+  {
+   "id": "end_shock",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypotension soon after a burn is not burn shock until other causes are excluded: continue in the major trauma pathway (pw_trauma) for hemothorax, tamponade, neurogenic shock and abdominal or pelvic bleeding; after closed-space smoke, cyanide is a cause of low pressure (pw_tox). Once the cause is treated, the burn is sized here and fluids are timed from the burn."
+  },
+  {
+   "id": "chem_step",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Chemical on the skin, eyes spared, clothing still on. First?",
+   "options": [
+    "Gloves, clothing off, brush off any dry powder, then a long running-water rinse",
+    "Neutralize it on the skin: a weak acid for an alkali, or bicarbonate for an acid",
+    "Pour water over the dry powder at once, then brush off what is left",
+    "Cover with a dry dressing and give the antidote before rinsing"
+   ],
+   "answer": 0,
+   "chainStep": "Barrier protection for staff; remove and bag contaminated clothing; brush off dry powder or solid chemical; irrigate with running water for 30 minutes to 2 hours; no neutralizing agents; an eye splash is irrigated first (pw_eye)",
+   "why": "Contaminated clothing comes off first, with barrier protection for staff. Dried alkali or other solid chemical is brushed away before rinsing, and then the skin is irrigated with plenty of running water, for 30 minutes to 2 hours by the Burns Trauma consensus. Neutralizing agents are not used: no study shows them better than water, and the reaction releases heat that can add injury. Even hydrofluoric acid is irrigated first; its calcium gluconate comes after the rinse. A chemical in the eye goes first, to irrigation at once.",
+   "orders": [
+    {
+     "item": "Clear the chemical",
+     "dose": "Remove contaminated clothing; brush dried alkali or solid chemical away first, then rinse",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38343901",
+       "where": "Recommendation 9; clinical question 2"
+      },
+      {
+       "docId": "pmid:32644716",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Irrigation",
+     "dose": "Running water as soon as possible, for 30 minutes to 2 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38343901",
+       "where": "Recommendation 9"
+      },
+      {
+       "docId": "url:0bc82ef6dbb8",
+       "where": "First aid: what to do"
+      },
+      {
+       "docId": "pmid:29763063",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Neutralizing agents",
+     "dose": "Not used routinely: the reaction releases heat and can add injury",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38343901",
+       "where": "Recommendation 10; clinical question 2"
+      },
+      {
+       "docId": "pmid:32644716",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Staff",
+     "dose": "Barrier protection; contaminated clothing removed and contained",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722859",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "url:0bc82ef6dbb8",
+       "where": "First aid: what not to do"
+      }
+     ]
+    },
+    {
+     "item": "Eyes",
+     "dose": "Copious irrigation at once; the red eye pathway (pw_eye) sets the end point",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29763063",
+       "where": "History and Physical"
+      }
+     ]
+    }
+   ],
+   "next": "chem_result",
+   "sources": [
+    {
+     "docId": "pmid:38343901",
+     "where": "Recommendations 9 to 11; clinical question 2"
+    },
+    {
+     "docId": "pmid:32644716",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:29763063",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:0bc82ef6dbb8",
+     "where": "First aid"
+    },
+    {
+     "docId": "pmid:28722859",
+     "where": "Treatment / Management"
+    }
+   ]
+  },
+  {
+   "id": "chem_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The chemical on the label",
+   "outcomes": [
+    {
+     "id": "hf",
+     "if": "Hydrofluoric acid; pain out of proportion, a rust or wheel cleaner",
+     "ddx": {
+      "lead": [
+       "Hydrofluoric acid burn"
+      ],
+      "out": []
+     },
+     "next": "hf_step"
+    },
+    {
+     "id": "skin",
+     "if": "Another acid or alkali; no hydrofluoric acid",
+     "ddx": {
+      "lead": [
+       "Chemical burn"
+      ],
+      "out": []
+     },
+     "next": "size"
+    }
+   ]
+  },
+  {
+   "id": "hf_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Hydrofluoric acid on the fingers, irrigated; pain out of proportion to the burn. Next?",
+   "options": [
+    "Calcium gluconate gel massaged in, with calcium, magnesium and an ECG",
+    "Bicarbonate soaks to neutralize the acid, with a dry dressing",
+    "Silver sulfadiazine dressing with a wound check in 48 hours",
+    "IV opioid titrated to the pain, with the hand elevated and splinted high"
+   ],
+   "answer": 0,
+   "chainStep": "2.5% calcium gluconate gel massaged in for 15 to 30 minutes, reapplied every 10 to 15 minutes until the pain eases; subcutaneous 5% calcium gluconate if pain persists; calcium, magnesium, potassium, bicarbonate and kidney function; ECG and monitoring",
+   "why": "Pain far beyond the look of the wound is the hallmark of hydrofluoric acid. Irrigation dilutes the acid but does not bind fluoride already in the tissue, so calcium gluconate is the cornerstone: 2.5% gel massaged in, then subcutaneous 5% calcium gluconate if the pain persists, with relief of pain as the sign that it works. Even a skin burn can lower calcium and magnesium and raise potassium, with QT prolongation and arrhythmias, so the electrolytes are checked and the heart is monitored. Neutralizing soaks are not recommended for chemical burns, a dressing leaves the fluoride in the tissue untreated, and an opioid treats the pain, not the fluoride.",
+   "orders": [
+    {
+     "item": "Calcium gluconate gel",
+     "dose": "2.5% gel applied liberally and massaged in for 15 to 30 minutes; reapplied every 10 to 15 minutes until the pain improves",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722859",
+       "where": "Treatment: dermal exposure"
+      }
+     ]
+    },
+    {
+     "item": "Pain persists",
+     "dose": "5% calcium gluconate infiltrated at 0.5 mL per cm2, slightly beyond the visible margins; in the digits at most 0.5 mL per phalanx",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722859",
+       "where": "Treatment: dermal exposure"
+      }
+     ]
+    },
+    {
+     "item": "Labs and monitoring",
+     "dose": "Calcium, magnesium, potassium, bicarbonate and kidney function; ECG and continuous monitoring in moderate or severe exposures",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722859",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Admission",
+     "dose": "Over 5% TBSA (over 1% if the acid is above 50%), inhalation, ingestion or abnormal electrolytes: continuous cardiac monitoring and serial labs; IV calcium for hypocalcemia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722859",
+       "where": "Management of systemic fluoride toxicity"
+      }
+     ]
+    },
+    {
+     "item": "Antiarrhythmics",
+     "dose": "Amiodarone, lidocaine and procainamide are relatively contraindicated; correct the electrolytes",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28722859",
+       "where": "Management of systemic fluoride toxicity"
+      }
+     ]
+    }
+   ],
+   "next": "end_hf",
+   "sources": [
+    {
+     "docId": "pmid:28722859",
+     "where": "History and Physical; Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "pmid:38343901",
+     "where": "Recommendations 10 and 11"
+    }
+   ]
+  },
+  {
+   "id": "end_hf",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hydrofluoric acid burn: irrigation, then 2.5% calcium gluconate gel until the pain settles, subcutaneous 5% calcium gluconate if it does not, and calcium, magnesium and potassium with an ECG. Admission with continuous monitoring for a burn over 5% TBSA (over 1% with acid above 50%) or any electrolyte change, with IV calcium for hypocalcemia. Chemical burns meet the burn center criteria."
+  },
+  {
+   "id": "end_eye",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Chemical in the eye: irrigate at once and at length, and continue in the red eye pathway (pw_eye), which sets the end point of irrigation and calls ophthalmology. Skin burns are washed and sized as in this pathway, and chemical burns meet the burn center criteria."
+  },
+  {
+   "id": "cool",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Thermal burn, airway safe or secured. First aid, given the time since the burn?",
+   "options": [
+    "Under 3 hours old: cool water 20 minutes, limited in large burns; older: cover",
+    "Ice packs for 20 minutes to draw the heat out faster and ease the pain",
+    "Silver sulfadiazine cream now, so the wound is covered before transfer",
+    "Cool water if the burn happened in the last few minutes, then a dry sheet over it"
+   ],
+   "answer": 0,
+   "chainStep": "Within 3 hours: cool water (12 to 25 °C) for 20 minutes, running on the limbs, wet cold compresses on the head, face, trunk and groin; limited in large burns, small children, the frail and shock, keeping the patient warm; after 3 hours, cover without cooling; no ice; cling film or a clean nonadherent dressing; no creams before transfer",
+   "why": "Cool running water for 20 minutes gives the most benefit and still helps up to 3 hours after the burn: it eases pain and reduces the need for grafting. Ice is harmful: it deepens the injury through prolonged vasoconstriction. Large burns, infants, older and frail patients and those in shock lose heat fast, so cooling is done with care and the patient is kept warm. Afterwards the wound is covered with cling film or a clean nonadherent dressing; creams and ointments are left off before transfer, so the burn center can assess the wound.",
+   "orders": [
+    {
+     "item": "Cooling",
+     "dose": "Cool running water (12 to 25 °C) for at least 20 minutes or until the pain is relieved, started as soon as possible and no later than 3 hours after the burn; running water on the limbs, alternating wet cold compresses on the head, face, trunk and groin",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38343901",
+       "where": "Recommendations 2, 3 and 5"
+      },
+      {
+       "docId": "pmid:32896144",
+       "where": "First aid for burns"
+      },
+      {
+       "docId": "pmid:33191592",
+       "where": "Introduction"
+      }
+     ]
+    },
+    {
+     "item": "Cooling time",
+     "dose": "20 minutes (the Burns Trauma consensus, the SAFP review, the Australian and New Zealand first aid guidance) against 3 to 5 minutes (StatPearls acute thermal burn chapter, patient advice)",
+     "status": "conflict",
+     "note": "The StatPearls patient advice is far shorter than the consensus and reviews; the key follows 20 minutes."
+    },
+    {
+     "item": "Ice",
+     "dose": "No ice: it deepens the injury and risks hypothermia",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:0bc82ef6dbb8",
+       "where": "First aid: what not to do"
+      },
+      {
+       "docId": "pmid:32896144",
+       "where": "First aid for burns"
+      },
+      {
+       "docId": "pmid:28613481",
+       "where": "Deterrence and Patient Education"
+      }
+     ]
+    },
+    {
+     "item": "Hypothermia",
+     "dose": "Care with large burns, infants and children, older or frail patients, shock and cold conditions; avoid prolonged cooling and keep the patient warm; the evidence for 20 minutes of running water comes mostly from burns under 20% TBSA",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38343901",
+       "where": "Recommendation 6"
+      },
+      {
+       "docId": "url:0bc82ef6dbb8",
+       "where": "First aid: what not to do"
+      },
+      {
+       "docId": "pmid:28613524",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:28613481",
+       "where": "Deterrence and Patient Education"
+      },
+      {
+       "docId": "pmid:42345981",
+       "where": "4.3 Discussion"
+      }
+     ]
+    },
+    {
+     "item": "Cover",
+     "dose": "Cling film or a clean nonadherent dressing after cooling; no topical creams or ointments if transferring",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32896144",
+       "where": "First aid for burns"
+      },
+      {
+       "docId": "pmid:38343901",
+       "where": "Recommendation 8"
+      },
+      {
+       "docId": "pmid:28613524",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "next": "size",
+   "sources": [
+    {
+     "docId": "pmid:32896144",
+     "where": "First aid for burns"
+    },
+    {
+     "docId": "pmid:38343901",
+     "where": "Recommendations 2, 3, 6 and 8"
+    },
+    {
+     "docId": "url:0bc82ef6dbb8",
+     "where": "First aid"
+    },
+    {
+     "docId": "pmid:33191592",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:28613524",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:28613481",
+     "where": "Deterrence and Patient Education"
+    }
+   ]
+  },
+  {
+   "id": "size",
+   "kind": "step",
+   "stage": "Assess",
+   "ask": "First aid done. Sizing the burn, which skin counts?",
+   "options": [
+    "Partial- and full-thickness skin, by the rule of nines, or Lund-Browder in a child",
+    "Each red area, superficial burns included, since the epidermis there is damaged too",
+    "The adult rule of nines in a toddler too, with the head counted as 9%",
+    "Full-thickness areas, as partial-thickness skin heals by itself"
+   ],
+   "answer": 0,
+   "chainStep": "Map depth (superficial, partial, full thickness); count partial- and full-thickness areas only: rule of nines in adults, Lund-Browder chart in children, the patient's palm with fingers for small or scattered burns; weigh the patient; reexamine in the following days",
+   "why": "Only partial- and full-thickness burns count toward the TBSA; superficial burns are left out. The adult rule of nines gives the head 9%, each arm 9%, the front and back of the trunk 18% each, each leg 18% and the groin 1%. Children have proportionately larger heads (a young child's head can be 19% of TBSA), so the Lund-Browder chart, which adjusts for age, is more accurate. For small or scattered burns, the patient's palm with the fingers is about 1%, although it overestimates. Partial-thickness burns count because they disrupt the skin's barrier, temperature control and fluid control.",
+   "orders": [
+    {
+     "item": "Adult rule of nines",
+     "dose": "Head 9%, each arm 9%, front of the trunk 18%, back of the trunk 18%, each leg 18%, groin 1%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30020659",
+       "where": "Introduction"
+      },
+      {
+       "docId": "pmid:28613524",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Children",
+     "dose": "Lund-Browder chart; a young child's head can be 19% of TBSA, against 9% in an adult",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30020659",
+       "where": "Key Clinical Considerations: pediatric patients"
+      },
+      {
+       "docId": "pmid:37983357",
+       "where": "Issues of Concern"
+      },
+      {
+       "docId": "pmid:30725875",
+       "where": "Technique or Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Palm",
+     "dose": "The patient's palm with fingers is about 1% TBSA; it overestimates by 10 to 20%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30020659",
+       "where": "Clinical Significance"
+      },
+      {
+       "docId": "pmid:30480960",
+       "where": "Indications"
+      }
+     ]
+    },
+    {
+     "item": "Depth",
+     "dose": "Superficial: red, dry, painful, blanching, no blisters. Superficial partial: blisters, a moist pink base that blanches, very painful. Deep partial: mottled or white, sluggish or no blanching, less pain. Full thickness: leathery, dry, no blanching, no pain",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30969595",
+       "where": "Clinical Significance"
+      },
+      {
+       "docId": "pmid:28613524",
+       "where": "History and Physical"
+      },
+      {
+       "docId": "pmid:28613481",
+       "where": "History and Physical"
+      }
+     ]
+    },
+    {
+     "item": "Reassess",
+     "dose": "Burns evolve: reexamine extent and depth over the following days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613524",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "next": "burn_size",
+   "sources": [
+    {
+     "docId": "pmid:30020659",
+     "where": "Introduction; Key Clinical Considerations; Clinical Significance"
+    },
+    {
+     "docId": "pmid:30725875",
+     "where": "Technique or Treatment"
+    },
+    {
+     "docId": "pmid:30969595",
+     "where": "Clinical Significance; Interprofessional Team Interventions"
+    },
+    {
+     "docId": "pmid:37983357",
+     "where": "Issues of Concern"
+    },
+    {
+     "docId": "pmid:28613524",
+     "where": "History and Physical; Evaluation"
+    },
+    {
+     "docId": "pmid:38343901",
+     "where": "Recommendation 17"
+    }
+   ]
+  },
+  {
+   "id": "burn_size",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Depth, size, site and the story",
+   "outcomes": [
+    {
+     "id": "superficial",
+     "if": "Superficial only; red, dry, painful, no blisters, story fits",
+     "ddx": {
+      "lead": [
+       "Superficial burn"
+      ],
+      "out": []
+     },
+     "next": "end_superficial"
+    },
+    {
+     "id": "nai",
+     "if": "Child, pattern suggests abuse; immersion lines, cigarette marks, or an unsuitable story",
+     "ddx": {
+      "lead": [
+       "Non-accidental burn"
+      ],
+      "out": []
+     },
+     "next": "safeguard"
+    },
+    {
+     "id": "minor",
+     "if": "Small partial thickness; under 10% TBSA, thermal, no special site, smoke, full thickness or comorbidity, story fits",
+     "ddx": {
+      "lead": [
+       "Partial-thickness burn"
+      ],
+      "out": []
+     },
+     "next": "minor_care"
+    },
+    {
+     "id": "refer",
+     "if": "Burn center criterion, no formal fluids; 10% TBSA or more but not a major burn, or smaller with full thickness, a special site, a chemical, smoke or comorbidity; story fits",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Adults 15 to 20% TBSA",
+       "dose": "Formal resuscitation over 20% TBSA (most StatPearls chapters, the 2012 ABA consensus as reported); StatPearls facial burns expects shock and aggressive fluids from 15 to 20%; the SAFP review starts fluids above 10 to 15%",
+       "status": "conflict",
+       "note": "Below 20% the sources disagree; no case here sits between 15 and 20%."
+      }
+     ],
+     "next": "refer_step"
+    },
+    {
+     "id": "major",
+     "if": "Major burn, adult; partial and full thickness over 20% TBSA",
+     "ddx": {
+      "lead": [
+       "Burn shock"
+      ],
+      "out": []
+     },
+     "next": "parkland"
+    },
+    {
+     "id": "major_child",
+     "if": "Major burn, child; partial and full thickness over 10% TBSA, story fits",
+     "ddx": {
+      "lead": [
+       "Burn shock"
+      ],
+      "out": []
+     },
+     "next": "peds_fluids"
+    }
+   ]
+  },
+  {
+   "id": "end_superficial",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Superficial burn only: it is not counted in the TBSA and needs no referral for its size. Over-the-counter analgesia and a soothing topical such as aloe vera; it heals without scarring within 5 to 10 days."
+  },
+  {
+   "id": "minor_care",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Partial-thickness burn under 10% TBSA, no special site, story fits. Care?",
+   "options": [
+    "Clean it, dress it, oral analgesia, tetanus by history, and a wound check in days",
+    "Oral antibiotics for a week to keep the burn from becoming infected",
+    "Admit for Parkland fluids over 24 hours, since the whole burn is partial thickness",
+    "Leave it open to the air without a dressing, so the blisters dry out"
+   ],
+   "answer": 0,
+   "chainStep": "Clean the burn; topical antibiotic ointment under an absorbent dressing changed once or twice a day, or an occlusive burn dressing left about a week; oral analgesia; tetanus by history; recheck every 2 to 4 days until healing",
+   "why": "Small partial-thickness burns are managed as outpatients: cleansing, a topical antibiotic ointment with an absorbent dressing changed once or twice a day or an occlusive burn dressing left about a week, pain relief, and a tetanus booster if needed, since burns are tetanus-prone. Burns evolve, so the wound is reexamined within days. Prophylactic antibiotics are not given; good cleaning and dressings prevent infection. Formal fluids start above 20% TBSA in adults, and patients with small burns who can eat and drink need none.",
+   "orders": [
+    {
+     "item": "Dressing",
+     "dose": "Clean, then a topical antibiotic ointment under an absorbent dressing changed once or twice a day, or an occlusive burn dressing left about one week; silver sulfadiazine is falling out of favor as it can delay healing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613524",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Blisters",
+     "dose": "Keep intact blisters during early first aid (Burns Trauma consensus, recommendation 7); remove broken, large, thin-walled or contaminated ones (recommendation 18); debride large, tense or joint-crossing blisters and leave small or palm and sole blisters (StatPearls thermal burns); remove all blisters larger than a thumbnail to judge the depth (SAFP review)",
+     "status": "conflict",
+     "note": "The sources disagree on blister care."
+    },
+    {
+     "item": "Tetanus",
+     "dose": "Burns are tetanus-prone wounds: a tetanus toxoid vaccine if more than 5 years since the last dose; vaccine plus human tetanus immune globulin if fewer than 3 doses or unknown",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644434",
+       "where": "Issues of Concern"
+      },
+      {
+       "docId": "pmid:31971933",
+       "where": "Tetanus Prophylaxis for Wound Management Recommendations"
+      }
+     ]
+    },
+    {
+     "item": "Tetanus immune globulin dose",
+     "dose": "HyperTET 250 units deep IM, with Td in a different limb and syringe (age 7 and over); under 7, 4.0 units/kg or the whole 250 units",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:31e161088a7b",
+       "where": "Dosage and Administration"
+      }
+     ]
+    },
+    {
+     "item": "Prophylactic antibiotics",
+     "dose": "Not given; infection is prevented by cleaning the wound and dressing it",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:32896144",
+       "where": "Dressing the burn wound"
+      }
+     ]
+    },
+    {
+     "item": "Recheck",
+     "dose": "Every 2 to 4 days until signs of healing; reassess extent and depth",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29763063",
+       "where": "Postoperative and Rehabilitation Care"
+      },
+      {
+       "docId": "pmid:28613524",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "next": "end_minor",
+   "sources": [
+    {
+     "docId": "pmid:28613524",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:32644434",
+     "where": "Issues of Concern"
+    },
+    {
+     "docId": "pmid:32896144",
+     "where": "Dressing the burn wound"
+    },
+    {
+     "docId": "pmid:29763063",
+     "where": "Postoperative and Rehabilitation Care"
+    },
+    {
+     "docId": "pmid:30725875",
+     "where": "Contraindications"
+    }
+   ]
+  },
+  {
+   "id": "end_minor",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Minor burn: outpatient care with cleaning, a dressing, oral analgesia and tetanus cover, rechecked every few days because burns evolve in depth and extent. No prophylactic antibiotics. A burn that deepens or spreads is measured again against the burn center criteria."
+  },
+  {
+   "id": "refer_step",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Meets a burn center criterion, no formal fluids needed. Next?",
+   "options": [
+    "Call the burn center for transfer or advice; analgesia, tetanus and a clean cover",
+    "Dress it here and book a clinic visit in a week, since the burn is small",
+    "Start Parkland fluids now, since a referral criterion means a formal resuscitation",
+    "Prophylactic IV antibiotics while the transfer is being arranged"
+   ],
+   "answer": 0,
+   "chainStep": "Discuss with the burn center for transfer or advice; clean and cover without creams; analgesia; tetanus by history; watch circumferential burns and the airway while waiting",
+   "why": "The burn center criteria include partial-thickness or deeper burns of 10% TBSA or more; burns of the face, hands, feet, genitals, perineum or major joints; full-thickness burns of any size; chemical and electrical burns; inhalation injury; burns with trauma; significant medical problems; special social or rehabilitation needs; and children where the hospital lacks pediatric burn care. Over 50 with more than 10% TBSA is also a referral. Size alone does not decide: a small burn of the hand or face still goes to the burn center. Formal fluids are for burns over 20% TBSA in adults, and antibiotics are not given as prophylaxis. For transfer the burn is cleaned and covered without creams, and the burn center is asked for instructions.",
+   "orders": [
+    {
+     "item": "Burn center criteria",
+     "dose": "Partial thickness or deeper 10% TBSA or more; face, hands, feet, genitals, perineum or major joints; full thickness of any size; chemical, electrical or inhalation injury; concomitant trauma; medical problems that affect mortality; special social or rehabilitation needs; children where pediatric burn care is lacking",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613481",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:30969595",
+       "where": "Interprofessional Team Interventions"
+      }
+     ]
+    },
+    {
+     "item": "Older adults",
+     "dose": "Over 50 with more than 10% TBSA: refer to a burn center",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:be86a08e2cd9",
+       "where": "Burns"
+      }
+     ]
+    },
+    {
+     "item": "ABA 2022 referral update",
+     "dose": "Not read: ameriburn.org terms bar copying; these criteria follow the StatPearls summaries of the ABA list",
+     "status": "pending"
+    },
+    {
+     "item": "Transfer dressing",
+     "dose": "Clean and cover without topical creams or ointments; call the burn center for instructions",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613524",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Analgesia, adult",
+     "dose": "IV morphine, starting 2 to 10 mg per 70 kg and titrated to the lowest effective dose; IV pain medication in a severe burn",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30252371",
+       "where": "Administration"
+      },
+      {
+       "docId": "pmid:28613524",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Analgesia, child",
+     "dose": "Pediatric opioid doses are not in the open sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Tetanus",
+     "dose": "Burns are tetanus-prone wounds: a tetanus toxoid vaccine if more than 5 years since the last dose; vaccine plus human tetanus immune globulin if fewer than 3 doses or unknown",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644434",
+       "where": "Issues of Concern"
+      },
+      {
+       "docId": "pmid:31971933",
+       "where": "Tetanus Prophylaxis for Wound Management Recommendations"
+      }
+     ]
+    },
+    {
+     "item": "Circumferential burns",
+     "dose": "Watch any circumferential partial- or full-thickness burn for compartment syndrome",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613481",
+       "where": "History and Physical"
+      }
+     ]
+    }
+   ],
+   "next": "end_refer",
+   "sources": [
+    {
+     "docId": "pmid:28613481",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:30969595",
+     "where": "Interprofessional Team Interventions"
+    },
+    {
+     "docId": "url:be86a08e2cd9",
+     "where": "Burns"
+    },
+    {
+     "docId": "pmid:28613524",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:30020659",
+     "where": "Clinical Overview"
+    },
+    {
+     "docId": "pmid:32896144",
+     "where": "Dressing the burn wound"
+    }
+   ]
+  },
+  {
+   "id": "end_refer",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Burn meeting a burn center criterion without formal fluids: discuss with the burn center for transfer or advice, clean and cover the wound without creams, give analgesia and tetanus cover, and watch circumferential burns and the airway while waiting."
+  },
+  {
+   "id": "parkland",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Adult, partial and full thickness over 20% TBSA. Fluids?",
+   "options": [
+    "Lactated Ringer's at 2 to 4 mL/kg/%TBSA over 24 h, half by 8 h after the burn",
+    "Normal saline boluses of a liter each until the pulse and the pressure settle down",
+    "Lactated Ringer's by Parkland, half over the 8 hours after arrival here",
+    "Albumin as the main fluid from the first hour, to hold fluid in the vessels"
+   ],
+   "answer": 0,
+   "chainStep": "Lactated Ringer's by weight and burn size: Parkland 4 mL/kg/%TBSA over 24 hours, or modified Brooke 2 mL/kg/%TBSA; half in the first 8 hours from the time of the burn, minus fluid already given, the rest over 16 hours; urinary catheter; titrate hourly to a urine output of 0.5 to 1 mL/kg/h; no boluses without hypovolemia; document fluids and urine hourly",
+   "why": "Formal resuscitation is for partial- and full-thickness burns over 20% TBSA in adults. Lactated Ringer's is the fluid: large volumes of normal saline cause a hyperchloremic acidosis, and boluses without hypovolemia only worsen the edema. The Parkland formula gives 4 mL/kg/%TBSA over the first 24 hours and the modified Brooke 2 mL/kg/%TBSA; either way half goes in over the first 8 hours, counted from the time of the burn and not from arrival, with fluid given before arrival subtracted. One source advises no colloid in the first 8 hours, while the ABA suggests albumin as rescue when crystalloid needs climb. A urinary catheter goes in, because the formula only sets the starting rate and the urine output guides the rest.",
+   "orders": [
+    {
+     "item": "Threshold",
+     "dose": "Adults with partial- and full-thickness burns over 20% TBSA",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30480960",
+       "where": "Introduction"
+      },
+      {
+       "docId": "pmid:30725875",
+       "where": "Indications"
+      },
+      {
+       "docId": "pmid:30020659",
+       "where": "Clinical Overview"
+      },
+      {
+       "docId": "pmid:28613481",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Starting volume",
+     "dose": "Parkland 4 mL/kg/%TBSA of lactated Ringer's in 24 hours, the most used formula; modified Brooke 2 mL/kg/%TBSA, preferred by the SAFP review because doctors give extra fluid for low urine more readily than they cut the rate",
+     "status": "conflict",
+     "note": "StatPearls and the SAFP review present both formulas; the ABA burn shock resuscitation guideline could not be read (OUP, not open)."
+    },
+    {
+     "item": "Timing",
+     "dose": "Half in the first 8 hours from the time of the burn, not from arrival; the rest over the next 16 hours; fluid given before arrival is subtracted",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725875",
+       "where": "Technique or Treatment"
+      },
+      {
+       "docId": "pmid:30020659",
+       "where": "Clinical Overview"
+      }
+     ]
+    },
+    {
+     "item": "Late arrival",
+     "dose": "Arriving 2 hours after the burn with no fluid yet: the first half goes in over the next 6 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30020659",
+       "where": "Clinical Overview"
+      }
+     ]
+    },
+    {
+     "item": "Fluid",
+     "dose": "Lactated Ringer's; avoid large volumes of normal saline (hyperchloremic acidosis) and hypotonic fluids (edema)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725875",
+       "where": "Technique or Treatment"
+      },
+      {
+       "docId": "pmid:32896144",
+       "where": "Fluid resuscitation and early enteral feeding"
+      },
+      {
+       "docId": "pmid:30480960",
+       "where": "Technique or Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Boluses",
+     "dose": "No fluid bolus without evidence of hypovolemia: it worsens edema",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30480960",
+       "where": "Indications"
+      },
+      {
+       "docId": "pmid:32896144",
+       "where": "Fluid resuscitation and early enteral feeding"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Urinary catheter; urine output 0.5 to 1 mL/kg/h (30 to 50 mL/h in an adult); fluids, vital signs and urine documented hourly",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30480960",
+       "where": "Technique or Treatment"
+      },
+      {
+       "docId": "pmid:30725875",
+       "where": "Technique or Treatment; Enhancing Healthcare Team Outcomes"
+      },
+      {
+       "docId": "pmid:32896144",
+       "where": "Fluid resuscitation and early enteral feeding"
+      }
+     ]
+    },
+    {
+     "item": "Colloid",
+     "dose": "Not recommended in the first 8 hours (StatPearls rule of nines); albumin throughout or as rescue when crystalloid needs climb (the ABA guideline, as reported in StatPearls burn fluid resuscitation)",
+     "status": "conflict",
+     "note": "The sources disagree on when albumin starts."
+    },
+    {
+     "item": "Higher needs",
+     "dose": "Inhalation injury, delayed resuscitation, polytrauma and high-voltage injury raise fluid needs",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30480960",
+       "where": "Complications"
+      }
+     ]
+    },
+    {
+     "item": "Feeding",
+     "dose": "Nasogastric tube for early enteral feeding in burns over 15 to 20% TBSA",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32896144",
+       "where": "Fluid resuscitation and early enteral feeding"
+      }
+     ]
+    }
+   ],
+   "next": "uo_check",
+   "sources": [
+    {
+     "docId": "pmid:30480960",
+     "where": "Introduction; Indications; Technique or Treatment"
+    },
+    {
+     "docId": "pmid:30725875",
+     "where": "Indications; Technique or Treatment"
+    },
+    {
+     "docId": "pmid:30020659",
+     "where": "Clinical Overview"
+    },
+    {
+     "docId": "pmid:32896144",
+     "where": "Fluid resuscitation and early enteral feeding"
+    },
+    {
+     "docId": "pmid:28613481",
+     "where": "Treatment / Management"
+    }
+   ],
+   "calcs": [
+    "burn_fluids",
+    "burn_fluids_late",
+    "burn_urine"
+   ]
+  },
+  {
+   "id": "peds_fluids",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Child, partial and full thickness over 10% TBSA. Fluids?",
+   "options": [
+    "Lactated Ringer's by weight and burn size, plus maintenance fluid with dextrose",
+    "The adult Parkland volume, and no extra maintenance fluid in the first 24 hours",
+    "Oral rehydration solution and observation, as the child is drinking",
+    "Repeated normal saline boluses until the urine output picks up"
+   ],
+   "answer": 0,
+   "chainStep": "Lactated Ringer's by weight and burn size (Parkland 3 to 4 mL/kg/%TBSA), half in the first 8 hours from the burn; plus maintenance fluid with dextrose; glucose checks; urinary catheter; urine about 1 mL/kg/h under 30 kg; rate reassessed hourly",
+   "why": "Children need formal resuscitation at smaller burn sizes than adults, though the cutoff varies: over 10% TBSA in one StatPearls chapter, 10 to 15% in another, over 15% in a pediatric review. Lactated Ringer's is used at every age, and maintenance fluid with dextrose goes on top of the burn formula, because small glycogen stores put children, and infants most, at risk of hypoglycemia; the glucose is checked closely. The Parkland volume for children is 3 mL/kg/%TBSA in two StatPearls chapters and 4 mL/kg/%TBSA in a pediatric table. The urine target is 1 mL/kg/h under 30 kg. Saline boluses add chloride and edema without meeting the ongoing losses.",
+   "orders": [
+    {
+     "item": "Threshold",
+     "dose": "Over 10% TBSA (StatPearls Parkland formula; EMS rule of tens), 10 to 15% (StatPearls burn fluid resuscitation; SAFP review), over 15% (Burns Trauma pediatric review)",
+     "status": "conflict",
+     "note": "The cutoffs differ by source and institution; the cases here are over 15%."
+    },
+    {
+     "item": "Volume",
+     "dose": "Parkland 3 mL/kg/%TBSA in children (StatPearls Parkland formula and burn fluid resuscitation), but 4 mL/kg/%TBSA in the burn fluid chapter's pediatric section and the pediatric review's table; the Cincinnati formula adds 1500 mL/m2 of total body surface area",
+     "status": "conflict",
+     "note": "The same StatPearls chapter gives 3 and 4 mL/kg/%TBSA for children."
+    },
+    {
+     "item": "Maintenance and glucose",
+     "dose": "Maintenance fluid with dextrose on top of the burn formula; glucose monitored closely in infants",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725875",
+       "where": "Technique or Treatment"
+      },
+      {
+       "docId": "pmid:32896144",
+       "where": "Fluid resuscitation and early enteral feeding"
+      },
+      {
+       "docId": "pmid:28879205",
+       "where": "Current resuscitation practices"
+      },
+      {
+       "docId": "pmid:30480960",
+       "where": "Technique or Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Urine target",
+     "dose": "1 mL/kg/h under 30 kg, 0.5 mL/kg/h over 30 kg (StatPearls burn fluid resuscitation and rule of nines; pediatric review); 1.0 to 1.5 mL/kg/h in children (StatPearls Parkland formula)",
+     "status": "conflict",
+     "note": "The pediatric urine targets differ slightly by source."
+    },
+    {
+     "item": "Hourly adjustment",
+     "dose": "Reevaluate the rate hourly; over- and under-resuscitation are equally harmful",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28879205",
+       "where": "Endpoints of resuscitation"
+      }
+     ]
+    }
+   ],
+   "next": "uo_check",
+   "sources": [
+    {
+     "docId": "pmid:30725875",
+     "where": "Indications; Technique or Treatment"
+    },
+    {
+     "docId": "pmid:30480960",
+     "where": "Introduction; Technique or Treatment"
+    },
+    {
+     "docId": "pmid:28879205",
+     "where": "Background; Current resuscitation practices; Endpoints of resuscitation"
+    },
+    {
+     "docId": "pmid:32896144",
+     "where": "Fluid resuscitation and early enteral feeding"
+    },
+    {
+     "docId": "pmid:37983357",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:30020659",
+     "where": "Clinical Overview"
+    }
+   ],
+   "calcs": [
+    "burn_fluids",
+    "burn_fluids_late",
+    "burn_urine"
+   ]
+  },
+  {
+   "id": "uo_check",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Urine output over the next hours",
+   "outcomes": [
+    {
+     "id": "low",
+     "if": "Urine below target; under 0.5 mL/kg/h in an adult or a child over 30 kg, under 1 mL/kg/h in a child under 30 kg",
+     "ddx": {
+      "lead": [
+       "Burn shock"
+      ],
+      "out": []
+     },
+     "next": "uo_low"
+    },
+    {
+     "id": "on_target",
+     "if": "Urine on target; 0.5 to 1 mL/kg/h in an adult or a child over 30 kg, 1 to 1.5 mL/kg/h in a child under 30 kg",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "circ_check"
+    },
+    {
+     "id": "high",
+     "if": "Urine above target; over 1 mL/kg/h in an adult or a child over 30 kg, over 1.5 mL/kg/h in a child under 30 kg",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "uo_high"
+    }
+   ]
+  },
+  {
+   "id": "uo_low",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Burn resuscitation running; urine below target. Next?",
+   "options": [
+    "Raise the lactated Ringer's rate and recheck the urine output each hour",
+    "A saline bolus, then return to the original formula rate",
+    "Mannitol to bring the urine output up to the target",
+    "Keep the formula rate, as the calculated volume is fixed for the 24 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Increase the infusion rate (not a bolus) and recheck the urine output hourly; if volumes run far above the formula with low urine, measure the bladder pressure for abdominal compartment syndrome",
+   "why": "Urine output below half a mL/kg/h in an adult calls for a higher infusion rate, not a bolus, because the losses are ongoing. The formula is only an estimate, and the rate is reassessed every hour. Mannitol is no more effective than fluid loading. If the volume climbs far past the formula and the urine stays low, abdominal compartment syndrome (oliguria with rising airway pressures and falling tidal volumes) is the trap, because more fluid makes it worse.",
+   "orders": [
+    {
+     "item": "Rate",
+     "dose": "Increase the rate, not a bolus, for urine under 0.5 mL/kg/h",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32896144",
+       "where": "Fluid resuscitation and early enteral feeding"
+      }
+     ]
+    },
+    {
+     "item": "Hourly",
+     "dose": "Reevaluate the rate every hour",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28879205",
+       "where": "Endpoints of resuscitation"
+      }
+     ]
+    },
+    {
+     "item": "Abdominal compartment syndrome",
+     "dose": "Intra-abdominal pressure over 20 mm Hg with organ dysfunction; oliguria with rising inspiratory pressures and falling tidal volumes can be misread as needing more fluid; bladder pressure monitoring",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30480960",
+       "where": "Complications"
+      },
+      {
+       "docId": "pmid:29489153",
+       "where": "Technique: thoracoabdominal escharotomy"
+      }
+     ]
+    },
+    {
+     "item": "Twice the formula",
+     "dose": "A child on twice the predicted Parkland rate with persistently low urine: heart failure or over-resuscitation, such as abdominal compartment syndrome or pleural effusion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28879205",
+       "where": "Endpoints of resuscitation"
+      }
+     ]
+    }
+   ],
+   "next": "circ_check",
+   "sources": [
+    {
+     "docId": "pmid:32896144",
+     "where": "Fluid resuscitation and early enteral feeding"
+    },
+    {
+     "docId": "pmid:28879205",
+     "where": "Endpoints of resuscitation"
+    },
+    {
+     "docId": "pmid:30480960",
+     "where": "Technique or Treatment; Complications"
+    },
+    {
+     "docId": "pmid:29489153",
+     "where": "Technique: thoracoabdominal escharotomy"
+    }
+   ],
+   "calcs": [
+    "burn_urine"
+   ]
+  },
+  {
+   "id": "uo_high",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Burn resuscitation running; urine above target. Next?",
+   "options": [
+    "Lower the infusion rate and keep the urine output inside the target",
+    "Keep the formula rate, since a high urine output proves it is working",
+    "Stop the IV fluids, as the resuscitation is complete at this point",
+    "Add albumin to keep the fluid inside the vessels at the same rate"
+   ],
+   "answer": 0,
+   "chainStep": "Reduce the infusion rate to keep the urine output within target; watch for fluid creep (edema, compartment syndromes, worsening oxygenation)",
+   "why": "Urine above 1 mL/kg/h in an adult calls for a lower rate. Over-resuscitation, fluid creep, causes pulmonary and cerebral edema, compartment syndrome of the limbs, abdomen and orbits, worse ARDS and more airway edema, and it can be as harmful as under-resuscitation. The losses are ongoing, so the fluid is reduced, not stopped.",
+   "orders": [
+    {
+     "item": "Rate",
+     "dose": "Decrease the rate for urine over 1 mL/kg/h",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32896144",
+       "where": "Fluid resuscitation and early enteral feeding"
+      }
+     ]
+    },
+    {
+     "item": "Fluid creep",
+     "dose": "Pulmonary and cerebral edema; extremity, abdominal and orbital compartment syndrome; worse ARDS; more airway edema",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30480960",
+       "where": "Complications; Clinical Significance"
+      },
+      {
+       "docId": "pmid:34283483",
+       "where": "Fluid management"
+      }
+     ]
+    }
+   ],
+   "next": "circ_check",
+   "sources": [
+    {
+     "docId": "pmid:32896144",
+     "where": "Fluid resuscitation and early enteral feeding"
+    },
+    {
+     "docId": "pmid:30480960",
+     "where": "Complications; Clinical Significance"
+    },
+    {
+     "docId": "pmid:34283483",
+     "where": "Fluid management"
+    }
+   ],
+   "calcs": [
+    "burn_urine"
+   ]
+  },
+  {
+   "id": "circ_check",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Circumferential eschar: limbs and chest",
+   "outcomes": [
+    {
+     "id": "limb",
+     "if": "Limb perfusion failing, chest moving; circumferential full-thickness limb burn, Doppler fading",
+     "ddx": {
+      "lead": [
+       "Eschar constriction"
+      ],
+      "out": []
+     },
+     "next": "esch_limb"
+    },
+    {
+     "id": "chest",
+     "if": "Chest eschar limiting ventilation; circumferential full-thickness chest burn, pressures rising",
+     "ddx": {
+      "lead": [
+       "Eschar constriction"
+      ],
+      "out": []
+     },
+     "next": "esch_chest"
+    },
+    {
+     "id": "none",
+     "if": "No eschar compromise; distal pulses, Doppler signals and ventilation normal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "major_care"
+    }
+   ]
+  },
+  {
+   "id": "esch_limb",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Circumferential full-thickness limb burn; distal limb cool, Doppler signal fading. Next?",
+   "options": [
+    "Escharotomy through the eschar along the mid-medial and mid-lateral lines",
+    "A formal fasciotomy through the deep fascia as the first decompression step",
+    "Elevate the limb and recheck it in 4 hours before cutting",
+    "Slow the fluids to shrink the swelling under the eschar"
+   ],
+   "answer": 0,
+   "chainStep": "Bedside escharotomy under local anesthetic at the margins: longitudinal mid-medial and mid-lateral incisions through the eschar to fat, stopping above the fascia, unburned skin to unburned skin, sparing the ulnar and common peroneal nerves; then elevation and serial neurovascular checks",
+   "why": "A circumferential full-thickness eschar acts as a tourniquet as edema builds under it during resuscitation. Pain out of proportion, pallor, paresthesia, coolness, fading Doppler signals, compartment pressures over 30 mm Hg or a limb saturation under 95% call for escharotomy; pulselessness is a late sign, and elevation alone must not delay it. Escharotomy cuts the eschar but not the deep fascia; fasciotomy is for deep compartments that stay tight afterwards. Cutting the fluids trades the limb for under-resuscitation.",
+   "orders": [
+    {
+     "item": "Indication",
+     "dose": "Circumferential full-thickness limb burn with pain out of proportion, pallor, paresthesia, paresis, coolness, fading or absent Doppler signals, compartment pressure over 30 mm Hg or limb saturation under 95%; pulselessness is late; elevation must not delay it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489153",
+       "where": "Indications"
+      }
+     ]
+    },
+    {
+     "item": "Technique",
+     "dose": "At the bedside, local anesthetic into unburned skin at the margins; longitudinal mid-medial and mid-lateral incisions through eschar to fat, stopping above the muscle fascia, from unburned to unburned skin; avoid the ulnar nerve at the medial epicondyle and the common peroneal nerve at the fibular neck",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489153",
+       "where": "Equipment; Preparation; Technique: limb escharotomy"
+      }
+     ]
+    },
+    {
+     "item": "Afterwards",
+     "dose": "Elevation and serial neurovascular checks; extend the incisions or convert to fasciotomy if deep compartments stay tight",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489153",
+       "where": "Postprocedure monitoring"
+      }
+     ]
+    },
+    {
+     "item": "When to cut",
+     "dose": "Every circumferential full-thickness burn needs an escharotomy (StatPearls thermal burns) against escharotomy when perfusion or ventilation fails, generally not in the first 4 to 6 hours and mostly within 48 hours (StatPearls escharotomy)",
+     "status": "conflict",
+     "note": "The two StatPearls chapters differ on prophylactic escharotomy; the key acts on failing perfusion."
+    }
+   ],
+   "next": "major_care",
+   "sources": [
+    {
+     "docId": "pmid:29489153",
+     "where": "Introduction; Anatomy and Physiology; Indications; Equipment; Technique; Postprocedure monitoring"
+    },
+    {
+     "docId": "pmid:28613481",
+     "where": "History and Physical"
+    },
+    {
+     "docId": "pmid:28613524",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:30480960",
+     "where": "Clinical Significance"
+    }
+   ]
+  },
+  {
+   "id": "esch_chest",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Ventilated; circumferential full-thickness chest burn, peak pressures rising, breath sounds equal. Next?",
+   "options": [
+    "Chest escharotomy: anterior axillary line incisions joined across the chest",
+    "Needle decompression of both sides of the chest for tension",
+    "Deeper sedation and paralysis to bring the airway pressures down",
+    "A faster fluid rate, since rising airway pressures mean the patient is still dry"
+   ],
+   "answer": 0,
+   "chainStep": "Chest escharotomy in a breastplate pattern: bilateral anterior axillary line incisions joined across the upper chest and below the costal margins; bladder pressure if the abdomen is burned or tense",
+   "why": "A rigid full-thickness eschar on the chest or abdominal wall can stop the chest from expanding, and escharotomy is indicated when it limits ventilation, even if the burn is not fully circumferential. The breastplate pattern joins bilateral anterior axillary line incisions with transverse cuts across the upper chest and below the costal margins. With equal breath sounds, the stiff eschar rather than a tension pneumothorax explains the pressures. Infants breathe with the abdomen, so abdominal wall burns matter early in them. Extra fluid worsens the edema under the eschar.",
+   "orders": [
+    {
+     "item": "Indication",
+     "dose": "Full-thickness chest or abdominal wall eschar limiting expansion with distress or impaired ventilation, even if not circumferential",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489153",
+       "where": "Indications"
+      }
+     ]
+    },
+    {
+     "item": "Breastplate",
+     "dose": "Bilateral anterior axillary line incisions joined by transverse incisions across the upper chest and below the costal margins",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489153",
+       "where": "Technique: chest escharotomy"
+      }
+     ]
+    },
+    {
+     "item": "Abdomen",
+     "dose": "Thoracoabdominal burns: bladder pressure for intra-abdominal hypertension; paracentesis or decompressive laparotomy for abdominal compartment syndrome",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489153",
+       "where": "Technique: thoracoabdominal escharotomy"
+      }
+     ]
+    }
+   ],
+   "next": "major_care",
+   "sources": [
+    {
+     "docId": "pmid:29489153",
+     "where": "Introduction; Indications; Technique: chest and thoracoabdominal escharotomy"
+    },
+    {
+     "docId": "pmid:30480960",
+     "where": "Complications"
+    }
+   ]
+  },
+  {
+   "id": "major_care",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Major burn, fluids running and titrated. Before transfer?",
+   "options": [
+    "Cover, warmth, IV opioid, tetanus, catheter, NG tube, no prophylactic antibiotics",
+    "Prophylactic IV antibiotics, as the burn wound will soon be colonized",
+    "Silver sulfadiazine cream over the open wounds before transfer, to prevent infection",
+    "Excise and graft the deep areas here to close the wound early"
+   ],
+   "answer": 0,
+   "chainStep": "Oxygen and cardiac monitoring; urinary catheter and nasogastric tube; IV analgesia; tetanus by history; wounds cleaned and covered without creams; keep warm; no prophylactic systemic antibiotics; call the burn center and transfer with the fluid and urine record",
+   "why": "A severe burn needs fluids, oxygen, cardiac monitoring, a nasogastric tube, a urinary catheter, IV analgesia, tetanus cover and transfer to a burn center. For transfer the wounds are cleaned and covered without creams, the burn center is called for instructions, and the patient is kept warm. Prophylactic systemic antibiotics are not recommended, partly for resistance; a meta-analysis of older trials found a mortality signal from weak data and called for new trials. Excision and grafting are definitive burn center care after stabilization.",
+   "orders": [
+    {
+     "item": "Supportive care",
+     "dose": "Oxygen, cardiac monitoring, nasogastric tube, urinary catheter, IV analgesia, tetanus booster, transfer to a burn center",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613524",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Analgesia, adult",
+     "dose": "IV morphine, starting 2 to 10 mg per 70 kg and titrated to the lowest effective dose; IV pain medication in a severe burn",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30252371",
+       "where": "Administration"
+      },
+      {
+       "docId": "pmid:28613524",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Analgesia, child",
+     "dose": "Pediatric opioid doses are not in the open sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Wounds for transfer",
+     "dose": "Clean and cover; no topical creams or ointments; call the burn center for instructions",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613524",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Prophylactic systemic antibiotics",
+     "dose": "Not given; infection is prevented by cleaning the wound and dressing it",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:32896144",
+       "where": "Dressing the burn wound"
+      },
+      {
+       "docId": "pmid:30020633",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:20156911",
+       "where": "Introduction; abstract conclusions"
+      }
+     ],
+     "note": "A meta-analysis (BMJ) found lower mortality with systemic prophylaxis in poor-quality trials, with more resistance; it kept prophylaxis not recommended outside the perioperative period and called for trials."
+    },
+    {
+     "item": "Warmth",
+     "dose": "Keep the patient warm",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613481",
+       "where": "Deterrence and Patient Education"
+      }
+     ]
+    },
+    {
+     "item": "Tetanus",
+     "dose": "Burns are tetanus-prone wounds: a tetanus toxoid vaccine if more than 5 years since the last dose; vaccine plus human tetanus immune globulin if fewer than 3 doses or unknown",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644434",
+       "where": "Issues of Concern"
+      },
+      {
+       "docId": "pmid:31971933",
+       "where": "Tetanus Prophylaxis for Wound Management Recommendations"
+      }
+     ]
+    },
+    {
+     "item": "Comorbidities",
+     "dose": "Monitor in an ICU, preferably a burn center, during the fluid phase",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30020659",
+       "where": "Key Clinical Considerations"
+      }
+     ]
+    }
+   ],
+   "next": "end_major",
+   "sources": [
+    {
+     "docId": "pmid:28613524",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:32896144",
+     "where": "Dressing the burn wound"
+    },
+    {
+     "docId": "pmid:20156911",
+     "where": "Abstract; Introduction"
+    },
+    {
+     "docId": "pmid:30020633",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:28613481",
+     "where": "Treatment / Management; Deterrence and Patient Education"
+    },
+    {
+     "docId": "pmid:32644434",
+     "where": "Issues of Concern"
+    }
+   ]
+  },
+  {
+   "id": "end_major",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Major burn: lactated Ringer's titrated to urine output, escharotomy for any constricting eschar, analgesia, tetanus cover, a clean cover and warmth, a catheter and a nasogastric tube, and transfer to a burn center, with hourly fluids, vital signs and urine output documented for the receiving team."
+  },
+  {
+   "id": "safeguard",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Child's burn with a pattern or story that suggests abuse. Next?",
+   "options": [
+    "Treat the burn, report to child protective services, and keep the child safe",
+    "Ask the carer to explain the injury in detail before treatment starts",
+    "Dress the burn and book a clinic visit, with a letter to the family doctor too",
+    "Hold the referral until the history proves the burn was inflicted"
+   ],
+   "answer": 0,
+   "chainStep": "Treat the burn by its size and site; report to child protective services; keep the child in a safe place until CPS decides; imaging for occult fractures, which guidelines recommend for non-orthopedic injuries concerning for abuse; document the account, the findings and photographs",
+   "why": "Immersion scalds with sharp borders on the buttocks, perineum and legs, in a glove or stocking pattern or symmetric; burns in the shape of an implement such as a cigarette or iron; burns on areas unlikely to touch a hot object by accident; a child who is not independently mobile; and an absent or unsuitable explanation all raise suspicion of maltreatment. Splash burns on exposed areas are more often accidental. The clinician is a mandated reporter: concern, not proof, triggers the report, and child protective services decide whether the child can go home and assess the siblings. The burn is still treated by its size and site.",
+   "orders": [
+    {
+     "item": "Patterns",
+     "dose": "Immersion scalds of the buttocks, perineum and legs; glove or stocking or symmetric limb scalds; sharp borders; implement shapes (cigarette, iron); soft areas unlikely to touch a hot object (backs of hands, soles, buttocks, back); multiple burns of different ages; a child not independently mobile; an absent or unsuitable explanation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:77b1607e3dd6",
+       "where": "1.1.6"
+      },
+      {
+       "docId": "pmid:29083602",
+       "where": "History and Physical: burns"
+      }
+     ]
+    },
+    {
+     "item": "Report",
+     "dose": "Mandated reporting to child protective services on any concern; proving abuse or naming the perpetrator is not the clinician's role",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083602",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "url:77b1607e3dd6",
+       "where": "Terms used: suspect"
+      }
+     ]
+    },
+    {
+     "item": "Imaging",
+     "dose": "Skeletal survey at 24 months or younger with a possibly abusive fracture; imaging is also indicated for non-orthopedic injuries concerning for abuse",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083602",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Siblings and home",
+     "dose": "CPS decides whether the child can go home and assesses siblings and young household members (about a 1 in 3 risk)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083602",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Mimics",
+     "dose": "Stevens-Johnson syndrome and toxic epidermal necrolysis can look like burns (pw_rash)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083602",
+       "where": "Differential Diagnosis"
+      }
+     ]
+    }
+   ],
+   "next": "end_nai",
+   "sources": [
+    {
+     "docId": "url:77b1607e3dd6",
+     "where": "1.1.6; terms used: suspect"
+    },
+    {
+     "docId": "pmid:29083602",
+     "where": "History and Physical; Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "pmid:28613524",
+     "where": "Etiology"
+    },
+    {
+     "docId": "pmid:28613481",
+     "where": "History and Physical"
+    },
+    {
+     "docId": "url:0bc82ef6dbb8",
+     "where": "Who is at risk: age"
+    }
+   ]
+  },
+  {
+   "id": "end_nai",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Suspected non-accidental burn: the burn is treated by its size and site (fluids, referral and dressings as above), the concern is reported to child protective services, who decide whether the child can safely go home and assess siblings, and imaging looks for occult fractures. The account given, the findings and photographs are documented."
+  }
+ ],
+ "cases": [
+  {
+   "id": "smoke_confused",
+   "label": "Confused after an apartment fire",
+   "vignette": "58-year-old man carried out of a burning apartment after about 15 minutes inside. Soot around the nose and mouth, burns on both forearms. Confused, GCS 13. HR 118, BP 92/58, SpO2 99% on a non-rebreather mask.",
+   "picks": {
+    "front": "smoke_tox"
+   },
+   "results": {
+    "front": "Talking in sentences, no stridor or hoarseness, swallowing his saliva; soot in the mouth; venous gas lactate 11 mmol/L, COHb 18%."
+   }
+  },
+  {
+   "id": "stridor_co",
+   "label": "Stridor after a basement fire",
+   "vignette": "34-year-old woman, 68 kg, rescued from a basement fire after 20 minutes. Burns to the face and neck. Hoarse at the scene, now noisy breathing. HR 124, BP 108/70, SpO2 94% on oxygen.",
+   "picks": {
+    "front": "airway",
+    "post_tube": "tox"
+   },
+   "results": {
+    "front": "Hoarse voice, inspiratory stridor, singed eyebrows, soot in the mouth, swollen lips.",
+    "post_tube": "Intubated by the fiberoptic route; COHb 26%, lactate 9 mmol/L."
+   }
+  },
+  {
+   "id": "chest_eschar",
+   "label": "Gasoline flash, intubated, stiff chest",
+   "vignette": "45-year-old man, 80 kg, whose clothing was set alight by gasoline at a barbecue 1 hour ago. Deep burns to the face and around the trunk. HR 126, BP 118/72.",
+   "picks": {
+    "front": "airway",
+    "post_tube": "clear",
+    "burn_size": "major",
+    "uo_check": "on_target",
+    "circ_check": "chest"
+   },
+   "results": {
+    "front": "Hoarse voice, burns inside the lips, deep facial burns; open-air fire.",
+    "post_tube": "Intubated by the fiberoptic route; COHb 3%, lactate 1.8 mmol/L.",
+    "burn_size": "Deep partial-thickness burns of the whole head and neck (9%) and a full-thickness burn all around the trunk, front and back (36%): 45% TBSA; story fits.",
+    "uo_check": "Urine 60 mL/h (0.75 mL/kg/h) over 3 hours.",
+    "circ_check": "Six hours after the burn: peak airway pressure up from 26 to 42 cm H2O, tidal volumes falling, breath sounds equal on both sides, chest eschar hard and inelastic; limb pulses and Doppler signals normal."
+   }
+  },
+  {
+   "id": "soot_hand",
+   "label": "Kitchen fire, soot and a burned hand",
+   "vignette": "29-year-old woman, 62 kg, out of a smoky apartment kitchen fire within a few minutes. Burns on the right hand and forearm. Alert. HR 96, BP 128/80, SpO2 99% on air.",
+   "picks": {
+    "front": "smoke_watch",
+    "watch_result": "clear",
+    "burn_size": "refer"
+   },
+   "results": {
+    "front": "Soot at the nostrils, singed nasal hair, voice normal, no stridor, no facial burns, chest clear.",
+    "watch_result": "Fiberoptic laryngoscopy: no edema or redness; COHb 2%.",
+    "burn_size": "Blistered, moist, pink, blanching burns of the back of the right hand and forearm, about 3% TBSA by her palm; story fits."
+   }
+  },
+  {
+   "id": "mattress_fire",
+   "label": "Mattress fire, the voice changes",
+   "vignette": "50-year-old man, 85 kg, who fell asleep smoking; his mattress caught fire in a closed bedroom. Burns on the back of the right arm and upper back. HR 102, BP 134/82, SpO2 97% on air.",
+   "picks": {
+    "front": "smoke_watch",
+    "watch_result": "swelling",
+    "post_tube": "clear",
+    "burn_size": "refer"
+   },
+   "results": {
+    "front": "Soot in the nostrils and on the tongue, singed nasal hair, voice normal, no stridor; alert.",
+    "watch_result": "Laryngoscopy: swollen, red arytenoids and epiglottis; his voice is hoarse at the 1-hour recheck.",
+    "post_tube": "Intubated by the fiberoptic route; COHb 4%, lactate 1.5 mmol/L.",
+    "burn_size": "Deep partial-thickness burns over the back of the right arm and the upper back, about 8% TBSA; story fits."
+   }
+  },
+  {
+   "id": "sofa_co",
+   "label": "Fought a sofa fire, headache",
+   "vignette": "22-year-old man who spent 10 minutes in a smoky living room putting out a sofa fire. Headache and nausea. Alert. HR 104, BP 130/78, SpO2 100% on air.",
+   "picks": {
+    "front": "smoke_watch",
+    "watch_result": "co"
+   },
+   "results": {
+    "front": "Soot at the nostrils, singed nasal hair, voice normal, no stridor, alert and oriented; no skin burns.",
+    "watch_result": "Laryngoscopy: no edema; COHb 19% on a venous gas."
+   }
+  },
+  {
+   "id": "mask_failed",
+   "label": "Firefighter, mask failed, no burns",
+   "vignette": "39-year-old firefighter whose breathing mask failed for a few minutes inside a burning warehouse. Cough, no burns. Alert. HR 98, BP 132/80, SpO2 98% on air.",
+   "picks": {
+    "front": "smoke_watch",
+    "watch_result": "smoke_only"
+   },
+   "results": {
+    "front": "Soot at the nostrils and in his sputum, singed nasal hair, voice normal, no stridor, alert; no other injury.",
+    "watch_result": "Fiberoptic laryngoscopy: no edema or redness; COHb 2%; no skin burn anywhere."
+   }
+  },
+  {
+   "id": "hoarse_no_burn",
+   "label": "Hoarse after a car fire he fled",
+   "vignette": "61-year-old man, 82 kg, who sat in a smoke-filled garage trying to put out a burning car before getting out unhurt. No skin burns. Hoarse. HR 110, BP 140/84, SpO2 95% on oxygen.",
+   "picks": {
+    "front": "airway",
+    "post_tube": "tube_only"
+   },
+   "results": {
+    "front": "Hoarse voice, soot on the tongue, swollen uvula, no stridor yet; no skin burns, no other injury.",
+    "post_tube": "Intubated by the fiberoptic route; COHb 4%, lactate 1.6 mmol/L; no skin burn on a full look."
+   }
+  },
+  {
+   "id": "frozen_toes",
+   "label": "Sent in as a burn: frozen toes",
+   "vignette": "52-year-old man sent in as a 'burn' after a night outdoors in the snow: blistered, numb toes on both feet. HR 92, BP 128/80.",
+   "picks": {
+    "front": "other"
+   },
+   "results": {
+    "front": "Airway clear; no heat source, current or chemical; white, numb toes with clear blisters after cold exposure."
+   }
+  },
+  {
+   "id": "jumped",
+   "label": "Jumped from a burning house",
+   "vignette": "31-year-old man who jumped from a second-floor window to escape a house fire. Burns on the back and legs; left hip pain. HR 128, BP 96/60.",
+   "picks": {
+    "front": "trauma"
+   },
+   "results": {
+    "front": "Airway open, talking; shortened, externally rotated left leg; bruised left flank; burns on the back."
+   }
+  },
+  {
+   "id": "stove_shock",
+   "label": "Nightdress fire, low pressure",
+   "vignette": "67-year-old woman whose nightdress caught fire at the stove 40 minutes ago. Burns to the front of the trunk and both arms. HR 132, BP 74/40.",
+   "picks": {
+    "front": "shock"
+   },
+   "results": {
+    "front": "Open kitchen, flames on her clothing only, no soot; airway clear; no visible injury and no fall reported; hypotensive on arrival before any fluid."
+   }
+  },
+  {
+   "id": "live_cable",
+   "label": "Electrician and a live cable",
+   "vignette": "38-year-old electrician who touched a live high-voltage cable at work. Awake. HR 96 and irregular, BP 136/84.",
+   "picks": {
+    "front": "electrical"
+   },
+   "results": {
+    "front": "Small charred wounds on the right palm and left heel; no fall or other injury; airway clear."
+   }
+  },
+  {
+   "id": "lime_shins",
+   "label": "Builder with lime in his trousers",
+   "vignette": "44-year-old builder, 88 kg, whose trouser legs filled with wet cement and dry lime powder an hour ago. Burning pain in both shins. HR 90, BP 140/86.",
+   "picks": {
+    "front": "chemical",
+    "chem_result": "skin",
+    "burn_size": "refer"
+   },
+   "results": {
+    "front": "White powder on both shins and in the trouser legs; red skin with patches of blistering; eyes clear; no other injury.",
+    "chem_result": "Lime and wet cement, an alkali; no hydrofluoric acid.",
+    "burn_size": "After irrigation: partial-thickness burns on the front of both shins, about 6% TBSA; story fits."
+   }
+  },
+  {
+   "id": "wheel_cleaner",
+   "label": "Wheel cleaner, fingertips on fire",
+   "vignette": "32-year-old man who used a wheel cleaner without gloves 3 hours ago. Severe throbbing pain in two fingertips that look almost normal. HR 100, BP 132/80.",
+   "picks": {
+    "front": "chemical",
+    "chem_result": "hf"
+   },
+   "results": {
+    "front": "Two fingertips of the right hand faintly red; eyes spared; no other injury; airway clear.",
+    "chem_result": "The label lists hydrofluoric acid; pain 9 out of 10 with little to see."
+   }
+  },
+  {
+   "id": "acid_eye",
+   "label": "Acid splash to the face",
+   "vignette": "27-year-old laboratory technician splashed with acid across the face and left eye 10 minutes ago. HR 92, BP 124/78.",
+   "picks": {
+    "front": "chem_eye"
+   },
+   "results": {
+    "front": "Left eye held shut, red and watering, vision blurred; small splash burns on the left cheek; a sulfuric acid cleaner; no other injury; airway clear."
+   }
+  },
+  {
+   "id": "steam_arm",
+   "label": "Steam from a dishwasher",
+   "vignette": "24-year-old cook, 70 kg, whose forearm was hit by steam from a commercial dishwasher 30 minutes ago. HR 84, BP 122/76.",
+   "picks": {
+    "front": "thermal",
+    "burn_size": "superficial"
+   },
+   "results": {
+    "front": "Airway clear; no smoke, injury, current or chemical.",
+    "burn_size": "Right forearm red, dry and painful; it blanches; no blisters; story fits."
+   }
+  },
+  {
+   "id": "kettle_thigh",
+   "label": "Kettle spilled on a thigh",
+   "vignette": "35-year-old woman, 64 kg, who spilled boiling water from a kettle on her left thigh 45 minutes ago. Last tetanus booster 12 years ago. HR 88, BP 118/74.",
+   "picks": {
+    "front": "thermal",
+    "burn_size": "minor"
+   },
+   "results": {
+    "front": "Airway clear; no smoke, injury, current or chemical.",
+    "burn_size": "Blistered, moist, pink, blanching burn on the front of the left thigh, about 3 of her palms (3% TBSA); no full-thickness areas; story fits."
+   }
+  },
+  {
+   "id": "burning_pan",
+   "label": "Burning pan, both hands",
+   "vignette": "52-year-old man, 90 kg, who burned both hands carrying a pan of burning oil out of his kitchen 1 hour ago. HR 98, BP 146/88.",
+   "picks": {
+    "front": "thermal",
+    "burn_size": "refer"
+   },
+   "results": {
+    "front": "Airway clear; no soot or singed hair, voice normal; no other injury.",
+    "burn_size": "Blistered partial-thickness burns of the palms and backs of both hands, about 4% TBSA; story fits."
+   }
+  },
+  {
+   "id": "yard_fire",
+   "label": "Clothes alight in the yard",
+   "vignette": "40-year-old man, 70 kg, whose clothes caught fire while burning leaves in an open yard 1 hour ago. Alert. HR 112, BP 128/76.",
+   "picks": {
+    "front": "thermal",
+    "burn_size": "major",
+    "uo_check": "on_target",
+    "circ_check": "none"
+   },
+   "results": {
+    "front": "Airway clear, voice normal, no soot or singed hair; no other injury.",
+    "burn_size": "Partial-thickness burns of the whole front of the trunk (18%) and the whole left arm (9%): 27% TBSA; story fits.",
+    "uo_check": "Urine 45 mL/h (0.64 mL/kg/h) over 2 hours.",
+    "circ_check": "Pulses and Doppler signals normal in all limbs; the chest moves freely."
+   }
+  },
+  {
+   "id": "flash_arm",
+   "label": "Flash fire, a cold hand",
+   "vignette": "33-year-old woman, 60 kg, caught in a flash fire in an open loading bay 1 hour ago. Alert. HR 120, BP 112/70.",
+   "picks": {
+    "front": "thermal",
+    "burn_size": "major",
+    "uo_check": "low",
+    "circ_check": "limb"
+   },
+   "results": {
+    "front": "Airway clear, voice normal, no soot; no other injury.",
+    "burn_size": "Full-thickness burn all around the right arm (9%), partial-thickness burns of the front of the trunk (18%) and the front of the right leg (9%): 36% TBSA; story fits.",
+    "uo_check": "Urine 15 mL/h (0.25 mL/kg/h) over 2 hours.",
+    "circ_check": "Six hours after the burn: right hand cool and pale, numb fingers, radial Doppler signal fading; the chest moves freely."
+   }
+  },
+  {
+   "id": "steam_pipe",
+   "label": "Burst steam pipe, brisk urine",
+   "vignette": "48-year-old man, 100 kg, scalded by a burst industrial steam pipe 2 hours ago. Alert. HR 108, BP 134/80.",
+   "picks": {
+    "front": "thermal",
+    "burn_size": "major",
+    "uo_check": "high",
+    "circ_check": "none"
+   },
+   "results": {
+    "front": "Airway clear; no smoke, injury, current or chemical.",
+    "burn_size": "Partial-thickness burns of the back of the trunk (18%) and the backs of both legs (9% each): 36% TBSA; story fits.",
+    "uo_check": "Urine 160 mL/h (1.6 mL/kg/h) over 3 hours on the formula rate.",
+    "circ_check": "Pulses and Doppler signals normal; no circumferential burn; the chest moves freely."
+   }
+  },
+  {
+   "id": "soup_toddler",
+   "label": "Toddler pulls down hot soup",
+   "vignette": "3-year-old girl, 15 kg, who pulled a pot of hot soup off the stove over her chest and arms 1 hour ago while her mother watched. HR 150, BP 96/60.",
+   "picks": {
+    "front": "thermal",
+    "burn_size": "major_child",
+    "uo_check": "on_target",
+    "circ_check": "none"
+   },
+   "results": {
+    "front": "Airway clear, crying loudly; no smoke or other injury.",
+    "burn_size": "Lund-Browder chart: partial-thickness splash burns of the front of the trunk and both arms, 16% TBSA; splash pattern on exposed skin, story fits.",
+    "uo_check": "Urine 16 mL/h (about 1.1 mL/kg/h) over 2 hours; glucose 92 mg/dL.",
+    "circ_check": "Pulses normal; no circumferential burn; the chest moves freely."
+   }
+  },
+  {
+   "id": "campfire_boy",
+   "label": "Campfire, a quiet catheter",
+   "vignette": "6-year-old boy, 20 kg, whose shirt caught fire at a campfire 2 hours ago; his father put it out. HR 140, BP 98/58.",
+   "picks": {
+    "front": "thermal",
+    "burn_size": "major_child",
+    "uo_check": "low",
+    "circ_check": "none"
+   },
+   "results": {
+    "front": "Airway clear, voice normal, no soot; no other injury.",
+    "burn_size": "Lund-Browder chart: partial-thickness burns of the chest, abdomen and right arm, 18% TBSA; story fits.",
+    "uo_check": "Urine 8 mL/h (0.4 mL/kg/h) over 2 hours; glucose 88 mg/dL.",
+    "circ_check": "Pulses and Doppler signals normal; no circumferential burn."
+   }
+  },
+  {
+   "id": "bath_toddler",
+   "label": "Toddler 'climbed into the bath'",
+   "vignette": "18-month-old boy brought in 6 hours after he 'climbed into the bath by himself' while his mother's partner looked after him. HR 140.",
+   "picks": {
+    "front": "thermal",
+    "burn_size": "nai"
+   },
+   "results": {
+    "front": "Airway clear; no smoke; no other visible injury on first look.",
+    "burn_size": "Symmetric scalds of both feet and lower legs to the same level with sharp borders (a stocking pattern) and of the buttocks, about 8% TBSA; the account is unwitnessed and the visit delayed."
+   }
+  },
+  {
+   "id": "cigarette_marks",
+   "label": "Round burns on a palm and sole",
+   "vignette": "3-year-old girl brought in with a sore hand; her mother says she touched the oven door. HR 118.",
+   "picks": {
+    "front": "thermal",
+    "burn_size": "nai"
+   },
+   "results": {
+    "front": "Airway clear; no smoke or other injury.",
+    "burn_size": "Three round, punched-out burns about 8 mm across on the right palm and left sole, at different stages of healing; under 1% TBSA; the oven story does not fit."
+   }
+  },
+  {
+   "id": "bonfire_late",
+   "label": "Bonfire, 2 hours late",
+   "vignette": "56-year-old woman, 75 kg, burned when a garden bonfire flared 2 hours before arrival; no IV fluid so far. HR 116, BP 122/74.",
+   "picks": {
+    "front": "thermal",
+    "burn_size": "major",
+    "uo_check": "on_target",
+    "circ_check": "none"
+   },
+   "results": {
+    "front": "Airway clear, voice normal, no soot; no other injury.",
+    "burn_size": "Partial- and full-thickness burns of the front of the trunk (18%) and the whole left leg (18%): 36% TBSA; story fits.",
+    "uo_check": "Started on arrival with 6 hours left of the first 8: by Parkland 4 x 75 x 36 = 10,800 mL, half (5,400 mL) over 6 hours, 900 mL/h (by modified Brooke 2 x 75 x 36 = 5,400 mL, half (2,700 mL) over 6 hours, 450 mL/h). Urine 50 mL/h (0.67 mL/kg/h).",
+    "circ_check": "Pulses and Doppler signals normal; no circumferential full-thickness burn."
+   }
+  }
+ ],
+ "calculators": [
+  {
+   "id": "burn_fluids",
+   "title": "Burn resuscitation volume",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "wt",
+     "label": "Weight",
+     "unit": "kg",
+     "default": 70,
+     "min": 3,
+     "max": 250,
+     "step": 1
+    },
+    {
+     "id": "tbsa",
+     "label": "TBSA, partial and full thickness",
+     "unit": "%",
+     "default": 30,
+     "min": 1,
+     "max": 100,
+     "step": 1
+    },
+    {
+     "id": "ml",
+     "label": "Formula",
+     "choices": [
+      {
+       "label": "Parkland, 4 mL/kg/%TBSA",
+       "value": 4
+      },
+      {
+       "label": "Modified Brooke, adult, 2 mL/kg/%TBSA",
+       "value": 2
+      },
+      {
+       "label": "Child, 3 mL/kg/%TBSA",
+       "value": 3
+      }
+     ],
+     "default": 4
+    },
+    {
+     "id": "h",
+     "label": "Hours since the burn",
+     "unit": "h",
+     "default": 0,
+     "min": 0,
+     "max": 7.5,
+     "step": 0.5
+    },
+    {
+     "id": "given",
+     "label": "Fluid already given",
+     "unit": "mL",
+     "default": 0,
+     "min": 0,
+     "max": 20000,
+     "step": 50
+    }
+   ],
+   "outputs": [
+    {
+     "label": "24-hour total",
+     "expr": "ml * wt * tbsa",
+     "unit": "mL",
+     "decimals": 0
+    },
+    {
+     "label": "First 8 hours from the burn",
+     "expr": "ml * wt * tbsa / 2",
+     "unit": "mL",
+     "decimals": 0
+    },
+    {
+     "label": "Rate for the rest of those 8 hours",
+     "expr": "max(0, ml * wt * tbsa / 2 - given) / (8 - h)",
+     "unit": "mL/h",
+     "decimals": 0,
+     "bands": [
+      {
+       "lte": 0,
+       "text": "First-half volume already in: reduce the rate, do not stop; set it by urine output"
+      },
+      {
+       "gt": 0,
+       "text": "A starting rate, not a bolus: titrate to urine output hourly"
+      }
+     ]
+    },
+    {
+     "label": "Rate for the next 16 hours",
+     "expr": "ml * wt * tbsa / 2 / 16",
+     "unit": "mL/h",
+     "decimals": 0
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:30725875",
+     "where": "Technique or Treatment"
+    },
+    {
+     "docId": "pmid:30020659",
+     "where": "Clinical Overview"
+    },
+    {
+     "docId": "pmid:32896144",
+     "where": "Fluid resuscitation and early enteral feeding"
+    },
+    {
+     "docId": "pmid:30480960",
+     "where": "Technique or Treatment"
+    },
+    {
+     "docId": "pmid:28879205",
+     "where": "Table 1"
+    }
+   ],
+   "note": "For a patient seen within 8 hours of the burn; later, use the next calculator. Lactated Ringer's. The clock starts at the burn, not at arrival, and fluid given before arrival comes off the first half. A starting rate only: titrate to urine output, recorded hourly. Children get maintenance fluid with dextrose on top; the sources give them 3 or 4 mL/kg/%TBSA.",
+   "tests": [
+    {
+     "inputs": {
+      "wt": 75,
+      "tbsa": 36,
+      "ml": 4,
+      "h": 2,
+      "given": 0
+     },
+     "expect": [
+      10800,
+      5400,
+      900,
+      337.5
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 75,
+      "tbsa": 36,
+      "ml": 2,
+      "h": 2,
+      "given": 0
+     },
+     "expect": [
+      5400,
+      2700,
+      450,
+      168.75
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 70,
+      "tbsa": 27,
+      "ml": 4,
+      "h": 1,
+      "given": 1000
+     },
+     "expect": [
+      7560,
+      3780,
+      397.14285714285717,
+      236.25
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 20,
+      "tbsa": 18,
+      "ml": 3,
+      "h": 2,
+      "given": 0
+     },
+     "expect": [
+      1080,
+      540,
+      90,
+      33.75
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 70,
+      "tbsa": 24,
+      "ml": 2,
+      "h": 4,
+      "given": 1800
+     },
+     "expect": [
+      3360,
+      1680,
+      0,
+      105
+     ]
+    }
+   ]
+  },
+  {
+   "id": "burn_fluids_late",
+   "title": "Burn fluids, seen 8 or more hours after the burn",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "wt",
+     "label": "Weight",
+     "unit": "kg",
+     "default": 70,
+     "min": 3,
+     "max": 250,
+     "step": 1
+    },
+    {
+     "id": "tbsa",
+     "label": "TBSA, partial and full thickness",
+     "unit": "%",
+     "default": 30,
+     "min": 1,
+     "max": 100,
+     "step": 1
+    },
+    {
+     "id": "ml",
+     "label": "Formula",
+     "choices": [
+      {
+       "label": "Parkland, 4 mL/kg/%TBSA",
+       "value": 4
+      },
+      {
+       "label": "Modified Brooke, adult, 2 mL/kg/%TBSA",
+       "value": 2
+      },
+      {
+       "label": "Child, 3 mL/kg/%TBSA",
+       "value": 3
+      }
+     ],
+     "default": 4
+    },
+    {
+     "id": "h",
+     "label": "Hours since the burn",
+     "unit": "h",
+     "default": 8,
+     "min": 8,
+     "max": 23.5,
+     "step": 0.5
+    },
+    {
+     "id": "given",
+     "label": "Fluid already given",
+     "unit": "mL",
+     "default": 0,
+     "min": 0,
+     "max": 20000,
+     "step": 50
+    }
+   ],
+   "outputs": [
+    {
+     "label": "24-hour total",
+     "expr": "ml * wt * tbsa",
+     "unit": "mL",
+     "decimals": 0
+    },
+    {
+     "label": "Due by now on the schedule",
+     "expr": "ml * wt * tbsa / 2 + (h - 8) * ml * wt * tbsa / 2 / 16",
+     "unit": "mL",
+     "decimals": 0
+    },
+    {
+     "label": "Behind the schedule by",
+     "expr": "max(0, ml * wt * tbsa / 2 + (h - 8) * ml * wt * tbsa / 2 / 16 - given)",
+     "unit": "mL",
+     "decimals": 0,
+     "bands": [
+      {
+       "lte": 0,
+       "text": "On schedule: set the rate by urine output"
+      },
+      {
+       "gt": 0,
+       "text": "Behind: a delayed start may need a faster rate and raises fluid needs; set it by urine output, not a bolus"
+      }
+     ]
+    },
+    {
+     "label": "Scheduled rate, hours 8 to 24",
+     "expr": "ml * wt * tbsa / 2 / 16",
+     "unit": "mL/h",
+     "decimals": 0,
+     "bands": [
+      {
+       "gt": 0,
+       "text": "A starting rate, not a bolus: titrate to urine output hourly"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:30725875",
+     "where": "Technique or Treatment"
+    },
+    {
+     "docId": "pmid:30020659",
+     "where": "Clinical Overview"
+    },
+    {
+     "docId": "pmid:30480960",
+     "where": "Technique or Treatment; Complications"
+    },
+    {
+     "docId": "pmid:32896144",
+     "where": "Fluid resuscitation and early enteral feeding"
+    }
+   ],
+   "note": "The 24 hours still count from the burn, and fluid already given counts against them. The schedule runs the second half evenly over hours 8 to 24; the sources set no catch-up rate for a missed first half. After 24 hours the formula gives way to maintenance fluid.",
+   "tests": [
+    {
+     "inputs": {
+      "wt": 75,
+      "tbsa": 36,
+      "ml": 4,
+      "h": 8,
+      "given": 0
+     },
+     "expect": [
+      10800,
+      5400,
+      5400,
+      337.5
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 75,
+      "tbsa": 36,
+      "ml": 4,
+      "h": 12,
+      "given": 2000
+     },
+     "expect": [
+      10800,
+      6750,
+      4750,
+      337.5
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 75,
+      "tbsa": 36,
+      "ml": 4,
+      "h": 16,
+      "given": 9000
+     },
+     "expect": [
+      10800,
+      8100,
+      0,
+      337.5
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 70,
+      "tbsa": 30,
+      "ml": 2,
+      "h": 10,
+      "given": 1000
+     },
+     "expect": [
+      4200,
+      2362.5,
+      1362.5,
+      131.25
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 20,
+      "tbsa": 18,
+      "ml": 3,
+      "h": 9,
+      "given": 0
+     },
+     "expect": [
+      1080,
+      573.75,
+      573.75,
+      33.75
+     ]
+    }
+   ]
+  },
+  {
+   "id": "burn_urine",
+   "title": "Urine output",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "urine",
+     "label": "Urine",
+     "unit": "mL",
+     "default": 35,
+     "min": 0,
+     "max": 2000,
+     "step": 1
+    },
+    {
+     "id": "hours",
+     "label": "Over",
+     "unit": "h",
+     "default": 1,
+     "min": 0.5,
+     "max": 24,
+     "step": 0.5
+    },
+    {
+     "id": "wt",
+     "label": "Weight",
+     "unit": "kg",
+     "default": 70,
+     "min": 3,
+     "max": 250,
+     "step": 1
+    }
+   ],
+   "outputs": [
+    {
+     "label": "Adult, or child over 30 kg",
+     "expr": "urine / (wt * hours)",
+     "unit": "mL/kg/h",
+     "decimals": 2,
+     "bands": [
+      {
+       "lt": 0.5,
+       "text": "Under 0.5: below target; raise the rate, no bolus"
+      },
+      {
+       "gte": 0.5,
+       "lte": 1,
+       "text": "0.5 to 1: on target"
+      },
+      {
+       "gt": 1,
+       "text": "Over 1: above target; lower the rate"
+      }
+     ]
+    },
+    {
+     "label": "Child under 30 kg",
+     "expr": "urine / (wt * hours)",
+     "unit": "mL/kg/h",
+     "decimals": 2,
+     "bands": [
+      {
+       "lt": 1,
+       "text": "Under 1: below target; raise the rate"
+      },
+      {
+       "gte": 1,
+       "lte": 1.5,
+       "text": "1 to 1.5: on target"
+      },
+      {
+       "gt": 1.5,
+       "text": "Over 1.5: above target; lower the rate"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:30725875",
+     "where": "Technique or Treatment"
+    },
+    {
+     "docId": "pmid:30020659",
+     "where": "Clinical Overview"
+    },
+    {
+     "docId": "pmid:32896144",
+     "where": "Fluid resuscitation and early enteral feeding"
+    },
+    {
+     "docId": "pmid:30480960",
+     "where": "Technique or Treatment"
+    }
+   ],
+   "note": "Read the line for your patient. In an adult the target is about 30 to 50 mL/h. The targets for children vary slightly by source.",
+   "tests": [
+    {
+     "inputs": {
+      "urine": 60,
+      "hours": 1,
+      "wt": 80
+     },
+     "expect": [
+      0.75,
+      0.75
+     ]
+    },
+    {
+     "inputs": {
+      "urine": 30,
+      "hours": 2,
+      "wt": 60
+     },
+     "expect": [
+      0.25,
+      0.25
+     ]
+    },
+    {
+     "inputs": {
+      "urine": 160,
+      "hours": 1,
+      "wt": 100
+     },
+     "expect": [
+      1.6,
+      1.6
+     ]
+    },
+    {
+     "inputs": {
+      "urine": 16,
+      "hours": 1,
+      "wt": 15
+     },
+     "expect": [
+      1.0666666666666667,
+      1.0666666666666667
+     ]
+    },
+    {
+     "inputs": {
+      "urine": 50,
+      "hours": 1,
+      "wt": 75
+     },
+     "expect": [
+      0.6666666666666666,
+      0.6666666666666666
+     ]
+    }
+   ]
+  }
+ ]
+}

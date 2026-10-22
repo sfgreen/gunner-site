@@ -1,0 +1,4217 @@
+{
+ "id": "pw_dyspnea",
+ "title": "Dyspnea",
+ "world": "pulm",
+ "synonyms": [
+  "dyspnea",
+  "dyspnoea",
+  "shortness of breath",
+  "SOB",
+  "breathlessness",
+  "acute breathlessness",
+  "pulmonary embolism",
+  "PE",
+  "acute heart failure",
+  "pulmonary edema",
+  "flash pulmonary edema",
+  "COPD exacerbation",
+  "AECOPD",
+  "asthma attack",
+  "status asthmaticus",
+  "pneumonia",
+  "CAP",
+  "pneumothorax",
+  "tension pneumothorax",
+  "anaphylaxis",
+  "NIV",
+  "BiPAP",
+  "hypoxia"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:28883921",
+   "label": "BTS oxygen 2017",
+   "title": "British Thoracic Society Guideline for oxygen use in adults in healthcare and emergency settings",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28883921/"
+  },
+  {
+   "docId": "pmid:34756653",
+   "label": "Chest pain 2021",
+   "title": "2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34756653/"
+  },
+  {
+   "docId": "pmid:37433579",
+   "label": "BTS pleural procedures 2023",
+   "title": "British Thoracic Society Clinical Statement on pleural procedures",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37433579/"
+  },
+  {
+   "docId": "pmid:37433578",
+   "label": "BTS pleural 2023",
+   "title": "British Thoracic Society Guideline for pleural disease",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37433578/"
+  },
+  {
+   "docId": "pmid:33204386",
+   "label": "WAO 2020",
+   "title": "World Allergy Organization anaphylaxis guidance 2020",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33204386/"
+  },
+  {
+   "docId": "pmid:31504429",
+   "label": "ESC PE 2019",
+   "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31504429/"
+  },
+  {
+   "docId": "pmid:33007077",
+   "label": "ASH VTE 2020",
+   "title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33007077/"
+  },
+  {
+   "docId": "url:329bf4ccdc3f",
+   "label": "NICE NG158",
+   "title": "Venous thromboembolic diseases: diagnosis, management and thrombophilia testing",
+   "url": "https://www.nice.org.uk/guidance/ng158"
+  },
+  {
+   "docId": "url:13b6c161ea88",
+   "label": "NAEPP EPR-3 2007",
+   "title": "Expert Panel Report 3: Guidelines for the Diagnosis and Management of Asthma, Full Report 2007",
+   "url": "https://www.nhlbi.nih.gov/sites/default/files/media/docs/EPR-3_Asthma_Full_Report_2007.pdf"
+  },
+  {
+   "docId": "pmid:27026806",
+   "label": "BTS/ICS 2016",
+   "title": "BTS/ICS Guideline for the ventilatory management of acute hypercapnic respiratory failure in adults",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27026806/"
+  },
+  {
+   "docId": "url:1cad9e2455ef",
+   "label": "NICE NG115",
+   "title": "Chronic obstructive pulmonary disease in over 16s: diagnosis and management",
+   "url": "https://www.nice.org.uk/guidance/ng115"
+  },
+  {
+   "docId": "url:691f7322d481",
+   "label": "NICE NG114",
+   "title": "Chronic obstructive pulmonary disease (acute exacerbation): antimicrobial prescribing",
+   "url": "https://www.nice.org.uk/guidance/ng114"
+  },
+  {
+   "docId": "url:d18a85034eff",
+   "label": "NICE CG187",
+   "title": "Acute heart failure: diagnosis and management",
+   "url": "https://www.nice.org.uk/guidance/cg187"
+  },
+  {
+   "docId": "pmid:31573350",
+   "label": "ATS/IDSA CAP 2019",
+   "title": "Diagnosis and Treatment of Adults with Community-acquired Pneumonia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31573350/"
+  },
+  {
+   "docId": "url:3ae7a526534f",
+   "label": "Eliquis label",
+   "title": "ELIQUIS (apixaban) prescribing information, FDA label via DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e9481622-7cc6-418a-acb6-c5450daae9b0"
+  },
+  {
+   "docId": "url:cf40393193b8",
+   "label": "Xarelto label",
+   "title": "XARELTO (rivaroxaban) prescribing information, FDA label via DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10db92f9-2300-4a80-836b-673e1ae91610"
+  },
+  {
+   "docId": "url:23d3e1d11acb",
+   "label": "NICE NG250",
+   "title": "Pneumonia: diagnosis and management (NICE guideline NG250, 2025)",
+   "url": "https://www.nice.org.uk/guidance/ng250"
+  }
+ ],
+ "differential": [
+  "Pulmonary embolism",
+  "Acute heart failure",
+  "COPD exacerbation",
+  "Asthma exacerbation",
+  "Pneumonia",
+  "Pneumothorax",
+  "Tension pneumothorax",
+  "Anaphylaxis",
+  "ACS"
+ ],
+ "calculators": [
+  {
+   "id": "wells_pe",
+   "title": "Two-level PE Wells score",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "dvt",
+     "label": "DVT signs (swelling, deep vein tenderness)",
+     "choices": [
+      {
+       "label": "No",
+       "value": 0
+      },
+      {
+       "label": "Yes, 3 points",
+       "value": 3
+      }
+     ],
+     "default": 0
+    },
+    {
+     "id": "alt",
+     "label": "Another diagnosis less likely than PE",
+     "choices": [
+      {
+       "label": "No",
+       "value": 0
+      },
+      {
+       "label": "Yes, 3 points",
+       "value": 3
+      }
+     ],
+     "default": 0
+    },
+    {
+     "id": "hr",
+     "label": "Heart rate over 100",
+     "choices": [
+      {
+       "label": "No",
+       "value": 0
+      },
+      {
+       "label": "Yes, 1.5 points",
+       "value": 1.5
+      }
+     ],
+     "default": 0
+    },
+    {
+     "id": "immob",
+     "label": "Immobile over 3 days, or surgery in 4 weeks",
+     "choices": [
+      {
+       "label": "No",
+       "value": 0
+      },
+      {
+       "label": "Yes, 1.5 points",
+       "value": 1.5
+      }
+     ],
+     "default": 0
+    },
+    {
+     "id": "prev",
+     "label": "Previous DVT or PE",
+     "choices": [
+      {
+       "label": "No",
+       "value": 0
+      },
+      {
+       "label": "Yes, 1.5 points",
+       "value": 1.5
+      }
+     ],
+     "default": 0
+    },
+    {
+     "id": "haem",
+     "label": "Hemoptysis",
+     "choices": [
+      {
+       "label": "No",
+       "value": 0
+      },
+      {
+       "label": "Yes, 1 point",
+       "value": 1
+      }
+     ],
+     "default": 0
+    },
+    {
+     "id": "cancer",
+     "label": "Cancer: current, past 6 months, palliative",
+     "choices": [
+      {
+       "label": "No",
+       "value": 0
+      },
+      {
+       "label": "Yes, 1 point",
+       "value": 1
+      }
+     ],
+     "default": 0
+    }
+   ],
+   "outputs": [
+    {
+     "label": "PE Wells score",
+     "expr": "dvt + alt + hr + immob + prev + haem + cancer",
+     "unit": "points",
+     "decimals": 1,
+     "bands": [
+      {
+       "lte": 4,
+       "text": "4 points or less: PE unlikely"
+      },
+      {
+       "gt": 4,
+       "text": "More than 4 points: PE likely"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.1.17, Table 2; 1.1.18; 1.1.21"
+    }
+   ],
+   "note": "PE likely: CTPA immediately if possible. PE unlikely: a D-dimer, with the result within 4 hours if possible.",
+   "tests": [
+    {
+     "inputs": {
+      "dvt": 0,
+      "alt": 0,
+      "hr": 0,
+      "immob": 0,
+      "prev": 0,
+      "haem": 0,
+      "cancer": 0
+     },
+     "expect": [
+      0
+     ]
+    },
+    {
+     "inputs": {
+      "dvt": 0,
+      "alt": 3,
+      "hr": 0,
+      "immob": 0,
+      "prev": 0,
+      "haem": 0,
+      "cancer": 0
+     },
+     "expect": [
+      3
+     ]
+    },
+    {
+     "inputs": {
+      "dvt": 0,
+      "alt": 3,
+      "hr": 1.5,
+      "immob": 1.5,
+      "prev": 0,
+      "haem": 0,
+      "cancer": 0
+     },
+     "expect": [
+      6
+     ]
+    },
+    {
+     "inputs": {
+      "dvt": 3,
+      "alt": 3,
+      "hr": 0,
+      "immob": 0,
+      "prev": 0,
+      "haem": 0,
+      "cancer": 0
+     },
+     "expect": [
+      6
+     ]
+    },
+    {
+     "inputs": {
+      "dvt": 0,
+      "alt": 3,
+      "hr": 1.5,
+      "immob": 0,
+      "prev": 0,
+      "haem": 0,
+      "cancer": 0
+     },
+     "expect": [
+      4.5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "perc",
+   "title": "PERC rule (criteria not met)",
+   "kind": "points",
+   "items": [
+    {
+     "id": "age",
+     "label": "Age 50 or older",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "pulse",
+     "label": "Pulse 100 or more",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "sao2",
+     "label": "SaO2 94% or less",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "leg",
+     "label": "Unilateral leg swelling",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "haemoptysis",
+     "label": "Hemoptysis",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "trauma",
+     "label": "Recent trauma or surgery",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "vte",
+     "label": "History of VTE",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "hormone",
+     "label": "Oral hormone use",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    }
+   ],
+   "bands": [
+    {
+     "lte": 0,
+     "text": "0: all 8 criteria met; PERC negative"
+    },
+    {
+     "gte": 1,
+     "text": "1 or more: PERC not satisfied"
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:31504429",
+     "where": "4.3"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.1.16"
+    }
+   ],
+   "note": "Each criterion not met counts 1, so PERC negative is a total of 0. It applies only when clinical suspicion is already low on the overall impression and another diagnosis is feasible (NICE 1.1.16); it has not been validated in COVID-19.",
+   "tests": [
+    {
+     "picks": {},
+     "expect": 0
+    },
+    {
+     "picks": {
+      "age": 1
+     },
+     "expect": 1
+    },
+    {
+     "picks": {
+      "age": 1,
+      "hormone": 1
+     },
+     "expect": 2
+    },
+    {
+     "picks": {
+      "age": 1,
+      "pulse": 1,
+      "sao2": 1,
+      "leg": 1,
+      "haemoptysis": 1,
+      "trauma": 1,
+      "vte": 1,
+      "hormone": 1
+     },
+     "expect": 8
+    }
+   ]
+  },
+  {
+   "id": "spesi",
+   "title": "Simplified PESI (sPESI)",
+   "kind": "points",
+   "items": [
+    {
+     "id": "age",
+     "label": "Age over 80",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "cancer",
+     "label": "Cancer",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "cardiopulm",
+     "label": "Chronic heart failure or lung disease",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "pulse",
+     "label": "Pulse 110 or more",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "sbp",
+     "label": "Systolic BP under 100",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "sao2",
+     "label": "SaO2 under 90%",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    }
+   ],
+   "bands": [
+    {
+     "lte": 0,
+     "text": "0: 30-day mortality 1.0%; low risk only if RV and troponin are normal"
+    },
+    {
+     "gte": 1,
+     "text": "1 or more: 30-day mortality 10.9%; intermediate risk"
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:31504429",
+     "where": "Table 7; Table 8; 5.6"
+    }
+   ],
+   "note": "Chronic heart failure and chronic lung disease share one point. RV dysfunction on imaging or a raised troponin despite an sPESI of 0 puts the patient in the intermediate-low-risk group (ESC 2019).",
+   "tests": [
+    {
+     "picks": {},
+     "expect": 0
+    },
+    {
+     "picks": {
+      "pulse": 1
+     },
+     "expect": 1
+    },
+    {
+     "picks": {
+      "age": 1,
+      "cancer": 1,
+      "cardiopulm": 1,
+      "pulse": 1,
+      "sbp": 1,
+      "sao2": 1
+     },
+     "expect": 6
+    }
+   ]
+  },
+  {
+   "id": "curb65",
+   "title": "CURB-65",
+   "kind": "points",
+   "items": [
+    {
+     "id": "confusion",
+     "label": "Confusion (AMT 8 or less, or disoriented)",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "urea",
+     "label": "Urea over 7 mmol/L",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "rr",
+     "label": "Respiratory rate 30 or more",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "bp",
+     "label": "Diastolic 60 or less, or systolic under 90",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "age",
+     "label": "Age 65 or older",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    }
+   ],
+   "bands": [
+    {
+     "lte": 1,
+     "text": "0 or 1: low risk (under 3% mortality)"
+    },
+    {
+     "gte": 2,
+     "lte": 2,
+     "text": "2: intermediate risk (3% to 15% mortality)"
+    },
+    {
+     "gte": 3,
+     "text": "3 to 5: high risk (over 15% mortality)"
+    }
+   ],
+   "sources": [
+    {
+     "docId": "url:23d3e1d11acb",
+     "where": "Box 2; 1.2.8"
+    },
+    {
+     "docId": "pmid:31573350",
+     "where": "Question 6; Question 7"
+    }
+   ],
+   "note": "ATS/IDSA 2019 prefers the PSI to CURB-65 for deciding on admission, always with clinical judgment, and neither score was designed to choose the level of care once a patient is admitted. NICE gives urea in mmol/L.",
+   "tests": [
+    {
+     "picks": {
+      "age": 1
+     },
+     "expect": 1
+    },
+    {
+     "picks": {
+      "confusion": 1,
+      "urea": 1,
+      "rr": 1
+     },
+     "expect": 3
+    },
+    {
+     "picks": {
+      "confusion": 1,
+      "urea": 1,
+      "rr": 1,
+      "bp": 1,
+      "age": 1
+     },
+     "expect": 5
+    }
+   ]
+  }
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Acutely breathless adult. First moves?",
+   "options": [
+    "Airway, oxygen to a target saturation, monitoring and an ECG",
+    "High-flow oxygen by reservoir mask until the saturation reads 100%",
+    "Chest x-ray first, then treatment once it is reported",
+    "A D-dimer first, before any assessment of PE risk"
+   ],
+   "answer": 0,
+   "chainStep": "Airway check; oxygen to 94 to 98% (88 to 92% if at risk of hypercapnic failure); monitoring, ECG and a focused exam",
+   "why": "Oxygen is prescribed to a target range: 94 to 98% for most acutely ill patients, 88 to 92% for those at risk of hypercapnic respiratory failure, and it is never delayed in a seriously ill patient for a gas. Shortness of breath counts as an anginal equivalent, so the ECG comes early. PE is approached by clinical probability first, not by a D-dimer for everyone.",
+   "sources": [
+    {
+     "docId": "pmid:28883921",
+     "where": "Summary of recommendations: target oxygen prescription; good practice point with B2; Tables 1 and 4"
+    },
+    {
+     "docId": "pmid:34756653",
+     "where": "Top 10 take-home messages, 1; 2.3.1 rec 3"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.1.17"
+    }
+   ],
+   "next": "front",
+   "orders": [
+    {
+     "item": "Oxygen, most acutely ill patients",
+     "dose": "Target saturation 94 to 98%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28883921",
+       "where": "Summary of recommendations: target oxygen prescription"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen, risk of hypercapnic failure (COPD and others)",
+     "dose": "Target 88 to 92% before the gas: 24% Venturi mask at 2 to 3 L/min, 28% at 4 L/min, or nasal cannulae at 1 to 2 L/min; move to 94 to 98% if the PCO2 is normal (unless previous NIV or IMV); recheck the gas at 30 to 60 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28883921",
+       "where": "Table 4"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen, critical illness (shock, sepsis, anaphylaxis)",
+     "dose": "Reservoir mask at 15 L/min until oximetry is reliable, then titrate to 94 to 98%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28883921",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "ECG",
+     "dose": "Within 10 minutes when ACS is possible; shortness of breath counts as an anginal equivalent",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34756653",
+       "where": "Top 10 take-home messages, 1; 2.3.1 rec 3"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: upper airway obstruction other than anaphylaxis, tamponade, pleural effusion, pregnancy, children."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Vitals, chest, skin and ECG",
+   "outcomes": [
+    {
+     "id": "tension",
+     "if": "Tension pneumothorax; one side silent and hyperresonant, with low pressure or falling saturation",
+     "ddx": {
+      "lead": [
+       "Tension pneumothorax"
+      ],
+      "out": []
+     },
+     "next": "needle"
+    },
+    {
+     "id": "anaph",
+     "if": "Anaphylaxis; minutes after a likely allergen, with stridor, wheeze or low pressure",
+     "ddx": {
+      "lead": [
+       "Anaphylaxis"
+      ],
+      "out": []
+     },
+     "next": "anaph_epi"
+    },
+    {
+     "id": "acs",
+     "if": "Possible ACS; ST elevation or new ischemic change on the ECG",
+     "ddx": {
+      "lead": [
+       "ACS"
+      ],
+      "out": []
+     },
+     "next": "end_acs"
+    },
+    {
+     "id": "shock",
+     "if": "Shock, cause unclear; systolic under 90 or poor perfusion, none of the above",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "shock_echo"
+    },
+    {
+     "id": "stable",
+     "if": "None of these; go by the history and exam",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "findings"
+    }
+   ]
+  },
+  {
+   "id": "needle",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Trachea shifted, one side silent and hyperresonant, pressure falling. Next?",
+   "options": [
+    "Decompress now on the clinical signs, then a chest drain",
+    "Chest x-ray to confirm before any procedure",
+    "CT chest to look for bullae first",
+    "High-flow oxygen and observe"
+   ],
+   "answer": 0,
+   "chainStep": "Decompress now on the clinical signs, without waiting for imaging; then a chest drain",
+   "why": "Tension pneumothorax is the one pleural emergency diagnosed on clinical signs and treated urgently without imaging. Every other pleural procedure waits for an image that confirms the side. Haemodynamic compromise is a high-risk feature, and chest drains are centred on high-risk patients.",
+   "sources": [
+    {
+     "docId": "pmid:37433579",
+     "where": "Preprocedural imaging in the operative position and marking of position"
+    },
+    {
+     "docId": "pmid:37433578",
+     "where": "Pneumothorax, definitions and treatment principles; Appendix 1, high-risk characteristics"
+    }
+   ],
+   "next": "end_tension",
+   "orders": [
+    {
+     "item": "Decompression site and device",
+     "dose": "Not stated in the BTS guideline or clinical statement read",
+     "status": "pending"
+    },
+    {
+     "item": "Chest drain",
+     "dose": "After decompression: haemodynamic compromise (tension) is a high-risk characteristic, and drains are centred on high-risk patients",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37433578",
+       "where": "Definitions and treatment principles; Appendix 1, high-risk characteristics"
+      }
+     ]
+    },
+    {
+     "item": "Recurrence",
+     "dose": "Surgical advice after a first pneumothorax presenting with tension",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37433578",
+       "where": "Optimal surgical approach: accepted indications for surgical advice"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "anaph_epi",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Anaphylaxis with stridor, wheeze or low pressure. First drug?",
+   "options": [
+    "IM epinephrine 0.01 mg/kg, maximum 0.5 mg, outer thigh",
+    "IV diphenhydramine first, then reassess the airway",
+    "IV methylprednisolone first, to prevent a relapse",
+    "An IV epinephrine bolus through the arm line"
+   ],
+   "answer": 0,
+   "chainStep": "IM epinephrine 0.01 mg/kg (maximum 0.5 mg) into the anterolateral thigh, repeated every 5 to 15 minutes if needed; lie flat, or sit up if breathing is the problem",
+   "why": "Intramuscular epinephrine into the anterolateral thigh is first line: 0.01 mg/kg to a maximum of 0.5 mg, repeated every 5 to 15 minutes if symptoms persist. An IV bolus can cause fatal arrhythmias and is not used to start. Antihistamines and glucocorticoids are second line: antihistamines mainly ease the skin, and glucocorticoids may be of no benefit acutely.",
+   "sources": [
+    {
+     "docId": "pmid:33204386",
+     "where": "Acute treatment of anaphylaxis; Table 6; Table 2"
+    }
+   ],
+   "next": "anaph_response",
+   "orders": [
+    {
+     "item": "Epinephrine IM",
+     "dose": "0.01 mg/kg to a maximum of 0.5 mg; teenagers and adults 0.5 mg (0.5 mL of 1 mg/mL); repeat every 5 to 15 minutes if symptoms persist",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis; Table 6"
+      }
+     ]
+    },
+    {
+     "item": "Position",
+     "dose": "Supine; sitting if breathing is the problem; pregnant, semi-recumbent on the left side",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen",
+     "dose": "High flow, preferably 100% by non-rebreather, with respiratory distress or further epinephrine doses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "IV fluids",
+     "dose": "Cardiovascular instability: 20 mL/kg crystalloid bolus",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Wheeze",
+     "dose": "Inhaled SABA as an add-on, never instead of repeated IM epinephrine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Stridor",
+     "dose": "Consider nebulized epinephrine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Antihistamines and glucocorticoids",
+     "dose": "Second line; antihistamines mainly for the skin; glucocorticoids may be of no benefit in the acute reaction",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "anaph_response",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Response to IM epinephrine",
+   "outcomes": [
+    {
+     "id": "settled",
+     "if": "Settles; airway, breathing and pressure recover",
+     "ddx": {
+      "lead": [
+       "Anaphylaxis"
+      ],
+      "out": []
+     },
+     "next": "anaph_obs"
+    },
+    {
+     "id": "refractory",
+     "if": "Refractory; still hypotensive after repeated IM doses",
+     "ddx": {
+      "lead": [
+       "Anaphylaxis"
+      ],
+      "out": []
+     },
+     "next": "anaph_refractory"
+    }
+   ]
+  },
+  {
+   "id": "anaph_obs",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Settled after IM epinephrine. Before discharge?",
+   "options": [
+    "Observe, then auto-injectors and a written action plan",
+    "Discharge now, since the reaction has fully settled",
+    "An oral antihistamine course, and no auto-injector",
+    "Observe; prescribe an auto-injector only after a second reaction"
+   ],
+   "answer": 0,
+   "chainStep": "Observe for a biphasic reaction; prescribe epinephrine auto-injectors with teaching, a written anaphylaxis action plan and medical identification",
+   "why": "About half of biphasic reactions come within 6 to 12 hours, so patients are observed, above all after severe reactions or several doses. Every patient at risk leaves with one or more epinephrine auto-injectors, taught how to use them, and a written action plan.",
+   "sources": [
+    {
+     "docId": "pmid:33204386",
+     "where": "Acute treatment of anaphylaxis (biphasic reactions; auto-injectors); Long-term management of anaphylaxis; Table 8"
+    }
+   ],
+   "next": "end_anaph",
+   "orders": [
+    {
+     "item": "Observation",
+     "dose": "Especially after severe reactions or several epinephrine doses; about half of biphasic reactions come within 6 to 12 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Observation length",
+     "dose": "No fixed duration stated in WAO 2020",
+     "status": "pending"
+    },
+    {
+     "item": "Epinephrine auto-injectors",
+     "dose": "One or more, with teaching on self-administration",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis; Long-term management of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Action plan",
+     "dose": "Written personalized anaphylaxis emergency action plan and medical identification",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Long-term management of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Trigger",
+     "dose": "Identify it: detailed history and confirmatory tests",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Table 8"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "anaph_refractory",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "On a beta blocker, still hypotensive after repeated IM epinephrine. Next?",
+   "options": [
+    "Monitored IV epinephrine infusion and fluid boluses; add IV glucagon for the beta blocker",
+    "An undiluted IV epinephrine bolus, repeated every few minutes as needed",
+    "Stop epinephrine; IV antihistamine and IV steroid instead, then reassess",
+    "Stop epinephrine and give glucagon alone"
+   ],
+   "answer": 0,
+   "chainStep": "Keep repeating IM epinephrine; IV epinephrine infusion by pump in a monitored patient, by experienced staff; 20 mL/kg crystalloid; glucagon if on a beta blocker",
+   "why": "Reactions refractory to IM epinephrine move to a low-dose IV infusion, by pump, in a monitored patient, given by staff experienced in diluting it; a bolus risks fatal arrhythmias. Fluids go in as 20 mL/kg boluses. Glucagon is an add-on when epinephrine is not working, above all on a beta blocker, never a replacement.",
+   "sources": [
+    {
+     "docId": "pmid:33204386",
+     "where": "Acute treatment of anaphylaxis"
+    }
+   ],
+   "next": "end_anaph_refractory",
+   "orders": [
+    {
+     "item": "IV epinephrine",
+     "dose": "Infusion by pump, monitored, by staff experienced in diluting and giving it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "IV epinephrine infusion rate",
+     "dose": "Not stated in WAO 2020; it cites infusion protocols without their doses",
+     "status": "pending"
+    },
+    {
+     "item": "IV fluids",
+     "dose": "20 mL/kg crystalloid bolus for cardiovascular instability",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Glucagon",
+     "dose": "Parenteral, when the response to epinephrine is poor, above all on a beta blocker (very limited evidence); dose not stated in WAO 2020",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Observation",
+     "dose": "A severe reaction needing several doses: observe closely",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_anaph",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Anaphylaxis that settled: IM epinephrine, observation for a biphasic reaction, auto-injectors and a written action plan; find the trigger."
+  },
+  {
+   "id": "end_anaph_refractory",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Refractory anaphylaxis: repeated IM epinephrine, then a monitored IV epinephrine infusion, 20 mL/kg fluid boluses and glucagon on a beta blocker; close observation."
+  },
+  {
+   "id": "end_tension",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Tension pneumothorax: decompress on the clinical signs without waiting for imaging, then a chest drain; surgical advice to prevent recurrence. The decompression site is not in the open sources read."
+  },
+  {
+   "id": "end_acs",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Possible ACS presenting as breathlessness: continue in the chest pain pathway."
+  },
+  {
+   "id": "shock_echo",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Breathless and in shock; no tension, anaphylaxis or ST elevation. Next?",
+   "options": [
+    "Bedside echo now",
+    "D-dimer first; image only if it is raised",
+    "Two liters of saline before any imaging",
+    "V/Q scan once a little more stable"
+   ],
+   "answer": 0,
+   "chainStep": "Bedside echo now (CTPA instead only if PE is suspected and it is immediately available); oxygen; cautious fluids and a heparin bolus if PE is suspected",
+   "why": "With haemodynamic instability, bedside echo or emergency CTPA, whichever the circumstances allow, makes the diagnosis; a D-dimer cannot exclude PE when suspicion is high. When the patient is too unstable for anything but bedside tests, RV dysfunction on echo confirms high-risk PE. Aggressive volume loading can worsen RV function, so fluids are cautious.",
+   "sources": [
+    {
+     "docId": "pmid:31504429",
+     "where": "4.11 recs, haemodynamic instability; Figure 4 and footnote d; 6.1.2"
+    }
+   ],
+   "next": "shock_echo_result",
+   "orders": [
+    {
+     "item": "UFH if PE is suspected",
+     "dose": "Without delay, with a weight-adjusted bolus: 80 IU/kg IV",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504429",
+       "where": "4.11 rec 2; Supplementary Figure 1"
+      }
+     ]
+    },
+    {
+     "item": "Fluids if PE is suspected",
+     "dose": "Cautious: Ringer's lactate or saline 200 to 500 mL IV; aggressive volume expansion may worsen RV function",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504429",
+       "where": "Supplementary Figure 1; 6.1.2"
+      }
+     ]
+    },
+    {
+     "item": "Norepinephrine or dobutamine (high-risk PE)",
+     "dose": "Should be considered; the Table 9 doses do not extract cleanly from the open copy",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:31504429",
+       "where": "6.6 rec 5"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen",
+     "dose": "Reservoir mask at 15 L/min in shock, then titrate to 94 to 98%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28883921",
+       "where": "Table 1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "shock_echo_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Bedside echo",
+   "outcomes": [
+    {
+     "id": "rv",
+     "if": "RV dysfunction; dilated right ventricle, no other cause seen",
+     "ddx": {
+      "lead": [
+       "Pulmonary embolism"
+      ],
+      "out": []
+     },
+     "next": "pe_lysis"
+    },
+    {
+     "id": "no_rv",
+     "if": "No RV dysfunction; PE does not explain the shock",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_shock_other",
+     "orders": [
+      {
+       "item": "Cardiogenic shock (poor left ventricle)",
+       "dose": "Consider inotropes or vasopressors for potentially reversible cardiogenic shock, in at least level 2 care",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:d18a85034eff",
+         "where": "1.3.11"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pe_lysis",
+   "kind": "step",
+   "stage": "Reperfuse",
+   "ask": "Shock with a dilated right ventricle: high-risk PE. Treatment?",
+   "options": [
+    "Systemic thrombolysis, with unfractionated heparin",
+    "Anticoagulation alone, and observe",
+    "An IVC filter, then anticoagulation",
+    "Vasopressors alone, and reassess in an hour"
+   ],
+   "answer": 0,
+   "chainStep": "Alteplase 100 mg IV over 2 hours with unfractionated heparin; surgical or catheter embolectomy if thrombolysis is contraindicated or fails",
+   "why": "Primary reperfusion, in most cases systemic thrombolysis, is the treatment of choice for high-risk PE, on a continuous heparin infusion; anticoagulation alone is not enough. Vasopressors support the circulation while reperfusion is given, not instead of it. Surgical embolectomy or catheter-directed treatment is for patients in whom thrombolysis is contraindicated or has failed.",
+   "sources": [
+    {
+     "docId": "pmid:31504429",
+     "where": "6.6 recs 1 to 4; 7.2.1; Table 10"
+    },
+    {
+     "docId": "pmid:33007077",
+     "where": "Recommendations 6 and 9"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.3.12; 1.6.2"
+    }
+   ],
+   "next": "end_pe_high",
+   "orders": [
+    {
+     "item": "Alteplase (rtPA)",
+     "dose": "100 mg over 2 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504429",
+       "where": "Table 10"
+      }
+     ]
+    },
+    {
+     "item": "Accelerated rtPA",
+     "dose": "0.6 mg/kg over 15 minutes (maximum 50 mg): not officially approved, sometimes used in extreme instability such as cardiac arrest",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504429",
+       "where": "Table 10 and footnote a"
+      }
+     ]
+    },
+    {
+     "item": "Unfractionated heparin",
+     "dose": "Continuous infusion, started with a weight-adjusted bolus",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.3.12"
+      },
+      {
+       "docId": "pmid:31504429",
+       "where": "6.6 rec 1"
+      }
+     ]
+    },
+    {
+     "item": "Absolute contraindications",
+     "dose": "Haemorrhagic stroke or stroke of unknown origin; ischemic stroke in 6 months; CNS neoplasm; major trauma, surgery or head injury in 3 weeks; bleeding diathesis; active bleeding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504429",
+       "where": "Table 10"
+      }
+     ]
+    },
+    {
+     "item": "Thrombolysis contraindicated or failed",
+     "dose": "Surgical pulmonary embolectomy, or percutaneous catheter-directed treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504429",
+       "where": "6.6 recs 3 and 4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_pe_high",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "High-risk PE: unfractionated heparin, systemic thrombolysis, cautious fluids and vasopressors; embolectomy when thrombolysis is contraindicated or fails."
+  },
+  {
+   "id": "end_shock_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Shock without RV dysfunction: PE does not explain it; search for other causes. A failing left ventricle in cardiogenic shock may need inotropes or vasopressors in level 2 care; its workup is not in this pathway. Septic shock: see the sepsis pathway."
+  },
+  {
+   "id": "findings",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "History and examination",
+   "outcomes": [
+    {
+     "id": "asthma",
+     "if": "Asthma attack; known asthma, wheeze or a silent chest",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "asthma_assess"
+    },
+    {
+     "id": "copd",
+     "if": "COPD exacerbation; known COPD, worse breathlessness and sputum",
+     "ddx": {
+      "lead": [
+       "COPD exacerbation"
+      ],
+      "out": []
+     },
+     "next": "copd_tests"
+    },
+    {
+     "id": "hf",
+     "if": "Fluid overload; orthopnea, crackles, raised neck veins, edema",
+     "ddx": {
+      "lead": [
+       "Acute heart failure"
+      ],
+      "out": []
+     },
+     "next": "ahf_resp"
+    },
+    {
+     "id": "infection",
+     "if": "Fever and cough; focal crackles or bronchial breathing",
+     "ddx": {
+      "lead": [
+       "Pneumonia"
+      ],
+      "out": []
+     },
+     "next": "cap_cxr"
+    },
+    {
+     "id": "ptx",
+     "if": "Possible pneumothorax; sudden one-sided pain, quieter side",
+     "ddx": {
+      "lead": [
+       "Pneumothorax"
+      ],
+      "out": []
+     },
+     "next": "ptx_cxr"
+    },
+    {
+     "id": "pe",
+     "if": "Clear chest; none of these, PE possible",
+     "ddx": {
+      "lead": [
+       "Pulmonary embolism"
+      ],
+      "out": []
+     },
+     "next": "pe_prob"
+    }
+   ]
+  },
+  {
+   "id": "asthma_assess",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Known asthma, acutely breathless. Next?",
+   "options": [
+    "Grade it at once (speech, vitals, saturation, PEF if able) and treat",
+    "Arterial blood gas and chest x-ray before any treatment",
+    "Spirometry with reversibility testing before treating",
+    "Take the full history first, then start treatment"
+   ],
+   "answer": 0,
+   "chainStep": "Grade severity at once (speech, vital signs, saturation, PEF or FEV1 unless life-threatening) and start treatment immediately",
+   "why": "Every patient is triaged at once on vital signs and how well they can talk, and treatment starts as soon as a moderate or worse attack is recognized. PEF or FEV1 is measured on arrival and 30 to 60 minutes after treatment, but not in a life-threatening attack. Laboratory tests are not required for most and must not delay treatment.",
+   "sources": [
+    {
+     "docId": "url:13b6c161ea88",
+     "where": "Section 5, ED and hospital management: assessment; Figure 5-6, initial assessment"
+    }
+   ],
+   "next": "asthma_sev"
+  },
+  {
+   "id": "asthma_sev",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Severity on arrival",
+   "outcomes": [
+    {
+     "id": "mm",
+     "if": "Mild to moderate; PEF or FEV1 40% or more of predicted or best",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "asthma_mm"
+    },
+    {
+     "id": "severe",
+     "if": "Severe; PEF or FEV1 under 40%, breathless at rest",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "asthma_severe"
+    },
+    {
+     "id": "arrest",
+     "if": "Impending arrest; drowsy, confused, too breathless to speak",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "asthma_intubate"
+    }
+   ]
+  },
+  {
+   "id": "asthma_intubate",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Drowsy, too breathless to speak, quiet chest. Next?",
+   "options": [
+    "Intubate and ventilate, then SABA, ipratropium and IV steroid",
+    "Non-invasive ventilation and reassess in an hour",
+    "IV magnesium first, then decide on the airway",
+    "Arterial gas first; intubate only if the PaCO2 is raised"
+   ],
+   "answer": 0,
+   "chainStep": "Intubation and mechanical ventilation with 100% oxygen; nebulized SABA and ipratropium; IV corticosteroid; ICU",
+   "why": "Impending or actual respiratory arrest means intubation and mechanical ventilation with 100% oxygen, nebulized SABA and ipratropium, IV corticosteroids and intensive care. Adjuncts such as magnesium may be considered to avoid intubation, but intubation is not delayed once it is needed, for a drug or a gas. NIV is not used in acute asthma with hypercapnic respiratory failure.",
+   "sources": [
+    {
+     "docId": "url:13b6c161ea88",
+     "where": "Figure 5-6, impending or actual respiratory arrest; Section 5, impending respiratory failure"
+    },
+    {
+     "docId": "pmid:27026806",
+     "where": "Recommendation 39"
+    }
+   ],
+   "next": "end_asthma_icu",
+   "orders": [
+    {
+     "item": "Lung function",
+     "dose": "PEF or FEV1 is not measured in the initial assessment of a life-threatening attack",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Section 5, assessment"
+      }
+     ]
+    },
+    {
+     "item": "Non-invasive ventilation",
+     "dose": "Not used in acute asthma with hypercapnic respiratory failure",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:27026806",
+       "where": "Recommendation 39"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "asthma_mm",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "PEF 40% or more of predicted or best. Treatment?",
+   "options": [
+    "Inhaled SABA, up to 3 doses in the first hour",
+    "IV magnesium sulfate before any bronchodilator",
+    "Ipratropium alone as the first-line bronchodilator",
+    "IV aminophylline with the first nebulizer"
+   ],
+   "answer": 0,
+   "chainStep": "Albuterol 2.5 to 5 mg nebulized every 20 minutes for 3 doses, or 4 to 8 puffs with a spacer every 20 minutes up to 4 hours; oral corticosteroid if no immediate response; oxygen",
+   "why": "Mild to moderate attacks get an inhaled SABA, up to 3 doses in the first hour, by nebulizer or by inhaler with a spacer, which works as well here. An oral corticosteroid follows if there is no immediate response or recent steroid use. Ipratropium is not first-line, methylxanthines are not recommended, and magnesium is kept for attacks still severe after an hour or life-threatening.",
+   "sources": [
+    {
+     "docId": "url:13b6c161ea88",
+     "where": "Figure 5-6, mild to moderate; Figure 5-5; Section 5, treatments not recommended and magnesium sulfate"
+    }
+   ],
+   "next": "asthma_response",
+   "orders": [
+    {
+     "item": "Albuterol, nebulized",
+     "dose": "2.5 to 5 mg every 20 minutes for 3 doses, then 2.5 to 10 mg every 1 to 4 hours as needed, or 10 to 15 mg/hour continuously",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5"
+      }
+     ]
+    },
+    {
+     "item": "Albuterol, inhaler with spacer",
+     "dose": "4 to 8 puffs every 20 minutes up to 4 hours, then every 1 to 4 hours as needed; as effective as a nebulizer in mild to moderate attacks with good technique",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5, albuterol MDI adult dose and comment"
+      }
+     ]
+    },
+    {
+     "item": "Prednisone (or methylprednisolone or prednisolone)",
+     "dose": "40 to 80 mg/day in 1 or 2 divided doses until PEF reaches 70% of predicted or best",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen",
+     "dose": "To an SaO2 over 90% (over 95% in pregnancy or heart disease)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Section 5, treatment: oxygen"
+      },
+      {
+       "docId": "pmid:28883921",
+       "where": "Table 2, acute asthma"
+      }
+     ],
+     "note": "BTS 2017 targets 94 to 98% in acute asthma (see the first step); the higher target satisfies both."
+    },
+    {
+     "item": "Antibiotics",
+     "dose": "Not for the asthma itself; only for a comorbid infection",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Section 5, treatments not recommended"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "asthma_severe",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "PEF under 40%, breathless at rest. Treatment?",
+   "options": [
+    "High-dose SABA plus ipratropium, and a systemic steroid",
+    "SABA alone; add ipratropium only if no better",
+    "IV corticosteroid now; bronchodilators can wait",
+    "Non-invasive ventilation with the first nebulizer"
+   ],
+   "answer": 0,
+   "chainStep": "Oxygen; albuterol 2.5 to 5 mg plus ipratropium 0.5 mg nebulized every 20 minutes for 3 doses (or continuous albuterol 10 to 15 mg/hour); prednisone 40 to 80 mg/day orally",
+   "why": "Severe attacks get high-dose inhaled SABA plus ipratropium every 20 minutes or continuously for an hour, and an oral systemic corticosteroid, which works as well as IV when the gut works. Ipratropium is added for severe attacks rather than used alone. NIV is not used in acute asthma with hypercapnic failure.",
+   "sources": [
+    {
+     "docId": "url:13b6c161ea88",
+     "where": "Figure 5-6, severe; Figure 5-5 and notes"
+    },
+    {
+     "docId": "pmid:27026806",
+     "where": "Recommendation 39"
+    }
+   ],
+   "next": "asthma_response",
+   "orders": [
+    {
+     "item": "Albuterol, nebulized",
+     "dose": "2.5 to 5 mg every 20 minutes for 3 doses, then 2.5 to 10 mg every 1 to 4 hours as needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5"
+      }
+     ]
+    },
+    {
+     "item": "Ipratropium, nebulized",
+     "dose": "0.5 mg every 20 minutes for 3 doses, then as needed; added to SABA in severe attacks, not first-line; no proven benefit once hospitalized",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5"
+      }
+     ]
+    },
+    {
+     "item": "Albuterol, continuous",
+     "dose": "10 to 15 mg/hour",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5"
+      }
+     ]
+    },
+    {
+     "item": "Prednisone",
+     "dose": "40 to 80 mg/day in 1 or 2 divided doses; no advantage of higher doses or of IV over oral when the gut works",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5 and notes"
+      }
+     ]
+    },
+    {
+     "item": "Non-invasive ventilation",
+     "dose": "Not used in acute asthma with hypercapnic respiratory failure",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:27026806",
+       "where": "Recommendation 39"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "asthma_response",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Reassessment after treatment",
+   "outcomes": [
+    {
+     "id": "good",
+     "if": "Good response; PEF 70% or more, sustained 60 minutes, no distress",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "end_asthma_home",
+     "orders": [
+      {
+       "item": "Discharge",
+       "dose": "Continue inhaled SABA and the oral corticosteroid course; review inhaler technique and the action plan",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:13b6c161ea88",
+         "where": "Figure 5-6, discharge home"
+        }
+       ]
+      },
+      {
+       "item": "ICS",
+       "dose": "Continue an ICS; consider starting one if not on a controller",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:13b6c161ea88",
+         "where": "Figure 5-6, discharge home"
+        }
+       ]
+      },
+      {
+       "item": "Corticosteroid course",
+       "dose": "Outpatient burst 40 to 60 mg for a total of 5 to 10 days; no taper for courses under a week",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:13b6c161ea88",
+         "where": "Figure 5-5, comment and notes"
+        }
+       ]
+      },
+      {
+       "item": "Follow-up",
+       "dose": "Appointment with primary care or an asthma specialist in 1 to 4 weeks",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:13b6c161ea88",
+         "where": "Figure 5-6, discharge home"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "incomplete",
+     "if": "Incomplete; PEF 40 to 69%, mild to moderate symptoms",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "end_asthma_ward",
+     "orders": [
+      {
+       "item": "Admission",
+       "dose": "Individualized decision; on the ward: oxygen, inhaled SABA, systemic corticosteroid, consider adjuncts; monitor vital signs, PEF or FEV1 and SaO2",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:13b6c161ea88",
+         "where": "Figure 5-6, incomplete response; admit to hospital ward"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "poor",
+     "if": "Poor; PEF under 40%",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "asthma_mag"
+    }
+   ]
+  },
+  {
+   "id": "asthma_mag",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Still under 40% after an hour of intensive treatment, alert. Add?",
+   "options": [
+    "IV magnesium sulfate, with ICU admission",
+    "An IV aminophylline infusion",
+    "Non-invasive ventilation on the ward",
+    "Discharge on a course of oral prednisone"
+   ],
+   "answer": 0,
+   "chainStep": "ICU: IV magnesium sulfate (2 g in adults in the studies cited), SABA hourly or continuously, IV corticosteroid; intubate without delay once it is needed",
+   "why": "IV magnesium sulfate is considered for life-threatening attacks and for those still severe after an hour of intensive conventional therapy; heliox-driven albuterol is the other adjunct. A poor response means intensive care: SABA hourly or continuously, IV corticosteroid, and intubation when needed, never delayed for an adjunct. Methylxanthines are not recommended, and NIV is not used in acute asthma with hypercapnic respiratory failure.",
+   "sources": [
+    {
+     "docId": "url:13b6c161ea88",
+     "where": "Section 5, magnesium sulfate, heliox, impending respiratory failure, treatments not recommended; Figure 5-6, poor response"
+    },
+    {
+     "docId": "pmid:27026806",
+     "where": "Recommendation 39"
+    }
+   ],
+   "next": "end_asthma_icu",
+   "orders": [
+    {
+     "item": "Magnesium sulfate IV",
+     "dose": "2 g in adults, the dose in the trials EPR-3 cites",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Section 5, intravenous magnesium sulfate"
+      }
+     ],
+     "note": "Infusion time not stated in EPR-3."
+    },
+    {
+     "item": "Heliox-driven albuterol",
+     "dose": "Consider in the same patients",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Section 5, heliox"
+      }
+     ]
+    },
+    {
+     "item": "ICU care",
+     "dose": "Oxygen, SABA hourly or continuously, IV corticosteroid, possible intubation and mechanical ventilation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-6, admit to hospital intensive care"
+      }
+     ]
+    },
+    {
+     "item": "Intubation",
+     "dose": "Not delayed once it is deemed necessary",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Section 5, impending respiratory failure"
+      }
+     ]
+    },
+    {
+     "item": "Methylxanthines",
+     "dose": "Not recommended",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Section 5, treatments not recommended"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_asthma_home",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Asthma attack with a good response: home on SABA and a short oral corticosteroid course, an ICS, an action plan and follow-up in 1 to 4 weeks."
+  },
+  {
+   "id": "end_asthma_ward",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Incomplete response: an individualized decision on admission; on the ward, oxygen, SABA, a systemic corticosteroid and close monitoring of PEF and saturation."
+  },
+  {
+   "id": "end_asthma_icu",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "ICU: SABA hourly or continuously, IV corticosteroid, IV magnesium, intubation when needed (ipratropium with SABA in the arrest itself); not NIV."
+  },
+  {
+   "id": "copd_tests",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Known COPD, more breathless with more sputum, in hospital. Next?",
+   "options": [
+    "Chest x-ray, arterial gas (inspired oxygen noted), ECG, bloods",
+    "Spirometry now to confirm the diagnosis of COPD",
+    "CT pulmonary angiogram before any other test",
+    "Oxygen to 98%, and a gas only if breathing tires"
+   ],
+   "answer": 0,
+   "chainStep": "Chest x-ray, arterial blood gas (record the inspired oxygen), ECG, blood count, urea and electrolytes; sputum culture if purulent, blood cultures if febrile; controlled oxygen 88 to 92%",
+   "why": "Everyone admitted with an exacerbation gets a chest x-ray, arterial gases with the inspired oxygen recorded, an ECG, a blood count and electrolytes; sputum goes for culture only when purulent. Oxygen is controlled to 88 to 92% until the gas shows the CO2.",
+   "sources": [
+    {
+     "docId": "url:1cad9e2455ef",
+     "where": "1.3.3; 1.3.29"
+    },
+    {
+     "docId": "pmid:28883921",
+     "where": "Table 4"
+    }
+   ],
+   "next": "copd_cxr",
+   "orders": [
+    {
+     "item": "Oxygen",
+     "dose": "88 to 92% before the gas: 24% Venturi at 2 to 3 L/min, 28% at 4 L/min, or nasal cannulae at 1 to 2 L/min; recheck the gas at 30 to 60 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28883921",
+       "where": "Table 4"
+      }
+     ]
+    },
+    {
+     "item": "Nebulizer driving gas",
+     "dose": "Hypercapnic or acidotic: drive it with compressed air, with oxygen by nasal cannulae alongside",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1cad9e2455ef",
+       "where": "1.3.11"
+      }
+     ]
+    },
+    {
+     "item": "Other tests",
+     "dose": "Theophylline level if taking it; blood cultures if febrile",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1cad9e2455ef",
+       "where": "1.3.3"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "copd_cxr",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Chest x-ray",
+   "outcomes": [
+    {
+     "id": "clear",
+     "if": "No consolidation",
+     "ddx": {
+      "lead": [
+       "COPD exacerbation"
+      ],
+      "out": []
+     },
+     "next": "copd_meds"
+    },
+    {
+     "id": "consol",
+     "if": "Consolidation; pneumonia with COPD",
+     "ddx": {
+      "lead": [
+       "Pneumonia"
+      ],
+      "out": []
+     },
+     "next": "cap_severity"
+    }
+   ]
+  },
+  {
+   "id": "copd_meds",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Chest x-ray shows no consolidation. Treatment?",
+   "options": [
+    "Bronchodilators, 5 days of oral steroid, antibiotic by sputum",
+    "Bronchodilators alone; steroids only if acidotic",
+    "IV theophylline first, nebulizers if it fails",
+    "Bronchodilators only; a steroid only if the FEV1 is below 30%"
+   ],
+   "answer": 0,
+   "chainStep": "Nebulized short-acting bronchodilators; prednisolone 30 mg orally daily for 5 days; amoxicillin, doxycycline or clarithromycin for 5 days when the sputum has changed",
+   "why": "Short-acting bronchodilators carry the treatment. Oral corticosteroids go to everyone admitted without a significant contraindication, for 5 days, because courses beyond 7 days showed no benefit. An antibiotic is weighed on severity, above all a change in sputum color or volume. IV theophylline is only an adjunct when nebulized bronchodilators are not enough.",
+   "sources": [
+    {
+     "docId": "url:1cad9e2455ef",
+     "where": "Pharmacological management; 1.3.13; 1.3.16 and rationale; 1.3.22"
+    },
+    {
+     "docId": "url:691f7322d481",
+     "where": "1.1.2; Table 1"
+    }
+   ],
+   "next": "copd_gas",
+   "orders": [
+    {
+     "item": "Prednisolone",
+     "dose": "30 mg orally daily for 5 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1cad9e2455ef",
+       "where": "1.3.16"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotic, oral first choice",
+     "dose": "Amoxicillin 500 mg three times daily, or doxycycline 200 mg on day 1 then 100 mg daily, or clarithromycin 500 mg twice daily; 5 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:691f7322d481",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotic, IV first choice",
+     "dose": "Unable to take oral or severely unwell: amoxicillin 500 mg three times daily, co-amoxiclav 1.2 g three times daily, clarithromycin 500 mg twice daily, or piperacillin with tazobactam 4.5 g three times daily; review by 48 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:691f7322d481",
+       "where": "Table 1; 1.2.3"
+      }
+     ]
+    },
+    {
+     "item": "IV theophylline",
+     "dose": "Only as an adjunct when nebulized bronchodilators are not enough; levels within 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1cad9e2455ef",
+       "where": "1.3.22; 1.3.24"
+      }
+     ]
+    }
+   ],
+   "note": "US practice and the REDUCE trial use prednisone 40 mg daily for 5 days (abstract only, PMID 23695200)."
+  },
+  {
+   "id": "copd_gas",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Blood gas after treatment",
+   "outcomes": [
+    {
+     "id": "acid",
+     "if": "Acidosis persists; pH under 7.35 with a raised PaCO2 (BTS/ICS: over 6.5 kPa, 49 mm Hg)",
+     "ddx": {
+      "lead": [
+       "COPD exacerbation"
+      ],
+      "out": []
+     },
+     "next": "copd_niv"
+    },
+    {
+     "id": "no_acid",
+     "if": "No acidosis; pH 7.35 or more",
+     "ddx": {
+      "lead": [
+       "COPD exacerbation"
+      ],
+      "out": []
+     },
+     "next": "end_copd_ward"
+    }
+   ]
+  },
+  {
+   "id": "copd_niv",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "pH 7.29, PaCO2 67 mm Hg (8.9 kPa) after an hour of treatment, alert. Next?",
+   "options": [
+    "Non-invasive ventilation, with a plan for deterioration",
+    "Raise the oxygen until the saturation reaches 98%",
+    "A doxapram infusion as a respiratory stimulant",
+    "Same treatment, and repeat the gas tomorrow"
+   ],
+   "answer": 0,
+   "chainStep": "Non-invasive ventilation (full face mask, pressure-targeted ventilator) in a dedicated area; oxygen 88 to 92%; agreed ceiling of treatment",
+   "why": "NIV is the treatment of choice when hypercapnic failure persists despite optimal medical therapy: pH under 7.35 with PaCO2 over 6.5 kPa. It runs in a dedicated setting with trained staff and a plan for deterioration, and it never delays intubation when that is more appropriate. Doxapram is only for when NIV is unavailable or inappropriate.",
+   "sources": [
+    {
+     "docId": "url:1cad9e2455ef",
+     "where": "1.3.25; 1.3.29 to 1.3.32"
+    },
+    {
+     "docId": "pmid:27026806",
+     "where": "Recommendations 1, 2, 24 to 27"
+    }
+   ],
+   "next": "end_copd_niv",
+   "orders": [
+    {
+     "item": "NIV setup",
+     "dose": "Full face mask first; pressure-targeted ventilator",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27026806",
+       "where": "Recommendations 1 and 2"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen",
+     "dose": "Target 88 to 92%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27026806",
+       "where": "Recommendation 24"
+      }
+     ]
+    },
+    {
+     "item": "Escalation",
+     "dose": "NIV must not delay invasive ventilation when that is more appropriate; severe acidosis alone does not rule out a trial of NIV where intubation is at hand",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27026806",
+       "where": "Recommendations 26 and 27"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Repeat arterial gases according to the response",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1cad9e2455ef",
+       "where": "1.3.29"
+      }
+     ]
+    }
+   ],
+   "note": "US references use 45 mm Hg; no open source read."
+  },
+  {
+   "id": "end_copd_niv",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "COPD exacerbation with persistent hypercapnic acidosis: NIV in a dedicated area, oxygen 88 to 92%, bronchodilators, prednisolone 30 mg for 5 days, antibiotics when the sputum has changed. US practice and the REDUCE trial use prednisone 40 mg daily for 5 days (abstract only, PMID 23695200)."
+  },
+  {
+   "id": "end_copd_ward",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "COPD exacerbation without acidosis: controlled oxygen 88 to 92%, bronchodilators, prednisolone 30 mg for 5 days, antibiotics when the sputum has changed; repeat the gas as the response dictates. US practice and the REDUCE trial use prednisone 40 mg daily for 5 days (abstract only, PMID 23695200)."
+  },
+  {
+   "id": "ahf_tests",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Signs of fluid overload; no known heart failure. Next?",
+   "options": [
+    "ECG, chest x-ray, bloods and a natriuretic peptide",
+    "Pulmonary artery catheter to measure filling pressures",
+    "A D-dimer first, to rule out PE before anything else",
+    "Echo first; a natriuretic peptide only if the echo is normal"
+   ],
+   "answer": 0,
+   "chainStep": "ECG, chest x-ray, bloods and a single BNP or NT-proBNP; echo if it is raised",
+   "why": "History, examination and standard tests (ECG, chest x-ray, bloods) come with a single natriuretic peptide in new suspected acute heart failure: BNP under 100 or NT-proBNP under 300 ng/L rules it out. A raised level calls for echo, ideally within 48 hours. Pulmonary artery catheters are not routine.",
+   "sources": [
+    {
+     "docId": "url:d18a85034eff",
+     "where": "1.2.1 to 1.2.5"
+    }
+   ],
+   "next": "ahf_bnp",
+   "note": "The 2021 ESC and 2022 AHA/ACC/HFSA heart failure guidelines were not reachable; NICE CG187 alone sources this branch."
+  },
+  {
+   "id": "ahf_bnp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Natriuretic peptide",
+   "outcomes": [
+    {
+     "id": "raised",
+     "if": "Raised; BNP 100 or more, or NT-proBNP 300 or more ng/L (ng/L equals pg/mL)",
+     "ddx": {
+      "lead": [
+       "Acute heart failure"
+      ],
+      "out": []
+     },
+     "next": "ahf_diuretic"
+    },
+    {
+     "id": "low",
+     "if": "Below the cutoffs; heart failure ruled out",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Acute heart failure"
+      ]
+     },
+     "next": "pe_prob"
+    }
+   ]
+  },
+  {
+   "id": "ahf_diuretic",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Natriuretic peptide raised, congested. Drug treatment?",
+   "options": [
+    "IV loop diuretic, bolus or infusion, above any home dose",
+    "Oral loop diuretic, keeping the usual home dose",
+    "IV morphine and a sodium nitroprusside infusion",
+    "IV dobutamine to support the failing heart"
+   ],
+   "answer": 0,
+   "chainStep": "IV loop diuretic, bolus or infusion (above the home dose if already on one); monitor creatinine, weight and urine output; echo within 48 hours",
+   "why": "Every patient with acute heart failure gets an IV diuretic, by bolus or infusion, at a higher dose than the home one for anyone already taking a diuretic. Opiates, inotropes and nitrates are not routine, and NICE advises against sodium nitroprusside.",
+   "sources": [
+    {
+     "docId": "url:d18a85034eff",
+     "where": "1.3.2 to 1.3.5; 1.3.7; 1.3.9; 1.3.10"
+    }
+   ],
+   "next": "ahf_bp",
+   "orders": [
+    {
+     "item": "IV loop diuretic dose",
+     "dose": "NICE gives no dose; the 2021 ESC dosing is behind a bot check and was not read",
+     "status": "pending"
+    },
+    {
+     "item": "Already on a diuretic",
+     "dose": "A higher dose than the admission dose, unless adherence was in doubt",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:d18a85034eff",
+       "where": "1.3.4"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Renal function, weight and urine output",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:d18a85034eff",
+       "where": "1.3.5"
+      }
+     ]
+    },
+    {
+     "item": "Opiates",
+     "dose": "Not routinely",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:d18a85034eff",
+       "where": "1.3.2"
+      }
+     ]
+    },
+    {
+     "item": "Sodium nitroprusside",
+     "dose": "Do not offer",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:d18a85034eff",
+       "where": "1.3.9"
+      }
+     ],
+     "note": "NICE CG187 1.3.9; US hypertensive-emergency guidance not read."
+    },
+    {
+     "item": "Beta blocker already taken",
+     "dose": "Continue unless heart rate under 50, second or third degree AV block, or shock",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:d18a85034eff",
+       "where": "1.5.1"
+      }
+     ]
+    },
+    {
+     "item": "Echo",
+     "dose": "Transthoracic Doppler echo; consider it within 48 hours of admission",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:d18a85034eff",
+       "where": "1.2.3; 1.2.4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ahf_resp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Blood gas and work of breathing",
+   "outcomes": [
+    {
+     "id": "acidemic",
+     "if": "Acidemic, severely breathless; suspected pulmonary edema",
+     "ddx": {
+      "lead": [
+       "Acute heart failure"
+      ],
+      "out": []
+     },
+     "next": "ahf_niv"
+    },
+    {
+     "id": "not",
+     "if": "No acidemia",
+     "ddx": {
+      "lead": [
+       "Acute heart failure"
+      ],
+      "out": []
+     },
+     "next": "ahf_tests"
+    }
+   ]
+  },
+  {
+   "id": "ahf_niv",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Suspected pulmonary edema, severe breathlessness, acidemic, alert. Next?",
+   "options": [
+    "CPAP or NIV now, while the workup and diuretic follow",
+    "Intubate before trying anything else",
+    "IV morphine to settle the breathing",
+    "Ultrafiltration to clear the fluid faster"
+   ],
+   "answer": 0,
+   "chainStep": "CPAP or non-invasive ventilation without delay for cardiogenic pulmonary edema with severe breathlessness and acidemia",
+   "why": "NIV is not routine in acute heart failure, but with cardiogenic pulmonary edema, severe breathlessness and acidemia it is started without delay at presentation, or later if medical treatment fails; the workup and IV diuretic follow alongside it. Invasive ventilation is for respiratory failure, reduced consciousness or exhaustion despite treatment. Ultrafiltration is kept for confirmed diuretic resistance.",
+   "sources": [
+    {
+     "docId": "url:d18a85034eff",
+     "where": "1.4.1 to 1.4.5"
+    },
+    {
+     "docId": "pmid:28883921",
+     "where": "Table 2, acute heart failure"
+    }
+   ],
+   "next": "ahf_tests",
+   "orders": [
+    {
+     "item": "Invasive ventilation",
+     "dose": "Consider if, despite treatment, there is respiratory failure, reduced consciousness or physical exhaustion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:d18a85034eff",
+       "where": "1.4.3"
+      }
+     ]
+    },
+    {
+     "item": "Ultrafiltration",
+     "dose": "Not routinely; consider only for confirmed diuretic resistance",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:d18a85034eff",
+       "where": "1.4.4; 1.4.5"
+      }
+     ]
+    }
+   ],
+   "note": "US teaching gives high-dose IV nitrates early in hypertensive acute pulmonary edema; the ESC 2021 and AHA/ACC/HFSA 2022 guidelines were not read (blocked)."
+  },
+  {
+   "id": "ahf_bp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Blood pressure",
+   "outcomes": [
+    {
+     "id": "htn",
+     "if": "Severe hypertension; with the pulmonary edema",
+     "ddx": {
+      "lead": [
+       "Acute heart failure"
+      ],
+      "out": []
+     },
+     "next": "ahf_nitrate"
+    },
+    {
+     "id": "not",
+     "if": "No severe hypertension",
+     "ddx": {
+      "lead": [
+       "Acute heart failure"
+      ],
+      "out": []
+     },
+     "next": "end_ahf"
+    }
+   ]
+  },
+  {
+   "id": "ahf_nitrate",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Acute heart failure with severe hypertension. Add?",
+   "options": [
+    "IV nitrate, with close BP monitoring in level 2 care",
+    "IV dobutamine to support the heart's output",
+    "A higher IV loop diuretic dose alone, no nitrate",
+    "IV morphine to bring the pressure down"
+   ],
+   "answer": 0,
+   "chainStep": "IV nitrate with close blood pressure monitoring in at least level 2 care",
+   "why": "Nitrates are not routine in acute heart failure, but severe hypertension, myocardial ischemia and regurgitant aortic or mitral valve disease are the circumstances in which IV nitrates are used, with the pressure watched closely in level 2 care. Inotropes and opiates are not routine.",
+   "sources": [
+    {
+     "docId": "url:d18a85034eff",
+     "where": "1.3.2; 1.3.7; 1.3.8; 1.3.10"
+    }
+   ],
+   "next": "end_ahf",
+   "orders": [
+    {
+     "item": "IV nitrate dose",
+     "dose": "Not stated in NICE CG187",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "end_ahf",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute heart failure: IV loop diuretic, NIV for severe breathlessness with acidemia, an IV nitrate when severely hypertensive; no routine opiates, inotropes or nitroprusside; echo within 48 hours."
+  },
+  {
+   "id": "cap_cxr",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Fever, cough and focal crackles. Next?",
+   "options": [
+    "Chest x-ray",
+    "Procalcitonin to decide whether to treat",
+    "Sputum culture before anything else",
+    "CT pulmonary angiogram"
+   ],
+   "answer": 0,
+   "chainStep": "Chest x-ray to confirm pneumonia",
+   "why": "Clinical signs alone are inaccurate for pneumonia, so the guideline defines it radiographically. Once it is clinically suspected and radiographically confirmed, antibiotics start whatever the procalcitonin. Routine sputum culture is not done in outpatients.",
+   "sources": [
+    {
+     "docId": "pmid:31573350",
+     "where": "Introduction; Question 5; Question 1"
+    }
+   ],
+   "next": "cap_result",
+   "note": "ATS issued a 2025 update on four questions (lung ultrasound for diagnosis, antibiotics when a virus test is positive, antibiotic duration, corticosteroids); its full text was not reachable for this version."
+  },
+  {
+   "id": "cap_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Chest x-ray",
+   "outcomes": [
+    {
+     "id": "consol",
+     "if": "Pneumonia; a new infiltrate",
+     "ddx": {
+      "lead": [
+       "Pneumonia"
+      ],
+      "out": []
+     },
+     "next": "cap_severity"
+    },
+    {
+     "id": "clear",
+     "if": "No infiltrate",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_cap_negative"
+    }
+   ]
+  },
+  {
+   "id": "cap_severity",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Pneumonia on the film. Where to treat?",
+   "options": [
+    "Clinical judgment plus the PSI or CURB-65",
+    "CURB-65 alone, without clinical judgment",
+    "The procalcitonin level decides the site",
+    "The white count decides the site of care"
+   ],
+   "answer": 0,
+   "chainStep": "Clinical judgment plus PSI (preferred) or CURB-65 for admission; ICU for vasopressors or ventilation; minor criteria and judgment guide the rest",
+   "why": "A validated prognostic rule, the PSI in preference to CURB-65, is used together with clinical judgment to decide on admission. Hypotension needing vasopressors or respiratory failure needing ventilation goes straight to the ICU; otherwise the 2007 minor criteria with judgment guide higher-intensity care. Severe CAP is one major or 3 or more minor criteria. Some patients need admission for other reasons, such as being unable to keep up oral intake.",
+   "sources": [
+    {
+     "docId": "pmid:31573350",
+     "where": "Questions 6 and 7; Introduction; Table 1"
+    }
+   ],
+   "next": "cap_site",
+   "orders": [
+    {
+     "item": "Minor criteria (3 or more is severe)",
+     "dose": "Respiratory rate 30 or more, PaO2/FiO2 250 or less, multilobar infiltrates, confusion, BUN 20 mg/dL or more, white count under 4,000, platelets under 100,000, temperature under 36, hypotension needing aggressive fluids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Major criteria (1 is severe)",
+     "dose": "Septic shock needing vasopressors; respiratory failure needing mechanical ventilation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Table 1"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "curb65"
+   ]
+  },
+  {
+   "id": "cap_site",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Severity and site of care",
+   "outcomes": [
+    {
+     "id": "out",
+     "if": "Outpatient; low risk on PSI and judgment",
+     "ddx": {
+      "lead": [
+       "Pneumonia"
+      ],
+      "out": []
+     },
+     "next": "cap_out"
+    },
+    {
+     "id": "ward",
+     "if": "Ward; admitted, not severe",
+     "ddx": {
+      "lead": [
+       "Pneumonia"
+      ],
+      "out": []
+     },
+     "next": "cap_ward"
+    },
+    {
+     "id": "severe",
+     "if": "Severe; 1 major or 3 or more minor criteria",
+     "ddx": {
+      "lead": [
+       "Pneumonia"
+      ],
+      "out": []
+     },
+     "next": "cap_icu"
+    }
+   ]
+  },
+  {
+   "id": "cap_out",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Outpatient CAP, no comorbidity, no MRSA or Pseudomonas risk. Antibiotic?",
+   "options": [
+    "Amoxicillin or doxycycline if healthy; broader cover if comorbid",
+    "Azithromycin alone, whatever the local macrolide resistance",
+    "A respiratory fluoroquinolone first-line if healthy",
+    "Amoxicillin-clavulanate plus azithromycin, as for comorbid patients"
+   ],
+   "answer": 0,
+   "chainStep": "Healthy: amoxicillin 1 g three times daily or doxycycline 100 mg twice daily; with comorbidity: amoxicillin-clavulanate or a cephalosporin plus a macrolide or doxycycline, or a respiratory fluoroquinolone alone",
+   "why": "A healthy adult gets amoxicillin or doxycycline; a macrolide alone only where pneumococcal macrolide resistance is under 25%. Chronic heart, lung, liver or renal disease, diabetes, alcoholism, malignancy or asplenia call for amoxicillin-clavulanate or a cephalosporin with a macrolide or doxycycline, or a respiratory fluoroquinolone alone.",
+   "sources": [
+    {
+     "docId": "pmid:31573350",
+     "where": "Question 8 recommendations 1 and 2; Table 3"
+    }
+   ],
+   "next": "end_cap_out",
+   "orders": [
+    {
+     "item": "Healthy, no comorbidity",
+     "dose": "Amoxicillin 1 g three times daily, or doxycycline 100 mg twice daily, or a macrolide (azithromycin 500 mg day 1 then 250 mg daily, or clarithromycin 500 mg twice daily) only where pneumococcal macrolide resistance is under 25%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Question 8 recommendation 1"
+      }
+     ]
+    },
+    {
+     "item": "With comorbidity",
+     "dose": "Amoxicillin-clavulanate 875/125 mg twice daily (or 500/125 mg three times daily, or 2,000/125 mg twice daily), or cefpodoxime 200 mg or cefuroxime 500 mg twice daily, plus azithromycin, clarithromycin or doxycycline 100 mg twice daily; or levofloxacin 750 mg, moxifloxacin 400 mg or gemifloxacin 320 mg daily alone",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Question 8 recommendation 2"
+      }
+     ]
+    },
+    {
+     "item": "Duration",
+     "dose": "Guided by clinical stability; until stable and no less than a total of 5 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Question 15"
+      }
+     ],
+     "note": "The 2025 ATS update on duration was not read."
+    }
+   ]
+  },
+  {
+   "id": "cap_ward",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Admitted to the ward, not severe, no MRSA or Pseudomonas risk. Regimen?",
+   "options": [
+    "Beta-lactam plus macrolide, or a fluoroquinolone alone",
+    "Ceftriaxone alone, since atypical cover adds nothing",
+    "Vancomycin plus piperacillin-tazobactam",
+    "Azithromycin alone, oral, for the whole course"
+   ],
+   "answer": 0,
+   "chainStep": "Ceftriaxone 1 to 2 g daily plus azithromycin 500 mg daily, or levofloxacin 750 mg daily alone",
+   "why": "Nonsevere inpatients without MRSA or Pseudomonas risk factors get a beta-lactam plus a macrolide, or a respiratory fluoroquinolone alone; a beta-lactam with doxycycline is the third option when both are contraindicated. MRSA or Pseudomonas cover is added only for locally validated risk factors.",
+   "sources": [
+    {
+     "docId": "pmid:31573350",
+     "where": "Recommendation 9.1; Question 11; Table 4"
+    }
+   ],
+   "next": "end_cap_inpatient",
+   "orders": [
+    {
+     "item": "Beta-lactam",
+     "dose": "Ampicillin-sulbactam 1.5 to 3 g every 6 h, cefotaxime 1 to 2 g every 8 h, ceftriaxone 1 to 2 g daily, or ceftaroline 600 mg every 12 h",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Recommendation 9.1"
+      }
+     ]
+    },
+    {
+     "item": "Macrolide",
+     "dose": "Azithromycin 500 mg daily or clarithromycin 500 mg twice daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Recommendation 9.1"
+      }
+     ]
+    },
+    {
+     "item": "Respiratory fluoroquinolone alone",
+     "dose": "Levofloxacin 750 mg daily or moxifloxacin 400 mg daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Recommendation 9.1"
+      }
+     ]
+    },
+    {
+     "item": "Macrolide and fluoroquinolone both contraindicated",
+     "dose": "Beta-lactam plus doxycycline 100 mg twice daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Recommendation 9.1, third option"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroids",
+     "dose": "Not routinely in nonsevere CAP",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Question 12"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cap_icu",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Severe CAP by the minor criteria, no MRSA or Pseudomonas risk. Regimen?",
+   "options": [
+    "Beta-lactam plus either a macrolide or a fluoroquinolone",
+    "A respiratory fluoroquinolone alone, given IV",
+    "Ceftriaxone alone, at the higher daily dose",
+    "Vancomycin plus cefepime, as for hospital-acquired"
+   ],
+   "answer": 0,
+   "chainStep": "Beta-lactam plus macrolide (or beta-lactam plus respiratory fluoroquinolone); blood and sputum cultures before treatment; pneumococcal and Legionella urine antigens",
+   "why": "Severe CAP without MRSA or Pseudomonas risk gets a beta-lactam with a macrolide, or a beta-lactam with a respiratory fluoroquinolone; doses are as for the ward. Severe disease is the setting for pretreatment blood and sputum cultures and for pneumococcal and Legionella urine antigens.",
+   "sources": [
+    {
+     "docId": "pmid:31573350",
+     "where": "Recommendation 9.2; Questions 1, 2 and 3; Table 4"
+    }
+   ],
+   "next": "end_cap_inpatient",
+   "orders": [
+    {
+     "item": "Cultures",
+     "dose": "Pretreatment blood cultures and sputum Gram stain and culture",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Questions 1 and 2"
+      }
+     ]
+    },
+    {
+     "item": "Urine antigens",
+     "dose": "Pneumococcal and Legionella; Legionella culture or NAAT of lower respiratory secretions",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Question 3"
+      }
+     ]
+    },
+    {
+     "item": "MRSA or Pseudomonas cover",
+     "dose": "Only with locally validated risk factors: vancomycin 15 mg/kg every 12 h or linezolid 600 mg every 12 h; piperacillin-tazobactam 4.5 g every 6 h or cefepime 2 g every 8 h, among others",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Question 11"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroids",
+     "dose": "ATS/IDSA 2019 suggested not routinely using them in severe CAP; the 2025 ATS update and the 2024 SCCM update both address this and were not read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Question 12"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_cap_out",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Outpatient CAP: amoxicillin or doxycycline when healthy; with comorbidity, amoxicillin-clavulanate or a cephalosporin plus a macrolide or doxycycline, or a respiratory fluoroquinolone alone."
+  },
+  {
+   "id": "end_cap_inpatient",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Inpatient CAP: a beta-lactam plus a macrolide, or a respiratory fluoroquinolone alone on the ward; when severe, a beta-lactam with a macrolide or a fluoroquinolone, cultures and urine antigens; MRSA or Pseudomonas cover only for those at risk."
+  },
+  {
+   "id": "end_cap_negative",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No infiltrate: outside the guideline, which covers radiographically confirmed CAP; not covered further here."
+  },
+  {
+   "id": "ptx_cxr",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Sudden one-sided pleuritic chest pain, stable. Next?",
+   "options": [
+    "Chest x-ray",
+    "Needle aspiration now, before imaging",
+    "CT chest before any x-ray",
+    "A D-dimer before any imaging"
+   ],
+   "answer": 0,
+   "chainStep": "Chest x-ray; CT if it is uncertain",
+   "why": "Outside tension pneumothorax, a recent image confirms the pneumothorax and its side before any procedure. The x-ray also shows whether there is enough of a rim to intervene safely, usually 2 cm or more on the film, or any size on CT that can be safely reached. Breathlessness with pleuritic pain also earns a chest x-ray when PE is in the frame.",
+   "sources": [
+    {
+     "docId": "pmid:37433579",
+     "where": "Preprocedural imaging in the operative position and marking of position"
+    },
+    {
+     "docId": "pmid:37433578",
+     "where": "Appendix 1, pneumothorax pathway, footnote"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.1.15"
+    }
+   ],
+   "next": "ptx_result"
+  },
+  {
+   "id": "ptx_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Chest x-ray",
+   "outcomes": [
+    {
+     "id": "psp_min",
+     "if": "Primary, minimal symptoms; no lung disease, little pain or breathlessness",
+     "ddx": {
+      "lead": [
+       "Pneumothorax"
+      ],
+      "out": []
+     },
+     "next": "ptx_conservative"
+    },
+    {
+     "id": "psp_sym",
+     "if": "Primary, symptomatic; no high-risk features",
+     "ddx": {
+      "lead": [
+       "Pneumothorax"
+      ],
+      "out": []
+     },
+     "next": "ptx_intervene"
+    },
+    {
+     "id": "high",
+     "if": "High risk or secondary; lung disease, 50 or older and smoking, hypoxia",
+     "ddx": {
+      "lead": [
+       "Pneumothorax"
+      ],
+      "out": []
+     },
+     "next": "ptx_drain"
+    },
+    {
+     "id": "none",
+     "if": "No pneumothorax",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "pe_prob"
+    }
+   ]
+  },
+  {
+   "id": "ptx_conservative",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Primary pneumothorax, minimal symptoms. Management?",
+   "options": [
+    "Conservative care, outpatient review and a follow-up x-ray",
+    "Chest drain and admission until the lung is up",
+    "Thoracic surgery now, to prevent a recurrence",
+    "Needle aspiration now, since the rim is visible"
+   ],
+   "answer": 0,
+   "chainStep": "Conservative care: outpatient review, follow-up chest x-ray at 2 to 4 weeks, no commercial flights until resolved, stop smoking",
+   "why": "Conservative management can be considered for minimally symptomatic or asymptomatic primary pneumothorax regardless of size, and it shortens the hospital stay compared with a drain. Patients managed by observation return for an x-ray at 2 to 4 weeks and do not fly until the pneumothorax has resolved.",
+   "sources": [
+    {
+     "docId": "pmid:37433578",
+     "where": "A1 recommendations and evidence statements; discharge advice, flying and activity"
+    }
+   ],
+   "next": "end_ptx_psp",
+   "orders": [
+    {
+     "item": "Follow-up x-ray",
+     "dose": "At 2 to 4 weeks after observation or needle aspiration",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37433578",
+       "where": "Discharge advice, flying and activity"
+      }
+     ]
+    },
+    {
+     "item": "Flying",
+     "dose": "Not until radiological resolution; then 7 days after the x-ray shows it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37433578",
+       "where": "Discharge advice, flying and activity"
+      }
+     ]
+    },
+    {
+     "item": "Smoking",
+     "dose": "Advise cessation: it raises the risk of recurrence",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37433578",
+       "where": "Discharge advice, flying and activity"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ptx_intervene",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Primary pneumothorax, breathless, rim over 2 cm, no high-risk features. Management?",
+   "options": [
+    "Ambulatory device, needle aspiration or a drain, by patient choice",
+    "Thoracic surgery now, at this first episode",
+    "Chemical pleurodesis through a chest drain",
+    "Chest drain mandatory, because the rim is over 2 cm"
+   ],
+   "answer": 0,
+   "chainStep": "Ambulatory device, needle aspiration or chest drain, chosen with the patient; review, and a follow-up x-ray at 2 to 4 weeks",
+   "why": "Size no longer decides on intervention, only whether it is safe, usually at 2 cm or more. An ambulatory device where the service exists, needle aspiration or a drain are the options, chosen with the patient's priority; needle aspiration shortens the stay but more often needs a further procedure. Surgery at a first episode is considered when preventing recurrence matters most, such as after tension or in high-risk occupations; chemical pleurodesis is considered to prevent recurrent secondary pneumothorax.",
+   "sources": [
+    {
+     "docId": "pmid:37433578",
+     "where": "Definitions and treatment principles; A1 recommendations, evidence statements and good practice point; Appendix 1"
+    }
+   ],
+   "next": "end_ptx_psp",
+   "orders": [
+    {
+     "item": "Follow-up x-ray",
+     "dose": "At 2 to 4 weeks after needle aspiration",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37433578",
+       "where": "Discharge advice, flying and activity"
+      }
+     ]
+    },
+    {
+     "item": "Flying",
+     "dose": "Not until radiological resolution; then 7 days after the x-ray shows it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37433578",
+       "where": "Discharge advice, flying and activity"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ptx_drain",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pneumothorax with lung disease, or 50 or older and smoking; breathless. Management?",
+   "options": [
+    "Chest drain and inpatient review",
+    "Conservative care at home",
+    "Needle aspiration and discharge",
+    "Thoracic surgery before any drain"
+   ],
+   "answer": 0,
+   "chainStep": "Chest drain with inpatient review; surgical advice when a first secondary pneumothorax caused significant physiological compromise",
+   "why": "Chest drains are centred on patients with high-risk characteristics: underlying lung disease, age 50 or more with a significant smoking history, significant hypoxia, bilateral pneumothorax, haemopneumothorax or haemodynamic compromise. A first secondary pneumothorax with significant physiological compromise earns surgical advice, and pleurodesis can be considered where a recurrence would be hazardous.",
+   "sources": [
+    {
+     "docId": "pmid:37433578",
+     "where": "Definitions and treatment principles; Appendix 1; A1 recommendations; accepted indications for surgical advice"
+    }
+   ],
+   "next": "end_ptx_drain",
+   "orders": [
+    {
+     "item": "Recurrence prevention",
+     "dose": "Talc pleurodesis can be considered at the first episode when a recurrence would be hazardous (for example severe COPD)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37433578",
+       "where": "Appendix 1, footnote; A1 recommendation"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_ptx_psp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Primary spontaneous pneumothorax: managed by symptoms, not size: conservative care when minimally symptomatic, otherwise an ambulatory device, needle aspiration or a drain; x-ray follow-up at 2 to 4 weeks."
+  },
+  {
+   "id": "end_ptx_drain",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "High-risk or secondary pneumothorax: chest drain and inpatient review; surgical advice or pleurodesis to prevent recurrence."
+  },
+  {
+   "id": "pe_prob",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "PE is possible and the patient is stable. Next?",
+   "options": [
+    "Two-level Wells score for the clinical probability",
+    "A D-dimer, whatever the clinical probability",
+    "V/Q scan first, before any scoring",
+    "CTPA first, then estimate the clinical probability"
+   ],
+   "answer": 0,
+   "chainStep": "Two-level Wells score (consider PERC first when suspicion is low); chest x-ray to exclude other causes",
+   "why": "In stable patients the strategy rests on clinical probability, from judgment or a validated rule; NICE uses the two-level Wells score, over 4 points PE likely. When suspicion is low and another diagnosis is feasible, the PERC rule can show that no test is needed. A D-dimer is not used when probability is high, because a normal result does not exclude PE.",
+   "sources": [
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.1.15; 1.1.16; 1.1.17, Table 2"
+    },
+    {
+     "docId": "pmid:31504429",
+     "where": "4.11 recommendations, clinical evaluation and D-dimer"
+    }
+   ],
+   "next": "pe_score",
+   "orders": [
+    {
+     "item": "Two-level Wells score",
+     "dose": "DVT signs 3; an alternative diagnosis less likely than PE 3; heart rate over 100: 1.5; immobilization over 3 days or surgery in 4 weeks 1.5; previous DVT or PE 1.5; haemoptysis 1; malignancy 1. Over 4 points: PE likely",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "Table 2"
+      }
+     ]
+    },
+    {
+     "item": "PERC",
+     "dose": "Consider when suspicion is low on the overall impression and other diagnoses are feasible",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.1.16"
+      }
+     ]
+    },
+    {
+     "item": "Chest x-ray",
+     "dose": "To exclude other causes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.1.15"
+      }
+     ]
+    }
+   ],
+   "note": "The 2026 AHA/ACC acute PE guideline introduces its own clinical categories; its full text was not reachable, so this branch follows ESC 2019, NICE NG158 and ASH 2020.",
+   "calcs": [
+    "wells_pe",
+    "perc"
+   ]
+  },
+  {
+   "id": "pe_score",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Two-level Wells score",
+   "outcomes": [
+    {
+     "id": "unlikely",
+     "if": "PE unlikely; 4 points or less",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "pe_perc"
+    },
+    {
+     "id": "likely",
+     "if": "PE likely; more than 4 points",
+     "ddx": {
+      "lead": [
+       "Pulmonary embolism"
+      ],
+      "out": []
+     },
+     "next": "pe_ctpa"
+    }
+   ]
+  },
+  {
+   "id": "pe_perc",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "PERC rule",
+   "outcomes": [
+    {
+     "id": "neg",
+     "if": "PERC negative; low suspicion, all 8 criteria met",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_pe_perc",
+     "orders": [
+      {
+       "item": "PERC criteria",
+       "dose": "Age under 50; pulse under 100; SaO2 over 94%; no unilateral leg swelling; no haemoptysis; no recent trauma or surgery; no history of VTE; no oral hormone use",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31504429",
+         "where": "4.3"
+        },
+        {
+         "docId": "url:329bf4ccdc3f",
+         "where": "1.1.16"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pos",
+     "if": "PERC not satisfied",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "pe_ddimer"
+    }
+   ]
+  },
+  {
+   "id": "pe_ddimer",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "PE unlikely on Wells; PERC not satisfied. Next?",
+   "options": [
+    "D-dimer; CTPA only if it is positive",
+    "CTPA now, without a D-dimer",
+    "Discharge home without any test",
+    "A V/Q scan now, instead of a D-dimer"
+   ],
+   "answer": 0,
+   "chainStep": "D-dimer (age-adjusted over 50), result within 4 hours or interim anticoagulation while waiting; CTPA if positive",
+   "why": "With PE unlikely, a D-dimer, preferably highly sensitive, saves imaging: after a negative result the 3-month risk untreated was under 1%, so PE is set aside; a positive one goes to CTPA. If the result will take more than 4 hours, interim anticoagulation covers the wait. Over 50, an age-adjusted cutoff may be used.",
+   "sources": [
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.1.14; 1.1.21"
+    },
+    {
+     "docId": "pmid:31504429",
+     "where": "4.11 recommendations, D-dimer"
+    }
+   ],
+   "next": "ddimer_result",
+   "orders": [
+    {
+     "item": "Timing",
+     "dose": "Result within 4 hours if possible; otherwise interim therapeutic anticoagulation while waiting",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.1.21"
+      }
+     ]
+    },
+    {
+     "item": "Age-adjusted cutoff",
+     "dose": "Consider an age-adjusted threshold for people over 50",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.1.14"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ddimer_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "D-dimer",
+   "outcomes": [
+    {
+     "id": "neg",
+     "if": "Negative; below the cutoff",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Pulmonary embolism"
+      ]
+     },
+     "next": "end_pe_excluded"
+    },
+    {
+     "id": "pos",
+     "if": "Positive",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "pe_ctpa"
+    }
+   ]
+  },
+  {
+   "id": "pe_ctpa",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "PE likely, or a positive D-dimer. Next?",
+   "options": [
+    "CTPA, or a V/Q scan if contrast is a problem",
+    "Repeat the D-dimer in 24 hours and compare",
+    "MR angiography to spare the radiation",
+    "Thrombolysis first, then the scan"
+   ],
+   "answer": 0,
+   "chainStep": "Anticoagulate now when clinical probability is high or intermediate (LMWH or fondaparinux); CTPA immediately (V/Q SPECT or planar V/Q if contrast allergy, creatinine clearance under 30 or high radiation risk)",
+   "why": "A likely Wells score, or a positive D-dimer, goes to CTPA immediately if possible; contrast allergy, creatinine clearance under 30 mL/min or a high radiation risk make V/Q the alternative. If imaging cannot be done at once, interim anticoagulation is given. MR angiography is not used to rule out PE.",
+   "sources": [
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.1.18; 1.1.21"
+    },
+    {
+     "docId": "pmid:31504429",
+     "where": "4.11 recommendations, anticoagulation and MRA; 6.7 recommendations"
+    }
+   ],
+   "next": "ctpa_result",
+   "orders": [
+    {
+     "item": "Anticoagulation while waiting",
+     "dose": "Without delay when clinical probability is high or intermediate; NICE offers interim anticoagulation if imaging cannot be done immediately; parenterally, LMWH or fondaparinux over UFH for most",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504429",
+       "where": "4.11 recommendations; 6.7 recommendations"
+      },
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.1.18"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ctpa_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CTPA",
+   "outcomes": [
+    {
+     "id": "pe",
+     "if": "PE; a segmental or more proximal filling defect",
+     "ddx": {
+      "lead": [
+       "Pulmonary embolism"
+      ],
+      "out": []
+     },
+     "next": "pe_risk"
+    },
+    {
+     "id": "normal",
+     "if": "Normal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_pe_excluded",
+     "orders": [
+      {
+       "item": "DVT still suspected",
+       "dose": "Consider a proximal leg vein ultrasound",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:329bf4ccdc3f",
+         "where": "1.1.20"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pe_risk",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "PE on CTPA, blood pressure normal. Next?",
+   "options": [
+    "Grade the risk: sPESI, RV on imaging, troponin",
+    "Systemic thrombolysis now, before any grading",
+    "An IVC filter to protect against a further clot",
+    "Discharge home before any risk grading"
+   ],
+   "answer": 0,
+   "chainStep": "sPESI (or PESI), RV size on CT or echo, and troponin to grade the risk",
+   "why": "Without haemodynamic instability, PE is stratified further into intermediate and low risk. The right ventricle is assessed on imaging or by biomarkers even when the PESI is low or the sPESI negative, because RV dysfunction can hide behind a reassuring score.",
+   "sources": [
+    {
+     "docId": "pmid:31504429",
+     "where": "5.7 recommendations; Table 8"
+    }
+   ],
+   "next": "pe_risk_result",
+   "calcs": [
+    "spesi"
+   ]
+  },
+  {
+   "id": "pe_risk_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Risk class",
+   "outcomes": [
+    {
+     "id": "low",
+     "if": "Low risk; sPESI 0, RV and troponin normal",
+     "ddx": {
+      "lead": [
+       "Pulmonary embolism"
+      ],
+      "out": []
+     },
+     "next": "pe_home"
+    },
+    {
+     "id": "inter",
+     "if": "Intermediate risk; sPESI 1 or more, or RV dysfunction or raised troponin",
+     "ddx": {
+      "lead": [
+       "Pulmonary embolism"
+      ],
+      "out": []
+     },
+     "next": "pe_admit"
+    }
+   ]
+  },
+  {
+   "id": "pe_home",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Low-risk PE, good support at home. Disposition?",
+   "options": [
+    "Home on apixaban or rivaroxaban, with a follow-up plan",
+    "Admit for 5 days of IV heparin, then an oral agent",
+    "Low-dose thrombolysis, then home the next day",
+    "LMWH bridged to warfarin as first choice"
+   ],
+   "answer": 0,
+   "chainStep": "Home treatment on apixaban or rivaroxaban for at least 3 months, with written warning signs and direct contact with a thrombosis team",
+   "why": "Low-risk PE is treated at home when outpatient care and anticoagulation can be provided, using a validated risk tool. Apixaban or rivaroxaban is offered first, DOACs over VKAs, for at least 3 months, with written information on warning signs and direct contact details.",
+   "sources": [
+    {
+     "docId": "pmid:33007077",
+     "where": "Recommendations 2 and 3"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.2.1; 1.2.4; 1.3.5; 1.3.8"
+    },
+    {
+     "docId": "pmid:31504429",
+     "where": "7.2.3"
+    }
+   ],
+   "next": "end_pe_home",
+   "orders": [
+    {
+     "item": "Apixaban or rivaroxaban dose",
+     "dose": "Apixaban 10 mg twice daily for 7 days, then 5 mg twice daily; or rivaroxaban 15 mg twice daily with food for 21 days, then 20 mg once daily with food",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3ae7a526534f",
+       "where": "2.1"
+      },
+      {
+       "docId": "url:cf40393193b8",
+       "where": "2.1"
+      },
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.3.8"
+      }
+     ]
+    },
+    {
+     "item": "Duration",
+     "dose": "At least 3 months",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.3.5"
+      }
+     ]
+    },
+    {
+     "item": "Follow-up plan",
+     "dose": "Written information on warning symptoms; direct contact with a thrombosis team; out-of-hours contacts",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.2.4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pe_admit",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "PE, normotensive, sPESI 1 or more or a strained right ventricle. Treatment?",
+   "options": [
+    "Admit and anticoagulate; no routine thrombolysis",
+    "Systemic thrombolysis now, then anticoagulate",
+    "Anticoagulate, plus an IVC filter for safety",
+    "Home treatment today on an oral anticoagulant"
+   ],
+   "answer": 0,
+   "chainStep": "Admit; LMWH or fondaparinux (or a DOAC); monitor when RV dysfunction and troponin are both abnormal; rescue thrombolysis if instability develops",
+   "why": "Normotensive patients with any marker of raised risk are admitted. Routine primary thrombolysis is not recommended without instability, even with RV dysfunction: the bleeding risk outweighs the benefit. RV dysfunction with a positive troponin earns monitoring over the first hours or days, and rescue thrombolysis or embolectomy is kept for those who deteriorate.",
+   "sources": [
+    {
+     "docId": "pmid:31504429",
+     "where": "7.2.2; 6.7 recommendations; 6.9 recommendations"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.6.3"
+    },
+    {
+     "docId": "pmid:33007077",
+     "where": "Recommendation 7"
+    }
+   ],
+   "next": "end_pe_admit",
+   "orders": [
+    {
+     "item": "Parenteral start",
+     "dose": "LMWH or fondaparinux over UFH for most",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504429",
+       "where": "6.7 recommendations"
+      }
+     ]
+    },
+    {
+     "item": "Oral",
+     "dose": "A NOAC in preference to a VKA when eligible",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504429",
+       "where": "6.7 recommendations"
+      }
+     ]
+    },
+    {
+     "item": "RV dysfunction plus positive troponin",
+     "dose": "Monitor over the first hours or days; LMWH for the first 2 to 3 days before switching to oral",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504429",
+       "where": "7.2.2"
+      }
+     ]
+    },
+    {
+     "item": "Systemic thrombolysis",
+     "dose": "Not with haemodynamic stability, with or without RV dysfunction",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.6.3"
+      },
+      {
+       "docId": "pmid:31504429",
+       "where": "7.2.2"
+      }
+     ]
+    },
+    {
+     "item": "Deterioration",
+     "dose": "Rescue thrombolysis, or surgical embolectomy or catheter-directed treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504429",
+       "where": "6.7 recommendations; 7.2.2"
+      }
+     ]
+    },
+    {
+     "item": "IVC filter",
+     "dose": "Not routinely",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:31504429",
+       "where": "6.9 recommendations"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_pe_excluded",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "PE excluded (a negative D-dimer with PE unlikely, or a normal CTPA): think of other causes and explain when to come back; a leg ultrasound if DVT is still suspected."
+  },
+  {
+   "id": "end_pe_perc",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No further PE testing; think of other causes."
+  },
+  {
+   "id": "end_pe_home",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Low-risk PE: home on apixaban or rivaroxaban for at least 3 months, with written warning signs and direct contact details."
+  },
+  {
+   "id": "end_pe_admit",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Intermediate-risk PE: admitted and anticoagulated, no routine thrombolysis, monitoring when the right ventricle and troponin are both abnormal, rescue reperfusion if it turns unstable."
+  }
+ ],
+ "cases": [
+  {
+   "id": "tension",
+   "label": "Tension pneumothorax",
+   "vignette": "26-year-old man, sudden left chest pain an hour ago, now gasping and anxious. HR 134, BP 80/48, RR 36, SpO2 82% on air.",
+   "picks": {
+    "front": "tension"
+   },
+   "results": {
+    "front": "Trachea deviated to the right; left chest hyperresonant with no breath sounds; neck veins distended. ECG: sinus tachycardia."
+   }
+  },
+  {
+   "id": "anaph_settles",
+   "label": "Anaphylaxis that settles",
+   "vignette": "29-year-old woman, stung by a wasp 10 minutes ago: hives, swollen lips, a hoarse voice and noisy breathing. Weight 60 kg. BP 102/66, HR 118, SpO2 93%.",
+   "picks": {
+    "front": "anaph",
+    "anaph_response": "settled"
+   },
+   "results": {
+    "front": "Inspiratory stridor and wheeze, generalized hives, lip swelling. ECG: sinus tachycardia.",
+    "anaph_response": "Five minutes after one IM dose: stridor gone, wheeze easing, BP 118/74, SpO2 97%."
+   }
+  },
+  {
+   "id": "anaph_refractory",
+   "label": "Refractory anaphylaxis on a beta blocker",
+   "vignette": "58-year-old man on metoprolol, collapsed 15 minutes after a shrimp dinner: flushed, wheezy, faint. Weight 80 kg. BP 72/40, HR 64.",
+   "picks": {
+    "front": "anaph",
+    "anaph_response": "refractory"
+   },
+   "results": {
+    "front": "Generalized hives and wheeze, BP 72/40. ECG: sinus rhythm, no ST change.",
+    "anaph_response": "After two IM doses 5 minutes apart and a 20 mL/kg crystalloid bolus: BP 76/44, still wheezy."
+   }
+  },
+  {
+   "id": "acs",
+   "label": "Breathlessness as an anginal equivalent",
+   "vignette": "66-year-old woman with diabetes, an hour of breathlessness and sweating, no chest pain. BP 132/78, HR 96, SpO2 94%.",
+   "picks": {
+    "front": "acs"
+   },
+   "results": {
+    "front": "ECG: 2 mm ST elevation in V2 to V5. Chest clear, no rash, both sides air entry equal."
+   }
+  },
+  {
+   "id": "massive_pe",
+   "label": "High-risk PE",
+   "vignette": "48-year-old woman on the combined pill, a swollen left calf for a week, collapsed at home breathless. No recent surgery, trauma, stroke or bleeding. BP 78/50, HR 128, SpO2 84%.",
+   "picks": {
+    "front": "shock",
+    "shock_echo_result": "rv"
+   },
+   "results": {
+    "front": "Cold peripheries, raised neck veins, clear chest with equal air entry, no rash or stridor. ECG: sinus tachycardia, no ST elevation.",
+    "shock_echo_result": "Too unstable to leave resus. Bedside echo: right ventricle larger than the left, poorly contracting; left ventricle small and vigorous; no effusion."
+   }
+  },
+  {
+   "id": "cardiogenic",
+   "label": "Shock without RV dysfunction",
+   "vignette": "71-year-old man with a past myocardial infarction, breathless and clammy. BP 82/54, HR 104, SpO2 89%.",
+   "picks": {
+    "front": "shock",
+    "shock_echo_result": "no_rv"
+   },
+   "results": {
+    "front": "Cold hands, crackles to the mid-zones, no rash or stridor. ECG: old Q waves, no ST elevation or new ischemic change.",
+    "shock_echo_result": "Bedside echo: right ventricle normal size; left ventricle dilated and poorly contracting."
+   }
+  },
+  {
+   "id": "asthma_home",
+   "label": "Moderate asthma, good response",
+   "vignette": "24-year-old woman with asthma, two days of wheeze after a cold, speaking in sentences. RR 22, HR 104, SpO2 95%.",
+   "picks": {
+    "front": "stable",
+    "findings": "asthma",
+    "asthma_sev": "mm",
+    "asthma_response": "good"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Known asthma; widespread wheeze, no stridor, no rash.",
+    "asthma_sev": "PEF 55% of her best.",
+    "asthma_response": "After three SABA doses and oral prednisone: PEF 78% of best, holding 60 minutes after the last dose; no distress."
+   }
+  },
+  {
+   "id": "asthma_icu",
+   "label": "Severe asthma, poor response",
+   "vignette": "31-year-old man with asthma and two past ICU admissions, breathless at rest, speaking in phrases. RR 30, HR 122, SpO2 92%.",
+   "picks": {
+    "front": "stable",
+    "findings": "asthma",
+    "asthma_sev": "severe",
+    "asthma_response": "poor"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Known asthma; loud wheeze both sides, accessory muscles working, no stridor.",
+    "asthma_sev": "PEF 30% of predicted.",
+    "asthma_response": "After an hour of SABA, ipratropium and prednisone: PEF 35% of predicted, PCO2 40 mm Hg, alert."
+   }
+  },
+  {
+   "id": "asthma_ward",
+   "label": "Severe asthma, incomplete response",
+   "vignette": "45-year-old woman with asthma, breathless at rest since the morning. RR 28, HR 112, SpO2 93%.",
+   "picks": {
+    "front": "stable",
+    "findings": "asthma",
+    "asthma_sev": "severe",
+    "asthma_response": "incomplete"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Known asthma; widespread wheeze, no stridor.",
+    "asthma_sev": "PEF 35% of predicted.",
+    "asthma_response": "After treatment: PEF 55% of predicted, still mildly breathless."
+   }
+  },
+  {
+   "id": "asthma_arrest",
+   "label": "Life-threatening asthma",
+   "vignette": "19-year-old with asthma brought in by friends, too breathless to speak, drowsy. RR 8, HR 132, SpO2 86% on oxygen.",
+   "picks": {
+    "front": "stable",
+    "findings": "asthma",
+    "asthma_sev": "arrest"
+   },
+   "results": {
+    "front": "BP 118/70. No rash or stridor; ECG: sinus tachycardia, no ST change.",
+    "findings": "Known asthma; a quiet chest with barely any air movement.",
+    "asthma_sev": "Drowsy and confused; cannot attempt a peak flow."
+   }
+  },
+  {
+   "id": "copd_niv",
+   "label": "COPD exacerbation needing NIV",
+   "vignette": "69-year-old man with COPD, three days of more breathlessness and green sputum. RR 28, HR 104, SpO2 86% on air, alert.",
+   "picks": {
+    "front": "stable",
+    "findings": "copd",
+    "copd_cxr": "clear",
+    "copd_gas": "acid"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Known COPD; wheeze and prolonged expiration; sputum green and more than usual; no leg swelling.",
+    "copd_cxr": "Chest x-ray: hyperinflated lungs, no consolidation.",
+    "copd_gas": "After an hour of nebulizers, prednisolone and an antibiotic, on a 28% Venturi: pH 7.29, PaCO2 67 mm Hg (8.9 kPa)."
+   }
+  },
+  {
+   "id": "copd_ward",
+   "label": "COPD exacerbation without acidosis",
+   "vignette": "74-year-old woman with COPD, more breathless for two days with yellow sputum. RR 24, HR 96, SpO2 89% on air.",
+   "picks": {
+    "front": "stable",
+    "findings": "copd",
+    "copd_cxr": "clear",
+    "copd_gas": "no_acid"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Known COPD; scattered wheeze; sputum yellow and thicker than usual.",
+    "copd_cxr": "Chest x-ray: hyperinflated lungs, no consolidation.",
+    "copd_gas": "On a 24% Venturi after treatment: pH 7.38, PaCO2 45 mm Hg (6.0 kPa)."
+   }
+  },
+  {
+   "id": "scape",
+   "label": "Hypertensive pulmonary edema",
+   "vignette": "72-year-old woman with no known heart failure, woke gasping, cannot lie flat. BP 214/118, HR 112, RR 34, SpO2 84% on air, alert.",
+   "picks": {
+    "front": "stable",
+    "findings": "hf",
+    "ahf_resp": "acidemic",
+    "ahf_bnp": "raised",
+    "ahf_bp": "htn"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG: sinus tachycardia, left ventricular hypertrophy, no ST elevation or new ischemia.",
+    "findings": "Crackles to the apices, raised neck veins, mild ankle edema.",
+    "ahf_bnp": "NT-proBNP 6,800 ng/L.",
+    "ahf_resp": "Arterial gas: pH 7.24; she is working hard to breathe, still alert.",
+    "ahf_bp": "BP still 208/116 on the monitor."
+   }
+  },
+  {
+   "id": "ahf",
+   "label": "Acute heart failure, normal pressure",
+   "vignette": "79-year-old man with no known heart failure, a week of worsening breathlessness, two pillows at night, ankles swelling, 4 kg heavier. BP 132/80, HR 92, SpO2 91%.",
+   "picks": {
+    "front": "stable",
+    "findings": "hf",
+    "ahf_bnp": "raised",
+    "ahf_resp": "not",
+    "ahf_bp": "not"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Bibasal crackles, neck veins raised, pitting edema to the knees.",
+    "ahf_bnp": "NT-proBNP 3,800 ng/L.",
+    "ahf_resp": "Arterial gas: pH 7.41; breathing comfortably at rest.",
+    "ahf_bp": "BP 128/78."
+   }
+  },
+  {
+   "id": "hf_ruled_out",
+   "label": "Heart failure ruled out, PE unlikely",
+   "vignette": "68-year-old woman, two weeks of breathlessness on exertion and swollen ankles. No known heart failure. BP 138/84, HR 88, SpO2 95%.",
+   "picks": {
+    "front": "stable",
+    "findings": "hf",
+    "ahf_resp": "not",
+    "ahf_bnp": "low",
+    "pe_score": "unlikely",
+    "pe_perc": "pos",
+    "ddimer_result": "neg"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Both ankles puffy, a few basal crackles, neck veins not raised.",
+    "ahf_resp": "Arterial gas: pH 7.40; comfortable at rest.",
+    "ahf_bnp": "NT-proBNP 180 ng/L.",
+    "pe_score": "Wells 3: no other diagnosis is more likely than PE; no DVT signs, heart rate under 100, no immobility, surgery, previous VTE, haemoptysis or cancer.",
+    "pe_perc": "PERC not satisfied: she is 68.",
+    "ddimer_result": "D-dimer below her age-adjusted cutoff."
+   }
+  },
+  {
+   "id": "cap_out",
+   "label": "Pneumonia treated at home",
+   "vignette": "34-year-old man, no medical history, three days of fever and a productive cough. RR 20, HR 96, BP 124/76, SpO2 96%, temperature 38.6.",
+   "picks": {
+    "front": "stable",
+    "findings": "infection",
+    "cap_result": "consol",
+    "cap_site": "out"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Bronchial breathing and crackles at the right base.",
+    "cap_result": "Chest x-ray: right lower lobe consolidation.",
+    "cap_site": "PSI class I; eating and drinking, good support at home; no recent hospital stay or IV antibiotics."
+   }
+  },
+  {
+   "id": "cap_ward",
+   "label": "Pneumonia on the ward",
+   "vignette": "67-year-old woman with type 2 diabetes, fever, cough and breathlessness. RR 24, HR 102, BP 128/74, SpO2 92%, temperature 38.9.",
+   "picks": {
+    "front": "stable",
+    "findings": "infection",
+    "cap_result": "consol",
+    "cap_site": "ward"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Crackles at the left base.",
+    "cap_result": "Chest x-ray: left lower lobe consolidation.",
+    "cap_site": "Vomiting and unable to keep up oral intake, so admitted; alert, RR 24, BUN 16 mg/dL (urea 5.7 mmol/L), no minor criteria met; no MRSA or Pseudomonas in the past, no hospital stay or IV antibiotics in 90 days."
+   }
+  },
+  {
+   "id": "cap_severe",
+   "label": "Severe pneumonia by minor criteria",
+   "vignette": "58-year-old man, two days of fever and cough, now muddled. RR 32, HR 116, BP 104/62, SpO2 84% on air, temperature 39.4.",
+   "picks": {
+    "front": "stable",
+    "findings": "infection",
+    "cap_result": "consol",
+    "cap_site": "severe"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Crackles and bronchial breathing over both lower zones.",
+    "cap_result": "Chest x-ray: consolidation in both lower lobes.",
+    "cap_site": "Confused, RR 32, BUN 28 mg/dL (urea 10.0 mmol/L), PaO2/FiO2 230, multilobar: 5 minor criteria; no vasopressor or ventilator needed; no MRSA or Pseudomonas risk."
+   }
+  },
+  {
+   "id": "cap_clear",
+   "label": "Fever and cough, clear film",
+   "vignette": "41-year-old woman, two days of fever and a dry cough. RR 18, HR 92, BP 122/78, SpO2 97%, temperature 38.2.",
+   "picks": {
+    "front": "stable",
+    "findings": "infection",
+    "cap_result": "clear"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "A few crackles at the right base.",
+    "cap_result": "Chest x-ray: clear lungs, no infiltrate."
+   }
+  },
+  {
+   "id": "psp_small",
+   "label": "Small primary pneumothorax, few symptoms",
+   "vignette": "22-year-old tall man, sudden sharp left chest pain at rest 6 hours ago, now mild, not breathless. HR 82, BP 122/74, SpO2 98%.",
+   "picks": {
+    "front": "stable",
+    "findings": "ptx",
+    "ptx_result": "psp_min"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Breath sounds slightly quieter on the left; no wheeze, crackles or leg swelling.",
+    "ptx_result": "Chest x-ray: a 1 cm apical left pneumothorax; lungs otherwise normal. No lung disease, never smoked."
+   }
+  },
+  {
+   "id": "psp_symptomatic",
+   "label": "Symptomatic primary pneumothorax",
+   "vignette": "27-year-old woman, office worker, sudden right chest pain and breathlessness walking. HR 98, BP 118/72, SpO2 95%.",
+   "picks": {
+    "front": "stable",
+    "findings": "ptx",
+    "ptx_result": "psp_sym"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Reduced breath sounds on the right; no wheeze or crackles.",
+    "ptx_result": "Chest x-ray: a 3 cm lateral right pneumothorax. No lung disease, non-smoker, no hypoxia; breathless and sore, and she wants quick relief."
+   }
+  },
+  {
+   "id": "ssp",
+   "label": "Secondary pneumothorax in COPD",
+   "vignette": "67-year-old man with COPD who smokes, sudden worse breathlessness and right chest pain, no change in sputum. HR 108, BP 136/80, SpO2 90% on air.",
+   "picks": {
+    "front": "stable",
+    "findings": "ptx",
+    "ptx_result": "high"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Right side quieter and hyper-resonant; trachea central; sputum unchanged.",
+    "ptx_result": "Chest x-ray: a 2.5 cm right pneumothorax over emphysematous lungs."
+   }
+  },
+  {
+   "id": "no_ptx_pe",
+   "label": "No pneumothorax, then PE ruled out",
+   "vignette": "52-year-old woman on estrogen therapy, sudden right pleuritic pain and breathlessness this morning. HR 96, BP 128/80, SpO2 96%.",
+   "picks": {
+    "front": "stable",
+    "findings": "ptx",
+    "ptx_result": "none",
+    "pe_score": "unlikely",
+    "pe_perc": "pos",
+    "ddimer_result": "pos",
+    "ctpa_result": "normal"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Breath sounds perhaps a little quieter on the right; no wheeze, crackles or leg swelling.",
+    "ptx_result": "Chest x-ray: no pneumothorax, lungs clear.",
+    "pe_score": "Wells 3: no other diagnosis is more likely than PE; heart rate under 100, no DVT signs, immobility, surgery, previous VTE, haemoptysis or cancer.",
+    "pe_perc": "PERC not satisfied: she is 52 and takes estrogen.",
+    "ddimer_result": "D-dimer above the cutoff.",
+    "ctpa_result": "CTPA: no filling defect."
+   }
+  },
+  {
+   "id": "pe_home",
+   "label": "Low-risk PE, home",
+   "vignette": "36-year-old woman, two days of breathlessness after a long flight, a painful swollen right calf. HR 92, BP 126/80, SpO2 95%. Lives with her partner.",
+   "picks": {
+    "front": "stable",
+    "findings": "pe",
+    "pe_score": "likely",
+    "ctpa_result": "pe",
+    "pe_risk_result": "low"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Chest clear; right calf swollen and tender along the deep veins.",
+    "pe_score": "Wells 6: DVT signs 3, no other diagnosis more likely than PE 3.",
+    "ctpa_result": "CTPA: segmental filling defects in the right lower lobe.",
+    "pe_risk_result": "sPESI 0; RV/LV ratio normal on CT; troponin normal."
+   }
+  },
+  {
+   "id": "pe_intermediate",
+   "label": "Intermediate-risk PE",
+   "vignette": "63-year-old man, 10 days after a knee replacement, sudden breathlessness this morning. HR 112, BP 124/78, SpO2 91%.",
+   "picks": {
+    "front": "stable",
+    "findings": "pe",
+    "pe_score": "likely",
+    "ctpa_result": "pe",
+    "pe_risk_result": "inter"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Chest clear; no wheeze, crackles or edema.",
+    "pe_score": "Wells 6: heart rate over 100 1.5, surgery in the last 4 weeks 1.5, no other diagnosis more likely than PE 3.",
+    "ctpa_result": "CTPA: bilateral main pulmonary artery filling defects.",
+    "pe_risk_result": "sPESI 1 (heart rate 110 or more); RV larger than LV on CT; troponin raised."
+   }
+  },
+  {
+   "id": "perc_negative",
+   "label": "PERC negative, no testing",
+   "vignette": "29-year-old man, two days of sharp left chest pain on deep breaths after a cold, a little short of breath. HR 84, BP 124/76, SpO2 98%.",
+   "picks": {
+    "front": "stable",
+    "findings": "pe",
+    "pe_score": "unlikely",
+    "pe_perc": "neg"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Chest clear; no wheeze, crackles or leg swelling; the pain is reproduced by pressing on the chest wall.",
+    "pe_score": "Wells 0: another diagnosis is more likely than PE; no DVT signs, heart rate under 100, no immobility, surgery, previous VTE, haemoptysis or cancer.",
+    "pe_perc": "Age 29, pulse 84, SaO2 98%; no leg swelling, haemoptysis, recent trauma or surgery, previous VTE or hormone use; suspicion is low."
+   }
+  },
+  {
+   "id": "copd_pneumonia",
+   "label": "COPD with pneumonia on the film",
+   "vignette": "71-year-old woman with COPD, three days of more breathlessness, fever and green sputum. RR 26, HR 104, BP 132/76, SpO2 89% on air, temperature 38.7.",
+   "picks": {
+    "front": "stable",
+    "findings": "copd",
+    "copd_cxr": "consol",
+    "cap_site": "ward"
+   },
+   "results": {
+    "front": "No tension, anaphylaxis or shock; ECG without ST elevation or new ischemia.",
+    "findings": "Known COPD; wheeze, and crackles at the right base; sputum green and more than usual.",
+    "copd_cxr": "Chest x-ray: new right lower lobe consolidation over hyperinflated lungs.",
+    "cap_site": "Admitted on clinical judgment with an oxygen need; alert, RR 26, BUN 15 mg/dL (urea 5.4 mmol/L), no minor criteria met; no MRSA or Pseudomonas in the past, no hospital stay or IV antibiotics in 90 days."
+   }
+  }
+ ]
+}

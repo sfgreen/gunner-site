@@ -1,0 +1,1172 @@
+{
+ "id": "pw_chest_pain",
+ "title": "Chest pain",
+ "world": "cardio",
+ "synonyms": [
+  "ACS",
+  "acute coronary syndrome",
+  "STEMI",
+  "NSTEMI",
+  "NSTE-ACS",
+  "myocardial infarction",
+  "MI",
+  "heart attack",
+  "angina",
+  "aortic dissection",
+  "acute aortic syndrome",
+  "chest pressure"
+ ],
+ "reviewBy": "2029-06-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:40013746",
+   "label": "ACS 2025",
+   "title": "2025 ACC/AHA/ACEP/NAEMSP/SCAI Guideline for the Management of Patients With Acute Coronary Syndromes",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40013746/"
+  },
+  {
+   "docId": "pmid:34756653",
+   "label": "Chest pain 2021",
+   "title": "2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR Guideline for the Evaluation and Diagnosis of Chest Pain",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34756653/"
+  },
+  {
+   "docId": "pmid:36334952",
+   "label": "Aortic 2022",
+   "title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36334952/"
+  },
+  {
+   "docId": "pmid:29922729",
+   "label": "HEART score guide 2018 (review)",
+   "title": "The HEART score: A guide to its application in the emergency department (Turk J Emerg Med 2018), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29922729/"
+  }
+ ],
+ "differential": [
+  "ACS",
+  "Aortic dissection",
+  "Pulmonary embolism",
+  "Tension pneumothorax",
+  "Tamponade",
+  "Esophageal rupture",
+  "Pericarditis"
+ ],
+ "calculators": [
+  {
+   "id": "heart",
+   "title": "HEART score",
+   "kind": "points",
+   "items": [
+    {
+     "id": "history",
+     "label": "History",
+     "options": [
+      {
+       "label": "Slightly suspicious: nonspecific for ACS",
+       "points": 0
+      },
+      {
+       "label": "Moderately suspicious: mixed features",
+       "points": 1
+      },
+      {
+       "label": "Highly suspicious: traditional ACS features",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "ecg",
+     "label": "ECG",
+     "options": [
+      {
+       "label": "Normal",
+       "points": 0
+      },
+      {
+       "label": "Nonspecific repolarization disturbance",
+       "points": 1
+      },
+      {
+       "label": "Significant ST deviation, not known old",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "age",
+     "label": "Age",
+     "options": [
+      {
+       "label": "Under 45",
+       "points": 0
+      },
+      {
+       "label": "45 to 64",
+       "points": 1
+      },
+      {
+       "label": "65 or older",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "risk",
+     "label": "Risk factors",
+     "options": [
+      {
+       "label": "None",
+       "points": 0
+      },
+      {
+       "label": "1 or 2",
+       "points": 1
+      },
+      {
+       "label": "3 or more, or known atherosclerotic disease",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "troponin",
+     "label": "Troponin",
+     "options": [
+      {
+       "label": "Below the assay's cutoff",
+       "points": 0
+      },
+      {
+       "label": "1 to 3 times the cutoff",
+       "points": 1
+      },
+      {
+       "label": "More than 3 times the cutoff",
+       "points": 2
+      }
+     ]
+    }
+   ],
+   "bands": [
+    {
+     "gte": 0,
+     "lte": 3,
+     "text": "0 to 3: low risk; a candidate for early discharge"
+    },
+    {
+     "gte": 4,
+     "lte": 6,
+     "text": "4 to 6: moderate risk; observation and further evaluation"
+    },
+    {
+     "gte": 7,
+     "lte": 10,
+     "text": "7 to 10: high risk; a candidate for urgent intervention"
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:29922729",
+     "where": "Table 1"
+    },
+    {
+     "docId": "pmid:34756653",
+     "where": "Table 6; Table 8; 4.1.3 recommendations 1 and 2"
+    }
+   ],
+   "note": "Risk factors: diabetes, smoking, hypertension, high cholesterol, obesity, a family history of coronary disease. Known atherosclerotic disease: a past MI or coronary revascularization, peripheral arterial disease, stroke. Troponin against the local assay's cutoff. The 2021 chest pain guideline calls 3 or less low risk only with initial and serial troponins below the 99th percentile (Table 8).",
+   "tests": [
+    {
+     "picks": {
+      "history": 0,
+      "ecg": 0,
+      "age": 0,
+      "risk": 0,
+      "troponin": 0
+     },
+     "expect": 0
+    },
+    {
+     "picks": {
+      "history": 1,
+      "ecg": 0,
+      "age": 2,
+      "risk": 2,
+      "troponin": 0
+     },
+     "expect": 5
+    },
+    {
+     "picks": {
+      "history": 2,
+      "ecg": 2,
+      "age": 2,
+      "risk": 2,
+      "troponin": 2
+     },
+     "expect": 10
+    },
+    {
+     "picks": {
+      "history": 2,
+      "ecg": 1,
+      "age": 2,
+      "risk": 2
+     },
+     "expect": 7
+    }
+   ]
+  }
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "First move?",
+   "options": [
+    "12-lead ECG within 10 minutes",
+    "Draw a troponin and wait for it",
+    "Chest x-ray first",
+    "Start a heparin drip"
+   ],
+   "answer": 0,
+   "chainStep": "12-lead ECG within 10 minutes of first contact; blood pressure in both arms",
+   "why": "The ECG sorts ST elevation from everything else, and the clock is 10 minutes from first medical contact. Take the pressure in both arms while it prints.",
+   "next": "first_look",
+   "sources": [
+    {
+     "docId": "pmid:40013746",
+     "where": "3.1.2 rec 1, Class 1; 3.1.1 rec 1"
+    },
+    {
+     "docId": "pmid:36334952",
+     "where": "7.1"
+    }
+   ],
+   "note": "Hypotension or distended neck veins: a bedside echo looks for effusion and tamponade before the route goes on. Not in this version: tension pneumothorax (a bedside diagnosis), esophageal rupture, shock, presentations 12 to 24 hours old, a new LBBB.",
+   "orders": [
+    {
+     "item": "Chest x-ray",
+     "dose": "Useful to look for other cardiac, pulmonary and thoracic causes; it does not come before the ECG",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34756653",
+       "where": "2.3.3 rec 1, Class 1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "first_look",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "ECG and both arm pressures",
+   "outcomes": [
+    {
+     "id": "ste_inf",
+     "if": "ST elevation in II, III and aVF; no features of an aortic syndrome",
+     "ddx": {
+      "lead": [
+       "ACS"
+      ],
+      "out": []
+     },
+     "next": "rv_leads"
+    },
+    {
+     "id": "ste_other",
+     "if": "ST elevation in another territory; no features of an aortic syndrome",
+     "ddx": {
+      "lead": [
+       "ACS"
+      ],
+      "out": []
+     },
+     "next": "pci_access"
+    },
+    {
+     "id": "ste_mimic",
+     "if": "Pericarditis pattern; diffuse ST elevation with PR depression, no reciprocal change",
+     "ddx": {
+      "lead": [
+       "Pericarditis"
+      ],
+      "out": []
+     },
+     "next": "end_mimic"
+    },
+    {
+     "id": "no_ste",
+     "if": "No ST elevation, no features of an aortic syndrome",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "troponin"
+    },
+    {
+     "id": "aas",
+     "if": "Aortic syndrome features; abrupt severe chest or back pain with a pulse deficit or an arm pressure gap, a focal neurologic deficit, or a known aortic aneurysm or connective tissue disease",
+     "ddx": {
+      "lead": [
+       "Aortic dissection"
+      ],
+      "out": []
+     },
+     "next": "cta"
+    }
+   ]
+  },
+  {
+   "id": "rv_leads",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Inferior ST elevation. Before any nitroglycerin?",
+   "options": [
+    "Right-sided leads (V4R)",
+    "Nitroglycerin 0.4 mg sublingual now",
+    "IV morphine for the pain first",
+    "IV metoprolol before the cath lab"
+   ],
+   "answer": 0,
+   "chainStep": "Right-sided leads (V4R) before any nitroglycerin",
+   "why": "Right-sided leads look for right ventricular involvement, the inferior STEMI whose pressure falls on nitroglycerin.",
+   "next": "rv_check",
+   "sources": [
+    {
+     "docId": "pmid:40013746",
+     "where": "3.1.2 supportive text; Table 6"
+    }
+   ]
+  },
+  {
+   "id": "rv_check",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "V4R",
+   "outcomes": [
+    {
+     "id": "rv",
+     "if": "V4R elevated: right ventricular involvement",
+     "orders": [
+      {
+       "item": "Nitroglycerin",
+       "dose": "Avoid: suspected RV infarction",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "pmid:40013746",
+         "where": "Table 6, IV nitroglycerin row"
+        }
+       ]
+      },
+      {
+       "item": "IV fluids",
+       "dose": "Only if hypotensive with clear lungs; not stated in the ACS guideline",
+       "status": "pending"
+      },
+      {
+       "item": "Vasopressor",
+       "dose": "If hypotension persists after fluids; agent not stated in the ACS guideline",
+       "status": "pending"
+      }
+     ],
+     "next": "pci_access"
+    },
+    {
+     "id": "no_rv",
+     "if": "V4R normal",
+     "next": "pci_access"
+    }
+   ]
+  },
+  {
+   "id": "pci_access",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Time to a cath lab",
+   "outcomes": [
+    {
+     "id": "onsite",
+     "if": "Cath lab here; primary PCI within 90 minutes of first contact",
+     "next": "pci"
+    },
+    {
+     "id": "transfer",
+     "if": "Transfer within 120 minutes; no cath lab here, but transfer gets first contact to device within 120 minutes",
+     "next": "pci"
+    },
+    {
+     "id": "far",
+     "if": "PCI over 120 minutes away; no cath lab here, symptoms under 12 hours, no contraindication to fibrinolysis",
+     "next": "lytic"
+    }
+   ]
+  },
+  {
+   "id": "pci",
+   "kind": "step",
+   "stage": "Reperfuse",
+   "ask": "Primary PCI is reachable in time. Reperfusion?",
+   "options": [
+    "Primary PCI: first contact to device 90 minutes, or 120 with a transfer",
+    "Tenecteplase now",
+    "Admit and repeat the ECG in 6 hours",
+    "Bedside echo to confirm a wall motion abnormality first"
+   ],
+   "answer": 0,
+   "chainStep": "Primary PCI: first contact to device 90 minutes, or 120 with a transfer",
+   "why": "Primary PCI within 90 minutes of first medical contact, or 120 when the patient must be transferred.",
+   "next": "pci_meds",
+   "sources": [
+    {
+     "docId": "pmid:40013746",
+     "where": "5.2.1 rec 1, Class 1; 5.3 rec 1"
+    }
+   ]
+  },
+  {
+   "id": "pci_meds",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "A prior stroke or TIA rules out which P2Y12 load?",
+   "options": [
+    "Prasugrel 60 mg",
+    "Ticagrelor 180 mg",
+    "Clopidogrel 600 mg",
+    "None, all three are fine"
+   ],
+   "answer": 0,
+   "chainStep": "Aspirin 162 to 325 mg chewed plus ticagrelor 180 mg (never prasugrel after a stroke or TIA), heparin for PCI, high-intensity statin",
+   "why": "Prasugrel after a stroke or TIA is Class 3: Harm. Ticagrelor or prasugrel is the usual partner for aspirin when PCI is the plan.",
+   "orders": [
+    {
+     "item": "Aspirin",
+     "dose": "162 to 325 mg, chewed; then 75 to 100 mg daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "Table 7"
+      }
+     ]
+    },
+    {
+     "item": "Ticagrelor",
+     "dose": "180 mg load; then 90 mg twice daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "Table 7"
+      }
+     ]
+    },
+    {
+     "item": "Unfractionated heparin for PCI",
+     "dose": "No prior anticoagulant: 70 to 100 U/kg bolus, target ACT 250 to 300 s",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "Table 10"
+      }
+     ]
+    },
+    {
+     "item": "High-intensity statin",
+     "dose": "Atorvastatin 40 to 80 mg or rosuvastatin 20 to 40 mg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "4.5 rec 1; Table 12"
+      }
+     ]
+    }
+   ],
+   "next": "end_pci",
+   "sources": [
+    {
+     "docId": "pmid:40013746",
+     "where": "4.3.2 rec 2; Figure 4"
+    }
+   ]
+  },
+  {
+   "id": "lytic",
+   "kind": "step",
+   "stage": "Reperfuse",
+   "ask": "The nearest PCI center is more than 120 minutes away. Reperfusion?",
+   "options": [
+    "Fibrinolysis now, then transfer",
+    "Transfer for primary PCI whatever the delay",
+    "Heparin alone and observe",
+    "Fibrinolysis, then keep her here unless the pain returns"
+   ],
+   "answer": 0,
+   "chainStep": "Fibrinolysis now, then immediate transfer for angiography at 2 to 24 hours",
+   "why": "With PCI more than 120 minutes from first contact and symptoms under 12 hours, give a fibrinolytic, then transfer at once for angiography at 2 to 24 hours. Check the absolute contraindications first: a suspected aortic dissection is one.",
+   "next": "lytic_dose",
+   "sources": [
+    {
+     "docId": "pmid:40013746",
+     "where": "5.3 rec 2; 5.3.2 rec 1 and 3; Table 14"
+    }
+   ]
+  },
+  {
+   "id": "lytic_dose",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "She weighs 72 kg. Tenecteplase dose?",
+   "options": [
+    "40 mg",
+    "30 mg",
+    "50 mg",
+    "0.9 mg/kg"
+   ],
+   "answer": 0,
+   "chainStep": "Tenecteplase as one IV bolus by weight (40 mg at 70 to 79 kg), with aspirin, clopidogrel and enoxaparin",
+   "why": "One weight-based IV bolus: 30 mg under 60 kg, 35 mg for 60 to 69, 40 mg for 70 to 79, 45 mg for 80 to 89, 50 mg for 90 kg and over.",
+   "orders": [
+    {
+     "item": "Tenecteplase",
+     "dose": "Single IV bolus by weight: 30, 35, 40, 45 or 50 mg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "Table 13"
+      }
+     ]
+    },
+    {
+     "item": "Aspirin",
+     "dose": "162 to 325 mg, chewed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "Table 7"
+      }
+     ]
+    },
+    {
+     "item": "Clopidogrel with a fibrinolytic",
+     "dose": "300 mg load under 75 years, then 75 mg daily; 75 mg daily with no load in older patients",
+     "status": "conflict",
+     "note": "The guideline's Table 7 puts age 75 itself in the load group; its text puts it in the no-load group.",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "Table 7; 4.3.2 text"
+      }
+     ]
+    },
+    {
+     "item": "Enoxaparin with a fibrinolytic",
+     "dose": "Under 75 years: 30 mg IV, then 15 minutes later 1 mg/kg SC every 12 h (max 100 mg for the first 2 doses). 75 and over: 0.75 mg/kg SC every 12 h, no bolus (max 75 mg for the first 2 doses). Continue for the hospital stay, up to 8 days, or until revascularization",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "Table 10; 4.4 rec 9"
+      }
+     ]
+    },
+    {
+     "item": "Transfer",
+     "dose": "Immediately; angiography at 2 to 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "5.3.2 rec 1 and 3"
+      }
+     ]
+    },
+    {
+     "item": "Failed reperfusion",
+     "dose": "Immediate angiography and rescue PCI if ST elevation resolves less than 50% (anterior) or 70% (inferior), symptoms persist, or she becomes unstable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "5.3.2 rec 2 and supportive text"
+      }
+     ]
+    }
+   ],
+   "next": "end_lytic",
+   "sources": [
+    {
+     "docId": "pmid:40013746",
+     "where": "Table 13"
+    }
+   ]
+  },
+  {
+   "id": "troponin",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "No ST elevation. Next?",
+   "options": [
+    "hs-troponin now and again at 1 to 2 hours",
+    "Activate the cath lab",
+    "Discharge with follow-up",
+    "Conventional troponin now and again at 1 hour"
+   ],
+   "answer": 0,
+   "chainStep": "hs-troponin now and again at 1 to 2 hours",
+   "why": "A high-sensitivity troponin now and again at 1 to 2 hours; thresholds are specific to the assay. Fibrinolysis without ST elevation brings harm and no benefit, except a true posterior STEMI: ST depression in V1 to V3 calls for V7 to V9.",
+   "next": "trop_result",
+   "sources": [
+    {
+     "docId": "pmid:40013746",
+     "where": "3.1.2 rec 4; 5.3 rec 4"
+    },
+    {
+     "docId": "pmid:34756653",
+     "where": "2.3.2 rec 3"
+    }
+   ],
+   "calcs": [
+    "heart"
+   ]
+  },
+  {
+   "id": "trop_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "hs-troponin",
+   "outcomes": [
+    {
+     "id": "rising",
+     "if": "Above the 99th percentile with a rise or fall",
+     "ddx": {
+      "lead": [
+       "ACS"
+      ],
+      "out": []
+     },
+     "next": "nste_meds"
+    },
+    {
+     "id": "negative_low",
+     "if": "Low risk; troponin negative and HEART 3 or less, or one undetectable draw with symptoms 3 or more hours before arrival and a normal ECG",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "heart"
+    },
+    {
+     "id": "negative_int",
+     "if": "Troponin negative, HEART 4 to 6",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_intermediate"
+    },
+    {
+     "id": "negative_high",
+     "if": "Troponin negative, HEART 7 or more",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_high_risk",
+     "orders": [
+      {
+       "item": "Invasive coronary angiography",
+       "dose": "Recommended once a high decision pathway score designates the patient high risk",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34756653",
+         "where": "4.1.3 recommendations 1 and 2, Class 1; Table 6"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nste_meds",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "NSTEMI. Anticoagulant to start now?",
+   "options": [
+    "Heparin 60 IU/kg bolus (max 4,000), then 12 IU/kg/h (max 1,000)",
+    "Tenecteplase by weight",
+    "Heparin 10,000 unit bolus",
+    "None until angiography"
+   ],
+   "answer": 0,
+   "chainStep": "Aspirin, heparin 60 IU/kg (max 4,000) then 12 IU/kg/h (max 1,000), nitrates for pain, high-intensity statin; angiography timed by risk",
+   "why": "Weight based with caps, aPTT 60 to 80 seconds. When no early invasive approach is planned, enoxaparin 1 mg/kg every 12 hours or fondaparinux are the alternatives.",
+   "orders": [
+    {
+     "item": "Aspirin",
+     "dose": "162 to 325 mg, chewed; then 75 to 100 mg daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "Table 7"
+      }
+     ]
+    },
+    {
+     "item": "Ticagrelor",
+     "dose": "180 mg load, then 90 mg twice daily. Angiography within 24 hours: load at PCI. Upstream only when angiography is expected after 24 hours (Class 2b) or no invasive plan",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "Table 7; 4.3.2"
+      }
+     ]
+    },
+    {
+     "item": "Enoxaparin (instead of heparin when no early invasive approach is planned)",
+     "dose": "1 mg/kg SC every 12 h; 1 mg/kg SC every 24 h if CrCl under 30",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "Table 10; 4.4 rec 2"
+      }
+     ]
+    },
+    {
+     "item": "Nitroglycerin",
+     "dose": "0.3 to 0.4 mg SL every 5 min, up to 3 doses; SBP 90 or more; no avanafil in 12 h, sildenafil or vardenafil in 24 h, tadalafil in 48 h",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "Table 6"
+      }
+     ]
+    },
+    {
+     "item": "Beta blocker",
+     "dose": "Oral, within 24 hours if no contraindication; the guideline names no agent or dose",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "4.6"
+      }
+     ]
+    },
+    {
+     "item": "High-intensity statin",
+     "dose": "Atorvastatin 40 to 80 mg or rosuvastatin 20 to 40 mg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "4.5 rec 1; Table 12"
+      }
+     ]
+    },
+    {
+     "item": "Angiography timing",
+     "dose": "Under 2 hours if unstable (shock, heart failure, refractory angina, VT or VF); under 24 hours if high risk (GRACE over 140, a steeply rising troponin despite treatment, ongoing dynamic ST changes); before discharge, under 72 hours, if intermediate risk",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "Figure 8; 6.1 rec 3 to 5"
+      }
+     ]
+    }
+   ],
+   "next": "end_nste",
+   "sources": [
+    {
+     "docId": "pmid:40013746",
+     "where": "Table 10; 4.4 rec 2"
+    }
+   ]
+  },
+  {
+   "id": "heart",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Low HEART score, both troponins below the 99th percentile. Disposition?",
+   "options": [
+    "Discharge home without urgent cardiac testing",
+    "Admit for a stress test",
+    "Start heparin",
+    "Coronary CT before discharge"
+   ],
+   "answer": 0,
+   "chainStep": "Discharge home without urgent cardiac testing",
+   "why": "A HEART score of 3 or less with negative troponins marks a 30-day risk under 1%: home without admission or urgent testing. A single undetectable hs-troponin also rules out injury when symptoms began 3 or more hours before arrival and the ECG is normal.",
+   "note": "Table 6 of the same guideline writes the HEART low-risk cut as under 3; Table 8 and the HEART Pathway write 3 or less. This case scores 0, low on either cut. Pulmonary embolism is not handled in this version: weigh it by pretest probability before discharge.",
+   "next": "end_home",
+   "sources": [
+    {
+     "docId": "pmid:34756653",
+     "where": "4.1.1 rec 1 and 2, Class 2a; 4.1 rec 5; Table 8"
+    }
+   ],
+   "calcs": [
+    "heart"
+   ]
+  },
+  {
+   "id": "cta",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Concern for an aortic syndrome. Next?",
+   "options": [
+    "CT angiography of the chest, abdomen and pelvis",
+    "Aspirin 325 mg and heparin",
+    "Chest x-ray to rule it out",
+    "D-dimer first; CT only if it is raised"
+   ],
+   "answer": 0,
+   "chainStep": "CT angiography of the chest, abdomen and pelvis",
+   "why": "CT angiography first. A plain chest x-ray is neither sensitive nor specific enough to rule out an acute aortic syndrome, and a suspected dissection is an absolute contraindication to fibrinolysis.",
+   "next": "aas_type",
+   "sources": [
+    {
+     "docId": "pmid:34756653",
+     "where": "4.2.1 rec 1"
+    },
+    {
+     "docId": "pmid:36334952",
+     "where": "7.2 synopsis and rec 1"
+    },
+    {
+     "docId": "pmid:40013746",
+     "where": "Table 14"
+    }
+   ]
+  },
+  {
+   "id": "aas_type",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT angiography",
+   "outcomes": [
+    {
+     "id": "type_a",
+     "if": "Ascending aorta involved: type A",
+     "orders": [
+      {
+       "item": "Type A",
+       "dose": "Emergency surgery",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:36334952",
+         "where": "7.4.1.1 rec 1"
+        }
+       ]
+      }
+     ],
+     "next": "aas_meds"
+    },
+    {
+     "id": "type_b",
+     "if": "Descending aorta only: type B",
+     "orders": [
+      {
+       "item": "Type B",
+       "dose": "Medical therapy in the ICU; when to intervene is not yet extracted",
+       "status": "pending"
+      }
+     ],
+     "next": "aas_meds"
+    }
+   ]
+  },
+  {
+   "id": "aas_meds",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "First drug?",
+   "options": [
+    "IV beta blocker (esmolol, metoprolol or labetalol)",
+    "IV nitroprusside alone",
+    "IV nicardipine to reach a systolic under 120 first",
+    "Heparin drip"
+   ],
+   "answer": 0,
+   "chainStep": "IV beta blocker first to a heart rate of 60 to 80, then a vasodilator to a systolic under 120; arterial line in the ICU",
+   "why": "Rate first, then pressure: a vasodilator is avoided as the initial drug and added only after the beta blocker.",
+   "orders": [
+    {
+     "item": "Targets",
+     "dose": "Systolic under 120 and heart rate 60 to 80",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36334952",
+       "where": "7.3.1 rec 2"
+      }
+     ]
+    },
+    {
+     "item": "IV beta blocker",
+     "dose": "Agents named; no dose stated in the guideline. If a beta blocker cannot be used: IV verapamil or diltiazem for rate (Class 2a)",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:36334952",
+       "where": "7.3.1 rec 3"
+      }
+     ]
+    },
+    {
+     "item": "Vasodilator",
+     "dose": "Only after the beta blocker",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36334952",
+       "where": "7.3.1 rec 4"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Arterial line, ICU",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36334952",
+       "where": "7.3.1 rec 1"
+      }
+     ]
+    },
+    {
+     "item": "Pain",
+     "dose": "IV opioids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36334952",
+       "where": "7.3.1 rec 5 text"
+      }
+     ]
+    },
+    {
+     "item": "Fibrinolysis",
+     "dose": "Absolute contraindication",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:40013746",
+       "where": "Table 14"
+      }
+     ]
+    }
+   ],
+   "next": "end_aas",
+   "sources": [
+    {
+     "docId": "pmid:36334952",
+     "where": "7.3.1 rec 3 and 4"
+    }
+   ]
+  },
+  {
+   "id": "end_mimic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Diffuse ST elevation with PR depression is the ECG hallmark of pericarditis, a STEMI mimic: no cath lab and no fibrinolytic. Its workup and treatment are not in this pathway's sources yet."
+  },
+  {
+   "id": "end_pci",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Inferior STEMI: primary PCI, aspirin plus ticagrelor, heparin, high-intensity statin; no nitroglycerin when the right ventricle is involved."
+  },
+  {
+   "id": "end_lytic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "STEMI far from PCI: tenecteplase by weight, aspirin, clopidogrel and enoxaparin, immediate transfer; rescue PCI at once if reperfusion fails, otherwise angiography at 2 to 24 hours."
+  },
+  {
+   "id": "end_nste",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "NSTEMI: aspirin, heparin, nitrates for pain, a high-intensity statin, an oral beta blocker within 24 hours, and angiography timed by risk; the P2Y12 load waits for PCI when angiography is within 24 hours."
+  },
+  {
+   "id": "end_home",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Low risk: home without admission or urgent cardiac testing."
+  },
+  {
+   "id": "end_aas",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute aortic syndrome: CT angiography, beta blocker first, systolic under 120 and heart rate 60 to 80; type A to surgery; never a fibrinolytic."
+  },
+  {
+   "id": "end_intermediate",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Troponin negative but HEART 4 to 6: intermediate risk, where further diagnostic testing may be indicated. Which test is not yet in this pathway."
+  },
+  {
+   "id": "end_high_risk",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Troponin negative but HEART 7 or more: a high decision pathway score makes this high risk for short-term MACE, and invasive coronary angiography is recommended."
+  }
+ ],
+ "cases": [
+  {
+   "id": "inferior_rv",
+   "label": "Inferior STEMI, right ventricle involved",
+   "vignette": "58-year-old man, 40 minutes of substernal chest pressure radiating to the left arm, diaphoretic. BP 148/90, HR 96, SpO2 97%. Cath lab on site.",
+   "picks": {
+    "first_look": "ste_inf",
+    "rv_check": "rv",
+    "pci_access": "onsite"
+   },
+   "results": {
+    "first_look": "ECG: 2 mm ST elevation in II, III and aVF. Arm pressures equal, no back pain.",
+    "rv_check": "V4R: 1 mm ST elevation.",
+    "pci_access": "The interventional team can have him on the table within the hour."
+   }
+  },
+  {
+   "id": "rural_stemi",
+   "label": "STEMI, two hours from a cath lab",
+   "vignette": "64-year-old woman at a rural emergency department, 2 hours of crushing chest pressure. BP 152/88, HR 88. Weight 72 kg. No prior intracranial bleed or stroke, no head trauma, no bleeding, no recent surgery.",
+   "picks": {
+    "first_look": "ste_inf",
+    "rv_check": "no_rv",
+    "pci_access": "far"
+   },
+   "results": {
+    "first_look": "ECG: 3 mm ST elevation in II, III and aVF. Arm pressures equal, no back pain.",
+    "rv_check": "V4R: no ST elevation.",
+    "pci_access": "The nearest PCI center is two and a half hours away by road."
+   }
+  },
+  {
+   "id": "anterior_transfer",
+   "label": "Anterior STEMI, transfer for PCI",
+   "vignette": "52-year-old man at a community hospital without a cath lab, 1 hour of chest pain. BP 138/86, HR 92. The PCI center is 40 minutes away.",
+   "picks": {
+    "first_look": "ste_other",
+    "pci_access": "transfer"
+   },
+   "results": {
+    "first_look": "ECG: 3 mm ST elevation in V1 to V4. Arm pressures equal, no back pain.",
+    "pci_access": "The receiving team can open the artery within 110 minutes of first contact."
+   }
+  },
+  {
+   "id": "nstemi",
+   "label": "NSTEMI",
+   "vignette": "67-year-old man with diabetes, 3 hours of chest pressure at rest that eased before arrival. BP 142/84, HR 90.",
+   "picks": {
+    "first_look": "no_ste",
+    "trop_result": "rising"
+   },
+   "results": {
+    "first_look": "ECG: 1 mm ST depression in V4 to V6, no ST elevation. Arm pressures equal.",
+    "trop_result": "hs-troponin above the 99th percentile at 0 hours and higher at 1 hour."
+   }
+  },
+  {
+   "id": "low_risk",
+   "label": "Low-risk chest pain",
+   "vignette": "34-year-old woman, a sharp left chest pain that began while lifting, 4 hours before arrival, and has settled. No risk factors, no estrogen use, no leg swelling, no recent surgery or travel. BP 118/72, HR 74, SpO2 99%.",
+   "picks": {
+    "first_look": "no_ste",
+    "trop_result": "negative_low"
+   },
+   "results": {
+    "first_look": "ECG: normal sinus rhythm, no ischemic change. Arm pressures equal.",
+    "trop_result": "hs-troponin undetectable at 0 hours and at 2 hours."
+   }
+  },
+  {
+   "id": "type_a",
+   "label": "Type A dissection",
+   "vignette": "61-year-old man with hypertension, sudden severe chest pain that tears through to his back. BP 182/96 in the right arm, HR 108.",
+   "picks": {
+    "first_look": "aas",
+    "aas_type": "type_a"
+   },
+   "results": {
+    "first_look": "ECG: sinus tachycardia, no ST elevation. Right arm 182/96, left arm 148/80.",
+    "aas_type": "CT angiography: an intimal flap in the ascending aorta."
+   }
+  },
+  {
+   "id": "type_b",
+   "label": "Type B dissection",
+   "vignette": "70-year-old woman with a known descending thoracic aneurysm, sudden severe tearing pain between the shoulder blades. BP 176/98.",
+   "picks": {
+    "first_look": "aas",
+    "aas_type": "type_b"
+   },
+   "results": {
+    "first_look": "ECG: sinus rhythm, no ST elevation. Right arm 176/98, left arm 172/96; leg pulses intact.",
+    "aas_type": "CT angiography: a flap starting beyond the left subclavian artery; the ascending aorta is spared."
+   }
+  },
+  {
+   "id": "pericarditis",
+   "label": "Pericarditis, the STEMI mimic",
+   "vignette": "28-year-old man, a week after a cold, sharp chest pain that is worse lying flat and eases sitting forward. BP 124/76, HR 98, temperature 37.9.",
+   "picks": {
+    "first_look": "ste_mimic"
+   },
+   "results": {
+    "first_look": "ECG: diffuse concave ST elevation with PR depression, no reciprocal ST depression."
+   }
+  },
+  {
+   "id": "intermediate",
+   "label": "Troponin negative, intermediate risk",
+   "vignette": "68-year-old man with hypertension, diabetes and high cholesterol, 2 hours of pressure-like chest discomfort that has eased. BP 146/88, HR 80.",
+   "picks": {
+    "first_look": "no_ste",
+    "trop_result": "negative_int"
+   },
+   "results": {
+    "first_look": "ECG: normal sinus rhythm, no ischemic change. Arm pressures equal.",
+    "trop_result": "hs-troponin below the 99th percentile at 0 and 2 hours. HEART score 5."
+   }
+  },
+  {
+   "id": "high_heart",
+   "label": "Troponin negative, high HEART",
+   "vignette": "72-year-old man with a coronary stent placed 3 years ago, diabetes and hypertension, an hour of crushing exertional chest pain into the left arm that has eased. BP 150/86, HR 84.",
+   "picks": {
+    "first_look": "no_ste",
+    "trop_result": "negative_high"
+   },
+   "results": {
+    "first_look": "ECG: left ventricular hypertrophy with repolarization change, no ST depression. Arm pressures equal.",
+    "trop_result": "hs-troponin below the 99th percentile at 0 and 2 hours. HEART score 7."
+   }
+  }
+ ]
+}

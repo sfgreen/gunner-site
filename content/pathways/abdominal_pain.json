@@ -1,0 +1,2188 @@
+{
+ "id": "pw_abdominal_pain",
+ "title": "Abdominal pain",
+ "world": "gi",
+ "synonyms": [
+  "abdominal pain",
+  "abd pain",
+  "belly pain",
+  "acute abdomen",
+  "RUQ",
+  "RLQ",
+  "LLQ",
+  "epigastric",
+  "pelvic pain",
+  "appendicitis",
+  "cholecystitis",
+  "cholangitis",
+  "pancreatitis",
+  "diverticulitis",
+  "ectopic",
+  "PID",
+  "torsion",
+  "small bowel obstruction",
+  "SBO",
+  "mesenteric ischemia",
+  "AAA",
+  "perforated ulcer",
+  "Murphy"
+ ],
+ "reviewBy": "2029-06-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:32295644",
+   "label": "WSES appendicitis 2020",
+   "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32295644/"
+  },
+  {
+   "docId": "pmid:33153472",
+   "label": "WSES cholecystitis 2020",
+   "title": "2020 WSES updated guidelines for acute calculous cholecystitis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33153472/"
+  },
+  {
+   "docId": "pmid:30979521",
+   "label": "ASGE 2019",
+   "title": "ASGE guideline on the role of endoscopy in the evaluation and management of choledocholithiasis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30979521/"
+  },
+  {
+   "docId": "pmid:31921329",
+   "label": "WSES peptic ulcer 2020",
+   "title": "WSES guidelines for perforated and bleeding peptic ulcer",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31921329/"
+  },
+  {
+   "docId": "pmid:31210778",
+   "label": "WSES pancreatitis 2019",
+   "title": "2019 WSES guidelines for the management of severe acute pancreatitis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31210778/"
+  },
+  {
+   "docId": "pmid:33279517",
+   "label": "AGA diverticulitis 2021",
+   "title": "AGA Clinical Practice Update on Medical Management of Colonic Diverticulitis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33279517/"
+  },
+  {
+   "docId": "pmid:34292926",
+   "label": "CDC STI 2021",
+   "title": "Sexually Transmitted Infections Treatment Guidelines, 2021",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34292926/"
+  },
+  {
+   "docId": "url:b1149372731c",
+   "label": "NICE NG126",
+   "title": "Ectopic pregnancy and miscarriage: diagnosis and initial management",
+   "url": "https://www.nice.org.uk/guidance/ng126"
+  },
+  {
+   "docId": "pmid:40397032",
+   "label": "ESR 2025",
+   "title": "European Society of Radiology: imaging of acute abdominal pain (adnexal torsion)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40397032/"
+  },
+  {
+   "docId": "pmid:29946347",
+   "label": "WSES bowel obstruction 2017",
+   "title": "Bologna guidelines for adhesive small bowel obstruction, 2017 update",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29946347/"
+  },
+  {
+   "docId": "pmid:36261857",
+   "label": "WSES mesenteric ischemia 2022",
+   "title": "Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36261857/"
+  },
+  {
+   "docId": "pmid:36334952",
+   "label": "Aortic 2022",
+   "title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36334952/"
+  },
+  {
+   "docId": "pmid:34756653",
+   "label": "Chest pain 2021",
+   "title": "2021 AHA/ACC Guideline for the Evaluation and Diagnosis of Chest Pain",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34756653/"
+  },
+  {
+   "docId": "pmid:28702076",
+   "label": "WSES intra-abdominal infections 2017",
+   "title": "The management of intra-abdominal infections from a global perspective: 2017 WSES guidelines",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28702076/"
+  },
+  {
+   "docId": "pmid:32381121",
+   "label": "WSES diverticulitis 2020",
+   "title": "2020 update of the WSES guidelines for the management of acute colonic diverticulitis in the emergency setting",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32381121/"
+  }
+ ],
+ "differential": [
+  "Cholecystitis",
+  "Choledocholithiasis",
+  "Pancreatitis",
+  "Perforated ulcer",
+  "Appendicitis",
+  "Diverticulitis",
+  "Ectopic pregnancy",
+  "PID",
+  "Ovarian torsion",
+  "Bowel obstruction",
+  "Mesenteric ischemia",
+  "Ruptured AAA",
+  "ACS"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Undifferentiated abdominal pain. First moves?",
+   "options": [
+    "Vitals, IV access, blood count, lactate, electrolytes and creatinine, and a pregnancy test in any woman who could be pregnant",
+    "Blood count and lipase; a pregnancy test only if her period is late",
+    "A plain abdominal x-ray for everyone",
+    "Analgesia and discharge if the pain settles"
+   ],
+   "answer": 0,
+   "chainStep": "Vitals, IV access, blood count, lactate, electrolytes and creatinine; a pregnancy test in any woman who could be pregnant",
+   "why": "Labs set the baseline (lactate, blood count, electrolytes, creatinine), a pregnancy test belongs early even when the symptoms are non-specific, and plain films add little.",
+   "sources": [
+    {
+     "docId": "pmid:29946347",
+     "where": "Laboratory tests; Table 5 IID (labs), IIC (plain films)"
+    },
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.4.5"
+    }
+   ],
+   "orders": [
+    {
+     "item": "ECG",
+     "dose": "Upper abdominal pain that could be cardiac: ECG within 10 minutes, and a troponin when ACS is suspected; the chest pain guideline counts upper abdominal discomfort as chest pain",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34756653",
+       "where": "Definition of chest pain; 2.3.1; 4.1"
+      }
+     ]
+    }
+   ],
+   "next": "first_look"
+  },
+  {
+   "id": "first_look",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Exam, history and pregnancy test",
+   "outcomes": [
+    {
+     "id": "unstable",
+     "if": "Shock or generalized peritonitis; resuscitate while the cause is found",
+     "next": "unstable_mgmt"
+    },
+    {
+     "id": "aaa",
+     "if": "Suspected ruptured AAA; abdominal, back or flank pain with hypotension and a pulsatile mass or known aneurysm",
+     "ddx": {
+      "lead": [
+       "Ruptured AAA"
+      ],
+      "out": []
+     },
+     "next": "aaa"
+    },
+    {
+     "id": "aaa_stable",
+     "if": "Painful aneurysm, pressure normal; a known or palpable aneurysm with pain, blood pressure normal",
+     "ddx": {
+      "lead": [
+       "Ruptured AAA"
+      ],
+      "out": []
+     },
+     "next": "aaa_stable"
+    },
+    {
+     "id": "acs",
+     "if": "Possible ACS; ECG with ST elevation or new ischemia, or a raised troponin",
+     "ddx": {
+      "lead": [
+       "ACS"
+      ],
+      "out": []
+     },
+     "next": "end_acs"
+    },
+    {
+     "id": "hcg_pos",
+     "if": "Pregnancy test positive; location not yet known, with pain or bleeding",
+     "ddx": {
+      "lead": [
+       "Ectopic pregnancy"
+      ],
+      "out": []
+     },
+     "next": "ectopic_us"
+    },
+    {
+     "id": "localize",
+     "if": "Stable; pregnancy test negative, not applicable, or an intrauterine pregnancy confirmed",
+     "next": "location"
+    }
+   ]
+  },
+  {
+   "id": "aaa",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Suspected ruptured AAA. BP 84/50, alert. Next?",
+   "options": [
+    "Permissive hypotension and straight to repair; CT only if stable enough",
+    "Two liters of saline to a normal pressure",
+    "A formal ultrasound before calling vascular surgery",
+    "Admit to the ward and repeat the exam"
+   ],
+   "answer": 0,
+   "chainStep": "Permissive hypotension (systolic around 60 to 90, enough for mentation) and emergency repair; CT if stable to plan an endovascular repair",
+   "why": "Permissive hypotension slows the bleeding: a systolic that keeps mentation, typically 60 to 90. A stable patient gets CT to see if the anatomy suits endovascular repair, which is preferred when it does.",
+   "sources": [
+    {
+     "docId": "pmid:36334952",
+     "where": "Repair of ruptured AAA, rec 1, 2 and 4 with supportive text"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Blood pressure",
+     "dose": "Permissive: systolic typically 60 to 90 mm Hg, enough to keep mentation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36334952",
+       "where": "Ruptured AAA rec 4 and supportive text"
+      }
+     ]
+    },
+    {
+     "item": "Repair",
+     "dose": "Endovascular over open when the anatomy suits it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36334952",
+       "where": "Ruptured AAA rec 2"
+      }
+     ]
+    }
+   ],
+   "next": "end_aaa"
+  },
+  {
+   "id": "ectopic_us",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Positive pregnancy test, pelvic pain, stable. Next?",
+   "options": [
+    "Transvaginal ultrasound to locate the pregnancy",
+    "Use the hCG level alone to locate the pregnancy",
+    "CT of the abdomen and pelvis",
+    "Methotrexate now"
+   ],
+   "answer": 0,
+   "chainStep": "Transvaginal ultrasound to locate the pregnancy; never the hCG level alone",
+   "why": "A transvaginal scan locates the pregnancy; serum hCG does not. An ectopic with significant pain or instability means surgery, laparoscopic where her condition allows.",
+   "sources": [
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.5.1; 1.8.2; 1.15.2; 1.16.1"
+    }
+   ],
+   "next": "ectopic_result"
+  },
+  {
+   "id": "ectopic_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Transvaginal ultrasound and hCG",
+   "outcomes": [
+    {
+     "id": "mtx_ok",
+     "if": "Small and painless, hCG under 1,500; tubal, under 35 mm, no heartbeat, no significant pain",
+     "next": "ectopic_mtx"
+    },
+    {
+     "id": "choice",
+     "if": "Small and painless, hCG 1,500 to under 5,000; under 35 mm, no heartbeat",
+     "next": "ectopic_choice"
+    },
+    {
+     "id": "surgical",
+     "if": "Needs surgery; significant pain, a mass of 35 mm or more, a heartbeat, hCG of 5,000 or more, or unable to return for follow-up",
+     "next": "ectopic_surgery"
+    },
+    {
+     "id": "iup",
+     "if": "Intrauterine pregnancy; on ultrasound, no adnexal mass",
+     "next": "location"
+    },
+    {
+     "id": "pul",
+     "if": "Pregnancy of unknown location; empty uterus, no adnexal mass",
+     "next": "pul_hcg"
+    }
+   ]
+  },
+  {
+   "id": "ectopic_mtx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Which finding would rule out methotrexate for a tubal ectopic?",
+   "options": [
+    "A visible fetal heartbeat",
+    "An hCG of 1,200",
+    "A 20 mm adnexal mass",
+    "An hCG of 3,000"
+   ],
+   "answer": 0,
+   "chainStep": "Methotrexate: no significant pain, an unruptured tubal mass under 35 mm with no heartbeat, no intrauterine pregnancy, able to return; offered under hCG 1,500, a choice with surgery from 1,500 to under 5,000",
+   "why": "A heartbeat sends her to surgery. Methotrexate is offered with no significant pain, an unruptured tubal mass under 35 mm with no heartbeat, no intrauterine pregnancy, hCG under 1,500 and the ability to return for follow-up. From 1,500 to under 5,000 she may choose methotrexate or surgery; at 5,000 or more, surgery is first line.",
+   "sources": [
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.14.1; 1.14.2; 1.15.1; 1.15.2; 1.15.3"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Methotrexate",
+     "dose": "Dose not stated in NICE NG126",
+     "status": "pending"
+    },
+    {
+     "item": "Methotrexate on a first visit",
+     "dose": "Only with a definite ectopic diagnosis and a viable intrauterine pregnancy excluded",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.15.1"
+      }
+     ]
+    },
+    {
+     "item": "hCG after methotrexate",
+     "dose": "Days 4 and 7, then weekly until negative; reassess if it plateaus or rises",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.15.4"
+      }
+     ]
+    }
+   ],
+   "next": "end_mtx"
+  },
+  {
+   "id": "ectopic_surgery",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Ectopic with a 40 mm adnexal mass and significant pain. Treatment?",
+   "options": [
+    "Laparoscopic surgery, usually a salpingectomy",
+    "Methotrexate",
+    "Expectant management",
+    "Repeat hCG in 48 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Laparoscopic surgery, usually a salpingectomy (salpingotomy if she has other risks for infertility)",
+   "why": "Significant pain, a mass of 35 mm or more, a heartbeat or hCG of 5,000 or more means surgery first; a salpingectomy unless there are other risk factors for infertility.",
+   "sources": [
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.15.2; 1.16.1; 1.17.1; 1.17.2"
+    }
+   ],
+   "next": "end_ectopic_surgery"
+  },
+  {
+   "id": "location",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Where are the pain and tenderness?",
+   "outcomes": [
+    {
+     "id": "ruq",
+     "if": "Right upper quadrant",
+     "ddx": {
+      "lead": [
+       "Cholecystitis"
+      ],
+      "out": []
+     },
+     "next": "ruq_us"
+    },
+    {
+     "id": "epigastric",
+     "if": "Epigastric",
+     "ddx": {
+      "lead": [
+       "Pancreatitis",
+       "Perforated ulcer"
+      ],
+      "out": []
+     },
+     "next": "epi_workup"
+    },
+    {
+     "id": "rlq",
+     "if": "Right lower quadrant",
+     "ddx": {
+      "lead": [
+       "Appendicitis"
+      ],
+      "out": []
+     },
+     "next": "rlq_workup"
+    },
+    {
+     "id": "llq",
+     "if": "Left lower quadrant",
+     "ddx": {
+      "lead": [
+       "Diverticulitis"
+      ],
+      "out": []
+     },
+     "next": "llq_ct"
+    },
+    {
+     "id": "pelvic",
+     "if": "Pelvic, pregnancy test negative",
+     "ddx": {
+      "lead": [
+       "PID",
+       "Ovarian torsion"
+      ],
+      "out": []
+     },
+     "next": "pelvic_us"
+    },
+    {
+     "id": "diffuse",
+     "if": "Diffuse, with distension or pain out of proportion",
+     "ddx": {
+      "lead": [
+       "Bowel obstruction",
+       "Mesenteric ischemia"
+      ],
+      "out": []
+     },
+     "next": "diffuse_workup"
+    }
+   ]
+  },
+  {
+   "id": "ruq_us",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "RUQ pain and fever. First imaging?",
+   "options": [
+    "Abdominal ultrasound, with liver tests",
+    "CT of the abdomen with contrast",
+    "A HIDA scan first",
+    "MRCP first"
+   ],
+   "answer": 0,
+   "chainStep": "Abdominal ultrasound, with liver tests to grade the risk of a duct stone",
+   "why": "Ultrasound is the preferred first test: cheap, available and accurate. HIDA is the most accurate but not first, and CT is weaker for cholecystitis. Liver tests and the ultrasound grade the risk of a common duct stone.",
+   "sources": [
+    {
+     "docId": "pmid:33153472",
+     "where": "1.3; 1.4; 2.4"
+    }
+   ],
+   "next": "ruq_result"
+  },
+  {
+   "id": "ruq_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Ultrasound and liver tests",
+   "outcomes": [
+    {
+     "id": "acc",
+     "if": "Acute cholecystitis; low risk of a duct stone",
+     "next": "chole_mgmt"
+    },
+    {
+     "id": "cbd_high",
+     "if": "High risk of a duct stone; cholangitis, a stone in the duct, or bilirubin over 4 with a dilated duct",
+     "ddx": {
+      "lead": [
+       "Choledocholithiasis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Antibiotics for cholangitis",
+       "dose": "Start now, with biliary drainage; in organ dysfunction or septic shock as soon as possible",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28702076",
+         "where": "Acute cholangitis; timing in organ dysfunction and septic shock"
+        }
+       ]
+      },
+      {
+       "item": "Regimen",
+       "dose": "A third-generation cephalosporin such as ceftriaxone with metronidazole is an option in mild infection; doses not stated here",
+       "status": "pending"
+      }
+     ],
+     "next": "ercp"
+    },
+    {
+     "id": "cbd_int",
+     "if": "Intermediate risk; abnormal liver tests, age over 55 or a dilated duct, without a high-risk criterion",
+     "ddx": {
+      "lead": [
+       "Choledocholithiasis"
+      ],
+      "out": []
+     },
+     "next": "mrcp"
+    }
+   ]
+  },
+  {
+   "id": "mrcp",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Intermediate risk of a duct stone. Next?",
+   "options": [
+    "EUS or MRCP",
+    "ERCP straight away",
+    "A HIDA scan",
+    "No further imaging"
+   ],
+   "answer": 0,
+   "chainStep": "EUS or MRCP to confirm a duct stone before any ERCP",
+   "why": "Intermediate risk earns a confirmatory test, EUS or MRCP, not a diagnostic ERCP.",
+   "sources": [
+    {
+     "docId": "pmid:30979521",
+     "where": "Comprehensive review, LFT/clinical/US predictors; GRADE question 1"
+    },
+    {
+     "docId": "pmid:33153472",
+     "where": "2.6"
+    }
+   ],
+   "next": "mrcp_result"
+  },
+  {
+   "id": "ercp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "High risk of a duct stone. Next?",
+   "options": [
+    "ERCP to clear the duct",
+    "MRCP to confirm first",
+    "Cholecystectomy alone",
+    "Discharge on oral antibiotics"
+   ],
+   "answer": 0,
+   "chainStep": "Antibiotics now when there is cholangitis, then ERCP to clear the duct; the gallbladder comes out afterwards",
+   "why": "Cholangitis, a stone on imaging, or bilirubin over 4 with a dilated duct goes straight to ERCP; with cholangitis ERCP is of clear benefit and early. Duct stones are removed before, during or after the cholecystectomy.",
+   "sources": [
+    {
+     "docId": "pmid:30979521",
+     "where": "Comprehensive review, high-risk criteria; GRADE question 2 discussion"
+    },
+    {
+     "docId": "pmid:33153472",
+     "where": "2.8"
+    },
+    {
+     "docId": "pmid:28702076",
+     "where": "Acute cholangitis"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Cholangitis severity and drainage timing",
+     "dose": "Grade-based timing is in the Tokyo Guidelines, not yet read",
+     "status": "pending"
+    }
+   ],
+   "next": "end_ercp"
+  },
+  {
+   "id": "chole_mgmt",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Acute cholecystitis, fit for surgery. Timing?",
+   "options": [
+    "Laparoscopic cholecystectomy as soon as possible, within 7 days of admission and 10 days of symptoms",
+    "Antibiotics now, cholecystectomy only if it recurs",
+    "Percutaneous gallbladder drainage first",
+    "Cholecystectomy in 3 weeks"
+   ],
+   "answer": 0,
+   "chainStep": "Laparoscopic cholecystectomy as soon as possible, within 7 days of admission and 10 days of symptoms; past that window, after 6 weeks",
+   "why": "Early laparoscopic cholecystectomy is first line. Past the window, wait beyond 6 weeks rather than operate in between. Drainage and antibiotics with observation are for patients unfit for or refusing surgery.",
+   "sources": [
+    {
+     "docId": "pmid:33153472",
+     "where": "3.1; 4.1; 4.2; 6.1; 6.3"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Unfit for surgery or refusing",
+     "dose": "Antibiotics and observation; gallbladder drainage as the alternative",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33153472",
+       "where": "6.1; 6.4"
+      }
+     ]
+    },
+    {
+     "item": "After surgery",
+     "dose": "Uncomplicated cholecystitis with the source controlled: no routine postoperative antibiotics",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33153472",
+       "where": "7.1"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotic regimen",
+     "dose": "The guideline's table is an image; not yet sourced",
+     "status": "pending"
+    }
+   ],
+   "next": "end_chole"
+  },
+  {
+   "id": "epi_workup",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Severe epigastric pain. After the ECG, next?",
+   "options": [
+    "Lipase, with CT if perforation or peritonitis is a concern",
+    "Upper endoscopy now",
+    "Amylase alone",
+    "A plain film to diagnose pancreatitis"
+   ],
+   "answer": 0,
+   "chainStep": "Lipase, and CT when a perforation is possible",
+   "why": "Pancreatitis is diagnosed on 2 of 3 criteria: typical pain, lipase over 3 times normal, or imaging. A suspected perforation needs CT, or an upright film when CT is not available.",
+   "sources": [
+    {
+     "docId": "pmid:31210778",
+     "where": "Diagnosis and severity grading, discussion"
+    },
+    {
+     "docId": "pmid:31921329",
+     "where": "Perforated peptic ulcer, diagnosis 1C"
+    }
+   ],
+   "next": "epi_result"
+  },
+  {
+   "id": "epi_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Lipase and imaging",
+   "outcomes": [
+    {
+     "id": "panc",
+     "if": "Acute pancreatitis; typical pain and lipase over 3 times normal",
+     "ddx": {
+      "lead": [
+       "Pancreatitis"
+      ],
+      "out": []
+     },
+     "next": "panc_mgmt"
+    },
+    {
+     "id": "perf",
+     "if": "Perforated ulcer; free air or peritonitis",
+     "ddx": {
+      "lead": [
+       "Perforated ulcer"
+      ],
+      "out": []
+     },
+     "next": "perf_mgmt"
+    },
+    {
+     "id": "neither",
+     "if": "Neither; lipase under 3 times normal and no free air",
+     "next": "end_epi_other"
+    }
+   ]
+  },
+  {
+   "id": "perf_mgmt",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Free air under the diaphragm, peritonitis. Next?",
+   "options": [
+    "Resuscitate, start broad-spectrum antibiotics and operate as soon as possible",
+    "Non-operative care with an IV proton pump inhibitor",
+    "Upper endoscopy to find the ulcer",
+    "Repeat CT in 24 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Resuscitate, broad-spectrum antibiotics, and surgery as soon as possible (laparoscopic if stable, open if unstable)",
+   "why": "Free air with peritonitis is operative, and delay costs lives, above all after a late presentation or past 70. Non-operative care is for extremely selected patients only.",
+   "sources": [
+    {
+     "docId": "pmid:31921329",
+     "where": "Perforated peptic ulcer, surgery 1C and 1B; non-operative management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Resuscitation targets",
+     "dose": "MAP 65 or more, urine 0.5 mL/kg/h or more, lactate normalizing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31921329",
+       "where": "Resuscitation 1C"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotics",
+     "dose": "Ceftriaxone 2 g every 24 h plus metronidazole 500 mg every 6 h, or amoxicillin/clavulanate 1.2 to 2.2 g every 6 h; critically ill: piperacillin/tazobactam 4.5 g every 6 h",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31921329",
+       "where": "Antimicrobial therapy, regimens"
+      }
+     ]
+    },
+    {
+     "item": "Course",
+     "dose": "3 to 5 days, or until inflammatory markers normalize",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31921329",
+       "where": "Antimicrobial therapy, short course"
+      }
+     ]
+    },
+    {
+     "item": "Repair",
+     "dose": "Primary repair for a perforation under 2 cm; laparoscopic if stable, open if unstable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31921329",
+       "where": "Surgery 2C, 2B, 1D"
+      }
+     ]
+    }
+   ],
+   "next": "end_perf"
+  },
+  {
+   "id": "panc_mgmt",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Acute pancreatitis, no organ failure. Fluids and antibiotics?",
+   "options": [
+    "Isotonic crystalloid early, reassessed often; no prophylactic antibiotics",
+    "Hydroxyethyl starch boluses",
+    "Restrict fluids to protect the lungs",
+    "Prophylactic imipenem"
+   ],
+   "answer": 0,
+   "chainStep": "Early isotonic crystalloid, reassessed often; no prophylactic antibiotics; early oral feeding as tolerated, enteral rather than parenteral if a tube is needed; ultrasound for gallstones; cholecystectomy in the same admission when gallstones caused it",
+   "why": "Isotonic crystalloid is the preferred fluid, adjusted by frequent reassessment; the guideline sets no fixed rate and has not shown lactated Ringer to be superior. Routine prophylactic antibiotics are not recommended, and feeding is enteral rather than parenteral.",
+   "sources": [
+    {
+     "docId": "pmid:31210778",
+     "where": "ICU, fluid resuscitation (1B); antibiotic therapy, prophylactic (1A); enteral nutrition (1A)"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Etiology",
+     "dose": "Ultrasound on admission to look for gallstones",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31210778",
+       "where": "Imaging, statement 1 (1C)"
+      }
+     ]
+    },
+    {
+     "item": "CT",
+     "dose": "Not needed in most; early only if the diagnosis is in doubt; to stage severe disease, a first contrast CT at 72 to 96 hours from onset",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31210778",
+       "where": "Imaging, statements 2 and 3"
+      }
+     ]
+    },
+    {
+     "item": "ERCP",
+     "dose": "For cholangitis or common duct obstruction, not routinely",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31210778",
+       "where": "Surgical management, emergent ERCP statements 1 to 4"
+      }
+     ]
+    },
+    {
+     "item": "Gallstone pancreatitis, mild",
+     "dose": "Laparoscopic cholecystectomy during the same admission",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31210778",
+       "where": "Timing of cholecystectomy (1A)"
+      }
+     ]
+    },
+    {
+     "item": "ICU",
+     "dose": "Organ failure, or dysfunction that persists despite fluids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31210778",
+       "where": "ICU, monitoring (1C)"
+      }
+     ]
+    },
+    {
+     "item": "Pain",
+     "dose": "No restriction on the drug; avoid NSAIDs with acute kidney injury",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31210778",
+       "where": "ICU, pain control (1C)"
+      }
+     ]
+    }
+   ],
+   "next": "end_panc"
+  },
+  {
+   "id": "rlq_workup",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "RLQ pain, anorexia, rebound tenderness. Next?",
+   "options": [
+    "Score the risk (AIR or AAS) and image: ultrasound first in a child or in pregnancy; in other adults ultrasound, then low-dose CT if it is negative or unclear",
+    "CT first for every patient, children and pregnant women included",
+    "Confirm with the Alvarado score alone and operate",
+    "Discharge if the white count is normal"
+   ],
+   "answer": 0,
+   "chainStep": "Score the risk (AIR or AAS); point-of-care ultrasound first, then low-dose contrast CT if it is negative or unclear",
+   "why": "AIR and AAS predict appendicitis; Alvarado should not be used to confirm it (a score under 5 does rule it out). Ultrasound comes first in adults and children, then low-dose CT if ultrasound is negative.",
+   "sources": [
+    {
+     "docId": "pmid:32295644",
+     "where": "1.3; 1.4; 1.7; 1.10; 1.11"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Child",
+     "dose": "Ultrasound first; avoid routine CT",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32295644",
+       "where": "1.14.1; 1.14.2"
+      }
+     ]
+    },
+    {
+     "item": "Pregnant",
+     "dose": "Ultrasound first, then MRI if it is inconclusive",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32295644",
+       "where": "1.13.1; 1.13.2"
+      }
+     ]
+    }
+   ],
+   "next": "rlq_result"
+  },
+  {
+   "id": "rlq_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Imaging",
+   "outcomes": [
+    {
+     "id": "uncomplicated",
+     "if": "Uncomplicated appendicitis; not pregnant",
+     "ddx": {
+      "lead": [
+       "Appendicitis"
+      ],
+      "out": []
+     },
+     "next": "appy_choice"
+    },
+    {
+     "id": "uncomp_preg",
+     "if": "Uncomplicated appendicitis in pregnancy",
+     "ddx": {
+      "lead": [
+       "Appendicitis"
+      ],
+      "out": []
+     },
+     "next": "appy_preg"
+    },
+    {
+     "id": "complicated",
+     "if": "Complicated; perforation or a periappendiceal abscess",
+     "ddx": {
+      "lead": [
+       "Appendicitis"
+      ],
+      "out": []
+     },
+     "next": "appy_complicated"
+    },
+    {
+     "id": "negative",
+     "if": "Appendix normal or not seen",
+     "next": "end_rlq_negative",
+     "orders": [
+      {
+       "item": "Pain that does not settle",
+       "dose": "Cross-sectional imaging before surgery",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:32295644",
+         "where": "1.12"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "appy_choice",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Uncomplicated appendicitis, no appendicolith, not pregnant. Options?",
+   "options": [
+    "Laparoscopic appendectomy within 24 hours, or antibiotics first after discussing recurrence",
+    "Antibiotics first despite an appendicolith",
+    "Delay surgery past 48 hours",
+    "Open appendectomy as the default"
+   ],
+   "answer": 0,
+   "chainStep": "Laparoscopic appendectomy within 24 hours, or antibiotics first after discussing the chance of recurrence; not antibiotics first with an appendicolith or in pregnancy",
+   "why": "Surgery on the next list within 24 hours, laparoscopic where possible. Antibiotics first is a safe alternative only without an appendicolith, after discussing recurrence, and not in pregnancy.",
+   "sources": [
+    {
+     "docId": "pmid:32295644",
+     "where": "3.1; 3.2; 4.1; 2.1.1; 2.1.2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Before surgery",
+     "dose": "One preoperative dose of broad-spectrum antibiotics",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32295644",
+       "where": "7.1"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotics first",
+     "dose": "IV first, then oral as the patient improves; for example ceftriaxone 2 g every 24 h plus metronidazole 500 mg every 6 h",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32295644",
+       "where": "2.3; Q2.3 narrative citing the 2017 WSES regimens"
+      }
+     ]
+    }
+   ],
+   "next": "end_appy"
+  },
+  {
+   "id": "appy_complicated",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Perforated appendicitis without an abscess. Timing?",
+   "options": [
+    "Appendectomy without delay",
+    "Antibiotics alone",
+    "Interval appendectomy in 6 weeks",
+    "A percutaneous drain"
+   ],
+   "answer": 0,
+   "chainStep": "Appendectomy without delay, never beyond 24 hours; a periappendiceal abscess may be treated with antibiotics and percutaneous drainage",
+   "why": "Complicated appendicitis is operated early; surgery is not delayed beyond 24 hours, and in children with complicated appendicitis WSES suggests within 8 hours. A periappendiceal abscess is the exception: antibiotics with percutaneous drainage are an option, above all where laparoscopic expertise is not available.",
+   "sources": [
+    {
+     "docId": "pmid:32295644",
+     "where": "3.2; 3.3 (pediatric); 6.1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Drains after surgery",
+     "dose": "Not used in adults after appendectomy for complicated appendicitis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32295644",
+       "where": "4.12"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotics",
+     "dose": "A single preoperative dose; after surgery, no longer than 3 to 5 days once the source is controlled",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32295644",
+       "where": "7.1; 7.2"
+      }
+     ]
+    }
+   ],
+   "next": "end_appy_complicated"
+  },
+  {
+   "id": "llq_ct",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "LLQ pain and fever. Imaging?",
+   "options": [
+    "CT of the abdomen and pelvis with contrast",
+    "Colonoscopy now",
+    "A barium enema",
+    "A plain film to confirm it"
+   ],
+   "answer": 0,
+   "chainStep": "CT of the abdomen and pelvis with contrast; colonoscopy 6 to 8 weeks later",
+   "why": "CT is highly accurate and grades complications. Plain films only look for perforation or obstruction, and colonoscopy waits 6 to 8 weeks.",
+   "sources": [
+    {
+     "docId": "pmid:33279517",
+     "where": "Best Practice Advice 1 text; BPA 3"
+    }
+   ],
+   "next": "llq_result"
+  },
+  {
+   "id": "llq_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT",
+   "outcomes": [
+    {
+     "id": "div_mild",
+     "if": "Mild uncomplicated diverticulitis",
+     "ddx": {
+      "lead": [
+       "Diverticulitis"
+      ],
+      "out": []
+     },
+     "next": "div_uncomp"
+    },
+    {
+     "id": "div_comp",
+     "if": "Complicated diverticulitis; abscess, perforation, obstruction or fistula",
+     "ddx": {
+      "lead": [
+       "Diverticulitis"
+      ],
+      "out": []
+     },
+     "next": "div_complicated"
+    }
+   ]
+  },
+  {
+   "id": "div_uncomp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Uncomplicated diverticulitis, immunocompetent, CRP 60, eating. Antibiotics?",
+   "options": [
+    "Not routinely: antibiotics can be used selectively",
+    "IV antibiotics and admission for everyone",
+    "Urgent sigmoid resection",
+    "Colonoscopy this week"
+   ],
+   "answer": 0,
+   "chainStep": "Antibiotics selectively, not routinely, when immunocompetent and mild; give them if immunocompromised, frail or comorbid, vomiting or refractory, CRP over 140, white count over 15, or a fluid collection or long inflamed segment on CT",
+   "why": "In immunocompetent patients with mild uncomplicated disease, antibiotics are selective. They are advised with comorbidity or frailty, refractory symptoms or vomiting, a CRP over 140, a white count over 15, or a fluid collection or long inflamed segment on CT; immunocompromised patients get a low threshold.",
+   "sources": [
+    {
+     "docId": "pmid:33279517",
+     "where": "BPA 6; BPA 7 and text; BPA 8"
+    }
+   ],
+   "orders": [
+    {
+     "item": "When antibiotics are used, outpatient",
+     "dose": "An oral fluoroquinolone plus metronidazole, or amoxicillin-clavulanate alone, usually 4 to 7 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33279517",
+       "where": "BPA 7 text"
+      }
+     ]
+    },
+    {
+     "item": "Colonoscopy",
+     "dose": "6 to 8 weeks out or once symptoms resolve, whichever is later, unless a high-quality one was done within a year",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33279517",
+       "where": "BPA 2; BPA 3"
+      }
+     ]
+    }
+   ],
+   "next": "end_div"
+  },
+  {
+   "id": "div_complicated",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "CT shows a 6 cm pericolic abscess. Next?",
+   "options": [
+    "IV antibiotics and percutaneous drainage",
+    "Oral antibiotics at home",
+    "Colonoscopy now",
+    "No antibiotics"
+   ],
+   "answer": 0,
+   "chainStep": "Antibiotics; percutaneous drainage for an abscess over 4 to 5 cm; surgery for perforation with diffuse peritonitis",
+   "why": "Antibiotics are mandatory once there is an abscess. A small abscess, up to 4 to 5 cm, gets antibiotics alone at first; a larger one gets percutaneous drainage with antibiotics, or antibiotics alone if drainage is not feasible.",
+   "sources": [
+    {
+     "docId": "pmid:33279517",
+     "where": "BPA 6 to 7 text"
+    },
+    {
+     "docId": "pmid:32381121",
+     "where": "Small and large diverticular abscess (2C)"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Abscess size",
+     "dose": "Up to 4 to 5 cm: antibiotics alone at first; larger: percutaneous drainage plus antibiotics; if drainage is not feasible, antibiotics alone",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32381121",
+       "where": "Diverticular abscess (2C)"
+      }
+     ]
+    },
+    {
+     "item": "Perforation with diffuse peritonitis",
+     "dose": "Surgery: resection with anastomosis, with or without a stoma, when stable without comorbidities; Hartmann procedure when unstable or with multiple comorbidities",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32381121",
+       "where": "Diffuse peritonitis, surgical options"
+      }
+     ]
+    }
+   ],
+   "next": "end_div_complicated"
+  },
+  {
+   "id": "pelvic_us",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Lower pelvic pain, pregnancy test negative. Next?",
+   "options": [
+    "Pelvic exam, and pelvic ultrasound with color Doppler",
+    "CT first",
+    "Treat as a urinary infection and discharge",
+    "Laparoscopy now"
+   ],
+   "answer": 0,
+   "chainStep": "Pelvic exam; pelvic ultrasound with color Doppler",
+   "why": "Ultrasound with color Doppler is the first test for torsion, and the pelvic exam finds the tenderness that defines PID.",
+   "sources": [
+    {
+     "docId": "pmid:40397032",
+     "where": "Adnexal torsion"
+    },
+    {
+     "docId": "pmid:34292926",
+     "where": "PID section, diagnostic considerations"
+    }
+   ],
+   "next": "pelvic_result"
+  },
+  {
+   "id": "pelvic_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Exam and ultrasound",
+   "outcomes": [
+    {
+     "id": "torsion",
+     "if": "Ovarian torsion; an enlarged ovary with a whirlpool sign",
+     "ddx": {
+      "lead": [
+       "Ovarian torsion"
+      ],
+      "out": []
+     },
+     "next": "torsion_mgmt"
+    },
+    {
+     "id": "pid",
+     "if": "PID; cervical motion, uterine or adnexal tenderness, no other cause",
+     "ddx": {
+      "lead": [
+       "PID"
+      ],
+      "out": []
+     },
+     "next": "pid_mgmt"
+    }
+   ]
+  },
+  {
+   "id": "torsion_mgmt",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Enlarged ovary, whirlpool sign, arterial flow still present. Next?",
+   "options": [
+    "Emergency surgery: flow does not exclude torsion",
+    "Reassure: arterial flow rules it out",
+    "Repeat the ultrasound in 24 hours",
+    "Antibiotics"
+   ],
+   "answer": 0,
+   "chainStep": "Emergency surgery; Doppler flow does not exclude torsion",
+   "why": "Torsion is a surgical emergency. The whirlpool sign with an enlarged ovary is diagnostic, and preserved arterial or venous flow does not exclude it.",
+   "sources": [
+    {
+     "docId": "pmid:40397032",
+     "where": "Adnexal torsion; Table 2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "At surgery",
+     "dose": "Detorsion and keeping the ovary: not stated in this source",
+     "status": "pending"
+    }
+   ],
+   "next": "end_torsion"
+  },
+  {
+   "id": "pid_mgmt",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Sexually active 22-year-old, adnexal tenderness, no other cause. Treat?",
+   "options": [
+    "Treat for PID now",
+    "Wait for the chlamydia and gonorrhea results",
+    "Treat only if all three minimum criteria are present",
+    "Ultrasound before any antibiotics"
+   ],
+   "answer": 0,
+   "chainStep": "Treat for PID on any one minimum criterion: cervical motion, uterine or adnexal tenderness",
+   "why": "Keep a low threshold: one minimum criterion is enough to start treatment, because waiting for all three misses cases.",
+   "sources": [
+    {
+     "docId": "pmid:34292926",
+     "where": "PID section, diagnostic considerations (minimum criteria)"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Outpatient",
+     "dose": "Ceftriaxone 500 mg IM once (1 g if 150 kg or more), plus doxycycline 100 mg orally twice daily and metronidazole 500 mg orally twice daily for 14 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "PID section, IM or oral regimen"
+      }
+     ]
+    },
+    {
+     "item": "Inpatient, IV",
+     "dose": "Ceftriaxone 1 g IV every 24 h plus doxycycline 100 mg orally or IV every 12 h (orally when possible) plus metronidazole 500 mg orally or IV every 12 h; switch to oral to complete 14 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "PID section, recommended parenteral regimens"
+      }
+     ]
+    },
+    {
+     "item": "Tubo-ovarian abscess",
+     "dose": "More than 24 hours of inpatient observation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "PID section, parenteral treatment"
+      }
+     ]
+    },
+    {
+     "item": "Admit",
+     "dose": "A surgical emergency not excluded, tubo-ovarian abscess, pregnancy, severe illness, vomiting or temperature over 38.5, or unable to take or no response to oral therapy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "PID section, hospitalization criteria"
+      }
+     ]
+    },
+    {
+     "item": "Partners",
+     "dose": "Partners from the 60 days before her symptoms: evaluate, test and treat presumptively",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Chlamydial and gonococcal infections, management of sex partners"
+      }
+     ]
+    }
+   ],
+   "next": "end_pid"
+  },
+  {
+   "id": "diffuse_workup",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Diffuse pain: distension and vomiting, or pain out of proportion. Next?",
+   "options": [
+    "Lactate and CT; CT angiography without delay if mesenteric ischemia is possible",
+    "Plain films to decide",
+    "Observe and repeat the exam in 6 hours",
+    "Colonoscopy"
+   ],
+   "answer": 0,
+   "chainStep": "Lactate and CT; CT angiography without delay if mesenteric ischemia is possible, even with kidney injury",
+   "why": "CT is the preferred test for obstruction and decides on urgent surgery; plain films add little. Suspected mesenteric ischemia gets CT angiography without delay, even with acute kidney injury.",
+   "sources": [
+    {
+     "docId": "pmid:29946347",
+     "where": "Imaging studies, CT scans; Table 5 IIC"
+    },
+    {
+     "docId": "pmid:36261857",
+     "where": "Statement 5 and supporting text"
+    }
+   ],
+   "next": "diffuse_result"
+  },
+  {
+   "id": "diffuse_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT",
+   "outcomes": [
+    {
+     "id": "sbo",
+     "if": "Adhesive small bowel obstruction; no strangulation, peritonitis or ischemia",
+     "ddx": {
+      "lead": [
+       "Bowel obstruction"
+      ],
+      "out": []
+     },
+     "next": "sbo_mgmt"
+    },
+    {
+     "id": "ami",
+     "if": "Mesenteric ischemia; arterial occlusion of the mesenteric vessels",
+     "ddx": {
+      "lead": [
+       "Mesenteric ischemia"
+      ],
+      "out": []
+     },
+     "next": "ami_mgmt"
+    }
+   ]
+  },
+  {
+   "id": "sbo_mgmt",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Adhesive small bowel obstruction, no signs of strangulation. Next?",
+   "options": [
+    "Nil by mouth, nasogastric decompression and fluids; water-soluble contrast with a film at 24 hours",
+    "Laparotomy today",
+    "Operate if the contrast reaches the colon by 24 hours",
+    "Operate at 24 hours without a contrast study"
+   ],
+   "answer": 0,
+   "chainStep": "Nil by mouth, nasogastric decompression and fluids; water-soluble contrast with a film at 24 hours; up to 72 hours before surgery",
+   "why": "Without peritonitis, strangulation or ischemia, non-operative care comes first and can run safely for 72 hours. Contrast in the colon at 24 hours means the obstruction is resolving; contrast short of the colon predicts failure.",
+   "sources": [
+    {
+     "docId": "pmid:29946347",
+     "where": "Management, initial decision making; non-operative management; Table 5 IIB and IB"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Surgery",
+     "dose": "Peritonitis, strangulation or ischemia; or failure of a 72 hour trial",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29946347",
+       "where": "Table 5 IIC and IIB"
+      }
+     ]
+    }
+   ],
+   "next": "end_sbo"
+  },
+  {
+   "id": "ami_mgmt",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "CT angiography: an SMA occlusion, no peritonitis. Next?",
+   "options": [
+    "Correct electrolytes, decompress, heparin, broad-spectrum antibiotics and revascularization",
+    "Observe and repeat the lactate",
+    "Oral antibiotics",
+    "Heparin and observe; revascularize only if peritonitis develops"
+   ],
+   "answer": 0,
+   "chainStep": "Heparin, broad-spectrum antibiotics now, nasogastric decompression, and endovascular revascularization; laparotomy for peritonitis",
+   "why": "Antibiotics go in immediately, heparin anticoagulates, and endovascular revascularization is first line for an arterial occlusion when expertise is available. Overt peritonitis means prompt laparoscopy or laparotomy.",
+   "sources": [
+    {
+     "docId": "pmid:36261857",
+     "where": "Statements 7, 8, 9, 10 and supporting text"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Unfractionated heparin",
+     "dose": "Dose not stated in this guideline",
+     "status": "pending"
+    },
+    {
+     "item": "Antibiotics",
+     "dose": "Broad spectrum, immediately; at least 4 days in a stable immunocompetent patient",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36261857",
+       "where": "Statement 8 and supporting text"
+      }
+     ]
+    },
+    {
+     "item": "Second look",
+     "dose": "After resection, re-exploration usually within 24 to 48 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36261857",
+       "where": "Statement 11 supporting text"
+      }
+     ]
+    }
+   ],
+   "next": "end_ami"
+  },
+  {
+   "id": "end_aaa",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ruptured AAA: permissive hypotension and emergency repair, endovascular when the anatomy suits it."
+  },
+  {
+   "id": "end_mtx",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Small, painless, unruptured tubal ectopic with no heartbeat and hCG under 1,500: methotrexate, or expectant care (offered at 1,000 or less, considered from 1,000 to 1,500)."
+  },
+  {
+   "id": "end_ectopic_surgery",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ectopic with pain, a large mass, a heartbeat or a high hCG: surgery, usually salpingectomy."
+  },
+  {
+   "id": "end_chole",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute cholecystitis: laparoscopic cholecystectomy as soon as possible, within 7 days of admission and 10 days of symptoms."
+  },
+  {
+   "id": "end_ercp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "High-risk duct stone or cholangitis: antibiotics at once for cholangitis, ERCP to clear the duct, then cholecystectomy."
+  },
+  {
+   "id": "end_perf",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Perforated ulcer: resuscitation, broad-spectrum antibiotics and surgery as soon as possible."
+  },
+  {
+   "id": "end_panc",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute pancreatitis: isotonic fluids reassessed often, no prophylactic antibiotics, enteral feeding, ultrasound for gallstones and cholecystectomy in the same admission when they caused it."
+  },
+  {
+   "id": "end_appy",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Uncomplicated appendicitis: laparoscopic appendectomy within 24 hours, or antibiotics first in selected patients."
+  },
+  {
+   "id": "end_appy_complicated",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Complicated appendicitis: early appendectomy and a short antibiotic course; an abscess may be drained instead."
+  },
+  {
+   "id": "end_div",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Mild uncomplicated diverticulitis: selective antibiotics, home care, colonoscopy in 6 to 8 weeks."
+  },
+  {
+   "id": "end_div_complicated",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Complicated diverticulitis: antibiotics; percutaneous drainage for an abscess over 4 to 5 cm; surgery for perforation with diffuse peritonitis."
+  },
+  {
+   "id": "end_torsion",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ovarian torsion: emergency surgery, whatever the Doppler shows."
+  },
+  {
+   "id": "end_pid",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "PID: treat on one minimum criterion; ceftriaxone, doxycycline and metronidazole."
+  },
+  {
+   "id": "end_sbo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Adhesive small bowel obstruction: decompression and a water-soluble contrast trial for up to 72 hours."
+  },
+  {
+   "id": "end_ami",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute mesenteric ischemia: CT angiography, antibiotics, heparin, revascularization."
+  },
+  {
+   "id": "unstable_mgmt",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Rigid abdomen, BP 82/50, lactate 5. Next?",
+   "options": [
+    "Resuscitate, broad-spectrum antibiotics now and an emergency surgical opinion",
+    "CT first, antibiotics once the cause is known",
+    "Analgesia and observe",
+    "Upper endoscopy"
+   ],
+   "answer": 0,
+   "chainStep": "Resuscitate to MAP 65 or more, urine 0.5 mL/kg/h and a falling lactate; broad-spectrum antibiotics now; emergency surgical source control",
+   "why": "In shock with peritonitis, antibiotics start as soon as possible and resuscitation targets a MAP of 65, a urine output of 0.5 mL/kg/h and a normalizing lactate; the cause is controlled in theatre.",
+   "sources": [
+    {
+     "docId": "pmid:28702076",
+     "where": "Antimicrobial therapy: timing in organ dysfunction and septic shock"
+    },
+    {
+     "docId": "pmid:31921329",
+     "where": "Perforated peptic ulcer, resuscitation 1C"
+    }
+   ],
+   "next": "end_unstable"
+  },
+  {
+   "id": "aaa_stable",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Known 6 cm AAA, new back pain, BP 148/86. Next?",
+   "options": [
+    "CT angiography now; a symptomatic aneurysm is repaired",
+    "Outpatient ultrasound in 3 months",
+    "Permissive hypotension and theatre without imaging",
+    "Discharge with analgesia"
+   ],
+   "answer": 0,
+   "chainStep": "Stable with a painful aneurysm: CT angiography now; a symptomatic aneurysm is repaired, monitored in an ICU meanwhile",
+   "why": "A stable patient gets CT to define the aneurysm and plan repair. An intact aneurysm causing pain is at high risk of rupture and is repaired, with arterial pressure monitoring and tight control meanwhile.",
+   "sources": [
+    {
+     "docId": "pmid:36334952",
+     "where": "Repair of ruptured AAA rec 1; threshold for repair rec 2 and supportive text"
+    }
+   ],
+   "next": "end_aaa_stable"
+  },
+  {
+   "id": "ectopic_choice",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Tubal ectopic, 25 mm, no heartbeat, hCG 3,000, little pain. Options?",
+   "options": [
+    "Methotrexate or surgery, her choice",
+    "Methotrexate is ruled out at this hCG",
+    "Expectant management",
+    "Surgery is mandatory"
+   ],
+   "answer": 0,
+   "chainStep": "hCG 1,500 to under 5,000 with a small painless ectopic: methotrexate or surgery, her choice",
+   "why": "Between 1,500 and 5,000, NICE offers a choice of methotrexate or surgery, after explaining that methotrexate may need further treatment. Expectant care is only for lower levels.",
+   "sources": [
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.15.3; 1.14.1"
+    }
+   ],
+   "next": "end_ectopic_choice"
+  },
+  {
+   "id": "pul_hcg",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Positive test, empty uterus, no adnexal mass, stable. Next?",
+   "options": [
+    "Two serum hCG measurements 48 hours apart",
+    "Methotrexate now",
+    "A single hCG to decide",
+    "Discharge, no follow-up"
+   ],
+   "answer": 0,
+   "chainStep": "Two serum hCG measurements 48 hours apart; the change decides the next step",
+   "why": "A pregnancy of unknown location is followed with two serum hCG levels 48 hours apart: a rise over 63% suggests an ongoing pregnancy and a scan, a fall over 50% suggests failure, and anything between needs review within 24 hours.",
+   "sources": [
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.8.5; 1.8.7; 1.8.8; 1.8.9"
+    }
+   ],
+   "next": "end_pul"
+  },
+  {
+   "id": "mrcp_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "EUS or MRCP",
+   "outcomes": [
+    {
+     "id": "stone",
+     "if": "Duct stone seen",
+     "ddx": {
+      "lead": [
+       "Choledocholithiasis"
+      ],
+      "out": []
+     },
+     "next": "ercp"
+    },
+    {
+     "id": "clear",
+     "if": "No duct stone",
+     "next": "chole_mgmt"
+    }
+   ]
+  },
+  {
+   "id": "appy_preg",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Uncomplicated appendicitis at 20 weeks. Treatment?",
+   "options": [
+    "Laparoscopic appendectomy",
+    "Antibiotics first",
+    "Wait until after delivery",
+    "Open appendectomy is required in pregnancy"
+   ],
+   "answer": 0,
+   "chainStep": "Appendectomy, laparoscopic where expertise allows; not antibiotics first in pregnancy",
+   "why": "Non-operative treatment is not advised in pregnancy, and laparoscopy is preferred to open surgery where the expertise exists.",
+   "sources": [
+    {
+     "docId": "pmid:32295644",
+     "where": "2.1.2; 4.7"
+    }
+   ],
+   "next": "end_appy_preg"
+  },
+  {
+   "id": "end_unstable",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Unstable acute abdomen: resuscitation to targets, antibiotics at once and surgical source control."
+  },
+  {
+   "id": "end_aaa_stable",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Painful intact aneurysm: CT angiography, ICU monitoring with tight pressure control, and repair."
+  },
+  {
+   "id": "end_acs",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Possible ACS from upper abdominal pain: continue in the chest pain pathway."
+  },
+  {
+   "id": "end_ectopic_choice",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Small painless ectopic, hCG 1,500 to under 5,000: methotrexate or surgery, her choice."
+  },
+  {
+   "id": "end_pul",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pregnancy of unknown location: two hCG levels 48 hours apart guide the scan and follow-up."
+  },
+  {
+   "id": "end_epi_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Not pancreatitis or a perforation: biliary, ulcer or cardiac causes, not covered in this version."
+  },
+  {
+   "id": "end_appy_preg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Appendicitis in pregnancy: appendectomy, laparoscopic where expertise allows; no antibiotics-first."
+  },
+  {
+   "id": "end_rlq_negative",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Imaging negative: if the pain does not settle, cross-sectional imaging before any surgery; in a woman, consider pelvic causes."
+  }
+ ],
+ "cases": [
+  {
+   "id": "rupt_aaa",
+   "label": "Ruptured AAA",
+   "vignette": "74-year-old man who smokes, sudden severe abdominal and back pain, now pale and sweaty. BP 84/50, HR 118. Alert.",
+   "picks": {
+    "first_look": "aaa"
+   },
+   "results": {
+    "first_look": "A pulsatile, tender abdominal mass; known 7 cm aneurysm on old imaging."
+   }
+  },
+  {
+   "id": "ectopic_mtx",
+   "label": "Small tubal ectopic",
+   "vignette": "29-year-old, 6 weeks since her last period, mild left pelvic pain and spotting. BP 118/74, HR 82. She lives nearby and can return for follow-up.",
+   "picks": {
+    "first_look": "hcg_pos",
+    "ectopic_result": "mtx_ok"
+   },
+   "results": {
+    "first_look": "Urine pregnancy test positive.",
+    "ectopic_result": "Transvaginal ultrasound: empty uterus, a 22 mm left adnexal mass without a heartbeat. hCG 1,200. Little pain."
+   }
+  },
+  {
+   "id": "ectopic_surg",
+   "label": "Ectopic needing surgery",
+   "vignette": "31-year-old, 7 weeks pregnant by dates, sharp right pelvic pain. BP 112/70, HR 96.",
+   "picks": {
+    "first_look": "hcg_pos",
+    "ectopic_result": "surgical"
+   },
+   "results": {
+    "first_look": "Urine pregnancy test positive.",
+    "ectopic_result": "Transvaginal ultrasound: a 40 mm right adnexal mass, empty uterus. Significant pain."
+   }
+  },
+  {
+   "id": "cholecystitis",
+   "label": "Acute cholecystitis",
+   "vignette": "46-year-old woman, 1 day of RUQ pain after a fatty meal, fever 38.4, Murphy sign positive.",
+   "picks": {
+    "first_look": "localize",
+    "location": "ruq",
+    "ruq_result": "acc"
+   },
+   "results": {
+    "first_look": "Stable; pregnancy test negative.",
+    "location": "Tenderness in the right upper quadrant.",
+    "ruq_result": "Ultrasound: gallstones, a thick gallbladder wall, pericholecystic fluid; duct 4 mm. Liver tests normal."
+   }
+  },
+  {
+   "id": "cholangitis",
+   "label": "Cholangitis",
+   "vignette": "68-year-old man with fever, jaundice and RUQ pain. BP 104/66, HR 108.",
+   "picks": {
+    "first_look": "localize",
+    "location": "ruq",
+    "ruq_result": "cbd_high"
+   },
+   "results": {
+    "first_look": "Stable after fluids.",
+    "location": "Tenderness in the right upper quadrant.",
+    "ruq_result": "Ultrasound: a dilated duct with a stone. Bilirubin 5.2."
+   }
+  },
+  {
+   "id": "cbd_intermediate",
+   "label": "Possible duct stone",
+   "vignette": "60-year-old woman with RUQ pain and fever, a positive Murphy sign.",
+   "picks": {
+    "first_look": "localize",
+    "location": "ruq",
+    "ruq_result": "cbd_int",
+    "mrcp_result": "clear"
+   },
+   "results": {
+    "first_look": "Stable; pregnancy test not applicable.",
+    "location": "Tenderness in the right upper quadrant.",
+    "ruq_result": "Ultrasound: acute cholecystitis, duct 7 mm, no stone seen. ALT and alkaline phosphatase raised, bilirubin 2.1.",
+    "mrcp_result": "MRCP: no duct stone."
+   }
+  },
+  {
+   "id": "pancreatitis",
+   "label": "Acute pancreatitis",
+   "vignette": "41-year-old man, a day of severe epigastric pain boring through to the back, vomiting, after a heavy weekend of drinking.",
+   "picks": {
+    "first_look": "localize",
+    "location": "epigastric",
+    "epi_result": "panc"
+   },
+   "results": {
+    "first_look": "Stable; ECG normal.",
+    "location": "Epigastric tenderness, no peritonitis.",
+    "epi_result": "Lipase 9 times the upper limit of normal."
+   }
+  },
+  {
+   "id": "perf_ulcer",
+   "label": "Perforated ulcer",
+   "vignette": "72-year-old woman on daily ibuprofen, sudden severe epigastric pain 10 hours ago, now a rigid abdomen.",
+   "picks": {
+    "first_look": "localize",
+    "location": "epigastric",
+    "epi_result": "perf"
+   },
+   "results": {
+    "first_look": "BP 134/80; ECG without ischemia; bedside ultrasound shows a normal-caliber aorta.",
+    "location": "Epigastric pain with generalized guarding.",
+    "epi_result": "CT: free air and fluid around the duodenum."
+   }
+  },
+  {
+   "id": "appendicitis",
+   "label": "Uncomplicated appendicitis",
+   "vignette": "24-year-old man, pain that moved from the umbilicus to the right lower quadrant, anorexia, temperature 38.0.",
+   "picks": {
+    "first_look": "localize",
+    "location": "rlq",
+    "rlq_result": "uncomplicated"
+   },
+   "results": {
+    "first_look": "Stable.",
+    "location": "Rebound tenderness in the right lower quadrant.",
+    "rlq_result": "Ultrasound: a 9 mm non-compressible appendix, no appendicolith, no free fluid."
+   }
+  },
+  {
+   "id": "appy_perf",
+   "label": "Perforated appendicitis",
+   "vignette": "35-year-old woman, 3 days of right lower quadrant pain, now fever 39.0 and worse pain.",
+   "picks": {
+    "first_look": "localize",
+    "location": "rlq",
+    "rlq_result": "complicated"
+   },
+   "results": {
+    "first_look": "Stable; pregnancy test negative.",
+    "location": "Right lower quadrant guarding.",
+    "rlq_result": "Ultrasound inconclusive. Low-dose CT: a perforated appendix with free fluid, no abscess."
+   }
+  },
+  {
+   "id": "diverticulitis",
+   "label": "Uncomplicated diverticulitis",
+   "vignette": "62-year-old man, 2 days of LLQ pain, temperature 37.9, eating and drinking. No comorbidities.",
+   "picks": {
+    "first_look": "localize",
+    "location": "llq",
+    "llq_result": "div_mild"
+   },
+   "results": {
+    "first_look": "Stable.",
+    "location": "Left lower quadrant tenderness.",
+    "llq_result": "CT: sigmoid diverticulitis over a short segment, no abscess, fluid collection or free air. CRP 60, white count 12."
+   }
+  },
+  {
+   "id": "div_abscess",
+   "label": "Diverticular abscess",
+   "vignette": "58-year-old woman, 5 days of LLQ pain, fever 38.6.",
+   "picks": {
+    "first_look": "localize",
+    "location": "llq",
+    "llq_result": "div_comp"
+   },
+   "results": {
+    "first_look": "Stable; pregnancy test not applicable.",
+    "location": "Left lower quadrant tenderness.",
+    "llq_result": "CT: sigmoid diverticulitis with a 6 cm pericolic abscess."
+   }
+  },
+  {
+   "id": "torsion",
+   "label": "Ovarian torsion",
+   "vignette": "19-year-old, sudden severe left pelvic pain with vomiting.",
+   "picks": {
+    "first_look": "localize",
+    "location": "pelvic",
+    "pelvic_result": "torsion"
+   },
+   "results": {
+    "first_look": "Stable; pregnancy test negative.",
+    "location": "Left pelvic tenderness.",
+    "pelvic_result": "Ultrasound: a 7 cm left ovary with a whirlpool sign; arterial flow still present."
+   }
+  },
+  {
+   "id": "pid",
+   "label": "Pelvic inflammatory disease",
+   "vignette": "22-year-old, sexually active, 3 days of lower abdominal pain and discharge. Temperature 38.1.",
+   "picks": {
+    "first_look": "localize",
+    "location": "pelvic",
+    "pelvic_result": "pid"
+   },
+   "results": {
+    "first_look": "Stable; pregnancy test negative.",
+    "location": "Bilateral lower pelvic tenderness.",
+    "pelvic_result": "Cervical motion and adnexal tenderness; ultrasound normal, no abscess."
+   }
+  },
+  {
+   "id": "sbo",
+   "label": "Adhesive small bowel obstruction",
+   "vignette": "56-year-old man with a prior laparotomy, a day of colicky pain, distension and bilious vomiting.",
+   "picks": {
+    "first_look": "localize",
+    "location": "diffuse",
+    "diffuse_result": "sbo"
+   },
+   "results": {
+    "first_look": "Stable.",
+    "location": "Diffuse distension, no peritonitis.",
+    "diffuse_result": "CT: dilated small bowel with a transition point, no closed loop, normal bowel wall enhancement. Lactate normal."
+   }
+  },
+  {
+   "id": "mesenteric",
+   "label": "Acute mesenteric ischemia",
+   "vignette": "79-year-old woman in atrial fibrillation, sudden severe abdominal pain out of proportion to a soft abdomen.",
+   "picks": {
+    "first_look": "localize",
+    "location": "diffuse",
+    "diffuse_result": "ami"
+   },
+   "results": {
+    "first_look": "BP 128/76, HR 112 irregular.",
+    "location": "Diffuse pain, abdomen soft.",
+    "diffuse_result": "CT angiography: an embolus in the superior mesenteric artery. Lactate 3.4. No peritonitis."
+   }
+  },
+  {
+   "id": "peritonitis_shock",
+   "label": "Shock with peritonitis",
+   "vignette": "67-year-old man, a day of worsening abdominal pain, now confused and mottled. BP 82/50, HR 128, temperature 38.9.",
+   "picks": {
+    "first_look": "unstable"
+   },
+   "results": {
+    "first_look": "Generalized rigidity; lactate 5.1."
+   }
+  },
+  {
+   "id": "aaa_symptomatic",
+   "label": "Painful intact AAA",
+   "vignette": "71-year-old man with a known 6 cm aneurysm under surveillance, new back pain since this morning. BP 148/86, HR 84.",
+   "picks": {
+    "first_look": "aaa_stable"
+   },
+   "results": {
+    "first_look": "A tender pulsatile mass; no hypotension."
+   }
+  },
+  {
+   "id": "epigastric_mi",
+   "label": "Epigastric pain that is cardiac",
+   "vignette": "66-year-old woman with diabetes, 2 hours of epigastric burning and nausea. BP 146/88, HR 94.",
+   "picks": {
+    "first_look": "acs"
+   },
+   "results": {
+    "first_look": "ECG: 2 mm ST depression in V4 to V6."
+   }
+  },
+  {
+   "id": "ectopic_choice",
+   "label": "Ectopic, hCG 3,000",
+   "vignette": "33-year-old, 6 weeks pregnant by dates, mild right pelvic pain. BP 120/76, HR 80. Lives nearby.",
+   "picks": {
+    "first_look": "hcg_pos",
+    "ectopic_result": "choice"
+   },
+   "results": {
+    "first_look": "Urine pregnancy test positive.",
+    "ectopic_result": "Transvaginal ultrasound: a 25 mm right adnexal mass without a heartbeat, empty uterus. hCG 3,000. Little pain."
+   }
+  },
+  {
+   "id": "pul",
+   "label": "Pregnancy of unknown location",
+   "vignette": "26-year-old, 5 weeks since her last period, light spotting and mild cramps. Stable.",
+   "picks": {
+    "first_look": "hcg_pos",
+    "ectopic_result": "pul"
+   },
+   "results": {
+    "first_look": "Urine pregnancy test positive.",
+    "ectopic_result": "Transvaginal ultrasound: empty uterus, no adnexal mass, no free fluid."
+   }
+  },
+  {
+   "id": "appy_pregnant",
+   "label": "Appendicitis in pregnancy",
+   "vignette": "29-year-old at 20 weeks, a day of right-sided abdominal pain, anorexia, temperature 38.1.",
+   "picks": {
+    "first_look": "hcg_pos",
+    "ectopic_result": "iup",
+    "location": "rlq",
+    "rlq_result": "uncomp_preg"
+   },
+   "results": {
+    "first_look": "Known pregnancy.",
+    "ectopic_result": "Ultrasound: a live intrauterine pregnancy at 20 weeks.",
+    "location": "Right-sided tenderness, higher than usual.",
+    "rlq_result": "Ultrasound inconclusive; MRI: an inflamed appendix, no perforation."
+   }
+  },
+  {
+   "id": "epi_neither",
+   "label": "Epigastric pain, tests negative",
+   "vignette": "38-year-old man, burning epigastric pain after meals for a week.",
+   "picks": {
+    "first_look": "localize",
+    "location": "epigastric",
+    "epi_result": "neither"
+   },
+   "results": {
+    "first_look": "Stable; ECG normal.",
+    "location": "Mild epigastric tenderness, no peritonitis.",
+    "epi_result": "Lipase normal; no free air."
+   }
+  },
+  {
+   "id": "rlq_negative",
+   "label": "RLQ pain, imaging negative",
+   "vignette": "19-year-old man, a day of vague right lower quadrant pain, afebrile.",
+   "picks": {
+    "first_look": "localize",
+    "location": "rlq",
+    "rlq_result": "negative"
+   },
+   "results": {
+    "first_look": "Stable.",
+    "location": "Mild right lower quadrant tenderness.",
+    "rlq_result": "Ultrasound: appendix not seen; low-dose CT: normal appendix."
+   }
+  },
+  {
+   "id": "duct_stone_mrcp",
+   "label": "Duct stone found on MRCP",
+   "vignette": "57-year-old woman, RUQ pain and fever.",
+   "picks": {
+    "first_look": "localize",
+    "location": "ruq",
+    "ruq_result": "cbd_int",
+    "mrcp_result": "stone"
+   },
+   "results": {
+    "first_look": "Stable; pregnancy test not applicable.",
+    "location": "Tenderness in the right upper quadrant.",
+    "ruq_result": "Ultrasound: cholecystitis, duct 7 mm, no stone seen; alkaline phosphatase raised.",
+    "mrcp_result": "MRCP: a 6 mm stone in the distal duct."
+   }
+  }
+ ]
+}

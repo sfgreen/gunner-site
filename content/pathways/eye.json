@@ -1,0 +1,3348 @@
+{
+ "id": "pw_eye",
+ "title": "Red eye and sudden vision loss",
+ "world": "ophtho",
+ "synonyms": [
+  "red eye",
+  "painful red eye",
+  "eye pain",
+  "sudden vision loss",
+  "vision loss",
+  "blurred vision",
+  "acute angle-closure glaucoma",
+  "angle closure",
+  "glaucoma attack",
+  "keratitis",
+  "corneal ulcer",
+  "contact lens",
+  "uveitis",
+  "iritis",
+  "endophthalmitis",
+  "central retinal artery occlusion",
+  "CRAO",
+  "retinal detachment",
+  "flashes and floaters",
+  "vitreous hemorrhage",
+  "central retinal vein occlusion",
+  "CRVO",
+  "conjunctivitis",
+  "pink eye",
+  "gonococcal conjunctivitis",
+  "ophthalmia neonatorum",
+  "subconjunctival hemorrhage",
+  "episcleritis",
+  "scleritis",
+  "corneal abrasion",
+  "chemical eye injury",
+  "alkali burn",
+  "open globe",
+  "globe rupture",
+  "orbital compartment syndrome",
+  "retrobulbar hematoma",
+  "lateral canthotomy",
+  "orbital cellulitis",
+  "preseptal cellulitis",
+  "periorbital cellulitis",
+  "giant cell arteritis",
+  "temporal arteritis"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:28435504",
+   "label": "WestJEM red eye 2017",
+   "title": "Differentiating Urgent and Emergent Causes of Acute Red Eye for the Emergency Physician (West J Emerg Med 2017; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28435504/"
+  },
+  {
+   "docId": "pmid:41026937",
+   "label": "EGS 2025",
+   "title": "European Glaucoma Society Terminology and Guidelines for Glaucoma, 6th Edition (Br J Ophthalmol 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41026937/"
+  },
+  {
+   "docId": "pmid:38548943",
+   "label": "Eye CRAO review 2024",
+   "title": "Central retinal artery occlusion: a stroke of the eye (Eye 2024; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38548943/"
+  },
+  {
+   "docId": "pmid:39085596",
+   "label": "Eye open globe review 2024",
+   "title": "Management of open globe injury: a narrative review (Eye 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39085596/"
+  },
+  {
+   "docId": "pmid:30487692",
+   "label": "CEHJ chemical burns 2018",
+   "title": "Emergency management: chemical burns (Community Eye Health 2018)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30487692/"
+  },
+  {
+   "docId": "pmid:30487690",
+   "label": "CEHJ penetrating injury 2018",
+   "title": "Emergency management: penetrating eye injuries and intraocular foreign bodies (Community Eye Health 2018)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30487690/"
+  },
+  {
+   "docId": "pmid:30487688",
+   "label": "CEHJ endophthalmitis 2018",
+   "title": "Emergency management: acute endophthalmitis (Community Eye Health 2018)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30487688/"
+  },
+  {
+   "docId": "pmid:30487681",
+   "label": "CEHJ ophthalmia neonatorum 2018",
+   "title": "Emergency management: ophthalmia neonatorum (Community Eye Health 2018)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30487681/"
+  },
+  {
+   "docId": "pmid:30487680",
+   "label": "CEHJ orbital cellulitis 2018",
+   "title": "Emergency management: orbital cellulitis (Community Eye Health 2018)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30487680/"
+  },
+  {
+   "docId": "pmid:30487683",
+   "label": "CEHJ retinal detachment 2018",
+   "title": "Emergency management: retinal detachment (Community Eye Health 2018)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30487683/"
+  },
+  {
+   "docId": "pmid:31806931",
+   "label": "OCS review 2019",
+   "title": "Orbital Compartment Syndrome: An Update With Review Of The Literature (Clin Ophthalmol 2019)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31806931/"
+  },
+  {
+   "docId": "pmid:32982161",
+   "label": "Chemical burns review 2020",
+   "title": "Management Strategies of Ocular Chemical Burns: Current Perspectives (Clin Ophthalmol 2020)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32982161/"
+  },
+  {
+   "docId": "pmid:38983972",
+   "label": "Lens keratitis review 2021",
+   "title": "Contact Lens Associated Bacterial Keratitis: Common Organisms, Antibiotic Therapy, and Global Resistance Trends: A Systematic Review (Front Ophthalmol 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38983972/"
+  },
+  {
+   "docId": "pmid:41835781",
+   "label": "Corneal abrasion review 2026",
+   "title": "Scratching the Surface: Re-evaluating the Management of Corneal Abrasions (Cureus 2026; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41835781/"
+  },
+  {
+   "docId": "pmid:36588205",
+   "label": "Vitreous hemorrhage review 2023",
+   "title": "Vitreous hemorrhage: causes, diagnosis, and management (Indian J Ophthalmol 2023; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36588205/"
+  },
+  {
+   "docId": "pmid:39735154",
+   "label": "Ocular POCUS review 2024",
+   "title": "Expanding Ocular Care in the Emergency Department: A Comprehensive Review of the Utility of Point-of-Care Ultrasound for Ocular Emergencies (Cureus 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39735154/"
+  },
+  {
+   "docId": "pmid:34292926",
+   "label": "CDC STI 2021",
+   "title": "Sexually Transmitted Infections Treatment Guidelines, 2021",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34292926/"
+  },
+  {
+   "docId": "pmid:34235884",
+   "label": "ACR 2021 GCA",
+   "title": "2021 American College of Rheumatology/Vasculitis Foundation Guideline for the Management of Giant Cell Arteritis and Takayasu Arteritis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34235884/"
+  },
+  {
+   "docId": "pmid:42481270",
+   "label": "EULAR 2025",
+   "title": "2025 EULAR recommendations for the management of polymyalgia rheumatica and primary large vessel vasculitis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42481270/"
+  },
+  {
+   "docId": "pmid:31270110",
+   "label": "EULAR 2018",
+   "title": "2018 Update of the EULAR recommendations for the management of large vessel vasculitis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31270110/"
+  },
+  {
+   "docId": "pmid:31869101",
+   "label": "StatPearls: Globe Rupture",
+   "title": "Globe Rupture (StatPearls, updated 2024; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31869101/"
+  },
+  {
+   "docId": "pmid:30422555",
+   "label": "StatPearls: Corneal Abrasion",
+   "title": "Corneal Abrasion (StatPearls, updated 2024; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30422555/"
+  },
+  {
+   "docId": "pmid:29083604",
+   "label": "StatPearls: Ocular Burns",
+   "title": "Ocular Burns (StatPearls, updated 2026; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29083604/"
+  },
+  {
+   "docId": "pmid:34662023",
+   "label": "StatPearls: Bacterial Keratitis",
+   "title": "Bacterial Keratitis (StatPearls, updated 2023; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34662023/"
+  },
+  {
+   "docId": "pmid:31855346",
+   "label": "StatPearls: Retinal Detachment",
+   "title": "Retinal Detachment (StatPearls, updated 2024; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31855346/"
+  },
+  {
+   "docId": "pmid:30252241",
+   "label": "StatPearls: CRVO",
+   "title": "Central Retinal Vein Occlusion (StatPearls, updated 2023; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30252241/"
+  },
+  {
+   "docId": "pmid:29262124",
+   "label": "StatPearls: CRAO",
+   "title": "Central Retinal Artery Occlusion (StatPearls, updated 2024; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29262124/"
+  },
+  {
+   "docId": "pmid:29939678",
+   "label": "StatPearls: Orbital Cellulitis",
+   "title": "Orbital Cellulitis (StatPearls, updated 2026; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29939678/"
+  },
+  {
+   "docId": "pmid:29261970",
+   "label": "StatPearls: Periorbital Cellulitis",
+   "title": "Periorbital Cellulitis (StatPearls, updated 2025; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29261970/"
+  },
+  {
+   "docId": "pmid:35015442",
+   "label": "StatPearls: Retrobulbar Hematoma",
+   "title": "Retrobulbar Hematoma (StatPearls, updated 2022; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35015442/"
+  },
+  {
+   "docId": "pmid:28613607",
+   "label": "StatPearls: Acute Angle-Closure Glaucoma",
+   "title": "Acute Angle-Closure Glaucoma (StatPearls, updated 2026; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613607/"
+  },
+  {
+   "docId": "pmid:30521217",
+   "label": "StatPearls: Episcleritis",
+   "title": "Episcleritis (StatPearls, updated 2023; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30521217/"
+  },
+  {
+   "docId": "pmid:31869130",
+   "label": "StatPearls: Subconjunctival Hemorrhage",
+   "title": "Subconjunctival Hemorrhage (StatPearls, updated 2025; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31869130/"
+  },
+  {
+   "docId": "pmid:31082078",
+   "label": "StatPearls: Conjunctivitis",
+   "title": "Conjunctivitis Overview (StatPearls, updated 2026; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31082078/"
+  },
+  {
+   "docId": "pmid:28613659",
+   "label": "StatPearls: Iritis",
+   "title": "Iritis (StatPearls, updated 2023; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613659/"
+  },
+  {
+   "docId": "pmid:33085420",
+   "label": "StatPearls: Posterior Vitreous Detachment",
+   "title": "Posterior Vitreous Detachment (StatPearls, updated 2026; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33085420/"
+  },
+  {
+   "docId": "pmid:29763119",
+   "label": "StatPearls: Scleritis",
+   "title": "Scleritis (StatPearls, updated 2026; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29763119/"
+  },
+  {
+   "docId": "url:3cc476aa3b3a",
+   "label": "FDA label: acetazolamide injection",
+   "title": "Acetazolamide for Injection, USP prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c9bd730d-c06e-47ef-b003-4dde6336f8ae"
+  },
+  {
+   "docId": "url:2ccd8159b391",
+   "label": "FDA label: pilocarpine ophthalmic",
+   "title": "Pilocarpine hydrochloride ophthalmic solution prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=53fa0b7a-f982-48a7-92c4-6f098683c1ed"
+  },
+  {
+   "docId": "url:81458de18e11",
+   "label": "FDA label: timolol ophthalmic",
+   "title": "Timolol maleate ophthalmic solution 0.25% and 0.5% prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2ed21930-1e05-46de-8acd-cb6f4798a7fa"
+  },
+  {
+   "docId": "url:759149051540",
+   "label": "FDA label: Osmitrol",
+   "title": "Osmitrol (mannitol injection) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0d914965-7001-45cb-ba51-d7c5964b05bc"
+  },
+  {
+   "docId": "url:48ceb0ff7132",
+   "label": "FDA label: ciprofloxacin ophthalmic",
+   "title": "Ciprofloxacin ophthalmic solution 0.3% prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a2cec2cc-729b-4baa-8df1-c3f70847a483"
+  },
+  {
+   "docId": "url:73fa06afdc6b",
+   "label": "FDA label: polymyxin B and trimethoprim",
+   "title": "Polymyxin B sulfate and trimethoprim ophthalmic solution prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=71900075-5288-4f4b-afe2-098436fa2173"
+  },
+  {
+   "docId": "url:7ded552715a4",
+   "label": "FDA label: Alcaine",
+   "title": "Alcaine (proparacaine hydrochloride ophthalmic solution) 0.5% prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=0c0fa0bf-977d-4539-b8dc-54c187c5b094"
+  },
+  {
+   "docId": "url:0b32c067e6bb",
+   "label": "FDA label: Pred Forte",
+   "title": "Pred Forte (prednisolone acetate ophthalmic suspension) 1% prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=00a5aa88-e361-4ea7-8922-530c738b726e"
+  }
+ ],
+ "differential": [
+  "Chemical injury",
+  "Open globe injury",
+  "Orbital compartment syndrome",
+  "Preseptal cellulitis",
+  "Orbital cellulitis",
+  "Ophthalmia neonatorum",
+  "Acute angle-closure glaucoma",
+  "Bacterial keratitis",
+  "Anterior uveitis",
+  "Endophthalmitis",
+  "Corneal abrasion",
+  "Episcleritis",
+  "Scleritis",
+  "Subconjunctival hemorrhage",
+  "Viral conjunctivitis",
+  "Allergic conjunctivitis",
+  "Bacterial conjunctivitis",
+  "Gonococcal conjunctivitis",
+  "Central retinal artery occlusion",
+  "Giant cell arteritis",
+  "Retinal detachment",
+  "Posterior vitreous detachment",
+  "Vitreous hemorrhage",
+  "Central retinal vein occlusion",
+  "Herpes simplex keratitis"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Red or painful eye, or sudden vision loss, at triage. First move?",
+   "options": [
+    "ABCs and the story first: irrigate a splash at once, otherwise check vision",
+    "Visual acuity in both eyes first, then irrigate if the history turns up a splash",
+    "Measure the pressure in both eyes before anything else, to catch angle closure early",
+    "Dilate both pupils first so the whole retina can be seen, then take the history"
+   ],
+   "answer": 0,
+   "chainStep": "Airway, breathing and circulation first; ask about a chemical splash or an injury; irrigate a splash at once; everyone else has the vision checked in each eye, as acuity with glasses or a pinhole when the patient can read a chart",
+   "why": "An injured patient is assessed airway, breathing and circulation first. A chemical splash is irrigated before anything else: irrigation takes priority over every diagnostic step, and the examination waits until the pH is neutral. Everyone else has the vision assessed in each eye, with glasses or a pinhole, because acuity sorts the routes. Measuring acuity before irrigating a splash spends the minutes that decide a burn, tonometry is one of the maneuvers to avoid in a possible open globe, and dilating first skips the history and acuity that choose the route.",
+   "next": "front_door",
+   "sources": [
+    {
+     "docId": "pmid:30487690",
+     "where": "Recognition and diagnosis"
+    },
+    {
+     "docId": "pmid:29083604",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:28435504",
+     "where": "Visual Acuity"
+    },
+    {
+     "docId": "pmid:31869101",
+     "where": "Treatment / Management"
+    }
+   ],
+   "note": "Not in this version: closed-globe blunt injury (hyphema is only routed to ophthalmology), thermal and ultraviolet burns, lid lacerations, zoster ophthalmicus, optic neuritis, and transient monocular loss that has fully resolved."
+  },
+  {
+   "id": "front_door",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Mechanism and a first look",
+   "outcomes": [
+    {
+     "id": "unstable",
+     "if": "Unstable or major trauma; airway, breathing, circulation or consciousness at risk",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_trauma"
+    },
+    {
+     "id": "chemical",
+     "if": "Chemical splash; acid, alkali or another chemical in the eye",
+     "ddx": {
+      "lead": [
+       "Chemical injury"
+      ],
+      "out": []
+     },
+     "next": "chem_irrigate"
+    },
+    {
+     "id": "open_globe",
+     "if": "Possible open globe; a full-thickness wound, a peaked pupil, extruded tissue, or metal hammered on metal",
+     "ddx": {
+      "lead": [
+       "Open globe injury"
+      ],
+      "out": []
+     },
+     "next": "globe"
+    },
+    {
+     "id": "ocs",
+     "if": "Tense, bulging eye after trauma; vision falling, an afferent pupil defect, rock-hard lids",
+     "ddx": {
+      "lead": [
+       "Orbital compartment syndrome"
+      ],
+      "out": []
+     },
+     "next": "ocs"
+    },
+    {
+     "id": "lids",
+     "if": "Lid cellulitis; swollen, red, warm lids, no globe injury, past the newborn period",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "lid_exam"
+    },
+    {
+     "id": "neonate",
+     "if": "Newborn with eye discharge; first 4 weeks of life",
+     "ddx": {
+      "lead": [
+       "Ophthalmia neonatorum"
+      ],
+      "out": []
+     },
+     "next": "neo_tx"
+    },
+    {
+     "id": "other",
+     "if": "Everything else; no chemical, no open globe, no lid cellulitis",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "presentation"
+    }
+   ]
+  },
+  {
+   "id": "end_trauma",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Major trauma or an unstable patient: the primary survey and resuscitation come first, in the major trauma pathway (pw_trauma). Once it is safe, an injured eye gets a rigid shield with no pressure on the globe, acuity when it can be measured, and ophthalmology."
+  },
+  {
+   "id": "chem_irrigate",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Chemical splash in the eye. First move?",
+   "options": [
+    "Irrigate now, after an anesthetic drop, until the pH reads 7.0 to 7.4",
+    "Visual acuity and a full slit lamp exam first, then start irrigating",
+    "Identify the exact chemical from the bottle first, then choose the irrigating fluid",
+    "Stain with fluorescein and grade the burn first, so the irrigation can be planned"
+   ],
+   "answer": 0,
+   "chainStep": "Topical anesthetic, then irrigate at once with lactated Ringer or saline for at least 30 minutes until the ocular surface pH is 7.0 to 7.4 on litmus; evert both lids and sweep the fornices; recheck the pH",
+   "why": "Irrigation comes before every diagnostic step, and its timing matters more than the fluid: tap water is acceptable before arrival, and lactated Ringer, saline or a balanced salt solution in the department. Continue until the surface pH is neutral, 7.0 to 7.4 on litmus paper, for at least 30 minutes: a mild injury may need about 2 L, a severe one up to 10 L over 2 to 4 hours, and alkali usually more than acid. Evert the lids, double-evert the upper lid and sweep the fornices for particles, then recheck the pH. Acuity, the slit lamp, staining and grading wait for a neutral pH, and identifying the chemical never delays the rinse.",
+   "next": "end_chem",
+   "sources": [
+    {
+     "docId": "pmid:29083604",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:32982161",
+     "where": "Management of Immediate Stage"
+    },
+    {
+     "docId": "pmid:30487692",
+     "where": "Text; irrigation protocol"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Irrigating fluid",
+     "dose": "Lactated Ringer, 0.9% saline or a balanced salt solution; tap water before arrival rather than any delay",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083604",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Volume and time",
+     "dose": "At least 30 minutes; about 2 L for a mild injury, up to 10 L over 2 to 4 hours for a severe one",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083604",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "pH target",
+     "dose": "Ocular surface pH 7.0 to 7.4 on litmus paper; recheck after irrigation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083604",
+       "where": "History and Physical; Treatment / Management"
+      },
+      {
+       "docId": "pmid:32982161",
+       "where": "Management of Immediate Stage"
+      }
+     ]
+    },
+    {
+     "item": "Particles",
+     "dose": "Evert both lids, double-evert the upper lid, sweep the fornices and remove every particle",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083604",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:32982161",
+       "where": "Management of Immediate Stage"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_chem",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Chemical injury: irrigate first, until the pH is 7.0 to 7.4, then examine: acuity, the slit lamp with fluorescein, the eye pressure, and conjunctival blanching, which marks limbal ischemia. Systemic analgesia and immediate ophthalmology follow; the eye team starts lubricants, a topical antibiotic, a cycloplegic and a steroid, with amniotic membrane for moderate to severe burns."
+  },
+  {
+   "id": "globe",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Possible open globe. Next?",
+   "options": [
+    "Rigid shield, no pressure, antiemetic, IV antibiotics, nil by mouth, CT orbits, ophthalmology",
+    "Measure the eye pressure with a tonometer first to confirm the rupture before imaging",
+    "Pressure patch with antibiotic ointment, analgesia, and a CT of the orbits in the morning",
+    "MRI of the orbits to look for a hidden metal fragment, then call ophthalmology with the result"
+   ],
+   "answer": 0,
+   "chainStep": "Rigid shield over the eye, no pressure on the globe, no tonometry; antiemetic, analgesia, head of the bed at 30 degrees, nothing by mouth; systemic antibiotic prophylaxis; tetanus booster if needed; CT orbits; ophthalmology now for repair within 24 hours",
+   "why": "Protect the eye and keep its pressure down: a rigid (Fox) shield, no pressure on the globe, and no tonometry, lid retraction or ultrasound, which can push the contents out. Antiemetics, analgesia and the head of the bed at 30 degrees prevent straining, food and fluids are withheld for surgery, and an open globe is a tetanus-prone wound. CT is the preferred imaging for a foreign body but never replaces the ophthalmic exam, and MRI is contraindicated while a metal fragment is possible. A protruding object stays until surgery, and repair should happen within 24 hours if at all possible.",
+   "next": "end_globe",
+   "sources": [
+    {
+     "docId": "pmid:31869101",
+     "where": "Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "pmid:30487690",
+     "where": "Remedies and immediate management; Take note; Referral"
+    },
+    {
+     "docId": "pmid:39085596",
+     "where": "Primary repair"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Shield",
+     "dose": "Rigid (Fox) shield or cup; no pressure on the globe",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31869101",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:30487690",
+       "where": "Remedies and immediate management; Take note"
+      }
+     ]
+    },
+    {
+     "item": "Tonometry, lid retraction, ocular ultrasound",
+     "dose": "Avoid: these maneuvers raise the pressure in the eye",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:31869101",
+       "where": "Evaluation; Treatment / Management"
+      },
+      {
+       "docId": "pmid:30487690",
+       "where": "Take note"
+      }
+     ]
+    },
+    {
+     "item": "MRI",
+     "dose": "Avoid while a ferromagnetic foreign body is possible",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:31869101",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:30487690",
+       "where": "Referral"
+      }
+     ]
+    },
+    {
+     "item": "CT orbits",
+     "dose": "Preferred imaging for an intraocular foreign body; never replaces the ophthalmic exam",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31869101",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Antiemetic and analgesia",
+     "dose": "To prevent vomiting and straining; head of the bed at 30 degrees; nothing by mouth",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31869101",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:30487690",
+       "where": "Remedies and immediate management"
+      }
+     ]
+    },
+    {
+     "item": "Tetanus",
+     "dose": "Booster if immunization is uncertain or incomplete",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31869101",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Systemic antibiotic prophylaxis",
+     "dose": "Give broad-spectrum systemic antibiotics: IV agents such as vancomycin, ceftazidime or cefazolin, or oral ciprofloxacin, which one review found non-inferior; widely used with little supportive evidence that it lowers the endophthalmitis risk",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30487690",
+       "where": "Remedies and immediate management"
+      },
+      {
+       "docId": "pmid:39085596",
+       "where": "Medication"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotic doses",
+     "dose": "Not stated in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Repair",
+     "dose": "As soon as possible, within 24 hours if at all possible",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31869101",
+       "where": "Enhancing Healthcare Team Outcomes"
+      },
+      {
+       "docId": "pmid:39085596",
+       "where": "Primary repair"
+      }
+     ]
+    }
+   ],
+   "note": "Drops: US teaching usually puts nothing in an open eye. StatPearls allows preservative-free antibiotic drops before surgery, and the Eye 2024 review found no evidence that topical prophylaxis lowers the risk. No option here turns on drops."
+  },
+  {
+   "id": "end_globe",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Open globe: a rigid shield, no pressure on the globe and no tonometry, antiemetic and analgesia, nothing by mouth, systemic antibiotics, tetanus cover, CT for a foreign body (never MRI while metal is possible), and ophthalmology for repair within 24 hours. A protruding object is left for the operating room."
+  },
+  {
+   "id": "ocs",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Tense, bulging eye after trauma, vision falling. Next?",
+   "options": [
+    "Lateral canthotomy and cantholysis now, before any imaging",
+    "CT of the orbits first to confirm the hematoma, then decide",
+    "IV mannitol and acetazolamide, then recheck the vision in an hour",
+    "Pressure dressing over the eye and admission for observation"
+   ],
+   "answer": 0,
+   "chainStep": "Lateral canthotomy and cantholysis at the bedside now, under local anesthetic, ideally within 2 hours, without waiting for CT; antiemetic and analgesia; emergency ophthalmology; image afterwards if the eye does not clearly improve",
+   "why": "Orbital compartment syndrome is a clinical diagnosis: a tense, proptosed eye after trauma with falling vision, an afferent defect or an eye pressure of 40 or more. When the optic nerve is threatened, imaging waits for decompression, and visual outcomes are better when it comes within the first 2 hours. Lateral canthotomy with cantholysis is the first-line bedside procedure. Mannitol, acetazolamide and steroids are adjuncts whose effect in this syndrome is not established, and observing the patient delays the decompression.",
+   "next": "end_ocs",
+   "sources": [
+    {
+     "docId": "pmid:31806931",
+     "where": "Abstract; Clinical Diagnosis, History And Examination; Surgical Management; Medical Therapy"
+    },
+    {
+     "docId": "pmid:35015442",
+     "where": "Evaluation; Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Lateral canthotomy and cantholysis",
+     "dose": "At the bedside under local anesthetic; better visual outcomes within the first 2 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31806931",
+       "where": "Abstract; Surgical Management"
+      },
+      {
+       "docId": "pmid:35015442",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Trigger",
+     "dose": "Suspected optic nerve ischemia with an eye pressure of 40 or more: do not delay decompression",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35015442",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Imaging",
+     "dose": "Delayed when the optic nerve is threatened; CT afterwards if the signs do not clearly improve",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35015442",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:31806931",
+       "where": "Clinical Diagnosis, History And Examination; Surgical Management"
+      }
+     ]
+    },
+    {
+     "item": "Antiemetic and analgesia",
+     "dose": "To prevent vomiting and other Valsalva maneuvers",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35015442",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Mannitol, acetazolamide, steroids",
+     "dose": "Adjuncts only; effectiveness in orbital compartment syndrome not established",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31806931",
+       "where": "Medical Therapy"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_ocs",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Orbital compartment syndrome: lateral canthotomy and cantholysis at once, ideally within 2 hours, without waiting for imaging; antiemetic and analgesia; emergency ophthalmology. If the signs do not clearly improve, the orbit is imaged to find the hematoma and decompressed further surgically."
+  },
+  {
+   "id": "lid_exam",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Lid cellulitis, no globe injury. Next?",
+   "options": [
+    "Eye movements and pain on moving them, proptosis, acuity, color vision and pupils",
+    "Oral antibiotics and home; the eye itself can be examined once the swelling settles",
+    "Contrast CT of the orbits first, and the eye exam once the scan is reported",
+    "Swab the lid and start antibiotic eye drops, then reassess tomorrow"
+   ],
+   "answer": 0,
+   "chainStep": "Vital signs; eye movements and pain on movement, proptosis, chemosis, acuity, color vision and pupils, to separate preseptal from orbital cellulitis",
+   "why": "Lid swelling and redness occur in both, so they do not separate them. Pain with eye movement, restricted movement, double vision, proptosis, chemosis, falling acuity, poor color vision or an afferent pupil defect put the infection behind the septum. Sending the patient home before that exam can miss orbital cellulitis, the exam rather than a scan decides who needs imaging, and inadequate or delayed treatment can cost the eye or spread inside the skull.",
+   "next": "lid_result",
+   "sources": [
+    {
+     "docId": "pmid:29939678",
+     "where": "History and Physical; Evaluation"
+    },
+    {
+     "docId": "pmid:29261970",
+     "where": "History and Physical"
+    },
+    {
+     "docId": "pmid:28435504",
+     "where": "Skin and Lid Examination"
+    },
+    {
+     "docId": "pmid:30487680",
+     "where": "Orbital cellulitis"
+    }
+   ]
+  },
+  {
+   "id": "lid_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Eye movements, proptosis and vision",
+   "outcomes": [
+    {
+     "id": "preseptal",
+     "if": "Lids only; eye moves fully without pain, vision and pupils normal",
+     "ddx": {
+      "lead": [
+       "Preseptal cellulitis"
+      ],
+      "out": []
+     },
+     "next": "end_preseptal",
+     "orders": [
+      {
+       "item": "Oral antibiotics",
+       "dose": "Age 1 year or more with mild disease: amoxicillin-clavulanate, cefpodoxime or cefdinir, with clindamycin or TMP-SMX where MRSA is a concern; usually 5 to 7 days; doses not stated in the sources read",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29261970",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Oral antibiotic doses",
+       "dose": "Not stated in the sources read",
+       "status": "pending"
+      },
+      {
+       "item": "Admit for IV antibiotics",
+       "dose": "Severe disease or under 1 year of age; also if outpatient treatment fails to improve within 24 to 48 hours, with a CT",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29261970",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "orbital",
+     "if": "Orbital signs; pain on eye movement, restricted movement, proptosis or vision loss",
+     "ddx": {
+      "lead": [
+       "Orbital cellulitis"
+      ],
+      "out": []
+     },
+     "next": "orbit_tx"
+    },
+    {
+     "id": "cannot_assess",
+     "if": "Cannot be examined; lids swollen shut, or a child who will not cooperate",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "orbit_tx",
+     "orders": [
+      {
+       "item": "Treat as orbital",
+       "dose": "When preseptal and orbital cellulitis cannot be told apart, treat it as orbital cellulitis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29261970",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_preseptal",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Preseptal cellulitis: oral antibiotics for 5 to 7 days in a well patient aged 1 year or more (amoxicillin-clavulanate, cefpodoxime or cefdinir, with clindamycin or TMP-SMX where MRSA is a concern), and a recheck. Admit for IV antibiotics and a CT if it is not better in 24 to 48 hours, if the child is under 1 year, or if orbital signs appear; when in doubt, treat as orbital cellulitis."
+  },
+  {
+   "id": "orbit_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Orbital signs, or no way to exclude them. Next?",
+   "options": [
+    "Admit, IV vancomycin plus ceftriaxone, contrast CT orbits and sinuses, ophthalmology and ENT",
+    "Oral amoxicillin-clavulanate at home, with a review of the eye in 48 hours",
+    "Lumbar puncture first, then antibiotics once the CSF result is back",
+    "IV antibiotics on the ward, keeping imaging for a fever that lasts beyond a full week of treatment"
+   ],
+   "answer": 0,
+   "chainStep": "Admit; IV vancomycin plus ceftriaxone, adding metronidazole when anaerobes are likely; contrast CT of the orbits and sinuses; ophthalmology and ENT; serial vision, pupils, color vision and motility",
+   "why": "Orbital cellulitis needs admission, broad-spectrum IV antibiotics, close checks of vision, pupils, color vision and motility, and early ophthalmology and ENT. A common empiric regimen is vancomycin for MRSA plus a broad beta-lactam such as ceftriaxone, with metronidazole for a dental source, chronic sinusitis, intracranial spread or an abscess. Contrast-enhanced CT of the orbits and sinuses is the usual first imaging: it shows the sinus disease and finds a subperiosteal or orbital abscess that may need drainage. Oral treatment at home is for preseptal disease, and antibiotics are not held back for other tests.",
+   "next": "end_orbit",
+   "sources": [
+    {
+     "docId": "pmid:29939678",
+     "where": "Treatment / Management; Evaluation"
+    },
+    {
+     "docId": "pmid:30487680",
+     "where": "Remedies and immediate management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Vancomycin",
+     "dose": "Adults 15 to 20 mg/kg IV every 8 to 12 hours (usual max 2 g per dose); children 40 to 60 mg/kg/day divided every 6 to 8 hours (usual max 4 g/day); adjust to renal function and levels",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29939678",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Ceftriaxone",
+     "dose": "Adults 2 g IV daily, every 12 hours if intracranial spread is suspected; children 50 mg/kg IV once or twice daily (usual max 4 g/day)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29939678",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Metronidazole",
+     "dose": "When anaerobes are likely (dental source, chronic sinusitis, intracranial spread, abscess): adults 500 mg IV or orally every 8 hours; children 30 mg/kg/day divided every 6 to 8 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29939678",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Contrast CT orbits and sinuses",
+     "dose": "Initial imaging; MRI without and with contrast is the alternative",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29939678",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:30487680",
+       "where": "Remedies and immediate management"
+      }
+     ]
+    },
+    {
+     "item": "Surgery",
+     "dose": "Worsening vision or an afferent defect, a large or non-medial subperiosteal abscess, an orbital abscess, intracranial spread, or no improvement after 24 to 48 hours of IV antibiotics",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29939678",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Oral step-down",
+     "dose": "After about 3 to 5 days of IV treatment if improving; total course usually 2 to 3 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29939678",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_orbit",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Orbital cellulitis: admission, IV vancomycin plus ceftriaxone (metronidazole when anaerobes are likely), contrast CT of the orbits and sinuses, ophthalmology and ENT, and close checks of vision, pupils and motility. Worsening vision or an afferent defect, a large or non-medial subperiosteal abscess, an orbital abscess, intracranial spread, or no improvement after 24 to 48 hours of IV antibiotics goes to surgery; oral step-down after about 3 to 5 days, 2 to 3 weeks in all."
+  },
+  {
+   "id": "neo_tx",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Newborn with eye discharge. Next?",
+   "options": [
+    "Gram stain, culture and chlamydia test; ceftriaxone once if diplococci are seen",
+    "Erythromycin ointment four times daily and a review in a week, without a swab",
+    "Saline cleaning alone; this is a reaction to the eye prophylaxis given at birth",
+    "Oral erythromycin for 14 days for presumed chlamydia, with no swab or Gram stain"
+   ],
+   "answer": 0,
+   "chainStep": "Gram stain and culture of the discharge and a chlamydia test from the everted lid; gram-negative intracellular diplococci: ceftriaxone 25 to 50 mg/kg IV or IM once (max 250 mg) and a search for sepsis, arthritis and meningitis",
+   "why": "Gram-negative intracellular diplococci on the smear justify treating for gonorrhea at once, after cultures, and the chlamydia test is taken from the everted lid at the same time. Gonococcal ophthalmia can perforate the globe, so one dose of systemic ceftriaxone is given and the baby is examined for disseminated infection, with infectious diseases input. Topical treatment alone is inadequate for either organism. A reaction to birth prophylaxis is mild and mucoid and settles within 48 hours, unlike a copious purulent discharge.",
+   "next": "neo_result",
+   "sources": [
+    {
+     "docId": "pmid:34292926",
+     "where": "Ophthalmia Neonatorum Caused by N. gonorrhoeae: Diagnostic Considerations, Treatment; Ophthalmia Neonatorum Caused by C. trachomatis"
+    },
+    {
+     "docId": "pmid:30487681",
+     "where": "Presentation and diagnosis; Prevention"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Topical antibiotics alone",
+     "dose": "Inadequate for gonococcal or chlamydial ophthalmia",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Treatment of Gonococcal Ophthalmia Neonatorum; Ophthalmia Neonatorum Caused by C. trachomatis: Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Mother and partners",
+     "dose": "Evaluate, test and treat presumptively",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Management of Mothers and Their Sex Partners"
+      }
+     ]
+    },
+    {
+     "item": "Prevention at birth",
+     "dose": "Erythromycin 0.5% ophthalmic ointment in each eye, a single application at birth, within 24 hours; it does not prevent chlamydial ophthalmia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Recommended Regimen to Prevent Ophthalmia Neonatorum Caused by N. gonorrhoeae; Preventing Ophthalmia Neonatorum Caused by C. trachomatis"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "neo_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Gram stain and chlamydia test",
+   "outcomes": [
+    {
+     "id": "gc",
+     "if": "Gram-negative diplococci; intracellular, days 2 to 5",
+     "ddx": {
+      "lead": [
+       "Ophthalmia neonatorum"
+      ],
+      "out": []
+     },
+     "next": "end_neo",
+     "orders": [
+      {
+       "item": "Ceftriaxone",
+       "dose": "25 to 50 mg/kg IV or IM in a single dose, not more than 250 mg; caution with hyperbilirubinemia",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34292926",
+         "where": "Treatment of Gonococcal Ophthalmia Neonatorum"
+        }
+       ]
+      },
+      {
+       "item": "Cefotaxime instead",
+       "dose": "100 mg/kg IV or IM once when IV calcium is being given",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34292926",
+         "where": "Treatment of Gonococcal Ophthalmia Neonatorum"
+        }
+       ]
+      },
+      {
+       "item": "Disseminated infection",
+       "dose": "Evaluate for sepsis, arthritis and meningitis; manage with infectious diseases",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34292926",
+         "where": "Other Management Considerations"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ct",
+     "if": "Chlamydia test positive; no diplococci, days 5 to 12",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_neo_ct",
+     "orders": [
+      {
+       "item": "Oral erythromycin",
+       "dose": "Erythromycin base or ethylsuccinate 50 mg/kg/day orally in 4 divided doses for 14 days; watch for pyloric stenosis; a second course may be needed",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34292926",
+         "where": "Ophthalmia Neonatorum Caused by C. trachomatis: Treatment; Follow-Up"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_neo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Gonococcal ophthalmia neonatorum (diplococci, usually days 2 to 5): ceftriaxone 25 to 50 mg/kg IV or IM once (max 250 mg), a search for disseminated infection, and infectious diseases input. Topical treatment alone is not enough; the mother and her partners are treated."
+  },
+  {
+   "id": "end_neo_ct",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Chlamydial ophthalmia neonatorum: oral erythromycin base or ethylsuccinate 50 mg/kg/day in 4 doses for 14 days, a watch for pyloric stenosis, follow-up because a second course may be needed, and treatment of the mother and her partners; topical treatment alone is not enough."
+  },
+  {
+   "id": "presentation",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Visual acuity and a first look",
+   "outcomes": [
+    {
+     "id": "red",
+     "if": "Red eye; with or without pain or reduced vision",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "red_exam"
+    },
+    {
+     "id": "painless",
+     "if": "Painless loss of vision or new floaters; white, quiet eye",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "fundus"
+    }
+   ]
+  },
+  {
+   "id": "red_exam",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Red eye. Next?",
+   "options": [
+    "Pupils, pressure, slit lamp and fluorescein; ask about lenses and recent eye surgery",
+    "Steroid-antibiotic combination drops to settle it, and a review in the eye clinic next week",
+    "A phenylephrine drop first, to see whether the redness blanches, before the pressure",
+    "Fluorescein under a blue light at the bedside alone; no pressure or slit lamp needed"
+   ],
+   "answer": 0,
+   "chainStep": "Pupils, intraocular pressure, slit lamp with fluorescein; ask about contact lenses, recent eye surgery, discharge and itch; a phenylephrine drop for sectoral redness once the pressure is known to be normal",
+   "why": "Pain and photophobia, the pressure, the slit lamp with fluorescein, the response to phenylephrine and the acuity are the findings that separate a benign red eye from a dangerous one. Contact lens wear raises the risk of keratitis, and recent eye surgery points to endophthalmitis. Phenylephrine goes in only once the pressure is known to be normal. A steroid drop before the exam can worsen herpes keratitis and mask an infection, and fluorescein alone misses the pressure and the anterior chamber.",
+   "next": "red_result",
+   "sources": [
+    {
+     "docId": "pmid:28435504",
+     "where": "Pain or Photophobia; Risk Factors; Response to Phenylephrine; Fluorescein Examination"
+    },
+    {
+     "docId": "url:0b32c067e6bb",
+     "where": "Warnings"
+    },
+    {
+     "docId": "url:7ded552715a4",
+     "where": "Warnings"
+    }
+   ]
+  },
+  {
+   "id": "red_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Pressure, slit lamp and fluorescein",
+   "outcomes": [
+    {
+     "id": "aacg",
+     "if": "Hard eye, mid-dilated pupil; pressure over 40, hazy cornea, shallow chamber, vision down",
+     "ddx": {
+      "lead": [
+       "Acute angle-closure glaucoma"
+      ],
+      "out": []
+     },
+     "next": "aacg_tx"
+    },
+    {
+     "id": "keratitis",
+     "if": "Corneal ulcer in a lens wearer; a white infiltrate over a staining defect",
+     "ddx": {
+      "lead": [
+       "Bacterial keratitis"
+      ],
+      "out": []
+     },
+     "next": "kerat_tx"
+    },
+    {
+     "id": "uveitis",
+     "if": "Cells and flare, small pupil; ciliary flush, clear cornea, normal pressure",
+     "ddx": {
+      "lead": [
+       "Anterior uveitis"
+      ],
+      "out": []
+     },
+     "next": "uveitis_tx"
+    },
+    {
+     "id": "endophthalmitis",
+     "if": "Hypopyon after surgery, injection or trauma; hazy view, vision down",
+     "ddx": {
+      "lead": [
+       "Endophthalmitis"
+      ],
+      "out": []
+     },
+     "next": "endo_tx"
+    },
+    {
+     "id": "abrasion",
+     "if": "Staining defect, clear cornea; no infiltrate, quiet chamber",
+     "ddx": {
+      "lead": [
+       "Corneal abrasion"
+      ],
+      "out": []
+     },
+     "next": "abrasion_tx"
+    },
+    {
+     "id": "episcleritis",
+     "if": "Sectoral redness that blanches; phenylephrine clears it, mild ache only",
+     "ddx": {
+      "lead": [
+       "Episcleritis"
+      ],
+      "out": []
+     },
+     "next": "end_episcleritis",
+     "orders": [
+      {
+       "item": "Oral NSAID",
+       "dose": "Most resolve on their own in 2 to 21 days with refrigerated artificial tears at least 4 times a day; if symptoms need more, ibuprofen 200 to 600 mg 3 to 4 times a day or naproxen 250 to 500 mg twice a day, for up to 2 weeks",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30521217",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:28435504",
+         "where": "Episcleritis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "scleritis",
+     "if": "Deep violet redness, severe boring pain; no blanching with phenylephrine",
+     "ddx": {
+      "lead": [
+       "Scleritis"
+      ],
+      "out": []
+     },
+     "next": "end_scleritis",
+     "orders": [
+      {
+       "item": "Ophthalmology",
+       "dose": "Emergent referral to start treatment and prevent scleral melting; an eye shield if the sclera is thin",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28435504",
+         "where": "Anterior Scleritis"
+        }
+       ]
+      },
+      {
+       "item": "Systemic workup",
+       "dose": "At the first presentation: ANCA, ANA, rheumatoid factor and anti-CCP, blood count, ESR and CRP, creatinine and urinalysis, syphilis and Lyme serology; about half have a systemic disease",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29763119",
+         "where": "Evaluation; Pearls and Other Issues"
+        },
+        {
+         "docId": "pmid:28435504",
+         "where": "Anterior Scleritis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sch",
+     "if": "Flat bright red patch, no pain; vision, pupil, cornea and chamber normal",
+     "ddx": {
+      "lead": [
+       "Subconjunctival hemorrhage"
+      ],
+      "out": []
+     },
+     "next": "end_sch",
+     "orders": [
+      {
+       "item": "INR",
+       "dose": "Consider it in a patient on warfarin",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28435504",
+         "where": "Subconjunctival Hemorrhage"
+        }
+       ]
+      },
+      {
+       "item": "Blood pressure",
+       "dose": "Check it: hypertension is the most consistently documented systemic risk factor",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31869130",
+         "where": "Etiology"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "viral",
+     "if": "Watery discharge, follicles; tender node in front of the ear, recent cold",
+     "ddx": {
+      "lead": [
+       "Viral conjunctivitis"
+      ],
+      "out": []
+     },
+     "next": "end_viral",
+     "orders": [
+      {
+       "item": "Supportive care",
+       "dose": "Preservative-free artificial tears up to 8 times a day, cold compresses; contagious for 1 to 2 weeks from onset, contact precautions",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28435504",
+         "where": "Conjunctivitis"
+        },
+        {
+         "docId": "pmid:31082078",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "allergic",
+     "if": "Itchy, watery eyes on both sides; chemosis, hay fever season",
+     "ddx": {
+      "lead": [
+       "Allergic conjunctivitis"
+      ],
+      "out": []
+     },
+     "next": "end_allergic",
+     "orders": [
+      {
+       "item": "Topical antihistamine",
+       "dose": "With allergen avoidance, cold compresses and artificial tears; a mast cell inhibitor or an oral antihistamine for more severe symptoms",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28435504",
+         "where": "Conjunctivitis"
+        },
+        {
+         "docId": "pmid:31082078",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bacterial",
+     "if": "Mucopurulent discharge, no itch; lids stuck shut, cornea clear",
+     "ddx": {
+      "lead": [
+       "Bacterial conjunctivitis"
+      ],
+      "out": []
+     },
+     "next": "end_bacterial",
+     "orders": [
+      {
+       "item": "Polymyxin B and trimethoprim drops",
+       "dose": "1 drop every 3 hours (maximum 6 doses a day) for 7 to 10 days in mild to moderate infection",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:73fa06afdc6b",
+         "where": "Dosage and Administration"
+        },
+        {
+         "docId": "pmid:31082078",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Contact lens wearer",
+       "dose": "Broad-spectrum cover such as a fluoroquinolone, and close follow-up for an early keratitis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31082078",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:28435504",
+         "where": "Conjunctivitis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "gonococcal",
+     "if": "Hyperacute copious pus; swollen lids within hours, sexually active adult",
+     "ddx": {
+      "lead": [
+       "Gonococcal conjunctivitis"
+      ],
+      "out": []
+     },
+     "next": "gc_tx"
+    },
+    {
+     "id": "dendrite",
+     "if": "Branching dendrite with end bulbs; stains brightly",
+     "ddx": {
+      "lead": [
+       "Herpes simplex keratitis"
+      ],
+      "out": []
+     },
+     "next": "end_red_other",
+     "orders": [
+      {
+       "item": "Herpes simplex dendrite",
+       "dose": "Topical trifluridine 1% every 2 hours and/or an oral antiviral (acyclovir, valacyclovir); no topical steroid; ophthalmology within 24 hours once treatment is started",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28435504",
+         "where": "Viral Keratitis; Anterior Uveitis/Iritis"
+        },
+        {
+         "docId": "url:0b32c067e6bb",
+         "where": "Contraindications"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "other_finding",
+     "if": "Another finding; a hyphema or an embedded foreign body",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_red_other",
+     "orders": [
+      {
+       "item": "Hyphema",
+       "dose": "Immediate ophthalmology referral",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30422555",
+         "where": "Evaluation"
+        }
+       ]
+      },
+      {
+       "item": "Corneal foreign body",
+       "dose": "Remove with a swab, irrigation or a needle under the slit lamp; if that fails, ophthalmology within 24 hours",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30422555",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "aacg_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Acute angle closure, pressure 58. Next?",
+   "options": [
+    "Timolol, an alpha-2 agonist, IV acetazolamide; pilocarpine as IOP falls; iridotomy",
+    "Phenylephrine drops to widen the pupil and draw the iris back off the drainage angle",
+    "Pilocarpine 4% every 5 minutes as the first drop, until the pupil constricts",
+    "Oral acetazolamide alone tonight and an eye clinic appointment later this week"
+   ],
+   "answer": 0,
+   "chainStep": "Timolol 0.5% one drop, an alpha-2 agonist drop, acetazolamide 500 mg IV; pilocarpine 1 to 2% once the pressure falls below 40; IV mannitol if the response is poor; emergency ophthalmology for laser iridotomy in both eyes",
+   "why": "Acute angle closure is an emergency. Lower the pressure with aqueous suppressants first: topical timolol, an alpha-2 agonist and acetazolamide, IV when the patient is vomiting or speed matters. Pilocarpine works only once the pressure has come down and the iris is no longer ischemic, so it follows rather than leads, at 1 to 2%; intensive or stronger pilocarpine is avoided. Mannitol is the next step if the response is inadequate. Laser peripheral iridotomy is definitive, in the fellow eye too. Phenylephrine can worsen the attack, and a clinic appointment leaves an emergency untreated.",
+   "next": "end_aacg",
+   "sources": [
+    {
+     "docId": "pmid:41026937",
+     "where": "II.2.4.1.4 Acute angle closure: treatment"
+    },
+    {
+     "docId": "pmid:28435504",
+     "where": "Acute Angle Closure Glaucoma"
+    },
+    {
+     "docId": "pmid:28613607",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:2ccd8159b391",
+     "where": "2.2 Management of Acute Angle-Closure Glaucoma"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Timolol 0.5%",
+     "dose": "1 drop to the affected eye; not used alone in angle closure; avoid in asthma, severe COPD, sinus bradycardia, second or third degree heart block or overt heart failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613607",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "url:81458de18e11",
+       "where": "Contraindications; Precautions: General"
+      }
+     ]
+    },
+    {
+     "item": "Alpha-2 agonist",
+     "dose": "1 drop: apraclonidine 1% (StatPearls) or brimonidine 0.1% (WestJEM, which advises against apraclonidine because it can dilate the pupil); not with MAO inhibitors",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613607",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:28435504",
+       "where": "Acute Angle Closure Glaucoma"
+      }
+     ],
+     "note": "The sources differ on the agent."
+    },
+    {
+     "item": "Acetazolamide",
+     "dose": "500 mg IV or orally (US sources; label: 500 mg, then 125 to 250 mg every 4 hours, IV for rapid relief); EGS: 10 mg/kg IV when the pressure is 40 or more with vomiting or when speed is needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613607",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:28435504",
+       "where": "Acute Angle Closure Glaucoma"
+      },
+      {
+       "docId": "url:3cc476aa3b3a",
+       "where": "Dosage and Administration"
+      },
+      {
+       "docId": "pmid:41026937",
+       "where": "II.2.4.1.4 Systemic medication A"
+      }
+     ]
+    },
+    {
+     "item": "Acetazolamide cautions",
+     "dose": "Avoid with a sulfonamide allergy, marked kidney or liver disease (cirrhosis), low sodium or potassium, or sickle cell disease",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:41026937",
+       "where": "II.2.4.1.4 Systemic medication A"
+      },
+      {
+       "docId": "pmid:28435504",
+       "where": "Acute Angle Closure Glaucoma"
+      },
+      {
+       "docId": "url:3cc476aa3b3a",
+       "where": "Contraindications"
+      }
+     ]
+    },
+    {
+     "item": "Pilocarpine 1 to 2%",
+     "dose": "Once the pressure has come down (StatPearls: below 40; label: below 50; EGS defers it while the pressure is 40 or more): 1 drop up to 3 times over 30 minutes; nothing stronger than 2%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2ccd8159b391",
+       "where": "2.2 Management of Acute Angle-Closure Glaucoma"
+      },
+      {
+       "docId": "pmid:28613607",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:41026937",
+       "where": "II.2.4.1.4 Topical medication"
+      },
+      {
+       "docId": "pmid:28435504",
+       "where": "Acute Angle Closure Glaucoma"
+      }
+     ]
+    },
+    {
+     "item": "Mannitol",
+     "dose": "If the response is inadequate: EGS 0.5 to 1.5 g/kg IV at 3 to 5 mL/minute; label 1.5 to 2 g/kg IV over at least 30 minutes; check for heart and kidney disease first",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41026937",
+       "where": "II.2.4.1.4 Systemic medication B"
+      },
+      {
+       "docId": "url:759149051540",
+       "where": "Dosage and Administration"
+      }
+     ],
+     "note": "The EGS range starts lower than the label's."
+    },
+    {
+     "item": "Topical steroid",
+     "dose": "Intensive, for example 6 times a day, to reduce inflammation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41026937",
+       "where": "II.2.4.1.4 Topical medication"
+      }
+     ]
+    },
+    {
+     "item": "Phenylephrine and other dilating drops",
+     "dose": "Avoid: may worsen the attack",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28435504",
+       "where": "Acute Angle Closure Glaucoma"
+      }
+     ]
+    },
+    {
+     "item": "Laser peripheral iridotomy",
+     "dose": "As soon as the cornea is clear enough; the fellow eye too, before discharge",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41026937",
+       "where": "II.2.4.1.4 Laser and surgical treatment"
+      },
+      {
+       "docId": "pmid:28613607",
+       "where": "Treatment / Management; Enhancing Healthcare Team Outcomes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_aacg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute angle closure: timolol, an alpha-2 agonist and acetazolamide now, pilocarpine once the pressure falls, mannitol if it does not, an intensive topical steroid, and laser iridotomy in both eyes as soon as the cornea clears. If the pressure stays high the eye team breaks the attack with laser iridoplasty, paracentesis or lens extraction. A medication trigger is looked for."
+  },
+  {
+   "id": "kerat_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Corneal ulcer. Next?",
+   "options": [
+    "Lenses out, no patch; topical fluoroquinolone now; ophthalmology within 24 hours",
+    "Pressure patch with erythromycin ointment and a review in 2 days",
+    "Topical prednisolone first to calm the inflammation, then antibiotics if it spreads",
+    "Oral ciprofloxacin alone, with no drops in the eye, until ophthalmology reviews it"
+   ],
+   "answer": 0,
+   "chainStep": "Remove contact lenses; no patch; topical fluoroquinolone (ciprofloxacin 0.3%: 2 drops every 15 minutes for 6 hours, then every 30 minutes for the rest of day 1); ophthalmology within 24 hours, the same day if the ulcer is large, deep or central, for scrapings and fortified drops",
+   "why": "Contact lens keratitis is most often Pseudomonas, which ciprofloxacin covers almost fully. A topical fluoroquinolone is used alone for small peripheral ulcers; large, deep or central ones get two antibiotics, usually fortified, after ophthalmology takes scrapings. Ophthalmology sees the patient within 24 hours, sooner when severe. Patching is not recommended, least of all when a contact lens caused the injury. A steroid is contraindicated in an untreated purulent infection, and systemic antibiotics have only a limited role in keratitis.",
+   "next": "end_kerat",
+   "sources": [
+    {
+     "docId": "pmid:38983972",
+     "where": "Abstract: Conclusion"
+    },
+    {
+     "docId": "pmid:34662023",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:28435504",
+     "where": "Bacterial or Fungal Keratitis/Corneal Ulcer"
+    },
+    {
+     "docId": "pmid:30422555",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:48ceb0ff7132",
+     "where": "Dosage and Administration"
+    },
+    {
+     "docId": "url:0b32c067e6bb",
+     "where": "Contraindications"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Ciprofloxacin 0.3% (corneal ulcer)",
+     "dose": "2 drops every 15 minutes for 6 hours, every 30 minutes for the rest of day 1, hourly on day 2, every 4 hours on days 3 to 14",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:48ceb0ff7132",
+       "where": "Dosage and Administration"
+      }
+     ]
+    },
+    {
+     "item": "Contact lenses",
+     "dose": "Remove them before treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:48ceb0ff7132",
+       "where": "Warnings"
+      }
+     ]
+    },
+    {
+     "item": "Patch",
+     "dose": "Avoid, especially when a contact lens caused the injury",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30422555",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Topical steroid",
+     "dose": "Avoid: contraindicated in an acute untreated purulent infection",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:0b32c067e6bb",
+       "where": "Contraindications"
+      }
+     ]
+    },
+    {
+     "item": "Large, deep or central ulcer",
+     "dose": "Two antibacterials, usually fortified drops, started by ophthalmology after scrapings",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34662023",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:28435504",
+       "where": "Bacterial or Fungal Keratitis/Corneal Ulcer"
+      }
+     ]
+    },
+    {
+     "item": "Ophthalmology",
+     "dose": "Within 24 hours, sooner depending on severity",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28435504",
+       "where": "Bacterial or Fungal Keratitis/Corneal Ulcer"
+      }
+     ]
+    }
+   ],
+   "note": "StatPearls notes rising resistance to ciprofloxacin and ofloxacin, with moxifloxacin and gatifloxacin used more; the ciprofloxacin label carries the corneal ulcer regimen."
+  },
+  {
+   "id": "end_kerat",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bacterial keratitis in a lens wearer: lenses out, no patch, no steroid, a topical fluoroquinolone at once, and ophthalmology within 24 hours, the same day when the ulcer is large or central, for scrapings and fortified drops. Pseudomonas is the usual organism."
+  },
+  {
+   "id": "uveitis_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Anterior uveitis. Next?",
+   "options": [
+    "Ophthalmology within 24 hours; topical steroid and a cycloplegic, agreed with them",
+    "Topical antibiotic drops and follow-up with primary care in a week or two",
+    "Oral NSAID and lubricating drops, as for episcleritis, with no referral",
+    "Topical steroid started from the ED with no eye review, stopped once the redness settles"
+   ],
+   "answer": 0,
+   "chainStep": "Ophthalmology within 24 hours; topical prednisolone acetate 1% and a cycloplegic, started with ophthalmology once herpes and infection are excluded; the eye team looks for HLA-B27 disease, syphilis, tuberculosis and sarcoidosis",
+   "why": "Anterior uveitis is treated with a topical steroid and a cycloplegic, which eases the ciliary spasm and keeps the iris from scarring to the lens. Steroids are started only with ophthalmology, because they worsen herpes keratitis and uveitis is a diagnosis of exclusion, and the patient is seen by ophthalmology within 24 hours. Antibiotics treat nothing here, and lubricants with an oral NSAID are the treatment for episcleritis, not iritis.",
+   "next": "end_uveitis",
+   "sources": [
+    {
+     "docId": "pmid:28435504",
+     "where": "Anterior Uveitis/Iritis"
+    },
+    {
+     "docId": "pmid:28613659",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:0b32c067e6bb",
+     "where": "Contraindications"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Prednisolone acetate 1%",
+     "dose": "Started only with ophthalmology: 1 to 2 drops 2 to 4 times a day, more often in the first 24 to 48 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613659",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "url:0b32c067e6bb",
+       "where": "Dosage and Administration"
+      }
+     ]
+    },
+    {
+     "item": "Topical cycloplegic",
+     "dose": "Atropine or homatropine, with the steroid, to relieve spasm and prevent synechiae",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613659",
+       "where": "History and Physical; Treatment / Management"
+      },
+      {
+       "docId": "pmid:28435504",
+       "where": "Anterior Uveitis/Iritis"
+      }
+     ]
+    },
+    {
+     "item": "Steroid contraindications",
+     "dose": "Epithelial herpes simplex keratitis and most viral corneal disease, fungal and mycobacterial eye infection",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:0b32c067e6bb",
+       "where": "Contraindications"
+      }
+     ]
+    },
+    {
+     "item": "Cause",
+     "dose": "By the eye team: HLA-B27 spondyloarthropathy, syphilis, tuberculosis, Lyme disease, herpesviruses, sarcoidosis; drugs such as rifabutin and moxifloxacin",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28435504",
+       "where": "Anterior Uveitis/Iritis"
+      },
+      {
+       "docId": "pmid:28613659",
+       "where": "Etiology"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_uveitis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute anterior uveitis: ophthalmology within 24 hours, a topical steroid and a cycloplegic started with them once infection is excluded, and a search for a cause; after idiopathic disease, HLA-B27 disease is the most common."
+  },
+  {
+   "id": "endo_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Hypopyon after eye surgery, an injection or trauma. Next?",
+   "options": [
+    "Ophthalmology now: vitreous sample and intravitreal vancomycin plus ceftazidime",
+    "Topical steroid drops first to damp the inflammation, then decide on antibiotics",
+    "Oral ciprofloxacin at home and a review in the eye clinic tomorrow morning",
+    "IV vancomycin and ceftazidime alone, with no vitreous sample and no injection"
+   ],
+   "answer": 0,
+   "chainStep": "Ophthalmology now: vitreous tap and intravitreal vancomycin 1 mg in 0.1 mL plus ceftazidime 2 mg in 0.1 mL when vision is hand motion or better; emergent vitrectomy when it is light perception or worse; B-scan if there is no view",
+   "why": "Endophthalmitis is an emergency: ophthalmology samples the vitreous and injects intravitreal antibiotics, vancomycin with ceftazidime first. With hand motion vision or better, a tap and injection is the treatment; with light perception or worse, an emergent vitrectomy. A steroid trial first delays treatment and can cost the eye, and systemic antibiotics are only an adjunct to the intravitreal injection.",
+   "next": "end_endo",
+   "sources": [
+    {
+     "docId": "pmid:28435504",
+     "where": "Endopthalmitis"
+    },
+    {
+     "docId": "pmid:30487688",
+     "where": "How to recognise endophthalmitis; Protocol"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Intravitreal vancomycin",
+     "dose": "1 mg in 0.1 mL",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30487688",
+       "where": "Protocol: 1st choice"
+      }
+     ]
+    },
+    {
+     "item": "Intravitreal ceftazidime",
+     "dose": "2 mg in 0.1 mL; second choice amikacin 400 micrograms in 0.1 mL with ceftazidime",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30487688",
+       "where": "Protocol: 1st and 2nd choice"
+      }
+     ]
+    },
+    {
+     "item": "Vitrectomy",
+     "dose": "Emergent when vision is light perception or worse",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28435504",
+       "where": "Endopthalmitis"
+      },
+      {
+       "docId": "pmid:30487688",
+       "where": "Protocol: Within 1 hour"
+      }
+     ]
+    },
+    {
+     "item": "B-scan ultrasound",
+     "dose": "If available, to look for vitritis or a detachment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30487688",
+       "where": "How to recognise endophthalmitis"
+      }
+     ]
+    },
+    {
+     "item": "Steroid course first",
+     "dose": "Avoid: delays treatment and may lose the eye",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30487688",
+       "where": "How to recognise endophthalmitis"
+      }
+     ]
+    },
+    {
+     "item": "Systemic antibiotics",
+     "dose": "Consider the same agents for 48 hours as an adjunct",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30487688",
+       "where": "Protocol: Then"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_endo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Postoperative endophthalmitis: emergency ophthalmology, a vitreous tap and intravitreal vancomycin plus ceftazidime when vision is hand motion or better, and an emergent vitrectomy when it is light perception or worse. Never a steroid trial first."
+  },
+  {
+   "id": "abrasion_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Corneal abrasion, no infiltrate. Next?",
+   "options": [
+    "Evert the lids; topical antibiotic; no patch and no anesthetic drops for home",
+    "Pressure patch over the eye for 24 hours to speed the healing and ease the pain",
+    "Tetracaine drops to use at home as often as needed for the next week",
+    "Prednisolone acetate drops four times a day to speed the healing of the defect"
+   ],
+   "answer": 0,
+   "chainStep": "Evert the lids for a foreign body; erythromycin ointment 4 times a day for 5 days (a fluoroquinolone for a contact lens wearer); oral acetaminophen or an NSAID; no patch; no anesthetic drops for home; ophthalmology if not better in 24 hours",
+   "why": "Evert the lids to find a retained foreign body. A topical antibiotic is the mainstay: an ointment such as erythromycin when no lenses are worn, a fluoroquinolone for Pseudomonas when they are. Patching is no longer recommended for most patients, least of all after a lens injury. Topical anesthetics are for the exam: they are toxic to the epithelium and not meant for self-administration. A steroid drop raises the risk of secondary infection. Pain that is not better in 24 hours needs ophthalmology urgently.",
+   "next": "end_abrasion",
+   "sources": [
+    {
+     "docId": "pmid:30422555",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:28435504",
+     "where": "Corneal Abrasion/Corneal Foreign Bodies; Response to Topical Anesthetic"
+    },
+    {
+     "docId": "pmid:41835781",
+     "where": "Review: Topical Anesthetics; Follow-Up and Referral"
+    },
+    {
+     "docId": "url:7ded552715a4",
+     "where": "Warnings"
+    },
+    {
+     "docId": "url:0b32c067e6bb",
+     "where": "Warnings"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Erythromycin ointment",
+     "dose": "4 times a day for 5 days when no contact lenses are worn",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30422555",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Contact lens wearer",
+     "dose": "A fluoroquinolone or aminoglycoside for Pseudomonas; ophthalmology within 24 to 48 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30422555",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:28435504",
+       "where": "Corneal Abrasion/Corneal Foreign Bodies"
+      },
+      {
+       "docId": "pmid:41835781",
+       "where": "Review: Follow-Up and Referral"
+      }
+     ]
+    },
+    {
+     "item": "Pain",
+     "dose": "Oral acetaminophen or an NSAID; a topical NSAID lowers pain in the first 48 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41835781",
+       "where": "Review: Pain Management; Topical NSAIDs"
+      }
+     ]
+    },
+    {
+     "item": "Topical anesthetic for home",
+     "dose": "Avoid: toxic to the epithelium; labeled for use under a clinician's supervision only",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:7ded552715a4",
+       "where": "Warnings"
+      },
+      {
+       "docId": "pmid:28435504",
+       "where": "Response to Topical Anesthetic"
+      }
+     ]
+    },
+    {
+     "item": "Patch",
+     "dose": "Not recommended for most patients, especially after a contact lens injury",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30422555",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Follow-up",
+     "dose": "Ophthalmology emergently if an ulcer is suspected or the pain is not improving within 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28435504",
+       "where": "Corneal Abrasion/Corneal Foreign Bodies"
+      }
+     ]
+    },
+    {
+     "item": "No tetanus prophylaxis",
+     "dose": "A superficial abrasion does not need it; penetrating eye injuries do",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30422555",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "note": "In February 2024 ACEP supported dispensing a small supply of topical anesthetic (about 1.5 to 2 mL, every 30 minutes as needed for up to 24 hours) to selected patients with an uncomplicated abrasion; the AAO did not endorse it, and the labels say the drops are not for self-administration. This pathway keys no take-home anesthetic, the usual US exam answer."
+  },
+  {
+   "id": "end_abrasion",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Corneal abrasion: lid eversion, a topical antibiotic (erythromycin ointment, or a fluoroquinolone for a lens wearer), oral analgesia with or without a topical NSAID, no patch and no anesthetic drops to take home. Lens wearers see ophthalmology within 24 to 48 hours, and pain that is not better in 24 hours is seen urgently."
+  },
+  {
+   "id": "end_episcleritis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Episcleritis: redness that blanches with phenylephrine and a mild ache; most resolve on their own in 2 to 21 days. Artificial tears, an oral NSAID if needed, primary care follow-up for an underlying cause, and a return if the pain worsens, which suggests scleritis."
+  },
+  {
+   "id": "end_scleritis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Scleritis: severe boring pain and redness that does not blanch. Emergency ophthalmology to start treatment and prevent scleral melting, a shield if the sclera is thin, and a search for systemic disease, present in about half: rheumatoid arthritis or granulomatosis with polyangiitis, for example."
+  },
+  {
+   "id": "end_sch",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Subconjunctival hemorrhage: reassurance and lubrication as needed; it usually clears in 1 to 2 weeks. Check the blood pressure, consider an INR on warfarin, and think of globe rupture after trauma or with a 360-degree bullous hemorrhage."
+  },
+  {
+   "id": "end_viral",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Viral conjunctivitis: supportive care with cold compresses and preservative-free artificial tears up to 8 times a day; no antibiotic. It is contagious for 1 to 2 weeks, so contact precautions. Pain or photophobia should raise the question of keratitis or uveitis."
+  },
+  {
+   "id": "end_allergic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Allergic conjunctivitis: a topical antihistamine, allergen avoidance, cold compresses and artificial tears; a mast cell inhibitor or an oral antihistamine for more severe symptoms."
+  },
+  {
+   "id": "end_bacterial",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bacterial conjunctivitis: usually self-limited; a topical antibiotic such as polymyxin B with trimethoprim shortens it. Contact lens wearers get broad-spectrum cover such as a fluoroquinolone and close follow-up, because their conjunctivitis may be an early keratitis."
+  },
+  {
+   "id": "end_red_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A dendrite, a hyphema or an embedded foreign body is not worked up in this pathway. Herpes simplex keratitis (a branching dendrite with end bulbs) gets an antiviral, no steroid drop, and ophthalmology within 24 hours; a hyphema goes to ophthalmology at once; a corneal foreign body is removed, or referred within 24 hours if removal fails."
+  },
+  {
+   "id": "gc_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Hyperacute purulent conjunctivitis in an adult. Next?",
+   "options": [
+    "Ceftriaxone 1 g IM once, saline lavage, chlamydia cover, ophthalmology today",
+    "Erythromycin ointment four times a day and a review in a week",
+    "Ceftriaxone 250 mg IM once with topical moxifloxacin, and primary care follow-up",
+    "Oral azithromycin 1 g alone, with lubricating drops for comfort"
+   ],
+   "answer": 0,
+   "chainStep": "Gram stain and culture of the discharge; ceftriaxone 1 g IM once; one-time saline lavage of the eye; doxycycline 100 mg twice daily for 7 days unless chlamydia is excluded; prompt ophthalmology; partners referred",
+   "why": "Hyperacute gonococcal conjunctivitis can involve the cornea and perforate it, so it is treated systemically at once: ceftriaxone 1 g IM as a single dose, the recommended regimen for gonococcal conjunctivitis, with a one-time saline lavage and infectious diseases input considered. Gonorrhea and chlamydia are treated together, so doxycycline is added unless chlamydia has been excluded. Topical treatment alone does not cover it, and a severe purulent discharge warrants prompt ophthalmology.",
+   "next": "end_gc",
+   "sources": [
+    {
+     "docId": "pmid:34292926",
+     "where": "Gonococcal Conjunctivitis; Uncomplicated Gonococcal Infection of the Cervix, Urethra, or Rectum"
+    },
+    {
+     "docId": "pmid:28435504",
+     "where": "Conjunctivitis"
+    },
+    {
+     "docId": "pmid:31082078",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Ceftriaxone",
+     "dose": "1 g IM in a single dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Recommended Regimen for Gonococcal Conjunctivitis Among Adolescents and Adults"
+      }
+     ]
+    },
+    {
+     "item": "Saline lavage",
+     "dose": "One-time lavage of the infected eye",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Recommended Regimen for Gonococcal Conjunctivitis Among Adolescents and Adults"
+      }
+     ]
+    },
+    {
+     "item": "Chlamydia",
+     "dose": "If not excluded: doxycycline 100 mg orally twice daily for 7 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Uncomplicated Gonococcal Infection of the Cervix, Urethra, or Rectum: Recommended Regimen"
+      },
+      {
+       "docId": "pmid:28435504",
+       "where": "Conjunctivitis"
+      }
+     ]
+    },
+    {
+     "item": "Infectious diseases",
+     "dose": "Consider consultation; adult data are limited",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Gonococcal Conjunctivitis"
+      }
+     ]
+    },
+    {
+     "item": "Partners",
+     "dose": "Refer for evaluation and treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Gonococcal Conjunctivitis: Management of Sex Partners"
+      }
+     ]
+    },
+    {
+     "item": "Ophthalmology",
+     "dose": "Prompt referral for a severe purulent discharge",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31082078",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_gc",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Gonococcal conjunctivitis: ceftriaxone 1 g IM once, a one-time saline lavage, doxycycline unless chlamydia is excluded, prompt ophthalmology because the cornea can perforate, and treatment of partners."
+  },
+  {
+   "id": "fundus",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Sudden painless vision loss or new floaters. Next?",
+   "options": [
+    "Pupils for an afferent defect, a fundus exam, and ocular ultrasound if no view",
+    "IV acetazolamide now, then a fundus exam once the pressure is down",
+    "Eye clinic referral for next week; nothing more needed in the department tonight",
+    "Carotid duplex and an echocardiogram now; the eye exam can wait for the source"
+   ],
+   "answer": 0,
+   "chainStep": "Afferent pupil check, dilated fundus exam, visual fields, and bedside ocular ultrasound when there is no view; ask about flashes, floaters, a curtain, jaw claudication and scalp tenderness",
+   "why": "The fundus decides the route: a pale retina with a cherry-red spot, a detached retina, blood and thunder, a swollen disc, or no view at all. Bedside ultrasound picks up a detachment with high sensitivity when blood hides the retina, and a vitreous hemorrhage alone does not cause an afferent defect. Sudden vision loss needs same-day assessment: a white eye does not make it benign, and a carotid study before the eye exam delays the diagnosis.",
+   "next": "fundus_result",
+   "sources": [
+    {
+     "docId": "pmid:31855346",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:39735154",
+     "where": "Introduction and background; Review"
+    },
+    {
+     "docId": "pmid:36588205",
+     "where": "Clinical examination; Ultra-sonography"
+    },
+    {
+     "docId": "pmid:30252241",
+     "where": "Deterrence and Patient Education"
+    }
+   ]
+  },
+  {
+   "id": "fundus_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Pupils, fundus and ultrasound",
+   "outcomes": [
+    {
+     "id": "crao",
+     "if": "Cherry-red spot; pale, opaque retina and an afferent defect",
+     "ddx": {
+      "lead": [
+       "Central retinal artery occlusion"
+      ],
+      "out": []
+     },
+     "next": "crao_first"
+    },
+    {
+     "id": "rd",
+     "if": "Retina detached; a grey billowing retina, or a membrane on ultrasound",
+     "ddx": {
+      "lead": [
+       "Retinal detachment"
+      ],
+      "out": []
+     },
+     "next": "end_rd",
+     "orders": [
+      {
+       "item": "Ophthalmology",
+       "dose": "Immediately: a rhegmatogenous detachment is an ocular emergency; refer to a retina specialist as soon as possible",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31855346",
+         "where": "Enhancing Healthcare Team Outcomes"
+        },
+        {
+         "docId": "pmid:30487683",
+         "where": "Referral"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "vh",
+     "if": "No fundus view, retina flat on ultrasound; vitreous hemorrhage",
+     "ddx": {
+      "lead": [
+       "Vitreous hemorrhage"
+      ],
+      "out": []
+     },
+     "next": "end_vh",
+     "orders": [
+      {
+       "item": "Ophthalmology",
+       "dose": "Prompt review to find the cause; not an immediate emergency once the retina is attached",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39735154",
+         "where": "Review: vitreous hemorrhage"
+        },
+        {
+         "docId": "pmid:36588205",
+         "where": "Etiology"
+        }
+       ]
+      },
+      {
+       "item": "Head of the bed raised",
+       "dose": "Lets the blood settle inferiorly",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:36588205",
+         "where": "Management: Observation"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "crvo",
+     "if": "Blood and thunder; hemorrhages in every quadrant, swollen disc",
+     "ddx": {
+      "lead": [
+       "Central retinal vein occlusion"
+      ],
+      "out": []
+     },
+     "next": "end_crvo",
+     "orders": [
+      {
+       "item": "Workup",
+       "dose": "Blood pressure, ESR, blood count, glucose, total and HDL cholesterol, protein electrophoresis, renal function and electrolytes, thyroid function, ECG",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30252241",
+         "where": "Evaluation"
+        }
+       ]
+      },
+      {
+       "item": "Ophthalmology",
+       "dose": "Referral, preferably to a retina specialist; anti-VEGF injections for macular edema",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30252241",
+         "where": "Consultations; Treatment / Management; Complications"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pvd",
+     "if": "Vitreous detachment only; retina attached on exam and ultrasound",
+     "ddx": {
+      "lead": [
+       "Posterior vitreous detachment"
+      ],
+      "out": []
+     },
+     "next": "end_pvd",
+     "orders": [
+      {
+       "item": "Retinal exam",
+       "dose": "Prompt dilated peripheral exam by ophthalmology: 8 to 22% have a retinal tear at the first exam; then a recheck at 2 to 6 weeks",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33085420",
+         "where": "Etiology; Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Return precautions",
+       "dose": "Come back at once for new floaters or flashes, a shadow or falling vision",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33085420",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "disc",
+     "if": "Swollen optic disc; no cherry-red spot, retina attached",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "disc_esr"
+    },
+    {
+     "id": "normal",
+     "if": "Normal fundus and ultrasound; the loss persists",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_fundus_normal"
+    }
+   ]
+  },
+  {
+   "id": "crao_first",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Cherry-red spot with sudden painless loss. Next?",
+   "options": [
+    "Treat it as a stroke: ESR and CRP now, stroke-team review, brain and vessel imaging",
+    "Ocular massage and a pressure-lowering drop, then home with eye clinic follow-up next week",
+    "IV acetazolamide and an anterior chamber paracentesis to lower the pressure, then stroke review",
+    "Start warfarin now, before imaging or blood tests come back"
+   ],
+   "answer": 0,
+   "chainStep": "Treat as a stroke of the eye: ESR and CRP now (high-dose steroids at once if raised with GCA features); stroke-team review; brain MRI, carotid duplex, echocardiogram, ECG and rhythm monitoring; glucose, HbA1c and lipids; ophthalmology",
+   "why": "A central retinal artery occlusion is the eye's equivalent of an ischemic stroke, with a high early risk of a cerebral stroke, so it gets a stroke workup: brain imaging (about 30% show cerebral ischemia on MRI), carotid and cardiac sources, and vascular risk factors. ESR and CRP come first, to catch giant cell arteritis, which needs high-dose steroids at once. Ocular massage, paracentesis and pressure-lowering drops have not changed outcomes. Without an indication for anticoagulation, the prevention afterwards is antiplatelet.",
+   "next": "crao_esr",
+   "sources": [
+    {
+     "docId": "pmid:38548943",
+     "where": "Introduction; Clinical features; Clinical workup; Table 1; Acute treatment options; Secondary prevention; Recommended management"
+    },
+    {
+     "docId": "pmid:29262124",
+     "where": "Etiology; Evaluation; Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "ESR and CRP",
+     "dose": "Now, to exclude giant cell arteritis; high-dose IV steroids at once if raised with a consistent history",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29262124",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Brain imaging",
+     "dose": "MRI: about 30% of acute CRAO have cerebral ischemic changes; CT head within 4.5 hours of onset, for the stroke team's lysis decision",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38548943",
+       "where": "Clinical workup"
+      },
+      {
+       "docId": "pmid:29262124",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Embolic source",
+     "dose": "Carotid duplex, echocardiogram, ECG and rhythm monitoring for atrial fibrillation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38548943",
+       "where": "Clinical workup; Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Risk factors",
+     "dose": "Blood pressure, glucose and HbA1c, lipids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38548943",
+       "where": "Clinical workup; Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Ocular massage, paracentesis, pressure-lowering drops",
+     "dose": "Not shown to change outcomes; never delays the stroke workup",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38548943",
+       "where": "Acute treatment options"
+      },
+      {
+       "docId": "pmid:29262124",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "IV thrombolysis",
+     "dose": "Withheld, not missing: the Eye 2024 review and StatPearls describe IV alteplase within 4.5 hours with the stroke team; THEIA and TenCRAOS (abstracts only) found no vision benefit over aspirin. A decision for the stroke team.",
+     "status": "pending",
+     "note": "The Eye 2024 review and StatPearls describe IV alteplase within 4.5 hours with the stroke team as an option; two later randomized trials (THEIA, Lancet Neurology 2025; TenCRAOS, NEJM 2026; abstracts read, full texts not accessible) found no vision benefit over aspirin, with more adverse events on tenecteplase, including one fatal intracranial hemorrhage."
+    }
+   ]
+  },
+  {
+   "id": "crao_esr",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "ESR, CRP and GCA symptoms",
+   "outcomes": [
+    {
+     "id": "arteritic",
+     "if": "ESR and CRP raised, GCA symptoms; jaw claudication, scalp tenderness",
+     "ddx": {
+      "lead": [
+       "Giant cell arteritis"
+      ],
+      "out": []
+     },
+     "next": "gca_steroid"
+    },
+    {
+     "id": "embolic",
+     "if": "ESR and CRP normal, no GCA symptoms; vascular risk factors",
+     "ddx": {
+      "lead": [
+       "Central retinal artery occlusion"
+      ],
+      "out": []
+     },
+     "next": "end_crao"
+    }
+   ]
+  },
+  {
+   "id": "end_crao",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Non-arteritic central retinal artery occlusion, a stroke of the eye: a stroke-team workup (brain MRI, carotid duplex, echocardiogram, rhythm monitoring, vascular risk factors) and secondary prevention as for a TIA or minor stroke. Without an indication for anticoagulation or carotid surgery, that means 21 days of dual antiplatelet therapy, then a single agent; a symptomatic carotid stenosis on duplex goes to the stroke team for surgery. The stroke pathway (pw_stroke) carries the antiplatelet doses. Iris new vessels can follow within 1 to 2 months, so ophthalmology follows the eye."
+  },
+  {
+   "id": "gca_steroid",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Suspected giant cell arteritis with vision loss. Next?",
+   "options": [
+    "Pulse IV methylprednisolone now, then high-dose prednisone; biopsy within 2 weeks",
+    "Hold the steroids until the temporal artery biopsy result is back",
+    "Prednisone 10 mg daily, increased if the biopsy proves arteritis",
+    "Aspirin alone, and a rheumatology clinic appointment next month to discuss steroids"
+   ],
+   "answer": 0,
+   "chainStep": "Pulse IV methylprednisolone (ACR: 500 to 1000 mg daily for 3 to 5 days), then high-dose oral prednisone; urgent rheumatology and ophthalmology; temporal artery biopsy within 2 weeks of starting",
+   "why": "With threatened or lost vision, the ACR conditionally prefers pulse IV glucocorticoids over high-dose oral ones, and EULAR says pulsed methylprednisolone could be considered and starts treatment without waiting for confirmation when suspicion is strong. The biopsy can still show arteritis after steroids start, ideally within 2 weeks. Low-dose prednisone is not induction therapy, and delaying steroids risks the other eye.",
+   "next": "end_gca",
+   "sources": [
+    {
+     "docId": "pmid:34235884",
+     "where": "Recommendations 9 and 10; definitions table; biopsy text"
+    },
+    {
+     "docId": "pmid:42481270",
+     "where": "Recommendations 1 and 2; Recommendation 4 text"
+    },
+    {
+     "docId": "pmid:31270110",
+     "where": "Recommendation 1 text; Definitions table"
+    },
+    {
+     "docId": "pmid:29262124",
+     "where": "Evaluation; Complications"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Methylprednisolone (ACR)",
+     "dose": "500 to 1000 mg IV daily for 3 to 5 days, or equivalent",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34235884",
+       "where": "Definitions table; Recommendation 9"
+      }
+     ]
+    },
+    {
+     "item": "Methylprednisolone (EULAR)",
+     "dose": "0.25 to 1.0 g IV daily for up to 3 days could be considered in acute vision loss; benefit unclear",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42481270",
+       "where": "Recommendation 4 text"
+      }
+     ]
+    },
+    {
+     "item": "Then prednisone",
+     "dose": "High dose: 1 mg/kg up to 80 mg daily, or equivalent",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34235884",
+       "where": "Definitions table"
+      }
+     ]
+    },
+    {
+     "item": "Temporal artery biopsy",
+     "dose": "Within 2 weeks of starting glucocorticoids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34235884",
+       "where": "Biopsy text"
+      },
+      {
+       "docId": "pmid:29262124",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Ophthalmology",
+     "dose": "New visual symptoms: seen as soon as possible by an ophthalmology team",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31270110",
+       "where": "Recommendation 1 text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_gca",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Giant cell arteritis with vision loss: glucocorticoids at once, pulse IV methylprednisolone then high-dose prednisone, without waiting for the biopsy. Confirmation, the taper and steroid-sparing treatment continue in the headache pathway's GCA route (pw_headache)."
+  },
+  {
+   "id": "end_rd",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Rhegmatogenous retinal detachment (new floaters and flashes, then a spreading field loss): an ocular emergency. Same-day referral to a retina surgeon; whether the macula is still attached is one of the main factors in the visual outcome."
+  },
+  {
+   "id": "end_pvd",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Posterior vitreous detachment with the retina attached: usually benign, but 8 to 22% have a retinal tear at the first exam, so ophthalmology does a prompt dilated peripheral exam and rechecks at 2 to 6 weeks. The patient returns at once for new floaters or flashes, a shadow or falling vision; an untreated symptomatic tear often goes on to detach."
+  },
+  {
+   "id": "end_vh",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Vitreous hemorrhage with the retina attached on ultrasound: prompt ophthalmology to find the cause (proliferative diabetic retinopathy, a posterior vitreous detachment with or without a tear, or trauma), but not an immediate emergency. The head of the bed is kept raised so the blood settles. A detachment on ultrasound changes the route to the retina surgeon."
+  },
+  {
+   "id": "end_crvo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Central retinal vein occlusion: referral to ophthalmology, preferably a retina specialist, and a workup for its causes (blood pressure, ESR, blood count, glucose, cholesterol, protein electrophoresis, renal and thyroid tests, ECG). No medical treatment is fully effective; anti-VEGF injections treat macular edema, and the ischemic form is checked monthly for 6 months for neovascular glaucoma."
+  },
+  {
+   "id": "disc_esr",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "ESR, CRP and GCA symptoms",
+   "outcomes": [
+    {
+     "id": "arteritic_aion",
+     "if": "ESR and CRP raised, GCA symptoms; jaw claudication, scalp tenderness",
+     "ddx": {
+      "lead": [
+       "Giant cell arteritis"
+      ],
+      "out": []
+     },
+     "next": "gca_steroid"
+    },
+    {
+     "id": "naion",
+     "if": "ESR and CRP normal, no GCA symptoms; vascular risk factors",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_disc"
+    }
+   ]
+  },
+  {
+   "id": "end_disc",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Swollen optic disc with ESR and CRP normal and no GCA symptoms: likely non-arteritic ischemic optic neuropathy, whose workup is not in this pathway; ophthalmology."
+  },
+  {
+   "id": "end_fundus_normal",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A normal fundus and ultrasound with real, persisting vision loss points behind the eye, to the optic nerve or the brain; that workup is not in this pathway. A field loss in both eyes, such as a hemianopia, puts a stroke on the differential: the stroke pathway (pw_stroke)."
+  }
+ ],
+ "cases": [
+  {
+   "id": "unstable",
+   "label": "Major trauma with an eye injury",
+   "vignette": "34-year-old motorcyclist brought in after a high-speed crash, helmet off at the scene. Snoring respirations, GCS 8, BP 86/50, HR 128. Blood over the left side of the face.",
+   "picks": {
+    "front_door": "unstable"
+   },
+   "results": {
+    "front_door": "Airway obstructed, GCS 8, hypotensive; a laceration across the left upper lid."
+   }
+  },
+  {
+   "id": "alkali",
+   "label": "Alkali splash",
+   "vignette": "41-year-old cleaner, oven cleaner splashed into the right eye 10 minutes ago. Rinsed briefly at the sink. Severe pain, eye clamped shut.",
+   "picks": {
+    "front_door": "chemical"
+   },
+   "results": {
+    "front_door": "Alkaline cleaner in the right eye; breathing comfortably, no other burns."
+   }
+  },
+  {
+   "id": "open_globe",
+   "label": "Open globe while hammering",
+   "vignette": "29-year-old man, hammering a steel chisel when something hit his left eye. Pain and blurred vision. No other injury.",
+   "picks": {
+    "front_door": "open_globe"
+   },
+   "results": {
+    "front_door": "Left eye: a small full-thickness corneal wound with a teardrop-shaped pupil pointing toward it."
+   }
+  },
+  {
+   "id": "ocs",
+   "label": "Retrobulbar hemorrhage after an assault",
+   "vignette": "52-year-old man, punched in the right eye 1 hour ago. Pain, vomiting, and his vision on that side is fading.",
+   "picks": {
+    "front_door": "ocs"
+   },
+   "results": {
+    "front_door": "Right eye bulging and rock hard behind tense lids; counts fingers only; afferent pupil defect; pressure 52. No wound in the globe."
+   }
+  },
+  {
+   "id": "preseptal",
+   "label": "Preseptal cellulitis in a child",
+   "vignette": "4-year-old boy, red swollen left upper lid since yesterday after a scratch from the cat. Temperature 37.8, playing in the waiting room.",
+   "picks": {
+    "front_door": "lids",
+    "lid_result": "preseptal"
+   },
+   "results": {
+    "front_door": "Swollen, warm, red left upper lid; no injury to the eye itself.",
+    "lid_result": "Follows a toy in every direction without discomfort; no proptosis; acuity 20/25 each eye; pupils normal."
+   }
+  },
+  {
+   "id": "orbital",
+   "label": "Orbital cellulitis from sinusitis",
+   "vignette": "9-year-old girl, a week of a runny nose, now 2 days of a swollen red right eye and a temperature of 39.2. She weighs 30 kg.",
+   "picks": {
+    "front_door": "lids",
+    "lid_result": "orbital"
+   },
+   "results": {
+    "front_door": "Swollen red right lids, no injury.",
+    "lid_result": "Pain on looking up and to the side, restricted elevation, right eye pushed forward, chemosis; acuity 20/40 right, 20/20 left."
+   }
+  },
+  {
+   "id": "neonate",
+   "label": "Purulent discharge on day 3",
+   "vignette": "3-day-old boy, born at home to a mother who had no prenatal care. Since this morning, thick discharge pouring from both eyes and swollen lids.",
+   "picks": {
+    "front_door": "neonate",
+    "neo_result": "gc"
+   },
+   "results": {
+    "front_door": "Copious purulent discharge from both eyes, tense swollen lids; no eye ointment at birth; feeding well, temperature normal.",
+    "neo_result": "Gram stain: gram-negative intracellular diplococci; chlamydia test sent."
+   }
+  },
+  {
+   "id": "aacg",
+   "label": "Acute angle closure",
+   "vignette": "63-year-old long-sighted woman, 2 hours of severe right eye pain and headache with vomiting, starting in a dark cinema. No asthma, no sulfa allergy, no other medical problems.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "aacg"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Right eye red and painful; acuity 20/200 right, 20/25 left.",
+    "red_result": "Right pupil 5 mm, sluggish; cornea steamy; shallow chamber; pressure 58 right, 16 left; fluorescein negative."
+   }
+  },
+  {
+   "id": "keratitis",
+   "label": "Contact lens ulcer",
+   "vignette": "24-year-old woman who sleeps in her soft contact lenses, 2 days of a painful, light-sensitive right eye with discharge.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "keratitis"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Right eye red, painful, photophobic; acuity 20/40 right, 20/20 left.",
+    "red_result": "A 2 mm white infiltrate just off the visual axis over a staining epithelial defect; pressure 15; no hypopyon."
+   }
+  },
+  {
+   "id": "uveitis",
+   "label": "Acute anterior uveitis",
+   "vignette": "29-year-old man with 2 years of morning low back stiffness, 2 days of an aching red left eye; light hurts even when shone in the other eye.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "uveitis"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Left eye red and painful; acuity 20/40 left, 20/20 right.",
+    "red_result": "Ring of redness at the limbus, small left pupil, cells and flare in the anterior chamber; cornea clear, fluorescein negative, pressure 14."
+   }
+  },
+  {
+   "id": "endophthalmitis",
+   "label": "Endophthalmitis after cataract surgery",
+   "vignette": "74-year-old man, right cataract surgery 4 days ago, now increasing pain and worsening vision in that eye since last night.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "endophthalmitis"
+   },
+   "results": {
+    "front_door": "No chemical exposure or new injury; mild lid swelling, no cellulitis.",
+    "presentation": "Right eye red and painful; sees hand motion only on the right, 20/30 left.",
+    "red_result": "2 mm hypopyon, dense cells, hazy view of the fundus; wound intact; pressure 19."
+   }
+  },
+  {
+   "id": "abrasion",
+   "label": "Fingernail abrasion",
+   "vignette": "30-year-old father, his toddler's fingernail caught his left eye this morning. Pain, tearing, light sensitivity. No contact lenses.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "abrasion"
+   },
+   "results": {
+    "front_door": "No chemical exposure; a superficial scratch only; lids normal.",
+    "presentation": "Left eye red and watering; acuity 20/25 left, 20/20 right.",
+    "red_result": "Linear staining defect on the lower cornea, clear stroma, no infiltrate, quiet chamber, nothing under either lid; pressure 13."
+   }
+  },
+  {
+   "id": "episcleritis",
+   "label": "Episcleritis",
+   "vignette": "35-year-old woman, 2 days of a red patch on the white of her right eye with a mild ache. No discharge.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "episcleritis"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Right eye: a red wedge on the outer side; acuity 20/20 each eye.",
+    "red_result": "Pressure 14; the vessels move over the sclera and blanch 15 minutes after a phenylephrine drop; cornea clear, chamber quiet."
+   }
+  },
+  {
+   "id": "scleritis",
+   "label": "Scleritis",
+   "vignette": "58-year-old woman with rheumatoid arthritis, a week of deep, boring left eye pain that wakes her at night and spreads to her brow.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "scleritis"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Left eye red and very painful; acuity 20/30 left, 20/20 right.",
+    "red_result": "Deep bluish-violet redness, globe tender to touch; no blanching after phenylephrine; cornea clear, pressure 16."
+   }
+  },
+  {
+   "id": "sch",
+   "label": "Subconjunctival hemorrhage",
+   "vignette": "66-year-old man noticed a bright red patch on his right eye this morning after a bout of coughing. No pain, no injury, no blood thinners.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "sch"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Right eye: a red patch; acuity 20/20 each eye. BP 168/96.",
+    "red_result": "Flat, sharply edged bright red patch under the conjunctiva; pupil, cornea and chamber normal; pressure 15."
+   }
+  },
+  {
+   "id": "viral",
+   "label": "Viral conjunctivitis",
+   "vignette": "26-year-old teacher, a cold last week, now 2 days of a red, gritty right eye and since this morning the left.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "viral"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Both eyes pink and watering; acuity 20/20 each eye.",
+    "red_result": "Watery discharge, follicles on the lower lids, a tender node in front of the right ear; cornea clear, fluorescein negative."
+   }
+  },
+  {
+   "id": "allergic",
+   "label": "Allergic conjunctivitis",
+   "vignette": "19-year-old student, every spring, now a week of itchy, watery eyes with sneezing.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "allergic"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Both eyes pink; acuity 20/20 each eye.",
+    "red_result": "Swollen conjunctiva on both sides, papillae under the upper lids, watery discharge; cornea clear."
+   }
+  },
+  {
+   "id": "bacterial",
+   "label": "Bacterial conjunctivitis",
+   "vignette": "40-year-old accountant, 2 days of a sticky red left eye; this morning the lids were glued shut. No contact lenses.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "bacterial"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Left eye red with discharge; acuity 20/20 each eye.",
+    "red_result": "Yellow mucopurulent discharge, crusted lashes, no itch, no follicles; cornea clear, fluorescein negative."
+   }
+  },
+  {
+   "id": "gonococcal",
+   "label": "Hyperacute gonococcal conjunctivitis",
+   "vignette": "22-year-old man, right eye red and swollen within 12 hours with discharge running down his cheek. New sexual partner 5 days ago, and burning on passing urine.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "gonococcal"
+   },
+   "results": {
+    "front_door": "No chemical exposure or injury; lids swollen from the conjunctivitis, not warm or tender like cellulitis.",
+    "presentation": "Right eye red, pouring pus; acuity 20/30 right, 20/20 left.",
+    "red_result": "Copious thick pus that reforms as soon as it is wiped, marked chemosis; cornea clear so far."
+   }
+  },
+  {
+   "id": "pvd",
+   "label": "Posterior vitreous detachment",
+   "vignette": "62-year-old woman, since last night flashes of light at the edge of the right eye's vision and a new cobweb floater. No shadow, vision otherwise normal.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "painless",
+    "fundus_result": "pvd"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Right eye white and quiet; acuity 20/20 each eye, full fields.",
+    "fundus_result": "No afferent defect; a ring-shaped floater in front of the disc; retina attached on the view and on ultrasound, which shows a detached posterior vitreous; no blood in the vitreous."
+   }
+  },
+  {
+   "id": "hsv",
+   "label": "Herpes simplex keratitis",
+   "vignette": "33-year-old man who gets cold sores, 2 days of a watery, light-sensitive, aching left eye.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "dendrite"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Left eye red and watering; acuity 20/30 left, 20/20 right.",
+    "red_result": "A branching ulcer with terminal bulbs that stains brightly with fluorescein; chamber quiet, pressure 14."
+   }
+  },
+  {
+   "id": "ct_neonate",
+   "label": "Chlamydial conjunctivitis in a newborn",
+   "vignette": "10-day-old girl, eye ointment given at birth; since day 7 a watery discharge from both eyes that has turned mucopurulent; afebrile, feeding well.",
+   "picks": {
+    "front_door": "neonate",
+    "neo_result": "ct"
+   },
+   "results": {
+    "front_door": "Mucopurulent discharge and lid swelling in both eyes; well baby.",
+    "neo_result": "No organisms on Gram stain; chlamydia test from the everted lid positive."
+   }
+  },
+  {
+   "id": "lids_shut",
+   "label": "Lids swollen shut in a toddler",
+   "vignette": "3-year-old boy, 3 days of a runny nose, now a red left eye swollen shut; temperature 39.1; he weighs 14 kg.",
+   "picks": {
+    "front_door": "lids",
+    "lid_result": "cannot_assess"
+   },
+   "results": {
+    "front_door": "Swollen, red, warm left lids; no injury to the eye.",
+    "lid_result": "The lids cannot be opened; he screams and will not track; the globe and pupil cannot be seen."
+   }
+  },
+  {
+   "id": "foreign_body",
+   "label": "Corneal foreign body",
+   "vignette": "36-year-old grinding metal without goggles, felt something fly into his right eye an hour ago; scratchy and watering.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "red",
+    "red_result": "other_finding"
+   },
+   "results": {
+    "front_door": "No chemical exposure; a speck from a grinder, no wound, pupil round; lids normal.",
+    "presentation": "Right eye red and watering; acuity 20/25 right, 20/20 left.",
+    "red_result": "A rust-ringed metal fleck embedded at 4 o'clock; chamber quiet; Seidel negative."
+   }
+  },
+  {
+   "id": "aion_gca",
+   "label": "Arteritic ischemic optic neuropathy",
+   "vignette": "79-year-old woman, woke with the right eye's vision gone below the middle; for a month a new headache and an aching jaw when she eats.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "painless",
+    "fundus_result": "disc",
+    "disc_esr": "arteritic_aion"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Right eye white and quiet; counts fingers right, 20/25 left; lower field gone on the right.",
+    "fundus_result": "Right afferent defect; pale, chalk-white swollen disc; no cherry-red spot; retina attached.",
+    "disc_esr": "ESR 104, CRP 72; scalp tender over the right temple."
+   }
+  },
+  {
+   "id": "crao",
+   "label": "Central retinal artery occlusion",
+   "vignette": "68-year-old man with hypertension who smokes, sudden painless loss of vision in the right eye 2 hours ago while reading.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "painless",
+    "fundus_result": "crao",
+    "crao_esr": "embolic"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Right eye white and quiet; counts fingers only on the right, 20/20 left.",
+    "fundus_result": "Right afferent pupil defect; pale, opaque retina with a cherry-red spot at the macula.",
+    "crao_esr": "ESR 12, CRP normal; no headache, jaw pain or scalp tenderness. Carotid bruit on the right."
+   }
+  },
+  {
+   "id": "gca",
+   "label": "Arteritic retinal artery occlusion",
+   "vignette": "77-year-old woman, woke today unable to see out of her right eye. No pain in the eye.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "painless",
+    "fundus_result": "crao",
+    "crao_esr": "arteritic"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Right eye white and quiet; hand motion only on the right, 20/30 left.",
+    "fundus_result": "Right afferent pupil defect; whitened retina with a cherry-red spot.",
+    "crao_esr": "ESR 96, CRP 64. On questioning, 3 weeks of a new headache, pain in the jaw when chewing, and a tender scalp."
+   }
+  },
+  {
+   "id": "rd",
+   "label": "Retinal detachment",
+   "vignette": "55-year-old very short-sighted man, 2 days of flashes and a shower of new floaters in the left eye, and since this morning a shadow coming down from above.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "painless",
+    "fundus_result": "rd"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Left eye white and quiet; acuity 20/30 left, 20/20 right; upper field missing on the left.",
+    "fundus_result": "Grey, billowing detached retina inferiorly; pigment in the vitreous; macula still flat."
+   }
+  },
+  {
+   "id": "vh",
+   "label": "Vitreous hemorrhage",
+   "vignette": "58-year-old woman with poorly controlled type 2 diabetes, sudden painless cloud of floaters, then haze, in the right eye this morning.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "painless",
+    "fundus_result": "vh"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Right eye white and quiet; hand motion right, 20/40 left.",
+    "fundus_result": "No afferent defect; no red reflex and no fundus view on the right; ultrasound shows mobile echoes in the vitreous with the retina flat. Left fundus: new vessels on the disc."
+   }
+  },
+  {
+   "id": "crvo",
+   "label": "Central retinal vein occlusion",
+   "vignette": "70-year-old man with hypertension and glaucoma, woke with blurred vision in the right eye.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "painless",
+    "fundus_result": "crvo"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Right eye white and quiet; acuity 20/200 right, 20/25 left.",
+    "fundus_result": "Mild right afferent defect; swollen disc, tortuous dilated veins and hemorrhages in all four quadrants."
+   }
+  },
+  {
+   "id": "disc",
+   "label": "Swollen optic disc",
+   "vignette": "71-year-old man, woke with the lower half of the vision in his right eye missing. No pain.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "painless",
+    "fundus_result": "disc",
+    "disc_esr": "naion"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Right eye white and quiet; acuity 20/60 right, 20/20 left; lower field gone on the right.",
+    "fundus_result": "Right afferent defect; swollen right disc with a few flame hemorrhages; no cherry-red spot; retina attached.",
+    "disc_esr": "ESR 14, CRP normal; no headache, jaw pain or scalp tenderness."
+   }
+  },
+  {
+   "id": "hemianopia",
+   "label": "Hemianopia mistaken for one eye",
+   "vignette": "72-year-old woman, since lunchtime she keeps bumping into things on her right and thinks her right eye has failed.",
+   "picks": {
+    "front_door": "other",
+    "presentation": "painless",
+    "fundus_result": "normal"
+   },
+   "results": {
+    "front_door": "No chemical exposure, no injury, no lid cellulitis.",
+    "presentation": "Both eyes white and quiet; acuity 20/25 each eye.",
+    "fundus_result": "No afferent defect; normal fundus and ultrasound in both eyes. Fields: the right half is missing in both eyes."
+   }
+  }
+ ]
+}

@@ -1,0 +1,2466 @@
+{
+ "id": "pw_htn",
+ "title": "Severely raised blood pressure",
+ "world": "cardio",
+ "synonyms": [
+  "hypertensive emergency",
+  "hypertensive urgency",
+  "hypertensive crisis",
+  "severe hypertension",
+  "asymptomatic severe hypertension",
+  "BP over 180/120",
+  "malignant hypertension",
+  "accelerated hypertension",
+  "hypertensive encephalopathy",
+  "PRES",
+  "papilledema",
+  "hypertensive retinopathy",
+  "nicardipine",
+  "clevidipine",
+  "labetalol",
+  "esmolol",
+  "phentolamine",
+  "nitroglycerin drip",
+  "cocaine hypertension",
+  "sympathomimetic toxicity",
+  "methamphetamine",
+  "pheochromocytoma crisis",
+  "aortic dissection blood pressure",
+  "permissive hypertension",
+  "ICH blood pressure",
+  "severe-range blood pressure in pregnancy",
+  "pre-eclampsia",
+  "flash pulmonary edema"
+ ],
+ "reviewBy": "2029-06-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:40815242",
+   "label": "AHA/ACC BP 2025",
+   "title": "2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40815242/"
+  },
+  {
+   "docId": "pmid:36418425",
+   "label": "BIHS 2023",
+   "title": "Management of hypertensive crisis: British and Irish Hypertension Society Position document (J Hum Hypertens 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36418425/"
+  },
+  {
+   "docId": "pmid:36334952",
+   "label": "Aortic 2022",
+   "title": "2022 ACC/AHA Guideline for the Diagnosis and Management of Aortic Disease (JACC copy)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36334952/"
+  },
+  {
+   "docId": "url:3489e1e96576",
+   "label": "NICE NG136",
+   "title": "Hypertension in adults: diagnosis and management (NICE NG136, 2019, updated 2026)",
+   "url": "https://www.nice.org.uk/guidance/ng136"
+  },
+  {
+   "docId": "url:ed91553c28fb",
+   "label": "NICE NG133",
+   "title": "Hypertension in pregnancy: diagnosis and management (NICE NG133, 2019, updated 2023)",
+   "url": "https://www.nice.org.uk/guidance/ng133"
+  },
+  {
+   "docId": "pmid:42830886",
+   "label": "ICU review 2026",
+   "title": "Hypertensive crisis in the critically ill (Ann Intensive Care 2026, review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42830886/"
+  },
+  {
+   "docId": "pmid:29939523",
+   "label": "StatPearls: Hypertensive Crisis",
+   "title": "Hypertensive Crisis (StatPearls, NBK507701, updated 2026-06-12, review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29939523/"
+  },
+  {
+   "docId": "pmid:28613508",
+   "label": "StatPearls: Sympathomimetic Toxicity",
+   "title": "Sympathomimetic Toxicity (StatPearls, NBK430757, updated 2025-02-16, review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613508/"
+  },
+  {
+   "docId": "pmid:28613695",
+   "label": "StatPearls: Cocaine Toxicity",
+   "title": "Cocaine Toxicity (StatPearls, NBK430976, updated 2023-06-08, review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613695/"
+  },
+  {
+   "docId": "pmid:36944004",
+   "label": "StatPearls: Pheochromocytoma",
+   "title": "Pheochromocytoma (StatPearls, NBK589700, updated 2024-11-07, review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36944004/"
+  },
+  {
+   "docId": "url:132aa38fd940",
+   "label": "FDA label: phentolamine",
+   "title": "Phentolamine Mesylate for Injection (Hikma) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ed6c506c-5535-4b7c-ae1a-d63f09d796c9"
+  },
+  {
+   "docId": "url:a17a38e00174",
+   "label": "FDA label: labetalol injection",
+   "title": "Labetalol Hydrochloride Injection (Hospira) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=abfc6b75-1ed5-41f1-0484-4597488237bc"
+  },
+  {
+   "docId": "pmid:32119279",
+   "label": "StatPearls: Eclampsia",
+   "title": "Eclampsia (StatPearls, updated 2024-10-06, review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32119279/"
+  },
+  {
+   "docId": "url:d18a85034eff",
+   "label": "NICE CG187",
+   "title": "Acute heart failure: diagnosis and management (NICE CG187)",
+   "url": "https://www.nice.org.uk/guidance/cg187"
+  },
+  {
+   "docId": "url:64e48d5d8ef3",
+   "label": "NICE NG128",
+   "title": "Stroke and transient ischaemic attack in over 16s: diagnosis and initial management (NICE NG128)",
+   "url": "https://www.nice.org.uk/guidance/ng128"
+  },
+  {
+   "docId": "url:1d4b714d9283",
+   "label": "FDA label: magnesium sulfate",
+   "title": "Magnesium Sulfate Injection USP prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6a5d362b-7aa7-40d3-898d-09407cce0713"
+  }
+ ],
+ "differential": [
+  "Hypertensive encephalopathy",
+  "Intracerebral hemorrhage",
+  "Subarachnoid hemorrhage",
+  "Ischemic stroke",
+  "Subdural or mass",
+  "Aortic dissection",
+  "ACS",
+  "Acute pulmonary edema",
+  "Acute kidney injury",
+  "Malignant hypertension",
+  "Sympathomimetic toxicity",
+  "Pheochromocytoma crisis",
+  "Pre-eclampsia",
+  "Eclampsia",
+  "Severe hypertension without organ damage"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "BP 180/120 or more. First moves?",
+   "options": [
+    "Airway and vitals, both-arm pressures, then screen for organ damage and pregnancy",
+    "IV labetalol at once, aiming for a systolic below 140 within the first hour",
+    "Oral amlodipine at triage, then recheck the pressure in 30 minutes and examine after",
+    "Bring it under 160/100 first, then look for organ damage once it has come down"
+   ],
+   "answer": 0,
+   "chainStep": "Airway and vital signs; repeat the BP in both arms and feel the pulses; look for acute organ damage (neurologic exam, fundi, ECG, creatinine, urine dipstick); test for pregnancy; ask about cocaine and other drugs",
+   "why": "Acute organ damage, not the number, separates a hypertensive emergency from severe hypertension without it, and the kind of damage directs the drug, the target and the pace. Pressures in both arms and the pulses screen for a dissection, the fundi for hemorrhages or papilledema, the urine for blood and protein; pregnancy is excluded in a woman who could be pregnant, and drugs such as cocaine are asked about. Lowering first treats the number: without acute organ damage the pressure is not lowered aggressively or with IV drugs, and one set target is wrong for a dissection or a stroke.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "pmid:36418425",
+     "where": "Assessment of a patient presenting with hypertensive crisis; Principles of management"
+    },
+    {
+     "docId": "pmid:40815242",
+     "where": "6.2 synopsis"
+    },
+    {
+     "docId": "url:3489e1e96576",
+     "where": "1.3.3; 1.5.2"
+    },
+    {
+     "docId": "pmid:42830886",
+     "where": "Hypertensive emergencies: clinical presentation; Table 1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Airway",
+     "dose": "Secure it when the patient cannot protect it; the method is not in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Organ damage screen",
+     "dose": "Fundi; 12-lead ECG; creatinine and electrolytes; full blood count, LDH and haptoglobin; urine dipstick for blood and protein; a pregnancy test in a woman of childbearing age; then troponin, chest film, CT head or CT angiography as the findings direct; a urine drug screen when cocaine or methamphetamine is suspected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Assessment of a patient presenting with hypertensive crisis"
+      },
+      {
+       "docId": "url:3489e1e96576",
+       "where": "1.3.3"
+      },
+      {
+       "docId": "pmid:42830886",
+       "where": "Table 1"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: children, postoperative hypertension, scleroderma renal crisis, MAOI interactions and clonidine withdrawal."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Exam, fundi, ECG, labs and history",
+   "outcomes": [
+    {
+     "id": "unstable",
+     "if": "Airway at risk; GCS below 13, not convulsing, no aortic features, not pregnant or recently delivered",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "airway_ct"
+    },
+    {
+     "id": "convulsing",
+     "if": "Convulsing, not pregnant or recently delivered; seizing on arrival",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_seizing"
+    },
+    {
+     "id": "neuro",
+     "if": "Neurologic signs; confusion, vision change or a new focal deficit, GCS 13 or more, no aortic features, not pregnant or recently delivered",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ct_neuro"
+    },
+    {
+     "id": "aorta",
+     "if": "Aortic features; abrupt severe chest or back pain with a pulse deficit, an arm pressure gap or a known aneurysm, with or without a neurologic deficit",
+     "ddx": {
+      "lead": [
+       "Aortic dissection"
+      ],
+      "out": []
+     },
+     "next": "dissect_bp"
+    },
+    {
+     "id": "acs",
+     "if": "Ischemic chest pain; new ischemic ECG change or a raised troponin, lungs clear, no aortic features, no stimulant use, no suspected pheochromocytoma",
+     "ddx": {
+      "lead": [
+       "ACS"
+      ],
+      "out": []
+     },
+     "next": "acs_bp"
+    },
+    {
+     "id": "pulm",
+     "if": "Pulmonary edema; breathless with crackles and edema on the chest film, no aortic features",
+     "ddx": {
+      "lead": [
+       "Acute pulmonary edema"
+      ],
+      "out": []
+     },
+     "next": "pulm_bp"
+    },
+    {
+     "id": "organ",
+     "if": "Kidney or retinal damage; acute kidney injury, or retinal hemorrhages or papilledema, with a normal neurologic exam, not pregnant or recently delivered",
+     "ddx": {
+      "lead": [
+       "Malignant hypertension",
+       "Acute kidney injury"
+      ],
+      "out": []
+     },
+     "next": "htn_icu"
+    },
+    {
+     "id": "stimulant",
+     "if": "Cocaine or amphetamine; agitated, sweating, big pupils, fast pulse, with or without chest pain",
+     "ddx": {
+      "lead": [
+       "Sympathomimetic toxicity"
+      ],
+      "out": []
+     },
+     "next": "coc_step"
+    },
+    {
+     "id": "pheo",
+     "if": "Suspected pheochromocytoma; spells of headache, sweating and palpitations, an adrenal mass, with or without an ischemic ECG",
+     "ddx": {
+      "lead": [
+       "Pheochromocytoma crisis"
+      ],
+      "out": []
+     },
+     "next": "pheo_step"
+    },
+    {
+     "id": "pregnant",
+     "if": "Pregnant or recently delivered; GCS 13 or more, no focal deficit or aortic features",
+     "ddx": {
+      "lead": [
+       "Pre-eclampsia"
+      ],
+      "out": []
+     },
+     "next": "preg_fit"
+    },
+    {
+     "id": "preg_neuro",
+     "if": "Pregnant or postpartum, GCS below 13 or a deficit; a focal deficit or a GCS below 13, no aortic features",
+     "ddx": {
+      "lead": [
+       "Eclampsia"
+      ],
+      "out": []
+     },
+     "next": "end_preg_neuro"
+    },
+    {
+     "id": "symptoms",
+     "if": "Chest pain or sudden headache, screen clear; no aortic features, first ECG and troponin normal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_symptoms"
+    },
+    {
+     "id": "none",
+     "if": "No acute organ damage; no chest pain, breathlessness or sudden severe headache, normal neurologic exam, fundi, ECG, creatinine and urine, not pregnant or recently delivered",
+     "ddx": {
+      "lead": [
+       "Severe hypertension without organ damage"
+      ],
+      "out": []
+     },
+     "next": "urgency"
+    }
+   ]
+  },
+  {
+   "id": "airway_ct",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "GCS below 13 with severe hypertension. First?",
+   "options": [
+    "Protect the airway, then a non-contrast CT head at once",
+    "IV labetalol to a systolic under 140 before the scan",
+    "Sublingual nifedipine, then a CT once the pressure falls",
+    "Lower it to normal now, then scan once the GCS improves"
+   ],
+   "answer": 0,
+   "chainStep": "Protect the airway; non-contrast CT head before setting the BP target",
+   "why": "A bleed or an infarct changes the target, and hypertensive encephalopathy is a diagnosis of exclusion, so the scan that rules out a hemorrhage comes first, before the BP plan. Lowering before the scan sets a target blind, rapid correction to normal can starve organs whose autoregulation is lost, and short-acting nifedipine is not used. How to secure the airway is not in the sources read.",
+   "next": "neuro_ct",
+   "sources": [
+    {
+     "docId": "pmid:36418425",
+     "where": "Hypertensive encephalopathy; Assessment of a patient presenting with hypertensive crisis; Table 2 footnote"
+    },
+    {
+     "docId": "pmid:40815242",
+     "where": "6.2 footnote; 6.2 synopsis"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Airway",
+     "dose": "Secure it when the patient cannot protect it; intubation criteria are not in the sources read",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "ct_neuro",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Neurologic signs with severe hypertension. Before the BP plan?",
+   "options": [
+    "Non-contrast CT head now, while the IV agent is prepared",
+    "No imaging: the fundi already show it is hypertensive",
+    "MRI brain tomorrow morning, once the pressure has come down",
+    "Lower it to normal first, then scan if the confusion persists"
+   ],
+   "answer": 0,
+   "chainStep": "Non-contrast CT head now to exclude a hemorrhage or infarct, which have their own BP targets",
+   "why": "The 2025 guideline handles a hypertensive emergency with an intracerebral hemorrhage or an ischemic stroke in its cerebrovascular section, so the scan comes before the target. Encephalopathy is a diagnosis of exclusion, and a focal deficit should raise suspicion for a stroke. The fundi cannot show a bleed, a scan tomorrow leaves tonight's target unset, and rapid lowering to normal risks hypoperfusion because autoregulation is lost.",
+   "next": "neuro_ct",
+   "sources": [
+    {
+     "docId": "pmid:40815242",
+     "where": "6.2 footnote; 6.2 synopsis"
+    },
+    {
+     "docId": "pmid:36418425",
+     "where": "Hypertensive encephalopathy; Assessment of a patient presenting with hypertensive crisis"
+    },
+    {
+     "docId": "pmid:42830886",
+     "where": "Hypertensive emergencies: clinical presentation"
+    }
+   ]
+  },
+  {
+   "id": "neuro_ct",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Non-contrast CT head",
+   "outcomes": [
+    {
+     "id": "ich",
+     "if": "Intracerebral hemorrhage; blood in the brain tissue",
+     "ddx": {
+      "lead": [
+       "Intracerebral hemorrhage"
+      ],
+      "out": []
+     },
+     "next": "ich_bp"
+    },
+    {
+     "id": "sah",
+     "if": "Subarachnoid blood; blood in the cisterns or sulci",
+     "ddx": {
+      "lead": [
+       "Subarachnoid hemorrhage"
+      ],
+      "out": []
+     },
+     "next": "end_sah"
+    },
+    {
+     "id": "lesion",
+     "if": "A subdural or a mass; a lesion that explains the picture",
+     "ddx": {
+      "lead": [
+       "Subdural or mass"
+      ],
+      "out": []
+     },
+     "next": "end_lesion"
+    },
+    {
+     "id": "ischemic",
+     "if": "No bleed, focal deficit; CT clear or an early infarct",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": [
+       "Intracerebral hemorrhage"
+      ]
+     },
+     "next": "ais_elig"
+    },
+    {
+     "id": "clear",
+     "if": "No bleed, no focal deficit; CT clear or PRES-type edema",
+     "ddx": {
+      "lead": [
+       "Hypertensive encephalopathy"
+      ],
+      "out": [
+       "Intracerebral hemorrhage"
+      ]
+     },
+     "next": "htn_icu"
+    }
+   ]
+  },
+  {
+   "id": "ich_bp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Intracerebral hemorrhage on CT. Blood pressure?",
+   "options": [
+    "Smooth IV lowering, never below 130; aim 130 to 139 from 150 to 220",
+    "Lower it by about 15% over 24 hours, as after an ischemic stroke",
+    "Bring the systolic to 120 or less within 20 minutes, as for a dissection",
+    "Leave it alone for the first 24 hours so the brain stays perfused"
+   ],
+   "answer": 0,
+   "chainStep": "Titratable IV agent; systolic 130 to 139 for at least 7 days when it starts at 150 to 220, never below 130; smooth, without peaks; then the stroke pathway for reversal and surgery",
+   "why": "For a spontaneous ICH with a systolic of 150 to 220, the 2025 guideline lowers it at once to 130 to under 140 for at least 7 days and stops the drugs below 130; above 220 it is not taken below 130. Control should be smooth, without peaks or large swings. A 15% fall over a day is the rule for an ischemic stroke without reperfusion, not a bleed; 120 within 20 minutes is the dissection target and goes below the 130 floor; and leaving it alone gives up the functional benefit.",
+   "next": "end_ich",
+   "sources": [
+    {
+     "docId": "pmid:40815242",
+     "where": "5.3.9.1 recommendations 1 to 3; 5.3.9.2 recommendation 4; Table 27, acute ICH"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Target",
+     "dose": "Systolic 150 to 220: lower at once to 130 to 139 and hold it for at least 7 days; stop the drugs if it falls below 130",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "5.3.9.1 recommendation 1"
+      },
+      {
+       "docId": "pmid:36418425",
+       "where": "Table 6"
+      },
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.5.6"
+      }
+     ],
+     "note": "AHA/ACC aims for 130 to 139 and stops below 130; BIHS calls 140 to 180 appropriate; NICE (stroke pathway) aims for 140 or below."
+    },
+    {
+     "item": "Systolic over 220",
+     "dose": "AHA/ACC: not below 130. BIHS: a smooth fall of the mean pressure by 20 to 25% at most over several hours, keeping the systolic at 140 or more, preferably 140 to 160",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "5.3.9.1 recommendation 3"
+      },
+      {
+       "docId": "pmid:36418425",
+       "where": "Table 6"
+      }
+     ],
+     "note": "The floor differs: 130 in the AHA/ACC guideline, 140 in the BIHS position."
+    },
+    {
+     "item": "Agents",
+     "dose": "Clevidipine, nicardipine, esmolol, labetalol or hydralazine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 27, acute ICH"
+      }
+     ]
+    },
+    {
+     "item": "Nitroprusside",
+     "dose": "Avoid in acute cerebrovascular disease unless no other agent is available",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, sodium nitroprusside"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ais_elig",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Stroke team's reperfusion plan",
+   "outcomes": [
+    {
+     "id": "lytic",
+     "if": "Lytic planned; with or without thrombectomy",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": []
+     },
+     "next": "ais_lytic"
+    },
+    {
+     "id": "evt",
+     "if": "Thrombectomy only; the lytic contraindicated or out of window",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": []
+     },
+     "next": "end_evt"
+    },
+    {
+     "id": "none",
+     "if": "No reperfusion; no lytic and no occlusion to retrieve",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": []
+     },
+     "next": "ais_none"
+    }
+   ]
+  },
+  {
+   "id": "ais_lytic",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Ischemic stroke, a lytic planned. Blood pressure?",
+   "options": [
+    "Below 185/110 before the lytic, then under 180/105 for 24 hours",
+    "No lytic: a pressure over 180/120 rules it out",
+    "Give the lytic now and treat the pressure afterwards",
+    "Lower it by 25% at most over the first hour, then reassess the lytic"
+   ],
+   "answer": 0,
+   "chainStep": "Lower the pressure below 185/110 before the lytic bolus, then keep it below 180/105 for at least 24 hours; 180/105 or less during and for 24 hours after any thrombectomy; continue in the stroke pathway",
+   "why": "A patient otherwise eligible for a lytic has the pressure brought below 185 systolic and 110 diastolic before it starts, and held below 180/105 for at least 24 hours after, to avoid complications; with thrombectomy, 180/105 or less during and for 24 hours after. A pressure that comes down does not rule the lytic out, giving it first skips the threshold, and the 25% plan belongs to emergencies without a stroke.",
+   "next": "end_reperf",
+   "sources": [
+    {
+     "docId": "pmid:40815242",
+     "where": "5.3.9.2 recommendations 2 and 3; 6.2 footnote"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Before the lytic",
+     "dose": "Systolic under 185 and diastolic under 110",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "5.3.9.2 recommendation 2"
+      }
+     ]
+    },
+    {
+     "item": "After",
+     "dose": "Below 180/105 for at least 24 hours after the lytic; 180/105 or less during and for 24 hours after thrombectomy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "5.3.9.2 recommendations 2 and 3"
+      }
+     ]
+    },
+    {
+     "item": "Agents",
+     "dose": "Clevidipine, nicardipine, esmolol, labetalol or hydralazine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 27, acute ischemic stroke"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ais_none",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Ischemic stroke, no lytic or thrombectomy, no other emergency. Blood pressure?",
+   "options": [
+    "Lower it only if 220/120 or more, and then by 15% over 24 hours",
+    "Lower it below 185/110 now, as if a lytic were planned",
+    "Restart the home tablets today, to reach 140/90 within 48 hours",
+    "Systolic down 25% in the first hour, then to 160/100 by 6 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Under 220/120: no lowering in the first 48 to 72 hours; at 220/120 or more, lower by about 15% over the first 24 hours; continue in the stroke pathway",
+   "why": "Without reperfusion and with a pressure under 220/120, starting or restarting treatment in the first 48 to 72 hours does not prevent death or disability. At 220/120 or more, a 15% fall over the first 24 hours may be reasonable. 185/110 is the threshold before a lytic, not a target without one, and the 25% plan belongs to emergencies without a stroke.",
+   "next": "end_ais_none",
+   "sources": [
+    {
+     "docId": "pmid:40815242",
+     "where": "5.3.9.2 recommendations 2, 4 and 5; 6.2 footnote"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Threshold",
+     "dose": "Under 220/120 with no comorbid condition needing urgent treatment: no new or restarted treatment in the first 48 to 72 hours. 220/120 or more: lower by 15% over the first 24 hours (Class 2b)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "5.3.9.2 recommendations 4 and 5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "htn_icu",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Acute organ damage without a stroke, dissection or pregnancy. BP plan?",
+   "options": [
+    "ICU, IV infusion: systolic down 25% at most in hour 1, then under 160/100 by 2 to 6 h",
+    "ICU, IV infusion: bring the pressure to normal within the first hour, then hold it there",
+    "ICU, IV infusion: systolic 120 or less within 20 minutes, heart rate 60 to 80",
+    "Sublingual nifedipine now, then oral tablets on a general medical ward"
+   ],
+   "answer": 0,
+   "chainStep": "ICU with an arterial line; titratable IV agent (nicardipine, clevidipine or labetalol); systolic down by no more than 25% in the first hour, under 160/100 over the next 2 to 6 hours, then cautiously to 130 to 140 over 24 to 48 hours; then oral therapy",
+   "why": "With acute organ damage and no compelling condition, the 2025 guideline admits to an ICU and lowers the systolic by no more than 25% in the first hour, then to under 160/100 over the next 2 to 6 hours, then cautiously to 130 to 140 over 24 to 48 hours. A titratable infusion avoids large swings. Rapid correction to normal can starve organs whose autoregulation is lost; 120 within 20 minutes is the dissection target; and short-acting nifedipine is not used.",
+   "next": "agent_limits",
+   "sources": [
+    {
+     "docId": "pmid:40815242",
+     "where": "6.2 recommendations 1 and 3; 6.2 synopsis; 6.2 supportive text 1; Figure 9 footnote"
+    },
+    {
+     "docId": "pmid:36418425",
+     "where": "Table 2 footnote; Where to treat?"
+    },
+    {
+     "docId": "pmid:42830886",
+     "where": "Hypertensive emergencies: clinical presentation"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Nicardipine",
+     "dose": "Start 5 mg/h; increase by 2.5 mg/h every 5 minutes to a maximum of 15 mg/h; not with advanced aortic stenosis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, nicardipine"
+      }
+     ]
+    },
+    {
+     "item": "Clevidipine",
+     "dose": "Start 1 to 2 mg/h, doubling every 90 seconds until the pressure nears target, then smaller steps every 5 to 10 minutes; maximum 21 mg/h and 72 hours; not with soy or egg allergy or defective lipid metabolism",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, clevidipine"
+      },
+      {
+       "docId": "pmid:29939523",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "StatPearls gives a 32 mg/h maximum."
+    },
+    {
+     "item": "Labetalol",
+     "dose": "AHA/ACC: 0.3 to 1.0 mg/kg (max 20 mg) slow IV every 10 minutes, or 0.4 to 1.0 mg/kg/h up to 3 mg/kg/h, to 300 mg in 24 hours. FDA label: 20 mg slow IV over 2 minutes, then 40 or 80 mg every 10 minutes to 300 mg, or an infusion at 2 mg/min. Not with asthma or obstructive airway disease, heart block beyond first degree, or bradycardia",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, labetalol, as corrected in 2026"
+      },
+      {
+       "docId": "url:a17a38e00174",
+       "where": "Contraindications; Dosage and administration"
+      }
+     ],
+     "note": "The guideline caps each injection at 20 mg (0.3 to 1.0 mg/kg); the FDA label repeats 40 or 80 mg every 10 minutes. Both stop at 300 mg."
+    },
+    {
+     "item": "Acute kidney injury",
+     "dose": "Preferred agents: clevidipine, fenoldopam or nicardipine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 27, acute kidney injury"
+      }
+     ]
+    },
+    {
+     "item": "Arterial line",
+     "dose": "Preferred for a hypertensive emergency on IV agents",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42830886",
+       "where": "Hypertensive emergencies: clinical presentation"
+      }
+     ]
+    },
+    {
+     "item": "Eye changes alone",
+     "dose": "Retinal hemorrhages or papilledema with no other damage: AHA/ACC lists them as acute organ damage, as this route does; BIHS calls uncomplicated malignant hypertension not an emergency and treats it by mouth over days",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Figure 9 footnote"
+      },
+      {
+       "docId": "pmid:36418425",
+       "where": "Malignant hypertension; Malignant hypertension/accelerated hypertension"
+      }
+     ],
+     "note": "The sources disagree on whether eye changes alone need ICU and IV therapy."
+    }
+   ]
+  },
+  {
+   "id": "agent_limits",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "History that limits the agent",
+   "outcomes": [
+    {
+     "id": "asthma",
+     "if": "Beta blocker ruled out; asthma, COPD, block beyond first degree or bradycardia",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "htn_asthma"
+    },
+    {
+     "id": "none",
+     "if": "Nothing limiting; no asthma, COPD, heart block or bradycardia",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_htn_emerg"
+    }
+   ]
+  },
+  {
+   "id": "htn_asthma",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Acute organ damage, a beta blocker ruled out. Which IV agent?",
+   "options": [
+    "Titrated nicardipine or clevidipine infusion",
+    "Labetalol boluses every 10 minutes up to 300 mg",
+    "Hydralazine boluses as the first-line agent",
+    "Enalaprilat boluses as the first-line agent"
+   ],
+   "answer": 0,
+   "chainStep": "Nicardipine or clevidipine infusion; no labetalol or other beta blocker",
+   "why": "Labetalol is contraindicated in bronchial asthma, heart block beyond first degree and severe bradycardia, and the guideline adds reactive airway or obstructive pulmonary disease; its label adds that beta blockers, even cardioselective ones, should not be used with obstructive airway disease. Nicardipine and clevidipine have no negative inotropic or chronotropic effects, BIHS turns to IV nicardipine in asthma, and both are preferred when the kidney is injured. Hydralazine is an undesirable first-line agent because its response is unpredictable and long, and enalaprilat is slow to act (15 minutes) and unpredictable.",
+   "next": "end_htn_emerg",
+   "sources": [
+    {
+     "docId": "url:a17a38e00174",
+     "where": "Contraindications"
+    },
+    {
+     "docId": "pmid:40815242",
+     "where": "Table 26, labetalol, nicardipine, clevidipine, hydralazine and enalaprilat; Table 27, acute kidney injury"
+    },
+    {
+     "docId": "pmid:36418425",
+     "where": "Table 5 (encephalopathy)"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Beta blockers",
+     "dose": "Not with asthma or obstructive airway disease, even cardioselective ones; labetalol not with heart block beyond first degree or bradycardia",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:a17a38e00174",
+       "where": "Contraindications"
+      },
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, labetalol"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dissect_bp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Suspected aortic dissection with severe hypertension. While the CT angiogram is arranged?",
+   "options": [
+    "IV esmolol or labetalol first; systolic 120 or less within 20 minutes",
+    "IV nicardipine first, then a beta blocker if the heart rate climbs",
+    "IV labetalol, lowering the systolic by 25% at most over the first hour",
+    "Nitroprusside alone, titrated to a systolic under 120 within the hour"
+   ],
+   "answer": 0,
+   "chainStep": "ICU with an arterial line; IV esmolol or labetalol first, heart rate 60 to 80 (aortic guideline) or 60 or less (BIHS), then a vasodilator if needed; systolic 120 or less within 20 minutes; IV opioid for pain; CT angiography of the chest, abdomen and pelvis",
+   "why": "Dissection is the compelling condition: the 2025 guideline wants the systolic at 120 or less within 20 minutes, with esmolol or labetalol and beta blockade before any vasodilator to prevent reflex tachycardia. The aortic guideline adds an arterial line in the ICU, a heart rate of 60 to 80, and a vasodilator only once the beta blocker is running. A vasodilator first, or nitroprusside alone, drives the heart rate up; the 25% plan is for emergencies without a compelling condition.",
+   "next": "cta",
+   "sources": [
+    {
+     "docId": "pmid:40815242",
+     "where": "Table 27, acute aortic dissection; 6.2 recommendation 2"
+    },
+    {
+     "docId": "pmid:36334952",
+     "where": "7.3.1 recommendations 1 to 4 and supportive text"
+    },
+    {
+     "docId": "pmid:36418425",
+     "where": "Aortic dissection"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Systolic target",
+     "dose": "120 or less within 20 minutes (AHA/ACC 2025 Table 27; under 120 within the first hour in its recommendation 2); under 120, or the lowest that keeps the organs perfused (aortic guideline)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 27, acute aortic dissection; 6.2 recommendation 2"
+      },
+      {
+       "docId": "pmid:36334952",
+       "where": "7.3.1 recommendation 2"
+      }
+     ]
+    },
+    {
+     "item": "Heart rate target",
+     "dose": "60 to 80 (ACC/AHA aortic guideline); 60 or less (BIHS)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:36334952",
+       "where": "7.3.1 recommendation 2"
+      },
+      {
+       "docId": "pmid:36418425",
+       "where": "Table 9"
+      }
+     ],
+     "note": "The aortic guideline aims for 60 to 80 beats a minute; BIHS aims for 60 or less."
+    },
+    {
+     "item": "Esmolol",
+     "dose": "Load 500 to 1,000 mcg/kg/min over 1 minute, then 50 mcg/kg/min; repeat the load and raise by 50 mcg/kg/min as needed, to 300 mcg/kg/min. Not with a beta blocker already running, bradycardia or decompensated heart failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, esmolol"
+      }
+     ]
+    },
+    {
+     "item": "Labetalol",
+     "dose": "AHA/ACC: 0.3 to 1.0 mg/kg (max 20 mg) slow IV every 10 minutes, or 0.4 to 1.0 mg/kg/h up to 3 mg/kg/h, to 300 mg in 24 hours. FDA label: 20 mg slow IV over 2 minutes, then 40 or 80 mg every 10 minutes to 300 mg, or an infusion at 2 mg/min. Not with asthma or obstructive airway disease, heart block beyond first degree, or bradycardia",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, labetalol, as corrected in 2026"
+      },
+      {
+       "docId": "url:a17a38e00174",
+       "where": "Contraindications; Dosage and administration"
+      }
+     ],
+     "note": "The guideline caps each injection at 20 mg (0.3 to 1.0 mg/kg); the FDA label repeats 40 or 80 mg every 10 minutes. Both stop at 300 mg."
+    },
+    {
+     "item": "No beta blocker possible",
+     "dose": "IV non-dihydropyridine calcium channel blocker for rate control",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36334952",
+       "where": "7.3.1 recommendation 3"
+      }
+     ]
+    },
+    {
+     "item": "Vasodilator",
+     "dose": "Only after the beta blocker, if the pressure is still not controlled",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36334952",
+       "where": "7.3.1 recommendation 4 and supportive text"
+      },
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 27, acute aortic dissection"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Arterial line in the ICU",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36334952",
+       "where": "7.3.1 recommendation 1"
+      }
+     ]
+    },
+    {
+     "item": "Pain",
+     "dose": "IV opioids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36334952",
+       "where": "7.3.1 supportive text"
+      }
+     ]
+    },
+    {
+     "item": "Imaging",
+     "dose": "CT angiography",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36334952",
+       "where": "7.2 recommendation 1"
+      },
+      {
+       "docId": "pmid:36418425",
+       "where": "Assessment of a patient presenting with hypertensive crisis"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT angiography",
+   "outcomes": [
+    {
+     "id": "type_a",
+     "if": "Type A; the ascending aorta is involved",
+     "ddx": {
+      "lead": [
+       "Aortic dissection"
+      ],
+      "out": []
+     },
+     "next": "end_type_a"
+    },
+    {
+     "id": "type_b",
+     "if": "Type B; descending aorta only, the ascending spared",
+     "ddx": {
+      "lead": [
+       "Aortic dissection"
+      ],
+      "out": []
+     },
+     "next": "end_type_b"
+    },
+    {
+     "id": "none",
+     "if": "No aortic syndrome; no flap, hematoma or ulcer",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Aortic dissection"
+      ]
+     },
+     "next": "end_cta_neg"
+    }
+   ]
+  },
+  {
+   "id": "acs_bp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Ischemic chest pain with severe hypertension, no aortic features. BP drug?",
+   "options": [
+    "IV nitroglycerin, plus esmolol if no beta-blocker contraindication",
+    "IV nitroprusside infusion, the fastest way to bring the pressure down",
+    "IV hydralazine boluses until the pressure is back to normal",
+    "IV nicardipine, aiming for a diastolic of 60 within the hour"
+   ],
+   "answer": 0,
+   "chainStep": "IV nitroglycerin (none after a PDE-5 inhibitor or with an RV infarct), esmolol if no contraindication; mean pressure down 20 to 25% at most, diastolic 70 or more; revascularization first, in the chest pain pathway",
+   "why": "Esmolol and nitroglycerin are the agents of choice in ACS. Revascularization comes before the pressure, the mean pressure falls by no more than 20 to 25%, and the diastolic stays at 70 or more, so 60 is too low. Nitroprusside is avoided in ACS, and hydralazine is an undesirable first-line agent.",
+   "next": "end_acs",
+   "sources": [
+    {
+     "docId": "pmid:40815242",
+     "where": "Table 27, acute coronary syndromes and footnote; Table 26, hydralazine"
+    },
+    {
+     "docId": "pmid:36418425",
+     "where": "Table 10; Table 2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Nitroglycerin IV",
+     "dose": "Start 5 mcg/min; increase by 5 mcg/min every 3 to 5 minutes to a maximum of 200 mcg/min; not in volume depletion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, nitroglycerin"
+      }
+     ]
+    },
+    {
+     "item": "After a PDE-5 inhibitor",
+     "dose": "No nitrate: profound hypotension",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 27, acute coronary syndromes"
+      }
+     ]
+    },
+    {
+     "item": "Inferior STEMI with RV infarction",
+     "dose": "No nitroglycerin",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Acute coronary syndrome (ACS)"
+      },
+      {
+       "docId": "pmid:42830886",
+       "where": "Table 2, nitroglycerin"
+      }
+     ]
+    },
+    {
+     "item": "Esmolol",
+     "dose": "Load 500 to 1,000 mcg/kg/min over 1 minute, then 50 mcg/kg/min; repeat the load and raise by 50 mcg/kg/min as needed, to 300 mcg/kg/min. Not with a beta blocker already running, bradycardia or decompensated heart failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, esmolol"
+      }
+     ]
+    },
+    {
+     "item": "Beta blocker contraindications",
+     "dose": "Moderate to severe LV failure with pulmonary edema, heart rate under 60, systolic under 100, poor perfusion, second- or third-degree block, reactive airways",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 27, acute coronary syndromes"
+      }
+     ]
+    },
+    {
+     "item": "Nitroprusside",
+     "dose": "Avoid in ACS",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Table 10"
+      }
+     ]
+    },
+    {
+     "item": "Recent cocaine or methamphetamine",
+     "dose": "No beta blocker alone: unopposed alpha stimulation",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28613508",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Pace",
+     "dose": "Mean pressure down 20 to 25% at most; diastolic not below 70; revascularization before BP therapy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Table 2; Table 10"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pulm_bp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pulmonary edema with severe hypertension. BP drugs?",
+   "options": [
+    "IV nitroglycerin infusion with an IV loop diuretic",
+    "IV labetalol infusion to lower the pressure",
+    "IV nitroglycerin, then IV esmolol to slow the heart",
+    "IV hydralazine boluses as the first-line agent"
+   ],
+   "answer": 0,
+   "chainStep": "IV nitroglycerin (or clevidipine or nitroprusside) with IV furosemide 40 to 80 mg; no beta blocker; mean pressure down 25% at most; breathing support in the dyspnea pathway",
+   "why": "Clevidipine, nitroglycerin and nitroprusside are the preferred agents in acute pulmonary edema, and beta blockers are contraindicated; BIHS pairs IV nitroglycerin or nitroprusside with a loop diuretic and avoids CCBs and IV labetalol in the acute phase. The mean pressure falls by no more than 25%; in small trials a 15% fall within 30 minutes eased the breathlessness. Hydralazine is an undesirable first-line agent.",
+   "next": "end_pulm",
+   "sources": [
+    {
+     "docId": "pmid:40815242",
+     "where": "Table 27, acute pulmonary edema; 6.2 supportive text 3; Table 26, hydralazine"
+    },
+    {
+     "docId": "pmid:36418425",
+     "where": "Table 11; Table 2; Acute pulmonary oedema"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Nitroglycerin IV",
+     "dose": "Start 5 mcg/min; increase by 5 mcg/min every 3 to 5 minutes to a maximum of 200 mcg/min; not in volume depletion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, nitroglycerin"
+      }
+     ]
+    },
+    {
+     "item": "Loop diuretic",
+     "dose": "IV furosemide 40 to 80 mg (0.5 to 2 mg/kg) for congestion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Table 2"
+      }
+     ]
+    },
+    {
+     "item": "Alternatives",
+     "dose": "Clevidipine or nitroprusside",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 27, acute pulmonary edema"
+      },
+      {
+       "docId": "pmid:36418425",
+       "where": "Table 11"
+      },
+      {
+       "docId": "url:d18a85034eff",
+       "where": "1.3.9"
+      }
+     ],
+     "note": "AHA/ACC Table 27 prefers clevidipine or nitroprusside; BIHS Table 11 says CCBs and IV labetalol are best avoided in the acute phase; NICE CG187 1.3.9 says not to offer sodium nitroprusside in acute heart failure."
+    },
+    {
+     "item": "Beta blockers",
+     "dose": "Contraindicated in acute pulmonary edema",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 27, acute pulmonary edema"
+      },
+      {
+       "docId": "pmid:36418425",
+       "where": "Acute pulmonary oedema"
+      }
+     ]
+    },
+    {
+     "item": "Pace",
+     "dose": "Mean pressure down 25% at most, watching for hypoperfusion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Table 11"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "coc_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Severe hypertension after a stimulant; agitated, sweating, tachycardic. First drug?",
+   "options": [
+    "IV benzodiazepine, titrated until the agitation settles",
+    "IV metoprolol to bring the heart rate and pressure down",
+    "Short-acting oral nifedipine to bring the pressure down",
+    "Haloperidol for the agitation, then reassess"
+   ],
+   "answer": 0,
+   "chainStep": "IV benzodiazepine titrated until the agitation and autonomic instability settle; external cooling if hot; no beta blocker alone, no short-acting nifedipine; with ischemic chest pain add IV nitroglycerin and continue in the chest pain pathway; no esmolol or metoprolol",
+   "why": "Benzodiazepines are first line for cocaine and amphetamine hypertension: they cut central sympathetic outflow and settle the tachycardia, the pressure, the agitation and the seizure risk. Beta blockers are controversial because of unopposed alpha stimulation, more so with cocaine; nifedipine-type drugs bring reflex tachycardia; and haloperidol first delays the drug that treats the cardiovascular toxicity.",
+   "next": "coc_resp",
+   "sources": [
+    {
+     "docId": "pmid:36418425",
+     "where": "Phaeochromocytoma and adrenergic crisis"
+    },
+    {
+     "docId": "pmid:28613508",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:28613695",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:40815242",
+     "where": "Table 27, acute coronary syndromes"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Benzodiazepine",
+     "dose": "IV, titrated until the agitation and autonomic instability resolve; watch for over-sedation and respiratory depression with repeated doses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613508",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:28613695",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Benzodiazepine agent and dose",
+     "dose": "Not stated in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Cooling",
+     "dose": "External cooling for hyperthermia, a poor prognostic sign",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613508",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Beta blocker",
+     "dose": "Not first: controversial because of unopposed alpha stimulation, more so with cocaine; if one is used, a short-acting drug titrated by infusion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613508",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Nifedipine",
+     "dose": "Avoid: reflex tachycardia",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28613695",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:36418425",
+       "where": "Table 2 footnote"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "coc_resp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After the benzodiazepine",
+   "outcomes": [
+    {
+     "id": "settles",
+     "if": "Calm, pressure falling; agitation and tachycardia settling",
+     "ddx": {
+      "lead": [
+       "Sympathomimetic toxicity"
+      ],
+      "out": []
+     },
+     "next": "end_coc"
+    },
+    {
+     "id": "still_high",
+     "if": "Calmer, pressure still severe; despite repeated doses",
+     "ddx": {
+      "lead": [
+       "Sympathomimetic toxicity"
+      ],
+      "out": []
+     },
+     "next": "coc_second"
+    }
+   ]
+  },
+  {
+   "id": "coc_second",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Stimulant toxicity, calmer on benzodiazepines, pressure still severe. Next?",
+   "options": [
+    "Add IV phentolamine or IV nitroglycerin",
+    "Add IV metoprolol boluses for the heart rate",
+    "Add short-acting oral nifedipine",
+    "Further benzodiazepine boluses until asleep"
+   ],
+   "answer": 0,
+   "chainStep": "Add IV phentolamine (5 mg boluses every 10 minutes) or IV nitroglycerin; watch for reflex tachycardia",
+   "why": "When the pressure stays high on benzodiazepines, the 2025 guideline lists phentolamine for cocaine and amphetamine crises, and BIHS adds IV nitroglycerin, nicardipine or a labetalol infusion. Phentolamine treats the alpha-driven pressure but not the tachycardia, and nitrates can bring reflex tachycardia. A beta blocker alone risks unopposed alpha stimulation, nifedipine-type drugs are avoided, and escalating benzodiazepine doses risk over-sedation and respiratory depression.",
+   "next": "end_coc",
+   "sources": [
+    {
+     "docId": "pmid:40815242",
+     "where": "Table 26, phentolamine"
+    },
+    {
+     "docId": "pmid:36418425",
+     "where": "Phaeochromocytoma and adrenergic crisis"
+    },
+    {
+     "docId": "pmid:28613695",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:28613508",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Phentolamine",
+     "dose": "5 mg IV bolus, then further boluses every 10 minutes as needed to the target, up to 50 mg in 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, phentolamine"
+      }
+     ]
+    },
+    {
+     "item": "Phentolamine with coronary disease",
+     "dose": "Contraindicated by its label with a myocardial infarction (now or before), angina, coronary insufficiency or other coronary artery disease",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:132aa38fd940",
+       "where": "Contraindications"
+      }
+     ]
+    },
+    {
+     "item": "Nitroglycerin IV",
+     "dose": "Start 5 mcg/min; increase by 5 mcg/min every 3 to 5 minutes to a maximum of 200 mcg/min; not in volume depletion",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Phaeochromocytoma and adrenergic crisis"
+      },
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, nitroglycerin"
+      }
+     ],
+     "note": "BIHS lists IV GTN when stimulant hypertension persists despite benzodiazepines; AHA/ACC Table 26 limits IV nitroglycerin to ACS or acute pulmonary edema."
+    },
+    {
+     "item": "Labetalol infusion",
+     "dose": "An alternative: BIHS lists it, and StatPearls reports it safe in cocaine hypertension without unopposed alpha effects",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Phaeochromocytoma and adrenergic crisis"
+      },
+      {
+       "docId": "pmid:28613695",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:28613508",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "BIHS lists it and the cocaine review reports it safe; the sympathomimetic review calls beta blockade controversial, more so with cocaine."
+    },
+    {
+     "item": "Nicardipine",
+     "dose": "BIHS lists IV nicardipine; StatPearls avoids dihydropyridines such as nifedipine for reflex tachycardia",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Phaeochromocytoma and adrenergic crisis"
+      },
+      {
+       "docId": "pmid:28613695",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "BIHS includes a dihydropyridine; the cocaine review advises against the class."
+    }
+   ]
+  },
+  {
+   "id": "pheo_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Suspected pheochromocytoma crisis. First drug?",
+   "options": [
+    "IV phentolamine, nicardipine or clevidipine; no beta blocker first",
+    "IV esmolol first, to bring the heart rate down",
+    "IV metoprolol now, then add phentolamine if the pressure stays high",
+    "IV labetalol alone, in place of an alpha blocker"
+   ],
+   "answer": 0,
+   "chainStep": "IV phentolamine 5 mg, repeated every 10 minutes to target (up to 50 mg in 24 hours), or nicardipine or clevidipine; IV fluids; no beta blocker until alpha blockade; metanephrines; then oral alpha blockade before surgery",
+   "why": "A catecholamine crisis takes an alpha blocker: phentolamine is used in pheochromocytoma, with clevidipine or nicardipine as alternatives, and they take its place with an ischemic ECG, since its label rules it out with coronary insufficiency. A beta blocker started before alpha blockade can precipitate a crisis through unopposed alpha stimulation, so esmolol or metoprolol first is wrong. Labetalol gives incomplete alpha blockade and paradoxical rises are reported, so BIHS keeps it for when phentolamine is unavailable.",
+   "next": "end_pheo",
+   "sources": [
+    {
+     "docId": "pmid:40815242",
+     "where": "Table 26, phentolamine; Table 27, acute sympathetic discharge or catecholamine excess"
+    },
+    {
+     "docId": "pmid:36418425",
+     "where": "Phaeochromocytoma and adrenergic crisis"
+    },
+    {
+     "docId": "pmid:36944004",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:42830886",
+     "where": "Table 2, esmolol"
+    },
+    {
+     "docId": "url:132aa38fd940",
+     "where": "Indications and usage; Contraindications"
+    },
+    {
+     "docId": "url:a17a38e00174",
+     "where": "Warnings: pheochromocytoma"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Phentolamine",
+     "dose": "5 mg IV bolus, then further boluses every 10 minutes as needed to the target, up to 50 mg in 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, phentolamine"
+      },
+      {
+       "docId": "url:132aa38fd940",
+       "where": "Dosage and administration 1 (5 mg)"
+      }
+     ]
+    },
+    {
+     "item": "Phentolamine with coronary disease",
+     "dose": "Contraindicated by its label with a myocardial infarction (now or before), angina, coronary insufficiency or other coronary artery disease",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:132aa38fd940",
+       "where": "Contraindications"
+      }
+     ]
+    },
+    {
+     "item": "Alternatives",
+     "dose": "Clevidipine or nicardipine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 27, acute sympathetic discharge or catecholamine excess"
+      }
+     ]
+    },
+    {
+     "item": "Beta blocker",
+     "dose": "Not until alpha blockade is in place: unopposed alpha stimulation can precipitate a crisis",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Phaeochromocytoma and adrenergic crisis"
+      },
+      {
+       "docId": "pmid:36944004",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:42830886",
+       "where": "Table 2, esmolol"
+      }
+     ]
+    },
+    {
+     "item": "Fluids",
+     "dose": "IV fluid to correct the volume depletion from pressure natriuresis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Phaeochromocytoma and adrenergic crisis"
+      }
+     ]
+    },
+    {
+     "item": "Pace",
+     "dose": "AHA/ACC 2025: not a compelling condition for a first-hour target of 140 or 120. StatPearls: systolic under 140 within the first hour. BIHS: a short-lived rise can safely return to normal within hours",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "6.2 recommendation-specific supportive text 2"
+      },
+      {
+       "docId": "pmid:29939523",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:36418425",
+       "where": "Phaeochromocytoma and adrenergic crisis"
+      }
+     ],
+     "note": "The 2025 guideline drops pheochromocytoma from the compelling conditions; the StatPearls chapter keeps the older under-140 first-hour target."
+    },
+    {
+     "item": "Confirm",
+     "dose": "Plasma or urine metanephrines",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Assessment of a patient presenting with hypertensive crisis"
+      }
+     ]
+    },
+    {
+     "item": "Then",
+     "dose": "Oral alpha blockade (phenoxybenzamine, or doxazosin if it is unavailable) in preparation for surgery",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Phaeochromocytoma and adrenergic crisis"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "preg_fit",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Seizure watch",
+   "outcomes": [
+    {
+     "id": "fit",
+     "if": "Seizure; convulsing now or fitted today",
+     "ddx": {
+      "lead": [
+       "Eclampsia"
+      ],
+      "out": []
+     },
+     "next": "mag"
+    },
+    {
+     "id": "no_fit",
+     "if": "No seizure; alert and oriented",
+     "ddx": {
+      "lead": [
+       "Pre-eclampsia"
+      ],
+      "out": []
+     },
+     "next": "preg_bp"
+    }
+   ]
+  },
+  {
+   "id": "mag",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "A fit after 20 weeks of pregnancy or after birth, with new hypertension. Anticonvulsant?",
+   "options": [
+    "IV magnesium sulfate: a loading dose, then an infusion",
+    "IV lorazepam now, then a fosphenytoin load if she fits again",
+    "IV levetiracetam loading dose, then an infusion",
+    "IV diazepam now; magnesium if she has another fit"
+   ],
+   "answer": 0,
+   "chainStep": "IV magnesium sulfate: 4 g over 5 to 15 minutes (US label 4 to 5 g; StatPearls 6 g), then an infusion (1 g an hour; US label 1 to 2 g; StatPearls 2 g) continued for 24 hours after the last fit",
+   "why": "After an eclamptic fit NICE gives IV magnesium sulfate and says not to use diazepam, phenytoin or other anticonvulsants as an alternative to it; StatPearls also prefers it over other antiseizure treatments. NICE uses the Collaborative Eclampsia Trial regimen; the US label gives 4 to 5 g IV and describes 1 to 2 g an hour after it; StatPearls loads 6 g. Before each dose the knee jerk should be present, breathing about 16 a minute or more and urine output 100 mL or more over the preceding 4 hours, with an injectable calcium salt at hand.",
+   "next": "end_eclampsia",
+   "sources": [
+    {
+     "docId": "url:ed91553c28fb",
+     "where": "1.8.1; 1.8.4; 1.8.5"
+    },
+    {
+     "docId": "url:1d4b714d9283",
+     "where": "Dosage and administration: in pre-eclampsia or eclampsia; Precautions"
+    },
+    {
+     "docId": "pmid:32119279",
+     "where": "Treatment / Management: magnesium sulfate"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Magnesium sulfate load",
+     "dose": "NICE: 4 g IV over 5 to 15 minutes. US label: 4 to 5 g IV in 250 mL, or 4 g as a 10 or 20% solution over 3 to 4 minutes. StatPearls: 6 g IV over 15 to 20 minutes, then 2 g an hour",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.8.4"
+      },
+      {
+       "docId": "url:1d4b714d9283",
+       "where": "Dosage and administration: in pre-eclampsia or eclampsia"
+      },
+      {
+       "docId": "pmid:32119279",
+       "where": "Treatment / Management: magnesium sulfate"
+      }
+     ],
+     "note": "NICE and the label load 4 to 5 g; StatPearls loads 6 g and runs 2 g an hour."
+    },
+    {
+     "item": "Magnesium sulfate infusion",
+     "dose": "1 g an hour for 24 hours; after a fit, until 24 hours after the last fit",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.8.4"
+      }
+     ]
+    },
+    {
+     "item": "Magnesium sulfate, US label",
+     "dose": "After the initial IV dose, some clinicians give 1 to 2 g an hour; no more than 30 to 40 g in 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1d4b714d9283",
+       "where": "Dosage and administration: in pre-eclampsia or eclampsia"
+      }
+     ]
+    },
+    {
+     "item": "Recurrent fit",
+     "dose": "A further 2 to 4 g IV over 5 to 15 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.8.4"
+      }
+     ]
+    },
+    {
+     "item": "Magnesium monitoring",
+     "dose": "Knee jerk present and breathing about 16 a minute or more; urine output 100 mL or more over the 4 hours before each dose; injectable calcium salt immediately available",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1d4b714d9283",
+       "where": "Precautions"
+      }
+     ]
+    },
+    {
+     "item": "Diazepam, phenytoin or another anticonvulsant instead of magnesium",
+     "dose": "Do not use",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.8.5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "preg_bp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pregnant or after birth, severe-range pressure, no seizure. BP drug?",
+   "options": [
+    "Treat now: labetalol, oral nifedipine or IV hydralazine",
+    "IV nitroprusside infusion, titrated down toward 140/90",
+    "IV enalaprilat boluses, repeated until under 160/110",
+    "Oral methyldopa now, then recheck the pressure in 4 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Labetalol (oral or IV), oral nifedipine or IV hydralazine now, first to below 160/110; IV magnesium sulfate with severe features; the obstetric team for timing of birth",
+   "why": "Severe hypertension in pregnancy (160 systolic or 110 diastolic or more) is treated at once with labetalol, oral nifedipine or IV hydralazine, first to below 160/110. ACE inhibitors, ARBs and nitroprusside are contraindicated in pregnancy, and methyldopa, though safe in pregnancy, is not one of the three NICE uses for immediate treatment. Magnesium sulfate with antihypertensives is the mainstay of treatment (AHA/ACC); NICE gives it after a fit and considers it with severe headaches, visual scotomata or birth within 24 hours.",
+   "next": "end_preg",
+   "sources": [
+    {
+     "docId": "url:ed91553c28fb",
+     "where": "1.8.6; 1.8.1 to 1.8.3; Terms used in this guideline: severe hypertension"
+    },
+    {
+     "docId": "pmid:40815242",
+     "where": "5.5 recommendation-specific supportive text 3; 5.5.2 synopsis; Table 27, eclampsia or preeclampsia; Table 26, enalaprilat"
+    },
+    {
+     "docId": "pmid:36418425",
+     "where": "Table 12"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Labetalol",
+     "dose": "BIHS: 200 mg by mouth at once, or 50 mg slow IV over 1 to 2 minutes, repeated. StatPearls: 10 to 20 mg IV, then 20 to 80 mg every 10 to 30 minutes to 300 mg, or 1 to 2 mg/min IV",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Table 2"
+      },
+      {
+       "docId": "pmid:32119279",
+       "where": "Treatment / Management: labetalol"
+      }
+     ],
+     "note": "BIHS starts IV labetalol at 50 mg; StatPearls starts at 10 to 20 mg."
+    },
+    {
+     "item": "Hydralazine",
+     "dose": "5 to 10 mg slow IV, repeated every 20 minutes as needed to a total of 20 mg (StatPearls); consider up to 500 mL crystalloid before or with the first antenatal dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Table 2"
+      },
+      {
+       "docId": "pmid:32119279",
+       "where": "Treatment / Management: hydralazine"
+      },
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.8.8"
+      }
+     ]
+    },
+    {
+     "item": "Oral nifedipine",
+     "dose": "10 to 20 mg, repeated in 20 minutes if needed; then 10 to 20 mg every 2 to 6 hours up to a maximum daily dose of 180 mg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32119279",
+       "where": "Treatment / Management: nifedipine"
+      }
+     ]
+    },
+    {
+     "item": "Contraindicated",
+     "dose": "In pregnancy: ACE inhibitors, ARBs, renin inhibitors and nitroprusside; after birth NICE offers enalapril",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 27, eclampsia or preeclampsia"
+      },
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.9.4"
+      }
+     ]
+    },
+    {
+     "item": "Magnesium sulfate",
+     "dose": "Consider with severe headaches, visual scotomata or other severe features, or when birth is planned within 24 hours; give it after a fit; with antihypertensives, the mainstay of treatment (AHA/ACC)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.8.1; 1.8.2; 1.8.3"
+      },
+      {
+       "docId": "pmid:40815242",
+       "where": "5.5.2 synopsis"
+      }
+     ]
+    },
+    {
+     "item": "Magnesium sulfate load",
+     "dose": "NICE: 4 g IV over 5 to 15 minutes, then 1 g an hour for 24 hours. StatPearls: 6 g IV over 15 to 20 minutes, then 2 g an hour",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.8.4"
+      },
+      {
+       "docId": "pmid:32119279",
+       "where": "Treatment / Management: magnesium sulfate"
+      }
+     ],
+     "note": "NICE loads 4 g; StatPearls loads 6 g."
+    },
+    {
+     "item": "Fluids",
+     "dose": "Maintenance fluids no more than 80 mL an hour in severe pre-eclampsia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.8.12"
+      }
+     ]
+    },
+    {
+     "item": "Target",
+     "dose": "First below 160/110, then 135/85 or less",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Table 12"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "urgency",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Severe hypertension, no acute organ damage, not pregnant. Plan?",
+   "options": [
+    "Start or restart oral therapy; review within 7 days",
+    "IV labetalol to under 160/100, then discharge",
+    "Admit for an IV nicardipine infusion until it is normal",
+    "Sublingual nifedipine now, discharge once it has fallen"
+   ],
+   "answer": 0,
+   "chainStep": "No IV drugs and no rapid lowering; restart or step up oral therapy, or confirm a new diagnosis with a repeat or ambulatory reading; address pain and anxiety; review within 7 days",
+   "why": "Without acute organ damage the pressure is not lowered aggressively or with IV drugs; oral therapy is restarted or intensified, preferably as an outpatient, and the pressure comes down over days to weeks. Rapid lowering has not been shown to help and can harm, short-acting nifedipine is not used, and admission for an infusion treats the number.",
+   "next": "end_urgency",
+   "sources": [
+    {
+     "docId": "pmid:40815242",
+     "where": "6.2 synopsis"
+    },
+    {
+     "docId": "pmid:29939523",
+     "where": "Treatment / Management; Pearls and Other Issues"
+    },
+    {
+     "docId": "pmid:36418425",
+     "where": "Uncomplicated acute severe hypertension; Table 2 footnote; Table 3"
+    },
+    {
+     "docId": "url:3489e1e96576",
+     "where": "1.5.1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Known hypertension",
+     "dose": "Increase the doses or add a drug; consider adherence testing; outpatient follow-up and up-titration",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Table 3"
+      }
+     ]
+    },
+    {
+     "item": "New diagnosis",
+     "dose": "NICE confirms it first: a repeat clinic reading within 7 days, or ambulatory monitoring with a review within 7 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3489e1e96576",
+       "where": "1.5.1"
+      }
+     ]
+    },
+    {
+     "item": "Confounders",
+     "dose": "Find and treat pain, anxiety and distress",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36418425",
+       "where": "Uncomplicated acute severe hypertension"
+      }
+     ]
+    },
+    {
+     "item": "Ward patient",
+     "dose": "No as-needed IV or oral doses to bring it down acutely; standing medicines with careful monitoring",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "6.2 recommendation 4; 6.2 recommendation-specific supportive text 4"
+      }
+     ]
+    }
+   ],
+   "note": "NICE confirms a new diagnosis before treating it; BIHS and StatPearls start or adjust oral therapy. Both fit the key."
+  },
+  {
+   "id": "end_seizing",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Convulsing with severe hypertension, not pregnant: stop the seizure first in the seizure pathway. Once it stops, a non-contrast CT head comes before the BP plan, as on the neurologic route here."
+  },
+  {
+   "id": "end_ich",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Intracerebral hemorrhage: smooth IV lowering to a systolic of 130 to 139 for at least 7 days when it starts at 150 to 220, never below 130 (AHA/ACC; BIHS aims for 140 to 180, and 140 or more above 220). Continue in the stroke pathway for anticoagulant reversal, the hematoma site and surgery."
+  },
+  {
+   "id": "end_sah",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Subarachnoid hemorrhage: continue in the headache pathway for CT angiography, nimodipine and securing the aneurysm. Its blood pressure target is not settled in the sources read; BIHS lowers it only for a compelling reason, with a titratable agent, to 140 to 180/90 to 110."
+  },
+  {
+   "id": "end_lesion",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A subdural or a mass explains the picture, so this is not hypertensive encephalopathy. Treating the lesion, and the pressure that goes with it, is outside this pathway's sources."
+  },
+  {
+   "id": "end_reperf",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ischemic stroke with a lytic: below 185/110 before it and under 180/105 for 24 hours after; 180/105 or less during and for 24 hours after any thrombectomy. Continue in the stroke pathway for the lytic, its dose and thrombectomy."
+  },
+  {
+   "id": "end_evt",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ischemic stroke going to thrombectomy without a lytic: 180/105 or less during and for 24 hours after the procedure. Continue in the stroke pathway for thrombectomy."
+  },
+  {
+   "id": "end_ais_none",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ischemic stroke without reperfusion: leave the pressure alone under 220/120; at 220/120 or more, lower it by about 15% over the first day. Continue in the stroke pathway for antiplatelets and imaging."
+  },
+  {
+   "id": "end_htn_emerg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypertensive emergency without a compelling condition: ICU and an arterial line, a titratable IV agent, systolic down by no more than 25% in the first hour, under 160/100 over 2 to 6 hours, then cautiously to 130 to 140 over 24 to 48 hours, then oral therapy. Nicardipine or clevidipine when a beta blocker is ruled out."
+  },
+  {
+   "id": "end_type_a",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Type A dissection: emergency surgical consultation and immediate surgery; meanwhile beta blocker first, systolic 120 or less, heart rate 60 to 80 (aortic guideline; BIHS 60 or less); transfer to a high-volume aortic center if stable enough. The chest pain pathway carries the same route."
+  },
+  {
+   "id": "end_type_b",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Type B dissection: medical therapy first when uncomplicated (ICU, beta blocker, systolic under 120, heart rate 60 to 80, or 60 or less in BIHS); intervention for rupture or other complications."
+  },
+  {
+   "id": "end_cta_neg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No aortic syndrome on CT angiography: the dissection targets lapse. Back to the organ damage screen: an ECG and troponin for ACS (chest pain pathway); with no acute organ damage, it is severe hypertension, lowered slowly by mouth."
+  },
+  {
+   "id": "end_acs",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "ACS with severe hypertension: IV nitroglycerin (not after a PDE-5 inhibitor or with an RV infarct) and esmolol if there is no beta-blocker contraindication; mean pressure down 20 to 25% at most, diastolic 70 or more, no nitroprusside; revascularization first. Continue in the chest pain pathway."
+  },
+  {
+   "id": "end_pulm",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypertensive pulmonary edema: IV nitroglycerin, clevidipine or nitroprusside with an IV loop diuretic; no beta blocker; mean pressure down 25% at most. Breathing support sits in the dyspnea pathway."
+  },
+  {
+   "id": "end_coc",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cocaine or amphetamine hypertension: IV benzodiazepines first, titrated until calm, with cooling if hot; if the pressure stays high, IV phentolamine or nitroglycerin (BIHS adds IV nicardipine or a labetalol infusion; both are disputed); no beta blocker alone, no short-acting nifedipine; with ischemic chest pain, IV nitroglycerin and the chest pain pathway."
+  },
+  {
+   "id": "end_pheo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pheochromocytoma crisis: IV phentolamine (or nicardipine or clevidipine) and IV fluids, no beta blocker until alpha blockade is in place; confirm with metanephrines, then oral alpha blockade before surgery."
+  },
+  {
+   "id": "end_eclampsia",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Eclampsia: IV magnesium sulfate, 4 g over 5 to 15 minutes, then 1 g an hour until 24 hours after the last fit (StatPearls loads 6 g, then 2 g an hour), 2 to 4 g more for a recurrent fit, never diazepam or phenytoin in its place; treat the severe pressure at once with labetalol, oral nifedipine or IV hydralazine. Continue in the seizure pathway."
+  },
+  {
+   "id": "end_preg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Severe-range pressure in pregnancy: labetalol, oral nifedipine or IV hydralazine now, first to below 160/110; magnesium sulfate when severe features are present; no ACE inhibitor, ARB or nitroprusside before birth. The obstetric team decides on timing of birth (headache and seizure pathways)."
+  },
+  {
+   "id": "end_preg_neuro",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pregnant or recently delivered with a focal deficit or a GCS below 13: protect the airway and get a non-contrast CT head; treat a severe-range pressure at once with labetalol, oral nifedipine or IV hydralazine, and give magnesium if this may be eclampsia. The rest is outside this pathway's sources."
+  },
+  {
+   "id": "end_symptoms",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Not yet severe hypertension without organ damage: continue in the chest pain or headache pathway; no IV lowering for the number alone."
+  },
+  {
+   "id": "end_urgency",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Severe hypertension without acute organ damage: no IV drugs and no rapid lowering; restart or step up oral therapy, or confirm a new diagnosis, and review within 7 days. No short-acting nifedipine, and no as-needed doses for a ward patient."
+  }
+ ],
+ "cases": [
+  {
+   "id": "unstable_ich",
+   "label": "Unresponsive, intracerebral hemorrhage",
+   "vignette": "71-year-old man found slumped in his chair by his daughter; he takes amlodipine and lisinopril. BP 214/122, HR 64, SpO2 94%, glucose 6.4 mmol/L (115 mg/dL).",
+   "picks": {
+    "front": "unstable",
+    "neuro_ct": "ich"
+   },
+   "results": {
+    "front": "GCS 9 (E2 V2 M5), snoring respirations, not convulsing.",
+    "neuro_ct": "Non-contrast CT: a left basal ganglia hemorrhage."
+   }
+  },
+  {
+   "id": "encephalopathy",
+   "label": "Hypertensive encephalopathy",
+   "vignette": "44-year-old man who stopped his blood pressure tablets a month ago, 2 days of worsening headache and vomiting, now muddled. BP 238/136, HR 96, afebrile.",
+   "picks": {
+    "front": "neuro",
+    "neuro_ct": "clear",
+    "agent_limits": "none"
+   },
+   "results": {
+    "front": "Both arms 238/136. GCS 14, disoriented to the date, no focal deficit; flame hemorrhages and disc swelling in both fundi. ECG: LVH, no ischemic change.",
+    "neuro_ct": "Non-contrast CT: no bleed or infarct; patchy low density in both occipital lobes.",
+    "agent_limits": "No asthma, no heart block, no allergies; HR 96."
+   }
+  },
+  {
+   "id": "aki_asthma",
+   "label": "Malignant hypertension with kidney injury, asthma",
+   "vignette": "36-year-old woman, a week of headache and passing less urine. BP 226/134, HR 88.",
+   "picks": {
+    "front": "organ",
+    "agent_limits": "asthma"
+   },
+   "results": {
+    "front": "Both arms 226/134. Alert and oriented, normal neurologic exam; retinal hemorrhages and cotton wool spots in both eyes. Creatinine 3.1 mg/dL (274 micromol/L), 0.9 six months ago; urine 2+ blood, 2+ protein. Pregnancy test negative. ECG: no ischemic change.",
+    "agent_limits": "Asthma since childhood, on an inhaled steroid and salbutamol."
+   }
+  },
+  {
+   "id": "stroke_reperf",
+   "label": "Ischemic stroke, reperfusion planned",
+   "vignette": "66-year-old woman, sudden right arm weakness and slurred speech 90 minutes ago; not on an anticoagulant. BP 204/112, HR 82 and irregular, glucose normal.",
+   "picks": {
+    "front": "neuro",
+    "neuro_ct": "ischemic",
+    "ais_elig": "lytic"
+   },
+   "results": {
+    "front": "GCS 15; right face and arm weakness, expressive aphasia. Fundi normal. ECG: atrial fibrillation, no ischemic change.",
+    "neuro_ct": "Non-contrast CT: no bleed, no established infarct.",
+    "ais_elig": "Stroke team: within 4.5 hours, no contraindication; a lytic and CT angiography for thrombectomy are planned."
+   }
+  },
+  {
+   "id": "stroke_evt",
+   "label": "Ischemic stroke, thrombectomy without a lytic",
+   "vignette": "58-year-old man, sudden left-sided weakness and his eyes turned to the right 3 hours ago; he takes apixaban, last dose this morning. BP 192/106, HR 88 and irregular.",
+   "picks": {
+    "front": "neuro",
+    "neuro_ct": "ischemic",
+    "ais_elig": "evt"
+   },
+   "results": {
+    "front": "GCS 14; dense left hemiparesis, gaze deviation to the right. Fundi normal. ECG: atrial fibrillation, no ischemic change.",
+    "neuro_ct": "Non-contrast CT: no bleed; a hyperdense right middle cerebral artery.",
+    "ais_elig": "Stroke team: apixaban this morning rules out the lytic; CT angiography shows a right M1 occlusion; thrombectomy planned."
+   }
+  },
+  {
+   "id": "stroke_none",
+   "label": "Ischemic stroke, no reperfusion",
+   "vignette": "79-year-old man who woke with a weak left side; last seen well 16 hours ago. BP 198/108, HR 76.",
+   "picks": {
+    "front": "neuro",
+    "neuro_ct": "ischemic",
+    "ais_elig": "none"
+   },
+   "results": {
+    "front": "GCS 15; left face, arm and leg weakness, a left visual field loss. Fundi normal.",
+    "neuro_ct": "Non-contrast CT: no bleed; early low density in the right MCA territory.",
+    "ais_elig": "Stroke team: outside the lytic window, no large vessel occlusion on CT angiography; no lytic or thrombectomy."
+   }
+  },
+  {
+   "id": "sah",
+   "label": "Subarachnoid hemorrhage with severe hypertension",
+   "vignette": "52-year-old woman, a sudden severe headache while lifting a box, then vomiting. BP 206/116, HR 58.",
+   "picks": {
+    "front": "neuro",
+    "neuro_ct": "sah"
+   },
+   "results": {
+    "front": "GCS 14, confused, neck stiff, no focal deficit. Fundi: no papilledema. Pregnancy test negative.",
+    "neuro_ct": "Non-contrast CT: blood in the basal cisterns and both sylvian fissures."
+   }
+  },
+  {
+   "id": "subdural",
+   "label": "Subdural, not encephalopathy",
+   "vignette": "83-year-old man on aspirin, a week of headache and growing confusion. BP 192/104, HR 70.",
+   "picks": {
+    "front": "neuro",
+    "neuro_ct": "lesion"
+   },
+   "results": {
+    "front": "GCS 14, drowsy and disoriented, no focal deficit; fundi normal.",
+    "neuro_ct": "Non-contrast CT: a left convexity subdural hematoma with midline shift."
+   }
+  },
+  {
+   "id": "type_a",
+   "label": "Type A dissection",
+   "vignette": "61-year-old man with hypertension, sudden severe chest pain that goes through to his back. HR 104.",
+   "picks": {
+    "front": "aorta",
+    "cta": "type_a"
+   },
+   "results": {
+    "front": "Right arm 212/118, left arm 168/96; a faint left radial pulse. ECG: sinus tachycardia, no ST elevation. Neurologic exam normal.",
+    "cta": "CT angiography: an intimal flap from the aortic root into the arch."
+   }
+  },
+  {
+   "id": "type_b",
+   "label": "Type B dissection",
+   "vignette": "68-year-old woman, sudden tearing pain between the shoulder blades. HR 98.",
+   "picks": {
+    "front": "aorta",
+    "cta": "type_b"
+   },
+   "results": {
+    "front": "Right arm 208/112, left arm 204/110; the left femoral pulse is weaker than the right. ECG: sinus rhythm, no ST elevation.",
+    "cta": "CT angiography: a flap starting beyond the left subclavian artery; the ascending aorta is spared; no rupture, kidneys and bowel perfused."
+   }
+  },
+  {
+   "id": "cta_negative",
+   "label": "Suspected dissection, CT angiography clear",
+   "vignette": "55-year-old man, sudden sharp chest pain spreading to his back while lifting weights. HR 92.",
+   "picks": {
+    "front": "aorta",
+    "cta": "none"
+   },
+   "results": {
+    "front": "Right arm 196/110, left arm 172/98; leg pulses equal. ECG: LVH with strain, no ST elevation. Neurologic exam normal.",
+    "cta": "CT angiography: normal aorta; no flap, hematoma or ulcer."
+   }
+  },
+  {
+   "id": "acs",
+   "label": "ACS with severe hypertension",
+   "vignette": "64-year-old man with diabetes, an hour of crushing central chest pressure. HR 92, SpO2 97%. No sildenafil or tadalafil.",
+   "picks": {
+    "front": "acs"
+   },
+   "results": {
+    "front": "Both arms 198/114, pulses equal, no back pain. ECG: 2 mm ST depression in V4 to V6. Chest clear, no edema. Neurologic exam normal."
+   }
+  },
+  {
+   "id": "pulmonary_edema",
+   "label": "Hypertensive pulmonary edema",
+   "vignette": "72-year-old woman, woke breathless and cannot lie flat. HR 112, SpO2 88% on air.",
+   "picks": {
+    "front": "pulm"
+   },
+   "results": {
+    "front": "Both arms 224/126. Crackles to both mid zones; chest film: bilateral alveolar edema. ECG: LVH, no acute ischemic change. Alert, neurologic exam normal."
+   }
+  },
+  {
+   "id": "cocaine_settles",
+   "label": "Cocaine, settles on benzodiazepines",
+   "vignette": "27-year-old man brought in by friends from a club, shouting and pacing. HR 132, temperature 37.9.",
+   "picks": {
+    "front": "stimulant",
+    "coc_resp": "settles"
+   },
+   "results": {
+    "front": "BP 210/118 in both arms. Pupils 7 mm, skin wet; friends say he snorted cocaine an hour ago. No chest pain; ECG: sinus tachycardia, no ischemic change. Neurologic exam normal apart from agitation.",
+    "coc_resp": "After two doses of IV lorazepam: calm, BP 162/94, HR 104."
+   }
+  },
+  {
+   "id": "cocaine_ischemia",
+   "label": "Cocaine with ST depression",
+   "vignette": "45-year-old man, an hour of chest tightness, restless and sweating. HR 124, temperature 37.4.",
+   "picks": {
+    "front": "stimulant",
+    "coc_resp": "settles"
+   },
+   "results": {
+    "front": "BP 206/120 in both arms, pulses equal, no back pain. Pupils 6 mm; he smoked crack cocaine an hour ago. ECG: 1 mm ST depression in V4 to V6. Lungs clear, neurologic exam normal.",
+    "coc_resp": "After IV lorazepam and IV nitroglycerin: calm, BP 158/92, HR 98, the tightness easing."
+   }
+  },
+  {
+   "id": "meth_high",
+   "label": "Methamphetamine, pressure stays high",
+   "vignette": "34-year-old woman brought in restless and tremulous after a night awake. HR 126, temperature 37.6.",
+   "picks": {
+    "front": "stimulant",
+    "coc_resp": "still_high"
+   },
+   "results": {
+    "front": "BP 218/124 in both arms. Pupils dilated, sweating; she admits smoking methamphetamine 2 hours ago. No chest pain; ECG: sinus tachycardia, no ischemic change. Pregnancy test negative.",
+    "coc_resp": "After repeated IV diazepam: calmer, HR 110, but BP 204/118."
+   }
+  },
+  {
+   "id": "pheo",
+   "label": "Pheochromocytoma crisis",
+   "vignette": "41-year-old woman, a pounding headache with palpitations for the last hour; pale and tremulous. HR 128.",
+   "picks": {
+    "front": "pheo"
+   },
+   "results": {
+    "front": "BP 236/128 in both arms. Spells like this for 6 months, each with sweating; a 4 cm right adrenal mass on a CT for back pain in the spring. No drugs taken; urine drug screen and pregnancy test negative. ECG: sinus tachycardia, no ischemic change."
+   }
+  },
+  {
+   "id": "eclampsia",
+   "label": "Eclampsia",
+   "vignette": "29-year-old woman, 35 weeks into her first pregnancy, a severe headache and flashing lights since lunchtime.",
+   "picks": {
+    "front": "pregnant",
+    "preg_fit": "fit"
+   },
+   "results": {
+    "front": "BP 184/122; 3+ protein on dipstick; no focal deficit, no chest or back pain.",
+    "preg_fit": "A generalized tonic-clonic seizure in the bay, lasting 2 minutes."
+   }
+  },
+  {
+   "id": "preeclampsia",
+   "label": "Pre-eclampsia, severe-range pressure",
+   "vignette": "33-year-old woman, 34 weeks pregnant, a headache and spots before her eyes since this morning.",
+   "picks": {
+    "front": "pregnant",
+    "preg_fit": "no_fit"
+   },
+   "results": {
+    "front": "BP 186/120; 2+ protein on dipstick; no focal deficit, no chest or back pain.",
+    "preg_fit": "No seizure; alert and oriented."
+   }
+  },
+  {
+   "id": "postpartum_drowsy",
+   "label": "Recently delivered, GCS below 13",
+   "vignette": "31-year-old woman, 6 days after a vaginal delivery, a day of headache; her partner found her hard to wake. BP 194/124, HR 96.",
+   "picks": {
+    "front": "preg_neuro"
+   },
+   "results": {
+    "front": "GCS 11, not convulsing; no focal deficit; arm pressures equal, no chest or back pain."
+   }
+  },
+  {
+   "id": "chest_pain_clear",
+   "label": "Chest pain, screen clear",
+   "vignette": "50-year-old man, an hour of central chest tightness, now easing. BP 192/108, HR 84.",
+   "picks": {
+    "front": "symptoms"
+   },
+   "results": {
+    "front": "Both arms 190/106, pulses equal, no back pain. ECG normal; first high-sensitivity troponin below the 99th percentile. Neurologic exam and fundi normal; creatinine and urine normal."
+   }
+  },
+  {
+   "id": "no_organ_damage",
+   "label": "Severe hypertension, no organ damage",
+   "vignette": "58-year-old man sent from clinic with BP 196/116 twice; he ran out of amlodipine and lisinopril 10 days ago and feels well.",
+   "picks": {
+    "front": "none"
+   },
+   "results": {
+    "front": "Repeat 194/118 in both arms. Alert, normal neurologic exam and fundi; no chest pain or breathlessness. ECG: LVH, no ischemic change. Creatinine at his baseline; urine dipstick normal."
+   }
+  },
+  {
+   "id": "seizing",
+   "label": "Convulsing with severe hypertension",
+   "vignette": "38-year-old man, 3 days of headache and blurred vision, brought in after collapsing at home. BP 232/132, HR 110.",
+   "picks": {
+    "front": "convulsing"
+   },
+   "results": {
+    "front": "A generalized tonic-clonic seizure starts in the bay and is still going at 5 minutes; glucose 5.8 mmol/L (104 mg/dL)."
+   }
+  }
+ ]
+}

@@ -1,0 +1,2521 @@
+{
+ "id": "pw_flank_pain",
+ "title": "Flank pain and urinary retention",
+ "world": "renal",
+ "synonyms": [
+  "flank pain",
+  "renal colic",
+  "ureteric colic",
+  "ureteral colic",
+  "kidney stone",
+  "ureteric stone",
+  "ureteral stone",
+  "nephrolithiasis",
+  "urolithiasis",
+  "ureterolithiasis",
+  "hydronephrosis",
+  "medical expulsive therapy",
+  "MET",
+  "tamsulosin",
+  "infected obstructed kidney",
+  "obstructive pyelonephritis",
+  "pyonephrosis",
+  "infected stone",
+  "nephrostomy",
+  "ureteric stent",
+  "pyelonephritis",
+  "acute pyelonephritis",
+  "perinephric abscess",
+  "costovertebral angle tenderness",
+  "CVA tenderness",
+  "urinary retention",
+  "acute urinary retention",
+  "AUR",
+  "bladder scan",
+  "trial without catheter",
+  "TWOC",
+  "BPH retention",
+  "clot retention",
+  "hematuria with clots",
+  "three-way catheter",
+  "post-obstructive diuresis"
+ ],
+ "reviewBy": "2028-04-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:716a97bf1c96",
+   "label": "NICE NG118",
+   "title": "Renal and ureteric stones: assessment and management",
+   "url": "https://www.nice.org.uk/guidance/ng118"
+  },
+  {
+   "docId": "url:f531e12f2681",
+   "label": "NICE NG111",
+   "title": "Pyelonephritis (acute): antimicrobial prescribing",
+   "url": "https://www.nice.org.uk/guidance/ng111"
+  },
+  {
+   "docId": "url:870c1ebcd621",
+   "label": "NICE CG97",
+   "title": "Lower urinary tract symptoms in men: management",
+   "url": "https://www.nice.org.uk/guidance/cg97"
+  },
+  {
+   "docId": "pmid:38040458",
+   "label": "ACR flank pain 2023",
+   "title": "ACR Appropriateness Criteria Acute Onset Flank Pain-Suspicion of Stone Disease (Urolithiasis)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38040458/"
+  },
+  {
+   "docId": "pmid:36436954",
+   "label": "ACR pyelonephritis 2022",
+   "title": "ACR Appropriateness Criteria Acute Pyelonephritis: 2022 Update",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36436954/"
+  },
+  {
+   "docId": "pmid:32370972",
+   "label": "ACR obstruction 2019",
+   "title": "ACR Appropriateness Criteria Radiologic Management of Urinary Tract Obstruction",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32370972/"
+  },
+  {
+   "docId": "pmid:32370958",
+   "label": "ACR hematuria 2019",
+   "title": "ACR Appropriateness Criteria Hematuria",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32370958/"
+  },
+  {
+   "docId": "pmid:31402153",
+   "label": "Renal colic imaging consensus 2019",
+   "title": "Imaging in Suspected Renal Colic: Systematic Review of the Literature and Multispecialty Consensus (Ann Emerg Med; ACEP, ACR and AUA panel)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31402153/"
+  },
+  {
+   "docId": "pmid:41509089",
+   "label": "MET meta-analysis 2026",
+   "title": "Efficacy of alpha-blockers in medical expulsive therapy for ureteral stones (review, Arab J Urol)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41509089/"
+  },
+  {
+   "docId": "pmid:38929478",
+   "label": "Nephrostomy vs stent meta-analysis 2024",
+   "title": "Percutaneous Nephrostomy versus Ureteral Stent for Severe Urinary Tract Infection with Obstructive Urolithiasis (review, Medicina)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38929478/"
+  },
+  {
+   "docId": "pmid:39157169",
+   "label": "Trial without catheter review 2024",
+   "title": "Immediate or delayed trial without catheter in acute urinary retention in males (review, BJUI Compass)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39157169/"
+  },
+  {
+   "docId": "pmid:34599691",
+   "label": "SSC 2021",
+   "title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34599691/"
+  },
+  {
+   "docId": "pmid:30137822",
+   "label": "StatPearls pyelonephritis",
+   "title": "Acute Pyelonephritis (StatPearls review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30137822/"
+  },
+  {
+   "docId": "pmid:32809509",
+   "label": "StatPearls ureterolithiasis",
+   "title": "Ureterolithiasis (StatPearls review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32809509/"
+  },
+  {
+   "docId": "pmid:28613743",
+   "label": "StatPearls renal colic",
+   "title": "Acute Renal Colic (StatPearls review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613743/"
+  },
+  {
+   "docId": "pmid:32644527",
+   "label": "StatPearls urolithiasis",
+   "title": "Urolithiasis (StatPearls review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32644527/"
+  },
+  {
+   "docId": "pmid:30860734",
+   "label": "StatPearls urinary retention",
+   "title": "Male Urinary Retention: Acute and Chronic (StatPearls review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30860734/"
+  },
+  {
+   "docId": "pmid:30725732",
+   "label": "StatPearls UTI in pregnancy",
+   "title": "Urinary Tract Infection in Pregnancy (StatPearls review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30725732/"
+  },
+  {
+   "docId": "pmid:33232074",
+   "label": "StatPearls difficult Foley",
+   "title": "Difficult Foley Catheterization (StatPearls review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33232074/"
+  },
+  {
+   "docId": "pmid:30480952",
+   "label": "StatPearls hematuria",
+   "title": "Gross and Microscopic Hematuria (StatPearls review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30480952/"
+  },
+  {
+   "docId": "url:bbce9bfd09e9",
+   "label": "Ketorolac injection label",
+   "title": "Ketorolac tromethamine injection USP, FDA prescribing information (DailyMed)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8accbb78-fc64-45d5-69b0-35c23a1d2a2e"
+  },
+  {
+   "docId": "url:0ab6c49010b1",
+   "label": "Ibuprofen label",
+   "title": "Ibuprofen tablets USP, FDA prescribing information (DailyMed)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e080f7da-a506-4c04-a227-c1be77234f01"
+  },
+  {
+   "docId": "url:af8f00181691",
+   "label": "Tamsulosin label",
+   "title": "Tamsulosin hydrochloride capsules, FDA prescribing information (DailyMed)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=13a5032d-0be1-4001-916e-459f0b1a051d"
+  },
+  {
+   "docId": "url:d0e50eecf004",
+   "label": "Ciprofloxacin label",
+   "title": "Ciprofloxacin tablets, FDA prescribing information (DailyMed)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3b3d22dc-df09-4910-8c9b-1204eeedbd68"
+  },
+  {
+   "docId": "url:9eebeb63e8f7",
+   "label": "Bactrim label",
+   "title": "Bactrim and Bactrim DS (sulfamethoxazole and trimethoprim) tablets, FDA prescribing information (DailyMed)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f59d0c04-9c66-4d53-a0e1-cb55570deb62"
+  },
+  {
+   "docId": "url:38ac99966401",
+   "label": "Macrobid label",
+   "title": "Macrobid (nitrofurantoin) capsules, FDA prescribing information (DailyMed)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8f270a9f-12a1-44d4-bc7e-873613555801"
+  },
+  {
+   "docId": "url:eed08301207b",
+   "label": "Ceftriaxone label",
+   "title": "Ceftriaxone for injection USP, FDA prescribing information (DailyMed)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8351aa37-552d-471d-b293-c564dcb6ec29"
+  }
+ ],
+ "differential": [
+  "Ruptured AAA",
+  "Septic shock",
+  "Ectopic pregnancy",
+  "Ureteric stone",
+  "Infected obstructed kidney",
+  "Pyelonephritis",
+  "Renal abscess",
+  "Acute urinary retention",
+  "Cauda equina syndrome",
+  "Clot retention",
+  "Another abdominal cause"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Adult with flank pain or unable to pass urine. First moves?",
+   "options": [
+    "Vitals, abdomen, bladder exam, urine test, and hCG where relevant",
+    "Low-dose CT first, then examine once the stone is confirmed",
+    "Analgesia, then discharge home if the pain settles in an hour",
+    "A plain KUB film first, and a urinalysis only if a stone shows up"
+   ],
+   "answer": 0,
+   "chainStep": "Vital signs; abdominal exam for a pulsatile mass and a palpable bladder; urinalysis; urine hCG in women of reproductive age; analgesia while the workup runs",
+   "why": "Flank pain is nonspecific: an abdominal aortic aneurysm, appendicitis, diverticulitis and ectopic pregnancy all mimic renal colic. The vital signs and abdomen pick out shock, a pulsatile mass and a full bladder, the urinalysis shows blood or infection, and urine hCG, checked in all women of reproductive age, decides the imaging, because in pregnancy ultrasound replaces CT. Imaging and discharge decisions come after these checks.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "pmid:28613743",
+     "where": "Differential Diagnosis"
+    },
+    {
+     "docId": "pmid:32644527",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "url:716a97bf1c96",
+     "where": "1.1.1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Urine hCG",
+     "dose": "All women of reproductive age",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644527",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: children, kidney transplant recipients, and flank pain or hematuria after trauma."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Vitals, exam, urinalysis and pregnancy test",
+   "outcomes": [
+    {
+     "id": "aaa",
+     "if": "Aneurysm suspected, or shock without fever; a pulsatile mass, a known aneurysm, or hypotension without fever",
+     "next": "end_aaa",
+     "ddx": {
+      "lead": [
+       "Ruptured AAA",
+       "Ectopic pregnancy"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "septic",
+     "if": "Septic shock; fever with hypotension, no pulsatile mass",
+     "next": "end_sepsis",
+     "ddx": {
+      "lead": [
+       "Septic shock",
+       "Infected obstructed kidney"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "ectopic",
+     "if": "Pregnant, location unknown; positive hCG, no scan yet showing an intrauterine pregnancy",
+     "next": "end_ectopic",
+     "ddx": {
+      "lead": [
+       "Ectopic pregnancy"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "retention",
+     "if": "Unable to pass urine; lower abdominal pain, fullness or a palpable bladder, no fever, pressure normal",
+     "next": "ret_scan",
+     "ddx": {
+      "lead": [
+       "Acute urinary retention"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "ret_fever",
+     "if": "Retention with fever, no shock; unable to pass urine with a fever, pressure normal",
+     "next": "end_ret_fever",
+     "ddx": {
+      "lead": [
+       "Acute urinary retention"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "fever_stone",
+     "if": "Infection with stone features; fever, pyuria or nitrite with colicky pain or a known stone, pressure normal",
+     "next": "fs_workup",
+     "ddx": {
+      "lead": [
+       "Infected obstructed kidney",
+       "Pyelonephritis"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "pyelo",
+     "if": "Fever and pyuria, no stone features; flank pain, pressure normal; blood in the urine alone is common in pyelonephritis",
+     "next": "pyelo_first",
+     "ddx": {
+      "lead": [
+       "Pyelonephritis"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "colic_preg",
+     "if": "Pregnant, intrauterine pregnancy known; colicky flank pain, no fever, pressure normal",
+     "next": "preg_us",
+     "ddx": {
+      "lead": [
+       "Ureteric stone"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "colic",
+     "if": "Suspected renal colic, no infection; no fever, pyuria or nitrite, not pregnant, pressure normal",
+     "next": "colic_pain",
+     "ddx": {
+      "lead": [
+       "Ureteric stone"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "end_aaa",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Flank pain with a pulsatile mass or known aneurysm, or shock without fever: continue in the abdominal pain pathway (pw_abdominal_pain), which takes shock with a mass or known aneurysm as a suspected rupture, other shock through its unstable route, and a stable painful aneurysm to CT angiography."
+  },
+  {
+   "id": "end_sepsis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Septic shock with flank pain: resuscitate in the sepsis pathway (pw_sepsis_fever), whose urinary route images the kidneys at once and drains an obstructed kidney or an abscess urgently with antibiotics running; in a septic, hypotensive patient ACR rates a nephrostomy usually appropriate and a stent may be appropriate, and the stone waits until the infection is controlled."
+  },
+  {
+   "id": "end_ret_fever",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Retention with fever, no shock: drain the bladder by urethral catheter, which suits a temporary cause such as infection; send the urine for culture, treat the infection separately, and admit for urosepsis; this route is not covered further in this version."
+  },
+  {
+   "id": "end_ectopic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Positive pregnancy test with pain and no confirmed intrauterine pregnancy: continue in the abdominal pain pathway (pw_abdominal_pain), whose pregnancy route starts with a transvaginal ultrasound and hCG to find or exclude an ectopic pregnancy."
+  },
+  {
+   "id": "colic_pain",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Suspected renal colic, afebrile, not pregnant. Analgesia?",
+   "options": [
+    "An NSAID first, for example IV ketorolac",
+    "IV morphine first; an NSAID only if it fails",
+    "Hyoscine (an antispasmodic) with an opioid",
+    "IV paracetamol first; an NSAID if it fails"
+   ],
+   "answer": 0,
+   "chainStep": "Ketorolac 30 mg IV once (15 mg if 65 or older, renally impaired or under 50 kg), or another NSAID by any route; IV paracetamol if NSAIDs are contraindicated or not enough, then an opioid; no antispasmodic; ondansetron and IV fluids as needed",
+   "why": "NICE offers an NSAID by any route first: against opioids, antispasmodics and IV paracetamol it cut the need for rescue medication, and it reduced pain with fewer adverse effects. IV paracetamol comes next if NSAIDs are contraindicated or not enough, an opioid only if both are, and antispasmodics are not offered. Ketorolac is the usual US parenteral NSAID, 15 to 30 mg IV or IM; IV acetaminophen matched ketorolac in one meta-analysis, but the data are too thin to prefer it.",
+   "next": "colic_imaging",
+   "sources": [
+    {
+     "docId": "url:716a97bf1c96",
+     "where": "1.2.1 to 1.2.4; 1.2 rationale"
+    },
+    {
+     "docId": "pmid:28613743",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:32809509",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:bbce9bfd09e9",
+     "where": "Dosage and Administration"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Ketorolac",
+     "dose": "IV, one dose of 30 mg under 65 years, or 15 mg if 65 or older, renally impaired or under 50 kg; repeated dosing 30 mg every 6 hours (at most 120 mg a day), or 15 mg every 6 hours (at most 60 mg a day) in those groups; IV and oral use together no more than 5 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:bbce9bfd09e9",
+       "where": "Dosage and Administration"
+      }
+     ]
+    },
+    {
+     "item": "Ketorolac contraindications",
+     "dose": "Advanced renal impairment or risk of renal failure from volume depletion (correct hypovolemia first); StatPearls adds pregnancy, GFR under 30 mL/min, a significant upper GI bleed, and NSAID or aspirin allergy",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:bbce9bfd09e9",
+       "where": "Boxed warning, renal risk; Dosage and Administration"
+      },
+      {
+       "docId": "pmid:32809509",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "NSAID not possible or not enough",
+     "dose": "IV paracetamol next, then an opioid if both are contraindicated or not enough (NICE); US reviews give morphine 0.1 mg/kg IV or IM when ketorolac fails",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:716a97bf1c96",
+       "where": "1.2.2; 1.2.3"
+      },
+      {
+       "docId": "pmid:28613743",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "IV paracetamol dose",
+     "dose": "Not stated in the sources read; no IV acetaminophen label was read",
+     "status": "pending"
+    },
+    {
+     "item": "Antispasmodics",
+     "dose": "Do not offer",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:716a97bf1c96",
+       "where": "1.2.4"
+      }
+     ]
+    },
+    {
+     "item": "Antiemetic and fluids",
+     "dose": "Ondansetron 4 to 8 mg IV or orally may be preferred; IV fluids for dehydration from vomiting or poor intake, not to flush out the stone",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613743",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "note": "NICE puts IV paracetamol before opioids; US practice and StatPearls reach for IV morphine after ketorolac. Both keep the NSAID first."
+  },
+  {
+   "id": "colic_imaging",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Suspected renal colic, not pregnant, analgesia given. Imaging?",
+   "options": [
+    "Low-dose noncontrast CT of the abdomen and pelvis",
+    "CT abdomen and pelvis with IV contrast, portal phase",
+    "Intravenous urography to show the level of obstruction",
+    "MR urography without contrast, to avoid radiation"
+   ],
+   "answer": 0,
+   "chainStep": "Low-dose noncontrast CT of the abdomen and pelvis within 24 hours; ultrasound first instead in pregnancy and in children, and acceptable in a younger adult with typical, controlled pain",
+   "why": "Noncontrast CT is the reference standard for stones, with sensitivity as high as 97%, and a low-dose technique keeps that accuracy (pooled sensitivity 97%, specificity 95%); it sizes and places the stone and shows other causes of flank pain. NICE offers it within 24 hours and ACR rates it usually appropriate. IV contrast can hide stones in the collecting system, and IV urography and MR urography are rated usually not appropriate first tests. A US multispecialty consensus would skip CT in a younger patient whose typical pain is controlled, but recommends CT at about 55 without a stone history, in older patients whatever the history, and whenever the pain cannot be relieved.",
+   "next": "colic_result",
+   "sources": [
+    {
+     "docId": "pmid:38040458",
+     "where": "Variant 1, A and C; Variant 1 rating table"
+    },
+    {
+     "docId": "url:716a97bf1c96",
+     "where": "1.1.1"
+    },
+    {
+     "docId": "pmid:31402153",
+     "where": "Discussion"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Timing",
+     "dose": "Urgent, within 24 hours of presentation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:716a97bf1c96",
+       "where": "1.1.1"
+      }
+     ]
+    },
+    {
+     "item": "Ultrasound instead",
+     "dose": "Pregnancy: ultrasound instead of CT. Children and young people: ultrasound first",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:716a97bf1c96",
+       "where": "1.1.1; 1.1.2"
+      }
+     ]
+    },
+    {
+     "item": "Ultrasound first or no CT (US consensus)",
+     "dose": "Younger patients (about 35) with typical, controlled pain may avoid CT even without a stone history; CT at about 55 without a stone history, and in older patients regardless; reduced-dose CT whenever CT is used, including when pain cannot be relieved",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31402153",
+       "where": "Discussion"
+      }
+     ]
+    }
+   ],
+   "note": "NICE scans every adult with suspected renal colic; the 2019 consensus panel (ACEP, ACR and AUA members) accepts ultrasound or no imaging in younger patients with typical, controlled pain. Both scan a patient of about 55 or more without a stone history, and anyone whose pain cannot be relieved."
+  },
+  {
+   "id": "colic_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Low-dose CT, creatinine and pain after analgesia",
+   "outcomes": [
+    {
+     "id": "small",
+     "if": "Ureteric stone under 5 mm, pain controlled; likely to pass on its own",
+     "next": "end_pass",
+     "ddx": {
+      "lead": [
+       "Ureteric stone"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Expected passage",
+       "dose": "About 90% of stones under 5 mm pass within 4 weeks",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613743",
+         "where": "Pearls and Other Issues"
+        }
+       ]
+      },
+      {
+       "item": "Alpha blocker under 5 mm",
+       "dose": "Modest added benefit that may not justify routine use; NICE still allows one for distal stones under 10 mm",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:41509089",
+         "where": "Discussion"
+        },
+        {
+         "docId": "url:716a97bf1c96",
+         "where": "1.3.1"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "met",
+     "if": "Distal ureteric stone 5 to under 10 mm, pain controlled; a candidate for an alpha blocker",
+     "next": "colic_met",
+     "ddx": {
+      "lead": [
+       "Ureteric stone"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "proximal",
+     "if": "Proximal or mid-ureteric stone 5 to under 10 mm; pain controlled, alpha blockers not shown to help",
+     "next": "end_proximal",
+     "ddx": {
+      "lead": [
+       "Ureteric stone"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "refer48",
+     "if": "Stone 10 mm or more, pain controlled; unlikely to pass, kidney function normal",
+     "next": "end_refer48",
+     "ddx": {
+      "lead": [
+       "Ureteric stone"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Surgery within 48 hours",
+       "dose": "Offered within 48 hours of diagnosis or readmission when the stone is unlikely to pass; 10 to 20 mm: ureteroscopy, or shockwave lithotripsy if it can clear the stone within 4 weeks",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:716a97bf1c96",
+         "where": "1.5.4; 1.5.3 Table 2"
+        }
+       ]
+      },
+      {
+       "item": "Size",
+       "dose": "Stones over 10 mm generally need surgery; over 7 mm they are much less likely to pass",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613743",
+         "where": "Indications for Surgical Intervention"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "urgent",
+     "if": "Urgent urology criterion; pain or vomiting not controlled, AKI, a solitary kidney or both sides blocked",
+     "next": "colic_urgent",
+     "ddx": {
+      "lead": [
+       "Ureteric stone"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "no_stone",
+     "if": "No ureteric stone; CT shows another cause, a kidney stone that does not explain the pain, or nothing",
+     "next": "end_no_stone",
+     "ddx": {
+      "lead": [
+       "Another abdominal cause"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "colic_met",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Distal ureteric stone 5 to under 10 mm, pain controlled. Plan?",
+   "options": [
+    "Tamsulosin daily with an NSAID, and urology follow-up",
+    "Ureteroscopy before discharge, to clear the stone at once",
+    "Nifedipine daily as the expulsive drug of choice",
+    "IV fluids to flush the stone, then discharge"
+   ],
+   "answer": 0,
+   "chainStep": "Tamsulosin 0.4 mg once daily (off-label for stones) and an NSAID; watchful waiting; urology if not passed in 4 to 6 weeks, or sooner for fever, uncontrolled pain or worsening kidney function",
+   "why": "NICE considers alpha blockers for distal ureteric stones under 10 mm (off-label), and the benefit is largest for stones of 5 to 10 mm (number needed to treat 6), with fewer pain episodes and less analgesia. Alpha blockers beat calcium channel blockers such as nifedipine. A stone this size with controlled symptoms can be managed as an outpatient with prompt follow-up and no immediate surgery, and fluids do not flush a stone out. Surgery is for failure to pass in 4 to 6 weeks, uncontrolled symptoms, infection or worsening kidney function.",
+   "next": "end_pass",
+   "sources": [
+    {
+     "docId": "url:716a97bf1c96",
+     "where": "1.3.1; 1.3 rationale"
+    },
+    {
+     "docId": "pmid:41509089",
+     "where": "Discussion; Abstract, Results"
+    },
+    {
+     "docId": "pmid:32809509",
+     "where": "Treatment / Management, MET; Indications for Surgical Intervention"
+    },
+    {
+     "docId": "pmid:28613743",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Tamsulosin",
+     "dose": "0.4 mg once daily, about half an hour after the same meal each day (the labeled BPH dose; use for stones is off-label)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:af8f00181691",
+       "where": "2 Dosage and Administration; 1 Indications and Usage"
+      },
+      {
+       "docId": "url:716a97bf1c96",
+       "where": "1.3.1"
+      }
+     ]
+    },
+    {
+     "item": "Course length",
+     "dose": "Not stated in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Calcium channel blockers",
+     "dose": "Less effective than alpha blockers for stone passage; not the first choice",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:716a97bf1c96",
+       "where": "1.3 rationale"
+      },
+      {
+       "docId": "pmid:32809509",
+       "where": "Treatment / Management, MET"
+      }
+     ]
+    },
+    {
+     "item": "Urology",
+     "dose": "If the stone has not passed or progressed in 4 to 6 weeks; sooner for uncontrolled symptoms, infection, a solitary kidney or worsening renal failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32809509",
+       "where": "Indications for Surgical Intervention"
+      }
+     ]
+    },
+    {
+     "item": "Follow-up",
+     "dose": "Prompt outpatient follow-up for uncomplicated stones",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644527",
+       "where": "Enhancing Healthcare Team Outcomes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_pass",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ureteric stone likely to pass, pain controlled: home with an NSAID and watchful waiting, tamsulosin for a distal stone of 5 to under 10 mm (it adds little under 5 mm), and serum calcium measured; urology if the stone has not passed in 4 to 6 weeks, and sooner for fever, uncontrolled pain or worsening kidney function."
+  },
+  {
+   "id": "end_proximal",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Proximal or mid-ureteric stone of 5 to under 10 mm, pain controlled: NICE makes no alpha blocker recommendation here and the MET review finds the benefit modest; urology review, and NICE offers treatment within 48 hours if it is unlikely to pass: shockwave lithotripsy, or ureteroscopy if lithotripsy cannot clear it within 4 weeks."
+  },
+  {
+   "id": "end_refer48",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ureteric stone of 10 mm or more with pain controlled: unlikely to pass, so NICE offers treatment within 48 hours of diagnosis: ureteroscopy for stones of 10 to 20 mm, or shockwave lithotripsy if it can clear the stone within 4 weeks."
+  },
+  {
+   "id": "colic_urgent",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Ureteric stone with an urgent urology criterion. Next?",
+   "options": [
+    "Admit, nil by mouth, and urgent urology review today",
+    "Home on tamsulosin and oral opioids; clinic in 4 weeks",
+    "Repeat the CT in 48 hours before calling urology",
+    "Admit for analgesia; urology only if a fever starts"
+   ],
+   "answer": 0,
+   "chainStep": "Admit; nil by mouth; IV analgesia and antiemetic; urgent urology review today: immediate decompression for both sides blocked, a blocked solitary kidney or kidney injury, and surgical treatment within 48 hours for pain that is not tolerated (NICE)",
+   "why": "A stone in a solitary kidney, severe kidney injury and intractable pain or nausea are reasons to admit, and failure to control symptoms, uncontrollable pain, a solitary kidney, both ureters blocked, anuria or worsening renal failure are indications for surgery. NICE offers surgical treatment within 48 hours when the pain is ongoing and not tolerated or the stone is unlikely to pass, and a 2024 review lists bilateral obstruction, an obstructed solitary kidney and acute renal insufficiency among the reasons for immediate intervention to restore drainage. Keep the patient nil by mouth until surgery is ruled out; waiting for a fever or a repeat scan delays treatment that is already indicated.",
+   "next": "end_urgent",
+   "sources": [
+    {
+     "docId": "pmid:28613743",
+     "where": "Pearls and Other Issues"
+    },
+    {
+     "docId": "pmid:32809509",
+     "where": "Indications for Surgical Intervention; Treatment / Management"
+    },
+    {
+     "docId": "url:716a97bf1c96",
+     "where": "1.5.4"
+    },
+    {
+     "docId": "pmid:32370972",
+     "where": "Introduction/Background"
+    },
+    {
+     "docId": "pmid:38929478",
+     "where": "4. Discussion"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Surgery within 48 hours",
+     "dose": "Ureteric stones with ongoing pain that is not tolerated, or unlikely to pass: surgical treatment (including shockwave lithotripsy) within 48 hours of diagnosis or readmission",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:716a97bf1c96",
+       "where": "1.5.4"
+      }
+     ]
+    },
+    {
+     "item": "Nil by mouth",
+     "dose": "Until surgery is deemed unnecessary",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32809509",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Admission",
+     "dose": "A significant stone in a solitary kidney, severe kidney injury, an infected stone, intractable pain or nausea, extravasation or sepsis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613743",
+       "where": "Pearls and Other Issues"
+      }
+     ]
+    },
+    {
+     "item": "Double J stent",
+     "dose": "Can promptly relieve the pain and symptoms of ureteral obstruction",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613743",
+       "where": "Treatment / Management, Double J stent placement"
+      }
+     ]
+    },
+    {
+     "item": "Speed of decompression",
+     "dose": "Immediate intervention to restore drainage for bilateral obstruction, an obstructed solitary kidney, acute renal insufficiency, high-grade obstruction or uncontrollable pain",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38929478",
+       "where": "4. Discussion"
+      }
+     ]
+    },
+    {
+     "item": "Route",
+     "dose": "Stent, nephrostomy or ureteroscopy: not stated in the sources read",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "end_urgent",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ureteric stone with pain or vomiting that will not settle, kidney injury, a solitary kidney or both sides blocked: admit and keep nil by mouth for urgent urology review today, with immediate decompression for both sides blocked, a blocked solitary kidney or kidney injury, and surgical treatment within 48 hours for pain that is not tolerated (NICE); acute obstructive uropathy can bring renal failure or sepsis."
+  },
+  {
+   "id": "end_no_stone",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No ureteric stone on CT: noncontrast CT also diagnoses other causes of flank pain, from an aortic aneurysm to appendicitis and diverticulitis; treat the cause it shows, or continue in the abdominal pain pathway (pw_abdominal_pain)."
+  },
+  {
+   "id": "fs_workup",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Infection signs, flank pain and a stone feature, pressure normal. Next?",
+   "options": [
+    "Cultures, IV antibiotics, urgent imaging for obstruction",
+    "Tamsulosin and an NSAID at home; let the stone pass",
+    "Oral antibiotics at home; image if no better in 48 hours",
+    "Imaging first; antibiotics once a stone shows"
+   ],
+   "answer": 0,
+   "chainStep": "Midstream urine culture, then IV ceftriaxone 1 to 2 g once a day; urgent CT of the abdomen and pelvis (ultrasound in pregnancy) for an obstructing stone or a collection",
+   "why": "Pyelonephritis that antibiotics alone will treat cannot be told from the far more dangerous obstructed, infected kidney without imaging, and a stone history, signs of sepsis or a patient who looks particularly ill, or where an obstructed kidney is otherwise suspected, are reasons to image now. A urine specimen taken before antibiotics greatly improves the yield, and the antibiotic then starts: ACR recommends antibiotics before any drainage when urosepsis is suspected, and StatPearls prefers a third generation cephalosporin at first. Home on tamsulosin, or a 48-hour wait, misses a surgical emergency.",
+   "next": "fs_result",
+   "sources": [
+    {
+     "docId": "pmid:32809509",
+     "where": "Introduction; Evaluation, Obstructive Pyelonephritis and Urosepsis"
+    },
+    {
+     "docId": "pmid:30137822",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:36436954",
+     "where": "Variant 3 rating table; Variant 3, A"
+    },
+    {
+     "docId": "pmid:32370972",
+     "where": "Variant 5, B"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Urine culture",
+     "dose": "Midstream sample before the first antibiotic",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "1.1.2"
+      },
+      {
+       "docId": "pmid:30137822",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Imaging",
+     "dose": "CT of the abdomen and pelvis, with IV contrast or without and with it, rated usually appropriate with a stone history (unenhanced CT is more sensitive for small stones); ultrasound in pregnancy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36436954",
+       "where": "Variant 3 rating table; Variant 3, A"
+      },
+      {
+       "docId": "url:716a97bf1c96",
+       "where": "1.1.1"
+      }
+     ]
+    },
+    {
+     "item": "Empiric antibiotic",
+     "dose": "Ceftriaxone 1 to 2 g IV once a day (a NICE first-choice IV agent); third generation cephalosporins are generally preferred at first for a suspected infected, obstructed kidney",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 1, first-choice intravenous antibiotics"
+      },
+      {
+       "docId": "pmid:32809509",
+       "where": "Evaluation, Obstructive Pyelonephritis and Urosepsis"
+      }
+     ]
+    }
+   ],
+   "note": "ACR's flank pain criteria assume no sign of infection; fever with a stone history falls under its pyelonephritis criteria, which favour CT with contrast."
+  },
+  {
+   "id": "fs_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT for obstruction or a collection",
+   "outcomes": [
+    {
+     "id": "obstructed",
+     "if": "Infected, obstructed kidney; a ureteric stone, with or without hydronephrosis",
+     "next": "fs_decompress",
+     "ddx": {
+      "lead": [
+       "Infected obstructed kidney"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Stone without hydronephrosis",
+       "dose": "Fever with a 10 mm ureteric stone and no hydronephrosis: ACR rates retrograde stenting usually appropriate and medical management without decompression usually not appropriate",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:32370972",
+         "where": "Variant 2 rating table; Variant 2, A"
+        }
+       ],
+       "note": "The Variant 2 table rates medical management without decompression usually not appropriate, but its Variant 2 A text says that without evidence of obstruction, IV antibiotics, fluids and close clinical and imaging follow-up could be considered."
+      }
+     ]
+    },
+    {
+     "id": "abscess",
+     "if": "Renal or perinephric abscess; a collection, no ureteric stone",
+     "next": "end_abscess",
+     "ddx": {
+      "lead": [
+       "Renal abscess"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Source control",
+       "dose": "Pyelonephritis with an abscess is a focus for source control, which may include drainage of the abscess",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34599691",
+         "where": "Rec 27 rationale"
+        }
+       ]
+      },
+      {
+       "item": "When to drain",
+       "dose": "Size thresholds and the route are not stated in the sources read",
+       "status": "pending"
+      }
+     ]
+    },
+    {
+     "id": "clear",
+     "if": "No obstruction, no collection; pyelonephritis without a blocked kidney",
+     "next": "pyelo_dispo",
+     "ddx": {
+      "lead": [
+       "Pyelonephritis"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "fs_decompress",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Infection behind an obstructing ureteric stone. Next?",
+   "options": [
+    "Urgent stent or nephrostomy, with IV antibiotics running",
+    "Ureteroscopy now to remove the stone and the infection",
+    "IV antibiotics alone; decompress if no better in 48 hours",
+    "Tamsulosin and IV antibiotics until the stone passes"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent decompression by retrograde ureteric stent or percutaneous nephrostomy with IV antibiotics running; culture the kidney urine; definitive stone treatment only after the infection has cleared, typically 1 to 2 weeks later",
+   "why": "An infected kidney behind a stone is a surgical emergency: antibiotics alone are insufficient, and a retrograde stent or a percutaneous nephrostomy with antibiotics is first-line, done without waiting for the patient to become more stable, since a delay of more than 2 days raises mortality by about 30%. Neither route has better outcomes; a nephrostomy is preferred when the stone is hard to bypass or anesthesia is a risk. Definitive stone treatment waits until the infection is controlled, typically 1 to 2 weeks, so ureteroscopy now and tamsulosin while the kidney stays blocked are both wrong.",
+   "next": "end_decompress",
+   "sources": [
+    {
+     "docId": "pmid:32370972",
+     "where": "Variant 5, A, B and E; Variant 2 rating table"
+    },
+    {
+     "docId": "pmid:32809509",
+     "where": "Evaluation, Obstructive Pyelonephritis and Urosepsis"
+    },
+    {
+     "docId": "pmid:30137822",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:38929478",
+     "where": "Abstract, Conclusions; 1. Introduction; 4. Discussion"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Decompression",
+     "dose": "Retrograde ureteric (double J) stent or percutaneous nephrostomy; efficacy outcomes did not differ in a 2024 meta-analysis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38929478",
+       "where": "Abstract, Conclusions"
+      },
+      {
+       "docId": "pmid:32809509",
+       "where": "Evaluation, Obstructive Pyelonephritis and Urosepsis"
+      }
+     ]
+    },
+    {
+     "item": "Choosing the route",
+     "dose": "Nephrostomy for a stone burden hard to bypass cystoscopically or a patient who cannot tolerate anesthesia; stenting avoided when bladder access is difficult; nephrostomy contraindicated with uncorrected coagulopathy or platelet dysfunction",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32809509",
+       "where": "Evaluation, Obstructive Pyelonephritis and Urosepsis"
+      },
+      {
+       "docId": "pmid:38929478",
+       "where": "4. Discussion"
+      }
+     ]
+    },
+    {
+     "item": "Septic and hypotensive",
+     "dose": "ACR rates a percutaneous nephrostomy usually appropriate and a retrograde stent may be appropriate",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32370972",
+       "where": "Variant 5 rating table"
+      }
+     ]
+    },
+    {
+     "item": "Culture from the kidney",
+     "dose": "Nephrostomy urine can identify the pathogen and change the antibiotic",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32370972",
+       "where": "Variant 5, B"
+      }
+     ]
+    },
+    {
+     "item": "Definitive stone treatment",
+     "dose": "Postponed until the infection is controlled and the patient has fully recovered, typically 1 to 2 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32809509",
+       "where": "Evaluation, Obstructive Pyelonephritis and Urosepsis"
+      },
+      {
+       "docId": "pmid:28613743",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_decompress",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Infected, obstructed kidney: cultures, IV antibiotics and urgent decompression by stent or nephrostomy without waiting for the patient to settle; the stone is treated once the infection is controlled, typically 1 to 2 weeks later."
+  },
+  {
+   "id": "end_abscess",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Renal or perinephric abscess: admit for IV antibiotics; it is a focus for source control, so urology or interventional radiology decide on drainage; size thresholds for drainage are not in the sources read."
+  },
+  {
+   "id": "pyelo_first",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Fever, flank pain and pyuria, no stone features. First?",
+   "options": [
+    "Urine culture before antibiotics; image only if high risk",
+    "CT with contrast first for an abscess, then antibiotics",
+    "No culture; a 3-day course as for simple cystitis",
+    "Blood cultures before antibiotics; no urine culture needed"
+   ],
+   "answer": 0,
+   "chainStep": "Midstream urine culture before antibiotics; no routine imaging in a first, uncomplicated pyelonephritis; decide home or hospital",
+   "why": "Send a midstream urine culture before the first antibiotic: it greatly improves the yield. Blood cultures are often sent but rarely change treatment; the urine culture is the one that decides the switch. Imaging is not beneficial in a first, uncomplicated pyelonephritis, since nearly all are afebrile by 72 hours; it is kept for high-risk patients, such as those with diabetes, immune compromise, a stone history, pregnancy or no response. More than 95% of uncomplicated patients can be treated at home on oral antibiotics, and NICE courses run 7 to 14 days by agent, not a cystitis course.",
+   "next": "pyelo_dispo",
+   "sources": [
+    {
+     "docId": "url:f531e12f2681",
+     "where": "1.1.2; Table 1"
+    },
+    {
+     "docId": "pmid:30137822",
+     "where": "Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "pmid:36436954",
+     "where": "Variant 1, A; Variant 2 rating table"
+    }
+   ]
+  },
+  {
+   "id": "pyelo_dispo",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Severity, oral intake and pregnancy",
+   "outcomes": [
+    {
+     "id": "home",
+     "if": "Mild, drinking, not pregnant; no sepsis, vomiting or high-risk feature",
+     "next": "pyelo_oral",
+     "ddx": {
+      "lead": [
+       "Pyelonephritis"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "admit",
+     "if": "Needs admission; vomiting, unable to take oral drugs, or high risk",
+     "next": "pyelo_iv",
+     "ddx": {
+      "lead": [
+       "Pyelonephritis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Admit",
+       "dose": "Signs of sepsis, high fever, difficult pain, persistent nausea, marked debility, failed outpatient treatment, significant comorbidities, likely non-compliance or poor home care",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30137822",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pregnant",
+     "if": "Pregnant; pyelonephritis in pregnancy",
+     "next": "pyelo_preg",
+     "ddx": {
+      "lead": [
+       "Pyelonephritis"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "pyelo_oral",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Mild pyelonephritis, not pregnant, going home. Antibiotic?",
+   "options": [
+    "An oral agent by local resistance, switched by culture",
+    "Nitrofurantoin for 5 days, the same as for cystitis",
+    "Fosfomycin as a single oral dose, as for cystitis",
+    "TMP-SMX twice daily now, before the culture result is known"
+   ],
+   "answer": 0,
+   "chainStep": "Oral antibiotic by local resistance, switched by the culture: ciprofloxacin 500 mg twice a day for 7 days (StatPearls: 14 days in men) where fluoroquinolone resistance is 10% or less (one IV dose of ceftriaxone first if it is higher); NICE first choice cefalexin 500 mg two or three times a day for 7 to 10 days; return if not better in 48 hours",
+   "why": "Give an oral antibiotic when the patient can take it, chosen by local resistance and switched by the culture. In the US a fluoroquinolone is preferred where community resistance is 10% or less, for 7 days; where resistance is higher, a long-acting parenteral dose such as ceftriaxone goes first, before discharge. NICE starts with cefalexin and keeps ciprofloxacin for when the others are unsuitable. Growing resistance makes TMP-SMX less useful empirically, so it waits for susceptibility; nitrofurantoin is not indicated for pyelonephritis, fosfomycin is not recommended for it in the US, and the 3 to 5 day courses that treat cystitis are too short.",
+   "next": "end_pyelo_home",
+   "sources": [
+    {
+     "docId": "url:f531e12f2681",
+     "where": "1.3.2; Table 1; 1.1.7"
+    },
+    {
+     "docId": "pmid:30137822",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:38ac99966401",
+     "where": "Indications and Usage"
+    },
+    {
+     "docId": "url:d0e50eecf004",
+     "where": "2 Dosage and Administration"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Ciprofloxacin",
+     "dose": "500 mg twice a day for 7 days (NICE); the label gives 250 to 500 mg every 12 hours for 7 to 14 days; US use where fluoroquinolone resistance is 10% or less",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 1, first-choice oral antibiotics"
+      },
+      {
+       "docId": "url:d0e50eecf004",
+       "where": "2 Dosage and Administration, Table 1 adult dosage"
+      },
+      {
+       "docId": "pmid:30137822",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Resistance over 10%",
+     "dose": "An initial long-acting parenteral dose (ceftriaxone, an aminoglycoside or ertapenem) in the emergency department before discharge",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30137822",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Cefalexin (NICE first choice)",
+     "dose": "500 mg two or three times a day (up to 1 to 1.5 g three or four times a day if severe) for 7 to 10 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 1, first-choice oral antibiotics"
+      }
+     ]
+    },
+    {
+     "item": "TMP-SMX (only if susceptible)",
+     "dose": "One double-strength tablet (800/160 mg) every 12 hours; 14 days in StatPearls, 10 to 14 days on the label",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:9eebeb63e8f7",
+       "where": "Dosage and Administration; Description"
+      },
+      {
+       "docId": "pmid:30137822",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Nitrofurantoin",
+     "dose": "Not indicated for pyelonephritis",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:38ac99966401",
+       "where": "Indications and Usage"
+      }
+     ]
+    },
+    {
+     "item": "Safety-net",
+     "dose": "Seek help if symptoms worsen, do not start to improve within 48 hours, or the person becomes very unwell",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "1.1.7"
+      }
+     ]
+    }
+   ],
+   "note": "NICE NG111 makes cefalexin first choice and restricts fluoroquinolones under MHRA advice; US teaching gives an oral fluoroquinolone first where resistance allows. The IDSA 2010 guideline behind the US regimen was not read: its OUP copy is behind a bot check."
+  },
+  {
+   "id": "end_pyelo_home",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Mild pyelonephritis: urine culture, an oral antibiotic chosen by local resistance and switched by the culture, and review if it is not better within 48 hours; symptoms that persist to 72 hours need imaging."
+  },
+  {
+   "id": "pyelo_iv",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pyelonephritis needing admission, not pregnant. Empiric IV antibiotic?",
+   "options": [
+    "IV ceftriaxone, narrowed by the culture",
+    "IV vancomycin alone, to cover MRSA",
+    "IV meropenem with vancomycin for broad cover",
+    "Oral ciprofloxacin, started once the vomiting settles"
+   ],
+   "answer": 0,
+   "chainStep": "Urine culture, then IV ceftriaxone 1 to 2 g once a day, narrowed by susceptibility; review by 48 hours and step down to oral when improving",
+   "why": "Ceftriaxone is a good initial empiric IV choice and one of NICE's first-choice IV agents, narrowed by susceptibility. E. coli causes more than 90% of pyelonephritis in young healthy women, so vancomycin alone misses it; vancomycin or linezolid are added only when a Gram-positive organism is suspected. Carbapenems are reserved for the critically ill or when nothing else fits. Vomiting means IV treatment now: NICE gives first-choice IV antibiotics to a patient who is vomiting, unable to take oral antibiotics or severely unwell.",
+   "next": "pyelo_review",
+   "sources": [
+    {
+     "docId": "pmid:30137822",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:f531e12f2681",
+     "where": "Table 1, first-choice intravenous antibiotics; 1.3.3"
+    },
+    {
+     "docId": "pmid:36436954",
+     "where": "Introduction/Background"
+    },
+    {
+     "docId": "url:eed08301207b",
+     "where": "Dosage and Administration, adults"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Ceftriaxone",
+     "dose": "1 to 2 g IV once a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 1, first-choice intravenous antibiotics"
+      },
+      {
+       "docId": "url:eed08301207b",
+       "where": "Dosage and Administration, adults"
+      }
+     ]
+    },
+    {
+     "item": "Gentamicin (another NICE first-choice IV agent)",
+     "dose": "Initially 5 to 7 mg/kg once a day, then adjusted by serum levels, with renal monitoring",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 1, first-choice intravenous antibiotics"
+      }
+     ]
+    },
+    {
+     "item": "Review",
+     "dose": "IV antibiotics reviewed by 48 hours, stepping down to oral where possible",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "1.3.3"
+      },
+      {
+       "docId": "pmid:30137822",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pyelo_review",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Response at 48 to 72 hours",
+   "outcomes": [
+    {
+     "id": "better",
+     "if": "Improving; afebrile and eating by 48 to 72 hours, culture back",
+     "next": "end_pyelo_stepdown",
+     "ddx": {
+      "lead": [
+       "Pyelonephritis"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "not_better",
+     "if": "Still febrile at 72 hours; no response on the right antibiotic",
+     "next": "pyelo_fail",
+     "ddx": {
+      "lead": [
+       "Renal abscess",
+       "Infected obstructed kidney"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "end_pyelo_stepdown",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pyelonephritis improving on IV antibiotics: step down to an oral agent chosen by the culture by 48 hours; the course length depends on the agent (NICE: ciprofloxacin 7 days, cefalexin 7 to 10 days, trimethoprim 14 days)."
+  },
+  {
+   "id": "pyelo_fail",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Pyelonephritis, still febrile at 72 hours on IV antibiotics. Next?",
+   "options": [
+    "CT of the abdomen and pelvis with IV contrast",
+    "Add a second antibiotic and wait another 72 hours",
+    "DMSA renal scan to confirm the pyelonephritis",
+    "Repeat the urine culture and continue unchanged"
+   ],
+   "answer": 0,
+   "chainStep": "CT of the abdomen and pelvis with IV contrast for an abscess, obstruction or emphysematous pyelonephritis; keep IV antibiotics and change them by the culture; urology if obstructed, infectious disease advice if not",
+   "why": "Nearly all uncomplicated pyelonephritis is afebrile by 72 hours, so persistent fever is a lack of response. ACR rates contrast CT usually appropriate for that complicated patient: it shows a renal or perirenal abscess, emphysematous pyelonephritis, hydronephrosis or an obstructing stone. Change the antibiotic if needed and keep it IV, but image rather than wait; a DMSA scan cannot show stones. Urology follows an obstruction, infectious disease advice a negative scan.",
+   "next": "end_pyelo_fail",
+   "sources": [
+    {
+     "docId": "pmid:36436954",
+     "where": "Variant 1, A; Variant 2 rating table; Variant 2, A; Variant 3, D"
+    },
+    {
+     "docId": "pmid:30137822",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "After the CT",
+     "dose": "Urology if imaging shows obstruction; infectious disease advice if it is negative; change the antibiotic and keep it parenteral as needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30137822",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_pyelo_fail",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pyelonephritis not responding at 72 hours: contrast CT; drainage of an obstruction or a collection, and infectious disease advice with a culture-guided change if the CT is negative."
+  },
+  {
+   "id": "pyelo_preg",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pyelonephritis in pregnancy. Next?",
+   "options": [
+    "Admit; IV cephalosporin after the urine culture",
+    "Oral ciprofloxacin at home, with review in 48 hours",
+    "Oral nitrofurantoin for 7 days at home",
+    "Low-dose CT first, to rule out an obstructing stone"
+   ],
+   "answer": 0,
+   "chainStep": "Admit; urine culture; IV cephalosporin (NICE: cefuroxime 750 mg to 1.5 g three or four times a day; US practice: ceftriaxone 1 g every 24 hours); ultrasound if imaging is needed; oral step-down after 48 hours once stable, 7 to 14 days in all; no fluoroquinolone or nitrofurantoin",
+   "why": "Pyelonephritis in pregnancy is serious and usually needs hospital: StatPearls ties it to preterm labour, and NICE considers referral or specialist advice in pregnancy. A second or third generation cephalosporin is the usual first IV treatment after a urine culture (NICE first choice IV cefuroxime; ceftriaxone in US practice). Fluoroquinolones, nitrofurantoin and fosfomycin are avoided; nitrofurantoin and fosfomycin do not reach the kidney. If imaging is needed, ultrasound comes first: CT is not supported as the initial test in pregnancy.",
+   "next": "end_pyelo_preg",
+   "sources": [
+    {
+     "docId": "pmid:30725732",
+     "where": "Pyelonephritis Management in Pregnancy"
+    },
+    {
+     "docId": "pmid:30137822",
+     "where": "Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "url:f531e12f2681",
+     "where": "1.1.10; Table 2, pregnant women"
+    },
+    {
+     "docId": "pmid:36436954",
+     "where": "Variant 4, A"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Cefuroxime (NICE first choice IV)",
+     "dose": "750 mg to 1.5 g three or four times a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 2, pregnant women"
+      }
+     ]
+    },
+    {
+     "item": "Ceftriaxone (US practice)",
+     "dose": "1 g IV every 24 hours (StatPearls review); the label range is 1 to 2 g once a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725732",
+       "where": "Pyelonephritis Management in Pregnancy"
+      },
+      {
+       "docId": "url:eed08301207b",
+       "where": "Dosage and Administration, adults"
+      }
+     ]
+    },
+    {
+     "item": "Oral step-down",
+     "dose": "After at least 48 hours once stable and eating; 7 to 14 days of IV and oral treatment in total",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725732",
+       "where": "Pyelonephritis Management in Pregnancy"
+      }
+     ]
+    },
+    {
+     "item": "Fluoroquinolones, nitrofurantoin, fosfomycin",
+     "dose": "Avoid for pyelonephritis in pregnancy",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30137822",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:30725732",
+       "where": "Pyelonephritis Management in Pregnancy"
+      }
+     ]
+    },
+    {
+     "item": "NSAIDs",
+     "dose": "Avoid from about 30 weeks; between about 20 and 30 weeks, only the lowest dose for the shortest time",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:0ab6c49010b1",
+       "where": "Warnings, fetal toxicity"
+      }
+     ]
+    },
+    {
+     "item": "Imaging",
+     "dose": "Ultrasound first if imaging is needed; CT is not supported as the initial imaging in pregnancy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30137822",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:36436954",
+       "where": "Variant 4, A"
+      }
+     ]
+    }
+   ],
+   "note": "ACOG is barred, so the US regimen comes from the StatPearls review; NICE's first-choice IV agent in pregnancy is cefuroxime."
+  },
+  {
+   "id": "end_pyelo_preg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pyelonephritis in pregnancy: admit, urine culture, an IV cephalosporin, ultrasound rather than CT if imaging is needed, oral step-down after 48 hours once stable, and 7 to 14 days in total."
+  },
+  {
+   "id": "ret_scan",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Unable to pass urine, lower abdominal pain or fullness. First?",
+   "options": [
+    "Bladder scan if unsure; catheter at once if obvious",
+    "Tamsulosin, then wait 2 hours for spontaneous voiding",
+    "CT of the abdomen and pelvis before any catheter",
+    "Suprapubic catheter as the first route of drainage"
+   ],
+   "answer": 0,
+   "chainStep": "Bedside bladder scan, without delaying catheterisation when retention is obvious; urinalysis and culture if appropriate",
+   "why": "A bladder scan identifies retention, but it must not delay the catheter when retention is obvious. Over 400 mL typically means retention; under 200 mL, acute retention is unlikely and another cause is looked for. NICE catheterises men with acute retention immediately; a suprapubic tube is for a bladder that cannot be reached through the urethra or after recent prostate or urethral surgery. An alpha blocker needs about 72 hours for full effect, so waiting on it leaves the bladder full.",
+   "next": "ret_volume",
+   "sources": [
+    {
+     "docId": "pmid:30860734",
+     "where": "Evaluation; Treatment / Management; Medical Therapy, Alpha-blockers"
+    },
+    {
+     "docId": "url:870c1ebcd621",
+     "where": "1.7.1"
+    }
+   ]
+  },
+  {
+   "id": "ret_volume",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Bladder volume",
+   "outcomes": [
+    {
+     "id": "retention",
+     "if": "Retention; over 400 mL, or 200 to 400 mL and the picture fits",
+     "next": "ret_cath",
+     "ddx": {
+      "lead": [
+       "Acute urinary retention"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "not_retention",
+     "if": "Not retention; under 200 mL in the bladder",
+     "next": "end_not_retention",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "end_not_retention",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Under 200 mL on the bladder scan: acute retention is unlikely; look for another cause of the pain or the voiding trouble, such as the urinary infection a nitrite-positive sample suggests; send it for culture."
+  },
+  {
+   "id": "ret_cath",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Retention confirmed. Drainage?",
+   "options": [
+    "Urethral catheter, draining the bladder fully at once",
+    "Drain 500 mL, clamp it, then release the rest slowly over hours",
+    "One in-and-out catheter, then home to void as usual",
+    "A suprapubic catheter first, to spare the urethra"
+   ],
+   "answer": 0,
+   "chainStep": "16 French urethral Foley catheter, draining the bladder fully at once; a large three-way catheter instead if the urine is bloody or clots are seen; record the volume and leave the catheter in if over 400 mL; watch for post-obstructive diuresis if over 1500 mL; no prophylactic antibiotics",
+   "why": "NICE catheterises men with acute retention immediately. A 16 French Foley is the usual first catheter, and rapid, complete drainage is best even for very large volumes: clamping or partial drainage does not reduce hematuria, hypotension or post-obstructive diuresis. Over 400 mL, the catheter stays in; when the bladder is merely emptied and the catheter withdrawn at once, retention returns in about half within a week. A suprapubic tube is for when the urethra cannot be passed or after recent urological surgery.",
+   "next": "ret_cause",
+   "sources": [
+    {
+     "docId": "url:870c1ebcd621",
+     "where": "1.7.1"
+    },
+    {
+     "docId": "pmid:30860734",
+     "where": "Treatment / Management; Evaluation; Overview of Foley Catheterization"
+    },
+    {
+     "docId": "pmid:39157169",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:33232074",
+     "where": "Catheter types"
+    },
+    {
+     "docId": "pmid:30480952",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Catheter",
+     "dose": "16 French Foley with a 5 to 10 mL balloon; a coude tip if a standard catheter will not pass; suprapubic if the urethra cannot be passed, or after radical prostatectomy or urethral reconstruction",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30860734",
+       "where": "Treatment / Management; Overview of Foley Catheterization"
+      }
+     ]
+    },
+    {
+     "item": "Leave it in",
+     "dose": "If over 400 mL drains; 200 to 400 mL by the clinical picture",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30860734",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Post-obstructive diuresis",
+     "dose": "Watch if over 1500 mL drains; if IV fluid is needed, replace 50 to 75% of the previous 1 to 2 hours' urine output with isotonic saline",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30860734",
+       "where": "Overview of Foley Catheterization; Special Conditions, Post-obstructive diuresis"
+      }
+     ]
+    },
+    {
+     "item": "Admit",
+     "dose": "Urosepsis, malignant obstruction, acute myelopathy, acute renal failure, a residual over 1500 mL, or a sodium disturbance",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30860734",
+       "where": "Overview of Foley Catheterization"
+      }
+     ]
+    },
+    {
+     "item": "Prophylactic antibiotics",
+     "dose": "Not unless a urinary infection is present",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30860734",
+       "where": "Overview of Foley Catheterization"
+      }
+     ]
+    }
+   ],
+   "note": "This version follows acute retention in men; retention in women, after surgery, and chronic retention are not covered."
+  },
+  {
+   "id": "ret_cause",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Catheter drainage, history and exam",
+   "outcomes": [
+    {
+     "id": "bph",
+     "if": "Enlarged prostate, no other trigger; an older man with prior voiding symptoms",
+     "next": "ret_twoc",
+     "ddx": {
+      "lead": [
+       "Acute urinary retention"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "reversible",
+     "if": "Drug or bowel trigger; a new anticholinergic, decongestant or opioid, or a loaded rectum",
+     "next": "end_reversible",
+     "ddx": {
+      "lead": [
+       "Acute urinary retention"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Drug review",
+       "dose": "Review current medicines, including over-the-counter ones; anticholinergics (antihistamines such as diphenhydramine among them) and alpha-adrenergic agonists such as pseudoephedrine are the drugs most linked to retention, and opioids are on the list",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:870c1ebcd621",
+         "where": "1.1.1"
+        },
+        {
+         "docId": "pmid:30860734",
+         "where": "Etiology, Medications"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "neuro",
+     "if": "Neurological signs; back pain with saddle numbness, leg weakness or bowel change",
+     "next": "end_ces",
+     "ddx": {
+      "lead": [
+       "Cauda equina syndrome"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "clots",
+     "if": "Clot retention; the catheter drains blood and clots, then blocks",
+     "next": "ret_clot",
+     "ddx": {
+      "lead": [
+       "Clot retention"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "other",
+     "if": "No cause above; a woman, or a normal prostate and no trigger",
+     "next": "end_ret_other",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "ret_twoc",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Retention from an enlarged prostate, catheter in. Before the trial without catheter?",
+   "options": [
+    "Tamsulosin now; trial without catheter in 2 to 7 days",
+    "Start finasteride and remove the catheter tomorrow",
+    "Remove the catheter today, without an alpha blocker",
+    "Book a TURP this admission, before any trial of voiding"
+   ],
+   "answer": 0,
+   "chainStep": "Tamsulosin 0.4 mg once daily from now; trial without catheter after 2 to 7 days; urology referral; surgery only if symptoms are severe or drug treatment fails",
+   "why": "NICE offers an alpha blocker before the catheter comes out. With BPH as the likely cause it makes the trial without catheter more likely to succeed and lowers the risk of recurrent retention, though about 40% still fail; it needs about 72 hours for full effect, so it starts when the catheter goes in, and the trial usually follows after 2 to 7 days. Finasteride and dutasteride need at least 6 months, and NICE keeps surgery for severe symptoms or failed drug and conservative treatment.",
+   "next": "end_bph",
+   "sources": [
+    {
+     "docId": "url:870c1ebcd621",
+     "where": "1.7.2; 1.5.1"
+    },
+    {
+     "docId": "pmid:39157169",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:30860734",
+     "where": "Medical Therapy; Duration of Catheterization"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Tamsulosin",
+     "dose": "0.4 mg once daily, about half an hour after the same meal each day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:af8f00181691",
+       "where": "2 Dosage and Administration"
+      }
+     ]
+    },
+    {
+     "item": "Trial without catheter",
+     "dose": "Usually after 2 to 7 days (the best timing is not established); failure is no voiding or a residual over 400 mL, success a residual under 200 mL",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39157169",
+       "where": "Introduction"
+      },
+      {
+       "docId": "pmid:30860734",
+       "where": "Performing a Voiding Trial"
+      }
+     ]
+    },
+    {
+     "item": "5-alpha reductase inhibitors",
+     "dose": "At least 6 months for optimal effect, so no use as a bridge to the trial without catheter",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30860734",
+       "where": "Medical Therapy, 5-alpha reductase inhibitors"
+      }
+     ]
+    },
+    {
+     "item": "Referral",
+     "dose": "Specialist assessment for LUTS complicated by retention",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:870c1ebcd621",
+       "where": "1.1.14"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_bph",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute retention from an enlarged prostate: catheterise at once, start an alpha blocker, and try without the catheter after 2 to 7 days; about 40% still fail, urology follows up, and surgery is for severe symptoms or failed drug treatment."
+  },
+  {
+   "id": "end_reversible",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Retention with a drug or bowel trigger: drain the bladder, stop the drug (anticholinergics, decongestants, opioids and others), treat the cause such as constipation, offer an alpha blocker before the catheter comes out (NICE), and try without the catheter early, within hours to 3 days."
+  },
+  {
+   "id": "end_ret_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Retention with no prostate, drug, neurological or clot cause, or in a woman: not covered in this version; keep the catheter in, culture the urine and refer to urology."
+  },
+  {
+   "id": "end_ces",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Retention with back pain, saddle numbness, leg weakness or bowel change: suspect cauda equina syndrome, which MRI diagnoses; continue in the back pain pathway (pw_back_pain), which takes it to an emergency MRI. The catheter stays in."
+  },
+  {
+   "id": "ret_clot",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "The catheter drains blood and clots, then blocks. Next?",
+   "options": [
+    "Large three-way catheter, clot washout, then irrigation",
+    "Remove the catheter and let the clots pass on their own",
+    "CT urogram now, before the bladder is drained again",
+    "A smaller catheter, which passes more easily"
+   ],
+   "answer": 0,
+   "chainStep": "Large three-way urethral catheter (22 French or more), bladder washout and continuous irrigation; urology; then CT or MR urography and cystoscopy for the visible hematuria",
+   "why": "Clot retention needs a large three-way catheter, 22 French or more, with continuous bladder irrigation through its extra port; clots may need evacuating by vigorous hand irrigation, and anticoagulants are stopped or reversed where possible. Irrigating blood and clots from the bladder is one of the reasons to catheterise, and a larger catheter is the exception kept for bleeding. The bladder is drained first. Afterwards, visible hematuria needs a full urological workup, because up to 30 to 40% is associated with malignancy: CT or MR urography and, in many patients, cystoscopy.",
+   "next": "end_clot",
+   "sources": [
+    {
+     "docId": "pmid:33232074",
+     "where": "Catheter types; Introduction; Indications"
+    },
+    {
+     "docId": "pmid:30480952",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:30860734",
+     "where": "Overview of Foley Catheterization"
+    },
+    {
+     "docId": "pmid:32370958",
+     "where": "Introduction/Background; Summary of Recommendations"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Three-way catheter",
+     "dose": "22 French or larger three-way catheter; evacuate clots by hand irrigation, then continuous bladder irrigation; stop or reverse anticoagulants where possible",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30480952",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Irrigation fluid and rate",
+     "dose": "Not stated in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Hematuria workup",
+     "dose": "CT urography or MR urography (usually appropriate for gross hematuria) and, in many patients, cystoscopy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32370958",
+       "where": "Summary of Recommendations; Introduction/Background"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_clot",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Clot retention: a large three-way catheter, washout and continuous irrigation, then a full workup of the visible hematuria with CT or MR urography and cystoscopy, because up to 30 to 40% is associated with malignancy."
+  },
+  {
+   "id": "preg_us",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Pregnant, colicky flank pain, no fever. Imaging?",
+   "options": [
+    "Ultrasound of the kidneys and bladder",
+    "Low-dose noncontrast CT, the most accurate test",
+    "A plain abdominal x-ray to look for the stone",
+    "MR urography with gadolinium first"
+   ],
+   "answer": 0,
+   "chainStep": "Ultrasound of the kidneys and bladder; noncontrast MR urography or low-dose CT only if it is inconclusive; obstetric follow-up; no NSAID from about 30 weeks",
+   "why": "In pregnancy NICE offers ultrasound instead of CT, and ACR rates kidney and bladder ultrasound usually appropriate; noncontrast MR urography or low-dose CT may be appropriate when it does not settle the question. Hydronephrosis is common in pregnancy anyway (over 80%, more often on the right, from the second trimester), so dilatation alone does not prove a stone. A plain film and gadolinium MR urography are rated usually not appropriate.",
+   "next": "preg_result",
+   "sources": [
+    {
+     "docId": "url:716a97bf1c96",
+     "where": "1.1.1"
+    },
+    {
+     "docId": "pmid:38040458",
+     "where": "Variant 3; Variant 3 rating table; Summary of Recommendations"
+    }
+   ],
+   "orders": [
+    {
+     "item": "If ultrasound is inconclusive",
+     "dose": "Noncontrast MR urography or low-dose noncontrast CT may be appropriate",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38040458",
+       "where": "Summary of Recommendations, Variant 3"
+      }
+     ]
+    },
+    {
+     "item": "NSAIDs",
+     "dose": "Avoid from about 30 weeks; between about 20 and 30 weeks, lowest effective dose for the shortest time; StatPearls lists pregnancy as a ketorolac contraindication",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:0ab6c49010b1",
+       "where": "Warnings, fetal toxicity"
+      },
+      {
+       "docId": "url:bbce9bfd09e9",
+       "where": "Warnings, fetal toxicity"
+      },
+      {
+       "docId": "pmid:32809509",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Analgesic in pregnancy",
+     "dose": "The agent and dose are not stated in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Obstetric care",
+     "dose": "Close obstetric follow-up; admission for renal colic carries up to twice the risk of preterm labour",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613743",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "preg_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Kidney and bladder ultrasound",
+   "outcomes": [
+    {
+     "id": "stone",
+     "if": "Stone seen; a ureteric stone with hydronephrosis, no fever",
+     "next": "end_preg_stone",
+     "ddx": {
+      "lead": [
+       "Ureteric stone"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "none",
+     "if": "No stone seen; normal, or hydronephrosis without a stone",
+     "next": "end_preg_none",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "end_preg_stone",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ureteric stone in pregnancy without infection: obstetric and urology care; rest, hydration, antiemetics and analgesia succeed in 70 to 80%, a stent or nephrostomy is rated usually appropriate once fever comes with hydronephrosis, and the main risk of a stone is preterm labour."
+  },
+  {
+   "id": "end_preg_none",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No stone on ultrasound in pregnancy: mild hydronephrosis alone may be the physiological hydronephrosis of pregnancy; if the pain persists, noncontrast MR urography or low-dose CT may be appropriate, and pregnancy causes such as preterm labour or placental abruption are considered."
+  }
+ ],
+ "cases": [
+  {
+   "id": "aaa",
+   "label": "Ruptured aneurysm presenting as renal colic",
+   "vignette": "72-year-old man who smokes, sudden severe left flank pain spreading to the groin, then lightheaded. BP 86/54, HR 116, temperature 36.7. Never had a kidney stone.",
+   "picks": {
+    "front": "aaa"
+   },
+   "results": {
+    "front": "A tender, pulsatile mass above the umbilicus. Urine dipstick: a trace of blood. No fever."
+   }
+  },
+  {
+   "id": "septic",
+   "label": "Obstructed kidney in septic shock",
+   "vignette": "66-year-old woman with diabetes, 2 days of right flank pain and rigors, now drowsy. BP 82/48, HR 128, RR 26, temperature 39.4.",
+   "picks": {
+    "front": "septic"
+   },
+   "results": {
+    "front": "No pulsatile mass. Right costovertebral angle tenderness. Urine: many white cells, nitrite positive."
+   }
+  },
+  {
+   "id": "ectopic",
+   "label": "Positive pregnancy test with flank pain",
+   "vignette": "27-year-old woman, 6 hours of right flank and lower abdominal pain; last period 7 weeks ago. BP 118/72, HR 96, temperature 37.0.",
+   "picks": {
+    "front": "ectopic"
+   },
+   "results": {
+    "front": "Urine hCG positive; no scan yet in this pregnancy. Mild right lower quadrant tenderness. Urine: a trace of blood, no white cells."
+   }
+  },
+  {
+   "id": "colic_small",
+   "label": "Small distal stone, first episode",
+   "vignette": "56-year-old man, 4 hours of colicky right flank pain moving to the groin, vomited once, cannot keep still. BP 148/88, HR 102, temperature 36.9. No previous stones.",
+   "picks": {
+    "front": "colic",
+    "colic_result": "small"
+   },
+   "results": {
+    "front": "No pulsatile mass; bladder not palpable. Urine: blood 3+, no nitrite, no white cells.",
+    "colic_result": "Low-dose CT: a 3 mm stone at the right vesicoureteric junction with mild hydronephrosis. Creatinine 0.9 mg/dL. Pain gone after IV ketorolac."
+   }
+  },
+  {
+   "id": "colic_met",
+   "label": "Distal 6 mm stone",
+   "vignette": "58-year-old woman, colicky left flank pain for 6 hours radiating to the groin, nauseated. BP 136/80, HR 94, temperature 36.8. Postmenopausal; no previous stones.",
+   "picks": {
+    "front": "colic",
+    "colic_result": "met"
+   },
+   "results": {
+    "front": "No pulsatile mass; bladder not palpable. Urine: blood 2+, no nitrite, no white cells. Pregnancy test not needed (postmenopausal).",
+    "colic_result": "Low-dose CT: a 6 mm stone in the distal left ureter with moderate hydronephrosis. Creatinine 0.8 mg/dL. Comfortable after ketorolac."
+   }
+  },
+  {
+   "id": "colic_large",
+   "label": "Proximal 12 mm stone",
+   "vignette": "61-year-old man, 8 hours of severe right flank pain, now easing. BP 152/90, HR 88, temperature 37.1. First stone.",
+   "picks": {
+    "front": "colic",
+    "colic_result": "refer48"
+   },
+   "results": {
+    "front": "No pulsatile mass; bladder not palpable. Urine: blood 3+, no nitrite or white cells.",
+    "colic_result": "Low-dose CT: a 12 mm stone in the proximal right ureter with moderate hydronephrosis; nothing else acute. Creatinine 1.0 mg/dL. Pain controlled after ketorolac."
+   }
+  },
+  {
+   "id": "colic_urgent",
+   "label": "Pain and vomiting that will not settle",
+   "vignette": "64-year-old man, colicky left flank pain for 10 hours, vomiting repeatedly. BP 158/94, HR 104, temperature 37.2. No previous stones.",
+   "picks": {
+    "front": "colic",
+    "colic_result": "urgent"
+   },
+   "results": {
+    "front": "No pulsatile mass; bladder not palpable. Urine: blood 3+, no nitrite, no white cells.",
+    "colic_result": "Low-dose CT: a 7 mm stone in the mid left ureter with moderate hydronephrosis. Creatinine 1.1 mg/dL. Still in severe pain and vomiting after ketorolac 30 mg IV, IV morphine and ondansetron."
+   }
+  },
+  {
+   "id": "colic_none",
+   "label": "Flank pain with no stone on CT",
+   "vignette": "67-year-old woman, 6 hours of left flank pain radiating to the groin, nauseated. BP 138/82, HR 92, temperature 37.4.",
+   "picks": {
+    "front": "colic",
+    "colic_result": "no_stone"
+   },
+   "results": {
+    "front": "No pulsatile mass. Mild left lower quadrant tenderness. Urine: blood 1+, no nitrite, no white cells. Pregnancy test not needed (postmenopausal).",
+    "colic_result": "Low-dose CT: no urinary stone and no hydronephrosis; sigmoid diverticulitis with pericolic fat stranding. Creatinine 0.9 mg/dL."
+   }
+  },
+  {
+   "id": "fs_obstructed",
+   "label": "Fever behind an obstructing stone",
+   "vignette": "45-year-old man, 2 days of colicky right flank pain, shivering since this morning. BP 128/78, HR 108, RR 18, temperature 38.9. Passed a stone 3 years ago.",
+   "picks": {
+    "front": "fever_stone",
+    "fs_result": "obstructed"
+   },
+   "results": {
+    "front": "No pulsatile mass. Right costovertebral angle tenderness. Urine: blood 3+, many white cells, nitrite positive.",
+    "fs_result": "CT: a 6 mm stone in the proximal right ureter with moderate hydronephrosis and perinephric stranding. Lactate 1.6 mmol/L; creatinine 1.3 mg/dL."
+   }
+  },
+  {
+   "id": "fs_abscess",
+   "label": "Fever, a known stone and a collection",
+   "vignette": "52-year-old woman with diabetes, 6 days of left flank pain and fevers; a left kidney stone was seen on a scan last year. BP 130/76, HR 104, temperature 38.7.",
+   "picks": {
+    "front": "fever_stone",
+    "fs_result": "abscess"
+   },
+   "results": {
+    "front": "No pulsatile mass. Left costovertebral angle tenderness. Urine: white cells, nitrite positive, blood 1+. Pregnancy test negative.",
+    "fs_result": "CT with contrast: a 4 cm left perinephric abscess; a 5 mm stone within the left kidney; no ureteric stone, no hydronephrosis."
+   }
+  },
+  {
+   "id": "fs_clear",
+   "label": "Fever and colicky pain, no obstruction",
+   "vignette": "33-year-old woman, 2 days of dysuria, then left flank pain that comes in waves, vomiting since last night. BP 116/72, HR 104, temperature 38.6.",
+   "picks": {
+    "front": "fever_stone",
+    "fs_result": "clear",
+    "pyelo_dispo": "admit",
+    "pyelo_review": "better"
+   },
+   "results": {
+    "front": "No pulsatile mass. Left costovertebral angle tenderness. Urine: many white cells, nitrite positive, blood 2+. Pregnancy test negative.",
+    "fs_result": "CT with contrast: no ureteric stone, no hydronephrosis, no collection; a swollen left kidney with patchy enhancement.",
+    "pyelo_dispo": "Still vomiting; cannot keep fluids or tablets down.",
+    "pyelo_review": "By 48 hours afebrile and eating; the urine grows E. coli susceptible to ceftriaxone, ciprofloxacin and cefalexin."
+   }
+  },
+  {
+   "id": "pyelo_home",
+   "label": "Mild pyelonephritis",
+   "vignette": "24-year-old woman, 2 days of dysuria and frequency, now right flank pain and fever. BP 120/74, HR 98, temperature 38.4. Eating and drinking.",
+   "picks": {
+    "front": "pyelo",
+    "pyelo_dispo": "home"
+   },
+   "results": {
+    "front": "No pulsatile mass. Right costovertebral angle tenderness. Urine: white cells, nitrite positive, no blood. Pregnancy test negative.",
+    "pyelo_dispo": "Well, drinking, no vomiting; no diabetes, immune compromise or urinary tract abnormality. Local E. coli resistance to fluoroquinolones is under 10%."
+   }
+  },
+  {
+   "id": "pyelo_fail",
+   "label": "Pyelonephritis still febrile at 72 hours",
+   "vignette": "29-year-old woman, 3 days of fever and left flank pain, vomiting since yesterday. BP 118/70, HR 108, temperature 39.0. No medical problems.",
+   "picks": {
+    "front": "pyelo",
+    "pyelo_dispo": "admit",
+    "pyelo_review": "not_better"
+   },
+   "results": {
+    "front": "No pulsatile mass. Left costovertebral angle tenderness. Urine: many white cells, nitrite positive, no blood. Pregnancy test negative.",
+    "pyelo_dispo": "Vomiting; unable to keep fluids or tablets down.",
+    "pyelo_review": "At 72 hours on IV ceftriaxone: still febrile to 39.1 with constant left flank pain; the urine grows E. coli susceptible to ceftriaxone."
+   }
+  },
+  {
+   "id": "pyelo_preg",
+   "label": "Pyelonephritis at 24 weeks",
+   "vignette": "26-year-old woman, 24 weeks pregnant, 2 days of fever, right flank pain and vomiting. BP 112/68, HR 106, temperature 38.8.",
+   "picks": {
+    "front": "pyelo",
+    "pyelo_dispo": "pregnant"
+   },
+   "results": {
+    "front": "Intrauterine pregnancy on her anatomy scan. No pulsatile mass. Right costovertebral angle tenderness. Urine: white cells, nitrite positive.",
+    "pyelo_dispo": "Pregnant at 24 weeks; vomiting."
+   }
+  },
+  {
+   "id": "ret_none",
+   "label": "Cannot pass urine, bladder nearly empty",
+   "vignette": "71-year-old man says he has not been able to pass urine since this morning; lower abdominal discomfort. BP 142/84, HR 84, temperature 37.0.",
+   "picks": {
+    "front": "retention",
+    "ret_volume": "not_retention"
+   },
+   "results": {
+    "front": "Abdomen soft; the bladder is not clearly palpable. No pulsatile mass.",
+    "ret_volume": "Bladder scan: 90 mL. He then passes a small, cloudy sample: white cells and nitrite positive."
+   }
+  },
+  {
+   "id": "ret_bph",
+   "label": "Retention from an enlarged prostate",
+   "vignette": "74-year-old man, unable to pass urine for 10 hours, increasing lower abdominal pain; months of a weak stream and getting up at night. BP 160/92, HR 96, temperature 36.8.",
+   "picks": {
+    "front": "retention",
+    "ret_volume": "retention",
+    "ret_cause": "bph"
+   },
+   "results": {
+    "front": "A tender, dull suprapubic swelling reaching the umbilicus. No pulsatile mass. Urinalysis waits for the catheter specimen.",
+    "ret_volume": "Bladder scan while the catheter is prepared: about 950 mL.",
+    "ret_cause": "The catheter drains 1,000 mL of clear urine. Smooth, enlarged prostate on rectal exam; no new medicines, normal bowels, no back pain; leg strength and perianal sensation normal. Creatinine 1.0 mg/dL."
+   }
+  },
+  {
+   "id": "ret_drug",
+   "label": "Retention after a cold remedy",
+   "vignette": "68-year-old man, unable to pass urine since last night, lower abdominal pain. BP 150/88, HR 92, temperature 36.9.",
+   "picks": {
+    "front": "retention",
+    "ret_volume": "retention",
+    "ret_cause": "reversible"
+   },
+   "results": {
+    "front": "Palpable, tender bladder. No pulsatile mass. Urinalysis waits for the catheter specimen.",
+    "ret_volume": "Bladder scan while the catheter is prepared: about 700 mL.",
+    "ret_cause": "The catheter drains 750 mL of clear urine. For 3 days he has taken an over-the-counter cold remedy containing diphenhydramine and pseudoephedrine. Prostate normal on rectal exam; no back pain; neurological exam normal."
+   }
+  },
+  {
+   "id": "ret_neuro",
+   "label": "Retention with saddle numbness",
+   "vignette": "49-year-old man, unable to pass urine since this morning, lower abdominal fullness. BP 138/84, HR 88, temperature 36.8.",
+   "picks": {
+    "front": "retention",
+    "ret_volume": "retention",
+    "ret_cause": "neuro"
+   },
+   "results": {
+    "front": "Palpable bladder. No pulsatile mass. Urinalysis waits for the catheter specimen.",
+    "ret_volume": "Bladder scan while the catheter is prepared: about 800 mL.",
+    "ret_cause": "The catheter drains 850 mL of clear urine. Severe low back pain for 4 days with pain down both legs; numbness around the anus; weak ankle plantarflexion on both sides. No new medicines; prostate normal."
+   }
+  },
+  {
+   "id": "ret_clot",
+   "label": "Clot retention",
+   "vignette": "77-year-old man, unable to pass urine for 6 hours, lower abdominal pain. BP 146/82, HR 98, temperature 36.9.",
+   "picks": {
+    "front": "retention",
+    "ret_volume": "retention",
+    "ret_cause": "clots"
+   },
+   "results": {
+    "front": "Tender, palpable bladder. No pulsatile mass. He has passed red urine for 2 days. Urinalysis waits for the catheter specimen.",
+    "ret_volume": "Bladder scan while the catheter is prepared: about 700 mL with echogenic material in the bladder.",
+    "ret_cause": "The catheter drains dark red urine and clots, then stops draining."
+   }
+  },
+  {
+   "id": "preg_stone",
+   "label": "Ureteric stone at 20 weeks",
+   "vignette": "31-year-old woman, 20 weeks pregnant, 5 hours of colicky right flank pain into the groin, vomiting. BP 118/70, HR 98, temperature 37.1.",
+   "picks": {
+    "front": "colic_preg",
+    "preg_result": "stone"
+   },
+   "results": {
+    "front": "Intrauterine pregnancy on her 12-week scan. No fever; right costovertebral angle tenderness. Urine: blood 2+, no nitrite or white cells.",
+    "preg_result": "Ultrasound: moderate right hydronephrosis and a 6 mm echogenic stone at the right vesicoureteric junction."
+   }
+  },
+  {
+   "id": "preg_none",
+   "label": "Flank pain in pregnancy, no stone seen",
+   "vignette": "29-year-old woman, 26 weeks pregnant, intermittent colicky right flank pain for a day. BP 112/66, HR 90, temperature 36.9.",
+   "picks": {
+    "front": "colic_preg",
+    "preg_result": "none"
+   },
+   "results": {
+    "front": "Intrauterine pregnancy on her anatomy scan. No fever; mild right flank tenderness. Urine: blood 1+, no nitrite.",
+    "preg_result": "Ultrasound: mild right hydronephrosis, no stone seen; left kidney and bladder normal."
+   }
+  },
+  {
+   "id": "colic_proximal",
+   "label": "Proximal 7 mm stone",
+   "vignette": "59-year-old man, 5 hours of colicky left flank pain, now settling. BP 144/86, HR 90, temperature 36.8. No previous stones.",
+   "picks": {
+    "front": "colic",
+    "colic_result": "proximal"
+   },
+   "results": {
+    "front": "No pulsatile mass; bladder not palpable. Urine: blood 2+, no nitrite, no white cells.",
+    "colic_result": "Low-dose CT: a 7 mm stone in the proximal left ureter with mild hydronephrosis. Creatinine 0.9 mg/dL. Pain controlled after ketorolac."
+   }
+  },
+  {
+   "id": "ret_fever",
+   "label": "Retention with fever",
+   "vignette": "66-year-old man, 2 days of burning on passing urine and a perineal ache, now unable to pass urine. BP 132/80, HR 106, temperature 38.7.",
+   "picks": {
+    "front": "ret_fever"
+   },
+   "results": {
+    "front": "Palpable, tender bladder. No pulsatile mass. Urinalysis waits for the catheter specimen."
+   }
+  },
+  {
+   "id": "ret_other",
+   "label": "Retention in a woman, no cause found",
+   "vignette": "63-year-old woman, unable to pass urine since last night, lower abdominal fullness. BP 140/82, HR 88, temperature 36.8.",
+   "picks": {
+    "front": "retention",
+    "ret_volume": "retention",
+    "ret_cause": "other"
+   },
+   "results": {
+    "front": "Palpable bladder. No pulsatile mass. Pregnancy test not needed (postmenopausal). Urinalysis waits for the catheter specimen.",
+    "ret_volume": "Bladder scan while the catheter is prepared: about 650 mL.",
+    "ret_cause": "The catheter drains 700 mL of clear urine. No new medicines, normal bowels, no back pain; perianal sensation and leg strength normal; no blood or clots."
+   }
+  }
+ ]
+}

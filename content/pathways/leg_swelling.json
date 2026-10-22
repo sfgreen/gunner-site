@@ -1,0 +1,2923 @@
+{
+ "id": "pw_leg_swelling",
+ "title": "Painful or swollen leg",
+ "world": "cardio",
+ "synonyms": [
+  "leg swelling",
+  "swollen leg",
+  "leg pain",
+  "calf pain",
+  "unilateral leg swelling",
+  "DVT",
+  "deep vein thrombosis",
+  "isolated distal DVT",
+  "calf vein thrombosis",
+  "Wells score",
+  "compression ultrasound",
+  "acute limb ischemia",
+  "ALI",
+  "cold leg",
+  "phlegmasia cerulea dolens",
+  "necrotizing fasciitis",
+  "necrotizing soft tissue infection",
+  "NSTI",
+  "cellulitis",
+  "erysipelas",
+  "skin abscess",
+  "MRSA",
+  "ruptured Baker cyst",
+  "popliteal cyst",
+  "pseudothrombophlebitis",
+  "bilateral leg edema",
+  "peripheral edema",
+  "Rutherford classification"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:30482764",
+   "label": "ASH VTE diagnosis 2018",
+   "title": "American Society of Hematology 2018 guidelines for management of venous thromboembolism: diagnosis of venous thromboembolism",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30482764/"
+  },
+  {
+   "docId": "pmid:33007077",
+   "label": "ASH VTE 2020",
+   "title": "American Society of Hematology 2020 guidelines for management of venous thromboembolism: treatment of deep vein thrombosis and pulmonary embolism",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33007077/"
+  },
+  {
+   "docId": "url:329bf4ccdc3f",
+   "label": "NICE NG158",
+   "title": "Venous thromboembolic diseases: diagnosis, management and thrombophilia testing",
+   "url": "https://www.nice.org.uk/guidance/ng158"
+  },
+  {
+   "docId": "pmid:33570602",
+   "label": "ASH cancer VTE 2021",
+   "title": "American Society of Hematology 2021 guidelines for management of venous thromboembolism: prevention and treatment in patients with cancer",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33570602/"
+  },
+  {
+   "docId": "pmid:30482767",
+   "label": "ASH VTE in pregnancy 2018",
+   "title": "American Society of Hematology 2018 guidelines for management of venous thromboembolism: venous thromboembolism in the context of pregnancy",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30482767/"
+  },
+  {
+   "docId": "pmid:38752899",
+   "label": "ACC/AHA PAD 2024",
+   "title": "2024 ACC/AHA/AACVPR/APMA/ABC/SCAI/SVM/SVN/SVS/SIR/VESS Guideline for the Management of Lower Extremity Peripheral Artery Disease",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38752899/"
+  },
+  {
+   "docId": "pmid:30564282",
+   "label": "WSES/SIS-E 2018",
+   "title": "2018 WSES/SIS-E consensus conference: recommendations for the management of skin and soft-tissue infections",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30564282/"
+  },
+  {
+   "docId": "pmid:35033131",
+   "label": "WSES 2022 SSTI pathways",
+   "title": "WSES/GAIS/WSIS/SIS-E/AAST global clinical pathways for patients with skin and soft tissue infections",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35033131/"
+  },
+  {
+   "docId": "url:4a5a96cceb37",
+   "label": "NICE NG141",
+   "title": "Cellulitis and erysipelas: antimicrobial prescribing",
+   "url": "https://www.nice.org.uk/guidance/ng141"
+  },
+  {
+   "docId": "url:728fe81d8394",
+   "label": "NICE NG106",
+   "title": "Chronic heart failure in adults: diagnosis and management",
+   "url": "https://www.nice.org.uk/guidance/ng106"
+  },
+  {
+   "docId": "pmid:34556256",
+   "label": "KDIGO GN 2021",
+   "title": "KDIGO 2021 Clinical Practice Guideline for the Management of Glomerular Diseases",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34556256/"
+  },
+  {
+   "docId": "url:3ae7a526534f",
+   "label": "Eliquis label",
+   "title": "ELIQUIS (apixaban) prescribing information, FDA label via DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e9481622-7cc6-418a-acb6-c5450daae9b0"
+  },
+  {
+   "docId": "url:cf40393193b8",
+   "label": "Xarelto label",
+   "title": "XARELTO (rivaroxaban) prescribing information, FDA label via DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=10db92f9-2300-4a80-836b-673e1ae91610"
+  },
+  {
+   "docId": "url:4fa1b610a0b0",
+   "label": "Lovenox label",
+   "title": "LOVENOX (enoxaparin sodium) prescribing information, FDA label via DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5017a927-2a24-4f27-89f9-27c805bf7d59"
+  },
+  {
+   "docId": "url:ed400c98a7b6",
+   "label": "Heparin label",
+   "title": "Heparin Sodium Injection (Hospira) prescribing information, FDA label via DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c8c4edd2-ee9e-4558-6b8c-b83adc242a0a"
+  },
+  {
+   "docId": "url:3489e1e96576",
+   "label": "NICE NG136",
+   "title": "Hypertension in adults: diagnosis and management",
+   "url": "https://www.nice.org.uk/guidance/ng136"
+  },
+  {
+   "docId": "url:33e83cd0eec6",
+   "label": "Norvasc label",
+   "title": "NORVASC (amlodipine besylate) prescribing information, FDA label via DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=abd6a2ca-40c2-485c-bc53-db1c652505ed"
+  },
+  {
+   "docId": "pmid:40956909",
+   "label": "Distal DVT review 2025",
+   "title": "Isolated distal deep vein thrombosis: Diagnosis and management (Sci Prog 2025, narrative review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40956909/"
+  },
+  {
+   "docId": "pmid:41552735",
+   "label": "Baker cyst review 2026",
+   "title": "Ruptured Baker's Cyst Demystified: Current Evidence, Diagnostic Strategies, and Treatment Options for an Under-Recognized Condition (Cureus 2026, narrative review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41552735/"
+  }
+ ],
+ "differential": [
+  "Acute limb ischemia",
+  "Phlegmasia cerulea dolens",
+  "Necrotizing infection",
+  "Pulmonary embolism",
+  "DVT",
+  "Cellulitis",
+  "Skin abscess",
+  "Ruptured Baker cyst"
+ ],
+ "calculators": [
+  {
+   "id": "wells_dvt",
+   "title": "Two-level DVT Wells score",
+   "kind": "points",
+   "items": [
+    {
+     "id": "cancer",
+     "label": "Cancer: current, past 6 months, palliative",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "paralysis",
+     "label": "Paralysis, paresis or recent leg plaster",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "bedridden",
+     "label": "Bedridden 3 days, or major surgery in 12 wk",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "tender",
+     "label": "Tenderness along the deep veins",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "leg",
+     "label": "Entire leg swollen",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "calf",
+     "label": "Calf 3 cm or more larger than the other side",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "pitting",
+     "label": "Pitting edema confined to the painful leg",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "collateral",
+     "label": "Collateral superficial veins (non-varicose)",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "prev",
+     "label": "Previously documented DVT",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "alt",
+     "label": "Another diagnosis at least as likely as DVT",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": -2
+      }
+     ]
+    }
+   ],
+   "bands": [
+    {
+     "lte": 1,
+     "text": "1 point or less: DVT unlikely"
+    },
+    {
+     "gte": 2,
+     "text": "2 points or more: DVT likely"
+    }
+   ],
+   "sources": [
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.1.2, Table 1; 1.1.3; 1.1.8"
+    }
+   ],
+   "note": "DVT likely: a proximal leg vein ultrasound, then a D-dimer if the scan is negative. DVT unlikely: a D-dimer.",
+   "tests": [
+    {
+     "picks": {
+      "calf": 1,
+      "alt": 1
+     },
+     "expect": -1
+    },
+    {
+     "picks": {
+      "calf": 1
+     },
+     "expect": 1
+    },
+    {
+     "picks": {
+      "paralysis": 1,
+      "tender": 1
+     },
+     "expect": 2
+    },
+    {
+     "picks": {
+      "bedridden": 1,
+      "leg": 1,
+      "calf": 1,
+      "pitting": 1
+     },
+     "expect": 4
+    }
+   ]
+  }
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Painful or swollen leg. First moves?",
+   "options": [
+    "Vitals, then both legs: pulses, color, warmth, sensation, movement, skin",
+    "A D-dimer before examining the leg, to decide which patients need a scan",
+    "A venous duplex first, then the examination",
+    "A heparin infusion for presumed DVT, then the examination"
+   ],
+   "answer": 0,
+   "chainStep": "Vitals; examine both legs for pulses (handheld Doppler if impalpable), color, warmth, sensation, movement, swelling and the skin",
+   "why": "The first job is the limb or life threat. Acute limb ischemia is judged at the bedside for viability, with a handheld Doppler because pulse palpation is inaccurate, and without waiting for imaging. Necrotizing infection is a clinical diagnosis: pain out of proportion, edema past the redness, bullae, crepitus. For a swollen or painful leg, the history and examination look for other causes before DVT is scored, and a D-dimer comes only after the Wells score, when DVT is unlikely.",
+   "sources": [
+    {
+     "docId": "pmid:38752899",
+     "where": "ALI: initial evaluation rec 2 and supportive text"
+    },
+    {
+     "docId": "pmid:30564282",
+     "where": "NSTI diagnosis (1C)"
+    },
+    {
+     "docId": "pmid:35033131",
+     "where": "NSTI: diagnosis, local and systemic signs"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.1.1; 1.1.2; 1.1.8"
+    }
+   ],
+   "next": "front",
+   "note": "Not in this version: injury and traumatic compartment syndrome, superficial thrombophlebitis, upper limb swelling, chronic venous disease and lymphedema, children."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Vitals, pulses and the skin",
+   "outcomes": [
+    {
+     "id": "ali",
+     "if": "Acute limb ischemia; cold, pale, pulseless foot, the leg not swollen",
+     "ddx": {
+      "lead": [
+       "Acute limb ischemia"
+      ],
+      "out": []
+     },
+     "next": "ali_hep"
+    },
+    {
+     "id": "phleg",
+     "if": "Phlegmasia, not in shock; whole leg tensely swollen, blue and very painful",
+     "ddx": {
+      "lead": [
+       "Phlegmasia cerulea dolens",
+       "DVT"
+      ],
+      "out": []
+     },
+     "next": "phleg"
+    },
+    {
+     "id": "shock",
+     "if": "Shock, no ischemic limb; systolic under 90 or poor perfusion",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_shock"
+    },
+    {
+     "id": "nsti",
+     "if": "Necrotizing signs, not in shock; pain out of proportion, edema past the redness, bullae or crepitus",
+     "ddx": {
+      "lead": [
+       "Necrotizing infection"
+      ],
+      "out": []
+     },
+     "next": "nsti_surg"
+    },
+    {
+     "id": "pe",
+     "if": "PE symptoms, not in shock; breathless, pleuritic pain, hypoxia or hemoptysis",
+     "ddx": {
+      "lead": [
+       "Pulmonary embolism"
+      ],
+      "out": []
+     },
+     "next": "end_pe"
+    },
+    {
+     "id": "both",
+     "if": "Both legs swollen; no limb threat, no PE symptoms",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "bilat"
+    },
+    {
+     "id": "one",
+     "if": "One leg, none of the above; go by the exam",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "findings"
+    }
+   ]
+  },
+  {
+   "id": "ali_hep",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Cold, pale, pulseless foot. First moves?",
+   "options": [
+    "IV heparin now and an emergency vascular surgery assessment",
+    "CT angiography first; heparin once it confirms the occlusion",
+    "Aspirin and an urgent vascular clinic appointment this week",
+    "Ankle-brachial index and a duplex, then decide on heparin"
+   ],
+   "answer": 0,
+   "chainStep": "Unfractionated heparin IV on diagnosis unless contraindicated; emergency assessment of limb viability by a clinician who can revascularize, with a handheld continuous wave Doppler; no imaging delay",
+   "why": "Acute limb ischemia is an emergency. Unfractionated heparin goes in on diagnosis unless contraindicated, and a clinician able to revascularize judges viability at once, by examination and a continuous wave Doppler. Skeletal muscle tolerates ischemia for about 4 to 6 hours, and duplex, CT or MR angiography is usually unnecessary before treatment. Aspirin or a clinic slot is too little and too late.",
+   "sources": [
+    {
+     "docId": "pmid:38752899",
+     "where": "ALI: initial evaluation recs 1 to 3, synopsis and supportive text; anticoagulation rec 1"
+    }
+   ],
+   "next": "ali_cat",
+   "orders": [
+    {
+     "item": "Unfractionated heparin",
+     "dose": "Therapeutic IV dose on diagnosis; the ACC/AHA guideline names no dose. Initial dose 5,000 units by intravenous injection; continuous 20,000 to 40,000 units/24 hours by infusion; adequate when the aPTT is 1.5 to 2 times normal (label full-dose regimen, based on a 68 kg patient)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38752899",
+       "where": "Anticoagulation for ALI, rec 1 and supportive text"
+      },
+      {
+       "docId": "url:ed400c98a7b6",
+       "where": "1 Indications; 2 Dosage and Administration table; 2.2"
+      }
+     ],
+     "note": "The heparin label lists treatment of peripheral arterial embolism among its indications; its dose is the general full-dose regimen."
+    },
+    {
+     "item": "Heparin not given",
+     "dose": "High bleeding risk or active bleeding, an ALI from aortic dissection or major vascular trauma; after heparin-induced thrombocytopenia, a direct thrombin inhibitor instead",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38752899",
+       "where": "Anticoagulation for ALI, synopsis and supportive text"
+      }
+     ]
+    },
+    {
+     "item": "Imaging before treatment",
+     "dose": "Usually unnecessary; may help after multiple previous revascularizations, or when an aortic dissection is suspected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38752899",
+       "where": "Initial evaluation rec 3 and supportive text"
+      }
+     ]
+    },
+    {
+     "item": "No local expertise",
+     "dose": "Transfer to a center that can revascularize",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38752899",
+       "where": "Initial evaluation rec 1, supportive text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ali_cat",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Viability at the bedside",
+   "outcomes": [
+    {
+     "id": "salvage",
+     "if": "Salvageable, category I to IIb; the foot moves, venous Doppler signal heard",
+     "ddx": {
+      "lead": [
+       "Acute limb ischemia"
+      ],
+      "out": []
+     },
+     "next": "ali_revasc"
+    },
+    {
+     "id": "lost",
+     "if": "Irreversible, category III; insensate and paralyzed, no arterial or venous signal",
+     "ddx": {
+      "lead": [
+       "Acute limb ischemia"
+      ],
+      "out": []
+     },
+     "next": "ali_amp"
+    }
+   ]
+  },
+  {
+   "id": "ali_revasc",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Threatened but salvageable limb. Next?",
+   "options": [
+    "Revascularize now: surgical embolectomy or catheter-directed lysis",
+    "Heparin alone, and reassess the limb in 24 hours to see if it recovers",
+    "Primary amputation, to avoid the injury of reperfusion",
+    "An echocardiogram for the embolic source before any procedure"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent revascularization, surgical thromboembolectomy or endovascular (catheter-directed thrombolysis or mechanical thrombectomy); monitor for compartment syndrome and do a fasciotomy if it develops; ECG, rhythm monitoring and echo for the source, without delaying treatment",
+   "why": "For a salvageable limb (categories I, IIa and IIb), revascularization, open or endovascular including catheter-directed thrombolysis, is indicated to prevent amputation, with similar limb salvage either way and more bleeding with thrombolysis; the acuity and severity of the ischemia weigh in the choice of thrombolysis, and category IIb needs revascularization immediately. Heparin alone does not reperfuse the limb, amputation is for the nonviable one, and the search for an embolic source must not delay revascularization.",
+   "sources": [
+    {
+     "docId": "pmid:38752899",
+     "where": "ALI category definitions; revascularization recs 1 and 4, synopsis and supportive text; diagnostic evaluation for the cause, synopsis and supportive text"
+    }
+   ],
+   "next": "end_ali",
+   "orders": [
+    {
+     "item": "Fasciotomy",
+     "dose": "Monitor for compartment syndrome after revascularization and treat it with fasciotomy (Class 1); a prophylactic fasciotomy is reasonable in category IIa or IIb (Class 2a)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38752899",
+       "where": "Adjunctive therapies recs 1 and 2"
+      }
+     ]
+    },
+    {
+     "item": "Catheter-directed thrombolysis",
+     "dose": "Effective for occlusions under 14 days old; beyond 14 days its benefit is minimal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38752899",
+       "where": "Revascularization, supportive text"
+      }
+     ]
+    },
+    {
+     "item": "Embolic source",
+     "dose": "History and examination for atrial fibrillation, MI, valve or aortic disease; ECG, rhythm monitoring and echocardiography (Class 2a); long-term oral anticoagulation if atrial fibrillation is the cause",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38752899",
+       "where": "Diagnostic evaluation for the cause, recs 1 and 2 and supportive text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ali_amp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Insensate, paralyzed foot; no arterial or venous Doppler signal. Next?",
+   "options": [
+    "Amputation of the nonviable tissue, without revascularization",
+    "Catheter-directed thrombolysis, to try to save the foot",
+    "Surgical embolectomy now, with a fasciotomy at the same operation",
+    "Revascularize first, then judge which tissue has survived"
+   ],
+   "answer": 0,
+   "chainStep": "Amputation of nonviable tissue as the index procedure; no revascularization of nonviable tissue",
+   "why": "Category III is irreversible: major tissue loss or permanent nerve damage is inevitable, and the absence of both arterial and venous Doppler signals marks a limb that may be beyond salvage. Revascularizing nonviable tissue is Class 3: Harm, because its risks outweigh any benefit and reperfusion of the ischemic metabolites can cause multiorgan failure and cardiovascular collapse.",
+   "sources": [
+    {
+     "docId": "pmid:38752899",
+     "where": "ALI category definitions; initial evaluation supportive text; revascularization rec 4 and supportive text"
+    }
+   ],
+   "next": "end_ali"
+  },
+  {
+   "id": "end_ali",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute limb ischemia: heparin on diagnosis and an emergency bedside assessment of viability with a Doppler; revascularize a salvageable limb and watch for compartment syndrome; amputate an irreversible one instead of reperfusing it; look for the embolic source without delaying treatment."
+  },
+  {
+   "id": "phleg",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Whole leg tense, swollen and blue. Next?",
+   "options": [
+    "Admit, anticoagulate, and refer for catheter-directed thrombolysis",
+    "Home on apixaban, with the leg elevated and a clinic review in 2 days",
+    "Systemic alteplase through a peripheral vein, then heparin",
+    "An IVC filter, holding anticoagulation until it is in place"
+   ],
+   "answer": 0,
+   "chainStep": "Admit; therapeutic anticoagulation; duplex to confirm the iliofemoral DVT; urgent referral for catheter-directed (not systemic) thrombolysis if the bleeding risk is low",
+   "why": "Phlegmasia cerulea dolens is limb-threatening DVT: ASH places it among the DVTs better treated in hospital, and thrombolysis is reasonable to consider, catheter-directed rather than systemic when lysis is chosen. NICE adds conditions for catheter-directed thrombolysis in iliofemoral DVT: symptoms under 14 days, good functional status, life expectancy of a year or more and a low bleeding risk. An IVC filter is only for a patient who cannot be anticoagulated.",
+   "sources": [
+    {
+     "docId": "pmid:33007077",
+     "where": "Recommendation 1 remarks and text; recommendation 5 remarks; recommendation 8"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.6.1; 1.7.1"
+    },
+    {
+     "docId": "pmid:30482764",
+     "where": "Recommendation 7a"
+    }
+   ],
+   "next": "end_phleg",
+   "orders": [
+    {
+     "item": "Agent for phlegmasia",
+     "dose": "The sources read name no agent for phlegmasia",
+     "status": "pending",
+     "note": "Agent choice before a procedure is not stated in ASH 2020 or NICE NG158."
+    },
+    {
+     "item": "Unfractionated heparin, if chosen",
+     "dose": "Initial dose 5,000 units by intravenous injection; continuous 20,000 to 40,000 units/24 hours by infusion; adequate when the aPTT is 1.5 to 2 times normal (label full-dose regimen, based on a 68 kg patient)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed400c98a7b6",
+       "where": "1 Indications; 2 Dosage and Administration table; 2.2"
+      }
+     ]
+    },
+    {
+     "item": "Catheter-directed thrombolysis",
+     "dose": "Reasonable for limb-threatening DVT; NICE: iliofemoral DVT with symptoms under 14 days, good functional status, life expectancy 1 year or more, low bleeding risk",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33007077",
+       "where": "Recommendation 5 remarks"
+      },
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.6.1"
+      }
+     ]
+    },
+    {
+     "item": "Route of thrombolysis",
+     "dose": "Catheter-directed over systemic for extensive DVT",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33007077",
+       "where": "Recommendation 8"
+      }
+     ]
+    },
+    {
+     "item": "IVC filter",
+     "dose": "Not unless anticoagulation is contraindicated",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.7.1"
+      },
+      {
+       "docId": "pmid:33007077",
+       "where": "Recommendations 10 and 11 remarks"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_phleg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Phlegmasia cerulea dolens: limb-threatening DVT, started in hospital with anticoagulation; catheter-directed thrombolysis is reasonable when the bleeding risk is low. Which anticoagulant, and when surgical thrombectomy fits, are not in this pathway's sources."
+  },
+  {
+   "id": "end_shock",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Shock with a painful or swollen leg: resuscitate first. A hot, red leg or fever goes to the sepsis pathway, whose skin route takes necrotizing signs straight to surgery; without infection, look for a high-risk PE in the dyspnea pathway's shock route, which starts with a bedside echo. Phlegmasia in shock also starts here."
+  },
+  {
+   "id": "end_pe",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Leg symptoms with PE symptoms: continue in the dyspnea pathway, where the two-level PE Wells score, with DVT signs worth 3 points, decides between a D-dimer and CTPA. With signs of both, NICE lets the first test be for either DVT or PE, by clinical judgment."
+  },
+  {
+   "id": "nsti_surg",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Necrotizing signs on the leg, not in shock. Next?",
+   "options": [
+    "Emergency surgical debridement and broad IV antibiotics now",
+    "CT of the leg first; operate only if it shows gas in the tissue",
+    "An LRINEC score first; operate only if the score is high",
+    "IV antibiotics now; operate if it is worse in 24 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Emergency surgical consultation and debridement in the operating room as soon as possible (within 6 hours of admission, WSES 2022); blood cultures and deep tissue samples; broad antibiotics covering MRSA, gram-negatives and anaerobes, with clindamycin or linezolid (for example vancomycin plus piperacillin-tazobactam plus clindamycin)",
+   "why": "Necrotizing infection is a clinical diagnosis, and early surgical debridement is the main determinant of outcome: WSES 2022 asks for it within 6 hours of admission, where its 2018 consensus said 12. Imaging must neither delay nor deter surgery, gas in the tissue marks advanced disease, and a low LRINEC score does not rule the diagnosis out. Antibiotics are an adjunct to debridement, never a substitute.",
+   "sources": [
+    {
+     "docId": "pmid:35033131",
+     "where": "NSTI: diagnosis, LRINEC, imaging, treatment"
+    },
+    {
+     "docId": "pmid:30564282",
+     "where": "NSTI diagnosis (1C, 1B, 1A); timing of source control (1B); antibiotics (1B, 1C)"
+    }
+   ],
+   "next": "nsti_or",
+   "orders": [
+    {
+     "item": "Timing",
+     "dose": "As soon as possible: within 6 hours of admission (WSES 2022); WSES 2018 said at least within 12 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI treatment"
+      },
+      {
+       "docId": "pmid:30564282",
+       "where": "Timing of source control (1B)"
+      }
+     ],
+     "note": "The sepsis pathway quotes the 2018 figure of 12 hours."
+    },
+    {
+     "item": "Re-exploration",
+     "dose": "Every 12 to 24 hours, sooner if worse, until little or no debridement is needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI treatment"
+      },
+      {
+       "docId": "pmid:30564282",
+       "where": "Re-exploration (1C)"
+      }
+     ]
+    },
+    {
+     "item": "Samples",
+     "dose": "Blood cultures, and deep tissue from the edge between healthy and necrotic tissue at the first debridement",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI treatment"
+      }
+     ]
+    },
+    {
+     "item": "Empiric antibiotics",
+     "dose": "Broad cover including MRSA and gram-negatives, with clindamycin or linezolid against toxin production",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30564282",
+       "where": "Empiric antibiotics (1C); antitoxin agent (1C)"
+      },
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI empiric regimens"
+      }
+     ]
+    },
+    {
+     "item": "WSES 2022 regimens",
+     "dose": "Unstable: piperacillin-tazobactam 4.5 g every 6 h or meropenem 1 g every 8 h, plus linezolid 600 mg every 12 h or vancomycin 25 to 30 mg/kg load then 15 to 20 mg/kg every 8 h, plus clindamycin 600 to 900 mg every 8 h. Stable: amoxicillin-clavulanate 1.2/2.2 g every 8 h, or ceftriaxone 2 g every 24 h with metronidazole 500 mg every 8 h, plus clindamycin 600 to 900 mg every 8 h",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI empiric regimens, normal renal function; MRSA antibiotics list"
+      }
+     ],
+     "note": "WSES 2022 asks for anti-MRSA cover in every initial NSTI regimen, but its stable list relies on clindamycin, which it lists as an MRSA agent with a high resistance rate."
+    },
+    {
+     "item": "Vancomycin with renal impairment or a vancomycin MIC of 1.5 or more",
+     "dose": "Avoid",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30564282",
+       "where": "Empiric antibiotics (1B)"
+      }
+     ]
+    },
+    {
+     "item": "Sepsis without shock",
+     "dose": "With organ dysfunction: a 1 L balanced crystalloid bolus over 30 minutes and antibiotics within 1 hour; 30 mL/kg within 3 hours if hypotensive or the lactate is raised",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI, Surviving Sepsis summary"
+      }
+     ]
+    },
+    {
+     "item": "Adjuncts",
+     "dose": "IVIG may be considered for group A streptococcal NSTI; hyperbaric oxygen only where available and never delaying care",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30564282",
+       "where": "IVIG (2B)"
+      },
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI treatment; adjunctive treatment"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nsti_or",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "At operation",
+   "outcomes": [
+    {
+     "id": "nec",
+     "if": "Necrotizing; grey fascia that does not bleed, dishwater fluid",
+     "ddx": {
+      "lead": [
+       "Necrotizing infection"
+      ],
+      "out": []
+     },
+     "next": "end_nsti"
+    },
+    {
+     "id": "none",
+     "if": "No necrosis; the fascia is healthy and bleeds",
+     "ddx": {
+      "lead": [
+       "Cellulitis"
+      ],
+      "out": []
+     },
+     "next": "end_nsti_none"
+    }
+   ]
+  },
+  {
+   "id": "end_nsti",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Necrotizing soft tissue infection: debridement as soon as possible, re-explored every 12 to 24 hours until little or none is needed; broad antibiotics with clindamycin or linezolid until no more debridement is needed, the patient is better and the fever has settled for 48 to 72 hours, narrowed on the cultures."
+  },
+  {
+   "id": "end_nsti_none",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No necrosis at exploration: treat as severe cellulitis with IV antibiotics and keep re-examining; a rapidly progressive soft tissue infection is treated as necrotizing from the beginning."
+  },
+  {
+   "id": "bilat",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Both legs swollen; no limb threat, no PE symptoms. Next?",
+   "options": [
+    "Review the drugs; NT-proBNP, urine protein, albumin, liver tests",
+    "A loop diuretic first; tests only if the swelling persists",
+    "Antibiotics for cellulitis of both legs, then a review",
+    "Compression stockings, and a review in a month without any tests"
+   ],
+   "answer": 0,
+   "chainStep": "Medication review (calcium channel blockers such as amlodipine); NT-proBNP; urine protein quantified, with serum albumin; ECG; renal, liver and thyroid function, blood count and urinalysis",
+   "why": "Symmetric swelling sends you looking for a systemic cause. NT-proBNP is measured when heart failure is suspected; diuretics, ACE inhibitors, beta blockers and MRAs can lower it. For nephrotic syndrome the urine protein is quantified, with the serum albumin. Amlodipine causes edema in a dose-related way, and cellulitis is called only after non-infectious causes such as venous insufficiency are excluded.",
+   "sources": [
+    {
+     "docId": "url:728fe81d8394",
+     "where": "1.2.2; 1.2.7; 1.2.12"
+    },
+    {
+     "docId": "pmid:34556256",
+     "where": "Practice Points 1.2.7 and 1.1.1"
+    },
+    {
+     "docId": "url:33e83cd0eec6",
+     "where": "6 Adverse Reactions; 6.1 table"
+    },
+    {
+     "docId": "url:4a5a96cceb37",
+     "where": "1.1.1; 1.1.7"
+    }
+   ],
+   "next": "end_bilat",
+   "orders": [
+    {
+     "item": "NT-proBNP over 2,000 ng/L",
+     "dose": "Urgent specialist assessment and transthoracic echocardiography within 2 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:728fe81d8394",
+       "where": "1.2.3"
+      }
+     ]
+    },
+    {
+     "item": "NT-proBNP 400 to 2,000 ng/L",
+     "dose": "Specialist assessment and transthoracic echocardiography within 6 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:728fe81d8394",
+       "where": "1.2.4"
+      }
+     ]
+    },
+    {
+     "item": "NT-proBNP under 400 ng/L",
+     "dose": "Heart failure less likely in an untreated person; review other causes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:728fe81d8394",
+       "where": "1.2.5; 1.2.6"
+      }
+     ]
+    },
+    {
+     "item": "Nephrotic syndrome",
+     "dose": "Quantify the proteinuria; kidney biopsy is the gold standard for glomerular disease",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34556256",
+       "where": "Practice Points 1.2.7 and 1.1.1"
+      }
+     ]
+    },
+    {
+     "item": "Amlodipine",
+     "dose": "Edema is its most common adverse reaction and dose related: 1.8% at 2.5 mg, 3.0% at 5 mg, 10.8% at 10 mg, 0.6% on placebo",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:33e83cd0eec6",
+       "where": "6 Adverse Reactions; 6.1 table"
+      }
+     ]
+    },
+    {
+     "item": "Amlodipine edema",
+     "dose": "If a CCB is not tolerated because of edema, offer a thiazide-like diuretic for the hypertension instead",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3489e1e96576",
+       "where": "1.4.36"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: bilateral DVT and venous obstruction, chronic venous insufficiency, lymphedema."
+  },
+  {
+   "id": "end_bilat",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bilateral swelling: review the drugs and replace a CCB that causes edema (NICE: a thiazide-like diuretic); NT-proBNP for heart failure, with an echo timed by its level; quantified urine protein with albumin for nephrotic syndrome."
+  },
+  {
+   "id": "findings",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The leg and the history",
+   "outcomes": [
+    {
+     "id": "dvt",
+     "if": "DVT possible, not pregnant; swollen or painful leg, no spreading redness",
+     "ddx": {
+      "lead": [
+       "DVT"
+      ],
+      "out": []
+     },
+     "next": "wells"
+    },
+    {
+     "id": "preg",
+     "if": "Pregnant, DVT possible; swollen or painful leg",
+     "ddx": {
+      "lead": [
+       "DVT"
+      ],
+      "out": []
+     },
+     "next": "preg_us"
+    },
+    {
+     "id": "cell",
+     "if": "Cellulitis, no MRSA risk; spreading red, warm, tender skin, no pus",
+     "ddx": {
+      "lead": [
+       "Cellulitis"
+      ],
+      "out": []
+     },
+     "next": "cell_strep"
+    },
+    {
+     "id": "mrsa",
+     "if": "Cellulitis with an MRSA risk; injects drugs or carries MRSA, no pus",
+     "ddx": {
+      "lead": [
+       "Cellulitis"
+      ],
+      "out": []
+     },
+     "next": "cell_mrsa"
+    },
+    {
+     "id": "pus",
+     "if": "Abscess; a fluctuant swelling with pus",
+     "ddx": {
+      "lead": [
+       "Skin abscess"
+      ],
+      "out": []
+     },
+     "next": "abscess"
+    }
+   ]
+  },
+  {
+   "id": "cell_strep",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Cellulitis, no pus, no MRSA risk. Antibiotic?",
+   "options": [
+    "A beta-lactam: oral cephalexin, or IV cefazolin if unwell",
+    "Oral TMP-SMX alone, the usual cover for community-acquired MRSA",
+    "IV vancomycin plus piperacillin-tazobactam, then narrow",
+    "No antibiotic yet; elevate the leg and review in 2 days"
+   ],
+   "answer": 0,
+   "chainStep": "Oral cephalexin 500 mg every 6 hours (NICE: flucloxacillin) for 5 days, longer if not resolved; IV cefazolin 2 g every 8 hours if systemically unwell",
+   "why": "Cellulitis is treated with an antibiotic against gram-positive bacteria, streptococci above all, orally first when the patient can take it and is not severely unwell. WSES 2022 says TMP-SMX and doxycycline have no activity against group A and B streptococci, so for an MRSA risk it adds them to a beta-lactam; NICE still lists doxycycline alone for penicillin allergy. Vancomycin with piperacillin-tazobactam is for MRSA risk, gram-negative risk or failure, and NICE offers an antibiotic to everyone with cellulitis. NICE's first choice is flucloxacillin; WSES lists cephalexin or amoxicillin-clavulanate.",
+   "sources": [
+    {
+     "docId": "pmid:30564282",
+     "where": "Superficial infections (1C) and text"
+    },
+    {
+     "docId": "pmid:35033131",
+     "where": "Cellulitis; typical cellulitis regimens; MRSA oral options text"
+    },
+    {
+     "docId": "url:4a5a96cceb37",
+     "where": "1.1.4; 1.1.5; Table 1"
+    }
+   ],
+   "next": "cell_care",
+   "orders": [
+    {
+     "item": "Oral (WSES 2022)",
+     "dose": "Cephalexin 500 mg every 6 h, or amoxicillin-clavulanate 1 g every 8 h; beta-lactam allergy: clindamycin 300 mg every 8 h",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Typical cellulitis, outpatient therapy, normal renal function"
+      }
+     ]
+    },
+    {
+     "item": "Oral (NICE NG141)",
+     "dose": "Flucloxacillin 500 mg to 1 g four times a day; penicillin allergy: clarithromycin 500 mg twice a day, or doxycycline 200 mg on day 1 then 100 mg daily; erythromycin in pregnancy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5a96cceb37",
+       "where": "Table 1"
+      }
+     ],
+     "note": "WSES 2022 says TMP-SMX and doxycycline have no activity against group A and B streptococci, so for an MRSA risk it adds them to a beta-lactam; NICE still lists doxycycline alone for penicillin allergy."
+    },
+    {
+     "item": "IV, if systemically unwell",
+     "dose": "Cefazolin 2 g every 8 h (WSES 2022), or flucloxacillin 1 to 2 g four times a day (NICE); review by 48 hours for a switch to oral",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Typical cellulitis, inpatient therapy"
+      },
+      {
+       "docId": "url:4a5a96cceb37",
+       "where": "Table 1; 1.1.6"
+      }
+     ]
+    },
+    {
+     "item": "Outpatient",
+     "dose": "When adherent, without general signs of inflammation or hemodynamic instability",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Cellulitis"
+      }
+     ]
+    },
+    {
+     "item": "Duration",
+     "dose": "5 days, up to 7 to 10 if not resolved (WSES 2022); 5 to 7 days, up to 14 by clinical assessment (NICE)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Cellulitis, treatment"
+      },
+      {
+       "docId": "url:4a5a96cceb37",
+       "where": "Table 1 and notes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cell_mrsa",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Cellulitis, no pus, with an MRSA risk. Antibiotic?",
+   "options": [
+    "IV vancomycin if unwell; if well, cephalexin plus TMP-SMX",
+    "Oral cephalexin alone; injection drug use does not change the cover",
+    "Oral TMP-SMX alone, covering both MRSA and streptococci",
+    "Oral ciprofloxacin alone, covering skin flora and MRSA"
+   ],
+   "answer": 0,
+   "chainStep": "If systemically unwell: vancomycin 25 to 30 mg/kg IV load, then 15 to 20 mg/kg every 12 hours, or linezolid 600 mg every 12 hours. If well: oral cephalexin 500 mg every 6 hours plus TMP-SMX 160/800 mg every 12 hours or doxycycline 100 mg every 12 hours",
+   "why": "MRSA cover is added only for a risk: injection drug use or penetrating trauma, MRSA infection or colonization in the past year, 5 days of antibiotics in the last 90, immunocompromise or critical illness, or no response to first-line treatment. TMP-SMX, doxycycline and minocycline cover MRSA but not streptococci, so they go with a beta-lactam, or clindamycin is used alone despite common resistance; fluoroquinolones are not adequate for MRSA. A systemically unwell patient gets IV vancomycin or linezolid.",
+   "sources": [
+    {
+     "docId": "pmid:35033131",
+     "where": "Typical cellulitis: CA-MRSA risk, oral and IV regimens; MRSA oral options text"
+    },
+    {
+     "docId": "pmid:30564282",
+     "where": "Superficial infections (1C); MRSA oral options text; MRSA antibiotics list"
+    },
+    {
+     "docId": "url:4a5a96cceb37",
+     "where": "Table 1, MRSA"
+    }
+   ],
+   "next": "cell_care",
+   "orders": [
+    {
+     "item": "IV MRSA cover (WSES 2022)",
+     "dose": "Vancomycin 25 to 30 mg/kg load, then 15 to 20 mg/kg every 12 h, or linezolid 600 mg every 12 h; consider piperacillin-tazobactam 4.5 g every 6 h at gram-negative risk or for severe forms not responding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Typical cellulitis, inpatient therapy, CA-MRSA"
+      }
+     ]
+    },
+    {
+     "item": "IV MRSA cover (NICE NG141)",
+     "dose": "Vancomycin 15 to 20 mg/kg two or three times a day (maximum 2 g a dose), adjusted to serum levels, added to a first-line antibiotic",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5a96cceb37",
+       "where": "Table 1, MRSA"
+      }
+     ]
+    },
+    {
+     "item": "Oral MRSA cover",
+     "dose": "TMP-SMX 160/800 to 320/1600 mg every 12 h, doxycycline 100 mg every 12 h or minocycline 100 mg every 12 h, added to cephalexin; or clindamycin alone, 300 to 450 mg every 8 h (WSES 2022; 300 to 600 in 2018), high resistance rate",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Typical cellulitis, outpatient CA-MRSA; MRSA antibiotics list"
+      },
+      {
+       "docId": "pmid:30564282",
+       "where": "MRSA oral options text; MRSA antibiotics list"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "abscess",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Fluctuant abscess on the leg. Next?",
+   "options": [
+    "Incision and drainage; an antibiotic too if redness spreads past it",
+    "Oral antibiotics alone, and drain it only if they fail to shrink it",
+    "A warm compress to bring it to a head, and drain it next week",
+    "IV vancomycin first, and drain it once it has become smaller"
+   ],
+   "answer": 0,
+   "chainStep": "Incision and drainage, breaking up loculations, left open and lightly packed; add an antibiotic (TMP-SMX or doxycycline where MRSA is common, cephalexin otherwise) when cellulitis surrounds it, it is over 5 cm, or the patient is immunosuppressed",
+   "why": "Incision and drainage is the primary treatment for an abscess, and antibiotics without drainage can leave a hard lump of sterile pus. A simple abscess, its redness confined to the abscess, needs no antibiotic; one with cellulitis around it generally gets one, aimed at S. aureus, with an MRSA agent where more than 10% of S. aureus isolates are MRSA or the patient is at high risk. WSES reports methicillin resistance in 35.9% of S. aureus from skin infections in North America. An abscess over 5 cm, at a hard-to-drain site, multiple, or in an immunosuppressed patient also earns an antibiotic.",
+   "sources": [
+    {
+     "docId": "pmid:30564282",
+     "where": "Superficial infections (1C) and text; MRSA in cSSTI, text"
+    },
+    {
+     "docId": "pmid:35033131",
+     "where": "Simple abscess; purulent cellulitis"
+    }
+   ],
+   "next": "cell_care",
+   "orders": [
+    {
+     "item": "Purulent cellulitis, MRSA common or high risk",
+     "dose": "TMP-SMX 160/800 to 320/1600 mg every 12 h, doxycycline 100 mg every 12 h or minocycline 100 mg every 12 h",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Purulent cellulitis, outpatient"
+      }
+     ]
+    },
+    {
+     "item": "Purulent cellulitis, MRSA uncommon",
+     "dose": "Cephalexin 500 mg every 6 h or amoxicillin-clavulanate 1 g every 8 h",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Purulent cellulitis, outpatient"
+      }
+     ]
+    },
+    {
+     "item": "Inpatient",
+     "dose": "Vancomycin 25 to 30 mg/kg load, then 15 to 20 mg/kg every 12 h, or linezolid 600 mg every 12 h",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Purulent cellulitis, inpatient"
+      }
+     ]
+    },
+    {
+     "item": "Duration",
+     "dose": "5 days, extended to 7 to 10 if not resolved",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Simple abscess, treatment"
+      }
+     ]
+    },
+    {
+     "item": "Culture",
+     "dose": "Not routine; can help when immunosuppressed, severe or not responding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Purulent cellulitis, culture"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cell_care",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Antibiotic chosen. What else?",
+   "options": [
+    "Mark the edge, treat edema or tinea, reassess if no better in 2 to 3 days",
+    "Swab the unbroken skin and choose the antibiotic by the result",
+    "Change the antibiotic if the redness has not faded by 24 hours",
+    "Give a full 14-day course from the start, so the infection does not come back"
+   ],
+   "answer": 0,
+   "chainStep": "Draw around the redness with a single-use marker before treatment; treat edema, venous insufficiency, eczema, tinea and diabetes; reassess if worse at any point or not improving in 2 to 3 days",
+   "why": "Drawing around the infection before treatment shows whether it spreads; redness is harder to see on darker skin. Predisposing conditions are treated, edema from calcium channel blockers included, and edema, venous insufficiency and tinea pedis make it recur. Skin takes time to return to normal, so the trigger to reassess is worsening, or no improvement in 2 to 3 days, not redness at 24 hours. A swab helps only when the skin is broken, and the course is 5 to 7 days unless the clinical assessment says otherwise.",
+   "sources": [
+    {
+     "docId": "url:4a5a96cceb37",
+     "where": "1.1.2; 1.1.3; 1.1.7 to 1.1.9; Table 1 notes"
+    },
+    {
+     "docId": "pmid:35033131",
+     "where": "Cellulitis, recurrences; culture"
+    }
+   ],
+   "next": "end_cell",
+   "orders": [
+    {
+     "item": "Leg elevation",
+     "dose": "Not stated in the open sources read; IDSA 2014 was not reachable (bot check)",
+     "status": "pending"
+    },
+    {
+     "item": "Reassess urgently",
+     "dose": "Systemically very unwell, pain out of proportion, or redness spreading beyond the first presentation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5a96cceb37",
+       "where": "1.1.9"
+      }
+     ]
+    },
+    {
+     "item": "Refer to hospital",
+     "dose": "Signs of orbital cellulitis, osteomyelitis, septic arthritis, necrotizing fasciitis or sepsis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5a96cceb37",
+       "where": "1.1.13"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_cell",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cellulitis: a beta-lactam against streptococci, MRSA cover only with a risk factor, drainage for pus; a marked edge, treatment of edema or tinea, and reassessment if no better in 2 to 3 days."
+  },
+  {
+   "id": "preg_us",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Pregnant, swollen tender calf. Next?",
+   "options": [
+    "Compression ultrasound of the leg, including the iliac veins",
+    "A D-dimer first; scan only if it is positive",
+    "LMWH on the clinical findings; no scan in pregnancy",
+    "Contrast venography as the first test"
+   ],
+   "answer": 0,
+   "chainStep": "Compression ultrasound including the iliac veins; if negative with no other cause, serial compression ultrasound or MR venography",
+   "why": "ASH's pregnancy guideline builds the workup on compression ultrasound with imaging of the iliac veins, and after a negative first scan it suggests further investigation, serial compression ultrasound or MR venography, rather than none. The D-dimer is of limited use in pregnancy because it is so often positive, so it does not decide who is scanned, and treating on the clinical findings alone skips the diagnosis.",
+   "sources": [
+    {
+     "docId": "pmid:30482767",
+     "where": "Recommendation 31"
+    },
+    {
+     "docId": "pmid:30482764",
+     "where": "Recommendation 5a remarks"
+    }
+   ],
+   "next": "preg_us_result"
+  },
+  {
+   "id": "preg_us_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Compression ultrasound, iliac veins included",
+   "outcomes": [
+    {
+     "id": "pos",
+     "if": "DVT on ultrasound; a deep vein will not compress",
+     "ddx": {
+      "lead": [
+       "DVT"
+      ],
+      "out": []
+     },
+     "next": "preg_tx"
+    },
+    {
+     "id": "neg",
+     "if": "No DVT; veins compress, iliac veins imaged",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_preg_neg"
+    }
+   ]
+  },
+  {
+   "id": "end_preg_neg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Initial scan negative in pregnancy: serial compression ultrasound or MR venography, not no further tests (ASH 2018 pregnancy rec 31)"
+  },
+  {
+   "id": "preg_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pregnant, DVT confirmed on ultrasound. Anticoagulant?",
+   "options": [
+    "Low molecular weight heparin, once or twice daily",
+    "Apixaban 10 mg twice daily for 7 days, then 5 mg twice",
+    "Heparin with warfarin for 5 days, then warfarin",
+    "Unfractionated heparin, adjusted to the aPTT"
+   ],
+   "answer": 0,
+   "chainStep": "Therapeutic LMWH once or twice daily, without routine anti-Xa monitoring; no warfarin and no DOAC",
+   "why": "In pregnancy ASH recommends LMWH over unfractionated heparin (strong), once or twice daily, without routine anti-Xa monitoring. Vitamin K antagonists cross the placenta, with teratogenicity, pregnancy loss and fetal bleeding, and the DOACs are likely to cross it with unknown effects; the apixaban label does not recommend it in pregnancy. ASH also suggests against adding catheter-directed thrombolysis for DVT in pregnancy.",
+   "sources": [
+    {
+     "docId": "pmid:30482767",
+     "where": "Recommendations 2, 4, 5 and 6; question 1, EtD criteria"
+    },
+    {
+     "docId": "url:3ae7a526534f",
+     "where": "Highlights, Use in Specific Populations; 8.1"
+    }
+   ],
+   "next": "end_preg",
+   "orders": [
+    {
+     "item": "LMWH",
+     "dose": "Therapeutic dose, once or twice daily; no routine anti-Xa monitoring",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30482767",
+       "where": "Recommendations 2, 4 and 5"
+      }
+     ]
+    },
+    {
+     "item": "Enoxaparin",
+     "dose": "1 mg/kg SC every 12 hours (label DVT dose; 1.5 mg/kg once daily is the label's inpatient alternative); ASH accepts once or twice daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4fa1b610a0b0",
+       "where": "2.1; 8.1"
+      },
+      {
+       "docId": "pmid:30482767",
+       "where": "Recommendation 4"
+      }
+     ],
+     "note": "The label gives no pregnancy-specific dose (8.1); its regimen is written alongside warfarin, which is not used in pregnancy."
+    },
+    {
+     "item": "Warfarin and DOACs",
+     "dose": "Not in pregnancy: vitamin K antagonists cross the placenta; DOACs likely do, effects unknown",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30482767",
+       "where": "Question 1, EtD criteria"
+      },
+      {
+       "docId": "url:3ae7a526534f",
+       "where": "Highlights, Use in Specific Populations; 8.1"
+      }
+     ]
+    },
+    {
+     "item": "Delivery",
+     "dose": "Scheduled delivery, with therapeutic LMWH stopped beforehand",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30482767",
+       "where": "Recommendation 10"
+      }
+     ]
+    },
+    {
+     "item": "Setting",
+     "dose": "Low-risk acute VTE: start as an outpatient",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30482767",
+       "where": "Recommendation 9"
+      }
+     ]
+    },
+    {
+     "item": "Duration",
+     "dose": "Not stated for DVT in the sources read",
+     "status": "pending"
+    }
+   ],
+   "note": "ASH 2018 on diagnosis excludes pregnant women; the ASH 2018 pregnancy guideline covers it (rec 31)."
+  },
+  {
+   "id": "end_preg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "DVT in pregnancy: LMWH, once or twice daily, never warfarin or a DOAC; scheduled delivery with therapeutic LMWH stopped beforehand. The duration is not in this pathway's sources."
+  },
+  {
+   "id": "wells",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "One leg swollen or painful; not pregnant, no spreading redness. Next?",
+   "options": [
+    "Two-level DVT Wells score for the clinical probability",
+    "A D-dimer first, whatever the clinical probability",
+    "Contrast venography as the first test for a clot",
+    "Treat as DVT for 3 months, without any further testing first"
+   ],
+   "answer": 0,
+   "chainStep": "Two-level DVT Wells score: 1 point each for active cancer, paralysis or a recent cast, bedridden 3 days or major surgery within 12 weeks, tenderness along the deep veins, whole leg swollen, calf 3 cm or more larger, pitting edema confined to that leg, collateral superficial veins, previous DVT; minus 2 if another diagnosis is as likely. 2 or more: likely",
+   "why": "Suspected DVT starts with a clinical probability from a validated rule; NICE uses the two-level Wells score, 2 points or more DVT likely. The probability decides the next test: a D-dimer when DVT is unlikely, an ultrasound when it is likely, and a positive D-dimer alone diagnoses nothing. Compression ultrasound, not venography, is the first-line imaging.",
+   "sources": [
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.1.2, Table 1; 1.1.3; 1.1.8"
+    },
+    {
+     "docId": "pmid:30482764",
+     "where": "Summary of recommendations; recommendations 5a, 7a and 7b"
+    },
+    {
+     "docId": "pmid:40956909",
+     "where": "Diagnostic methods"
+    }
+   ],
+   "next": "wells_result",
+   "orders": [
+    {
+     "item": "Two-level DVT Wells score",
+     "dose": "1 point each: active cancer; paralysis, paresis or recent plaster immobilization; bedridden 3 days or more or major surgery within 12 weeks; localized tenderness along the deep veins; entire leg swollen; calf at least 3 cm larger than the other side; pitting edema confined to the symptomatic leg; collateral superficial veins; previously documented DVT. Minus 2: an alternative diagnosis at least as likely. 2 or more likely, 1 or less unlikely",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "Table 1"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "wells_dvt"
+   ]
+  },
+  {
+   "id": "wells_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Two-level DVT Wells score",
+   "outcomes": [
+    {
+     "id": "unlikely",
+     "if": "DVT unlikely; 1 point or less",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "dd"
+    },
+    {
+     "id": "likely",
+     "if": "DVT likely; 2 points or more",
+     "ddx": {
+      "lead": [
+       "DVT"
+      ],
+      "out": []
+     },
+     "next": "us"
+    }
+   ]
+  },
+  {
+   "id": "dd",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "DVT unlikely on Wells. Next?",
+   "options": [
+    "A D-dimer, age-adjusted over 50; scan only if it is positive",
+    "Discharge now, since a low Wells score on its own rules DVT out",
+    "Anticoagulate if the D-dimer is positive, without a scan",
+    "Contrast venography as the first test"
+   ],
+   "answer": 0,
+   "chainStep": "D-dimer with the result within 4 hours (interim therapeutic anticoagulation if it will take longer); consider an age-adjusted cutoff over 50; compression ultrasound if positive",
+   "why": "With DVT unlikely, a highly sensitive D-dimer comes first: a negative one rules DVT out with no further testing, and a positive one goes to ultrasound, never straight to treatment. NICE considers an age-adjusted threshold over 50. The D-dimer helps little in hospitalized, postsurgical or pregnant patients, in whom it is often positive. If it will take more than 4 hours, interim therapeutic anticoagulation covers the wait. Where a D-dimer is not readily available, ASH accepts ultrasound alone.",
+   "sources": [
+    {
+     "docId": "pmid:30482764",
+     "where": "Recommendations 5a and 5b with remarks"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.1.8; 1.1.9; 1.1.10; 1.1.14"
+    }
+   ],
+   "next": "dd_result",
+   "orders": [
+    {
+     "item": "Age-adjusted cutoff",
+     "dose": "Consider for people over 50",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.1.14"
+      }
+     ]
+    },
+    {
+     "item": "Timing",
+     "dose": "Result within 4 hours, or interim therapeutic anticoagulation while waiting",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.1.8"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dd_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "D-dimer",
+   "outcomes": [
+    {
+     "id": "neg",
+     "if": "Negative; below the cutoff",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "DVT"
+      ]
+     },
+     "next": "end_dvt_out"
+    },
+    {
+     "id": "pos",
+     "if": "Positive; above the cutoff",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "us"
+    }
+   ]
+  },
+  {
+   "id": "us",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "DVT likely, or unlikely with a positive D-dimer. Next?",
+   "options": [
+    "Compression ultrasound, proximal or whole leg, within 4 hours",
+    "A D-dimer first, and an ultrasound only if the D-dimer is positive",
+    "Anticoagulate for 3 months on the probability alone",
+    "Contrast venography as the first imaging test"
+   ],
+   "answer": 0,
+   "chainStep": "Compression ultrasound (proximal, or whole leg) with the result within 4 hours; if it will take longer, interim therapeutic anticoagulation and the scan within 24 hours",
+   "why": "A likely Wells score, or an unlikely one with a positive D-dimer, goes to ultrasound: NICE scans the proximal leg veins, and ASH accepts proximal or whole-leg ultrasound; only a whole-leg scan also images the calf veins. When the result cannot come within 4 hours, interim anticoagulation covers the wait and the scan follows within 24 hours. A D-dimer does not decide whether a likely patient is scanned, and a probability is not a diagnosis.",
+   "sources": [
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.1.3; 1.1.4; 1.1.10"
+    },
+    {
+     "docId": "pmid:30482764",
+     "where": "Recommendations 5a, 7a and 7b"
+    },
+    {
+     "docId": "pmid:40956909",
+     "where": "Diagnostic methods"
+    }
+   ],
+   "next": "us_result",
+   "orders": [
+    {
+     "item": "Interim anticoagulation",
+     "dose": "If the scan cannot be done within 4 hours; choose one that can continue if DVT is confirmed; take a blood count, renal and liver function, PT and APTT without waiting for the results",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.1.4; 1.1.10; 1.3.3; 1.3.4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "us_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Compression ultrasound",
+   "outcomes": [
+    {
+     "id": "prox",
+     "if": "Proximal DVT; the popliteal vein or above will not compress",
+     "ddx": {
+      "lead": [
+       "DVT"
+      ],
+      "out": []
+     },
+     "next": "tx_group"
+    },
+    {
+     "id": "distal",
+     "if": "Isolated distal DVT; calf veins only, on a whole-leg scan",
+     "ddx": {
+      "lead": [
+       "DVT"
+      ],
+      "out": []
+     },
+     "next": "distal_risk"
+    },
+    {
+     "id": "baker",
+     "if": "No DVT; a ruptured Baker cyst",
+     "ddx": {
+      "lead": [
+       "Ruptured Baker cyst"
+      ],
+      "out": []
+     },
+     "next": "baker"
+    },
+    {
+     "id": "neg_unl",
+     "if": "No DVT, Wells unlikely; the D-dimer was positive",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "DVT"
+      ]
+     },
+     "next": "end_dvt_out"
+    },
+    {
+     "id": "neg_lik",
+     "if": "No DVT, Wells likely; no other diagnosis found",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "repeat"
+    },
+    {
+     "id": "other",
+     "if": "No DVT; another cause seen on the scan",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_dvt_out"
+    }
+   ]
+  },
+  {
+   "id": "repeat",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Wells likely, scan negative, no other diagnosis. Next?",
+   "options": [
+    "Repeat the scan in about a week (NICE: if a D-dimer is positive)",
+    "Discharge, since one negative scan rules DVT out",
+    "Diagnose DVT on a positive D-dimer and start full anticoagulation",
+    "Treat for 3 months because the Wells score was high"
+   ],
+   "answer": 0,
+   "chainStep": "ASH: serial ultrasound, one more scan in 1 week. NICE: D-dimer; if positive, stop interim anticoagulation and repeat the proximal scan 6 to 8 days later; if negative, DVT is not likely",
+   "why": "With DVT likely, one negative scan is not the end: ASH follows it with a serial scan a week later when no other diagnosis is found, and NICE checks a D-dimer, repeating the proximal scan 6 to 8 days later only if it is positive, with interim anticoagulation stopped meanwhile. A positive D-dimer alone never diagnoses DVT.",
+   "sources": [
+    {
+     "docId": "pmid:30482764",
+     "where": "Recommendation 6a remarks; recommendations 7a and 7b"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.1.3; 1.1.6; 1.1.7"
+    }
+   ],
+   "next": "repeat_result"
+  },
+  {
+   "id": "repeat_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "D-dimer and the repeat scan",
+   "outcomes": [
+    {
+     "id": "dvt",
+     "if": "Proximal DVT on the repeat scan; a vein now will not compress",
+     "ddx": {
+      "lead": [
+       "DVT"
+      ],
+      "out": []
+     },
+     "next": "tx_group"
+    },
+    {
+     "id": "clear",
+     "if": "No DVT; the repeat scan is clear, or the D-dimer negative",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "DVT"
+      ]
+     },
+     "next": "end_dvt_out"
+    }
+   ]
+  },
+  {
+   "id": "end_dvt_out",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "DVT not likely: stop any interim anticoagulation, think of other diagnoses, and explain the symptoms and signs of DVT and when to come back."
+  },
+  {
+   "id": "baker",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Ultrasound: no DVT, a ruptured Baker cyst. Management?",
+   "options": [
+    "Rest, ice, compression, elevation and an NSAID",
+    "Anticoagulate for 3 months, as for a calf DVT",
+    "Arthroscopic surgery on the knee this admission",
+    "Ultrasound-guided aspiration of the calf fluid today"
+   ],
+   "answer": 0,
+   "chainStep": "Rest, ice, a compression bandage, elevation and an NSAID or other analgesic; treat the knee; reassess for compartment syndrome if the pain and swelling escalate",
+   "why": "A ruptured Baker cyst leaks synovial fluid into the calf and mimics DVT, which is why duplex comes first: it excludes DVT. Most ruptures settle with conservative care, rest, ice, compression, elevation and anti-inflammatories, most within 4 to 12 weeks. Aspiration with a steroid injection is for persistent or recurrent cases, surgery for refractory symptoms or the joint lesion behind them, and anticoagulation without a DVT is the misdiagnosis to avoid.",
+   "sources": [
+    {
+     "docId": "pmid:41552735",
+     "where": "Abstract; diagnostic evaluation; management; complications"
+    }
+   ],
+   "next": "end_baker",
+   "orders": [
+    {
+     "item": "Compartment syndrome",
+     "dose": "Severe pain, tense swelling, neurovascular impairment or foot drop: immediate fasciotomy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41552735",
+       "where": "Complications"
+      }
+     ]
+    },
+    {
+     "item": "A true DVT",
+     "dose": "Can be missed if the symptoms are blamed on the cyst; the duplex result decides",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41552735",
+       "where": "Complications"
+      }
+     ]
+    }
+   ],
+   "note": "The source is a 2026 narrative review, not a guideline."
+  },
+  {
+   "id": "end_baker",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ruptured Baker cyst: duplex excludes DVT; rest, ice, compression, elevation and an NSAID; aspiration or surgery only for persistent cases; watch for compartment syndrome."
+  },
+  {
+   "id": "distal_risk",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Symptoms and risk of extension",
+   "outcomes": [
+    {
+     "id": "low",
+     "if": "Low risk; mild symptoms, no risk factor for extension",
+     "ddx": {
+      "lead": [
+       "DVT"
+      ],
+      "out": []
+     },
+     "next": "distal_serial"
+    },
+    {
+     "id": "high",
+     "if": "Severe symptoms or a risk factor; cancer, a clot over 5 cm, or several veins",
+     "ddx": {
+      "lead": [
+       "DVT"
+      ],
+      "out": []
+     },
+     "next": "tx_group",
+     "orders": [
+      {
+       "item": "Anticoagulation",
+       "dose": "The same regimen as for proximal DVT",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:40956909",
+         "where": "Table 1, CHEST 2021"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "distal_serial",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Isolated distal DVT, mild symptoms, no risk factor for extension. Next?",
+   "options": [
+    "Serial ultrasound over 2 weeks, treating only if it extends",
+    "Discharge, with no anticoagulant and no repeat scan",
+    "Catheter-directed thrombolysis to clear the thrombus from the calf veins",
+    "An IVC filter, in place of anticoagulation or a scan"
+   ],
+   "answer": 0,
+   "chainStep": "Repeat ultrasound over the next 2 weeks (CHEST; ESVS: a whole-leg scan at 1 week) instead of anticoagulation; anticoagulate as for proximal DVT if it reaches the proximal veins",
+   "why": "For an isolated distal DVT without severe symptoms or risk factors for extension, CHEST suggests serial imaging of the deep veins for 2 weeks over anticoagulation (weak), and ESVS repeats a whole-leg scan after 1 week in an untreated patient; the scans look for progression toward the proximal veins. Anticoagulation, when chosen, is the same regimen as for proximal DVT. Thrombolysis should be rare below the common femoral vein, and an IVC filter is not offered when anticoagulation is possible.",
+   "sources": [
+    {
+     "docId": "pmid:40956909",
+     "where": "Table 1 (CHEST 2021, ESVS 2021); Table 2; diagnostic methods"
+    },
+    {
+     "docId": "pmid:33007077",
+     "where": "Recommendation 5 remarks"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.7.1"
+    }
+   ],
+   "next": "end_distal",
+   "orders": [
+    {
+     "item": "Risk factors for extension (CHEST)",
+     "dose": "Raised D-dimer without another cause, clot over 5 cm or over 7 mm or in more than one vein, close to the proximal veins, unprovoked, active cancer, previous VTE, inpatient, significant symptoms, unwilling to have repeat scans",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40956909",
+       "where": "Table 2, CHEST 2021"
+      }
+     ]
+    }
+   ],
+   "note": "CHEST 2021 and ESVS 2021 are quoted from an open 2025 review; their own texts sit behind bot checks. CHEST lists unwillingness to have repeat scans among the reasons to anticoagulate instead."
+  },
+  {
+   "id": "end_distal",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Isolated distal DVT at low risk: serial ultrasound over 2 weeks instead of anticoagulation, treated as proximal DVT if it extends; severe symptoms or a risk factor for extension mean anticoagulation from the start."
+  },
+  {
+   "id": "tx_group",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Active cancer?",
+   "outcomes": [
+    {
+     "id": "std",
+     "if": "No active cancer; not pregnant",
+     "ddx": {
+      "lead": [
+       "DVT"
+      ],
+      "out": []
+     },
+     "next": "tx_doac"
+    },
+    {
+     "id": "cancer",
+     "if": "Active cancer; treated, metastatic, inoperable or diagnosed within 6 months",
+     "ddx": {
+      "lead": [
+       "DVT"
+      ],
+      "out": []
+     },
+     "next": "cancer"
+    }
+   ]
+  },
+  {
+   "id": "tx_doac",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "DVT to treat; not pregnant, no active cancer. Anticoagulant?",
+   "options": [
+    "Apixaban or rivaroxaban, with no heparin lead-in",
+    "LMWH bridged to warfarin, as the first choice",
+    "Dabigatran from day 1, with no heparin lead-in",
+    "Admit for an unfractionated heparin infusion and warfarin"
+   ],
+   "answer": 0,
+   "chainStep": "Apixaban 10 mg twice daily for 7 days, then 5 mg twice daily; or rivaroxaban 15 mg twice daily with food for 21 days, then 20 mg once daily with food; baseline blood count, renal and liver function, PT and APTT",
+   "why": "ASH suggests a DOAC over a vitamin K antagonist, and NICE offers apixaban or rivaroxaban first, for at least 3 months. Neither needs a parenteral start; each begins at a higher dose instead, for 7 days with apixaban and 3 weeks with rivaroxaban, while dabigatran and edoxaban follow 5 to 10 days of heparin. Unfractionated heparin with warfarin is not routine unless renal failure or a high bleeding risk calls for it.",
+   "sources": [
+    {
+     "docId": "pmid:33007077",
+     "where": "Recommendations 3 and 4 with remarks; evidence text"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.3.5; 1.3.8; 1.3.9"
+    },
+    {
+     "docId": "url:3ae7a526534f",
+     "where": "2.1 Treatment of DVT and PE"
+    },
+    {
+     "docId": "url:cf40393193b8",
+     "where": "2.1 Treatment of DVT and/or PE"
+    }
+   ],
+   "next": "tx_setting",
+   "orders": [
+    {
+     "item": "Apixaban",
+     "dose": "10 mg twice daily for 7 days, then 5 mg twice daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3ae7a526534f",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "Rivaroxaban",
+     "dose": "15 mg twice daily with food for 21 days, then 20 mg once daily with food",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cf40393193b8",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "Dabigatran or edoxaban",
+     "dose": "Only after a parenteral start: LMWH for at least 5 days (NICE), 5 to 10 days of heparin (ASH)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.3.8"
+      },
+      {
+       "docId": "pmid:33007077",
+       "where": "Recommendation 3, evidence text"
+      }
+     ]
+    },
+    {
+     "item": "Rivaroxaban, CrCl under 15",
+     "dose": "Avoid",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:cf40393193b8",
+       "where": "8.6 Renal Impairment; 2.1 table"
+      }
+     ]
+    },
+    {
+     "item": "Rivaroxaban, CrCl 15 to under 30",
+     "dose": "Observe closely for bleeding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cf40393193b8",
+       "where": "8.6 Renal Impairment"
+      }
+     ]
+    },
+    {
+     "item": "Apixaban and the kidneys",
+     "dose": "No dose adjustment for renal impairment, including ESRD on dialysis (US label)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3ae7a526534f",
+       "where": "8.6 Renal Impairment"
+      }
+     ],
+     "note": "NICE lists only heparin-based options under CrCl 15, and ASH says its DOAC preference may not apply under CrCl 30."
+    },
+    {
+     "item": "CrCl under 15 (NICE)",
+     "dose": "LMWH, or unfractionated heparin, or either with a VKA for at least 5 days until the INR is 2.0 or more on 2 readings, then the VKA alone",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.3.14"
+      }
+     ]
+    },
+    {
+     "item": "CrCl 15 to 50 (NICE)",
+     "dose": "Apixaban or rivaroxaban; or LMWH for 5 days then edoxaban, or dabigatran if CrCl is 30 or more; or heparin with a VKA",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.3.13"
+      }
+     ]
+    },
+    {
+     "item": "Enoxaparin, CrCl under 30",
+     "dose": "1 mg/kg SC once daily (label, given with warfarin)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4fa1b610a0b0",
+       "where": "2.3 Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Weight under 50 or over 120 kg",
+     "dose": "Consider monitoring of therapeutic levels",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.3.11"
+      }
+     ]
+    },
+    {
+     "item": "Triple-positive antiphospholipid syndrome",
+     "dose": "LMWH with a VKA, then the VKA alone",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.3.20"
+      },
+      {
+       "docId": "pmid:33007077",
+       "where": "Recommendation 3 remarks"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tx_setting",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Where to treat",
+   "outcomes": [
+    {
+     "id": "home",
+     "if": "Home; stable, supported, pain controlled by mouth",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "provoke",
+     "orders": [
+      {
+       "item": "Home treatment",
+       "dose": "Suggested over hospital treatment for uncomplicated DVT",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33007077",
+         "where": "Recommendation 1"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "admit",
+     "if": "Admit; needs IV pain relief, no support at home, or another reason",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "provoke",
+     "orders": [
+      {
+       "item": "Hospital start",
+       "dose": "Limb-threatening DVT, high bleeding risk, IV analgesia, another condition needing admission, or limited support at home",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33007077",
+         "where": "Recommendation 1 remarks"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "provoke",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "What provoked it",
+   "outcomes": [
+    {
+     "id": "provoked",
+     "if": "Provoked; recent surgery, trauma, immobility or estrogen, now passed",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "dur_prov"
+    },
+    {
+     "id": "unprovoked",
+     "if": "Unprovoked; no recent major risk factor, no hormones",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "dur_unprov"
+    }
+   ]
+  },
+  {
+   "id": "dur_prov",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "DVT provoked by a transient factor that has passed. Duration?",
+   "options": [
+    "3 months, then stop if the course has been uncomplicated",
+    "6 weeks, then stop once the leg has settled down",
+    "6 to 12 months, then stop",
+    "Indefinitely, with a review of the bleeding and clot risks every year"
+   ],
+   "answer": 0,
+   "chainStep": "Anticoagulate for 3 months, then stop if the provoking factor has gone and the course was uncomplicated; give written warning signs and a thrombosis contact",
+   "why": "A proximal DVT is treated for at least 3 months, and ASH suggests a primary course of 3 to 6 months over 6 to 12. After a clot provoked by a transient factor that has gone, NICE considers stopping at 3 months if the course was uncomplicated, and ASH notes these patients typically need nothing more.",
+   "sources": [
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.3.5; 1.4.2; Terms used: provoked"
+    },
+    {
+     "docId": "pmid:33007077",
+     "where": "Recommendations 12 to 14 with remarks; recommendation 18 remarks"
+    }
+   ],
+   "next": "end_dvt_tx",
+   "orders": [
+    {
+     "item": "On stopping",
+     "dose": "Advice on recurrence, written warning signs, a thrombosis team contact and out-of-hours options",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.4.2"
+      }
+     ]
+    },
+    {
+     "item": "Thrombophilia testing",
+     "dose": "Not after a provoked DVT",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.9.2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dur_unprov",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Unprovoked DVT, 3 months of treatment done. Next?",
+   "options": [
+    "Continue indefinitely if bleeding risk allows; review yearly",
+    "Stop at 3 months, the same as for a provoked clot",
+    "Switch to aspirin, to lower the long-term risk of bleeding instead",
+    "Let a D-dimer at 3 months decide whether to stop it"
+   ],
+   "answer": 0,
+   "chainStep": "Continue anticoagulation indefinitely for secondary prevention when the bleeding risk allows, reviewed at least yearly; a lower-dose DOAC may be considered after the primary course",
+   "why": "After an unprovoked DVT, ASH suggests indefinite antithrombotic therapy over stopping, and NICE considers continuing beyond 3 months, telling patients with a low bleeding risk that the benefits likely outweigh the risks. Prognostic scores, a D-dimer or residual clot on ultrasound are not used routinely to decide, and anticoagulation is preferred to aspirin for secondary prevention. NICE suggests discussing stopping if the HAS-BLED score is 4 or more and cannot be modified.",
+   "sources": [
+    {
+     "docId": "pmid:33007077",
+     "where": "Recommendations 15 to 17, 19, 20 and 22 remarks"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.4.3; 1.4.4; 1.4.6; 1.4.12"
+    }
+   ],
+   "next": "end_dvt_tx",
+   "orders": [
+    {
+     "item": "Lower-dose DOAC",
+     "dose": "Apixaban 2.5 mg twice daily or rivaroxaban 10 mg once daily; the labels give these after at least 6 months of treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33007077",
+       "where": "Recommendation 22 remarks"
+      },
+      {
+       "docId": "url:3ae7a526534f",
+       "where": "2.1"
+      },
+      {
+       "docId": "url:cf40393193b8",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "Review",
+     "dose": "At least once a year",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.4.12"
+      }
+     ]
+    },
+    {
+     "item": "Cancer search",
+     "dose": "History, examination and baseline bloods; no further cancer tests without symptoms or signs",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.8.1; 1.8.2"
+      }
+     ]
+    },
+    {
+     "item": "Thrombophilia testing",
+     "dose": "Not while anticoagulation continues",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.9.1"
+      }
+     ]
+    },
+    {
+     "item": "Chronic persistent risk factor",
+     "dose": "Also indefinite therapy, unless the bleeding risk is high",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33007077",
+       "where": "Recommendation 18 and remarks"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_dvt_tx",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "DVT treated: apixaban or rivaroxaban, at home unless something keeps the patient in, for at least 3 months; stop at 3 months after a transient provoking factor, and continue indefinitely after an unprovoked clot when the bleeding risk allows."
+  },
+  {
+   "id": "cancer",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "DVT with active cancer. Anticoagulant for the first 3 to 6 months?",
+   "options": [
+    "A DOAC, used carefully in GI cancers; LMWH if a DOAC is unsuitable",
+    "Warfarin, started alongside heparin, for the first 6 months of treatment",
+    "Unfractionated heparin infusions for the first 3 months",
+    "An IVC filter, holding anticoagulation during chemotherapy"
+   ],
+   "answer": 0,
+   "chainStep": "Apixaban or rivaroxaban at treatment doses (or edoxaban after heparin) for 3 to 6 months, used carefully in GI cancers; LMWH if a DOAC is unsuitable; check interactions with the cancer drugs; then continue while the cancer is active",
+   "why": "For the first 3 to 6 months ASH suggests a DOAC, apixaban, edoxaban or rivaroxaban, over LMWH, and either over a vitamin K antagonist; NICE considers a DOAC and turns to LMWH when a DOAC is unsuitable. DOACs are used carefully in GI cancers, where GI bleeding is more common, and tumour site, drug interactions and bleeding risk shape the choice. For the first week LMWH is recommended over unfractionated heparin, and an IVC filter is not a substitute for anticoagulation.",
+   "sources": [
+    {
+     "docId": "pmid:33570602",
+     "where": "Recommendations 20, 21 and 23 to 25 with remarks; recommendation 32"
+    },
+    {
+     "docId": "url:329bf4ccdc3f",
+     "where": "1.3.15 to 1.3.18; 1.7.1"
+    }
+   ],
+   "next": "end_cancer",
+   "orders": [
+    {
+     "item": "Apixaban or rivaroxaban",
+     "dose": "Treatment doses as in the labels: apixaban 10 mg twice daily for 7 days then 5 mg twice daily; rivaroxaban 15 mg twice daily with food for 21 days then 20 mg daily with food",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33570602",
+       "where": "Recommendation 20"
+      },
+      {
+       "docId": "url:3ae7a526534f",
+       "where": "2.1"
+      },
+      {
+       "docId": "url:cf40393193b8",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "GI cancer",
+     "dose": "Use a DOAC carefully: GI bleeding is more common",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33570602",
+       "where": "Recommendations 20 and 23 to 25 remarks"
+      }
+     ]
+    },
+    {
+     "item": "CrCl under 30",
+     "dose": "Unfractionated heparin might be preferred over LMWH",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33570602",
+       "where": "Initial treatment, remarks"
+      }
+     ]
+    },
+    {
+     "item": "Duration",
+     "dose": "3 to 6 months, then reviewed (NICE); ASH suggests long-term anticoagulation beyond 6 months while the cancer is active",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:329bf4ccdc3f",
+       "where": "1.3.15"
+      },
+      {
+       "docId": "pmid:33570602",
+       "where": "Recommendation 32"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_cancer",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cancer-associated DVT: a DOAC for the first 3 to 6 months, used carefully in GI cancers, LMWH when a DOAC is unsuitable; then long-term anticoagulation while the cancer is active, reviewed for bleeding and drug interactions."
+  }
+ ],
+ "cases": [
+  {
+   "id": "ali_salvage",
+   "label": "Acute limb ischemia, salvageable",
+   "vignette": "74-year-old woman with atrial fibrillation who stopped her apixaban 2 weeks ago for dental work. Sudden pain in the right leg 3 hours ago. BP 150/88, HR 104 and irregular.",
+   "picks": {
+    "front": "ali",
+    "ali_cat": "salvage"
+   },
+   "results": {
+    "front": "Right foot cold and white; no femoral, popliteal or pedal pulses; the leg is not swollen.",
+    "ali_cat": "Toes numb, but she moves the foot and toes; no arterial Doppler signal at the ankle, venous signal heard."
+   }
+  },
+  {
+   "id": "ali_lost",
+   "label": "Acute limb ischemia, irreversible",
+   "vignette": "81-year-old man found on his kitchen floor about 2 days after he last spoke to his family. Alert, no head injury, no bleeding. BP 128/72, HR 96.",
+   "picks": {
+    "front": "ali",
+    "ali_cat": "lost"
+   },
+   "results": {
+    "front": "Left leg cold and mottled to the knee, no pulses; the leg is not swollen.",
+    "ali_cat": "The foot is insensate and he cannot move it; no arterial or venous Doppler signal."
+   }
+  },
+  {
+   "id": "phlegmasia",
+   "label": "Phlegmasia cerulea dolens",
+   "vignette": "46-year-old woman on the combined pill, 3 days of left leg pain that is now severe. No recent surgery, bleeding or stroke. BP 124/78, HR 96.",
+   "picks": {
+    "front": "phleg"
+   },
+   "results": {
+    "front": "The whole left leg is swollen from groin to foot, tense and blue-purple; foot pulses faint but present."
+   }
+  },
+  {
+   "id": "septic_leg",
+   "label": "Shock with a hot red leg",
+   "vignette": "63-year-old man with diabetes, 2 days of a red, hot, swollen right leg, now confused. Temperature 39.4. BP 82/46 after a liter of fluid, HR 126.",
+   "picks": {
+    "front": "shock"
+   },
+   "results": {
+    "front": "Right shin and calf red, hot and swollen; the foot is warm with pulses; BP 82/46."
+   }
+  },
+  {
+   "id": "nsti",
+   "label": "Necrotizing fasciitis",
+   "vignette": "49-year-old man with diabetes, a shin graze 2 days ago, now severe pain in the leg. Temperature 38.6, HR 108, BP 124/76.",
+   "picks": {
+    "front": "nsti",
+    "nsti_or": "nec"
+   },
+   "results": {
+    "front": "Pain far worse than the dusky redness suggests; tense swelling past its edge; two bullae; foot pulses present.",
+    "nsti_or": "Grey fascia that does not bleed and separates under a finger; dishwater fluid."
+   }
+  },
+  {
+   "id": "nsti_negative",
+   "label": "Explored, no necrosis",
+   "vignette": "37-year-old woman, a gardening scratch on the calf yesterday, now redness spreading by the hour with severe pain. Temperature 38.9, HR 104, BP 120/74.",
+   "picks": {
+    "front": "nsti",
+    "nsti_or": "none"
+   },
+   "results": {
+    "front": "Pain out of proportion to the redness, edema beyond it, the edge spreading past a pen mark within hours; no bullae; foot pulses present.",
+    "nsti_or": "Healthy fascia that bleeds and resists the finger; no dishwater fluid."
+   }
+  },
+  {
+   "id": "pe_symptoms",
+   "label": "Swollen calf with PE symptoms",
+   "vignette": "39-year-old woman, a week after a long flight, a painful swollen left calf and, since this morning, breathlessness and right-sided pleuritic pain. HR 104, BP 122/76, SpO2 93%.",
+   "picks": {
+    "front": "pe"
+   },
+   "results": {
+    "front": "Left calf swollen and tender; breathless at rest; BP 122/76, SpO2 93%."
+   }
+  },
+  {
+   "id": "bilateral",
+   "label": "Both ankles swollen",
+   "vignette": "72-year-old woman, 4 weeks of swelling of both ankles. Her amlodipine was raised from 5 to 10 mg 6 weeks ago. No breathlessness or orthopnea. BP 138/80.",
+   "picks": {
+    "front": "both"
+   },
+   "results": {
+    "front": "Both ankles and shins pit equally; skin not red; pulses normal; no breathlessness."
+   }
+  },
+  {
+   "id": "cellulitis",
+   "label": "Cellulitis, oral treatment",
+   "vignette": "44-year-old woman, 2 days of a red, warm, tender patch spreading up the right shin from a cracked heel. Temperature 37.2, HR 82. No drug use, no MRSA history, no antibiotics this year.",
+   "picks": {
+    "front": "one",
+    "findings": "cell"
+   },
+   "results": {
+    "front": "No ischemia, shock, necrotizing signs or PE symptoms; one leg affected.",
+    "findings": "Spreading redness, warmth and tenderness of the right shin; no pus or fluctuance; tinea between the toes."
+   }
+  },
+  {
+   "id": "cellulitis_mrsa",
+   "label": "Cellulitis with an MRSA risk",
+   "vignette": "33-year-old man who injects heroin into his left thigh, 3 days of spreading redness there. Temperature 38.6, HR 106, BP 126/78.",
+   "picks": {
+    "front": "one",
+    "findings": "mrsa"
+   },
+   "results": {
+    "front": "No ischemia, shock or PE symptoms; pain matches the redness, no bullae or crepitus.",
+    "findings": "Spreading redness and warmth of the left thigh around injection sites; no pus or fluctuance."
+   }
+  },
+  {
+   "id": "abscess",
+   "label": "Abscess with surrounding cellulitis",
+   "vignette": "24-year-old college wrestler with a painful lump on the left shin for 4 days. Temperature 37.4, HR 84.",
+   "picks": {
+    "front": "one",
+    "findings": "pus"
+   },
+   "results": {
+    "front": "No ischemia, shock, necrotizing signs or PE symptoms.",
+    "findings": "A fluctuant 3 cm abscess with redness spreading about 4 cm beyond its edge."
+   }
+  },
+  {
+   "id": "pregnant",
+   "label": "Pregnant, swollen calf",
+   "vignette": "31-year-old woman, 26 weeks pregnant, 2 days of a swollen, aching left calf. BP 112/70, HR 92, SpO2 99%.",
+   "picks": {
+    "front": "one",
+    "findings": "preg",
+    "preg_us_result": "pos"
+   },
+   "results": {
+    "front": "No ischemia, shock, necrotizing signs or PE symptoms.",
+    "findings": "Left calf 3 cm larger and tender along the deep veins; skin not red.",
+    "preg_us_result": "Left popliteal and femoral veins do not compress; iliac veins patent"
+   }
+  },
+  {
+   "id": "pregnant_negative",
+   "label": "Pregnant, first scan negative",
+   "vignette": "28-year-old woman, 20 weeks pregnant, 3 days of an aching, swollen right calf. BP 114/68, HR 88, SpO2 99%.",
+   "picks": {
+    "front": "one",
+    "findings": "preg",
+    "preg_us_result": "neg"
+   },
+   "results": {
+    "front": "No ischemia, shock, necrotizing signs or PE symptoms.",
+    "findings": "Right calf 2 cm larger and tender; skin not red.",
+    "preg_us_result": "Femoral and popliteal veins compress normally; iliac veins imaged, with normal flow; no other cause seen."
+   }
+  },
+  {
+   "id": "dd_negative",
+   "label": "DVT unlikely, D-dimer negative",
+   "vignette": "34-year-old woman with an aching left calf since a long hike 2 days ago. No cancer, surgery, immobility, previous clot or hormones.",
+   "picks": {
+    "front": "one",
+    "findings": "dvt",
+    "wells_result": "unlikely",
+    "dd_result": "neg"
+   },
+   "results": {
+    "front": "No ischemia, shock, necrotizing signs or PE symptoms.",
+    "findings": "Left calf 3 cm larger, tender over the muscle belly; no spreading redness.",
+    "wells_result": "Wells -1: calf 3 cm or more larger (1); a calf muscle strain is at least as likely as DVT (-2).",
+    "dd_result": "D-dimer below the cutoff."
+   }
+  },
+  {
+   "id": "us_negative",
+   "label": "DVT unlikely, D-dimer positive, scan clear",
+   "vignette": "58-year-old man, 4 days of a swollen right calf. No cancer, surgery, immobility or previous clot.",
+   "picks": {
+    "front": "one",
+    "findings": "dvt",
+    "wells_result": "unlikely",
+    "dd_result": "pos",
+    "us_result": "neg_unl"
+   },
+   "results": {
+    "front": "No ischemia, shock, necrotizing signs or PE symptoms.",
+    "findings": "Right calf 3.5 cm larger; not tender along the deep veins; no pitting; no spreading redness.",
+    "wells_result": "Wells 1: calf 3 cm or more larger (1); nothing else.",
+    "dd_result": "D-dimer above his age-adjusted cutoff.",
+    "us_result": "Proximal leg veins compress normally."
+   }
+  },
+  {
+   "id": "us_other_cause",
+   "label": "No DVT, another cause on the scan",
+   "vignette": "52-year-old man, 4 days of a swollen, painful right calf. No injury he can recall; on no anticoagulant. No cancer, surgery or previous clot.",
+   "picks": {
+    "front": "one",
+    "findings": "dvt",
+    "wells_result": "likely",
+    "us_result": "other"
+   },
+   "results": {
+    "front": "No ischemia, shock, necrotizing signs or PE symptoms.",
+    "findings": "Right calf 3 cm larger, tender along the deep veins, pitting edema of that leg only; no spreading redness.",
+    "wells_result": "Wells 3: calf 3 cm or more larger (1), tenderness along the deep veins (1), pitting edema confined to that leg (1).",
+    "us_result": "Veins compress normally from groin to ankle; a 5 cm intramuscular hematoma in the medial gastrocnemius."
+   }
+  },
+  {
+   "id": "baker",
+   "label": "Ruptured Baker cyst",
+   "vignette": "66-year-old woman with osteoarthritis of the right knee, 2 days of a painful, swollen right calf. No cancer, surgery or previous clot.",
+   "picks": {
+    "front": "one",
+    "findings": "dvt",
+    "wells_result": "likely",
+    "us_result": "baker"
+   },
+   "results": {
+    "front": "No ischemia, shock, necrotizing signs or PE symptoms.",
+    "findings": "Right calf 3 cm larger, tender along the deep veins, pitting edema of that leg only; no spreading redness. No popliteal swelling felt.",
+    "wells_result": "Wells 3: calf 3 cm or more larger (1), tenderness along the deep veins (1), pitting edema confined to that leg (1).",
+    "us_result": "Veins compress normally from groin to ankle; a ruptured popliteal cyst, with fluid tracking down between the calf muscles."
+   }
+  },
+  {
+   "id": "repeat_clear",
+   "label": "DVT likely, repeat scan clear",
+   "vignette": "45-year-old man, 3 days after a long-haul flight, a swollen, painful left calf. No cancer, surgery or previous clot.",
+   "picks": {
+    "front": "one",
+    "findings": "dvt",
+    "wells_result": "likely",
+    "us_result": "neg_lik",
+    "repeat_result": "clear"
+   },
+   "results": {
+    "front": "No ischemia, shock, necrotizing signs or PE symptoms.",
+    "findings": "Left calf 3 cm larger, tender along the deep veins, pitting edema of that leg only.",
+    "wells_result": "Wells 3: calf 3 cm or more larger (1), tenderness along the deep veins (1), pitting edema confined to that leg (1).",
+    "us_result": "Proximal scan: the femoral and popliteal veins compress normally; no other cause seen.",
+    "repeat_result": "D-dimer positive; the repeat proximal scan on day 7 compresses normally."
+   }
+  },
+  {
+   "id": "provoked_home",
+   "label": "Proximal DVT after knee surgery",
+   "vignette": "62-year-old man, 3 weeks after a left knee replacement, now walking, with a swollen, painful left leg. Lives with his wife. No bleeding history. CrCl 78 mL/min.",
+   "picks": {
+    "front": "one",
+    "findings": "dvt",
+    "wells_result": "likely",
+    "us_result": "prox",
+    "tx_group": "std",
+    "tx_setting": "home",
+    "provoke": "provoked"
+   },
+   "results": {
+    "front": "No ischemia, shock, necrotizing signs or PE symptoms.",
+    "findings": "The whole left leg is swollen, the calf 4 cm larger, with pitting edema of that leg only.",
+    "wells_result": "Wells 4: major surgery within 12 weeks (1), entire leg swollen (1), calf 3 cm or more larger (1), pitting edema confined to that leg (1).",
+    "us_result": "The left popliteal and femoral veins do not compress.",
+    "tx_group": "No cancer; not pregnant.",
+    "tx_setting": "Pain controlled with oral analgesia; his wife is at home.",
+    "provoke": "Provoked by the knee replacement 3 weeks ago; he is now mobile."
+   }
+  },
+  {
+   "id": "unprovoked_admit",
+   "label": "Unprovoked DVT on the repeat scan",
+   "vignette": "57-year-old woman with no recent surgery, travel, injury or hormones, 4 days of a swollen, painful right calf. Lives alone. No previous bleeding.",
+   "picks": {
+    "front": "one",
+    "findings": "dvt",
+    "wells_result": "likely",
+    "us_result": "neg_lik",
+    "repeat_result": "dvt",
+    "tx_group": "std",
+    "tx_setting": "admit",
+    "provoke": "unprovoked"
+   },
+   "results": {
+    "front": "No ischemia, shock, necrotizing signs or PE symptoms.",
+    "findings": "Right calf 3 cm larger, tender along the deep veins, pitting edema of that leg only.",
+    "wells_result": "Wells 3: calf 3 cm or more larger (1), tenderness along the deep veins (1), pitting edema confined to that leg (1).",
+    "us_result": "Proximal scan: veins compress normally; no other cause seen.",
+    "repeat_result": "D-dimer positive; on the day 7 repeat scan the right popliteal vein no longer compresses.",
+    "tx_group": "No cancer; not pregnant.",
+    "tx_setting": "The pain now needs IV morphine, and she lives alone.",
+    "provoke": "No surgery, injury, immobility, travel or hormones in the last 3 months; blood count and kidney function normal."
+   }
+  },
+  {
+   "id": "distal_low",
+   "label": "Isolated distal DVT, low risk",
+   "vignette": "41-year-old man whose below-knee cast for an ankle fracture came off a week ago, now an aching left calf. Walking normally. No cancer or previous clot.",
+   "picks": {
+    "front": "one",
+    "findings": "dvt",
+    "wells_result": "likely",
+    "us_result": "distal",
+    "distal_risk": "low"
+   },
+   "results": {
+    "front": "No ischemia, shock, necrotizing signs or PE symptoms.",
+    "findings": "Left calf mildly tender along the deep veins, 1 cm larger; no spreading redness.",
+    "wells_result": "Wells 2: recent plaster immobilization (1), tenderness along the deep veins (1).",
+    "us_result": "Whole-leg scan: a 2 cm clot in one peroneal vein; the popliteal and femoral veins compress normally.",
+    "distal_risk": "Mild ache only; one short clot well below the popliteal vein; the cast is off; no cancer, previous VTE or admission."
+   }
+  },
+  {
+   "id": "distal_cancer",
+   "label": "Distal DVT with active cancer",
+   "vignette": "66-year-old man with lung cancer on chemotherapy, 3 days of a swollen, painful right calf. His oncology pharmacist reports no interacting drugs.",
+   "picks": {
+    "front": "one",
+    "findings": "dvt",
+    "wells_result": "likely",
+    "us_result": "distal",
+    "distal_risk": "high",
+    "tx_group": "cancer"
+   },
+   "results": {
+    "front": "No ischemia, shock, necrotizing signs or PE symptoms.",
+    "findings": "Right calf 3 cm larger with pitting edema of that leg only; no spreading redness.",
+    "wells_result": "Wells 3: active cancer (1), calf 3 cm or more larger (1), pitting edema confined to that leg (1).",
+    "us_result": "Whole-leg scan: clot in two posterior tibial veins over 6 cm; the popliteal and femoral veins compress normally.",
+    "distal_risk": "Active cancer, a clot over 5 cm, and more than one vein involved.",
+    "tx_group": "Lung cancer on chemotherapy: active cancer."
+   }
+  }
+ ]
+}

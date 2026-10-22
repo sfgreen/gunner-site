@@ -1,0 +1,1902 @@
+{
+ "id": "pw_syncope",
+ "title": "Syncope",
+ "world": "cardio",
+ "synonyms": [
+  "syncope",
+  "fainting",
+  "faint",
+  "blackout",
+  "passed out",
+  "collapse",
+  "transient loss of consciousness",
+  "TLoC",
+  "vasovagal syncope",
+  "reflex syncope",
+  "situational syncope",
+  "orthostatic hypotension",
+  "postural hypotension",
+  "cardiac syncope",
+  "complete heart block",
+  "Mobitz II",
+  "long QT",
+  "Brugada",
+  "WPW",
+  "aortic stenosis",
+  "HCM",
+  "Canadian Syncope Risk Score",
+  "CSRS",
+  "San Francisco Syncope Rule",
+  "CHESS"
+ ],
+ "reviewBy": "2027-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:7b949a5cebeb",
+   "label": "NICE CG109",
+   "title": "Transient loss of consciousness ('blackouts') in over 16s (NICE CG109, last updated 2023)",
+   "url": "https://www.nice.org.uk/guidance/cg109"
+  },
+  {
+   "docId": "url:3489e1e96576",
+   "label": "NICE NG136",
+   "title": "Hypertension in adults: diagnosis and management (postural hypotension, 1.1.5 to 1.1.7)",
+   "url": "https://www.nice.org.uk/guidance/ng136"
+  },
+  {
+   "docId": "url:80ade8bcc827",
+   "label": "NICE NG208",
+   "title": "Heart valve disease presenting in adults: investigation and management",
+   "url": "https://www.nice.org.uk/guidance/ng208"
+  },
+  {
+   "docId": "url:b1149372731c",
+   "label": "NICE NG126",
+   "title": "Ectopic pregnancy and miscarriage: diagnosis and initial management",
+   "url": "https://www.nice.org.uk/guidance/ng126"
+  },
+  {
+   "docId": "pmid:31504429",
+   "label": "ESC PE 2019",
+   "title": "2019 ESC Guidelines for the diagnosis and management of acute pulmonary embolism",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31504429/"
+  },
+  {
+   "docId": "pmid:34455427",
+   "label": "ESC pacing 2021",
+   "title": "2021 ESC Guidelines on cardiac pacing and cardiac resynchronization therapy (EP Europace co-publication)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34455427/"
+  },
+  {
+   "docId": "pmid:25980576",
+   "label": "HRS 2015",
+   "title": "2015 Heart Rhythm Society expert consensus statement on postural tachycardia syndrome, inappropriate sinus tachycardia, and vasovagal syncope",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25980576/"
+  },
+  {
+   "docId": "pmid:39082572",
+   "label": "SBC HCM 2024",
+   "title": "Brazilian Society of Cardiology guidelines on the diagnosis and treatment of hypertrophic cardiomyopathy, 2024",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39082572/"
+  },
+  {
+   "docId": "pmid:27378464",
+   "label": "CSRS 2016",
+   "title": "Development of the Canadian Syncope Risk Score to predict serious adverse events after ED assessment of syncope (CMAJ 2016)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27378464/"
+  },
+  {
+   "docId": "pmid:41193023",
+   "label": "WJEM 2025",
+   "title": "Potential impact of using the Canadian Syncope Risk Score on ED hospitalizations for syncope",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41193023/"
+  },
+  {
+   "docId": "pmid:42154462",
+   "label": "JAMA Netw Open 2026",
+   "title": "Validation of 2 syncope risk scores and comparison with physician risk estimation",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42154462/"
+  },
+  {
+   "docId": "pmid:21948723",
+   "label": "SFSR review 2011",
+   "title": "San Francisco Syncope Rule to predict short-term serious outcomes: a systematic review (CMAJ 2011)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21948723/"
+  },
+  {
+   "docId": "url:44d97365d556",
+   "label": "NICE NG217",
+   "title": "Epilepsies in children, young people and adults (NICE NG217, 2022)",
+   "url": "https://www.nice.org.uk/guidance/ng217"
+  },
+  {
+   "docId": "pmid:38043043",
+   "label": "AF 2023",
+   "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation (JACC copy)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38043043/"
+  },
+  {
+   "docId": "pmid:39496561",
+   "label": "SAEM GRACE review 2025",
+   "title": "Risk-stratification tools for ED patients with syncope: a systematic review and meta-analysis for SAEM GRACE",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39496561/"
+  },
+  {
+   "docId": "pmid:36017572",
+   "label": "ESC VA 2022",
+   "title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36017572/"
+  },
+  {
+   "docId": "pmid:20185054",
+   "label": "AHA/ACCF TdP 2010",
+   "title": "Prevention of torsade de pointes in hospital settings: AHA/ACCF scientific statement (JACC copy)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20185054/"
+  }
+ ],
+ "differential": [
+  "Vasovagal or situational syncope",
+  "Orthostatic hypotension",
+  "High-grade AV block",
+  "Ventricular tachycardia",
+  "Long QT, Brugada or pre-excitation",
+  "Aortic stenosis",
+  "Hypertrophic cardiomyopathy",
+  "Pulmonary embolism",
+  "GI bleeding",
+  "Ectopic pregnancy",
+  "Seizure",
+  "Hypoglycemia",
+  "Ruptured abdominal aortic aneurysm",
+  "ACS",
+  "Aortic dissection",
+  "Subarachnoid hemorrhage"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Brought in after a collapse. First moves?",
+   "options": [
+    "Monitor, vitals, 12-lead ECG, glucose if it could be low, and the story",
+    "Vitals, a 12-lead ECG, a 48-hour Holter before discharge, and the story",
+    "Vitals, a 12-lead ECG, an urgent EEG, and the story of what happened",
+    "Vitals, a 12-lead ECG, a tilt-table test today, and the story"
+   ],
+   "answer": 0,
+   "chainStep": "Cardiac monitor and vitals; a 12-lead ECG for everyone; the account of before, during and after from the patient and any witnesses",
+   "why": "Everyone with a suspected blackout gets vitals, a 12-lead ECG and an account, from the patient and any witnesses, of what happened before, during and after. Arrhythmia is the commonest cause of a falsely negative San Francisco rule, so monitoring is part of the assessment. A Holter never replaces the 12-lead, and for infrequent blackouts it is not usually offered unless the 12-lead shows a conduction abnormality; EEG is not a routine test for a blackout, and a tilt test is not a first-line investigation.",
+   "sources": [
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.1.1.2; 1.1.2.1; 1.1.2.2; 1.2.2.1; 1.3.2.4; 1.1.2.4"
+    },
+    {
+     "docId": "pmid:21948723",
+     "where": "Abstract, results and interpretation"
+    }
+   ],
+   "next": "front",
+   "orders": [
+    {
+     "item": "12-lead ECG",
+     "dose": "Everyone. A red flag if it shows a conduction abnormality (bundle branch block or any degree of heart block), a long or short QT, or any ST segment or T wave abnormality",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.1.2.2"
+      }
+     ]
+    },
+    {
+     "item": "Manual ECG read",
+     "dose": "Without automated interpretation, look for persistent bradycardia, any ventricular arrhythmia, QTc over 450 ms or under 350 ms, a Brugada pattern, pre-excitation, ventricular hypertrophy, abnormal T wave inversion, pathological Q waves, a sustained atrial arrhythmia, a paced rhythm",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.1.2.3"
+      }
+     ]
+    },
+    {
+     "item": "Vitals and drugs",
+     "dose": "Pulse, respiratory rate, temperature; lying and standing blood pressure if clinically appropriate; the drug list, looking for culprits such as diuretics",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.1.2.1"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: under-16s, cardiac arrest, head injury from the collapse, intoxication, syncope with a reduced ejection fraction or other structural disease on the echo."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Monitor and vitals",
+   "outcomes": [
+    {
+     "id": "brady_shock",
+     "if": "Bradycardia with shock; high-grade AV block or a very slow rate, with low pressure or confusion",
+     "ddx": {
+      "lead": [
+       "High-grade AV block"
+      ],
+      "out": []
+     },
+     "next": "brady_unstable"
+    },
+    {
+     "id": "vt",
+     "if": "Ventricular tachycardia; sustained, on the monitor",
+     "ddx": {
+      "lead": [
+       "Ventricular tachycardia"
+      ],
+      "out": []
+     },
+     "next": "end_vt",
+     "orders": [
+      {
+       "item": "Synchronized cardioversion",
+       "dose": "Immediate synchronized cardioversion with haemodynamic instability; an unsynchronized shock if synchronization is not possible",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:36017572",
+         "where": "6.1.2"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "shock_other",
+     "if": "Shock without bradycardia or VT; still hypotensive after coming round",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_shock"
+    },
+    {
+     "id": "other",
+     "if": "Neither; no VT, no bradycardia, no shock",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "look"
+    }
+   ]
+  },
+  {
+   "id": "brady_unstable",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Bradycardia with shock after a collapse. Treatment?",
+   "options": [
+    "IV atropine, then pacing if the rate and pressure do not respond",
+    "Watch on the monitor; pace only if the collapse recurs",
+    "A permanent pacemaker first, before any drug or temporary pacing",
+    "Wait for the potassium and digoxin level before treating"
+   ],
+   "answer": 0,
+   "chainStep": "IV chronotropic drug (atropine); temporary pacing if it fails, transcutaneous as the emergency bridge and transvenous when available; labs for a reversible cause",
+   "why": "Temporary pacing is emergency treatment for a bradyarrhythmia causing syncope or hemodynamic compromise, once an IV chronotropic drug has been considered; atropine is named, in the guideline's acute MI section, for vagally mediated bradycardia and AV block. Transcutaneous pacing is fast and non-invasive but less stable and needs sedation, so it is for the emergency or when transvenous pacing is not available. Labs for a reversible cause go alongside, and a permanent pacemaker follows promptly once its criteria are met.",
+   "sources": [
+    {
+     "docId": "pmid:34455427",
+     "where": "11.3 recommendations regarding temporary cardiac pacing and text; 8.1 text; 4.3.4"
+    }
+   ],
+   "next": "pace",
+   "orders": [
+    {
+     "item": "Atropine",
+     "dose": "Dose not stated in the open sources read",
+     "status": "pending",
+     "note": "The US ACLS bradycardia algorithm (AHA, Circulation) is barred from AI use and the ERC 2021 copy was not reachable; the dose needs one of them."
+    },
+    {
+     "item": "Temporary transvenous pacing",
+     "dose": "Bradycardia that compromises the circulation and does not respond to IV chronotropic drugs; also the bridge when a permanent implant is not immediately available",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34455427",
+       "where": "11.3 recommendations, Class I and IIa"
+      }
+     ]
+    },
+    {
+     "item": "Transcutaneous pacing",
+     "dose": "When transvenous pacing is not possible or available; emergency use only, under close hemodynamic monitoring, with sedation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34455427",
+       "where": "11.3 recommendation, Class IIa; 11.3 text"
+      }
+     ],
+     "note": "ESC 2021 ranks transcutaneous pacing behind transvenous; the US algorithm uses it as the first pacing step after atropine. Pacing is never delayed for a drug that has failed."
+    },
+    {
+     "item": "Labs for a reversible cause",
+     "dose": "Thyroid function, Lyme titer, digoxin level, potassium, calcium and pH when clinically suspected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34455427",
+       "where": "4.3.4 recommendation, Class I"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_vt",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Sustained VT after a collapse: immediate synchronized cardioversion when unstable (unsynchronized if synchronization is not possible); if tolerated, continue in the palpitations pathway's wide-complex route."
+  },
+  {
+   "id": "look",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "No VT, no bradycardia and no shock. Next?",
+   "options": [
+    "The witnesses' account; glucose, hemoglobin and a pregnancy test where they fit",
+    "Carotid sinus massage at the bedside to look for a reflex cause",
+    "An epilepsy referral, since the limbs jerked during it",
+    "Admit for telemetry before taking the history"
+   ],
+   "answer": 0,
+   "chainStep": "Full account from the patient and witnesses; glucose if hypoglycemia is possible, hemoglobin if bleeding or anemia is, a pregnancy test in any woman who could be pregnant",
+   "why": "The account decides whether this was a blackout at all; if that stays uncertain, assume it was until proven otherwise, and a cause that needs immediate action is treated first. Glucose is checked when hypoglycemia is possible and hemoglobin when bleeding or anemia is. A pregnancy test is worth offering even when symptoms are non-specific: fainting and collapse are presentations of ectopic pregnancy, as syncope is of PE. Brief jerking happens in ordinary faints and is not by itself epilepsy. Carotid sinus massage is a later test, done with ECG recording and resuscitation equipment at hand, and an uncomplicated faint needs no further immediate management.",
+   "sources": [
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.1.1.4; 1.1.2.2; 1.1.2.4; 1.1.4.1; 1.1.4.3; 1.1.4.5; 1.2.2.1; 1.3.2.7"
+    },
+    {
+     "docId": "pmid:21948723",
+     "where": "Box 1"
+    },
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.4.3; 1.4.4; 1.4.5"
+    },
+    {
+     "docId": "pmid:31504429",
+     "where": "4.1 Clinical presentation"
+    }
+   ],
+   "next": "event"
+  },
+  {
+   "id": "event",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "History, glucose, hemoglobin and pregnancy test",
+   "outcomes": [
+    {
+     "id": "not_tloc",
+     "if": "Not a blackout; a trip or fall, aware throughout",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_not_tloc"
+    },
+    {
+     "id": "hypo",
+     "if": "Hypoglycemia; low glucose in a person with diabetes",
+     "ddx": {
+      "lead": [
+       "Hypoglycemia"
+      ],
+      "out": []
+     },
+     "next": "end_hypo",
+     "orders": [
+      {
+       "item": "Glucose",
+       "dose": "Dose for a non-seizing patient not in the open sources read; the seizure pathway's AES dose (thiamine 100 mg IV, then 50 mL of 50% dextrose IV, glucose under 60 mg/dL) is for a seizure",
+       "status": "pending"
+      }
+     ]
+    },
+    {
+     "id": "seizure",
+     "if": "Seizure features; a bitten tongue, head turning, prolonged jerking or confusion afterward",
+     "ddx": {
+      "lead": [
+       "Seizure"
+      ],
+      "out": []
+     },
+     "next": "end_seizure",
+     "orders": [
+      {
+       "item": "Epilepsy specialist",
+       "dose": "Within 2 weeks when features strongly suggest a seizure: a bitten tongue, head turning to one side, unusual posturing, prolonged limb jerking, confusion afterward, déjà vu or jamais vu",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:7b949a5cebeb",
+         "where": "1.2.2.1"
+        }
+       ]
+      },
+      {
+       "item": "EEG",
+       "dose": "Routine awake EEG if an epileptic seizure is suspected, ideally within 72 hours, through the seizure workup; not a routine test for a blackout that is not a suspected seizure",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:44d97365d556",
+         "where": "1.2.5; 1.2.7"
+        },
+        {
+         "docId": "url:7b949a5cebeb",
+         "where": "1.2.2.1"
+        }
+       ]
+      },
+      {
+       "item": "Driving",
+       "dose": "Must not drive while waiting for the specialist assessment",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:7b949a5cebeb",
+         "where": "1.5.2.2"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "gi_bleed",
+     "if": "GI bleeding; melena or hematemesis, often a low hemoglobin",
+     "ddx": {
+      "lead": [
+       "GI bleeding"
+      ],
+      "out": []
+     },
+     "next": "end_gi_bleed"
+    },
+    {
+     "id": "pregnant",
+     "if": "Pregnancy test positive; in a woman who fainted",
+     "ddx": {
+      "lead": [
+       "Ectopic pregnancy"
+      ],
+      "out": []
+     },
+     "next": "end_ectopic"
+    },
+    {
+     "id": "breathless",
+     "if": "New breathlessness; or hypoxia, a swollen leg, a recent operation",
+     "ddx": {
+      "lead": [
+       "Pulmonary embolism"
+      ],
+      "out": []
+     },
+     "next": "end_dyspnea"
+    },
+    {
+     "id": "chest_pain",
+     "if": "Chest pain with the collapse; or pain tearing through to the back",
+     "ddx": {
+      "lead": [
+       "ACS",
+       "Aortic dissection"
+      ],
+      "out": []
+     },
+     "next": "end_chest_pain"
+    },
+    {
+     "id": "headache",
+     "if": "Sudden severe headache; at or just before the collapse",
+     "ddx": {
+      "lead": [
+       "Subarachnoid hemorrhage"
+      ],
+      "out": []
+     },
+     "next": "end_headache"
+    },
+    {
+     "id": "syncope",
+     "if": "Syncope; a blackout with full recovery, none of the above",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "risk_step"
+    }
+   ]
+  },
+  {
+   "id": "end_not_tloc",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No loss of consciousness: a fall, not a blackout. Assess and manage it as a fall; this pathway stops here."
+  },
+  {
+   "id": "end_hypo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypoglycemia explains the collapse: give glucose now and find out why (insulin with a missed meal here); the non-seizure dose is pending a source."
+  },
+  {
+   "id": "end_seizure",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Features that strongly suggest an epileptic seizure, not syncope: continue in the seizure pathway. From this guideline: an epilepsy specialist within 2 weeks, an EEG through the seizure workup, and no driving while waiting."
+  },
+  {
+   "id": "end_gi_bleed",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Syncope with GI bleeding: continue in the GI bleed pathway, which starts with hemodynamics and resuscitation."
+  },
+  {
+   "id": "end_ectopic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Positive pregnancy test after a faint: continue in the abdominal pain pathway, where a transvaginal ultrasound locates the pregnancy."
+  },
+  {
+   "id": "end_dyspnea",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Syncope with new breathlessness: continue in the dyspnea pathway, where PE is weighed by clinical probability."
+  },
+  {
+   "id": "end_chest_pain",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Syncope with chest pain or an ischemic ECG: continue in the chest pain pathway, which covers ACS and aortic dissection."
+  },
+  {
+   "id": "end_headache",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Collapse with a sudden severe headache: continue in the headache pathway, where subarachnoid hemorrhage is excluded."
+  },
+  {
+   "id": "end_shock",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Shock after a collapse, without bradycardia or VT, is not a faint that has recovered: resuscitate and find the source now. Back pain or a pulsatile mass continues in the abdominal pain pathway (ruptured AAA); melena or hematemesis in the GI bleed pathway; a positive pregnancy test in the abdominal pain pathway; hypoxia or new breathlessness in the dyspnea pathway."
+  },
+  {
+   "id": "risk_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Syncope with full recovery, no other cause found yet. Next?",
+   "options": [
+    "The ECG and a red-flag screen before any disposition",
+    "Discharge: full recovery and normal vitals now mean a benign cause",
+    "An exercise test now, before the ECG is reviewed",
+    "Admit only if the troponin is raised; otherwise home with GP follow-up"
+   ],
+   "answer": 0,
+   "chainStep": "Screen the ECG and the red flags (an abnormal ECG, heart failure, syncope on exertion, a family history of sudden death under 40 or an inherited heart condition, new breathlessness, a murmur; consider it over 65 without warning); any red flag means urgent cardiology assessment within 24 hours",
+   "why": "A blackout with complete recovery still needs the red-flag screen. Any of these means urgent cardiovascular assessment, reviewed by a specialist within 24 hours: an ECG abnormality, heart failure, a blackout during exertion, a family history of sudden death under 40 or an inherited heart condition, new or unexplained breathlessness, or a murmur; consider it for anyone over 65 who blacked out without warning. Troponin is not on that list. An exercise test is for syncope during exercise, and waits for imaging if aortic stenosis or HCM is possible.",
+   "sources": [
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.1.2.2; 1.1.4.2; 1.3.2.1; 1.3.2.2; Terms: blackout"
+    },
+    {
+     "docId": "pmid:21948723",
+     "where": "Box 1"
+    }
+   ],
+   "next": "flags",
+   "orders": [
+    {
+     "item": "Admission",
+     "dose": "US practice admits high-risk syncope for monitored evaluation; the 2017 ACC/AHA/HRS criteria were not readable in an open copy",
+     "status": "pending"
+    }
+   ],
+   "note": "These red flags follow NICE CG109. The 2017 ACC/AHA/HRS syncope guideline, the usual US frame, was not reachable in an open copy, so its high-risk list is not checked here; palpitations just before the event and chest pain are not on NICE's list. Palpitations just before the event and a blackout while lying down are high-risk features in the usual US frame; no case uses them until a source is read."
+  },
+  {
+   "id": "flags",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "12-lead ECG and red flags",
+   "outcomes": [
+    {
+     "id": "block",
+     "if": "High-grade AV block; Mobitz II, infranodal 2:1, high-degree or complete heart block",
+     "ddx": {
+      "lead": [
+       "High-grade AV block"
+      ],
+      "out": []
+     },
+     "next": "pace"
+    },
+    {
+     "id": "risky_ecg",
+     "if": "Long QT, Brugada or pre-excitation; on the 12-lead ECG",
+     "ddx": {
+      "lead": [
+       "Long QT, Brugada or pre-excitation"
+      ],
+      "out": []
+     },
+     "next": "ecg_risky"
+    },
+    {
+     "id": "ischemia",
+     "if": "Acute ischemia on the ECG; ST elevation or new ischemic changes",
+     "ddx": {
+      "lead": [
+       "ACS"
+      ],
+      "out": []
+     },
+     "next": "end_chest_pain"
+    },
+    {
+     "id": "structural",
+     "if": "Exertion, murmur, failure or family history; syncope on exertion, a heart murmur, heart failure, or sudden death in a relative under 40",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "echo"
+    },
+    {
+     "id": "arrhythmic",
+     "if": "Other red flags only; another ECG abnormality such as bundle branch block, or over 65 with no warning",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "monitor"
+    },
+    {
+     "id": "none",
+     "if": "No red flags; normal ECG, none of the above",
+     "ddx": {
+      "lead": [
+       "Vasovagal or situational syncope",
+       "Orthostatic hypotension"
+      ],
+      "out": []
+     },
+     "next": "lowrisk_step"
+    }
+   ]
+  },
+  {
+   "id": "pace",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Syncope with high-grade AV block; stable now, or paced. Next?",
+   "options": [
+    "Look for a reversible cause; permanent pacemaker if there is none",
+    "Discharge with a 48-hour Holter monitor and a cardiology letter",
+    "Observe, and implant a pacemaker only if the syncope happens again",
+    "A tilt-table test first, to look for a reflex cause of the block"
+   ],
+   "answer": 0,
+   "chainStep": "Labs and the drug list for a reversible cause; permanent pacemaker for Mobitz II, infranodal 2:1, high-degree or complete AV block, promptly; cardiac imaging; temporary transvenous pacing as the bridge if needed",
+   "why": "Pacing is indicated for third-degree, second-degree type 2, infranodal 2:1 or high-degree AV block whatever the symptoms, so there is no waiting for another event, and the implant should be prompt once the criteria are met. It is not recommended when the block has a transient cause that can be corrected and prevented, which is why the labs and the drug list come first when a cause is suspected. Ambulatory monitoring is for a suspected bradycardia, to link rhythm and symptoms; this one is documented.",
+   "sources": [
+    {
+     "docId": "pmid:34455427",
+     "where": "5.2 recommendations for pacing for atrioventricular block; 4.3.1; 4.3.4; 11.3 text"
+    }
+   ],
+   "next": "end_pacing",
+   "orders": [
+    {
+     "item": "Permanent pacemaker",
+     "dose": "Third-degree, second-degree type 2, infranodal 2:1 or high-degree AV block in sinus rhythm, irrespective of symptoms; implant promptly once the criteria are met",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34455427",
+       "where": "5.2 recommendations, Class I; 11.3 text"
+      }
+     ]
+    },
+    {
+     "item": "Pacing for a correctable transient cause",
+     "dose": "Not recommended (Class III)",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:34455427",
+       "where": "5.2 recommendations, Class III"
+      }
+     ]
+    },
+    {
+     "item": "Labs",
+     "dose": "Thyroid function, Lyme titer, digoxin level, potassium, calcium and pH when a cause is suspected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34455427",
+       "where": "4.3.4 recommendation, Class I"
+      }
+     ]
+    },
+    {
+     "item": "Cardiac imaging",
+     "dose": "For structural heart disease and left ventricular function in symptomatic bradycardia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34455427",
+       "where": "4.3.3 recommendation, Class I"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_pacing",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "High-grade AV block with syncope: an IV chronotropic drug and temporary pacing for shock, a correctable cause excluded, then a permanent pacemaker without waiting for another event."
+  },
+  {
+   "id": "ecg_risky",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Syncope with long QT, a Brugada pattern or pre-excitation. Next?",
+   "options": [
+    "Cardiac monitoring now, with urgent cardiology assessment within 24 hours",
+    "Home today with a routine outpatient cardiology referral letter",
+    "A 48-hour Holter at home first, then decide on the referral",
+    "A tilt-table test today to look for a reflex cause first"
+   ],
+   "answer": 0,
+   "chainStep": "Cardiac monitoring; urgent cardiology assessment within 24 hours; no exertion and no driving until assessed",
+   "why": "These are ECG red flags. Long QT and Brugada syndromes predispose to ventricular arrhythmia and sudden cardiac death and can present with syncope, and pre-excitation is on the same list, so the referral is urgent, reviewed by a specialist within 24 hours. While waiting, the patient avoids exertion and does not drive. For a suspected arrhythmic cause, a tilt test is not a first-line test.",
+   "sources": [
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.1.2.2; 1.1.2.3; 1.1.4.1; 1.1.4.2; 1.3.2.4; 1.5.4.3; Terms: Brugada syndrome, long QT syndromes"
+    }
+   ],
+   "next": "end_risky_ecg",
+   "orders": [
+    {
+     "item": "Long QT",
+     "dose": "Red flag for referral: QTc over 450 ms on a manual read (short QT under 350 ms); not the diagnostic threshold for long QT syndrome",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.1.2.3"
+      }
+     ]
+    },
+    {
+     "item": "QT-prolonging drugs and potassium",
+     "dose": "Remove the offending QT-prolonging drug; manage provoking conditions such as hypokalemia (repleting potassium to 4.5 to 5 mmol/L may be considered)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:20185054",
+       "where": "Introduction; Management"
+      }
+     ]
+    },
+    {
+     "item": "Brugada pattern",
+     "dose": "Abnormal ST elevation in V1 to V3",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "Terms: Brugada syndrome"
+      }
+     ]
+    },
+    {
+     "item": "Specific treatment",
+     "dose": "Drug, device and ablation decisions for these conditions are not in the open sources read",
+     "status": "pending"
+    },
+    {
+     "item": "While waiting",
+     "dose": "Avoid physical exertion if relevant; do not drive",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.5.4.3"
+      }
+     ]
+    },
+    {
+     "item": "Pre-excited AF",
+     "dose": "Unstable: electrical cardioversion. Stable: IV ibutilide or IV procainamide. AV nodal blockers (verapamil, diltiazem, amiodarone, digoxin, adenosine, beta blockers) are contraindicated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "WPW and preexcitation syndromes, recommendations 1, 3 and 4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_risky_ecg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Long QT, Brugada pattern or pre-excitation with syncope: urgent cardiology assessment within 24 hours, monitored meanwhile, with no exertion or driving until assessed; the specific treatment is a specialist decision not covered here."
+  },
+  {
+   "id": "echo",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Syncope with exertion, a murmur, heart failure or a family history of sudden death. Next?",
+   "options": [
+    "Echo and cardiac monitoring, with urgent cardiology assessment within 24 hours",
+    "An exercise test first, to reproduce the blackout safely",
+    "Discharge today with an outpatient echo in six weeks",
+    "A 24-hour Holter instead of any cardiac imaging"
+   ],
+   "answer": 0,
+   "chainStep": "Echo and urgent cardiology assessment within 24 hours; no exercise testing before imaging when aortic stenosis or HCM is possible; no exercise until assessed",
+   "why": "Suspected structural heart disease is investigated with cardiac imaging, and these red flags make the assessment urgent, reviewed within 24 hours. Syncope during exercise does earn an exercise test, but not before imaging when aortic stenosis or HCM is possible, and until then the patient refrains from exercise. Arrhythmia stays possible in structural disease, so an ambulatory ECG may follow.",
+   "sources": [
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.1.4.2; 1.3.1.2; 1.3.2.2"
+    },
+    {
+     "docId": "url:80ade8bcc827",
+     "where": "1.1.3"
+    }
+   ],
+   "next": "echo_result",
+   "orders": [
+    {
+     "item": "Exercise",
+     "dose": "Refrain until told otherwise after the specialist assessment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.3.2.2"
+      }
+     ]
+    },
+    {
+     "item": "Exercise testing",
+     "dose": "Within 7 days for syncope during exercise, unless aortic stenosis or HCM needs imaging first",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.3.2.2"
+      }
+     ]
+    }
+   ],
+   "note": "NICE NG208 sets urgent specialist assessment with an echo within 2 weeks for a systolic murmur with exertional syncope; NICE CG109 wants a blackout with a red flag reviewed within 24 hours. This route follows CG109."
+  },
+  {
+   "id": "echo_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Echo",
+   "outcomes": [
+    {
+     "id": "as",
+     "if": "Severe aortic stenosis; on the echo",
+     "ddx": {
+      "lead": [
+       "Aortic stenosis"
+      ],
+      "out": []
+     },
+     "next": "as_step"
+    },
+    {
+     "id": "hcm",
+     "if": "Hypertrophic cardiomyopathy; asymmetric septal hypertrophy with an outflow gradient",
+     "ddx": {
+      "lead": [
+       "Hypertrophic cardiomyopathy"
+      ],
+      "out": []
+     },
+     "next": "hcm_step"
+    },
+    {
+     "id": "no_cause",
+     "if": "Structurally normal heart; no AS or HCM",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Aortic stenosis"
+      ]
+     },
+     "next": "monitor"
+    }
+   ]
+  },
+  {
+   "id": "as_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Syncope on exertion with severe aortic stenosis. Management?",
+   "options": [
+    "Aortic valve replacement, surgical or transcatheter",
+    "Review with an echo every 6 to 12 months",
+    "An exercise test to confirm the symptoms",
+    "Medical therapy until symptoms limit daily life"
+   ],
+   "answer": 0,
+   "chainStep": "Refer for aortic valve replacement, surgical or TAVI by surgical risk; no exercise test; no exercise until reassessed",
+   "why": "Symptomatic severe valve disease is an indication for intervention, and syncope on exertion is a symptom; there is no waiting for symptoms to worsen. Echo review every 6 to 12 months is for asymptomatic severe disease, and exercise testing unmasks symptoms in asymptomatic aortic stenosis rather than confirming them after a faint. NICE offers surgery first at low or intermediate surgical risk and TAVI, for non-bicuspid valves, at high risk or when surgery is unsuitable.",
+   "sources": [
+    {
+     "docId": "url:80ade8bcc827",
+     "where": "1.3.1; 1.3.2; 1.4.1; 1.5.3; 1.5.4"
+    },
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.3.2.2"
+    }
+   ],
+   "next": "end_as",
+   "orders": [
+    {
+     "item": "Valve intervention",
+     "dose": "Surgical replacement first line at low or intermediate surgical risk; TAVI for non-bicuspid severe aortic stenosis at high surgical risk or when surgery is unsuitable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:80ade8bcc827",
+       "where": "1.5.3; 1.5.4"
+      }
+     ],
+     "note": "NICE's choice rests partly on the UK list price of TAVI; the 2020 ACC/AHA valve guideline (JACC copy) was not reachable to compare."
+    },
+    {
+     "item": "Exercise",
+     "dose": "Refrain until told otherwise after the specialist assessment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.3.2.2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_as",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Exertional syncope from severe aortic stenosis: a symptom of severe valve disease, so valve replacement, surgical or transcatheter; no exercise test and no exercise meanwhile."
+  },
+  {
+   "id": "hcm_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Syncope on exertion; HCM with an outflow gradient. Next?",
+   "options": [
+    "Beta blocker, no vasodilators or diuretics, rest from exercise, risk review",
+    "A vasodilator to lower the afterload, then home with cardiology follow-up",
+    "Furosemide to offload the thickened ventricle, with a beta blocker",
+    "A beta blocker, and back to sport once the heart rate settles"
+   ],
+   "answer": 0,
+   "chainStep": "Beta blocker (non-dihydropyridine calcium channel blocker if not tolerated or not effective); avoid vasodilators, diuretics and hypovolemia; no exercise until assessed; sudden death risk review for an ICD; echo for first-degree relatives",
+   "why": "Beta blockers are recommended for symptoms in obstructive and non-obstructive HCM, with a non-dihydropyridine calcium channel blocker when they fail or are not tolerated. Vasodilators should be avoided, especially with obstruction, and syncope in HCM can be triggered by hypovolemia, diuretics or vasodilators. Exercise waits for the specialist assessment. Unexplained syncope, not from obstruction or a vasovagal reflex, is a sudden death risk factor that weighs toward an ICD, and exertional syncope from a gradient over 50 mm Hg despite optimal medical therapy calls for septal reduction.",
+   "sources": [
+    {
+     "docId": "pmid:39082572",
+     "where": "Table 12; 2.7; SCD risk and ICD recommendations; septal reduction recommendations"
+    },
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.3.2.2"
+    }
+   ],
+   "next": "end_hcm",
+   "orders": [
+    {
+     "item": "Beta blocker",
+     "dose": "Recommended for symptoms; the source names no agent or dose",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:39082572",
+       "where": "Table 12, Class I"
+      }
+     ]
+    },
+    {
+     "item": "Non-dihydropyridine calcium channel blocker",
+     "dose": "If beta blockers are not tolerated or not effective. Verapamil: initial dose 40 mg three times a day, up to a maximum of 480 mg per day; strict monitoring with severe obstruction (100 mm Hg or more) or a raised pulmonary artery systolic pressure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39082572",
+       "where": "Table 12, Class I; 4.1.1.1"
+      }
+     ]
+    },
+    {
+     "item": "Vasodilators",
+     "dose": "Avoid, especially with outflow obstruction",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:39082572",
+       "where": "Table 12, Class IIa"
+      }
+     ]
+    },
+    {
+     "item": "Syncope triggers",
+     "dose": "Hypovolemia, diuretics, vasodilators and severe anemia can each trigger syncope in HCM",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39082572",
+       "where": "2.7"
+      }
+     ]
+    },
+    {
+     "item": "ICD",
+     "dose": "Consider at 40 or younger with one risk factor such as unexplained syncope (not from obstruction or a vasovagal reflex); over 40 to 60 by shared decision",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39082572",
+       "where": "SCD risk and ICD recommendations, Class IIa"
+      }
+     ]
+    },
+    {
+     "item": "Septal reduction therapy",
+     "dose": "Exertional syncope from a resting or provoked outflow gradient over 50 mm Hg despite optimal medical therapy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39082572",
+       "where": "Septal reduction recommendations, Class I"
+      }
+     ]
+    },
+    {
+     "item": "Family",
+     "dose": "Echo for first-degree relatives as initial family screening",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39082572",
+       "where": "Imaging recommendations, Class I"
+      }
+     ]
+    },
+    {
+     "item": "Exercise",
+     "dose": "Refrain until told otherwise after the specialist assessment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.3.2.2"
+      }
+     ]
+    }
+   ],
+   "note": "These recommendations come from the 2024 Brazilian Society of Cardiology HCM guideline, the open full text found; the 2024 AHA/ACC HCM guideline (JACC copy) was not reachable to compare."
+  },
+  {
+   "id": "end_hcm",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "HCM with exertional syncope: beta blocker, no vasodilators or diuretics, no exercise until assessed, sudden death risk reviewed for an ICD, septal reduction if a large gradient keeps causing syncope on full therapy, and echo for first-degree relatives."
+  },
+  {
+   "id": "monitor",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Red flags point to an arrhythmia; no diagnosis yet. Next?",
+   "options": [
+    "Monitor now, urgent specialist review, then an ambulatory ECG by frequency",
+    "Home today with a tilt-table test booked before any ambulatory ECG",
+    "Home today with a 24-hour Holter",
+    "An EEG and a neurology referral to look for epilepsy"
+   ],
+   "answer": 0,
+   "chainStep": "Cardiac monitoring; urgent specialist review within 24 hours; ambulatory ECG by frequency (Holter if several a week, external event recorder every 1 to 2 weeks, implantable recorder if rarer); carotid sinus massage at 60 or older; no driving while waiting",
+   "why": "A suspected arrhythmic cause gets an ambulatory ECG chosen by how often the blackouts come: a Holter for several a week, an external event recorder for every 1 to 2 weeks, an implantable recorder when rarer. When blackouts come less than once every 2 weeks, a Holter is not usually offered unless the 12-lead shows a conduction abnormality; a tilt test is not first-line here, and EEG has no routine place. Arrhythmia is the commonest cause of a falsely reassuring San Francisco rule, which is why monitoring is part of the assessment.",
+   "sources": [
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.1.4.2; 1.2.2.1; 1.3.2.4; 1.3.2.7; 1.3.2.9"
+    },
+    {
+     "docId": "pmid:21948723",
+     "where": "Abstract, results and interpretation"
+    },
+    {
+     "docId": "pmid:34455427",
+     "where": "4.3.1 Table 8; 4.5 recommendations for electrophysiology study"
+    }
+   ],
+   "next": "end_monitor",
+   "orders": [
+    {
+     "item": "Ambulatory ECG",
+     "dose": "Several blackouts a week: Holter up to 48 hours; every 1 to 2 weeks: external event recorder; less often than every 2 weeks: implantable event recorder",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.3.2.4"
+      }
+     ]
+    },
+    {
+     "item": "Daily symptoms",
+     "dose": "24-hour Holter or in-hospital telemetry; events under once a month: implantable loop recorder",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34455427",
+       "where": "4.3.1 Table 8"
+      }
+     ]
+    },
+    {
+     "item": "Syncope with bifascicular block",
+     "dose": "Electrophysiology study if still unexplained after non-invasive tests or when a pacing decision is urgent, unless empirical pacing is preferred, especially in the elderly and frail",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34455427",
+       "where": "4.5 recommendations, Class IIa"
+      }
+     ]
+    },
+    {
+     "item": "Carotid sinus massage",
+     "dose": "First-line test for unexplained syncope at 60 or older, with ECG recording and resuscitation equipment; not after a TIA or stroke or with known carotid stenosis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.3.2.7"
+      },
+      {
+       "docId": "pmid:34455427",
+       "where": "Recommendations for non-invasive evaluation, footnote c"
+      }
+     ]
+    },
+    {
+     "item": "Driving",
+     "dose": "Must not drive while waiting for the specialist assessment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.5.2.2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_monitor",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Red flags without a diagnosis: urgent specialist assessment, cardiac monitoring, then an ambulatory ECG chosen by how often the events come; no driving while waiting."
+  },
+  {
+   "id": "lowrisk_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Syncope, normal ECG, no red flags. Next?",
+   "options": [
+    "Lying and standing pressure, and the history of posture, trigger and warning",
+    "Admit for telemetry and an echo before any discharge decision",
+    "An EEG, in case the blackout was really a seizure",
+    "A tilt-table test now, before any decision about discharge"
+   ],
+   "answer": 0,
+   "chainStep": "Lying, then standing blood pressure at 1 and 3 minutes; the history of posture, provoking trigger and warning symptoms; a validated risk score alongside judgment if the cause is unclear",
+   "why": "With no red flags, the history and the standing pressure sort it: a posture such as prolonged standing, a provoking trigger such as pain or a procedure, and warning symptoms such as sweating point to an uncomplicated faint; a fall of 20 mm Hg systolic or 10 diastolic after at least 1 minute standing confirms postural hypotension. An uncomplicated faint needs no admission or tilt test, and EEG is not routine. Risk scores can help when the cause is unclear, but most have low-quality evidence for routine use, and the Canadian score and the San Francisco rule overlap in performance.",
+   "sources": [
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.1.4.3; 1.1.4.5; 1.2.1.1; 1.2.2.1; 1.3.2.5"
+    },
+    {
+     "docId": "url:3489e1e96576",
+     "where": "1.1.5; 1.1.6"
+    },
+    {
+     "docId": "pmid:39496561",
+     "where": "Abstract, conclusions"
+    }
+   ],
+   "next": "type",
+   "orders": [
+    {
+     "item": "Lying and standing blood pressure",
+     "dose": "Lying (or seated), then again after standing at least 1 minute; positive if systolic falls 20 mm Hg or more or diastolic 10 or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3489e1e96576",
+       "where": "1.1.5; 1.1.6"
+      }
+     ]
+    },
+    {
+     "item": "Canadian Syncope Risk Score",
+     "dose": "Vasovagal predisposition (warm crowded place, prolonged standing, fear, emotion or pain) -1; heart disease +1; any ED systolic under 90 or over 180 +2; troponin above the 99th percentile +2 (not done scores 0); abnormal QRS axis (under -30 or over 100 degrees) +1; QRS over 130 ms +1; QTc over 480 ms +2; ED diagnosis vasovagal -2, cardiac +2, neither 0. Range -3 to 11: -2 or lower very low risk (under 1%), -1 to 3 low to medium (1 to 8%), 4 or more high (over 12%)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:27378464",
+       "where": "Abstract; Table 4 and footnotes; Results; Interpretation"
+      },
+      {
+       "docId": "pmid:41193023",
+       "where": "Table 1; Introduction; Limitations"
+      },
+      {
+       "docId": "pmid:42154462",
+       "where": "Methods"
+      }
+     ],
+     "note": "The derivation paper gives the abnormal QRS axis as over 100 degrees in its abstract and over 110 in its Table 4. WJEM 2025 Table 1 prints QTc over 480 ms as +1, which cannot reach the -3 to 11 range stated by the derivation, the 2026 validation and WJEM's own introduction; +2 is used here. The low-risk cut is under 0 in the 2026 US validation and under 1 in the 2025 US study."
+    },
+    {
+     "item": "San Francisco Syncope Rule",
+     "dose": "High risk with congestive heart failure, hematocrit under 30%, an abnormal ECG or monitor (new changes or non-sinus rhythm), shortness of breath, or a triage systolic under 90 mm Hg. Only when no cause is evident after the ED evaluation; a negative rule leaves 5% or lower risk of a serious outcome in all comers, and 2% or lower when applied only after no cause is evident",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:21948723",
+       "where": "Box: the rule; abstract"
+      }
+     ]
+    },
+    {
+     "item": "Scores and judgment",
+     "dose": "Most syncope decision rules have low-quality evidence for routine use; in a 2026 US cohort, physician-estimated risk did not differ from the CSRS",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39496561",
+       "where": "Abstract, conclusions"
+      },
+      {
+       "docId": "pmid:42154462",
+       "where": "Results"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "type",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Standing pressure and the history",
+   "outcomes": [
+    {
+     "id": "reflex",
+     "if": "Uncomplicated faint; posture, a trigger and warning, or micturition, cough or swallowing",
+     "ddx": {
+      "lead": [
+       "Vasovagal or situational syncope"
+      ],
+      "out": []
+     },
+     "next": "reflex_step"
+    },
+    {
+     "id": "orthostatic",
+     "if": "Postural hypotension; systolic falls 20 or more, or diastolic 10 or more, on standing",
+     "ddx": {
+      "lead": [
+       "Orthostatic hypotension"
+      ],
+      "out": []
+     },
+     "next": "oh_step"
+    },
+    {
+     "id": "unexplained",
+     "if": "Unexplained; no typical posture, trigger or warning, standing pressure normal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "unexplained_step"
+    }
+   ]
+  },
+  {
+   "id": "reflex_step",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Uncomplicated faint or situational syncope, no red flags. Next?",
+   "options": [
+    "Home with reassurance, salt and fluids, and counter-pressure maneuvers",
+    "Admit for telemetry and an echo to exclude a cardiac cause",
+    "A tilt-table test before discharge to confirm the diagnosis",
+    "Home on fludrocortisone to prevent the next faint"
+   ],
+   "answer": 0,
+   "chainStep": "Discharge: explain the mechanism and the good prognosis; trigger avoidance; salt and fluids unless contraindicated; counter-pressure maneuvers; driving advice",
+   "why": "An uncomplicated faint or situational syncope with nothing else of concern needs no further immediate management. Explain the mechanism, advise on triggers and how to avoid them, and reassure about the good prognosis; promote salt and fluid intake unless contraindicated, and teach counter-pressure maneuvers, which help when the warning lasts long enough. A tilt test is not offered once the history has made the diagnosis, and drugs such as fludrocortisone are for frequent faints: after an occasional one, reassure and teach.",
+   "sources": [
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.1.4.3; 1.1.4.4; 1.1.4.5; 1.3.2.5; 1.5.4.1"
+    },
+    {
+     "docId": "pmid:25980576",
+     "where": "Recommendations for vasovagal syncope; treatment strategy; physical counterpressure maneuver"
+    }
+   ],
+   "next": "end_reflex",
+   "orders": [
+    {
+     "item": "Explanation",
+     "dose": "The mechanism, possible triggers and how to avoid them, a good prognosis; see the GP if it recurs or changes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.5.4.1"
+      }
+     ]
+    },
+    {
+     "item": "Salt and fluid",
+     "dose": "Promote intake unless contraindicated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25980576",
+       "where": "Recommendations, Class I"
+      }
+     ]
+    },
+    {
+     "item": "Counter-pressure maneuvers",
+     "dose": "Useful when the warning period is long enough; they do not work with a minimal or absent prodrome",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25980576",
+       "where": "Recommendations, Class IIa; physical counterpressure maneuver"
+      }
+     ]
+    },
+    {
+     "item": "Drugs that lower pressure",
+     "dose": "Reduce or withdraw where possible",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25980576",
+       "where": "Recommendations, Class IIa"
+      }
+     ]
+    },
+    {
+     "item": "Fludrocortisone and other drugs",
+     "dose": "For frequent faints only; do not treat someone who has not fainted in the past year",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25980576",
+       "where": "Recommendations, Class IIb; treatment strategy"
+      }
+     ]
+    },
+    {
+     "item": "Driving",
+     "dose": "Advise on eligibility to drive at this first presentation, under the local licensing rules (NICE points to the UK DVLA)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.5.2.1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_reflex",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Uncomplicated faint: home, with an explanation, trigger advice, salt and fluids, counter-pressure maneuvers and reassurance about the prognosis; no tilt test and no drugs after an occasional faint."
+  },
+  {
+   "id": "oh_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Postural hypotension, no red flags. Next?",
+   "options": [
+    "Review and reduce the drugs that lower pressure, and explain the cause",
+    "Start midodrine and keep every current drug unchanged",
+    "Admit for telemetry and an echo to exclude a cardiac cause",
+    "Home with an ambulatory ECG to look for an arrhythmia"
+   ],
+   "answer": 0,
+   "chainStep": "Review and adjust pressure-lowering drugs such as diuretics; explain the mechanism and what to do if it recurs; standing pressures at follow-up; specialist care if symptoms persist",
+   "why": "Postural hypotension sends you to the likely causes, above all the drug list; diuretics are the example the guideline gives. Explain the mechanism, the treatment options and what to do after another blackout, and measure later pressures standing. A firm diagnosis of postural hypotension is an exception to specialist cardiovascular referral, so no admission or ambulatory ECG; specialist care comes only if symptoms persist once the causes are addressed.",
+   "sources": [
+    {
+     "docId": "url:3489e1e96576",
+     "where": "1.1.6"
+    },
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.1.2.1; 1.2.3.1; 1.5.4.2"
+    }
+   ],
+   "next": "end_oh",
+   "orders": [
+    {
+     "item": "Medication review",
+     "dose": "Consider likely causes, including current medication; measure later pressures standing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3489e1e96576",
+       "where": "1.1.6"
+      }
+     ]
+    },
+    {
+     "item": "Specialist care",
+     "dose": "If symptoms persist despite addressing the likely causes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3489e1e96576",
+       "where": "1.1.6"
+      }
+     ]
+    },
+    {
+     "item": "Driving",
+     "dose": "Advise on eligibility to drive at this first presentation, under the local licensing rules (NICE points to the UK DVLA)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.5.2.1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_oh",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Postural hypotension from a drug: review and reduce the culprit, explain the cause, recheck standing pressures; specialist care only if symptoms persist."
+  },
+  {
+   "id": "unexplained_step",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Unexplained syncope, no red flags, normal ECG and standing pressure. Next?",
+   "options": [
+    "Home with specialist cardiovascular follow-up and an ambulatory ECG",
+    "Reassure and discharge with no follow-up, since the ECG is normal",
+    "Home with a tilt-table test booked before any ambulatory ECG",
+    "An EEG and a neurology referral to look for epilepsy"
+   ],
+   "answer": 0,
+   "chainStep": "Discharge with return advice; specialist cardiovascular assessment; ambulatory ECG by event frequency; no driving while waiting; record any further event",
+   "why": "Everyone with a blackout goes on to a specialist cardiovascular assessment unless the first assessment made a firm diagnosis of a faint, situational syncope or postural hypotension, or strongly suggested epilepsy. Unexplained syncope gets an ambulatory ECG, never a tilt test before it, and EEG is not routine. A low Canadian Syncope Risk Score supports discharge with clear return advice. The patient must not drive while waiting for the specialist, and a video or a witness account of any further event helps.",
+   "sources": [
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.2.2.1; 1.2.3.1; 1.3.2.9; 1.4.1.2; 1.5.2.2"
+    },
+    {
+     "docId": "pmid:41193023",
+     "where": "Introduction"
+    }
+   ],
+   "next": "end_unexplained",
+   "orders": [
+    {
+     "item": "Specialist cardiovascular assessment",
+     "dose": "For every blackout without a firm diagnosis of faint, situational syncope or postural hypotension, or features strongly suggesting epilepsy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.2.3.1"
+      }
+     ]
+    },
+    {
+     "item": "Ambulatory ECG",
+     "dose": "By event frequency; an implantable recorder when events come less often than every 2 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.3.2.4; 1.3.2.9"
+      }
+     ]
+    },
+    {
+     "item": "Driving",
+     "dose": "Must not drive while waiting for the specialist assessment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.5.2.2"
+      }
+     ]
+    },
+    {
+     "item": "Further events",
+     "dose": "Record them: a video or a detailed witness account",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.4.1.2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_unexplained",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Unexplained syncope without red flags: home with return advice, specialist cardiovascular assessment and an ambulatory ECG; no driving while waiting."
+  }
+ ],
+ "cases": [
+  {
+   "id": "chb_shock",
+   "label": "Complete heart block with shock",
+   "vignette": "81-year-old woman, collapsed in her kitchen without warning, now drowsy. BP 74/40, HR 32. She takes no beta blocker, calcium channel blocker or digoxin.",
+   "picks": {
+    "front": "brady_shock"
+   },
+   "results": {
+    "front": "Monitor: complete heart block, ventricular rate 32, broad escape complexes. BP 74/40, cold and clammy, drowsy."
+   }
+  },
+  {
+   "id": "vt",
+   "label": "Ventricular tachycardia after a collapse",
+   "vignette": "64-year-old man with a heart attack 3 years ago, blacked out while watching television; awake now, sweaty and pale. BP 92/60, HR 188.",
+   "picks": {
+    "front": "vt"
+   },
+   "results": {
+    "front": "Monitor: sustained regular broad-complex tachycardia at 188."
+   }
+  },
+  {
+   "id": "fall",
+   "label": "A trip, not a blackout",
+   "vignette": "77-year-old man brought in after a fall in his garden; he says his foot caught on the hose. BP 146/84, HR 78.",
+   "picks": {
+    "front": "other",
+    "event": "not_tloc"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 78. BP 146/84, alert.",
+    "event": "He remembers every moment of the fall and spoke to his wife at once; she saw him trip. Glucose 112 mg/dL."
+   }
+  },
+  {
+   "id": "hypo",
+   "label": "Hypoglycemia",
+   "vignette": "58-year-old woman on insulin, found slumped at home by her daughter; now rousing. BP 132/80, HR 96.",
+   "picks": {
+    "front": "other",
+    "event": "hypo"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 96. BP 132/80, drowsy but rousable.",
+    "event": "Fingerstick glucose 38 mg/dL. She took her usual insulin and skipped lunch."
+   }
+  },
+  {
+   "id": "seizure",
+   "label": "Seizure, not syncope",
+   "vignette": "26-year-old man, collapsed while sitting on a bus; a witness saw him go stiff, then jerk all four limbs for about two minutes. BP 128/76, HR 104.",
+   "picks": {
+    "front": "other",
+    "event": "seizure"
+   },
+   "results": {
+    "front": "Monitor: sinus tachycardia 104, settling. BP 128/76.",
+    "event": "Bitten on the side of the tongue, head turned to one side as he went down, confused for 20 minutes afterward. Glucose 98 mg/dL."
+   }
+  },
+  {
+   "id": "gi_bleed",
+   "label": "Syncope from a GI bleed",
+   "vignette": "69-year-old man taking naproxen for knee pain, fainted getting up from the toilet; black stools for 2 days. BP 104/62, HR 112.",
+   "picks": {
+    "front": "other",
+    "event": "gi_bleed"
+   },
+   "results": {
+    "front": "Monitor: sinus tachycardia 112. BP 104/62.",
+    "event": "Black tarry stool on rectal exam. Hemoglobin 7.9 g/dL; 14.2 a year ago."
+   }
+  },
+  {
+   "id": "ectopic",
+   "label": "Faint with a positive pregnancy test",
+   "vignette": "27-year-old woman, fainted at work and has a dull left lower abdominal ache. Last period 7 weeks ago. BP 108/68, HR 104.",
+   "picks": {
+    "front": "other",
+    "event": "pregnant"
+   },
+   "results": {
+    "front": "Monitor: sinus tachycardia 104. BP 108/68.",
+    "event": "Urine pregnancy test positive. Mild left lower quadrant tenderness, no guarding."
+   }
+  },
+  {
+   "id": "breathless",
+   "label": "Syncope with new breathlessness",
+   "vignette": "54-year-old woman, 9 days after a knee replacement, fainted walking to the bathroom and is now short of breath. BP 112/70, HR 118, SpO2 89% on air.",
+   "picks": {
+    "front": "other",
+    "event": "breathless"
+   },
+   "results": {
+    "front": "Monitor: sinus tachycardia 118. BP 112/70.",
+    "event": "Breathless at rest, SpO2 89% on air, right calf swollen and tender. Glucose 104 mg/dL."
+   }
+  },
+  {
+   "id": "aaa",
+   "label": "Still in shock after the collapse",
+   "vignette": "72-year-old man with hypertension who smokes, collapsed at home with sudden severe back pain. BP 82/50, HR 118.",
+   "picks": {
+    "front": "shock_other"
+   },
+   "results": {
+    "front": "Monitor: sinus tachycardia 118. BP 82/50, still hypotensive after coming round; severe back pain, a tender pulsatile mass above the umbilicus."
+   }
+  },
+  {
+   "id": "ischemia_ecg",
+   "label": "Ischemic ECG after a faint",
+   "vignette": "68-year-old woman with diabetes, fainted at the kitchen sink after feeling lightheaded and sweaty; no chest pain. BP 134/80, HR 88.",
+   "picks": {
+    "front": "other",
+    "event": "syncope",
+    "flags": "ischemia"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 88. BP 134/80.",
+    "event": "Went pale and slumped, came round within a minute, fully oriented. No chest pain, no headache, not breathless. Glucose 142 mg/dL, hemoglobin 12.6 g/dL.",
+    "flags": "ECG: new 2 mm ST depression in V4 to V6, not on her ECG from last year."
+   }
+  },
+  {
+   "id": "chest_pain",
+   "label": "Collapse with tearing chest pain",
+   "vignette": "59-year-old man with hypertension, sudden tearing chest pain through to his back, then a brief blackout. BP 168/94, HR 98.",
+   "picks": {
+    "front": "other",
+    "event": "chest_pain"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 98. BP 168/94.",
+    "event": "The pain began seconds before he blacked out and still tears through to his back. Glucose 120 mg/dL. Not breathless."
+   }
+  },
+  {
+   "id": "headache",
+   "label": "Collapse with a sudden severe headache",
+   "vignette": "44-year-old woman, a sudden severe headache while unloading groceries, then a brief collapse; now awake and vomiting. BP 156/92, HR 84.",
+   "picks": {
+    "front": "other",
+    "event": "headache"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 84. BP 156/92.",
+    "event": "The headache reached full strength within seconds, just before she went down; her neck is stiff. Glucose 104 mg/dL. Pregnancy test negative."
+   }
+  },
+  {
+   "id": "mobitz2",
+   "label": "Mobitz II with syncope, pressure holding",
+   "vignette": "76-year-old man, two blackouts this week without warning, the second at the dinner table. Well now. BP 138/80, HR 66.",
+   "picks": {
+    "front": "other",
+    "event": "syncope",
+    "flags": "block"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm, rate 66, an occasional dropped beat. BP 138/80, alert.",
+    "event": "Witnesses: he slumped, went pale and came round within a minute, fully oriented. No tongue bite. Glucose 104 mg/dL, hemoglobin 14.1 g/dL. Not breathless.",
+    "flags": "ECG: sinus rhythm with dropped beats and no PR lengthening before them (Mobitz II), right bundle branch block."
+   }
+  },
+  {
+   "id": "long_qt",
+   "label": "Long QT with syncope",
+   "vignette": "23-year-old woman, collapsed when her alarm clock went off this morning; her roommate saw a few seconds of jerking. Takes no medicines. BP 118/74, HR 64.",
+   "picks": {
+    "front": "other",
+    "event": "syncope",
+    "flags": "risky_ecg"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 64. BP 118/74.",
+    "event": "Pale and limp, a few seconds of jerking, awake and oriented within a minute; no tongue bite, no confusion after. Glucose 92 mg/dL. Pregnancy test negative.",
+    "flags": "ECG: sinus rhythm, QTc 530 ms. No murmur; no known family history of sudden death."
+   }
+  },
+  {
+   "id": "aortic_stenosis",
+   "label": "Exertional syncope, aortic stenosis",
+   "vignette": "79-year-old man, fainted walking up a hill and came round within a minute. He has tired more easily on hills for months. BP 128/84, HR 76.",
+   "picks": {
+    "front": "other",
+    "event": "syncope",
+    "flags": "structural",
+    "echo_result": "as"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 76. BP 128/84.",
+    "event": "Went down halfway up the hill, came round within a minute, fully alert; no jerking or tongue bite. Glucose 110 mg/dL, hemoglobin 13.8 g/dL. Not breathless now.",
+    "flags": "Harsh ejection systolic murmur at the right upper sternal border, radiating to the neck. ECG: sinus rhythm, left ventricular hypertrophy.",
+    "echo_result": "Echo: severe calcific aortic stenosis; left ventricle thick-walled, ejection fraction normal."
+   }
+  },
+  {
+   "id": "hcm",
+   "label": "HCM in a young athlete",
+   "vignette": "19-year-old college basketball player, collapsed during a sprint drill and came round within a minute. BP 122/70, HR 70.",
+   "picks": {
+    "front": "other",
+    "event": "syncope",
+    "flags": "structural",
+    "echo_result": "hcm"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 70. BP 122/70.",
+    "event": "Collapsed mid-sprint, pale, awake within a minute, no confusion afterward. Glucose 96 mg/dL. Not breathless.",
+    "flags": "Systolic murmur at the left sternal border that gets louder on standing. ECG: deep T wave inversion in the lateral leads.",
+    "echo_result": "Echo: asymmetric septal hypertrophy, septum 24 mm, resting outflow gradient 60 mm Hg with systolic anterior motion of the mitral valve."
+   }
+  },
+  {
+   "id": "family_history",
+   "label": "Family history of sudden death, normal echo",
+   "vignette": "34-year-old woman, fainted while sitting on the sofa and came round within a minute. Her father died suddenly at 38. BP 120/76, HR 72.",
+   "picks": {
+    "front": "other",
+    "event": "syncope",
+    "flags": "structural",
+    "echo_result": "no_cause"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 72. BP 120/76.",
+    "event": "Slumped and went pale, came round within a minute, fully oriented. No tongue bite. Glucose 94 mg/dL. Pregnancy test negative. Not breathless.",
+    "flags": "No murmur, no heart failure. ECG: sinus rhythm, normal intervals, no Brugada pattern or pre-excitation. Her father died suddenly at 38 with no cause found.",
+    "echo_result": "Echo: structurally normal heart, normal function."
+   }
+  },
+  {
+   "id": "older_no_warning",
+   "label": "Over 65, no warning",
+   "vignette": "74-year-old woman, sudden blackout while seated in church with no warning; she slid off the pew. Well now. BP 142/82, HR 70.",
+   "picks": {
+    "front": "other",
+    "event": "syncope",
+    "flags": "arrhythmic"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 70. BP 142/82.",
+    "event": "Slumped without any warning, pale, came round in under a minute and knew where she was. No tongue bite. Glucose 118 mg/dL, hemoglobin 12.9 g/dL. Not breathless.",
+    "flags": "ECG: normal sinus rhythm, normal intervals. No murmur, no heart failure, no family history of sudden death; no warning at all before the blackout."
+   }
+  },
+  {
+   "id": "faint",
+   "label": "Uncomplicated faint",
+   "vignette": "21-year-old woman, fainted while having blood taken: felt hot, sweaty and sick, then went down; came round within seconds. Her first faint. BP 116/72, HR 68.",
+   "picks": {
+    "front": "other",
+    "event": "syncope",
+    "flags": "none",
+    "type": "reflex"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 68. BP 116/72.",
+    "event": "Pale, a few brief twitches, awake within 30 seconds and fully oriented. No tongue bite. Glucose 90 mg/dL. Pregnancy test negative.",
+    "flags": "ECG: normal sinus rhythm, normal intervals. No murmur, no exertion, no family history of sudden death.",
+    "type": "Lying 116/72; standing 112/74 at 1 and 3 minutes. A clear trigger (the needle), with sweating and warmth beforehand. Canadian Syncope Risk Score -3: vasovagal predisposition -1, ED diagnosis of vasovagal syncope -2."
+   }
+  },
+  {
+   "id": "orthostatic",
+   "label": "Postural hypotension on a new diuretic",
+   "vignette": "79-year-old man started on hydrochlorothiazide 3 weeks ago, fainted standing up quickly from the dinner table after a week of dizziness on standing. BP 146/84, HR 76.",
+   "picks": {
+    "front": "other",
+    "event": "syncope",
+    "flags": "none",
+    "type": "orthostatic"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 76. BP 146/84.",
+    "event": "Went lightheaded as he stood, then slumped; came round within a minute, fully oriented. Glucose 108 mg/dL, hemoglobin 13.5 g/dL. Not breathless.",
+    "flags": "ECG: sinus rhythm, normal intervals. No murmur, no heart failure, no family history of sudden death.",
+    "type": "Lying 148/84; standing 118/72 at 1 minute and 116/70 at 3 minutes, with the same lightheadedness."
+   }
+  },
+  {
+   "id": "unexplained",
+   "label": "Unexplained syncope, low risk",
+   "vignette": "36-year-old man, fainted while sitting at his desk after a few seconds of lightheadedness and came round within a minute. He has fainted twice before when having blood taken. BP 124/78, HR 70.",
+   "picks": {
+    "front": "other",
+    "event": "syncope",
+    "flags": "none",
+    "type": "unexplained"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 70. BP 124/78.",
+    "event": "Slumped in his chair, pale, came round within a minute, fully oriented. No tongue bite. Glucose 96 mg/dL. Not breathless.",
+    "flags": "ECG: normal sinus rhythm, normal intervals. No murmur, no exertion, no family history of sudden death.",
+    "type": "Lying 124/78; standing 122/80 at 1 and 3 minutes. No trigger, no prolonged standing, no typical warning this time. Canadian Syncope Risk Score -1: vasovagal predisposition -1; no ED diagnosis of vasovagal or cardiac syncope; troponin not done, scored 0."
+   }
+  }
+ ]
+}

@@ -50,6 +50,10 @@ SITEMAP_EXCLUDED = {
     "/admin",     # operator surface
     "/readiness/paste",  # internal tool for answering score threads, noindex
     "/chiefs/me",  # a Chief's private stats, token-gated, noindex
+    # The ED pathways hub 404s on production until Danny signs off the first
+    # pathway; from then on the sitemap lists it (and each signed-off article)
+    # itself, so the omission here only covers the empty state.
+    "/pathways",
 }
 
 TITLE_MAX = 65

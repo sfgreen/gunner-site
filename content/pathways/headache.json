@@ -1,0 +1,2880 @@
+{
+ "id": "pw_headache",
+ "title": "Headache",
+ "world": "neuro",
+ "synonyms": [
+  "headache",
+  "thunderclap headache",
+  "worst headache of my life",
+  "subarachnoid hemorrhage",
+  "SAH",
+  "xanthochromia",
+  "lumbar puncture after CT",
+  "nimodipine",
+  "giant cell arteritis",
+  "GCA",
+  "temporal arteritis",
+  "cerebral venous thrombosis",
+  "CVT",
+  "venous sinus thrombosis",
+  "idiopathic intracranial hypertension",
+  "IIH",
+  "pseudotumor cerebri",
+  "papilledema",
+  "carbon monoxide poisoning",
+  "CO poisoning",
+  "hyperbaric oxygen",
+  "hypertensive emergency",
+  "hypertensive encephalopathy",
+  "migraine",
+  "tension-type headache",
+  "cluster headache",
+  "high-flow oxygen",
+  "sumatriptan",
+  "metoclopramide",
+  "prochlorperazine"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:42279d67da8d",
+   "label": "NICE NG228",
+   "title": "Subarachnoid haemorrhage caused by a ruptured aneurysm: diagnosis and management (2022)",
+   "url": "https://www.nice.org.uk/guidance/ng228"
+  },
+  {
+   "docId": "url:5fa71509be03",
+   "label": "NICE CG150",
+   "title": "Headaches in over 12s: diagnosis and management (2012, updated 2025)",
+   "url": "https://www.nice.org.uk/guidance/cg150"
+  },
+  {
+   "docId": "url:64e48d5d8ef3",
+   "label": "NICE NG128",
+   "title": "Stroke and transient ischaemic attack in over 16s: diagnosis and initial management (2019, updated 2022)",
+   "url": "https://www.nice.org.uk/guidance/ng128"
+  },
+  {
+   "docId": "pmid:37236753",
+   "label": "ACR AC Headache 2022",
+   "title": "ACR Appropriateness Criteria: Headache, 2022 update",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37236753/"
+  },
+  {
+   "docId": "pmid:34235884",
+   "label": "ACR 2021 GCA",
+   "title": "2021 American College of Rheumatology/Vasculitis Foundation Guideline for the Management of Giant Cell Arteritis and Takayasu Arteritis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34235884/"
+  },
+  {
+   "docId": "pmid:42481270",
+   "label": "EULAR 2025",
+   "title": "2025 EULAR recommendations for the management of polymyalgia rheumatica and primary large vessel vasculitis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42481270/"
+  },
+  {
+   "docId": "pmid:31270110",
+   "label": "EULAR 2018",
+   "title": "2018 Update of the EULAR recommendations for the management of large vessel vasculitis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31270110/"
+  },
+  {
+   "docId": "pmid:38826076",
+   "label": "CSBPR CVT 2024",
+   "title": "Canadian Stroke Best Practice Recommendations, 7th Edition: Cerebral Venous Thrombosis, 2024",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38826076/"
+  },
+  {
+   "docId": "pmid:29903905",
+   "label": "IIH consensus 2018",
+   "title": "Idiopathic intracranial hypertension: consensus guidelines on management (UK, 2018)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29903905/"
+  },
+  {
+   "docId": "pmid:34867135",
+   "label": "S2k CO 2021",
+   "title": "S2k guideline diagnosis and treatment of carbon monoxide poisoning (Germany, 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34867135/"
+  },
+  {
+   "docId": "pmid:40815242",
+   "label": "AHA/ACC BP 2025",
+   "title": "2025 AHA/ACC/AANP/AAPA/ABC/ACCP/ACPM/AGS/AMA/ASPC/NMA/PCNA/SGIM Guideline for the Prevention, Detection, Evaluation, and Management of High Blood Pressure in Adults",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40815242/"
+  },
+  {
+   "docId": "pmid:42095754",
+   "label": "ESO aSAH 2026",
+   "title": "European Stroke Organisation (ESO), European Association of Neurosurgical Societies (EANS) and European Society for Minimally Invasive Neurological Therapy (ESMINT) guideline on aneurysmal subarachnoid haemorrhage",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42095754/"
+  },
+  {
+   "docId": "url:28b15fd5d33e",
+   "label": "FDA label: nimodipine",
+   "title": "Nimodipine capsules prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e65d5108-22a2-4d87-a78d-15606f3cc9e2"
+  },
+  {
+   "docId": "url:eba7d2785f5f",
+   "label": "FDA label: Imitrex injection",
+   "title": "Imitrex (sumatriptan) injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fee7d073-0b99-48f2-7985-0d8cf970894b"
+  },
+  {
+   "docId": "pmid:15494903",
+   "label": "IDSA meningitis 2004",
+   "title": "Practice guidelines for the management of bacterial meningitis (2004)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15494903/"
+  },
+  {
+   "docId": "url:ed91553c28fb",
+   "label": "NICE NG133",
+   "title": "Hypertension in pregnancy: diagnosis and management (2019, updated 2023)",
+   "url": "https://www.nice.org.uk/guidance/ng133"
+  }
+ ],
+ "differential": [
+  "Subarachnoid hemorrhage",
+  "Intracerebral hemorrhage",
+  "Bacterial meningitis",
+  "Cerebral venous thrombosis",
+  "Idiopathic intracranial hypertension",
+  "Space-occupying lesion",
+  "Giant cell arteritis",
+  "Carbon monoxide poisoning",
+  "Hypertensive emergency",
+  "Pre-eclampsia",
+  "Migraine",
+  "Tension-type headache",
+  "Cluster headache",
+  "Medication overuse headache"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Headache in the ED. First moves?",
+   "options": [
+    "Airway and vital signs, GCS, a neurologic exam with the fundi; time the onset and screen red flags",
+    "Non-contrast CT head before any history or exam; take the story once the report is back",
+    "IV morphine for the pain first, then a full history and neurologic exam once it has settled",
+    "Metoclopramide and ketorolac at triage; examine and take the history only if they fail"
+   ],
+   "answer": 0,
+   "chainStep": "Airway, breathing and vital signs; GCS and a neurologic exam with fundoscopy; establish the rate of onset and time to peak; screen for red flags",
+   "why": "Stability comes first: the Canadian CVT guideline, for example, starts with airway, breathing and circulation and looks for raised intracranial pressure, fundoscopy included. Then the red flags choose the route. NICE CG150 lists, among others, a sudden onset reaching maximum intensity within 5 minutes, worsening headache with fever, a new neurological deficit, impaired consciousness, head trauma in the past 3 months and symptoms of giant cell arteritis, and adds compromised immunity and a cancer that spreads to the brain. NICE NG228 asks for the rate of onset and the time to peak, the fundi look for papilledema, and the pressure screens for malignant hypertension (180 systolic or 120 diastolic or more). Imaging before the history skips the questions that choose the scan, opioids sedate and change the pupils of the patient being examined, and treating first leaves the red flags unasked.",
+   "next": "front_door",
+   "sources": [
+    {
+     "docId": "url:5fa71509be03",
+     "where": "1.1.1; 1.1.2"
+    },
+    {
+     "docId": "url:42279d67da8d",
+     "where": "1.1.2; 1.1.9"
+    },
+    {
+     "docId": "pmid:29903905",
+     "where": "Q1"
+    },
+    {
+     "docId": "pmid:38826076",
+     "where": "1.1.ii"
+    }
+   ],
+   "note": "Not in this version: children, post-dural puncture headache, acute angle-closure glaucoma, pituitary apoplexy, cervical artery dissection and reversible cerebral vasoconstriction. A seizure with headache goes to the seizure pathway."
+  },
+  {
+   "id": "front_door",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Onset, vital signs and exam",
+   "outcomes": [
+    {
+     "id": "unstable",
+     "if": "Depressed consciousness, no fever; GCS below 13 or the airway at risk",
+     "next": "unstable",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    },
+    {
+     "id": "thunderclap",
+     "if": "Thunderclap, GCS 13 or more; peak within 5 minutes, no deficit, no fever",
+     "next": "sah_ct",
+     "ddx": {
+      "lead": [
+       "Subarachnoid hemorrhage"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "fever",
+     "if": "Fever; with neck stiffness, a rash, confusion, or no other source found",
+     "next": "end_mening",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "focal",
+     "if": "New focal deficit; sudden weakness, speech or field loss, not vision loss with GCA features",
+     "next": "end_stroke",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    },
+    {
+     "id": "other_flag",
+     "if": "Another red flag; GCS 13 or more, afebrile, no focal deficit, not a thunderclap",
+     "next": "flags",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    },
+    {
+     "id": "none",
+     "if": "No red flags; normal exam, a primary headache pattern",
+     "next": "primary",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "flags",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The red flag",
+   "outcomes": [
+    {
+     "id": "gca",
+     "if": "Over 50 with GCA features; a new headache with jaw claudication, scalp tenderness or visual symptoms, vision loss included",
+     "next": "gca_first",
+     "ddx": {
+      "lead": [
+       "Giant cell arteritis"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "papilledema",
+     "if": "Papilledema; BP below 180/120, not pregnant",
+     "next": "venous_img",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    },
+    {
+     "id": "co",
+     "if": "Others at home are ill too; headache and nausea around a fuel-burning appliance",
+     "next": "co_first",
+     "ddx": {
+      "lead": [
+       "Carbon monoxide poisoning"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "bp",
+     "if": "BP over 180/120 with confusion; or visual change, not pregnant",
+     "next": "htn_ct",
+     "ddx": {
+      "lead": [
+       "Hypertensive emergency"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "bp_no_tod",
+     "if": "BP over 180/120, no organ damage; alert, normal fundi and neurological exam, not pregnant",
+     "next": "end_htn_no_tod",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    },
+    {
+     "id": "imaging_flag",
+     "if": "Another secondary-cause flag; over 50 without GCA features, cancer, low immunity, head injury in 3 months, an anticoagulant, a worsening or changed pattern, a cough or exertion trigger, new cognitive change, or unexplained vomiting",
+     "next": "flag_img",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    },
+    {
+     "id": "orthostatic",
+     "if": "Worse upright, better lying",
+     "next": "end_orthostatic",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    },
+    {
+     "id": "pregnant",
+     "if": "Pregnant or postpartum; a new headache unlike her usual, no household cluster",
+     "next": "preg_bp",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "unstable",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Depressed consciousness, no fever. First?",
+   "options": [
+    "Airway, capillary glucose, then an immediate non-contrast CT head",
+    "Lumbar puncture first, to look for blood or infection in the CSF",
+    "MRI brain first, since it shows more than CT"
+   ],
+   "answer": 0,
+   "chainStep": "Protect the airway; capillary glucose; immediate non-contrast CT head; ask witnesses how it started",
+   "why": "NICE NG128 excludes hypoglycemia as the cause of sudden neurological symptoms. Reduced consciousness is one of the signs of subarachnoid hemorrhage in NICE NG228, and a GCS below 13 calls for an immediate non-contrast CT in suspected stroke (NG128). NG228 diagnoses SAH on the CT and turns to an LP only when the CT is clear; in meningitis guidance an abnormal level of consciousness is one of the findings that put a CT before any LP, because a mass lesion can herniate after a tap. NG128 asks for an immediate non-enhanced CT, not an MRI first. When the patient cannot describe the onset, ask a witness, without delaying the scan. How to secure the airway is not in the sources read.",
+   "next": "unstable_ct",
+   "sources": [
+    {
+     "docId": "url:42279d67da8d",
+     "where": "1.1.3; 1.1.4; 1.1.7; 1.1.10 to 1.1.12"
+    },
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.1.2; 1.3.2"
+    },
+    {
+     "docId": "pmid:15494903",
+     "where": "CT before lumbar puncture (text before Table 2)"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Capillary glucose",
+     "dose": "Exclude hypoglycemia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.1.2"
+      }
+     ]
+    },
+    {
+     "item": "Airway",
+     "dose": "Secure it when the patient cannot protect it; the method and the intubation threshold are not in the sources read",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "unstable_ct",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Non-contrast CT head",
+   "outcomes": [
+    {
+     "id": "sah",
+     "if": "Subarachnoid blood; blood in the subarachnoid space",
+     "next": "sah_cta",
+     "ddx": {
+      "lead": [
+       "Subarachnoid hemorrhage"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "ich",
+     "if": "Intracerebral hemorrhage; blood in the brain tissue",
+     "next": "end_stroke",
+     "ddx": {
+      "lead": [
+       "Intracerebral hemorrhage"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "lesion",
+     "if": "A subdural, mass, abscess or hydrocephalus",
+     "next": "end_lesion",
+     "ddx": {
+      "lead": [
+       "Space-occupying lesion"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "clear",
+     "if": "No bleed, no mass; CT clear",
+     "next": "venous_img",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Intracerebral hemorrhage"
+      ]
+     },
+     "orders": [
+      {
+       "item": "Blood gas with COHb",
+       "dose": "COHb, pH and lactate",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34867135",
+         "where": "8"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sah_ct",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Thunderclap headache, GCS 13 or more, no deficit. Next?",
+   "options": [
+    "Urgent non-contrast CT head, with senior review",
+    "Lumbar puncture now; CT only if the tap is bloody",
+    "Treat as migraine; scan only if the pain does not settle",
+    "MRI brain as an outpatient this week"
+   ],
+   "answer": 0,
+   "chainStep": "Senior review; urgent non-contrast CT head (most accurate within 6 hours of onset); effective analgesia, opioids if needed",
+   "why": "A thunderclap headache, typically peaking within 1 to 5 minutes, is a red-flag symptom of subarachnoid hemorrhage. NICE NG228 asks for urgent senior review and an urgent non-contrast CT, whose accuracy is highest within 6 hours of onset, and the ACR rates a non-contrast CT usually appropriate for a sudden severe headache and MRI usually not appropriate. Most thunderclap headaches are not SAH, migraine among the other causes, but that should not deter investigation, and the LP comes only after a clear CT.",
+   "next": "sah_ct_result",
+   "sources": [
+    {
+     "docId": "url:42279d67da8d",
+     "where": "1.1.3; 1.1.6; 1.1.7; 1.1.11; 1.1.12"
+    },
+    {
+     "docId": "pmid:37236753",
+     "where": "Variant 1 table"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Pain relief",
+     "dose": "Effective relief, including opioids if needed; record them, since they sedate and change the pupils",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:42279d67da8d",
+       "where": "1.1.8; 1.1.9"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sah_ct_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Non-contrast CT head",
+   "outcomes": [
+    {
+     "id": "blood",
+     "if": "Subarachnoid blood; diagnose SAH",
+     "next": "sah_cta",
+     "ddx": {
+      "lead": [
+       "Subarachnoid hemorrhage"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "neg_early",
+     "if": "Clear, within 6 hours; done under 6 hours from onset, reported by a radiologist",
+     "next": "neg_early",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    },
+    {
+     "id": "neg_late",
+     "if": "Clear, after 6 hours; done more than 6 hours from onset",
+     "next": "lp",
+     "ddx": {
+      "lead": [
+       "Subarachnoid hemorrhage"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "neg_early",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Clear CT within 6 hours of onset, reported by a radiologist. Next?",
+   "options": [
+    "Senior review; LP for xanthochromia at 12 hours or more if SAH is still suspected",
+    "Discharge home without further assessment, since the CT has ruled out SAH",
+    "Start enteral nimodipine and admit under neurosurgery for angiography",
+    "Catheter angiography of the head before any other test or review"
+   ],
+   "answer": 0,
+   "chainStep": "Clear CT within 6 hours: senior review and specialist advice on other causes; if SAH is still suspected, LP for xanthochromia at least 12 hours after onset (NICE does not offer it routinely after a radiologist-reported scan)",
+   "why": "NICE NG228: when a CT done within 6 hours of onset and reported by a radiologist shows no SAH, do not routinely offer an LP; think about alternative diagnoses, discuss with a senior and seek specialist advice. Such a scan has a high diagnostic accuracy, but it does not end the assessment, so discharge without that review is wrong. Nimodipine is for a confirmed SAH, and catheter angiography is rated usually not appropriate as the first study for a sudden severe headache.",
+   "next": "neg_early_result",
+   "sources": [
+    {
+     "docId": "url:42279d67da8d",
+     "where": "1.1.11; 1.1.13; 1.2.1; rationale on assessment and referral"
+    },
+    {
+     "docId": "pmid:37236753",
+     "where": "Variant 1 table"
+    }
+   ],
+   "note": "Exam note: many US question banks still expect an LP after any negative CT. The key keeps the LP for doubt that remains, at least 12 hours after onset, so both answers sit inside it."
+  },
+  {
+   "id": "neg_early_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Senior and specialist review",
+   "outcomes": [
+    {
+     "id": "settled",
+     "if": "No other cause, no remaining doubt; exam normal, headache settling",
+     "next": "end_sah_out",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Subarachnoid hemorrhage"
+      ]
+     }
+    },
+    {
+     "id": "doubt",
+     "if": "Doubt remains; LP done at least 12 hours after onset",
+     "next": "lp_result",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    },
+    {
+     "id": "venous",
+     "if": "A venous cause suspected; estrogen, postpartum, or worse lying flat",
+     "next": "venous_img",
+     "ddx": {
+      "lead": [
+       "Cerebral venous thrombosis"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "lp",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Clear CT done more than 6 hours after onset. Next?",
+   "options": [
+    "Lumbar puncture at least 12 hours after onset; spectrophotometry for xanthochromia",
+    "Discharge with analgesia: a clear CT at this stage has ruled out SAH",
+    "Admit and repeat the non-contrast CT head in 24 hours to look for blood",
+    "Outpatient MRI of the brain within the week, then decide on a lumbar puncture"
+   ],
+   "answer": 0,
+   "chainStep": "Lumbar puncture at least 12 hours after onset; spectrophotometry for xanthochromia",
+   "why": "After 6 hours the CT is less accurate and false negatives are more likely, so NICE NG228 says to consider an LP, done at least 12 hours after onset, when enough bilirubin has formed to be detected reliably; xanthochromia on spectrophotometry diagnoses SAH. A clear late CT does not rule SAH out. The next test NG228 names is the LP, not a repeat scan, and the ACR rates MRI usually not appropriate as the first study for a sudden severe headache.",
+   "next": "lp_result",
+   "sources": [
+    {
+     "docId": "url:42279d67da8d",
+     "where": "1.1.12; 1.1.13; 1.1.14; rationale on diagnosing SAH"
+    },
+    {
+     "docId": "pmid:37236753",
+     "where": "Variant 1 table"
+    }
+   ]
+  },
+  {
+   "id": "lp_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CSF spectrophotometry",
+   "outcomes": [
+    {
+     "id": "xantho",
+     "if": "Xanthochromia; raised bilirubin on spectrophotometry",
+     "next": "sah_cta",
+     "ddx": {
+      "lead": [
+       "Subarachnoid hemorrhage"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "clear",
+     "if": "No xanthochromia; LP 12 hours or more after onset",
+     "next": "end_sah_out",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Subarachnoid hemorrhage"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "sah_cta",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Subarachnoid hemorrhage confirmed. Next?",
+   "options": [
+    "CT angiography of the head now; urgent call to the neurosurgical center",
+    "Tranexamic acid now, then a routine catheter angiogram later in the week",
+    "MRI and MR angiography tomorrow, then refer if an aneurysm shows",
+    "Admit to a general ward, analgesia, and repeat the CT head in 24 hours"
+   ],
+   "answer": 0,
+   "chainStep": "CT angiography of the head without delay; urgent discussion with the neurosurgical center; analgesia, opioids if needed",
+   "why": "NICE NG228 offers CT angiography of the head without delay to find the cause and guide treatment, and an urgent discussion with a specialist neurosurgical center, because the risk of rebleeding is highest within 24 hours of onset. ESO recommends against routine antifibrinolytic drugs before the aneurysm is treated, and NICE says tranexamic acid must not delay treatment to secure it. Waiting a day for an MRI or a repeat CT spends the highest-risk window.",
+   "next": "cta_result",
+   "sources": [
+    {
+     "docId": "url:42279d67da8d",
+     "where": "1.1.16; 1.1.17; 1.1.18; rationale on short-course tranexamic acid"
+    },
+    {
+     "docId": "pmid:42095754",
+     "where": "Abstract"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Pain relief",
+     "dose": "Effective relief, including opioids if needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:42279d67da8d",
+       "where": "1.1.8"
+      }
+     ]
+    },
+    {
+     "item": "Antifibrinolytics (tranexamic acid)",
+     "dose": "Not routinely before the aneurysm is treated, and never a reason to delay securing it",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:42095754",
+       "where": "Abstract"
+      },
+      {
+       "docId": "url:42279d67da8d",
+       "where": "rationale on short-course tranexamic acid"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cta_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT angiography of the head",
+   "outcomes": [
+    {
+     "id": "aneurysm",
+     "if": "Aneurysm; the blood pattern fits its rupture",
+     "next": "sah_secure",
+     "ddx": {
+      "lead": [
+       "Subarachnoid hemorrhage"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "none",
+     "if": "No cause found; an aneurysm is still suspected",
+     "next": "end_cta_neg",
+     "ddx": {
+      "lead": [
+       "Subarachnoid hemorrhage"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "mismatch",
+     "if": "Aneurysm, pattern does not fit rupture; the blood pattern is not compatible with that aneurysm",
+     "next": "end_cta_mismatch",
+     "ddx": {
+      "lead": [
+       "Subarachnoid hemorrhage"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "sah_secure",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Ruptured aneurysm on CT angiography. While the team plans treatment?",
+   "options": [
+    "Enteral nimodipine 60 mg every 4 hours; coil or clip the aneurysm early if intervention is an option",
+    "Hold treatment of the aneurysm for 2 weeks, until the vasospasm window has passed",
+    "Magnesium sulfate infusion in place of nimodipine; secure the aneurysm next week",
+    "Nimodipine 60 mg every 4 hours, injecting the capsule contents IV if swallowing is unsafe"
+   ],
+   "answer": 0,
+   "chainStep": "Nimodipine 60 mg by mouth or tube every 4 hours for 21 days, started within 96 hours; if intervention is an option, secure the aneurysm at the earliest opportunity, coiling, or clipping if coiling is not suitable",
+   "why": "Nimodipine is given enterally, 60 mg every 4 hours for 21 days, starting as soon as possible within 96 hours of the bleed; when the patient cannot swallow, the capsule contents go into an oral syringe and down a nasogastric tube. They must never be injected: deaths, cardiac arrest and cardiovascular collapse have followed. ESO recommends oral nimodipine and recommends against magnesium sulfate. When intervention is an option, the aneurysm is secured at the earliest opportunity, because rebleeding risk is highest in the first 24 hours: NICE offers endovascular coiling, or clipping if coiling is not suitable, and ESO suggests treatment within 24 hours. Holding it for 2 weeks leaves that risk running.",
+   "next": "end_sah",
+   "sources": [
+    {
+     "docId": "url:28b15fd5d33e",
+     "where": "Boxed warning; dosage and administration"
+    },
+    {
+     "docId": "url:42279d67da8d",
+     "where": "1.1.17; 1.2.1; 1.2.4; 1.2.6; 1.2.8"
+    },
+    {
+     "docId": "pmid:42095754",
+     "where": "Abstract"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Nimodipine",
+     "dose": "60 mg (two 30 mg capsules) every 4 hours for 21 consecutive days, started as soon as possible within 96 hours of onset; unable to swallow: capsule contents drawn into an oral syringe, given by nasogastric tube or PEG",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:28b15fd5d33e",
+       "where": "Dosage and administration"
+      },
+      {
+       "docId": "url:42279d67da8d",
+       "where": "1.2.1"
+      }
+     ]
+    },
+    {
+     "item": "Nimodipine by injection",
+     "dose": "Never inject the capsule contents IV or by any parenteral route",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:28b15fd5d33e",
+       "where": "Boxed warning; warnings"
+      }
+     ]
+    },
+    {
+     "item": "Nimodipine with liver cirrhosis",
+     "dose": "30 mg every 4 hours, with close monitoring of blood pressure and heart rate",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:28b15fd5d33e",
+       "where": "Dosage and administration"
+      }
+     ]
+    },
+    {
+     "item": "Securing the aneurysm",
+     "dose": "Endovascular coiling, or clipping if coiling is not suitable, at the earliest opportunity; ESO suggests within 24 hours when the most dedicated team is available",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:42279d67da8d",
+       "where": "1.2.6; 1.2.8"
+      },
+      {
+       "docId": "pmid:42095754",
+       "where": "Abstract"
+      }
+     ]
+    },
+    {
+     "item": "Blood pressure before the aneurysm is secured",
+     "dose": "ESO suggests lowering very high pressure before the aneurysm is secured, slowly, without undershoot, with short-acting drugs (expert opinion; effect on outcome unclear)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42095754",
+       "where": "Plain language summary"
+      }
+     ]
+    },
+    {
+     "item": "Blood pressure target",
+     "dose": "Not stated in the text read: NG228 gives no acute target; ESO prose reports only observational targets (120 plus or minus 20, 160, 140 or less) under PICO 1b Additional information; its PICO 1b recommendation boxes are images not yet read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:42095754",
+       "where": "PICO 1b, additional information"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gca_first",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Suspected giant cell arteritis. Next?",
+   "options": [
+    "ESR and CRP, and start glucocorticoids now; confirm with biopsy or imaging",
+    "ESR and CRP, but hold glucocorticoids until the temporal artery biopsy is done",
+    "ESR and CRP, and start glucocorticoids only if the ESR comes back raised",
+    "Non-contrast CT head first; start glucocorticoids only if it shows a cause"
+   ],
+   "answer": 0,
+   "chainStep": "ESR and CRP; start glucocorticoids without delay; urgent specialist referral; temporal artery biopsy or ultrasound to confirm",
+   "why": "With a strong clinical suspicion, EULAR starts glucocorticoids without delay while the confirmatory tests are pending and refers urgently; headache, scalp tenderness, jaw claudication and visual disturbance raise that suspicion. ESR and CRP are typically raised in GCA and both are normal in under 3%, so they support the diagnosis but do not gate the first dose. Starting steroids first does not spoil the confirmation: imaging and biopsy can still show GCA weeks into treatment, and the ACR asks for the biopsy within 2 weeks.",
+   "next": "gca_vision",
+   "sources": [
+    {
+     "docId": "pmid:42481270",
+     "where": "Recommendations 1 and 2 and text"
+    },
+    {
+     "docId": "pmid:31270110",
+     "where": "Recommendation 1 text; Recommendation 3 text"
+    },
+    {
+     "docId": "pmid:34235884",
+     "where": "Recommendations 3 and 9"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Referral",
+     "dose": "Urgent: within 24 hours of presentation, immediately with cranial symptoms",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42481270",
+       "where": "Recommendation 1 and text"
+      }
+     ]
+    },
+    {
+     "item": "ESR and CRP",
+     "dose": "Typically raised in GCA; both normal in under 3%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31270110",
+       "where": "Recommendation 3 text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gca_vision",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Vision",
+   "outcomes": [
+    {
+     "id": "vision",
+     "if": "Visual loss or amaurosis fugax",
+     "next": "gca_pulse",
+     "ddx": {
+      "lead": [
+       "Giant cell arteritis"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "no_vision",
+     "if": "No visual or neurological symptoms",
+     "next": "gca_oral",
+     "ddx": {
+      "lead": [
+       "Giant cell arteritis"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "gca_pulse",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Suspected GCA with visual loss. Glucocorticoid?",
+   "options": [
+    "Pulse IV methylprednisolone, then high-dose oral prednisone",
+    "Prednisone 10 mg daily, raised if the biopsy is positive",
+    "No steroids: vision already lost will not come back",
+    "Tocilizumab alone, to spare an older patient the glucocorticoids"
+   ],
+   "answer": 0,
+   "chainStep": "Pulse IV methylprednisolone (ACR: 500 to 1000 mg daily for 3 to 5 days), then high-dose oral prednisone; ophthalmology as soon as possible",
+   "why": "For new GCA with threatened vision, the ACR conditionally recommends pulse IV glucocorticoids over high-dose oral; EULAR says pulsed methylprednisolone could be considered for acute vision loss, though its benefit is unclear, and arranging it should not delay oral treatment. Delaying glucocorticoids when vision is affected is the strongest risk factor for permanent blindness, low-dose prednisone is not induction therapy, and tocilizumab is used together with glucocorticoids, not instead of them.",
+   "next": "gca_confirm",
+   "sources": [
+    {
+     "docId": "pmid:34235884",
+     "where": "Recommendations 9 and 12; definitions table"
+    },
+    {
+     "docId": "pmid:42481270",
+     "where": "Recommendation 4 text"
+    },
+    {
+     "docId": "pmid:31270110",
+     "where": "Recommendation 1 text; Recommendation 4 text"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Methylprednisolone (ACR)",
+     "dose": "500 to 1000 mg IV daily for 3 to 5 days, or equivalent",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34235884",
+       "where": "Definitions table; Recommendation 9"
+      }
+     ]
+    },
+    {
+     "item": "Methylprednisolone (EULAR)",
+     "dose": "0.25 to 1.0 g IV daily for up to 3 days could be considered; benefit unclear",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42481270",
+       "where": "Recommendation 4 text"
+      }
+     ]
+    },
+    {
+     "item": "Ophthalmology",
+     "dose": "New visual symptoms: seen as soon as possible by an ophthalmology team",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31270110",
+       "where": "Recommendation 1 text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gca_oral",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Suspected GCA, no visual or neurological symptoms. Glucocorticoid?",
+   "options": [
+    "High-dose oral prednisone daily, started today",
+    "Prednisone 10 mg daily, raised if the biopsy is positive",
+    "Alternate-day prednisone to limit side effects",
+    "No steroids until the biopsy result is back"
+   ],
+   "answer": 0,
+   "chainStep": "High-dose oral prednisone daily, started today (EULAR 40 to 60 mg/day; ACR high dose up to 1 mg/kg, max 80 mg)",
+   "why": "Without cranial ischemia, the ACR prefers high-dose oral glucocorticoids over pulse IV and over moderate doses, given daily rather than on alternate days. EULAR starts 40 to 60 mg/day prednisone-equivalent and tapers to 15 to 20 mg/day within 2 to 3 months, and with a strong suspicion it does not wait for confirmation. A low dose is not induction therapy.",
+   "next": "gca_confirm",
+   "sources": [
+    {
+     "docId": "pmid:34235884",
+     "where": "Recommendations 8, 10 and 11; definitions table"
+    },
+    {
+     "docId": "pmid:42481270",
+     "where": "Recommendations 2 and 4"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Prednisone (EULAR)",
+     "dose": "40 to 60 mg/day; taper to 15 to 20 mg/day within 2 to 3 months, aiming to stop within 12 to 18 months",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42481270",
+       "where": "Recommendation 4"
+      }
+     ]
+    },
+    {
+     "item": "Prednisone (ACR high dose)",
+     "dose": "1 mg/kg up to 80 mg daily, or equivalent; daily, not alternate days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34235884",
+       "where": "Definitions table; Recommendation 10"
+      }
+     ],
+     "note": "The ACR's high-dose definition reaches above EULAR's 40 to 60 mg/day starting range."
+    }
+   ]
+  },
+  {
+   "id": "gca_confirm",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Glucocorticoids started. How is GCA confirmed?",
+   "options": [
+    "Temporal artery biopsy within 2 weeks, or ultrasound where there is expertise",
+    "Stop the steroids for a week so the biopsy is not falsely negative",
+    "A response to steroids confirms it; no biopsy or imaging needed",
+    "Temporal artery biopsy after 6 weeks, once the steroids have settled it"
+   ],
+   "answer": 0,
+   "chainStep": "Temporal artery biopsy within 2 weeks of starting glucocorticoids (unilateral, longer than 1 cm), or temporal artery ultrasound where there is expertise",
+   "why": "EULAR confirms GCA by imaging or biopsy findings, so a response to steroids is not the test. The ACR conditionally prefers a unilateral temporal artery biopsy longer than 1 cm, within 2 weeks of starting glucocorticoids, and calls biopsy the optimal approach in the United States; EULAR 2018 accepts ultrasound or MRI of the cranial arteries as well as histology. The steroids are not stopped for the biopsy, since imaging and biopsy can still show GCA weeks into treatment.",
+   "next": "gca_result",
+   "sources": [
+    {
+     "docId": "pmid:34235884",
+     "where": "Recommendations 1 to 4 and text"
+    },
+    {
+     "docId": "pmid:42481270",
+     "where": "Overarching principle B"
+    },
+    {
+     "docId": "pmid:31270110",
+     "where": "Recommendation 3; Recommendation 1 text"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Temporal artery biopsy",
+     "dose": "Unilateral first, a long segment over 1 cm, within 2 weeks of starting glucocorticoids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34235884",
+       "where": "Recommendations 1 to 3"
+      }
+     ]
+    },
+    {
+     "item": "Temporal artery ultrasound",
+     "dose": "EULAR accepts it; the ACR prefers biopsy in the US, where ultrasound expertise is less common",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31270110",
+       "where": "Recommendation 3"
+      },
+      {
+       "docId": "pmid:34235884",
+       "where": "Recommendation 4 and text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gca_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Biopsy or ultrasound",
+   "outcomes": [
+    {
+     "id": "positive",
+     "if": "Arteritis confirmed",
+     "next": "end_gca",
+     "ddx": {
+      "lead": [
+       "Giant cell arteritis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Tocilizumab",
+       "dose": "ACR: with oral glucocorticoids for newly diagnosed GCA (conditional); EULAR: tocilizumab or upadacitinib considered, especially for relapsing or refractory disease or a high risk of glucocorticoid harm",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34235884",
+         "where": "Recommendation 12"
+        },
+        {
+         "docId": "pmid:42481270",
+         "where": "Recommendation 7"
+        }
+       ]
+      },
+      {
+       "item": "Large-vessel imaging",
+       "dose": "Baseline MR or CT angiography of the neck, chest, abdomen and pelvis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34235884",
+         "where": "Recommendation 7 and text"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "negative",
+     "if": "Negative biopsy; suspicion still high",
+     "next": "end_gca_neg",
+     "ddx": {
+      "lead": [
+       "Giant cell arteritis"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "venous_img",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Papilledema or a suspected venous thrombosis. Imaging?",
+   "options": [
+    "MRI with MR venography, or CT with CT venography, now",
+    "Lumbar puncture first; image only if the pressure is high",
+    "Non-contrast CT alone; a clear scan rules out venous thrombosis",
+    "D-dimer first; image only if it is raised"
+   ],
+   "answer": 0,
+   "chainStep": "Brain imaging with venography now: MRI with MR venography, or non-contrast CT with CT venography",
+   "why": "Suspected cerebral venous thrombosis needs parenchymal and venous imaging immediately after stabilization: CT with CT venography, or MRI with MR venography, contrast-enhanced preferred. A non-contrast CT alone cannot rule it in or out, and a D-dimer should not decide whether to image. With papilledema, the UK IIH consensus asks for MRI within 24 hours (CT if MRI is not available) and makes CT or MR venography mandatory; the LP comes only after normal imaging. The ACR rates venography 'may be appropriate' for papilledema and in pregnancy.",
+   "next": "venous_result",
+   "sources": [
+    {
+     "docId": "pmid:38826076",
+     "where": "1.1.i; 1.2.1; 1.2.2.i"
+    },
+    {
+     "docId": "pmid:29903905",
+     "where": "Q1"
+    },
+    {
+     "docId": "pmid:37236753",
+     "where": "Variants 4 and 6 tables"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Blood pressure",
+     "dose": "Measure it with papilledema: malignant hypertension is 180 systolic or 120 diastolic or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29903905",
+       "where": "Q1"
+      }
+     ]
+    },
+    {
+     "item": "Eye examination",
+     "dose": "Confirm papilledema; acuity, pupils, intraocular pressure, perimetry, dilated fundoscopy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29903905",
+       "where": "Q1"
+      }
+     ]
+    },
+    {
+     "item": "Blood tests",
+     "dose": "CBC, electrolytes, aPTT and INR, creatinine and eGFR, glucose, ALT, TSH, and a pregnancy test if able to become pregnant",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38826076",
+       "where": "1.2.2.iii"
+      }
+     ]
+    },
+    {
+     "item": "Venography contrast in pregnancy or the peripartum period",
+     "dose": "The sources disagree; see the note",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:37236753",
+       "where": "Variant 6 table"
+      },
+      {
+       "docId": "pmid:38826076",
+       "where": "1.2.1.ii and iii"
+      }
+     ],
+     "note": "ACR Variant 6 rates MRV with IV contrast usually not appropriate, and MRV without contrast and CT venography may be appropriate; CSBPR 1.2.1.ii and iii prefer contrast-enhanced CT or MR venography and do not recommend time-of-flight MR venography."
+    }
+   ]
+  },
+  {
+   "id": "venous_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Imaging with venography",
+   "outcomes": [
+    {
+     "id": "cvt",
+     "if": "Venous sinus thrombosis",
+     "next": "cvt_tx",
+     "ddx": {
+      "lead": [
+       "Cerebral venous thrombosis"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "clear_pap",
+     "if": "Clear, papilledema confirmed; no thrombosis, no mass",
+     "next": "iih_lp",
+     "ddx": {
+      "lead": [
+       "Idiopathic intracranial hypertension"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "clear",
+     "if": "Clear, no papilledema; no thrombosis, no mass",
+     "next": "end_venous_clear",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    },
+    {
+     "id": "mass",
+     "if": "A mass or hydrocephalus",
+     "next": "end_lesion",
+     "ddx": {
+      "lead": [
+       "Space-occupying lesion"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "cvt_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Cerebral venous thrombosis on venography. Treatment?",
+   "options": [
+    "Therapeutic LMWH now, even if there is a venous hemorrhage",
+    "No anticoagulation while there is blood on the scan",
+    "Systemic IV alteplase to dissolve the clot, then anticoagulation",
+    "Endovascular thrombectomy as the first-line treatment"
+   ],
+   "answer": 0,
+   "chainStep": "Therapeutic-dose LMWH (or IV heparin) as soon as possible, even with intracranial blood; stroke unit care; an oral anticoagulant once stable, for at least 3 months",
+   "why": "Therapeutic LMWH or IV unfractionated heparin starts as soon as possible after the diagnosis, LMWH preferred for most, and intracranial or subarachnoid blood is not a contraindication. Systemic thrombolysis is not recommended, and endovascular therapy is not routine first-line treatment; it may be considered when the patient deteriorates despite optimal medical therapy.",
+   "next": "end_cvt",
+   "sources": [
+    {
+     "docId": "pmid:38826076",
+     "where": "2.0.i; 2.1; 2.6"
+    }
+   ],
+   "orders": [
+    {
+     "item": "LMWH",
+     "dose": "Therapeutic dose, subcutaneous; the agent and dose are not stated in CSBPR",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:38826076",
+       "where": "2.1.i"
+      }
+     ]
+    },
+    {
+     "item": "IV unfractionated heparin",
+     "dose": "Bolus then infusion by institutional protocol; mainly for severe renal impairment or a planned procedure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38826076",
+       "where": "2.1.i.b and c"
+      }
+     ]
+    },
+    {
+     "item": "History of heparin-induced thrombocytopenia",
+     "dose": "Avoid heparin; involve hematology",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38826076",
+       "where": "2.1.i.d and e"
+      }
+     ]
+    },
+    {
+     "item": "A DOAC as the first agent",
+     "dose": "Not routinely without a parenteral lead-in; case by case only",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38826076",
+       "where": "2.1.ii; clinical consideration 3"
+      }
+     ]
+    },
+    {
+     "item": "Systemic thrombolysis",
+     "dose": "Not recommended",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38826076",
+       "where": "2.1.iv"
+      }
+     ]
+    },
+    {
+     "item": "Seizures",
+     "dose": "Treat acute symptomatic seizures; no prophylactic antiseizure drugs",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38826076",
+       "where": "2.2.i and ii"
+      }
+     ]
+    },
+    {
+     "item": "Vision",
+     "dose": "Visual symptoms or raised-pressure signs: urgent ophthalmology, ideally within 24 to 48 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38826076",
+       "where": "2.4.i"
+      }
+     ]
+    },
+    {
+     "item": "Acetazolamide for papilledema",
+     "dose": "Escalated by the papilledema's response; the starting dose is not stated in CSBPR",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:38826076",
+       "where": "2.4.1.i"
+      }
+     ]
+    },
+    {
+     "item": "Deterioration",
+     "dose": "Endovascular therapy may be considered on deterioration despite optimal medical therapy; decompressive hemicraniectomy for life-threatening mass effect",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38826076",
+       "where": "2.6 clinical consideration 3a; 2.7.i"
+      }
+     ]
+    },
+    {
+     "item": "Oral anticoagulation",
+     "dose": "Warfarin (INR 2.0 to 3.0) or a DOAC once stable, for at least 3 months; at least 3 to 6 months after a major transient risk factor such as the early postpartum period",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38826076",
+       "where": "3.1.i; clinical considerations 1 to 3a"
+      }
+     ]
+    },
+    {
+     "item": "Breastfeeding",
+     "dose": "No DOAC while breastfeeding",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38826076",
+       "where": "4.1.v"
+      }
+     ]
+    },
+    {
+     "item": "Pregnancy",
+     "dose": "Therapeutic LMWH, with thrombosis or obstetric medicine follow-up; no DOAC or warfarin",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38826076",
+       "where": "4.1.iii and iv"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "iih_lp",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Papilledema; brain imaging and venography show no cause. Next?",
+   "options": [
+    "Lumbar puncture lying on the side: opening pressure, then CSF protein, glucose and cells",
+    "Lumbar puncture sitting upright: opening pressure, then CSF protein, glucose and cells",
+    "Discharge with acetazolamide: normal imaging means no lumbar puncture is needed",
+    "Start anticoagulation for a presumed venous thrombosis the venogram missed"
+   ],
+   "answer": 0,
+   "chainStep": "Lumbar puncture in the lateral decubitus position, legs extended: opening pressure; CSF protein, glucose and cell count",
+   "why": "After normal imaging, everyone with papilledema has an LP to measure the opening pressure and check the contents, lying on the side, relaxed, with the legs extended. The diagnostic criteria use an opening pressure above 25 cm CSF, read with the rest of the picture rather than alone. Normal imaging does not explain papilledema, and with the venography clear there is no thrombosis to treat.",
+   "next": "iih_result",
+   "sources": [
+    {
+     "docId": "pmid:29903905",
+     "where": "Q1"
+    }
+   ]
+  },
+  {
+   "id": "iih_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Opening pressure and CSF",
+   "outcomes": [
+    {
+     "id": "raised",
+     "if": "Over 25 cm CSF; contents normal",
+     "next": "iih_tx",
+     "ddx": {
+      "lead": [
+       "Idiopathic intracranial hypertension"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "normal",
+     "if": "25 cm CSF or less; contents normal",
+     "next": "end_iih_normal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "iih_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Idiopathic intracranial hypertension, vision not declining. Treatment?",
+   "options": [
+    "Weight management if BMI is over 30, acetazolamide, and ophthalmology follow-up",
+    "Serial lumbar punctures to keep the pressure down, with ophthalmology follow-up",
+    "A long course of oral prednisolone with acetazolamide, and ophthalmology follow-up",
+    "A CSF shunt now for the headache, then weight management and follow-up"
+   ],
+   "answer": 0,
+   "chainStep": "Weight management (BMI over 30); acetazolamide titrated up; short-term NSAID or paracetamol, no opioids; ophthalmology follow-up by papilledema grade",
+   "why": "Weight loss is the only disease-modifying therapy in typical IIH, and everyone with a BMI over 30 is counselled at the earliest opportunity; acetazolamide could be prescribed for symptoms, though the trial benefit was modest. Serial LPs are not recommended, a prolonged course of steroids is not recommended because of weight gain, and CSF diversion is generally not recommended for headache alone. If vision declines, the acute treatment is surgical.",
+   "next": "end_iih",
+   "sources": [
+    {
+     "docId": "pmid:29903905",
+     "where": "Q2; Q3; Q7; Q8; Q9; Q11; Q15; Q23"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Acetazolamide",
+     "dose": "A popular start is 250 to 500 mg twice a day, titrated up; the IIHTT maximum was 4 g daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29903905",
+       "where": "Q9"
+      }
+     ]
+    },
+    {
+     "item": "Headache",
+     "dose": "Short-term NSAID or paracetamol; no opioids; warn about medication overuse",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29903905",
+       "where": "Q11"
+      }
+     ]
+    },
+    {
+     "item": "Declining vision",
+     "dose": "Surgical: CSF diversion or optic nerve sheath fenestration; a lumbar drain can bridge to surgery",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29903905",
+       "where": "Q3"
+      }
+     ]
+    },
+    {
+     "item": "Before any new drug",
+     "dose": "Counsel women about side effects and teratogenic risk",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29903905",
+       "where": "Q8"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "co_first",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Suspected carbon monoxide poisoning. First moves?",
+   "options": [
+    "100% oxygen by tight-fitting mask with a reservoir now; COHb on a blood gas",
+    "Room air is enough: the pulse oximeter reads 99%; COHb on a blood gas",
+    "Pulse CO-oximetry first; start oxygen only if the reading is raised",
+    "Analgesia for the headache, then home to rest once the pain has settled"
+   ],
+   "answer": 0,
+   "chainStep": "100% oxygen at once, whatever the SpO2; COHb, pH and lactate on a blood gas; ECG and troponin; neurological exam; find the source and alert the fire service",
+   "why": "If CO poisoning is suspected, 100% oxygen starts immediately whatever the saturation, because ordinary pulse oximeters cannot tell carboxyhemoglobin from oxyhemoglobin. A blood gas measures COHb, pH and lactate. A negative CO-oximetry reading, or even a normal COHb, does not rule it out when the history and symptoms fit. Symptomatic patients are admitted, and the source is found so that no one else is poisoned.",
+   "next": "co_result",
+   "sources": [
+    {
+     "docId": "pmid:34867135",
+     "where": "4 (symptoms and diagnosis); 4.3; 6; 7; 8"
+    }
+   ],
+   "orders": [
+    {
+     "item": "ECG and cardiac markers",
+     "dose": "12-lead ECG and troponin (with CK and CK-MB) in everyone with suspected CO poisoning",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34867135",
+       "where": "8"
+      }
+     ]
+    },
+    {
+     "item": "Neurological exam",
+     "dose": "In everyone with symptoms",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34867135",
+       "where": "8"
+      }
+     ]
+    },
+    {
+     "item": "The source",
+     "dose": "Determine it, and alert the fire department to check the scene",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34867135",
+       "where": "4 (symptoms and diagnosis)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "co_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "COHb, ECG, troponin and exam",
+   "outcomes": [
+    {
+     "id": "severe",
+     "if": "Severe signs or pregnant; impaired consciousness, seizure, acidosis, respiratory failure, cardiac ischemia, an extremely high COHb, or pregnancy",
+     "next": "co_severe",
+     "ddx": {
+      "lead": [
+       "Carbon monoxide poisoning"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "not_severe",
+     "if": "No severe signs, not pregnant; COHb raised but not extreme, or normal after oxygen on the way in",
+     "next": "end_co",
+     "ddx": {
+      "lead": [
+       "Carbon monoxide poisoning"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "co_severe",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Carbon monoxide poisoning with severe signs or in pregnancy. Next?",
+   "options": [
+    "Hyperbaric oxygen within 6 hours; 100% oxygen until then",
+    "100% oxygen, stopped as soon as the COHb is back to normal",
+    "Hyperbaric oxygen tomorrow, but only if symptoms are still present"
+   ],
+   "answer": 0,
+   "chainStep": "Call the hyperbaric center now: HBOT within 6 hours, three sessions in 24 hours; 100% oxygen until then; ECG and troponin monitoring",
+   "why": "The German S2k guideline gives HBOT to adults with signs of severe poisoning, including continued impaired consciousness, metabolic acidosis, respiratory insufficiency or cardiac ischemia, and in pregnancy. It should start within 6 hours and is not recommended after 24. Oxygen continues until COHb is normal and the patient is symptom-free, because symptoms do not track COHb clearance.",
+   "next": "end_co_severe",
+   "sources": [
+    {
+     "docId": "pmid:34867135",
+     "where": "4.2; 8; 9"
+    }
+   ],
+   "note": "Not every society in the S2k group agreed: DGINA and DGIIN give HBOT or high-flow normobaric oxygen case by case, because a long-term neurocognitive benefit of HBOT over normobaric oxygen is unclear. S2k gives no number for extremely high; the 25% (15% in pregnancy) US threshold is not in the sources read.",
+   "orders": [
+    {
+     "item": "Hyperbaric oxygen",
+     "dose": "Adults (18 and over), ought to, 78% consensus: within 6 hours, not after 24; three sessions within 24 hours, the first at 300 kPa for 90 minutes, the second and third at 2.4 bar or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34867135",
+       "where": "9"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen",
+     "dose": "100% until COHb is below 3% and the patient is symptom-free",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34867135",
+       "where": "8"
+      }
+     ]
+    },
+    {
+     "item": "Delayed neurological sequelae",
+     "dose": "Warn every patient about the risk, symptoms and timing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34867135",
+       "where": "10"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "htn_ct",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "BP over 180/120 with confusion. Before the BP plan?",
+   "options": [
+    "Non-contrast CT head now, while the IV agent is prepared",
+    "No imaging: the fundi already show it is hypertensive",
+    "MRI brain tomorrow, once the pressure is down",
+    "Lumbar puncture to exclude a subarachnoid bleed first"
+   ],
+   "answer": 0,
+   "chainStep": "Non-contrast CT head now to exclude a hemorrhage or infarct, which have their own BP targets",
+   "why": "The 2025 AHA/ACC guideline handles a hypertensive emergency with an acute intracerebral hemorrhage or ischemic stroke in its cerebrovascular section, so a bleed or infarct changes the target; the ACR rates a non-contrast CT usually appropriate for a headache with a neurologic deficit. The fundi cannot show a bleed or an infarct, and waiting for an MRI or doing an LP first leaves the target unset.",
+   "next": "htn_ct_result",
+   "sources": [
+    {
+     "docId": "pmid:40815242",
+     "where": "6.2 footnote"
+    },
+    {
+     "docId": "pmid:37236753",
+     "where": "Variant 7 table"
+    }
+   ]
+  },
+  {
+   "id": "htn_ct_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Non-contrast CT head",
+   "outcomes": [
+    {
+     "id": "clear",
+     "if": "No bleed or infarct; CT clear or PRES-type edema",
+     "next": "htn",
+     "ddx": {
+      "lead": [
+       "Hypertensive emergency"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "bleed",
+     "if": "A bleed or infarct",
+     "next": "end_stroke",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "htn",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "BP over 180/120 with encephalopathy, not pregnant. BP plan?",
+   "options": [
+    "ICU, titratable IV agent: systolic down no more than 25% in hour 1, then to 160/100 over 2 to 6 hours",
+    "ICU, titratable IV agent: bring the pressure to normal within the first hour, then hold it there",
+    "ICU, titratable IV agent: systolic below 120 within the first hour, then hold it there",
+    "Oral amlodipine in the department, then discharge to clinic follow-up within a week"
+   ],
+   "answer": 0,
+   "chainStep": "ICU with continuous monitoring; titratable IV agent; systolic down by no more than 25% in hour 1, to below 160/100 over the next 2 to 6 hours, then 130 to 140 over 24 to 48 hours",
+   "why": "For a hypertensive emergency without a compelling condition, the 2025 AHA/ACC guideline admits to an ICU and lowers systolic pressure by no more than 25% in the first hour, then to under 160/100 over the next 2 to 6 hours, then cautiously to 130 to 140 over 24 to 48 hours. Rapid correction to normal can cause organ hypoperfusion through lost autoregulation; under 120 in the first hour is the target for aortic dissection; and oral treatment with discharge is for severe hypertension without acute organ damage.",
+   "next": "end_htn",
+   "sources": [
+    {
+     "docId": "pmid:40815242",
+     "where": "6.2 recommendations 1 to 3; synopsis; Table 26"
+    }
+   ],
+   "note": "Acute intracerebral hemorrhage, ischemic stroke and pregnancy have their own targets in the guideline; a bleed or infarct on imaging goes to the stroke pathway.",
+   "orders": [
+    {
+     "item": "Nicardipine",
+     "dose": "Start 5 mg/h; increase by 2.5 mg/h every 5 minutes to a maximum of 15 mg/h",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26"
+      }
+     ]
+    },
+    {
+     "item": "Clevidipine",
+     "dose": "Start 1 to 2 mg/h, doubling every 90 seconds until BP nears target, then smaller increases every 5 to 10 minutes; maximum 21 mg/h, 72 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26"
+      }
+     ]
+    },
+    {
+     "item": "Labetalol",
+     "dose": "0.3 to 1.0 mg/kg (max 20 mg) slow IV every 10 minutes, or 0.4 to 1.0 mg/kg/h infusion up to 3 mg/kg/h; not with reactive airway or obstructive pulmonary disease",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40815242",
+       "where": "Table 26, as corrected in 2026"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "flag_img",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "A secondary-cause red flag without a specific pattern. Imaging?",
+   "options": [
+    "Brain imaging now: non-contrast CT, or MRI",
+    "No imaging: treat as migraine and review in clinic",
+    "Lumbar puncture before any imaging"
+   ],
+   "answer": 0,
+   "chainStep": "Brain imaging now: non-contrast CT head, or MRI head",
+   "why": "NICE CG150 says to consider further investigation of a headache after head trauma in the past 3 months, with compromised immunity or with a cancer that can spread to the brain, and the ACR rates non-contrast CT, MRI, or MRI with and without contrast usually appropriate for a headache with cancer, immunocompromise, onset after 50 or onset after trauma. Treating it as migraine skips that, and in meningitis guidance an immunocompromised state is one of the findings that put a CT before an LP, because a mass lesion can herniate after a tap.",
+   "next": "flag_img_result",
+   "sources": [
+    {
+     "docId": "url:5fa71509be03",
+     "where": "1.1.1; 1.1.2"
+    },
+    {
+     "docId": "pmid:37236753",
+     "where": "Variant 7 table"
+    },
+    {
+     "docId": "pmid:15494903",
+     "where": "CT before lumbar puncture (text before Table 2)"
+    }
+   ],
+   "note": "Anticoagulation is not on the CG150 or ACR lists read; it is here as a bleeding risk, and a bleed on an anticoagulant is reversed in the stroke pathway. Over 50 without GCA features, GCA still stays possible."
+  },
+  {
+   "id": "flag_img_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Brain imaging",
+   "outcomes": [
+    {
+     "id": "lesion",
+     "if": "A bleed, mass or abscess",
+     "next": "end_lesion",
+     "ddx": {
+      "lead": [
+       "Space-occupying lesion"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "clear",
+     "if": "No abnormality",
+     "next": "end_flag_clear",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "preg_bp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Blood pressure and urine",
+   "outcomes": [
+    {
+     "id": "pe",
+     "if": "New hypertension after 20 weeks; over 140/90 with proteinuria or another new organ sign, such as severe headache or visual scotomata",
+     "next": "end_pe",
+     "ddx": {
+      "lead": [
+       "Pre-eclampsia"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Pre-eclampsia (NICE definition)",
+       "dose": "New hypertension over 140 systolic or 90 diastolic after 20 weeks, with new proteinuria or other new maternal organ dysfunction (severe headaches or persistent visual scotomata included) or uteroplacental dysfunction",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:ed91553c28fb",
+         "where": "Terms used in this guideline"
+        }
+       ]
+      },
+      {
+       "item": "Severe-range BP",
+       "dose": "Systolic 160 or more or diastolic 110 or more is severe hypertension in pregnancy and is treated urgently; the agent and dose table is reprinted from ACOG and waits for Danny's ruling",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:40815242",
+         "where": "5.5 recommendation-specific supportive text 3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "normal",
+     "if": "BP normal, no proteinuria; a venous thrombosis to exclude",
+     "next": "venous_img",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "primary",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The headache pattern",
+   "outcomes": [
+    {
+     "id": "migraine",
+     "if": "Migraine; throbbing, light-sensitive, like previous attacks, oral treatment failed or not tolerated",
+     "next": "mig_tx",
+     "ddx": {
+      "lead": [
+       "Migraine"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "tension",
+     "if": "Tension-type; bilateral, pressing, mild to moderate",
+     "next": "tth_tx",
+     "ddx": {
+      "lead": [
+       "Tension-type headache"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "cluster",
+     "if": "Cluster; one-sided orbital pain, red watery eye, restless",
+     "next": "cluster_tx",
+     "ddx": {
+      "lead": [
+       "Cluster headache"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "moh",
+     "if": "Medication overuse; worse on triptans, opioids or combination drugs 10 or more days a month, or simple analgesics 15 or more, for 3 months",
+     "next": "moh_tx",
+     "ddx": {
+      "lead": [
+       "Medication overuse headache"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "mig_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Migraine, no red flags, and treatment at home has failed. In the ED?",
+   "options": [
+    "IV metoclopramide or prochlorperazine, with an IV NSAID such as ketorolac",
+    "IV hydromorphone with an antiemetic, repeated until the pain settles",
+    "Non-contrast CT head first, then IV treatment once it is reported clear"
+   ],
+   "answer": 0,
+   "chainStep": "IV metoclopramide or prochlorperazine plus an IV NSAID (ketorolac); sumatriptan SC if pain persists and nothing rules it out; no opioids",
+   "why": "When oral treatment fails, NICE CG150 considers a non-oral metoclopramide or prochlorperazine, adding a non-oral NSAID or triptan if not already tried, and an antiemetic is worth giving even without nausea. Opioids and ergots are not offered for migraine, and people with a migraine diagnosis are not sent for neuroimaging solely for reassurance; the ACR rates imaging usually not appropriate for a primary migraine with a normal exam.",
+   "next": "end_mig",
+   "sources": [
+    {
+     "docId": "url:5fa71509be03",
+     "where": "1.3.3; 1.3.13; 1.3.14; 1.3.16"
+    },
+    {
+     "docId": "pmid:37236753",
+     "where": "Variant 2 table"
+    }
+   ],
+   "note": "The 2025 AHS assessment of parenteral ED treatment (read in abstract only; the full text sat behind a bot check) rates IV prochlorperazine must offer; IV metoclopramide, IV ketorolac and SC sumatriptan should offer; IV dexamethasone may offer; IV hydromorphone must not offer.",
+   "orders": [
+    {
+     "item": "Metoclopramide or prochlorperazine",
+     "dose": "Non-oral; the migraine dose is not stated in the sources read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:5fa71509be03",
+       "where": "1.3.14"
+      }
+     ]
+    },
+    {
+     "item": "NSAID such as ketorolac",
+     "dose": "Non-oral; the dose is not stated in the sources read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:5fa71509be03",
+       "where": "1.3.14"
+      }
+     ]
+    },
+    {
+     "item": "Sumatriptan if pain persists",
+     "dose": "6 mg SC; a second 6 mg only after at least 1 hour and some response; max 12 mg in 24 hours; never IV or IM",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:eba7d2785f5f",
+       "where": "2.1; 2.2"
+      },
+      {
+       "docId": "url:5fa71509be03",
+       "where": "1.3.14"
+      }
+     ]
+    },
+    {
+     "item": "Sumatriptan: do not give",
+     "dose": "Ischemic coronary disease or coronary vasospasm, Wolff-Parkinson-White or another accessory pathway, prior stroke or TIA, hemiplegic or basilar migraine, peripheral vascular or ischemic bowel disease, uncontrolled hypertension, an ergot or another 5-HT1 agonist within 24 hours, an MAO-A inhibitor within 2 weeks, severe hepatic impairment",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:eba7d2785f5f",
+       "where": "4"
+      }
+     ]
+    },
+    {
+     "item": "Opioids and ergots",
+     "dose": "Not offered for acute migraine",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:5fa71509be03",
+       "where": "1.3.16"
+      }
+     ]
+    },
+    {
+     "item": "Diphenhydramine with metoclopramide or prochlorperazine",
+     "dose": "Given against akathisia in US practice; dose and evidence not in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Medication overuse",
+     "dose": "Explain the risk",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5fa71509be03",
+       "where": "1.3.6"
+      }
+     ]
+    },
+    {
+     "item": "Dexamethasone against recurrence",
+     "dose": "Not in the full texts read: a 2008 BMJ meta-analysis (abstract) found single-dose parenteral dexamethasone cut recurrence within 72 hours, and the 2025 AHS assessment (abstract) rates IV dexamethasone may offer; no dose keyed",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "tth_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Tension-type headache, no red flags. Treatment?",
+   "options": [
+    "Aspirin, paracetamol or an NSAID; no opioid",
+    "Codeine with paracetamol",
+    "Sumatriptan 6 mg subcutaneously",
+    "Non-contrast CT head before any treatment"
+   ],
+   "answer": 0,
+   "chainStep": "Aspirin, paracetamol or an NSAID (no aspirin under 16); no opioids; no imaging for reassurance; warn about medication overuse",
+   "why": "NICE CG150 considers aspirin, paracetamol or an NSAID for acute tension-type headache and does not offer opioids. Sumatriptan injection is indicated for migraine and cluster headache, and only once that diagnosis is clear. Imaging solely for reassurance is not offered, and the risk of medication overuse headache is explained to anyone using acute treatments.",
+   "next": "end_tth",
+   "sources": [
+    {
+     "docId": "url:5fa71509be03",
+     "where": "1.3.3; 1.3.6; 1.3.7; 1.3.8"
+    },
+    {
+     "docId": "url:eba7d2785f5f",
+     "where": "1"
+    }
+   ]
+  },
+  {
+   "id": "cluster_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Cluster headache attack. Acute treatment?",
+   "options": [
+    "100% oxygen at 12 L/min or more by non-rebreather, and/or sumatriptan 6 mg SC",
+    "Oral sumatriptan tablets, with a second tablet if the pain returns",
+    "IV ketorolac with an antiemetic, then reassess the pain",
+    "IV morphine titrated to the pain, with oxygen only if saturation falls"
+   ],
+   "answer": 0,
+   "chainStep": "100% oxygen at 12 L/min or more by non-rebreathing mask with reservoir, and/or sumatriptan 6 mg SC; verapamil for the bout with specialist advice; home oxygen",
+   "why": "NICE CG150 offers oxygen and/or a subcutaneous or nasal triptan: 100% oxygen at 12 litres a minute or more through a non-rebreathing mask with a reservoir bag. Sumatriptan injection is indicated for cluster headache at a single 6 mg dose. Paracetamol, NSAIDs, opioids, ergots and oral triptans are not offered for an acute cluster attack.",
+   "next": "end_cluster",
+   "sources": [
+    {
+     "docId": "url:5fa71509be03",
+     "where": "1.3.35; 1.3.36; 1.3.38"
+    },
+    {
+     "docId": "url:eba7d2785f5f",
+     "where": "1; 2.1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Oxygen",
+     "dose": "100%, at least 12 L/min, non-rebreathing mask with a reservoir bag; arrange home and ambulatory oxygen",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5fa71509be03",
+       "where": "1.3.36"
+      }
+     ]
+    },
+    {
+     "item": "Sumatriptan",
+     "dose": "6 mg SC; a second 6 mg only after at least 1 hour and some response; max 12 mg in 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:eba7d2785f5f",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "Sumatriptan: do not give",
+     "dose": "Ischemic coronary disease or coronary vasospasm, Wolff-Parkinson-White or another accessory pathway, prior stroke or TIA, hemiplegic or basilar migraine, peripheral vascular or ischemic bowel disease, uncontrolled hypertension, an ergot or another 5-HT1 agonist within 24 hours, an MAO-A inhibitor within 2 weeks, severe hepatic impairment",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:eba7d2785f5f",
+       "where": "4"
+      }
+     ]
+    },
+    {
+     "item": "Verapamil",
+     "dose": "Consider for prevention during the bout; seek specialist advice, including on ECG monitoring, if unfamiliar; the dose is not in CG150",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5fa71509be03",
+       "where": "1.3.39"
+      }
+     ]
+    },
+    {
+     "item": "First bout",
+     "dose": "Discuss neuroimaging with a headache specialist or neurologist; the ACR rates MRI head with and without contrast usually appropriate",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5fa71509be03",
+       "where": "1.3.34"
+      },
+      {
+       "docId": "pmid:37236753",
+       "where": "Variant 3 table"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "moh_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Medication overuse headache. Management?",
+   "options": [
+    "Stop all overused acute drugs abruptly for at least 1 month; warn it worsens first; consider prophylaxis; review in 4 to 8 weeks",
+    "Taper the overused drugs slowly over 3 months; warn it worsens first; consider prophylaxis; review in 4 to 8 weeks",
+    "Admit for inpatient withdrawal before any trial at home; consider prophylaxis; review in 4 to 8 weeks",
+    "Switch to a different daily acute analgesic; warn it worsens first; consider prophylaxis; review in 4 to 8 weeks"
+   ],
+   "answer": 0,
+   "chainStep": "Withdraw all overused acute headache drugs abruptly for at least 1 month; warn that the headache worsens first, with close follow-up; consider prophylaxis for the underlying headache; review at 4 to 8 weeks",
+   "why": "NICE CG150 treats medication overuse headache by withdrawing the overused drugs: stop all overused acute headache medicines for at least 1 month, abruptly rather than gradually, and warn that symptoms are likely to get worse before they improve. Prophylaxis for the underlying primary headache is considered alongside, and the diagnosis is reviewed 4 to 8 weeks after withdrawal starts. Inpatient withdrawal is not offered routinely; it is considered for strong opioids, relevant comorbidities or repeated failed attempts. A different daily acute drug is still an acute drug taken daily, not withdrawal.",
+   "next": "end_moh",
+   "sources": [
+    {
+     "docId": "url:5fa71509be03",
+     "where": "1.2.7; 1.3.42 to 1.3.48"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Inpatient withdrawal",
+     "dose": "Not routinely; consider specialist referral or inpatient withdrawal for strong opioids, relevant comorbidities or repeated unsuccessful attempts",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5fa71509be03",
+       "where": "1.3.46; 1.3.47"
+      }
+     ]
+    },
+    {
+     "item": "Follow-up",
+     "dose": "Close follow-up and support while symptoms worsen; review the diagnosis 4 to 8 weeks after withdrawal starts",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5fa71509be03",
+       "where": "1.3.44; 1.3.48"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_mening",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Fever with neck stiffness, a rash or confusion: suspected bacterial meningitis. Continue in the sepsis and fever pathway, which covers the antibiotics, dexamethasone and when an LP is safe. Antibiotics within 1 hour; when a CT or the LP is delayed, blood cultures, dexamethasone and antibiotics come first."
+  },
+  {
+   "id": "end_stroke",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A new focal deficit or an intracerebral hemorrhage: continue in the stroke pathway, which covers imaging, anticoagulant reversal and blood pressure."
+  },
+  {
+   "id": "end_sah",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Aneurysmal subarachnoid hemorrhage: CT angiography, an urgent call to the neurosurgical center, analgesia including opioids, enteral nimodipine 60 mg every 4 hours for 21 days, no routine antifibrinolytic, and the aneurysm secured at the earliest opportunity, by coiling, or clipping if coiling is not suitable."
+  },
+  {
+   "id": "end_sah_out",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Subarachnoid hemorrhage ruled out: a radiologist-reported CT within 6 hours of onset, or a later CT followed by an LP without xanthochromia. Think about the other causes of a sudden severe headache; they are outside this pathway's sources."
+  },
+  {
+   "id": "end_cta_mismatch",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "CT angiography shows an aneurysm, but the subarachnoid blood pattern is not compatible with its rupture. Seek specialist opinion without delay from an interventional neuroradiologist and a neurosurgeon."
+  },
+  {
+   "id": "end_cta_neg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Subarachnoid hemorrhage with no cause on CT angiography: with an aneurysm still suspected, NICE considers digital subtraction angiography, or MR angiography if DSA is contraindicated, and thinks about other diagnoses if neither shows one. Enteral nimodipine is considered for any confirmed SAH, and neurosurgical advice continues."
+  },
+  {
+   "id": "end_gca",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Giant cell arteritis confirmed: high-dose glucocorticoids tapered to 15 to 20 mg/day within 2 to 3 months, tocilizumab with them considered, and baseline imaging of the large vessels."
+  },
+  {
+   "id": "end_gca_neg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Negative temporal artery biopsy with GCA still suspected: the ACR adds noninvasive imaging of the large vessels to the clinical assessment, and a contralateral biopsy is also appropriate. The glucocorticoid decision stays with the specialist team. With high clinical probability, a provisional diagnosis of GCA may be made, then confirmed or revised during follow-up."
+  },
+  {
+   "id": "end_cvt",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cerebral venous thrombosis: therapeutic LMWH (or IV heparin) at once, even with intracranial blood; no systemic thrombolysis; seizures treated, not prevented; ophthalmology for visual or raised-pressure signs; then an oral anticoagulant for at least 3 months, at least 3 to 6 months after a major transient risk factor such as the early postpartum period, with no DOAC while breastfeeding."
+  },
+  {
+   "id": "end_venous_clear",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Venography and brain imaging clear, no papilledema: no venous thrombosis and no mass. The other causes of the headache are outside this pathway's sources; specialist advice continues. If consciousness is still depressed, a BP over 180/120 or a raised COHb sends the patient to those steps; a CT more than 6 hours after onset can still miss a SAH."
+  },
+  {
+   "id": "end_lesion",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A subdural, mass, abscess, hydrocephalus or bleed on imaging: outside this pathway; neurosurgical review now. Anticoagulant reversal is covered in the stroke pathway for an intracerebral hemorrhage only; reversal for a subdural is not in the sources read."
+  },
+  {
+   "id": "end_iih",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Idiopathic intracranial hypertension with vision not declining: weight management, acetazolamide titrated up, short-term simple analgesia without opioids, and ophthalmology follow-up timed by the papilledema grade. Declining vision goes to urgent surgery."
+  },
+  {
+   "id": "end_iih_normal",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Papilledema with an opening pressure of 25 cm CSF or less: below the IIH cut-off, so the picture is reread. An experienced clinician reviews the discs, and a repeat LP or intracranial pressure monitoring may be considered."
+  },
+  {
+   "id": "end_co",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Carbon monoxide poisoning without severe signs: 100% oxygen until symptom-free with COHb below 3%, admission while symptomatic, ECG and troponin, the source found, and a warning about delayed neurological sequelae. A normal COHb does not exclude it when the exposure and symptoms fit."
+  },
+  {
+   "id": "end_co_severe",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Severe carbon monoxide poisoning: 100% oxygen, hyperbaric oxygen within 6 hours, cardiac monitoring, and a warning about delayed neurological sequelae."
+  },
+  {
+   "id": "end_htn_no_tod",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Severe hypertension without acute target organ damage: no aggressive short-term lowering, no parenteral drugs; restart or intensify oral therapy."
+  },
+  {
+   "id": "end_orthostatic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Orthostatic headache: the ACR rates MRI head without and with IV contrast usually appropriate, CT usually not (Variant 5); the rest is outside this pathway's sources."
+  },
+  {
+   "id": "end_htn",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypertensive emergency with encephalopathy: ICU, a titratable IV agent, systolic down by no more than 25% in the first hour, then below 160/100 over 2 to 6 hours and 130 to 140 over the next 24 to 48 hours."
+  },
+  {
+   "id": "end_flag_clear",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Imaging clear after a secondary-cause red flag: no bleed, mass or abscess. Over 50, giant cell arteritis is still possible; the rest of the workup for cancer or compromised immunity is outside this pathway's sources."
+  },
+  {
+   "id": "end_pe",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "New hypertension with proteinuria in pregnancy or after delivery: possible pre-eclampsia. Hand over to the obstetric team now. A systolic of 160 or more or a diastolic of 110 or more is severe-range and is treated urgently (AHA/ACC 2025); its agent and dose table is reprinted from ACOG and waits for Danny's ruling. Magnesium and delivery timing are outside this pathway's sources."
+  },
+  {
+   "id": "end_mig",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Migraine in the ED: IV metoclopramide or prochlorperazine with an IV NSAID, sumatriptan SC if the pain persists and nothing rules it out, no opioids or ergots, and no imaging for reassurance. Whether to add dexamethasone against recurrence is not settled by the full texts read."
+  },
+  {
+   "id": "end_tth",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Tension-type headache: aspirin, paracetamol or an NSAID, no opioids, no imaging for reassurance, and a warning about medication overuse."
+  },
+  {
+   "id": "end_moh",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Medication overuse headache: stop all overused acute drugs abruptly for at least 1 month, expect a worse spell first, consider prophylaxis for the underlying headache, and review in 4 to 8 weeks."
+  },
+  {
+   "id": "end_cluster",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cluster headache: 100% oxygen at 12 L/min or more by non-rebreather and/or sumatriptan 6 mg SC; no oral triptans, NSAIDs or opioids; verapamil for the bout with specialist advice; home oxygen; neuroimaging discussed for a first bout."
+  }
+ ],
+ "cases": [
+  {
+   "id": "sah_classic",
+   "label": "Thunderclap, blood on the CT",
+   "vignette": "52-year-old woman, a sudden severe headache that peaked within a minute while she lifted a box 2 hours ago, then vomiting and neck pain. BP 168/94, HR 88, temperature 36.9.",
+   "picks": {
+    "front_door": "thunderclap",
+    "sah_ct_result": "blood",
+    "cta_result": "aneurysm"
+   },
+   "results": {
+    "front_door": "Peak within a minute, 2 hours ago. GCS 15, no focal deficit, no fever; neck stiff on flexion.",
+    "sah_ct_result": "Non-contrast CT at 2.5 hours: blood in the basal cisterns and both sylvian fissures.",
+    "cta_result": "CT angiography: a 7 mm posterior communicating artery aneurysm; the blood pattern fits its rupture."
+   }
+  },
+  {
+   "id": "sah_late_lp",
+   "label": "Thunderclap, late CT, xanthochromia",
+   "vignette": "45-year-old man, a sudden explosive occipital headache while running yesterday evening, 18 hours ago, still severe. BP 150/90, HR 76, afebrile.",
+   "picks": {
+    "front_door": "thunderclap",
+    "sah_ct_result": "neg_late",
+    "lp_result": "xantho",
+    "cta_result": "none"
+   },
+   "results": {
+    "front_door": "Peak within seconds, 18 hours ago. GCS 15, no focal deficit, no fever.",
+    "sah_ct_result": "Non-contrast CT at 19 hours after onset, reported by a radiologist: no blood.",
+    "lp_result": "LP at 20 hours: raised bilirubin (xanthochromia) on spectrophotometry.",
+    "cta_result": "CT angiography: no aneurysm or other cause; the neuroradiologist still suspects an aneurysm."
+   }
+  },
+  {
+   "id": "sah_early_clear",
+   "label": "Thunderclap, early clear CT",
+   "vignette": "38-year-old woman, a sudden severe headache at her desk that peaked within seconds 90 minutes ago and is now easing. BP 132/80, HR 72, afebrile.",
+   "picks": {
+    "front_door": "thunderclap",
+    "sah_ct_result": "neg_early",
+    "neg_early_result": "settled"
+   },
+   "results": {
+    "front_door": "Peak within seconds, 90 minutes ago. GCS 15, normal neurological exam, no fever.",
+    "sah_ct_result": "Non-contrast CT at 2 hours, reported by a radiologist: no blood, no other abnormality.",
+    "neg_early_result": "Senior and neurology review: no other cause suspected, exam normal, headache settling."
+   }
+  },
+  {
+   "id": "sah_early_doubt",
+   "label": "Thunderclap, early clear CT, LP clear",
+   "vignette": "61-year-old man, a sudden severe headache at rest that peaked within a minute 3 hours ago, with one bout of vomiting; still severe. BP 158/92, HR 80, afebrile.",
+   "picks": {
+    "front_door": "thunderclap",
+    "sah_ct_result": "neg_early",
+    "neg_early_result": "doubt",
+    "lp_result": "clear"
+   },
+   "results": {
+    "front_door": "Peak within a minute, 3 hours ago. GCS 15, no focal deficit, no fever.",
+    "sah_ct_result": "Non-contrast CT at 4 hours, reported by a radiologist: no blood.",
+    "neg_early_result": "Specialist advice: doubt remains with the pain still severe; LP planned for 12 hours after onset.",
+    "lp_result": "LP at 13 hours after onset: no xanthochromia on spectrophotometry."
+   }
+  },
+  {
+   "id": "thunder_venous",
+   "label": "Thunderclap on the pill, venography clear",
+   "vignette": "29-year-old woman on the combined pill, a sudden severe headache 4 hours ago that has not eased and is worse lying flat. BP 124/78, HR 84, afebrile.",
+   "picks": {
+    "front_door": "thunderclap",
+    "sah_ct_result": "neg_early",
+    "neg_early_result": "venous",
+    "venous_result": "clear"
+   },
+   "results": {
+    "front_door": "Peak within a minute, 4 hours ago. GCS 15, no focal deficit, no fever.",
+    "sah_ct_result": "Non-contrast CT at 4.5 hours, reported by a radiologist: no blood.",
+    "neg_early_result": "Senior review: on estrogen, with a headache worse lying flat; venous thrombosis to exclude.",
+    "venous_result": "CT venography: sinuses and cortical veins patent; brain normal. Fundi normal."
+   }
+  },
+  {
+   "id": "coma_sah",
+   "label": "Collapse with SAH",
+   "vignette": "57-year-old woman found collapsed after shouting that her head hurt. Vomiting. BP 190/100, HR 64, temperature 36.8.",
+   "picks": {
+    "front_door": "unstable",
+    "unstable_ct": "sah",
+    "cta_result": "aneurysm"
+   },
+   "results": {
+    "front_door": "GCS 9, airway at risk, temperature 36.8.",
+    "unstable_ct": "Non-contrast CT: thick subarachnoid blood in the basal cisterns.",
+    "cta_result": "CT angiography: an anterior communicating artery aneurysm; the blood pattern fits its rupture."
+   }
+  },
+  {
+   "id": "coma_ich",
+   "label": "Drowsy with an intracerebral bleed",
+   "vignette": "72-year-old man on no anticoagulant, a sudden headache and then drowsiness over 30 minutes. BP 210/112, HR 70, afebrile.",
+   "picks": {
+    "front_door": "unstable",
+    "unstable_ct": "ich"
+   },
+   "results": {
+    "front_door": "GCS 11, no fever.",
+    "unstable_ct": "Non-contrast CT: a left putaminal hemorrhage."
+   }
+  },
+  {
+   "id": "coma_clear",
+   "label": "Drowsy, CT clear",
+   "vignette": "34-year-old woman brought in drowsy after 3 days of worsening headache. No neck stiffness, no rash. BP 128/76, HR 90, temperature 37.0.",
+   "picks": {
+    "front_door": "unstable",
+    "unstable_ct": "clear",
+    "venous_result": "clear"
+   },
+   "results": {
+    "front_door": "GCS 12, no fever.",
+    "unstable_ct": "Non-contrast CT: no bleed, no mass, no hydrocephalus.",
+    "venous_result": "CT venography: sinuses and cortical veins patent; no papilledema."
+   }
+  },
+  {
+   "id": "meningitis",
+   "label": "Fever and neck stiffness",
+   "vignette": "22-year-old student, 12 hours of headache, fever and photophobia. BP 112/70, HR 118, temperature 39.4.",
+   "picks": {
+    "front_door": "fever"
+   },
+   "results": {
+    "front_door": "Fever 39.4 with neck stiffness and photophobia; GCS 15, no rash, no focal deficit."
+   }
+  },
+  {
+   "id": "focal",
+   "label": "Headache with a focal deficit",
+   "vignette": "66-year-old man, a headache and sudden right arm weakness with slurred speech 1 hour ago. BP 176/98, HR 82, afebrile.",
+   "picks": {
+    "front_door": "focal"
+   },
+   "results": {
+    "front_door": "Right arm weakness and dysarthria; GCS 15, no fever."
+   }
+  },
+  {
+   "id": "gca_vision",
+   "label": "GCA with amaurosis fugax",
+   "vignette": "76-year-old woman, 3 weeks of a new right temporal headache, scalp tenderness when she brushes her hair, jaw pain when chewing, and this morning 5 minutes of darkness in the right eye. BP 142/80, afebrile.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "gca",
+    "gca_vision": "vision",
+    "gca_result": "positive"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "Over 50 with a new headache, scalp tenderness and jaw claudication.",
+    "gca_vision": "Amaurosis fugax in the right eye this morning; acuity now 20/30 on the right.",
+    "gca_result": "Temporal artery biopsy on day 5 of treatment, 1.5 cm: granulomatous arteritis."
+   }
+  },
+  {
+   "id": "gca_oral",
+   "label": "GCA without visual symptoms, biopsy negative",
+   "vignette": "71-year-old man, 2 weeks of a new bitemporal headache with scalp tenderness and jaw claudication; no visual symptoms. BP 138/82, afebrile.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "gca",
+    "gca_vision": "no_vision",
+    "gca_result": "negative"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "Over 50 with a new headache, scalp tenderness and jaw claudication.",
+    "gca_vision": "No visual or neurological symptoms; acuity and fields normal.",
+    "gca_result": "Left temporal artery biopsy, 1.2 cm, on day 6: no arteritis. The rheumatologist still suspects GCA."
+   }
+  },
+  {
+   "id": "iih",
+   "label": "Papilledema, IIH",
+   "vignette": "26-year-old woman, BMI 38, 2 months of daily headache worse lying down and in the morning, with brief greying of vision on standing and a whooshing sound in her ears. BP 124/80, afebrile, not pregnant.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "papilledema",
+    "venous_result": "clear_pap",
+    "iih_result": "raised"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "Bilateral disc swelling; BP 124/80; pregnancy test negative.",
+    "venous_result": "MRI brain and contrast MR venography: no thrombosis, no mass, no hydrocephalus. Ophthalmology confirms papilledema; acuity normal, enlarged blind spots only.",
+    "iih_result": "Opening pressure 36 cm CSF lying on her side; protein, glucose and cells normal."
+   }
+  },
+  {
+   "id": "iih_normal_op",
+   "label": "Papilledema, opening pressure not raised",
+   "vignette": "31-year-old woman, 3 weeks of headache; an optometrist reported swollen discs. BP 118/76, afebrile, not pregnant.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "papilledema",
+    "venous_result": "clear_pap",
+    "iih_result": "normal"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "Blurred disc margins on both sides; BP 118/76; pregnancy test negative.",
+    "venous_result": "MRI brain and contrast MR venography normal. Ophthalmology confirms mild papilledema; vision normal.",
+    "iih_result": "Opening pressure 21 cm CSF lying on her side, relaxed, legs extended; contents normal."
+   }
+  },
+  {
+   "id": "papilledema_mass",
+   "label": "Papilledema from a mass",
+   "vignette": "48-year-old man, 6 weeks of morning headache with vomiting, getting worse. BP 136/84, afebrile.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "papilledema",
+    "venous_result": "mass"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "Bilateral papilledema; BP 136/84.",
+    "venous_result": "MRI: a 4 cm enhancing right frontal mass with surrounding edema; venous sinuses patent."
+   }
+  },
+  {
+   "id": "co_severe",
+   "label": "Carbon monoxide, severe",
+   "vignette": "40-year-old man, headache and nausea since he woke and a brief faint 2 hours ago; his wife and son have headaches too, and the gas furnace has been noisy. Chest pressure now. BP 104/66, HR 112, SpO2 99% on room air, afebrile.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "co",
+    "co_result": "severe"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "Household cluster around a gas furnace; headache and nausea in all three.",
+    "co_result": "Venous gas: COHb 28%, pH 7.29, lactate 4.6. ECG: ST depression in V4 to V6; troponin raised."
+   }
+  },
+  {
+   "id": "co_mild",
+   "label": "Carbon monoxide, not severe",
+   "vignette": "30-year-old woman, 2 days of headache and nausea, better at work and worse at home; her partner has the same headache, and they use a portable gas heater. BP 118/74, HR 92, SpO2 98%, afebrile.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "co",
+    "co_result": "not_severe"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "Household cluster around a portable gas heater.",
+    "co_result": "Venous gas: COHb 12%, pH and lactate normal. ECG and troponin normal; neurological exam normal."
+   }
+  },
+  {
+   "id": "htn_emergency",
+   "label": "Hypertensive encephalopathy",
+   "vignette": "44-year-old man who stopped his blood pressure tablets a month ago, 2 days of headache, now confused with blurred vision. HR 92, afebrile, not on any anticoagulant.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "bp",
+    "htn_ct_result": "clear"
+   },
+   "results": {
+    "front_door": "GCS 14 (confused), afebrile, no focal deficit, gradual onset.",
+    "flags": "BP 236/138 in both arms; flame hemorrhages and disc swelling on fundoscopy.",
+    "htn_ct_result": "Non-contrast CT: no bleed or infarct; patchy posterior white-matter edema."
+   }
+  },
+  {
+   "id": "flag_subdural",
+   "label": "Anticoagulated after a fall",
+   "vignette": "79-year-old woman on apixaban for atrial fibrillation, who hit her head in a fall 3 weeks ago, with a week of worsening headache. BP 148/84, HR 78, afebrile. No jaw claudication, scalp tenderness or visual symptoms.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "imaging_flag",
+    "flag_img_result": "lesion"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "Head injury 3 weeks ago, on an anticoagulant; no GCA features, no papilledema.",
+    "flag_img_result": "Non-contrast CT: a left subacute subdural hematoma with mild mass effect."
+   }
+  },
+  {
+   "id": "flag_cancer_clear",
+   "label": "Cancer history, imaging clear",
+   "vignette": "55-year-old woman treated for breast cancer 3 years ago, 2 weeks of a new, steadily worsening headache. BP 130/78, afebrile. No jaw claudication, scalp tenderness or visual symptoms.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "imaging_flag",
+    "flag_img_result": "clear"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "A cancer that can spread to the brain; no GCA features, no papilledema.",
+    "flag_img_result": "MRI head with and without contrast: no mass, no abnormality."
+   }
+  },
+  {
+   "id": "preeclampsia",
+   "label": "Pregnant, raised BP",
+   "vignette": "30-year-old at 35 weeks of pregnancy, 6 hours of severe frontal headache with flashing lights. Afebrile.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "pregnant",
+    "preg_bp": "pe"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "Pregnant, 35 weeks; a new headache unlike her usual.",
+    "preg_bp": "BP 164/108 on repeat; urine protein 3+."
+   }
+  },
+  {
+   "id": "postpartum_cvt",
+   "label": "Postpartum venous thrombosis",
+   "vignette": "33-year-old woman 12 days after a vaginal delivery without an epidural, breastfeeding, with 4 days of worsening headache and vomiting, worse lying down. Afebrile. Fundi normal.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "pregnant",
+    "preg_bp": "normal",
+    "venous_result": "cvt"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "Postpartum day 12; a new headache unlike her usual.",
+    "preg_bp": "BP 122/78 on repeat; no proteinuria.",
+    "venous_result": "CT venography: thrombosis of the superior sagittal sinus, with a small adjacent venous hemorrhage."
+   }
+  },
+  {
+   "id": "migraine",
+   "label": "Migraine attack",
+   "vignette": "27-year-old woman with known migraine, 14 hours of a throbbing left-sided headache like her usual attacks, with nausea and light sensitivity; paracetamol at home did not help, and she has not taken an NSAID or a triptan today. BP 126/78, HR 84, afebrile. No cardiac history.",
+   "picks": {
+    "front_door": "none",
+    "primary": "migraine"
+   },
+   "results": {
+    "front_door": "GCS 15, normal neurological exam and fundi, afebrile; the pattern of her usual attacks.",
+    "primary": "Unilateral, throbbing, worse with movement, photophobia and nausea, like her previous attacks."
+   }
+  },
+  {
+   "id": "tension",
+   "label": "Tension-type headache",
+   "vignette": "41-year-old man, 3 days of a band-like pressing headache on both sides, mild to moderate, still working, no nausea or light sensitivity. BP 128/82, afebrile.",
+   "picks": {
+    "front_door": "none",
+    "primary": "tension"
+   },
+   "results": {
+    "front_door": "GCS 15, normal neurological exam and fundi, afebrile.",
+    "primary": "Bilateral, pressing, mild to moderate, not worse with routine activity."
+   }
+  },
+  {
+   "id": "cluster",
+   "label": "Cluster headache, first bout",
+   "vignette": "34-year-old man, his third attack today: severe boring pain behind the right eye for 40 minutes with a red, watering right eye and a blocked, runny right nostril; he is pacing the room. First bout. BP 132/84, HR 96, afebrile. No cardiac or vascular history.",
+   "picks": {
+    "front_door": "none",
+    "primary": "cluster"
+   },
+   "results": {
+    "front_door": "GCS 15, normal neurological exam and fundi, afebrile.",
+    "primary": "Unilateral orbital pain with ipsilateral tearing, red eye and rhinorrhea; restless."
+   }
+  },
+  {
+   "id": "co_pregnant",
+   "label": "Carbon monoxide in pregnancy",
+   "vignette": "29-year-old at 24 weeks of pregnancy, headache and nausea since last night; her two children have headaches too, and the apartment uses a gas space heater. She left an hour ago. BP 116/72, HR 104, SpO2 99%, afebrile.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "co",
+    "co_result": "severe"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "Household cluster around a gas space heater; pregnant, 24 weeks.",
+    "co_result": "Venous gas: COHb 14%, pH and lactate normal. ECG and troponin normal; neurological exam normal. Pregnant, 24 weeks."
+   }
+  },
+  {
+   "id": "htn_bleed",
+   "label": "Severe hypertension with a bleed",
+   "vignette": "67-year-old woman who ran out of her blood pressure tablets, a day of headache, now confused. HR 88, afebrile, no jaw claudication, scalp tenderness or visual symptoms.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "bp",
+    "htn_ct_result": "bleed"
+   },
+   "results": {
+    "front_door": "GCS 14 (confused), afebrile, no focal deficit, gradual onset.",
+    "flags": "BP 228/124 in both arms; retinal hemorrhages on fundoscopy.",
+    "htn_ct_result": "Non-contrast CT: a right parietal lobar hemorrhage."
+   }
+  },
+  {
+   "id": "htn_no_tod",
+   "label": "Severe hypertension, no organ damage",
+   "vignette": "46-year-old man who has missed his blood pressure tablets for a week, a dull headache since yesterday. HR 80, afebrile.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "bp_no_tod"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "BP 192/118 on repeat; alert, fundi and neurological exam normal; no chest pain or breathlessness."
+   }
+  },
+  {
+   "id": "orthostatic",
+   "label": "Orthostatic headache",
+   "vignette": "36-year-old woman, 5 days of headache that builds within minutes of standing and eases lying flat; no recent lumbar puncture, epidural or head injury. BP 118/72, afebrile.",
+   "picks": {
+    "front_door": "other_flag",
+    "flags": "orthostatic"
+   },
+   "results": {
+    "front_door": "GCS 15, afebrile, no focal deficit, gradual onset.",
+    "flags": "Worse within minutes of standing, gone lying flat; fundi normal."
+   }
+  },
+  {
+   "id": "coma_subdural",
+   "label": "Drowsy with a subdural",
+   "vignette": "74-year-old man, a week of worsening headache after a fall, now drowsy. BP 156/88, HR 70, afebrile.",
+   "picks": {
+    "front_door": "unstable",
+    "unstable_ct": "lesion"
+   },
+   "results": {
+    "front_door": "GCS 10, no fever.",
+    "unstable_ct": "Non-contrast CT: a large left subacute subdural hematoma with midline shift."
+   }
+  },
+  {
+   "id": "sah_mismatch",
+   "label": "Aneurysm that does not fit the bleed",
+   "vignette": "48-year-old man, a sudden severe headache that peaked within a minute 3 hours ago. BP 146/88, HR 74, afebrile.",
+   "picks": {
+    "front_door": "thunderclap",
+    "sah_ct_result": "blood",
+    "cta_result": "mismatch"
+   },
+   "results": {
+    "front_door": "Peak within a minute, 3 hours ago. GCS 15, no focal deficit, no fever.",
+    "sah_ct_result": "Non-contrast CT at 3.5 hours: blood confined to the cisterns in front of the midbrain.",
+    "cta_result": "CT angiography: a 3 mm middle cerebral artery aneurysm; the blood pattern is not compatible with its rupture."
+   }
+  },
+  {
+   "id": "moh",
+   "label": "Medication overuse headache",
+   "vignette": "39-year-old woman with migraine, a daily headache for 4 months; she takes sumatriptan on about 12 days a month and paracetamol on most other days. No opioids. BP 122/76, afebrile.",
+   "picks": {
+    "front_door": "none",
+    "primary": "moh"
+   },
+   "results": {
+    "front_door": "GCS 15, normal neurological exam and fundi, afebrile.",
+    "primary": "Daily headache for 4 months while taking sumatriptan on 12 days a month and paracetamol on most other days."
+   }
+  }
+ ]
+}

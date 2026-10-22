@@ -1,0 +1,3832 @@
+{
+ "id": "pw_peds_fever",
+ "title": "The febrile infant and child",
+ "world": "peds",
+ "synonyms": [
+  "fever in infants",
+  "febrile infant",
+  "febrile neonate",
+  "neonatal fever",
+  "fever in a child",
+  "fever without a source",
+  "fever without localizing signs",
+  "occult bacteremia",
+  "serious bacterial infection",
+  "invasive bacterial infection",
+  "AAP febrile infant guideline",
+  "8 to 21 days",
+  "22 to 28 days",
+  "29 to 60 days",
+  "procalcitonin",
+  "inflammatory markers",
+  "traffic light system",
+  "pediatric sepsis",
+  "septic shock in children",
+  "neonatal sepsis",
+  "neonatal HSV",
+  "acyclovir",
+  "ampicillin and gentamicin",
+  "febrile seizure",
+  "simple febrile seizure",
+  "complex febrile seizure",
+  "febrile status epilepticus",
+  "pediatric UTI",
+  "urinary tract infection in children",
+  "catheter urine",
+  "renal ultrasound",
+  "VCUG",
+  "Kawasaki disease",
+  "MIS-C",
+  "multisystem inflammatory syndrome in children"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:96adc1a88e80",
+   "label": "NICE NG143",
+   "title": "Fever in under 5s: assessment and initial management (NICE NG143, 2019, updated 2021)",
+   "url": "https://www.nice.org.uk/guidance/ng143"
+  },
+  {
+   "docId": "url:463607415c7b",
+   "label": "NICE NG254",
+   "title": "Suspected sepsis in under 16s: recognition, diagnosis and early management (NICE NG254, 2025; replaces NG51)",
+   "url": "https://www.nice.org.uk/guidance/ng254"
+  },
+  {
+   "docId": "pmid:41870559",
+   "label": "SSC children 2026",
+   "title": "Surviving Sepsis Campaign International Guidelines for the Management of Sepsis and Septic Shock in Children 2026 (Intensive Care Med 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41870559/"
+  },
+  {
+   "docId": "url:57d5b1785d53",
+   "label": "NICE NG195",
+   "title": "Neonatal infection: antibiotics for prevention and treatment (NICE NG195, 2021, updated 2026)",
+   "url": "https://www.nice.org.uk/guidance/ng195"
+  },
+  {
+   "docId": "url:7925dc2913d1",
+   "label": "NICE NG224",
+   "title": "Urinary tract infection in under 16s: diagnosis and management (NICE NG224, 2022)",
+   "url": "https://www.nice.org.uk/guidance/ng224"
+  },
+  {
+   "docId": "url:f531e12f2681",
+   "label": "NICE NG111",
+   "title": "Pyelonephritis (acute): antimicrobial prescribing (NICE NG111, 2018)",
+   "url": "https://www.nice.org.uk/guidance/ng111"
+  },
+  {
+   "docId": "url:4a5f477fcfcd",
+   "label": "NICE NG240",
+   "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management (NICE NG240, 2024)",
+   "url": "https://www.nice.org.uk/guidance/ng240"
+  },
+  {
+   "docId": "pmid:26900382",
+   "label": "AES 2016",
+   "title": "Evidence-Based Guideline: Treatment of Convulsive Status Epilepticus in Children and Adults (American Epilepsy Society, Epilepsy Curr 2016)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26900382/"
+  },
+  {
+   "docId": "pmid:36016968",
+   "label": "JACEP Open febrile seizure review 2022",
+   "title": "Febrile seizures: A review (J Am Coll Emerg Physicians Open 2022), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36016968/"
+  },
+  {
+   "docId": "pmid:38735928",
+   "label": "Ital J Pediatr febrile seizure review 2024",
+   "title": "Best practices for the management of febrile seizures in children (Ital J Pediatr 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38735928/"
+  },
+  {
+   "docId": "pmid:28846243",
+   "label": "StatPearls: febrile seizure",
+   "title": "Febrile Seizure (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846243/"
+  },
+  {
+   "docId": "pmid:38261676",
+   "label": "StatPearls: UTI in children",
+   "title": "Urinary Tract Infections In Children (StatPearls, updated 2024), a review that restates the AAP 2011 UTI guideline",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38261676/"
+  },
+  {
+   "docId": "pmid:30725848",
+   "label": "StatPearls: Kawasaki",
+   "title": "Kawasaki Disease (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30725848/"
+  },
+  {
+   "docId": "pmid:33557873",
+   "label": "Italian MIS-C guidance 2021",
+   "title": "Childhood multisystem inflammatory syndrome associated with COVID-19 (MIS-C): a diagnostic and treatment guidance from the Rheumatology Study Group of the Italian Society of Pediatrics (Ital J Pediatr 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33557873/"
+  },
+  {
+   "docId": "pmid:29939674",
+   "label": "StatPearls: neonatal HSV",
+   "title": "Congenital Herpes Simplex (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29939674/"
+  },
+  {
+   "docId": "pmid:30285373",
+   "label": "StatPearls: neonatal sepsis",
+   "title": "Neonatal Sepsis (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30285373/"
+  },
+  {
+   "docId": "pmid:30335297",
+   "label": "StatPearls: neonatal meningitis",
+   "title": "Neonatal Meningitis (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30335297/"
+  },
+  {
+   "docId": "pmid:32809488",
+   "label": "StatPearls: cefotaxime",
+   "title": "Cefotaxime (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32809488/"
+  },
+  {
+   "docId": "pmid:38247647",
+   "label": "Antibiotics 2024 febrile infant review",
+   "title": "Conundrums in the Management of Febrile Infants under Three Months of Age and Future Research (Antibiotics 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38247647/"
+  },
+  {
+   "docId": "pmid:33978724",
+   "label": "JAMA Netw Open 2021 (meningitis with a positive urinalysis)",
+   "title": "Prevalence of Bacterial Meningitis Among Febrile Infants Aged 29-60 Days With Positive Urinalysis Results: A Systematic Review and Meta-analysis (JAMA Netw Open 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33978724/"
+  },
+  {
+   "docId": "pmid:23766664",
+   "label": "Elhassanien 2013",
+   "title": "Fever without source in infants and young children: dilemma in diagnosis and management (Risk Manag Healthc Policy 2013)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23766664/"
+  },
+  {
+   "docId": "pmid:15494903",
+   "label": "IDSA meningitis 2004",
+   "title": "Practice guidelines for the management of bacterial meningitis (IDSA, Clin Infect Dis 2004)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15494903/"
+  },
+  {
+   "docId": "pmid:39113626",
+   "label": "Hosp Pediatr 2024 (low-risk disposition)",
+   "title": "Disposition and Follow-up for Low-Risk Febrile Infants: A Secondary Analysis of a Multicenter Study (Hosp Pediatr 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39113626/"
+  },
+  {
+   "docId": "pmid:34281996",
+   "label": "AAP 2021 febrile infants",
+   "title": "Evaluation and Management of Well-Appearing Febrile Infants 8 to 60 Days Old (AAP clinical practice guideline, Pediatrics 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34281996/"
+  },
+  {
+   "docId": "url:337aa8616efc",
+   "label": "FDA label: ampicillin",
+   "title": "Ampicillin for injection (Sandoz) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=64a04e8c-8f78-46b3-8f45-56ef225a4f74"
+  },
+  {
+   "docId": "url:eed08301207b",
+   "label": "FDA label: ceftriaxone",
+   "title": "Ceftriaxone for injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8351aa37-552d-471d-b293-c564dcb6ec29"
+  },
+  {
+   "docId": "url:77b8db7b8da8",
+   "label": "FDA label: ceftazidime",
+   "title": "Ceftazidime for injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40d48c5d-650e-461b-a67b-7e65772d1b92"
+  },
+  {
+   "docId": "url:c00b94cb2b5b",
+   "label": "FDA label: gentamicin",
+   "title": "Gentamicin sulfate injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=977180b3-a222-4282-d485-4a3217674305"
+  },
+  {
+   "docId": "url:c282bfad72db",
+   "label": "FDA label: acyclovir injection",
+   "title": "Acyclovir sodium injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ae921e4e-b8ae-4a45-acc1-32e5e719812b"
+  }
+ ],
+ "differential": [
+  "Septic shock",
+  "Status epilepticus",
+  "Simple febrile seizure",
+  "Complex febrile seizure",
+  "Bacterial meningitis",
+  "HSV encephalitis",
+  "Meningococcal disease",
+  "Bacteremia",
+  "Urinary tract infection",
+  "Neonatal HSV",
+  "Kawasaki disease",
+  "MIS-C",
+  "Viral illness",
+  "Focal bacterial infection"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "A febrile infant or child in the ED. First moves?",
+   "options": [
+    "Airway, breathing, circulation, consciousness; then vitals, weight and age in days",
+    "An antipyretic first, then judge how ill the child looks once the fever falls",
+    "Blood count, CRP, urine and a chest film first, before the child is examined",
+    "The height of the temperature first, since it separates serious infection from a virus"
+   ],
+   "answer": 0,
+   "chainStep": "Check the airway, breathing, circulation and consciousness; record temperature, heart rate, respiratory rate, capillary refill and oxygen saturation (blood pressure if the pulse or refill is abnormal); weigh the child; note the age in days, gestation, vaccines, any rash and any seizure; think 'could this be sepsis?'",
+   "why": "Immediately life-threatening features come first: the airway, breathing, circulation and the level of consciousness. Temperature, heart rate, respiratory rate and capillary refill are measured in every febrile child, a weight is needed for every dose, and in a young infant the age in days and the appearance set the workup. A fall, or no fall, in temperature after an antipyretic does not separate serious from non-serious illness; after 6 months the height of the fever alone does not identify serious illness; and a child with no features of serious illness does not need routine blood tests or a chest film.",
+   "orders": [
+    {
+     "item": "Vital signs",
+     "dose": "Temperature, heart rate, respiratory rate and capillary refill time in every febrile child; blood pressure if the heart rate or capillary refill is abnormal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.2.8; 1.2.10"
+      }
+     ]
+    },
+    {
+     "item": "High-risk (red) features",
+     "dose": "Pale, mottled, ashen or blue; no response to social cues; appears ill; does not wake or stay awake; weak, high-pitched or continuous cry; grunting; respiratory rate over 60; moderate or severe chest indrawing; reduced skin turgor; bulging fontanelle",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.2.5"
+      }
+     ]
+    },
+    {
+     "item": "Under 3 months",
+     "dose": "A temperature of 38 C or higher puts the infant in the high-risk group; some vaccines cause fever at this age",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.2.12"
+      }
+     ]
+    },
+    {
+     "item": "Tachycardia (APLS)",
+     "dose": "Over 160 a minute under 12 months, over 150 at 12 to 24 months, over 140 at 2 to 5 years: at least intermediate risk",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.2.15, Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Temperature route",
+     "dose": "NICE: an electronic thermometer in the axilla under 4 weeks; axillary or infrared tympanic from 4 weeks to 5 years; oral and rectal routes not used routinely under 5",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.1.1; 1.1.2; 1.1.3"
+      },
+      {
+       "docId": "pmid:34281996",
+       "where": "Inclusion criteria"
+      }
+     ],
+     "note": "AAP 2021 enrols infants with a documented rectal temperature of 38.0 C (100.4 F) or more, at home in the past 24 hours or in a clinical setting; NICE NG143 advises against routine rectal measurement under 5."
+    },
+    {
+     "item": "Fever reported by a parent",
+     "dose": "Taken seriously: infants febrile only at home had the same invasive bacterial infection rate (2.4%) as those febrile at assessment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.1.6"
+      },
+      {
+       "docId": "pmid:38247647",
+       "where": "Section 5.1"
+      }
+     ]
+    },
+    {
+     "item": "Antipyretic response as a test",
+     "dose": "Do not rely on a fall, or no fall, in temperature to separate serious from non-serious illness",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.4.8; 1.5.15"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: children with a chronic illness or immune deficiency, returning travellers, newborns still in the nursery or neonatal unit, bronchiolitis and croup (the child who cannot breathe), and children over 5 beyond the shock, seizure, Kawasaki and MIS-C routes. Adult sepsis and meningitis are in pw_sepsis_fever; rashes in pw_rash; seizures in adults in pw_seizure.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "url:96adc1a88e80",
+     "where": "1.2.1; 1.2.8; 1.2.10; 1.2.11; 1.4.8; 1.5.12"
+    }
+   ]
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Perfusion, convulsions, the skin and the first look",
+   "outcomes": [
+    {
+     "id": "shock",
+     "if": "Shocked, not convulsing; poor perfusion, mottled skin, slow capillary refill or low pressure",
+     "ddx": {
+      "lead": [
+       "Septic shock"
+      ],
+      "out": []
+     },
+     "next": "resus"
+    },
+    {
+     "id": "seizing",
+     "if": "Convulsing now; still seizing on arrival",
+     "ddx": {
+      "lead": [
+       "Status epilepticus"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "First-line IV benzodiazepine",
+       "dose": "IV lorazepam 0.1 mg/kg (maximum 4 mg, may repeat once) or IV diazepam 0.15 to 0.2 mg/kg (maximum 10 mg, may repeat once); IM midazolam in the next order",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:26900382",
+         "where": "Figure 1, initial therapy phase"
+        },
+        {
+         "docId": "pmid:36016968",
+         "where": "Table 3"
+        }
+       ]
+      },
+      {
+       "item": "No IV access, other routes",
+       "dose": "IM midazolam: AES 5 mg at 13 to 40 kg, 10 mg over 40 kg; JACEP Open 0.1 to 0.2 mg/kg (maximum 10 mg). Buccal midazolam 0.3 to 0.5 mg/kg or intranasal 0.2 mg/kg; rectal diazepam 0.2 to 0.5 mg/kg (maximum 20 mg)",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:26900382",
+         "where": "Figure 1, initial therapy phase"
+        },
+        {
+         "docId": "pmid:36016968",
+         "where": "Table 3"
+        }
+       ],
+       "note": "AES doses IM midazolam by weight band and gives no dose under 13 kg; JACEP Open doses it per kg: at 14 kg, 5 mg against 1.4 to 2.8 mg."
+      },
+      {
+       "item": "Glucose under 60 mg/dL",
+       "dose": "2 mL/kg of 25% dextrose IV from 2 years; 4 mL/kg of 12.5% dextrose under 2 years",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:26900382",
+         "where": "Figure 1, stabilization phase"
+        }
+       ]
+      },
+      {
+       "item": "Second line at 20 minutes",
+       "dose": "One dose of IV fosphenytoin 20 mg PE/kg (maximum 1,500 mg PE), valproic acid 40 mg/kg (maximum 3,000 mg) or levetiracetam 60 mg/kg (maximum 4,500 mg)",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:26900382",
+         "where": "Figure 1, second therapy phase"
+        }
+       ]
+      },
+      {
+       "item": "Febrile status epilepticus",
+       "dose": "Bacterial meningitis in 12% and 17% in two series; two guidelines advise an LP in every case",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:36016968",
+         "where": "Lumbar puncture"
+        }
+       ]
+      }
+     ],
+     "next": "end_seizing"
+    },
+    {
+     "id": "fs",
+     "if": "Seizure over, 6 months to 5 years, waking; not shocked, no non-blanching rash",
+     "ddx": {
+      "lead": [
+       "Simple febrile seizure",
+       "Complex febrile seizure"
+      ],
+      "out": []
+     },
+     "next": "fs_look"
+    },
+    {
+     "id": "seizure_other",
+     "if": "Seizure over, not a febrile seizure picture; under 6 months, over 5 years, or not waking",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis",
+       "HSV encephalitis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Reduced consciousness",
+       "dose": "Immediate parenteral antibiotics if the child is unrousable; consider them with reduced consciousness, and look for meningitis and herpes simplex encephalitis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:96adc1a88e80",
+         "where": "1.5.17; 1.5.18"
+        }
+       ]
+      },
+      {
+       "item": "Herpes simplex encephalitis",
+       "dose": "Suspect it with focal neurological signs, focal seizures or a decreased level of consciousness; give IV aciclovir",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:96adc1a88e80",
+         "where": "1.2.21; 1.5.20"
+        }
+       ]
+      },
+      {
+       "item": "Aciclovir, 3 months to 12 years",
+       "dose": "20 mg/kg over 1 hour every 8 hours for 10 days (US label, herpes simplex encephalitis); under 3 months: the newborn dose on the HSV route",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:c282bfad72db",
+         "where": "Dosage: herpes simplex encephalitis"
+        }
+       ]
+      },
+      {
+       "item": "Antibiotic",
+       "dose": "A third-generation cephalosporin such as cefotaxime or ceftriaxone until the cultures return; under 3 months add ampicillin or amoxicillin",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:96adc1a88e80",
+         "where": "1.5.19"
+        }
+       ]
+      }
+     ],
+     "next": "end_seizure_other"
+    },
+    {
+     "id": "purpura",
+     "if": "Non-blanching rash, not shocked or convulsing; petechiae or purpura",
+     "ddx": {
+      "lead": [
+       "Meningococcal disease"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Meningococcal disease",
+       "dose": "Consider it in any child with fever and a non-blanching rash, especially if ill-looking, with lesions over 2 mm, capillary refill of 3 seconds or more, or neck stiffness",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:96adc1a88e80",
+         "where": "1.2.18"
+        }
+       ]
+      },
+      {
+       "item": "Antibiotics",
+       "dose": "Parenteral benzylpenicillin or a third-generation cephalosporin at the earliest opportunity",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:96adc1a88e80",
+         "where": "1.4.10; 1.5.17"
+        }
+       ]
+      }
+     ],
+     "next": "end_purpura"
+    },
+    {
+     "id": "stable",
+     "if": "None of these; perfusion normal, no seizure, no non-blanching rash",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "age"
+    }
+   ]
+  },
+  {
+   "id": "end_seizing",
+   "kind": "end",
+   "summary": "Convulsing child: time the seizure and treat it from 5 minutes as status epilepticus. pw_seizure is for adults only, so the child's AES doses are here: IM midazolam 5 mg at 13 to 40 kg (10 mg over 40 kg; JACEP Open doses it at 0.1 to 0.2 mg/kg), IV lorazepam 0.1 mg/kg (maximum 4 mg) or IV diazepam 0.15 to 0.2 mg/kg (maximum 10 mg), and for a glucose under 60 mg/dL, 2 mL/kg of 25% dextrose from 2 years or 4 mL/kg of 12.5% dextrose under 2. Once it stops, a child of 6 months to 5 years who wakes returns to this pathway's febrile seizure route. Febrile status epilepticus carries the highest meningitis risk, and two guidelines advise an LP in every case."
+  },
+  {
+   "id": "end_seizure_other",
+   "kind": "end",
+   "summary": "A seizure with fever outside the febrile seizure picture (under 6 months, over 5 years, or a child who does not wake): look for bacterial meningitis, which NICE considers with a decreased level of consciousness or convulsive status epilepticus, and herpes simplex encephalitis, considered with focal signs, focal seizures or a decreased level of consciousness. Parenteral antibiotics go in immediately if the child is unrousable and are considered with any reduced consciousness; IV aciclovir is given when encephalitis is suggested. An infant under 3 months is worked up as a febrile young infant, a seizure being an HSV warning sign. pw_seizure and pw_ams are for adults only; the convulsing route here carries the AES weight-based doses."
+  },
+  {
+   "id": "end_purpura",
+   "kind": "end",
+   "summary": "Fever with a non-blanching rash: consider meningococcal disease, above all in an ill-looking child, with lesions over 2 mm, a capillary refill of 3 seconds or more, or neck stiffness, and give parenteral antibiotics at the earliest opportunity (benzylpenicillin or a third-generation cephalosporin, with ampicillin or amoxicillin added under 3 months). The rash and skin emergencies pathway (pw_rash) takes the purpura route from here, with its count, film, clotting and meningococcal workup; a child who becomes shocked comes back to this pathway's shock route."
+  },
+  {
+   "id": "resus",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Fever and shock in a child. First hour?",
+   "options": [
+    "Oxygen, IV or IO access, crystalloid boluses reassessed after each, antibiotics within 1 hour",
+    "Oxygen, IV or IO access, an LP with the blood culture, antibiotics once the CSF is in hand",
+    "Oxygen, IV or IO access, albumin boluses instead of crystalloid, antibiotics within 1 hour",
+    "Oxygen, IV or IO access, maintenance fluid only, antibiotics once a blood culture turns positive"
+   ],
+   "answer": 0,
+   "chainStep": "High-flow oxygen; IV or intraosseous access; blood culture, a gas with glucose and lactate, blood count, CRP, electrolytes, creatinine, liver tests and clotting; crystalloid bolus over minutes, reassessed after each; broad-spectrum IV antibiotics within 1 hour (ampicillin or amoxicillin added under 3 months); epinephrine or norepinephrine if shock persists; consultant and intensive care review; the LP only once stable",
+   "why": "A child in septic shock gets antibiotics as soon as possible and ideally within 1 hour, after a blood culture that does not substantially delay them. Fluid goes in as crystalloid boluses, with the circulation reassessed after every one and the boluses stopped if shock resolves or fluid overload appears; SSC suggests crystalloid rather than albumin. A lumbar puncture waits until shock is treated, and antibiotics never wait for it. Withholding boluses is SSC's advice for sepsis without hypotension where there is no intensive care, not for a shocked child in an ED with intensive care behind it.",
+   "orders": [
+    {
+     "item": "Fluid bolus",
+     "dose": "NICE: 10 mL/kg over under 10 minutes, at most 250 mL a bolus (10 to 20 mL/kg in newborns under 28 days), reassessed after each; SSC 2026: 10 to 20 mL/kg a bolus, up to 40 to 60 mL/kg in the first hour where intensive care is available",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.9.1; 1.9.2"
+      },
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.16"
+      },
+      {
+       "docId": "pmid:41870559",
+       "where": "Recommendations 19, 22"
+      }
+     ],
+     "note": "NICE NG254 (1.9.1, 1.9.2) and NG143 (1.5.16) give 10 mL/kg a bolus; SSC 2026 (recommendation 19) allows 10 to 20 mL/kg a bolus up to 40 to 60 mL/kg in the first hour. Both reassess after every bolus."
+    },
+    {
+     "item": "Fluid type",
+     "dose": "SSC 2026: balanced or buffered crystalloid rather than 0.9% saline; NICE NG143: normally 0.9% sodium chloride; NICE NG254: glucose-free crystalloid with sodium 130 to 154 mmol/L",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:41870559",
+       "where": "Recommendation 24"
+      },
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.16"
+      },
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.9.2"
+      }
+     ],
+     "note": "SSC 2026 (recommendation 24) prefers balanced crystalloid; NICE NG143 1.5.16 starts with 0.9% saline; NG254 1.9.2 allows any glucose-free crystalloid with sodium 130 to 154 mmol/L."
+    },
+    {
+     "item": "Albumin for the first boluses",
+     "dose": "Crystalloid rather than albumin for initial resuscitation",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:41870559",
+       "where": "Recommendation 23"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotic timing",
+     "dose": "Septic shock: as soon as possible, ideally within 1 hour; probable sepsis without shock: within 3 hours after rapid investigation (SSC); NICE: within 1 hour of meeting any high-risk criterion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41870559",
+       "where": "Recommendations 6, 7"
+      },
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.7.2"
+      }
+     ]
+    },
+    {
+     "item": "Blood culture",
+     "dose": "Before antibiotics, when that does not substantially delay them",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41870559",
+       "where": "Recommendation 4"
+      }
+     ]
+    },
+    {
+     "item": "Lactate",
+     "dose": "Measured as part of the first evaluation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41870559",
+       "where": "Recommendation 3"
+      }
+     ]
+    },
+    {
+     "item": "Ceftriaxone, over 28 days",
+     "dose": "NICE NG254: 80 mg/kg once a day (maximum 4 g) for suspected sepsis; US label: 50 to 75 mg/kg a day in 2 doses (maximum 2 g a day) for serious infections other than meningitis, 100 mg/kg (maximum 4 g) for meningitis; AAP 2021 (29 to 60 days): 50 mg/kg every 24 hours",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.8.8"
+      },
+      {
+       "docId": "url:eed08301207b",
+       "where": "Dosage: pediatric patients"
+      },
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 3"
+      }
+     ],
+     "note": "NICE gives 80 mg/kg once daily; the US label gives 50 to 75 mg/kg a day divided every 12 hours, or 100 mg/kg a day for meningitis; the AAP table gives 50 mg/kg every 24 hours for a well infant of 29 to 60 days."
+    },
+    {
+     "item": "Ceftriaxone in a newborn under 28 days",
+     "dose": "NICE: ceftriaxone 50 mg/kg once daily for community-acquired sepsis if over 40 weeks corrected gestational age and not on an IV calcium infusion, otherwise cefotaxime 50 mg/kg every 6 to 12 hours; the US label contraindicates ceftriaxone in premature neonates up to 41 weeks postmenstrual age, in hyperbilirubinemic neonates, and in neonates of 28 days or younger who need calcium-containing IV fluids",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.8.6"
+      },
+      {
+       "docId": "url:eed08301207b",
+       "where": "Contraindications"
+      },
+      {
+       "docId": "pmid:30285373",
+       "where": "Treatment"
+      }
+     ],
+     "note": "NICE NG254 1.8.6 uses ceftriaxone in term newborns without IV calcium; StatPearls (neonatal sepsis) says ceftriaxone should be avoided in neonates because of hyperbilirubinemia and calcium-ceftriaxone precipitation, and the US label lists the contraindications above."
+    },
+    {
+     "item": "Listeria cover under 3 months",
+     "dose": "NICE: add ampicillin or amoxicillin to the cephalosporin for every infant under 3 months; AAP 2021: ampicillin in the 8 to 21 day regimens and for meningitis up to 28 days, ceftriaxone alone from 22 days for a UTI or no focus, with ampicillin added when listeria or enterococci are suspected",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.7; 1.5.19"
+      },
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.8.7"
+      },
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 3; KAS 5"
+      },
+      {
+       "docId": "pmid:30285373",
+       "where": "Treatment"
+      }
+     ],
+     "note": "Cephalosporins do not cover listeria (AAP KAS 5; StatPearls); the AAP calls listeria rare and adds ampicillin only when it is suspected after 21 days, while NICE NG143 1.5.7 and NG254 1.8.7 add it for every infant under 3 months."
+    },
+    {
+     "item": "Lumbar puncture in shock",
+     "dose": "Not until shock is treated and the child stabilised",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:57d5b1785d53",
+       "where": "1.14.2"
+      },
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.4.11"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen",
+     "dose": "For signs of shock or SpO2 under 92% in air",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.10.1"
+      }
+     ]
+    },
+    {
+     "item": "No response",
+     "dose": "Reassess after each bolus; no improvement after a second bolus: a consultant attends in person",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.9.5"
+      }
+     ]
+    },
+    {
+     "item": "Vasoactive drug",
+     "dose": "Epinephrine or norepinephrine, either first line; start through a peripheral vein rather than wait for central access",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41870559",
+       "where": "Recommendations 31, 32"
+      }
+     ]
+    },
+    {
+     "item": "Vasoactive doses",
+     "dose": "Infusion doses are not stated in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Hydrocortisone, shock reversed",
+     "dose": "Not when stability returns with fluid and vasoactive drugs; SSC makes no recommendation either way for shock that stays unstable",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:41870559",
+       "where": "Recommendation 40"
+      }
+     ]
+    },
+    {
+     "item": "Adrenal insufficiency",
+     "dose": "Stress-dose corticosteroids for suspected or documented adrenal insufficiency",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41870559",
+       "where": "Recommendation 41, remark"
+      }
+     ]
+    }
+   ],
+   "next": "end_shock",
+   "sources": [
+    {
+     "docId": "pmid:41870559",
+     "where": "Recommendations 3, 4, 6, 19, 20, 22, 23"
+    },
+    {
+     "docId": "url:463607415c7b",
+     "where": "1.7.2; 1.9.2; 1.9.5; 1.10.1"
+    },
+    {
+     "docId": "url:96adc1a88e80",
+     "where": "1.5.16; 1.5.17"
+    },
+    {
+     "docId": "url:57d5b1785d53",
+     "where": "1.14.2"
+    }
+   ]
+  },
+  {
+   "id": "end_shock",
+   "kind": "end",
+   "summary": "Septic shock in a child: antibiotics within the hour after a blood culture, crystalloid boluses reassessed after each (10 mL/kg a bolus in NICE; 10 to 20 mL/kg up to 40 to 60 mL/kg in the first hour in SSC), epinephrine or norepinephrine through a peripheral line if shock persists, and intensive care. Once stable, the age-based routes in this pathway set the rest of the workup; an infant 60 days or younger still needs blood, urine and CSF cultures, with the LP done once it is safe."
+  },
+  {
+   "id": "age",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Age in days, appearance and the history",
+   "outcomes": [
+    {
+     "id": "neo7",
+     "if": "7 days old or younger; any appearance",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ill_workup"
+    },
+    {
+     "id": "ill",
+     "if": "8 to 60 days and ill-appearing; lethargic, weak cry, poor feeding",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ill_workup"
+    },
+    {
+     "id": "excluded",
+     "if": "8 to 60 days, well, outside the AAP group; preterm, vaccinated in the last 48 hours, focal infection",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_excluded"
+    },
+    {
+     "id": "d8_21",
+     "if": "8 to 21 days, well-appearing; term and previously healthy",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "d8_step"
+    },
+    {
+     "id": "d22_28",
+     "if": "22 to 28 days, well-appearing; term and previously healthy",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "d22_step"
+    },
+    {
+     "id": "d29_60",
+     "if": "29 to 60 days, well-appearing; term and previously healthy",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "d29_step"
+    },
+    {
+     "id": "prolonged",
+     "if": "Over 60 days, fever 5 days or more or MIS-C signs; Kawasaki features, or organs inflamed after SARS-CoV-2",
+     "ddx": {
+      "lead": [
+       "Kawasaki disease",
+       "MIS-C"
+      ],
+      "out": []
+     },
+     "next": "kd_step"
+    },
+    {
+     "id": "older",
+     "if": "Over 60 days, fever under 5 days, no source; examination unrevealing, no organ signs",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "older_step"
+    },
+    {
+     "id": "source",
+     "if": "Over 60 days, fever under 5 days, a clear source; otitis, pneumonia, a hot joint",
+     "ddx": {
+      "lead": [
+       "Focal bacterial infection"
+      ],
+      "out": []
+     },
+     "next": "end_source"
+    }
+   ]
+  },
+  {
+   "id": "end_excluded",
+   "kind": "end",
+   "summary": "Outside the AAP well-appearing group: the 2021 guideline excludes infants born before 37 weeks, infants under 2 weeks whose perinatal course was complicated by maternal fever, infection or antibiotics, a high suspicion of HSV (such as vesicles), a focal bacterial infection, bronchiolitis, immune compromise, a neonatal course complicated by surgery or infection, congenital or chromosomal abnormalities, technology-dependent infants, and immunization in the previous 48 hours; they are managed individually and are not covered in this version. NICE applies its under-3-months rules to every febrile infant: count, blood culture, CRP and urine; an LP and parenteral antibiotics under 1 month, when unwell, or with a white count under 5 or over 15. After vaccines: some vaccines cause fever under 3 months, and in one series all 35 infants seen within 72 hours of meningococcal B vaccine had vaccine fever without invasive infection; within 12 to 24 hours of that vaccine the review finds it reasonable to limit tests, withhold antibiotics and observe, with a urinalysis considered and the CRP often raised by the vaccine."
+  },
+  {
+   "id": "ill_workup",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Febrile at 7 days or younger, or ill-appearing at 8 to 60 days. Next?",
+   "options": [
+    "Blood culture, catheter urine, LP, count and CRP; admit; parenteral antibiotics",
+    "Blood culture and urine; an LP only if the CRP or procalcitonin is raised",
+    "Blood culture, urine and an LP; parenteral antibiotics once a culture turns positive",
+    "Count and CRP first; cultures, LP and antibiotics only if either is raised"
+   ],
+   "answer": 0,
+   "chainStep": "Blood culture; catheter urine for urinalysis and culture (not routine in the first 72 hours after birth in NICE); LP for CSF cell count, protein, glucose, Gram stain and culture, with HSV PCR for any HSV feature; blood count and CRP (or procalcitonin); stool culture with diarrhea, chest film with respiratory signs; admit; parenteral antibiotics within 1 hour of the decision; if the infant is unstable the LP waits, the antibiotics do not",
+   "why": "A febrile newborn in the first week, or any ill-appearing young infant, gets the full evaluation: blood culture, urine, cerebrospinal fluid, a blood count and CRP, then admission and parenteral antibiotics within an hour of the decision, without waiting for results. NICE does an LP and gives parenteral antibiotics to every febrile infant under 1 month and every unwell infant of 1 to 3 months, and the AAP 2021 guideline covers only well-appearing infants of 8 to 60 days. Letting the markers decide the LP is the route for well-appearing infants of 22 days and over.",
+   "orders": [
+    {
+     "item": "Tests under 3 months",
+     "dose": "Blood count, blood culture, CRP and urine for every febrile infant; chest film only with respiratory signs; stool culture with diarrhea",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.3"
+      }
+     ]
+    },
+    {
+     "item": "Lumbar puncture",
+     "dose": "Every febrile infant under 1 month; every unwell infant of 1 to 3 months; 1 to 3 months with a white count under 5 or over 15 x 10^9/L; without delay and, when possible, before antibiotics",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.4; 1.5.5"
+      }
+     ]
+    },
+    {
+     "item": "Before the LP",
+     "dose": "Stabilise the airway, breathing, shock, seizures or bleeding risk first; no LP with extensive or spreading purpura, infection at the site or signs of raised pressure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:57d5b1785d53",
+       "where": "1.14.2; 1.14.3"
+      }
+     ]
+    },
+    {
+     "item": "CSF tests",
+     "dose": "Red and white cell counts with differential, protein, glucose with a blood glucose just before the LP, Gram stain, culture and PCR for relevant pathogens",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:57d5b1785d53",
+       "where": "1.14.4; 1.14.5"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotic timing",
+     "dose": "As soon as possible and always within 1 hour of the decision to treat",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:57d5b1785d53",
+       "where": "1.15.2"
+      }
+     ]
+    },
+    {
+     "item": "First 72 hours after birth (NICE)",
+     "dose": "IV benzylpenicillin and gentamicin; urine microscopy and culture not routine for early-onset infection",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.8.5"
+      },
+      {
+       "docId": "url:57d5b1785d53",
+       "where": "1.13.3"
+      }
+     ]
+    }
+   ],
+   "next": "ill_age",
+   "sources": [
+    {
+     "docId": "url:96adc1a88e80",
+     "where": "1.5.3; 1.5.4; 1.5.6"
+    },
+    {
+     "docId": "pmid:34281996",
+     "where": "Abstract"
+    },
+    {
+     "docId": "url:57d5b1785d53",
+     "where": "1.14.2; 1.15.2"
+    },
+    {
+     "docId": "pmid:30285373",
+     "where": "Evaluation: lumbar puncture"
+    }
+   ]
+  },
+  {
+   "id": "ill_age",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Age at the full evaluation",
+   "outcomes": [
+    {
+     "id": "young",
+     "if": "28 days or younger; the newborn regimen applies",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "abx_young"
+    },
+    {
+     "id": "older",
+     "if": "29 to 60 days, ill-appearing; cultures and CSF sent",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Ceftriaxone, over 28 days",
+       "dose": "NICE NG254: 80 mg/kg once a day (maximum 4 g) for suspected sepsis; US label: 50 to 75 mg/kg a day in 2 doses (maximum 2 g a day) for serious infections other than meningitis, 100 mg/kg (maximum 4 g) for meningitis; AAP 2021 (29 to 60 days): 50 mg/kg every 24 hours",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "url:463607415c7b",
+         "where": "1.8.8"
+        },
+        {
+         "docId": "url:eed08301207b",
+         "where": "Dosage: pediatric patients"
+        },
+        {
+         "docId": "pmid:34281996",
+         "where": "Table 3"
+        }
+       ],
+       "note": "NICE gives 80 mg/kg once daily; the US label gives 50 to 75 mg/kg a day divided every 12 hours, or 100 mg/kg a day for meningitis; the AAP table gives 50 mg/kg every 24 hours for a well infant of 29 to 60 days."
+      },
+      {
+       "item": "Listeria cover under 3 months",
+       "dose": "NICE: add ampicillin or amoxicillin to the cephalosporin for every infant under 3 months; AAP 2021: ampicillin in the 8 to 21 day regimens and for meningitis up to 28 days, ceftriaxone alone from 22 days for a UTI or no focus, with ampicillin added when listeria or enterococci are suspected",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "url:96adc1a88e80",
+         "where": "1.5.7; 1.5.19"
+        },
+        {
+         "docId": "url:463607415c7b",
+         "where": "1.8.7"
+        },
+        {
+         "docId": "pmid:34281996",
+         "where": "Table 3; KAS 5"
+        },
+        {
+         "docId": "pmid:30285373",
+         "where": "Treatment"
+        }
+       ],
+       "note": "Cephalosporins do not cover listeria (AAP KAS 5; StatPearls); the AAP calls listeria rare and adds ampicillin only when it is suspected after 21 days, while NICE NG143 1.5.7 and NG254 1.8.7 add it for every infant under 3 months."
+      },
+      {
+       "item": "HSV risk",
+       "dose": "AAP 2021: maternal genital HSV lesions or fever from 48 hours before to 48 hours after delivery; vesicles, seizures, hypothermia, mucous membrane ulcers, CSF pleocytosis with a negative Gram stain, leukopenia, thrombocytopenia or a raised ALT; StatPearls suspects HSV up to 6 weeks; IV acyclovir while the tests run",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34281996",
+         "where": "Figure 1, footnote d; KAS 4"
+        },
+        {
+         "docId": "pmid:29939674",
+         "where": "History and physical; Treatment"
+        },
+        {
+         "docId": "pmid:30335297",
+         "where": "Herpes simplex virus"
+        }
+       ]
+      }
+     ],
+     "next": "end_d29_raised"
+    }
+   ]
+  },
+  {
+   "id": "abx_young",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Febrile at 21 days or younger, or ill-appearing at 28 days or younger. Regimen?",
+   "options": [
+    "IV ampicillin plus gentamicin, or ampicillin plus a third-generation cephalosporin",
+    "IV ceftriaxone given with calcium-containing IV fluids, since it also covers listeria",
+    "IV vancomycin plus gentamicin, keeping ampicillin for a positive culture",
+    "IV gentamicin alone, adding a cephalosporin only if the CSF is abnormal"
+   ],
+   "answer": 0,
+   "chainStep": "IV ampicillin 150 mg/kg a day divided every 8 hours with ceftazidime 150 mg/kg a day divided every 8 hours or gentamicin 4 mg/kg every 24 hours (AAP 2021, 8 to 21 days; the US labels dose ceftazidime and gentamicin lower in neonates); acyclovir for any HSV feature; first dose within 1 hour",
+   "why": "Ampicillin is part of every regimen at this age because it covers group B streptococcus and listeria, and cephalosporins do not cover listeria or enterococci. For a well infant of 8 to 21 days the AAP gives ampicillin with ceftazidime or gentamicin; for newborns StatPearls gives ampicillin with an aminoglycoside or with a third- or fourth-generation cephalosporin (cefotaxime, ceftazidime or cefepime). Ceftriaxone does not cover listeria, and in a newborn of 28 days or younger it is contraindicated with calcium-containing IV fluids; vancomycin is for the infant with severe infection or instability; and gentamicin without ampicillin leaves group B streptococcus and listeria uncovered.",
+   "orders": [
+    {
+     "item": "Ampicillin",
+     "dose": "150 mg/kg a day divided every 8 hours (AAP 2021, 8 to 21 days; US label, 28 days or younger and over 34 weeks' gestation)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 3"
+      },
+      {
+       "docId": "url:337aa8616efc",
+       "where": "Dosage: bacterial meningitis; Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Gentamicin",
+     "dose": "AAP 2021: 4 mg/kg IV or IM every 24 hours; US label: 2.5 mg/kg every 8 hours in infants and neonates, every 12 hours in the first week of life",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 3; footnote d"
+      },
+      {
+       "docId": "url:c00b94cb2b5b",
+       "where": "Dosage"
+      },
+      {
+       "docId": "url:57d5b1785d53",
+       "where": "1.23.3"
+      }
+     ],
+     "note": "The AAP table gives once-daily gentamicin 4 mg/kg, adding that it may help by synergy with ampicillin against group B streptococcus and enterococci; the label gives 2.5 mg/kg every 8 to 12 hours; NICE NG195 doses it with therapeutic drug monitoring."
+    },
+    {
+     "item": "Ceftazidime",
+     "dose": "AAP 2021: 150 mg/kg a day divided every 8 hours; US label: 30 mg/kg every 12 hours from birth to 4 weeks",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 3"
+      },
+      {
+       "docId": "url:77b8db7b8da8",
+       "where": "Dosage table"
+      }
+     ],
+     "note": "The AAP table doses ceftazidime at 50 mg/kg every 8 hours in effect; the label gives 30 mg/kg every 12 hours for neonates."
+    },
+    {
+     "item": "Cefotaxime",
+     "dose": "50 mg/kg IV every 12 hours in the first week, every 8 hours from 1 to 4 weeks (StatPearls); NICE: 50 mg/kg every 6 to 12 hours by age",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32809488",
+       "where": "Administration"
+      },
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.8.6"
+      }
+     ]
+    },
+    {
+     "item": "Ceftriaxone in a newborn under 28 days",
+     "dose": "NICE: ceftriaxone 50 mg/kg once daily for community-acquired sepsis if over 40 weeks corrected gestational age and not on an IV calcium infusion, otherwise cefotaxime 50 mg/kg every 6 to 12 hours; the US label contraindicates ceftriaxone in premature neonates up to 41 weeks postmenstrual age, in hyperbilirubinemic neonates, and in neonates of 28 days or younger who need calcium-containing IV fluids",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.8.6"
+      },
+      {
+       "docId": "url:eed08301207b",
+       "where": "Contraindications"
+      },
+      {
+       "docId": "pmid:30285373",
+       "where": "Treatment"
+      }
+     ],
+     "note": "NICE NG254 1.8.6 uses ceftriaxone in term newborns without IV calcium; StatPearls (neonatal sepsis) says ceftriaxone should be avoided in neonates because of hyperbilirubinemia and calcium-ceftriaxone precipitation, and the US label lists the contraindications above."
+    },
+    {
+     "item": "Listeria cover under 3 months",
+     "dose": "NICE: add ampicillin or amoxicillin to the cephalosporin for every infant under 3 months; AAP 2021: ampicillin in the 8 to 21 day regimens and for meningitis up to 28 days, ceftriaxone alone from 22 days for a UTI or no focus, with ampicillin added when listeria or enterococci are suspected",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.7; 1.5.19"
+      },
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.8.7"
+      },
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 3; KAS 5"
+      },
+      {
+       "docId": "pmid:30285373",
+       "where": "Treatment"
+      }
+     ],
+     "note": "Cephalosporins do not cover listeria (AAP KAS 5; StatPearls); the AAP calls listeria rare and adds ampicillin only when it is suspected after 21 days, while NICE NG143 1.5.7 and NG254 1.8.7 add it for every infant under 3 months."
+    },
+    {
+     "item": "First 72 hours after birth (NICE)",
+     "dose": "IV benzylpenicillin and gentamicin",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.8.5"
+      }
+     ]
+    },
+    {
+     "item": "Increased HSV risk, 8 to 21 days (AAP 2021)",
+     "dose": "Send the HSV studies and include acyclovir in the parenteral antimicrobials",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Figure 1, footnote d"
+      }
+     ]
+    }
+   ],
+   "next": "young_result",
+   "sources": [
+    {
+     "docId": "pmid:34281996",
+     "where": "Table 3; KAS 5"
+    },
+    {
+     "docId": "pmid:30285373",
+     "where": "Treatment"
+    },
+    {
+     "docId": "pmid:30335297",
+     "where": "Treatment"
+    },
+    {
+     "docId": "url:96adc1a88e80",
+     "where": "1.5.7"
+    },
+    {
+     "docId": "url:463607415c7b",
+     "where": "1.8.6; 1.8.7"
+    },
+    {
+     "docId": "url:eed08301207b",
+     "where": "Contraindications"
+    }
+   ]
+  },
+  {
+   "id": "abx_22",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "A well infant of 22 to 28 days with a raised marker, admitted for parenteral antibiotics. Regimen?",
+   "options": [
+    "IV ceftriaxone 50 mg/kg every 24 hours, with ampicillin added if listeria is a concern",
+    "Oral amoxicillin-clavulanate at home, with the blood and urine cultures reviewed in 24 hours",
+    "IV gentamicin alone, adding a cephalosporin only if a culture grows",
+    "IV vancomycin with cefepime, as for an infection caught in hospital"
+   ],
+   "answer": 0,
+   "chainStep": "IV or IM ceftriaxone 50 mg/kg every 24 hours, with no calcium-containing IV fluids alongside in a newborn of 28 days or younger; ampicillin added if listeria is a concern (NICE adds it under 3 months); admit; cultures reviewed at 24 to 36 hours",
+   "why": "From 22 days the AAP regimen for a UTI or a fever without a focus is ceftriaxone 50 mg/kg IV or IM every 24 hours, with ampicillin used when listeria or enterococci are suspected, since cephalosporins do not cover them; the AAP calls listeria rare. NICE gives the same ceftriaxone dose to a term newborn not on IV calcium and adds amoxicillin or ampicillin under 3 months. An abnormal marker puts the bacteremia risk over 5%, enough for empirical parenteral treatment in hospital, so oral treatment at home is wrong here; vancomycin with a broad cephalosporin is StatPearls' choice for severe infection or instability, which this infant does not have.",
+   "orders": [
+    {
+     "item": "AAP 2021 regimen, 22 to 28 days",
+     "dose": "UTI or no focus: ceftriaxone IV or IM 50 mg/kg every 24 hours; bacterial meningitis: ampicillin IV or IM 300 mg/kg a day divided every 6 hours with ceftazidime 150 mg/kg a day divided every 8 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 3"
+      }
+     ]
+    },
+    {
+     "item": "Ceftriaxone in a newborn under 28 days",
+     "dose": "NICE: ceftriaxone 50 mg/kg once daily for community-acquired sepsis if over 40 weeks corrected gestational age and not on an IV calcium infusion, otherwise cefotaxime 50 mg/kg every 6 to 12 hours; the US label contraindicates ceftriaxone in premature neonates up to 41 weeks postmenstrual age, in hyperbilirubinemic neonates, and in neonates of 28 days or younger who need calcium-containing IV fluids",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.8.6"
+      },
+      {
+       "docId": "url:eed08301207b",
+       "where": "Contraindications"
+      },
+      {
+       "docId": "pmid:30285373",
+       "where": "Treatment"
+      }
+     ],
+     "note": "NICE NG254 1.8.6 uses ceftriaxone in term newborns without IV calcium; StatPearls (neonatal sepsis) says ceftriaxone should be avoided in neonates because of hyperbilirubinemia and calcium-ceftriaxone precipitation, and the US label lists the contraindications above."
+    },
+    {
+     "item": "Listeria cover under 3 months",
+     "dose": "NICE: add ampicillin or amoxicillin to the cephalosporin for every infant under 3 months; AAP 2021: ampicillin in the 8 to 21 day regimens and for meningitis up to 28 days, ceftriaxone alone from 22 days for a UTI or no focus, with ampicillin added when listeria or enterococci are suspected",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.7; 1.5.19"
+      },
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.8.7"
+      },
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 3; KAS 5"
+      },
+      {
+       "docId": "pmid:30285373",
+       "where": "Treatment"
+      }
+     ],
+     "note": "Cephalosporins do not cover listeria (AAP KAS 5; StatPearls); the AAP calls listeria rare and adds ampicillin only when it is suspected after 21 days, while NICE NG143 1.5.7 and NG254 1.8.7 add it for every infant under 3 months."
+    },
+    {
+     "item": "Stopping",
+     "dose": "Stop and discharge after 24 to 36 hours of negative cultures if the infant is well or improving and there is no other reason to stay",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 1, KAS 14a"
+      }
+     ]
+    }
+   ],
+   "next": "young_result",
+   "sources": [
+    {
+     "docId": "pmid:34281996",
+     "where": "Table 3; KAS 5; KAS 12b"
+    },
+    {
+     "docId": "url:463607415c7b",
+     "where": "1.8.6; 1.8.7"
+    },
+    {
+     "docId": "url:eed08301207b",
+     "where": "Contraindications"
+    },
+    {
+     "docId": "pmid:30285373",
+     "where": "Treatment"
+    }
+   ]
+  },
+  {
+   "id": "young_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CSF, Gram stain and the HSV screen",
+   "outcomes": [
+    {
+     "id": "bact",
+     "if": "Organisms on the Gram stain; CSF pleocytosis with bacteria seen",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Meningitis regimen",
+       "dose": "AAP 2021 (8 to 28 days): ampicillin IV or IM 300 mg/kg a day divided every 6 hours with ceftazidime 150 mg/kg a day divided every 8 hours; StatPearls: ampicillin with cefotaxime; US ampicillin label: 150 mg/kg a day divided every 8 hours for neonatal meningitis",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:34281996",
+         "where": "Table 3"
+        },
+        {
+         "docId": "pmid:30335297",
+         "where": "Treatment"
+        },
+        {
+         "docId": "url:337aa8616efc",
+         "where": "Dosage: bacterial meningitis; Table 1"
+        }
+       ],
+       "note": "The AAP table doubles the ampicillin dose for meningitis (300 mg/kg a day every 6 hours); the US label gives the same 150 mg/kg a day for neonatal meningitis and septicemia; StatPearls pairs ampicillin with cefotaxime."
+      },
+      {
+       "item": "Dexamethasone in a newborn",
+       "dose": "Not routinely in neonatal meningitis; 28 days to 3 months, ask an infection specialist",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "pmid:30335297",
+         "where": "Treatment"
+        },
+        {
+         "docId": "url:4a5f477fcfcd",
+         "where": "1.8.2"
+        }
+       ]
+      }
+     ],
+     "next": "end_mening_young"
+    },
+    {
+     "id": "hsv",
+     "if": "HSV features, no organisms seen; vesicles, seizure, ill look, maternal HSV, CSF cells, raised ALT",
+     "ddx": {
+      "lead": [
+       "Neonatal HSV",
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "CSF cells, no organisms seen",
+       "dose": "Antibiotics at meningitic doses until the cultures return, alongside the acyclovir: ampicillin 300 mg/kg a day divided every 6 hours with ceftazidime 150 mg/kg a day divided every 8 hours (AAP 2021); StatPearls pairs ampicillin with cefotaxime",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34281996",
+         "where": "Table 3"
+        },
+        {
+         "docId": "pmid:30285373",
+         "where": "Treatment"
+        },
+        {
+         "docId": "pmid:30335297",
+         "where": "Treatment"
+        }
+       ]
+      }
+     ],
+     "next": "hsv_tx"
+    },
+    {
+     "id": "clear",
+     "if": "CSF normal, no HSV features; well-looking, no vesicles, seizure or maternal HSV, ALT and platelets normal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "When to stop",
+       "dose": "AAP 2021: stop parenteral antibiotics and discharge when cultures are negative at 24 to 36 hours, the infant is well or improving and there is no other reason to stay; NICE NG195: consider stopping at 48 hours if the blood culture is negative, suspicion was not strong and the baby and CRP trend are reassuring",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:34281996",
+         "where": "KAS 7a; Table 1, KAS 14a"
+        },
+        {
+         "docId": "url:57d5b1785d53",
+         "where": "1.24.1"
+        }
+       ],
+       "note": "The AAP stops at 24 to 36 hours of negative cultures for well-appearing infants of 8 to 28 days; NICE considers stopping at 48 hours."
+      }
+     ],
+     "next": "end_young"
+    },
+    {
+     "id": "nocsf",
+     "if": "No CSF result, no HSV features; tap failed or too bloody to read",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "CSF after antibiotics",
+       "dose": "Read it knowing earlier antibiotics may have reduced its reliability; red cells may mean blood contamination",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:57d5b1785d53",
+         "where": "1.14.8"
+        }
+       ]
+      },
+      {
+       "item": "No interpretable CSF (AAP 2021)",
+       "dose": "22 to 28 days: hospitalize; 29 to 60 days: parenteral antibiotics, though the AAP finds the data insufficient for a firm rule",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34281996",
+         "where": "Table 1, KAS 13b; KAS 19a; Figure 3, footnote c"
+        }
+       ]
+      },
+      {
+       "item": "Meningitic doses when no CSF is obtained",
+       "dose": "Not stated in AAP 2021",
+       "status": "pending"
+      }
+     ],
+     "next": "end_csf_none"
+    }
+   ]
+  },
+  {
+   "id": "end_mening_young",
+   "kind": "end",
+   "summary": "Bacterial meningitis at 28 days or younger: the AAP 2021 table gives ampicillin 300 mg/kg a day divided every 6 hours with ceftazidime 150 mg/kg a day divided every 8 hours (StatPearls pairs ampicillin with cefotaxime, which reaches the CSF better than an aminoglycoside), then treatment directed by the Gram stain and culture; dexamethasone is not routinely used in neonates, and from 28 days to 3 months NICE asks for infection specialist advice. Group B streptococcus and E. coli are the leading causes. Organism-directed therapy and its length are not covered further in this version."
+  },
+  {
+   "id": "end_csf_none",
+   "kind": "end",
+   "summary": "No interpretable CSF at 28 days or younger: the AAP hospitalizes a 22- to 28-day-old without interpretable CSF, the cultures continue on parenteral antibiotics, and the LP is repeated as soon as it is safe; once antibiotics have started, the CSF is read knowing they may have reduced its reliability, and red cells may mean blood contamination. The LP never delays the first antibiotic dose."
+  },
+  {
+   "id": "hsv_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "A febrile infant with an HSV warning sign, no organisms on the Gram stain. Next?",
+   "options": [
+    "Start IV acyclovir now; send CSF and blood HSV PCR, surface swabs and an ALT",
+    "Send the HSV PCR, and start acyclovir only once the result is positive",
+    "Start oral acyclovir now, switching to IV acyclovir if the infant becomes unwell",
+    "Hold acyclovir until skin vesicles appear or a surface swab is positive"
+   ],
+   "answer": 0,
+   "chainStep": "IV acyclovir 20 mg/kg every 8 hours (StatPearls; the label gives 10 mg/kg), each dose over at least 1 hour; HSV PCR of CSF and whole blood; surface swabs (mouth, nasopharynx, conjunctivae, anus) and vesicle swabs; ALT; antibiotics continue",
+   "why": "The AAP considers HSV with a maternal history of genital HSV lesions or fever from 48 hours before to 48 hours after delivery, and in infants with vesicles, seizures, hypothermia, mucous membrane ulcers, CSF pleocytosis with a negative Gram stain, leukopenia, thrombocytopenia or a raised ALT; StatPearls suspects it up to 6 weeks of age. Early acyclovir improves outcomes, so IV acyclovir starts with the antibiotics while the tests run: HSV PCR of CSF and blood, surface swabs from the mouth, nasopharynx, conjunctivae and anus, and an ALT. Parenteral acyclovir is the standard of care, and waiting for vesicles misses the many infants with CNS disease who never have them.",
+   "orders": [
+    {
+     "item": "Acyclovir dose",
+     "dose": "StatPearls: 60 mg/kg a day in 3 doses (20 mg/kg a dose); US label: 10 mg/kg every 8 hours for 10 days, noting that 15 or 20 mg/kg have been used with safety and efficacy not known",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29939674",
+       "where": "Treatment"
+      },
+      {
+       "docId": "pmid:30335297",
+       "where": "Treatment"
+      },
+      {
+       "docId": "url:c282bfad72db",
+       "where": "Dosage"
+      }
+     ],
+     "note": "StatPearls (neonatal HSV and neonatal meningitis) gives 20 mg/kg every 8 hours; the acyclovir injection label gives 10 mg/kg every 8 hours from birth to 3 months and calls higher doses of unknown safety and efficacy. AAP 2021 refers to the Red Book for HSV treatment."
+    },
+    {
+     "item": "HSV studies (AAP 2021)",
+     "dose": "CSF PCR; surface swabs of the mouth, nasopharynx, conjunctivae and anus for culture or PCR; ALT; blood PCR",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Figure 1, footnote d"
+      }
+     ]
+    },
+    {
+     "item": "Infusion",
+     "dose": "Over at least 1 hour, to reduce the risk of renal tubular damage",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c282bfad72db",
+       "where": "Warnings"
+      }
+     ]
+    },
+    {
+     "item": "Course if HSV is confirmed",
+     "dose": "Skin, eye and mouth disease: 14 days IV; CNS or disseminated disease: at least 21 days, with a repeat LP near the end to show the CSF HSV PCR is negative",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29939674",
+       "where": "Treatment"
+      }
+     ]
+    },
+    {
+     "item": "After the IV course",
+     "dose": "Oral acyclovir 300 mg/m2 a dose 3 times a day for 6 months",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29939674",
+       "where": "Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Confirmed HSV",
+     "dose": "Ophthalmology examination and neuroimaging for every infant",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29939674",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ],
+   "next": "end_hsv",
+   "sources": [
+    {
+     "docId": "pmid:34281996",
+     "where": "Figure 1, footnote d; KAS 4"
+    },
+    {
+     "docId": "pmid:29939674",
+     "where": "History and physical; Evaluation; Treatment; Prognosis"
+    },
+    {
+     "docId": "pmid:30335297",
+     "where": "Evaluation"
+    }
+   ]
+  },
+  {
+   "id": "end_hsv",
+   "kind": "end",
+   "summary": "Possible neonatal HSV: IV acyclovir alongside the antibiotics while the PCRs and surface swabs run; if HSV is confirmed, 14 days for skin, eye and mouth disease or at least 21 days for CNS or disseminated disease, a repeat LP before stopping for CNS disease, an eye examination and neuroimaging, then 6 months of oral suppression."
+  },
+  {
+   "id": "end_young",
+   "kind": "end",
+   "summary": "Febrile infant of 28 days or younger with a normal CSF and no HSV features: admitted on parenteral antibiotics while the blood, urine and CSF cultures incubate. The AAP stops them and discharges a well-appearing infant after 24 to 36 hours of negative cultures; NICE suggests considering stopping at 48 hours if the blood culture is negative, the first suspicion was not strong, the baby is reassuring and the CRP trend is reassuring. A positive culture sets an organism-directed course: 7 days for a positive blood culture in NICE, 10 to 14 days for an uncomplicated urinary infection in StatPearls."
+  },
+  {
+   "id": "d8_step",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "A well-appearing, term, previously healthy infant of 8 to 21 days with fever. Workup?",
+   "options": [
+    "Catheter urinalysis, blood culture and an LP; admit for parenteral antibiotics",
+    "Urinalysis, blood culture and markers; the LP only if a marker comes back raised",
+    "Urinalysis and markers; home with a review the next day if both are normal",
+    "Blood culture and markers; home on an oral antibiotic if the urine comes back positive"
+   ],
+   "answer": 0,
+   "chainStep": "Catheter or suprapubic urinalysis, cultured if positive; blood culture; LP for CSF cells, protein, glucose, Gram stain and culture, with HSV PCR for any HSV feature; markers may be added; admit; parenteral antibiotics",
+   "why": "Every guideline treats an infant under three weeks as at high risk of invasive bacterial infection. For 8 to 21 days the AAP calls for a catheter or suprapubic urinalysis (cultured if positive), a blood culture and CSF in every well-appearing infant, then parenteral antibiotics and monitoring in hospital, with the markers optional; NICE does an LP and gives parenteral antibiotics to every febrile infant under 1 month. Letting the markers decide the LP is the route for 22 to 28 days, and home care with oral treatment of a positive urinalysis belongs to 29 to 60 days.",
+   "orders": [
+    {
+     "item": "Tests, 8 to 21 days (AAP 2021)",
+     "dose": "Catheter or suprapubic urinalysis, cultured if positive; blood culture; CSF for cells, protein, glucose, Gram stain and culture; markers optional; parenteral antibiotics; monitoring in hospital",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 1, KAS 1 to 6"
+      }
+     ]
+    },
+    {
+     "item": "Urine culture",
+     "dose": "AAP 2021: culture the catheter or suprapubic sample if the urinalysis is positive; NICE NG224: send a culture for every baby under 3 months",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 1, KAS 1"
+      },
+      {
+       "docId": "url:7925dc2913d1",
+       "where": "1.1.21"
+      }
+     ],
+     "note": "The AAP cultures only after a positive urinalysis, to avoid contamination and asymptomatic bacteriuria; NICE NG224 1.1.21 sends urine for culture in every baby under 3 months."
+    },
+    {
+     "item": "AAP 2021 exclusions",
+     "dose": "Birth before 37 weeks; under 2 weeks after a perinatal course with maternal fever, infection or antibiotics; a high suspicion of HSV; a focal bacterial infection; bronchiolitis; immune compromise; a neonatal course with surgery or infection; congenital or chromosomal abnormalities; technology dependence; immunization within 48 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Exclusions 1 to 10"
+      }
+     ]
+    },
+    {
+     "item": "Fever and gestation",
+     "dose": "A rectal temperature of 38.0 C or more, at home in the past 24 hours or in a clinical setting; born at 37 to under 42 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Abstract; Inclusion criteria"
+      }
+     ]
+    },
+    {
+     "item": "NICE, under 1 month",
+     "dose": "An LP and parenteral antibiotics for every febrile infant",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.4; 1.5.6"
+      }
+     ]
+    }
+   ],
+   "next": "abx_young",
+   "sources": [
+    {
+     "docId": "pmid:38247647",
+     "where": "Section 4"
+    },
+    {
+     "docId": "pmid:34281996",
+     "where": "Table 1, KAS 1 to 6; Figure 1"
+    },
+    {
+     "docId": "url:96adc1a88e80",
+     "where": "1.5.4; 1.5.6"
+    }
+   ]
+  },
+  {
+   "id": "d22_step",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "A well-appearing, term, previously healthy infant of 22 to 28 days with fever. Workup?",
+   "options": [
+    "Urinalysis, blood culture and markers; an LP whenever a marker is raised",
+    "Urinalysis and blood culture; markers and an LP are for 21 days or younger",
+    "Markers only; the urine and blood culture follow if a marker is raised",
+    "Urinalysis only; home without blood tests if it is negative"
+   ],
+   "answer": 0,
+   "chainStep": "Urinalysis (catheter or suprapubic, or a bag or voided screen with a catheter culture if positive); blood culture; procalcitonin with the ANC or CRP (or the ANC, CRP and temperature); LP if any marker is raised",
+   "why": "From 22 days the AAP brings in the inflammatory markers: a urinalysis (a catheter or suprapubic sample, or a bag or voided screen with a catheter culture if positive), a blood culture and the markers in every infant, and CSF when any marker is abnormal; with normal markers the LP is optional. The blood culture and the urinalysis go whatever the markers show. NICE still does an LP and gives parenteral antibiotics to every febrile infant under 1 month, a real difference shown in the orders.",
+   "orders": [
+    {
+     "item": "Abnormal inflammatory markers (AAP 2021)",
+     "dose": "Temperature over 38.5 C, procalcitonin over 0.5 ng/mL, CRP over 20 mg/L, ANC over 4,000 to 5,200 per mm3 (the AAP gives both ANC cutoffs)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "KAS 10; Figures 2 and 3, footnote b"
+      }
+     ],
+     "note": "The KAS 10 discussion also writes the CRP cutoff as 20 mg/L or more."
+    },
+    {
+     "item": "Marker combinations (AAP 2021)",
+     "dose": "Procalcitonin, if available, with the ANC or CRP; without procalcitonin, both the ANC and CRP, and a temperature over 38.5 C counts as abnormal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Figures 2 and 3, footnote b"
+      }
+     ]
+    },
+    {
+     "item": "Positive urinalysis (AAP 2021)",
+     "dose": "Any leukocyte esterase on dipstick, more than 5 white cells per high-power field in centrifuged urine, or more than 10 per mm3 in uncentrifuged urine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "KAS 1"
+      }
+     ]
+    },
+    {
+     "item": "Urine specimen, 22 to 60 days (AAP 2021)",
+     "dose": "A catheter or suprapubic sample, or a bag, spontaneous or stimulated void for the urinalysis, with a catheter or suprapubic sample for culture if it is positive",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 1, KAS 8; KAS 15"
+      }
+     ]
+    },
+    {
+     "item": "LP at 22 to 28 days",
+     "dose": "AAP 2021: CSF if any marker is abnormal (KAS 11b), optional when all are normal (KAS 11a); NICE NG143: LP and parenteral antibiotics for every febrile infant under 1 month",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 1, KAS 11a; KAS 11b"
+      },
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.4; 1.5.6"
+      }
+     ],
+     "note": "The AAP makes the LP optional with normal markers; NICE NG143 1.5.4 and 1.5.6 make no exception for normal markers."
+    }
+   ],
+   "next": "im22",
+   "sources": [
+    {
+     "docId": "pmid:34281996",
+     "where": "Table 1, KAS 8 to 11b; Figure 2"
+    },
+    {
+     "docId": "url:96adc1a88e80",
+     "where": "1.5.4; 1.5.6"
+    }
+   ]
+  },
+  {
+   "id": "im22",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Inflammatory markers, 22 to 28 days",
+   "outcomes": [
+    {
+     "id": "raised",
+     "if": "A marker raised; procalcitonin, CRP, ANC or temperature over the cutoff",
+     "ddx": {
+      "lead": [
+       "Bacteremia",
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "A raised marker (AAP 2021)",
+       "dose": "LP (KAS 11b); parenteral antibiotics in hospital, since an abnormal marker puts the bacteremia risk over 5% (KAS 12b); hospitalize if the CSF is not obtained or uninterpretable (KAS 13b); the LP may be deferred and antibiotics started, accepting the risk of partly treated meningitis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34281996",
+         "where": "Table 1, KAS 11b, 12b, 13b; KAS 12b; Figure 2, footnote c"
+        }
+       ]
+      }
+     ],
+     "next": "abx_22"
+    },
+    {
+     "id": "normal",
+     "if": "All markers normal; urinalysis negative or positive",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Normal markers, positive urinalysis (AAP 2021)",
+       "dose": "Parenteral antibiotics in hospital (KAS 12a); the LP is optional (KAS 11a)",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34281996",
+         "where": "Table 1, KAS 11a; KAS 12a"
+        }
+       ]
+      },
+      {
+       "item": "Normal markers, negative urinalysis, normal CSF (AAP 2021)",
+       "dose": "Home only on parenteral antibiotics, ceftriaxone IV or IM 50 mg/kg every 24 hours, with reevaluation in 24 hours and reliable phone, transport and parents (KAS 12d, 13a); or in hospital, with or without parenteral antibiotics (KAS 12c)",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34281996",
+         "where": "Table 1, KAS 12c, 12d, 13a; Table 3; Figure 2, footnote d"
+        }
+       ]
+      },
+      {
+       "item": "Normal markers, no CSF (AAP 2021)",
+       "dose": "Hospitalize (KAS 13b); observation without antibiotics is an option after a risk and benefit discussion with the parents",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34281996",
+         "where": "Table 1, KAS 13b; Table 3, footnote c"
+        }
+       ]
+      }
+     ],
+     "next": "end_d22_low"
+    }
+   ]
+  },
+  {
+   "id": "end_d22_low",
+   "kind": "end",
+   "summary": "22 to 28 days with normal inflammatory markers (AAP 2021): the LP is optional. A positive urinalysis means parenteral antibiotics in hospital. With a negative urinalysis and a normal CSF the infant can go home only on parenteral ceftriaxone (50 mg/kg every 24 hours) with reevaluation in 24 hours and reliable phone, transport and parents, or stay in hospital with or without antibiotics; without interpretable CSF the infant is hospitalized. Antibiotics stop after 24 to 36 hours of negative cultures in a well infant. NICE does an LP and gives parenteral antibiotics to every febrile infant under 1 month."
+  },
+  {
+   "id": "d29_step",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "A well-appearing, term, previously healthy infant of 29 to 60 days with fever. Workup?",
+   "options": [
+    "Urinalysis, blood culture and markers; no LP while the markers are normal",
+    "Urinalysis, blood culture and an LP, since a UTI raises the meningitis risk",
+    "Urinalysis alone; blood tests only if it comes back positive",
+    "Blood culture and markers; urine only if a marker is raised"
+   ],
+   "answer": 0,
+   "chainStep": "Urinalysis (a bag or voided screen with a catheter culture if positive, or a catheter or suprapubic sample); blood culture; procalcitonin with the ANC or CRP (or the ANC, CRP and temperature); no LP while the markers are normal",
+   "why": "A urinalysis, a blood culture and the inflammatory markers come first. The AAP needs no CSF when all the markers are normal, makes the LP optional when one is abnormal, and does not count a positive urinalysis alone as a reason for an LP: in 25,374 infants of this age, meningitis was no more common with a positive urinalysis than with a negative one. NICE also tests every febrile infant under 3 months with a count, blood culture, CRP and urine, and keeps the LP for the unwell infant or a white count under 5 or over 15.",
+   "orders": [
+    {
+     "item": "Abnormal inflammatory markers (AAP 2021)",
+     "dose": "Temperature over 38.5 C, procalcitonin over 0.5 ng/mL, CRP over 20 mg/L, ANC over 4,000 to 5,200 per mm3 (the AAP gives both ANC cutoffs)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "KAS 10; Figures 2 and 3, footnote b"
+      }
+     ],
+     "note": "The KAS 10 discussion also writes the CRP cutoff as 20 mg/L or more."
+    },
+    {
+     "item": "Marker combinations (AAP 2021)",
+     "dose": "Procalcitonin, if available, with the ANC or CRP; without procalcitonin, both the ANC and CRP, and a temperature over 38.5 C counts as abnormal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Figures 2 and 3, footnote b"
+      }
+     ]
+    },
+    {
+     "item": "Positive urinalysis (AAP 2021)",
+     "dose": "Any leukocyte esterase on dipstick, more than 5 white cells per high-power field in centrifuged urine, or more than 10 per mm3 in uncentrifuged urine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "KAS 1"
+      }
+     ]
+    },
+    {
+     "item": "LP at 29 to 60 days (AAP 2021)",
+     "dose": "Optional if any marker is abnormal (KAS 18a); not needed if all are normal (KAS 18b), a positive urinalysis alone not being an indication",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 1, KAS 18a; KAS 18b"
+      }
+     ]
+    },
+    {
+     "item": "LP from 1 to 3 months (NICE)",
+     "dose": "If unwell, or with a white count under 5 or over 15 x 10^9/L",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.4"
+      }
+     ]
+    },
+    {
+     "item": "Meningitis with a positive urinalysis, 29 to 60 days",
+     "dose": "0.25% to 0.44%, no higher than with a negative urinalysis (meta-analysis of 25,374 infants)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33978724",
+       "where": "Key points"
+      }
+     ]
+    }
+   ],
+   "next": "im29",
+   "sources": [
+    {
+     "docId": "pmid:34281996",
+     "where": "Table 1, KAS 15 to 18b; KAS 18b"
+    },
+    {
+     "docId": "pmid:33978724",
+     "where": "Key points"
+    },
+    {
+     "docId": "url:96adc1a88e80",
+     "where": "1.5.3; 1.5.4"
+    }
+   ]
+  },
+  {
+   "id": "im29",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Inflammatory markers and urinalysis, 29 to 60 days",
+   "outcomes": [
+    {
+     "id": "normal",
+     "if": "Markers normal, urinalysis negative; procalcitonin, ANC and CRP under the cutoffs",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "d29_home"
+    },
+    {
+     "id": "uti",
+     "if": "Markers normal, urinalysis positive; leukocyte esterase or pyuria",
+     "ddx": {
+      "lead": [
+       "Urinary tract infection"
+      ],
+      "out": []
+     },
+     "next": "d29_uti"
+    },
+    {
+     "id": "raised",
+     "if": "A marker raised; with or without a positive urinalysis",
+     "ddx": {
+      "lead": [
+       "Bacteremia"
+      ],
+      "out": []
+     },
+     "next": "d29_raised"
+    }
+   ]
+  },
+  {
+   "id": "d29_home",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "29 to 60 days, markers normal, urinalysis negative. Plan?",
+   "options": [
+    "Home without antibiotics, with a clear safety net and a review while the cultures run",
+    "Admit on IV ceftriaxone until the blood culture has been negative for 48 hours",
+    "Home on oral amoxicillin to cover a bacteremia the markers may have missed",
+    "An LP first to be safe, then home off antibiotics if the CSF cell count and Gram stain are clear"
+   ],
+   "answer": 0,
+   "chainStep": "Discharge without antibiotics after a negative urinalysis and normal markers; warning signs and how to return explained; reevaluation in 24 hours (24 to 36 hours in the AAP algorithm) while the blood and urine cultures incubate",
+   "why": "With a negative urinalysis and normal markers the AAP needs no LP and no antibiotics, and manages the infant at home with parental teaching, a plan for reevaluation and access to care; hospital observation is an option when follow-up is hard. NICE gives parenteral antibiotics from 1 to 3 months only to the unwell infant or one with a white count under 5 or over 15, advises against oral antibiotics for fever without an apparent source, and leaves admission to the clinician, weighing the family's circumstances and anxiety. A child sent home without a diagnosis goes with a safety net.",
+   "orders": [
+    {
+     "item": "Home or hospital (AAP 2021)",
+     "dose": "Manage at home when the CSF (if obtained) is normal, the urinalysis negative and all markers normal, with parental education and plans in place (KAS 20c); no antibiotics needed (KAS 19d); hospital observation is an option when there are barriers to follow-up",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 1, KAS 19d, 20c; Figure 3, footnote e"
+      }
+     ]
+    },
+    {
+     "item": "Review interval",
+     "dose": "AAP KAS 20c: reevaluation in 24 hours; AAP Figure 3: follow-up within 24 to 36 hours; KAS 20d (no interpretable CSF): follow-up in 24 to 36 hours with reassessment in the following 24 hours",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 1, KAS 20c, 20d; Figure 3"
+      },
+      {
+       "docId": "pmid:39113626",
+       "where": "Abstract; Methods"
+      }
+     ],
+     "note": "The AAP text gives 24 hours in KAS 20c and 24 to 36 hours in Figure 3 and KAS 20d; Hosp Pediatr 2024 reports the AAP recommendation as primary care follow-up within 24 hours."
+    },
+    {
+     "item": "Safety net",
+     "dose": "Written or spoken warning signs and how to get care, a set follow-up, or direct access arranged",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.25"
+      }
+     ]
+    },
+    {
+     "item": "Oral antibiotics for fever without a source",
+     "dose": "Not prescribed",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.4.9"
+      }
+     ]
+    },
+    {
+     "item": "Admission factors (NICE)",
+     "dose": "Social and family circumstances, parental anxiety and instinct, repeated presentations, contacts with serious infection",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.24"
+      }
+     ]
+    }
+   ],
+   "next": "end_d29_home",
+   "sources": [
+    {
+     "docId": "pmid:34281996",
+     "where": "Table 1, KAS 18b, 19d, 20c; Figure 3, footnote e"
+    },
+    {
+     "docId": "url:96adc1a88e80",
+     "where": "1.4.9; 1.5.6; 1.5.24; 1.5.25"
+    }
+   ]
+  },
+  {
+   "id": "end_d29_home",
+   "kind": "end",
+   "summary": "Low-risk febrile infant of 29 to 60 days: home without antibiotics or an LP, with a safety net and reevaluation in 24 hours (24 to 36 hours in the AAP algorithm) while the cultures run; hospital observation if follow-up is hard; a positive culture, or an infant who looks less well, brings them straight back."
+  },
+  {
+   "id": "d29_uti",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "29 to 60 days, markers normal, urinalysis positive. Next?",
+   "options": [
+    "Urine culture from the catheter sample, antibiotics for a UTI, no LP for the urine alone",
+    "An LP before any antibiotic, since a urinary infection at this age raises the meningitis risk",
+    "No antibiotics until the urine culture grows, then treatment by sensitivities",
+    "A renal ultrasound first, with antibiotics only if it shows hydronephrosis"
+   ],
+   "answer": 0,
+   "chainStep": "Catheter or suprapubic urine culture; antibiotics for a UTI started on the urinalysis (AAP: oral cephalexin or cefixime, observed at home with follow-up in 12 to 24 hours; NICE: parenteral under 3 months); no LP for the urinalysis alone; blood culture followed up; renal and bladder ultrasound after a first febrile UTI",
+   "why": "With normal markers the AAP does not count a positive urinalysis as a reason for an LP, and meningitis was no more common with a positive urinalysis than with a negative one in 25,374 infants of this age. The culture comes from a catheter or suprapubic sample, and treatment starts on the urinalysis rather than waiting for growth. The route is where the sources part: the AAP starts oral antibiotics and may observe the infant at home with follow-up in 12 to 24 hours, while NICE gives parenteral antibiotics to every infant under 3 months with a suspected UTI and StatPearls advises parenteral therapy at 2 months or younger. The ultrasound follows treatment.",
+   "orders": [
+    {
+     "item": "Meningitis risk",
+     "dose": "0.25% to 0.44% with a positive urinalysis, no higher than with a negative one",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33978724",
+       "where": "Key points"
+      }
+     ]
+    },
+    {
+     "item": "CSF testing (AAP 2021)",
+     "dose": "Not needed when all markers are normal; a positive urinalysis alone is not an indication",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 1, KAS 18b; KAS 18b"
+      }
+     ]
+    },
+    {
+     "item": "Route",
+     "dose": "AAP 2021: oral antibiotics when the markers are normal and the CSF, if obtained, is normal (KAS 19c), with home observation and follow-up in 12 to 24 hours; NICE NG224: parenteral antibiotics for every infant under 3 months with a suspected UTI; StatPearls: parenteral at 2 months or younger",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 1, KAS 19c; Figure 3"
+      },
+      {
+       "docId": "url:7925dc2913d1",
+       "where": "1.2.3"
+      },
+      {
+       "docId": "pmid:38261676",
+       "where": "Treatment"
+      }
+     ],
+     "note": "AAP KAS 19c starts oral antibiotics; NICE NG224 1.2.3 and StatPearls (UTI in children) give parenteral treatment at this age, and NICE adds listeria cover under 3 months."
+    },
+    {
+     "item": "Oral agent (AAP 2021, over 28 days)",
+     "dose": "Cephalexin 50 to 100 mg/kg a day in 4 doses, or cefixime 8 mg/kg a day in 1 dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 3"
+      }
+     ]
+    },
+    {
+     "item": "Parenteral agent (AAP 2021, 29 to 60 days)",
+     "dose": "Ceftriaxone IV or IM 50 mg/kg every 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 3"
+      }
+     ]
+    },
+    {
+     "item": "Trimethoprim-sulfamethoxazole",
+     "dose": "Not under 2 months of age",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38261676",
+       "where": "Table 3"
+      }
+     ]
+    },
+    {
+     "item": "Ultrasound",
+     "dose": "Under 6 months, a first UTI that responds: ultrasound within 6 weeks (NICE); the AAP advises a renal ultrasound after every first febrile UTI in young children",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7925dc2913d1",
+       "where": "1.3.2"
+      },
+      {
+       "docId": "pmid:38261676",
+       "where": "Evaluation: renal ultrasound"
+      }
+     ]
+    }
+   ],
+   "next": "end_d29_uti",
+   "sources": [
+    {
+     "docId": "pmid:34281996",
+     "where": "Table 1, KAS 15, 18b, 19c; KAS 18b; Figure 3; Table 3"
+    },
+    {
+     "docId": "pmid:33978724",
+     "where": "Key points"
+    },
+    {
+     "docId": "pmid:38261676",
+     "where": "Treatment"
+    },
+    {
+     "docId": "url:7925dc2913d1",
+     "where": "1.2.3"
+    }
+   ]
+  },
+  {
+   "id": "end_d29_uti",
+   "kind": "end",
+   "summary": "UTI at 29 to 60 days with normal markers: a catheter or suprapubic culture and antibiotics without an LP. The AAP gives oral cephalexin 50 to 100 mg/kg a day in 4 doses or cefixime 8 mg/kg a day, observed at home with follow-up in 12 to 24 hours; NICE gives parenteral antibiotics under 3 months and StatPearls at 2 months or younger. Treatment runs 7 to 14 days in StatPearls, and a renal and bladder ultrasound follows the first febrile UTI."
+  },
+  {
+   "id": "d29_raised",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "29 to 60 days, an inflammatory marker raised. Next?",
+   "options": [
+    "An LP considered; parenteral antibiotics, observed in hospital or at home",
+    "No LP and no antibiotics; home with a review the next day, as for normal markers",
+    "Oral antibiotics at home without an LP, as for a positive urinalysis alone",
+    "Observe in hospital off antibiotics until a blood culture grows"
+   ],
+   "answer": 0,
+   "chainStep": "LP considered (AAP KAS 18a); without interpretable CSF, parenteral ceftriaxone 50 mg/kg every 24 hours; with a normal CSF, parenteral or oral treatment; hospital if the CSF is abnormal, otherwise hospital or close observation at home; acyclovir for any HSV warning sign",
+   "why": "A raised marker changes the plan. The AAP makes the LP optional; an abnormal CSF means parenteral antibiotics in hospital, a normal CSF allows parenteral or oral antibiotics in hospital or at home, and with no interpretable CSF the infant gets parenteral antibiotics, observed in hospital or closely at home. Oral treatment without an LP is the route for a positive urinalysis with normal markers, and no LP and no antibiotics is the route for normal markers. NICE does an LP from 1 to 3 months when the white count is under 5 or over 15 or the infant is unwell.",
+   "orders": [
+    {
+     "item": "AAP 2021 regimen, 29 to 60 days",
+     "dose": "UTI or no focus: ceftriaxone IV or IM 50 mg/kg every 24 hours; bacterial meningitis: ceftriaxone IV 100 mg/kg a day (once daily or divided every 12 hours) with vancomycin IV 60 mg/kg a day divided every 8 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 3; footnote f"
+      }
+     ]
+    },
+    {
+     "item": "Ceftriaxone, over 28 days",
+     "dose": "NICE NG254: 80 mg/kg once a day (maximum 4 g) for suspected sepsis; US label: 50 to 75 mg/kg a day in 2 doses (maximum 2 g a day) for serious infections other than meningitis, 100 mg/kg (maximum 4 g) for meningitis; AAP 2021 (29 to 60 days): 50 mg/kg every 24 hours",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.8.8"
+      },
+      {
+       "docId": "url:eed08301207b",
+       "where": "Dosage: pediatric patients"
+      },
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 3"
+      }
+     ],
+     "note": "NICE gives 80 mg/kg once daily; the US label gives 50 to 75 mg/kg a day divided every 12 hours, or 100 mg/kg a day for meningitis; the AAP table gives 50 mg/kg every 24 hours for a well infant of 29 to 60 days."
+    },
+    {
+     "item": "Listeria cover under 3 months",
+     "dose": "NICE: add ampicillin or amoxicillin to the cephalosporin for every infant under 3 months; AAP 2021: ampicillin in the 8 to 21 day regimens and for meningitis up to 28 days, ceftriaxone alone from 22 days for a UTI or no focus, with ampicillin added when listeria or enterococci are suspected",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.7; 1.5.19"
+      },
+      {
+       "docId": "url:463607415c7b",
+       "where": "1.8.7"
+      },
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 3; KAS 5"
+      },
+      {
+       "docId": "pmid:30285373",
+       "where": "Treatment"
+      }
+     ],
+     "note": "Cephalosporins do not cover listeria (AAP KAS 5; StatPearls); the AAP calls listeria rare and adds ampicillin only when it is suspected after 21 days, while NICE NG143 1.5.7 and NG254 1.8.7 add it for every infant under 3 months."
+    },
+    {
+     "item": "HSV risk",
+     "dose": "AAP 2021: maternal genital HSV lesions or fever from 48 hours before to 48 hours after delivery; vesicles, seizures, hypothermia, mucous membrane ulcers, CSF pleocytosis with a negative Gram stain, leukopenia, thrombocytopenia or a raised ALT; StatPearls suspects HSV up to 6 weeks; IV acyclovir while the tests run",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Figure 1, footnote d; KAS 4"
+      },
+      {
+       "docId": "pmid:29939674",
+       "where": "History and physical; Treatment"
+      },
+      {
+       "docId": "pmid:30335297",
+       "where": "Herpes simplex virus"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotics with a raised marker",
+     "dose": "AAP 2021: parenteral if the CSF suggests meningitis or is not available (KAS 19a), parenteral or oral if the CSF is normal (KAS 19b); NICE NG143: parenteral antibiotics from 1 to 3 months only if unwell or with a white count under 5 or over 15",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 1, KAS 19a, 19b; KAS 19a"
+      },
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.6"
+      }
+     ],
+     "note": "The AAP treats every well infant of 29 to 60 days with an abnormal marker; NICE NG143 1.5.6 ties parenteral antibiotics to an unwell look or the white count."
+    },
+    {
+     "item": "Where to observe (AAP 2021)",
+     "dose": "Hospital if the CSF is abnormal (KAS 20a); hospital may be used if any marker is abnormal (KAS 20b); without interpretable CSF, observation in hospital or closely at home",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 1, KAS 20a, 20b; Figure 3"
+      }
+     ]
+    },
+    {
+     "item": "LP",
+     "dose": "AAP 2021: optional when any marker is abnormal (KAS 18a); NICE: when the white count is under 5 or over 15 x 10^9/L or the infant is unwell",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34281996",
+       "where": "Table 1, KAS 18a"
+      },
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.4"
+      }
+     ]
+    }
+   ],
+   "next": "end_d29_raised",
+   "sources": [
+    {
+     "docId": "pmid:34281996",
+     "where": "Table 1, KAS 18a, 19a to 20b; KAS 19a; Figure 3"
+    },
+    {
+     "docId": "url:96adc1a88e80",
+     "where": "1.5.4; 1.5.6; 1.5.7"
+    }
+   ]
+  },
+  {
+   "id": "end_d29_raised",
+   "kind": "end",
+   "summary": "29 to 60 days and ill-appearing: outside the AAP algorithms; admission, cultures, an LP and parenteral antibiotics (ceftriaxone, with NICE adding ampicillin or amoxicillin under 3 months), and acyclovir for any HSV warning sign. Well-appearing with a raised marker (AAP 2021): the LP is optional; an abnormal CSF means parenteral antibiotics in hospital, a normal CSF allows parenteral or oral antibiotics in hospital or at home, and no interpretable CSF means parenteral antibiotics with observation in hospital or closely at home; ceftriaxone 50 mg/kg every 24 hours, or 100 mg/kg a day with vancomycin for meningitis. Antibiotics stop at 24 to 36 hours of negative cultures in a well infant."
+  },
+  {
+   "id": "older_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Over 60 days, fever under 5 days, no source on examination. Next?",
+   "options": [
+    "Vaccines and traffic-light signs; urine by catheter or tap if not toilet-trained",
+    "A blood count and blood culture first, and the urine only if the count is high",
+    "Oral amoxicillin to cover an occult bacteremia, with a review in 48 hours",
+    "A chest film and a blood count first, to look for a pneumonia not heard on examination"
+   ],
+   "answer": 0,
+   "chainStep": "Confirm Hib and pneumococcal vaccines; score the traffic-light features; urine test (catheter or suprapubic sample for culture if not toilet-trained, a bag only for a screening urinalysis); no routine blood tests, chest film or oral antibiotics without amber or red features",
+   "why": "Past 60 days the work-up follows the traffic-light features: a child with no amber or red feature has a urine test and a check for pneumonia, not routine blood tests or a chest film, and no oral antibiotics for fever without an apparent source. The old screen for occult bacteremia came before the conjugate vaccines; after the Hib vaccine the risk of serious bacterial infection with fever without a source at 3 to 36 months fell to 1.5% to 2.3%, so the vaccine record matters. For culture the AAP wants a catheter or suprapubic sample, using a bag only for a screening urinalysis; NICE starts with a clean catch.",
+   "orders": [
+    {
+     "item": "No amber or red features",
+     "dose": "Urine test and a check for pneumonia; no routine blood tests or chest film",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.11; 1.5.12"
+      }
+     ]
+    },
+    {
+     "item": "Oral antibiotics for fever without a source",
+     "dose": "Not prescribed",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.4.9"
+      }
+     ]
+    },
+    {
+     "item": "Amber features",
+     "dose": "Urine; blood count, CRP and blood culture; LP considered under 1 year; chest film if the fever is over 39 C with a white count over 20",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.10"
+      }
+     ]
+    },
+    {
+     "item": "Red features",
+     "dose": "Blood count, blood culture, CRP and urine; consider an LP at any age, a chest film, electrolytes and a gas",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.8; 1.5.9"
+      }
+     ]
+    },
+    {
+     "item": "Urine specimen",
+     "dose": "AAP (StatPearls): catheter or suprapubic aspiration for culture, a bag for urinalysis only; NICE NG224: clean catch where possible, then urine pads, with a catheter or suprapubic aspiration when non-invasive collection is not possible",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:38261676",
+       "where": "Evaluation: urine collection; urine culture"
+      },
+      {
+       "docId": "url:7925dc2913d1",
+       "where": "1.1.13; 1.1.14; 1.1.16"
+      }
+     ],
+     "note": "StatPearls restates the AAP 2011 preference for catheter or suprapubic samples; NICE NG224 1.1.13 to 1.1.16 put the clean catch first."
+    },
+    {
+     "item": "Vaccine era",
+     "dose": "After the Hib conjugate vaccine, serious bacterial infection in 1.5% to 2.3% of children of 3 to 36 months with fever without a source",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:23766664",
+       "where": "Introduction"
+      }
+     ]
+    },
+    {
+     "item": "Observation",
+     "dose": "Consider a period of observation in hospital from 3 months with fever without a source; reassess amber or red children after 1 to 2 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.5.14; 1.5.15"
+      }
+     ]
+    },
+    {
+     "item": "61 to 89 days",
+     "dose": "AAP 2021 stops at 60 days; NICE: still under 3 months, so 38 C or more is a red feature and every infant gets a count, blood culture, CRP and urine",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "Table 2; 1.5.3"
+      },
+      {
+       "docId": "pmid:38247647",
+       "where": "Section 4"
+      },
+      {
+       "docId": "pmid:34281996",
+       "where": "Abstract"
+      }
+     ],
+     "note": "NICE NG143 counts any infant under 3 months with 38 C or more as high risk and tests every one; the Antibiotics 2024 review reports invasive infection in 2.2% at 29 to 60 days and 2.0% at 61 to 90 days in UK and Irish data."
+    }
+   ],
+   "next": "older_result",
+   "sources": [
+    {
+     "docId": "url:96adc1a88e80",
+     "where": "1.4.9; 1.5.11; 1.5.12"
+    },
+    {
+     "docId": "pmid:23766664",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:38261676",
+     "where": "Evaluation: urine collection; urine culture"
+    }
+   ]
+  },
+  {
+   "id": "older_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Vaccines, traffic-light features and the urinalysis",
+   "outcomes": [
+    {
+     "id": "uti",
+     "if": "Urinalysis positive; leukocyte esterase, nitrite or pyuria",
+     "ddx": {
+      "lead": [
+       "Urinary tract infection"
+      ],
+      "out": []
+     },
+     "next": "uti_step"
+    },
+    {
+     "id": "well",
+     "if": "Urine negative, vaccinated, no amber or red features; smiling, responds normally",
+     "ddx": {
+      "lead": [
+       "Viral illness"
+      ],
+      "out": []
+     },
+     "next": "end_older_viral"
+    },
+    {
+     "id": "amber",
+     "if": "Urine negative, amber or red signs, or vaccines behind; sleepy, tachycardic or unvaccinated",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Blood tests for the under-vaccinated child",
+       "dose": "A rule for the child behind on Hib or pneumococcal vaccines is not in the sources read",
+       "status": "pending"
+      }
+     ],
+     "next": "end_older_amber"
+    }
+   ]
+  },
+  {
+   "id": "end_older_viral",
+   "kind": "end",
+   "summary": "Fever without a source in a vaccinated child with a negative urinalysis and no amber or red features: home with advice, no blood tests or antibiotics. Return for a fit, a non-blanching rash, a child who seems less well, a parent who is more worried, or a fever lasting 5 days or longer."
+  },
+  {
+   "id": "end_older_amber",
+   "kind": "end",
+   "summary": "Fever without a source with amber or red features: urine, blood count, CRP and blood culture, an LP considered under 1 year (and at any age with red features), a chest film if the fever is over 39 C with a white count over 20, observation in hospital considered with reassessment after 1 to 2 hours, and a safety net if sent home. For a child behind on Hib or pneumococcal vaccines the conjugate-vaccine reassurance does not apply; the sources read give no separate blood-test rule."
+  },
+  {
+   "id": "uti_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Over 60 days, a positive urinalysis and no other source. Treatment?",
+   "options": [
+    "Send the culture, then an oral antibiotic if not toxic, drinking and keeping it down",
+    "IV ceftriaxone and admission for the first 48 hours, then a switch to oral",
+    "No antibiotics until the culture comes back positive at 48 hours",
+    "An oral antibiotic for 3 days, as for cystitis in an older child"
+   ],
+   "answer": 0,
+   "chainStep": "Urine culture before the first dose; an oral cephalosporin (AAP table: cephalexin 50 to 100 mg/kg a day in 4 doses, or cefixime 8 mg/kg a day; NICE: cefalexin 12.5 mg/kg twice a day) or amoxicillin-clavulanate by local resistance for 7 to 14 days; IV ceftriaxone if toxic or vomiting, then oral once improving; adjust to the culture",
+   "why": "Antibiotics start on the urinalysis, once the culture is sent. Oral treatment works as well as IV for a febrile UTI, pyelonephritis included, in a child who is not toxic; parenteral treatment is for the toxic, septic or unstable child, one who cannot keep oral medicine down or does not respond, an immunocompromised child, or an infant of 2 months or younger. A febrile UTI under 2 years is treated for 7 to 14 days; 3 to 7 days is for cystitis in older children.",
+   "orders": [
+    {
+     "item": "Oral regimen",
+     "dose": "AAP table (StatPearls): cephalexin 50 to 100 mg/kg a day in 4 doses, cefixime 8 mg/kg a day in 1 dose, or amoxicillin-clavulanate 20 to 40 mg/kg a day in 3 doses; NICE NG111: cefalexin 12.5 mg/kg twice a day for 7 to 10 days (25 mg/kg 2 to 4 times a day if severe), co-amoxiclav only once the culture shows susceptibility",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:38261676",
+       "where": "Table 3"
+      },
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 3"
+      }
+     ],
+     "note": "The AAP table restated in StatPearls gives cephalexin 50 to 100 mg/kg a day; NICE NG111 gives 12.5 mg/kg twice a day (25 mg/kg up to 4 times a day for severe infection) and keeps co-amoxiclav for a susceptible culture."
+    },
+    {
+     "item": "IV regimen",
+     "dose": "Ceftriaxone 75 mg/kg every 24 hours (AAP table, StatPearls); NICE: 50 to 80 mg/kg once a day, maximum 4 g, from 3 months; review IV antibiotics by 48 hours and step down to oral",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38261676",
+       "where": "Table 2"
+      },
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 3; Table 3 notes"
+      }
+     ]
+    },
+    {
+     "item": "Parenteral treatment",
+     "dose": "Toxic appearance, bacteremia or sepsis, instability, immunocompromise, unable to take or not responding to oral medicine, or 2 months or younger",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38261676",
+       "where": "Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Duration",
+     "dose": "7 to 14 days under 24 months and for pyelonephritis; 3 to 7 days for cystitis in older children",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38261676",
+       "where": "Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Route, 61 to 89 days",
+     "dose": "StatPearls (AAP): oral if not toxic after 2 months; NICE NG224: parenteral under 3 months",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:38261676",
+       "where": "Treatment"
+      },
+      {
+       "docId": "url:7925dc2913d1",
+       "where": "1.2.3"
+      }
+     ],
+     "note": "StatPearls restates the AAP: parenteral only at 2 months or younger unless toxic; NICE NG224 1.2.3 gives parenteral antibiotics to every infant under 3 months with a suspected UTI."
+    },
+    {
+     "item": "Prophylaxis after a first UTI",
+     "dose": "Not given routinely",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:7925dc2913d1",
+       "where": "1.2.13"
+      }
+     ],
+     "note": "StatPearls (UTI in children) indicates prophylaxis for grade III or higher VUR; this order is for the first UTI without known reflux."
+    }
+   ],
+   "next": "uti_result",
+   "sources": [
+    {
+     "docId": "pmid:38261676",
+     "where": "Treatment; Table 2; Table 3; Prophylaxis"
+    },
+    {
+     "docId": "url:f531e12f2681",
+     "where": "Table 3"
+    },
+    {
+     "docId": "url:7925dc2913d1",
+     "where": "1.2.3"
+    }
+   ]
+  },
+  {
+   "id": "uti_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Response at 48 hours",
+   "outcomes": [
+    {
+     "id": "better",
+     "if": "Better within 48 hours; improving, E. coli on culture",
+     "ddx": {
+      "lead": [
+       "Urinary tract infection"
+      ],
+      "out": []
+     },
+     "next": "us_step"
+    },
+    {
+     "id": "atypical",
+     "if": "Not better at 48 hours, or atypical; poor stream, a mass, raised creatinine, non-E. coli",
+     "ddx": {
+      "lead": [
+       "Urinary tract infection"
+      ],
+      "out": []
+     },
+     "next": "end_uti_atypical"
+    }
+   ]
+  },
+  {
+   "id": "us_step",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "A first febrile UTI, improving on treatment. Imaging?",
+   "options": [
+    "Renal and bladder ultrasound in a young child; a VCUG only if abnormal or the UTI recurs",
+    "A VCUG this admission to look for reflux, before any ultrasound",
+    "A DMSA scan during the acute infection to confirm pyelonephritis",
+    "CT of the abdomen with contrast, to look for scarring, an abscess or an obstructed kidney"
+   ],
+   "answer": 0,
+   "chainStep": "Renal and bladder ultrasound (after the acute phase if improving; within the first days if very ill or not improving); VCUG only for an abnormal ultrasound or a recurrent febrile UTI; no routine DMSA in the acute phase",
+   "why": "The AAP advises a renal and bladder ultrasound after a first febrile UTI in young children to find structural abnormalities, and a VCUG only when the ultrasound shows hydronephrosis, scarring or other suggestive findings or the febrile UTI recurs; routine VCUG after a first UTI is not recommended, and a DMSA scan is not for routine acute care. NICE images less: an ultrasound within 6 weeks under 6 months, and from 6 months only for an atypical or recurrent UTI, a real difference shown in the orders.",
+   "orders": [
+    {
+     "item": "Ultrasound after a first febrile UTI",
+     "dose": "AAP (StatPearls): every young child with a first febrile UTI; NICE NG224: within 6 weeks under 6 months; from 6 months only for atypical UTI (during the infection) or recurrent UTI",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:38261676",
+       "where": "Evaluation: renal ultrasound"
+      },
+      {
+       "docId": "url:7925dc2913d1",
+       "where": "1.3.1; 1.3.2; 1.3.3"
+      }
+     ],
+     "note": "StatPearls restates the AAP 2011 advice for all young children; NICE NG224 1.3.2 and 1.3.3 do not image a typical first UTI from 6 months. The AAP's 2016 reaffirmation was not read."
+    },
+    {
+     "item": "VCUG",
+     "dose": "Not routine after a first UTI; only for hydronephrosis, hydroureter, scarring or other findings on ultrasound, or a recurrent febrile UTI",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38261676",
+       "where": "Evaluation: VCUG"
+      },
+      {
+       "docId": "url:7925dc2913d1",
+       "where": "1.3.7"
+      }
+     ]
+    },
+    {
+     "item": "DMSA in the acute phase",
+     "dose": "Not for routine care; NICE does not image to localise a UTI",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38261676",
+       "where": "Evaluation: DMSA"
+      },
+      {
+       "docId": "url:7925dc2913d1",
+       "where": "1.2.16"
+      }
+     ]
+    },
+    {
+     "item": "Timing",
+     "dose": "Very ill or not improving within 12 to 36 hours: ultrasound in the first few days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38261676",
+       "where": "Evaluation: renal ultrasound"
+      }
+     ]
+    }
+   ],
+   "next": "end_uti",
+   "sources": [
+    {
+     "docId": "pmid:38261676",
+     "where": "Evaluation: renal ultrasound; VCUG; DMSA"
+    },
+    {
+     "docId": "url:7925dc2913d1",
+     "where": "1.2.16; 1.3.2; 1.3.3; 1.3.7; Table 6"
+    }
+   ]
+  },
+  {
+   "id": "end_uti",
+   "kind": "end",
+   "summary": "First febrile UTI, improving: finish 7 to 14 days, no routine prophylaxis, a renal and bladder ultrasound (AAP; NICE only under 6 months or for an atypical or recurrent UTI), and a VCUG only for an abnormal scan or a recurrence. Manage constipation and voiding problems, and tell the parents that UTIs can recur and need prompt treatment."
+  },
+  {
+   "id": "end_uti_atypical",
+   "kind": "end",
+   "summary": "A UTI not better at 48 hours, or atypical (seriously ill, poor urine flow, an abdominal or bladder mass, raised creatinine, septicemia, a non-E. coli organism): an ultrasound during the acute infection for obstruction or an abscess, the culture and antibiotic reviewed, and parenteral treatment if the child cannot take oral medicine or is worsening. NICE adds a DMSA scan 4 to 6 months later under 3 years, an MCUG under 6 months, and considers one from 6 months to 3 years for dilatation, poor flow, a non-E. coli infection or a family history of reflux."
+  },
+  {
+   "id": "kd_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Over 60 days, fever for 5 days or more, or several organs involved. Next?",
+   "options": [
+    "Look for the Kawasaki features, now and since the fever began, and ask about SARS-CoV-2",
+    "Keep treating the fever, and review again only if it reaches 7 days",
+    "Blood culture and IV ceftriaxone for a presumed occult bacteremia, then a review at 48 hours",
+    "A throat swab first, with Kawasaki considered once strep is excluded"
+   ],
+   "answer": 0,
+   "chainStep": "Look for bilateral non-exudative conjunctival injection, red cracked lips or strawberry tongue, red swollen hands and feet, a polymorphous rash and a cervical node over 1.5 cm; ask about features since the fever began and about SARS-CoV-2 infection or contact; count, CRP, ESR, albumin, ALT and urinalysis when Kawasaki is incomplete or MIS-C is possible",
+   "why": "A fever of 5 days or longer calls for an assessment for Kawasaki disease: bilateral conjunctival injection without exudate, red cracked lips, a strawberry tongue or red mouth, red swollen hands and feet, a polymorphous rash and a cervical node over 1.5 cm, asked about since the fever began because they may have gone by the time of the visit. Infants under 1 year may show fewer features but carry a higher coronary risk. Fever over 24 hours with 2 or more organs involved and raised inflammatory markers after SARS-CoV-2 raises MIS-C. Waiting, or treating it as occult bacteremia, delays the echocardiogram and IVIG, and a late Kawasaki diagnosis can be catastrophic.",
+   "orders": [
+    {
+     "item": "Kawasaki criteria",
+     "dose": "Fever for 5 days or more with 4 of 5: bilateral non-exudative conjunctival injection; red mouth, strawberry tongue or cracked lips; polymorphous rash; red, swollen hands and feet; a cervical node over 1.5 cm",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725848",
+       "where": "History and physical"
+      },
+      {
+       "docId": "url:96adc1a88e80",
+       "where": "1.2.25"
+      }
+     ]
+    },
+    {
+     "item": "Incomplete Kawasaki",
+     "dose": "Fever for 5 days or more with 2 or 3 features: CRP over 30 mg/L or ESR over 40 mm/hr leads to the supplementary labs and an echocardiogram; below both, daily review",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725848",
+       "where": "Evaluation; Pearls"
+      }
+     ]
+    },
+    {
+     "item": "Infant under 6 months",
+     "dose": "Fever for over 7 days: an echocardiogram to rule out Kawasaki disease",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725848",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "MIS-C",
+     "dose": "Fever over 24 hours, signs of at least 2 organs involved, raised inflammatory markers, infection excluded; SARS-CoV-2 exposure in most, and a negative swab or serology does not delay treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33557873",
+       "where": "Case definition"
+      }
+     ]
+    }
+   ],
+   "next": "kd_result",
+   "sources": [
+    {
+     "docId": "url:96adc1a88e80",
+     "where": "1.2.14; 1.2.25; 1.2.26; 1.2.27"
+    },
+    {
+     "docId": "pmid:30725848",
+     "where": "History and physical; Evaluation; Pearls"
+    },
+    {
+     "docId": "pmid:33557873",
+     "where": "Case definition"
+    }
+   ]
+  },
+  {
+   "id": "kd_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Kawasaki and MIS-C features",
+   "outcomes": [
+    {
+     "id": "kd",
+     "if": "Kawasaki likely; 4 or 5 features, or 2 or 3 with CRP over 30 or ESR over 40 and the supplementary labs or a positive echo, no SARS-CoV-2 link",
+     "ddx": {
+      "lead": [
+       "Kawasaki disease"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Kawasaki treatment",
+       "dose": "Echocardiogram; IVIG 2 g/kg over 10 to 12 hours with aspirin 80 to 100 mg/kg a day in 4 doses until afebrile for over 48 hours, then 3 to 5 mg/kg a day; ideally within 7 to 10 days of fever onset",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30725848",
+         "where": "Evaluation; Treatment"
+        }
+       ],
+       "note": "The 2017 and 2024 AHA statements are in an LWW journal (barred) and were not read; StatPearls is the source. pw_rash shows the same doses."
+      }
+     ],
+     "next": "end_kd"
+    },
+    {
+     "id": "misc",
+     "if": "MIS-C possible; 2 or more organs inflamed after SARS-CoV-2, not shocked",
+     "ddx": {
+      "lead": [
+       "MIS-C"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "MIS-C first steps",
+       "dose": "Count, CRP, clotting, electrolytes, liver and kidney tests; troponin and NT-proBNP; ECG and echocardiogram",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33557873",
+         "where": "Second step"
+        }
+       ]
+      },
+      {
+       "item": "MIS-C treatment (Italian guidance)",
+       "dose": "IVIG 2 g/kg over at least 12 hours; glucocorticoids with IVIG for heart involvement or severe disease; aspirin 5 mg/kg for at least 6 to 8 weeks; broad-spectrum antibiotics while cultures are pending",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33557873",
+         "where": "Treatment table"
+        }
+       ],
+       "note": "The ACR MIS-C guidance is in PMC only under the COVID-19 emergency permission (barred) and was not read."
+      }
+     ],
+     "next": "end_misc"
+    },
+    {
+     "id": "none",
+     "if": "Kawasaki or MIS-C not met; under 2 features, or 2 or 3 with CRP under 30 and ESR under 40, no organ involvement",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Two or three features, CRP under 30 and ESR under 40",
+       "dose": "Review daily; an echocardiogram if the fever settles and the skin peels, and treatment if aneurysms are found",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30725848",
+         "where": "Evaluation"
+        }
+       ]
+      }
+     ],
+     "next": "end_kd_none"
+    }
+   ]
+  },
+  {
+   "id": "end_kd",
+   "kind": "end",
+   "summary": "Kawasaki disease: an echocardiogram at diagnosis, IVIG 2 g/kg over 10 to 12 hours with aspirin 80 to 100 mg/kg a day in 4 doses until afebrile for over 48 hours, then 3 to 5 mg/kg a day, ideally within 7 to 10 days of fever onset; a child still febrile 36 to 48 hours after IVIG gets a second dose. Incomplete Kawasaki follows the AHA laboratory and echocardiogram algorithm. pw_rash carries the Kawasaki flags too; the AHA statements themselves (ahajournals) were not read."
+  },
+  {
+   "id": "end_misc",
+   "kind": "end",
+   "summary": "Possible MIS-C: fever over 24 hours, 2 or more organs involved, raised inflammatory markers and SARS-CoV-2 infection or contact. First-step bloods, troponin and NT-proBNP, an ECG and an echocardiogram; shock can be the first sign or come on quickly in hospital. The Italian guidance treats with IVIG 2 g/kg over at least 12 hours, glucocorticoids with it for heart involvement or severe disease, aspirin 5 mg/kg for at least 6 to 8 weeks, and broad-spectrum antibiotics while infection is excluded. Not covered further in this version."
+  },
+  {
+   "id": "end_kd_none",
+   "kind": "end",
+   "summary": "Two or three features with a CRP under 30 mg/L and an ESR under 40 mm/hr: review daily, with an echocardiogram if the fever settles and the skin peels; an infant under 6 months with over 7 days of fever gets an echocardiogram. Fever of 5 days or more without Kawasaki or MIS-C features: duration alone does not predict serious illness, so the source is sought as for any febrile child, and the Kawasaki features are asked about again, since they may have resolved by the time of assessment. Not covered further in this version."
+  },
+  {
+   "id": "end_source",
+   "kind": "end",
+   "summary": "Fever with a clear source in a child over 60 days: pneumonia goes to pw_peds_breathing and a septic hip to pw_hot_joint; otitis, osteomyelitis and skin infections are not covered in this version. NICE considers pneumonia with fast breathing, crackles, nasal flaring, chest indrawing, cyanosis or a saturation of 95% or less, and septic arthritis or osteomyelitis with a swollen limb or joint, an unused limb or no weight bearing. A fever lasting 5 days or more is still assessed for Kawasaki disease."
+  },
+  {
+   "id": "fs_look",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "A seizure with fever has stopped; 6 months to 5 years, waking. Next?",
+   "options": [
+    "Describe the seizure, check vaccines and antibiotics, look for meningitis and a source",
+    "An EEG this visit, to judge the risk of later epilepsy",
+    "A CT of the head before discharge, to rule out a structural cause",
+    "Electrolytes, calcium, magnesium and a blood count, to find the cause of the seizure itself"
+   ],
+   "answer": 0,
+   "chainStep": "History: seizure type and duration, number in 24 hours, recovery, recent illness and antibiotics, Hib and pneumococcal vaccines, family history; examination for meningism, a bulging fontanelle and the fever's source; glucose",
+   "why": "A febrile seizure is a seizure with a fever of at least 38 C, without CNS infection, at 6 to 60 months. The history (generalized or focal, how long, how many in 24 hours, back to baseline or not), the Hib and pneumococcal vaccine record, any antibiotics, and an examination for meningitis and the fever's source sort simple from complex seizures and pick out the child who needs an LP. A glucose is checked as for any seizure, but routine laboratory tests are not needed after a simple febrile seizure, the AAP advises against routine neuroimaging, and no EEG is done in a neurologically healthy child with a simple febrile seizure.",
+   "orders": [
+    {
+     "item": "Simple febrile seizure",
+     "dose": "Generalized, under 15 minutes, no recurrence within 24 hours, no preexisting neurologic abnormality",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36016968",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Complex febrile seizure",
+     "dose": "Focal features, 15 minutes or longer or stopped by medicine, recurrence within 24 hours, or a neurologic abnormality before or after",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36016968",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Febrile status epilepticus",
+     "dose": "Over 30 minutes, or serial seizures without waking in between for over 30 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36016968",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Glucose",
+     "dose": "Checked as for any seizure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36016968",
+       "where": "Laboratory studies"
+      }
+     ]
+    },
+    {
+     "item": "Routine bloods, EEG, imaging after a simple seizure",
+     "dose": "Not needed",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:36016968",
+       "where": "Laboratory studies; Neuroimaging"
+      },
+      {
+       "docId": "pmid:38735928",
+       "where": "Diagnosis"
+      }
+     ]
+    }
+   ],
+   "next": "fs_type",
+   "sources": [
+    {
+     "docId": "pmid:36016968",
+     "where": "Introduction; Evaluation; Laboratory studies; Neuroimaging"
+    },
+    {
+     "docId": "pmid:38735928",
+     "where": "Diagnosis"
+    },
+    {
+     "docId": "pmid:28846243",
+     "where": "Evaluation"
+    }
+   ]
+  },
+  {
+   "id": "fs_type",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Seizure type, vaccines, antibiotics and the examination",
+   "outcomes": [
+    {
+     "id": "simple",
+     "if": "Simple, 12 months or older, no antibiotics; back to baseline, no meningism",
+     "ddx": {
+      "lead": [
+       "Simple febrile seizure"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Counselling",
+       "dose": "About a third have another febrile seizure; 1% to 2% later develop epilepsy; no lasting neurological or cognitive harm; antipyretics comfort but do not prevent seizures; no continuous or intermittent prophylaxis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:36016968",
+         "where": "Prevention; Risk of recurrence; Risk of epilepsy"
+        },
+        {
+         "docId": "pmid:28846243",
+         "where": "Prognosis"
+        },
+        {
+         "docId": "url:96adc1a88e80",
+         "where": "1.6.1"
+        }
+       ]
+      },
+      {
+       "item": "Seizure first aid",
+       "dose": "On the side on a safe surface, nothing in the mouth, time it, and call an ambulance if it lasts over 5 minutes",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846243",
+         "where": "Deterrence and patient education"
+        }
+       ]
+      },
+      {
+       "item": "Disposition",
+       "dose": "Most go home after a period of observation once back to baseline",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:36016968",
+         "where": "Indications for admission"
+        }
+       ]
+      }
+     ],
+     "next": "end_fs_simple"
+    },
+    {
+     "id": "option",
+     "if": "Simple, 6 to 11 months or on antibiotics; no meningism, the LP advice differs",
+     "ddx": {
+      "lead": [
+       "Simple febrile seizure"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "LP under 1 year",
+       "dose": "AAP (as restated): an option at 6 to 12 months if Hib or pneumococcal vaccines are incomplete or unknown, and in a child pretreated with antibiotics; Italian review: strongly recommended under 1 year",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:36016968",
+         "where": "Lumbar puncture"
+        },
+        {
+         "docId": "pmid:28846243",
+         "where": "Evaluation"
+        },
+        {
+         "docId": "pmid:38735928",
+         "where": "Diagnosis"
+        }
+       ],
+       "note": "JACEP Open 2022 and StatPearls restate the AAP 2011 options; the Ital J Pediatr 2024 review strongly recommends an LP under 1 year because meningitis signs are subtler. The AAP 2011 text was not read (blocked)."
+      }
+     ],
+     "next": "end_fs_option"
+    },
+    {
+     "id": "mening",
+     "if": "Meningitis signs; neck stiffness, bulging fontanelle, drowsy past the postictal period",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "LP",
+       "dose": "Every child with a febrile seizure and signs of meningitis; before antibiotics only if safe and without a clinically significant delay, antibiotics within 1 hour of arrival",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:36016968",
+         "where": "Lumbar puncture"
+        },
+        {
+         "docId": "url:4a5f477fcfcd",
+         "where": "1.4.1"
+        }
+       ]
+      },
+      {
+       "item": "Antibiotic",
+       "dose": "IDSA 2004: vancomycin with cefotaxime or ceftriaxone over 1 month, pending cultures; NICE: a third-generation cephalosporin such as cefotaxime or ceftriaxone",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:15494903",
+         "where": "Empirical antimicrobial therapy"
+        },
+        {
+         "docId": "url:96adc1a88e80",
+         "where": "1.5.19"
+        },
+        {
+         "docId": "url:4a5f477fcfcd",
+         "where": "1.6.5"
+        }
+       ],
+       "note": "NICE NG143 1.5.19 and NG240 1.6.5 give the cephalosporin without vancomycin."
+      },
+      {
+       "item": "Ceftriaxone for meningitis",
+       "dose": "US label: 100 mg/kg first dose (maximum 4 g), then 100 mg/kg a day; NICE NG240: the highest BNFC dose",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:eed08301207b",
+         "where": "Dosage: pediatric patients"
+        },
+        {
+         "docId": "url:4a5f477fcfcd",
+         "where": "1.6.5"
+        }
+       ]
+      },
+      {
+       "item": "Dexamethasone",
+       "dose": "IV for strongly suspected bacterial meningitis over 3 months of age",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:4a5f477fcfcd",
+         "where": "1.8.1"
+        }
+       ]
+      },
+      {
+       "item": "Dexamethasone dose",
+       "dose": "0.15 mg/kg every 6 hours for 2 to 4 days, first dose 10 to 20 minutes before or with the first antibiotic (IDSA 2004, infants and children); NICE NG240: with or before the first antibiotic, or as soon as possible if under 12 hours late",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:15494903",
+         "where": "Adjunctive dexamethasone"
+        },
+        {
+         "docId": "url:4a5f477fcfcd",
+         "where": "1.8.5"
+        }
+       ],
+       "note": "IDSA does not start it once antibiotics are in; NICE allows up to 12 hours. pw_rash shows the same conflict."
+      }
+     ],
+     "next": "end_fs_mening"
+    },
+    {
+     "id": "complex",
+     "if": "Complex, no meningitis signs; focal, 15 minutes or longer, or 2 in 24 hours",
+     "ddx": {
+      "lead": [
+       "Complex febrile seizure"
+      ],
+      "out": [
+       "Simple febrile seizure"
+      ]
+     },
+     "orders": [
+      {
+       "item": "Complex febrile seizure workup",
+       "dose": "Individualized: EEG (above all with abnormal neurological or developmental status), exclusion of structural or infectious causes, neuroimaging if a postictal deficit is present, admission in selected cases, neurology follow-up",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846243",
+         "where": "Evaluation; Deterrence and patient education"
+        },
+        {
+         "docId": "pmid:38735928",
+         "where": "Diagnosis"
+        },
+        {
+         "docId": "pmid:36016968",
+         "where": "Neuroimaging"
+        }
+       ]
+      },
+      {
+       "item": "LP after a complex febrile seizure",
+       "dose": "Under 12 months in two guidelines; only if the examination suggests meningitis in a third",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:36016968",
+         "where": "Lumbar puncture"
+        }
+       ]
+      },
+      {
+       "item": "Epilepsy risk",
+       "dose": "4% to 15% after complex febrile seizures, by the number of complex features",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:38735928",
+         "where": "Prognosis"
+        }
+       ]
+      }
+     ],
+     "next": "end_fs_complex"
+    }
+   ]
+  },
+  {
+   "id": "end_fs_simple",
+   "kind": "end",
+   "summary": "Simple febrile seizure at 12 months or older, back to baseline with no meningism: no LP, EEG, neuroimaging or routine blood tests; find and treat the fever's source, and most children go home after a period of observation. Reassure the parents: about a third have another febrile seizure, 1% to 2% later develop epilepsy, and there is no lasting neurological harm. Antipyretics make the child comfortable but do not prevent seizures, and continuous or intermittent antiseizure prophylaxis is not advised. During a seizure: on the side on a safe surface, nothing in the mouth, time it, and call an ambulance if it lasts over 5 minutes."
+  },
+  {
+   "id": "end_fs_option",
+   "kind": "end",
+   "summary": "Simple febrile seizure at 6 to 11 months, or in a child already on antibiotics: the AAP makes the LP an option at 6 to 12 months when Hib or pneumococcal vaccination is incomplete or unknown, and in a child pretreated with antibiotics, which can mask meningitis; the Italian review goes further and strongly recommends an LP under 1 year. A child who has an LP after a febrile seizure is admitted. Otherwise as for a simple febrile seizure: no EEG, imaging or routine bloods, and reassurance. A fully vaccinated infant of 6 to 11 months who is not on antibiotics meets neither AAP option, so no LP in the AAP approach; the Italian review still strongly recommends one under 1 year."
+  },
+  {
+   "id": "end_fs_mening",
+   "kind": "end",
+   "summary": "Fever, a seizure and meningitis signs: an LP when it is safe, parenteral antibiotics not delayed for it (a third-generation cephalosporin, with vancomycin over 1 month in IDSA 2004 but not in NICE), IV dexamethasone 0.15 mg/kg every 6 hours with or before the first antibiotic for strongly suspected bacterial meningitis over 3 months of age (IDSA does not start it once antibiotics are in; NICE allows up to 12 hours), and aciclovir if focal seizures or signs suggest herpes simplex encephalitis; admit. NICE NG240 covers children with meningitis; the CSF route in pw_sepsis_fever is written for adults."
+  },
+  {
+   "id": "end_fs_complex",
+   "kind": "end",
+   "summary": "Complex febrile seizure without meningitis signs: no national guideline sets the workup, so it is individualized. An EEG, above all with an abnormal neurological or developmental status; neuroimaging if a postictal neurological deficit is present; an LP under 12 months in two guidelines, or only if the examination suggests meningitis in another; admission for observation in selected cases; neurology follow-up. Epilepsy follows in 4% to 15%, depending on the number of complex features."
+  }
+ ],
+ "cases": [
+  {
+   "id": "shock_infant",
+   "label": "Septic shock at 9 months",
+   "vignette": "9-month-old girl, 1 day of fever and vomiting, now floppy and hard to rouse. T 39.6 C, RR 52, SpO2 95% in air. Weight 8.5 kg. Vaccines up to date.",
+   "picks": {
+    "front": "shock"
+   },
+   "results": {
+    "front": "Heart rate 190, capillary refill 5 seconds, cold mottled legs, BP 68/40; no rash; glucose 92 mg/dL; lactate 5.1 mmol/L."
+   }
+  },
+  {
+   "id": "seizing",
+   "label": "Still convulsing on arrival",
+   "vignette": "3-year-old boy, a day of cough and fever; generalized shaking began at home 8 minutes before arrival and has not stopped. T 39.8 C, HR 165, SpO2 93% in air. Weight 14 kg. No known epilepsy.",
+   "picks": {
+    "front": "seizing"
+   },
+   "results": {
+    "front": "Still convulsing, all four limbs jerking, eyes deviated; capillary refill 2 seconds; no rash; fingerstick glucose 96 mg/dL."
+   }
+  },
+  {
+   "id": "not_waking",
+   "label": "Not waking after a seizure",
+   "vignette": "3-year-old girl, 2 days of fever; a 4-minute generalized seizure at home 70 minutes ago. T 39.2 C, HR 150, BP 98/60. Weight 15 kg.",
+   "picks": {
+    "front": "seizure_other"
+   },
+   "results": {
+    "front": "Opens her eyes only to pain and does not speak; capillary refill 2 seconds; no rash; glucose 102 mg/dL."
+   }
+  },
+  {
+   "id": "purpura",
+   "label": "Fever and spreading purple spots",
+   "vignette": "18-month-old boy, 6 hours of fever and irritability; his mother noticed spots on his legs an hour ago. T 39.4 C, HR 148, BP 94/56. Weight 11 kg.",
+   "picks": {
+    "front": "purpura"
+   },
+   "results": {
+    "front": "Non-blanching purple spots on both legs and one on the trunk, some over 2 mm; capillary refill 2 seconds; alert and crying; no neck stiffness."
+   }
+  },
+  {
+   "id": "newborn_well",
+   "label": "Fever at 5 days old",
+   "vignette": "5-day-old boy, born at 39 weeks after an uncomplicated pregnancy, feeding well; felt hot this evening. T 38.4 C, HR 165, RR 48. Weight 3.4 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "neo7",
+    "ill_age": "young",
+    "young_result": "clear"
+   },
+   "results": {
+    "front": "Pink and well perfused, capillary refill 2 seconds; no rash; no seizure.",
+    "age": "Age 5 days; alert, feeding, normal cry.",
+    "ill_age": "5 days old.",
+    "young_result": "CSF 4 white cells per microliter, protein and glucose normal, no organisms on the Gram stain; no vesicles, no seizure, no maternal herpes history; ALT and platelets normal."
+   }
+  },
+  {
+   "id": "ill_meningitis",
+   "label": "An ill-appearing 2-week-old",
+   "vignette": "15-day-old girl, born at term, 1 day of poor feeding and sleepiness. T 38.9 C, HR 172, RR 58, SpO2 97% in air. Weight 3.6 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "ill",
+    "ill_age": "young",
+    "young_result": "bact"
+   },
+   "results": {
+    "front": "Pulses strong, capillary refill 2 seconds; no rash; no seizure.",
+    "age": "Age 15 days; lethargic, weak cry, wakes only briefly.",
+    "ill_age": "15 days old.",
+    "young_result": "CSF 1,450 white cells per microliter, protein raised, glucose low; gram-positive cocci in chains on the Gram stain."
+   }
+  },
+  {
+   "id": "ill_six_weeks",
+   "label": "An ill-appearing 6-week-old",
+   "vignette": "42-day-old boy, born at term, a day of fever and poor feeding. T 39.1 C, HR 178, RR 50. Weight 4.8 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "ill",
+    "ill_age": "older"
+   },
+   "results": {
+    "front": "Pulses strong, capillary refill 2 seconds; no rash; no seizure.",
+    "age": "Age 42 days; floppy and hard to engage, weak cry.",
+    "ill_age": "42 days old."
+   }
+  },
+  {
+   "id": "after_vaccines",
+   "label": "Fever the evening after the 2-month vaccines",
+   "vignette": "58-day-old girl, born at term, had her 2-month vaccines this morning; fever since the afternoon. T 38.4 C, HR 160, feeding normally. Weight 5.2 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "excluded"
+   },
+   "results": {
+    "front": "Well perfused; no rash; no seizure.",
+    "age": "Age 58 days; well-appearing; vaccinated 8 hours ago."
+   }
+  },
+  {
+   "id": "hsv_risk",
+   "label": "A well 10-day-old whose mother has genital herpes",
+   "vignette": "10-day-old boy, born at 39 weeks; his mother was diagnosed with a first episode of genital herpes a week after delivery. Fever since this morning, feeding well. T 38.3 C, HR 168. Weight 3.5 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "d8_21",
+    "young_result": "hsv"
+   },
+   "results": {
+    "front": "Well perfused; no rash; no seizure.",
+    "age": "Age 10 days; alert, feeding, well-appearing; term, healthy newborn course.",
+    "young_result": "CSF 48 white cells per microliter, mostly lymphocytes, protein raised, no organisms on the Gram stain; no vesicles; ALT 88 U/L."
+   }
+  },
+  {
+   "id": "raised_pct_tap_fails",
+   "label": "A raised procalcitonin at 24 days, and the tap fails",
+   "vignette": "24-day-old girl, born at term, healthy; fever since last night and feeding a little less; not jaundiced, no IV fluids yet. T 38.7 C, HR 170. Weight 3.9 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "d22_28",
+    "im22": "raised",
+    "young_result": "nocsf"
+   },
+   "results": {
+    "front": "Well perfused; no rash; no seizure.",
+    "age": "Age 24 days; well-appearing; term, no exclusions.",
+    "im22": "Procalcitonin 1.8 ng/mL, ANC 6,100 per mm3, CRP 34 mg/L; urinalysis negative.",
+    "young_result": "Two LP attempts: one dry, one heavily bloodstained and unreadable; no vesicles, no seizure, no maternal herpes history; ALT and platelets normal."
+   }
+  },
+  {
+   "id": "normal_markers_23d",
+   "label": "Normal markers at 23 days",
+   "vignette": "23-day-old boy, born at term, healthy; fever noticed this evening, feeding well. T 38.2 C, HR 160. Weight 3.8 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "d22_28",
+    "im22": "normal"
+   },
+   "results": {
+    "front": "Well perfused; no rash; no seizure.",
+    "age": "Age 23 days; well-appearing; term, no exclusions.",
+    "im22": "Procalcitonin 0.1 ng/mL, ANC 2,100 per mm3, CRP 3 mg/L; urinalysis negative."
+   }
+  },
+  {
+   "id": "low_risk_35d",
+   "label": "A low-risk 5-week-old",
+   "vignette": "35-day-old girl, born at term, healthy; fever for 6 hours, a sibling has a cold; feeding well. T 38.3 C, HR 158. Weight 4.6 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "d29_60",
+    "im29": "normal"
+   },
+   "results": {
+    "front": "Well perfused; no rash; no seizure.",
+    "age": "Age 35 days; well-appearing; term, no exclusions, no recent vaccines.",
+    "im29": "Procalcitonin 0.2 ng/mL, ANC 3,000 per mm3, CRP 6 mg/L; catheter urinalysis negative."
+   }
+  },
+  {
+   "id": "uti_45d",
+   "label": "A positive urinalysis at 45 days",
+   "vignette": "45-day-old girl, born at term, fever since yesterday, feeding well. T 38.6 C, HR 162. Weight 4.9 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "d29_60",
+    "im29": "uti"
+   },
+   "results": {
+    "front": "Well perfused; no rash; no seizure.",
+    "age": "Age 45 days; well-appearing; term, no exclusions.",
+    "im29": "Procalcitonin 0.3 ng/mL, ANC 3,500 per mm3; catheter urinalysis leukocyte esterase 2+, nitrite positive, 40 white cells per high-power field."
+   }
+  },
+  {
+   "id": "raised_50d",
+   "label": "A raised procalcitonin at 50 days",
+   "vignette": "50-day-old boy, born at term, fever since this morning. T 38.9 C, HR 170. Weight 5.1 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "d29_60",
+    "im29": "raised"
+   },
+   "results": {
+    "front": "Well perfused; no rash; no seizure.",
+    "age": "Age 50 days; well-appearing; term, no exclusions.",
+    "im29": "Procalcitonin 2.1 ng/mL, ANC 6,000 per mm3, CRP 48 mg/L; catheter urinalysis negative."
+   }
+  },
+  {
+   "id": "kawasaki",
+   "label": "Six days of fever, red eyes and red lips",
+   "vignette": "2-year-old boy, 6 days of fever despite antipyretics, irritable. T 39.5 C, HR 140. Weight 12 kg. No known COVID-19 contact.",
+   "picks": {
+    "front": "stable",
+    "age": "prolonged",
+    "kd_result": "kd"
+   },
+   "results": {
+    "front": "Well perfused; a blanching red rash on the trunk; no seizure.",
+    "age": "Age 2 years; fever for 6 days.",
+    "kd_result": "Both eyes red without discharge, red cracked lips and a strawberry tongue, swollen red hands, a 2 cm node in the left neck; CRP 110 mg/L."
+   }
+  },
+  {
+   "id": "misc",
+   "label": "Fever and abdominal pain after COVID-19 at home",
+   "vignette": "6-year-old girl, 3 days of fever, abdominal pain and vomiting; her family had COVID-19 four weeks ago. T 39.4 C, HR 132, BP 100/62. Weight 20 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "prolonged",
+    "kd_result": "misc"
+   },
+   "results": {
+    "front": "Warm hands, capillary refill 2 seconds; red eyes and a blanching rash; no seizure.",
+    "age": "Age 6 years; 3 days of fever, abdominal pain, vomiting, red eyes and a rash.",
+    "kd_result": "CRP 190 mg/L, lymphocytes 0.6 x 10^9/L, troponin and NT-proBNP raised; SARS-CoV-2 antibodies positive; red eyes and a rash are the only Kawasaki features."
+   }
+  },
+  {
+   "id": "prolonged_no_kd",
+   "label": "Six days of fever and a cough",
+   "vignette": "4-year-old boy, 6 days of fever and a cough. T 38.9 C, HR 120, RR 34. Weight 16 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "prolonged",
+    "kd_result": "none"
+   },
+   "results": {
+    "front": "Well perfused; no rash; no seizure.",
+    "age": "Age 4 years; fever for 6 days.",
+    "kd_result": "Crackles at the right base; eyes, lips, mouth, hands, feet and skin normal; neck nodes under 1 cm; no other organ involved."
+   }
+  },
+  {
+   "id": "kd_low_crp",
+   "label": "Two Kawasaki features and a low CRP",
+   "vignette": "3-year-old girl, 5 days of fever; red eyes for 2 days. T 38.8 C, HR 128. Weight 14 kg. No known COVID-19 contact.",
+   "picks": {
+    "front": "stable",
+    "age": "prolonged",
+    "kd_result": "none"
+   },
+   "results": {
+    "front": "Well perfused; no rash; no seizure.",
+    "age": "Age 3 years; fever for 5 days.",
+    "kd_result": "Both eyes red without discharge and red cracked lips; no rash, normal hands and feet, no neck node over 1 cm; CRP 18 mg/L, ESR 28 mm/hr; no organ involvement."
+   }
+  },
+  {
+   "id": "uti_10mo",
+   "label": "Fever without a source at 10 months",
+   "vignette": "10-month-old girl, 2 days of fever, no cough or diarrhea, vaccines up to date. T 39.4 C, HR 150. Weight 8.8 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "older",
+    "older_result": "uti",
+    "uti_result": "better"
+   },
+   "results": {
+    "front": "Well perfused; no rash; no seizure.",
+    "age": "Age 10 months; fever for 2 days; no source on examination.",
+    "older_result": "Catheter urinalysis leukocyte esterase 3+, nitrite positive; pink, alert and smiling, drinking, no amber or red features.",
+    "uti_result": "Afebrile at 36 hours on oral cephalexin; E. coli over 100,000 CFU/mL, sensitive."
+   }
+  },
+  {
+   "id": "uti_atypical",
+   "label": "Still febrile at 48 hours with a UTI",
+   "vignette": "7-month-old uncircumcised boy, 3 days of fever, vaccines up to date. T 39.8 C, HR 155. Weight 8 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "older",
+    "older_result": "uti",
+    "uti_result": "atypical"
+   },
+   "results": {
+    "front": "Well perfused; no rash; no seizure.",
+    "age": "Age 7 months; fever for 3 days; no source on examination.",
+    "older_result": "Catheter urinalysis leukocyte esterase 2+, nitrite positive; drinking, alert.",
+    "uti_result": "Still febrile at 48 hours on oral cefixime; weak urine stream; creatinine raised for age; Pseudomonas on culture."
+   }
+  },
+  {
+   "id": "fws_vaccinated",
+   "label": "Fever without a source in a vaccinated toddler",
+   "vignette": "20-month-old boy, 1 day of fever, eating less, playing between doses of ibuprofen; vaccines up to date. T 39.0 C, HR 140. Weight 11 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "older",
+    "older_result": "well"
+   },
+   "results": {
+    "front": "Well perfused; no rash; no seizure.",
+    "age": "Age 20 months; fever for 1 day; no source on examination.",
+    "older_result": "Catheter urinalysis negative; smiling, responds normally, moist mucous membranes, no amber or red features."
+   }
+  },
+  {
+   "id": "fws_unvaccinated",
+   "label": "An unvaccinated 13-month-old with a fever of 40",
+   "vignette": "13-month-old girl, unvaccinated by parental choice, 1 day of fever, sleepier than usual. T 40.1 C, HR 156, RR 38. Weight 9.5 kg.",
+   "picks": {
+    "front": "stable",
+    "age": "older",
+    "older_result": "amber"
+   },
+   "results": {
+    "front": "Capillary refill 2 seconds, pulses strong; no rash; no seizure.",
+    "age": "Age 13 months; fever for 1 day; no source on examination.",
+    "older_result": "Catheter urinalysis negative; wakes only with prolonged stimulation; heart rate 156; no vaccines given."
+   }
+  },
+  {
+   "id": "otitis",
+   "label": "Fever and a bulging eardrum",
+   "vignette": "2-year-old girl, 2 days of fever and pulling at her right ear. T 38.9 C, HR 130. Weight 12.5 kg. Vaccines up to date.",
+   "picks": {
+    "front": "stable",
+    "age": "source"
+   },
+   "results": {
+    "front": "Well perfused; no rash; no seizure.",
+    "age": "Age 2 years; fever for 2 days; a red, bulging right eardrum."
+   }
+  },
+  {
+   "id": "simple_fs",
+   "label": "A 90-second seizure at 20 months",
+   "vignette": "20-month-old boy, fever since this morning; a 90-second generalized seizure at home, stiffening then jerking of all limbs. T 39.5 C, HR 145. Weight 11.5 kg. Vaccines up to date; no antibiotics.",
+   "picks": {
+    "front": "fs",
+    "fs_type": "simple"
+   },
+   "results": {
+    "front": "Seizure over; awake and back to normal, playing; well perfused; no rash.",
+    "fs_type": "One generalized seizure of 90 seconds, back to baseline within 20 minutes; no neck stiffness; red throat; no antibiotics; vaccines complete."
+   }
+  },
+  {
+   "id": "fs_8mo",
+   "label": "A simple febrile seizure at 8 months, vaccines behind",
+   "vignette": "8-month-old girl who missed her 4- and 6-month vaccines; fever for a day, then a 3-minute generalized seizure. T 39.2 C, HR 150. Weight 8 kg.",
+   "picks": {
+    "front": "fs",
+    "fs_type": "option"
+   },
+   "results": {
+    "front": "Seizure over; awake and feeding; well perfused; no rash.",
+    "fs_type": "One generalized seizure of 3 minutes, now alert and feeding; fontanelle flat, no neck stiffness; no antibiotics; Hib and pneumococcal vaccines incomplete."
+   }
+  },
+  {
+   "id": "fs_meningitis",
+   "label": "After a febrile seizure, a stiff neck",
+   "vignette": "15-month-old boy, 2 days of fever and vomiting, a 2-minute generalized seizure an hour ago. T 39.7 C, HR 155. Weight 10 kg.",
+   "picks": {
+    "front": "fs",
+    "fs_type": "mening"
+   },
+   "results": {
+    "front": "Seizure over; eyes open, irritable; well perfused; no rash.",
+    "fs_type": "Irritable and cries when moved; neck stiff, fontanelle full and bulging; vaccines up to date."
+   }
+  },
+  {
+   "id": "complex_fs",
+   "label": "A 20-minute focal seizure",
+   "vignette": "30-month-old girl, fever since yesterday; right arm and leg jerking for 20 minutes, stopped by paramedics with buccal midazolam. T 39.0 C, HR 140. Weight 13 kg.",
+   "picks": {
+    "front": "fs",
+    "fs_type": "complex"
+   },
+   "results": {
+    "front": "Seizure over; waking and answering to her name; well perfused; no rash.",
+    "fs_type": "Focal right-sided seizure of 20 minutes; now moving all four limbs normally; no neck stiffness; vaccines up to date."
+   }
+  }
+ ]
+}

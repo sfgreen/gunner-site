@@ -1,0 +1,3608 @@
+{
+ "id": "pw_peds_breathing",
+ "title": "The child who cannot breathe",
+ "world": "peds",
+ "synonyms": [
+  "child difficulty breathing",
+  "pediatric respiratory distress",
+  "respiratory distress in a child",
+  "wheezy infant",
+  "bronchiolitis",
+  "RSV",
+  "respiratory syncytial virus",
+  "high-flow nasal cannula",
+  "pediatric asthma",
+  "asthma attack in a child",
+  "status asthmaticus in a child",
+  "pneumonia in a child",
+  "pediatric pneumonia",
+  "community-acquired pneumonia in children",
+  "walking pneumonia",
+  "Mycoplasma pneumoniae",
+  "pertussis",
+  "whooping cough",
+  "BRUE",
+  "brief resolved unexplained event",
+  "ALTE",
+  "apnea in an infant",
+  "pediatric respiratory failure",
+  "bag-mask ventilation",
+  "endotracheal tube size",
+  "pediatric anaphylaxis"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:2d41be52da97",
+   "label": "NICE NG9",
+   "title": "Bronchiolitis in children: diagnosis and management (NICE guideline NG9, 2015, updated 2021)",
+   "url": "https://www.nice.org.uk/guidance/ng9"
+  },
+  {
+   "docId": "pmid:40685806",
+   "label": "PREDICT bronchiolitis 2025",
+   "title": "Australasian Bronchiolitis Guideline: 2025 Update (J Paediatr Child Health 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40685806/"
+  },
+  {
+   "docId": "pmid:36765418",
+   "label": "Italian bronchiolitis 2022",
+   "title": "UPDATE: 2022 Italian guidelines on the management of bronchiolitis in infants (Ital J Pediatr 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36765418/"
+  },
+  {
+   "docId": "pmid:25349312",
+   "label": "AAP 2014 bronchiolitis",
+   "title": "Clinical Practice Guideline: The Diagnosis, Management, and Prevention of Bronchiolitis (AAP, Pediatrics 2014)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25349312/"
+  },
+  {
+   "docId": "pmid:33587138",
+   "label": "AAP guideline trends 2021",
+   "title": "Trends Over Time in Use of Nonrecommended Tests and Treatments Since Publication of the American Academy of Pediatrics Bronchiolitis Guideline (JAMA Netw Open 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33587138/"
+  },
+  {
+   "docId": "pmid:30137791",
+   "label": "StatPearls bronchiolitis",
+   "title": "Pediatric Bronchiolitis (StatPearls, review, updated 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30137791/"
+  },
+  {
+   "docId": "pmid:31536291",
+   "label": "StatPearls pediatric bronchospasm",
+   "title": "Pediatric Bronchospasm (StatPearls, review, updated 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31536291/"
+  },
+  {
+   "docId": "url:13b6c161ea88",
+   "label": "NAEPP EPR-3 2007",
+   "title": "Expert Panel Report 3: Guidelines for the Diagnosis and Management of Asthma, Full Report 2007",
+   "url": "https://www.nhlbi.nih.gov/sites/default/files/media/docs/EPR-3_Asthma_Full_Report_2007.pdf"
+  },
+  {
+   "docId": "url:3f6d6d331066",
+   "label": "SIGN/BTS 158",
+   "title": "British guideline on the management of asthma (SIGN 158, SIGN/BTS, 2019)",
+   "url": "https://www.brit-thoracic.org.uk/document-library/guidelines/asthma/btssign-guideline-for-the-management-of-asthma-2019-sign-158/"
+  },
+  {
+   "docId": "pmid:31869095",
+   "label": "StatPearls pediatric asthma",
+   "title": "Pediatric Asthma (StatPearls, review, updated 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31869095/"
+  },
+  {
+   "docId": "pmid:30480949",
+   "label": "StatPearls EMS asthma in children",
+   "title": "EMS Prehospital Evaluation and Treatment of Asthma in Children (StatPearls, review, updated 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30480949/"
+  },
+  {
+   "docId": "pmid:33204386",
+   "label": "WAO 2020",
+   "title": "World Allergy Organization anaphylaxis guidance 2020",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33204386/"
+  },
+  {
+   "docId": "pmid:42507345",
+   "label": "Singapore PLS 2026",
+   "title": "Singapore Paediatric Life Support Guidelines 2026",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42507345/"
+  },
+  {
+   "docId": "pmid:28613789",
+   "label": "StatPearls pediatric arrest",
+   "title": "Cardiopulmonary Arrest in Children (StatPearls, review, updated 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613789/"
+  },
+  {
+   "docId": "pmid:29262130",
+   "label": "StatPearls airway management",
+   "title": "Airway Management (StatPearls, review, updated 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29262130/"
+  },
+  {
+   "docId": "pmid:28722953",
+   "label": "StatPearls bag-valve-mask",
+   "title": "Bag-Valve-Mask Ventilation (StatPearls, review, updated 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722953/"
+  },
+  {
+   "docId": "pmid:34471872",
+   "label": "SATS pediatric CAP 2020",
+   "title": "Diagnosis and management of community-acquired pneumonia in children: South African Thoracic Society guidelines (Afr J Thorac Crit Care Med 2020)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34471872/"
+  },
+  {
+   "docId": "pmid:31518547",
+   "label": "Pediatric CAP review 2020",
+   "title": "Community-acquired pneumonia among children: the latest evidence for an updated management (J Pediatr (Rio J) 2020, review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31518547/"
+  },
+  {
+   "docId": "pmid:30725625",
+   "label": "StatPearls pediatric pneumonia",
+   "title": "Pediatric Pneumonia (StatPearls, review, updated 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30725625/"
+  },
+  {
+   "docId": "pmid:28613531",
+   "label": "StatPearls Mycoplasma",
+   "title": "Mycoplasma pneumoniae infection (StatPearls, review, updated 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613531/"
+  },
+  {
+   "docId": "pmid:32491698",
+   "label": "StatPearls azithromycin",
+   "title": "Azithromycin (StatPearls, review, updated 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32491698/"
+  },
+  {
+   "docId": "url:4938335258b2",
+   "label": "CDC pertussis treatment",
+   "title": "Treatment of Pertussis (CDC, for health care providers, updated 2025)",
+   "url": "https://www.cdc.gov/pertussis/hcp/clinical-care/index.html"
+  },
+  {
+   "docId": "url:4371d97ad05f",
+   "label": "CDC pertussis PEP",
+   "title": "Postexposure Antimicrobial Prophylaxis (CDC, whooping cough, updated 2025)",
+   "url": "https://www.cdc.gov/pertussis/php/postexposure-prophylaxis/index.html"
+  },
+  {
+   "docId": "url:1218ab48c929",
+   "label": "CDC pertussis clinical",
+   "title": "Clinical Features of Pertussis (CDC, for health care providers, 2025)",
+   "url": "https://www.cdc.gov/pertussis/hcp/clinical-signs/index.html"
+  },
+  {
+   "docId": "url:8ef92352ce68",
+   "label": "CDC pertussis 2005",
+   "title": "Recommended Antimicrobial Agents for the Treatment and Postexposure Prophylaxis of Pertussis: 2005 CDC Guidelines (MMWR)",
+   "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/rr5414a1.htm"
+  },
+  {
+   "docId": "pmid:30085550",
+   "label": "StatPearls pertussis",
+   "title": "Pertussis (StatPearls, review, updated 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30085550/"
+  },
+  {
+   "docId": "pmid:28722926",
+   "label": "StatPearls BRUE",
+   "title": "Brief Resolved Unexplained Event (StatPearls, review, updated 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722926/"
+  }
+ ],
+ "differential": [
+  "Bronchiolitis",
+  "Asthma exacerbation",
+  "Pneumonia",
+  "Atypical pneumonia",
+  "Pertussis",
+  "BRUE",
+  "Croup",
+  "Epiglottitis",
+  "Airway foreign body",
+  "Anaphylaxis",
+  "Sepsis",
+  "DKA"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Child struggling to breathe. First moves?",
+   "options": [
+    "Look first, then oximetry, oxygen if low, and a weight",
+    "A chest x-ray first; treat once it has been read",
+    "Lie the child flat and away from the parent to examine the chest",
+    "A blood gas first, then oxygen once the result is back"
+   ],
+   "answer": 0,
+   "chainStep": "Pediatric assessment triangle (appearance, work of breathing, circulation to the skin), then ABCDE; pulse oximetry and oxygen when the saturation is low (targets differ by condition); a weight, or a Broselow tape estimate",
+   "why": "A hands-off look at appearance, work of breathing and circulation to the skin sorts respiratory distress from respiratory failure, and a hands-on ABCDE survey follows. A child in distress is kept in a comfortable position with calm reassurance. Oxygen saturation is measured in every child with suspected bronchiolitis or acute wheeze, and blood gases are not routine. Weight drives every dose; a Broselow tape helps with sizing when the age is unknown.",
+   "sources": [
+    {
+     "docId": "pmid:30480949",
+     "where": "Evaluation: physical examination; management priorities based on general impression"
+    },
+    {
+     "docId": "url:2d41be52da97",
+     "where": "1.1.8; 1.4.9"
+    },
+    {
+     "docId": "url:3f6d6d331066",
+     "where": "9.7.1; 9.7.2"
+    },
+    {
+     "docId": "pmid:28613789",
+     "where": "Treatment / Management; Pearls"
+    }
+   ],
+   "next": "front",
+   "orders": [
+    {
+     "item": "Oxygen saturation",
+     "dose": "Measure in every baby or child with suspected bronchiolitis and in every child with acute wheeze",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.1.8"
+      },
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.7.2"
+      }
+     ]
+    },
+    {
+     "item": "Position",
+     "dose": "A comfortable position, with calm reassurance",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30480949",
+       "where": "Management priorities based on general impression"
+      },
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.7.1"
+      }
+     ]
+    },
+    {
+     "item": "Weight and sizing",
+     "dose": "Weigh the child; a Broselow tape may help with sizing when the age is unknown",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613789",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: the newborn in the delivery room, trauma, chronic lung disease, congenital heart disease, and children under a respiratory specialist."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "First look, airway and history",
+   "outcomes": [
+    {
+     "id": "arrest",
+     "if": "No signs of life; unresponsive, not breathing normally, no pulse",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_arrest"
+    },
+    {
+     "id": "anaph",
+     "if": "Anaphylaxis; minutes after a likely allergen, with hives, wheeze, stridor or low pressure",
+     "ddx": {
+      "lead": [
+       "Anaphylaxis"
+      ],
+      "out": []
+     },
+     "next": "anaph_epi"
+    },
+    {
+     "id": "failure",
+     "if": "Apneic or only gasping, with a pulse; no allergen or choking",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "bvm"
+    },
+    {
+     "id": "stridor",
+     "if": "Stridor or a barking cough; drooling or a muffled voice, no allergen and no choking episode",
+     "ddx": {
+      "lead": [
+       "Croup",
+       "Epiglottitis"
+      ],
+      "out": []
+     },
+     "next": "end_stridor"
+    },
+    {
+     "id": "choke",
+     "if": "Choking; a sudden cough, gag or silence while eating or playing",
+     "ddx": {
+      "lead": [
+       "Airway foreign body"
+      ],
+      "out": []
+     },
+     "next": "end_choke"
+    },
+    {
+     "id": "shock",
+     "if": "Shock, breathing on its own; poor perfusion or low pressure for age, no allergen",
+     "ddx": {
+      "lead": [
+       "Sepsis"
+      ],
+      "out": []
+     },
+     "next": "end_shock"
+    },
+    {
+     "id": "stable",
+     "if": "None of these; breathing on its own, perfusing, no stridor; go by the history and exam",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "findings"
+    }
+   ]
+  },
+  {
+   "id": "end_shock",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Breathless and in shock without an allergen: resuscitate as shock. In children under 10, hypotension is a systolic pressure under 70 plus twice the age in years. A febrile or septic child goes to the shock route of the febrile infant and child pathway (pw_peds_fever): oxygen, IV or IO access, crystalloid boluses reassessed after each, and antibiotics within 1 hour; pneumonia is then treated on its admitted route here. Heart failure and congenital heart disease are not covered in this version."
+  },
+  {
+   "id": "end_arrest",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cardiac arrest: start CPR with ventilations now, 15:2 for trained healthcare rescuers (30:2 for a single rescuer), because arrests in children often stem from respiratory failure. Paediatric life support is not covered further in this version."
+  },
+  {
+   "id": "anaph_epi",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Anaphylaxis in a child. First drug and dose?",
+   "options": [
+    "IM epinephrine 0.01 mg/kg into the outer thigh, at most 0.5 mg",
+    "IV diphenhydramine first, then epinephrine if still no better",
+    "Subcutaneous epinephrine 0.01 mg/kg into the upper arm",
+    "Nebulized albuterol first, then IM epinephrine if the wheeze persists"
+   ],
+   "answer": 0,
+   "chainStep": "IM epinephrine 0.01 mg/kg (maximum 0.5 mg) into the mid-anterolateral thigh, repeated every 5 to 15 minutes if needed; high-flow oxygen; 20 mL/kg crystalloid for cardiovascular instability",
+   "why": "Intramuscular epinephrine into the mid-anterolateral thigh is first line: 0.01 mg/kg to a maximum of 0.5 mg, repeated every 5 to 15 minutes if needed, or by age, 0.15 mg at 1 to 5 years and 0.3 mg at 6 to 12. Subcutaneous injection is avoided because it is absorbed more slowly than intramuscular. Inhaled albuterol is an add-on and never replaces repeated IM epinephrine, and antihistamines mainly ease the skin. In children under 10, hypotension is a systolic pressure under 70 plus twice the age in years.",
+   "sources": [
+    {
+     "docId": "pmid:33204386",
+     "where": "Acute treatment of anaphylaxis; Table 6; Table 2 footnote"
+    },
+    {
+     "docId": "pmid:31536291",
+     "where": "Treatment / Management: anaphylaxis"
+    }
+   ],
+   "next": "end_anaph",
+   "orders": [
+    {
+     "item": "Epinephrine IM",
+     "dose": "0.01 mg/kg to a maximum of 0.5 mg; or by age: infants under 10 kg 0.01 mg/kg, 1 to 5 years 0.15 mg, 6 to 12 years 0.3 mg, teenagers 0.5 mg; repeat every 5 to 15 minutes if symptoms persist",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis; Table 6"
+      }
+     ]
+    },
+    {
+     "item": "Subcutaneous epinephrine",
+     "dose": "Avoided: absorbed more slowly than intramuscular",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:31536291",
+       "where": "Treatment / Management: anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen",
+     "dose": "High flow, preferably 100% by non-rebreather, with respiratory distress or further epinephrine doses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "IV fluids",
+     "dose": "Cardiovascular instability: 20 mL/kg crystalloid bolus",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Hypotension in a child",
+     "dose": "Infants and children under 10: systolic under 70 mmHg plus twice the age in years",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Table 2 footnote"
+      }
+     ]
+    },
+    {
+     "item": "Albuterol and antihistamines",
+     "dose": "Inhaled SABA for wheeze as an add-on, never instead of repeated IM epinephrine; antihistamines mainly for the skin",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_anaph",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pediatric anaphylaxis after IM epinephrine: the dyspnea pathway (pw_dyspnea) takes it from its response-to-epinephrine branch, with repeat doses, observation for a biphasic reaction, auto-injectors and a written action plan. Carry over the child's dose from this pathway: 0.01 mg/kg, or 0.15 mg at 1 to 5 years and 0.3 mg at 6 to 12."
+  },
+  {
+   "id": "bvm",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Apneic or only gasping, with a pulse. Next?",
+   "options": [
+    "Open the airway and start bag-mask ventilation with oxygen",
+    "Intubate straight away in the ED, with no bag-mask breaths first",
+    "High-flow nasal cannula and reassess in 15 minutes",
+    "Chest compressions at 15:2, then bag-mask breaths"
+   ],
+   "answer": 0,
+   "chainStep": "Open the airway, high-concentration oxygen, bag-mask ventilation to visible chest rise at 30 breaths/min for an infant, 20 for a child, 12 for an adolescent; compressions with ventilations for bradycardia with poor perfusion",
+   "why": "Respiratory failure needs immediate moves: open the airway, give high-concentration oxygen and start bag-mask ventilation when breathing effort is inadequate, moving to an advanced airway when these fail. Bag-mask ventilation is a reasonable first airway; advanced airways have not beaten it. With a pulse over 60, rescue breaths go at 30 a minute for an infant, 20 for a child and 12 for an adolescent, each only to visible chest rise, avoiding hyperventilation. Hypoxia can cause bradycardia, especially in infants, and compressions with ventilations are for bradycardia with haemodynamic compromise.",
+   "sources": [
+    {
+     "docId": "pmid:30480949",
+     "where": "Management priorities based on general impression"
+    },
+    {
+     "docId": "pmid:42507345",
+     "where": "Airway management; rescue breathing; bradycardia"
+    },
+    {
+     "docId": "pmid:28722953",
+     "where": "Technique; complications"
+    }
+   ],
+   "next": "bvm_resp",
+   "orders": [
+    {
+     "item": "Rescue breathing (pulse over 60)",
+     "dose": "Infant 30/min (one breath every 2 s); child over 1 to 12 years 20/min (one every 3 s); adolescent over 12 years 12/min (one every 5 s)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42507345",
+       "where": "Ventilation considerations; rescue breathing table"
+      }
+     ]
+    },
+    {
+     "item": "Breath size",
+     "dose": "Only to visible chest rise; avoid hyperventilation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722953",
+       "where": "Technique; complications"
+      },
+      {
+       "docId": "pmid:42507345",
+       "where": "Ventilation considerations"
+      }
+     ]
+    },
+    {
+     "item": "Bradycardia with poor perfusion",
+     "dose": "Chest compressions with ventilations; epinephrine only after effective ventilation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42507345",
+       "where": "Bradycardia"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bvm_resp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Response to bag-mask ventilation",
+   "outcomes": [
+    {
+     "id": "recovers",
+     "if": "Breathing again; own effort back and saturation rising",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "findings"
+    },
+    {
+     "id": "fails",
+     "if": "Still failing; no effective effort of its own despite good bag-mask breaths",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "intubate"
+    }
+   ]
+  },
+  {
+   "id": "intubate",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Still failing despite good bag-mask ventilation. Tube?",
+   "options": [
+    "Cuffed tube, age/4 + 3.5 mm, depth 3 times the size",
+    "Uncuffed tube, age/4 + 3.5 mm, depth 3 times the size",
+    "Cuffed tube, age/4 + 4 mm, depth twice the tube size",
+    "Supraglottic airway, left in as the definitive airway"
+   ],
+   "answer": 0,
+   "chainStep": "Endotracheal intubation with a cuffed tube: internal diameter (age in years/4) + 3.5 mm, depth 3 times the tube size; confirm placement, then monitor with waveform capnography and pulse oximetry; intensive care",
+   "why": "Endotracheal intubation is the definitive airway when bag-mask ventilation fails; a supraglottic device is a rescue when ventilation is difficult or intubation is not possible. Cuffed tubes are recommended for all children except neonates, sized at age/4 + 3.5 mm (uncuffed age/4 + 4 mm), with the depth set at 3 times the tube size. Once placement is confirmed, waveform capnography and pulse oximetry monitor it continuously.",
+   "sources": [
+    {
+     "docId": "pmid:28613789",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:29262130",
+     "where": "Endotracheal tube sizing; confirmation and securing of the tube"
+    },
+    {
+     "docId": "pmid:42507345",
+     "where": "Airway management; summary table: supraglottic devices"
+    }
+   ],
+   "next": "end_intubated",
+   "orders": [
+    {
+     "item": "Cuffed tube, 2 years and older",
+     "dose": "Internal diameter (age in years/4) + 3.5 mm",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613789",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:29262130",
+       "where": "Endotracheal tube sizing"
+      }
+     ]
+    },
+    {
+     "item": "Cuffed tube, under 2 years",
+     "dose": "Cardiopulmonary Arrest in Children: (age/4) + 3.5 mm for all children except neonates; Airway Management: (age/4) + 3.0 mm (Khine formula) under 2 years",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:28613789",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:29262130",
+       "where": "Endotracheal tube sizing"
+      }
+     ],
+     "note": "Two StatPearls chapters give different cuffed-tube formulas for children under 2."
+    },
+    {
+     "item": "Uncuffed tube",
+     "dose": "(age in years/4) + 4 mm",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613789",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:29262130",
+       "where": "Endotracheal tube sizing"
+      }
+     ]
+    },
+    {
+     "item": "Tube depth",
+     "dose": "3 times the tube size",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613789",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "After placement",
+     "dose": "Secure the tube; continuous waveform capnography and pulse oximetry",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29262130",
+       "where": "Confirmation and securing of the tube"
+      }
+     ]
+    },
+    {
+     "item": "Induction drugs",
+     "dose": "Airway Management lists weight-based RSI doses (etomidate 0.3 to 0.4 mg/kg, rocuronium 0.6 to 1.2 mg/kg, succinylcholine 1 to 2 mg/kg) without saying they apply to children; no pediatric regimen in the sources read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:29262130",
+       "where": "Medications: rapid-sequence induction"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_intubated",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Intubated for respiratory failure: a cuffed tube sized by age, waveform capnography and intensive care; the cause (pneumonia, asthma, bronchiolitis) is then treated on its own route."
+  },
+  {
+   "id": "end_stridor",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Stridor or a barking cough: keep the child calm and upright with the parent, and do not examine the throat if epiglottitis is possible. The sore throat, stridor and epistaxis pathway (pw_throat_airway) takes it from here: croup, with or without stridor, graded by the Westley score, with dexamethasone at every grade and nebulized epinephrine for stridor at rest; epiglottitis to the operating room; a retropharyngeal abscess or foreign body on their own routes."
+  },
+  {
+   "id": "end_choke",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Choking or a suspected inhaled object: the sore throat, stridor and epistaxis pathway (pw_throat_airway) takes it from here, with back blows and chest thrusts for an infant, back blows and abdominal thrusts for an older child who cannot cough, CPR if unresponsive, and chest films then rigid bronchoscopy for a child who is breathing but may have aspirated."
+  },
+  {
+   "id": "findings",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Age, history and chest",
+   "outcomes": [
+    {
+     "id": "bronch",
+     "if": "Bronchiolitis picture; under 2, a 1 to 3 day cold, then cough, fast breathing or recession, and wheeze or widespread crackles; a first episode, fever if any under 39",
+     "ddx": {
+      "lead": [
+       "Bronchiolitis"
+      ],
+      "out": []
+     },
+     "next": "bronch_dx"
+    },
+    {
+     "id": "asthma",
+     "if": "Asthma or wheeze attack; known asthma or recurrent wheeze, or a first wheeze at 2 or older; no crackles",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "asthma_sev"
+    },
+    {
+     "id": "pna",
+     "if": "Pneumonia picture; fever with crackles or bronchial breathing, no wheeze, not the bronchiolitis picture",
+     "ddx": {
+      "lead": [
+       "Pneumonia"
+      ],
+      "out": []
+     },
+     "next": "pna_assess"
+    },
+    {
+     "id": "pert",
+     "if": "Pertussis picture, young infant; under 6 months, or apnea or blue spells under 1 year, with coughing fits; chest clear between fits, little fever",
+     "ddx": {
+      "lead": [
+       "Pertussis"
+      ],
+      "out": []
+     },
+     "next": "pert_start"
+    },
+    {
+     "id": "pert_older",
+     "if": "Pertussis picture, well between fits; 6 months or older, coughing fits with a whoop or vomiting after the cough; under 1 year, no apnea or blue spells",
+     "ddx": {
+      "lead": [
+       "Pertussis"
+      ],
+      "out": []
+     },
+     "next": "end_pert_older"
+    },
+    {
+     "id": "brue",
+     "if": "A brief event, now well; under 1 year, a pause in breathing or a color or tone change under a minute, nothing on history or exam to explain it",
+     "ddx": {
+      "lead": [
+       "BRUE"
+      ],
+      "out": []
+     },
+     "next": "brue_assess"
+    },
+    {
+     "id": "other",
+     "if": "None of these; the chest is clear, no wheeze or crackles",
+     "ddx": {
+      "lead": [
+       "DKA",
+       "Sepsis"
+      ],
+      "out": []
+     },
+     "next": "end_other"
+    }
+   ]
+  },
+  {
+   "id": "end_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Breathless with a clear chest and no wheeze: look outside the lungs. Deep, sighing breaths with a high glucose go to the ketoacidosis route of the vomiting child pathway (pw_peds_vomiting), which follows ISPAD; fever with poor perfusion goes to the shock route of the febrile infant and child pathway (pw_peds_fever). A possible ingestion in a child is not covered in this version. Heart failure and congenital heart disease are not covered in this version."
+  },
+  {
+   "id": "bronch_dx",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Bronchiolitis picture in an infant. Tests?",
+   "options": [
+    "None routinely; it is a clinical diagnosis, plus oximetry",
+    "A chest x-ray to rule out pneumonia before deciding on care",
+    "Nasal swab for RSV to confirm it before treating",
+    "Blood count and CRP to decide on antibiotics"
+   ],
+   "answer": 0,
+   "chainStep": "Clinical diagnosis with pulse oximetry; no routine chest x-ray, blood tests, blood gas or viral testing",
+   "why": "Bronchiolitis is diagnosed on a coryzal prodrome of 1 to 3 days followed by persistent cough, fast breathing or recession, and wheeze or crackles, in a child under 2. Oxygen saturation is measured in every case. A chest x-ray is not routine, because changes can mimic pneumonia and should not decide antibiotics, and blood tests and blood gases are not routine either. AAP 2014 diagnoses bronchiolitis on the history and examination, says radiographic and laboratory studies should not be obtained routinely, does not recommend routine virologic testing, and keeps an initial x-ray for respiratory effort severe enough for ICU or signs of an airway complication such as pneumothorax. PREDICT 2025 also advises against viral testing done only for cohorting.",
+   "sources": [
+    {
+     "docId": "url:2d41be52da97",
+     "where": "1.1.1; 1.1.3; 1.1.8; 1.3.6; 1.3.7; 1.4.9"
+    },
+    {
+     "docId": "pmid:25349312",
+     "where": "Key Action Statements 1a and 1c, with the 1c discussion"
+    },
+    {
+     "docId": "pmid:40685806",
+     "where": "Table 1, recommendations 3a, 4a and 5"
+    }
+   ],
+   "next": "bronch_tx",
+   "orders": [
+    {
+     "item": "Routine chest x-ray",
+     "dose": "Not done: changes can mimic pneumonia and should not decide antibiotics; consider one if intensive care is proposed, the course is not that of bronchiolitis, or an airway complication such as pneumothorax is suspected",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.3.7; 1.3.8"
+      },
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendations 3a and 3b"
+      },
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 1c and discussion"
+      }
+     ]
+    },
+    {
+     "item": "Routine viral testing",
+     "dose": "Not done, including testing done only to cohort patients (PREDICT); AAP's one exception is a breakthrough infection in an infant on monthly RSV prophylaxis",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 5"
+      },
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 1c, discussion"
+      }
+     ]
+    },
+    {
+     "item": "Routine blood tests",
+     "dose": "Not done; consider glucose or sodium with poor feeding, dehydration or altered mental state",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.3.6"
+      },
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 4a"
+      },
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 1c"
+      }
+     ]
+    },
+    {
+     "item": "Blood gas",
+     "dose": "Not routine; consider a capillary gas with severe worsening distress (oxygen over 50%) or suspected impending respiratory failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.9; 1.4.10"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bronch_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Bronchiolitis diagnosed clinically. Treatment plan?",
+   "options": [
+    "Supportive care: suction, oxygen and fluids as needed",
+    "A trial of nebulized albuterol, kept if it helps",
+    "A short course of oral dexamethasone",
+    "Nebulized hypertonic saline started in the emergency department"
+   ],
+   "answer": 0,
+   "chainStep": "Supportive care: superficial nasal suction for distress or feeding trouble from secretions, oxygen below the saturation threshold, fluids if intake is poor; no bronchodilators, epinephrine, steroids, hypertonic saline, antibiotics or chest physiotherapy",
+   "why": "No specific treatment changes the course of bronchiolitis, so care is supportive: superficial suction when secretions cause distress or feeding trouble, oxygen when saturation is persistently low, and fluids when intake falls. NICE says do not use antibiotics, hypertonic saline, nebulized adrenaline, salbutamol, montelukast, ipratropium or corticosteroids; PREDICT 2025 and the 2022 Italian guideline agree. AAP 2014 says no albuterol, no epinephrine, no systemic corticosteroids in any setting, no chest physiotherapy, and no antibiotics without a concomitant bacterial infection or a strong suspicion of one; it no longer recommends the albuterol trial its 2006 version allowed. Hypertonic saline is not given in the emergency department.",
+   "sources": [
+    {
+     "docId": "url:2d41be52da97",
+     "where": "1.4.1; 1.4.3; 1.4.6; 1.4.7; 1.4.8"
+    },
+    {
+     "docId": "pmid:40685806",
+     "where": "Table 1, recommendations 8a, 9, 10, 11a, 15, 16a and 19a"
+    },
+    {
+     "docId": "pmid:36765418",
+     "where": "Treatment; Table 6"
+    },
+    {
+     "docId": "pmid:33587138",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:25349312",
+     "where": "Key Action Statements 2, 3, 4a, 5, 7 and 8"
+    }
+   ],
+   "next": "bronch_sev",
+   "orders": [
+    {
+     "item": "Albuterol (salbutamol)",
+     "dose": "NICE, PREDICT (under 12 months), the Italian guideline and AAP 2014 (KAS 2, which drops its 2006 trial): not used; StatPearls Pediatric Bronchiolitis: a trial may be considered in severe respiratory compromise",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.3"
+      },
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 8a"
+      },
+      {
+       "docId": "pmid:36765418",
+       "where": "Table 6"
+      },
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 2 and its profile"
+      },
+      {
+       "docId": "pmid:30137791",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "A review still allows a trial that every guideline read rules out."
+    },
+    {
+     "item": "Nebulized epinephrine",
+     "dose": "Not used",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.3"
+      },
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 9"
+      },
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 3 and its profile"
+      }
+     ],
+     "note": "AAP 2014 excludes rescue treatment of a rapidly deteriorating infant from its recommendation."
+    },
+    {
+     "item": "Corticosteroids",
+     "dose": "Systemic: not used in any setting (AAP 2014, NICE, PREDICT); inhaled: not used (NICE, PREDICT)",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 5"
+      },
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.3"
+      },
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 11a"
+      }
+     ]
+    },
+    {
+     "item": "Hypertonic saline, emergency department",
+     "dose": "Not used",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 4a"
+      },
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.3"
+      }
+     ]
+    },
+    {
+     "item": "Hypertonic saline, inpatients",
+     "dose": "AAP 2014 (KAS 4b): may be given to hospitalized infants and children, a weak recommendation that applies only where the average stay exceeds 72 hours; NICE: do not use; PREDICT: not routinely outside a trial; Italian 2022: not recommended",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 4b and its profile"
+      },
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.3"
+      },
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 10"
+      },
+      {
+       "docId": "pmid:36765418",
+       "where": "Table 6"
+      }
+     ],
+     "note": "AAP keeps a weak inpatient option, limited to settings with long stays, that the UK, Australasian and Italian guidelines do not."
+    },
+    {
+     "item": "Antibiotics",
+     "dose": "Not routinely; only with a concomitant bacterial infection, or strong suspicion or clear evidence of one",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 8"
+      },
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.3"
+      },
+      {
+       "docId": "pmid:36765418",
+       "where": "Table 6"
+      }
+     ]
+    },
+    {
+     "item": "Suction",
+     "dose": "Not routine; superficial suction for distress or feeding difficulty from upper airway secretions, and in any infant presenting with apnea (NICE, PREDICT); AAP 2014: too little data for a recommendation, and routine deep suctioning may not help",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.6; 1.4.7; 1.4.8"
+      },
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 16a"
+      },
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 7, discussion of suctioning"
+      }
+     ]
+    },
+    {
+     "item": "Chest physiotherapy",
+     "dose": "Not used (AAP 2014 KAS 7, for infants without the underlying conditions it excludes); NICE: not used without a relevant comorbidity such as spinal muscular atrophy or severe tracheomalacia",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 7; scope"
+      },
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bronch_sev",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Saturation, breathing, feeding and age",
+   "outcomes": [
+    {
+     "id": "severe",
+     "if": "Severe or apnea; apnea, grunting, marked recession, breathing over 70 a minute, or exhaustion",
+     "ddx": {
+      "lead": [
+       "Bronchiolitis"
+      ],
+      "out": []
+     },
+     "next": "bronch_severe"
+    },
+    {
+     "id": "lowsat",
+     "if": "Low saturation, not severe; persistently under 90% in air (under 92% if under 6 weeks or with a health condition)",
+     "ddx": {
+      "lead": [
+       "Bronchiolitis"
+      ],
+      "out": []
+     },
+     "next": "bronch_o2",
+     "orders": [
+      {
+       "item": "Oxygen threshold",
+       "dose": "NICE 2021 and PREDICT 2025: oxygen when saturation is persistently under 90% at 6 weeks and over, or under 92% under 6 weeks or with an underlying health condition; Italian 2022: under 92% at any age; StatPearls Pediatric Bronchiolitis: below 92%; AAP 2014 (KAS 6a, ages 1 to 23 months): oxygen may be withheld when saturation exceeds 90%, except in children with acidosis or fever",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "url:2d41be52da97",
+         "where": "1.3.2; 1.4.4"
+        },
+        {
+         "docId": "pmid:40685806",
+         "where": "Table 1, recommendation 12b"
+        },
+        {
+         "docId": "pmid:36765418",
+         "where": "Table 6; oxygen therapy"
+        },
+        {
+         "docId": "pmid:30137791",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:25349312",
+         "where": "Key Action Statement 6a and its profile"
+        }
+       ],
+       "note": "AAP uses 90% with no separate threshold for young infants; NICE and PREDICT keep 92% under 6 weeks or with an underlying condition; the Italian guideline keeps 92% for every infant."
+      }
+     ]
+    },
+    {
+     "id": "feeding",
+     "if": "Poor intake only; saturation above the threshold, taking 50 to 75% of usual feeds or less, or dehydrated",
+     "ddx": {
+      "lead": [
+       "Bronchiolitis"
+      ],
+      "out": []
+     },
+     "next": "bronch_fluids",
+     "orders": [
+      {
+       "item": "Intake threshold",
+       "dose": "NICE: 50 to 75% of usual volume or less is inadequate and an admission criterion; PREDICT: home needs at least half of usual feeds with more than half the usual wet nappies",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "url:2d41be52da97",
+         "where": "1.3.2"
+        },
+        {
+         "docId": "pmid:40685806",
+         "where": "Table 1, recommendation 7"
+        }
+       ],
+       "note": "An infant on 50 to 75% of feeds is admitted under NICE but may go home under PREDICT."
+      }
+     ]
+    },
+    {
+     "id": "mild",
+     "if": "Mild; none of the above, feeding well, saturation above the threshold",
+     "ddx": {
+      "lead": [
+       "Bronchiolitis"
+      ],
+      "out": []
+     },
+     "next": "bronch_home"
+    }
+   ]
+  },
+  {
+   "id": "bronch_home",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Mild bronchiolitis, none of the admission criteria. Disposition?",
+   "options": [
+    "Home with red-flag advice and a smoke-free home",
+    "Admit overnight for continuous pulse oximetry and review",
+    "Home with an albuterol inhaler and a spacer",
+    "Home with amoxicillin to cover the fever"
+   ],
+   "answer": 0,
+   "chainStep": "Home with key safety information: red flags (worse breathing, intake 50 to 75% of normal or no wet nappy for 12 hours, apnea or cyanosis, exhaustion), no smoking in the home, how to get help, follow-up if needed",
+   "why": "Without apnea, low saturation, poor intake or severe distress, admission is not needed, though risk factors (under 3 months, prematurity, chronic lung or heart disease, neuromuscular disease, immunodeficiency) and the family's ability to cope are weighed. Parents leave with the red flags, the advice not to smoke in the home and how to get help. Symptoms usually peak at 3 to 5 days, and the cough resolves within 3 weeks in 90%. Continuous oximetry is not used routinely in infants who are not hypoxaemic.",
+   "sources": [
+    {
+     "docId": "url:2d41be52da97",
+     "where": "1.1.2; 1.3.2; 1.3.3; 1.3.4; 1.6.1"
+    },
+    {
+     "docId": "pmid:40685806",
+     "where": "Table 1, recommendations 7 and 13"
+    },
+    {
+     "docId": "pmid:25349312",
+     "where": "Key Action Statements 1b and 6b"
+    }
+   ],
+   "next": "end_bronch_home",
+   "orders": [
+    {
+     "item": "Red flags for parents",
+     "dose": "Worsening work of breathing (grunting, nasal flaring, marked recession); intake 50 to 75% of normal or no wet nappy for 12 hours; apnea or cyanosis; exhaustion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.6.1"
+      }
+     ]
+    },
+    {
+     "item": "Smoking",
+     "dose": "No smoking in the baby's home",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.6.1"
+      }
+     ]
+    },
+    {
+     "item": "Discharge from the ED",
+     "dose": "PREDICT: clinically stable; feeds at least half of usual with more than half the usual wet nappies; no further saturation observation needed if no oxygen or respiratory support was given, or SpO2 is 95% or more. NICE: intake of 50 to 75% of usual volume or less is an admission criterion",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 7"
+      },
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.3.2"
+      }
+     ],
+     "note": "An infant on 50 to 75% of feeds is admitted under NICE but may go home under PREDICT."
+    },
+    {
+     "item": "Course",
+     "dose": "Peak at 3 to 5 days; cough resolves within 3 weeks in 90%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.1.2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_bronch_home",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Mild bronchiolitis: home with red-flag advice, no smoking in the home and follow-up if needed, with no medicines. Symptoms usually peak at 3 to 5 days."
+  },
+  {
+   "id": "bronch_o2",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Bronchiolitis with persistently low saturation, not severe. Support?",
+   "options": [
+    "Admit; low-flow nasal oxygen, high-flow only if that fails",
+    "Admit; high-flow nasal cannula as the first support",
+    "Admit; CPAP now, before low-flow oxygen is tried",
+    "Oxygen in the ED, then home as soon as the reading tops 90%"
+   ],
+   "answer": 0,
+   "chainStep": "Admit; low-flow oxygen by nasal cannula while saturation is below the threshold; high-flow if low-flow fails; observe in air for 4 hours, including sleep, before discharge",
+   "why": "Persistently low saturation is an admission criterion, and oxygen is given below the threshold. PREDICT 2025 advises against high-flow as the first therapy in hypoxaemic moderate bronchiolitis and to consider it once low-flow oxygen has failed; the 2022 Italian guideline agrees, and oxygen is not given for work of breathing alone. CPAP is for impending respiratory failure. Discharge waits until saturation has held in air for 4 hours, including a period of sleep.",
+   "sources": [
+    {
+     "docId": "url:2d41be52da97",
+     "where": "1.3.2; 1.4.4; 1.4.5; 1.5.1"
+    },
+    {
+     "docId": "pmid:40685806",
+     "where": "Table 1, recommendations 12b, 13 and 14; oxygen saturation targets"
+    },
+    {
+     "docId": "pmid:36765418",
+     "where": "Table 6"
+    },
+    {
+     "docId": "pmid:25349312",
+     "where": "Key Action Statements 6a and 6b, discussion"
+    }
+   ],
+   "next": "bronch_o2_resp",
+   "orders": [
+    {
+     "item": "Oxygen device",
+     "dose": "Nasal prongs for infants who need no other respiratory support",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statements 6a and 6b, discussion"
+      }
+     ]
+    },
+    {
+     "item": "High-flow nasal cannula",
+     "dose": "Not routinely first line in moderate hypoxaemic bronchiolitis; consider after low-flow oxygen fails, and before CPAP in severe disease",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 14"
+      },
+      {
+       "docId": "pmid:36765418",
+       "where": "Table 6"
+      }
+     ],
+     "note": "AAP 2014 made no recommendation on high-flow, as no randomized trial had been completed."
+    },
+    {
+     "item": "Continuous pulse oximetry",
+     "dose": "Not routine in stable infants on low-flow oxygen who are not at risk of apnea (PREDICT); AAP 2014: clinicians may choose not to use it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 13"
+      },
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 6b"
+      }
+     ]
+    },
+    {
+     "item": "Discharge saturation",
+     "dose": "NICE: held in air for 4 hours including sleep, over 90% at 6 weeks and over, over 92% under 6 weeks or with an underlying condition; PREDICT: the same thresholds held for 3 to 4 hours including sleep",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.5.1"
+      },
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 7"
+      }
+     ],
+     "note": "The observation period differs slightly between NICE and PREDICT."
+    }
+   ]
+  },
+  {
+   "id": "bronch_o2_resp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "On low-flow oxygen",
+   "outcomes": [
+    {
+     "id": "settles",
+     "if": "Settles; saturation above the threshold on low-flow, breathing easier",
+     "ddx": {
+      "lead": [
+       "Bronchiolitis"
+      ],
+      "out": []
+     },
+     "next": "end_bronch_ward"
+    },
+    {
+     "id": "fails",
+     "if": "Fails; still below the threshold, or working harder, on low-flow",
+     "ddx": {
+      "lead": [
+       "Bronchiolitis"
+      ],
+      "out": []
+     },
+     "next": "bronch_hfnc"
+    }
+   ]
+  },
+  {
+   "id": "end_bronch_ward",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bronchiolitis on the ward: low-flow oxygen while saturation is below the threshold, nasogastric feeds or IV isotonic fluid if intake falls, no drug treatments, and discharge once clinically stable, feeding adequately and holding saturation in air for 4 hours including sleep."
+  },
+  {
+   "id": "bronch_hfnc",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Bronchiolitis, still hypoxaemic on low-flow oxygen. Next?",
+   "options": [
+    "High-flow nasal cannula, with CPAP ready if it fails",
+    "Intubate now, as low-flow oxygen has failed",
+    "Nebulized epinephrine with dexamethasone, on the ward",
+    "Chest physiotherapy to clear the secretions"
+   ],
+   "answer": 0,
+   "chainStep": "Humidified high-flow nasal cannula after failed low-flow oxygen, with higher-dependency monitoring; CPAP for impending respiratory failure; enteral feeds if tolerated",
+   "why": "High-flow is the rescue for hypoxaemic infants who have failed low-flow oxygen, and CPAP follows for impending or severe respiratory failure. Response is judged by falling respiratory and heart rates within 4 to 5 hours, and infants on high-flow can still take oral or NG feeds if tolerated. The steroid and epinephrine combination is not used routinely outside intensive care, and chest physiotherapy is not used.",
+   "sources": [
+    {
+     "docId": "pmid:40685806",
+     "where": "Table 1, recommendations 11c, 14, 18 and 20e; Figure 3"
+    },
+    {
+     "docId": "url:2d41be52da97",
+     "where": "1.4.1; 1.4.5"
+    },
+    {
+     "docId": "pmid:36765418",
+     "where": "Table 6"
+    }
+   ],
+   "next": "end_bronch_hdu",
+   "orders": [
+    {
+     "item": "High-flow nasal cannula",
+     "dose": "Consider in hypoxaemic infants who have failed low-flow oxygen",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 14"
+      },
+      {
+       "docId": "pmid:36765418",
+       "where": "Table 6"
+      }
+     ]
+    },
+    {
+     "item": "Response check",
+     "dose": "Falling respiratory rate, heart rate or early warning score within 4 to 5 hours of starting",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40685806",
+       "where": "Figure 3"
+      }
+     ]
+    },
+    {
+     "item": "CPAP",
+     "dose": "Consider with impending or severe respiratory failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.5"
+      },
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 18"
+      }
+     ]
+    },
+    {
+     "item": "Feeds on high-flow",
+     "dose": "Enteral feeding (NG or oral) if tolerated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 20e"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_bronch_hdu",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bronchiolitis needing high-flow: humidified high-flow after failed low-flow oxygen, CPAP for impending respiratory failure, enteral feeds if tolerated, and escalation to intensive care for severe distress."
+  },
+  {
+   "id": "bronch_fluids",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Bronchiolitis, saturation fine, feeding poorly with few wet nappies. Fluids?",
+   "options": [
+    "Admit; NG or IV isotonic fluid, volume watched",
+    "Admit; a 20 mL/kg IV bolus, then double maintenance",
+    "Admit; IV hypotonic fluid as the first route",
+    "Home with oral rehydration, reviewed the next morning"
+   ],
+   "answer": 0,
+   "chainStep": "Admit; nasogastric or orogastric feeds, or IV isotonic fluid (NICE and PREDICT put the tube first); restricted volume; glucose and sodium checked",
+   "why": "Intake of 50 to 75% of usual or less is an admission criterion, and hydration is assessed clinically. AAP 2014 gives nasogastric or intravenous fluids to infants who cannot keep up hydration by mouth, with the route a shared decision, and finds isotonic fluid safer because hypotonic fluid risks hyponatraemia. NICE puts the nasogastric or orogastric tube first and keeps IV isotonic fluid for infants who do not tolerate it or are heading for respiratory failure, and PREDICT prefers NG first in moderate disease. Because of fluid overload from inappropriate ADH secretion, PREDICT suggests restricting the volume, and glucose and sodium are considered in infants feeding poorly or dehydrated.",
+   "sources": [
+    {
+     "docId": "url:2d41be52da97",
+     "where": "1.3.2; 1.3.5; 1.4.11; 1.4.12"
+    },
+    {
+     "docId": "pmid:40685806",
+     "where": "Table 1, recommendations 4a and 20a to 20d; hydration"
+    },
+    {
+     "docId": "pmid:25349312",
+     "where": "Key Action Statement 9, its profile and discussion"
+    }
+   ],
+   "next": "end_bronch_ward",
+   "orders": [
+    {
+     "item": "Route",
+     "dose": "AAP 2014 (KAS 9): nasogastric or intravenous fluids, the route a shared decision; NICE: nasogastric or orogastric first, IV isotonic only if the tube is not tolerated or respiratory failure is impending; PREDICT: NG or IV, NG preferred first in moderate disease",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 9, its profile and discussion"
+      },
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.11; 1.4.12"
+      },
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 20b"
+      }
+     ],
+     "note": "AAP treats the two routes as equal; NICE and PREDICT put the tube first."
+    },
+    {
+     "item": "Nasogastric or orogastric feeds",
+     "dose": "Breast milk, formula or oral rehydration solution, bolus or continuous",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 20b"
+      }
+     ]
+    },
+    {
+     "item": "IV fluids",
+     "dose": "Isotonic (hypotonic fluid risks hyponatraemia): 0.9% saline or a balanced solution, each with 5% glucose; consider 10% glucose or glucose checks in infants up to 4 weeks corrected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 9, discussion"
+      },
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.12"
+      },
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 20d"
+      }
+     ]
+    },
+    {
+     "item": "Volume",
+     "dose": "PREDICT Table 1: consider restriction to 50 to 75% of maintenance; PREDICT text: 50 to 66%; watch for overhydration",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 20c; hydration"
+      }
+     ],
+     "note": "PREDICT 2025 gives two ranges for the same restriction: 50 to 75% in its table and 50 to 66% in its text."
+    },
+    {
+     "item": "Glucose and sodium",
+     "dose": "Consider with poor feeding, dehydration or altered mental state",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 4a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bronch_severe",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Bronchiolitis with apnea, grunting, marked recession or exhaustion. Next?",
+   "options": [
+    "Admit, monitored; HDU or PICU if failure looms",
+    "Hourly nebulized albuterol, on the general ward",
+    "Chest physiotherapy, then reassess in an hour",
+    "Intubate now, without a trial of CPAP"
+   ],
+   "answer": 0,
+   "chainStep": "Admit with continuous oximetry; HDU or PICU and CPAP for recurrent apnea or impending respiratory failure (high-flow may be tried first in severe disease); suction in apnea even without visible secretions; capillary blood gas; IV isotonic fluids; chest x-ray if intensive care is proposed",
+   "why": "An observed or reported apnea is a reason to admit, with continuous oximetry. Exhaustion, recurrent apnea or failing saturation despite oxygen signal impending respiratory failure, and these infants may need intensive care. CPAP is considered for them; PREDICT also allows high-flow before CPAP in severe disease. Suction is done in any infant presenting with apnea, even without visible secretions, a capillary gas is considered when distress is severe and worsening, and a chest x-ray when intensive care is proposed. Young infants, above all those under 6 weeks, may present with apnea alone. Intubation is considered for clinical fatigue or severe hypoxaemia.",
+   "sources": [
+    {
+     "docId": "url:2d41be52da97",
+     "where": "1.1.5; 1.1.10; 1.3.8; 1.4.5; 1.4.8; 1.4.10; 1.4.12"
+    },
+    {
+     "docId": "pmid:40685806",
+     "where": "Table 1, recommendations 3c, 4c, 11c, 14 and 18; oxygen saturation targets"
+    },
+    {
+     "docId": "pmid:30137791",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:25349312",
+     "where": "Key Action Statement 5, discussion"
+    }
+   ],
+   "next": "end_bronch_icu",
+   "orders": [
+    {
+     "item": "Admission",
+     "dose": "Any observed or reported apnea; recurrent apnea is a sign of impending respiratory failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.3.2; 1.1.10"
+      }
+     ]
+    },
+    {
+     "item": "Continuous pulse oximetry",
+     "dose": "Consider with apneas or risk factors for apnea",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40685806",
+       "where": "Oxygen saturation targets"
+      }
+     ]
+    },
+    {
+     "item": "CPAP",
+     "dose": "Consider with impending respiratory failure or severe illness",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.5"
+      },
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 18"
+      }
+     ]
+    },
+    {
+     "item": "Suction",
+     "dose": "In any infant presenting with apnea, even without obvious secretions",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.8"
+      }
+     ]
+    },
+    {
+     "item": "Capillary blood gas",
+     "dose": "Consider with severe worsening distress (oxygen over 50%) or suspected impending respiratory failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.10"
+      }
+     ]
+    },
+    {
+     "item": "Chest x-ray",
+     "dose": "Consider if intensive care is proposed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.3.8"
+      },
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 3c"
+      }
+     ]
+    },
+    {
+     "item": "IV fluids",
+     "dose": "Isotonic, with impending respiratory failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.12"
+      }
+     ]
+    },
+    {
+     "item": "Bloods on ICU admission",
+     "dose": "Consider blood count, CRP, procalcitonin and blood cultures for bacterial co-infection",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 4c"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroid with epinephrine",
+     "dose": "PREDICT 2025: consider the combination in severe bronchiolitis needing ICU-level care; NICE: do not use a combination of systemic corticosteroids and nebulised adrenaline; AAP 2014: a recommendation on combined dexamethasone and epinephrine is premature",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40685806",
+       "where": "Table 1, recommendation 11c"
+      },
+      {
+       "docId": "url:2d41be52da97",
+       "where": "1.4.3"
+      },
+      {
+       "docId": "pmid:25349312",
+       "where": "Key Action Statement 5, discussion"
+      }
+     ],
+     "note": "PREDICT's 2025 update added a conditional ICU-only option that NICE rules out."
+    }
+   ]
+  },
+  {
+   "id": "end_bronch_icu",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Severe bronchiolitis or apnea: admission with continuous oximetry; HDU or PICU with CPAP for recurrent apnea or impending respiratory failure, suction for apnea, IV isotonic fluids, and intubation for fatigue or severe hypoxaemia. Infants under 3 months, those born early, and those with heart, lung, neuromuscular or immune disease are at higher risk."
+  },
+  {
+   "id": "asthma_sev",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Severity on arrival",
+   "outcomes": [
+    {
+     "id": "moderate",
+     "if": "Moderate; talks in sentences, saturation 92% or more, heart and breathing rates within the age limits",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "asthma_mm"
+    },
+    {
+     "id": "severe",
+     "if": "Severe; cannot finish sentences or feed, saturation under 92%, or heart or breathing rate over the age limits",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "asthma_severe"
+    },
+    {
+     "id": "life",
+     "if": "Life-threatening, still alert; severe plus cyanosis, a peak flow under 33%, or low blood pressure",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "asthma_mag"
+    },
+    {
+     "id": "arrest",
+     "if": "Arrest imminent; drowsy or confused, a silent chest, paradoxical breathing or exhaustion",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "asthma_intubate"
+    }
+   ]
+  },
+  {
+   "id": "asthma_intubate",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Asthma attack with signs of imminent arrest. Next?",
+   "options": [
+    "Intubate and ventilate; SABA, ipratropium and IV steroid",
+    "IV magnesium first, then decide on the airway in an hour or so",
+    "Non-invasive ventilation, then reassess in an hour",
+    "An arterial gas first, intubating if the CO2 is high"
+   ],
+   "answer": 0,
+   "chainStep": "Intubation and mechanical ventilation with 100% oxygen by the most skilled airway clinician; nebulized SABA and ipratropium; IV corticosteroid; PICU",
+   "why": "Drowsiness or confusion, an absent wheeze, paradoxical breathing and bradycardia mark respiratory arrest as imminent. That means intubation and mechanical ventilation with 100% oxygen, nebulized SABA and ipratropium, IV corticosteroids and intensive care, with a clinician skilled in airway management involved early. Adjuncts such as magnesium may be considered to avoid intubation, but intubation is not delayed once it is needed. Altered mental status is itself an indication to intubate, so a blood gas need not come first.",
+   "sources": [
+    {
+     "docId": "url:13b6c161ea88",
+     "where": "Figure 5-3, respiratory arrest imminent; Figure 5-6, impending or actual respiratory arrest; Section 5: impending respiratory failure"
+    },
+    {
+     "docId": "pmid:31869095",
+     "where": "Treatment / Management: impending respiratory failure"
+    },
+    {
+     "docId": "url:3f6d6d331066",
+     "where": "9.9.5"
+    },
+    {
+     "docId": "pmid:30480949",
+     "where": "Pharmacologic management: ketamine"
+    }
+   ],
+   "next": "end_asthma_icu",
+   "orders": [
+    {
+     "item": "Intubation",
+     "dose": "Not delayed once it is deemed necessary; indications include arrest, hypoxaemia despite high oxygen or non-invasive support, severe work of breathing and altered mental status",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Section 5: impending respiratory failure"
+      },
+      {
+       "docId": "pmid:31869095",
+       "where": "Treatment / Management: impending respiratory failure"
+      }
+     ]
+    },
+    {
+     "item": "After intubation",
+     "dose": "100% oxygen, nebulized SABA and ipratropium, IV corticosteroid; consider adjunct therapies; intensive care",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-6, impending or actual respiratory arrest"
+      }
+     ]
+    },
+    {
+     "item": "Induction drug",
+     "dose": "Ketamine is considered an effective induction agent in status asthmaticus (EMS asthma in children); a pediatric dose is not stated in the sources read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:30480949",
+       "where": "Pharmacologic management: ketamine"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "asthma_mm",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Moderate asthma attack, saturation 92% or more. First treatment?",
+   "options": [
+    "Albuterol by spacer, 3 doses in the first hour, and an oral steroid",
+    "Nebulized albuterol with ipratropium, then IV magnesium sulfate at once",
+    "Inhaled budesonide at high dose, in place of an oral steroid",
+    "IV methylprednisolone now, since IV works faster than oral"
+   ],
+   "answer": 0,
+   "chainStep": "Albuterol by MDI and valved holding chamber (mask under 4 years) 4 to 8 puffs, or nebulized 0.15 mg/kg (minimum 2.5 mg), every 20 minutes for 3 doses; oral dexamethasone or prednisolone; oxygen if saturation is low",
+   "why": "Inhaled SABA is first line, and by inhaler with a valved holding chamber it works as well as a nebulizer in mild to moderate attacks, up to 3 doses in the first hour. Oral steroids given early reduce admissions and relapse; EPR-3 gives them in mild to moderate attacks when there is no immediate response or a recent steroid course. Oral and IV steroids work alike when the child can swallow, and inhaled steroids do not replace them. Ipratropium is added for severe attacks, and IV magnesium is kept for children still severe after first-line treatment.",
+   "sources": [
+    {
+     "docId": "url:13b6c161ea88",
+     "where": "Figure 5-5; Figure 5-6, mild to moderate"
+    },
+    {
+     "docId": "url:3f6d6d331066",
+     "where": "9.8.2; 9.8.4; Annex 8"
+    },
+    {
+     "docId": "pmid:31869095",
+     "where": "Treatment / Management: emergency room care; glucocorticoids"
+    }
+   ],
+   "next": "asthma_resp",
+   "orders": [
+    {
+     "item": "Albuterol, nebulized",
+     "dose": "EPR-3: 0.15 mg/kg (minimum 2.5 mg) every 20 minutes for 3 doses, then 0.15 to 0.3 mg/kg up to 10 mg every 1 to 4 hours, or 0.5 mg/kg/hour continuously; StatPearls: 0.15 mg/kg, minimum 2.5 mg, maximum 5 mg; SIGN 158: 2.5 mg at 2 to 5 years, 5 mg over 5",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5"
+      },
+      {
+       "docId": "pmid:31869095",
+       "where": "Treatment / Management: emergency room care"
+      },
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.8.2; Annex 8"
+      }
+     ],
+     "note": "EPR-3 and StatPearls give 0.15 mg/kg with a 2.5 mg floor, and StatPearls caps it at 5 mg; SIGN gives 2.5 mg at 2 to 5 years and 5 mg over 5."
+    },
+    {
+     "item": "Albuterol, MDI with valved holding chamber",
+     "dose": "4 to 8 puffs every 20 minutes for 3 doses, then every 1 to 4 hours; add a mask under 4 years; one weight-based option: 4 puffs at 5 to 10 kg, 6 at 10 to 20 kg, 8 over 20 kg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5"
+      },
+      {
+       "docId": "pmid:31869095",
+       "where": "Treatment / Management: emergency room care"
+      }
+     ]
+    },
+    {
+     "item": "Oral steroid",
+     "dose": "StatPearls: dexamethasone 0.6 mg/kg a day for 2 days, or prednisone or prednisolone 1 to 2 mg/kg a day to 20 mg (0 to 2 years), 30 mg (3 to 5) or 40 mg (6 to 11); EPR-3: prednisone 1 to 2 mg/kg in 2 divided doses, maximum 60 mg a day; SIGN 158: prednisolone 10 mg under 2 years, 20 mg at 2 to 5, 30 to 40 mg over 5",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:31869095",
+       "where": "Glucocorticoids"
+      },
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5"
+      },
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.8.4"
+      }
+     ],
+     "note": "Doses and maximums differ; SIGN found no proven advantage of dexamethasone over prednisolone in mild to moderate attacks."
+    },
+    {
+     "item": "Oral steroid timing",
+     "dose": "SIGN 158: early in every attack; StatPearls: promptly in moderate to severe attacks; EPR-3: in mild to moderate attacks if there is no immediate response to SABA or a recent oral steroid course",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.8.4"
+      },
+      {
+       "docId": "pmid:31869095",
+       "where": "Glucocorticoids"
+      },
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-6, mild to moderate"
+      }
+     ],
+     "note": "EPR-3 makes the first steroid depend on the response to SABA."
+    },
+    {
+     "item": "Oxygen",
+     "dose": "SIGN 158: high-flow oxygen if SpO2 is under 94%, to 94 to 98%; StatPearls Pediatric Asthma: keep saturation above 92%; EPR-3: SaO2 90% or more",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.8.1"
+      },
+      {
+       "docId": "pmid:31869095",
+       "where": "Treatment / Management: emergency room care"
+      },
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-6"
+      }
+     ],
+     "note": "The three sources give different saturation targets for a child in an asthma attack."
+    },
+    {
+     "item": "Inhaled corticosteroid in place of oral",
+     "dose": "Not used to replace oral steroids in an attack",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.8.4"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotics",
+     "dose": "Not given routinely",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.8.5"
+      }
+     ]
+    },
+    {
+     "item": "Chest x-ray",
+     "dose": "Not routine; for subcutaneous emphysema, unilateral signs, collapse or consolidation, or life-threatening asthma not responding",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.7.4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "asthma_severe",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Severe asthma attack, saturation under 92%. Treatment?",
+   "options": [
+    "Oxygen, albuterol with ipratropium every 20 minutes, a steroid",
+    "Nebulized albuterol alone; ipratropium is kept for the ward",
+    "IV aminophylline loading dose given with the first albuterol nebulizer",
+    "Subcutaneous terbutaline in place of inhaled albuterol"
+   ],
+   "answer": 0,
+   "chainStep": "Oxygen; nebulized albuterol 0.15 mg/kg (minimum 2.5 mg) with ipratropium 250 to 500 micrograms (sources differ), every 20 minutes for 3 doses; oral dexamethasone or prednisolone (IV only if it cannot be kept down)",
+   "why": "Severe attacks get high-dose inhaled SABA plus ipratropium every 20 minutes or continuously for the first hour, and an oral systemic steroid. Adding ipratropium to SABA reduces hospital admission in children with moderate to severe attacks, though it adds nothing once the child is admitted. Oral steroids work as well as IV unless the child cannot keep them down. Injected beta-agonists have no proven advantage over the aerosol. Aminophylline is not a first move; it is a second-line option for severe asthma unresponsive to maximal bronchodilators and steroids.",
+   "sources": [
+    {
+     "docId": "url:13b6c161ea88",
+     "where": "Figure 5-5; Figure 5-6, severe"
+    },
+    {
+     "docId": "pmid:31869095",
+     "where": "Treatment / Management: emergency room care; glucocorticoids"
+    },
+    {
+     "docId": "url:3f6d6d331066",
+     "where": "9.8.3; 9.8.4; 9.9.2; Annex 8"
+    }
+   ],
+   "next": "asthma_resp",
+   "orders": [
+    {
+     "item": "Albuterol, nebulized",
+     "dose": "0.15 mg/kg (minimum 2.5 mg) every 20 minutes for 3 doses, or 0.5 mg/kg/hour continuously",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5"
+      }
+     ]
+    },
+    {
+     "item": "Ipratropium",
+     "dose": "StatPearls: nebulized 250 micrograms under 20 kg and 500 micrograms over 20 kg, or 4 to 8 puffs by MDI, every 20 minutes for 3 doses; EPR-3: 0.25 to 0.5 mg every 20 minutes for 3 doses; SIGN 158: 250 micrograms a dose at any age",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:31869095",
+       "where": "Treatment / Management: emergency room care"
+      },
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5"
+      },
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.8.3; Annex 8"
+      }
+     ],
+     "note": "SIGN does not raise the dose with weight; not first line alone, and no added benefit once admitted."
+    },
+    {
+     "item": "IV steroid",
+     "dose": "Only for a child who cannot keep oral medicine down; SIGN 158: IV hydrocortisone 4 mg/kg every 4 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.8.4"
+      },
+      {
+       "docId": "pmid:31869095",
+       "where": "Glucocorticoids"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen",
+     "dose": "SIGN 158: high-flow oxygen if SpO2 is under 94%, to 94 to 98%; StatPearls Pediatric Asthma: keep saturation above 92%; EPR-3: SaO2 90% or more",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.8.1"
+      },
+      {
+       "docId": "pmid:31869095",
+       "where": "Treatment / Management: emergency room care"
+      },
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-6"
+      }
+     ],
+     "note": "The three sources give different saturation targets for a child in an asthma attack."
+    }
+   ]
+  },
+  {
+   "id": "asthma_resp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Reassessment an hour after treatment",
+   "outcomes": [
+    {
+     "id": "good",
+     "if": "Good response; no distress, normal exam, sustained an hour after the last dose",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "asthma_home"
+    },
+    {
+     "id": "incomplete",
+     "if": "Incomplete; better but still moderate, with no severe sign",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "end_asthma_ward"
+    },
+    {
+     "id": "poor",
+     "if": "Poor; still severe after an hour of full treatment",
+     "ddx": {
+      "lead": [
+       "Asthma exacerbation"
+      ],
+      "out": []
+     },
+     "next": "asthma_mag"
+    }
+   ]
+  },
+  {
+   "id": "asthma_home",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Good response, sustained an hour after the last dose. Discharge plan?",
+   "options": [
+    "Home: finish the steroid, albuterol as needed, an action plan",
+    "Home on albuterol alone, and the steroid can stop today",
+    "Home, tapering the steroid over 2 weeks to avoid adrenal crisis",
+    "Admit overnight anyway, since three nebulizers were needed"
+   ],
+   "answer": 0,
+   "chainStep": "Discharge on inhaled SABA and the rest of the oral steroid course (no taper), inhaler technique checked, a written action plan, an inhaled corticosteroid continued or considered, follow-up within 1 to 4 weeks",
+   "why": "A good response sustained 60 minutes after the last dose, with no distress and a normal exam, means home. The child continues inhaled SABA and finishes the oral steroid course; courses under a week need no taper. Inhaler technique and the written action plan are reviewed, an inhaled corticosteroid is continued or considered, and follow-up is booked within 1 to 4 weeks. SIGN 158 asks more before discharge: stable on 3 to 4 hourly bronchodilators, PEF over 75% and saturation over 94%.",
+   "sources": [
+    {
+     "docId": "url:13b6c161ea88",
+     "where": "Figure 5-6, good response and discharge home; Figure 5-5 notes"
+    },
+    {
+     "docId": "url:3f6d6d331066",
+     "where": "9.9.7"
+    },
+    {
+     "docId": "pmid:31869095",
+     "where": "Treatment / Management"
+    }
+   ],
+   "next": "end_asthma_home",
+   "orders": [
+    {
+     "item": "Steroid course",
+     "dose": "EPR-3: 3 to 10 days in total, no taper under a week; StatPearls: dexamethasone for 2 days, or prednisone or prednisolone for 3 to 5 days; SIGN 158: up to 3 days usually enough",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5 notes"
+      },
+      {
+       "docId": "pmid:31869095",
+       "where": "Glucocorticoids"
+      },
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.8.4"
+      }
+     ],
+     "note": "Course lengths differ between the US, UK and review sources."
+    },
+    {
+     "item": "Discharge criteria",
+     "dose": "EPR-3: FEV1 or PEF 70% or more, sustained 60 minutes after the last treatment, no distress, normal exam; SIGN 158: stable on 3 to 4 hourly inhaled bronchodilators, PEF or FEV1 over 75%, SpO2 over 94%",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-6"
+      },
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.9.7"
+      }
+     ],
+     "note": "SIGN's discharge thresholds are stricter than EPR-3's."
+    },
+    {
+     "item": "Controller",
+     "dose": "Continue an ICS; for those not on one, consider starting it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-6, discharge home"
+      }
+     ]
+    },
+    {
+     "item": "Education and follow-up",
+     "dose": "Inhaler technique, a written action plan, follow-up with primary care or an asthma specialist in 1 to 4 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-6, discharge home"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_asthma_home",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Asthma attack with a good response: home on albuterol and the rest of the oral steroid course, with inhaler technique checked, a written action plan, a controller continued or started, and follow-up in 1 to 4 weeks."
+  },
+  {
+   "id": "end_asthma_ward",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Incomplete response: admission is an individualized decision, made within 4 hours; on the ward, oxygen, inhaled SABA, a systemic steroid and close monitoring of breathing and saturation. A saturation under 92% in air after the first bronchodilators points to more intensive inpatient care."
+  },
+  {
+   "id": "asthma_mag",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Life-threatening, or severe after an hour of full treatment; albuterol, ipratropium and a steroid running. Add?",
+   "options": [
+    "IV magnesium sulfate, with PICU review",
+    "IV aminophylline as the first IV drug",
+    "Non-invasive ventilation on the general ward",
+    "Nebulized magnesium sulfate in place of albuterol"
+   ],
+   "answer": 0,
+   "chainStep": "IV magnesium sulfate 25 to 75 mg/kg (maximum 2 g) over 20 minutes; frequent or continuous nebulized albuterol with ipratropium; systemic steroid; urgent specialist and PICU review; intubate without delay once needed",
+   "why": "A life-threatening attack gets the severe-attack treatment at once: oxygen, nebulized albuterol with ipratropium every 20 minutes, and a steroid. EPR-3 considers IV magnesium for life-threatening attacks and for those still severe after an hour of intensive conventional therapy; in children the trials it cites used 25 to 75 mg/kg up to 2 g, and StatPearls gives it over 20 minutes to children aged 4 or older. SIGN 158 waits for a poor response to first-line treatment, then makes magnesium the first IV drug. These children need urgent specialist review and high-dependency or intensive care, and intubation is not delayed once it is needed. Nebulized magnesium does not replace albuterol, and the evidence for non-invasive ventilation in children is too thin to recommend it.",
+   "sources": [
+    {
+     "docId": "url:13b6c161ea88",
+     "where": "Section 5: intravenous magnesium sulfate; impending respiratory failure"
+    },
+    {
+     "docId": "pmid:31869095",
+     "where": "Treatment / Management: magnesium sulfate"
+    },
+    {
+     "docId": "url:3f6d6d331066",
+     "where": "9.8.7; 9.9; 9.9.3; 9.9.6; Annex 8"
+    }
+   ],
+   "next": "end_asthma_icu",
+   "orders": [
+    {
+     "item": "Albuterol, nebulized",
+     "dose": "0.15 mg/kg (minimum 2.5 mg) every 20 minutes for 3 doses, or 0.5 mg/kg/hour continuously",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5"
+      }
+     ]
+    },
+    {
+     "item": "Ipratropium",
+     "dose": "StatPearls: nebulized 250 micrograms under 20 kg and 500 micrograms over 20 kg, or 4 to 8 puffs by MDI, every 20 minutes for 3 doses; EPR-3: 0.25 to 0.5 mg every 20 minutes for 3 doses; SIGN 158: 250 micrograms a dose at any age",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:31869095",
+       "where": "Treatment / Management: emergency room care"
+      },
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5"
+      },
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.8.3; Annex 8"
+      }
+     ],
+     "note": "SIGN does not raise the dose with weight; not first line alone, and no added benefit once admitted."
+    },
+    {
+     "item": "Oral steroid",
+     "dose": "StatPearls: dexamethasone 0.6 mg/kg a day for 2 days, or prednisone or prednisolone 1 to 2 mg/kg a day to 20 mg (0 to 2 years), 30 mg (3 to 5) or 40 mg (6 to 11); EPR-3: prednisone 1 to 2 mg/kg in 2 divided doses, maximum 60 mg a day; SIGN 158: prednisolone 10 mg under 2 years, 20 mg at 2 to 5, 30 to 40 mg over 5",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:31869095",
+       "where": "Glucocorticoids"
+      },
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Figure 5-5"
+      },
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.8.4"
+      }
+     ],
+     "note": "Doses and maximums differ; SIGN found no proven advantage of dexamethasone over prednisolone in mild to moderate attacks."
+    },
+    {
+     "item": "IV magnesium timing, life-threatening attack",
+     "dose": "EPR-3: consider it in life-threatening attacks; SIGN 158: add it when first-line nebulized salbutamol, ipratropium and steroid do not work",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Section 5: intravenous magnesium sulfate"
+      },
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "Annex 8"
+      }
+     ],
+     "note": "EPR-3 allows magnesium on arrival in a life-threatening attack; SIGN waits for a poor response."
+    },
+    {
+     "item": "Magnesium sulfate IV",
+     "dose": "EPR-3: 25 to 75 mg/kg, maximum 2 g; StatPearls: the same over 20 minutes, from age 4; SIGN 158: 40 mg/kg (maximum 2 g) over 20 minutes",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Section 5: intravenous magnesium sulfate"
+      },
+      {
+       "docId": "pmid:31869095",
+       "where": "Treatment / Management: magnesium sulfate"
+      },
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.9.3; Annex 8"
+      }
+     ],
+     "note": "SIGN uses a single dose inside the EPR-3 range; StatPearls limits it to children aged 4 or older."
+    },
+    {
+     "item": "Kidney failure",
+     "dose": "A relative contraindication to magnesium sulfate",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:31869095",
+       "where": "Treatment / Management: magnesium sulfate"
+      }
+     ]
+    },
+    {
+     "item": "Aminophylline",
+     "dose": "EPR-3: methylxanthines not recommended; SIGN 158: consider for severe or life-threatening asthma unresponsive to maximal bronchodilators and steroids, 5 mg/kg over 20 minutes then 1 mg/kg/hour, with ECG monitoring",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Section 5: treatments not recommended"
+      },
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.9.2"
+      }
+     ],
+     "note": "The US guideline advises against it; the UK guideline keeps it as a second-line option."
+    },
+    {
+     "item": "IV albuterol",
+     "dose": "SIGN 158: consider one early bolus of 15 micrograms/kg over 10 minutes when initial inhaled therapy fails",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3f6d6d331066",
+       "where": "9.9.1"
+      }
+     ]
+    },
+    {
+     "item": "Intubation",
+     "dose": "Not delayed once it is deemed necessary",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:13b6c161ea88",
+       "where": "Section 5: impending respiratory failure"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_asthma_icu",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Life-threatening or refractory asthma: PICU care with frequent or continuous nebulized albuterol and ipratropium, a systemic steroid, IV magnesium, and intubation without delay once it is needed."
+  },
+  {
+   "id": "pna_assess",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Fever, cough and crackles in a child, no wheeze. Next?",
+   "options": [
+    "Oximetry and a severity check; x-ray if severe or admitted",
+    "A chest x-ray to confirm it before an antibiotic is started",
+    "Blood culture and CRP to choose the antibiotic",
+    "Sputum culture first, to target the antibiotic"
+   ],
+   "answer": 0,
+   "chainStep": "Clinical diagnosis with pulse oximetry and danger signs; no routine chest x-ray or microbiology in mild disease; x-ray and cultures when severe or admitted",
+   "why": "Pulse oximetry belongs in every assessment, and a saturation under 92% means admission and oxygen. A chest x-ray is not routine: it rarely changes treatment or outcome in children treated at home and cannot tell bacterial from viral pneumonia. It is done in severe cases, for complications or suspected TB, and for children who look toxic or have a prolonged course. Microbiology is for children who are admitted, and sputum is usually contaminated by mouth flora.",
+   "sources": [
+    {
+     "docId": "pmid:34471872",
+     "where": "Clinical assessment; investigations; summary of recommendations"
+    },
+    {
+     "docId": "pmid:30725625",
+     "where": "Evaluation"
+    }
+   ],
+   "next": "pna_sev",
+   "orders": [
+    {
+     "item": "Pulse oximetry",
+     "dose": "Every child; under 92% at sea level means admission for oxygen",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34471872",
+       "where": "Summary of recommendations"
+      }
+     ]
+    },
+    {
+     "item": "Chest x-ray",
+     "dose": "Not routine; for severe cases, suspected complications or TB, toxic appearance, or a prolonged course",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:34471872",
+       "where": "Summary of recommendations"
+      },
+      {
+       "docId": "pmid:30725625",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Microbiology",
+     "dose": "Only in children who need admission, or in outbreaks",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:34471872",
+       "where": "Summary of recommendations"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pna_sev",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Severity, age and pattern",
+   "outcomes": [
+    {
+     "id": "admit",
+     "if": "Admit; saturation under 92%, marked distress, danger signs, poor feeding, or under 2 months",
+     "ddx": {
+      "lead": [
+       "Pneumonia"
+      ],
+      "out": []
+     },
+     "next": "pna_admit"
+    },
+    {
+     "id": "mild",
+     "if": "Mild; saturation 92% or more, feeding, no danger signs, not the atypical picture",
+     "ddx": {
+      "lead": [
+       "Pneumonia"
+      ],
+      "out": []
+     },
+     "next": "pna_amox"
+    },
+    {
+     "id": "atyp",
+     "if": "Mild, atypical; school age, a week of dry cough, headache, low fever, scattered crackles",
+     "ddx": {
+      "lead": [
+       "Atypical pneumonia"
+      ],
+      "out": []
+     },
+     "next": "pna_atyp"
+    }
+   ]
+  },
+  {
+   "id": "pna_amox",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Mild pneumonia, saturation 92% or more, feeding well. Antibiotic?",
+   "options": [
+    "High-dose oral amoxicillin, twice a day",
+    "Oral azithromycin once a day for 5 days",
+    "Oral amoxicillin-clavulanate for 10 days",
+    "IV ampicillin after admission"
+   ],
+   "answer": 0,
+   "chainStep": "Oral amoxicillin 45 mg/kg twice daily (90 mg/kg a day) for 5 days; review at 3 days; amoxicillin-clavulanate if worse; a child not better by 72 hours is checked for a complication",
+   "why": "Oral amoxicillin is the first choice for children over 1 month who do not need admission, at a high dose that covers pneumococci with low or intermediate penicillin resistance. Macrolides are added only when atypical organisms are suspected; routine macrolides are not needed for preschool children with mild pneumonia. A child who worsens on amoxicillin moves to amoxicillin-clavulanate, and one not improving within 72 hours is checked for pneumothorax, empyema or effusion.",
+   "sources": [
+    {
+     "docId": "pmid:34471872",
+     "where": "Which empiric antibiotic; Table 5; summary of recommendations"
+    },
+    {
+     "docId": "pmid:31518547",
+     "where": "Antibiotic therapy"
+    },
+    {
+     "docId": "pmid:30725625",
+     "where": "Treatment / Management"
+    }
+   ],
+   "next": "end_pna_home",
+   "orders": [
+    {
+     "item": "Amoxicillin",
+     "dose": "SATS 2020: 45 mg/kg a dose every 12 hours for 5 days (90 mg/kg a day); StatPearls: high-dose oral amoxicillin; J Pediatr (Rio J) review: 50 mg/kg a day twice daily was as effective in a Brazilian trial, and Canadian authors advise against routine higher doses where resistance is rare",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:34471872",
+       "where": "Table 5; which empiric antibiotic"
+      },
+      {
+       "docId": "pmid:30725625",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:31518547",
+       "where": "Antibiotic therapy"
+      }
+     ],
+     "note": "High dose (SATS, StatPearls) against standard dose (the Brazilian review); the IDSA/PIDS 2011 guideline was not read (blocked)."
+    },
+    {
+     "item": "Amoxicillin maximum dose",
+     "dose": "Not stated in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Review",
+     "dose": "At 3 days; switch to amoxicillin-clavulanate if worse",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34471872",
+       "where": "Summary of recommendations"
+      }
+     ]
+    },
+    {
+     "item": "Not better at 72 hours",
+     "dose": "Look for pneumothorax, empyema or pleural effusion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725625",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "School-age child",
+     "dose": "SATS: amoxicillin from 1 month of age, with a macrolide when atypicals are suspected; StatPearls: over 5 years, macrolides are usually first line",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:34471872",
+       "where": "Which empiric antibiotic"
+      },
+      {
+       "docId": "pmid:30725625",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "The sources disagree on the first-line drug for typical pneumonia over 5 years."
+    }
+   ]
+  },
+  {
+   "id": "end_pna_home",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Mild typical pneumonia: home on high-dose oral amoxicillin, reviewed at 3 days, with return advice; a child who worsens or is not better by 72 hours is checked for a complication."
+  },
+  {
+   "id": "pna_atyp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "School-age child, a week of dry cough, headache, low fever; saturation fine. Antibiotic?",
+   "options": [
+    "Oral azithromycin for an atypical organism",
+    "High-dose oral amoxicillin alone",
+    "Oral doxycycline as the first choice",
+    "Oral levofloxacin, as a respiratory quinolone"
+   ],
+   "answer": 0,
+   "chainStep": "Oral azithromycin 10 mg/kg on day 1, then 5 mg/kg a day on days 2 to 5; reassess at 48 to 72 hours for macrolide resistance or another diagnosis",
+   "why": "Mycoplasma pneumoniae, common in school-age children, has no cell wall and so resists beta-lactams such as amoxicillin. Macrolides are first line in children, with doxycycline and respiratory quinolones as alternatives in adults. A child not improving after 48 to 72 hours may have macrolide-resistant mycoplasma or another diagnosis. Testing is not routine in a well outpatient.",
+   "sources": [
+    {
+     "docId": "pmid:28613531",
+     "where": "Evaluation; Treatment / Management; Pearls"
+    },
+    {
+     "docId": "pmid:32491698",
+     "where": "Administration"
+    },
+    {
+     "docId": "pmid:30725625",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:34471872",
+     "where": "Which empiric antibiotic"
+    }
+   ],
+   "next": "end_pna_atyp",
+   "orders": [
+    {
+     "item": "Azithromycin",
+     "dose": "StatPearls Azithromycin (CAP, 6 months and older): 10 mg/kg on day 1, then 5 mg/kg a day on days 2 to 5; SATS 2020: 10 mg/kg once daily for 5 days",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:32491698",
+       "where": "Administration"
+      },
+      {
+       "docId": "pmid:34471872",
+       "where": "Table 5"
+      }
+     ],
+     "note": "Two dosing schedules for the same 5-day course."
+    },
+    {
+     "item": "Azithromycin maximum dose in children",
+     "dose": "Not stated for pneumonia in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Mycoplasma testing",
+     "dose": "Not routine in otherwise healthy outpatients; PCR when admitted, severe, or when it changes treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613531",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_pna_atyp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Atypical pneumonia in a school-age child: oral azithromycin, return advice, and a rethink at 48 to 72 hours if not improving (macrolide resistance or another diagnosis)."
+  },
+  {
+   "id": "pna_admit",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pneumonia with saturation under 92% or danger signs. Next?",
+   "options": [
+    "Admit: oxygen, x-ray, blood culture, IV ampicillin",
+    "Home on high-dose amoxicillin, rechecked in 48 hours",
+    "A CT chest first, to look for an abscess or empyema",
+    "Admit on oral azithromycin alone, for atypicals"
+   ],
+   "answer": 0,
+   "chainStep": "Admit: oxygen for saturation under 92%, chest x-ray, blood culture, IV ampicillin or penicillin G (or IV amoxicillin); third-generation cephalosporin where pneumococcal penicillin resistance is high; oral step-down once improving",
+   "why": "Saturation under 92% means admission and oxygen, and children under 2 months with pneumonia are admitted. Admitted children get a chest x-ray to confirm pneumonia and look for complications, and microbiology is kept for them. International guidelines agree on ampicillin, penicillin G or IV amoxicillin for inpatients under 5; the American guideline keeps third-generation cephalosporins for places with high pneumococcal penicillin resistance. CT is not a first-line test, and a large effusion is drained.",
+   "sources": [
+    {
+     "docId": "pmid:34471872",
+     "where": "Clinical assessment; investigations; CT; summary of recommendations"
+    },
+    {
+     "docId": "pmid:31518547",
+     "where": "Antibiotic therapy; hospital admission"
+    },
+    {
+     "docId": "pmid:30725625",
+     "where": "Treatment / Management"
+    }
+   ],
+   "next": "end_pna_admit",
+   "orders": [
+    {
+     "item": "Oxygen",
+     "dose": "Saturation under 92% at sea level",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34471872",
+       "where": "Clinical assessment"
+      }
+     ]
+    },
+    {
+     "item": "IV antibiotic",
+     "dose": "J Pediatr (Rio J) review of international guidelines: ampicillin, aqueous penicillin G or IV amoxicillin for inpatients under 5, third-generation cephalosporin only where pneumococcal resistance is high; SATS 2020: amoxicillin-clavulanate for severe pneumonia over 1 month",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:31518547",
+       "where": "Antibiotic therapy"
+      },
+      {
+       "docId": "pmid:34471872",
+       "where": "Summary of recommendations"
+      }
+     ],
+     "note": "The South African guideline's choice reflects local organisms (S aureus and non-typable H influenzae)."
+    },
+    {
+     "item": "Age for admission",
+     "dose": "SATS and the J Pediatr review: all with pneumonia under 2 months; StatPearls: neonates and infants under 90 days",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:34471872",
+       "where": "Clinical assessment"
+      },
+      {
+       "docId": "pmid:31518547",
+       "where": "Antibiotic therapy"
+      },
+      {
+       "docId": "pmid:30725625",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "The age cut-off differs: 2 months against 90 days."
+    },
+    {
+     "item": "Under 1 month",
+     "dose": "SATS 2020: IV ampicillin 50 mg/kg 6-hourly with gentamicin 7.5 mg/kg daily, then ceftriaxone or cefotaxime if the response is poor; J Pediatr (Rio J) review: cefotaxime first, since ceftriaxone risks kernicterus; StatPearls: ampicillin plus an aminoglycoside or a third-generation cephalosporin, not ceftriaxone",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:34471872",
+       "where": "Table 5"
+      },
+      {
+       "docId": "pmid:31518547",
+       "where": "Antibiotic therapy"
+      },
+      {
+       "docId": "pmid:30725625",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "SATS lists ceftriaxone for neonates who respond poorly; the other two sources avoid it in the first month."
+    },
+    {
+     "item": "CT chest",
+     "dose": "Not a first-line test",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:34471872",
+       "where": "Investigations: CT"
+      }
+     ]
+    },
+    {
+     "item": "Pleural effusion",
+     "dose": "A large effusion is drained; early VATS for empyema",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725625",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_pna_admit",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pneumonia needing admission: oxygen, a chest x-ray, blood culture, IV ampicillin or penicillin G (or IV amoxicillin), oral step-down once improving, and a search for effusion or empyema if not better by 72 hours."
+  },
+  {
+   "id": "pert_start",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pertussis in a young infant, or with apnea or blue spells. Next?",
+   "options": [
+    "Admit, monitor for apnea, PCR, azithromycin now",
+    "Send a PCR, and start antibiotics once it comes back positive",
+    "Oral erythromycin for 14 days, given at home",
+    "Home on azithromycin, with a review tomorrow"
+   ],
+   "answer": 0,
+   "chainStep": "Admit with apnea and oxygen monitoring; nasopharyngeal PCR; azithromycin before the result (10 mg/kg once daily for 5 days under 6 months), watching for pyloric stenosis under 1 month; droplet precautions",
+   "why": "Infants are the group most at risk: apnea may be the only sign, apnea and pneumonia are the commonest complications, and hospitalization is commonest under 6 months. Treatment starts before results when the history strongly suggests pertussis or the patient is high risk, and infants are treated up to 6 weeks after cough onset. Azithromycin is the drug of choice in very young infants, because severe pertussis outweighs the small risk of pyloric stenosis; erythromycin is not preferred under 1 month. PCR on a nasopharyngeal specimen is the test of choice.",
+   "sources": [
+    {
+     "docId": "url:4938335258b2",
+     "where": "Consider treating prior to test results; treatment timeline; treatment options vary by age"
+    },
+    {
+     "docId": "url:1218ab48c929",
+     "where": "Clinical features; complications in infants"
+    },
+    {
+     "docId": "url:8ef92352ce68",
+     "where": "Treatment; azithromycin; erythromycin"
+    },
+    {
+     "docId": "pmid:30085550",
+     "where": "Evaluation; Treatment / Management; Table 2"
+    }
+   ],
+   "next": "pert_contacts",
+   "orders": [
+    {
+     "item": "Azithromycin, under 1 month",
+     "dose": "10 mg/kg once daily for 5 days; monitor for pyloric stenosis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8ef92352ce68",
+       "where": "Azithromycin"
+      },
+      {
+       "docId": "pmid:30085550",
+       "where": "Table 2"
+      },
+      {
+       "docId": "url:4938335258b2",
+       "where": "Infants less than 1 month of age"
+      }
+     ]
+    },
+    {
+     "item": "Azithromycin, 1 to 5 months",
+     "dose": "MMWR 2005: 10 mg/kg a day for 5 days under 6 months; StatPearls: from 1 month, 10 mg/kg (maximum 500 mg) on day 1, then 5 mg/kg (maximum 250 mg) on days 2 to 5",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:8ef92352ce68",
+       "where": "Azithromycin"
+      },
+      {
+       "docId": "pmid:30085550",
+       "where": "Table 2"
+      }
+     ],
+     "note": "The 2005 CDC guideline and the 2026 StatPearls table split the ages differently."
+    },
+    {
+     "item": "Azithromycin, 6 months and older",
+     "dose": "10 mg/kg (maximum 500 mg) on day 1, then 5 mg/kg (maximum 250 mg) on days 2 to 5",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8ef92352ce68",
+       "where": "Azithromycin"
+      },
+      {
+       "docId": "pmid:30085550",
+       "where": "Table 2"
+      }
+     ]
+    },
+    {
+     "item": "Erythromycin under 1 month",
+     "dose": "Not preferred: risk of infantile hypertrophic pyloric stenosis",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:8ef92352ce68",
+       "where": "Erythromycin"
+      }
+     ]
+    },
+    {
+     "item": "Trimethoprim-sulfamethoxazole",
+     "dose": "Alternative from 2 months: trimethoprim 8 mg/kg a day and sulfamethoxazole 40 mg/kg a day in 2 doses for 14 days; avoid under 2 months",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8ef92352ce68",
+       "where": "Trimethoprim-sulfamethoxazole"
+      },
+      {
+       "docId": "pmid:30085550",
+       "where": "Table 2"
+      }
+     ]
+    },
+    {
+     "item": "Treatment window",
+     "dose": "Under 1 year: within 6 weeks of cough onset; 1 year and older: within 3 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4938335258b2",
+       "where": "Treatment timeline"
+      }
+     ]
+    },
+    {
+     "item": "Isolation",
+     "dose": "Droplet precautions; noninfectious after 5 days of appropriate antibiotics",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30085550",
+       "where": "Isolation precautions"
+      }
+     ]
+    },
+    {
+     "item": "Steroids, bronchodilators, antihistamines, cough suppressants",
+     "dose": "No consistent benefit; not routine",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30085550",
+       "where": "Supportive care"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pert_contacts",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Pertussis in an infant; parents and a sibling at home. Contacts?",
+   "options": [
+    "Prophylaxis for all household contacts, vaccinated or not",
+    "Antibiotics just for the household members now coughing",
+    "A Tdap booster for each contact, given in place of antibiotics",
+    "Prophylaxis for the unvaccinated contacts alone"
+   ],
+   "answer": 0,
+   "chainStep": "Postexposure prophylaxis with the treatment regimen (usually azithromycin) for all asymptomatic household contacts within 21 days of the index patient's cough onset, and for high-risk contacts within 21 days of exposure",
+   "why": "CDC supports prophylaxis for all asymptomatic household contacts within 21 days of the index patient's cough onset, because secondary attack rates are high even in households up to date with vaccination, and for anyone at high risk of severe disease (infants under 12 months, third-trimester pregnancy, people in contact with them) within 21 days of exposure. The regimens are the treatment regimens, usually azithromycin. Vaccinating contacts is not a substitute: vaccinated people can still catch and pass on pertussis.",
+   "sources": [
+    {
+     "docId": "url:4371d97ad05f",
+     "where": "PEP use; household contacts; people at high risk"
+    },
+    {
+     "docId": "pmid:30085550",
+     "where": "Postexposure prophylaxis"
+    }
+   ],
+   "next": "end_pert",
+   "orders": [
+    {
+     "item": "Household contacts",
+     "dose": "All asymptomatic household contacts, within 21 days of cough onset in the index patient",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4371d97ad05f",
+       "where": "Household contacts"
+      }
+     ]
+    },
+    {
+     "item": "High-risk contacts",
+     "dose": "Infants under 12 months, people whose conditions pertussis could worsen, third-trimester pregnancy and high-risk settings, within 21 days of exposure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4371d97ad05f",
+       "where": "People at high risk; those who will have contact with people at high risk"
+      }
+     ]
+    },
+    {
+     "item": "Regimen",
+     "dose": "Same as age-based treatment dosing, azithromycin preferred",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30085550",
+       "where": "Table 2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_pert_older",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pertussis in a child well between fits: nasopharyngeal PCR; azithromycin before the result when the history is strongly suggestive, 10 mg/kg (maximum 500 mg) on day 1, then 5 mg/kg (maximum 250 mg) on days 2 to 5, within 6 weeks of cough onset under 1 year and 3 weeks from 1 year (given later, it neither changes the illness nor prevents spread); droplet precautions until 5 days of treatment; prophylaxis for asymptomatic household contacts within 21 days of cough onset."
+  },
+  {
+   "id": "end_pert",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Infant pertussis: admission with apnea monitoring, azithromycin started before results (10 mg/kg once daily for 5 days in the first month, watching for pyloric stenosis), droplet precautions, and prophylaxis for the household within 21 days."
+  },
+  {
+   "id": "brue_assess",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Infant had a brief, resolved event; now well. Next?",
+   "options": [
+    "Full history and exam, then sort lower from higher risk",
+    "Admit on a cardiorespiratory monitor, history later",
+    "Blood count, electrolytes and a chest x-ray straight away",
+    "Start a proton pump inhibitor for presumed reflux"
+   ],
+   "answer": 0,
+   "chainStep": "Confirm a BRUE (under 1 year; sudden, brief and resolved; cyanosis or pallor, altered breathing, tone or responsiveness; unexplained after history and exam), then stratify by the AAP lower-risk criteria",
+   "why": "A BRUE is a sudden, brief and now resolved episode in an infant under 1 year, with cyanosis or pallor, absent, decreased or irregular breathing, a marked change in tone, or altered responsiveness, that a careful history and exam do not explain. The structured history and examination come first, and the risk criteria then decide what follows. Routine tests, admission and acid suppression are discouraged in lower-risk infants.",
+   "sources": [
+    {
+     "docId": "pmid:28722926",
+     "where": "Introduction; Epidemiology; History and Physical; Evaluation"
+    }
+   ],
+   "next": "brue_risk"
+  },
+  {
+   "id": "brue_risk",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "AAP lower-risk criteria",
+   "outcomes": [
+    {
+     "id": "lower",
+     "if": "Lower risk; over 60 days, born at 32 weeks or later with postconceptional age 45 weeks or more, first event under 1 minute, no CPR by a trained provider, nothing concerning",
+     "ddx": {
+      "lead": [
+       "BRUE"
+      ],
+      "out": []
+     },
+     "next": "brue_low"
+    },
+    {
+     "id": "higher",
+     "if": "Higher risk; any lower-risk criterion not met",
+     "ddx": {
+      "lead": [
+       "BRUE"
+      ],
+      "out": []
+     },
+     "next": "brue_high"
+    }
+   ]
+  },
+  {
+   "id": "brue_low",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Lower-risk BRUE. Next?",
+   "options": [
+    "Educate, CPR training, brief oximetry if wanted, home",
+    "Admit overnight on a cardiorespiratory monitor for review",
+    "Blood count, electrolytes, chest x-ray and an EEG",
+    "Home with a home apnea monitor and acid suppression"
+   ],
+   "answer": 0,
+   "chainStep": "Caregiver education and CPR training, shared decisions, brief pulse oximetry with serial exams if wanted, ECG and pertussis testing may be considered; no routine labs, imaging, EEG, admission, home monitor or acid suppression; prompt follow-up",
+   "why": "The AAP guideline strongly recommends against routine tests in lower-risk infants (blood count, electrolytes, CSF, chest x-ray, upper GI series, pH probe, neuroimaging, EEG) and discourages admission and empiric acid suppression; ECG and pertussis testing get only a weak recommendation to consider. Brief observation with pulse oximetry and serial exams may be offered. Care rests on caregiver education, CPR training, shared decision-making and prompt follow-up, and home cardiopulmonary monitors are advised against unless specifically indicated.",
+   "sources": [
+    {
+     "docId": "pmid:28722926",
+     "where": "History and Physical; Evaluation; Treatment / Management; Deterrence and Patient Education"
+    }
+   ],
+   "next": "end_brue_low",
+   "orders": [
+    {
+     "item": "Routine tests",
+     "dose": "Not done: blood count (including tests for anemia), electrolytes, CSF, chest x-ray, upper GI series, pH probe, neuroimaging, EEG",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28722926",
+       "where": "Evaluation; Pearls"
+      }
+     ]
+    },
+    {
+     "item": "ECG and pertussis testing",
+     "dose": "May be considered (weak recommendation)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722926",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Admission and acid suppression",
+     "dose": "Strongly discouraged",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28722926",
+       "where": "Evaluation; Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Home cardiopulmonary monitoring",
+     "dose": "Advised against unless specifically indicated",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28722926",
+       "where": "Deterrence and Patient Education"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_brue_low",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Lower-risk BRUE: education, CPR training, brief observation if wanted, and home with prompt follow-up; no routine tests, admission, home monitor or acid suppression."
+  },
+  {
+   "id": "brue_high",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "BRUE that misses a lower-risk criterion. Next?",
+   "options": [
+    "A targeted first-tier workup, often without admission",
+    "Discharge with education alone, as for lower risk",
+    "Brain MRI, EEG, pH probe and a lumbar puncture up front",
+    "Acid suppression, since reflux is the usual cause"
+   ],
+   "answer": 0,
+   "chainStep": "First tier: continuous pulse oximetry for 4 hours or more, ECG read by pediatric cardiology, bedside feeding evaluation, respiratory virus and pertussis testing when indicated, targeted labs (hematocrit, glucose, bicarbonate or venous gas, lactate), social work and abuse imaging when maltreatment is suspected; second-tier tests only for persisting concerns",
+   "why": "Most infants (94%) miss at least one lower-risk criterion, and no uniform pathway exists for them. A tiered evaluation goes first for causes where delay harms (maltreatment, feeding problems with aspiration, arrhythmias, infection), often without admission; second-tier tests such as a swallow study or neurologic studies follow only for persisting concerns. Untargeted testing has a low yield: in a 2025 multicenter study only 8.4% of tests supported a cause. Reflux should not be blamed on nonspecific symptoms.",
+   "sources": [
+    {
+     "docId": "pmid:28722926",
+     "where": "Etiology; Epidemiology; Pathophysiology; Evaluation"
+    }
+   ],
+   "next": "end_brue_high"
+  },
+  {
+   "id": "end_brue_high",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Higher-risk BRUE: a targeted first-tier evaluation (pulse oximetry for 4 hours or more, ECG, feeding assessment, pertussis and viral testing when indicated, abuse assessment if suspected), second-tier tests only for persisting concerns, and close follow-up."
+  }
+ ],
+ "cases": [
+  {
+   "id": "arrest_infant",
+   "label": "Infant found in arrest",
+   "vignette": "4-month-old found limp and grey in the cot by her father, who carries her in. Weight 6.5 kg.",
+   "picks": {
+    "front": "arrest"
+   },
+   "results": {
+    "front": "Unresponsive, not breathing normally, no brachial pulse."
+   }
+  },
+  {
+   "id": "anaph_peanut",
+   "label": "Anaphylaxis after peanut",
+   "vignette": "3-year-old boy, 15 kg, ate a peanut cookie at a party 10 minutes ago; now hives, lip swelling and wheeze. HR 150, RR 40, BP 84/50, SpO2 93%.",
+   "picks": {
+    "front": "anaph"
+   },
+   "results": {
+    "front": "Widespread hives, swollen lips, wheeze throughout, hoarse cry; no drooling."
+   }
+  },
+  {
+   "id": "shock_pneumonia",
+   "label": "Breathless and in shock",
+   "vignette": "2-year-old boy, 12 kg, 3 days of fever and cough, now grunting and floppy. HR 182, RR 52, BP 68/38, SpO2 90% in air, temperature 39.9 C.",
+   "picks": {
+    "front": "shock"
+   },
+   "results": {
+    "front": "Mottled, cool to the knees, capillary refill 5 seconds; breathing on his own; no rash, no allergen, no stridor."
+   }
+  },
+  {
+   "id": "stridor_croup",
+   "label": "Barking cough and stridor",
+   "vignette": "2-year-old girl, 12 kg, 2 days of runny nose, then a barking cough overnight. HR 140, RR 36, SpO2 96%, temperature 38.2 C.",
+   "picks": {
+    "front": "stridor"
+   },
+   "results": {
+    "front": "Inspiratory stridor at rest with a barking cough; hoarse voice; no drooling; no allergen or choking."
+   }
+  },
+  {
+   "id": "choke_grape",
+   "label": "Choking on a grape",
+   "vignette": "18-month-old boy, 11 kg, began coughing and gagging while eating grapes 20 minutes ago. HR 130, RR 34, SpO2 95%.",
+   "picks": {
+    "front": "choke"
+   },
+   "results": {
+    "front": "Witnessed sudden coughing fit while eating; now coughing and breathing, wheeze on the right."
+   }
+  },
+  {
+   "id": "apnea_bronch",
+   "label": "Young infant apneic with bronchiolitis",
+   "vignette": "5-week-old girl, 4.2 kg, born at 39 weeks, 2 days of runny nose and cough; she stopped breathing and went blue in her mother's arms in the waiting room. HR 110.",
+   "picks": {
+    "front": "failure",
+    "bvm_resp": "recovers",
+    "findings": "bronch",
+    "bronch_sev": "severe"
+   },
+   "results": {
+    "front": "Apneic and blue, limp; brachial pulse 110; no allergen, no choking.",
+    "bvm_resp": "Breathing on her own within a minute of bag-mask breaths; saturation 94% in oxygen.",
+    "findings": "Two days of coryza, then cough; fine crackles and wheeze on both sides; temperature 37.8 C.",
+    "bronch_sev": "Two more short apneas in the ED; subcostal recession; saturation 90% in air."
+   }
+  },
+  {
+   "id": "fail_pneumonia",
+   "label": "Exhausted child with pneumonia",
+   "vignette": "4-year-old boy, 16 kg, 3 days of fever and cough, now blue and barely moving air, with a gasp every few seconds. HR 96, SpO2 70% on a non-rebreather.",
+   "picks": {
+    "front": "failure",
+    "bvm_resp": "fails"
+   },
+   "results": {
+    "front": "Gasping at 6 a minute, unresponsive to voice; carotid pulse 96; no allergen, no choking.",
+    "bvm_resp": "Chest rises with bag-mask breaths, but no effective effort of his own; saturation 82%."
+   }
+  },
+  {
+   "id": "bronch_mild",
+   "label": "Mild bronchiolitis",
+   "vignette": "5-month-old boy, 7 kg, born at term, 2 days of a cold then cough and fast breathing; feeding a little less. HR 138, RR 48, SpO2 96% in air, temperature 37.9 C.",
+   "picks": {
+    "front": "stable",
+    "findings": "bronch",
+    "bronch_sev": "mild"
+   },
+   "results": {
+    "front": "Alert, pink, mild recession, breathing on his own, no stridor.",
+    "findings": "First episode; coryza for 2 days, then cough; scattered wheeze and fine crackles on both sides.",
+    "bronch_sev": "Saturation 96% in air, no apnea, taking about 80% of his usual feeds, wet nappies normal."
+   }
+  },
+  {
+   "id": "bronch_lowsat",
+   "label": "Bronchiolitis needing oxygen",
+   "vignette": "3-month-old girl, 5.8 kg, born at term, 3 days of cough after a cold. HR 150, RR 58, SpO2 87% in air, temperature 37.6 C.",
+   "picks": {
+    "front": "stable",
+    "findings": "bronch",
+    "bronch_sev": "lowsat",
+    "bronch_o2_resp": "settles"
+   },
+   "results": {
+    "front": "Alert, moderate recession, breathing on her own, no stridor.",
+    "findings": "First episode; coryza then cough; diffuse fine crackles and wheeze.",
+    "bronch_sev": "Saturation persistently 86 to 88% in air; no apnea; taking 80% of feeds; no grunting; RR 58.",
+    "bronch_o2_resp": "On nasal cannula oxygen: saturation 95%, RR 50, settling to feed."
+   }
+  },
+  {
+   "id": "bronch_hfnc",
+   "label": "Bronchiolitis failing low-flow oxygen",
+   "vignette": "7-month-old boy, 8 kg, born at term, 4 days of cough and wheeze. HR 160, RR 64, SpO2 86% in air.",
+   "picks": {
+    "front": "stable",
+    "findings": "bronch",
+    "bronch_sev": "lowsat",
+    "bronch_o2_resp": "fails"
+   },
+   "results": {
+    "front": "Alert, moderate recession, breathing on his own, no stridor.",
+    "findings": "First episode; a 2-day cold, then cough; crackles and wheeze throughout.",
+    "bronch_sev": "Saturation persistently 86% in air; no apnea; no grunting; RR 64; feeding 70%.",
+    "bronch_o2_resp": "Two hours on low-flow nasal oxygen: saturation 88%, RR 68, recession worse."
+   }
+  },
+  {
+   "id": "bronch_feeds",
+   "label": "Bronchiolitis feeding poorly",
+   "vignette": "4-month-old girl, 6.5 kg, born at term, day 4 of a cough. HR 150, RR 55, SpO2 95% in air, temperature 37.5 C.",
+   "picks": {
+    "front": "stable",
+    "findings": "bronch",
+    "bronch_sev": "feeding"
+   },
+   "results": {
+    "front": "Alert, mild recession, breathing on her own, no stridor.",
+    "findings": "First episode; coryza then cough; fine crackles throughout both lungs.",
+    "bronch_sev": "Saturation 95% in air, no apnea, no grunting; taking 40% of usual feeds, 2 wet nappies in 24 hours, dry lips."
+   }
+  },
+  {
+   "id": "bronch_severe",
+   "label": "Severe bronchiolitis in a premature infant",
+   "vignette": "7-week-old boy, 4.5 kg, born at 34 weeks, 3 days of cough. HR 175, RR 76, SpO2 89% in air.",
+   "picks": {
+    "front": "stable",
+    "findings": "bronch",
+    "bronch_sev": "severe"
+   },
+   "results": {
+    "front": "Tiring but breathing on his own, grunting, no stridor.",
+    "findings": "First episode; coryza then cough; crackles and wheeze throughout; temperature 37.9 C.",
+    "bronch_sev": "Grunting, marked recession, RR 76, saturation 89% in air."
+   }
+  },
+  {
+   "id": "asthma_moderate",
+   "label": "Moderate asthma attack",
+   "vignette": "4-year-old girl, 16 kg, known asthma, wheezy since a cold yesterday. HR 125, RR 32, SpO2 95% in air.",
+   "picks": {
+    "front": "stable",
+    "findings": "asthma",
+    "asthma_sev": "moderate",
+    "asthma_resp": "good"
+   },
+   "results": {
+    "front": "Alert, talking, mild recession, no stridor.",
+    "findings": "Known asthma on an inhaled steroid; widespread wheeze, no crackles.",
+    "asthma_sev": "Talks in sentences; saturation 95%; HR 125, RR 32.",
+    "asthma_resp": "An hour after the last dose: chest clear, no recession, saturation 97%, playing."
+   }
+  },
+  {
+   "id": "asthma_severe_ward",
+   "label": "Severe attack, incomplete response",
+   "vignette": "8-year-old boy, 26 kg, known asthma, 2 days of worsening wheeze. HR 135, RR 34, SpO2 90% in air.",
+   "picks": {
+    "front": "stable",
+    "findings": "asthma",
+    "asthma_sev": "severe",
+    "asthma_resp": "incomplete"
+   },
+   "results": {
+    "front": "Alert, sitting forward, breathing on his own, no stridor.",
+    "findings": "Known asthma; recurrent wheeze since age 3; wheeze throughout, no crackles.",
+    "asthma_sev": "Cannot finish a sentence in one breath; saturation 90%; HR 135, RR 34.",
+    "asthma_resp": "After an hour: talking in sentences, moderate recession, wheeze persists, saturation 93%."
+   }
+  },
+  {
+   "id": "asthma_severe_poor",
+   "label": "Severe attack, poor response",
+   "vignette": "10-year-old girl, 32 kg, known asthma with one previous PICU stay. HR 140, RR 36, SpO2 89% in air.",
+   "picks": {
+    "front": "stable",
+    "findings": "asthma",
+    "asthma_sev": "severe",
+    "asthma_resp": "poor"
+   },
+   "results": {
+    "front": "Alert, anxious, breathing on her own, no stridor.",
+    "findings": "Known asthma; widespread wheeze, no crackles.",
+    "asthma_sev": "Speaks in words; saturation 89%; HR 140, RR 36.",
+    "asthma_resp": "After an hour of albuterol, ipratropium and dexamethasone: still words only, saturation 90%, HR 145."
+   }
+  },
+  {
+   "id": "asthma_life",
+   "label": "Life-threatening asthma, alert",
+   "vignette": "7-year-old boy, 22 kg, known asthma, 6 hours of worsening wheeze. HR 150, RR 40, SpO2 86% in air, BP 104/62.",
+   "picks": {
+    "front": "stable",
+    "findings": "asthma",
+    "asthma_sev": "life"
+   },
+   "results": {
+    "front": "Alert and frightened, breathing on his own, no stridor.",
+    "findings": "Known asthma; loud wheeze throughout, no crackles.",
+    "asthma_sev": "Too breathless to talk, lips blue; alert and oriented; saturation 86%."
+   }
+  },
+  {
+   "id": "asthma_arrest",
+   "label": "Asthma attack, arrest imminent",
+   "vignette": "6-year-old girl, 20 kg, known asthma, 8 hours of worsening breathlessness despite her inhaler at home. HR 165, RR 44 and shallow, SpO2 84% in air.",
+   "picks": {
+    "front": "stable",
+    "findings": "asthma",
+    "asthma_sev": "arrest"
+   },
+   "results": {
+    "front": "Breathing on her own, shallow; drowsy; no stridor.",
+    "findings": "Known asthma; recurrent attacks; hardly any air entry, no crackles.",
+    "asthma_sev": "Drowsy and hard to rouse, near-silent chest, chest and abdomen moving out of step."
+   }
+  },
+  {
+   "id": "pna_mild",
+   "label": "Mild pneumonia",
+   "vignette": "3-year-old boy, 14 kg, 2 days of fever to 39.6 C and cough. HR 140, RR 38, SpO2 95% in air.",
+   "picks": {
+    "front": "stable",
+    "findings": "pna",
+    "pna_sev": "mild"
+   },
+   "results": {
+    "front": "Alert, mild tachypnea, breathing on his own, no stridor.",
+    "findings": "Fever 39.6 C; persistently focal crackles at the right base; no wheeze.",
+    "pna_sev": "Saturation 95%, drinking well, no danger signs, mild distress; sudden onset."
+   }
+  },
+  {
+   "id": "pna_atypical",
+   "label": "Walking pneumonia",
+   "vignette": "9-year-old girl, 28 kg, a week of dry cough, headache and sore throat. HR 104, RR 24, SpO2 97% in air, temperature 38.1 C.",
+   "picks": {
+    "front": "stable",
+    "findings": "pna",
+    "pna_sev": "atyp"
+   },
+   "results": {
+    "front": "Well, breathing comfortably, no stridor.",
+    "findings": "Persistent crackles at both bases, more on the left; no wheeze.",
+    "pna_sev": "Gradual onset over a week, dry cough, headache, low fever; saturation 97%; eating and drinking."
+   }
+  },
+  {
+   "id": "pna_severe",
+   "label": "Pneumonia needing admission",
+   "vignette": "18-month-old girl, 11 kg, 2 days of fever to 39.8 C and cough, drinking poorly. HR 160, RR 56, SpO2 89% in air.",
+   "picks": {
+    "front": "stable",
+    "findings": "pna",
+    "pna_sev": "admit"
+   },
+   "results": {
+    "front": "Unwell, grunting, breathing on her own, no stridor.",
+    "findings": "Fever 39.8 C; bronchial breathing and crackles at the left base; no wheeze.",
+    "pna_sev": "Saturation 89% in air, grunting, drinking under half her usual."
+   }
+  },
+  {
+   "id": "pertussis_infant",
+   "label": "Pertussis in a 3-week-old",
+   "vignette": "3-week-old boy, 3.8 kg, a week of runny nose, now coughing fits that end with him turning blue; one pause in breathing at home. Afebrile. His 14-year-old brother has coughed for 3 weeks. HR 150, RR 44, SpO2 97% between fits.",
+   "picks": {
+    "front": "stable",
+    "findings": "pert"
+   },
+   "results": {
+    "front": "Pink between fits and breathing on his own; no stridor.",
+    "findings": "Witnessed fit of coughing with cyanosis that settles; chest clear between fits; temperature 37.1 C."
+   }
+  },
+  {
+   "id": "pertussis_child",
+   "label": "Pertussis in a school-age child",
+   "vignette": "7-year-old girl, 22 kg, unvaccinated, 10 days of coughing fits ending in a whoop, sometimes with vomiting; well between fits. HR 96, RR 22, SpO2 98% in air, temperature 37.2 C.",
+   "picks": {
+    "front": "stable",
+    "findings": "pert_older"
+   },
+   "results": {
+    "front": "Alert, pink, breathing comfortably between fits; no stridor.",
+    "findings": "A witnessed fit ending in an inspiratory whoop; chest clear between fits; no apnea or cyanosis."
+   }
+  },
+  {
+   "id": "brue_lower",
+   "label": "Lower-risk BRUE",
+   "vignette": "3-month-old girl (91 days), 5.6 kg, born at 39 weeks; while awake she stopped breathing and went pale for about 20 seconds, then recovered on her own. First event. Now HR 132, RR 34, SpO2 99%.",
+   "picks": {
+    "front": "stable",
+    "findings": "brue",
+    "brue_risk": "lower"
+   },
+   "results": {
+    "front": "Alert, pink, feeding, breathing comfortably.",
+    "findings": "No cough, cold, fever, choking or vomiting around the event; normal exam.",
+    "brue_risk": "91 days old, term, first event, about 20 seconds, no CPR; history and exam unremarkable."
+   }
+  },
+  {
+   "id": "brue_higher",
+   "label": "Higher-risk BRUE",
+   "vignette": "6-week-old boy (42 days), 4.3 kg, born at term; during a nap he went limp and blue for about 30 seconds, then recovered. HR 140, RR 38, SpO2 99%.",
+   "picks": {
+    "front": "stable",
+    "findings": "brue",
+    "brue_risk": "higher"
+   },
+   "results": {
+    "front": "Alert, pink, feeding, breathing comfortably.",
+    "findings": "No cough, cold, fever, choking or vomiting around the event; normal exam.",
+    "brue_risk": "42 days old, so under 60 days; first event, about 30 seconds, no CPR."
+   }
+  },
+  {
+   "id": "other_dka",
+   "label": "Deep breathing, clear chest",
+   "vignette": "9-year-old girl, 27 kg, 2 days of vomiting and thirst, now breathing deeply. HR 128, RR 34, SpO2 99% in air.",
+   "picks": {
+    "front": "stable",
+    "findings": "other"
+   },
+   "results": {
+    "front": "Drowsy but rousable, breathing on her own, no stridor.",
+    "findings": "Deep, sighing breaths; chest clear, no wheeze; bedside glucose 480 mg/dL."
+   }
+  }
+ ]
+}

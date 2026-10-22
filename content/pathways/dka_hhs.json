@@ -1,0 +1,3232 @@
+{
+ "id": "pw_dka_hhs",
+ "title": "Hyperglycemic crisis: DKA and HHS",
+ "world": "endo",
+ "synonyms": [
+  "DKA",
+  "diabetic ketoacidosis",
+  "HHS",
+  "hyperosmolar hyperglycemic state",
+  "hyperosmolar hyperglycaemic state",
+  "HHNS",
+  "HONK",
+  "hyperglycemic crisis",
+  "hyperglycemic emergency",
+  "euglycemic DKA",
+  "SGLT2 inhibitor ketoacidosis",
+  "ketoacidosis",
+  "insulin drip",
+  "insulin infusion",
+  "anion gap acidosis",
+  "Kussmaul breathing",
+  "cerebral edema DKA",
+  "hyperchloremic acidosis",
+  "mixed DKA HHS"
+ ],
+ "reviewBy": "2029-06-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:39052901",
+   "label": "ADA/EASD 2024",
+   "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report (ADA, EASD, JBDS, AACE, DTS), Diabetes Care 2024",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39052901/"
+  },
+  {
+   "docId": "pmid:38907161",
+   "label": "ADA/EASD 2024 figures",
+   "title": "Hyperglycaemic crises in adults with diabetes: a consensus report, Diabetologia 2024 co-publication (Figures 2, 4 and 5)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38907161/"
+  },
+  {
+   "docId": "url:c7d4d9169e59",
+   "label": "JBDS DKA 2023",
+   "title": "The Management of Diabetic Ketoacidosis in Adults, Joint British Diabetes Societies for Inpatient Care (JBDS 02), March 2023 revision",
+   "url": "https://abcd.care/sites/default/files/site_uploads/JBDS_Guidelines_Current/JBDS_02_DKA_Guideline_with_QR_code_March_2023.pdf"
+  },
+  {
+   "docId": "pmid:36370077",
+   "label": "JBDS HHS 2022",
+   "title": "Management of Hyperosmolar Hyperglycaemic State (HHS) in Adults: an updated guideline from the Joint British Diabetes Societies for Inpatient Care Group, with its 2022 care pathway",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36370077/"
+  },
+  {
+   "docId": "url:ddbf6bf0c79c",
+   "label": "JBDS hypoglycaemia 2023",
+   "title": "The Hospital Management of Hypoglycaemia in Adults with Diabetes Mellitus (JBDS 01), revised January 2023",
+   "url": "https://abcd.care/sites/default/files/site_uploads/JBDS_Guidelines_Current/JBDS_01_Hypo_Guideline_with_QR_code_January_2023.pdf"
+  },
+  {
+   "docId": "pmid:19564476",
+   "label": "ADA 2009",
+   "title": "Hyperglycemic Crises in Adult Patients With Diabetes (ADA consensus statement), Diabetes Care 2009",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19564476/"
+  },
+  {
+   "docId": "pmid:36250645",
+   "label": "ISPAD 2022",
+   "title": "ISPAD Clinical Practice Consensus Guidelines 2022: Diabetic ketoacidosis and hyperglycemic hyperosmolar state",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36250645/"
+  }
+ ],
+ "differential": [
+  "DKA",
+  "HHS",
+  "Mixed DKA and HHS",
+  "Euglycemic DKA",
+  "Alcoholic ketoacidosis",
+  "Starvation ketosis",
+  "Hyperglycemia without crisis"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Suspected hyperglycemic crisis. First moves?",
+   "options": [
+    "ABCs, large-bore IV access and isotonic saline; ECG and cardiac monitor",
+    "IV insulin bolus first, then fluids once the glucose is back",
+    "Venous gas and ketones first; fluids once the diagnosis is confirmed",
+    "Sodium bicarbonate for the acidosis, then fluids and insulin"
+   ],
+   "answer": 0,
+   "chainStep": "ABCs; large-bore IV access; start 0.9% saline; ECG and cardiac monitoring",
+   "why": "Fluid comes first: it is the most important initial treatment, and the insulin infusion starts only once fluids are running. No priming insulin bolus is needed; the consensus gives one only when setting up the infusion will be delayed. Bicarbonate is not routine. The ECG looks for hyperkalemia and ischemia.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Fluid administration and deficits; 0 to 60 minutes, Aims; 0 to 60 minutes, Action 1; Controversial areas"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Insulin; Section 4, Bicarbonate; Section 3, Clinical presentation"
+    }
+   ]
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Airway, consciousness and blood pressure",
+   "outcomes": [
+    {
+     "id": "stable",
+     "if": "Airway safe, systolic 90 or more; alert, or drowsy but protecting the airway",
+     "next": "labs"
+    },
+    {
+     "id": "shock",
+     "if": "Shock; systolic under 90",
+     "next": "shock"
+    },
+    {
+     "id": "obtunded",
+     "if": "Airway at risk; stupor or coma, or vomiting with a falling GCS",
+     "next": "airway"
+    }
+   ]
+  },
+  {
+   "id": "shock",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Systolic under 90. Next?",
+   "options": [
+    "Saline 500 mL over 10 to 15 minutes, repeated while systolic is under 90",
+    "Start the insulin infusion; the pressure recovers as the glucose falls",
+    "Norepinephrine now, holding fluid until an echo has been done",
+    "Albumin boluses, which stay in the circulation longer than saline"
+   ],
+   "answer": 0,
+   "chainStep": "0.9% saline 500 mL over 10 to 15 minutes, repeated while systolic is under 90; consider sepsis or heart failure; critical care review",
+   "why": "Hypotension in DKA is usually low circulating volume: 500 mL of saline over 10 to 15 minutes, repeated while the systolic stays under 90, and most people need 500 to 1,000 mL given rapidly. Other causes, sepsis and heart failure, are considered and critical care involved. Crystalloid, not colloid, is the resuscitation fluid. Insulin before adequate fluid can cause cardiovascular collapse as water leaves the intravascular space. Pressors belong to cardiac compromise, with hemodynamic monitoring.",
+   "next": "labs",
+   "sources": [
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "0 to 60 minutes, Action 2; Controversial areas"
+    },
+    {
+     "docId": "pmid:36370077",
+     "where": "Insulin dose and timing"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Severe hypovolemia (consensus)",
+     "dose": "0.9% saline or other crystalloid, 1.0 L/h",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38907161",
+       "where": "Fig. 4"
+      }
+     ]
+    },
+    {
+     "item": "Cardiac compromise",
+     "dose": "Hemodynamic monitoring and pressors",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38907161",
+       "where": "Fig. 4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "airway",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Stuporous and vomiting. Next?",
+   "options": [
+    "Critical care now; protect the airway, then a nasogastric tube",
+    "Ward bed with hourly checks; reassess after the first liter",
+    "Sodium bicarbonate to correct the pH and wake the patient",
+    "Insulin bolus now, to clear the ketones before any fluid"
+   ],
+   "answer": 0,
+   "chainStep": "Critical care assessment; protect the airway; nasogastric tube with airway protection; ICU",
+   "why": "A drowsy patient in DKA is seriously concerning and needs critical care assessment, and a nasogastric tube with airway protection prevents aspiration. Altered mental status is a reason for ICU care in the consensus. Bicarbonate is not routine, and insulin follows fluid.",
+   "next": "labs",
+   "sources": [
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "0 to 60 minutes, Action 1; 0 to 60 minutes, Aims"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Level of care; Section 4, Bicarbonate"
+    }
+   ]
+  },
+  {
+   "id": "labs",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Fluids running. Bloods to confirm the crisis?",
+   "options": [
+    "Glucose, blood ketones, venous gas, electrolytes, urea, creatinine, osmolality",
+    "Urine ketone dipstick, to diagnose and then to follow treatment",
+    "Arterial gas, since a venous gas is not reliable in acidosis",
+    "HbA1c and C-peptide first, to decide whether this is diabetes"
+   ],
+   "answer": 0,
+   "chainStep": "Glucose, blood beta-hydroxybutyrate, venous gas, electrolytes (anion gap, potassium), urea, creatinine, osmolality, blood count; ECG",
+   "why": "The initial samples are glucose, electrolytes, a venous gas, a blood count and ketones. Blood beta-hydroxybutyrate is the recommended ketone test for diagnosis and monitoring: urine ketones underestimate early and overestimate late, and are not used to call resolution. A venous gas is enough. The anion gap (sodium minus chloride and bicarbonate; over 12 fits DKA) is second line, useful where ketones cannot be measured. Effective osmolality (2 x sodium + glucose, both in mmol/L) sorts out HHS. The diagnosis rests on glucose or known diabetes, ketones and acidosis, not on HbA1c.",
+   "next": "trigger_ask",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 3, Clinical presentation; Section 3, DKA criteria; Section 4, Monitoring; Section 4, Resolution"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 2"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Point of care testing"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Anion gap, UK formula",
+     "dose": "JBDS adds potassium: (Na + K) minus (Cl + HCO3)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "Diagnosis of DKA"
+      }
+     ],
+     "note": "The two sources use different anion gap formulas; results here use the consensus formula, without potassium."
+    }
+   ],
+   "calcs": [
+    "anion_gap",
+    "effective_osm"
+   ]
+  },
+  {
+   "id": "trigger_ask",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "While the labs run: the trigger?",
+   "options": [
+    "Examine for infection; ECG, urine, cultures; ask about insulin and SGLT2 use",
+    "Broad-spectrum antibiotics now, since infection is the commonest trigger",
+    "Search for a trigger once the ketoacidosis has cleared",
+    "CT of the abdomen now for any abdominal pain, before treatment"
+   ],
+   "answer": 0,
+   "chainStep": "Search for the precipitant: examination for infection, ECG, blood cultures, urinalysis, chest x-ray if indicated, pregnancy test when relevant; medication and insulin history",
+   "why": "Infection is the commonest trigger worldwide, and missed insulin the other big one; MI, stroke, pancreatitis and drugs, SGLT2 inhibitors among them, also precipitate crises. Every patient is examined for infection and ischemia and has an ECG, which also shows hyperkalemia. Antibiotics follow clinical, laboratory or radiological evidence of infection. Abdominal pain is common in DKA itself and is investigated further if it does not settle as the dehydration and acidosis resolve.",
+   "next": "trigger",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 1, Risk factors; Section 3, Clinical presentation"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "0 to 60 minutes, Action 1"
+    },
+    {
+     "docId": "pmid:36370077",
+     "where": "Antibiotic therapy; Clinical presentation"
+    }
+   ]
+  },
+  {
+   "id": "trigger",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "History, examination and ECG",
+   "outcomes": [
+    {
+     "id": "infection",
+     "if": "Infection found; pneumonia, urinary infection or gastroenteritis",
+     "orders": [
+      {
+       "item": "Antibiotics",
+       "dose": "When there are clinical signs, or laboratory or radiological evidence of infection; local sepsis guidance",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:36370077",
+         "where": "Antibiotic therapy"
+        }
+       ]
+      }
+     ],
+     "next": "dx"
+    },
+    {
+     "id": "missed",
+     "if": "Missed treatment; omitted insulin or diabetes medicines, or a pump failure",
+     "orders": [
+      {
+       "item": "Before discharge",
+       "dose": "Education on the event and on diabetes management, written sick day rules; follow-up within 2 to 4 weeks",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39052901",
+         "where": "Section 7, Prevention"
+        },
+        {
+         "docId": "url:c7d4d9169e59",
+         "where": "Other considerations"
+        }
+       ]
+      }
+     ],
+     "next": "dx"
+    },
+    {
+     "id": "mi",
+     "if": "ST elevation on the ECG; MI as the trigger",
+     "orders": [
+      {
+       "item": "Level of care",
+       "dose": "ICU when critical illness such as MI is the precipitating cause",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39052901",
+         "where": "Section 4, Level of care"
+        }
+       ]
+      }
+     ],
+     "next": "end_mi"
+    },
+    {
+     "id": "sglt2",
+     "if": "SGLT2 inhibitor; often with fasting, a low-carbohydrate diet or illness",
+     "orders": [
+      {
+       "item": "SGLT2 inhibitor",
+       "dose": "Stop on admission",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39052901",
+         "where": "Table 4, SGLT2 inhibitor"
+        },
+        {
+         "docId": "url:c7d4d9169e59",
+         "where": "Euglycaemic DKA"
+        }
+       ]
+      },
+      {
+       "item": "Restarting it",
+       "dose": "Not recommended in type 1; in type 2 not routinely recommended after DKA (consensus); JBDS leaves it to the diabetes team",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39052901",
+         "where": "Table 4, SGLT2 inhibitor"
+        },
+        {
+         "docId": "url:c7d4d9169e59",
+         "where": "Euglycaemic DKA"
+        }
+       ],
+       "note": "The two sources differ in tone."
+      }
+     ],
+     "next": "dx"
+    },
+    {
+     "id": "none",
+     "if": "No clear trigger; including a first presentation of diabetes",
+     "next": "dx"
+    }
+   ]
+  },
+  {
+   "id": "dx",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Glucose, ketones, venous gas and osmolality",
+   "outcomes": [
+    {
+     "id": "dka_mm",
+     "if": "DKA, mild or moderate; glucose 200 or more, ketones 3.0 or more, pH under 7.3 or bicarbonate under 18, and pH 7.0 or more, bicarbonate 10 or more, ketones 6.0 or less, alert or drowsy",
+     "ddx": {
+      "lead": [
+       "DKA"
+      ],
+      "out": [
+       "HHS",
+       "Euglycemic DKA",
+       "Hyperglycemia without crisis"
+      ]
+     },
+     "orders": [
+      {
+       "item": "Level of care (consensus grading)",
+       "dose": "Mild: regular or observation unit. Moderate: step-down or intermediate care. Not every variable needs to be met",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39052901",
+         "where": "Table 2"
+        }
+       ]
+      },
+      {
+       "item": "JBDS severity markers",
+       "dose": "Any of ketones over 6.0, bicarbonate under 5.0, pH under 7.0, potassium under 3.5 on admission, GCS under 12, SpO2 under 92%, systolic under 90, pulse over 100 or under 60, anion gap over 16 by its formula: consider a Level 2 (HDU) bed",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:c7d4d9169e59",
+         "where": "Assessment of severity"
+        }
+       ]
+      }
+     ],
+     "next": "fluids"
+    },
+    {
+     "id": "dka_sev",
+     "if": "DKA, severe; glucose 200 or more with pH under 7.0, bicarbonate under 10, ketones over 6.0, or stupor",
+     "ddx": {
+      "lead": [
+       "DKA"
+      ],
+      "out": [
+       "HHS",
+       "Euglycemic DKA",
+       "Hyperglycemia without crisis"
+      ]
+     },
+     "next": "icu"
+    },
+    {
+     "id": "mixed",
+     "if": "Mixed DKA and HHS; glucose 600 or more, effective osmolality over 300, with ketones 3.0 or more and acidosis",
+     "ddx": {
+      "lead": [
+       "Mixed DKA and HHS"
+      ],
+      "out": [
+       "Euglycemic DKA",
+       "Hyperglycemia without crisis"
+      ]
+     },
+     "orders": [
+      {
+       "item": "Insulin",
+       "dose": "Fixed-rate IV insulin 0.1 units/kg/h, started with the fluids once potassium is 3.5 or more",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39052901",
+         "where": "Section 4, Insulin in HHS"
+        },
+        {
+         "docId": "pmid:36370077",
+         "where": "Mixed DKA/HHS"
+        }
+       ]
+      },
+      {
+       "item": "Fluids (JBDS)",
+       "dose": "Positive balance of 3 to 6 L in the first 12 hours",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:36370077",
+         "where": "Mixed DKA/HHS"
+        }
+       ]
+      },
+      {
+       "item": "Osmolality",
+       "dose": "Fall of 3 to 8 mOsm/kg an hour, no faster",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39052901",
+         "where": "Section 4, Fluid therapy in HHS"
+        },
+        {
+         "docId": "pmid:36370077",
+         "where": "Osmolality, sodium and glucose"
+        }
+       ]
+      },
+      {
+       "item": "Resolution",
+       "dose": "Also needs the HHS criteria: osmolality under 300, urine output over 0.5 mL/kg/h, cognition improved, glucose under 250",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39052901",
+         "where": "Section 4, Resolution"
+        }
+       ]
+      },
+      {
+       "item": "Thromboprophylaxis",
+       "dose": "Prophylactic-dose low molecular weight heparin unless thrombosis is suspected",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39052901",
+         "where": "Table 3"
+        },
+        {
+         "docId": "url:c7d4d9169e59",
+         "where": "60 minutes to 6 hours, Action 1"
+        }
+       ]
+      },
+      {
+       "item": "Level of care",
+       "dose": "ICU (consensus); JBDS: HDU discussion if any escalation marker, such as osmolality over 350",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39052901",
+         "where": "Section 4, Level of care"
+        },
+        {
+         "docId": "pmid:36370077",
+         "where": "Escalation of management"
+        }
+       ]
+      }
+     ],
+     "next": "fluids"
+    },
+    {
+     "id": "hhs",
+     "if": "HHS; glucose 600 or more, effective osmolality over 300, ketones under 3.0, pH 7.3 or more, bicarbonate 15 or more",
+     "ddx": {
+      "lead": [
+       "HHS"
+      ],
+      "out": [
+       "DKA",
+       "Mixed DKA and HHS",
+       "Euglycemic DKA",
+       "Hyperglycemia without crisis"
+      ]
+     },
+     "orders": [
+      {
+       "item": "Level of care",
+       "dose": "ICU (consensus); JBDS: HDU discussion if any escalation marker, such as osmolality over 350",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39052901",
+         "where": "Section 4, Level of care"
+        },
+        {
+         "docId": "pmid:36370077",
+         "where": "Escalation of management"
+        }
+       ]
+      }
+     ],
+     "next": "hhs_fluid"
+    },
+    {
+     "id": "eu",
+     "if": "Euglycemic DKA; glucose under 200 with ketoacidosis in known diabetes",
+     "ddx": {
+      "lead": [
+       "Euglycemic DKA"
+      ],
+      "out": [
+       "HHS",
+       "Mixed DKA and HHS",
+       "Hyperglycemia without crisis"
+      ]
+     },
+     "next": "eu_start"
+    },
+    {
+     "id": "not_crisis",
+     "if": "Neither; hyperglycemia without ketoacidosis or hyperosmolality",
+     "ddx": {
+      "lead": [
+       "Hyperglycemia without crisis"
+      ],
+      "out": [
+       "DKA",
+       "HHS",
+       "Mixed DKA and HHS",
+       "Euglycemic DKA"
+      ]
+     },
+     "next": "end_not_crisis"
+    },
+    {
+     "id": "aka",
+     "if": "Ketoacidosis without diabetes; normal glucose, no diabetes, heavy drinking",
+     "ddx": {
+      "lead": [
+       "Alcoholic ketoacidosis"
+      ],
+      "out": [
+       "HHS",
+       "Mixed DKA and HHS"
+      ]
+     },
+     "next": "end_aka"
+    }
+   ]
+  },
+  {
+   "id": "icu",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Severe DKA. Level of care?",
+   "options": [
+    "ICU or high-dependency care, with continuous monitoring",
+    "Regular ward with hourly glucose checks",
+    "Emergency department observation with subcutaneous rapid-acting insulin",
+    "Medical ward once the first liter is in, if the pH is improving"
+   ],
+   "answer": 0,
+   "chainStep": "ICU (UK: Level 2 high-dependency unit) for severe DKA; continuous cardiac monitoring",
+   "why": "Severe DKA (pH under 7.0, bicarbonate under 10, ketones over 6.0, stupor or coma) is graded for intensive care, as are patients whose crisis was triggered by critical illness or who have altered mental status; JBDS refers severe DKA for a Level 2 (high-dependency) bed. Subcutaneous rapid-acting insulin is for uncomplicated mild or moderate DKA, never severe.",
+   "next": "fluids",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Table 2; Section 4, Level of care; Section 4, Insulin"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Assessment of severity"
+    }
+   ]
+  },
+  {
+   "id": "eu_start",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Euglycemic DKA. Fluids and insulin?",
+   "options": [
+    "Dextrose with the saline from the start, plus insulin; stop the SGLT2 inhibitor",
+    "No insulin infusion as the glucose is under 200; stop the SGLT2 inhibitor",
+    "Saline and insulin, no dextrose unless hypoglycemia develops; stop the SGLT2 inhibitor",
+    "Insulin 0.02 units/kg/h with no dextrose; stop the SGLT2 inhibitor"
+   ],
+   "answer": 0,
+   "chainStep": "5 to 10% dextrose with 0.9% saline from the start of the insulin infusion; insulin 0.1 units/kg/h; stop the SGLT2 inhibitor",
+   "why": "Euglycemic DKA is treated as DKA: insulin is what switches off ketogenesis, and dextrose is the substrate that lets it run without hypoglycemia, so 5 or 10% dextrose starts with the saline at the start of the insulin. JBDS gives 10% glucose at 125 mL/h straight away and insulin at 0.1 units/kg/h, dropping to 0.05 if the blood glucose still falls on the 10% glucose. The SGLT2 inhibitor stops on admission.",
+   "next": "fluids",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Table 4, SGLT2 inhibitor; Section 3, DKA criteria"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Euglycaemic DKA; Insulin therapy"
+    }
+   ],
+   "orders": [
+    {
+     "item": "10% glucose (JBDS)",
+     "dose": "125 mL/h from the start",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "Euglycaemic DKA"
+      }
+     ]
+    },
+    {
+     "item": "Insulin (JBDS)",
+     "dose": "0.1 units/kg/h; 0.05 if the glucose falls despite 10% glucose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "Euglycaemic DKA"
+      }
+     ]
+    },
+    {
+     "item": "SGLT2 inhibitor",
+     "dose": "Stop on admission",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Table 4, SGLT2 inhibitor"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "insulin_rate"
+   ]
+  },
+  {
+   "id": "fluids",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Fluid for the first hours?",
+   "options": [
+    "0.9% saline or a balanced crystalloid, 500 to 1,000 mL/h for the first 2 to 4 hours",
+    "0.45% saline as the first fluid, to avoid raising the sodium further",
+    "5% dextrose in water alone, at 250 mL/h until the glucose has fallen",
+    "Fluid restricted to 100 mL/h for 4 hours to prevent cerebral edema"
+   ],
+   "answer": 0,
+   "chainStep": "0.9% saline or balanced crystalloid 500 to 1,000 mL/h for the first 2 to 4 hours (JBDS: 1 L in the first hour); smaller boluses for older adults, heart failure or dialysis",
+   "why": "Without renal or cardiac compromise, the consensus runs isotonic saline or a balanced crystalloid at 500 to 1,000 mL/h for the first 2 to 4 hours and corrects the deficit over 24 to 48 hours. Saline is the UK default, 1 L in the first hour; balanced crystalloids resolve DKA faster with less hyperchloremic acidosis. Older adults, heart failure and dialysis get smaller boluses, such as 250 mL, with frequent reassessment. Hypotonic saline is not a first fluid, dextrose joins the saline rather than replacing it, and slower fluid did not change neurologic outcomes in the large pediatric trial.",
+   "next": "k_check",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Fluid therapy"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "0 to 60 minutes, Action 2; Controversial areas"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Typical JBDS regimen, previously well 70 kg adult, systolic 90 or more",
+     "dose": "0.9% saline 1 L over the 1st hour, then 1 L over 2 hours, 1 L over 2 hours, 1 L over 4 hours, 1 L over 4 hours, 1 L over 6 hours, potassium from the second liter; reassess at 12 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "0 to 60 minutes, Action 2"
+      }
+     ]
+    },
+    {
+     "item": "Cautious replacement",
+     "dose": "Older adults, heart failure, dialysis: smaller boluses (for example 250 mL) with frequent hemodynamic assessment; JBDS adds pregnancy and young adults 18 to 25",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Fluid therapy"
+      },
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "0 to 60 minutes, Action 2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k_check",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Fluids running. Before the insulin starts?",
+   "options": [
+    "Potassium level, and confirm the patient is passing urine",
+    "Start insulin now; check potassium at the 4-hour draw",
+    "Give 40 mmol of potassium to everyone before any insulin",
+    "Sodium bicarbonate first, to protect the potassium"
+   ],
+   "answer": 0,
+   "chainStep": "Serum potassium (and urine output) before insulin; ECG for hyperkalemia changes",
+   "why": "Total body potassium is depleted even when the serum level is normal or high, and insulin, correction of acidosis and fluid all drive it down. The level before insulin decides whether insulin starts and how much potassium goes in the fluid, which needs adequate urine output. Bicarbonate raises the risk of hypokalemia.",
+   "next": "k",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Potassium; Section 4, Bicarbonate"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Complications 1, potassium"
+    }
+   ],
+   "calcs": [
+    "k_bands"
+   ]
+  },
+  {
+   "id": "k",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Potassium before insulin",
+   "outcomes": [
+    {
+     "id": "low",
+     "if": "Potassium under 3.5; low on arrival",
+     "next": "k_low"
+    },
+    {
+     "id": "mid",
+     "if": "Potassium 3.5 to 5.0; passing urine",
+     "next": "k_mid"
+    },
+    {
+     "id": "high",
+     "if": "Potassium over 5.0; no potassium yet",
+     "next": "k_high"
+    }
+   ]
+  },
+  {
+   "id": "k_low",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Potassium under 3.5 before any insulin. Next?",
+   "options": [
+    "Hold the insulin; IV potassium until the level is above 3.5",
+    "Start insulin now; recheck potassium at 4 hours",
+    "Start insulin at 0.05 units/kg/h with no potassium",
+    "Potassium-free saline until the level rises with rehydration"
+   ],
+   "answer": 0,
+   "chainStep": "Hold insulin; IV potassium 10 mmol/h (ADA text) until potassium is above 3.5; cardiac monitoring; senior review",
+   "why": "Low potassium on arrival (5 to 10% of DKA) means potassium goes in first and the insulin waits until the level is above 3.5: insulin drives potassium into cells and can cause life-threatening arrhythmias and respiratory muscle weakness. Faster replacement needs central venous access. JBDS calls for senior review and a more concentrated potassium infusion, which may need a Level 2 or 3 bed; it does not say to hold the insulin. Older US sources (ADA 2009) hold insulin under 3.3.",
+   "next": "insulin",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Potassium"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "0 to 60 minutes, Action 3; Complications 1, potassium"
+    },
+    {
+     "docId": "pmid:19564476",
+     "where": "Potassium"
+    }
+   ],
+   "orders": [
+    {
+     "item": "IV potassium",
+     "dose": "10 mmol/h until above 3.5; faster replacement needs central venous access",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Potassium"
+      },
+      {
+       "docId": "pmid:38907161",
+       "where": "Fig. 4"
+      }
+     ],
+     "note": "The consensus text says 10 mmol/h; its Figure 4 prints 10 to 20 (mmol per liter per hour)."
+    },
+    {
+     "item": "Insulin",
+     "dose": "Delayed until potassium is above 3.5",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Potassium"
+      }
+     ],
+     "note": "JBDS (UK) gives additional potassium with senior review and does not state a hold."
+    }
+   ],
+   "calcs": [
+    "k_bands"
+   ]
+  },
+  {
+   "id": "k_mid",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Potassium 3.5 to 5.0, passing urine. Next?",
+   "options": [
+    "Start insulin with potassium in every liter, keeping it at 4 to 5",
+    "Insulin alone; add potassium only if it falls under 3.5",
+    "Hold insulin until potassium has been replaced to over 5.0",
+    "Oral potassium only; keep the IV fluid potassium-free"
+   ],
+   "answer": 0,
+   "chainStep": "Insulin infusion with potassium in each liter of fluid (consensus text 20 to 30 mmol/L; JBDS 40 mmol/L), target potassium 4 to 5; recheck at 2 hours",
+   "why": "Potassium replacement starts once the level is under 5.0 (JBDS: 5.5) and urine is flowing, to hold it at 4 to 5 while insulin and fluid drive it down; levels typically fall 1 to 2 mmol/L in the first 48 hours. Waiting for hypokalemia is too late. Potassium is rechecked 2 hours after insulin starts, then every 4 hours; JBDS checks it on the venous gas at 1 and 2 hours, then 2-hourly.",
+   "next": "insulin",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Potassium"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Complications 1, potassium; Metabolic treatment targets; 60 minutes to 6 hours, Action 2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Potassium in the fluids",
+     "dose": "Consensus text: 20 to 30 mmol per liter; consensus Figure 4: 10 to 20 mmol per liter; JBDS: 40 mmol/L for potassium 3.5 to 5.5",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Potassium"
+      },
+      {
+       "docId": "pmid:38907161",
+       "where": "Fig. 4"
+      },
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "Complications 1, potassium"
+      }
+     ],
+     "note": "The consensus text and its own Figure 4 give different amounts; JBDS gives more."
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Potassium 2 hours after insulin starts, then every 4 hours until resolution; JBDS: venous potassium at 60 minutes, 2 hours, then 2-hourly",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Potassium"
+      },
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "60 minutes to 6 hours, Action 2"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "k_bands"
+   ]
+  },
+  {
+   "id": "k_high",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Potassium over 5.0. Next?",
+   "options": [
+    "Start insulin; no potassium yet; recheck in 2 hours",
+    "Hold insulin until the potassium is normal",
+    "Add 20 mmol of potassium per liter now; total body potassium is low",
+    "Hold fluids until the potassium falls"
+   ],
+   "answer": 0,
+   "chainStep": "Start the insulin infusion; no potassium in the fluids; recheck potassium every 2 hours; cardiac monitoring",
+   "why": "Above 5.0 the consensus starts insulin but gives no potassium and rechecks every 2 hours; JBDS gives none above 5.5. The high level reflects the shift out of cells, not the stores, and it falls with insulin and fluid, so replacement begins once it drops into range.",
+   "next": "insulin",
+   "sources": [
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Potassium"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Complications 1, potassium"
+    }
+   ],
+   "calcs": [
+    "k_bands"
+   ]
+  },
+  {
+   "id": "insulin",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Potassium at least 3.5, replaced first if it was lower. Insulin?",
+   "options": [
+    "Fixed-rate IV short-acting insulin, 0.1 units/kg/h",
+    "Fixed-rate IV insulin at 0.05 units/kg/h from the start, on saline alone",
+    "Subcutaneous long-acting insulin alone, no infusion",
+    "IV insulin 0.1 units/kg/h, stopped once the glucose is under 250"
+   ],
+   "answer": 0,
+   "chainStep": "Fixed-rate IV insulin infusion 0.1 units/kg/h (a 0.1 units/kg bolus only if the infusion will be delayed); continue usual basal insulin; LMWH prophylaxis",
+   "why": "A fixed-rate IV infusion of short-acting insulin at 0.1 units/kg/h by estimated weight is the standard; a 0.1 units/kg bolus is given only when the infusion will be delayed (JBDS: intramuscular), and usual basal insulin continues. 0.05 units/kg/h is for when the glucose falls under 250 mg/dL on treatment (euglycemic DKA starts at 0.1 with dextrose already running, JBDS), or for HHS without ketoacidosis. Stopping insulin when the glucose normalizes leaves the ketoacidosis untreated; dextrose is added instead. Subcutaneous rapid-acting analogs are an alternative only in uncomplicated mild or moderate DKA.",
+   "next": "acid",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Insulin"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Insulin therapy; 0 to 60 minutes, Action 4"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Insulin infusion",
+     "dose": "0.1 units/kg/h by estimated weight (7 units/h at 70 kg); JBDS: 50 units soluble insulin in 50 mL 0.9% saline",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Insulin"
+      },
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "0 to 60 minutes, Action 4"
+      }
+     ]
+    },
+    {
+     "item": "Bolus",
+     "dose": "0.1 units/kg (IV or IM) only if the infusion will be delayed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Insulin"
+      },
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "0 to 60 minutes, Action 4"
+      }
+     ],
+     "note": "JBDS lists no priming bolus as standard practice."
+    },
+    {
+     "item": "Usual basal insulin",
+     "dose": "Continue at the usual dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Insulin"
+      },
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "0 to 60 minutes, Action 4"
+      }
+     ]
+    },
+    {
+     "item": "New type 1 diabetes",
+     "dose": "JBDS starts basal insulin 0.25 units/kg once daily alongside the infusion; the consensus notes 0.15 to 0.3 units/kg basal during the infusion shortens it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "Intravenous glucose concentration"
+      },
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Insulin"
+      }
+     ]
+    },
+    {
+     "item": "Mild or moderate uncomplicated DKA, alternative",
+     "dose": "Subcutaneous rapid-acting analog 0.1 units/kg, then 0.1 units/kg every hour or 0.2 units/kg every 2 hours; not for severe DKA or HHS",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38907161",
+       "where": "Fig. 4"
+      },
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Insulin"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Capillary glucose every 1 to 2 hours; electrolytes, phosphate, creatinine, beta-hydroxybutyrate and venous pH every 4 hours until resolution",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Monitoring"
+      }
+     ]
+    },
+    {
+     "item": "Routine phosphate",
+     "dose": "Not recommended",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Phosphate"
+      },
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "Controversial areas"
+      }
+     ]
+    },
+    {
+     "item": "Thromboprophylaxis",
+     "dose": "Prophylactic-dose low molecular weight heparin unless thrombosis is suspected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Table 3"
+      },
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "60 minutes to 6 hours, Action 1"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "insulin_rate"
+   ]
+  },
+  {
+   "id": "acid",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Venous pH",
+   "outcomes": [
+    {
+     "id": "under7",
+     "if": "Venous pH under 7.0; consider bicarbonate",
+     "next": "bicarb"
+    },
+    {
+     "id": "over7",
+     "if": "Venous pH 7.0 or above; no bicarbonate",
+     "next": "no_bicarb"
+    }
+   ]
+  },
+  {
+   "id": "bicarb",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Venous pH under 7.0. Bicarbonate?",
+   "options": [
+    "Consider it: 100 mmol in 400 mL sterile water every 2 hours until the pH is above 7.0",
+    "Bicarbonate infusion, titrated until the pH is back in the normal range",
+    "Bicarbonate in place of insulin until the pH is above 7.1, then insulin",
+    "50 mmol bicarbonate push now, before any fluid or insulin is started"
+   ],
+   "answer": 0,
+   "chainStep": "Consider sodium bicarbonate 100 mmol (8.4%) in 400 mL sterile water every 2 hours until pH is above 7.0 (consensus); JBDS: not routine",
+   "why": "Fluid and insulin usually resolve the acidosis, and bicarbonate brings hypokalemia, cerebral edema and paradoxical CNS acidosis, so it is not routine. The consensus considers it only below pH 7.0, giving 100 mmol in 400 mL of sterile water every 2 hours to reach a pH above 7.0, not a normal pH. JBDS does not recommend it, though intensive care teams occasionally use it when the pH stays low and inotropes are needed. It never replaces insulin, which suppresses ketogenesis. ADA 2009 used pH under 6.9.",
+   "next": "glu",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Bicarbonate"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Controversial areas; Insulin therapy"
+    },
+    {
+     "docId": "pmid:19564476",
+     "where": "Bicarbonate therapy"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Sodium bicarbonate",
+     "dose": "100 mmol (8.4% solution) in 400 mL sterile water every 2 hours to reach pH above 7.0",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Bicarbonate"
+      }
+     ],
+     "note": "JBDS (UK) does not recommend it."
+    },
+    {
+     "item": "Potassium",
+     "dose": "Bicarbonate raises the risk of hypokalemia: recheck it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Bicarbonate"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "no_bicarb",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Venous pH 7.0 or above. Bicarbonate?",
+   "options": [
+    "No; fluid and insulin will clear the acidosis",
+    "Yes, 100 mmol over 2 hours, since the pH is under 7.2",
+    "Yes, whenever the bicarbonate is under 15",
+    "Yes, to protect the heart until the insulin works"
+   ],
+   "answer": 0,
+   "chainStep": "No bicarbonate at pH 7.0 or above; fluid and insulin",
+   "why": "Routine bicarbonate is not recommended: fluid and insulin resolve the acidosis, and bicarbonate has shown no advantage for cardiac or neurologic outcomes or for recovery, while adding hypokalemia, cerebral edema and paradoxical CNS acidosis. The consensus threshold for considering it is pH under 7.0; JBDS gives none.",
+   "next": "glu",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Bicarbonate"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Controversial areas"
+    }
+   ]
+  },
+  {
+   "id": "glu",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Glucose and ketones on the infusion",
+   "outcomes": [
+    {
+     "id": "under250",
+     "if": "Glucose under 250, ketones still up; above 0.6 mmol/L",
+     "next": "dex"
+    },
+    {
+     "id": "eu_dex",
+     "if": "Euglycemic throughout; dextrose already running",
+     "orders": [
+      {
+       "item": "Insulin (JBDS)",
+       "dose": "Reduce to 0.05 units/kg/h if the glucose falls despite 10% glucose",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:c7d4d9169e59",
+         "where": "Euglycaemic DKA"
+        }
+       ]
+      }
+     ],
+     "next": "course"
+    },
+    {
+     "id": "slow",
+     "if": "Ketones not falling; under 0.5 mmol/L an hour, glucose barely moving",
+     "next": "slow"
+    }
+   ]
+  },
+  {
+   "id": "slow",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Ketones falling under 0.5 mmol/L an hour, glucose barely moving. Next?",
+   "options": [
+    "Check the pump and line; if working, raise the insulin by 1 unit/h hourly",
+    "Halve the insulin rate, since a fast fall later risks hypoglycemia",
+    "Add bicarbonate to speed the clearance of the ketones",
+    "Continue unchanged and recheck the ketones in 4 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Check the insulin pump, connection and residual volume; if working, increase the infusion by 1 unit/h hourly until ketones fall at least 0.5 mmol/L an hour",
+   "why": "The JBDS targets are ketones down at least 0.5 mmol/L an hour, or bicarbonate up and glucose down 3 mmol/L an hour. When they are missed, first check that the pump works, is connected and holds the right residual volume; if it does, the infusion goes up 1 unit/h every hour until the targets are met. Ketones and glucose are reviewed hourly, not at 4 hours, and bicarbonate may even delay the fall in ketones.",
+   "next": "dex",
+   "sources": [
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Metabolic treatment targets; 60 minutes to 6 hours, Action 2; Controversial areas"
+    }
+   ]
+  },
+  {
+   "id": "dex",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Once the glucose is under 250 mg/dL (13.9 mmol/L) with ketones still raised: next?",
+   "options": [
+    "Add 5 to 10% dextrose; reduce insulin to 0.05 units/kg/h and keep it running",
+    "Stop the insulin infusion now that the glucose is under 250 mg/dL",
+    "Stop the infusion and start the usual subcutaneous insulin regimen",
+    "Keep insulin at 0.1 units/kg/h on saline alone until the glucose is under 100 mg/dL"
+   ],
+   "answer": 0,
+   "chainStep": "At glucose under 250 mg/dL (JBDS: 14 mmol/L): add 5 to 10% dextrose (JBDS: 10% at 125 mL/h) to the saline; reduce insulin to 0.05 units/kg/h; keep glucose 150 to 200 until resolution",
+   "why": "Glucose usually falls under 250 within 4 to 8 hours, well before the ketoacidosis resolves. Dextrose is added so the insulin can keep running until the ketones clear, and the rate drops to 0.05 units/kg/h (JBDS: consider), which cuts both hypoglycemia and hypokalemia. Target 150 to 200 mg/dL until resolution. Stopping the infusion, or moving to subcutaneous insulin before resolution, leaves the ketoacidosis untreated. Older US protocols (ADA 2009) added dextrose at 200 mg/dL; the 2024 consensus moved the threshold to 250.",
+   "next": "course",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Fluid therapy; Section 4, Insulin"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "60 minutes to 6 hours, Action 2; Intravenous glucose concentration; Insulin therapy"
+    },
+    {
+     "docId": "pmid:19564476",
+     "where": "Insulin therapy; Fluid therapy"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Dextrose",
+     "dose": "5 to 10% added to the 0.9% saline; JBDS: 10% glucose at 125 mL/h alongside the saline",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Fluid therapy"
+      },
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "60 minutes to 6 hours, Action 2"
+      }
+     ]
+    },
+    {
+     "item": "Insulin",
+     "dose": "0.05 units/kg/h until resolution",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Insulin"
+      },
+      {
+       "docId": "pmid:38907161",
+       "where": "Fig. 4"
+      }
+     ]
+    },
+    {
+     "item": "Glucose target",
+     "dose": "150 to 200 mg/dL (8.3 to 11.0 mmol/L) until resolution",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38907161",
+       "where": "Fig. 4"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "insulin_rate"
+   ]
+  },
+  {
+   "id": "course",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The next hours",
+   "outcomes": [
+    {
+     "id": "on_track",
+     "if": "On track; ketones falling, potassium 4 to 5, glucose in range",
+     "next": "resolve"
+    },
+    {
+     "id": "hypo",
+     "if": "Hypoglycemia; glucose under 70 mg/dL (3.9 mmol/L)",
+     "next": "hypo"
+    },
+    {
+     "id": "hypok",
+     "if": "Potassium under 3.5 on the infusion; replace, review insulin",
+     "next": "hypok"
+    },
+    {
+     "id": "cerebral",
+     "if": "Possible cerebral edema; headache, falling GCS, slowing pulse",
+     "next": "cerebral"
+    },
+    {
+     "id": "phos",
+     "if": "Low phosphate with weakness; severely low, with weak muscles or breathing",
+     "next": "phos"
+    }
+   ]
+  },
+  {
+   "id": "hypo",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Glucose under 70 mg/dL on the infusion, nil by mouth, ketones still raised. Next?",
+   "options": [
+    "IV glucose, recheck within 15 minutes; then insulin continues with more dextrose",
+    "Stop the insulin infusion until the ketones are rechecked in the morning",
+    "Stop the infusion and switch to the usual subcutaneous insulin now",
+    "Oral juice and continue as before, rechecking at the 2-hour round"
+   ],
+   "answer": 0,
+   "chainStep": "Treat the low with IV glucose (JBDS: 100 mL of 20% or 200 mL of 10% over 15 minutes); recheck in 10 to 15 minutes; keep or restart the insulin at a reviewed rate with more dextrose until the ketoacidosis resolves",
+   "why": "Hypoglycemia under 70 mg/dL occurs in 16 to 28% of DKA treatment, which is why glucose is checked every 1 to 2 hours. A low is treated at once and rechecked within 15 minutes. JBDS stops an insulin infusion while the low is treated and restarts it once it is fully treated; the ketoacidosis still needs insulin, so neither the insulin nor the dextrose is left off before the patient is eating, and the dextrose and insulin rate are reviewed so it does not recur.",
+   "next": "resolve",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Table 3"
+    },
+    {
+     "docId": "url:ddbf6bf0c79c",
+     "where": "Section A; Section C"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Intravenous glucose concentration"
+    }
+   ],
+   "orders": [
+    {
+     "item": "IV glucose, nil by mouth (JBDS)",
+     "dose": "100 mL of 20% glucose or 200 mL of 10% glucose over 15 minutes; recheck in 10 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ddbf6bf0c79c",
+       "where": "Section D, step 4; Section C, steps 5 and 7"
+      }
+     ]
+    },
+    {
+     "item": "Able to swallow (JBDS)",
+     "dose": "15 to 20 g rapid-acting carbohydrate; recheck in 10 to 15 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ddbf6bf0c79c",
+       "where": "Section A"
+      }
+     ]
+    },
+    {
+     "item": "Insulin infusion (JBDS)",
+     "dose": "Stop while the low is treated; restart once it is fully treated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ddbf6bf0c79c",
+       "where": "Section A"
+      }
+     ],
+     "note": "UK hospital hypoglycemia guidance; the consensus gives no treatment protocol for a low on the infusion."
+    }
+   ]
+  },
+  {
+   "id": "hypok",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Potassium under 3.5 on the insulin infusion. Next?",
+   "options": [
+    "More IV potassium in a monitored bed, rechecked hourly; review the insulin",
+    "Same fluids, with potassium rechecked at the next 4-hour draw",
+    "Sodium bicarbonate to correct the acidosis and so the potassium",
+    "Oral potassium only, keeping the IV fluids unchanged"
+   ],
+   "answer": 0,
+   "chainStep": "Increase IV potassium (concentrated potassium by central line in a monitored bed if needed); recheck hourly; senior review of the insulin rate",
+   "why": "Hypokalemia under 3.5 develops in about half of patients despite replacement, and severe hypokalemia carries a higher mortality. JBDS reviews the regimen, rechecks hourly, gives more concentrated potassium where it can be given safely, and considers 0.05 units/kg/h insulin once the glucose is under 14 mmol/L. The consensus replaces potassium until it is above 3.5, and when it is low at the start it delays insulin until then. Bicarbonate worsens hypokalemia.",
+   "next": "resolve",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Table 3; Section 4, Potassium; Section 4, Bicarbonate; Section 8, Research"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Complications 1, potassium; 60 minutes to 6 hours, Action 2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "IV potassium",
+     "dose": "Until above 3.5; faster replacement needs central venous access",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38907161",
+       "where": "Fig. 4"
+      }
+     ]
+    },
+    {
+     "item": "Insulin",
+     "dose": "JBDS: consider 0.05 units/kg/h once glucose is under 14 mmol/L; the consensus delays insulin when potassium is under 3.5 on admission",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "Complications 1, potassium"
+      },
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Potassium"
+      }
+     ],
+     "note": "Neither source says what to do with the insulin when potassium falls under 3.5 mid-infusion."
+    }
+   ]
+  },
+  {
+   "id": "cerebral",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "New headache, falling GCS and a slowing pulse on treatment. Next?",
+   "options": [
+    "Mannitol or hypertonic saline now; brain imaging once treatment has started",
+    "CT of the head first; mannitol only if it shows edema",
+    "Faster saline boluses to improve cerebral perfusion",
+    "Sodium bicarbonate to correct the acidosis driving the confusion"
+   ],
+   "answer": 0,
+   "chainStep": "Suspected cerebral edema: mannitol or hypertonic saline at once, not delayed for imaging; airway and ventilation as needed; imaging after; ICU",
+   "why": "A falling GCS during treatment is treated as cerebral edema at once with mannitol or hypertonic saline, without waiting for imaging. It is rare in adults but carries about 30% mortality; physically slight and younger adults are at higher risk, and in children it is the leading cause of DKA death. Fluid is adjusted to avoid both hypotension and excess volume, and bicarbonate is itself linked to cerebral injury.",
+   "next": "end_cerebral",
+   "sources": [
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Complications 3, cerebral oedema; Mortality and morbidity; 60 minutes to 6 hours, Action 1"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Table 3"
+    },
+    {
+     "docId": "pmid:36250645",
+     "where": "8.2 Cerebral injury; 8.2.1 Treatment of cerebral injury; Recommendations; Insulin therapy"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Adult dose",
+     "dose": "Mannitol and hypertonic saline doses are not stated in the adult sources",
+     "status": "pending"
+    },
+    {
+     "item": "Children (ISPAD 2022)",
+     "dose": "Mannitol 0.5 to 1 g/kg IV over 10 to 15 minutes, repeated after 30 minutes if needed; or 3% saline 2.5 to 5 mL/kg over 10 to 15 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36250645",
+       "where": "8.2.1 Treatment of cerebral injury"
+      }
+     ]
+    },
+    {
+     "item": "Imaging",
+     "dose": "After hyperosmolar treatment has started; it never delays treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36250645",
+       "where": "8.2.1 Treatment of cerebral injury"
+      },
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "Complications 3, cerebral oedema"
+      }
+     ]
+    },
+    {
+     "item": "Ventilation",
+     "dose": "Mechanical ventilation suggested (consensus); in intubated children the PCO2 is matched to the acidosis (ISPAD)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Table 3"
+      },
+      {
+       "docId": "pmid:36250645",
+       "where": "8.2.1 Treatment of cerebral injury"
+      }
+     ]
+    }
+   ],
+   "note": "Pediatric note: ISPAD 2022 reports clinically overt cerebral injury in 0.5 to 0.9% of pediatric DKA with 21 to 24% mortality, more often in younger children and new-onset diabetes, and linked to bicarbonate. Children follow ISPAD, not this adult pathway: fluid before insulin, insulin 0.05 to 0.1 U/kg/h at least 1 hour after fluids start, no IV insulin bolus, and mannitol or hypertonic saline at the bedside with the dose calculated when several risk factors are present."
+  },
+  {
+   "id": "phos",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Phosphate low with muscle weakness on treatment. Next?",
+   "options": [
+    "Potassium phosphate 20 to 30 mmol added to the replacement fluid",
+    "No phosphate; recheck it once the ketoacidosis has resolved",
+    "Rapid IV phosphate bolus over 15 minutes to correct it quickly",
+    "Calcium gluconate for the weakness, phosphate tomorrow"
+   ],
+   "answer": 0,
+   "chainStep": "Potassium phosphate 20 to 30 mmol added to the fluids when phosphate is severely low with muscle weakness or respiratory or cardiac compromise (the 2024 consensus prints under 1.0 mmol/L; ADA 2009 used under 1.0 mg/dL); watch the calcium",
+   "why": "Routine phosphate brings no benefit, but severe depletion can worsen respiratory failure, cause arrhythmias and rhabdomyolysis. The 2024 consensus replaces it with muscle weakness or respiratory or cardiac compromise and a phosphate under 1.0 mmol/L (about 3.1 mg/dL, inside the normal range); ADA 2009 used under 1.0 mg/dL (0.32 mmol/L), adding 20 to 30 mmol of potassium phosphate to the replacement fluid; replacing it too fast can precipitate hypocalcemia.",
+   "next": "resolve",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Phosphate"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Controversial areas"
+    },
+    {
+     "docId": "pmid:19564476",
+     "where": "Phosphate"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Potassium phosphate",
+     "dose": "20 to 30 mmol added to the replacement fluid; not rapid",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Phosphate"
+      }
+     ]
+    },
+    {
+     "item": "Threshold",
+     "dose": "2024 consensus: under 1.0 mmol/L with muscle weakness or respiratory or cardiac compromise. ADA 2009: under 1.0 mg/dL (0.32 mmol/L), or cardiac dysfunction, anemia or respiratory depression",
+     "status": "conflict",
+     "note": "1.0 mmol/L is about 3.1 mg/dL, a normal value; ADA 2009 used 1.0 mg/dL.",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Phosphate"
+      },
+      {
+       "docId": "pmid:19564476",
+       "where": "Phosphate"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "resolve",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Resolution check",
+   "outcomes": [
+    {
+     "id": "resolved",
+     "if": "Resolved; ketones under 0.6, pH 7.3 or more, bicarbonate 18 or more",
+     "next": "transition"
+    },
+    {
+     "id": "unresolved",
+     "if": "Not resolved at 24 hours; ketones 0.6 or more or pH under 7.3",
+     "next": "end_unresolved"
+    },
+    {
+     "id": "hyperchlor",
+     "if": "Ketones cleared, bicarbonate low; ketones under 0.6, pH 7.3 or more, bicarbonate under 18, high chloride, normal anion gap",
+     "next": "hyperchlor"
+    }
+   ]
+  },
+  {
+   "id": "hyperchlor",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Ketones under 0.6 and pH 7.3 or more, but the bicarbonate is low with a high chloride. Next?",
+   "options": [
+    "Resolved; hyperchloremic acidosis from saline: move to subcutaneous insulin",
+    "Not resolved: continue the insulin infusion until the bicarbonate is 18",
+    "Sodium bicarbonate to bring the bicarbonate back to normal",
+    "Persistent ketoacidosis: restart the full DKA protocol"
+   ],
+   "answer": 0,
+   "chainStep": "DKA resolved (ketones under 0.6, venous pH 7.3 or more); low bicarbonate with high chloride and a normal anion gap is hyperchloremic acidosis, self-limiting; transition to subcutaneous insulin",
+   "why": "Resolution is ketones under 0.6 mmol/L with venous pH 7.3 or more. Large volumes of 0.9% saline cause a hyperchloremic, normal anion gap acidosis in recovery that lowers the bicarbonate; it is self-limiting with few consequences, and mistaking it for persistent DKA delays the switch to subcutaneous insulin. That is why JBDS does not use bicarbonate as the marker at this stage and the consensus does not use the anion gap. Balanced crystalloids cause it less often.",
+   "next": "transition",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Resolution; Section 3, DKA criteria; Table 3"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "6 to 12 hours, Action 2"
+    }
+   ],
+   "calcs": [
+    "anion_gap"
+   ]
+  },
+  {
+   "id": "transition",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "DKA resolved and eating. Off the infusion?",
+   "options": [
+    "Subcutaneous basal-bolus insulin first; stop the infusion 1 to 2 hours later",
+    "Stop the infusion, then give subcutaneous insulin with the next meal",
+    "Long-acting insulin given at the same moment the infusion is stopped",
+    "Keep the insulin infusion running until the day of discharge"
+   ],
+   "answer": 0,
+   "chainStep": "Subcutaneous basal-bolus insulin started 1 to 2 hours before the infusion stops (JBDS: stop it 30 to 60 minutes after short-acting insulin with a meal); diabetes team; education; follow-up",
+   "why": "An overlap prevents rebound hyperglycemia and ketoacidosis: the consensus starts subcutaneous insulin 1 to 2 hours before stopping the infusion; JBDS gives short-acting insulin with a meal and stops the infusion 30 to 60 minutes later, never sooner than 30. Known diabetes: the pre-admission doses, changed before discharge if they were inadequate; insulin-naive: about 0.5 to 0.6 units/kg/day (0.3 with frailty or kidney disease), 40 to 60% as basal. Everyone gets education, sick day advice and follow-up.",
+   "next": "end_dka",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Transition; Section 7, Prevention"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4; Fig. 5"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "12 to 24 hours; Single page pathway, Box 6; Conversion to subcutaneous insulin"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Total daily dose, insulin-naive",
+     "dose": "0.5 to 0.6 units/kg/day; about 0.3 with hypoglycemia risk such as kidney disease or frailty; 40 to 60% as basal, the rest as three mealtime rapid-acting doses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Transition"
+      },
+      {
+       "docId": "pmid:38907161",
+       "where": "Fig. 5"
+      }
+     ]
+    },
+    {
+     "item": "Known diabetes",
+     "dose": "Pre-admission doses; change the regimen at discharge if it was inadequate or a drug contributed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Transition"
+      }
+     ]
+    },
+    {
+     "item": "SGLT2 inhibitors",
+     "dose": "Do not start or continue in hospital; not recommended in type 1",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38907161",
+       "where": "Fig. 5"
+      },
+      {
+       "docId": "pmid:39052901",
+       "where": "Table 4, SGLT2 inhibitor"
+      }
+     ]
+    },
+    {
+     "item": "Diabetes team",
+     "dose": "Review within 24 hours of admission (JBDS); follow-up within 2 to 4 weeks of discharge",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c7d4d9169e59",
+       "where": "Conversion to subcutaneous insulin"
+      },
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 7, Prevention"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hhs_fluid",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "HHS, ketones low. First treatment?",
+   "options": [
+    "0.9% saline first, 1 L in the first hour; half the deficit over 12 hours",
+    "0.45% saline first, because the sodium is already high",
+    "Insulin infusion at once, before fluid, to bring the glucose down",
+    "Fluid restricted in an older patient, with insulin to lower the glucose"
+   ],
+   "answer": 0,
+   "chainStep": "0.9% saline 1 L over the first hour (caution in heart failure, kidney disease or weight under 50 kg); replace about 50% of the deficit in 12 hours; potassium by level; osmolality hourly at first; older adults, heart failure or dialysis: smaller boluses such as 250 mL (consensus)",
+   "why": "Fluid alone lowers the glucose and the osmolality, so 0.9% saline is the first treatment: it restores circulating volume and is relatively hypotonic to an HHS patient's serum. Aim to replace about half the estimated deficit in the first 12 hours (consensus: 8 to 12), with caution in heart failure, kidney disease or low weight. Insulin before adequate fluid can cause cardiovascular collapse and larger osmotic shifts. Hypotonic saline is kept for an osmolality that stops falling despite adequate fluid.",
+   "next": "hhs_glu",
+   "sources": [
+    {
+     "docId": "pmid:36370077",
+     "where": "Fluid replacement; Insulin dose and timing; Osmolality, sodium and glucose; Care pathway p1"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Fluid therapy in HHS; Table 3"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Potassium",
+     "dose": "JBDS: 40 mmol/L for 3.5 to 5.5, none for 5.5 to 5.9, senior review at 6.0 or more or under 3.5; the consensus Figure 4 bands cover DKA and HHS alike",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36370077",
+       "where": "Potassium replacement, Table 2; Care pathway p2, Table 2"
+      },
+      {
+       "docId": "pmid:38907161",
+       "where": "Fig. 4"
+      }
+     ]
+    },
+    {
+     "item": "Osmolality",
+     "dose": "JBDS: calculated (2 x Na + glucose + urea) hourly for the first 6 hours, then 2-hourly; the consensus measures it every 4 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36370077",
+       "where": "Osmolality, sodium and glucose; Care pathway p1"
+      },
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Monitoring"
+      }
+     ]
+    },
+    {
+     "item": "Escalate to HDU or ICU (JBDS)",
+     "dose": "Osmolality over 350, sodium over 160, pH under 7.1, potassium under 3.5 or over 6 on admission, GCS under 12, SpO2 under 92%, systolic under 90, pulse over 100 or under 60, urine under 0.5 mL/kg/h, AKI, hypothermia, MI or stroke",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36370077",
+       "where": "Care pathway p2, Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Feet",
+     "dose": "Foot assessment on admission and daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36370077",
+       "where": "Foot protection"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "osm_jbds"
+   ]
+  },
+  {
+   "id": "hhs_glu",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Glucose on saline alone",
+   "outcomes": [
+    {
+     "id": "plateau",
+     "if": "Plateau; glucose no longer falling, fluid balance positive",
+     "next": "hhs_insulin"
+    },
+    {
+     "id": "fast",
+     "if": "Falling fast; over 90 mg/dL (5 mmol/L) an hour",
+     "next": "hhs_fast"
+    }
+   ]
+  },
+  {
+   "id": "hhs_fast",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Glucose falling over 90 mg/dL an hour on saline alone. Next?",
+   "options": [
+    "Check the osmolality trend; consider slowing the fluid; no insulin yet",
+    "Start insulin at 0.1 units/kg/h now that the glucose is responding",
+    "Switch to 0.45% saline at a higher rate to speed the correction",
+    "Give another liter of 0.9% saline as a rapid bolus"
+   ],
+   "answer": 0,
+   "chainStep": "Glucose falling over 5 mmol/L (90 mg/dL) an hour: check the rate of fall of osmolality; consider reducing the fluid rate; no insulin while the glucose is still falling",
+   "why": "Glucose should fall no faster than 90 to 120 mg/dL an hour (JBDS: 5 mmol/L) and osmolality no faster than 3 to 8 mOsm/kg an hour, because fast shifts risk cerebral edema and osmotic demyelination. When glucose falls faster than that on fluid alone, JBDS checks the osmolality trend and considers slowing the fluid. Insulin waits until the glucose stops falling.",
+   "next": "hhs_insulin",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Fluid therapy in HHS"
+    },
+    {
+     "docId": "pmid:36370077",
+     "where": "Fluid replacement; Insulin dose and timing; Care pathway p2, Figure 2"
+    }
+   ],
+   "calcs": [
+    "osm_jbds"
+   ]
+  },
+  {
+   "id": "hhs_insulin",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Potassium 3.5 or more and the glucose has stopped falling on fluid alone. Insulin?",
+   "options": [
+    "Fixed-rate IV insulin, 0.05 units/kg/h",
+    "Subcutaneous rapid-acting insulin every 2 hours",
+    "No insulin until the sodium is normal",
+    "IV insulin at a rate that brings the glucose under 250 within 2 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Fixed-rate IV insulin 0.05 units/kg/h once the glucose plateaus with a positive fluid balance; 0.1 units/kg/h if ketones 3.0 or more, ketonuria 2+, pH under 7.3 or bicarbonate under 18 (mixed DKA and HHS); dextrose 5 or 10% at 125 mL/h once glucose is under 14 mmol/L (250 mg/dL)",
+   "why": "HHS needs less insulin than DKA: both sources start a fixed-rate infusion at 0.05 units/kg/h when ketones are under 3.0 and there is no acidosis, and 0.1 for mixed DKA and HHS. JBDS starts it only once the glucose has plateaued with a positive balance, unless ketones are over 3.0 (the JBDS care pathway also starts 0.05 at once for ketones over 1.0 to 3.0); the consensus notes that some withhold insulin this way. Subcutaneous rapid-acting insulin is not for HHS. Glucose should fall no faster than 90 to 120 mg/dL an hour, toward 200 to 250 mg/dL (JBDS: 10 to 15 mmol/L) in the first 24 hours.",
+   "next": "hhs_osm",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Insulin in HHS; Section 4, Fluid therapy in HHS; Section 4, Insulin"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "pmid:36370077",
+     "where": "Insulin dose and timing; Care pathway p1; Care pathway p2, Figure 2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Insulin",
+     "dose": "0.05 units/kg/h fixed rate",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39052901",
+       "where": "Section 4, Insulin in HHS"
+      },
+      {
+       "docId": "pmid:36370077",
+       "where": "Insulin dose and timing"
+      }
+     ]
+    },
+    {
+     "item": "Dextrose",
+     "dose": "5 or 10% at 125 mL/h once glucose is under 14 mmol/L, alongside the insulin and fluid",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36370077",
+       "where": "Insulin dose and timing; Care pathway p1"
+      }
+     ]
+    },
+    {
+     "item": "Glucose target",
+     "dose": "200 to 250 mg/dL (consensus); JBDS 10 to 15 mmol/L in the first 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38907161",
+       "where": "Fig. 4"
+      },
+      {
+       "docId": "pmid:36370077",
+       "where": "Care pathway p1"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "insulin_rate"
+   ]
+  },
+  {
+   "id": "hhs_osm",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Osmolality and sodium on treatment",
+   "outcomes": [
+    {
+     "id": "on_target",
+     "if": "Falling 3 to 8 an hour; sodium rising",
+     "next": "hhs_na"
+    },
+    {
+     "id": "stuck",
+     "if": "Not falling; sodium rising, fluid balance positive",
+     "next": "hhs_half"
+    },
+    {
+     "id": "too_fast",
+     "if": "Falling over 8 an hour; risk of demyelination",
+     "next": "hhs_slow"
+    }
+   ]
+  },
+  {
+   "id": "hhs_slow",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Osmolality falling over 8 an hour on treatment. Next?",
+   "options": [
+    "Slow the fluid and, if running, the insulin; recheck osmolality hourly",
+    "Same rates; a fast fall means the treatment is working well",
+    "Switch to 0.45% saline to keep the osmolality falling",
+    "Raise the insulin to 0.1 units/kg/h to finish the correction"
+   ],
+   "answer": 0,
+   "chainStep": "Osmolality falling over 8 mOsm/kg an hour: reduce the fluid rate and, if running, the insulin rate; recheck osmolality hourly",
+   "why": "Osmolality should fall 3 to 8 mOsm/kg an hour and no faster: rapid shifts risk cerebral edema and osmotic demyelination, and the consensus asks for a slow correction of hyperosmolarity in HHS. JBDS answers a fall over 8 an hour by considering a slower fluid rate and, if insulin has started, a lower insulin rate, with osmolality checked hourly in the first 6 hours. More insulin or hypotonic fluid would speed the fall further.",
+   "next": "hhs_vte",
+   "sources": [
+    {
+     "docId": "pmid:36370077",
+     "where": "Care pathway p2, Figure 1; Care pathway p1; Osmolality, sodium and glucose"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Fluid therapy in HHS; Table 3"
+    }
+   ],
+   "calcs": [
+    "osm_jbds"
+   ]
+  },
+  {
+   "id": "hhs_na",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Osmolality falling 3 to 8 an hour, sodium rising. Fluids?",
+   "options": [
+    "Continue 0.9% saline at the same rate; the rising sodium is expected",
+    "Halve the 0.9% saline rate because the sodium is rising",
+    "5% dextrose in water at the same rate to bring the sodium down",
+    "Stop the fluid until the sodium starts to fall again"
+   ],
+   "answer": 0,
+   "chainStep": "Osmolality falling 3 to 8 mOsm/kg an hour with sodium rising: continue 0.9% saline at the same rate",
+   "why": "As glucose falls, water moves into cells and the sodium rises: about 1.6 mmol/L for each 100 mg/dL fall in glucose (consensus), or 2.4 for each 5.5 mmol/L (JBDS). That rise is not a reason for hypotonic fluid; a rising sodium matters only if the osmolality is not falling with it. With the osmolality on target, the same fluid continues. Sodium should fall no more than 10 mmol/L in 24 hours. Older US teaching (ADA 2009) switched to 0.45% after the first hour when the corrected sodium was normal or high; the 2024 consensus dropped that rule: the initial rise in serum sodium is not an indication to give hypotonic fluids.",
+   "next": "hhs_vte",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Fluid therapy in HHS"
+    },
+    {
+     "docId": "pmid:36370077",
+     "where": "Fluid replacement; Care pathway p2, Figure 1"
+    },
+    {
+     "docId": "pmid:19564476",
+     "where": "Fluid therapy"
+    }
+   ],
+   "calcs": [
+    "na_rise",
+    "osm_jbds"
+   ]
+  },
+  {
+   "id": "hhs_half",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Osmolality not falling, sodium rising, fluid balance positive. Next?",
+   "options": [
+    "Switch to 0.45% saline at the same rate",
+    "Increase the rate of the 0.9% saline",
+    "5% dextrose in water bolus to drop the sodium quickly",
+    "Stop all fluid until the sodium falls"
+   ],
+   "answer": 0,
+   "chainStep": "Osmolality not falling despite a positive fluid balance and appropriate insulin: switch to 0.45% saline at the same rate",
+   "why": "0.45% saline is used only when the osmolality is not falling despite an adequate positive balance with 0.9% saline and appropriate insulin; with a negative balance the answer is more 0.9% saline. There are no data for fluids weaker than 0.45%, and fast osmotic shifts risk cerebral edema and osmotic demyelination. JBDS also raises an infusion already running to 0.1 units/kg/h when the glucose falls less than 5 mmol/L an hour despite adequate fluid.",
+   "next": "hhs_vte",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Fluid therapy in HHS; Table 3"
+    },
+    {
+     "docId": "pmid:36370077",
+     "where": "Fluid replacement; Care pathway p2, Figure 1; Care pathway p2, Figure 2"
+    }
+   ],
+   "calcs": [
+    "osm_jbds",
+    "na_rise"
+   ]
+  },
+  {
+   "id": "hhs_vte",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "HHS. Thrombosis prevention?",
+   "options": [
+    "Prophylactic-dose LMWH for the admission unless contraindicated",
+    "Therapeutic-dose LMWH, given the clot risk in HHS",
+    "Low-dose aspirin instead of heparin for the admission",
+    "No prophylaxis; HHS carries no more clot risk than DKA"
+   ],
+   "answer": 0,
+   "chainStep": "Prophylactic low molecular weight heparin for the whole admission unless contraindicated; therapeutic dose only for suspected thrombosis or ACS",
+   "why": "HHS is prothrombotic, with more venous thromboembolism than DKA. Everyone gets prophylactic LMWH for the admission unless contraindicated. There are no data for routine therapeutic anticoagulation, which is for suspected thrombosis or acute coronary syndrome. JBDS adds that it is not known whether the arterial events of HHS (myocardial infarction, stroke, peripheral arterial thrombosis) can be prevented by prophylactic LMWH or antiplatelet therapy.",
+   "next": "hhs_done",
+   "sources": [
+    {
+     "docId": "pmid:36370077",
+     "where": "Anticoagulation; Care pathway p1"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Table 3"
+    }
+   ]
+  },
+  {
+   "id": "hhs_done",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "When has HHS resolved?",
+   "options": [
+    "Osmolality under 300, urine 0.5 mL/kg/h or more, cognition back, glucose under 250",
+    "Glucose under 250 mg/dL, whatever the osmolality and urine output",
+    "Sodium back in the normal range and the patient eating again",
+    "Ketones under 0.6 and venous pH 7.3 or more on the gas"
+   ],
+   "answer": 0,
+   "chainStep": "HHS resolved: osmolality under 300 mOsm/kg, urine output 0.5 mL/kg/h or more, cognition back to baseline, glucose under 250 mg/dL (JBDS: 15 mmol/L); then subcutaneous treatment with the diabetes team",
+   "why": "Resolution is holistic: osmolality under 300, hypovolemia corrected with urine output of 0.5 mL/kg/h or more, cognition back to its pre-illness state, and glucose under 250 mg/dL (JBDS: 15 mmol/L). A normal glucose or sodium alone does not mean it has resolved, and ketone and pH criteria define DKA resolution, not HHS. Complete correction can take up to 72 hours.",
+   "next": "end_hhs",
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Resolution"
+    },
+    {
+     "docId": "pmid:36370077",
+     "where": "Table 3, Resolution; Care pathway p1; Fluid replacement"
+    }
+   ],
+   "calcs": [
+    "effective_osm"
+   ]
+  },
+  {
+   "id": "end_mi",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "MI as the trigger: ICU care, with the chest pain pathway's reperfusion alongside the crisis treatment, and fluid given cautiously with heart disease. The combined plan is not walked further in this version."
+  },
+  {
+   "id": "end_not_crisis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hyperglycemia without ketoacidosis or hyperosmolality: neither DKA nor HHS. Its management is not covered in this pathway."
+  },
+  {
+   "id": "end_aka",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ketoacidosis with a normal glucose, no diabetes and heavy drinking: alcoholic ketoacidosis, not DKA. Its treatment is not in this pathway's sources."
+  },
+  {
+   "id": "end_cerebral",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cerebral edema during DKA treatment: hyperosmolar therapy at once, airway support, imaging once treatment has started, ICU. Not walked further in this version."
+  },
+  {
+   "id": "end_dka",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "DKA resolved: fluid first, potassium checked before insulin and replaced with it, fixed-rate insulin, dextrose once glucose is under 250, bicarbonate only under pH 7.0, then subcutaneous insulin with an overlap, the trigger treated, education and follow-up."
+  },
+  {
+   "id": "end_unresolved",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Not resolved by 24 hours: senior and specialist review, check the pump and line, look again for the cause. Not walked further in this version."
+  },
+  {
+   "id": "end_hhs",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "HHS resolved: saline first, low-dose insulin once the glucose plateaus, osmolality falling 3 to 8 an hour, LMWH, daily foot checks, then subcutaneous treatment with the diabetes team."
+  }
+ ],
+ "cases": [
+  {
+   "id": "missed_insulin",
+   "label": "Moderate DKA after missed insulin",
+   "vignette": "24-year-old woman with type 1 diabetes, out of insulin for 2 days, vomiting with abdominal pain and deep, rapid breathing. BP 112/70, HR 98, alert. Weight 60 kg.",
+   "picks": {
+    "front": "stable",
+    "trigger": "missed",
+    "dx": "dka_mm",
+    "k": "mid",
+    "acid": "over7",
+    "glu": "under250",
+    "course": "on_track",
+    "resolve": "resolved"
+   },
+   "results": {
+    "front": "Airway clear, alert and talking; BP 112/70, HR 98, RR 28.",
+    "trigger": "Out of insulin for 2 days; no fever, chest and urine clear; ECG sinus rhythm, no ischemia; pregnancy test negative.",
+    "dx": "Glucose 486 mg/dL (27.0 mmol/L), beta-hydroxybutyrate 5.1 mmol/L, venous pH 7.14, bicarbonate 11; sodium 134, chloride 98: anion gap 25. Effective osmolality 295 mOsm/kg. BUN 24 mg/dL (urea 8.6 mmol/L), creatinine 1.3.",
+    "k": "Potassium 4.6 mmol/L; passing urine.",
+    "acid": "Venous pH 7.14.",
+    "glu": "Hour 5: glucose 196 mg/dL (10.9 mmol/L), ketones 2.4 mmol/L (falling 58 mg/dL and 0.54 mmol/L an hour).",
+    "course": "Ketones falling about 0.6 an hour; potassium 4.2 to 4.6; glucose 160 to 200 mg/dL.",
+    "resolve": "Hour 14: ketones 0.4 mmol/L, venous pH 7.34, bicarbonate 19; glucose 168; asking for breakfast."
+   }
+  },
+  {
+   "id": "low_k",
+   "label": "DKA with low potassium on arrival",
+   "vignette": "31-year-old man with type 1 diabetes, 3 days of diarrhea and vomiting, now short of breath and weak. BP 108/68, HR 96, alert. Weight 75 kg.",
+   "picks": {
+    "front": "stable",
+    "trigger": "infection",
+    "dx": "dka_mm",
+    "k": "low",
+    "acid": "over7",
+    "glu": "under250",
+    "course": "hypok",
+    "resolve": "resolved"
+   },
+   "results": {
+    "front": "Airway clear, alert; BP 108/68, HR 96, RR 26.",
+    "trigger": "Gastroenteritis: watery diarrhea with a low-grade fever; chest and urine clear; ECG sinus rhythm, no ischemia.",
+    "dx": "Glucose 398 mg/dL (22.1 mmol/L), beta-hydroxybutyrate 4.2 mmol/L, venous pH 7.18, bicarbonate 12; sodium 136, chloride 100: anion gap 24. Effective osmolality 294 mOsm/kg. BUN 26 mg/dL (urea 9.3 mmol/L), creatinine 1.4.",
+    "k": "Potassium 3.0 mmol/L; passing urine.",
+    "acid": "Venous pH 7.18.",
+    "glu": "Hour 4 on insulin: glucose 178 mg/dL (9.9 mmol/L), ketones 2.2 mmol/L (falling 55 mg/dL and 0.50 mmol/L an hour).",
+    "course": "Hour 6 on insulin: potassium 3.2 despite potassium in every liter; glucose 170 on dextrose; ketones 1.2.",
+    "resolve": "Hour 12 on insulin: ketones 0.5 mmol/L, venous pH 7.33, bicarbonate 18; potassium 4.0; eating."
+   }
+  },
+  {
+   "id": "severe_bicarb",
+   "label": "Severe DKA, pH under 7.0, with pneumonia",
+   "vignette": "27-year-old man with type 1 diabetes found confused at home after a week of cough and fever. Deep breathing at 32 a minute, BP 104/64, HR 118, temperature 38.6, responds only to pain, vomiting. Weight 70 kg.",
+   "picks": {
+    "front": "obtunded",
+    "trigger": "infection",
+    "dx": "dka_sev",
+    "k": "high",
+    "acid": "under7",
+    "glu": "under250",
+    "course": "phos",
+    "resolve": "hyperchlor"
+   },
+   "results": {
+    "front": "Responds only to pain (GCS 9), vomiting, airway at risk; BP 104/64, HR 118.",
+    "trigger": "Chest x-ray: right lower lobe consolidation. ECG sinus tachycardia, no ST elevation.",
+    "dx": "Glucose 540 mg/dL (30.0 mmol/L), beta-hydroxybutyrate 7.2 mmol/L, venous pH 6.85, bicarbonate 4; sodium 133, chloride 102: anion gap 27. Effective osmolality 296 mOsm/kg. BUN 42 mg/dL (urea 15.0 mmol/L), creatinine 1.8.",
+    "k": "Potassium 5.9 mmol/L; no ECG changes of hyperkalemia; passing urine by catheter.",
+    "acid": "Venous pH 6.85, bicarbonate 4.",
+    "glu": "Hour 6: glucose 196 mg/dL (10.9 mmol/L), ketones 4.0 mmol/L (falling 57 mg/dL and 0.53 mmol/L an hour).",
+    "course": "Hour 10: awake now; phosphate 0.8 mg/dL (0.26 mmol/L); new proximal weakness and a weak cough.",
+    "resolve": "Hour 20: ketones 0.3 mmol/L, venous pH 7.31, bicarbonate 16; sodium 139, chloride 117: anion gap 6. Glucose 172; eating."
+   }
+  },
+  {
+   "id": "shock",
+   "label": "Severe DKA in shock",
+   "vignette": "38-year-old man with type 1 diabetes, 3 days of vomiting, cool peripheries. BP 84/52, HR 126, RR 30, alert but slow to answer. Weight 64 kg.",
+   "picks": {
+    "front": "shock",
+    "trigger": "none",
+    "dx": "dka_sev",
+    "k": "mid",
+    "acid": "over7",
+    "glu": "under250",
+    "course": "on_track",
+    "resolve": "hyperchlor"
+   },
+   "results": {
+    "front": "Airway clear; BP 84/52, HR 126; cool, mottled knees.",
+    "trigger": "No infection on examination, urine or chest x-ray; ECG sinus tachycardia, no ischemia; he says he took every insulin dose.",
+    "dx": "Glucose 512 mg/dL (28.4 mmol/L), beta-hydroxybutyrate 6.4 mmol/L, venous pH 7.03, bicarbonate 7; sodium 135, chloride 101: anion gap 27. Effective osmolality 298 mOsm/kg. BUN 48 mg/dL (urea 17.1 mmol/L), creatinine 1.9.",
+    "k": "After 2 L: potassium 4.9 mmol/L; urine 60 mL in the last hour.",
+    "acid": "Venous pH 7.03.",
+    "glu": "Hour 5: glucose 196 mg/dL (10.9 mmol/L), ketones 3.8 mmol/L (falling 63 mg/dL and 0.52 mmol/L an hour).",
+    "course": "Ketones falling about 0.5 an hour; potassium 4.4; BP 118/72 without further boluses; glucose 160 to 200.",
+    "resolve": "Hour 18: ketones 0.4 mmol/L, venous pH 7.32, bicarbonate 15; sodium 140, chloride 119: anion gap 6. Glucose 178; eating."
+   }
+  },
+  {
+   "id": "stemi",
+   "label": "Crisis triggered by an MI",
+   "vignette": "61-year-old man with type 2 diabetes on insulin, 2 days of vomiting and malaise and a heavy feeling in his chest since this morning. BP 136/82, HR 92, alert.",
+   "picks": {
+    "front": "stable",
+    "trigger": "mi"
+   },
+   "results": {
+    "front": "Airway clear, alert; BP 136/82, HR 92.",
+    "trigger": "ECG: 2 mm ST elevation in II, III and aVF."
+   }
+  },
+  {
+   "id": "eu_sglt2",
+   "label": "Euglycemic DKA on empagliflozin",
+   "vignette": "54-year-old woman with type 2 diabetes on empagliflozin and basal insulin, 3 days on a very-low-carbohydrate diet, now nausea, vomiting and fast, deep breathing. BP 118/74, HR 96, alert. Weight 80 kg.",
+   "picks": {
+    "front": "stable",
+    "trigger": "sglt2",
+    "dx": "eu",
+    "k": "mid",
+    "acid": "over7",
+    "glu": "eu_dex",
+    "course": "hypo",
+    "resolve": "resolved"
+   },
+   "results": {
+    "front": "Airway clear, alert; BP 118/74, HR 96, RR 28.",
+    "trigger": "Empagliflozin daily, last dose this morning; 3 days of a very-low-carbohydrate diet; no fever, urine clear; ECG normal.",
+    "dx": "Glucose 182 mg/dL (10.1 mmol/L), beta-hydroxybutyrate 5.4 mmol/L, venous pH 7.16, bicarbonate 10; sodium 137, chloride 103: anion gap 24. Effective osmolality 284 mOsm/kg. BUN 22 mg/dL (urea 7.9 mmol/L), creatinine 1.1.",
+    "k": "Potassium 4.3 mmol/L; passing urine.",
+    "acid": "Venous pH 7.16.",
+    "glu": "Glucose 150 to 190 mg/dL on 10% glucose at 125 mL/h with insulin; ketones 5.4 to 3.2 over 4 hours.",
+    "course": "Hour 6: glucose 58 mg/dL (3.2 mmol/L), ketones 1.9; nauseated, nil by mouth.",
+    "resolve": "Hour 18: ketones 0.4 mmol/L, venous pH 7.32, bicarbonate 18; glucose 140; eating."
+   }
+  },
+  {
+   "id": "cerebral",
+   "label": "New diabetes, severe DKA, cerebral edema",
+   "vignette": "19-year-old woman, slim, no known medical history, 5 days of thirst, weight loss and vomiting, now drowsy with deep sighing breaths. BP 104/66, HR 112. Weight 50 kg.",
+   "picks": {
+    "front": "stable",
+    "trigger": "none",
+    "dx": "dka_sev",
+    "k": "mid",
+    "acid": "over7",
+    "glu": "under250",
+    "course": "cerebral"
+   },
+   "results": {
+    "front": "Drowsy but rousable to voice and protecting her airway; BP 104/66, HR 112.",
+    "trigger": "No infection found; ECG sinus tachycardia; pregnancy test negative; takes no medicines. A first presentation of diabetes.",
+    "dx": "Glucose 498 mg/dL (27.7 mmol/L), beta-hydroxybutyrate 6.8 mmol/L, venous pH 7.02, bicarbonate 6; sodium 134, chloride 100: anion gap 28. Effective osmolality 296 mOsm/kg. BUN 30 mg/dL (urea 10.7 mmol/L), creatinine 1.2.",
+    "k": "Potassium 4.4 mmol/L; passing urine.",
+    "acid": "Venous pH 7.02.",
+    "glu": "Hour 5: glucose 196 mg/dL (10.9 mmol/L), ketones 4.0 mmol/L (falling 60 mg/dL and 0.56 mmol/L an hour).",
+    "course": "Hour 6: new headache and confusion; GCS 15 at hour 3, now 11; heart rate 112 to 62; BP 150/90."
+   }
+  },
+  {
+   "id": "slow",
+   "label": "DKA that responds slowly to insulin",
+   "vignette": "42-year-old man with type 1 diabetes on an insulin pump, a day of nausea after his tubing kinked overnight. BP 128/80, HR 96, alert. Weight 118 kg.",
+   "picks": {
+    "front": "stable",
+    "trigger": "missed",
+    "dx": "dka_mm",
+    "k": "high",
+    "acid": "over7",
+    "glu": "slow",
+    "course": "on_track",
+    "resolve": "resolved"
+   },
+   "results": {
+    "front": "Airway clear, alert; BP 128/80, HR 96.",
+    "trigger": "Pump tubing kinked overnight: no insulin for about 12 hours; no fever; ECG normal.",
+    "dx": "Glucose 410 mg/dL (22.8 mmol/L), beta-hydroxybutyrate 5.6 mmol/L, venous pH 7.17, bicarbonate 12; sodium 135, chloride 99: anion gap 24. Effective osmolality 293 mOsm/kg. BUN 24 mg/dL (urea 8.6 mmol/L), creatinine 1.2.",
+    "k": "Potassium 5.7 mmol/L; passing urine.",
+    "acid": "Venous pH 7.17.",
+    "glu": "Hour 2: ketones 5.6 to 5.3, bicarbonate unchanged at 12, glucose 410 to 385 mg/dL.",
+    "course": "Pump, line and residual volume checked and working; after two 1 unit/h increases: ketones falling 0.6 an hour; glucose reached 196 at hour 8 and dextrose was added; potassium 4.5.",
+    "resolve": "Hour 15: ketones 0.5 mmol/L, venous pH 7.33, bicarbonate 19; eating."
+   }
+  },
+  {
+   "id": "mixed",
+   "label": "Mixed DKA and HHS with pneumonia",
+   "vignette": "66-year-old man with type 2 diabetes on metformin and glipizide, a week of cough, thirst and confusion. BP 112/70, HR 98, drowsy but answers questions. Weight 90 kg.",
+   "picks": {
+    "front": "stable",
+    "trigger": "infection",
+    "dx": "mixed",
+    "k": "mid",
+    "acid": "over7",
+    "glu": "under250",
+    "course": "on_track",
+    "resolve": "resolved"
+   },
+   "results": {
+    "front": "Drowsy but answers questions, airway safe; BP 112/70, HR 98.",
+    "trigger": "Chest x-ray: left lower lobe pneumonia. ECG sinus rhythm, no ischemia.",
+    "dx": "Glucose 760 mg/dL (42.2 mmol/L), beta-hydroxybutyrate 4.1 mmol/L, venous pH 7.21, bicarbonate 13; sodium 138, chloride 98: anion gap 27. Effective osmolality 318 mOsm/kg. BUN 62 mg/dL (urea 22.1 mmol/L), creatinine 2.0. Total osmolality (2 x Na + glucose + urea) 340.",
+    "k": "Potassium 4.8 mmol/L; passing urine.",
+    "acid": "Venous pH 7.21.",
+    "glu": "Hour 6: glucose 198 mg/dL (11.0 mmol/L), ketones 1.1 mmol/L (falling 94 mg/dL and 0.50 mmol/L an hour); sodium 142, urea 20 mmol/L: total osmolality 315, down from 340, about 4 an hour.",
+    "course": "Ketones falling about 0.5 an hour; potassium 4.4; glucose 160 to 200.",
+    "resolve": "Hour 22: ketones 0.4 mmol/L, venous pH 7.35, bicarbonate 20; sodium 140, glucose 190 mg/dL (10.6 mmol/L): effective osmolality 291; urine 0.8 mL/kg/h; alert and oriented; eating."
+   }
+  },
+  {
+   "id": "hhs_target",
+   "label": "HHS with a urinary infection",
+   "vignette": "78-year-old woman with type 2 diabetes on metformin, a week of passing a lot of urine and drinking little, now confused. BP 102/60, HR 104, dry mouth. Weight 60 kg.",
+   "picks": {
+    "front": "stable",
+    "trigger": "infection",
+    "dx": "hhs",
+    "hhs_glu": "plateau",
+    "hhs_osm": "on_target"
+   },
+   "results": {
+    "front": "Confused but rousable, airway safe; BP 102/60, HR 104.",
+    "trigger": "Urine dipstick: nitrite and leukocytes positive. ECG sinus tachycardia, no ischemia.",
+    "dx": "Glucose 1,080 mg/dL (60.0 mmol/L), beta-hydroxybutyrate 0.6 mmol/L, venous pH 7.36, bicarbonate 23; sodium 145, chloride 109: anion gap 13. Effective osmolality 350 mOsm/kg. BUN 56 mg/dL (urea 20.0 mmol/L), creatinine 2.1. Total osmolality (2 x Na + glucose + urea) 370. Potassium 4.4 mmol/L; passing urine.",
+    "hhs_glu": "1 L saline in the first hour, then about 500 mL/h: glucose 1,080 to 770 mg/dL over 4 hours, then 770, 760 and 765 on three hourly checks; positive balance 3.0 L; ketones 0.5.",
+    "hhs_osm": "4 hours on insulin: glucose 765 to 500 mg/dL (42.5 to 27.8 mmol/L), sodium 147 to 149, urea 17 to 14 mmol/L; total osmolality 354 to 340, about 3.4 an hour; positive balance."
+   }
+  },
+  {
+   "id": "hhs_stuck",
+   "label": "HHS whose osmolality stalls",
+   "vignette": "70-year-old man with type 2 diabetes who stopped his metformin and gliclazide a week ago because of nausea, now drowsy and very dry. BP 110/66, HR 98. Weight 72 kg.",
+   "picks": {
+    "front": "stable",
+    "trigger": "missed",
+    "dx": "hhs",
+    "hhs_glu": "fast",
+    "hhs_osm": "stuck"
+   },
+   "results": {
+    "front": "Drowsy but protecting his airway; BP 110/66, HR 98.",
+    "trigger": "Stopped metformin and gliclazide 7 days ago; no fever, urine and chest x-ray clear; ECG without ischemia.",
+    "dx": "Glucose 900 mg/dL (50.0 mmol/L), beta-hydroxybutyrate 0.4 mmol/L, venous pH 7.35, bicarbonate 21; sodium 150, chloride 115: anion gap 14. Effective osmolality 350 mOsm/kg. BUN 70 mg/dL (urea 25.0 mmol/L), creatinine 2.4. Total osmolality (2 x Na + glucose + urea) 375. Potassium 4.9 mmol/L; passing urine.",
+    "hhs_glu": "2 hours of 0.9% saline, no insulin: glucose 900 to 640 mg/dL (50.0 to 35.6 mmol/L), 130 mg/dL (7.2 mmol/L) an hour.",
+    "hhs_osm": "Hour 10, insulin raised to 0.1 units/kg/h at hour 7 for a slow glucose fall: total osmolality 351 and 351 three hours apart; sodium 153 to 155; glucose 440 to 380 mg/dL; urea 21 to 20 mmol/L; positive balance 3.5 L."
+   }
+  },
+  {
+   "id": "not_crisis",
+   "label": "High glucose, no crisis",
+   "vignette": "52-year-old woman with type 2 diabetes, out of metformin for 2 weeks, thirsty and tired; her meter read HI at home. BP 132/80, HR 88, alert.",
+   "picks": {
+    "front": "stable",
+    "trigger": "missed",
+    "dx": "not_crisis"
+   },
+   "results": {
+    "front": "Airway clear, alert; BP 132/80, HR 88.",
+    "trigger": "Out of metformin for 2 weeks; no fever, urine clear; ECG normal.",
+    "dx": "Glucose 420 mg/dL (23.3 mmol/L), beta-hydroxybutyrate 0.6 mmol/L, venous pH 7.38, bicarbonate 24; sodium 136, chloride 100: anion gap 12. Effective osmolality 295 mOsm/kg. BUN 20 mg/dL (urea 7.1 mmol/L), creatinine 1.0. Total osmolality (2 x Na + glucose + urea) 302."
+   }
+  },
+  {
+   "id": "aka",
+   "label": "Alcoholic ketoacidosis, the mimic",
+   "vignette": "45-year-old man who drinks heavily, 2 days of vomiting after a binge, unable to eat, upper abdominal pain, breathing deep and fast. No known diabetes. BP 118/72, HR 98, alert.",
+   "picks": {
+    "front": "stable",
+    "trigger": "none",
+    "dx": "aka"
+   },
+   "results": {
+    "front": "Airway clear, alert; BP 118/72, HR 98.",
+    "trigger": "No infection found; ECG normal; takes no medicines; no diabetes.",
+    "dx": "Glucose 92 mg/dL (5.1 mmol/L), beta-hydroxybutyrate 5.2 mmol/L, venous pH 7.24, bicarbonate 13; sodium 136, chloride 96: anion gap 27. Effective osmolality 277 mOsm/kg. BUN 18 mg/dL (urea 6.4 mmol/L), creatinine 1.0."
+   }
+  },
+  {
+   "id": "mild_uti",
+   "label": "Mild DKA with a urinary infection",
+   "vignette": "29-year-old woman with type 1 diabetes, 2 days of burning on urination and fever, vomited twice. BP 118/76, HR 96, alert, eating a little. Weight 65 kg.",
+   "picks": {
+    "front": "stable",
+    "trigger": "infection",
+    "dx": "dka_mm",
+    "k": "mid",
+    "acid": "over7",
+    "glu": "under250",
+    "course": "on_track",
+    "resolve": "resolved"
+   },
+   "results": {
+    "front": "Airway clear, alert; BP 118/76, HR 96.",
+    "trigger": "Urine: nitrite and leukocytes positive; temperature 38.2; ECG normal; pregnancy test negative.",
+    "dx": "Glucose 330 mg/dL (18.3 mmol/L), beta-hydroxybutyrate 3.6 mmol/L, venous pH 7.27, bicarbonate 17; sodium 136, chloride 103: anion gap 16. Effective osmolality 290 mOsm/kg. BUN 18 mg/dL (urea 6.4 mmol/L), creatinine 0.9.",
+    "k": "Potassium 4.4 mmol/L; passing urine.",
+    "acid": "Venous pH 7.27.",
+    "glu": "Hour 3: glucose 164 mg/dL (9.1 mmol/L), ketones 2.0 mmol/L (falling 55 mg/dL and 0.53 mmol/L an hour).",
+    "course": "Ketones falling about 0.6 an hour; potassium 4.3; glucose 160 to 200.",
+    "resolve": "Hour 10: ketones 0.3 mmol/L, venous pH 7.36, bicarbonate 21; eating lunch."
+   }
+  },
+  {
+   "id": "sglt2_dka",
+   "label": "DKA on dapagliflozin, glucose over 200",
+   "vignette": "58-year-old man with type 2 diabetes on dapagliflozin and metformin, fasting for 2 days before a colonoscopy, now vomiting and breathless. BP 126/78, HR 94, alert. Weight 85 kg.",
+   "picks": {
+    "front": "stable",
+    "trigger": "sglt2",
+    "dx": "dka_mm",
+    "k": "mid",
+    "acid": "over7",
+    "glu": "under250",
+    "course": "on_track",
+    "resolve": "resolved"
+   },
+   "results": {
+    "front": "Airway clear, alert; BP 126/78, HR 94.",
+    "trigger": "Dapagliflozin daily; 2 days of fasting before a colonoscopy; no fever, urine clear; ECG normal.",
+    "dx": "Glucose 262 mg/dL (14.6 mmol/L), beta-hydroxybutyrate 4.0 mmol/L, venous pH 7.22, bicarbonate 13; sodium 137, chloride 102: anion gap 22. Effective osmolality 289 mOsm/kg. BUN 20 mg/dL (urea 7.1 mmol/L), creatinine 1.0.",
+    "k": "Potassium 4.7 mmol/L; passing urine.",
+    "acid": "Venous pH 7.22.",
+    "glu": "Hour 2: glucose 152 mg/dL (8.4 mmol/L), ketones 2.9 mmol/L (falling 55 mg/dL and 0.55 mmol/L an hour).",
+    "course": "Ketones falling about 0.5 an hour; potassium 4.4; glucose 150 to 200.",
+    "resolve": "Hour 12: ketones 0.5 mmol/L, venous pH 7.33, bicarbonate 19; eating."
+   }
+  },
+  {
+   "id": "hhs_fast_osm",
+   "label": "HHS whose osmolality falls too fast",
+   "vignette": "64-year-old woman with type 2 diabetes on metformin, a week of cough and thirst, now drowsy. BP 106/64, HR 98. Weight 70 kg.",
+   "picks": {
+    "front": "stable",
+    "trigger": "infection",
+    "dx": "hhs",
+    "hhs_glu": "plateau",
+    "hhs_osm": "too_fast"
+   },
+   "results": {
+    "front": "Drowsy but rousable, airway safe; BP 106/64, HR 98.",
+    "trigger": "Chest x-ray: right middle lobe pneumonia. ECG sinus rhythm, no ischemia.",
+    "dx": "Glucose 820 mg/dL (45.6 mmol/L), beta-hydroxybutyrate 0.5 mmol/L, venous pH 7.34, bicarbonate 22; sodium 142, chloride 106: anion gap 14. Effective osmolality 330 mOsm/kg. BUN 48 mg/dL (urea 17.1 mmol/L), creatinine 1.8. Total osmolality (2 x Na + glucose + urea) 347. Potassium 4.6 mmol/L; passing urine.",
+    "hhs_glu": "1 L saline in the first hour, then about 500 mL/h: glucose 820 to 610 mg/dL over 4 hours, then 610, 605 and 608 on three hourly checks; positive balance 2.8 L; ketones 0.4.",
+    "hhs_osm": "2 hours on insulin 0.05 units/kg/h: glucose 605 to 290 mg/dL (33.6 to 16.1 mmol/L), sodium 145 to 146, urea 15 to 13 mmol/L; total osmolality 339 to 321, about 9 an hour."
+   }
+  },
+  {
+   "id": "unresolved",
+   "label": "DKA not resolved at 24 hours",
+   "vignette": "35-year-old man with type 1 diabetes who skipped insulin for 2 days while he could not eat, after 3 days of vomiting. BP 116/72, HR 96, alert. Weight 72 kg.",
+   "picks": {
+    "front": "stable",
+    "trigger": "missed",
+    "dx": "dka_mm",
+    "k": "mid",
+    "acid": "over7",
+    "glu": "under250",
+    "course": "on_track",
+    "resolve": "unresolved"
+   },
+   "results": {
+    "front": "Airway clear, alert; BP 116/72, HR 96, RR 26.",
+    "trigger": "Skipped insulin for 2 days because he was not eating; no fever, chest and urine clear; ECG normal.",
+    "dx": "Glucose 452 mg/dL (25.1 mmol/L), beta-hydroxybutyrate 5.0 mmol/L, venous pH 7.12, bicarbonate 10; sodium 133, chloride 97: anion gap 26. Effective osmolality 291 mOsm/kg. BUN 28 mg/dL (urea 10.0 mmol/L), creatinine 1.3.",
+    "k": "Potassium 4.8 mmol/L; passing urine.",
+    "acid": "Venous pH 7.12.",
+    "glu": "Hour 5: glucose 176 mg/dL (9.8 mmol/L), ketones 2.4 mmol/L (falling 55 mg/dL and 0.52 mmol/L an hour).",
+    "course": "Ketones falling about 0.5 an hour to hour 9; potassium 4.4; glucose 150 to 200.",
+    "resolve": "Hour 24: ketones 0.9 mmol/L, venous pH 7.27, bicarbonate 16; still vomiting and not eating."
+   }
+  }
+ ],
+ "calculators": [
+  {
+   "id": "insulin_rate",
+   "title": "Insulin infusion rate",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "wt",
+     "label": "Weight",
+     "unit": "kg",
+     "default": 70,
+     "min": 30,
+     "max": 250,
+     "step": 1
+    },
+    {
+     "id": "rate",
+     "label": "Rate, units/kg/h",
+     "choices": [
+      {
+       "label": "0.1: start, DKA or mixed",
+       "value": 0.1
+      },
+      {
+       "label": "0.05: glucose fallen under 250, or HHS",
+       "value": 0.05
+      }
+     ],
+     "default": 0.1
+    }
+   ],
+   "outputs": [
+    {
+     "label": "Fixed-rate IV insulin",
+     "expr": "wt * rate",
+     "unit": "units/h",
+     "decimals": 1,
+     "bands": [
+      {
+       "lte": 15,
+       "text": "15 units/h or less"
+      },
+      {
+       "gt": 15,
+       "text": "Over 15 units/h: JBDS goes higher only on diabetes team advice"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Insulin; Section 4, Insulin in HHS"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Insulin therapy, weight and dose table; 0 to 60 minutes, Action 4; Euglycaemic DKA"
+    }
+   ],
+   "note": "Short-acting insulin by estimated weight. HHS without ketoacidosis starts at 0.05; mixed DKA and HHS at 0.1. Euglycemic DKA starts at 0.1 with dextrose already running (JBDS). JBDS goes above 15 units/h only on diabetes team advice.",
+   "tests": [
+    {
+     "inputs": {
+      "wt": 70,
+      "rate": 0.1
+     },
+     "expect": [
+      7
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 60,
+      "rate": 0.05
+     },
+     "expect": [
+      3
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 118,
+      "rate": 0.1
+     },
+     "expect": [
+      11.8
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 160,
+      "rate": 0.1
+     },
+     "expect": [
+      16
+     ]
+    }
+   ]
+  },
+  {
+   "id": "anion_gap",
+   "title": "Anion gap",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "na",
+     "label": "Sodium",
+     "unit": "mmol/L",
+     "default": 134,
+     "min": 100,
+     "max": 180,
+     "step": 1
+    },
+    {
+     "id": "cl",
+     "label": "Chloride",
+     "unit": "mmol/L",
+     "default": 98,
+     "min": 60,
+     "max": 140,
+     "step": 1
+    },
+    {
+     "id": "hco3",
+     "label": "Bicarbonate",
+     "unit": "mmol/L",
+     "default": 11,
+     "min": 1,
+     "max": 45,
+     "step": 1
+    }
+   ],
+   "outputs": [
+    {
+     "label": "Anion gap",
+     "expr": "na - (cl + hco3)",
+     "unit": "mmol/L",
+     "decimals": 0,
+     "bands": [
+      {
+       "lte": 12,
+       "text": "12 or less"
+      },
+      {
+       "gt": 12,
+       "text": "Over 12: a high anion gap acidosis, fits DKA"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 3, DKA criteria; Section 4, Resolution"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Diagnosis of DKA; Assessment of severity"
+    }
+   ],
+   "note": "Second line: ketones make the diagnosis and call resolution, and after large volumes of saline a hyperchloremic acidosis makes the gap misleading. JBDS adds potassium, (Na + K) minus (Cl + HCO3), and counts over 16 on that formula as a severity marker.",
+   "tests": [
+    {
+     "inputs": {
+      "na": 134,
+      "cl": 98,
+      "hco3": 11
+     },
+     "expect": [
+      25
+     ]
+    },
+    {
+     "inputs": {
+      "na": 139,
+      "cl": 117,
+      "hco3": 16
+     },
+     "expect": [
+      6
+     ]
+    },
+    {
+     "inputs": {
+      "na": 136,
+      "cl": 100,
+      "hco3": 24
+     },
+     "expect": [
+      12
+     ]
+    }
+   ]
+  },
+  {
+   "id": "effective_osm",
+   "title": "Effective osmolality",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "na",
+     "label": "Sodium",
+     "unit": "mmol/L",
+     "default": 134,
+     "min": 100,
+     "max": 190,
+     "step": 1
+    },
+    {
+     "id": "glu",
+     "label": "Glucose",
+     "unit": "mg/dL",
+     "default": 486,
+     "min": 20,
+     "max": 2500,
+     "step": 1
+    }
+   ],
+   "outputs": [
+    {
+     "label": "Effective osmolality",
+     "expr": "2 * na + glu / 18",
+     "unit": "mOsm/kg",
+     "decimals": 0,
+     "bands": [
+      {
+       "lte": 300,
+       "text": "300 or less"
+      },
+      {
+       "gt": 300,
+       "text": "Over 300: meets the HHS osmolality criterion"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 2"
+    },
+    {
+     "docId": "pmid:19564476",
+     "where": "Table 1 and footnote; Diagnosis"
+    }
+   ],
+   "note": "Glucose in mg/dL is divided by 18 (ADA 2009). HHS also needs glucose 600 or more, ketones under 3.0, pH 7.3 or more and bicarbonate 15 or more. A total osmolality, adding urea, over 320 also qualifies. ADA 2009 set the effective cutoff at 320.",
+   "tests": [
+    {
+     "inputs": {
+      "na": 134,
+      "glu": 486
+     },
+     "expect": [
+      295
+     ]
+    },
+    {
+     "inputs": {
+      "na": 145,
+      "glu": 1080
+     },
+     "expect": [
+      350
+     ]
+    },
+    {
+     "inputs": {
+      "na": 138,
+      "glu": 760
+     },
+     "expect": [
+      318.22222222222223
+     ]
+    },
+    {
+     "inputs": {
+      "na": 140,
+      "glu": 190
+     },
+     "expect": [
+      290.55555555555554
+     ]
+    }
+   ]
+  },
+  {
+   "id": "osm_jbds",
+   "title": "Calculated osmolality (JBDS)",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "na",
+     "label": "Sodium",
+     "unit": "mmol/L",
+     "default": 145,
+     "min": 100,
+     "max": 190,
+     "step": 1
+    },
+    {
+     "id": "glu",
+     "label": "Glucose",
+     "unit": "mmol/L",
+     "default": 60,
+     "min": 1,
+     "max": 140,
+     "step": 0.1
+    },
+    {
+     "id": "urea",
+     "label": "Urea (not BUN)",
+     "unit": "mmol/L",
+     "default": 20,
+     "min": 0.5,
+     "max": 80,
+     "step": 0.1
+    }
+   ],
+   "outputs": [
+    {
+     "label": "Calculated osmolality",
+     "expr": "2 * na + glu + urea",
+     "unit": "mOsm/kg",
+     "decimals": 0,
+     "bands": [
+      {
+       "lte": 320,
+       "text": "320 or less"
+      },
+      {
+       "gt": 320,
+       "lte": 350,
+       "text": "Over 320: meets the total osmolality criterion for HHS"
+      },
+      {
+       "gt": 350,
+       "text": "Over 350: also a JBDS reason to discuss an HDU bed"
+      }
+     ]
+    },
+    {
+     "label": "Effective osmolality",
+     "expr": "2 * na + glu",
+     "unit": "mOsm/kg",
+     "decimals": 0
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:36370077",
+     "where": "Osmolality, sodium and glucose; Escalation of management; Care pathway p1"
+    },
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 2"
+    }
+   ],
+   "note": "All in mmol/L. JBDS checks it every hour for the first 6 hours, aiming for a fall of 3 to 8 mOsm/kg an hour; until the urea is back it uses 2 x sodium + glucose. Urea is left out of the effective osmolality because it is an ineffective osmolyte.",
+   "tests": [
+    {
+     "inputs": {
+      "na": 122,
+      "glu": 13,
+      "urea": 23
+     },
+     "expect": [
+      280,
+      257
+     ]
+    },
+    {
+     "inputs": {
+      "na": 122,
+      "glu": 30,
+      "urea": 4
+     },
+     "expect": [
+      278,
+      274
+     ]
+    },
+    {
+     "inputs": {
+      "na": 145,
+      "glu": 60,
+      "urea": 20
+     },
+     "expect": [
+      370,
+      350
+     ]
+    },
+    {
+     "inputs": {
+      "na": 149,
+      "glu": 27.8,
+      "urea": 14
+     },
+     "expect": [
+      339.8,
+      325.8
+     ]
+    }
+   ]
+  },
+  {
+   "id": "na_rise",
+   "title": "Sodium as the glucose falls",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "na0",
+     "label": "Sodium at the start",
+     "unit": "mmol/L",
+     "default": 147,
+     "min": 100,
+     "max": 190,
+     "step": 1
+    },
+    {
+     "id": "g0",
+     "label": "Glucose at the start",
+     "unit": "mg/dL",
+     "default": 765,
+     "min": 20,
+     "max": 2500,
+     "step": 1
+    },
+    {
+     "id": "g1",
+     "label": "Glucose now",
+     "unit": "mg/dL",
+     "default": 500,
+     "min": 20,
+     "max": 2500,
+     "step": 1
+    }
+   ],
+   "outputs": [
+    {
+     "label": "Expected rise from the glucose fall",
+     "expr": "1.6 * (g0 - g1) / 100",
+     "unit": "mmol/L",
+     "decimals": 1
+    },
+    {
+     "label": "Sodium from the glucose shift alone",
+     "expr": "na0 + 1.6 * (g0 - g1) / 100",
+     "unit": "mmol/L",
+     "decimals": 1
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Fluid therapy in HHS"
+    },
+    {
+     "docId": "pmid:36370077",
+     "where": "Fluid replacement"
+    }
+   ],
+   "note": "Consensus: 1.6 mmol/L for each 100 mg/dL fall. JBDS gives 2.4 for each 5.5 mmol/L, a larger rise. The rise is not a reason for hypotonic fluid; it matters only if the osmolality is not falling.",
+   "tests": [
+    {
+     "inputs": {
+      "na0": 147,
+      "g0": 765,
+      "g1": 500
+     },
+     "expect": [
+      4.24,
+      151.24
+     ]
+    },
+    {
+     "inputs": {
+      "na0": 153,
+      "g0": 440,
+      "g1": 380
+     },
+     "expect": [
+      0.96,
+      153.96
+     ]
+    },
+    {
+     "inputs": {
+      "na0": 140,
+      "g0": 300,
+      "g1": 300
+     },
+     "expect": [
+      0,
+      140
+     ]
+    }
+   ]
+  },
+  {
+   "id": "k_bands",
+   "title": "Potassium bands (consensus)",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "k",
+     "label": "Potassium",
+     "unit": "mmol/L",
+     "default": 4.6,
+     "min": 1.5,
+     "max": 9,
+     "step": 0.1
+    }
+   ],
+   "outputs": [
+    {
+     "label": "Potassium",
+     "expr": "k",
+     "unit": "mmol/L",
+     "decimals": 1,
+     "bands": [
+      {
+       "lt": 3.5,
+       "text": "Under 3.5: potassium first; insulin waits until over 3.5"
+      },
+      {
+       "gte": 3.5,
+       "lte": 5.0,
+       "text": "3.5 to 5.0: insulin, with potassium in each liter to keep 4 to 5"
+      },
+      {
+       "gt": 5.0,
+       "text": "Over 5.0: insulin, no potassium; recheck every 2 hours"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:38907161",
+     "where": "Fig. 4"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 4, Potassium"
+    },
+    {
+     "docId": "url:c7d4d9169e59",
+     "where": "Complications 1, potassium; 0 to 60 minutes, Action 3"
+    }
+   ],
+   "note": "Urine output of about 0.5 mL/kg/h first. The doses differ: Figure 4 gives 10 to 20 mmol an hour under 3.5 and 10 to 20 mmol per liter at 3.5 to 5.0; the text gives 10 mmol an hour and 20 to 30 per liter. JBDS: 40 mmol/L at 3.5 to 5.5, none over 5.5, senior review under 3.5. At exactly 3.5, the consensus text still holds insulin until the level is over 3.5, while Figure 4 puts 3.5 in the middle band.",
+   "tests": [
+    {
+     "inputs": {
+      "k": 3.0
+     },
+     "expect": [
+      3.0
+     ]
+    },
+    {
+     "inputs": {
+      "k": 4.6
+     },
+     "expect": [
+      4.6
+     ]
+    },
+    {
+     "inputs": {
+      "k": 5.9
+     },
+     "expect": [
+      5.9
+     ]
+    }
+   ]
+  }
+ ]
+}

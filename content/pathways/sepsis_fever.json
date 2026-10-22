@@ -1,0 +1,2920 @@
+{
+ "id": "pw_sepsis_fever",
+ "title": "Sepsis and fever",
+ "world": "id",
+ "synonyms": [
+  "sepsis",
+  "septic shock",
+  "fever",
+  "SIRS",
+  "qSOFA",
+  "lactate",
+  "bacterial meningitis",
+  "meningitis",
+  "neutropenic fever",
+  "febrile neutropenia",
+  "MASCC",
+  "necrotizing fasciitis",
+  "NSTI",
+  "LRINEC",
+  "cellulitis",
+  "pyelonephritis",
+  "urosepsis",
+  "obstructed kidney",
+  "line infection",
+  "pneumonia",
+  "norepinephrine",
+  "vasopressin",
+  "hydrocortisone",
+  "Listeria"
+ ],
+ "reviewBy": "2029-06-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:34599691",
+   "label": "SSC 2021",
+   "title": "Surviving Sepsis Campaign: international guidelines for management of sepsis and septic shock 2021 (Intensive Care Medicine)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34599691/"
+  },
+  {
+   "docId": "pmid:42272214",
+   "label": "SSC 2026 (summary, Table 1)",
+   "title": "Insights from the 2026 Surviving Sepsis Campaign guidelines (Acute Crit Care 2026), Table 1: the 2026 recommendations quoted",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42272214/"
+  },
+  {
+   "docId": "pmid:15494903",
+   "label": "IDSA meningitis 2004",
+   "title": "Practice guidelines for the management of bacterial meningitis (IDSA, Clin Infect Dis 2004)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15494903/"
+  },
+  {
+   "docId": "url:4a5f477fcfcd",
+   "label": "NICE NG240",
+   "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management",
+   "url": "https://www.nice.org.uk/guidance/ng240"
+  },
+  {
+   "docId": "url:a2af80c8370d",
+   "label": "WHO meningitis 2025",
+   "title": "WHO guidelines on meningitis diagnosis, treatment and care",
+   "url": "https://iris.who.int/server/api/core/bitstreams/f2a6cc96-7387-42c5-9a63-f5fa4216f58c/content"
+  },
+  {
+   "docId": "pmid:29461916",
+   "label": "ASCO/IDSA 2018",
+   "title": "Outpatient management of fever and neutropenia in adults treated for malignancy: ASCO and IDSA guideline update",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29461916/"
+  },
+  {
+   "docId": "pmid:30564282",
+   "label": "WSES/SIS-E 2018",
+   "title": "2018 WSES/SIS-E consensus conference: recommendations for the management of skin and soft-tissue infections",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30564282/"
+  },
+  {
+   "docId": "pmid:35033131",
+   "label": "WSES 2022 SSTI pathways",
+   "title": "WSES/GAIS/WSIS/SIS-E/AAST global clinical pathways for patients with skin and soft tissue infections",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35033131/"
+  },
+  {
+   "docId": "url:f531e12f2681",
+   "label": "NICE NG111",
+   "title": "Pyelonephritis (acute): antimicrobial prescribing",
+   "url": "https://www.nice.org.uk/guidance/ng111"
+  },
+  {
+   "docId": "pmid:31573350",
+   "label": "ATS/IDSA CAP 2019",
+   "title": "Diagnosis and treatment of adults with community-acquired pneumonia (ATS/IDSA 2019)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31573350/"
+  },
+  {
+   "docId": "pmid:30137822",
+   "label": "StatPearls pyelonephritis",
+   "title": "Acute Pyelonephritis (StatPearls review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30137822/"
+  },
+  {
+   "docId": "pmid:32370972",
+   "label": "ACR obstruction 2019",
+   "title": "ACR Appropriateness Criteria Radiologic Management of Urinary Tract Obstruction",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32370972/"
+  },
+  {
+   "docId": "url:51eff9d2bb81",
+   "label": "NICE NG253",
+   "title": "Suspected sepsis in people aged 16 or over: recognition, assessment and early management (NICE NG253, 2025)",
+   "url": "https://www.nice.org.uk/guidance/ng253"
+  }
+ ],
+ "differential": [
+  "Septic shock",
+  "Sepsis",
+  "Bacterial meningitis",
+  "Neutropenic fever",
+  "Necrotizing infection",
+  "Cellulitis",
+  "Pyelonephritis",
+  "Infected obstructed kidney",
+  "Line infection",
+  "Pneumonia",
+  "Abdominal source",
+  "Non-infectious mimic"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Fever and a suspected infection. How do you screen for sepsis?",
+   "options": [
+    "Vitals and a lactate; SIRS, NEWS or MEWS, never qSOFA alone",
+    "Vitals and qSOFA alone; under 2 points rules sepsis out",
+    "Vitals and procalcitonin; it decides whether antibiotics start",
+    "Vitals and a lactate; a normal lactate rules sepsis out"
+   ],
+   "answer": 0,
+   "chainStep": "Full vitals scored with SIRS, NEWS or MEWS (not qSOFA alone) and a blood lactate; sepsis is treated as an emergency",
+   "why": "Sepsis is organ dysfunction from a dysregulated response to infection, and a medical emergency. qSOFA is not recommended as a single screening tool compared with SIRS, NEWS or MEWS. A lactate is suggested, but alone it neither rules sepsis in nor out. Procalcitonin is not used to decide when to start antibiotics.",
+   "note": "Adults only: SSC 2021 is written for adults in hospital. Children are not in this version. SSC 2026 has replaced SSC 2021; until its primary text is read, its changes come from the open summary's Table 1.",
+   "sources": [
+    {
+     "docId": "pmid:34599691",
+     "where": "Introduction; rec 2 (strong); rec 3 and rationale; rec 4; rec 16"
+    }
+   ],
+   "next": "first_look"
+  },
+  {
+   "id": "first_look",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Vitals, lactate, history and exam",
+   "outcomes": [
+    {
+     "id": "shock",
+     "if": "Possible septic shock; hypotension or a high lactate, no meningitis features or recent chemotherapy",
+     "ddx": {
+      "lead": [
+       "Septic shock"
+      ],
+      "out": []
+     },
+     "next": "resus"
+    },
+    {
+     "id": "mening_in_shock",
+     "if": "Meningitis in shock; hypotension with headache, stiff neck or confusion",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis",
+       "Septic shock"
+      ],
+      "out": []
+     },
+     "next": "mening_resus"
+    },
+    {
+     "id": "neutropenic_shock",
+     "if": "Shock after chemotherapy; hypotension within 6 weeks of chemotherapy",
+     "ddx": {
+      "lead": [
+       "Neutropenic fever",
+       "Septic shock"
+      ],
+      "out": []
+     },
+     "next": "fn_shock"
+    },
+    {
+     "id": "likely",
+     "if": "Sepsis likely, no shock; probable infection with new organ dysfunction",
+     "ddx": {
+      "lead": [
+       "Sepsis"
+      ],
+      "out": []
+     },
+     "next": "bundle"
+    },
+    {
+     "id": "possible",
+     "if": "Sepsis possible, no shock; organ dysfunction, infection uncertain",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "possible"
+    },
+    {
+     "id": "meningitis",
+     "if": "Suspected meningitis, no shock; fever with headache, stiff neck or confusion",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "next": "mening_first"
+    },
+    {
+     "id": "neutropenic",
+     "if": "Fever after chemotherapy, no shock; within 6 weeks of chemotherapy",
+     "ddx": {
+      "lead": [
+       "Neutropenic fever"
+      ],
+      "out": []
+     },
+     "next": "fn_first"
+    },
+    {
+     "id": "no_sepsis",
+     "if": "Infection without sepsis; normal perfusion, no organ dysfunction",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "mild_source"
+    }
+   ]
+  },
+  {
+   "id": "resus",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Possible septic shock or hypoperfusion. First hour?",
+   "options": [
+    "Cultures, antibiotics within 1 hour, at least 30 mL/kg crystalloid",
+    "Cultures, 30 mL/kg crystalloid, antibiotics once the source is confirmed",
+    "Cultures, antibiotics within 1 hour, hydroxyethyl starch boluses",
+    "Cultures, antibiotics within 1 hour, 30 mL/kg of albumin first"
+   ],
+   "answer": 0,
+   "chainStep": "Blood cultures if they delay antibiotics less than 45 minutes; broad-spectrum antibiotics within 1 hour; at least 30 mL/kg IV balanced crystalloid within 3 hours; repeat the lactate; start norepinephrine during the fluid if the shock is unstable",
+   "why": "Antimicrobials go in immediately, ideally within 1 hour, with cultures first only if that costs less than 45 minutes. Sepsis-induced hypoperfusion earns at least 30 mL/kg of IV crystalloid in the first 3 hours, and unstable shock may warrant a vasopressor during the fluid. Crystalloid is first line (balanced over saline); albumin only after large crystalloid volumes; starches never.",
+   "orders": [
+    {
+     "item": "IV crystalloid",
+     "dose": "At least 30 mL/kg within the first 3 hours, by actual body weight, or adjusted or ideal weight if BMI over 30; beyond that, guided by dynamic measures, capillary refill time and a falling lactate",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 5; rec 6 to 8"
+      },
+      {
+       "docId": "pmid:42272214",
+       "where": "Table 1, fluids (revisited) and remark"
+      },
+      {
+       "docId": "url:51eff9d2bb81",
+       "where": "1.8.4; 1.8.6 to 1.8.8"
+      },
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI: Surviving Sepsis summary"
+      }
+     ],
+     "note": "NICE NG253 (2025) gives 250 mL boluses over 10 to 15 minutes, up to 1,000 mL in all, reassessing after each; SSC (here, in WSES 2022 and in the SSC 2026 summary) gives at least 30 mL/kg within 3 hours. pw_rash shows the same conflict."
+    },
+    {
+     "item": "Unstable shock",
+     "dose": "Start the vasopressor during the fluid, case by case: severely reduced pressure, mottled or ashen skin, cyanosis, tachycardia, altered mentation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42272214",
+       "where": "Table 1, hypotension remark"
+      }
+     ]
+    },
+    {
+     "item": "Fluid type",
+     "dose": "Balanced crystalloid rather than normal saline; add albumin only after large crystalloid volumes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 32 to 34"
+      }
+     ]
+    },
+    {
+     "item": "Starches",
+     "dose": "Avoid for resuscitation",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 35 (strong)"
+      }
+     ]
+    },
+    {
+     "item": "Cultures",
+     "dose": "Routine cultures, blood included, before antibiotics if that delays them less than 45 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 11 rationale (2016 best practice statement, unchanged)"
+      }
+     ]
+    },
+    {
+     "item": "Empiric antibiotic",
+     "dose": "Agent and dose by suspected source and local resistance; SSC names no regimen",
+     "status": "pending"
+    },
+    {
+     "item": "MRSA cover",
+     "dose": "Only at high MRSA risk: prior MRSA infection or colonisation, recent IV antibiotics, recurrent skin infection or chronic wounds, invasive devices, haemodialysis, recent admission, severity of illness",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 17 and 18 with rationale"
+      }
+     ],
+     "note": "SSC 2026 folds MRSA into its recommendation on cover for a specific MDR pathogen (summary Table 1); recheck against the primary text."
+    },
+    {
+     "item": "MDR pathogen cover",
+     "dose": "Cover the specific MDR pathogen only at high risk of it: colonization or prior infection with it, prolonged broad-spectrum antibiotics, prolonged stay in a unit where it is common",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42272214",
+       "where": "Table 1, MDR pathogen (new), remark and low-risk row"
+      }
+     ]
+    },
+    {
+     "item": "Beta-lactam infusion",
+     "dose": "Prolonged infusion for maintenance, after an initial bolus",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 25"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:34599691",
+     "where": "Rec 4, 5, 12; rec 11 rationale (cultures); rec 32 to 35"
+    },
+    {
+     "docId": "pmid:42272214",
+     "where": "Table 1, fluids, hypotension and antimicrobial timing rows with remarks"
+    }
+   ],
+   "next": "map_check"
+  },
+  {
+   "id": "map_check",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Pressure after the fluid",
+   "outcomes": [
+    {
+     "id": "map_low",
+     "if": "MAP below target after the fluid; under 65, or under 60 if 65 or older",
+     "ddx": {
+      "lead": [
+       "Septic shock"
+      ],
+      "out": []
+     },
+     "next": "norepi"
+    },
+    {
+     "id": "map_ok",
+     "if": "MAP at target after the fluid; perfusion improving",
+     "ddx": {
+      "lead": [
+       "Sepsis"
+      ],
+      "out": []
+     },
+     "next": "source"
+    }
+   ]
+  },
+  {
+   "id": "norepi",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "MAP still below target with the fluid. Vasopressor?",
+   "options": [
+    "Norepinephrine to a MAP of 65, peripherally until a central line",
+    "Dopamine to a MAP of 65, peripherally until a central line",
+    "Norepinephrine to a MAP of 65, only once a central line is in",
+    "Norepinephrine to a MAP of 85, peripherally until a central line"
+   ],
+   "answer": 0,
+   "chainStep": "Norepinephrine to an initial MAP of 65 (60 to 65 if 65 or older), started peripherally (short term, a vein at or above the antecubital fossa) rather than waiting for a central line; invasive pressure monitoring for escalating or multiple vasopressors",
+   "why": "Norepinephrine is first line: against dopamine it had lower mortality and fewer arrhythmias. Start it peripherally rather than delay for central access. The initial MAP target is 65, or 60 to 65 at 65 or older; higher targets did not improve survival.",
+   "orders": [
+    {
+     "item": "Norepinephrine",
+     "dose": "Starting dose not stated in SSC 2021; SSC 2026 (summary Table 1) finds data insufficient to recommend a dose, duration or route for peripheral use",
+     "status": "pending"
+    },
+    {
+     "item": "MAP target",
+     "dose": "65 mm Hg initially; 60 to 65 mm Hg for adults 65 or older",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 9"
+      },
+      {
+       "docId": "pmid:42272214",
+       "where": "Table 1, MAP (new); text"
+      }
+     ]
+    },
+    {
+     "item": "Peripheral start",
+     "dose": "Short period only, in a vein in or proximal to the antecubital fossa",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 44 remark"
+      }
+     ],
+     "note": "SSC 2026 keeps peripheral initiation, but its remark says data are insufficient to recommend a duration, dose or access route, anatomic location included."
+    },
+    {
+     "item": "Blood pressure monitoring",
+     "dose": "Invasive or noninvasive; invasive for intermediate to high, escalating or multiple vasopressors",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42272214",
+       "where": "Table 1, blood pressure monitoring (revisited) and remark"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:34599691",
+     "where": "Rec 37 (strong) and rationale; rec 9 and rationale; rec 44 and remark"
+    },
+    {
+     "docId": "pmid:42272214",
+     "where": "Table 1, MAP (new) and text; peripheral vasopressors (revisited); blood pressure monitoring (revisited)"
+    }
+   ],
+   "next": "pressor_check"
+  },
+  {
+   "id": "pressor_check",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "MAP on norepinephrine",
+   "outcomes": [
+    {
+     "id": "refractory",
+     "if": "MAP below target on norepinephrine 0.25 or more; vasopressin now, steroid at 4 hours",
+     "ddx": {
+      "lead": [
+       "Septic shock"
+      ],
+      "out": []
+     },
+     "next": "vaso_steroid"
+    },
+    {
+     "id": "responding",
+     "if": "MAP at target on a lower dose; perfusion improving",
+     "ddx": {
+      "lead": [
+       "Septic shock"
+      ],
+      "out": []
+     },
+     "next": "source"
+    }
+   ]
+  },
+  {
+   "id": "vaso_steroid",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "MAP below target on norepinephrine 0.25 mcg/kg/min or more. Next?",
+   "options": [
+    "Add vasopressin 0.03 units/min and IV hydrocortisone 200 mg a day",
+    "Double the norepinephrine; hydrocortisone only if that fails",
+    "Add terlipressin and IV hydrocortisone 200 mg a day",
+    "Switch to dopamine and add IV hydrocortisone 200 mg a day"
+   ],
+   "answer": 0,
+   "chainStep": "Add vasopressin 0.03 units/min instead of escalating norepinephrine; IV hydrocortisone 50 mg every 6 hours; epinephrine next if the MAP is still inadequate",
+   "why": "Add vasopressin rather than escalate norepinephrine; it is usually started at norepinephrine 0.25 to 0.5 mcg/kg/min, with no wait, and given at a fixed 0.03 units/min. Hydrocortisone 200 mg a day: SSC 2021 started it at 0.25 mcg/kg/min or more at least 4 hours in, and SSC 2026 broadened it to septic shock. Terlipressin brought more harm, and norepinephrine stays first line over dopamine.",
+   "orders": [
+    {
+     "item": "Vasopressin",
+     "dose": "Fixed 0.03 units/min, not titrated; trials used up to 0.06 units/min",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 38 remark; rec 37 to 40 rationale"
+      }
+     ]
+    },
+    {
+     "item": "Hydrocortisone",
+     "dose": "200 mg a day: 50 mg IV every 6 hours or a continuous infusion; SSC 2021 started it at norepinephrine or epinephrine 0.25 mcg/kg/min or more, at least 4 hours after starting",
+     "status": "pending",
+     "note": "SSC 2026 broadened the indication; primary text not read."
+    },
+    {
+     "item": "Epinephrine",
+     "dose": "Add if the MAP is still inadequate on norepinephrine and vasopressin",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 39"
+      }
+     ]
+    },
+    {
+     "item": "Dobutamine",
+     "dose": "Cardiac dysfunction with persistent hypoperfusion despite adequate volume and pressure: add to norepinephrine, or use epinephrine alone",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 41"
+      }
+     ]
+    },
+    {
+     "item": "Terlipressin",
+     "dose": "Avoid",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 40 and rationale"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:34599691",
+     "where": "Rec 38 and remark; rec 37 to 40 rationale; rec 58 and remark; rec 40"
+    },
+    {
+     "docId": "pmid:42272214",
+     "where": "Table 1, corticosteroids (revisited); text"
+    }
+   ],
+   "next": "source"
+  },
+  {
+   "id": "mening_resus",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Shock with meningitis features. First hour?",
+   "options": [
+    "Blood cultures; dexamethasone with the first antibiotic; 30 mL/kg crystalloid; defer the LP",
+    "Blood cultures; antibiotics and fluid now; dexamethasone once the shock is treated",
+    "LP now, then dexamethasone and antibiotics",
+    "CT head, then LP, then dexamethasone and antibiotics"
+   ],
+   "answer": 0,
+   "chainStep": "Blood cultures; dexamethasone 0.15 mg/kg IV 10 to 20 minutes before or with the first IV antibiotic, within 1 hour; at least 30 mL/kg IV crystalloid; defer the LP until the shock is treated and it is safe; CT before the deferred LP for altered consciousness",
+   "why": "Shock is treated before any LP, but antibiotics go in within 1 hour after blood cultures, with dexamethasone just before or with the first dose: IDSA does not start it once antibiotics are in. Hypoperfusion still earns at least 30 mL/kg of crystalloid. Altered consciousness means a CT before the deferred LP.",
+   "note": "Dexamethasone after antibiotics have started: IDSA 2004 says do not give it to adults; NICE NG240 says give it as soon as possible if it is less than 12 hours late; WHO 2025 says with the first dose or as soon as possible after.",
+   "orders": [
+    {
+     "item": "Dexamethasone",
+     "dose": "0.15 mg/kg every 6 hours for 2 to 4 days, first dose 10 to 20 minutes before or with the first antibiotic; continue for pneumococcus (IDSA) or pneumococcus or Hib (NICE); stop if the CSF is not bacterial",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:15494903",
+       "where": "Adjunctive dexamethasone, adults (A-I)"
+      },
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.8.1; 1.8.3; 1.8.5"
+      },
+      {
+       "docId": "url:a2af80c8370d",
+       "where": "Corticosteroids recommendation and remarks"
+      }
+     ]
+    },
+    {
+     "item": "IV crystalloid",
+     "dose": "At least 30 mL/kg within the first 3 hours, by actual body weight, or adjusted or ideal weight if BMI over 30; beyond that, guided by dynamic measures, capillary refill time and a falling lactate",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 5; rec 6 to 8"
+      },
+      {
+       "docId": "pmid:42272214",
+       "where": "Table 1, fluids (revisited) and remark"
+      },
+      {
+       "docId": "url:51eff9d2bb81",
+       "where": "1.8.4; 1.8.6 to 1.8.8"
+      },
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI: Surviving Sepsis summary"
+      }
+     ],
+     "note": "NICE NG253 (2025) gives 250 mL boluses over 10 to 15 minutes, up to 1,000 mL in all, reassessing after each; SSC (here, in WSES 2022 and in the SSC 2026 summary) gives at least 30 mL/kg within 3 hours. pw_rash shows the same conflict."
+    },
+    {
+     "item": "LP",
+     "dose": "Deferred: treat and stabilise shock first",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.4.11"
+      }
+     ]
+    },
+    {
+     "item": "CT before the deferred LP",
+     "dose": "For altered consciousness, an IDSA CT criterion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:15494903",
+       "where": "CT before LP (B-II)"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "1.4.11; 1.6.3; 1.8.5"
+    },
+    {
+     "docId": "pmid:15494903",
+     "where": "Initial management approach; adjunctive dexamethasone, adults; CT before LP (B-II)"
+    },
+    {
+     "docId": "pmid:34599691",
+     "where": "Rec 5, 12"
+    },
+    {
+     "docId": "pmid:42272214",
+     "where": "Table 1, fluids and antimicrobial timing"
+    }
+   ],
+   "next": "map_check"
+  },
+  {
+   "id": "fn_shock",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Septic shock within 6 weeks of chemotherapy. First-hour antibiotics?",
+   "options": [
+    "IV antipseudomonal beta-lactam plus vancomycin for the instability",
+    "IV antipseudomonal beta-lactam alone, as in stable neutropenia",
+    "Oral ciprofloxacin plus amoxicillin-clavulanate in the ED",
+    "IV vancomycin alone until the blood cultures are back"
+   ],
+   "answer": 0,
+   "chainStep": "IV antipseudomonal beta-lactam (cefepime, meropenem, imipenem-cilastatin or piperacillin-tazobactam) plus vancomycin for the instability within 1 hour; other agents if resistance is suspected; at least 30 mL/kg IV crystalloid",
+   "why": "Fever after chemotherapy is treated as neutropenic infection before the count is back, with the first dose within 1 hour. An antipseudomonal beta-lactam is the backbone; vancomycin is not standard, but hemodynamic instability is one of its indications, and agents such as an aminoglycoside may be added for hypotension. Vancomycin alone leaves gram-negatives uncovered; an oral regimen is for low-risk outpatients.",
+   "orders": [
+    {
+     "item": "Antipseudomonal beta-lactam doses",
+     "dose": "Not stated in ASCO/IDSA 2018; IDSA 2010 not read",
+     "status": "pending"
+    },
+    {
+     "item": "Added agents",
+     "dose": "Aminoglycosides, fluoroquinolones or vancomycin may be added for complications such as hypotension or pneumonia, or suspected resistance",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29461916",
+       "where": "Recommendation 1.1h"
+      }
+     ]
+    },
+    {
+     "item": "Resistant organisms",
+     "dose": "MRSA: vancomycin, linezolid, or daptomycin if no pneumonia; VRE: linezolid or daptomycin; ESBL: a carbapenem",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29461916",
+       "where": "Recommendation 1.1h"
+      }
+     ]
+    },
+    {
+     "item": "IV crystalloid",
+     "dose": "At least 30 mL/kg within the first 3 hours, by actual body weight, or adjusted or ideal weight if BMI over 30; beyond that, guided by dynamic measures, capillary refill time and a falling lactate",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Rec 5; rec 6 to 8"
+      },
+      {
+       "docId": "pmid:42272214",
+       "where": "Table 1, fluids (revisited) and remark"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:29461916",
+     "where": "Recommendation 1.1, 1.1h (2010 IDSA endorsed)"
+    },
+    {
+     "docId": "pmid:34599691",
+     "where": "Rec 5, 12"
+    }
+   ],
+   "next": "map_check"
+  },
+  {
+   "id": "bundle",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Probable infection with new organ dysfunction, no shock. First hour?",
+   "options": [
+    "Cultures, then antibiotics within 1 hour; look for a source to control",
+    "Cultures, then a 3-hour workup before deciding on antibiotics",
+    "Cultures, then antibiotics once a culture turns positive",
+    "Cultures and procalcitonin; antibiotics if procalcitonin is high"
+   ],
+   "answer": 0,
+   "chainStep": "Cultures (if under 45 minutes' delay) and a lactate, broad-spectrum antibiotics within 1 hour, then identify or exclude a source that needs control",
+   "why": "With a high likelihood of sepsis, antimicrobials go in immediately, ideally within 1 hour; the 3-hour window of rapid investigation is for possible sepsis. Procalcitonin is not used to decide when to start. A source that needs emergent control is identified or excluded rapidly and controlled as soon as practical.",
+   "sources": [
+    {
+     "docId": "pmid:34599691",
+     "where": "Rec 12, 14, 16, 27; rec 11 rationale (cultures)"
+    },
+    {
+     "docId": "pmid:42272214",
+     "where": "Table 1, antimicrobial timing (revisited)"
+    }
+   ],
+   "next": "source"
+  },
+  {
+   "id": "source",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Source on history, exam and first tests",
+   "outcomes": [
+    {
+     "id": "urinary",
+     "if": "Urinary source; flank pain or dysuria with pyuria",
+     "ddx": {
+      "lead": [
+       "Pyelonephritis"
+      ],
+      "out": []
+     },
+     "next": "uti_image"
+    },
+    {
+     "id": "skin",
+     "if": "Skin and soft tissue; a spreading skin infection",
+     "ddx": {
+      "lead": [
+       "Cellulitis",
+       "Necrotizing infection"
+      ],
+      "out": []
+     },
+     "next": "skin_look"
+    },
+    {
+     "id": "abdominal",
+     "if": "Abdominal source; peritonitis, cholangitis or a collection",
+     "ddx": {
+      "lead": [
+       "Abdominal source"
+      ],
+      "out": []
+     },
+     "next": "end_abdo"
+    },
+    {
+     "id": "line",
+     "if": "Intravascular line; a central line in place, no other source",
+     "ddx": {
+      "lead": [
+       "Line infection"
+      ],
+      "out": []
+     },
+     "next": "line_mgmt"
+    },
+    {
+     "id": "lung",
+     "if": "Pneumonia; cough or hypoxemia with an infiltrate",
+     "ddx": {
+      "lead": [
+       "Pneumonia"
+      ],
+      "out": []
+     },
+     "next": "cap_abx"
+    },
+    {
+     "id": "unclear",
+     "if": "No source yet; exam, urine and chest x-ray unrevealing",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "unclear"
+    },
+    {
+     "id": "cns",
+     "if": "Meningitis; headache, stiff neck or confusion",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "next": "listeria"
+    },
+    {
+     "id": "neutropenic",
+     "if": "Neutropenic fever; after chemotherapy, ANC under 1,000",
+     "ddx": {
+      "lead": [
+       "Neutropenic fever"
+      ],
+      "out": []
+     },
+     "next": "end_fn_shock"
+    }
+   ]
+  },
+  {
+   "id": "uti_image",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Urinary source with sepsis. Beyond the urine culture and antibiotics, next?",
+   "options": [
+    "Image the kidneys now for an obstruction or abscess",
+    "Image the kidneys only if she is not better in 48 hours",
+    "Image the kidneys first; antibiotics once the source is seen",
+    "Refer to urology clinic for imaging after discharge"
+   ],
+   "answer": 0,
+   "chainStep": "Midstream urine culture before antibiotics; IV antibiotics; image the kidneys now for an obstruction or abscess that needs drainage",
+   "why": "In sepsis, a source that needs emergent control is identified or excluded rapidly, and pyelonephritis with obstruction or abscess is one. The 48-hour reassessment is for pyelonephritis without sepsis. Antibiotics never wait for imaging.",
+   "orders": [
+    {
+     "item": "Urine culture",
+     "dose": "Midstream sample before antibiotics",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "1.1.2"
+      }
+     ]
+    },
+    {
+     "item": "Imaging",
+     "dose": "Ultrasound or CT: neither SSC nor NICE NG111 names the test",
+     "status": "pending"
+    },
+    {
+     "item": "IV antibiotic (adults 16 and over, not pregnant)",
+     "dose": "First choices include ceftriaxone 1 to 2 g once a day or cefuroxime 750 mg to 1.5 g three or four times a day; may be combined (for example gentamicin, initially 5 to 7 mg/kg once a day, then by levels and renal function) if susceptibility or sepsis is a concern",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 1, first-choice intravenous antibiotics"
+      }
+     ]
+    },
+    {
+     "item": "MDR pathogen cover",
+     "dose": "Cover the specific MDR pathogen only at high risk of it: colonization or prior infection with it, prolonged broad-spectrum antibiotics, prolonged stay in a unit where it is common",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42272214",
+       "where": "Table 1, MDR pathogen (new), remark and low-risk row"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:34599691",
+     "where": "Rec 27 and rationale; rec 12"
+    },
+    {
+     "docId": "url:f531e12f2681",
+     "where": "1.1.2; 1.1.8; Table 1"
+    }
+   ],
+   "next": "uti_result"
+  },
+  {
+   "id": "uti_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Kidney imaging",
+   "outcomes": [
+    {
+     "id": "obstructed",
+     "if": "Obstruction or abscess; a blocked kidney or a collection to drain",
+     "ddx": {
+      "lead": [
+       "Infected obstructed kidney"
+      ],
+      "out": []
+     },
+     "next": "uti_drain"
+    },
+    {
+     "id": "clear",
+     "if": "No obstruction, no abscess",
+     "ddx": {
+      "lead": [
+       "Pyelonephritis"
+      ],
+      "out": []
+     },
+     "next": "uti_stepdown"
+    }
+   ]
+  },
+  {
+   "id": "uti_drain",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Infected, obstructed kidney or a renal abscess. Next?",
+   "options": [
+    "Urgent drainage of the kidney or abscess, antibiotics running",
+    "Antibiotics alone; drain only if no better in 48 hours",
+    "Treat the stone once the infection settles; no drainage now",
+    "Discharge on oral antibiotics; urology clinic for the stone"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent drainage of the obstructed kidney or the abscess by the least invasive effective route, as soon as practical, with IV antibiotics running",
+   "why": "Pyelonephritis with obstruction or abscess is a focus that needs source control, done as soon as medically and logistically practical by the least invasive option that works. Prolonged medical stabilisation in place of source control is generally not advised in severe illness.",
+   "orders": [
+    {
+     "item": "Drainage route",
+     "dose": "Septic and hypotensive with an obstructed kidney: percutaneous nephrostomy usually appropriate, retrograde ureteral stenting may be appropriate (ACR)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32370972",
+       "where": "Variant 5"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:34599691",
+     "where": "Rec 27 and rationale"
+    }
+   ],
+   "next": "end_uti_drain"
+  },
+  {
+   "id": "uti_stepdown",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "No obstruction; better at 48 hours on IV antibiotics. Next?",
+   "options": [
+    "Step down to an oral antibiotic chosen by the culture",
+    "Continue IV antibiotics to the end of the course",
+    "Stop all antibiotics now that she is afebrile and eating",
+    "Step down to oral co-amoxiclav whatever the culture shows"
+   ],
+   "answer": 0,
+   "chainStep": "Review IV antibiotics by 48 hours and step down to oral by the culture: cefalexin 500 mg two or three times a day for 7 to 10 days, or co-amoxiclav or trimethoprim if susceptible",
+   "why": "IV antibiotics are reviewed by 48 hours with a step down to oral where possible, switching to a narrow-spectrum agent if the organism is resistant. Courses run 7 to 14 days by agent. Co-amoxiclav and trimethoprim are used only when the culture shows susceptibility.",
+   "orders": [
+    {
+     "item": "Cefalexin",
+     "dose": "500 mg two or three times a day (up to 1 to 1.5 g three or four times a day if severe) for 7 to 10 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Co-amoxiclav (culture susceptible only)",
+     "dose": "500/125 mg three times a day for 7 to 10 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Trimethoprim (culture susceptible only)",
+     "dose": "200 mg twice a day for 14 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Ciprofloxacin",
+     "dose": "500 mg twice a day for 7 days; NICE uses it only when other first choices are unsuitable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 1"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "url:f531e12f2681",
+     "where": "1.3.3; 1.1.6; Table 1"
+    }
+   ],
+   "next": "end_uti"
+  },
+  {
+   "id": "skin_look",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The skin exam",
+   "outcomes": [
+    {
+     "id": "nsti",
+     "if": "Necrotizing signs; pain out of proportion, edema past the erythema, bullae or crepitus",
+     "ddx": {
+      "lead": [
+       "Necrotizing infection"
+      ],
+      "out": []
+     },
+     "next": "nsti_surgery"
+    },
+    {
+     "id": "nsti_lrinec",
+     "if": "Necrotizing signs, low LRINEC; the score cannot rule it out",
+     "ddx": {
+      "lead": [
+       "Necrotizing infection"
+      ],
+      "out": []
+     },
+     "next": "nsti_surgery"
+    },
+    {
+     "id": "cellulitis",
+     "if": "Cellulitis, no necrotizing signs; spreading redness, pain in proportion, no pus",
+     "ddx": {
+      "lead": [
+       "Cellulitis"
+      ],
+      "out": []
+     },
+     "next": "cell_iv"
+    }
+   ]
+  },
+  {
+   "id": "nsti_surgery",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Necrotizing signs on the skin exam. Next?",
+   "options": [
+    "Emergency surgical debridement; no imaging delay",
+    "CT first; surgery only if it shows gas in the tissue",
+    "Plain film first; no gas means no necrotizing infection",
+    "IV antibiotics now; surgery if worse in 24 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Emergency surgical consult and debridement as soon as possible, at least within 6 hours of admission (WSES 2022; WSES 2018 said 12); re-explore within 12 to 24 hours and repeat until free of necrosis",
+   "why": "Every necrotizing infection needs surgical debridement, as soon as possible and at least within 6 hours of admission (WSES 2022; the 2018 guideline said 12). Imaging must not delay surgery, a plain film cannot rule it out, and gas is present in only a few cases. A low LRINEC score does not rule it out either.",
+   "orders": [
+    {
+     "item": "Re-exploration",
+     "dose": "First within 12 to 24 hours; repeat until free of necrosis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30564282",
+       "where": "Re-exploration (1C)"
+      }
+     ]
+    },
+    {
+     "item": "Supportive care",
+     "dose": "Early and aggressive resuscitation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30564282",
+       "where": "Resuscitation (1A)"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:30564282",
+     "where": "NSTI definition; diagnosis (1C, 1B, 1A); LRINEC; timing of source control (1B)"
+    },
+    {
+     "docId": "pmid:34599691",
+     "where": "Rec 27 rationale"
+    },
+    {
+     "docId": "pmid:35033131",
+     "where": "NSTI treatment"
+    }
+   ],
+   "next": "nsti_abx"
+  },
+  {
+   "id": "nsti_abx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Debridement is booked. Empiric antibiotics?",
+   "options": [
+    "Broad MRSA and gram-negative cover plus clindamycin or linezolid",
+    "Penicillin plus clindamycin until the cultures are back",
+    "Vancomycin alone until the cultures are back",
+    "Cefazolin plus clindamycin until the cultures are back"
+   ],
+   "answer": 0,
+   "chainStep": "Anti-MRSA agent (linezolid or daptomycin, or vancomycin with normal renal function) plus piperacillin-tazobactam (a carbapenem where ESBL is common), with clindamycin or linezolid; until no further debridement is needed, the patient is better and afebrile 48 to 72 hours",
+   "why": "Once blood cultures are drawn, start broad-spectrum antibiotics urgently: gram-positive (MRSA included), gram-negative and anaerobic cover until cultures return, with clindamycin or linezolid in the regimen. Penicillin or cefazolin with clindamycin is not the broad anti-MRSA and anti-gram-negative regimen asked for, and vancomycin alone has no gram-negative cover. Antibiotics are an adjunct to debridement, never a substitute.",
+   "orders": [
+    {
+     "item": "Vancomycin",
+     "dose": "25 to 30 mg/kg loading dose, then 15 to 20 mg/kg every 8 hours (normal renal function); avoid with renal impairment or a vancomycin MIC of 1.5 or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI, unstable patients"
+      },
+      {
+       "docId": "pmid:30564282",
+       "where": "Empiric antibiotics for NSTI (1B)"
+      }
+     ]
+    },
+    {
+     "item": "Linezolid",
+     "dose": "600 mg every 12 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI, unstable patients"
+      }
+     ]
+    },
+    {
+     "item": "Daptomycin",
+     "dose": "6 to 8 mg/kg every 24 hours (approved at 4 to 6 mg/kg, used at higher doses)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI, unstable patients and footnote"
+      }
+     ],
+     "note": "WSES 2018 gave 10 mg/kg once daily in its MRSA recommendation and 4 to 6 mg/kg in its list; the 2022 pathways use 6 to 8 mg/kg."
+    },
+    {
+     "item": "Gram-negative cover (unstable patients)",
+     "dose": "Piperacillin-tazobactam 4.5 g every 6 hours, or meropenem 1 g every 8 hours (normal renal function); a carbapenem where ESBL-producing Enterobacterales are common",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI, unstable patients"
+      },
+      {
+       "docId": "pmid:30564282",
+       "where": "Empiric antibiotics for NSTI, text"
+      }
+     ]
+    },
+    {
+     "item": "Clindamycin",
+     "dose": "600 to 900 mg IV every 8 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI, stable and unstable patients"
+      }
+     ]
+    },
+    {
+     "item": "Stable patients (WSES 2022)",
+     "dose": "Amoxicillin-clavulanate 1.2/2.2 g every 8 hours, or ceftriaxone 2 g every 24 hours or cefotaxime 2 g every 8 hours with metronidazole 500 mg every 8 hours; plus clindamycin 600 to 900 mg every 8 hours",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI, stable patients"
+      }
+     ],
+     "note": "WSES 2022 asks for anti-MRSA cover in every initial NSTI regimen, but its stable-patient list carries no anti-MRSA agent beyond clindamycin."
+    },
+    {
+     "item": "Duration",
+     "dose": "Until no further debridement is needed, the patient has improved, and fever has resolved for 48 to 72 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30564282",
+       "where": "Duration (1C)"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:30564282",
+     "where": "Empiric antibiotics for NSTI (1B, 1C) and text; antitoxin agent (1C); duration (1C)"
+    },
+    {
+     "docId": "pmid:35033131",
+     "where": "NSTI, empiric regimens, normal renal function"
+    },
+    {
+     "docId": "pmid:42272214",
+     "where": "Table 1, anaerobic cover remark"
+    }
+   ],
+   "next": "end_nsti"
+  },
+  {
+   "id": "cell_iv",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Septic, cellulitis without necrotizing signs. Next?",
+   "options": [
+    "IV antibiotics now, re-examining for necrotizing signs",
+    "Oral antibiotics at home, re-examining if it spreads",
+    "Incision and drainage alone, no antibiotic",
+    "Antibiotics once the blood cultures grow"
+   ],
+   "answer": 0,
+   "chainStep": "IV antibiotics against streptococci and other gram-positives, with MRSA cover at high risk, critical illness included; re-examine, and treat a rapidly progressive infection as necrotizing",
+   "why": "Cellulitis is treated with antibiotics against gram-positive bacteria, and the parenteral route comes first for severe infection; outpatient oral treatment is for patients without signs of inflammation or instability. Drainage is for an abscess. Most necrotizing infections begin looking like cellulitis, and a rapidly progressive one is treated as necrotizing.",
+   "note": "IDSA 2014, the usual US source for severe cellulitis regimens and the surgical look, is not read.",
+   "orders": [
+    {
+     "item": "IV regimen",
+     "dose": "Cefazolin 2 g every 8 hours or amoxicillin-clavulanate 1.2/2.2 g every 8 hours; at CA-MRSA risk vancomycin 25 to 30 mg/kg load then 15 to 20 mg/kg every 12 hours, or linezolid 600 mg every 12 hours; severe forms not responding: consider piperacillin-tazobactam 4.5 g every 6 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Typical cellulitis, inpatient therapy, normal renal function"
+      }
+     ]
+    },
+    {
+     "item": "CA-MRSA risk",
+     "dose": "Critically ill or immunocompromised, MRSA contact or colonization in the past 12 months, 5 days of antibiotics in the last 90, penetrating trauma or illicit drug use, no response to first line",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Typical cellulitis, inpatient CA-MRSA"
+      }
+     ]
+    },
+    {
+     "item": "IV to oral",
+     "dose": "When the criteria of clinical stability are met",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30564282",
+       "where": "IV to oral (1C)"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:30564282",
+     "where": "Superficial infections (1C) and text; NSTI diagnosis (1C) and text"
+    },
+    {
+     "docId": "pmid:35033131",
+     "where": "Cellulitis; typical cellulitis, inpatient"
+    },
+    {
+     "docId": "pmid:34599691",
+     "where": "Rec 17 and 18"
+    }
+   ],
+   "next": "end_cellulitis"
+  },
+  {
+   "id": "line_mgmt",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Septic, a central line in place, no other source. Next?",
+   "options": [
+    "Remove the line once other vascular access is in",
+    "Keep the line and treat through it",
+    "Remove it only if the blood cultures grow",
+    "Pull it at once, before any other access"
+   ],
+   "answer": 0,
+   "chainStep": "Establish other vascular access and resuscitate, then remove the suspected line promptly; cultures and antibiotics as for sepsis, with MRSA cover (invasive device, recent IV antibiotics)",
+   "why": "A suspected intravascular device is removed promptly, after another access site is established and initial resuscitation succeeds. Removal with adequate antibiotics is definitive and preferred in most cases.",
+   "note": "SSC 2021 allows some implanted tunnelled catheter infections, without shock or fungemia, to be treated with prolonged antibiotics when removal is not practical. This case has a non-tunnelled line.",
+   "sources": [
+    {
+     "docId": "pmid:34599691",
+     "where": "Rec 28 and rationale; rec 17 rationale"
+    }
+   ],
+   "next": "end_line"
+  },
+  {
+   "id": "cap_abx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pneumonia with sepsis, admitted, no MRSA or Pseudomonas risk. Empiric regimen?",
+   "options": [
+    "A beta-lactam plus a macrolide, such as ceftriaxone plus azithromycin",
+    "Vancomycin plus piperacillin-tazobactam as standard",
+    "Ceftriaxone plus azithromycin plus hydrocortisone as standard",
+    "Oral amoxicillin 1 g three times daily alone"
+   ],
+   "answer": 0,
+   "chainStep": "Ceftriaxone 1 to 2 g daily plus azithromycin 500 mg daily (or levofloxacin 750 mg or moxifloxacin 400 mg daily alone if nonsevere); at least 5 days",
+   "why": "Inpatients without MRSA or Pseudomonas risk factors get a beta-lactam plus a macrolide (a respiratory fluoroquinolone alone is the alternative in nonsevere disease). MRSA or Pseudomonas cover needs locally validated risk factors, corticosteroids are not routine in nonsevere pneumonia, and amoxicillin alone is the regimen for healthy outpatients.",
+   "orders": [
+    {
+     "item": "Beta-lactam",
+     "dose": "Ampicillin-sulbactam 1.5 to 3 g every 6 hours, cefotaxime 1 to 2 g every 8 hours, ceftriaxone 1 to 2 g daily, or ceftaroline 600 mg every 12 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Recommendation 9.1"
+      }
+     ]
+    },
+    {
+     "item": "Macrolide",
+     "dose": "Azithromycin 500 mg daily or clarithromycin 500 mg twice daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Recommendation 9.1"
+      }
+     ]
+    },
+    {
+     "item": "Respiratory fluoroquinolone",
+     "dose": "Levofloxacin 750 mg or moxifloxacin 400 mg daily: alone in nonsevere disease, with a beta-lactam in severe disease",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Recommendation 9.1, 9.2"
+      }
+     ]
+    },
+    {
+     "item": "MRSA or Pseudomonas cover",
+     "dose": "Only with locally validated risk factors: vancomycin 15 mg/kg every 12 hours by levels or linezolid 600 mg every 12 hours; piperacillin-tazobactam 4.5 g every 6 hours or cefepime 2 g every 8 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Recommendation 11"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroids",
+     "dose": "Not routine in nonsevere pneumonia; SSC rules in refractory septic shock",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Question 12"
+      }
+     ]
+    },
+    {
+     "item": "Duration",
+     "dose": "At least 5 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31573350",
+       "where": "Duration"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:31573350",
+     "where": "Recommendation 9.1, 9.2, 11; question 12; duration"
+    }
+   ],
+   "next": "end_lung"
+  },
+  {
+   "id": "unclear",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Antibiotics running, no source found, low fungal and resistance risk. Next?",
+   "options": [
+    "Keep looking for a source and mimics; review antibiotics daily",
+    "Add an empiric antifungal and review antibiotics daily",
+    "Add a second gram-negative agent and review daily",
+    "Keep looking for a source; fixed 14-day course, no daily review"
+   ],
+   "answer": 0,
+   "chainStep": "Continue the search for a source and for non-infectious causes; daily de-escalation review; stop antibiotics if another cause is found",
+   "why": "With infection unconfirmed, keep re-evaluating, search for alternative diagnoses, and stop empiric antimicrobials if one is found; assess daily for de-escalation rather than fix the duration. Empirical antifungals and extra resistant-organism cover are suggested against at low risk.",
+   "sources": [
+    {
+     "docId": "pmid:34599691",
+     "where": "Rec 11, 20, 23, 29"
+    },
+    {
+     "docId": "pmid:42272214",
+     "where": "Table 1, antifungal (revisited); MDR pathogen, low risk (new)"
+    }
+   ],
+   "next": "end_unclear"
+  },
+  {
+   "id": "possible",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Possible sepsis, no shock, infection uncertain. Antibiotics?",
+   "options": [
+    "Rapid workup; antibiotics within 3 hours if concern persists",
+    "Rapid workup; procalcitonin decides whether antibiotics start",
+    "Rapid workup; antibiotics only if a blood culture turns positive",
+    "Rapid workup; antibiotics at 24 hours if still febrile"
+   ],
+   "answer": 0,
+   "chainStep": "Rapid assessment (history, exam, tests for infectious and non-infectious causes) within 3 hours; antibiotics if infection is still a concern, otherwise defer them and monitor closely",
+   "why": "For possible sepsis without shock: a time-limited rapid assessment of infectious versus non-infectious causes, then antimicrobials within 3 hours if concern for infection persists, not a day later. With a low likelihood of infection, defer them and monitor closely. Procalcitonin is not used to decide when to start.",
+   "sources": [
+    {
+     "docId": "pmid:34599691",
+     "where": "Rec 13, 14, 15, 16"
+    }
+   ],
+   "next": "possible_result"
+  },
+  {
+   "id": "possible_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Rapid assessment",
+   "outcomes": [
+    {
+     "id": "likely_now",
+     "if": "Infection likely; a source declares itself",
+     "ddx": {
+      "lead": [
+       "Sepsis"
+      ],
+      "out": []
+     },
+     "next": "bundle"
+    },
+    {
+     "id": "mimic",
+     "if": "Not an infection; a non-infectious cause explains it",
+     "ddx": {
+      "lead": [
+       "Non-infectious mimic"
+      ],
+      "out": []
+     },
+     "next": "end_mimic"
+    }
+   ]
+  },
+  {
+   "id": "mening_first",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Suspected bacterial meningitis. First moves?",
+   "options": [
+    "Blood cultures; LP first if safe; antibiotics within 1 hour",
+    "Blood cultures; CT head before the LP, then antibiotics",
+    "Blood cultures; LP first, antibiotics once the Gram stain is back",
+    "Blood cultures; antibiotics only after both CT and LP are done"
+   ],
+   "answer": 0,
+   "chainStep": "Blood cultures and bloods; LP before antibiotics only if no CT criterion, no contraindication and no delay; IV antibiotics within 1 hour of arrival",
+   "why": "Antibiotics start within 1 hour of arrival. Blood tests and the LP come first only when safe and without a clinically significant delay. Neuroimaging is not routine before LP, only for the CT criteria, and when imaging or the LP is delayed, blood cultures and antibiotics go first.",
+   "note": "IDSA images for any abnormal level of consciousness; WHO (GCS under 10) and NICE (9 or less) are narrower.",
+   "orders": [
+    {
+     "item": "Bloods",
+     "dose": "Blood culture, white count, CRP (or procalcitonin), glucose, whole-blood meningococcal and pneumococcal PCR, HIV test",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.4.4"
+      }
+     ]
+    },
+    {
+     "item": "Glucose",
+     "dose": "Immediately before the LP, for the CSF to blood ratio",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.4.13"
+      }
+     ]
+    },
+    {
+     "item": "Normal CRP, PCT or white count",
+     "dose": "Does not rule out bacterial meningitis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.4.5"
+      }
+     ]
+    },
+    {
+     "item": "Before any LP",
+     "dose": "Treat and stabilise first: unprotected airway, respiratory compromise, shock, uncontrolled seizures, bleeding risk; no LP with extensive or rapidly spreading purpura or infection at the site",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.4.11; 1.4.12"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "1.4.1; 1.4.6; 1.4.7; 1.4.8"
+    },
+    {
+     "docId": "url:a2af80c8370d",
+     "where": "Cranial imaging recommendations and remarks; B.2.1 timing"
+    },
+    {
+     "docId": "pmid:15494903",
+     "where": "Initial management approach; CT before LP (B-II)"
+    }
+   ],
+   "next": "ct_criteria"
+  },
+  {
+   "id": "ct_criteria",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Any reason to delay the LP?",
+   "outcomes": [
+    {
+     "id": "no_ct",
+     "if": "No CT criterion; fully alert, no focal signs, papilledema, recent seizure, immunocompromise or CNS disease",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "next": "lp_first"
+    },
+    {
+     "id": "ct",
+     "if": "CT criterion present; altered consciousness, focal signs, papilledema, new seizure, immunocompromise or CNS disease",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "next": "ct_first"
+    },
+    {
+     "id": "lp_unsafe",
+     "if": "LP unsafe now; spreading purpura, bleeding risk or site infection",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "next": "ct_first"
+    }
+   ]
+  },
+  {
+   "id": "lp_first",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "No reason to image first. Next?",
+   "options": [
+    "LP now, then dexamethasone and antibiotics at once",
+    "CT of the head before the LP",
+    "Antibiotics and admit; LP tomorrow",
+    "LP now; antibiotics once the CSF cell count is back"
+   ],
+   "answer": 0,
+   "chainStep": "LP now (glucose drawn just before), then dexamethasone and IV antibiotics immediately after the CSF is obtained, within 1 hour of arrival",
+   "why": "Routine imaging before LP is not recommended, and LP without a prior CT was associated with lower mortality than LP after CT. Do the LP before antibiotics when it is safe and quick, then give dexamethasone and antibiotics immediately after the CSF is obtained.",
+   "sources": [
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "1.4.6; 1.4.9; 1.6.3"
+    },
+    {
+     "docId": "url:a2af80c8370d",
+     "where": "Cranial imaging recommendation and justification"
+    },
+    {
+     "docId": "pmid:15494903",
+     "where": "Figure 2 legend, footnote e"
+    }
+   ],
+   "next": "csf_result"
+  },
+  {
+   "id": "ct_first",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "The LP must wait: a CT criterion or an LP contraindication. Now?",
+   "options": [
+    "Blood cultures, dexamethasone and antibiotics now; CT if indicated, LP when safe",
+    "CT now; blood cultures, dexamethasone and antibiotics after the LP",
+    "LP now despite it, then dexamethasone and antibiotics; CT afterwards",
+    "Blood cultures, then CT and LP; dexamethasone and antibiotics after the CSF"
+   ],
+   "answer": 0,
+   "chainStep": "Blood cultures, dexamethasone and IV antibiotics before the CT; LP after the CT if it shows no space-occupying lesion with midline shift and the raised-pressure signs allow, or once the contraindication clears",
+   "why": "When the LP is delayed, blood cultures are drawn and antimicrobial and adjunctive therapy given first, because delay risks morbidity and death. The LP waits until the CT excludes a lesion with shift and the raised-pressure signs or the contraindication have resolved; pretreatment blood cultures and CSF findings still support the diagnosis.",
+   "note": "Purpura: NICE NG240 does not routinely give corticosteroids for meningococcal disease (1.8.6); for suspected bacterial meningitis it gives dexamethasone and stops it if meningococcus is found (1.8.3).",
+   "sources": [
+    {
+     "docId": "pmid:15494903",
+     "where": "Initial management approach; empirical therapy"
+    },
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "1.4.7; 1.4.8; 1.4.10; 1.4.12"
+    },
+    {
+     "docId": "url:a2af80c8370d",
+     "where": "Cranial imaging recommendations and remarks"
+    }
+   ],
+   "next": "ct_result"
+  },
+  {
+   "id": "ct_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT and the deferred LP",
+   "outcomes": [
+    {
+     "id": "ct_clear",
+     "if": "CT clear; no lesion or shift, LP once safe",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "next": "csf_result"
+    },
+    {
+     "id": "ct_lesion",
+     "if": "Lesion with midline shift; no LP",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_mening_lesion"
+    },
+    {
+     "id": "lp_later",
+     "if": "No CT needed; the LP waits until it is safe",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "next": "listeria"
+    }
+   ]
+  },
+  {
+   "id": "csf_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CSF results",
+   "outcomes": [
+    {
+     "id": "csf_bacterial",
+     "if": "CSF bacterial; continue dexamethasone for pneumococcus",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Dexamethasone, once the organism is known",
+       "dose": "Continue for pneumococcus (IDSA: gram-positive diplococci or S. pneumoniae grown) or pneumococcus or Hib (NICE); stop for other organisms; no organism found: infection specialist advice; at most 4 days (WHO)",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:15494903",
+         "where": "Adjunctive dexamethasone, adults"
+        },
+        {
+         "docId": "url:4a5f477fcfcd",
+         "where": "1.8.3; 1.8.4"
+        },
+        {
+         "docId": "url:a2af80c8370d",
+         "where": "Corticosteroids remarks"
+        }
+       ]
+      }
+     ],
+     "next": "listeria"
+    },
+    {
+     "id": "csf_not_bacterial",
+     "if": "CSF not bacterial; stop dexamethasone, review antibiotics",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Dexamethasone",
+       "dose": "Stop when the CSF is not consistent with bacterial meningitis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:a2af80c8370d",
+         "where": "Corticosteroids recommendation"
+        }
+       ]
+      },
+      {
+       "item": "Antibiotics",
+       "dose": "Continue until blood and CSF results suggest an alternative or another diagnosis is found; infection specialist advice if results are normal but bacterial meningitis is still suspected",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:4a5f477fcfcd",
+         "where": "1.6.8"
+        }
+       ]
+      }
+     ],
+     "next": "end_csf_not_bacterial"
+    }
+   ]
+  },
+  {
+   "id": "listeria",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Risk factors for Listeria",
+   "outcomes": [
+    {
+     "id": "no_listeria",
+     "if": "No Listeria risk; 50 or under, not pregnant, not immunocompromised",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Listeria age cutoff",
+       "dose": "IDSA over 50 (Table 4, not yet read); WHO 2025 over 60",
+       "status": "conflict",
+       "note": "The sources set different age cutoffs; IDSA Table 4 is an image in the open copy"
+      }
+     ],
+     "next": "regimen_std"
+    },
+    {
+     "id": "listeria",
+     "if": "Listeria risk; over 50, pregnant or immunocompromised",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Listeria age cutoff",
+       "dose": "IDSA over 50 (Table 4, not yet read); WHO 2025 over 60",
+       "status": "conflict",
+       "note": "The sources set different age cutoffs; IDSA Table 4 is an image in the open copy"
+      }
+     ],
+     "next": "regimen_amp"
+    }
+   ]
+  },
+  {
+   "id": "regimen_std",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "No Listeria risk. Empiric antibiotic backbone?",
+   "options": [
+    "IV ceftriaxone or cefotaxime",
+    "IV vancomycin alone",
+    "High-dose oral amoxicillin",
+    "IV aciclovir alone"
+   ],
+   "answer": 0,
+   "chainStep": "IV ceftriaxone (or cefotaxime) at meningitis doses plus vancomycin to a trough of 15 to 20 mcg/mL; dexamethasone 0.15 mg/kg every 6 hours, first dose with or just before the antibiotic",
+   "why": "A third-generation cephalosporin is the empiric backbone. Vancomycin is never a single agent; IDSA 2004 pairs it with the cephalosporin, assuming resistance is likely, while WHO adds it where resistant pneumococci are common. Oral agents reach too little CSF, and aciclovir is not routine unless herpes encephalitis is strongly suspected.",
+   "note": "Dexamethasone after antibiotics have started: IDSA 2004 says do not give it to adults; NICE NG240 says give it as soon as possible if it is less than 12 hours late; WHO 2025 says with the first dose or as soon as possible after.",
+   "orders": [
+    {
+     "item": "Ceftriaxone",
+     "dose": "Highest meningitis dose: NICE defers to the BNF; WHO 2025 says maximum dosage every 12 hours with no mg; IDSA 2004 Table 6 is an image in the trail copy and not read; StatPearls meningococcemia gives 80 mg/kg a day in 1 or 2 doses (shown in pw_rash), not a meningitis dose",
+     "status": "pending"
+    },
+    {
+     "item": "Vancomycin",
+     "dose": "With the cephalosporin, never alone; trough about 15 to 20 mcg/mL",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:15494903",
+       "where": "Specific antimicrobial agents; vancomycin (A-III, B-III)"
+      }
+     ]
+    },
+    {
+     "item": "Vancomycin dose",
+     "dose": "IDSA 2004 Table 6, not read",
+     "status": "pending"
+    },
+    {
+     "item": "Dexamethasone",
+     "dose": "0.15 mg/kg every 6 hours for 2 to 4 days, first dose 10 to 20 minutes before or with the first antibiotic; continue for pneumococcus (IDSA) or pneumococcus or Hib (NICE); stop if the CSF is not bacterial",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:15494903",
+       "where": "Adjunctive dexamethasone, adults (A-I)"
+      },
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.8.1; 1.8.3; 1.8.5"
+      },
+      {
+       "docId": "url:a2af80c8370d",
+       "where": "Corticosteroids recommendation and remarks"
+      }
+     ]
+    },
+    {
+     "item": "Aciclovir",
+     "dose": "Not routine unless herpes simplex encephalitis is strongly suspected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.6.7"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "url:a2af80c8370d",
+     "where": "B.2.2 recommendation; B.2.1 general principles"
+    },
+    {
+     "docId": "pmid:15494903",
+     "where": "Specific antimicrobial agents; vancomycin"
+    },
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "1.6.5; 1.6.7"
+    }
+   ],
+   "next": "end_mening"
+  },
+  {
+   "id": "regimen_amp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Listeria risk. What is added to the cephalosporin?",
+   "options": [
+    "IV ampicillin or amoxicillin",
+    "Nothing; ceftriaxone covers Listeria",
+    "Vancomycin in place of the cephalosporin",
+    "A higher ceftriaxone dose instead"
+   ],
+   "answer": 0,
+   "chainStep": "Add IV ampicillin or amoxicillin to ceftriaxone (or cefotaxime) and vancomycin; dexamethasone with or just before the first dose",
+   "why": "Listeria is intrinsically resistant to third-generation cephalosporins, ceftriaxone and cefotaxime included, so ampicillin or amoxicillin is added for anyone over 50 (the IDSA cutoff; its Table 4 is not yet read) or over 60 (WHO 2025), pregnant or immunocompromised. Vancomycin never replaces the cephalosporin.",
+   "note": "Dexamethasone after antibiotics have started: IDSA 2004 says do not give it to adults; NICE NG240 says give it as soon as possible if it is less than 12 hours late; WHO 2025 says with the first dose or as soon as possible after.",
+   "orders": [
+    {
+     "item": "Ampicillin or amoxicillin",
+     "dose": "Dose not stated in NICE NG240 or WHO 2025; IDSA 2004 Table 6 not read",
+     "status": "pending"
+    },
+    {
+     "item": "Confirmed Listeria",
+     "dose": "IV amoxicillin or ampicillin for 21 days; infection specialist advice on co-trimoxazole for the first 7 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.6.14"
+      }
+     ]
+    },
+    {
+     "item": "Dexamethasone",
+     "dose": "0.15 mg/kg every 6 hours for 2 to 4 days, first dose 10 to 20 minutes before or with the first antibiotic; continue for pneumococcus (IDSA) or pneumococcus or Hib (NICE); stop if the CSF is not bacterial",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:15494903",
+       "where": "Adjunctive dexamethasone, adults (A-I)"
+      },
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.8.1; 1.8.3; 1.8.5"
+      },
+      {
+       "docId": "url:a2af80c8370d",
+       "where": "Corticosteroids recommendation and remarks"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "url:a2af80c8370d",
+     "where": "B.2.2 recommendation and justification"
+    },
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "1.6.6"
+    },
+    {
+     "docId": "pmid:15494903",
+     "where": "Vancomycin"
+    }
+   ],
+   "next": "end_mening_amp"
+  },
+  {
+   "id": "fn_first",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Fever within 6 weeks of chemotherapy. First hour?",
+   "options": [
+    "Assess within 15 minutes; cultures; first antibiotic within 1 hour",
+    "Assess within 15 minutes; cultures; antibiotic once the ANC is back",
+    "Assess within 15 minutes; cultures; vancomycin added as standard",
+    "Assess within 15 minutes; cultures; procalcitonin decides on antibiotics"
+   ],
+   "answer": 0,
+   "chainStep": "Assess within 15 minutes; CBC with differential, electrolytes, creatinine, BUN, lactate, liver tests; two sets of blood cultures (peripheral plus a central line lumen if one is present); first empiric dose within 1 hour",
+   "why": "Fever in a neutropenic patient is assumed to be infection. Assess within 15 minutes of triage, draw at least two sets of blood cultures and baseline labs, and give the first empiric dose within 1 hour; if risk is not settled in that hour, give an IV dose while evaluating. Vancomycin is not standard initial therapy, and procalcitonin is not yet recommended to decide on antibiotics.",
+   "orders": [
+    {
+     "item": "Fever",
+     "dose": "A single oral temperature of 38.3 C (101 F) or more, or 38.0 C (100.4 F) or more sustained over 1 hour",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29461916",
+       "where": "Methods, definitions"
+      }
+     ]
+    },
+    {
+     "item": "Neutropenia",
+     "dose": "ANC under 1,000/mcL; severe under 500; profound under 100 (ASCO 2018; IDSA 2010 uses 500, not yet read)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29461916",
+       "where": "Methods, definitions"
+      }
+     ]
+    },
+    {
+     "item": "MASCC index",
+     "dose": "No or mild symptoms 5 (moderate 3, not cumulative); no hypotension 5; no COPD 4; solid tumor, or blood cancer with no prior fungal infection, 4; no dehydration needing IV fluid 3; outpatient 3; age under 60, 2. Maximum 26; 21 or more is low risk",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29461916",
+       "where": "Table 2 and footnote; recommendation 2.1b"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:29461916",
+     "where": "Recommendation 1.1 a to h and literature review"
+    }
+   ],
+   "next": "fn_result"
+  },
+  {
+   "id": "fn_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "ANC and risk",
+   "outcomes": [
+    {
+     "id": "high",
+     "if": "High risk; MASCC under 21, a clinical exclusion, or leukemia induction",
+     "ddx": {
+      "lead": [
+       "Neutropenic fever"
+      ],
+      "out": []
+     },
+     "next": "fn_inpatient"
+    },
+    {
+     "id": "low",
+     "if": "Low risk; MASCC 21 or more, no exclusion, home supports in place",
+     "ddx": {
+      "lead": [
+       "Neutropenic fever"
+      ],
+      "out": []
+     },
+     "next": "fn_outpatient"
+    },
+    {
+     "id": "normal",
+     "if": "Not neutropenic; ANC 1,000 or more",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_fn_normal"
+    }
+   ]
+  },
+  {
+   "id": "fn_inpatient",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "High-risk febrile neutropenia. Empiric antibiotic?",
+   "options": [
+    "IV cefepime, a carbapenem or piperacillin-tazobactam, alone",
+    "IV cefepime plus an aminoglycoside as standard",
+    "IV cefepime plus vancomycin as standard",
+    "Oral ciprofloxacin plus amoxicillin-clavulanate at home"
+   ],
+   "answer": 0,
+   "chainStep": "Admit; IV antipseudomonal beta-lactam monotherapy (cefepime, meropenem, imipenem-cilastatin or piperacillin-tazobactam); vancomycin only for suspected line infection, skin, pneumonia or instability",
+   "why": "Monotherapy with an antipseudomonal beta-lactam is recommended. Adding an aminoglycoside brought more toxicity and no better survival, and vancomycin is kept for suspected catheter infection, skin or soft tissue infection, pneumonia or hemodynamic instability. Leukemia induction and a MASCC under 21 mean inpatient care.",
+   "orders": [
+    {
+     "item": "Antipseudomonal beta-lactam doses",
+     "dose": "Cefepime, meropenem, imipenem-cilastatin or piperacillin-tazobactam: doses not stated in ASCO/IDSA 2018; IDSA 2010 not read",
+     "status": "pending"
+    },
+    {
+     "item": "Gram-positive agent (vancomycin)",
+     "dose": "Only for suspected catheter infection, skin or soft tissue infection, pneumonia or hemodynamic instability",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29461916",
+       "where": "Recommendation 1.1h"
+      }
+     ]
+    },
+    {
+     "item": "Resistant organisms",
+     "dose": "MRSA: vancomycin, linezolid, or daptomycin if no pneumonia; VRE: linezolid or daptomycin; ESBL: a carbapenem",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29461916",
+       "where": "Recommendation 1.1h"
+      }
+     ]
+    },
+    {
+     "item": "Fluoroquinolone-resistant gram-negatives also resistant to beta-lactams",
+     "dose": "Inpatient carbapenem-based regimen",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29461916",
+       "where": "Recommendation 2.1 qualifying statements"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:29461916",
+     "where": "Recommendation 1.1h; 2.1 and qualifying statements; 5.1 literature review"
+    }
+   ],
+   "next": "end_fn_high"
+  },
+  {
+   "id": "fn_outpatient",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Low-risk febrile neutropenia, home supports in place. Plan?",
+   "options": [
+    "Dose here, observe 4 hours, home on ciprofloxacin plus amoxicillin-clavulanate",
+    "Home now on ciprofloxacin plus amoxicillin-clavulanate, first dose at home",
+    "Dose here, observe 4 hours, home on ciprofloxacin alone",
+    "No antibiotics; home, and return if the fever persists"
+   ],
+   "answer": 0,
+   "chainStep": "First empiric dose in the ED after cultures; observe 4 hours or more; home on oral ciprofloxacin or levofloxacin plus amoxicillin-clavulanate (clindamycin if penicillin allergic); re-evaluate if still febrile at 2 to 3 days",
+   "why": "Low-risk patients who meet the logistic requirements get the first dose in the clinic or emergency department after cultures, are observed for at least 4 hours, and go home on an oral fluoroquinolone plus amoxicillin-clavulanate, not after fluoroquinolone prophylaxis. A fluoroquinolone alone is not recommended.",
+   "orders": [
+    {
+     "item": "Oral regimen",
+     "dose": "Ciprofloxacin or levofloxacin plus amoxicillin-clavulanate (clindamycin instead if penicillin allergic); not after fluoroquinolone prophylaxis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29461916",
+       "where": "Recommendation 5.1; abstract"
+      }
+     ]
+    },
+    {
+     "item": "Oral regimen doses",
+     "dose": "Not stated in ASCO/IDSA 2018",
+     "status": "pending"
+    },
+    {
+     "item": "Logistics",
+     "dose": "Within 1 hour or 30 miles (48 km); caregiver at home 24 hours a day; telephone and transport 24 hours a day; no history of noncompliance; the oncologist agrees",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29461916",
+       "where": "Recommendation 3.1"
+      }
+     ]
+    },
+    {
+     "item": "Admit if",
+     "dose": "No defervescence after 2 to 3 days, fever returns, new signs of infection, oral intake fails, or cultures show resistance",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29461916",
+       "where": "Recommendation 3.1"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:29461916",
+     "where": "Recommendation 3.1; 4.1 and qualifying; 5.1 and qualifying; abstract"
+    }
+   ],
+   "next": "end_fn_low"
+  },
+  {
+   "id": "mild_source",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Source, no sepsis",
+   "outcomes": [
+    {
+     "id": "pyelo_mild",
+     "if": "Pyelonephritis, not septic; flank pain and fever, drinking",
+     "ddx": {
+      "lead": [
+       "Pyelonephritis"
+      ],
+      "out": []
+     },
+     "next": "pyelo_oral"
+    },
+    {
+     "id": "cell_mild",
+     "if": "Cellulitis, not septic; early, mild, no necrotizing signs",
+     "ddx": {
+      "lead": [
+       "Cellulitis"
+      ],
+      "out": []
+     },
+     "next": "cell_oral"
+    },
+    {
+     "id": "nsti_signs",
+     "if": "Necrotizing signs, no sepsis; pain out of proportion, edema past the redness",
+     "ddx": {
+      "lead": [
+       "Necrotizing infection"
+      ],
+      "out": []
+     },
+     "next": "nsti_surgery"
+    },
+    {
+     "id": "other_mild",
+     "if": "Another source, no sepsis; for example a chest or throat infection",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_other_mild"
+    }
+   ]
+  },
+  {
+   "id": "pyelo_oral",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Pyelonephritis, not septic, taking oral fluids. Plan?",
+   "options": [
+    "Urine culture, oral antibiotic, return if no better in 48 hours",
+    "Urine culture, then admission for IV antibiotics and fluids",
+    "No culture; a 3-day oral course as for cystitis",
+    "Urine culture, then fluids alone until the culture is back"
+   ],
+   "answer": 0,
+   "chainStep": "Midstream urine culture, then an oral antibiotic by local resistance, switched by the culture: ciprofloxacin 500 mg twice a day for 7 days (StatPearls: 14 days in men) where fluoroquinolone resistance is 10% or less (one IV dose of ceftriaxone first if it is higher); NICE first choice cefalexin 500 mg two or three times a day for 7 to 10 days; return if not better in 48 hours",
+   "why": "Send a midstream urine culture before antibiotics, offer an antibiotic chosen with local resistance in mind, and give it orally when the patient can take it and is not ill enough to need IV. Seek help if it worsens or does not improve within 48 hours; signs of sepsis mean hospital.",
+   "note": "NICE NG111 restricts ciprofloxacin to when other first choices are unsuitable; US teaching gives an oral fluoroquinolone first. The current US guideline, IDSA 2025 complicated UTI (pmid:41419213), is abstract-only in the trail, and its abstract names no agent.",
+   "orders": [
+    {
+     "item": "Cefalexin",
+     "dose": "500 mg two or three times a day (up to 1 to 1.5 g three or four times a day if severe) for 7 to 10 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Ciprofloxacin",
+     "dose": "500 mg twice a day for 7 days, when other first choices are unsuitable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Co-amoxiclav or trimethoprim",
+     "dose": "Only once the culture shows susceptibility",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Refer or seek advice",
+     "dose": "Significantly dehydrated or unable to take oral fluids and medicines, pregnant, or at higher risk of complications",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f531e12f2681",
+       "where": "1.1.10"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "url:f531e12f2681",
+     "where": "1.1.2; 1.1.5; 1.1.7; 1.1.9; 1.3.1; 1.3.2; Table 1"
+    },
+    {
+     "docId": "pmid:30137822",
+     "where": "Treatment / Management"
+    }
+   ],
+   "next": "end_pyelo_oral"
+  },
+  {
+   "id": "cell_oral",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Early, mild cellulitis, no sepsis. Treatment?",
+   "options": [
+    "An oral beta-lactam against streptococci",
+    "IV vancomycin plus piperacillin-tazobactam",
+    "Incision and drainage, no antibiotic",
+    "Elevation alone, no antibiotic"
+   ],
+   "answer": 0,
+   "chainStep": "Oral cephalexin or amoxicillin-clavulanate against streptococci; add MRSA cover if at risk or not responding; reassess for necrotizing signs if it spreads fast",
+   "why": "Cellulitis is treated with antibiotics against gram-positive bacteria, and early, mild cellulitis without significant comorbidity may need only an oral beta-lactam where community MRSA is not prevalent. Incision and drainage is for an abscess. Cover community MRSA if the patient is at risk or does not respond.",
+   "orders": [
+    {
+     "item": "Oral beta-lactam",
+     "dose": "Cephalexin 500 mg every 6 hours or amoxicillin-clavulanate 1 g every 8 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Typical cellulitis, outpatient therapy, normal renal function"
+      }
+     ]
+    },
+    {
+     "item": "Oral MRSA options, if at risk",
+     "dose": "Add doxycycline 100 mg every 12 hours or trimethoprim-sulfamethoxazole 160/800 mg every 12 hours to the beta-lactam; or clindamycin alone, 300 to 600 mg every 8 hours (high resistance rate); or linezolid 600 mg every 12 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30564282",
+       "where": "MRSA oral options, text; MRSA antibiotics list"
+      }
+     ]
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:30564282",
+     "where": "Superficial infections (1C) and text"
+    },
+    {
+     "docId": "pmid:35033131",
+     "where": "Typical cellulitis, outpatient"
+    }
+   ],
+   "next": "end_cell_oral"
+  },
+  {
+   "id": "end_uti_drain",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Infected, obstructed kidney or renal abscess: urine culture, IV antibiotics, and urgent drainage as soon as practical."
+  },
+  {
+   "id": "end_uti",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Urinary sepsis without obstruction: urine culture, IV antibiotics, imaging that excludes a blocked kidney, and an oral step-down by culture at 48 hours."
+  },
+  {
+   "id": "end_nsti",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Necrotizing soft tissue infection: emergency debridement within 6 hours of admission, broad cover with clindamycin or linezolid, re-exploration within 12 to 24 hours."
+  },
+  {
+   "id": "end_cellulitis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cellulitis with sepsis: IV gram-positive cover, MRSA cover for those at risk, and repeated checks for necrotizing signs."
+  },
+  {
+   "id": "end_fn_shock",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Febrile neutropenia: an IV antipseudomonal beta-lactam within the hour, with vancomycin added for instability; septic shock is resuscitated as above."
+  },
+  {
+   "id": "end_other_mild",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Infection without sepsis from another source: not in this pathway yet; treat by that source's own guideline."
+  },
+  {
+   "id": "end_line",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Line sepsis: other access first, then prompt removal of the line, with cultures, antibiotics and MRSA cover as for sepsis."
+  },
+  {
+   "id": "end_unclear",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Sepsis without a source: keep searching, consider mimics, and review the antibiotics daily."
+  },
+  {
+   "id": "end_lung",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pneumonia with sepsis: the sepsis bundle, then a beta-lactam plus a macrolide for at least 5 days; MRSA or Pseudomonas cover only with locally validated risk factors."
+  },
+  {
+   "id": "end_abdo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Abdominal source: source control as soon as practical; continue in the abdominal pain pathway."
+  },
+  {
+   "id": "end_mimic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Not an infection: defer antibiotics with close monitoring, or stop them, and treat the cause."
+  },
+  {
+   "id": "end_mening",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bacterial meningitis, no Listeria risk: dexamethasone and IV ceftriaxone plus vancomycin within the hour; the LP comes first only when it is safe and quick. WHO adds vancomycin only where resistance is common."
+  },
+  {
+   "id": "end_mening_amp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bacterial meningitis with Listeria risk: ampicillin or amoxicillin added to the cephalosporin; antibiotics never wait for a CT or an LP."
+  },
+  {
+   "id": "end_mening_lesion",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A space-occupying lesion with midline shift: no LP; the empiric antibiotics continue, and the lesion's workup and the steroid decision are not in this pathway."
+  },
+  {
+   "id": "end_csf_not_bacterial",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "CSF not bacterial: stop dexamethasone and review the antibiotics against the blood and CSF results, with infection specialist advice if bacterial meningitis is still suspected."
+  },
+  {
+   "id": "end_fn_high",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "High-risk febrile neutropenia: admit for IV antipseudomonal beta-lactam monotherapy, first dose within the hour."
+  },
+  {
+   "id": "end_fn_low",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Low-risk febrile neutropenia: first dose here, 4 hours of observation, home on a fluoroquinolone plus amoxicillin-clavulanate."
+  },
+  {
+   "id": "end_fn_normal",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Fever after chemotherapy with an ANC of 1,000 or more: not neutropenic; work up the fever as in any other patient."
+  },
+  {
+   "id": "end_pyelo_oral",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pyelonephritis without sepsis: urine culture, oral antibiotics at home, review if no better in 48 hours."
+  },
+  {
+   "id": "end_cell_oral",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Mild cellulitis: an oral beta-lactam, with MRSA cover if at risk or not responding."
+  }
+ ],
+ "cases": [
+  {
+   "id": "urosepsis_shock",
+   "label": "Obstructed urosepsis in refractory shock",
+   "vignette": "71-year-old woman, 2 days of fever and right flank pain, now confused. BP 78/42, HR 124, RR 26, temperature 39.2. Weight 64 kg. Lives at home; no recent antibiotics or hospital stays.",
+   "picks": {
+    "first_look": "shock",
+    "map_check": "map_low",
+    "pressor_check": "refractory",
+    "source": "urinary",
+    "uti_result": "obstructed"
+   },
+   "results": {
+    "first_look": "Lactate 5.4 mmol/L. SIRS and NEWS both high.",
+    "map_check": "After 2 L of balanced crystalloid: BP 80/44, MAP 56.",
+    "pressor_check": "Norepinephrine 0.3 mcg/kg/min: MAP 54; still on 0.3 at 4 hours.",
+    "source": "Right costovertebral angle tenderness. Urine: many white cells, nitrite positive.",
+    "uti_result": "Renal imaging: right hydronephrosis behind a 9 mm proximal ureteric stone."
+   }
+  },
+  {
+   "id": "pyelo_sepsis",
+   "label": "Pyelonephritis with sepsis, no obstruction",
+   "vignette": "34-year-old woman, 3 days of dysuria, then rigors, vomiting and left flank pain. BP 112/70, HR 116, RR 24, temperature 39.4. Pregnancy test negative; no recent antibiotics.",
+   "picks": {
+    "first_look": "likely",
+    "source": "urinary",
+    "uti_result": "clear"
+   },
+   "results": {
+    "first_look": "Lactate 1.8 mmol/L. Creatinine 2.1 mg/dL (baseline 0.8), platelets 88,000.",
+    "source": "Left costovertebral angle tenderness. Urine: pyuria, nitrite positive.",
+    "uti_result": "Renal imaging: no hydronephrosis, no abscess. By 48 hours she is afebrile and eating; the urine grows E. coli susceptible to cefalexin."
+   }
+  },
+  {
+   "id": "nsti_shock",
+   "label": "Necrotizing fasciitis in septic shock",
+   "vignette": "52-year-old man with diabetes, 1 day of severe left thigh pain after a small scrape, now drowsy. BP 84/48, HR 128, RR 28, temperature 38.9. Weight 90 kg.",
+   "picks": {
+    "first_look": "shock",
+    "map_check": "map_low",
+    "pressor_check": "responding",
+    "source": "skin",
+    "skin_look": "nsti"
+   },
+   "results": {
+    "first_look": "Lactate 4.8 mmol/L. Creatinine 2.0 mg/dL.",
+    "map_check": "After 2.7 L of balanced crystalloid: MAP 58.",
+    "pressor_check": "Norepinephrine 0.08 mcg/kg/min: MAP 67, mentation clearing.",
+    "source": "A tense, swollen left thigh; nothing else on exam, urine or chest x-ray.",
+    "skin_look": "Pain far beyond the visible redness, edema past the erythema, dusky bullae and crepitus."
+   }
+  },
+  {
+   "id": "cellulitis_sepsis",
+   "label": "Cellulitis with hypotension that responds to fluid",
+   "vignette": "63-year-old man, 2 days of a red, hot, swollen right lower leg with fever and rigors. BP 86/50, HR 118, RR 22, temperature 39.0. Weight 80 kg. No MRSA history, no recent antibiotics or admissions.",
+   "picks": {
+    "first_look": "shock",
+    "map_check": "map_ok",
+    "source": "skin",
+    "skin_look": "cellulitis"
+   },
+   "results": {
+    "first_look": "Lactate 3.9 mmol/L.",
+    "map_check": "After 2.4 L of balanced crystalloid: BP 112/68, MAP 83; lactate 2.1 and falling.",
+    "source": "Spreading redness of the right shin; urine and chest x-ray clear.",
+    "skin_look": "Diffuse warm erythema, pain in keeping with what is seen, no bullae, no crepitus, no pus."
+   }
+  },
+  {
+   "id": "nsti_low_lrinec",
+   "label": "Necrotizing infection with a low LRINEC",
+   "vignette": "47-year-old woman with diabetes, 18 hours of rapidly worsening right forearm pain after a small cut. BP 118/72, HR 112, RR 22, temperature 38.6, newly confused.",
+   "picks": {
+    "first_look": "likely",
+    "source": "skin",
+    "skin_look": "nsti_lrinec"
+   },
+   "results": {
+    "first_look": "Lactate 1.6 mmol/L. GCS 14; platelets 92,000.",
+    "source": "A swollen, red right forearm; urine and chest x-ray clear.",
+    "skin_look": "Pain out of proportion and edema beyond the erythema, spreading over 2 hours. CRP 40 mg/L, WBC 11,000, hemoglobin 14.2, sodium 139, creatinine 0.9, glucose 130: no LRINEC threshold crossed, LRINEC 0."
+   }
+  },
+  {
+   "id": "line_sepsis",
+   "label": "Infected PICC line",
+   "vignette": "60-year-old man on outpatient IV antibiotics through a PICC line for osteomyelitis, rigors whenever the line is flushed. BP 104/66, HR 112, RR 22, temperature 39.1.",
+   "picks": {
+    "first_look": "likely",
+    "source": "line"
+   },
+   "results": {
+    "first_look": "Lactate 1.9 mmol/L. Creatinine 1.8 mg/dL (baseline 1.0), platelets 84,000.",
+    "source": "Redness at the PICC exit site; chest x-ray, urine and skin otherwise clear."
+   }
+  },
+  {
+   "id": "unclear_source",
+   "label": "Sepsis without a source",
+   "vignette": "77-year-old woman from home, 1 day of fever, confusion and poor intake. BP 108/64, HR 110, RR 24, temperature 38.8. No recent antibiotics, admissions, lines or immunosuppression.",
+   "picks": {
+    "first_look": "likely",
+    "source": "unclear"
+   },
+   "results": {
+    "first_look": "Lactate 1.8 mmol/L. Creatinine 2.0 mg/dL (baseline 1.1); new confusion.",
+    "source": "No focal findings. Urinalysis, chest x-ray and skin exam unrevealing; cultures pending."
+   }
+  },
+  {
+   "id": "cholangitis",
+   "label": "Abdominal source: cholangitis",
+   "vignette": "56-year-old man, 2 days of right upper quadrant pain, jaundice and fever. BP 100/62, HR 118, RR 24, temperature 39.3.",
+   "picks": {
+    "first_look": "likely",
+    "source": "abdominal"
+   },
+   "results": {
+    "first_look": "Lactate 1.9 mmol/L. Bilirubin 4.2 mg/dL, creatinine 1.7 (baseline 0.9), platelets 95,000.",
+    "source": "Right upper quadrant tenderness and jaundice. Ultrasound: a dilated common bile duct."
+   }
+  },
+  {
+   "id": "pe_mimic",
+   "label": "Possible sepsis that is a pulmonary embolism",
+   "vignette": "61-year-old woman, 2 days after a long-haul flight, breathless with pleuritic chest pain. BP 122/78, HR 118, RR 26, SpO2 89%, temperature 38.1.",
+   "picks": {
+    "first_look": "possible",
+    "possible_result": "mimic"
+   },
+   "results": {
+    "first_look": "Lactate 1.7 mmol/L. Hypoxemic; no clear source of infection.",
+    "possible_result": "Chest x-ray clear, urinalysis normal. CT pulmonary angiogram: bilateral pulmonary emboli."
+   }
+  },
+  {
+   "id": "possible_pneumonia",
+   "label": "Possible sepsis that declares itself as pneumonia",
+   "vignette": "69-year-old man, 1 day of feeling unwell with fever. BP 128/76, HR 112, RR 24, SpO2 91%, temperature 38.6. No cough yet. No recent antibiotics or admissions; no prior MRSA or Pseudomonas.",
+   "picks": {
+    "first_look": "possible",
+    "possible_result": "likely_now",
+    "source": "lung"
+   },
+   "results": {
+    "first_look": "Lactate 1.6 mmol/L. SpO2 91% on air; no obvious source on the first look.",
+    "possible_result": "Chest x-ray: right lower lobe consolidation.",
+    "source": "Crackles at the right base, matching the x-ray."
+   }
+  },
+  {
+   "id": "mening_viral",
+   "label": "Meningitis features, LP first, CSF not bacterial",
+   "vignette": "19-year-old college student, 12 hours of fever, severe headache and neck stiffness. Alert and oriented. BP 118/72, HR 108, temperature 39.4. No rash.",
+   "picks": {
+    "first_look": "meningitis",
+    "ct_criteria": "no_ct",
+    "csf_result": "csf_not_bacterial"
+   },
+   "results": {
+    "first_look": "Lactate 1.4 mmol/L; blood pressure holds.",
+    "ct_criteria": "GCS 15, no focal signs, pupils equal and reactive, no papilledema, no seizure, not immunocompromised, no CNS disease.",
+    "csf_result": "CSF: 180 white cells, 90% lymphocytes; glucose normal, CSF to blood ratio 0.7; protein mildly raised; Gram stain negative."
+   }
+  },
+  {
+   "id": "mening_ct",
+   "label": "Meningitis with a new seizure, over 50",
+   "vignette": "68-year-old man, fever and headache since yesterday, then a generalized seizure today. BP 132/80, HR 104, temperature 39.0.",
+   "picks": {
+    "first_look": "meningitis",
+    "ct_criteria": "ct",
+    "ct_result": "ct_clear",
+    "csf_result": "csf_bacterial",
+    "listeria": "listeria"
+   },
+   "results": {
+    "first_look": "Lactate 1.8 mmol/L; blood pressure holds. Neck stiffness.",
+    "ct_criteria": "New-onset seizure and a right arm drift.",
+    "ct_result": "CT: no lesion, no midline shift; no further seizure.",
+    "csf_result": "CSF: 2,400 white cells, 92% neutrophils; glucose 22 mg/dL, CSF to blood ratio 0.2; protein 310 mg/dL; Gram stain negative.",
+    "listeria": "Age 68."
+   }
+  },
+  {
+   "id": "mening_pregnant",
+   "label": "Meningitis in pregnancy",
+   "vignette": "29-year-old woman, 30 weeks pregnant, 1 day of fever, headache and neck stiffness. Alert. BP 114/70, HR 110, temperature 38.9.",
+   "picks": {
+    "first_look": "meningitis",
+    "ct_criteria": "no_ct",
+    "csf_result": "csf_bacterial",
+    "listeria": "listeria"
+   },
+   "results": {
+    "first_look": "Lactate 1.4 mmol/L; blood pressure holds.",
+    "ct_criteria": "GCS 15, no focal signs, pupils equal and reactive, no papilledema, no seizure, not immunocompromised, no CNS disease.",
+    "csf_result": "CSF: 1,600 white cells, 85% neutrophils; glucose 25 mg/dL, CSF to blood ratio 0.25; protein 260 mg/dL; Gram stain negative.",
+    "listeria": "Pregnant, 30 weeks."
+   }
+  },
+  {
+   "id": "mening_purpura",
+   "label": "Meningitis with a spreading purpuric rash",
+   "vignette": "20-year-old student, 10 hours of fever, headache and neck stiffness, and a purpuric rash spreading over the last hour. Alert. BP 108/68, HR 120, RR 22, temperature 39.4.",
+   "picks": {
+    "first_look": "meningitis",
+    "ct_criteria": "lp_unsafe",
+    "ct_result": "lp_later",
+    "listeria": "no_listeria"
+   },
+   "results": {
+    "first_look": "Lactate 1.8 mmol/L; blood pressure holds.",
+    "ct_criteria": "Purpura spreading on the legs and trunk. GCS 15, no focal signs, no papilledema, no seizure.",
+    "ct_result": "No CT criterion. The LP waits until the purpura stops spreading; whole-blood PCR sent.",
+    "listeria": "Age 20, not pregnant, not immunocompromised."
+   }
+  },
+  {
+   "id": "mening_lesion",
+   "label": "Fever, headache and a focal deficit: a brain abscess",
+   "vignette": "62-year-old woman, a week of sinus pain, then fever, headache and new left arm weakness. BP 136/82, HR 102, temperature 38.8.",
+   "picks": {
+    "first_look": "meningitis",
+    "ct_criteria": "ct",
+    "ct_result": "ct_lesion"
+   },
+   "results": {
+    "first_look": "Lactate 1.5 mmol/L; blood pressure holds. Neck stiffness.",
+    "ct_criteria": "Left arm drift and papilledema.",
+    "ct_result": "CT: a right frontal ring-enhancing lesion with midline shift."
+   }
+  },
+  {
+   "id": "fn_high",
+   "label": "High-risk febrile neutropenia",
+   "vignette": "64-year-old man with AML, 12 days after a cycle of consolidation chemotherapy, at home until today. Temperature 38.7, BP 116/70, HR 108. Painful mouth ulcers; cannot swallow tablets; needs IV fluid. Moderately unwell. No COPD, no prior fungal infection.",
+   "picks": {
+    "first_look": "neutropenic",
+    "fn_result": "high"
+   },
+   "results": {
+    "first_look": "Lactate 1.5 mmol/L; blood pressure holds.",
+    "fn_result": "ANC 100/mcL. MASCC 19: moderate symptoms 3, no hypotension 5, no COPD 4, no prior fungal infection 4, outpatient 3; dehydration needing IV fluid and age 60 or over score 0."
+   }
+  },
+  {
+   "id": "fn_low",
+   "label": "Low-risk febrile neutropenia, home",
+   "vignette": "48-year-old woman with breast cancer, 10 days after her last chemotherapy cycle, temperature 38.5, mildly unwell. BP 124/78, HR 98. Eating and drinking, no COPD, no prior fungal infection, no antibiotic prophylaxis. Lives 20 minutes from the hospital; her husband is home with her around the clock; phone and car at all hours; no history of missed treatment.",
+   "picks": {
+    "first_look": "neutropenic",
+    "fn_result": "low"
+   },
+   "results": {
+    "first_look": "Lactate 1.2 mmol/L; blood pressure holds.",
+    "fn_result": "ANC 300/mcL. MASCC 26: mild symptoms 5, no hypotension 5, no COPD 4, solid tumor 4, no dehydration 3, outpatient 3, under 60 2. No exclusion on exam, chest x-ray or labs; her oncologist agrees to outpatient care."
+   }
+  },
+  {
+   "id": "fn_normal",
+   "label": "Fever after chemotherapy, ANC normal",
+   "vignette": "55-year-old man with colon cancer, 4 days after his last chemotherapy cycle, temperature 38.4 and a sore throat. BP 128/80, HR 96.",
+   "picks": {
+    "first_look": "neutropenic",
+    "fn_result": "normal"
+   },
+   "results": {
+    "first_look": "Lactate 1.1 mmol/L; blood pressure holds.",
+    "fn_result": "ANC 3,800/mcL."
+   }
+  },
+  {
+   "id": "pyelo_home",
+   "label": "Pyelonephritis, home",
+   "vignette": "26-year-old woman, 2 days of dysuria, then fever and right flank pain. BP 122/76, HR 96, RR 16, temperature 38.6. Eating and drinking; not pregnant; no known urinary tract abnormality.",
+   "picks": {
+    "first_look": "no_sepsis",
+    "mild_source": "pyelo_mild"
+   },
+   "results": {
+    "first_look": "Lactate 1.1 mmol/L. Creatinine and platelets normal; alert.",
+    "mild_source": "Right costovertebral angle tenderness. Urine: pyuria, nitrite positive."
+   }
+  },
+  {
+   "id": "cellulitis_home",
+   "label": "Early, mild cellulitis",
+   "vignette": "42-year-old man, 1 day of a red, warm patch on the left shin, temperature 38.1, otherwise well. BP 130/80, HR 88. No diabetes, no MRSA history, no injection drug use.",
+   "picks": {
+    "first_look": "no_sepsis",
+    "mild_source": "cell_mild"
+   },
+   "results": {
+    "first_look": "Lactate 1.0 mmol/L. Labs normal.",
+    "mild_source": "Early, mild cellulitis over the shin: no pus, no bullae, pain in keeping with what is seen."
+   }
+  },
+  {
+   "id": "nsti_early",
+   "label": "Early necrotizing infection with normal vitals",
+   "vignette": "38-year-old man who injects drugs, 10 hours of severe right forearm pain after injecting. BP 128/78, HR 102, RR 18, temperature 38.2.",
+   "picks": {
+    "first_look": "no_sepsis",
+    "mild_source": "nsti_signs"
+   },
+   "results": {
+    "first_look": "Lactate 1.2 mmol/L. Creatinine, platelets and mentation normal.",
+    "mild_source": "Pain far out of proportion to faint redness, edema beyond the erythema, spreading over 2 hours."
+   }
+  },
+  {
+   "id": "mening_shock",
+   "label": "Pneumococcal-type meningitis in shock",
+   "vignette": "35-year-old man, a week of right ear pain, then fever, severe headache and neck stiffness; now confused. BP 80/46, HR 128, RR 26, temperature 39.5. Weight 75 kg. No rash.",
+   "picks": {
+    "first_look": "mening_in_shock",
+    "map_check": "map_low",
+    "pressor_check": "responding",
+    "source": "cns",
+    "listeria": "no_listeria"
+   },
+   "results": {
+    "first_look": "Lactate 4.6 mmol/L. Neck stiffness; confused, GCS 13.",
+    "map_check": "After 2.25 L of balanced crystalloid: MAP 57.",
+    "pressor_check": "Norepinephrine 0.1 mcg/kg/min: MAP 66.",
+    "source": "A bulging red right eardrum; urine and chest x-ray clear.",
+    "listeria": "Age 35, not immunocompromised."
+   }
+  },
+  {
+   "id": "fn_shock",
+   "label": "Neutropenic septic shock",
+   "vignette": "58-year-old woman with lymphoma, 9 days after chemotherapy, fever and rigors. BP 78/40, HR 130, RR 26, temperature 39.3. Weight 70 kg.",
+   "picks": {
+    "first_look": "neutropenic_shock",
+    "map_check": "map_low",
+    "pressor_check": "responding",
+    "source": "neutropenic"
+   },
+   "results": {
+    "first_look": "Lactate 4.2 mmol/L. Chemotherapy 9 days ago.",
+    "map_check": "After 2.1 L of balanced crystalloid: MAP 58.",
+    "pressor_check": "Norepinephrine 0.12 mcg/kg/min: MAP 66.",
+    "source": "ANC 200/mcL. No focal source on exam, urine or chest x-ray."
+   }
+  },
+  {
+   "id": "mild_chest",
+   "label": "Chest infection without sepsis",
+   "vignette": "45-year-old man, 3 days of cough and fever. BP 128/80, HR 94, RR 18, SpO2 97%, temperature 38.4. Alert.",
+   "picks": {
+    "first_look": "no_sepsis",
+    "mild_source": "other_mild"
+   },
+   "results": {
+    "first_look": "Lactate 1.0 mmol/L. Creatinine and platelets normal.",
+    "mild_source": "Crackles at the left base; urine clear; skin normal."
+   }
+  }
+ ]
+}

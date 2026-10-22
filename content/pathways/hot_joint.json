@@ -1,0 +1,2589 @@
+{
+ "id": "pw_hot_joint",
+ "title": "Hot swollen joint",
+ "world": "msk",
+ "synonyms": [
+  "hot joint",
+  "acute monoarthritis",
+  "monoarticular arthritis",
+  "septic arthritis",
+  "septic joint",
+  "gout",
+  "gout flare",
+  "pseudogout",
+  "CPPD",
+  "calcium pyrophosphate deposition",
+  "disseminated gonococcal infection",
+  "DGI",
+  "gonococcal arthritis",
+  "Lyme arthritis",
+  "reactive arthritis",
+  "hemarthrosis",
+  "prosthetic joint infection",
+  "PJI",
+  "limping child",
+  "septic hip",
+  "transient synovitis",
+  "Kocher criteria",
+  "arthrocentesis"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:30844203",
+   "label": "StatPearls review: septic arthritis",
+   "title": "Septic Arthritis (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30844203/"
+  },
+  {
+   "docId": "pmid:28846340",
+   "label": "StatPearls review: prosthetic joint infection",
+   "title": "Periprosthetic Joint Infection (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846340/"
+  },
+  {
+   "docId": "pmid:29262239",
+   "label": "StatPearls review: knee arthrocentesis",
+   "title": "Knee Arthrocentesis (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29262239/"
+  },
+  {
+   "docId": "pmid:30252255",
+   "label": "StatPearls review: hemarthrosis",
+   "title": "Hemarthrosis (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30252255/"
+  },
+  {
+   "docId": "pmid:34599691",
+   "label": "SSC 2021",
+   "title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34599691/"
+  },
+  {
+   "docId": "pmid:34292926",
+   "label": "CDC STI 2021",
+   "title": "Sexually Transmitted Infections Treatment Guidelines, 2021",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34292926/"
+  },
+  {
+   "docId": "pmid:32391934",
+   "label": "ACR gout 2020",
+   "title": "2020 American College of Rheumatology Guideline for the Management of Gout",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32391934/"
+  },
+  {
+   "docId": "pmid:23024029",
+   "label": "ACR gout 2012, part 2",
+   "title": "2012 American College of Rheumatology guidelines for management of gout. Part 2: therapy and antiinflammatory prophylaxis of acute gouty arthritis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/23024029/"
+  },
+  {
+   "docId": "url:a78b4a6a92ce",
+   "label": "NICE NG219",
+   "title": "Gout: diagnosis and management",
+   "url": "https://www.nice.org.uk/guidance/ng219"
+  },
+  {
+   "docId": "url:3f919da1446c",
+   "label": "Colchicine label (FDA)",
+   "title": "COLCRYS (colchicine) tablets, prescribing information",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d6adc880-5499-4691-93f3-27c87902d5fc"
+  },
+  {
+   "docId": "pmid:30986010",
+   "label": "StatPearls review: CPPD",
+   "title": "Calcium Pyrophosphate Deposition Disease (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30986010/"
+  },
+  {
+   "docId": "url:68bd7ad74fab",
+   "label": "NICE NG95",
+   "title": "Lyme disease",
+   "url": "https://www.nice.org.uk/guidance/ng95"
+  },
+  {
+   "docId": "pmid:28613720",
+   "label": "StatPearls review: Lyme disease",
+   "title": "Lyme Disease (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613720/"
+  },
+  {
+   "docId": "pmid:31415492",
+   "label": "CDC Lyme serology 2019",
+   "title": "Updated CDC Recommendation for Serologic Diagnosis of Lyme Disease",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31415492/"
+  },
+  {
+   "docId": "pmid:29763006",
+   "label": "StatPearls review: reactive arthritis",
+   "title": "Reactive Arthritis (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29763006/"
+  },
+  {
+   "docId": "pmid:32744769",
+   "label": "WFH 2020",
+   "title": "WFH Guidelines for the Management of Hemophilia, 3rd edition",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32744769/"
+  },
+  {
+   "docId": "pmid:29083615",
+   "label": "StatPearls review: pediatric septic hip",
+   "title": "Septic Arthritis of the Pediatric Hip (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29083615/"
+  },
+  {
+   "docId": "pmid:29083677",
+   "label": "StatPearls review: transient synovitis",
+   "title": "Transient Synovitis (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29083677/"
+  },
+  {
+   "docId": "pmid:29083794",
+   "label": "StatPearls review: vancomycin",
+   "title": "Vancomycin (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29083794/"
+  },
+  {
+   "docId": "url:eed08301207b",
+   "label": "Ceftriaxone label (FDA)",
+   "title": "Ceftriaxone for injection, prescribing information",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8351aa37-552d-471d-b293-c564dcb6ec29"
+  },
+  {
+   "docId": "url:77b8db7b8da8",
+   "label": "Ceftazidime label (FDA)",
+   "title": "TAZICEF (ceftazidime) for injection, prescribing information",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=40d48c5d-650e-461b-a67b-7e65772d1b92"
+  },
+  {
+   "docId": "pmid:29261865",
+   "label": "StatPearls review: gonococcal arthritis",
+   "title": "Gonococcal Arthritis (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29261865/"
+  }
+ ],
+ "differential": [
+  "Septic arthritis",
+  "Prosthetic joint infection",
+  "Disseminated gonococcal infection",
+  "Gout",
+  "Pseudogout (CPPD)",
+  "Lyme arthritis",
+  "Reactive arthritis",
+  "Hemarthrosis",
+  "Transient synovitis"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Hot, swollen or painful joint. First moves?",
+   "options": [
+    "Vital signs and a sepsis screen; ask about a joint replacement and a bleeding disorder",
+    "IV antibiotics now; aspirate the joint tomorrow",
+    "Colchicine now; aspirate only if it fails",
+    "Serum urate first, to decide whether it is gout"
+   ],
+   "answer": 0,
+   "chainStep": "Vital signs and a sepsis screen; ask about a joint replacement, a bleeding disorder or an anticoagulant; consider septic arthritis in every hot, swollen joint",
+   "why": "Septic arthritis is considered in every painful, red, swollen joint, and three findings change the route before any needle goes in: sepsis (antibiotics within the hour), a joint replacement (aspirated preferably by an orthopedic surgeon) and a bleeding disorder (factor before any tap). In a stable patient, antibiotics wait until synovial fluid has been taken. Colchicine first skips the question of infection, and a serum urate decides nothing: it can be under 6 mg/dL during a flare.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "pmid:30844203",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:34599691",
+     "where": "Recommendation 1; Recommendation 12"
+    },
+    {
+     "docId": "pmid:29262239",
+     "where": "Contraindications"
+    },
+    {
+     "docId": "pmid:32744769",
+     "where": "7.2 Arthrocentesis"
+    },
+    {
+     "docId": "url:a78b4a6a92ce",
+     "where": "1.1.3; 1.1.4; 1.1.7"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Serum urate",
+     "dose": "Not diagnostic during a flare: it can be below 6 mg/dL; NICE repeats it at least 2 weeks after the flare settles",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a78b4a6a92ce",
+       "where": "1.1.7"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: polyarticular flares, a joint after trauma or recent surgery, cellulitis or bursitis over the joint, children's joints other than the hip, tuberculous and fungal arthritis."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Vitals, history and the joint",
+   "outcomes": [
+    {
+     "id": "septic_shock",
+     "if": "Septic and unstable adult; hypotension or poor perfusion with a hot joint",
+     "ddx": {
+      "lead": [
+       "Septic arthritis"
+      ],
+      "out": []
+     },
+     "next": "sepsis_first"
+    },
+    {
+     "id": "prosthesis",
+     "if": "Prosthetic joint; a hot, swollen joint replacement, stable",
+     "ddx": {
+      "lead": [
+       "Prosthetic joint infection"
+      ],
+      "out": []
+     },
+     "next": "pji"
+    },
+    {
+     "id": "child_hip",
+     "if": "Child with a limp; a painful hip, stable",
+     "ddx": {
+      "lead": [
+       "Septic arthritis",
+       "Transient synovitis"
+      ],
+      "out": []
+     },
+     "next": "hip_tests"
+    },
+    {
+     "id": "hemophilia",
+     "if": "Known hemophilia A; a swollen, painful joint, stable",
+     "ddx": {
+      "lead": [
+       "Hemarthrosis"
+      ],
+      "out": []
+     },
+     "next": "factor"
+    },
+    {
+     "id": "dgi",
+     "if": "Tenosynovitis and skin lesions; sexually active, stable",
+     "ddx": {
+      "lead": [
+       "Disseminated gonococcal infection"
+      ],
+      "out": []
+     },
+     "next": "dgi_tests"
+    },
+    {
+     "id": "native",
+     "if": "Stable adult, native joint; none of the above",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "aspirate"
+    }
+   ]
+  },
+  {
+   "id": "sepsis_first",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Hot, swollen joint with hypotension. First hour?",
+   "options": [
+    "Blood cultures, and a joint tap if quick, then antibiotics within the hour",
+    "Tap the joint and wait for the Gram stain before antibiotics",
+    "Antibiotics only once orthopedics has washed out the joint",
+    "Fluids and pressors first; antibiotics once a culture grows"
+   ],
+   "answer": 0,
+   "chainStep": "Blood cultures, and the joint aspirate if it adds no substantial delay; antimicrobials within 1 hour; at least 30 mL/kg crystalloid for hypoperfusion; orthopedics for source control",
+   "why": "With possible septic shock, antimicrobials go in immediately, ideally within 1 hour of recognition. Cultures, blood included, come first only when they cause no substantial delay (under 45 minutes), so a quick tap is taken but never waited on, and antibiotics never wait for a washout or a growing culture. The septic joint is a source that is controlled as soon as medically and logistically practical.",
+   "next": "end_sepsis",
+   "sources": [
+    {
+     "docId": "pmid:34599691",
+     "where": "Recommendation 12 and its text on cultures; Recommendation 5; Recommendation 17; Recommendation 27"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Antimicrobials",
+     "dose": "Immediately, ideally within 1 hour of recognition",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Recommendation 12"
+      }
+     ]
+    },
+    {
+     "item": "Cultures",
+     "dose": "Blood (and synovial fluid) before antimicrobials only if that causes no substantial delay, under 45 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Antimicrobial therapy, text with recommendation 12"
+      }
+     ]
+    },
+    {
+     "item": "IV crystalloid",
+     "dose": "At least 30 mL/kg within the first 3 hours for sepsis-induced hypoperfusion or septic shock (a weak recommendation)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Recommendation 5"
+      }
+     ]
+    },
+    {
+     "item": "Source control",
+     "dose": "Drain the joint as soon as medically and logistically practical",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Recommendation 27"
+      }
+     ]
+    },
+    {
+     "item": "MRSA cover",
+     "dose": "Empiric MRSA cover for adults at high risk of MRSA; the full regimen continues in the sepsis pathway",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Recommendation 17"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pji",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Hot, swollen joint replacement, stable. Next?",
+   "options": [
+    "Orthopedics now; blood cultures and joint fluid before any antibiotic",
+    "Start vancomycin now; aspirate at the clinic next week",
+    "Plain x-ray; treat as gout if there is no loosening",
+    "Empiric IV antibiotics now, aspirate tomorrow"
+   ],
+   "answer": 0,
+   "chainStep": "Orthopedic (arthroplasty) team now; blood cultures and synovial fluid for cell count, differential and cultures before antibiotics, unless septic",
+   "why": "A joint replacement is aspirated preferably by an orthopedic surgeon, and an arthroplasty-led team manages the infection, usually with surgery and 6 or more weeks of IV antibiotics. Antibiotics are delayed until blood and synovial fluid have been cultured; the exception is sepsis, where antimicrobials go in within the hour. Plain films cannot separate infection from aseptic loosening, and antibiotics before the aspirate, today or for a clinic visit next week, lower the culture yield.",
+   "next": "end_pji",
+   "sources": [
+    {
+     "docId": "pmid:29262239",
+     "where": "Contraindications"
+    },
+    {
+     "docId": "pmid:28846340",
+     "where": "Evaluation; intraoperative assessment; Treatment / Management; Enhancing healthcare team outcomes"
+    },
+    {
+     "docId": "pmid:34599691",
+     "where": "Recommendation 12"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Antibiotics",
+     "dose": "Delayed until blood and synovial fluid are cultured; the exception is sepsis or overwhelming infection",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846340",
+       "where": "Treatment / Management, antibiotic therapy"
+      }
+     ]
+    },
+    {
+     "item": "Synovial fluid",
+     "dose": "Cell count and neutrophil percentage, aerobic and anaerobic cultures; over 1,700 cells/uL supports a knee PJI, over 4,200 a hip PJI; neutrophils over 80% are typical",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846340",
+       "where": "Evaluation; Evaluation, cultures"
+      },
+      {
+       "docId": "pmid:30844203",
+       "where": "Evaluation, laboratory studies"
+      }
+     ],
+     "note": "StatPearls' septic arthritis chapter gives a different PJI threshold: a WBC of 1,100 with 64% neutrophils."
+    },
+    {
+     "item": "Surgery",
+     "dose": "Debridement with implant retention for early infection with a stable implant, symptoms under 3 weeks and no sinus tract, or acute hematogenous infection under 72 hours; two-stage exchange is the US standard otherwise",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846340",
+       "where": "Treatment / Management, DAIR and two-stage exchange"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "factor",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Known hemophilia A, a joint bleed. First move?",
+   "options": [
+    "Factor VIII concentrate now, before any imaging or needle",
+    "Aspirate the knee first to exclude infection",
+    "Ibuprofen and ice; factor only if it keeps swelling",
+    "MRI of the knee, then treat by what it shows"
+   ],
+   "answer": 0,
+   "chainStep": "Factor VIII concentrate at once (IU = weight in kg x target IU/dL x 0.5); rest, ice, compression, elevation; acetaminophen or a COX-2 inhibitor; no other NSAIDs; tap only under factor cover",
+   "why": "Clotting factor concentrate goes in immediately, ideally within 2 hours of a suspected bleed, at a dose that raises the factor level enough to stop it; it does not wait for imaging. Arthrocentesis is generally unnecessary in known hemophilia: it is considered for a tense bleed no better 24 hours after the first infusion or for suspected septic arthritis, and only under factor cover. NSAIDs other than selective COX-2 inhibitors are avoided.",
+   "next": "end_hemophilia",
+   "sources": [
+    {
+     "docId": "pmid:32744769",
+     "where": "7.2 joint hemorrhage: clotting factor replacement, rec 7.2.1, pain management, arthrocentesis; Table 7-2; FVIII dosage"
+    },
+    {
+     "docId": "pmid:30252255",
+     "where": "Treatment / Management, hemophilia"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Factor VIII concentrate",
+     "dose": "Immediately, ideally within 2 hours; dose in IU = weight (kg) x desired level (IU/dL) x 0.5. Joint bleed: peak 40 to 60 IU/dL (higher-dose practice) or 10 to 20 IU/dL (lower-dose practice) for 1 to 2 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32744769",
+       "where": "7.2 clotting factor replacement; Table 7-2; FVIII dosage/administration"
+      },
+      {
+       "docId": "pmid:30252255",
+       "where": "Treatment / Management, hemophilia"
+      }
+     ],
+     "note": "StatPearls writes at least 40 to 50% (25 units/kg of factor VIII) for a knee, elbow or ankle bleed."
+    },
+    {
+     "item": "Analgesia",
+     "dose": "Acetaminophen, a selective COX-2 inhibitor, tramadol or opioids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32744769",
+       "where": "7.2 pain management"
+      }
+     ]
+    },
+    {
+     "item": "NSAIDs other than COX-2 inhibitors",
+     "dose": "Avoid",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:32744769",
+       "where": "7.2 pain management"
+      },
+      {
+       "docId": "pmid:30252255",
+       "where": "Treatment / Management, hemophilia"
+      }
+     ]
+    },
+    {
+     "item": "Adjuncts",
+     "dose": "Rest, ice, compression, elevation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32744769",
+       "where": "7.2 adjunctive care"
+      }
+     ]
+    },
+    {
+     "item": "Arthrocentesis",
+     "dose": "Only for a tense, painful bleed no better 24 hours after the first infusion, or suspected septic arthritis; check for inhibitors first; under factor cover of at least 30 to 50 IU/dL for 48 to 72 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32744769",
+       "where": "7.2 arthrocentesis"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dgi_tests",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Sexually active, tenosynovitis and skin lesions. Next?",
+   "options": [
+    "NAAT or culture of every exposed site, plus blood, skin and joint fluid",
+    "A urine NAAT alone",
+    "Treat as reactive arthritis with an NSAID",
+    "Rheumatoid factor and anti-CCP first"
+   ],
+   "answer": 0,
+   "chainStep": "NAAT or culture of all exposed urogenital and extragenital sites, plus blood, skin and synovial fluid; susceptibility testing on every isolate; admit, with infectious disease advice; HIV and syphilis tests",
+   "why": "Tenosynovitis with petechial or pustular acral lesions and polyarthralgia in a sexually active adult is the picture of disseminated gonococcal infection, and the genital infection is often silent. Specimens are taken from every exposed urogenital and extragenital site and from the disseminated sites (skin, synovial fluid, blood), so a single urine NAAT is not enough, and every isolate goes for susceptibility testing. Admission and infectious disease advice are recommended for initial therapy.",
+   "next": "dgi_treat",
+   "sources": [
+    {
+     "docId": "pmid:34292926",
+     "where": "Disseminated gonococcal infection"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Specimens",
+     "dose": "NAAT or culture of all exposed urogenital and extragenital sites, plus skin, synovial fluid, blood or CSF; susceptibility testing on every isolate",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Disseminated gonococcal infection"
+      }
+     ]
+    },
+    {
+     "item": "Examination",
+     "dose": "Look for endocarditis and meningitis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Disseminated gonococcal infection"
+      }
+     ]
+    },
+    {
+     "item": "HIV and syphilis tests",
+     "dose": "HIV for everyone seeking STI evaluation not already known to have HIV; anyone diagnosed with gonorrhea is tested for other STIs, including chlamydia, syphilis and HIV",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "HIV infection, detection; Gonococcal infections"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dgi_treat",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Gonococcal arthritis or the arthritis-dermatitis syndrome. Regimen?",
+   "options": [
+    "Ceftriaxone 1 g IV or IM every 24 hours, plus doxycycline unless chlamydia is excluded",
+    "Ceftriaxone 500 mg IM once",
+    "Azithromycin 2 g orally once",
+    "Ciprofloxacin 500 mg orally twice daily for 7 days"
+   ],
+   "answer": 0,
+   "chainStep": "Ceftriaxone 1 g IV or IM every 24 hours; doxycycline 100 mg orally twice daily for 7 days if chlamydia is not excluded; drain a purulent joint; in the arthritis-dermatitis syndrome, oral step-down by susceptibility 24 to 48 hours after substantial improvement",
+   "why": "The recommended regimen for gonococcal arthritis and the arthritis-dermatitis syndrome is ceftriaxone 1 g IM or IV every 24 hours, with doxycycline for 7 days if chlamydia has not been excluded; cefotaxime is the alternative. A single 500 mg IM dose is the regimen for uncomplicated cervical, urethral or rectal infection, not disseminated infection, and neither azithromycin nor ciprofloxacin is a listed regimen. In the arthritis-dermatitis syndrome, once substantially better for 24 to 48 hours, the patient can switch to an oral agent chosen by susceptibility, for a total course of more than 7 days; purulent gonococcal arthritis also needs joint drainage and usually a longer parenteral course.",
+   "next": "end_dgi",
+   "sources": [
+    {
+     "docId": "pmid:34292926",
+     "where": "Treatment of arthritis and arthritis-dermatitis syndrome; uncomplicated gonococcal infections"
+    },
+    {
+     "docId": "pmid:29261865",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Ceftriaxone",
+     "dose": "1 g IM or IV every 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Treatment of arthritis and arthritis-dermatitis syndrome"
+      }
+     ]
+    },
+    {
+     "item": "Alternatives",
+     "dose": "Cefotaxime 1 g IV every 8 hours, or ceftizoxime 1 g every 8 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Alternative regimens"
+      }
+     ]
+    },
+    {
+     "item": "Chlamydia",
+     "dose": "Doxycycline 100 mg orally twice daily for 7 days if chlamydial infection has not been excluded",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Treatment of arthritis and arthritis-dermatitis syndrome"
+      }
+     ]
+    },
+    {
+     "item": "Oral step-down, arthritis-dermatitis syndrome",
+     "dose": "Guided by susceptibility testing, 24 to 48 hours after substantial clinical improvement, for a total course of more than 7 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Treatment of arthritis and arthritis-dermatitis syndrome"
+      }
+     ],
+     "note": "The PMC copy and the trail copy print '>7 days'. The CDC web page, reported to read 'at least 7 days', could not be read (cdc.gov Access Denied, 2026-10-19)."
+    },
+    {
+     "item": "Partners and retest",
+     "dose": "Encourage partner notification and evaluation; rescreen 3 months after treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Partner services; Retesting after treatment"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hip_tests",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Child limping with a painful hip. First tests?",
+   "options": [
+    "Hip ultrasound and x-ray, with WBC, ESR and CRP",
+    "Aspirate the hip at the bedside without imaging",
+    "MRI under sedation before any blood test",
+    "Ultrasound only; bloods if the limp lasts a week"
+   ],
+   "answer": 0,
+   "chainStep": "Hip ultrasound for an effusion and a hip x-ray; WBC, ESR and CRP; temperature and weight bearing for the Kocher criteria; blood culture before any antibiotic if septic arthritis is suspected",
+   "why": "The workup is a WBC, CRP and ESR, a hip x-ray and an ultrasound, which is extremely accurate for an intracapsular effusion. The x-ray also looks for Perthes disease or a slipped capital femoral epiphysis in an older child. The Kocher criteria are fever over 38.5 C (101.3 F), refusal to bear weight, ESR over 40 mm/h and WBC over 12,000/uL. Transient synovitis is diagnosed after this workup, not before it; ultrasound guides any aspiration, and MRI is for settings that do not aspirate effusions routinely.",
+   "next": "hip_result",
+   "sources": [
+    {
+     "docId": "pmid:29083677",
+     "where": "Introduction; Evaluation"
+    },
+    {
+     "docId": "pmid:29083615",
+     "where": "Evaluation, laboratory, Kocher criteria, imaging"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Blood culture",
+     "dose": "Before antibiotics whenever possible when septic arthritis is suspected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083615",
+       "where": "Evaluation, laboratory"
+      }
+     ]
+    }
+   ],
+   "note": "Hip disease can present as knee pain."
+  },
+  {
+   "id": "hip_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Ultrasound, labs and the Kocher criteria",
+   "outcomes": [
+    {
+     "id": "risk",
+     "if": "Effusion with risk features; temperature over 99.5 F, ESR 20 or more, CRP over 2 mg/dL, severe pain or spasm, or 2 or more Kocher criteria",
+     "ddx": {
+      "lead": [
+       "Septic arthritis"
+      ],
+      "out": []
+     },
+     "next": "hip_aspirate"
+    },
+    {
+     "id": "low",
+     "if": "Effusion, no risk features; temperature 99.5 F or under, ESR under 20, CRP 2 mg/dL or under, no severe pain, under 2 Kocher criteria",
+     "ddx": {
+      "lead": [
+       "Transient synovitis"
+      ],
+      "out": []
+     },
+     "next": "ts_care"
+    },
+    {
+     "id": "none",
+     "if": "No effusion; ultrasound shows no fluid in the hip",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_hip_other"
+    }
+   ]
+  },
+  {
+   "id": "hip_aspirate",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Hip effusion with risk features. Next?",
+   "options": [
+    "Ultrasound-guided hip aspiration: cell count, Gram stain, culture",
+    "IV antibiotics first; aspirate if no better in 48 hours",
+    "Discharge on ibuprofen with review in 2 days",
+    "Bone scan to tell infection from synovitis"
+   ],
+   "answer": 0,
+   "chainStep": "Ultrasound-guided hip aspiration for cell count and differential, Gram stain, culture and glucose; Kingella testing under 4 years; orthopedics involved",
+   "why": "An effusion with a temperature over 99.5 F, an ESR of 20 or more, or severe pain with spasm is aspirated under ultrasound, a CRP over 2 mg/dL is an independent risk factor for septic arthritis, and the diagnosis of a septic hip requires the aspirate. The Kocher criteria grade the risk: 3% with one, 40% with two, 93% with three and 99% with all four. Waiting 48 hours or sending the child home delays the one test that decides it, and a bone scan cannot tell the causes apart.",
+   "next": "hip_fluid",
+   "sources": [
+    {
+     "docId": "pmid:29083677",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:29083615",
+     "where": "Evaluation, laboratory, Kocher criteria"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Kingella kingae",
+     "dose": "Molecular testing of the synovial fluid in children under 4 years, where available",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083615",
+       "where": "Evaluation, laboratory"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hip_fluid",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Hip aspirate",
+   "outcomes": [
+    {
+     "id": "septic",
+     "if": "Septic; synovial WBC over 50,000, a positive Gram stain, over 90% neutrophils, or glucose under 40 mg/dL",
+     "ddx": {
+      "lead": [
+       "Septic arthritis"
+      ],
+      "out": []
+     },
+     "next": "hip_drain"
+    },
+    {
+     "id": "not_septic",
+     "if": "Not septic; synovial WBC well under 50,000 (transient synovitis runs about 5,600 to 15,400), Gram stain negative, 90% neutrophils or fewer, glucose normal; culture pending",
+     "ddx": {
+      "lead": [
+       "Transient synovitis"
+      ],
+      "out": []
+     },
+     "next": "ts_care"
+    }
+   ]
+  },
+  {
+   "id": "hip_drain",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Septic hip on the aspirate. Next?",
+   "options": [
+    "Urgent surgical irrigation and debridement, with IV antibiotics",
+    "IV antibiotics alone; operate only if no better in 5 days",
+    "Oral antibiotics at home with review in 48 hours",
+    "IV antibiotics and repeat ultrasound in 48 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent surgical drainage (irrigation and debridement) by orthopedics; empiric IV cover for S aureus, with Kingella cover from 6 to 48 months; culture-directed antibiotics, early oral switch",
+   "why": "A septic hip is an orthopedic emergency: bacteria, inflammation and intracapsular pressure damage cartilage quickly and threaten the femoral head's blood supply, so drainage is the rule, and antibiotics alone, home treatment or a 48-hour wait for a repeat scan all delay it. Management is urgent surgical irrigation and debridement with culture-directed IV antibiotics. Empiric cover targets S aureus: cefazolin, nafcillin or oxacillin where MRSA is uncommon, clindamycin or vancomycin where it is prevalent; Kingella kingae is covered from 6 to 48 months.",
+   "next": "end_hip_septic",
+   "sources": [
+    {
+     "docId": "pmid:29083615",
+     "where": "Introduction; Treatment / Management; Pearls"
+    },
+    {
+     "docId": "pmid:29083794",
+     "where": "Administration, pediatric dosage"
+    },
+    {
+     "docId": "url:eed08301207b",
+     "where": "Dosage and administration, pediatric patients"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Empiric antibiotics, stable child over 3 months",
+     "dose": "Cefazolin, nafcillin or oxacillin where MRSA is uncommon; clindamycin or vancomycin where MRSA is prevalent or suspected; add a cephalosporin if Kingella cover is needed and missing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083615",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Septic or unstable child",
+     "dose": "Vancomycin plus ceftriaxone or cefepime",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083615",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Infant under 3 months",
+     "dose": "An antistaphylococcal agent plus a third- or fourth-generation cephalosporin",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083615",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Vancomycin, 1 month and older",
+     "dose": "10 mg/kg IV every 6 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083794",
+       "where": "Administration, pediatric dosage"
+      }
+     ]
+    },
+    {
+     "item": "Ceftriaxone, children",
+     "dose": "50 to 75 mg/kg a day in divided doses every 12 hours, not over 2 g a day (label dose for serious miscellaneous infections other than meningitis); not for hyperbilirubinemic neonates",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:eed08301207b",
+       "where": "Dosage and administration, pediatric patients; neonates"
+      }
+     ]
+    },
+    {
+     "item": "Cefazolin, nafcillin, oxacillin and clindamycin doses",
+     "dose": "Not in the trail; the PIDS/IDSA 2023 pediatric guideline sits behind a bot check",
+     "status": "pending"
+    },
+    {
+     "item": "Duration",
+     "dose": "About 10 to 14 days in total when uncomplicated, with an early oral switch; 21 to 28 days for MRSA, slow response, poor source control or osteomyelitis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083615",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ts_care",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Transient synovitis is the likely diagnosis. Plan?",
+   "options": [
+    "An NSAID and rest, with review; admit to observe if unsure",
+    "IV antibiotics for 48 hours to be safe",
+    "Oral prednisolone for 5 days",
+    "Bed rest in hospital until the limp settles"
+   ],
+   "answer": 0,
+   "chainStep": "Supportive care: rest and an NSAID for pain; admit for serial observation if the diagnosis is unclear; follow the aspirate culture if one was sent; reassess for another diagnosis if symptoms last 7 to 10 days",
+   "why": "Transient synovitis is benign and self-limiting, so management is supportive: rest, an NSAID for pain, and admission for serial observation when the diagnosis is unclear. Symptoms usually improve within 24 to 48 hours; significant symptoms 7 to 10 days on mean another diagnosis. Antibiotics and steroids are not part of that supportive care, and admission is for observation when the diagnosis is unclear, not bed rest until the limp settles. It remains a diagnosis of exclusion, so any aspirate culture is followed.",
+   "next": "end_ts",
+   "sources": [
+    {
+     "docId": "pmid:29083677",
+     "where": "Introduction; Evaluation; Treatment / Management"
+    }
+   ]
+  },
+  {
+   "id": "aspirate",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Stable adult, native joint. Next?",
+   "options": [
+    "Aspirate before antibiotics: cell count, Gram stain, culture, crystals; blood cultures",
+    "IV antibiotics now; aspirate once they start working",
+    "Serum urate and an NSAID; aspirate if no better",
+    "MRI of the joint first"
+   ],
+   "answer": 0,
+   "chainStep": "Arthrocentesis before antibiotics: culture, Gram stain, crystals, WBC with differential; two sets of blood cultures; CBC, ESR and CRP",
+   "why": "Synovial fluid is the most useful test for septic arthritis, and its analysis separates a simple effusion, a hemarthrosis and a septic joint, so it is taken before antibiotics, which start promptly once the aspirate and cultures are done: culture, Gram stain, crystals and a white cell count with differential. Two sets of blood cultures look for bacteremia. An anticoagulant does not stop the tap when septic arthritis is the question; the bleeding risk is low. A normal x-ray does not rule out septic arthritis, so imaging does not replace the tap, and an NSAID first only postpones the answer.",
+   "next": "fluid",
+   "sources": [
+    {
+     "docId": "pmid:30844203",
+     "where": "Evaluation, laboratory and imaging studies; Treatment / Management"
+    },
+    {
+     "docId": "pmid:29262239",
+     "where": "Complications"
+    },
+    {
+     "docId": "pmid:30252255",
+     "where": "Evaluation; Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "On an anticoagulant",
+     "dose": "Not a bar to the tap when septic arthritis is being evaluated; the hemarthrosis risk is low",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29262239",
+       "where": "Complications"
+      },
+      {
+       "docId": "pmid:30252255",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Ultrasound",
+     "dose": "Identifies the effusion and aids needle aspiration",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30844203",
+       "where": "Evaluation, imaging studies"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fluid",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Synovial fluid",
+   "outcomes": [
+    {
+     "id": "gpc",
+     "if": "Gram-positive cocci; purulent fluid",
+     "ddx": {
+      "lead": [
+       "Septic arthritis"
+      ],
+      "out": []
+     },
+     "next": "abx_gpc"
+    },
+    {
+     "id": "gnr",
+     "if": "Gram-negative rods, injects drugs; purulent fluid",
+     "ddx": {
+      "lead": [
+       "Septic arthritis"
+      ],
+      "out": []
+     },
+     "next": "abx_gnr"
+    },
+    {
+     "id": "gnr_other",
+     "if": "Gram-negative rods, no Pseudomonas risk; purulent fluid",
+     "ddx": {
+      "lead": [
+       "Septic arthritis"
+      ],
+      "out": []
+     },
+     "next": "abx_gnr_other"
+    },
+    {
+     "id": "gndc",
+     "if": "Gram-negative diplococci; gonococcal arthritis",
+     "ddx": {
+      "lead": [
+       "Disseminated gonococcal infection"
+      ],
+      "out": []
+     },
+     "next": "dgi_treat",
+     "orders": [
+      {
+       "item": "Gonococcal specimens",
+       "dose": "NAAT or culture of all exposed urogenital and extragenital sites, and blood; susceptibility testing on every isolate; HIV and syphilis tests (anyone diagnosed with gonorrhea is tested for chlamydia, syphilis and HIV)",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34292926",
+         "where": "Disseminated gonococcal infection; Gonococcal infections; HIV infection, detection"
+        }
+       ]
+      },
+      {
+       "item": "Joint drainage",
+       "dose": "Repeated needle aspiration, arthroscopic drainage, or surgical drainage when less invasive approaches are ineffective; parenteral therapy typically 7 to 14 days for purulent arthritis, depending on clinical response",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29261865",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "stain_neg",
+     "if": "Septic picture, Gram stain negative; WBC over 50,000, over 90% neutrophils, no crystals",
+     "ddx": {
+      "lead": [
+       "Septic arthritis"
+      ],
+      "out": []
+     },
+     "next": "abx_empiric"
+    },
+    {
+     "id": "crystal_septic",
+     "if": "Crystals with a septic count; WBC over 50,000, Gram stain negative",
+     "ddx": {
+      "lead": [
+       "Septic arthritis"
+      ],
+      "out": []
+     },
+     "next": "abx_empiric"
+    },
+    {
+     "id": "inflam_febrile",
+     "if": "Inflammatory with fever; WBC under 50,000, no crystals, Gram stain negative",
+     "ddx": {
+      "lead": [
+       "Septic arthritis"
+      ],
+      "out": []
+     },
+     "next": "abx_empiric"
+    },
+    {
+     "id": "urate",
+     "if": "Urate crystals; negatively birefringent needles, Gram stain negative, culture pending, WBC under 50,000",
+     "ddx": {
+      "lead": [
+       "Gout"
+      ],
+      "out": []
+     },
+     "next": "gout_tx",
+     "orders": [
+      {
+       "item": "Culture",
+       "dose": "Follow it: crystals do not rule out septic arthritis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29262239",
+         "where": "Clinical significance"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cpp",
+     "if": "CPP crystals; weakly positive rhomboids, Gram stain negative, culture pending, WBC under 50,000",
+     "ddx": {
+      "lead": [
+       "Pseudogout (CPPD)"
+      ],
+      "out": []
+     },
+     "next": "cppd_tx",
+     "orders": [
+      {
+       "item": "Culture",
+       "dose": "Follow it: crystals do not rule out septic arthritis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29262239",
+         "where": "Clinical significance"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "inflam",
+     "if": "Inflammatory, no crystals; WBC under 50,000, Gram stain negative, afebrile",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "inflam_next"
+    },
+    {
+     "id": "blood",
+     "if": "Blood; a hemarthrosis, Gram stain negative, no crystals",
+     "ddx": {
+      "lead": [
+       "Hemarthrosis"
+      ],
+      "out": []
+     },
+     "next": "end_hemarthrosis",
+     "orders": [
+      {
+       "item": "Initial care",
+       "dose": "Immobilization, ice and compression; analgesia",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30252255",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Anticoagulant",
+       "dose": "Persistent or recurrent bleeding only: stop the anticoagulant and reverse it with the agent appropriate to it",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30252255",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Apixaban reversal",
+       "dose": "Agent and dose not in the trail",
+       "status": "pending"
+      },
+      {
+       "item": "Imaging",
+       "dose": "Plain films first; CT if a fracture is suspected but not seen; fat globules in the aspirate mean a lipohemarthrosis and point to an intra-articular fracture",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30252255",
+         "where": "Evaluation"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "noninflam",
+     "if": "Noninflammatory; clear fluid, few white cells, no crystals, Gram stain negative",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_noninflam"
+    }
+   ]
+  },
+  {
+   "id": "abx_gpc",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Gram-positive cocci in a native joint. Empiric antibiotic?",
+   "options": [
+    "IV vancomycin",
+    "IV ceftriaxone alone",
+    "IV piperacillin-tazobactam alone",
+    "No antibiotic until the culture grows"
+   ],
+   "answer": 0,
+   "chainStep": "IV vancomycin, dosed to renal function and levels; narrow on the culture",
+   "why": "Every septic joint gets antistaphylococcal cover (nafcillin, oxacillin or vancomycin), and IV vancomycin is the usual choice when MRSA is possible on community and institutional data. Ceftriaxone alone and piperacillin-tazobactam alone are not among those antistaphylococcal choices, and empiric therapy starts promptly once the joint has been aspirated, not when the culture grows.",
+   "next": "drain",
+   "sources": [
+    {
+     "docId": "pmid:30844203",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:29083794",
+     "where": "Administration, adult dosage; Monitoring"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Vancomycin IV",
+     "dose": "Usual adult dose 2 g a day, as 1 g every 12 hours or 500 mg every 6 hours, each over 60 minutes or more; the dose depends on renal function and body weight, and later doses are adjusted to renal function, age and levels; AUC monitoring preferred for severe MRSA infection such as bacteremia or osteomyelitis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083794",
+       "where": "Administration, adult dosage; Monitoring"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "abx_gnr",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Gram-negative rods in a native joint; injects drugs. Empiric antibiotic?",
+   "options": [
+    "IV vancomycin plus ceftazidime",
+    "IV vancomycin alone",
+    "IV ceftriaxone alone",
+    "Oral ciprofloxacin at home"
+   ],
+   "answer": 0,
+   "chainStep": "Vancomycin plus ceftazidime 2 g IV every 12 hours (adjusted in renal impairment); narrow on the culture",
+   "why": "Antistaphylococcal cover runs in every septic joint, and injection drug use is one of the reasons StatPearls adds a third-generation cephalosporin for gram-negative cover; it links joint infection in injection drug use to Serratia and Pseudomonas. With gram-negative rods on the stain, ceftazidime is the one whose label lists Pseudomonas aeruginosa among its bone and joint pathogens; ceftriaxone's bone and joint indication does not, and vancomycin alone covers no gram-negative rods. An oral fluoroquinolone at home skips the drainage and the 2 weeks of IV therapy a septic joint usually gets.",
+   "next": "drain",
+   "sources": [
+    {
+     "docId": "pmid:30844203",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:77b8db7b8da8",
+     "where": "Indications and usage; Dosage and administration; Clinical pharmacology"
+    },
+    {
+     "docId": "url:eed08301207b",
+     "where": "Indications and usage"
+    },
+    {
+     "docId": "pmid:29083794",
+     "where": "Administration, adult dosage; Monitoring"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Ceftazidime",
+     "dose": "Bone and joint infections: 2 g IV every 12 hours; dose adjusted in renal impairment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:77b8db7b8da8",
+       "where": "Dosage and administration table; Clinical pharmacology, renal impairment"
+      }
+     ]
+    },
+    {
+     "item": "Vancomycin IV",
+     "dose": "Usual adult dose 2 g a day, as 1 g every 12 hours or 500 mg every 6 hours, each over 60 minutes or more; the dose depends on renal function and body weight, and later doses are adjusted to renal function, age and levels; AUC monitoring preferred for severe MRSA infection such as bacteremia or osteomyelitis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083794",
+       "where": "Administration, adult dosage; Monitoring"
+      }
+     ]
+    },
+    {
+     "item": "Duration with Pseudomonas",
+     "dose": "4 to 6 weeks may be reasonable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30844203",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "abx_gnr_other",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Gram-negative rods in a native joint; no Pseudomonas risk. Empiric antibiotic?",
+   "options": [
+    "IV vancomycin plus ceftriaxone",
+    "IV vancomycin alone",
+    "No antibiotic until the culture names the rod",
+    "Oral ciprofloxacin at home"
+   ],
+   "answer": 0,
+   "chainStep": "Ceftriaxone 1 to 2 g IV once a day, with vancomycin until the culture returns; narrow on the culture",
+   "why": "Age, risk factors and the Gram stain direct the antibiotics added to the antistaphylococcal cover every septic joint gets, and a third-generation cephalosporin such as ceftriaxone is StatPearls' gram-negative partner. Ceftriaxone's label lists Escherichia coli, Proteus mirabilis, Klebsiella pneumoniae and Enterobacter species among its bone and joint pathogens. Vancomycin alone covers no gram-negative rods, treatment starts once the joint is aspirated, and an oral fluoroquinolone at home skips the drainage and the 2 weeks of IV therapy a septic joint usually gets.",
+   "next": "drain",
+   "sources": [
+    {
+     "docId": "pmid:30844203",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:eed08301207b",
+     "where": "Indications and usage; Dosage and administration, adults"
+    },
+    {
+     "docId": "pmid:29083794",
+     "where": "Administration, adult dosage"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Ceftriaxone",
+     "dose": "1 to 2 g once a day; total daily dose not over 4 g",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:eed08301207b",
+       "where": "Dosage and administration, adults"
+      }
+     ]
+    },
+    {
+     "item": "Vancomycin IV",
+     "dose": "Usual adult dose 2 g a day, as 1 g every 12 hours or 500 mg every 6 hours, each over 60 minutes or more; the dose depends on renal function and body weight, and later doses are adjusted to renal function, age and levels; AUC monitoring preferred for severe MRSA infection such as bacteremia or osteomyelitis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083794",
+       "where": "Administration, adult dosage; Monitoring"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "abx_empiric",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Gram stain negative, septic arthritis still possible: a septic-range count, crystals or not, or fever. Empiric antibiotics?",
+   "options": [
+    "Vancomycin plus a third-generation cephalosporin",
+    "Vancomycin alone",
+    "Ceftriaxone alone, for gonococcus",
+    "No antibiotic until the culture is back"
+   ],
+   "answer": 0,
+   "chainStep": "Vancomycin plus a third-generation cephalosporin: ceftriaxone 1 to 2 g IV daily, ceftazidime 2 g IV every 12 hours, or cefotaxime",
+   "why": "A negative stain does not settle it: a WBC over 50,000 with 90% neutrophils suggests a bacterial source, a WBC under 50,000 does not rule infection out, and crystals do not rule out a septic joint alongside them. A negative Gram stain is one of the reasons StatPearls adds a third-generation cephalosporin (ceftriaxone, ceftazidime or cefotaxime) to the antistaphylococcal cover. Vancomycin alone or ceftriaxone alone leaves half of that cover out, and treatment starts once the joint is aspirated, not when the culture returns.",
+   "next": "drain",
+   "sources": [
+    {
+     "docId": "pmid:30844203",
+     "where": "Evaluation, laboratory studies; Treatment / Management"
+    },
+    {
+     "docId": "pmid:29262239",
+     "where": "Clinical significance"
+    },
+    {
+     "docId": "url:eed08301207b",
+     "where": "Dosage and administration, adults"
+    },
+    {
+     "docId": "url:77b8db7b8da8",
+     "where": "Dosage and administration"
+    },
+    {
+     "docId": "pmid:29083794",
+     "where": "Administration, adult dosage"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Vancomycin IV",
+     "dose": "Usual adult dose 2 g a day, as 1 g every 12 hours or 500 mg every 6 hours, each over 60 minutes or more; the dose depends on renal function and body weight, and later doses are adjusted to renal function, age and levels; AUC monitoring preferred for severe MRSA infection such as bacteremia or osteomyelitis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083794",
+       "where": "Administration, adult dosage; Monitoring"
+      }
+     ]
+    },
+    {
+     "item": "Ceftriaxone",
+     "dose": "1 to 2 g once a day; total daily dose not over 4 g",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:eed08301207b",
+       "where": "Dosage and administration, adults"
+      }
+     ]
+    },
+    {
+     "item": "Ceftazidime",
+     "dose": "Bone and joint infections: 2 g IV every 12 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:77b8db7b8da8",
+       "where": "Dosage and administration table"
+      }
+     ]
+    },
+    {
+     "item": "Cefotaxime",
+     "dose": "Named by StatPearls; no septic arthritis dose in the open sources read",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "drain",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Native joint treated as septic arthritis, on IV antibiotics. Next?",
+   "options": [
+    "Drain the joint: arthroscopy, arthrotomy or daily needle aspiration, chosen by orthopedics",
+    "Antibiotics alone; drain only if no better in 5 days",
+    "Splint, and repeat aspiration only if fever returns",
+    "Seven days of antibiotics in total"
+   ],
+   "answer": 0,
+   "chainStep": "Joint drainage (arthrotomy, arthroscopy or daily needle aspiration) chosen by orthopedics; IV antibiotics about 2 weeks, then oral, 3 to 4 weeks in total; re-aspirate if no better in 5 to 6 days",
+   "why": "Treatment is antibiotics plus drainage of the joint, by arthrotomy, arthroscopy or daily needle aspiration; early orthopedic involvement is essential, and the surgeon chooses the procedure. Nongonococcal infection usually gets 2 weeks IV and then 1 to 2 weeks oral, 3 to 4 weeks in all, not 7 days. Drainage is part of the treatment, not a response to fever, and immobilization is not needed after 2 to 3 days: aggressive physical therapy restores function. No improvement in 5 to 6 days means re-aspiration and a look for Lyme disease, fungi, reactive arthritis and osteomyelitis.",
+   "next": "end_septic",
+   "sources": [
+    {
+     "docId": "pmid:30844203",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Drainage",
+     "dose": "Arthrotomy, arthroscopy or daily needle aspiration; the orthopedic surgeon chooses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30844203",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Duration, nongonococcal",
+     "dose": "IV about 2 weeks, then 1 to 2 weeks oral: 3 to 4 weeks in total",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30844203",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Mobilize",
+     "dose": "Immobilization is not needed after 2 to 3 days; aggressive physical therapy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30844203",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "No better in 5 to 6 days",
+     "dose": "Re-aspirate; consider Lyme disease, fungi and reactive arthritis; image for osteomyelitis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30844203",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gout_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Urate crystals, Gram stain negative, culture pending. Flare treatment?",
+   "options": [
+    "An NSAID, low-dose colchicine or a corticosteroid, chosen by comorbidity",
+    "Colchicine 1.2 mg, then 0.6 mg every hour until the pain eases",
+    "Anakinra first, as the most effective option",
+    "Allopurinol 300 mg daily to end the flare"
+   ],
+   "answer": 0,
+   "chainStep": "Full-dose NSAID, or colchicine 1.2 mg then 0.6 mg an hour later, or prednisone 0.5 mg/kg/day or more for 5 to 10 days; ice; follow the culture",
+   "why": "Colchicine, NSAIDs and glucocorticoids (oral, intra-articular or intramuscular) are all first line, chosen by comorbidity, access and past response; IL-1 inhibitors are kept for when these are ineffective, not tolerated or contraindicated. Colchicine follows the FDA dose, 1.2 mg then 0.6 mg an hour later: low-dose works as well as high-dose with fewer adverse effects, and higher doses add nothing. Allopurinol starts at 100 mg a day or less, and starting urate-lowering therapy can itself bring on flares. Crystals do not exclude infection, so the culture is still followed.",
+   "next": "gout_ult",
+   "sources": [
+    {
+     "docId": "pmid:32391934",
+     "where": "Gout flare management; Abstract"
+    },
+    {
+     "docId": "pmid:23024029",
+     "where": "NSAIDs; Colchicine; Systemic and intra-articular corticosteroids"
+    },
+    {
+     "docId": "url:a78b4a6a92ce",
+     "where": "1.3.1 to 1.3.4"
+    },
+    {
+     "docId": "url:3f919da1446c",
+     "where": "2.1 Gout flares"
+    },
+    {
+     "docId": "pmid:29262239",
+     "where": "Clinical significance"
+    }
+   ],
+   "orders": [
+    {
+     "item": "NSAID",
+     "dose": "Full FDA or EMA anti-inflammatory dose until the flare resolves (naproxen, indomethacin and sulindac are FDA approved for gout); taper in renal or hepatic impairment; consider a proton pump inhibitor",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:23024029",
+       "where": "NSAIDs"
+      },
+      {
+       "docId": "url:a78b4a6a92ce",
+       "where": "1.3.2"
+      }
+     ]
+    },
+    {
+     "item": "Colchicine",
+     "dose": "1.2 mg at the first sign, then 0.6 mg 1 hour later; maximum 1.8 mg over 1 hour; ACR 2012 uses it for flares that began no more than 36 hours earlier. Where 1 mg and 0.5 mg tablets are used: 1 mg, then 0.5 mg 1 hour later",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3f919da1446c",
+       "where": "2.1 Gout flares, treatment"
+      },
+      {
+       "docId": "pmid:32391934",
+       "where": "Gout flare management, text"
+      },
+      {
+       "docId": "pmid:23024029",
+       "where": "Colchicine"
+      }
+     ]
+    },
+    {
+     "item": "Colchicine in kidney disease",
+     "dose": "Severe impairment: no dose change for a flare, but repeat a course no more than once every 2 weeks; dialysis: 0.6 mg once, repeated no more than once every 2 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3f919da1446c",
+       "where": "2.5 Dose modification in renal impairment; Highlights"
+      }
+     ]
+    },
+    {
+     "item": "Colchicine with a P-gp or strong CYP3A4 inhibitor (clarithromycin, cyclosporine)",
+     "dose": "Contraindicated with renal or hepatic impairment; fatal toxicity reported",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:3f919da1446c",
+       "where": "2.4 Table 1 and footnote; 4 Contraindications"
+      },
+      {
+       "docId": "pmid:23024029",
+       "where": "Colchicine"
+      }
+     ]
+    },
+    {
+     "item": "Oral corticosteroid",
+     "dose": "Prednisone or prednisolone at least 0.5 mg/kg/day for 5 to 10 days, then stop",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:23024029",
+       "where": "Systemic and intra-articular corticosteroids"
+      }
+     ]
+    },
+    {
+     "item": "Intra-articular corticosteroid",
+     "dose": "An option for 1 or 2 large joints once infection is excluded",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:23024029",
+       "where": "Systemic and intra-articular corticosteroids"
+      },
+      {
+       "docId": "pmid:32391934",
+       "where": "Gout flare management"
+      }
+     ],
+     "note": "infection caveat not yet sourced"
+    },
+    {
+     "item": "IL-1 inhibitor",
+     "dose": "Only when the first-line agents are ineffective, not tolerated or contraindicated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32391934",
+       "where": "Gout flare management"
+      },
+      {
+       "docId": "url:a78b4a6a92ce",
+       "where": "1.3.4"
+      }
+     ]
+    },
+    {
+     "item": "Ice",
+     "dose": "Topical ice as an adjunct",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32391934",
+       "where": "Gout flare management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gout_ult",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Urate-lowering therapy at the flare",
+   "outcomes": [
+    {
+     "id": "on_ult",
+     "if": "Already on allopurinol; taking it daily",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ult_continue"
+    },
+    {
+     "id": "first",
+     "if": "First flare, no ULT; no CKD 3 or more, stones or tophi, urate 9 or under",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ult_defer"
+    },
+    {
+     "id": "indicated",
+     "if": "ULT indicated, not on it; tophi, 2 or more flares a year, CKD 3 or more, or a first flare with urate over 9 or stones",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ult_start"
+    }
+   ]
+  },
+  {
+   "id": "ult_continue",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Gout flare while taking allopurinol daily. The allopurinol?",
+   "options": [
+    "Continue it unchanged through the flare",
+    "Stop it until the flare settles",
+    "Double the dose to end the flare",
+    "Switch to febuxostat now"
+   ],
+   "answer": 0,
+   "chainStep": "Continue established allopurinol without interruption; treat the flare; titrate to a urate under 6 mg/dL by monthly levels once it settles",
+   "why": "Established urate-lowering therapy is continued without interruption during a flare. ULT is continued indefinitely, and its dose is raised by monthly urate levels toward a target under 6 mg/dL, not doubled to end a flare. Switching to febuxostat is for a target not reached or a drug not tolerated.",
+   "next": "end_gout",
+   "sources": [
+    {
+     "docId": "pmid:23024029",
+     "where": "Overall recommendations, Figure 2 text"
+    },
+    {
+     "docId": "pmid:32391934",
+     "where": "Ongoing ULT management; Abstract"
+    },
+    {
+     "docId": "url:a78b4a6a92ce",
+     "where": "1.5.3; 1.5.5; 1.5.6; 1.5.10"
+    }
+   ]
+  },
+  {
+   "id": "ult_defer",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "First flare; no CKD 3 or more, tophi or stones, urate 9 or under. Urate-lowering therapy?",
+   "options": [
+    "Not now; recheck the urate and discuss ULT once the flare settles",
+    "Allopurinol 300 mg daily from today",
+    "Febuxostat 80 mg daily from today",
+    "Probenecid from today, as the first choice"
+   ],
+   "answer": 0,
+   "chainStep": "Treat the flare; follow-up after it settles to recheck the urate and discuss ULT (ACR 2020: conditionally against starting after a first uncomplicated flare)",
+   "why": "After a first flare without moderate-to-severe CKD, a urate over 9 mg/dL or kidney stones, ACR 2020 conditionally recommends against starting ULT, with shared decision-making; NICE discusses the option and starts any ULT at least 2 to 4 weeks after the flare settles. A follow-up visit rechecks the urate, which can read low during a flare. When ULT is started, allopurinol is the preferred first-line drug at 100 mg a day or less, and febuxostat starts at 40 mg a day or less.",
+   "next": "end_gout",
+   "sources": [
+    {
+     "docId": "pmid:32391934",
+     "where": "Indications for ULT; Abstract"
+    },
+    {
+     "docId": "url:a78b4a6a92ce",
+     "where": "1.1.7; 1.3.6; 1.5.2; 1.5.4"
+    }
+   ]
+  },
+  {
+   "id": "ult_start",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "ULT indicated and not yet taken. How to start it?",
+   "options": [
+    "Allopurinol 100 mg a day or less, with colchicine prophylaxis, titrated to urate under 6",
+    "Allopurinol 300 mg a day with no prophylaxis",
+    "Febuxostat first, as the safer choice in kidney disease",
+    "Wait until a full year without a flare"
+   ],
+   "answer": 0,
+   "chainStep": "Allopurinol 100 mg a day or less (lower in CKD), colchicine 0.6 mg once or twice daily as prophylaxis for 3 to 6 months, monthly urate to titrate to under 6 mg/dL; start during the flare (ACR 2020) or 2 to 4 weeks after it settles (NICE)",
+   "why": "Allopurinol is the preferred first-line ULT, including in CKD stage 3 or more, started at 100 mg a day or less (lower in CKD) because a low start reduces flares, and titrated by serial urate levels to a target under 6 mg/dL. Anti-inflammatory prophylaxis, colchicine first, runs for 3 to 6 months. On timing, ACR 2020 conditionally favors starting during the flare once ULT is indicated; NICE starts 2 to 4 weeks after it settles, or during it when flares are frequent. Neither waits for a flare-free year.",
+   "next": "end_gout",
+   "sources": [
+    {
+     "docId": "pmid:32391934",
+     "where": "Abstract; Indications for ULT; Initiating ULT; prophylaxis; HLA-B*5801"
+    },
+    {
+     "docId": "url:a78b4a6a92ce",
+     "where": "1.5.1; 1.5.4; 1.5.5; 1.5.6; 1.5.7; 1.5.12"
+    },
+    {
+     "docId": "url:3f919da1446c",
+     "where": "2.1 Gout flares, prophylaxis"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Allopurinol",
+     "dose": "Start at 100 mg/day or less, lower in CKD (50 mg/day or less considered); titrate to a serum urate under 6 mg/dL",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32391934",
+       "where": "Abstract; Initiating ULT, text"
+      }
+     ]
+    },
+    {
+     "item": "Prophylaxis",
+     "dose": "Colchicine 0.6 mg once or twice daily (maximum 1.2 mg/day); low-dose NSAID or low-dose oral corticosteroid if colchicine cannot be used; continue 3 to 6 months",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3f919da1446c",
+       "where": "2.1 Gout flares, prophylaxis"
+      },
+      {
+       "docId": "url:a78b4a6a92ce",
+       "where": "1.5.12"
+      },
+      {
+       "docId": "pmid:32391934",
+       "where": "Initiating ULT, prophylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Timing",
+     "dose": "ACR 2020: start during the flare (conditional). NICE: at least 2 to 4 weeks after it settles, or during a flare when flares are frequent",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32391934",
+       "where": "Initiating ULT"
+      },
+      {
+       "docId": "url:a78b4a6a92ce",
+       "where": "1.5.4"
+      }
+     ]
+    },
+    {
+     "item": "HLA-B*5801 test",
+     "dose": "Before allopurinol: conditionally recommended for patients of Southeast Asian descent (for example Han Chinese, Korean, Thai) and for African American patients",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32391934",
+       "where": "Initiating ULT, HLA-B*5801"
+      }
+     ]
+    },
+    {
+     "item": "Lower urate target",
+     "dose": "Consider a target under 300 micromol/L (5 mg/dL) with tophi or chronic gouty arthritis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a78b4a6a92ce",
+       "where": "1.5.7"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cppd_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "CPP crystals, Gram stain negative, culture pending. Treatment?",
+   "options": [
+    "An NSAID, colchicine or a corticosteroid, as for gout",
+    "Allopurinol to dissolve the crystals",
+    "Methotrexate as first-line therapy"
+   ],
+   "answer": 0,
+   "chainStep": "NSAID, colchicine (within 12 hours of onset) or a corticosteroid such as prednisone 30 mg daily (duration not stated in the trail); follow the culture; calcium, magnesium, phosphate, PTH, iron studies and TSH",
+   "why": "Acute CPP crystal arthritis is treated like a gout flare: NSAIDs, colchicine, or systemic or intra-articular corticosteroids by age and comorbidity, with colchicine given early, within 12 hours of onset. No therapy dissolves CPP deposits, and methotrexate is a second-line drug for chronic CPP inflammatory arthritis, not the acute attack. Crystals do not exclude infection, so the culture is followed.",
+   "next": "end_cppd",
+   "sources": [
+    {
+     "docId": "pmid:30986010",
+     "where": "Evaluation; Histopathology; Treatment / Management"
+    },
+    {
+     "docId": "pmid:29262239",
+     "where": "Clinical significance"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Acute treatment",
+     "dose": "NSAIDs, colchicine or systemic corticosteroids by age and comorbidity; the 2023 COLCHICORT trial used prednisone 30 mg daily first line (duration not stated in the trail)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30986010",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Intra-articular corticosteroid",
+     "dose": "An option once infection is excluded",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:30986010",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "infection caveat not yet sourced"
+    },
+    {
+     "item": "Colchicine timing",
+     "dose": "Early, within 12 hours of onset",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30986010",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Bloodwork",
+     "dose": "Calcium, magnesium, phosphate, parathyroid hormone, iron studies, TSH and uric acid",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30986010",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Chronic CPP inflammatory arthritis",
+     "dose": "Daily colchicine first line; methotrexate or tocilizumab second line",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30986010",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "note": "The EULAR 2011 CPPD recommendations were not read (bot check, restricted repository copy); StatPearls' summary of them stands in."
+  },
+  {
+   "id": "inflam_next",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Inflammatory fluid, no crystals, Gram stain negative, afebrile. Next?",
+   "options": [
+    "Follow the culture; Lyme serology after tick exposure, chlamydia NAAT and stool tests by history",
+    "Synovial Lyme PCR in place of serology",
+    "A Lyme immunoblot alone, without the EIA",
+    "HLA-B27 to confirm reactive arthritis"
+   ],
+   "answer": 0,
+   "chainStep": "Follow the synovial culture; two-tier Lyme serology (EIA, then an immunoblot or an FDA-cleared second EIA if positive or equivocal) after tick exposure; urine chlamydia NAAT and stool studies when a trigger is suspected",
+   "why": "Inflammatory fluid without crystals or organisms still has its culture followed: a WBC under 50,000 does not rule out infection, and reactive arthritis typically has a sterile inflammatory fluid. For Lyme arthritis, serum antibody testing comes before synovial PCR or culture: a sensitive EIA, then a western immunoblot, or an FDA-cleared second EIA, when it is positive or equivocal; PCR is for a diagnosis still in doubt despite positive serology. Reactive arthritis is a clinical diagnosis: stool studies and a chlamydia NAAT (the recommended chlamydia test) find a trigger in about half, and HLA-B27 is not required.",
+   "next": "inflam_result",
+   "sources": [
+    {
+     "docId": "pmid:29763006",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:28613720",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:31415492",
+     "where": "Background; Recommendation"
+    },
+    {
+     "docId": "pmid:34292926",
+     "where": "Chlamydial infections, diagnostic considerations"
+    },
+    {
+     "docId": "pmid:29262239",
+     "where": "Clinical significance"
+    }
+   ]
+  },
+  {
+   "id": "inflam_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Serology, cultures and history",
+   "outcomes": [
+    {
+     "id": "lyme",
+     "if": "Lyme arthritis; EIA and immunoblot positive, culture sterile",
+     "ddx": {
+      "lead": [
+       "Lyme arthritis"
+      ],
+      "out": []
+     },
+     "next": "lyme_tx"
+    },
+    {
+     "id": "reactive",
+     "if": "Reactive arthritis; a recent enteric or genital infection, culture sterile",
+     "ddx": {
+      "lead": [
+       "Reactive arthritis"
+      ],
+      "out": []
+     },
+     "next": "end_reactive",
+     "orders": [
+      {
+       "item": "NSAID",
+       "dose": "First line for the acute arthritis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29763006",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Joint injection",
+       "dose": "Intra-articular glucocorticoid for persistent inflammation in a large joint",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29763006",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Antibiotics",
+       "dose": "Not for the arthritis or an enteric trigger; treat a chlamydial trigger and the partners. CDC chlamydia regimen: doxycycline 100 mg orally twice daily for 7 days",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29763006",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:34292926",
+         "where": "Chlamydial infections, treatment"
+        }
+       ],
+       "note": "StatPearls quotes doxycycline for 10 to 14 days in reactive arthritis; the CDC chlamydia regimen is 7 days."
+      }
+     ]
+    },
+    {
+     "id": "neither",
+     "if": "Neither; Lyme serology negative, no trigger, culture sterile",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_inflam_other"
+    }
+   ]
+  },
+  {
+   "id": "lyme_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Lyme arthritis on serology. Treatment?",
+   "options": [
+    "Oral doxycycline for 28 days",
+    "IV ceftriaxone for 28 days, first line",
+    "Oral doxycycline for 10 days",
+    "Intra-articular corticosteroid, no antibiotic"
+   ],
+   "answer": 0,
+   "chainStep": "Doxycycline 100 mg twice daily or 200 mg once daily for 28 days (NICE dose); a second oral course for a partial response; IV ceftriaxone 2 to 4 weeks for minimal or no response",
+   "why": "Lyme arthritis is treated with oral doxycycline for 28 days, with amoxicillin as the alternative: a 28-day course, not a short one. IV ceftriaxone is kept for minimal or no response (NICE lists it as the second alternative), and a partial response can get a second oral course. Joint injections and other therapies wait for postantibiotic arthritis that has failed oral and IV antibiotics, through a rheumatologist.",
+   "next": "end_lyme",
+   "sources": [
+    {
+     "docId": "pmid:28613720",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:68bd7ad74fab",
+     "where": "1.3.6; Table 1, Lyme disease with arthritis"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Doxycycline",
+     "dose": "100 mg twice daily or 200 mg once daily for 28 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:68bd7ad74fab",
+       "where": "Table 1, Lyme disease with arthritis"
+      },
+      {
+       "docId": "pmid:28613720",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Amoxicillin",
+     "dose": "The alternative; NICE (UK) dose 1 g three times daily for 28 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:68bd7ad74fab",
+       "where": "Table 1, Lyme disease with arthritis"
+      }
+     ]
+    },
+    {
+     "item": "Not settling",
+     "dose": "Partial response: a second oral course. Minimal or no response: IV ceftriaxone for 2 to 4 weeks (NICE dose 2 g once a day)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613720",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "url:68bd7ad74fab",
+       "where": "Table 1, Lyme disease with arthritis"
+      }
+     ]
+    },
+    {
+     "item": "Pregnancy",
+     "dose": "Ask before prescribing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:68bd7ad74fab",
+       "where": "1.3.6"
+      }
+     ]
+    }
+   ],
+   "note": "The IDSA/AAN/ACR 2020 Lyme guideline was not read (bot check); the 28-day oral course here comes from StatPearls and NICE NG95."
+  },
+  {
+   "id": "end_sepsis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Septic and unstable with a hot joint: cultures without delay, antibiotics within the hour, fluids, and the joint drained as source control; continue in the sepsis and fever pathway."
+  },
+  {
+   "id": "end_pji",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Prosthetic joint infection: aspiration preferably by orthopedics, cultures before antibiotics unless septic, and usually surgery plus 6 or more weeks of IV antibiotics."
+  },
+  {
+   "id": "end_hemophilia",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hemarthrosis in hemophilia: factor replacement at once, analgesia without NSAIDs (COX-2 inhibitors aside), rest and ice; aspirate only for a tense bleed not settling at 24 hours or suspected infection, and only under factor cover."
+  },
+  {
+   "id": "end_dgi",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Gonococcal arthritis: specimens from every exposed site, ceftriaxone 1 g IV or IM daily, doxycycline unless chlamydia is excluded, drainage of a purulent joint, an oral step-down by susceptibility after improvement in the arthritis-dermatitis syndrome, partner notification and a retest at 3 months."
+  },
+  {
+   "id": "end_hip_septic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Septic hip: urgent surgical irrigation and debridement, cultures first, empiric IV cover for S aureus (and Kingella in young children), an early oral switch, about 10 to 14 days in total when uncomplicated."
+  },
+  {
+   "id": "end_ts",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Transient synovitis: rest and an NSAID, observation when unsure, and a fresh look for another diagnosis if symptoms last beyond 7 to 10 days."
+  },
+  {
+   "id": "end_hip_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No hip effusion: the limp still needs a cause; osteomyelitis, Perthes disease, a slipped capital femoral epiphysis, fracture and tumor are in the differential and are not covered in this pathway."
+  },
+  {
+   "id": "end_septic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Native joint treated as septic arthritis: synovial fluid and cultures first, empiric IV antibiotics by the Gram stain with antistaphylococcal cover, drainage chosen by orthopedics, then 3 to 4 weeks of antibiotics (4 to 6 with Pseudomonas), mostly oral after the first 2 weeks."
+  },
+  {
+   "id": "end_gout",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Gout flare: an NSAID, low-dose colchicine or a corticosteroid by comorbidity, with the culture followed; established ULT continued, ULT started low with prophylaxis when indicated, and discussed after a first uncomplicated flare."
+  },
+  {
+   "id": "end_cppd",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute CPP crystal arthritis (pseudogout): an NSAID, early colchicine or a corticosteroid, the culture followed, and a metabolic screen; nothing dissolves the deposits."
+  },
+  {
+   "id": "end_lyme",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Lyme arthritis: two-tier serology, oral doxycycline for 28 days, a second oral course or IV ceftriaxone if it does not settle, and rheumatology for postantibiotic arthritis."
+  },
+  {
+   "id": "end_reactive",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Reactive arthritis: sterile inflammatory fluid after a genital or enteric infection; NSAIDs first, an intra-articular steroid for a persistent large joint, and antibiotics for a chlamydial trigger but not an enteric one."
+  },
+  {
+   "id": "end_inflam_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Inflammatory monoarthritis without crystals, organisms, Lyme serology or a trigger: follow the culture to the end; the wider differential (viral, psoriatic or early rheumatoid arthritis, spondyloarthritis, sarcoid) is not covered in this pathway."
+  },
+  {
+   "id": "end_hemarthrosis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hemarthrosis on an anticoagulant: immobilization, ice and compression; if anticoagulated, stop and reverse only if bleeding persists; plain films if a fracture is possible."
+  },
+  {
+   "id": "end_noninflam",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Noninflammatory fluid, no crystals or organisms: the culture is still followed; osteoarthritis and mechanical causes are not covered in this pathway."
+  }
+ ],
+ "cases": [
+  {
+   "id": "septic_shock",
+   "label": "Septic knee in shock",
+   "vignette": "71-year-old man with diabetes, 2 days of a hot, swollen right knee, now confused. Temperature 39.4 C, BP 82/48, HR 124, RR 26. Lactate 4.8 mmol/L. Weight 80 kg. No joint replacement, no bleeding disorder, no anticoagulant.",
+   "picks": {
+    "front": "septic_shock"
+   },
+   "results": {
+    "front": "Hypotensive and confused, cool peripheries; a hot, tense right knee effusion. Native joint."
+   }
+  },
+  {
+   "id": "pji",
+   "label": "Infected knee replacement",
+   "vignette": "68-year-old woman with a right total knee replacement 4 years ago, 3 days of a hot, swollen, painful knee. Temperature 38.2 C, BP 134/78, HR 84. Alert. No anticoagulant.",
+   "picks": {
+    "front": "prosthesis"
+   },
+   "results": {
+    "front": "Stable; a warm, tense effusion over the knee replacement, no sinus tract."
+   }
+  },
+  {
+   "id": "hemophilia",
+   "label": "Knee bleed in hemophilia A",
+   "vignette": "24-year-old man with severe hemophilia A, no known inhibitor, a swollen, painful left knee since this morning after climbing stairs. Temperature 36.9 C, BP 126/74, HR 88. Weight 70 kg.",
+   "picks": {
+    "front": "hemophilia"
+   },
+   "results": {
+    "front": "Stable and afebrile; a warm, tense left knee effusion with flexion limited. Known severe hemophilia A."
+   }
+  },
+  {
+   "id": "dgi",
+   "label": "Arthritis-dermatitis syndrome",
+   "vignette": "22-year-old woman with a new sexual partner, 4 days of fever and joint pains that moved from joint to joint, now a painful, swollen right wrist. Temperature 38.3 C, BP 118/70, HR 98.",
+   "picks": {
+    "front": "dgi"
+   },
+   "results": {
+    "front": "Stable; tenosynovitis over the back of the right wrist, a few painless pustules on the fingers and ankles, aching knees and ankles."
+   }
+  },
+  {
+   "id": "child_septic",
+   "label": "Septic hip in a child",
+   "vignette": "5-year-old boy, a day of fever and refusing to walk; he cries when his right hip is moved. Temperature 39.1 C (102.4 F). Fully immunized, no injury.",
+   "picks": {
+    "front": "child_hip",
+    "hip_result": "risk",
+    "hip_fluid": "septic"
+   },
+   "results": {
+    "front": "Stable; holds the right hip flexed and externally rotated, will not bear weight.",
+    "hip_result": "Ultrasound: a right hip effusion. X-ray: no fracture or slip. WBC 16,800/uL, ESR 58 mm/h, CRP 9.2 mg/dL. Kocher criteria 4 of 4.",
+    "hip_fluid": "Ultrasound-guided aspirate: turbid, WBC 112,000/uL with 94% neutrophils, gram-positive cocci in clusters, glucose 22 mg/dL."
+   }
+  },
+  {
+   "id": "child_ts_aspirated",
+   "label": "Transient synovitis after a negative tap",
+   "vignette": "6-year-old girl, a day of right hip pain and limping after a cold last week; this morning she would not stand on the leg. Temperature 38.7 C (101.7 F).",
+   "picks": {
+    "front": "child_hip",
+    "hip_result": "risk",
+    "hip_fluid": "not_septic"
+   },
+   "results": {
+    "front": "Stable; pain at the end of hip rotation, will not bear weight.",
+    "hip_result": "Ultrasound: a small right hip effusion. X-ray normal. WBC 10,900/uL, ESR 28 mm/h, CRP 1.6 mg/dL. Kocher criteria 2 of 4 (fever, refusal to bear weight).",
+    "hip_fluid": "Ultrasound-guided aspirate: clear yellow, WBC 11,500/uL with 62% neutrophils, Gram stain negative, glucose 84 mg/dL; culture pending."
+   }
+  },
+  {
+   "id": "child_ts_clinical",
+   "label": "Transient synovitis, low risk",
+   "vignette": "7-year-old boy, a limp and mild left hip pain since waking, a runny nose last week. Temperature 37.2 C (99.0 F). He walks in with a limp.",
+   "picks": {
+    "front": "child_hip",
+    "hip_result": "low"
+   },
+   "results": {
+    "front": "Stable; mild pain at the end of internal rotation, bearing weight.",
+    "hip_result": "Ultrasound: a small left hip effusion. X-ray normal. WBC 8,900/uL, ESR 12 mm/h, CRP 0.4 mg/dL. Kocher criteria 0 of 4; no severe pain or spasm."
+   }
+  },
+  {
+   "id": "child_no_effusion",
+   "label": "Limp without a hip effusion",
+   "vignette": "8-year-old boy, 2 weeks of an intermittent limp with right hip and knee ache, no fever. Temperature 36.8 C.",
+   "picks": {
+    "front": "child_hip",
+    "hip_result": "none"
+   },
+   "results": {
+    "front": "Stable; mildly limited internal rotation of the right hip, bearing weight.",
+    "hip_result": "Ultrasound: no hip effusion. X-ray: no fracture or slip. WBC 7,600/uL, ESR 9 mm/h, CRP under 0.5 mg/dL."
+   }
+  },
+  {
+   "id": "septic_gpc",
+   "label": "Staphylococcal septic knee",
+   "vignette": "61-year-old man with knee osteoarthritis, a corticosteroid injection into the left knee 10 days ago, now 2 days of a hot, swollen left knee; he cannot bear weight. Temperature 38.6 C, BP 138/82, HR 102. Creatinine normal, no immunosuppression.",
+   "picks": {
+    "front": "native",
+    "fluid": "gpc"
+   },
+   "results": {
+    "front": "Stable; a hot, tense effusion in a native joint. No joint replacement, no bleeding disorder.",
+    "fluid": "Turbid yellow-green fluid: WBC 86,000/uL with 92% neutrophils. Gram stain: gram-positive cocci in clusters. No crystals."
+   }
+  },
+  {
+   "id": "septic_gnr",
+   "label": "Gram-negative septic knee in a drug user",
+   "vignette": "38-year-old man who injects drugs, 3 days of a hot, swollen right knee. Temperature 38.4 C, BP 128/76, HR 104. Creatinine normal.",
+   "picks": {
+    "front": "native",
+    "fluid": "gnr"
+   },
+   "results": {
+    "front": "Stable; a hot, tense effusion in a native joint. No joint replacement, no bleeding disorder. Track marks on both arms.",
+    "fluid": "Purulent fluid: WBC 94,000/uL with 95% neutrophils. Gram stain: gram-negative rods. No crystals."
+   }
+  },
+  {
+   "id": "gonococcal_fluid",
+   "label": "Gonococcal septic knee",
+   "vignette": "19-year-old man with several recent sexual partners, 2 days of a hot, swollen left knee; no rash, no tendon pain. Temperature 38.1 C, BP 124/72, HR 96.",
+   "picks": {
+    "front": "native",
+    "fluid": "gndc"
+   },
+   "results": {
+    "front": "Stable; a hot, tense effusion in a native joint. No joint replacement, no bleeding disorder. No skin lesions, no tenosynovitis.",
+    "fluid": "Cloudy fluid: WBC 52,000/uL with 88% neutrophils. Gram stain: gram-negative intracellular diplococci. No crystals."
+   }
+  },
+  {
+   "id": "septic_stain_neg",
+   "label": "Septic ankle, Gram stain negative",
+   "vignette": "55-year-old woman with type 2 diabetes, 2 days of a hot, swollen right ankle. Temperature 38.8 C, BP 132/80, HR 106. Creatinine normal.",
+   "picks": {
+    "front": "native",
+    "fluid": "stain_neg"
+   },
+   "results": {
+    "front": "Stable; a hot, tense effusion in a native joint. No joint replacement, no bleeding disorder.",
+    "fluid": "Turbid fluid: WBC 78,000/uL with 93% neutrophils. Gram stain: no organisms. No crystals."
+   }
+  },
+  {
+   "id": "gnr_other",
+   "label": "Gram-negative septic knee, no Pseudomonas risk",
+   "vignette": "81-year-old woman treated for an E. coli urinary infection last week, 2 days of a hot, swollen right knee. Temperature 38.5 C, BP 136/78, HR 100. Does not inject drugs, not immunosuppressed. Creatinine normal.",
+   "picks": {
+    "front": "native",
+    "fluid": "gnr_other"
+   },
+   "results": {
+    "front": "Stable; a hot, tense effusion in a native joint. No joint replacement, no bleeding disorder.",
+    "fluid": "Purulent fluid: WBC 92,000/uL with 94% neutrophils. Gram stain: gram-negative rods. No crystals."
+   }
+  },
+  {
+   "id": "crystal_septic",
+   "label": "Septic knee with urate crystals",
+   "vignette": "66-year-old man with gout, 2 days of a hot, swollen right knee and rigors. Temperature 38.9 C, BP 134/80, HR 108. Creatinine normal.",
+   "picks": {
+    "front": "native",
+    "fluid": "crystal_septic"
+   },
+   "results": {
+    "front": "Stable; a hot, tense effusion in a native joint. No joint replacement, no bleeding disorder.",
+    "fluid": "Turbid fluid: WBC 88,000/uL with 94% neutrophils. Negatively birefringent needle-shaped crystals. Gram stain negative; culture pending."
+   }
+  },
+  {
+   "id": "inflam_febrile",
+   "label": "Febrile inflammatory knee, Gram stain negative",
+   "vignette": "47-year-old woman with type 2 diabetes, 3 days of a hot, swollen left knee and fever. No tick exposure, no recent infection. Temperature 38.7 C, BP 128/78, HR 104. Creatinine normal.",
+   "picks": {
+    "front": "native",
+    "fluid": "inflam_febrile"
+   },
+   "results": {
+    "front": "Stable; a hot, tense effusion in a native joint. No joint replacement, no bleeding disorder.",
+    "fluid": "Cloudy fluid: WBC 36,000/uL with 85% neutrophils. No crystals. Gram stain negative; culture pending."
+   }
+  },
+  {
+   "id": "gout_on_ult",
+   "label": "Gout flare on allopurinol",
+   "vignette": "58-year-old man with gout on allopurinol 300 mg daily for 2 years, woke with a hot, swollen right knee. Temperature 37.6 C, BP 142/88. eGFR 82; no other medicines.",
+   "picks": {
+    "front": "native",
+    "fluid": "urate",
+    "gout_ult": "on_ult"
+   },
+   "results": {
+    "front": "Stable; a hot, tense effusion in a native joint. No joint replacement, no bleeding disorder.",
+    "fluid": "Cloudy yellow fluid: WBC 24,000/uL with 80% neutrophils. Strongly negatively birefringent needle-shaped crystals. Gram stain negative; culture pending.",
+    "gout_ult": "Takes allopurinol 300 mg every day; serum urate 5.4 mg/dL last month."
+   }
+  },
+  {
+   "id": "gout_first",
+   "label": "First gout flare",
+   "vignette": "44-year-old man, previously well, 12 hours of a hot, swollen left ankle after a weekend of heavy drinking. Temperature 37.4 C. eGFR 96, no medicines.",
+   "picks": {
+    "front": "native",
+    "fluid": "urate",
+    "gout_ult": "first"
+   },
+   "results": {
+    "front": "Stable; a hot, tense effusion in a native joint. No joint replacement, no bleeding disorder.",
+    "fluid": "Cloudy fluid: WBC 18,000/uL with 75% neutrophils. Negatively birefringent needles. Gram stain negative; culture pending.",
+    "gout_ult": "First ever flare. No tophi, no kidney stones, no CKD. Serum urate 7.9 mg/dL."
+   }
+  },
+  {
+   "id": "gout_indicated",
+   "label": "Tophaceous gout, not on ULT",
+   "vignette": "67-year-old man with CKD stage 3a and 3 gout flares this year, a hot, swollen right knee for a day. Not on urate-lowering therapy. Temperature 37.5 C. eGFR 52; takes amlodipine only.",
+   "picks": {
+    "front": "native",
+    "fluid": "urate",
+    "gout_ult": "indicated"
+   },
+   "results": {
+    "front": "Stable; a hot, tense effusion in a native joint. No joint replacement, no bleeding disorder. Tophi over both elbows.",
+    "fluid": "Cloudy fluid: WBC 32,000/uL. Negatively birefringent needles. Gram stain negative; culture pending.",
+    "gout_ult": "Not on ULT; tophi on both elbows, 3 flares this year, eGFR 52 (CKD stage 3a)."
+   }
+  },
+  {
+   "id": "cppd",
+   "label": "Pseudogout of the knee",
+   "vignette": "78-year-old woman, a hot, swollen right knee since she woke 8 hours ago. Temperature 37.8 C, BP 146/84. No joint replacement.",
+   "picks": {
+    "front": "native",
+    "fluid": "cpp"
+   },
+   "results": {
+    "front": "Stable; a hot, tense effusion in a native joint. No joint replacement, no bleeding disorder.",
+    "fluid": "Cloudy fluid: WBC 21,000/uL with 70% neutrophils. Weakly positively birefringent rhomboid crystals. Gram stain negative; culture pending."
+   }
+  },
+  {
+   "id": "lyme",
+   "label": "Lyme arthritis of the knee",
+   "vignette": "34-year-old man from Connecticut, 3 weeks of a large, mildly painful left knee effusion; he hiked in the woods last summer and remembers an expanding rash. Temperature 37.1 C. Not taking any medicines.",
+   "picks": {
+    "front": "native",
+    "fluid": "inflam",
+    "inflam_result": "lyme"
+   },
+   "results": {
+    "front": "Stable; a large, warm left knee effusion, only mildly tender. Native joint. No joint replacement, no bleeding disorder.",
+    "fluid": "Yellow, slightly cloudy fluid: WBC 24,000/uL with 70% neutrophils. No crystals. Gram stain negative.",
+    "inflam_result": "Lyme EIA positive; IgG immunoblot positive. Synovial culture sterile."
+   }
+  },
+  {
+   "id": "reactive",
+   "label": "Reactive arthritis after diarrhea",
+   "vignette": "26-year-old man, a hot, swollen right knee and a painful left heel 3 weeks after a bout of bloody diarrhea; his eyes were red last week. No tick exposure. Temperature 37.3 C.",
+   "picks": {
+    "front": "native",
+    "fluid": "inflam",
+    "inflam_result": "reactive"
+   },
+   "results": {
+    "front": "Stable; a warm right knee effusion and tenderness at the left Achilles insertion. Native joint.",
+    "fluid": "Yellow, cloudy fluid: WBC 16,000/uL with 65% neutrophils. No crystals. Gram stain negative.",
+    "inflam_result": "Stool culture from 3 weeks ago grew Campylobacter. Urine chlamydia NAAT negative. Synovial culture sterile."
+   }
+  },
+  {
+   "id": "inflam_other",
+   "label": "Inflammatory knee, no cause found",
+   "vignette": "45-year-old woman who gardens in a Lyme-endemic county, a warm, swollen right knee for 10 days, no injury and no recent infection. Temperature 37.0 C.",
+   "picks": {
+    "front": "native",
+    "fluid": "inflam",
+    "inflam_result": "neither"
+   },
+   "results": {
+    "front": "Stable; a warm right knee effusion. Native joint. No joint replacement, no bleeding disorder.",
+    "fluid": "Yellow fluid: WBC 9,000/uL with 55% neutrophils. No crystals. Gram stain negative.",
+    "inflam_result": "Lyme EIA negative. Urine chlamydia NAAT negative. Synovial culture sterile at 5 days."
+   }
+  },
+  {
+   "id": "hemarthrosis",
+   "label": "Hemarthrosis on apixaban",
+   "vignette": "76-year-old man on apixaban for atrial fibrillation, a hot, swollen left knee for 6 hours; no fall. Temperature 37.2 C, BP 138/80.",
+   "picks": {
+    "front": "native",
+    "fluid": "blood"
+   },
+   "results": {
+    "front": "Stable; a warm, tense left knee effusion. Native joint. No known bleeding disorder.",
+    "fluid": "Uniformly bloody fluid that does not clot; no fat globules, no crystals, Gram stain negative."
+   }
+  },
+  {
+   "id": "noninflammatory",
+   "label": "Noninflammatory effusion",
+   "vignette": "62-year-old woman with knee osteoarthritis, a swollen, warm-feeling right knee for 4 days after gardening, no fever. Temperature 36.9 C.",
+   "picks": {
+    "front": "native",
+    "fluid": "noninflam"
+   },
+   "results": {
+    "front": "Stable; a moderate right knee effusion, mild warmth. Native joint. No joint replacement, no bleeding disorder.",
+    "fluid": "Clear, straw-colored, viscous fluid: WBC 300/uL with 20% neutrophils. No crystals. Gram stain negative."
+   }
+  }
+ ]
+}
