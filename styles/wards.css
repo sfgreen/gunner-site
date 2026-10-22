@@ -577,6 +577,9 @@
 @media (min-width: 960px) {
   .mk .abg-g { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); }
   .mk .abg-in { padding: 28px; position: sticky; top: 72px; align-self: start; }
+  /* The dark card's overflow: hidden makes it a scroll container, so the form could not
+     stick (the Stage band had the same cause, fixed with clip). Clip still rounds the corners. */
+  .mk .dark-card:has(> .abg-g) { overflow: clip; }
   .mk .abg-out { padding: 28px; box-shadow: inset 1px 0 0 var(--st-line); }
 }
 

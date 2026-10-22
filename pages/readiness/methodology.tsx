@@ -522,7 +522,7 @@ export default function Methodology() {
         .mk .mt-wbar { position: relative; height: 28px; border-radius: 8px; background: var(--card-2); box-shadow: inset 0 0 0 1px var(--line); overflow: hidden; }
         .mk .mt-wfill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 8px 0 0 8px; opacity: .9; }
         .mk .mt-wwt { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); font: 700 13px/1 var(--f-mono); color: var(--ink); padding: 2px 4px; border-radius: 4px; background: var(--card); }
-        .mk .mt-wlead { position: absolute; left: 8px; top: 50%; transform: translateY(-50%); font: 700 13px/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--on-act); }
+        .mk .mt-wlead { position: absolute; left: 8px; top: 50%; transform: translateY(-50%); font: 700 13px/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink); padding: 2px 4px; border-radius: 4px; background: var(--card); }
         .mk .mt-pfoot { margin-top: 16px; padding-top: 16px; box-shadow: inset 0 1px 0 var(--line); font-size: 15px; line-height: 1.6; color: var(--ink-3); max-width: 64ch; }
         .mk .mt-tiers { margin-top: 12px; border-radius: var(--r-md); background: var(--card); box-shadow: inset 0 0 0 1px var(--line); max-width: 560px; }
         .mk .mt-tiers li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; align-items: center; padding: 12px 16px; }

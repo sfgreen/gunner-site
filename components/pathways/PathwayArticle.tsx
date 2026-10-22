@@ -153,7 +153,7 @@ function BlockView({ block, ctx }: { block: Block; ctx: Ctx }) {
           return (
             <li key={id}>
               <h3 className="pw-fxh"><a href={`#${forkAnchor(id)}`}><PwIcon name="branch" />{f.label}</a></h3>
-              <div className="pw-chips">{f.rows.map((r) => <span className="pw-gc" key={r.result}>{r.result}</span>)}</div>
+              <div className="pw-chips">{f.rows.map((r, k) => <span className="pw-gc" key={k}>{r.result}</span>)}</div>
             </li>
           );
         })}
@@ -212,7 +212,7 @@ function Glance({ vm, lk }: { vm: ArticleVM; lk: Lookup }) {
                       <div className="pw-rf" key={id}>
                         <a href={`#${forkAnchor(id)}`}><PwIcon name="branch" />{f.label}</a>
                         {vm.glanceChips && (
-                          <div className="pw-chips">{f.rows.map((r) => <span className="pw-gc" key={r.result}>{r.result}</span>)}</div>
+                          <div className="pw-chips">{f.rows.map((r, k) => <span className="pw-gc" key={k}>{r.result}</span>)}</div>
                         )}
                       </div>
                     );
