@@ -582,6 +582,9 @@
   .mk .dark-card:has(> .abg-g) { overflow: clip; }
   .mk .abg-out { padding: 28px; box-shadow: inset 1px 0 0 var(--st-line); }
 }
+/* The form is about 750px tall: in a shorter window a sticky form would hide its own
+   last rows (the worked cases) until the read ends, so it only sticks where it fits. */
+@media (min-width: 960px) and (max-height: 859px) { .mk .abg-in { position: static; } }
 
 /* the template */
 .mk .tpl-hd { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; padding: 12px; box-shadow: inset 0 -1px 0 var(--st-line); }
