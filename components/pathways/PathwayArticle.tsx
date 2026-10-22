@@ -1,53 +1,65 @@
 import Head from 'next/head';
-import Link from 'next/link';
-import { Fragment, useEffect, useRef, useState } from 'react';
-import SiteShell from '../SiteShell';
-import QuickCheck from './QuickCheck';
+import { Fragment, ReactNode, useState } from 'react';
+import {
+  AppShell, ArticleBody, ArticleHeader, Callout, CtaCard, DrillCard, EndBand, Faq, faqJsonLd, Hero, Icon,
+  NumberedSteps, Rich, Section, Stage, StickyStoreBar, StoreButton, Table, Wrap,
+} from '../app';
+import QuickChecks from './QuickChecks';
 import Calculator from './Calculator';
 import PwStyles from './PwStyles';
-import {
-  Cites, Icon, NewTabNote, Rich, Source, StatusChip, StickyBar, StoreBand, StoreLink, plainText, sentence, useStickyBar,
-} from './ui';
+import { CellLabel, Cites, Mk, NewTabNote, PwIcon, Source, SourceLine, StatusChip, sentence } from './ui';
 import { PATHWAYS_LIVE, articleSlot } from '../../lib/pathways/config';
 import { endAnchor, forkAnchor, lookupOf, nodeAnchor } from '../../lib/pathways/view';
 import type { ArticleVM, Block, ForkVM, Lookup, NextVM, OrderVM, StepVM } from '../../lib/pathways/view';
 
-// /pathways/<slug>: one ED pathway as an article, from PATHWAY_ARTICLE_MOCK.html
-// with the SITE_REDESIGN 3.4 changes (shuffled quick checks, four store slots
-// plus the sticky, no crumb without a URL, fork rows that show the next step,
-// AA label ink). Doses, forks, quick checks, conflicts, cases, calculators and
-// sources come from the pathway JSON; the hero, short answer, section questions,
-// checklist, rounds, traps and FAQ from its editorial layer. The page data holds
-// each string once; `lk` (lib/pathways/view) resolves the references.
+// /pathways/<slug>: one ED pathway as an article, in the app look (components/app,
+// the recipe in its README; the ABG article is the nearest page). The opening is
+// the ArticleHeader, the trust line and the top ask; the dark Stage band holds the
+// interactive heart: the algorithm at a glance and every step's quick check; the
+// article body numbers its sections beside the sticky contents list, with the
+// calculators as dark app cards in "The bedside math". Doses, forks, quick checks,
+// conflicts, cases, calculators and sources come from the pathway JSON; the
+// hero, short answer, section questions, checklist, rounds, traps and FAQ from
+// its editorial layer. The page data holds each string once; `lk`
+// (lib/pathways/view) resolves the references.
+//
+// Store slots (GA4 store_click location): inline (the top card), toc (the card
+// under the contents list), case (each practice patient), end (the closing
+// band), sticky (phones). While PATHWAYS_LIVE is false every one of them sells
+// the Next Best Step drills, never ED Pathways in the app.
 
 const BASE = 'https://stepgunner.com';
 
 type Ctx = { sources: Source[]; lk: Lookup };
 
-function Orders({ orders, ctx, head = true }: { orders: OrderVM[] | undefined; ctx: Ctx; head?: boolean }) {
+/** The accent half of a pathway H1: everything after its first ": ". */
+const accentOf = (h1: string): string | undefined => {
+  const i = h1.indexOf(': ');
+  return i > 0 ? h1.slice(i + 2) : undefined;
+};
+
+const nn = (i: number) => String(i).padStart(2, '0');
+
+function OrderCell({ o, ctx }: { o: OrderVM; ctx: Ctx }) {
+  return (
+    <>
+      <StatusChip status={o.status} />
+      {o.dose}
+      {o.note && <span className="pw-onote">{o.note}</span>}
+      <Cites cites={ctx.lk.cites(o.cites)} sources={ctx.sources} />
+    </>
+  );
+}
+
+function Orders({ orders, ctx, label }: { orders: OrderVM[] | undefined; ctx: Ctx; label: string }) {
   if (!orders || !orders.length) return null;
   return (
-    <div className="pw-tw">
-      <table className="pw-tab">
-        {head && (
-          <thead>
-            <tr><th scope="col">Order</th><th scope="col">Dose and detail</th></tr>
-          </thead>
-        )}
-        <tbody>
-          {orders.map((o, i) => (
-            <tr key={i}>
-              <th scope="row">{o.item}</th>
-              <td>
-                <StatusChip status={o.status} />
-                {o.dose}
-                {o.note && <p className="pw-onote">{o.note}</p>}
-                <Cites cites={ctx.lk.cites(o.cites)} sources={ctx.sources} />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="pw-tbl pw-t2">
+      <Table
+        label={label}
+        head={['Order', 'Dose and detail']}
+        rows={orders.map((o) => [o.item, <OrderCell key="d" o={o} ctx={ctx} />])}
+      />
     </div>
   );
 }
@@ -62,62 +74,58 @@ function NextText({ next, lk }: { next: NextVM | undefined; lk: Lookup }) {
 }
 
 function Fork({ fork, ctx }: { fork: ForkVM; ctx: Ctx }) {
+  const id = forkAnchor(fork.id);
   return (
-    <div className="pw-fork" id={forkAnchor(fork.id)}>
-      <h3>
-        <span className="pw-fk"><Icon name="branch" />Fork</span>
-        {fork.label}
-      </h3>
-      <div className="pw-tw">
-        <table className="pw-tab pw-forktab">
-          <thead>
-            <tr><th scope="col">Result</th><th scope="col">What it means</th><th scope="col">Next step</th></tr>
-          </thead>
-          <tbody>
-            {fork.rows.map((r, k) => (
-              <tr key={k}>
-                <th scope="row">{r.result}</th>
-                <td data-l="What it means">
-                  {r.meaning || <span className="pw-muted">As stated</span>}
-                  {(r.lead || r.out) && (
-                    <p className="pw-ddx">
-                      {r.lead && <>Leading: {r.lead.join(', ')}. </>}
-                      {r.out && <>Struck: {r.out.join(', ')}.</>}
-                    </p>
-                  )}
-                  {r.orders && (
-                    <ul className="pw-olist" aria-label="Orders on this result">
-                      {r.orders.map((o, i) => (
-                        <li key={i}>
-                          <StatusChip status={o.status} />
-                          <b>{o.item}:</b> {o.dose}
-                          {o.note && <p className="pw-onote">{o.note}</p>}
-                          <Cites cites={ctx.lk.cites(o.cites)} sources={ctx.sources} />
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </td>
-                <td data-l="Next step"><NextText next={r.next} lk={ctx.lk} /></td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+    <div className="pw-fork" id={id}>
+      <p className="lbl pw-fk"><PwIcon name="branch" />Fork</p>
+      <h3 className="pw-fh">{fork.label}</h3>
+      <div className="pw-tbl pw-t3">
+        <Table
+          label={`Fork: ${fork.label}`}
+          head={['Result', 'What it means', 'Next step']}
+          rows={fork.rows.map((r) => [
+            r.result,
+            <Fragment key="m">
+              <CellLabel>What it means</CellLabel>
+              {r.meaning || <span className="pw-muted">As stated</span>}
+              {(r.lead || r.out) && (
+                <span className="pw-ddx">
+                  {r.lead && <>Leading: {r.lead.join(', ')}. </>}
+                  {r.out && <>Struck: {r.out.join(', ')}.</>}
+                </span>
+              )}
+              {r.orders && (
+                <ul className="pw-olist" aria-label="Orders on this result">
+                  {r.orders.map((o, i) => (
+                    <li key={i}>
+                      <StatusChip status={o.status} />
+                      <b>{o.item}:</b> {o.dose}
+                      {o.note && <span className="pw-onote">{o.note}</span>}
+                      <Cites cites={ctx.lk.cites(o.cites)} sources={ctx.sources} />
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </Fragment>,
+            <Fragment key="n"><CellLabel>Next step</CellLabel><NextText next={r.next} lk={ctx.lk} /></Fragment>,
+          ])}
+        />
       </div>
     </div>
   );
 }
 
 function Step({ step, ctx }: { step: StepVM; ctx: Ctx }) {
+  const id = nodeAnchor(step.id);
   return (
-    <div className="pw-step" id={nodeAnchor(step.id)}>
-      <p className="pw-sk">{step.stage}</p>
-      <h3>{step.ask}</h3>
+    <article className="pw-step" id={id} aria-labelledby={`${id}-h`}>
+      <p className="lbl">{step.stage}</p>
+      <h3 className="pw-sh" id={`${id}-h`}>{step.ask}</h3>
       <p className="pw-nbs"><b>Next best step:</b> {sentence(step.chainStep)}</p>
-      {step.note && <p className="pw-snote">{step.note}</p>}
-      <Orders orders={step.orders} ctx={ctx} />
+      {step.note && <p className="pw-note">{step.note}</p>}
+      <Orders orders={step.orders} ctx={ctx} label={`Orders: ${step.ask}`} />
       {step.calcs && (
-        <p className="pw-calclinks">
+        <p className="pw-mathl">
           Bedside math:{' '}
           {step.calcs.map((c, k) => (
             <Fragment key={c}>
@@ -127,11 +135,8 @@ function Step({ step, ctx }: { step: StepVM; ctx: Ctx }) {
           ))}
         </p>
       )}
-      <QuickCheck id={step.id} ask={step.ask} options={step.options} answer={step.answer} why={step.why} cites={ctx.lk.cites(step.cites)} sources={ctx.sources} />
-      {step.end && (
-        <p className="pw-endline"><NextText next={step.end} lk={ctx.lk} /></p>
-      )}
-    </div>
+      {step.end && <p className="pw-endl"><NextText next={step.end} lk={ctx.lk} /></p>}
+    </article>
   );
 }
 
@@ -141,13 +146,13 @@ function BlockView({ block, ctx }: { block: Block; ctx: Ctx }) {
   if (block.kind === 'fork') return <Fork fork={block} ctx={ctx} />;
   if (block.kind === 'forkIndex') {
     return (
-      <ul className="pw-findex">
+      <ul className="pw-fx">
         {block.forks.map((id) => {
           const f = lk.fork(id);
           if (!f) return null;
           return (
             <li key={id}>
-              <h3><a href={`#${forkAnchor(id)}`}>{f.label}</a></h3>
+              <h3 className="pw-fxh"><a href={`#${forkAnchor(id)}`}><PwIcon name="branch" />{f.label}</a></h3>
               <div className="pw-chips">{f.rows.map((r) => <span className="pw-gc" key={r.result}>{r.result}</span>)}</div>
             </li>
           );
@@ -182,6 +187,46 @@ function BlockView({ block, ctx }: { block: Block; ctx: Ctx }) {
   );
 }
 
+/** The typical route: each step on it and the forks right after, linked into the article. */
+function Glance({ vm, lk }: { vm: ArticleVM; lk: Lookup }) {
+  return (
+    <section className="sheet dark-card" id="glance" aria-labelledby="glance-h">
+      <div className="sheet-hd">
+        <h2 className="lbl" id="glance-h">The algorithm at a glance</h2>
+      </div>
+      <div className="sheet-bd">
+        <p className="pw-gli">The typical route through this pathway, step by step, with the forks along the way.</p>
+        <ol className="pw-route">
+          {vm.glance.map((g, i) => {
+            const st = lk.step(g.step);
+            return (
+              <li key={g.step}>
+                <span className="pw-rn num" aria-hidden="true">{i + 1}</span>
+                <div className="pw-rb">
+                  <p className="lbl">{st?.stage}</p>
+                  <p className="pw-rt"><a href={`#${nodeAnchor(g.step)}`}>{st?.chainStep}</a></p>
+                  {g.forks.map((id) => {
+                    const f = lk.fork(id);
+                    if (!f) return null;
+                    return (
+                      <div className="pw-rf" key={id}>
+                        <a href={`#${forkAnchor(id)}`}><PwIcon name="branch" />{f.label}</a>
+                        {vm.glanceChips && (
+                          <div className="pw-chips">{f.rows.map((r) => <span className="pw-gc" key={r.result}>{r.result}</span>)}</div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </li>
+            );
+          })}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
 export default function PathwayArticle({ vm }: { vm: ArticleVM }) {
   const url = `${BASE}/pathways/${vm.slug}`;
   const image = `${BASE}/og/pathways/${vm.slug}.png`;
@@ -191,42 +236,210 @@ export default function PathwayArticle({ vm }: { vm: ArticleVM }) {
   const ctx: Ctx = { sources, lk };
   const live = PATHWAYS_LIVE;
   const slotCtx = { count: vm.appCount, term: vm.searchTerm, short: vm.short };
-  const shortRef = useRef<HTMLElement>(null);
-  const endRef = useRef<HTMLElement>(null);
-  const showSticky = useStickyBar(shortRef, endRef);
+  const inline = articleSlot('inline', live, slotCtx);
+  const tocSlot = articleSlot('toc', live, slotCtx);
+  const endSlot = articleSlot('end', live, slotCtx);
   const sticky = articleSlot('sticky', live, slotCtx);
   const caseCopy = articleSlot('case', live, slotCtx);
+  const steps = vm.sections.flatMap((s) => s.blocks.filter((b): b is StepVM => b.kind === 'step'));
 
-  // ---- on this page, with the section in view marked ----
-  const toc: { id: string; label: string }[] = [
-    ...(vm.shortAnswer.length ? [{ id: 'short', label: 'The short answer' }] : []),
-    ...(vm.glance.length ? [{ id: 'glance', label: 'At a glance' }] : []),
-    ...vm.sections.map((s) => ({ id: s.anchor, label: s.heading })),
-    ...(vm.checklist ? [{ id: 'checklist', label: vm.checklist.heading }] : []),
-    ...(vm.calculators.length ? [{ id: 'math', label: 'The bedside math' }] : []),
-    ...(vm.rounds ? [{ id: 'rounds', label: 'On rounds' }] : []),
-    ...(vm.traps.length ? [{ id: 'traps', label: 'Traps' }] : []),
-    ...(vm.disagree.length ? [{ id: 'disagree', label: 'Where the guidelines disagree' }] : []),
-    ...(vm.cases.length ? [{ id: 'patients', label: 'Practice patients' }] : []),
-    ...(vm.faq.length ? [{ id: 'faq', label: 'FAQ' }] : []),
-    { id: 'sources', label: 'Sources' },
-  ];
-  const [current, setCurrent] = useState<string>(toc[0]?.id || '');
-  useEffect(() => {
-    if (typeof IntersectionObserver === 'undefined') return undefined;
-    const els = toc.map((t) => document.getElementById(t.id)).filter(Boolean) as HTMLElement[];
-    const io = new IntersectionObserver(
-      (entries) => {
-        const vis = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-        if (vis[0]) setCurrent(vis[0].target.id);
-      },
-      { rootMargin: '0px 0px -70% 0px' },
-    );
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
-    // The page's sections never change after render.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  // ---- the numbered sections, and the contents list beside them ----
+  // A section's contents label is its jump link (the short name the editorial
+  // gives it: "First moves", "Criteria") where it has one, else its question.
+  const jumpLabel = new Map(vm.jump.map((j) => [j.anchor, j.label]));
+  type Sec = { id: string; toc: string; title: ReactNode; lead?: ReactNode; body: ReactNode };
+  const secs: Sec[] = [];
+  if (vm.shortAnswer.length) {
+    secs.push({
+      id: 'short', toc: 'The short answer', title: 'The short answer',
+      body: (
+        <NumberedSteps
+          steps={vm.shortAnswer.map((s) => ({
+            text: <><b><Rich text={s.lead} /></b> <Rich text={s.text} /></>,
+            cite: s.src && s.src.length ? <SourceLine src={s.src} sources={sources} /> : undefined,
+          }))}
+        />
+      ),
+    });
+  }
+  for (const s of vm.sections) {
+    secs.push({
+      id: s.anchor, toc: jumpLabel.get(s.anchor) || s.heading, title: s.heading,
+      lead: s.intro ? <Rich text={s.intro} /> : undefined,
+      body: s.blocks.map((b, i) => <BlockView key={`${b.kind}-${i}`} block={b} ctx={ctx} />),
+    });
+  }
+  if (vm.checklist) {
+    secs.push({
+      id: 'checklist', toc: jumpLabel.get('checklist') || vm.checklist.heading, title: vm.checklist.heading,
+      body: (
+        <ul className="pw-check">
+          {vm.checklist.items.map((it, i) => (
+            <li key={i}>
+              <PwIcon name="box" sm={false} />
+              <p>{it.label && <b>{it.label}: </b>}<Rich text={it.text} /></p>
+            </li>
+          ))}
+        </ul>
+      ),
+    });
+  }
+  if (vm.calculators.length) {
+    secs.push({
+      id: 'math', toc: 'The bedside math', title: 'The bedside math',
+      lead: <>{vm.calculators.length === 1 ? 'The calculation' : `The ${vm.calculators.length} calculations`} this pathway uses, with the formulas, cutoffs and bands exactly as the cited sources give them. Change a value to recalculate.</>,
+      body: <div className="pw-calcs">{vm.calculators.map((c) => <Calculator key={c.id} calc={c} sources={sources} lk={lk} />)}</div>,
+    });
+  }
+  if (vm.rounds) {
+    const pr = vm.rounds.present;
+    secs.push({
+      id: 'rounds', toc: 'On rounds', title: 'On rounds: how to present it, and what you will be asked',
+      body: (
+        <>
+          {pr && (
+            <>
+              {pr.intro && <p className="prs"><Rich text={pr.intro} /></p>}
+              <div className="script pw-present">
+                <p className="lbl">{pr.oneLiner ? 'One-liner' : 'How to present it'}</p>
+                {pr.oneLiner && <p><Rich text={pr.oneLiner} /></p>}
+                {pr.paragraphs.map((t, i) => (
+                  <p key={i}>{t.lead && <b>{t.lead}: </b>}<Rich text={t.text} /></p>
+                ))}
+                {pr.plan.length > 0 && (
+                  <>
+                    <p className="lbl">Assessment and plan</p>
+                    <ol className="pw-plan">
+                      {pr.plan.map((x, i) => (
+                        <li key={i}>{x.lead && <b><Rich text={x.lead} /> </b>}<Rich text={x.text} /></li>
+                      ))}
+                    </ol>
+                  </>
+                )}
+              </div>
+            </>
+          )}
+          {vm.rounds.pimp.length > 0 && (
+            <>
+              <h3 className="h-3 subh">The pimp questions</h3>
+              <div className="faq">
+                {vm.rounds.pimp.map((x, i) => (
+                  <details key={i}>
+                    <summary><span><Rich text={x.q} /></span><Icon name="plus" sm /></summary>
+                    <div className="fa"><p><Rich text={x.a} /></p></div>
+                  </details>
+                ))}
+              </div>
+            </>
+          )}
+        </>
+      ),
+    });
+  }
+  if (vm.traps.length) {
+    secs.push({
+      id: 'traps', toc: 'Traps', title: 'Shelf and Step 2 traps, in one list',
+      body: (
+        <div className="pw-traps">
+          {vm.traps.map((t, i) => (
+            <Callout key={i} tone="trap" title={t.lead || undefined}><p><Rich text={t.text} /></p></Callout>
+          ))}
+        </div>
+      ),
+    });
+  }
+  if (vm.disagree.length) {
+    const rows = vm.disagree.map((d) => lk.order(d)).filter(Boolean) as NonNullable<ReturnType<Lookup['order']>>[];
+    secs.push({
+      id: 'disagree', toc: 'Where the guidelines disagree', title: 'Where the guidelines disagree',
+      lead: 'A question can only key one answer. These are the places the sources split; each row links back to the step it sits on.',
+      body: (
+        <div className="pw-tbl pw-t2">
+          <Table
+            label="Where the guidelines disagree"
+            head={['Question', 'What the sources say']}
+            rows={rows.map((at) => [
+              <Fragment key="q">{at.order.item}<a className="pw-ctx" href={`#${at.anchor}`}>{at.context}</a></Fragment>,
+              <OrderCell key="d" o={{ ...at.order, status: 'conflict' }} ctx={ctx} />,
+            ])}
+          />
+        </div>
+      ),
+    });
+  }
+  if (vm.cases.length) {
+    secs.push({
+      id: 'patients', toc: 'Practice patients', title: 'Practice patients',
+      lead: <>{vm.cases.length} of the {vm.counts.cases} patients in this pathway, chosen to walk the most forks between them. Open a fork to see the result and the next step.</>,
+      body: vm.cases.map((c) => (
+        <div className="pw-case" key={c.id}>
+          <p className="lbl">Practice patient</p>
+          <h3 className="pw-sh">{c.label}</h3>
+          <p className="vig">{c.vignette}</p>
+          <div className="faq">
+            {c.forks.map((f, i) => {
+              const fork = lk.fork(f.fork);
+              const row = fork?.rows[f.row];
+              if (!fork || !row) return null;
+              const next = lk.next(row.next).text;
+              return (
+                <details key={i}>
+                  <summary><span>Fork {i + 1}: {fork.label}</span><Icon name="plus" sm /></summary>
+                  <div className="fa">
+                    <p>
+                      {f.result && <>{sentence(f.result)} </>}
+                      <b>{row.result}.</b>
+                      {next && <> Next: {sentence(next)}</>}
+                    </p>
+                  </div>
+                </details>
+              );
+            })}
+          </div>
+          <div className="pw-case-a">
+            <StoreButton loc="case" variant="q">{caseCopy.button}<Icon name="arrow" sm /></StoreButton>
+          </div>
+        </div>
+      )),
+    });
+  }
+  if (vm.faq.length) {
+    secs.push({ id: 'faq', toc: 'FAQ', title: 'Frequently asked questions', body: <Faq items={vm.faq} /> });
+  }
+  secs.push({
+    id: 'sources', toc: 'Sources', title: 'Sources',
+    body: (
+      <div className="refs pw-refs">
+        <ol>
+          {vm.sources.map((s) => (
+            <li key={s.url}>
+              <span>
+                <a href={s.url} target="_blank" rel="nofollow noopener noreferrer" aria-describedby="pw-newtab"><b>{s.label}</b></a>{' '}
+                {s.title}
+              </span>
+            </li>
+          ))}
+        </ol>
+      </div>
+    ),
+  });
+  secs.push({
+    id: 'related', toc: 'Related', title: vm.related.length ? 'Related pathways' : 'Keep studying',
+    body: (
+      <div className="rel">
+        {vm.related.map((r) => (
+          <a key={r.slug} href={`/pathways/${r.slug}`}>
+            <span className="lbl">ED pathway</span><span className="rt">{r.title}</span><Icon name="arrow" sm />
+          </a>
+        ))}
+        {vm.also.map((a) => (
+          <a key={a.href} href={a.href}>
+            <span className="lbl">{a.kind}</span><span className="rt">{a.label}</span><Icon name="arrow" sm />
+          </a>
+        ))}
+      </div>
+    ),
+  });
 
   // ---- structured data: exactly what the page shows ----
   // datePublished and dateModified are the article's `updated` date (the one
@@ -265,13 +478,6 @@ export default function PathwayArticle({ vm }: { vm: ArticleVM }) {
       ...dates,
     },
   };
-  const faqLd = vm.faq.length
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: vm.faq.map((f) => ({ '@type': 'Question', name: plainText(f.q), acceptedAnswer: { '@type': 'Answer', text: plainText(f.a) } })),
-      }
-    : null;
   const crumbLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -281,20 +487,27 @@ export default function PathwayArticle({ vm }: { vm: ArticleVM }) {
       { '@type': 'ListItem', position: 3, name: vm.short, item: url },
     ],
   };
-  const ld = [pageLd, faqLd, crumbLd].filter(Boolean);
+  const ld = [pageLd, vm.faq.length ? faqJsonLd(vm.faq) : null, crumbLd].filter(Boolean);
 
-  const inline = articleSlot('inline', live, slotCtx);
-  const tocSlot = articleSlot('toc', live, slotCtx);
-  const endSlot = articleSlot('end', live, slotCtx);
-  const store = { ct: vm.id, pageType: 'pathway' as const, page: vm.slug };
+  const meta: ReactNode[] = [
+    ...(vm.updated ? [<>Updated <b>{vm.updated}</b></>] : []),
+    <><b>{vm.counts.steps}</b> decision steps</>,
+    <><b>{vm.counts.forks}</b> forks</>,
+    <><b>{vm.counts.sources}</b> sources</>,
+    <>About {vm.counts.minutes} minutes</>,
+  ];
 
   return (
-    <>
+    <AppShell
+      campaign={vm.id}
+      page={vm.slug}
+      pageType="pathway"
+      navCta={{ label: 'Check readiness', href: '/readiness' }}
+      sticky={<StickyStoreBar title={sticky.heading || ''} sub={sticky.body} button={sticky.button} />}
+    >
       <Head>
         <title>{vm.seoTitle}</title>
         <meta name="description" content={vm.metaDescription} />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" content="#faf9f6" />
         {vm.draft && <meta name="robots" content="noindex" />}
         <link rel="canonical" href={url} />
         <meta property="og:type" content="article" />
@@ -316,328 +529,59 @@ export default function PathwayArticle({ vm }: { vm: ArticleVM }) {
         ))}
       </Head>
       <PwStyles />
-      <div className="pw">
-        <SiteShell campaign={vm.id} measure="wide" cta={{ label: 'Check readiness', href: '/readiness' }}>
-          <NewTabNote />
-          <div className="pw-grid">
-            <article className="pw-main" aria-labelledby="pw-h1">
-              <nav className="pw-crumb" aria-label="Breadcrumb">
-                <ol>
-                  <li><Link href="/">Home</Link></li>
-                  <li><Link href="/pathways">ED Pathways</Link></li>
-                  <li aria-current="page">{vm.short}</li>
-                </ol>
-              </nav>
-
-              {vm.draft && (
-                <div className="pw-draft" role="note">
-                  <Icon name="warn" />
-                  <p>
-                    <b>Draft: not yet medically reviewed.</b> A preview, not indexed and not on the live site.
-                    {vm.editorialPending && ' The article layer for this pathway is still being written; what shows is the pathway itself.'}
-                    {vm.fixture && ' Editorial text here is the approved mock, standing in until the real file lands.'}
-                  </p>
-                </div>
-              )}
-
-              <p className="pw-eyebrow">ED pathway · {vm.worldLabel}</p>
-              <h1 id="pw-h1">{vm.h1}</h1>
-              {vm.dek && <p className="pw-dek"><Rich text={vm.dek} /></p>}
-              <ul className="pw-meta">
-                <li>By <b>Danny Varghese</b></li>
-                {vm.updated && <li>Updated <b>{vm.updated}</b></li>}
-                <li><b>{vm.counts.steps}</b> decision steps</li>
-                <li><b>{vm.counts.forks}</b> forks</li>
-                <li><b>{vm.counts.sources}</b> sources</li>
-                <li>About {vm.counts.minutes} minutes</li>
-              </ul>
-              {vm.signedOff && (
-                <p className="pw-reviewed">
-                  <Icon name="shield" />
-                  Medically reviewed by Danny Varghese{vm.reviewedDate ? `, ${vm.reviewedDate}` : ''}
+      <NewTabNote />
+      <div className="pw-a">
+        <Hero>
+          {vm.draft && (
+            <Mk>
+              <div className="pw-draft" role="note">
+                <Icon name="warn" sm />
+                <p>
+                  <b>Draft: not yet medically reviewed.</b> A preview, not indexed and not on the live site.
+                  {vm.editorialPending && ' The article layer for this pathway is still being written; what shows is the pathway itself.'}
+                  {vm.fixture && ' Editorial text here is the approved mock, standing in until the real file lands.'}
                 </p>
-              )}
-
-              {vm.jump.length > 0 && (
-                <nav className="pw-jump" aria-label="Jump to a section">
-                  {vm.jump.map((j) => (
-                    <a key={j.anchor} href={`#${j.anchor}`}><span>{j.label}</span></a>
-                  ))}
-                </nav>
-              )}
-
-              <div className="pw-trust">
-                <Icon name="check" />
-                <p>Every dose and threshold below is quoted from the source it cites, and a second pass tried to break each fork. Where guidelines disagree, both sides are shown; where a source could not be read in full, the step says so.</p>
               </div>
+            </Mk>
+          )}
+          <ArticleHeader
+            category="ed"
+            crumb={[{ href: '/pathways', label: 'ED Pathways' }, { label: vm.short }]}
+            eyebrow={<>ED pathway · {vm.worldLabel}</>}
+            title={vm.h1}
+            accent={accentOf(vm.h1)}
+            dek={vm.dek ? <Rich text={vm.dek} /> : undefined}
+            meta={meta}
+            reviewed={vm.signedOff ? `Medically reviewed by Danny Varghese${vm.reviewedDate ? `, ${vm.reviewedDate}` : ''}` : undefined}
+          />
+          <Mk>
+            <p className="disc-top pw-trust">
+              <Icon name="checkc" sm />
+              <span>Every dose and threshold below is quoted from the source it cites, and a second pass tried to break each fork. Where guidelines disagree, both sides are shown; where a source could not be read in full, the step says so.</span>
+            </p>
+          </Mk>
+          <CtaCard title={inline.heading} sub={inline.body} button={inline.button} loc="inline" stickyStart />
+        </Hero>
 
-              {vm.shortAnswer.length > 0 ? (
-                <section className="pw-short" id="short" aria-labelledby="h-short" ref={shortRef}>
-                  <h2 className="pw-k" id="h-short">The short answer</h2>
-                  <ol>
-                    {vm.shortAnswer.map((s, i) => (
-                      <li key={i}><b><Rich text={s.lead} /></b> <Rich text={s.text} /></li>
-                    ))}
-                  </ol>
-                </section>
-              ) : (
-                <span ref={shortRef} />
-              )}
-
-              <StoreBand copy={inline} loc="inline" {...store} />
-
-              {vm.glance.length > 0 && (
-                <section id="glance" aria-labelledby="h-glance">
-                  <h2 className="pw-h2" id="h-glance">The algorithm at a glance</h2>
-                  <p className="pw-intro">The typical route through this pathway, step by step, with the forks along the way.</p>
-                  <ol className="pw-glance">
-                    {vm.glance.map((g, i) => {
-                      const st = lk.step(g.step);
-                      return (
-                        <li key={g.step}>
-                          <span className="pw-gn" aria-hidden="true">{i + 1}</span>
-                          <div>
-                            <p className="pw-gs">{st?.stage}</p>
-                            <p className="pw-gt"><a href={`#${nodeAnchor(g.step)}`}>{st?.chainStep}</a></p>
-                            {g.forks.map((id) => {
-                              const f = lk.fork(id);
-                              if (!f) return null;
-                              return (
-                                <div className="pw-gf" key={id}>
-                                  <a href={`#${forkAnchor(id)}`}><Icon name="branch" />{f.label}</a>
-                                  {vm.glanceChips && (
-                                    <div className="pw-chips">{f.rows.map((r) => <span className="pw-gc" key={r.result}>{r.result}</span>)}</div>
-                                  )}
-                                </div>
-                              );
-                            })}
-                          </div>
-                        </li>
-                      );
-                    })}
-                  </ol>
-                </section>
-              )}
-
-              {vm.sections.map((s) => (
-                <section key={s.anchor} id={s.anchor} aria-labelledby={`h-${s.anchor}`}>
-                  <h2 className="pw-h2" id={`h-${s.anchor}`}>{s.heading}</h2>
-                  {s.intro && <p className="pw-intro"><Rich text={s.intro} /></p>}
-                  {s.blocks.map((b, i) => <BlockView key={`${b.kind}-${i}`} block={b} ctx={ctx} />)}
-                </section>
-              ))}
-
-              {vm.checklist && (
-                <section id="checklist" aria-labelledby="h-checklist">
-                  <h2 className="pw-h2" id="h-checklist">{vm.checklist.heading}</h2>
-                  <ul className="pw-check">
-                    {vm.checklist.items.map((it, i) => (
-                      <li key={i}>
-                        <Icon name="box" />
-                        <p>{it.label && <b>{it.label}: </b>}<Rich text={it.text} /></p>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-
-              {vm.calculators.length > 0 && (
-                <section id="math" aria-labelledby="h-math">
-                  <h2 className="pw-h2" id="h-math">The bedside math</h2>
-                  <p className="pw-intro">
-                    {vm.calculators.length === 1 ? 'The calculation' : `The ${vm.calculators.length} calculations`} this pathway uses, with the formulas, cutoffs and bands exactly as the cited sources give them. Change a value to recalculate.
-                  </p>
-                  <div className="pw-calcs">
-                    {vm.calculators.map((c) => <Calculator key={c.id} calc={c} sources={sources} lk={lk} />)}
-                  </div>
-                </section>
-              )}
-
-              {vm.rounds && (
-                <section id="rounds" aria-labelledby="h-rounds">
-                  <h2 className="pw-h2" id="h-rounds">On rounds: how to present it, and what you will be asked</h2>
-                  {vm.rounds.present && (
-                    <div className="pw-present">
-                      {vm.rounds.present.intro && <p className="pw-intro"><Rich text={vm.rounds.present.intro} /></p>}
-                      <p className="pw-pk">{vm.rounds.present.oneLiner ? 'One-liner' : 'How to present it'}</p>
-                      {vm.rounds.present.oneLiner && <p><Rich text={vm.rounds.present.oneLiner} /></p>}
-                      {vm.rounds.present.paragraphs.map((t, i) => (
-                        <p key={i}>{t.lead && <b>{t.lead}: </b>}<Rich text={t.text} /></p>
-                      ))}
-                      {vm.rounds.present.plan.length > 0 && (
-                        <>
-                          <p className="pw-pk">Assessment and plan</p>
-                          <ol>
-                            {vm.rounds.present.plan.map((x, i) => (
-                              <li key={i}>{x.lead && <b><Rich text={x.lead} /> </b>}<Rich text={x.text} /></li>
-                            ))}
-                          </ol>
-                        </>
-                      )}
-                    </div>
-                  )}
-                  {vm.rounds.pimp.length > 0 && (
-                    <>
-                      <h3 className="pw-h3">The pimp questions</h3>
-                      <div className="pw-dets">
-                        {vm.rounds.pimp.map((x, i) => (
-                          <details key={i}>
-                            <summary><span><Rich text={x.q} /></span><Icon name="chev" /></summary>
-                            <p><Rich text={x.a} /></p>
-                          </details>
-                        ))}
-                      </div>
-                    </>
-                  )}
-                </section>
-              )}
-
-              {vm.traps.length > 0 && (
-                <section id="traps" aria-labelledby="h-traps">
-                  <h2 className="pw-h2" id="h-traps">Shelf and Step 2 traps, in one list</h2>
-                  <ul className="pw-traps">
-                    {vm.traps.map((t, i) => (
-                      <li key={i}><Icon name="warn" /><p>{t.lead && <b>{t.lead} </b>}<Rich text={t.text} /></p></li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-
-              {vm.disagree.length > 0 && (
-                <section id="disagree" aria-labelledby="h-disagree">
-                  <h2 className="pw-h2" id="h-disagree">Where the guidelines disagree</h2>
-                  <p className="pw-intro">A question can only key one answer. These are the places the sources split; each row links back to the step it sits on.</p>
-                  <div className="pw-tw">
-                    <table className="pw-tab">
-                      <thead><tr><th scope="col">Question</th><th scope="col">What the sources say</th></tr></thead>
-                      <tbody>
-                        {vm.disagree.map((d, i) => {
-                          const at = lk.order(d);
-                          if (!at) return null;
-                          return (
-                            <tr key={i}>
-                              <th scope="row">
-                                {at.order.item}
-                                <a className="pw-ctx" href={`#${at.anchor}`}>{at.context}</a>
-                              </th>
-                              <td>
-                                <StatusChip status="conflict" />
-                                {at.order.dose}
-                                {at.order.note && <p className="pw-onote">{at.order.note}</p>}
-                                <Cites cites={lk.cites(at.order.cites)} sources={sources} />
-                              </td>
-                            </tr>
-                          );
-                        })}
-                      </tbody>
-                    </table>
-                  </div>
-                </section>
-              )}
-
-              {vm.cases.length > 0 && (
-                <section id="patients" aria-labelledby="h-patients">
-                  <h2 className="pw-h2" id="h-patients">Practice patients</h2>
-                  <p className="pw-intro">
-                    {vm.cases.length} of the {vm.counts.cases} patients in this pathway, chosen to walk the most forks between them. Open a fork to see the result and the next step.
-                  </p>
-                  {vm.cases.map((c) => (
-                    <div className="pw-case" key={c.id}>
-                      <p className="pw-sk">Practice patient</p>
-                      <h3>{c.label}</h3>
-                      <p className="pw-vig">{c.vignette}</p>
-                      <div className="pw-dets">
-                        {c.forks.map((f, i) => {
-                          const fork = lk.fork(f.fork);
-                          const row = fork?.rows[f.row];
-                          if (!fork || !row) return null;
-                          const next = lk.next(row.next).text;
-                          return (
-                            <details key={i}>
-                              <summary><span>Fork {i + 1}: {fork.label}</span><Icon name="chev" /></summary>
-                              <p>
-                                {f.result && <>{sentence(f.result)} </>}
-                                <b>{row.result}.</b>
-                                {next && <> Next: {sentence(next)}</>}
-                              </p>
-                            </details>
-                          );
-                        })}
-                      </div>
-                      <StoreLink {...store} loc="case" className="pw-btn-quiet">
-                        {caseCopy.button}<Icon name="arrow" />
-                      </StoreLink>
-                    </div>
-                  ))}
-                </section>
-              )}
-
-              {vm.faq.length > 0 && (
-                <section id="faq" aria-labelledby="h-faq">
-                  <h2 className="pw-h2" id="h-faq">Frequently asked questions</h2>
-                  <div className="pw-dets">
-                    {vm.faq.map((f, i) => (
-                      <details key={i}>
-                        <summary><span><Rich text={f.q} /></span><Icon name="chev" /></summary>
-                        <p><Rich text={f.a} /></p>
-                      </details>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              <section id="sources" aria-labelledby="h-sources">
-                <h2 className="pw-h2" id="h-sources">Sources</h2>
-                <ol className="pw-srcs">
-                  {vm.sources.map((s) => (
-                    <li key={s.url}>
-                      <a href={s.url} target="_blank" rel="nofollow noopener noreferrer" aria-describedby="pw-newtab"><b>{s.label}</b></a>{' '}
-                      {s.title}
-                    </li>
-                  ))}
-                </ol>
-              </section>
-
-              <section id="related" aria-labelledby="h-related">
-                <h2 className="pw-h2" id="h-related">{vm.related.length ? 'Related pathways' : 'Keep studying'}</h2>
-                {vm.related.length > 0 && (
-                  <div className="pw-rels">
-                    {vm.related.map((r) => <Link key={r.slug} href={`/pathways/${r.slug}`}>{r.title}</Link>)}
-                  </div>
-                )}
-                <div className="pw-also">
-                  {vm.also.map((a) => (
-                    <Link key={a.href} href={a.href}>
-                      <span className="pw-sk">{a.kind}</span>
-                      <b>{a.label}</b>
-                    </Link>
-                  ))}
-                </div>
-              </section>
-
-              <StoreBand copy={endSlot} loc="end" {...store} bandRef={endRef} />
-              <p className="pw-disc">For exam preparation, not clinical advice. Real patients get local protocols and a senior.</p>
-            </article>
-
-            <aside className="pw-toc" aria-label="On this page">
-              <p className="pw-k">On this page</p>
-              <ol>
-                {toc.map((t) => (
-                  <li key={t.id}>
-                    <a href={`#${t.id}`} aria-current={current === t.id ? 'true' : undefined}>{t.label}</a>
-                  </li>
-                ))}
-              </ol>
-              <div className="pw-mini">
-                <b>{tocSlot.heading}</b>
-                {tocSlot.body && <p>{tocSlot.body}</p>}
-                <StoreLink {...store} loc="toc" className="pw-btn-act pw-btn-block">{tocSlot.button}</StoreLink>
-              </div>
-            </aside>
+        <Stage>
+          <div className="pw-sg">
+            {vm.glance.length > 0 && <Glance vm={vm} lk={lk} />}
+            <QuickChecks steps={steps} lk={lk} sources={sources} page={vm.slug} />
           </div>
-        </SiteShell>
-        <StickyBar show={showSticky} heading={sticky.heading || ''} body={sticky.body} button={sticky.button} {...store} />
+        </Stage>
+
+        <ArticleBody
+          toc={secs.map((s) => [s.id, s.toc] as [string, string])}
+          aside={<DrillCard kicker={tocSlot.kicker || 'Step Gunner'} title={tocSlot.heading} body={tocSlot.body} button={tocSlot.button} loc="toc" />}
+        >
+          {secs.map((s, i) => (
+            <Section key={s.id} id={s.id} n={nn(i + 1)} title={s.title} lead={s.lead}>{s.body}</Section>
+          ))}
+        </ArticleBody>
+
+        <EndBand kicker={endSlot.kicker} title={endSlot.heading} body={endSlot.body} button={endSlot.button} />
+        <Wrap><p className="disc">For exam preparation, not clinical advice. Real patients get local protocols and a senior.</p></Wrap>
       </div>
-    </>
+    </AppShell>
   );
 }
