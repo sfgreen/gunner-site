@@ -75,7 +75,7 @@ export default function Research({ record }: { record: Record }) {
         <Hero>
           <ArticleHeader
             category="step2"
-            crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research', label: 'Research' }]}
+            crumb={[{ href: '/research', label: 'Research' }, { label: 'NBME to Step 2' }]}
             eyebrow="Research"
             title={H1}
             accent="your Step 2 score"

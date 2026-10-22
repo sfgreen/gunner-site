@@ -72,7 +72,7 @@ export default function ModelMissesAppUsers() {
         <Hero>
           <ArticleHeader
             category="step2"
-            crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research', label: 'Research' }]}
+            crumb={[{ href: '/research', label: 'Research' }, { label: 'Model misses app users' }]}
             eyebrow="Research"
             title={H1}
             accent="worse on our own users"

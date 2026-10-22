@@ -194,6 +194,12 @@ export default function PwStyles() {
       /* The contents list scrolls inside itself when it is taller than the window
          (16 sections and the app card); the card shows where the column is wide enough. */
       .pw-a .mk .toc { max-height: calc(100vh - 96px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding-bottom: 24px; }
+      /* Wide windows: only the list scrolls, so the app card under it always shows. */
+      @media (min-width: 1040px) {
+        .pw-a .mk .toc { display: flex; flex-direction: column; overflow: visible; }
+        .pw-a .mk .toc ol { min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+        .pw-a .mk .toc .toc-x { flex: none; }
+      }
       .pw-a .mk .toc-x { display: none; }
       @media (min-width: 1200px) { .pw-a .mk .toc-x { display: block; } }
 

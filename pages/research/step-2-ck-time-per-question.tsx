@@ -64,7 +64,7 @@ export default function TimePerQuestion() {
         <Hero>
           <ArticleHeader
             category="step2"
-            crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research', label: 'Research' }]}
+            crumb={[{ href: '/research', label: 'Research' }, { label: 'Time per question' }]}
             eyebrow="Research"
             title={title}
             accent="more right answers"

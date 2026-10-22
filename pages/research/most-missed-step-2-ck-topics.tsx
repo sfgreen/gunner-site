@@ -65,7 +65,7 @@ export default function MostMissedTopics() {
         <Hero>
           <ArticleHeader
             category="step2"
-            crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research', label: 'Research' }]}
+            crumb={[{ href: '/research', label: 'Research' }, { label: 'Most-missed topics' }]}
             eyebrow="Research"
             title={title}
             accent="Here is what they have in common."

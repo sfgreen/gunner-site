@@ -59,7 +59,7 @@ export default function DedicatedCalendar() {
         <Hero>
           <ArticleHeader
             category="step2"
-            crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research', label: 'Research' }]}
+            crumb={[{ href: '/research', label: 'Research' }, { label: 'Dedicated schedule' }]}
             eyebrow="Research"
             title={H1}
             accent="nobody wrote down"

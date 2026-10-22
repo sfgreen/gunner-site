@@ -272,7 +272,7 @@ export default function WhichNbme() {
         <Hero>
           <ArticleHeader
             category="step2"
-            crumb={[{ href: '/step-2-score-predictor', label: 'Score predictor' }, { href: '/research', label: 'Research' }]}
+            crumb={[{ href: '/research', label: 'Research' }, { label: 'Which NBME is real' }]}
             eyebrow="Research"
             title={H1}
             accent="the real you?"

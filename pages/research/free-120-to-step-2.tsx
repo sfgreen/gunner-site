@@ -60,7 +60,7 @@ export default function FreeOneTwenty() {
         <Hero>
           <ArticleHeader
             category="step2"
-            crumb={[{ href: '/free120', label: 'Free 120' }, { href: '/research', label: 'Research' }]}
+            crumb={[{ href: '/research', label: 'Research' }, { label: 'Free 120 to Step 2' }]}
             eyebrow="Research"
             title={H1}
             accent="actually worth"
