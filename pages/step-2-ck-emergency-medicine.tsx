@@ -4,17 +4,23 @@
 // gunner repo (content_staging/pathways/*.json), which cite the guideline text
 // for each one; where the sources disagree, the article says so. Danny signs
 // off the medicine before this ships.
+// Built from the app-look blocks (components/app/README.md): the ED category, the
+// short answer, one sheet per presentation with its trap callout, the disagreements
+// table and the FAQ as disclosures.
 // No em or en dashes anywhere in the copy (site rule).
-import { Fragment } from 'react';
 import type { GetStaticProps } from 'next';
 import Link from 'next/link';
-import LabLayout from '../components/LabLayout';
-import { appStoreUrl, track, referrerHost } from '../lib/analytics';
+import {
+  AppShell, ArticleBody, ArticleHeader, Callout, Faq, Hero, Icon, NumberedSteps, Section, Table,
+} from '../components/app';
+import { ChoicePair, PageHead, Pitch, ResearchStyles, Summary, W820 } from '../components/app/research';
+import { track } from '../lib/analytics';
 import { publishedEntries } from '../lib/pathways/data';
 
 const CAMPAIGN = 'article_ed_next_best_step';
 const PUBLISHED = '2026-10-22';
 const PATH = '/step-2-ck-emergency-medicine';
+const H1 = 'The next best step in the ED';
 
 type Presentation = {
   id: string;
@@ -520,32 +526,44 @@ const FAQ: { q: string; a: string }[] = [
  *  full pathway only when that page exists, so a gated build never links a 404. */
 type Live = Record<string, string>;
 
+/** A group's anchor: its title as a slug ("Chest, heart and circulation" -> g-chest-heart-and-circulation). */
+const gid = (title: string) => `g-${title.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '')}`;
+
+const TOC: [string, string][] = [
+  ['built', 'How the ED question is built'],
+  ['jump', 'Jump to a presentation'],
+  ...GROUPS.map((g) => [gid(g.title), g.title] as [string, string]),
+  ['disagree', 'Where the guidelines disagree, and what to answer'],
+  ['faq', 'Frequently asked questions'],
+  ['how', 'How this was built'],
+];
+
 function PresentationCard({ p, live }: { p: Presentation; live: Live }) {
   const full = live[p.pathway];
   return (
-    <section className="pres" id={p.id}>
-      <h3>{p.name}</h3>
-      <div className="row first"><span className="k">First</span><p>{p.first}</p></div>
-      <div className="row"><span className="k">Then</span>
-        <ul>{p.steps.map((s) => <li key={s}>{s}</li>)}</ul>
+    <section className="sheet rs-pres" id={p.id} aria-labelledby={`${p.id}-h`}>
+      <div className="sheet-bd">
+        <h3 className="h-3" id={`${p.id}-h`}>{p.name}</h3>
+        <div className="rs-pr rs-first"><span className="lbl">First</span><p>{p.first}</p></div>
+        <div className="rs-pr"><span className="lbl">Then</span>
+          <ul className="rs-ul">{p.steps.map((s) => <li key={s}>{s}</li>)}</ul>
+        </div>
+        <Callout tone="trap" label="Trap"><p>{p.trap}</p></Callout>
+        <p className="srcl">Sources: {p.sources}</p>
+        {full && (
+          <Link className="lnk rs-full" href={`/pathways/${p.pathway}`}>
+            Full pathway: {full}<Icon name="arrow" sm />
+          </Link>
+        )}
       </div>
-      <div className="row trap"><span className="k">Trap</span><p>{p.trap}</p></div>
-      <div className="src">Sources: {p.sources}</div>
-      {full && (
-        <Link className="full" href={`/pathways/${p.pathway}`}>
-          Full pathway: {full}<span aria-hidden="true">&rarr;</span>
-        </Link>
-      )}
     </section>
   );
 }
 
 export default function EdNextBestStep({ live }: { live: Live }) {
   const liveCount = Object.keys(live).length;
-  const store = appStoreUrl(CAMPAIGN);
   const title = 'Step 2 CK emergency medicine: the next best step for 26 ED presentations';
   const desc = 'The first move, the fork and the trap for 26 ED chief complaints on Step 2 CK, from chest pain to scrotal pain, with doses from current guidelines.';
-  const storeClick = (location: string) => () => track('store_click', { source: CAMPAIGN, location, ref: referrerHost() });
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -567,179 +585,143 @@ export default function EdNextBestStep({ live }: { live: Live }) {
   ];
 
   return (
-    <LabLayout
-      eyebrow="Study guide"
-      title="The next best step in the ED"
-      lede={<>26 emergency presentations the way Step 2 CK asks them: the first move, the fork that decides everything after it, and the one trap each is built around. Doses and thresholds from current guidelines, and a straight answer where those guidelines disagree.</>}
-      crumb={[{ href: '/guides', label: 'Guides' }, { href: PATH, label: 'Emergency medicine' }]}
-      metaTitle="Step 2 CK Emergency Medicine: Next Best Step for 26 Presentations"
-      metaDesc={desc}
-      ogImage="/og/step-2-ck-emergency-medicine.png"
-      campaign={CAMPAIGN}
-      head={<>
+    <>
+      <PageHead metaTitle="Step 2 CK Emergency Medicine: Next Best Step for 26 Presentations" metaDesc={desc} ogImage="/og/step-2-ck-emergency-medicine.png" ogAlt={H1}>
         <link rel="canonical" href={`https://stepgunner.com${PATH}`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      </>}
-    >
-      <style jsx global>{`
-        .prose h2 { font-size: 23px; font-weight: 800; letter-spacing: -0.4px; margin: 44px 0 12px; text-wrap: balance; }
-        .prose p { color: var(--ink-dim); font-size: 15.5px; line-height: 1.75; margin: 0 0 14px; }
-        .prose p strong, .prose li strong { color: var(--ink); }
-        .prose ul { margin: 0 0 16px 22px; } .prose li { color: var(--ink-dim); font-size: 15.5px; line-height: 1.7; margin-bottom: 7px; } .prose li::marker { color: var(--green); }
-        .prose a { color: var(--blue); } .prose a:hover { text-decoration: underline; }
-        .byline { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: var(--mono); font-size: 11px; color: var(--ink-faint); letter-spacing: 0.3px; margin: -8px 0 24px; }
-        .byline b { color: var(--ink-dim); font-weight: 600; }
-        .abstract { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 16px; padding: 20px 22px; margin-bottom: 18px; }
-        .abstract .k { font-family: var(--mono); font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
-        .abstract p { font-size: 15px; margin: 0 0 10px; color: var(--ink); line-height: 1.75; } .abstract p:last-child { margin: 0; }
-        .pitch { margin: 18px 0 8px; background: var(--ink); border-radius: 18px; padding: 22px 22px 20px; color: #ffffff; position: relative; overflow: hidden; }
-        .pitch:before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 90% at 85% 0%, rgba(240,180,41,0.22), transparent 60%); }
-        .pitch > * { position: relative; }
-        .pitch .pk { font-family: var(--mono); font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.55); }
-        .pitch .ph { font-size: 19px; font-weight: 800; margin: 6px 0 6px; letter-spacing: -0.3px; }
-        .pitch .ps { font-size: 14px; color: rgba(255,255,255,0.72); line-height: 1.6; max-width: 56ch; margin: 0 0 14px; }
-        .pitch .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
-        .pitch .btn-store { display: inline-flex; align-items: center; gap: 9px; background: var(--gold); color: #1a1403; font-weight: 800; font-size: 14px; padding: 12px 18px; border-radius: 12px; }
-        .pitch .btn-store:hover { filter: brightness(1.06); }
-        .pitch .btn-calc { display: inline-flex; align-items: center; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.28); color: #fff; font-weight: 700; font-size: 14px; }
-        .jump { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 6px 18px; margin: 6px 0 22px; padding: 0; list-style: none; }
-        .jump li { margin: 0; font-size: 14px; } .jump li::marker { content: ""; }
-        .jump .g { grid-column: 1 / -1; font-family: var(--mono); font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); margin-top: 10px; }
-        .rules { counter-reset: r; list-style: none; margin: 0 0 18px; padding: 0; }
-        .rules li { counter-increment: r; position: relative; padding-left: 34px; margin-bottom: 12px; }
-        .rules li:before { content: counter(r); position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border-radius: 11px; background: var(--ink); color: #fff; font: 700 12px/22px var(--mono); text-align: center; }
-        .pres { background: var(--bg-2); border: 1px solid var(--hair); border-radius: 14px; padding: 18px 20px 14px; margin: 0 0 14px; scroll-margin-top: 80px; }
-        .pres h3 { font-size: 18px; font-weight: 800; margin: 0 0 12px; letter-spacing: -0.2px; }
-        .pres .row { display: grid; grid-template-columns: 62px 1fr; gap: 10px; align-items: start; margin-bottom: 8px; }
-        .pres .row > * { min-width: 0; }
-        .pres .k { font-family: var(--mono); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); padding-top: 4px; }
-        .pres .row p { margin: 0; color: var(--ink); font-size: 15px; line-height: 1.65; }
-        .pres .row ul { margin: 0 0 0 18px; } .pres .row li { font-size: 14.5px; margin-bottom: 5px; }
-        .pres .trap { background: rgba(240,180,41,0.09); border-radius: 10px; padding: 8px 10px; margin: 10px -10px 6px; }
-        .pres .trap .k { color: var(--gold); }
-        .pres .src { font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint); letter-spacing: 0.2px; line-height: 1.5; margin-top: 8px; }
-        .pres .full { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 14px; font-weight: 700; color: var(--blue); }
-        .pres .full:hover { text-decoration: underline; }
-        .prose .hubline { font-size: 15px; margin: 0 0 18px; }
-        .tblwrap { overflow-x: auto; margin: 8px 0 24px; }
-        .tbl { width: 100%; border-collapse: collapse; font-size: 14.5px; background: var(--bg-2); border: 1px solid var(--hair); border-radius: 12px; overflow: hidden; }
-        .tbl th { text-align: left; font-family: var(--mono); font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); padding: 9px 12px; border-bottom: 1px solid var(--hair-strong); background: var(--bg-3); }
-        .tbl td { padding: 10px 12px; border-bottom: 1px solid var(--hair); color: var(--ink-dim); vertical-align: top; line-height: 1.55; } .tbl tr:last-child td { border-bottom: 0; }
-        .tbl td b { color: var(--ink); }
-        .faq h3 { font-size: 16px; font-weight: 800; margin: 22px 0 6px; }
-        .cta { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 28px 0 10px; }
-        .cta a { display: block; text-align: center; padding: 16px 14px; border-radius: 12px; font-weight: 800; font-size: 14px; }
-        .cta a:hover { filter: brightness(1.05); }
-        .cta .pri { background: var(--ink); color: #fff; } .cta .sec { border: 1px solid var(--hair-strong); color: var(--ink); background: var(--bg-2); }
-        .cta small { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.65; margin-top: 4px; font-weight: 600; }
-        @media (max-width: 640px) { .tbl { font-size: 13.5px; } .cta { grid-template-columns: 1fr; } .pres .row { grid-template-columns: 1fr; gap: 2px; } .pres .trap { margin: 10px 0 6px; } }
-      `}</style>
+      </PageHead>
 
-      <div className="prose">
-      <div className="byline">
-        <span><b>Danny Varghese</b>, MS4, Texas A&amp;M College of Medicine</span>
-        <span>Published {PUBLISHED}</span>
-        <span>26 presentations</span>
-        <span>About 20 minutes</span>
-      </div>
-
-      <div className="abstract">
-        <div className="k">The short answer</div>
-        <p>Almost every ED question on Step 2 CK asks for one of two things: the first move, or the fork that decides everything after it. The first move is nearly always the bedside test that changes the plan within minutes: an ECG for chest pain, palpitations and syncope; a fingerstick glucose for confusion, seizure, stroke and weakness; a pregnancy test for abdominal pain and bleeding.</p>
-        <p>The fork is a result: ST elevation or not, potassium above or below 3.5, a TWIST score of 5 or more. And the trap is usually a test ordered when the answer was to treat. You decompress a tension pneumothorax on the signs, give antibiotics before the CT in meningitis, and give dexamethasone before the MRI in cord compression.</p>
-      </div>
-
-      {liveCount > 0 && (
-        <p className="hubline">
-          Each presentation below links to its full pathway, with every fork, every order and dose, and the source behind each one. Browse all {liveCount} in <Link href="/pathways">ED pathways</Link>.
-        </p>
-      )}
-
-      <section className="pitch">
-        <div className="pk">Practice the next best step</div>
-        <div className="ph">Reading an algorithm is not the same as answering one.</div>
-        <p className="ps">Step Gunner drills the next best step case by case, walks each management chain one decision at a time, and brings back the steps you miss with spaced repetition until they stick. Free to start.</p>
-        <div className="row">
-          <a href={store} className="btn-store" onClick={storeClick('pitch_top')}>Get Step Gunner free</a>
-          <Link href="/readiness" className="btn-calc" onClick={() => track('cta_predictor', { surface: CAMPAIGN, location: 'pitch_top' })}>Check your Step 2 readiness</Link>
-        </div>
-      </section>
-
-      <h2>How the ED question is built</h2>
-      <p>Most ED stems run the same way. Read them in this order and the answer choices sort themselves:</p>
-      <ol className="rules">
-        <li><strong>Is the patient unstable?</strong> Shock, a threatened airway or a falling GCS gets its own route before any diagnosis. A patient in shock never goes to the scanner as the next step; a threatened airway is secured first, and a falling GCS then goes straight to a non-contrast CT.</li>
-        <li><strong>What is the one bedside test?</strong> ECG, fingerstick glucose, pregnancy test, blood gas, bedside echo. If the stem has not given you its result, ordering it is usually the answer.</li>
-        <li><strong>Does treatment beat the test?</strong> Tension pneumothorax, anaphylaxis, meningitis, cord compression from cancer, a retrobulbar hemorrhage and a hemophilia joint bleed are all treated before anyone images them.</li>
-        <li><strong>Which result is the fork?</strong> The stem usually hands you a number (a potassium, a pH, a score, a time since onset). The answer changes on which side of the line it falls.</li>
-        <li><strong>Where is the trap?</strong> It is usually a contraindication (prasugrel after a stroke, AV nodal blockers in pre-excited AF, methylergonovine in hypertension) or a test that delays treatment.</li>
-      </ol>
-
-      <h2>Jump to a presentation</h2>
-      <ul className="jump">
-        {GROUPS.map((g) => (
-          <Fragment key={g.title}>
-            <li className="g">{g.title}</li>
-            {g.items.map((p) => <li key={p.id}><a href={`#${p.id}`}>{p.name}</a></li>)}
-          </Fragment>
-        ))}
-      </ul>
-
-      {GROUPS.map((g, gi) => (
-        <div key={g.title}>
-          <h2>{g.title}</h2>
-          {g.items.map((p) => <PresentationCard key={p.id} p={p} live={live} />)}
-          {gi === 2 && (
-            <section className="pitch">
-              <div className="pk">The part between the algorithms</div>
-              <div className="ph">You will see each of these as a vignette with several plausible answers.</div>
-              <p className="ps">Step Gunner turns the chain into questions: which step comes next, which drug, which dose, which contraindication. Misses come back on a schedule until you get them right cold.</p>
-              <div className="row">
-                <a href={store} className="btn-store" onClick={storeClick('pitch_mid')}>Get Step Gunner free</a>
-                <Link href="/research/nbme-to-step-2" className="btn-calc" onClick={() => track('cta_research', { surface: CAMPAIGN, location: 'pitch_mid' })}>What your NBME predicts</Link>
+      <AppShell campaign={CAMPAIGN} pageType="tool">
+        <ResearchStyles />
+        <Hero>
+          <ArticleHeader
+            category="ed"
+            crumb={[{ href: '/guides', label: 'Guides' }, { label: 'Emergency medicine' }]}
+            eyebrow="Study guide"
+            title={H1}
+            accent="in the ED"
+            dek={<>26 emergency presentations the way Step 2 CK asks them: the first move, the fork that decides everything after it, and the one trap each is built around. Doses and thresholds from current guidelines, and a straight answer where those guidelines disagree.</>}
+            meta={[`Published ${PUBLISHED}`, '26 presentations', 'About 20 minutes']}
+          />
+          <Summary label="The short answer" tone="ed">
+            <p>Almost every ED question on Step 2 CK asks for one of two things: the first move, or the fork that decides everything after it. The first move is nearly always the bedside test that changes the plan within minutes: an ECG for chest pain, palpitations and syncope; a fingerstick glucose for confusion, seizure, stroke and weakness; a pregnancy test for abdominal pain and bleeding.</p>
+            <p>The fork is a result: ST elevation or not, potassium above or below 3.5, a TWIST score of 5 or more. And the trap is usually a test ordered when the answer was to treat. You decompress a tension pneumothorax on the signs, give antibiotics before the CT in meningitis, and give dexamethasone before the MRI in cord compression.</p>
+          </Summary>
+          {liveCount > 0 && (
+            <W820>
+              <div className="mk isl">
+                <p className="prs rs-hub">
+                  Each presentation below links to its full pathway, with every fork, every order and dose, and the source behind each one. Browse all {liveCount} in <Link href="/pathways">ED pathways</Link>.
+                </p>
               </div>
-            </section>
+            </W820>
           )}
-        </div>
-      ))}
+          <Pitch
+            placement="top"
+            kicker="Practice the next best step"
+            title="Reading an algorithm is not the same as answering one."
+            body="Step Gunner drills the next best step case by case, walks each management chain one decision at a time, and brings back the steps you miss with spaced repetition until they stick. Free to start."
+            primary={{ store: true, loc: 'top', label: 'Get Step Gunner free' }}
+            secondary={{ href: '/readiness', label: 'Check your Step 2 readiness', onClick: () => track('cta_predictor', { surface: CAMPAIGN, location: 'pitch_top' }) }}
+          />
+        </Hero>
 
-      <h2>Where the guidelines disagree, and what to answer</h2>
-      <p>Building these from the source texts turned up places where two respected guidelines give different numbers. A question can only key one, so here is how to answer when you meet them.</p>
-      <div className="tblwrap">
-        <table className="tbl">
-          <thead><tr><th>question</th><th>what the sources say</th><th>what to answer</th></tr></thead>
-          <tbody>
-            {DISAGREE.map((d) => (
-              <tr key={d.topic}><td><b>{d.topic}</b></td><td>{d.sides}</td><td>{d.answer}</td></tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+        <ArticleBody toc={TOC}>
+          <Section id="built" n="" title="How the ED question is built" lead="Most ED stems run the same way. Read them in this order and the answer choices sort themselves:">
+            <NumberedSteps steps={[
+              { text: <><strong>Is the patient unstable?</strong> Shock, a threatened airway or a falling GCS gets its own route before any diagnosis. A patient in shock never goes to the scanner as the next step; a threatened airway is secured first, and a falling GCS then goes straight to a non-contrast CT.</> },
+              { text: <><strong>What is the one bedside test?</strong> ECG, fingerstick glucose, pregnancy test, blood gas, bedside echo. If the stem has not given you its result, ordering it is usually the answer.</> },
+              { text: <><strong>Does treatment beat the test?</strong> Tension pneumothorax, anaphylaxis, meningitis, cord compression from cancer, a retrobulbar hemorrhage and a hemophilia joint bleed are all treated before anyone images them.</> },
+              { text: <><strong>Which result is the fork?</strong> The stem usually hands you a number (a potassium, a pH, a score, a time since onset). The answer changes on which side of the line it falls.</> },
+              { text: <><strong>Where is the trap?</strong> It is usually a contraindication (prasugrel after a stroke, AV nodal blockers in pre-excited AF, methylergonovine in hypertension) or a test that delays treatment.</> },
+            ]} />
+          </Section>
 
-      <h2>Frequently asked questions</h2>
-      <div className="faq">
-        {FAQ.map((f) => (
-          <div key={f.q}>
-            <h3>{f.q}</h3>
-            <p>{f.a}</p>
-          </div>
-        ))}
-      </div>
+          <Section id="jump" n="" title="Jump to a presentation">
+            <div className="mk isl">
+              <div className="rs-jump">
+                {GROUPS.map((g) => (
+                  <div key={g.title} className="rs-jg">
+                    <p className="lbl">{g.title}</p>
+                    <ul>{g.items.map((p) => <li key={p.id}><a href={`#${p.id}`}>{p.name}</a></li>)}</ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Section>
 
-      <div className="cta">
-        <a className="pri" href={store} onClick={storeClick('cta_bottom')}>Get Step Gunner free<small>next best step drills, spaced repetition</small></a>
-        <Link className="sec" href="/readiness" onClick={() => track('cta_predictor', { surface: CAMPAIGN, location: 'cta_bottom' })}>Run the readiness check<small>free, with exam date and percentile</small></Link>
-      </div>
+          {GROUPS.map((g, gi) => (
+            <Section key={g.title} id={gid(g.title)} n="" title={g.title}>
+              <div className="mk isl">
+                <div className="rs-plist">
+                  {g.items.map((p) => <PresentationCard key={p.id} p={p} live={live} />)}
+                </div>
+              </div>
+              {gi === 2 && (
+                <Pitch
+                  kicker="The part between the algorithms"
+                  title="You will see each of these as a vignette with several plausible answers."
+                  body="Step Gunner turns the chain into questions: which step comes next, which drug, which dose, which contraindication. Misses come back on a schedule until you get them right cold."
+                  primary={{ store: true, loc: 'mid', label: 'Get Step Gunner free' }}
+                  secondary={{ href: '/research/nbme-to-step-2', label: 'What your NBME predicts', onClick: () => track('cta_research', { surface: CAMPAIGN, location: 'pitch_mid' }) }}
+                />
+              )}
+            </Section>
+          ))}
 
-      <h2>How this was built</h2>
-      <p>Each presentation started as a full branching pathway: every result an ED workup can return, the patient who walks each branch, and the orders with their doses. Every dose, threshold and time window in those pathways is quoted from the source it cites (a guideline, a drug label or a named review), and a second, independent pass went through each one trying to break it. Where the sources disagree, the pathway shows both sides instead of picking one quietly; where a source could not be read in full, the step says so. This page condenses {ALL.length} of those pathways to the steps Step 2 CK asks about.</p>
-      <p>Guidelines are named under each presentation. Where US and UK or European sources differ, the pathway records both; this page gives the answer the pathway keys and flags the split where a question could turn on it. This page is for exam preparation and is not clinical advice; real patients get local protocols and a senior.</p>
-      </div>
-    </LabLayout>
+          <Section id="disagree" n="" title="Where the guidelines disagree, and what to answer" lead="Building these from the source texts turned up places where two respected guidelines give different numbers. A question can only key one, so here is how to answer when you meet them.">
+            <Table
+              label="Guideline disagreements, side by side"
+              head={['question', 'what the sources say', 'what to answer']}
+              minWidth={720}
+              rows={DISAGREE.map((d) => [<b key="t">{d.topic}</b>, d.sides, d.answer])}
+            />
+          </Section>
+
+          <Section id="faq" n="" title="Frequently asked questions">
+            <Faq items={FAQ} />
+          </Section>
+
+          <ChoicePair
+            store={{ label: 'Get Step Gunner free', sub: 'next best step drills, spaced repetition' }}
+            alt={{ href: '/readiness', label: 'Run the readiness check', sub: 'free, with exam date and percentile', onClick: () => track('cta_predictor', { surface: CAMPAIGN, location: 'cta_bottom' }) }}
+          />
+
+          <Section id="how" n="" title="How this was built">
+            <p className="prs">Each presentation started as a full branching pathway: every result an ED workup can return, the patient who walks each branch, and the orders with their doses. Every dose, threshold and time window in those pathways is quoted from the source it cites (a guideline, a drug label or a named review), and a second, independent pass went through each one trying to break it. Where the sources disagree, the pathway shows both sides instead of picking one quietly; where a source could not be read in full, the step says so. This page condenses {ALL.length} of those pathways to the steps Step 2 CK asks about.</p>
+            <p className="prs">Guidelines are named under each presentation. Where US and UK or European sources differ, the pathway records both; this page gives the answer the pathway keys and flags the split where a question could turn on it. This page is for exam preparation and is not clinical advice; real patients get local protocols and a senior.</p>
+          </Section>
+        </ArticleBody>
+      </AppShell>
+
+      <style jsx global>{`
+        .mk .rs-hub { margin-top: 20px; }
+        .mk .rs-jump { display: grid; gap: 24px 32px; margin-top: 16px; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+        .mk .rs-jg ul { display: grid; margin-top: 8px; }
+        .mk .rs-jg a { display: flex; align-items: center; min-height: 44px; font-size: 17px; line-height: 1.3; color: var(--key); text-decoration: underline; text-decoration-color: var(--line-2); text-decoration-thickness: 1px; text-underline-offset: .2em; box-shadow: inset 0 -1px 0 var(--line); }
+        .mk .rs-jg a:hover { text-decoration-color: currentColor; }
+        .mk .rs-plist { display: grid; gap: 12px; margin-top: 16px; }
+        .mk .rs-pres { scroll-margin-top: calc(var(--nav-h) + 16px); }
+        .mk .rs-pres .h-3 { font-size: 21px; }
+        .mk .rs-pr { display: grid; gap: 4px; margin-top: 16px; }
+        .mk .rs-pr > p { font-size: 18px; line-height: 1.6; color: var(--ink); max-width: 66ch; }
+        .mk .rs-pr .rs-ul { margin-top: 4px; gap: 8px; }
+        .mk .rs-pr .rs-ul > li { font-size: 17px; line-height: 1.6; }
+        .mk .rs-pr .rs-ul > li::before { top: 11px; }
+        .mk .rs-first > p { font-weight: 500; }
+        .mk .rs-pres .trap { margin-top: 16px; }
+        .mk .rs-pres .trap p:not(.lbl) { margin-top: 4px; color: var(--ink); }
+        .mk .rs-full { margin-top: 8px; color: var(--key); }
+        @media (min-width: 760px) {
+          .mk .rs-pr { grid-template-columns: 72px minmax(0, 1fr); gap: 12px; align-items: baseline; }
+          .mk .rs-pr .rs-ul { margin-top: 0; }
+        }
+      `}</style>
+    </>
   );
 }
 
