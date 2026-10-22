@@ -349,6 +349,12 @@
    "label": "DAN consensus 2018 (pre-hospital DCI)",
    "title": "Pre-hospital management of decompression illness: expert review of key principles and controversies (Diving Hyperb Med 2018)",
    "url": "https://pubmed.ncbi.nlm.nih.gov/29557102/"
+  },
+  {
+   "docId": "url:f16b34a1e288",
+   "label": "UKKA 2020",
+   "title": "UK Kidney Association clinical practice guideline: treatment of acute hyperkalaemia in adults (2020)",
+   "url": "https://www.ukkidney.org/sites/default/files/RENAL%20ASSOCIATION%20HYPERKALAEMIA%20GUIDELINE%20-%20JULY%202022%20V2_0.pdf"
   }
  ],
  "differential": [
@@ -394,8 +400,8 @@
     "Airway, breathing and pulse; an oral thermometer reading, then warm or cool to that number"
    ],
    "answer": 0,
-   "chainStep": "Check airway, breathing and a central pulse (feel for 30 to 60 seconds in a cold patient); core temperature by esophageal, bladder or rectal probe, or a thermistor epitympanic probe, on a thermometer that reads below 35 °C; fingerstick glucose; cardiac monitor and 12-lead ECG; what happened: heat, cold, water, a current, an animal, altitude or a dive",
-   "why": "Management turns on the core temperature, so it is measured close to the core with a thermometer that reads below 35 °C. Oral, axillary, temporal and infrared tympanic readings are not accurate in hypothermia, and after exercise in the heat only a rectal temperature is valid; most oral thermometers cannot read under 35 °C at all. In a cold patient the pulse is felt for longer (60 seconds in Paal 2022, 30 seconds in StatPearls), because it can be slow and faint. Antipyretics have no role in heat illness and may harm the liver and clotting. Glucose comes early, because hypoglycemia is common in heat illness and can cause or accompany hypothermia, and every hypothermic or electrically injured adult gets an ECG.",
+   "chainStep": "Check airway, breathing and a central pulse (feel for 30 to 60 seconds in a cold patient); core temperature by esophageal, bladder or rectal probe, or a thermistor epitympanic probe, on a thermometer that reads below 35 °C (95 °F); fingerstick glucose; cardiac monitor and 12-lead ECG; what happened: heat, cold, water, a current, an animal, altitude or a dive",
+   "why": "Management turns on the core temperature, so it is measured close to the core with a thermometer that reads below 35 °C (95 °F). Oral, axillary, temporal and infrared tympanic readings are not accurate in hypothermia, and after exercise in the heat only a rectal temperature is valid; most oral thermometers cannot read under 35 °C (95 °F) at all. In a cold patient the pulse is felt for longer (60 seconds in Paal 2022, 30 seconds in StatPearls), because it can be slow and faint. Antipyretics have no role in heat illness and may harm the liver and clotting. Glucose comes early, because hypoglycemia is common in heat illness and can cause or accompany hypothermia, and every hypothermic or electrically injured adult gets an ECG.",
    "orders": [
     {
      "item": "Core temperature, cold patient",
@@ -526,7 +532,7 @@
    "outcomes": [
     {
      "id": "arrest_cold",
-     "if": "Hypothermic arrest; no pulse on a full pulse check, core under 30 °C",
+     "if": "Hypothermic arrest; no pulse on a full pulse check, core under 30 °C (86 °F)",
      "ddx": {
       "lead": [
        "Accidental hypothermia"
@@ -537,7 +543,7 @@
     },
     {
      "id": "arrest_water",
-     "if": "Arrest after submersion; no pulse, core 30 °C or more",
+     "if": "Arrest after submersion; no pulse, core 30 °C (86 °F) or more",
      "ddx": {
       "lead": [
        "Drowning"
@@ -548,7 +554,7 @@
     },
     {
      "id": "arrest_other",
-     "if": "Other arrest; core 30 °C or more, not after submersion",
+     "if": "Other arrest; core 30 °C (86 °F) or more, not after submersion",
      "ddx": {
       "lead": [
        "Lightning injury",
@@ -558,8 +564,8 @@
      },
      "orders": [
       {
-       "item": "Cold with a core of 30 °C or more",
-       "dose": "Look for another cause: no arrest above 30 °C has been attributed to hypothermia alone, and ECPR is not used above 30 °C",
+       "item": "Cold with a core of 30 °C (86 °F) or more",
+       "dose": "Look for another cause: no arrest above 30 °C (86 °F) has been attributed to hypothermia alone, and ECPR is not used above 30 °C (86 °F)",
        "status": "ok",
        "sources": [
         {
@@ -710,7 +716,7 @@
       },
       {
        "item": "Access and fluids",
-       "dose": "IV, or IO if IV fails; fluid boluses guided by the vital signs, warmed to 38 to 42 °C in a cold patient",
+       "dose": "IV, or IO if IV fails; fluid boluses guided by the vital signs, warmed to 38 to 42 °C (100.4 to 107.6 °F) in a cold patient",
        "status": "ok",
        "sources": [
         {
@@ -760,16 +766,16 @@
    "id": "cold_arrest",
    "kind": "step",
    "stage": "Stabilize",
-   "ask": "Cold, pulseless on a full pulse check, core under 30 °C, no sign of death. Next?",
+   "ask": "Cold, pulseless on a full pulse check, core under 30 °C (86 °F), no sign of death. Next?",
    "options": [
     "Continuous CPR, shocks for VF, and ECLS rewarming; resuscitation goes on until warm",
     "Standard ALS, stopping after 30 minutes without ROSC, as for any normothermic arrest",
     "No CPR, as fixed dilated pupils and stiff limbs mean the patient has died",
-    "Rewarm with forced air first, and start CPR once the core is back over 30 °C"
+    "Rewarm with forced air first, and start CPR once the core is back over 30 °C (86 °F)"
    ],
    "answer": 0,
-   "chainStep": "Continuous CPR (mechanical device for prolonged CPR or transport); defibrillate VF (Paal 2022: if 3 shocks fail below 30 °C, wait until the core is over 30 °C, and hold epinephrine and amiodarone below 30 °C; the Korean 2025 guideline uses standard ALS); transfer for ECLS (VA ECMO) rewarming; HOPE score to guide ECLS; warmed IV fluids; check potassium",
-   "why": "Hypothermic arrest is treated differently from normothermic arrest, and good neurological recovery is possible after long resuscitations when the cold came first. Compressions and ventilation are standard and run continuously until ROSC, and the guidelines keep resuscitating until the patient is warm, judging termination at the target temperature rather than after a fixed time. VF is shocked; how many shocks and whether to give epinephrine below 30 °C differs between the sources (see the orders). Rewarming is by ECLS, preferably VA ECMO. Asystole, an unwitnessed arrest, a very low core temperature, fixed dilated pupils and apparent rigor mortis are not, in Paal 2022, reasons to withhold rewarming, and rewarming before CPR would leave the patient without compressions.",
+   "chainStep": "Continuous CPR (mechanical device for prolonged CPR or transport); defibrillate VF (Paal 2022: if 3 shocks fail below 30 °C (86 °F), wait until the core is over 30 °C (86 °F), and hold epinephrine and amiodarone below 30 °C (86 °F); the Korean 2025 guideline uses standard ALS); transfer for ECLS (VA ECMO) rewarming; HOPE score to guide ECLS; warmed IV fluids; check potassium",
+   "why": "Hypothermic arrest is treated differently from normothermic arrest, and good neurological recovery is possible after long resuscitations when the cold came first. Compressions and ventilation are standard and run continuously until ROSC, and the guidelines keep resuscitating until the patient is warm, judging termination at the target temperature rather than after a fixed time. VF is shocked; how many shocks and whether to give epinephrine below 30 °C (86 °F) differs between the sources (see the orders). Rewarming is by ECLS, preferably VA ECMO. Asystole, an unwitnessed arrest, a very low core temperature, fixed dilated pupils and apparent rigor mortis are not, in Paal 2022, reasons to withhold rewarming, and rewarming before CPR would leave the patient without compressions.",
    "orders": [
     {
      "item": "CPR",
@@ -799,7 +805,7 @@
     },
     {
      "item": "Intermittent CPR, only if continuous CPR is impossible",
-     "dose": "Core under 28 °C or unknown: at least 5 minutes of CPR, then at most 5 minutes without; under 20 °C, at most 10 minutes without",
+     "dose": "Core under 28 °C (82.4 °F) or unknown: at least 5 minutes of CPR, then at most 5 minutes without; under 20 °C (68 °F), at most 10 minutes without",
      "status": "ok",
      "sources": [
       {
@@ -810,7 +816,7 @@
     },
     {
      "item": "Defibrillation",
-     "dose": "Paal 2022: if VF persists after 3 shocks with the core under 30 °C, delay further shocks until it is over 30 °C",
+     "dose": "Paal 2022: if VF persists after 3 shocks with the core under 30 °C (86 °F), delay further shocks until it is over 30 °C (86 °F)",
      "status": "conflict",
      "sources": [
       {
@@ -826,7 +832,7 @@
     },
     {
      "item": "Epinephrine and amiodarone",
-     "dose": "Paal 2022: neither under 30 °C; epinephrine interval doubled to every 6 to 10 minutes; standard protocols from 35 °C",
+     "dose": "Paal 2022: neither under 30 °C (86 °F); epinephrine interval doubled to every 6 to 10 minutes; standard protocols from 35 °C (95 °F)",
      "status": "conflict",
      "sources": [
       {
@@ -838,7 +844,7 @@
        "where": "Severe hypothermia"
       }
      ],
-     "note": "Paal 2022 says epinephrine and amiodarone should not be given under 30 °C, then in the next sentence doubles the epinephrine interval 'if core temperature is <30 °C'; the two sentences contradict each other as printed. The Korean 2025 guideline says hypothermic arrest gets BLS and ALS by the standard guidelines."
+     "note": "Paal 2022 says epinephrine and amiodarone should not be given under 30 °C (86 °F), then in the next sentence doubles the epinephrine interval 'if core temperature is <30 °C'; the two sentences contradict each other as printed. The Korean 2025 guideline says hypothermic arrest gets BLS and ALS by the standard guidelines."
     },
     {
      "item": "Reasons to withhold or stop",
@@ -869,7 +875,7 @@
     },
     {
      "item": "ECLS",
-     "dose": "VA ECMO preferred; ECPR not used with a core over 30 °C, major trauma, or comorbidities incompatible with acceptable quality of life",
+     "dose": "VA ECMO preferred; ECPR not used with a core over 30 °C (86 °F), major trauma, or comorbidities incompatible with acceptable quality of life",
      "status": "ok",
      "sources": [
       {
@@ -951,7 +957,7 @@
    "id": "end_ca_ecls",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Hypothermic cardiac arrest with no sign of irreversible death: continuous CPR to an ECLS centre for VA ECMO rewarming, with the HOPE score (10% or more favors ECLS) and clinical judgment guiding the decision. Rewarm at 5 °C/h or less; after ROSC, targeted temperature management by local protocol and no post-resuscitation hyperthermia. ECPR is stopped if there is no ROSC at the target temperature, or for uncontrollable bleeding or severe anoxic brain injury."
+   "summary": "Hypothermic cardiac arrest with no sign of irreversible death: continuous CPR to an ECLS centre for VA ECMO rewarming, with the HOPE score (10% or more favors ECLS) and clinical judgment guiding the decision. Rewarm at 5 °C/h (9 °F/h) or less; after ROSC, targeted temperature management by local protocol and no post-resuscitation hyperthermia. ECPR is stopped if there is no ROSC at the target temperature, or for uncontrollable bleeding or severe anoxic brain injury."
   },
   {
    "id": "end_ca_stop",
@@ -963,7 +969,7 @@
    "id": "drown_arrest",
    "kind": "step",
    "stage": "Stabilize",
-   "ask": "Pulled from the water: not breathing, no pulse, core 30 °C or more. Next?",
+   "ask": "Pulled from the water: not breathing, no pulse, core 30 °C (86 °F) or more. Next?",
    "options": [
     "Open the airway, give 5 rescue breaths, then CPR with ventilations and oxygen",
     "Compression-only CPR at once, since breaths only delay the chest compressions",
@@ -1057,13 +1063,13 @@
    "id": "end_drown_arrest",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Drowning arrest: ventilation first (5 rescue breaths), then CPR with oxygen, intubation when airway protection is inadequate, and ECMO as salvage for refractory hypoxemia or severe hypothermia. Submersion time is the strongest predictor of survival, with mortality rising steeply beyond 5 minutes. A core under 30 °C makes this a hypothermic arrest (this pathway's hypothermic arrest route)."
+   "summary": "Drowning arrest: ventilation first (5 rescue breaths), then CPR with oxygen, intubation when airway protection is inadequate, and ECMO as salvage for refractory hypoxemia or severe hypothermia. Submersion time is the strongest predictor of survival, with mortality rising steeply beyond 5 minutes. A core under 30 °C (86 °F) makes this a hypothermic arrest (this pathway's hypothermic arrest route)."
   },
   {
    "id": "end_arrest_other",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Cardiac arrest with a core of 30 °C or more, not after submersion (heat, an electrical injury, lightning, a bite, a dive, or cold that does not explain it): standard BLS and ALS, once the scene is safe from any current, with a search for the cause, since hypothermia alone does not explain an arrest above 30 °C. After lightning the pulse often returns before breathing does, so ventilation is supported early, the cervical spine is protected, and with several victims those in cardiac or respiratory arrest are treated first (reverse triage), because survivors of the strike rarely die later."
+   "summary": "Cardiac arrest with a core of 30 °C (86 °F) or more, not after submersion (heat, an electrical injury, lightning, a bite, a dive, or cold that does not explain it): standard BLS and ALS, once the scene is safe from any current, with a search for the cause, since hypothermia alone does not explain an arrest above 30 °C (86 °F). After lightning the pulse often returns before breathing does, so ventilation is supported early, the cervical spine is protected, and with several victims those in cardiac or respiratory arrest are treated first (reverse triage), because survivors of the strike rarely die later."
   },
   {
    "id": "exposure",
@@ -1082,7 +1088,7 @@
     },
     {
      "id": "cold",
-     "if": "Core under 35 °C; cold exposure or immersion",
+     "if": "Core under 35 °C (95 °F); cold exposure or immersion",
      "ddx": {
       "lead": [
        "Accidental hypothermia"
@@ -1093,7 +1099,7 @@
     },
     {
      "id": "frost",
-     "if": "Frostbite, core 35 °C or more; frozen, or thawed with blisters or dusky skin",
+     "if": "Frostbite, core 35 °C (95 °F) or more; frozen, or thawed with blisters or dusky skin",
      "ddx": {
       "lead": [
        "Frostbite"
@@ -1104,7 +1110,7 @@
     },
     {
      "id": "water",
-     "if": "Submersion, core 35 °C or more; breathing, pulse present",
+     "if": "Submersion, core 35 °C (95 °F) or more; breathing, pulse present",
      "ddx": {
       "lead": [
        "Drowning"
@@ -1174,7 +1180,7 @@
    ],
    "answer": 0,
    "chainStep": "Rectal (or esophageal) temperature and a mental status check at once; out of the heat, excess clothing off, cooling started; fingerstick glucose; CBC, PT and aPTT, metabolic panel with creatinine and liver tests, blood gas, CK, urine myoglobin, ECG; medication and drug review (diuretics, beta blockers, anticholinergics, antipsychotics, serotonergic drugs, stimulants, recent anesthesia)",
-   "why": "Two findings sort heat illness: the core temperature and the brain. Heat stroke is central nervous system dysfunction (delirium, ataxia, seizures) with a core temperature typically, but not always, over 40 °C, and only a rectal or esophageal reading is valid; a falsely low tympanic reading delays the one treatment shown to cut mortality, rapid cooling. Antipyretics have no role. CT is for a presentation that does not fit, not a reason to hold cooling. The drug list matters: diuretics, beta blockers and anticholinergics predispose to classic heat stroke, and rigidity or clonus points to a drug-induced syndrome instead.",
+   "why": "Two findings sort heat illness: the core temperature and the brain. Heat stroke is central nervous system dysfunction (delirium, ataxia, seizures) with a core temperature typically, but not always, over 40 °C (104 °F), and only a rectal or esophageal reading is valid; a falsely low tympanic reading delays the one treatment shown to cut mortality, rapid cooling. Antipyretics have no role. CT is for a presentation that does not fit, not a reason to hold cooling. The drug list matters: diuretics, beta blockers and anticholinergics predispose to classic heat stroke, and rigidity or clonus points to a drug-induced syndrome instead.",
    "orders": [
     {
      "item": "Core temperature",
@@ -1253,7 +1259,7 @@
    "outcomes": [
     {
      "id": "exhaustion",
-     "if": "Heat exhaustion; alert and oriented, core usually under 40 °C",
+     "if": "Heat exhaustion; alert and oriented, core usually under 40 °C (104 °F)",
      "ddx": {
       "lead": [
        "Heat exhaustion"
@@ -1289,7 +1295,7 @@
       },
       {
        "item": "Not recovering within 30 minutes",
-       "dose": "Fluids and physician care; recheck the rectal temperature, and treat as heat stroke if over 40.5 °C",
+       "dose": "Fluids and physician care; recheck the rectal temperature, and treat as heat stroke if over 40.5 °C (104.9 °F)",
        "status": "ok",
        "sources": [
         {
@@ -1325,7 +1331,7 @@
     },
     {
      "id": "ehs",
-     "if": "Exertional heat stroke; confused after exertion, core usually over 40 °C, no rigidity",
+     "if": "Exertional heat stroke; confused after exertion, core usually over 40 °C (104 °F), no rigidity",
      "ddx": {
       "lead": [
        "Exertional heat stroke"
@@ -1335,7 +1341,7 @@
      "orders": [
       {
        "item": "Defining temperature",
-       "dose": "NATA: CNS dysfunction with a rectal temperature over 40.5 °C, treated as heat stroke from about 40 °C if the brain is affected",
+       "dose": "NATA: CNS dysfunction with a rectal temperature over 40.5 °C (104.9 °F), treated as heat stroke from about 40 °C (104 °F) if the brain is affected",
        "status": "conflict",
        "sources": [
         {
@@ -1351,14 +1357,14 @@
          "where": "Definition and classification"
         }
        ],
-       "note": "NATA 2015 uses over 40.5 °C; StatPearls says typically but not always over 40 °C; Bouchama's definition, as reported by Hifumi 2018, uses over 40 °C. All three make CNS dysfunction the deciding finding."
+       "note": "NATA 2015 uses over 40.5 °C (104.9 °F); StatPearls says typically but not always over 40 °C (104 °F); Bouchama's definition, as reported by Hifumi 2018, uses over 40 °C (104 °F). All three make CNS dysfunction the deciding finding."
       }
      ],
      "next": "hs_cool"
     },
     {
      "id": "classic",
-     "if": "Classic heat stroke; confused at rest in hot weather, core usually over 40 °C, no rigidity",
+     "if": "Classic heat stroke; confused at rest in hot weather, core usually over 40 °C (104 °F), no rigidity",
      "ddx": {
       "lead": [
        "Classic heat stroke"
@@ -1467,7 +1473,7 @@
    "id": "end_exh",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Heat exhaustion: out of the heat, excess clothing off, lying flat with the legs raised, fans or ice towels, and oral (or IV) fluids with electrolytes. If recovery is not rapid within 30 minutes, or the mental status changes, recheck the rectal temperature and treat as heat stroke if it is over 40.5 °C. No same-day return to activity, and no antipyretics or dantrolene."
+   "summary": "Heat exhaustion: out of the heat, excess clothing off, lying flat with the legs raised, fans or ice towels, and oral (or IV) fluids with electrolytes. If recovery is not rapid within 30 minutes, or the mental status changes, recheck the rectal temperature and treat as heat stroke if it is over 40.5 °C (104.9 °F). No same-day return to activity, and no antipyretics or dantrolene."
   },
   {
    "id": "hs_cool",
@@ -1475,18 +1481,18 @@
    "stage": "Manage",
    "ask": "Heat stroke: confused and hot after heat or exertion. Next?",
    "options": [
-    "Cool now: cold-water immersion if feasible, else mist, fans and ice packs; stop near 39 °C",
+    "Cool now: cold-water immersion if feasible, else mist, fans and ice packs; stop near 39 °C (102.2 °F)",
     "IV acetaminophen and cooled saline, moving on to immersion only if the temperature holds up",
     "IV dantrolene to switch off muscle heat production, then passive cooling in a cool side room",
     "Transfer to the ICU first, and start cooling once a core probe is placed up there"
    ],
    "answer": 0,
-   "chainStep": "Cold-water immersion (stirred ice water, trunk and limbs up to the neck) where feasible; otherwise evaporative cooling (cool water mist and fans) with ice packs to groin, axillae and neck; continuous rectal or esophageal temperature; stop active cooling at 38 to 39 °C; aim to get under 38.9 °C within 30 minutes of collapse; IV access and rehydration, avoiding rapid sodium correction; benzodiazepine only for agitation or shivering; no antipyretics, no dantrolene; repeat CK, potassium, creatinine, liver tests, platelets and coagulation",
-   "why": "Rapid cooling is the intervention that lowers mortality, and the time above the critical temperature drives the damage, so cooling starts at once and transport comes second. Cold-water immersion cools fastest and is the standard for exertional heat stroke; in older patients with classic heat stroke it can be impractical because monitoring is hard and agitation interferes, and evaporative cooling with mist and fans plus ice packs is the next option. Cooling stops near 39 °C to avoid overcooling. Antipyretics have no role in heat stroke and may harm the liver, and dantrolene has not improved outcomes.",
+   "chainStep": "Cold-water immersion (stirred ice water, trunk and limbs up to the neck) where feasible; otherwise evaporative cooling (cool water mist and fans) with ice packs to groin, axillae and neck; continuous rectal or esophageal temperature; stop active cooling at 38 to 39 °C (100.4 to 102.2 °F); aim to get under 38.9 °C (102 °F) within 30 minutes of collapse; IV access and rehydration, avoiding rapid sodium correction; benzodiazepine only for agitation or shivering; no antipyretics, no dantrolene; repeat CK, potassium, creatinine, liver tests, platelets and coagulation",
+   "why": "Rapid cooling is the intervention that lowers mortality, and the time above the critical temperature drives the damage, so cooling starts at once and transport comes second. Cold-water immersion cools fastest and is the standard for exertional heat stroke; in older patients with classic heat stroke it can be impractical because monitoring is hard and agitation interferes, and evaporative cooling with mist and fans plus ice packs is the next option. Cooling stops near 39 °C (102.2 °F) to avoid overcooling. Antipyretics have no role in heat stroke and may harm the liver, and dantrolene has not improved outcomes.",
    "orders": [
     {
      "item": "Cold-water immersion",
-     "dose": "Up to the neck in 1.7 to 15 °C water, stirred; about 1 °C every 5 minutes; the most effective method for exertional heat stroke",
+     "dose": "Up to the neck in 1.7 to 15 °C (35.1 to 59 °F) water, stirred; about 1 °C (1.8 °F) every 5 minutes; the most effective method for exertional heat stroke",
      "status": "ok",
      "sources": [
       {
@@ -1497,7 +1503,7 @@
     },
     {
      "item": "Speed",
-     "dose": "Core under 38.9 °C within 30 minutes of collapse; with medical staff on site, cool first and transport second",
+     "dose": "Core under 38.9 °C (102 °F) within 30 minutes of collapse; with medical staff on site, cool first and transport second",
      "status": "ok",
      "sources": [
       {
@@ -1523,7 +1529,7 @@
     },
     {
      "item": "Where to stop",
-     "dose": "NATA 2015: remove from the water at 38.9 °C",
+     "dose": "NATA 2015: remove from the water at 38.9 °C (102 °F)",
      "status": "conflict",
      "sources": [
       {
@@ -1543,7 +1549,7 @@
        "where": "Target temperature of initial cooling"
       }
      ],
-     "note": "NATA stops at 38.9 °C; StatPearls Heat Stroke at 38 to 39 °C; StatPearls Cooling Techniques aims below 39 °C; Hifumi 2018 reports 39.4 °C used safely in large series and no evidence for a specific end point."
+     "note": "NATA stops at 38.9 °C (102 °F); StatPearls Heat Stroke at 38 to 39 °C (100.4 to 102.2 °F); StatPearls Cooling Techniques aims below 39 °C (102.2 °F); Hifumi 2018 reports 39.4 °C (102.9 °F) used safely in large series and no evidence for a specific end point."
     },
     {
      "item": "Antipyretics",
@@ -1673,9 +1679,13 @@
       },
       {
        "item": "Potassium",
-       "dose": "Treat high potassium as an emergency (pw_electrolytes); in rhabdomyolysis use calcium with caution, as hypercalcemia can follow",
+       "dose": "UKKA bands: mild 5.5 to 5.9, moderate 6.0 to 6.4, severe 6.5 or more mmol/L; an urgent 12-lead ECG at 6.0 or more; continuous ECG monitoring at 6.5 or more, with ECG changes, or at 6.0 to 6.4 when a rapid rise is expected; treat by band (pw_electrolytes); in rhabdomyolysis use calcium with caution, as hypercalcemia can follow",
        "status": "ok",
        "sources": [
+        {
+         "docId": "url:f16b34a1e288",
+         "where": "Introduction: \"mild (5.5-5.9 mmol/l), moderate (6.0-6.4 mmol/l) or severe (≥ 6.5 mmol/l)\"; Guideline 14.1: an urgent 12-lead ECG at \"a serum K + level ≥ 6.0 mmol/L\"; Guideline 14.2: monitoring \"in patients with a serum K+ 6.0-6.4 mmol/L who are clinically unwell or in whom a rapid rise in serum K+ is anticipated\""
+        },
         {
          "docId": "pmid:28846335",
          "where": "Electrolyte abnormalities"
@@ -1719,7 +1729,7 @@
    "id": "end_hs_organ",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Heat stroke with organ injury: intensive care, fluids for rhabdomyolysis titrated to urine output, potassium treated as an emergency (pw_electrolytes), and blood products for DIC by bleeding and labs. Hypotension, a low GCS, a raised creatinine and DIC on admission carry the highest mortality; intravascular cooling, anticoagulation and blood purification are unproven."
+   "summary": "Heat stroke with organ injury: intensive care, fluids for rhabdomyolysis titrated to urine output, potassium treated by its UKKA band with an ECG from 6.0 (pw_electrolytes), and blood products for DIC by bleeding and labs. Hypotension, a low GCS, a raised creatinine and DIC on admission carry the highest mortality; intravascular cooling, anticoagulation and blood purification are unproven."
   },
   {
    "id": "end_drug_heat",
@@ -1731,7 +1741,7 @@
    "id": "hypo_stage",
    "kind": "step",
    "stage": "Diagnose",
-   "ask": "Core temperature under 35 °C. Next?",
+   "ask": "Core temperature under 35 °C (95 °F). Next?",
    "options": [
     "Handle gently and keep flat; stage by core and consciousness; ECG; look for a cause",
     "Sit them up and get them walking now, and stage the cold by whether they shiver",
@@ -1739,12 +1749,12 @@
     "Stage it by a tympanic infrared reading, repeated hourly as rewarming goes on"
    ],
    "answer": 0,
-   "chainStep": "Keep horizontal and handle gently; remove wet clothing and insulate; continuous core temperature on a low-reading probe; defibrillation pads and 12-lead ECG; fingerstick glucose, CBC, metabolic panel, fibrinogen, CK, lactate, TSH, cortisol and toxicology as indicated; stage: mild 32 to 35 °C, moderate 28 to 32 °C, severe under 28 °C (the Revised Swiss System uses consciousness when no core reading is available); look for sepsis, hypothyroidism, adrenal insufficiency, hypoglycemia, intoxication, trauma or stroke",
+   "chainStep": "Keep horizontal and handle gently; remove wet clothing and insulate; continuous core temperature on a low-reading probe; defibrillation pads and 12-lead ECG; fingerstick glucose, CBC, metabolic panel, fibrinogen, CK, lactate, TSH, cortisol and toxicology as indicated; stage: mild 32 to 35 °C (89.6 to 95 °F), moderate 28 to 32 °C (82.4 to 89.6 °F), severe under 28 °C (82.4 °F) (the Revised Swiss System uses consciousness when no core reading is available); look for sepsis, hypothyroidism, adrenal insufficiency, hypoglycemia, intoxication, trauma or stroke",
    "why": "Rough handling can trigger fatal dysrhythmias in moderate or severe hypothermia (rescue collapse), and a patient found lying down is not walked until fed and allowed to shiver for about 30 minutes. Shivering is not a consistent sign and is not used to stage hypothermia: staging comes from the core temperature and the level of consciousness. Warmed IV fluids stop further heat loss and treat volume depletion but rewarm only modestly. The ECG shows Osborn (J) waves, slowed conduction and often atrial fibrillation. Hypothermia out of proportion to the exposure points to another cause, such as sepsis, hypothyroidism, adrenal insufficiency, hypoglycemia or a drug.",
    "orders": [
     {
      "item": "Stages",
-     "dose": "Mild 32 to 35 °C, moderate 28 to 32 °C, severe under 28 °C",
+     "dose": "Mild 32 to 35 °C (89.6 to 95 °F), moderate 28 to 32 °C (82.4 to 89.6 °F), severe under 28 °C (82.4 °F)",
      "status": "ok",
      "sources": [
       {
@@ -1825,7 +1835,7 @@
     },
     {
      "item": "Coagulation tests",
-     "dose": "Can look normal despite coagulopathy, because they are run at 37 °C",
+     "dose": "Can look normal despite coagulopathy, because they are run at 37 °C (98.6 °F)",
      "status": "ok",
      "sources": [
       {
@@ -1866,7 +1876,7 @@
    "outcomes": [
     {
      "id": "stable",
-     "if": "Stable circulation; core 30 °C or more (32 °C if elderly or comorbid), systolic 90 or more, no VT",
+     "if": "Stable circulation; core 30 °C (86 °F) or more (32 °C (89.6 °F) if elderly or comorbid), systolic 90 or more, no VT",
      "ddx": {
       "lead": [
        "Accidental hypothermia"
@@ -1877,7 +1887,7 @@
     },
     {
      "id": "high",
-     "if": "High risk of arrest; core under 30 °C (32 °C if elderly or comorbid), systolic under 90, or VT",
+     "if": "High risk of arrest; core under 30 °C (86 °F) (32 °C (89.6 °F) if elderly or comorbid), systolic under 90, or VT",
      "ddx": {
       "lead": [
        "Accidental hypothermia"
@@ -1900,7 +1910,7 @@
     "Heat packs placed straight onto the bare skin of the chest, groin and armpits"
    ],
    "answer": 0,
-   "chainStep": "Remove wet clothing and insulate; forced-air warming and heat packs to the trunk, axillae, chest and back, not touching the skin; warmed IV fluids 38 to 42 °C in boluses guided by the vital signs; warm drinks if alert and swallowing; let a mild patient shiver; continuous core temperature and monitoring, rewarming toward 37 °C; active internal rewarming (intravascular catheter, CRRT) if the core stays the same or falls",
+   "chainStep": "Remove wet clothing and insulate; forced-air warming and heat packs to the trunk, axillae, chest and back, not touching the skin; warmed IV fluids 38 to 42 °C (100.4 to 107.6 °F) in boluses guided by the vital signs; warm drinks if alert and swallowing; let a mild patient shiver; continuous core temperature and monitoring, rewarming toward 37 °C (98.6 °F); active internal rewarming (intravascular catheter, CRRT) if the core stays the same or falls",
    "why": "With a stable circulation, passive and active external rewarming is enough for most patients: insulation, forced air and heat packs on the trunk, with warmed fluids to stop further loss and warm drinks for a mild, alert patient. Failure to rewarm (a static or falling core, rising lactate, falling consciousness or pressure, or a ventricular dysrhythmia) moves to active internal rewarming. In ICE-CRASH, ECMO helped hypothermic patients in arrest but not those with a pulse, in whom it added bleeding. Lavage is for severe cases when less invasive methods fail, and heat packs must not touch the skin, to prevent burns.",
    "orders": [
     {
@@ -1931,7 +1941,7 @@
     },
     {
      "item": "Warmed IV fluids",
-     "dose": "38 to 42 °C in boluses guided by the vital signs; they limit further cooling but rewarm little",
+     "dose": "38 to 42 °C (100.4 to 107.6 °F) in boluses guided by the vital signs; they limit further cooling but rewarm little",
      "status": "ok",
      "sources": [
       {
@@ -2005,13 +2015,13 @@
    "id": "end_rewarm",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Hypothermia with a stable circulation: passive and active external rewarming toward 37 °C, warmed fluids and gentle handling, with active internal rewarming if the core stalls or falls. A patient who fails to rewarm is searched for another cause: hypoglycemia, infection, hypothyroidism (myxedema coma is in pw_ams), adrenal insufficiency, intoxication or ongoing exposure. Rewarming itself can bring hyperkalemia and other electrolyte shifts, so they are rechecked."
+   "summary": "Hypothermia with a stable circulation: passive and active external rewarming toward 37 °C (98.6 °F), warmed fluids and gentle handling, with active internal rewarming if the core stalls or falls. A patient who fails to rewarm is searched for another cause: hypoglycemia, infection, hypothyroidism (myxedema coma is in pw_ams), adrenal insufficiency, intoxication or ongoing exposure. Rewarming itself can bring hyperkalemia and other electrolyte shifts, so they are rechecked."
   },
   {
    "id": "ecls",
    "kind": "step",
    "stage": "Manage",
-   "ask": "Pulse present, high risk: core under 30 °C (32 if old or ill), low pressure or VT. Next?",
+   "ask": "Pulse present, high risk: core under 30 °C (86 °F) (32 if old or ill), low pressure or VT. Next?",
    "options": [
     "To an ECLS centre, handled gently; active rewarming, warmed fluids, ECLS ready to start",
     "Atropine and transcutaneous pacing for the slow pulse, then the active external rewarming",
@@ -2019,12 +2029,12 @@
     "Defer intubation even if the airway is failing, as laryngoscopy will trigger VF"
    ],
    "answer": 0,
-   "chainStep": "Keep horizontal and handle gently; direct transfer to an ECLS-capable centre; active rewarming with warmed IV fluids (38 to 42 °C) in boluses; defibrillation pads on; ECLS on standby and started rapidly if needed (Paal 2022 favors it for hemodynamic instability); no specific treatment for the bradycardia or low pressure beyond rewarming; rapid-sequence intubation in a warm room if the airway needs it; blood gases read at 37 °C (alpha-stat)",
-   "why": "A core under 30 °C (32 °C in the elderly or comorbid), a systolic under 90 or a ventricular dysrhythmia marks a high risk of arrest, and these patients go directly to a centre that can provide ECLS, kept on standby and started rapidly if needed. The slow pulse and low pressure are responses to the cold and need nothing beyond rewarming, not atropine or pacing. Whether ECLS should start while the heart still beats is disputed: Paal 2022 calls it the best support for hemodynamic instability, while in ICE-CRASH it did not help patients without arrest and added bleeding (see the orders). Warming the limbs in a severe case can drop the pressure through peripheral vasodilation. When the airway needs it, rapid-sequence intubation in a warm room is used: the arrhythmia risk is small next to the benefit.",
+   "chainStep": "Keep horizontal and handle gently; direct transfer to an ECLS-capable centre; active rewarming with warmed IV fluids (38 to 42 °C, 100.4 to 107.6 °F) in boluses; defibrillation pads on; ECLS on standby and started rapidly if needed (Paal 2022 favors it for hemodynamic instability); no specific treatment for the bradycardia or low pressure beyond rewarming; rapid-sequence intubation in a warm room if the airway needs it; blood gases read at 37 °C (98.6 °F) (alpha-stat)",
+   "why": "A core under 30 °C (86 °F) (32 °C (89.6 °F) in the elderly or comorbid), a systolic under 90 or a ventricular dysrhythmia marks a high risk of arrest, and these patients go directly to a centre that can provide ECLS, kept on standby and started rapidly if needed. The slow pulse and low pressure are responses to the cold and need nothing beyond rewarming, not atropine or pacing. Whether ECLS should start while the heart still beats is disputed: Paal 2022 calls it the best support for hemodynamic instability, while in ICE-CRASH it did not help patients without arrest and added bleeding (see the orders). Warming the limbs in a severe case can drop the pressure through peripheral vasodilation. When the airway needs it, rapid-sequence intubation in a warm room is used: the arrhythmia risk is small next to the benefit.",
    "orders": [
     {
      "item": "Transfer",
-     "dose": "Directly to an ECLS centre for cardiac arrest, a core under 30 °C, a systolic under 90 mm Hg or a ventricular dysrhythmia",
+     "dose": "Directly to an ECLS centre for cardiac arrest, a core under 30 °C (86 °F), a systolic under 90 mm Hg or a ventricular dysrhythmia",
      "status": "ok",
      "sources": [
       {
@@ -2079,7 +2089,7 @@
     },
     {
      "item": "Blood gas",
-     "dose": "Alpha-stat: interpret at 37 °C",
+     "dose": "Alpha-stat: interpret at 37 °C (98.6 °F)",
      "status": "ok",
      "sources": [
       {
@@ -2138,20 +2148,20 @@
    "id": "frost",
    "kind": "step",
    "stage": "Manage",
-   "ask": "Frostbite of the fingers or toes, frozen or already thawed; core 35 °C or more. Next?",
+   "ask": "Frostbite of the fingers or toes, frozen or already thawed; core 35 °C (95 °F) or more. Next?",
    "options": [
-    "If still frozen, rapid rewarming in 37 to 39 °C water until pliable; analgesia, ibuprofen, tetanus",
+    "If still frozen, rapid rewarming in 37 to 39 °C (98.6 to 102.2 °F) water until pliable; analgesia, ibuprofen, tetanus",
     "Rub the fingers briskly with snow or a towel, then warm them slowly beside a heater or an open fire",
     "Thaw slowly at room temperature, since rapid rewarming worsens the reperfusion injury",
     "Early debridement of the pale digits, since frozen tissue will not recover anyway"
    ],
    "answer": 0,
-   "chainStep": "Correct moderate or severe hypothermia first; if still frozen, rapid rewarming in circulating water at 37 to 39 °C for about 30 minutes, until the tissue is soft and pliable, with analgesia; no rubbing and no refreezing; dry without rubbing, dry dressing, elevate; ibuprofen 12 mg/kg/day in 2 doses (maximum 2,400 mg/day in 4 doses); tetanus updated; drain clear or cloudy blisters, leave hemorrhagic blisters intact; aloe vera with dressing changes every 6 hours; no prophylactic antibiotics; oxygen if SpO2 under 88% or above 4,000 m",
+   "chainStep": "Correct moderate or severe hypothermia first; if still frozen, rapid rewarming in circulating water at 37 to 39 °C (98.6 to 102.2 °F) for about 30 minutes, until the tissue is soft and pliable, with analgesia; no rubbing and no refreezing; dry without rubbing, dry dressing, elevate; ibuprofen 12 mg/kg/day in 2 doses (maximum 2,400 mg/day in 4 doses); tetanus updated; drain clear or cloudy blisters, leave hemorrhagic blisters intact; aloe vera with dressing changes every 6 hours; no prophylactic antibiotics; oxygen if SpO2 under 88% or above 4,000 m",
    "why": "Once refreezing can be prevented, rapid rewarming in warm water until the tissue is soft and pliable is the standard; repeated thawing and refreezing does more harm. Passive thawing is the fallback only when active rewarming cannot be done, and vigorous rubbing adds tissue damage. Ibuprofen is given for its antiprostaglandin effect. The first appearance underestimates the injury, so debridement and amputation wait for demarcation, 1 to 3 months later, unless wet gangrene or sepsis forces it.",
    "orders": [
     {
      "item": "Rewarming bath",
-     "dose": "WMS 2024 (as summarized): 37 to 39 °C for about 30 minutes, or until red and pliable",
+     "dose": "WMS 2024 (as summarized): 37 to 39 °C (98.6 to 102.2 °F) for about 30 minutes, or until red and pliable",
      "status": "conflict",
      "sources": [
       {
@@ -2163,7 +2173,7 @@
        "where": "Treatment / Management"
       }
      ],
-     "note": "The AHA and American Red Cross 2024 first aid guideline, as reported in StatPearls, uses 37 to 40 °C for 20 to 30 minutes."
+     "note": "The AHA and American Red Cross 2024 first aid guideline, as reported in StatPearls, uses 37 to 40 °C (98.6 to 104 °F) for 20 to 30 minutes."
     },
     {
      "item": "Refreezing",
@@ -2513,7 +2523,7 @@
    "id": "drown",
    "kind": "step",
    "stage": "Diagnose",
-   "ask": "Pulled from the water, breathing, pulse present, core 35 °C or more. Next?",
+   "ask": "Pulled from the water, breathing, pulse present, core 35 °C (95 °F) or more. Next?",
    "options": [
     "Oxygen to SpO2 92 to 96%, chest exam, then observe or escalate; spinal care only with trauma",
     "A collar and spinal board first, since a neck injury cannot be excluded after any submersion",
@@ -4510,7 +4520,7 @@
     "Helicopter transfer at normal flying height, to reach the chamber as fast as possible"
    ],
    "answer": 0,
-   "chainStep": "Oxygen as close to 100% as possible until recompression; horizontal (recovery position if unconscious); IV or IO non-glucose isotonic crystalloid, or oral non-carbonated fluids if fully conscious; cardiac monitor; chest x-ray for pneumothorax before recompression; urgent hyperbaric consultation for recompression (US Navy Treatment Table 6); air transport pressurized, or under 300 m (1,000 ft)",
+   "chainStep": "Oxygen as close to 100% as possible until recompression; horizontal (recovery position if unconscious); IV or IO non-glucose isotonic crystalloid, or oral non-carbonated fluids if fully conscious; cardiac monitor; chest x-ray for pneumothorax before recompression; urgent hyperbaric consultation for recompression (US Navy Treatment Table 6); air transport pressurized, or under 1,000 ft (300 m)",
    "why": "Decompression illness, whether decompression sickness or arterial gas embolism, is treated with recompression, and until then with oxygen as close to 100% as possible. A horizontal position is encouraged; head-down and left lateral positions are no longer recommended because they raise the risk of cerebral edema. Fluids should not contain glucose. An untreated pneumothorax is an absolute contraindication to hyperbaric treatment, so the chest film comes first. Aspirin and steroids lack supporting evidence, waiting a day loses the window in which recompression works best, and an unpressurized aircraft must stay under 300 m.",
    "orders": [
     {
@@ -4632,7 +4642,7 @@
     },
     {
      "item": "Air transport",
-     "dose": "Pressurized aircraft, or unpressurized under 300 m (1,000 ft)",
+     "dose": "Pressurized aircraft, or unpressurized under 1,000 ft (300 m)",
      "status": "ok",
      "sources": [
       {
@@ -4686,7 +4696,7 @@
     "ca_result": "ecls"
    },
    "results": {
-    "front": "No pulse or breathing over a 60-second check; ventricular fibrillation on the pads; esophageal core 23.8 °C; no injury seen.",
+    "front": "No pulse or breathing over a 60-second check; ventricular fibrillation on the pads; esophageal core 23.8 °C (74.8 °F); no injury seen.",
     "ca_result": "No dependent lividity, no injury, no DNR order; potassium 4.6 mmol/L. HOPE estimate over 10%."
    }
   },
@@ -4699,7 +4709,7 @@
     "ca_result": "stop"
    },
    "results": {
-    "front": "No pulse or breathing over 60 seconds; asystole; bladder core 21 °C.",
+    "front": "No pulse or breathing over 60 seconds; asystole; bladder core 21 °C (69.8 °F).",
     "ca_result": "Fixed dependent lividity over the back and buttocks; no DNR order on file."
    }
   },
@@ -4711,7 +4721,7 @@
     "front": "arrest_water"
    },
    "results": {
-    "front": "No breathing, no central pulse; asystole on the pads; core 35.4 °C; no sign of injury."
+    "front": "No breathing, no central pulse; asystole on the pads; core 35.4 °C (95.7 °F); no sign of injury."
    }
   },
   {
@@ -4722,7 +4732,7 @@
     "front": "arrest_other"
    },
    "results": {
-    "front": "No pulse or breathing; ventricular fibrillation on the AED; core 36.9 °C; fern-like marks across the chest."
+    "front": "No pulse or breathing; ventricular fibrillation on the AED; core 36.9 °C (98.4 °F); fern-like marks across the chest."
    }
   },
   {
@@ -4758,14 +4768,14 @@
    },
    "results": {
     "front": "Pulse 118, BP 106/64, SpO2 99%; airway clear; alert; no fall or blow.",
-    "exposure": "Marching in full kit at 34 °C.",
-    "heat_result": "Rectal 39.1 °C; alert and oriented, answers normally; no rigidity or clonus; takes no medicines."
+    "exposure": "Marching in full kit at 34 °C (93.2 °F).",
+    "heat_result": "Rectal 39.1 °C (102.4 °F); alert and oriented, answers normally; no rigidity or clonus; takes no medicines."
    }
   },
   {
    "id": "exertional_heat_stroke",
    "label": "Linebacker down at practice",
-   "vignette": "19-year-old linebacker collapsed at a preseason practice on a humid 35 °C afternoon; combative and confused.",
+   "vignette": "19-year-old linebacker collapsed at a preseason practice on a humid 35 °C (95 °F) afternoon; combative and confused.",
    "picks": {
     "front": "stable",
     "exposure": "heat",
@@ -4775,8 +4785,8 @@
    "results": {
     "front": "Pulse 146, BP 104/58, SpO2 97%; airway open; GCS 12; no fall or blow.",
     "exposure": "Collapsed during practice in the heat.",
-    "heat_result": "Rectal 41.6 °C; disoriented and combative; skin wet with sweat; no rigidity or clonus; no medicines or supplements.",
-    "cool_labs": "Cooled in an ice-water tub to 38.9 °C in 24 minutes and waking; CK 52,000 U/L, creatinine 2.3 mg/dL, potassium 5.7 mmol/L, platelets 88,000, INR 1.6."
+    "heat_result": "Rectal 41.6 °C (106.9 °F); disoriented and combative; skin wet with sweat; no rigidity or clonus; no medicines or supplements.",
+    "cool_labs": "Cooled in an ice-water tub to 38.9 °C (102 °F) in 24 minutes and waking; CK 52,000 U/L, creatinine 2.3 mg/dL, potassium 5.7 mmol/L, platelets 88,000, INR 1.6."
    }
   },
   {
@@ -4792,8 +4802,8 @@
    "results": {
     "front": "Pulse 112, BP 118/64, SpO2 95%; airway open; GCS 13; no fall or blow.",
     "exposure": "Found at home in a heat wave.",
-    "heat_result": "Rectal 40.8 °C; disoriented; skin hot and dry; no rigidity or clonus; no new medicines.",
-    "cool_labs": "Cooled to 39.0 °C with misting, fans and ice packs; oriented again; CK 1,100 U/L, creatinine 1.0 mg/dL, potassium 4.1 mmol/L, ALT normal, INR 1.1, platelets 196,000."
+    "heat_result": "Rectal 40.8 °C (105.4 °F); disoriented; skin hot and dry; no rigidity or clonus; no new medicines.",
+    "cool_labs": "Cooled to 39.0 °C (102.2 °F) with misting, fans and ice packs; oriented again; CK 1,100 U/L, creatinine 1.0 mg/dL, potassium 4.1 mmol/L, ALT normal, INR 1.1, platelets 196,000."
    }
   },
   {
@@ -4808,7 +4818,7 @@
    "results": {
     "front": "Pulse 124, BP 158/96, SpO2 96%; airway open; GCS 13; no fall or blow.",
     "exposure": "Found indoors on a hot day.",
-    "heat_result": "Rectal 40.4 °C; confused; lead-pipe rigidity in all four limbs, no clonus; sweating heavily; CK 14,000 U/L."
+    "heat_result": "Rectal 40.4 °C (104.7 °F); confused; lead-pipe rigidity in all four limbs, no clonus; sweating heavily; CK 14,000 U/L."
    }
   },
   {
@@ -4822,7 +4832,7 @@
    },
    "results": {
     "front": "Pulse 104, BP 136/82, SpO2 96%; airway clear; GCS 14; no fall or blow.",
-    "exposure": "Rectal core 33.2 °C on a low-reading probe; outside in the cold for hours.",
+    "exposure": "Rectal core 33.2 °C (91.8 °F) on a low-reading probe; outside in the cold for hours.",
     "hypo_result": "Shivering and talking; BP 136/82; sinus tachycardia, no ventricular ectopy; glucose 96 mg/dL."
    }
   },
@@ -4837,14 +4847,14 @@
    },
    "results": {
     "front": "Pulse 32, BP 74/40, GCS 7; airway open with a jaw thrust; no fall, blow, hives or wheeze.",
-    "exposure": "Bladder core 26.6 °C; found in a cold room.",
+    "exposure": "Bladder core 26.6 °C (79.9 °F); found in a cold room.",
     "hypo_result": "Junctional bradycardia at 30 with Osborn waves; BP 74/40; no VT or VF."
    }
   },
   {
    "id": "frostbite_superficial",
    "label": "White fingertips on a ski lift",
-   "vignette": "30-year-old skier with numb, white fingertips after 4 hours on a chairlift in a -20 °C wind. Weight 75 kg.",
+   "vignette": "30-year-old skier with numb, white fingertips after 4 hours on a chairlift in a -20 °C (-4 °F) wind. Weight 75 kg.",
    "picks": {
     "front": "stable",
     "exposure": "frost",
@@ -4852,14 +4862,14 @@
    },
    "results": {
     "front": "Pulse 88, BP 124/78; airway clear; alert; no fall or blow.",
-    "exposure": "Fingertips hard, white and numb on both hands; core 36.6 °C.",
-    "frost_result": "After 30 minutes in 38 °C water: pink fingertips, clear blisters on two of them, capillary refill brisk."
+    "exposure": "Fingertips hard, white and numb on both hands; core 36.6 °C (97.9 °F).",
+    "frost_result": "After 30 minutes in 38 °C (100.4 °F) water: pink fingertips, clear blisters on two of them, capillary refill brisk."
    }
   },
   {
    "id": "frostbite_deep",
    "label": "Wooden hands after a night outside",
-   "vignette": "45-year-old man found sleeping outside overnight at -15 °C; both hands numb and wooden. No head injury, no bleeding history, no anticoagulants. Weight 70 kg.",
+   "vignette": "45-year-old man found sleeping outside overnight at -15 °C (5 °F); both hands numb and wooden. No head injury, no bleeding history, no anticoagulants. Weight 70 kg.",
    "picks": {
     "front": "stable",
     "exposure": "frost",
@@ -4867,7 +4877,7 @@
    },
    "results": {
     "front": "Pulse 92, BP 132/80; airway clear; alert; no fall or blow.",
-    "exposure": "Fingers hard, grey and numb to the knuckles; core 35.8 °C.",
+    "exposure": "Fingers hard, grey and numb to the knuckles; core 35.8 °C (96.4 °F).",
     "frost_result": "After rewarming: hemorrhagic blisters, blue-grey fingers to the PIP joints, no capillary refill; 3 hours since thawing; bone scan shows no uptake beyond the PIP joints."
    }
   },
@@ -4882,7 +4892,7 @@
    },
    "results": {
     "front": "Pulse 88, BP 138/84; alert; no fall or blow.",
-    "exposure": "Thawed frostbite of both forefeet; core 36.4 °C.",
+    "exposure": "Thawed frostbite of both forefeet; core 36.4 °C (97.5 °F).",
     "frost_result": "Hemorrhagic blisters and blue-black toes, no capillary refill; frozen 5 days ago, thawed 4 days ago."
    }
   },
@@ -4897,7 +4907,7 @@
    },
    "results": {
     "front": "Pulse 104, BP 108/66, SpO2 98% on air; alert; no fall or blow.",
-    "exposure": "Pulled from a lake; core 36.2 °C; breathing, pulse present.",
+    "exposure": "Pulled from a lake; core 36.2 °C (97.2 °F); breathing, pulse present.",
     "drown_result": "Over 6 hours: no cough, chest clear, SpO2 97 to 99% on air, alert throughout."
    }
   },
@@ -4912,7 +4922,7 @@
    },
    "results": {
     "front": "Pulse 118, BP 124/76, SpO2 86% on air, 94% on a non-rebreather; GCS 14; no fall or blow.",
-    "exposure": "Pulled from the sea; core 35.7 °C; breathing, pulse present.",
+    "exposure": "Pulled from the sea; core 35.7 °C (96.3 °F); breathing, pulse present.",
     "drown_result": "Crackles at both bases; SpO2 86% on air; respiratory rate 32 and rising."
    }
   },

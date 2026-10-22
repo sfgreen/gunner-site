@@ -219,7 +219,7 @@
         ]
       },
       {
-        "text": "Temperature over 38 C: 1 point.",
+        "text": "Temperature over 38 C (100.4 F): 1 point.",
         "refs": [
           "calc:mcisaac"
         ]
@@ -360,7 +360,7 @@
   "faq": [
     {
       "q": "What is the McIsaac score?",
-      "a": "The Centor criteria plus an age adjustment: 1 point each for tonsillar exudates, tender anterior cervical nodes, absent cough and a temperature over 38 C, plus 1 at age 3 to 14 and minus 1 at 45 or older. A score of 1 or less needs no test; 2 or more gets a rapid strep test. At 15 to 44 it equals the Centor score.",
+      "a": "The Centor criteria plus an age adjustment: 1 point each for tonsillar exudates, tender anterior cervical nodes, absent cough and a temperature over 38 C (100.4 F), plus 1 at age 3 to 14 and minus 1 at 45 or older. A score of 1 or less needs no test; 2 or more gets a rapid strep test. At 15 to 44 it equals the Centor score.",
       "refs": [
         "calc:mcisaac",
         "score"

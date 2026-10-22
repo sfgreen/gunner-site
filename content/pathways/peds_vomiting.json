@@ -470,7 +470,7 @@
    ],
    "answer": 0,
    "chainStep": "Weigh the child (every fluid and dose is per kg); airway and breathing; perfusion: level of consciousness, skin color, warmth of the hands and feet, pulses, capillary refill, heart rate, blood pressure; fingerstick glucose, with blood ketones and a venous gas if it is high",
-   "why": "Fluids and drugs in a child are calculated from body weight, so the weight comes first. Shock is a bedside diagnosis: decreased consciousness, pale or mottled skin, cold extremities, weak pulses, prolonged capillary refill, tachycardia and, late, hypotension. A stick glucose under 60 mg/dL is treated at once (AES; WHO's chart uses 2.5 mmol/L, 45 mg/dL, in a well-nourished child), and a high one is checked for ketoacidosis. Blood tests are not routine in gastroenteritis; they are for the child who needs IV fluid or may be hypernatremic. A film comes only once obstruction is suspected, and an antiemetic is a question for later, once shock and the red flags are excluded.",
+   "why": "Fluids and drugs in a child are calculated from body weight, so the weight comes first. Shock is a bedside diagnosis: decreased consciousness, pale or mottled skin, cold extremities, weak pulses, prolonged capillary refill, tachycardia and, late, hypotension. A stick glucose under 60 mg/dL is treated at once (AES; WHO's chart uses 45 mg/dL, 2.5 mmol/L, in a well-nourished child), and a high one is checked for ketoacidosis. Blood tests are not routine in gastroenteritis; they are for the child who needs IV fluid or may be hypernatremic. A film comes only once obstruction is suspected, and an antiemetic is a question for later, once shock and the red flags are excluded.",
    "orders": [
     {
      "item": "Weight",
@@ -496,7 +496,7 @@
     },
     {
      "item": "Low glucose",
-     "dose": "AES 2016: under 60 mg/dL in a child; 25% dextrose 2 mL/kg from 2 years, 12.5% dextrose 4 mL/kg under 2. WHO: under 2.5 mmol/L (45 mg/dL) if well nourished, under 3 mmol/L (54 mg/dL) if severely malnourished",
+     "dose": "AES 2016: under 60 mg/dL in a child; 25% dextrose 2 mL/kg from 2 years, 12.5% dextrose 4 mL/kg under 2. WHO: under 45 mg/dL (2.5 mmol/L) if well nourished, under 54 mg/dL (3 mmol/L) if severely malnourished",
      "status": "conflict",
      "sources": [
       {
@@ -512,7 +512,7 @@
     },
     {
      "item": "High glucose",
-     "dose": "DKA needs all three: glucose over 11 mmol/L (about 200 mg/dL), venous pH under 7.3 or bicarbonate under 18 mmol/L, and ketonemia (beta-hydroxybutyrate 3 mmol/L or more) or moderate or large ketonuria",
+     "dose": "DKA needs all three: glucose over 200 mg/dL (11 mmol/L), venous pH under 7.3 or bicarbonate under 18 mmol/L, and ketonemia (beta-hydroxybutyrate 3 mmol/L or more) or moderate or large ketonuria",
      "status": "ok",
      "sources": [
       {
@@ -766,7 +766,7 @@
    "id": "end_shock_surgical",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Shock with a surgical abdomen: resuscitation continues on the way to theatre. In an infant with bilious vomiting, peritonitis, sepsis or instability means the operating room without waiting for complete imaging, with the airway protected, nasogastric or orogastric decompression, IV fluid and broad-spectrum antibiotics, because midgut volvulus can progress to transmural necrosis within hours. Peritonitis, free air or shock also rule out enema reduction of an intussusception, which is treated surgically."
+   "summary": "Shock with a surgical abdomen: resuscitation continues on the way to the operating room. In an infant with bilious vomiting, peritonitis, sepsis or instability means the operating room without waiting for complete imaging, with the airway protected, nasogastric or orogastric decompression, IV fluid and broad-spectrum antibiotics, because midgut volvulus can progress to transmural necrosis within hours. Peritonitis, free air or shock also rule out enema reduction of an intussusception, which is treated surgically."
   },
   {
    "id": "end_picu",
@@ -1842,7 +1842,7 @@
     "An ORS trial with ondansetron, imaging if the vomiting goes on"
    ],
    "answer": 0,
-   "chainStep": "Urgent surgical review; nasogastric or orogastric decompression, IV fluid, broad-spectrum antibiotics; upper GI contrast series in a stable infant (ultrasound may show the whirlpool sign of volvulus); peritonitis, sepsis or instability goes to theatre without waiting for imaging",
+   "chainStep": "Urgent surgical review; nasogastric or orogastric decompression, IV fluid, broad-spectrum antibiotics; upper GI contrast series in a stable infant (ultrasound may show the whirlpool sign of volvulus); peritonitis, sepsis or instability goes to the operating room without waiting for imaging",
    "why": "Green vomit is malrotation with volvulus until proven otherwise, and volvulus can progress to necrosis within hours, so the surgeon is involved at once and the stomach decompressed. For bilious vomiting after the first 2 days of life ACR rates the upper GI series usually appropriate; it is the reference standard, although false negatives occur. Ultrasound may be appropriate, and its whirlpool sign is specific for volvulus, but a normal SMA and SMV relationship does not preclude malrotation. A contrast enema is not a first study (up to 15% have a normal mobile cecum), and treating green vomit as gastroenteritis misses the emergency.",
    "orders": [
     {
@@ -2186,7 +2186,7 @@
    "id": "end_intuss_surgery",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Surgery: peritonitis, free air or shock rule out an enema, and an irreducible intussusception or a perforation during the enema goes to theatre. APSA considers a laparoscopic approach first, for a shorter stay with similar complications; if the surgeon cannot reduce it, the segment is removed."
+   "summary": "Surgery: peritonitis, free air or shock rule out an enema, and an irreducible intussusception or a perforation during the enema goes to the operating room. APSA considers a laparoscopic approach first, for a shorter stay with similar complications; if the surgeon cannot reduce it, the segment is removed."
   },
   {
    "id": "end_intuss_neg",
@@ -2588,7 +2588,7 @@
     "front": "dka"
    },
    "results": {
-    "front": "Cap refill 3 seconds, alert. Glucose 26 mmol/L (468 mg/dL); blood ketones 5.8 mmol/L; venous pH 7.12, bicarbonate 8 mmol/L."
+    "front": "Cap refill 3 seconds, alert. Glucose 468 mg/dL (26 mmol/L); blood ketones 5.8 mmol/L; venous pH 7.12, bicarbonate 8 mmol/L."
    }
   },
   {
@@ -2603,7 +2603,7 @@
     "dehyd_result": "after_shock"
    },
    "results": {
-    "front": "Cold hands and feet, weak pulses, capillary refill 5 seconds; glucose 4.6 mmol/L (83 mg/dL).",
+    "front": "Cold hands and feet, weak pulses, capillary refill 5 seconds; glucose 83 mg/dL (4.6 mmol/L).",
     "shock_after": "After two 10 mL/kg boluses (100 mL each): alert, warm, pulses strong, refill 2 seconds, HR 140.",
     "flags_result": "No bile, stools watery without blood, abdomen soft and non-tender, fontanelle normal, no rash, no injury or ingestion; testes normal.",
     "pattern": "Watery stools 10 times a day and vomiting for 2 days; no earlier attacks.",
@@ -2619,20 +2619,20 @@
     "shock_after": "surgical"
    },
    "results": {
-    "front": "Cold, mottled, capillary refill 5 seconds; glucose 4.1 mmol/L (74 mg/dL).",
+    "front": "Cold, mottled, capillary refill 5 seconds; glucose 74 mg/dL (4.1 mmol/L).",
     "shock_after": "Still shocked after two 10 mL/kg boluses (40 mL each); abdomen distended and tender, blood per rectum, bile in the nasogastric tube."
    }
   },
   {
    "id": "shock_refractory",
    "label": "Shock that does not lift",
-   "vignette": "2-year-old girl, a day of vomiting and a few loose stools, then floppy. HR 176, BP 70/38, temperature 38.9 C, weight 12 kg.",
+   "vignette": "2-year-old girl, a day of vomiting and a few loose stools, then floppy. HR 176, BP 70/38, temperature 38.9 C (102 F), weight 12 kg.",
    "picks": {
     "front": "shock",
     "shock_after": "refractory"
    },
    "results": {
-    "front": "Mottled, cold feet, capillary refill 4 seconds; glucose 5.1 mmol/L (92 mg/dL).",
+    "front": "Mottled, cold feet, capillary refill 4 seconds; glucose 92 mg/dL (5.1 mmol/L).",
     "shock_after": "Still shocked after two 10 mL/kg boluses (120 mL each); abdomen soft, no bile, no rash yet."
    }
   },
@@ -2648,8 +2648,8 @@
     "ors_result": "takes"
    },
    "results": {
-    "front": "Warm, pulses good, capillary refill 2 seconds; glucose 2.1 mmol/L (38 mg/dL); urine ketones large.",
-    "flags_result": "After 60 mL of 10% glucose (5 mL/kg) he is awake and chatty, glucose 6.2 mmol/L at 30 minutes. No bile or blood, soft abdomen, no rash, no injury, testes normal.",
+    "front": "Warm, pulses good, capillary refill 2 seconds; glucose 38 mg/dL (2.1 mmol/L); urine ketones large.",
+    "flags_result": "After 60 mL of 10% glucose (5 mL/kg) he is awake and chatty, glucose 6.2 mmol/L (112 mg/dL) at 30 minutes. No bile or blood, soft abdomen, no rash, no injury, testes normal.",
     "pattern": "Vomiting then watery stools after a nursery outbreak; no past episodes.",
     "dehyd_result": "Dry mouth, fewer wet nappies, eyes normal; perfused.",
     "ors_result": "Took 600 mL of ORS (50 mL/kg) over 4 hours in small sips; one small vomit, now passing urine."
@@ -2666,7 +2666,7 @@
     "dehyd_result": "none"
    },
    "results": {
-    "front": "HR 112, capillary refill 2 seconds, warm hands and feet, alert; glucose 5.4 mmol/L (97 mg/dL).",
+    "front": "HR 112, capillary refill 2 seconds, warm hands and feet, alert; glucose 97 mg/dL (5.4 mmol/L).",
     "flags_result": "No bile, no blood, abdomen soft, no rash, no injury or ingestion.",
     "pattern": "Vomiting with diarrhea since yesterday, a classmate ill; no earlier attacks.",
     "dehyd_result": "Alert and playful, moist mouth, eyes normal, wet nappy an hour ago."
@@ -2685,7 +2685,7 @@
     "ondans_result": "takes"
    },
    "results": {
-    "front": "Warm, alert, capillary refill 2 seconds; glucose 4.9 mmol/L (88 mg/dL).",
+    "front": "Warm, alert, capillary refill 2 seconds; glucose 88 mg/dL (4.9 mmol/L).",
     "flags_result": "No bile or blood, soft abdomen, testes normal, no rash, no injury.",
     "pattern": "Vomiting and watery diarrhea since this morning; no past attacks.",
     "dehyd_result": "Dry lips, less urine, eyes normal, alert; perfused.",
@@ -2706,7 +2706,7 @@
     "ondans_result": "still"
    },
    "results": {
-    "front": "Warm, alert, capillary refill 2 seconds; glucose 4.4 mmol/L (79 mg/dL).",
+    "front": "Warm, alert, capillary refill 2 seconds; glucose 79 mg/dL (4.4 mmol/L).",
     "flags_result": "No bile or blood, soft abdomen, fontanelle closed, no rash, no injury.",
     "pattern": "Watery stools and vomiting for 2 days, both parents now unwell; no past attacks.",
     "dehyd_result": "Dry mouth, few wet nappies, eyes normal; perfused.",
@@ -2726,7 +2726,7 @@
     "ors_result": "worse"
    },
    "results": {
-    "front": "Warm, capillary refill 2 seconds, irritable; glucose 4.7 mmol/L (85 mg/dL).",
+    "front": "Warm, capillary refill 2 seconds, irritable; glucose 85 mg/dL (4.7 mmol/L).",
     "flags_result": "No bile, stools watery without blood, soft abdomen, fontanelle soft and flat, no rash.",
     "pattern": "Profuse watery stools 8 times a day for 2 days; no past attacks.",
     "dehyd_result": "Dry mouth, sunken eyes, irritable, tachycardic; perfused.",
@@ -2780,7 +2780,7 @@
     "pyl_result": "hps"
    },
    "results": {
-    "front": "Warm, capillary refill 2 seconds; glucose 4.3 mmol/L (77 mg/dL).",
+    "front": "Warm, capillary refill 2 seconds; glucose 77 mg/dL (4.3 mmol/L).",
     "flags_result": "Vomit is milk, never green; abdomen soft, no blood in stool, fontanelle normal.",
     "pattern": "Projectile non-bilious vomiting at 5 weeks, feeds eagerly afterwards, no diarrhea.",
     "pyl_result": "Pyloric muscle 4.5 mm thick, channel 19 mm long, no gastric contents pass during the scan. Chloride 88, potassium 3.0, bicarbonate 34 mmol/L."
@@ -2797,7 +2797,7 @@
     "pyl_result": "normal"
    },
    "results": {
-    "front": "Warm, alert, capillary refill 2 seconds; glucose 4.8 mmol/L (86 mg/dL).",
+    "front": "Warm, alert, capillary refill 2 seconds; glucose 86 mg/dL (4.8 mmol/L).",
     "flags_result": "Milky vomit, no bile, soft abdomen, no blood, fontanelle normal.",
     "pattern": "Projectile non-bilious vomits, hungry after feeds, no diarrhea.",
     "pyl_result": "Muscle 2.1 mm, channel 12 mm, contents pass through the pylorus during the scan. Electrolytes normal."
@@ -2813,7 +2813,7 @@
     "pattern": "reflux"
    },
    "results": {
-    "front": "Warm, alert, capillary refill under 2 seconds; glucose 5.0 mmol/L (90 mg/dL).",
+    "front": "Warm, alert, capillary refill under 2 seconds; glucose 90 mg/dL (5.0 mmol/L).",
     "flags_result": "No bile, soft abdomen, normal stools, fontanelle normal.",
     "pattern": "Effortless spit-ups since birth, gaining weight along the 50th centile; not projectile."
    }
@@ -2828,7 +2828,7 @@
     "pattern": "cyclic"
    },
    "results": {
-    "front": "Warm, capillary refill 2 seconds; glucose 4.6 mmol/L (83 mg/dL).",
+    "front": "Warm, capillary refill 2 seconds; glucose 83 mg/dL (4.6 mmol/L).",
     "flags_result": "No bile, no blood, abdomen soft, no head injury, no headache, no ingestion, no rash.",
     "pattern": "Five stereotyped episodes in 12 months, each 2 days, 6 to 10 weeks apart, normal between; an upper GI series last year was normal."
    }
@@ -2843,7 +2843,7 @@
     "bile_result": "malrot"
    },
    "results": {
-    "front": "Warm, capillary refill 2 seconds; glucose 4.2 mmol/L (76 mg/dL).",
+    "front": "Warm, capillary refill 2 seconds; glucose 76 mg/dL (4.2 mmol/L).",
     "flags_result": "Vomit dark green; abdomen soft, not distended; no colicky crying.",
     "bile_result": "Duodenojejunal flexure right of the spine, with a corkscrew of the proximal jejunum."
    }
@@ -2858,7 +2858,7 @@
     "bile_result": "normal"
    },
    "results": {
-    "front": "Warm, alert, capillary refill 2 seconds; glucose 4.9 mmol/L (88 mg/dL).",
+    "front": "Warm, alert, capillary refill 2 seconds; glucose 88 mg/dL (4.9 mmol/L).",
     "flags_result": "Green vomit twice; abdomen soft, no distension, stools normal, no colicky attacks.",
     "bile_result": "Duodenojejunal flexure left of the spine at the level of the pylorus; normal C-loop; contrast passes freely."
    }
@@ -2874,7 +2874,7 @@
     "enema_result": "reduced"
    },
    "results": {
-    "front": "Warm between attacks, capillary refill 2 seconds; glucose 5.0 mmol/L (90 mg/dL).",
+    "front": "Warm between attacks, capillary refill 2 seconds; glucose 90 mg/dL (5.0 mmol/L).",
     "flags_result": "Colicky attacks with pallor; a sausage-shaped mass in the right upper quadrant; no fever, no rash.",
     "intuss_result": "Target sign in the right upper quadrant, ileocolic; abdomen soft, no free air.",
     "enema_result": "Air enema: the mass is pushed back and air floods the small bowel; reduced."
@@ -2891,7 +2891,7 @@
     "enema_result": "partial"
    },
    "results": {
-    "front": "Warm, capillary refill 2 seconds; glucose 5.3 mmol/L (95 mg/dL).",
+    "front": "Warm, capillary refill 2 seconds; glucose 95 mg/dL (5.3 mmol/L).",
     "flags_result": "Attacks of crying with pallor, quiet between; red jelly-like stool; no fever.",
     "intuss_result": "Ileocolic target sign; no free fluid between the layers, no peritonitis, no free air.",
     "enema_result": "The head of the intussusception moves back to the cecum and stops at the ileocecal valve; she stays stable, abdomen soft."
@@ -2908,7 +2908,7 @@
     "enema_result": "failed"
    },
    "results": {
-    "front": "Perfused, capillary refill 2 seconds; glucose 4.6 mmol/L (83 mg/dL).",
+    "front": "Perfused, capillary refill 2 seconds; glucose 83 mg/dL (4.6 mmol/L).",
     "flags_result": "Colicky attacks with pallor, legs drawn up; currant jelly stool; no rash.",
     "intuss_result": "Ileocolic target sign; abdomen soft, no free air on the film.",
     "enema_result": "Three air enema attempts move nothing; the mass stays in the transverse colon."
@@ -2917,14 +2917,14 @@
   {
    "id": "intuss_perf",
    "label": "Intussusception with peritonitis",
-   "vignette": "9-month-old girl, 3 days of vomiting, now green, with colicky attacks; irritable between. HR 164, temperature 38.4 C, weight 8.5 kg.",
+   "vignette": "9-month-old girl, 3 days of vomiting, now green, with colicky attacks; irritable between. HR 164, temperature 38.4 C (101.1 F), weight 8.5 kg.",
    "picks": {
     "front": "ok",
     "flags_result": "colic",
     "intuss_result": "perforated"
    },
    "results": {
-    "front": "Warm, capillary refill 2 seconds, pulses good; glucose 5.5 mmol/L (99 mg/dL).",
+    "front": "Warm, capillary refill 2 seconds, pulses good; glucose 99 mg/dL (5.5 mmol/L).",
     "flags_result": "Colicky attacks with pallor for 3 days; the vomit is now green; bloody stool.",
     "intuss_result": "Target sign; abdomen rigid and tender; free air under the diaphragm on the film."
    }
@@ -2939,7 +2939,7 @@
     "intuss_result": "normal"
    },
    "results": {
-    "front": "Warm, alert, capillary refill 2 seconds; glucose 5.2 mmol/L (94 mg/dL).",
+    "front": "Warm, alert, capillary refill 2 seconds; glucose 94 mg/dL (5.2 mmol/L).",
     "flags_result": "Spells of crying with pallor and legs drawn up, playful between; no blood in the stool.",
     "intuss_result": "Good views of the whole colon: no target sign, no intussusception."
    }
@@ -2947,14 +2947,14 @@
   {
    "id": "appy_low",
    "label": "Low PAS",
-   "vignette": "10-year-old boy, since this morning a mild ache low on the right and one vomit after it, still eating. Temperature 37.2 C, HR 96, weight 32 kg.",
+   "vignette": "10-year-old boy, since this morning a mild ache low on the right and one vomit after it, still eating. Temperature 37.2 C (99 F), HR 96, weight 32 kg.",
    "picks": {
     "front": "ok",
     "flags_result": "rlq",
     "appy_risk": "low"
    },
    "results": {
-    "front": "Warm, alert; glucose 5.6 mmol/L (101 mg/dL).",
+    "front": "Warm, alert; glucose 101 mg/dL (5.6 mmol/L).",
     "flags_result": "Mild tenderness low on the right; the ache came on gradually, before the vomit; testes normal, no blood.",
     "appy_risk": "Nausea and vomiting 1, right lower quadrant tenderness 2; no migration, no anorexia, no fever, no cough or hop tenderness; white count 8,100, neutrophils 4,900: PAS 3."
    }
@@ -2962,7 +2962,7 @@
   {
    "id": "appy_pos",
    "label": "Appendicitis on ultrasound",
-   "vignette": "8-year-old girl, pain around the umbilicus since yesterday, now low on the right, worse on hopping; off food; vomited twice after the pain began. Temperature 38.3 C, HR 118, weight 26 kg.",
+   "vignette": "8-year-old girl, pain around the umbilicus since yesterday, now low on the right, worse on hopping; off food; vomited twice after the pain began. Temperature 38.3 C (100.9 F), HR 118, weight 26 kg.",
    "picks": {
     "front": "ok",
     "flags_result": "rlq",
@@ -2970,7 +2970,7 @@
     "appy_us_result": "appy"
    },
    "results": {
-    "front": "Warm, capillary refill 2 seconds; glucose 5.8 mmol/L (104 mg/dL).",
+    "front": "Warm, capillary refill 2 seconds; glucose 104 mg/dL (5.8 mmol/L).",
     "flags_result": "Pain moved to the right lower quadrant over a day, before the vomiting; tender there; nothing sudden, no blood.",
     "appy_risk": "Migration 1, anorexia 1, nausea or vomiting 1, fever 1, hop tenderness 2, right lower quadrant tenderness 2, white count 15,800 1, neutrophils 12,900 1: PAS 10.",
     "appy_us_result": "Noncompressible appendix 9 mm across with a thick wall and fluid around it."
@@ -2979,7 +2979,7 @@
   {
    "id": "appy_neg",
    "label": "Appendix not seen",
-   "vignette": "12-year-old boy, 18 hours of right lower abdominal pain and nausea, one vomit. Temperature 37.9 C, HR 104, weight 40 kg.",
+   "vignette": "12-year-old boy, 18 hours of right lower abdominal pain and nausea, one vomit. Temperature 37.9 C (100.2 F), HR 104, weight 40 kg.",
    "picks": {
     "front": "ok",
     "flags_result": "rlq",
@@ -2987,7 +2987,7 @@
     "appy_us_result": "not_shown"
    },
    "results": {
-    "front": "Warm, alert; glucose 5.4 mmol/L (97 mg/dL).",
+    "front": "Warm, alert; glucose 97 mg/dL (5.4 mmol/L).",
     "flags_result": "Tender in the right lower quadrant, the pain came on gradually, before the vomit; testes normal.",
     "appy_risk": "Anorexia 1, nausea 1, right lower quadrant tenderness 2, white count 11,200 1; no migration, no fever over 38, no cough or hop pain, neutrophils 6,800: PAS 5.",
     "appy_us_result": "The appendix is not seen; no free fluid, no mass."
@@ -3002,7 +3002,7 @@
     "flags_result": "torsion"
    },
    "results": {
-    "front": "Warm, alert; glucose 5.9 mmol/L (106 mg/dL).",
+    "front": "Warm, alert; glucose 106 mg/dL (5.9 mmol/L).",
     "flags_result": "Sudden one-sided pelvic pain with vomiting, tender low on the right; no diarrhea, no fever."
    }
   },
@@ -3015,7 +3015,7 @@
     "flags_result": "head"
    },
    "results": {
-    "front": "Warm, alert, capillary refill under 2 seconds; glucose 5.5 mmol/L (99 mg/dL).",
+    "front": "Warm, alert, capillary refill under 2 seconds; glucose 99 mg/dL (5.5 mmol/L).",
     "flags_result": "Three separate vomits after the fall; no loss of consciousness, not drowsy, no skull or basal fracture signs, no focal deficit; the story fits the injury."
    }
   },
@@ -3028,20 +3028,20 @@
     "flags_result": "ingestion"
    },
    "results": {
-    "front": "Warm, alert; glucose 5.0 mmol/L (90 mg/dL).",
+    "front": "Warm, alert; glucose 90 mg/dL (5.0 mmol/L).",
     "flags_result": "The battery cover is off and one battery is missing; she refuses to swallow and drools."
    }
   },
   {
    "id": "fever_rash",
    "label": "Fever, vomiting and a rash",
-   "vignette": "15-month-old boy, 12 hours of fever and vomiting, now irritable and crying when moved. Temperature 39.6 C, HR 168, BP 92/56, weight 11 kg.",
+   "vignette": "15-month-old boy, 12 hours of fever and vomiting, now irritable and crying when moved. Temperature 39.6 C (103.3 F), HR 168, BP 92/56, weight 11 kg.",
    "picks": {
     "front": "ok",
     "flags_result": "fever"
    },
    "results": {
-    "front": "Capillary refill 2 seconds, warm; glucose 5.1 mmol/L (92 mg/dL).",
+    "front": "Capillary refill 2 seconds, warm; glucose 92 mg/dL (5.1 mmol/L).",
     "flags_result": "A non-blanching purple rash on the legs; fontanelle bulging; neck stiff."
    }
   },
@@ -3055,7 +3055,7 @@
     "hus_result": "hus"
    },
    "results": {
-    "front": "Warm, capillary refill 2 seconds; glucose 5.6 mmol/L (101 mg/dL).",
+    "front": "Warm, capillary refill 2 seconds; glucose 101 mg/dL (5.6 mmol/L).",
     "flags_result": "Bloody diarrhea for 4 days last week, no colicky attacks, no mass; now pallor.",
     "hus_result": "Hemoglobin 72 g/L with schistocytes, platelets 38 x 10^9/L, creatinine 210 micromol/L, LDH high, Coombs negative; stool Shiga toxin positive."
    }
@@ -3070,7 +3070,7 @@
     "hus_result": "no_hus"
    },
    "results": {
-    "front": "Warm, alert, capillary refill 2 seconds; glucose 5.0 mmol/L (90 mg/dL).",
+    "front": "Warm, alert, capillary refill 2 seconds; glucose 90 mg/dL (5.0 mmol/L).",
     "flags_result": "Loose stools with blood, crampy pain but no colicky attacks with pallor, no mass.",
     "hus_result": "Hemoglobin 124 g/L, platelets 260 x 10^9/L, no schistocytes, creatinine 32 micromol/L; stool Shiga toxin positive."
    }

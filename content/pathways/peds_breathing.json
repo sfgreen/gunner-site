@@ -907,7 +907,7 @@
    ],
    "answer": 0,
    "chainStep": "Supportive care: superficial nasal suction for distress or feeding trouble from secretions, oxygen below the saturation threshold, fluids if intake is poor; no bronchodilators, epinephrine, steroids, hypertonic saline, antibiotics or chest physiotherapy",
-   "why": "No specific treatment changes the course of bronchiolitis, so care is supportive: superficial suction when secretions cause distress or feeding trouble, oxygen when saturation is persistently low, and fluids when intake falls. NICE says do not use antibiotics, hypertonic saline, nebulized adrenaline, salbutamol, montelukast, ipratropium or corticosteroids; PREDICT 2025 and the 2022 Italian guideline agree. AAP 2014 says no albuterol, no epinephrine, no systemic corticosteroids in any setting, no chest physiotherapy, and no antibiotics without a concomitant bacterial infection or a strong suspicion of one; it no longer recommends the albuterol trial its 2006 version allowed. Hypertonic saline is not given in the emergency department.",
+   "why": "No specific treatment changes the course of bronchiolitis, so care is supportive: superficial suction when secretions cause distress or feeding trouble, oxygen when saturation is persistently low, and fluids when intake falls. NICE says do not use antibiotics, hypertonic saline, nebulized epinephrine (adrenaline), albuterol (salbutamol), montelukast, ipratropium or corticosteroids; PREDICT 2025 and the 2022 Italian guideline agree. AAP 2014 says no albuterol, no epinephrine, no systemic corticosteroids in any setting, no chest physiotherapy, and no antibiotics without a concomitant bacterial infection or a strong suspicion of one; it no longer recommends the albuterol trial its 2006 version allowed. Hypertonic saline is not given in the emergency department.",
    "sources": [
     {
      "docId": "url:2d41be52da97",
@@ -1737,7 +1737,7 @@
     },
     {
      "item": "Corticosteroid with epinephrine",
-     "dose": "PREDICT 2025: consider the combination in severe bronchiolitis needing ICU-level care; NICE: do not use a combination of systemic corticosteroids and nebulised adrenaline; AAP 2014: a recommendation on combined dexamethasone and epinephrine is premature",
+     "dose": "PREDICT 2025: consider the combination in severe bronchiolitis needing ICU-level care; NICE: do not use a combination of systemic corticosteroids and nebulised epinephrine; AAP 2014: a recommendation on combined dexamethasone and epinephrine is premature",
      "status": "conflict",
      "sources": [
       {
@@ -2372,7 +2372,7 @@
     },
     {
      "item": "IV magnesium timing, life-threatening attack",
-     "dose": "EPR-3: consider it in life-threatening attacks; SIGN 158: add it when first-line nebulized salbutamol, ipratropium and steroid do not work",
+     "dose": "EPR-3: consider it in life-threatening attacks; SIGN 158: add it when first-line nebulized albuterol, ipratropium and steroid do not work",
      "status": "conflict",
      "sources": [
       {
@@ -3270,7 +3270,7 @@
   {
    "id": "shock_pneumonia",
    "label": "Breathless and in shock",
-   "vignette": "2-year-old boy, 12 kg, 3 days of fever and cough, now grunting and floppy. HR 182, RR 52, BP 68/38, SpO2 90% in air, temperature 39.9 C.",
+   "vignette": "2-year-old boy, 12 kg, 3 days of fever and cough, now grunting and floppy. HR 182, RR 52, BP 68/38, SpO2 90% in air, temperature 39.9 C (103.8 F).",
    "picks": {
     "front": "shock"
    },
@@ -3281,7 +3281,7 @@
   {
    "id": "stridor_croup",
    "label": "Barking cough and stridor",
-   "vignette": "2-year-old girl, 12 kg, 2 days of runny nose, then a barking cough overnight. HR 140, RR 36, SpO2 96%, temperature 38.2 C.",
+   "vignette": "2-year-old girl, 12 kg, 2 days of runny nose, then a barking cough overnight. HR 140, RR 36, SpO2 96%, temperature 38.2 C (100.8 F).",
    "picks": {
     "front": "stridor"
    },
@@ -3313,7 +3313,7 @@
    "results": {
     "front": "Apneic and blue, limp; brachial pulse 110; no allergen, no choking.",
     "bvm_resp": "Breathing on her own within a minute of bag-mask breaths; saturation 94% in oxygen.",
-    "findings": "Two days of coryza, then cough; fine crackles and wheeze on both sides; temperature 37.8 C.",
+    "findings": "Two days of coryza, then cough; fine crackles and wheeze on both sides; temperature 37.8 C (100 F).",
     "bronch_sev": "Two more short apneas in the ED; subcostal recession; saturation 90% in air."
    }
   },
@@ -3333,7 +3333,7 @@
   {
    "id": "bronch_mild",
    "label": "Mild bronchiolitis",
-   "vignette": "5-month-old boy, 7 kg, born at term, 2 days of a cold then cough and fast breathing; feeding a little less. HR 138, RR 48, SpO2 96% in air, temperature 37.9 C.",
+   "vignette": "5-month-old boy, 7 kg, born at term, 2 days of a cold then cough and fast breathing; feeding a little less. HR 138, RR 48, SpO2 96% in air, temperature 37.9 C (100.2 F).",
    "picks": {
     "front": "stable",
     "findings": "bronch",
@@ -3348,7 +3348,7 @@
   {
    "id": "bronch_lowsat",
    "label": "Bronchiolitis needing oxygen",
-   "vignette": "3-month-old girl, 5.8 kg, born at term, 3 days of cough after a cold. HR 150, RR 58, SpO2 87% in air, temperature 37.6 C.",
+   "vignette": "3-month-old girl, 5.8 kg, born at term, 3 days of cough after a cold. HR 150, RR 58, SpO2 87% in air, temperature 37.6 C (99.7 F).",
    "picks": {
     "front": "stable",
     "findings": "bronch",
@@ -3382,7 +3382,7 @@
   {
    "id": "bronch_feeds",
    "label": "Bronchiolitis feeding poorly",
-   "vignette": "4-month-old girl, 6.5 kg, born at term, day 4 of a cough. HR 150, RR 55, SpO2 95% in air, temperature 37.5 C.",
+   "vignette": "4-month-old girl, 6.5 kg, born at term, day 4 of a cough. HR 150, RR 55, SpO2 95% in air, temperature 37.5 C (99.5 F).",
    "picks": {
     "front": "stable",
     "findings": "bronch",
@@ -3405,7 +3405,7 @@
    },
    "results": {
     "front": "Tiring but breathing on his own, grunting, no stridor.",
-    "findings": "First episode; coryza then cough; crackles and wheeze throughout; temperature 37.9 C.",
+    "findings": "First episode; coryza then cough; crackles and wheeze throughout; temperature 37.9 C (100.2 F).",
     "bronch_sev": "Grunting, marked recession, RR 76, saturation 89% in air."
    }
   },
@@ -3493,7 +3493,7 @@
   {
    "id": "pna_mild",
    "label": "Mild pneumonia",
-   "vignette": "3-year-old boy, 14 kg, 2 days of fever to 39.6 C and cough. HR 140, RR 38, SpO2 95% in air.",
+   "vignette": "3-year-old boy, 14 kg, 2 days of fever to 39.6 C (103.3 F) and cough. HR 140, RR 38, SpO2 95% in air.",
    "picks": {
     "front": "stable",
     "findings": "pna",
@@ -3501,14 +3501,14 @@
    },
    "results": {
     "front": "Alert, mild tachypnea, breathing on his own, no stridor.",
-    "findings": "Fever 39.6 C; persistently focal crackles at the right base; no wheeze.",
+    "findings": "Fever 39.6 C (103.3 F); persistently focal crackles at the right base; no wheeze.",
     "pna_sev": "Saturation 95%, drinking well, no danger signs, mild distress; sudden onset."
    }
   },
   {
    "id": "pna_atypical",
    "label": "Walking pneumonia",
-   "vignette": "9-year-old girl, 28 kg, a week of dry cough, headache and sore throat. HR 104, RR 24, SpO2 97% in air, temperature 38.1 C.",
+   "vignette": "9-year-old girl, 28 kg, a week of dry cough, headache and sore throat. HR 104, RR 24, SpO2 97% in air, temperature 38.1 C (100.6 F).",
    "picks": {
     "front": "stable",
     "findings": "pna",
@@ -3523,7 +3523,7 @@
   {
    "id": "pna_severe",
    "label": "Pneumonia needing admission",
-   "vignette": "18-month-old girl, 11 kg, 2 days of fever to 39.8 C and cough, drinking poorly. HR 160, RR 56, SpO2 89% in air.",
+   "vignette": "18-month-old girl, 11 kg, 2 days of fever to 39.8 C (103.6 F) and cough, drinking poorly. HR 160, RR 56, SpO2 89% in air.",
    "picks": {
     "front": "stable",
     "findings": "pna",
@@ -3531,7 +3531,7 @@
    },
    "results": {
     "front": "Unwell, grunting, breathing on her own, no stridor.",
-    "findings": "Fever 39.8 C; bronchial breathing and crackles at the left base; no wheeze.",
+    "findings": "Fever 39.8 C (103.6 F); bronchial breathing and crackles at the left base; no wheeze.",
     "pna_sev": "Saturation 89% in air, grunting, drinking under half her usual."
    }
   },
@@ -3545,13 +3545,13 @@
    },
    "results": {
     "front": "Pink between fits and breathing on his own; no stridor.",
-    "findings": "Witnessed fit of coughing with cyanosis that settles; chest clear between fits; temperature 37.1 C."
+    "findings": "Witnessed fit of coughing with cyanosis that settles; chest clear between fits; temperature 37.1 C (98.8 F)."
    }
   },
   {
    "id": "pertussis_child",
    "label": "Pertussis in a school-age child",
-   "vignette": "7-year-old girl, 22 kg, unvaccinated, 10 days of coughing fits ending in a whoop, sometimes with vomiting; well between fits. HR 96, RR 22, SpO2 98% in air, temperature 37.2 C.",
+   "vignette": "7-year-old girl, 22 kg, unvaccinated, 10 days of coughing fits ending in a whoop, sometimes with vomiting; well between fits. HR 96, RR 22, SpO2 98% in air, temperature 37.2 C (99 F).",
    "picks": {
     "front": "stable",
     "findings": "pert_older"

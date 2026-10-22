@@ -1193,7 +1193,7 @@
    ],
    "answer": 0,
    "chainStep": "Immediate referral to the spinal surgical service; decompression as quickly as possible (with painless retention and overflow, within 24 hours of the MRI); nil by mouth; catheterise before surgery",
-   "why": "Confirmed compression goes to the spinal surgeons at once. Incomplete CES is operated on as quickly as possible, as an emergency between NCEPOD E1 and E2; painless retention with overflow (CES-R) still goes to theatre within 24 hours of the MRI, and about 70% of those patients benefit. Treating before the symptoms become severe can reduce the risk of permanent disability, so nobody waits for retention to appear.",
+   "why": "Confirmed compression goes to the spinal surgeons at once. Incomplete CES is operated on as quickly as possible, as an emergency between NCEPOD E1 and E2; painless retention with overflow (CES-R) still goes to surgery within 24 hours of the MRI, and about 70% of those patients benefit. Treating before the symptoms become severe can reduce the risk of permanent disability, so nobody waits for retention to appear.",
    "next": "end_ces",
    "sources": [
     {
@@ -1535,13 +1535,13 @@
    "options": [
     "Stay active and an NSAID at the lowest effective dose",
     "Bed rest until the pain settles, then a gradual return",
-    "Paracetamol (acetaminophen) alone, to avoid NSAID risks",
+    "Acetaminophen (paracetamol) alone, to avoid NSAID risks",
     "An opioid as the first drug, for a few days",
     "A short course of oral prednisone"
    ],
    "answer": 0,
    "chainStep": "Advice to stay active and keep up normal activities; ibuprofen 400 mg every 4 to 6 hours as needed, or naproxen 500 mg then 250 mg every 6 to 8 hours, at the lowest effective dose for the shortest time; no bed rest, routine opioid, systemic steroid or routine imaging",
-   "why": "Self-management with encouragement to continue normal activities runs through every step, and advice to remain active is the self-care step for acute pain. Oral NSAIDs are the drug to consider, at the lowest effective dose for the shortest time, weighing gastrointestinal, liver and cardiorenal risk and age. Paracetamol alone is not offered and VA/DoD suggests against acetaminophen; opioids are not routine for acute pain, a weak opioid only when an NSAID is contraindicated, not tolerated or ineffective; systemic corticosteroids are suggested against.",
+   "why": "Self-management with encouragement to continue normal activities runs through every step, and advice to remain active is the self-care step for acute pain. Oral NSAIDs are the drug to consider, at the lowest effective dose for the shortest time, weighing gastrointestinal, liver and cardiorenal risk and age. Acetaminophen alone is not offered and VA/DoD suggests against acetaminophen; opioids are not routine for acute pain, a weak opioid only when an NSAID is contraindicated, not tolerated or ineffective; systemic corticosteroids are suggested against.",
    "next": "ns_dispo",
    "sources": [
     {
@@ -1601,7 +1601,7 @@
      "status": "pending"
     },
     {
-     "item": "Paracetamol (acetaminophen) alone",
+     "item": "Acetaminophen alone",
      "dose": "Not offered",
      "status": "avoid",
      "sources": [

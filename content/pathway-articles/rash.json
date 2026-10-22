@@ -85,7 +85,7 @@
     },
     {
       "lead": "Vesicles: the host and the distribution decide.",
-      "text": "One dermatome, immunocompetent: oral valacyclovir 1 g three times a day within 72 hours. Nose tip: urgent ophthalmology. Disseminated or immunocompromised: IV aciclovir 10 mg/kg every 8 hours (20 mg/kg under 12 years).",
+      "text": "One dermatome, immunocompetent: oral valacyclovir 1 g three times a day within 72 hours. Nose tip: urgent ophthalmology. Disseminated or immunocompromised: IV acyclovir (aciclovir) 10 mg/kg every 8 hours (20 mg/kg under 12 years).",
       "refs": [
         "ves_look",
         "zoster",
@@ -379,7 +379,7 @@
     },
     {
       "q": "What is the treatment for shingles?",
-      "a": "In one dermatome in an immunocompetent adult: an oral antiviral within 72 hours of the rash, most effective within 48, such as valacyclovir 1 g three times a day, with analgesia. Vesicles on the nose tip mean urgent ophthalmology. Disseminated zoster or VZV on immunosuppression means admission for IV aciclovir 10 mg/kg every 8 hours. Systemic steroids are not routine.",
+      "a": "In one dermatome in an immunocompetent adult: an oral antiviral within 72 hours of the rash, most effective within 48, such as valacyclovir 1 g three times a day, with analgesia. Vesicles on the nose tip mean urgent ophthalmology. Disseminated zoster or VZV on immunosuppression means admission for IV acyclovir 10 mg/kg every 8 hours. Systemic steroids are not routine.",
       "refs": [
         "zoster",
         "ves_look",

@@ -184,6 +184,12 @@
    "label": "WSES-AAST kidney 2019",
    "title": "Kidney and uro-trauma: WSES-AAST guidelines (World J Emerg Surg 2019)",
    "url": "https://pubmed.ncbi.nlm.nih.gov/31827593/"
+  },
+  {
+   "docId": "pmid:39730103",
+   "label": "MTP review 2025",
+   "title": "A comprehensive review of massive transfusion and major hemorrhage protocols: origins, core principles and practical implementation (Braz J Anesthesiol 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39730103/"
   }
  ],
  "differential": [
@@ -528,7 +534,7 @@
    "ask": "Sucking chest wound. First?",
    "options": [
     "Occlusive dressing taped on three sides, watch for tension, then a chest drain",
-    "Pack the wound tightly with gauze and leave the packing in place until the patient reaches theatre",
+    "Pack the wound tightly with gauze and leave the packing in place until the patient reaches the operating room",
     "Suture the wound closed in the resuscitation bay",
     "Chest x-ray first, then cover the wound if it still sucks air"
    ],
@@ -630,7 +636,7 @@
    "id": "end_thoracotomy",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Massive hemothorax: to theatre for operative control, with balanced blood products and TXA running. WSES-AAST operates for instability from chest bleeding, more than 1,500 mL, or more than 200 mL an hour over 3 hours; its recommendation box puts the 1,500 mL over 24 hours, its text as a rapid loss."
+   "summary": "Massive hemothorax: to the operating room for operative control, with balanced blood products and TXA running. WSES-AAST operates for instability from chest bleeding, more than 1,500 mL, or more than 200 mL an hour over 3 hours; its recommendation box puts the 1,500 mL over 24 hours, its text as a rapid loss."
   },
   {
    "id": "flail_step",
@@ -641,7 +647,7 @@
     "Oxygen and strong analgesia; consider rib fixation once stable",
     "Intubate now, although he is still oxygenating well on the face mask",
     "Withhold opioids so that they do not blunt his breathing",
-    "Rib fixation in theatre now, before the rest of the survey"
+    "Rib fixation in the operating room now, before the rest of the survey"
    ],
    "answer": 0,
    "chainStep": "Oxygen to target and effective analgesia; NIV or ventilation only for respiratory failure; surgical rib stabilisation within 48 to 72 hours once stable",
@@ -996,6 +1002,22 @@
       }
      ],
      "note": "NICE activates on physiology and the response to immediate volume resuscitation, not on a risk tool applied at a single time point (NG39 1.5.13, 1.5.14)."
+    },
+    {
+     "item": "ABC score cutoffs",
+     "dose": "ACS TQIP writes pulse over 120 and systolic under 90; a 2025 review's table of the score gives heart rate 120 or more and systolic 90 or less; one point each with a positive FAST and a penetrating torso injury, 2 or more to activate",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:1176c205d68a",
+       "where": "Triggers for Initiating Massive Transfusion: \"pulse >120, SBP<90, + FAST, and penetrating torso injury\""
+      },
+      {
+       "docId": "pmid:39730103",
+       "where": "Table 2, Assessment of Blood Consumption (ABC): \"SAP ≤ 90 mmHg; HR ≥ 120 bpm\""
+      }
+     ],
+     "note": "The two sources set the edges differently: a pulse of exactly 120 or a systolic of exactly 90 scores a point in the review's table but not in the TQIP text."
     },
     {
      "item": "Plasma to red cells",
@@ -2403,7 +2425,7 @@
    "ask": "Penetrating abdominal wound, pressure normal. First?",
    "options": [
     "Look for laparotomy signs and the track of the wound",
-    "Let the FAST decide: theatre if free fluid, home if not",
+    "Let the FAST decide: the operating room if free fluid, home if not",
     "CT of the abdomen before examining the wound or the belly",
     "Close the wound and start antibiotics"
    ],

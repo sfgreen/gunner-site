@@ -48,7 +48,7 @@
     },
     {
       "lead": "Colic: an NSAID first.",
-      "text": "Ketorolac 30 mg IV once (15 mg if 65 or older, renally impaired or under 50 kg); if contraindicated or not enough, IV paracetamol then an opioid (NICE) or IV morphine (US practice); no antispasmodics.",
+      "text": "Ketorolac 30 mg IV once (15 mg if 65 or older, renally impaired or under 50 kg); if contraindicated or not enough, IV acetaminophen (paracetamol) then an opioid (NICE) or IV morphine (US practice); no antispasmodics.",
       "refs": [
         "colic_pain"
       ]
@@ -171,7 +171,7 @@
     {
       "stage": "Disposition",
       "heading": "Which antibiotic for pyelonephritis going home?",
-      "intro": "An oral agent chosen by local resistance and switched by the culture: ciprofloxacin where fluoroquinolone resistance is 10% or less in US practice, cefalexin first in NICE.",
+      "intro": "An oral agent chosen by local resistance and switched by the culture: ciprofloxacin where fluoroquinolone resistance is 10% or less in US practice, cephalexin (cefalexin) first in NICE.",
       "refs": [
         "pyelo_oral"
       ]
@@ -239,7 +239,7 @@
     "pimp": [
       {
         "q": "Why an NSAID before morphine for renal colic?",
-        "a": "Against opioids, antispasmodics and IV paracetamol, NSAIDs cut the need for rescue medication and reduced pain with fewer adverse effects. Opioids come later: after IV paracetamol in NICE, straight after ketorolac in US practice.",
+        "a": "Against opioids, antispasmodics and IV acetaminophen, NSAIDs cut the need for rescue medication and reduced pain with fewer adverse effects. Opioids come later: after IV acetaminophen in NICE, straight after ketorolac in US practice.",
         "refs": [
           "colic_pain"
         ]
@@ -339,7 +339,7 @@
   "faq": [
     {
       "q": "What is the best pain medicine for a kidney stone?",
-      "a": "An NSAID first, for example ketorolac 30 mg IV once, or 15 mg if 65 or older, renally impaired or under 50 kg. If NSAIDs are contraindicated or not enough, NICE moves to IV paracetamol and then an opioid, while US practice reaches for IV morphine after ketorolac. Antispasmodics are not offered, and IV fluids treat dehydration rather than flush out the stone.",
+      "a": "An NSAID first, for example ketorolac 30 mg IV once, or 15 mg if 65 or older, renally impaired or under 50 kg. If NSAIDs are contraindicated or not enough, NICE moves to IV acetaminophen and then an opioid, while US practice reaches for IV morphine after ketorolac. Antispasmodics are not offered, and IV fluids treat dehydration rather than flush out the stone.",
       "refs": [
         "colic_pain"
       ]
@@ -371,7 +371,7 @@
     },
     {
       "q": "What antibiotic for pyelonephritis going home?",
-      "a": "An oral agent chosen by local resistance and switched by the culture. In US practice, ciprofloxacin 500 mg twice a day for 7 days where fluoroquinolone resistance is 10% or less, with an IV dose of ceftriaxone first if it is higher; NICE starts with cefalexin and keeps ciprofloxacin for when others are unsuitable. TMP-SMX waits for susceptibility, and nitrofurantoin is not indicated.",
+      "a": "An oral agent chosen by local resistance and switched by the culture. In US practice, ciprofloxacin 500 mg twice a day for 7 days where fluoroquinolone resistance is 10% or less, with an IV dose of ceftriaxone first if it is higher; NICE starts with cephalexin and keeps ciprofloxacin for when others are unsuitable. TMP-SMX waits for susceptibility, and nitrofurantoin is not indicated.",
       "refs": [
         "pyelo_oral"
       ]

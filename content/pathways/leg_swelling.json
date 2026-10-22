@@ -148,6 +148,12 @@
    "label": "Baker cyst review 2026",
    "title": "Ruptured Baker's Cyst Demystified: Current Evidence, Diagnostic Strategies, and Treatment Options for an Under-Recognized Condition (Cureus 2026, narrative review)",
    "url": "https://pubmed.ncbi.nlm.nih.gov/41552735/"
+  },
+  {
+   "docId": "pmid:30855835",
+   "label": "StatPearls: Heparin",
+   "title": "Heparin (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30855835/"
   }
  ],
  "differential": [
@@ -513,6 +519,22 @@
      "note": "The heparin label lists treatment of peripheral arterial embolism among its indications; its dose is the general full-dose regimen."
     },
     {
+     "item": "Unfractionated heparin, weight-based",
+     "dose": "80 units/kg IV bolus, then 18 units/kg/h, titrated to the aPTT (StatPearls heparin review); the label's full-dose regimen is a fixed 5,000-unit bolus, then 20,000 to 40,000 units a day, based on a 68 kg patient",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:30855835",
+       "where": "Administration: \"For most therapeutic infusions, treatment begins with an IV bolus injection of 80 units/kg, followed by a continuous infusion at 18 units/kg/h.\"; Monitoring: \"Dosage titrations are made based on the results of the aPTT.\""
+      },
+      {
+       "docId": "url:ed400c98a7b6",
+       "where": "2 Dosage and Administration table"
+      }
+     ],
+     "note": "The label's fixed doses assume a 68 kg patient; the weight-based regimen scales to the patient, and pw_dyspnea gives the same 80 IU/kg bolus for suspected high-risk PE."
+    },
+    {
      "item": "Heparin not given",
      "dose": "High bleeding risk or active bleeding, an ALI from aortic dissection or major vascular trauma; after heparin-induced thrombocytopenia, a direct thrombin inhibitor instead",
      "status": "ok",
@@ -710,6 +732,22 @@
      ]
     },
     {
+     "item": "Unfractionated heparin, weight-based",
+     "dose": "80 units/kg IV bolus, then 18 units/kg/h, titrated to the aPTT (StatPearls heparin review); the label's full-dose regimen is a fixed 5,000-unit bolus, then 20,000 to 40,000 units a day, based on a 68 kg patient",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:30855835",
+       "where": "Administration: \"For most therapeutic infusions, treatment begins with an IV bolus injection of 80 units/kg, followed by a continuous infusion at 18 units/kg/h.\"; Monitoring: \"Dosage titrations are made based on the results of the aPTT.\""
+      },
+      {
+       "docId": "url:ed400c98a7b6",
+       "where": "2 Dosage and Administration table"
+      }
+     ],
+     "note": "The label's fixed doses assume a 68 kg patient; the weight-based regimen scales to the patient, and pw_dyspnea gives the same 80 IU/kg bolus for suspected high-risk PE."
+    },
+    {
      "item": "Catheter-directed thrombolysis",
      "dose": "Reasonable for limb-threatening DVT; NICE: iliofemoral DVT with symptoms under 14 days, good functional status, life expectancy 1 year or more, low bleeding risk",
      "status": "ok",
@@ -810,7 +848,7 @@
        "where": "Timing of source control (1B)"
       }
      ],
-     "note": "The sepsis pathway quotes the 2018 figure of 12 hours."
+     "note": "pw_sepsis_fever and pw_scrotal_pain use the same 6 hours."
     },
     {
      "item": "Re-exploration",

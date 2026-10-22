@@ -32,7 +32,7 @@
   "shortAnswer": [
     {
       "lead": "Core temperature on the right probe.",
-      "text": "Esophageal, bladder or rectal (rectal after exertion in the heat), on a thermometer that reads below 35 °C (a thermistor epitympanic probe also works in the cold); infrared tympanic, oral and temporal readings mislead.",
+      "text": "Esophageal, bladder or rectal (rectal after exertion in the heat), on a thermometer that reads below 35 °C (95 °F) (a thermistor epitympanic probe also works in the cold); infrared tympanic, oral and temporal readings mislead.",
       "refs": [
         "triage",
         "heat_assess"
@@ -40,14 +40,14 @@
     },
     {
       "lead": "Heat stroke: cool first, transport second, with medical staff on site.",
-      "text": "Cold-water immersion where feasible, aiming under 38.9 °C within 30 minutes of collapse, and stopping active cooling at 38 to 39 °C (NATA: 38.9 °C). No antipyretics, no dantrolene.",
+      "text": "Cold-water immersion where feasible, aiming under 38.9 °C (102 °F) within 30 minutes of collapse, and stopping active cooling at 38 to 39 °C (100.4 to 102.2 °F) (NATA: 38.9 °C, 102 °F). No antipyretics, no dantrolene.",
       "refs": [
         "hs_cool"
       ]
     },
     {
       "lead": "Hypothermia: gentle, horizontal, staged by the core.",
-      "text": "Mild 32 to 35 °C, moderate 28 to 32 °C, severe under 28 °C. A stable circulation gets external rewarming and warmed fluids; a high-risk patient goes to an ECLS center.",
+      "text": "Mild 32 to 35 °C (89.6 to 95 °F), moderate 28 to 32 °C (82.4 to 89.6 °F), severe under 28 °C (82.4 °F). A stable circulation gets external rewarming and warmed fluids; a high-risk patient goes to an ECLS center.",
       "refs": [
         "hypo_stage",
         "hypo_result",
@@ -57,7 +57,7 @@
     },
     {
       "lead": "Hypothermic arrest: resuscitate until warm.",
-      "text": "A core under 30 °C with no sign of irreversible death gets continuous CPR and ECLS rewarming, with termination judged at the target temperature rather than after a fixed time; a HOPE estimate under 10% argues against ECLS.",
+      "text": "A core under 30 °C (86 °F) with no sign of irreversible death gets continuous CPR and ECLS rewarming, with termination judged at the target temperature rather than after a fixed time; a HOPE estimate under 10% argues against ECLS.",
       "refs": [
         "cold_arrest",
         "ca_result"
@@ -165,7 +165,7 @@
     "heading": "Watch lists: what to recheck, and for how long",
     "items": [
       {
-        "text": "Heat stroke: continuous rectal or esophageal temperature during cooling; stop active cooling at 38 to 39 °C (NATA: 38.9 °C) to avoid overcooling.",
+        "text": "Heat stroke: continuous rectal or esophageal temperature during cooling; stop active cooling at 38 to 39 °C (100.4 to 102.2 °F) (NATA: 38.9 °C, 102 °F) to avoid overcooling.",
         "refs": [
           "hs_cool"
         ]
@@ -217,7 +217,7 @@
     ]
   },
   "rounds": {
-    "present": "Lead with the core temperature and the brain, then the cooling clock. One-liner: 19-year-old linebacker who collapsed at a preseason practice on a humid afternoon, combative and confused with a GCS of 12, rectal temperature 41.6 °C, sweating, no rigidity or clonus and no medicines: exertional heat stroke. Pulse 146, BP 104/58, airway open, no fall. Cooled at once in an ice-water tub, reaching 38.9 °C in 24 minutes, inside the 30-minute target, and now waking. After cooling his CK is 52,000, creatinine 2.3 mg/dL, potassium 5.7, platelets 88,000 and INR 1.6, so this is heat stroke with organ injury: intensive care, IV fluids for rhabdomyolysis titrated to urine output, the potassium treated as an emergency, and blood products for DIC by bleeding and labs. No antipyretics and no dantrolene.",
+    "present": "Lead with the core temperature and the brain, then the cooling clock. One-liner: 19-year-old linebacker who collapsed at a preseason practice on a humid afternoon, combative and confused with a GCS of 12, rectal temperature 41.6 °C (106.9 °F), sweating, no rigidity or clonus and no medicines: exertional heat stroke. Pulse 146, BP 104/58, airway open, no fall. Cooled at once in an ice-water tub, reaching 38.9 °C (102 °F) in 24 minutes, inside the 30-minute target, and now waking. After cooling his CK is 52,000, creatinine 2.3 mg/dL, potassium 5.7, platelets 88,000 and INR 1.6, so this is heat stroke with organ injury: intensive care, IV fluids for rhabdomyolysis titrated to urine output, the potassium treated by its UKKA band (5.7 is mild; an ECG from 6.0), and blood products for DIC by bleeding and labs. No antipyretics and no dantrolene.",
     "presentRefs": ["case:exertional_heat_stroke", "front", "heat_assess", "heat_result", "hs_cool", "cool_labs", "end_hs_organ"],
     "pimp": [
       {
@@ -230,7 +230,7 @@
       },
       {
         "q": "What separates heat exhaustion from heat stroke?",
-        "a": "The brain. Heat stroke is central nervous system dysfunction, such as delirium, ataxia or seizures, with a core temperature typically over 40 °C (NATA uses over 40.5 °C); heat exhaustion is alert and oriented, with a core usually under 40 °C.",
+        "a": "The brain. Heat stroke is central nervous system dysfunction, such as delirium, ataxia or seizures, with a core temperature typically over 40 °C (104 °F) (NATA uses over 40.5 °C, 104.9 °F); heat exhaustion is alert and oriented, with a core usually under 40 °C (104 °F).",
         "refs": [
           "heat_assess",
           "heat_result"
@@ -296,7 +296,7 @@
       ]
     },
     {
-      "text": "Rubbing frostbite, or thawing it where it could refreeze. Rapid rewarming in 37 to 39 °C water until pliable once refreezing can be prevented (AHA first aid: 37 to 40 °C).",
+      "text": "Rubbing frostbite, or thawing it where it could refreeze. Rapid rewarming in 37 to 39 °C (98.6 to 102.2 °F) water until pliable once refreezing can be prevented (AHA first aid: 37 to 40 °C, 98.6 to 104 °F).",
       "refs": [
         "frost"
       ]
@@ -323,7 +323,7 @@
   "faq": [
     {
       "q": "How do you treat exertional heat stroke?",
-      "a": "Cool at once, before transport: cold-water immersion up to the neck in stirred ice water, about 1 °C every 5 minutes, aiming under 38.9 °C within 30 minutes of collapse, with a continuous rectal or esophageal temperature. Stop active cooling at 38 to 39 °C to avoid overcooling; NATA stops at 38.9 °C. Antipyretics and dantrolene have no role. Then recheck CK, potassium, creatinine, liver tests, platelets and clotting.",
+      "a": "Cool at once, before transport: cold-water immersion up to the neck in stirred ice water, about 1 °C (1.8 °F) every 5 minutes, aiming under 38.9 °C (102 °F) within 30 minutes of collapse, with a continuous rectal or esophageal temperature. Stop active cooling at 38 to 39 °C (100.4 to 102.2 °F) to avoid overcooling; NATA stops at 38.9 °C (102 °F). Antipyretics and dantrolene have no role. Then recheck CK, potassium, creatinine, liver tests, platelets and clotting.",
       "refs": [
         "hs_cool",
         "cool_labs"
@@ -331,7 +331,7 @@
     },
     {
       "q": "What are the stages of hypothermia, and how is each rewarmed?",
-      "a": "Mild is 32 to 35 °C, moderate 28 to 32 °C and severe under 28 °C, staged by core temperature and consciousness, not shivering. A stable circulation gets passive and active external rewarming: insulation, forced air and heat packs to the trunk, and warmed IV fluids. A core under 30 °C (32 °C if old or ill), a systolic under 90 or VT means direct transfer to an ECLS center.",
+      "a": "Mild is 32 to 35 °C (89.6 to 95 °F), moderate 28 to 32 °C (82.4 to 89.6 °F) and severe under 28 °C (82.4 °F), staged by core temperature and consciousness, not shivering. A stable circulation gets passive and active external rewarming: insulation, forced air and heat packs to the trunk, and warmed IV fluids. A core under 30 °C (86 °F) (32 °C (89.6 °F) if old or ill), a systolic under 90 or VT means direct transfer to an ECLS center.",
       "refs": [
         "hypo_stage",
         "hypo_result",

@@ -1517,7 +1517,7 @@
     "A CSF shunt now for the headache, then weight management and follow-up"
    ],
    "answer": 0,
-   "chainStep": "Weight management (BMI over 30); acetazolamide titrated up; short-term NSAID or paracetamol, no opioids; ophthalmology follow-up by papilledema grade",
+   "chainStep": "Weight management (BMI over 30); acetazolamide titrated up; short-term NSAID or acetaminophen (paracetamol), no opioids; ophthalmology follow-up by papilledema grade",
    "why": "Weight loss is the only disease-modifying therapy in typical IIH, and everyone with a BMI over 30 is counselled at the earliest opportunity; acetazolamide could be prescribed for symptoms, though the trial benefit was modest. Serial LPs are not recommended, a prolonged course of steroids is not recommended because of weight gain, and CSF diversion is generally not recommended for headache alone. If vision declines, the acute treatment is surgical.",
    "next": "end_iih",
    "sources": [
@@ -1540,7 +1540,7 @@
     },
     {
      "item": "Headache",
-     "dose": "Short-term NSAID or paracetamol; no opioids; warn about medication overuse",
+     "dose": "Short-term NSAID or acetaminophen; no opioids; warn about medication overuse",
      "status": "ok",
      "sources": [
       {
@@ -2105,14 +2105,14 @@
    "stage": "Manage",
    "ask": "Tension-type headache, no red flags. Treatment?",
    "options": [
-    "Aspirin, paracetamol or an NSAID; no opioid",
-    "Codeine with paracetamol",
+    "Aspirin, acetaminophen or an NSAID; no opioid",
+    "Codeine with acetaminophen",
     "Sumatriptan 6 mg subcutaneously",
     "Non-contrast CT head before any treatment"
    ],
    "answer": 0,
-   "chainStep": "Aspirin, paracetamol or an NSAID (no aspirin under 16); no opioids; no imaging for reassurance; warn about medication overuse",
-   "why": "NICE CG150 considers aspirin, paracetamol or an NSAID for acute tension-type headache and does not offer opioids. Sumatriptan injection is indicated for migraine and cluster headache, and only once that diagnosis is clear. Imaging solely for reassurance is not offered, and the risk of medication overuse headache is explained to anyone using acute treatments.",
+   "chainStep": "Aspirin, acetaminophen or an NSAID (no aspirin under 16); no opioids; no imaging for reassurance; warn about medication overuse",
+   "why": "NICE CG150 considers aspirin, acetaminophen or an NSAID for acute tension-type headache and does not offer opioids. Sumatriptan injection is indicated for migraine and cluster headache, and only once that diagnosis is clear. Imaging solely for reassurance is not offered, and the risk of medication overuse headache is explained to anyone using acute treatments.",
    "next": "end_tth",
    "sources": [
     {
@@ -2138,7 +2138,7 @@
    ],
    "answer": 0,
    "chainStep": "100% oxygen at 12 L/min or more by non-rebreathing mask with reservoir, and/or sumatriptan 6 mg SC; verapamil for the bout with specialist advice; home oxygen",
-   "why": "NICE CG150 offers oxygen and/or a subcutaneous or nasal triptan: 100% oxygen at 12 litres a minute or more through a non-rebreathing mask with a reservoir bag. Sumatriptan injection is indicated for cluster headache at a single 6 mg dose. Paracetamol, NSAIDs, opioids, ergots and oral triptans are not offered for an acute cluster attack.",
+   "why": "NICE CG150 offers oxygen and/or a subcutaneous or nasal triptan: 100% oxygen at 12 litres a minute or more through a non-rebreathing mask with a reservoir bag. Sumatriptan injection is indicated for cluster headache at a single 6 mg dose. Acetaminophen, NSAIDs, opioids, ergots and oral triptans are not offered for an acute cluster attack.",
    "next": "end_cluster",
    "sources": [
     {
@@ -2388,7 +2388,7 @@
    "id": "end_tth",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Tension-type headache: aspirin, paracetamol or an NSAID, no opioids, no imaging for reassurance, and a warning about medication overuse."
+   "summary": "Tension-type headache: aspirin, acetaminophen or an NSAID, no opioids, no imaging for reassurance, and a warning about medication overuse."
   },
   {
    "id": "end_moh",
@@ -2743,7 +2743,7 @@
   {
    "id": "migraine",
    "label": "Migraine attack",
-   "vignette": "27-year-old woman with known migraine, 14 hours of a throbbing left-sided headache like her usual attacks, with nausea and light sensitivity; paracetamol at home did not help, and she has not taken an NSAID or a triptan today. BP 126/78, HR 84, afebrile. No cardiac history.",
+   "vignette": "27-year-old woman with known migraine, 14 hours of a throbbing left-sided headache like her usual attacks, with nausea and light sensitivity; acetaminophen at home did not help, and she has not taken an NSAID or a triptan today. BP 126/78, HR 84, afebrile. No cardiac history.",
    "picks": {
     "front_door": "none",
     "primary": "migraine"
@@ -2866,14 +2866,14 @@
   {
    "id": "moh",
    "label": "Medication overuse headache",
-   "vignette": "39-year-old woman with migraine, a daily headache for 4 months; she takes sumatriptan on about 12 days a month and paracetamol on most other days. No opioids. BP 122/76, afebrile.",
+   "vignette": "39-year-old woman with migraine, a daily headache for 4 months; she takes sumatriptan on about 12 days a month and acetaminophen on most other days. No opioids. BP 122/76, afebrile.",
    "picks": {
     "front_door": "none",
     "primary": "moh"
    },
    "results": {
     "front_door": "GCS 15, normal neurological exam and fundi, afebrile.",
-    "primary": "Daily headache for 4 months while taking sumatriptan on 12 days a month and paracetamol on most other days."
+    "primary": "Daily headache for 4 months while taking sumatriptan on 12 days a month and acetaminophen on most other days."
    }
   }
  ]

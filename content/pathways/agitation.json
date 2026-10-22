@@ -3238,7 +3238,7 @@
   {
    "id": "hypo_drinker",
    "label": "Agitated drinker with a low glucose",
-   "vignette": "51-year-old man, a heavy drinker, brought by police shouting and swinging at staff; sweaty and tremulous. HR 112, BP 138/84, RR 18, SpO2 97% on air, T 36.8 °C.",
+   "vignette": "51-year-old man, a heavy drinker, brought by police shouting and swinging at staff; sweaty and tremulous. HR 112, BP 138/84, RR 18, SpO2 97% on air, T 36.8 °C (98.2 °F).",
    "picks": {
     "front": "first"
    },
@@ -3249,7 +3249,7 @@
   {
    "id": "head_injury",
    "label": "Combative after a fall on apixaban",
-   "vignette": "68-year-old woman on apixaban, confused and combative after a fall at home. HR 92, BP 162/90, SpO2 96%, T 36.9 °C.",
+   "vignette": "68-year-old woman on apixaban, confused and combative after a fall at home. HR 92, BP 162/90, SpO2 96%, T 36.9 °C (98.4 °F).",
    "picks": {
     "front": "medical"
    },
@@ -3260,7 +3260,7 @@
   {
    "id": "nms",
    "label": "Rigid and febrile after a haloperidol increase",
-   "vignette": "34-year-old man with schizophrenia; haloperidol increased 4 days ago; now confused, agitated, sweating and stiff. HR 128, BP 172/104, RR 24, SpO2 96%, T 40.1 °C.",
+   "vignette": "34-year-old man with schizophrenia; haloperidol increased 4 days ago; now confused, agitated, sweating and stiff. HR 128, BP 172/104, RR 24, SpO2 96%, T 40.1 °C (104.2 °F).",
    "picks": {
     "front": "hot",
     "hot_cause": "nms"
@@ -3273,7 +3273,7 @@
   {
    "id": "cocaine_hot",
    "label": "Hot and agitated after cocaine",
-   "vignette": "26-year-old man, shouting and pacing after a night out; says he used cocaine. HR 146, BP 188/110, RR 26, SpO2 98%, T 39.6 °C.",
+   "vignette": "26-year-old man, shouting and pacing after a night out; says he used cocaine. HR 146, BP 188/110, RR 26, SpO2 98%, T 39.6 °C (103.3 °F).",
    "picks": {
     "front": "hot",
     "hot_cause": "tox"
@@ -3286,7 +3286,7 @@
   {
    "id": "dt_hot",
    "label": "Febrile withdrawal delirium",
-   "vignette": "58-year-old man; stopped drinking 3 days ago; now confused, picking at the air. HR 138, BP 176/102, RR 24, SpO2 95%, T 38.9 °C, weight 78 kg.",
+   "vignette": "58-year-old man; stopped drinking 3 days ago; now confused, picking at the air. HR 138, BP 176/102, RR 24, SpO2 95%, T 38.9 °C (102 °F), weight 78 kg.",
    "picks": {
     "front": "hot",
     "hot_cause": "dt"
@@ -3299,7 +3299,7 @@
   {
    "id": "schizo_violent",
    "label": "Violent relapse of schizophrenia",
-   "vignette": "29-year-old man with schizophrenia, off risperidone for a month; shouting that staff are poisoning him and throwing a chair. HR 104, BP 142/88, SpO2 98%, T 37.0 °C.",
+   "vignette": "29-year-old man with schizophrenia, off risperidone for a month; shouting that staff are poisoning him and throwing a chair. HR 104, BP 142/88, SpO2 98%, T 37.0 °C (98.6 °F).",
    "picks": {
     "front": "agitated",
     "deesc_result": "psych",
@@ -3316,7 +3316,7 @@
   {
    "id": "drunk_violent",
    "label": "Violent and intoxicated",
-   "vignette": "38-year-old man from a bar fight, punching the walls and threatening staff; smells of alcohol. HR 98, BP 136/82, SpO2 97%, T 36.7 °C.",
+   "vignette": "38-year-old man from a bar fight, punching the walls and threatening staff; smells of alcohol. HR 98, BP 136/82, SpO2 97%, T 36.7 °C (98.1 °F).",
    "picks": {
     "front": "agitated",
     "deesc_result": "etoh",
@@ -3331,7 +3331,7 @@
   {
    "id": "withdrawal_violent",
    "label": "Violent in early alcohol withdrawal",
-   "vignette": "47-year-old man who stopped drinking 30 hours ago when his money ran out; pacing, sweating, swinging at a nurse. HR 122, BP 168/98, SpO2 97%, T 37.5 °C.",
+   "vignette": "47-year-old man who stopped drinking 30 hours ago when his money ran out; pacing, sweating, swinging at a nurse. HR 122, BP 168/98, SpO2 97%, T 37.5 °C (99.5 °F).",
    "picks": {
     "front": "agitated",
     "deesc_result": "nopsych",
@@ -3350,7 +3350,7 @@
   {
    "id": "mania_thyroid",
    "label": "New mania that is thyrotoxicosis",
-   "vignette": "52-year-old woman with no psychiatric history; 5 days without sleep, talking fast, spending her savings, shouting in triage. HR 124, BP 148/78, SpO2 99%, T 37.4 °C.",
+   "vignette": "52-year-old woman with no psychiatric history; 5 days without sleep, talking fast, spending her savings, shouting in triage. HR 124, BP 148/78, SpO2 99%, T 37.4 °C (99.3 °F).",
    "picks": {
     "front": "agitated",
     "deesc_result": "settled",
@@ -3367,7 +3367,7 @@
   {
    "id": "aws_mild",
    "label": "Mild withdrawal, wants to stop",
-   "vignette": "36-year-old man who wants to stop drinking; last drink 14 hours ago; anxious and shaky. HR 98, BP 138/86, SpO2 99%, T 36.9 °C.",
+   "vignette": "36-year-old man who wants to stop drinking; last drink 14 hours ago; anxious and shaky. HR 98, BP 138/86, SpO2 99%, T 36.9 °C (98.4 °F).",
    "picks": {
     "front": "calm",
     "cause": "aws",
@@ -3382,7 +3382,7 @@
   {
    "id": "aws_cirrhosis",
    "label": "Withdrawal in cirrhosis that escalates",
-   "vignette": "61-year-old man with compensated cirrhosis, no ascites; last drink 36 hours ago; sweating and tremulous. HR 118, BP 158/92, SpO2 96%, T 37.4 °C, weight 70 kg.",
+   "vignette": "61-year-old man with compensated cirrhosis, no ascites; last drink 36 hours ago; sweating and tremulous. HR 118, BP 158/92, SpO2 96%, T 37.4 °C (99.3 °F), weight 70 kg.",
    "picks": {
     "front": "calm",
     "cause": "aws",
@@ -3399,7 +3399,7 @@
   {
    "id": "aws_seizure",
    "label": "Withdrawal seizure in the ED",
-   "vignette": "42-year-old woman; last drink 20 hours ago; tremulous and anxious in triage. HR 112, BP 150/94, SpO2 98%, T 37.2 °C.",
+   "vignette": "42-year-old woman; last drink 20 hours ago; tremulous and anxious in triage. HR 112, BP 150/94, SpO2 98%, T 37.2 °C (99 °F).",
    "picks": {
     "front": "calm",
     "cause": "aws",
@@ -3416,7 +3416,7 @@
   {
    "id": "dt_cause",
    "label": "Withdrawal delirium found on the history",
-   "vignette": "55-year-old man brought by family; stopped drinking 3 days ago; now confused and seeing insects. HR 124, BP 164/98, SpO2 97%, T 37.6 °C, weight 82 kg.",
+   "vignette": "55-year-old man brought by family; stopped drinking 3 days ago; now confused and seeing insects. HR 124, BP 164/98, SpO2 97%, T 37.6 °C (99.7 °F), weight 82 kg.",
    "picks": {
     "front": "agitated",
     "deesc_result": "settled",
@@ -3431,7 +3431,7 @@
   {
    "id": "wernicke",
    "label": "Wernicke encephalopathy",
-   "vignette": "49-year-old woman, a heavy drinker, thin, vomiting for a week; confused and unsteady. HR 102, BP 112/70, SpO2 98%, T 36.6 °C.",
+   "vignette": "49-year-old woman, a heavy drinker, thin, vomiting for a week; confused and unsteady. HR 102, BP 112/70, SpO2 98%, T 36.6 °C (97.9 °F).",
    "picks": {
     "front": "calm",
     "cause": "wernicke"
@@ -3444,7 +3444,7 @@
   {
    "id": "benzo",
    "label": "Benzodiazepine withdrawal",
-   "vignette": "33-year-old woman who ran out of alprazolam 2 mg three times daily 3 days ago; shaking and panicky. HR 116, BP 150/92, SpO2 99%, T 37.3 °C.",
+   "vignette": "33-year-old woman who ran out of alprazolam 2 mg three times daily 3 days ago; shaking and panicky. HR 116, BP 150/92, SpO2 99%, T 37.3 °C (99.1 °F).",
    "picks": {
     "front": "agitated",
     "deesc_result": "settled",
@@ -3459,7 +3459,7 @@
   {
    "id": "opioid_ready",
    "label": "Heroin withdrawal, buprenorphine works",
-   "vignette": "27-year-old man using heroin daily, last use 16 hours ago; wants treatment. HR 104, BP 142/88, SpO2 99%, T 37.1 °C.",
+   "vignette": "27-year-old man using heroin daily, last use 16 hours ago; wants treatment. HR 104, BP 142/88, SpO2 99%, T 37.1 °C (98.8 °F).",
    "picks": {
     "front": "calm",
     "cause": "opioid",
@@ -3476,7 +3476,7 @@
   {
    "id": "opioid_precip",
    "label": "Precipitated withdrawal after the first dose",
-   "vignette": "31-year-old woman who smokes fentanyl daily, last use 13 hours ago; wants treatment. HR 110, BP 136/84, SpO2 99%, T 37.0 °C.",
+   "vignette": "31-year-old woman who smokes fentanyl daily, last use 13 hours ago; wants treatment. HR 110, BP 136/84, SpO2 99%, T 37.0 °C (98.6 °F).",
    "picks": {
     "front": "calm",
     "cause": "opioid",
@@ -3493,7 +3493,7 @@
   {
    "id": "opioid_early",
    "label": "On methadone, too early to switch",
-   "vignette": "40-year-old man on methadone 60 mg daily who wants to switch to buprenorphine; last methadone dose 10 hours ago. HR 84, BP 128/80, SpO2 99%, T 36.8 °C.",
+   "vignette": "40-year-old man on methadone 60 mg daily who wants to switch to buprenorphine; last methadone dose 10 hours ago. HR 84, BP 128/80, SpO2 99%, T 36.8 °C (98.2 °F).",
    "picks": {
     "front": "calm",
     "cause": "opioid",
@@ -3508,7 +3508,7 @@
   {
    "id": "dystonia",
    "label": "Acute dystonia after an antiemetic",
-   "vignette": "19-year-old man given IV prochlorperazine for vomiting at another ED yesterday; now his neck twists to the right and his eyes are forced upward. HR 96, BP 128/76, SpO2 99%, T 36.8 °C, weight 68 kg.",
+   "vignette": "19-year-old man given IV prochlorperazine for vomiting at another ED yesterday; now his neck twists to the right and his eyes are forced upward. HR 96, BP 128/76, SpO2 99%, T 36.8 °C (98.2 °F), weight 68 kg.",
    "picks": {
     "front": "calm",
     "cause": "dystonia"
@@ -3521,7 +3521,7 @@
   {
    "id": "akathisia",
    "label": "Akathisia mistaken for agitation",
-   "vignette": "24-year-old woman who started haloperidol 5 mg twice daily a week ago; pacing triage, says she feels she could jump out of her skin. HR 98, BP 124/78, SpO2 99%, T 36.8 °C.",
+   "vignette": "24-year-old woman who started haloperidol 5 mg twice daily a week ago; pacing triage, says she feels she could jump out of her skin. HR 98, BP 124/78, SpO2 99%, T 36.8 °C (98.2 °F).",
    "picks": {
     "front": "agitated",
     "deesc_result": "settled",
@@ -3536,7 +3536,7 @@
   {
    "id": "suicide_hold",
    "label": "Acute risk, wants to leave",
-   "vignette": "45-year-old man brought by his wife after she found a goodbye note; quiet and withdrawn. HR 88, BP 132/80, SpO2 99%, T 36.7 °C.",
+   "vignette": "45-year-old man brought by his wife after she found a goodbye note; quiet and withdrawn. HR 88, BP 132/80, SpO2 99%, T 36.7 °C (98.1 °F).",
    "picks": {
     "front": "calm",
     "cause": "suicidal",
@@ -3553,7 +3553,7 @@
   {
    "id": "suicide_admit",
    "label": "Acute risk, agrees to admission",
-   "vignette": "22-year-old woman who cut her forearm superficially tonight after a breakup; tearful. HR 90, BP 118/72, SpO2 99%, T 36.8 °C.",
+   "vignette": "22-year-old woman who cut her forearm superficially tonight after a breakup; tearful. HR 90, BP 118/72, SpO2 99%, T 36.8 °C (98.2 °F).",
    "picks": {
     "front": "calm",
     "cause": "suicidal",
@@ -3570,7 +3570,7 @@
   {
    "id": "suicide_home",
    "label": "Non-acute risk, safety plan",
-   "vignette": "35-year-old man laid off last month, sleeping badly; says things feel pointless. HR 76, BP 124/78, SpO2 99%, T 36.7 °C.",
+   "vignette": "35-year-old man laid off last month, sleeping badly; says things feel pointless. HR 76, BP 124/78, SpO2 99%, T 36.7 °C (98.1 °F).",
    "picks": {
     "front": "calm",
     "cause": "suicidal",
@@ -3587,7 +3587,7 @@
   {
    "id": "suicide_negative",
    "label": "Low mood, negative screen",
-   "vignette": "40-year-old woman brought by her sister after a divorce; low mood. HR 80, BP 122/76, SpO2 99%, T 36.8 °C.",
+   "vignette": "40-year-old woman brought by her sister after a divorce; low mood. HR 80, BP 122/76, SpO2 99%, T 36.8 °C (98.2 °F).",
    "picks": {
     "front": "calm",
     "cause": "suicidal",
@@ -3602,7 +3602,7 @@
   {
    "id": "delirium_violent",
    "label": "Violent delirium in dementia",
-   "vignette": "79-year-old woman with dementia, pulling at her IV and striking a nurse since this morning. HR 104, BP 150/84, SpO2 95%, T 37.6 °C.",
+   "vignette": "79-year-old woman with dementia, pulling at her IV and striking a nurse since this morning. HR 104, BP 150/84, SpO2 95%, T 37.6 °C (99.7 °F).",
    "picks": {
     "front": "agitated",
     "deesc_result": "delirium"
@@ -3615,7 +3615,7 @@
   {
    "id": "no_cause",
    "label": "Shouting after an argument, no acute cause",
-   "vignette": "27-year-old man shouting and pacing in triage after an argument with his partner; no drugs or alcohol today. HR 102, BP 138/84, SpO2 99%, T 36.8 °C.",
+   "vignette": "27-year-old man shouting and pacing in triage after an argument with his partner; no drugs or alcohol today. HR 102, BP 138/84, SpO2 99%, T 36.8 °C (98.2 °F).",
    "picks": {
     "front": "agitated",
     "deesc_result": "settled",
@@ -3630,7 +3630,7 @@
   {
    "id": "delirium_elderly",
    "label": "Agitated delirium in dementia",
-   "vignette": "84-year-old man with dementia, hitting staff at his care home since yesterday; on donepezil. HR 96, BP 146/82, SpO2 95%, T 37.4 °C.",
+   "vignette": "84-year-old man with dementia, hitting staff at his care home since yesterday; on donepezil. HR 96, BP 146/82, SpO2 95%, T 37.4 °C (99.3 °F).",
    "picks": {
     "front": "agitated",
     "deesc_result": "settled",
@@ -3650,7 +3650,7 @@
     "front": "env_hot"
    },
    "results": {
-    "front": "HR 138, BP 104/62, SpO2 97%, rectal temperature 41.2 °C; glucose 108 mg/dL; skin hot; no rigidity or clonus; pupils normal."
+    "front": "HR 138, BP 104/62, SpO2 97%, rectal temperature 41.2 °C (106.2 °F); glucose 108 mg/dL; skin hot; no rigidity or clonus; pupils normal."
    }
   }
  ]

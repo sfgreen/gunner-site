@@ -408,11 +408,11 @@
     "An NSAID first, for example IV ketorolac",
     "IV morphine first; an NSAID only if it fails",
     "Hyoscine (an antispasmodic) with an opioid",
-    "IV paracetamol first; an NSAID if it fails"
+    "IV acetaminophen (paracetamol) first; an NSAID if it fails"
    ],
    "answer": 0,
-   "chainStep": "Ketorolac 30 mg IV once (15 mg if 65 or older, renally impaired or under 50 kg), or another NSAID by any route; IV paracetamol if NSAIDs are contraindicated or not enough, then an opioid; no antispasmodic; ondansetron and IV fluids as needed",
-   "why": "NICE offers an NSAID by any route first: against opioids, antispasmodics and IV paracetamol it cut the need for rescue medication, and it reduced pain with fewer adverse effects. IV paracetamol comes next if NSAIDs are contraindicated or not enough, an opioid only if both are, and antispasmodics are not offered. Ketorolac is the usual US parenteral NSAID, 15 to 30 mg IV or IM; IV acetaminophen matched ketorolac in one meta-analysis, but the data are too thin to prefer it.",
+   "chainStep": "Ketorolac 30 mg IV once (15 mg if 65 or older, renally impaired or under 50 kg), or another NSAID by any route; IV acetaminophen if NSAIDs are contraindicated or not enough, then an opioid; no antispasmodic; ondansetron and IV fluids as needed",
+   "why": "NICE offers an NSAID by any route first: against opioids, antispasmodics and IV acetaminophen it cut the need for rescue medication, and it reduced pain with fewer adverse effects. IV acetaminophen comes next if NSAIDs are contraindicated or not enough, an opioid only if both are, and antispasmodics are not offered. Ketorolac is the usual US parenteral NSAID, 15 to 30 mg IV or IM; IV acetaminophen matched ketorolac in one meta-analysis, but the data are too thin to prefer it.",
    "next": "colic_imaging",
    "sources": [
     {
@@ -461,7 +461,7 @@
     },
     {
      "item": "NSAID not possible or not enough",
-     "dose": "IV paracetamol next, then an opioid if both are contraindicated or not enough (NICE); US reviews give morphine 0.1 mg/kg IV or IM when ketorolac fails",
+     "dose": "IV acetaminophen next, then an opioid if both are contraindicated or not enough (NICE); US reviews give morphine 0.1 mg/kg IV or IM when ketorolac fails",
      "status": "ok",
      "sources": [
       {
@@ -475,7 +475,7 @@
      ]
     },
     {
-     "item": "IV paracetamol dose",
+     "item": "IV acetaminophen dose",
      "dose": "Not stated in the sources read; no IV acetaminophen label was read",
      "status": "pending"
     },
@@ -502,7 +502,7 @@
      ]
     }
    ],
-   "note": "NICE puts IV paracetamol before opioids; US practice and StatPearls reach for IV morphine after ketorolac. Both keep the NSAID first."
+   "note": "NICE puts IV acetaminophen before opioids; US practice and StatPearls reach for IV morphine after ketorolac. Both keep the NSAID first."
   },
   {
    "id": "colic_imaging",
@@ -1285,8 +1285,8 @@
     "TMP-SMX twice daily now, before the culture result is known"
    ],
    "answer": 0,
-   "chainStep": "Oral antibiotic by local resistance, switched by the culture: ciprofloxacin 500 mg twice a day for 7 days (StatPearls: 14 days in men) where fluoroquinolone resistance is 10% or less (one IV dose of ceftriaxone first if it is higher); NICE first choice cefalexin 500 mg two or three times a day for 7 to 10 days; return if not better in 48 hours",
-   "why": "Give an oral antibiotic when the patient can take it, chosen by local resistance and switched by the culture. In the US a fluoroquinolone is preferred where community resistance is 10% or less, for 7 days; where resistance is higher, a long-acting parenteral dose such as ceftriaxone goes first, before discharge. NICE starts with cefalexin and keeps ciprofloxacin for when the others are unsuitable. Growing resistance makes TMP-SMX less useful empirically, so it waits for susceptibility; nitrofurantoin is not indicated for pyelonephritis, fosfomycin is not recommended for it in the US, and the 3 to 5 day courses that treat cystitis are too short.",
+   "chainStep": "Oral antibiotic by local resistance, switched by the culture: ciprofloxacin 500 mg twice a day for 7 days (StatPearls: 14 days in men) where fluoroquinolone resistance is 10% or less (one IV dose of ceftriaxone first if it is higher); NICE first choice cephalexin (cefalexin) 500 mg two or three times a day for 7 to 10 days; return if not better in 48 hours",
+   "why": "Give an oral antibiotic when the patient can take it, chosen by local resistance and switched by the culture. In the US a fluoroquinolone is preferred where community resistance is 10% or less, for 7 days; where resistance is higher, a long-acting parenteral dose such as ceftriaxone goes first, before discharge. NICE starts with cephalexin and keeps ciprofloxacin for when the others are unsuitable. Growing resistance makes TMP-SMX less useful empirically, so it waits for susceptibility; nitrofurantoin is not indicated for pyelonephritis, fosfomycin is not recommended for it in the US, and the 3 to 5 day courses that treat cystitis are too short.",
    "next": "end_pyelo_home",
    "sources": [
     {
@@ -1338,7 +1338,7 @@
      ]
     },
     {
-     "item": "Cefalexin (NICE first choice)",
+     "item": "Cephalexin (NICE first choice)",
      "dose": "500 mg two or three times a day (up to 1 to 1.5 g three or four times a day if severe) for 7 to 10 days",
      "status": "ok",
      "sources": [
@@ -1386,7 +1386,7 @@
      ]
     }
    ],
-   "note": "NICE NG111 makes cefalexin first choice and restricts fluoroquinolones under MHRA advice; US teaching gives an oral fluoroquinolone first where resistance allows. The IDSA 2010 guideline behind the US regimen was not read: its publisher copy was not openly accessible."
+   "note": "NICE NG111 makes cephalexin first choice and restricts fluoroquinolones under MHRA advice; US teaching gives an oral fluoroquinolone first where resistance allows. The IDSA 2010 guideline behind the US regimen was not read: its publisher copy was not openly accessible."
   },
   {
    "id": "end_pyelo_home",
@@ -1506,7 +1506,7 @@
    "id": "end_pyelo_stepdown",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Pyelonephritis improving on IV antibiotics: step down to an oral agent chosen by the culture by 48 hours; the course length depends on the agent (NICE: ciprofloxacin 7 days, cefalexin 7 to 10 days, trimethoprim 14 days)."
+   "summary": "Pyelonephritis improving on IV antibiotics: step down to an oral agent chosen by the culture by 48 hours; the course length depends on the agent (NICE: ciprofloxacin 7 days, cephalexin 7 to 10 days, trimethoprim 14 days)."
   },
   {
    "id": "pyelo_fail",
@@ -2335,7 +2335,7 @@
     "front": "No pulsatile mass. Left costovertebral angle tenderness. Urine: many white cells, nitrite positive, blood 2+. Pregnancy test negative.",
     "fs_result": "CT with contrast: no ureteric stone, no hydronephrosis, no collection; a swollen left kidney with patchy enhancement.",
     "pyelo_dispo": "Still vomiting; cannot keep fluids or tablets down.",
-    "pyelo_review": "By 48 hours afebrile and eating; the urine grows E. coli susceptible to ceftriaxone, ciprofloxacin and cefalexin."
+    "pyelo_review": "By 48 hours afebrile and eating; the urine grows E. coli susceptible to ceftriaxone, ciprofloxacin and cephalexin."
    }
   },
   {

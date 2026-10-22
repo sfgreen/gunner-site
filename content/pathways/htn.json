@@ -1490,7 +1490,7 @@
        "where": "Table 26, nitroglycerin"
       }
      ],
-     "note": "BIHS lists IV GTN when stimulant hypertension persists despite benzodiazepines; AHA/ACC Table 26 limits IV nitroglycerin to ACS or acute pulmonary edema."
+     "note": "BIHS lists IV nitroglycerin (GTN) when stimulant hypertension persists despite benzodiazepines; AHA/ACC Table 26 limits IV nitroglycerin to ACS or acute pulmonary edema."
     },
     {
      "item": "Labetalol infusion",
@@ -2172,7 +2172,7 @@
   {
    "id": "unstable_ich",
    "label": "Unresponsive, intracerebral hemorrhage",
-   "vignette": "71-year-old man found slumped in his chair by his daughter; he takes amlodipine and lisinopril. BP 214/122, HR 64, SpO2 94%, glucose 6.4 mmol/L (115 mg/dL).",
+   "vignette": "71-year-old man found slumped in his chair by his daughter; he takes amlodipine and lisinopril. BP 214/122, HR 64, SpO2 94%, glucose 115 mg/dL (6.4 mmol/L).",
    "picks": {
     "front": "unstable",
     "neuro_ct": "ich"
@@ -2207,7 +2207,7 @@
    },
    "results": {
     "front": "Both arms 226/134. Alert and oriented, normal neurologic exam; retinal hemorrhages and cotton wool spots in both eyes. Creatinine 3.1 mg/dL (274 micromol/L), 0.9 six months ago; urine 2+ blood, 2+ protein. Pregnancy test negative. ECG: no ischemic change.",
-    "agent_limits": "Asthma since childhood, on an inhaled steroid and salbutamol."
+    "agent_limits": "Asthma since childhood, on an inhaled steroid and albuterol (salbutamol)."
    }
   },
   {
@@ -2459,7 +2459,7 @@
     "front": "convulsing"
    },
    "results": {
-    "front": "A generalized tonic-clonic seizure starts in the bay and is still going at 5 minutes; glucose 5.8 mmol/L (104 mg/dL)."
+    "front": "A generalized tonic-clonic seizure starts in the bay and is still going at 5 minutes; glucose 104 mg/dL (5.8 mmol/L)."
    }
   }
  ]

@@ -265,6 +265,12 @@
    "label": "NATA 2015 (exertional heat illness)",
    "title": "National Athletic Trainers' Association Position Statement: Exertional Heat Illnesses (J Athl Train 2015)",
    "url": "https://pubmed.ncbi.nlm.nih.gov/26381473/"
+  },
+  {
+   "docId": "pmid:28722939",
+   "label": "StatPearls: Naloxone",
+   "title": "Naloxone (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722939/"
   }
  ],
  "differential": [
@@ -377,7 +383,7 @@
    "outcomes": [
     {
      "id": "hypo",
-     "if": "Glucose low; under 4 mmol/L (72 mg/dL), the JBDS threshold",
+     "if": "Glucose low; under 72 mg/dL (4 mmol/L), the JBDS threshold",
      "ddx": {
       "lead": [
        "Hypoglycemia"
@@ -524,7 +530,7 @@
    "id": "hypo_tx",
    "kind": "step",
    "stage": "Stabilize",
-   "ask": "Capillary glucose under 4 mmol/L (72 mg/dL), IV line in. Next?",
+   "ask": "Capillary glucose under 72 mg/dL (4 mmol/L), IV line in. Next?",
    "options": [
     "Treat the glucose now; IV thiamine with it in a drinker",
     "Wait for the laboratory glucose to confirm it before treating",
@@ -639,7 +645,7 @@
    "outcomes": [
     {
      "id": "woke",
-     "if": "Back to normal; glucose above 4 mmol/L, confusion gone",
+     "if": "Back to normal; glucose above 4 mmol/L (72 mg/dL), confusion gone",
      "ddx": {
       "lead": [
        "Hypoglycemia"
@@ -701,6 +707,22 @@
        "where": "Dosage and Administration, Opioid Overdose"
       }
      ]
+    },
+    {
+     "item": "Starting dose when opioid-dependent",
+     "dose": "StatPearls: a small first IV dose, usually 0.04 to 0.1 mg, in an opioid-dependent patient; 0.4 mg without known dependence; 1 to 2 mg IV for apnea or near-apnea with cyanosis; then 0.1 to 0.4 mg IV until breathing is adequate. The label starts at 0.4 to 2 mg",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:28722939",
+       "where": "Administration: \"A small initial IV dose (usually 0.04 mg to 0.1 mg) is recommended in patients who are opioid-dependent with symptoms of opioid overdose to avoid opioid withdrawal symptoms. Larger initial doses (such as 0.4 mg) are recommended in patients without a known history of opioid dependency.\""
+      },
+      {
+       "docId": "url:755cffc56816",
+       "where": "Dosage and Administration, Opioid Overdose"
+      }
+     ],
+     "note": "The label gives 0.4 to 2 mg for any known or suspected overdose and warns that an abrupt, complete reversal precipitates withdrawal in dependence; StatPearls titrates to breathing, not full reversal, and starts lower in dependence."
     },
     {
      "item": "No response after 10 mg",
@@ -943,7 +965,7 @@
     },
     {
      "id": "temp",
-     "if": "Cold or heat exposure; core under 35 °C, or hot after heat",
+     "if": "Cold or heat exposure; core under 35 °C (95 °F), or hot after heat",
      "ddx": {
       "lead": [
        "Hypothermia",
@@ -966,7 +988,7 @@
       },
       {
        "item": "Hypothermia: ECLS",
-       "dose": "Direct transfer criteria: cardiac arrest, core under 30 °C, systolic under 90 or a ventricular dysrhythmia",
+       "dose": "Direct transfer criteria: cardiac arrest, core under 30 °C (86 °F), systolic under 90 or a ventricular dysrhythmia",
        "status": "ok",
        "sources": [
         {
@@ -988,7 +1010,7 @@
       },
       {
        "item": "Heat stroke: cooling",
-       "dose": "Up to the neck in 1.7 to 15 °C water, stirred; about 1 °C every 5 minutes; the most effective method for exertional heat stroke; the stop point and the rest are in pw_environmental",
+       "dose": "Up to the neck in 1.7 to 15 °C (35.1 to 59 °F) water, stirred; about 1 °C (1.8 °F) every 5 minutes; the most effective method for exertional heat stroke; the stop point and the rest are in pw_environmental",
        "status": "ok",
        "sources": [
         {
@@ -1263,7 +1285,7 @@
     },
     {
      "id": "storm",
-     "if": "Thyrotoxic; hyperthyroid with fever 38 °C or more, pulse 130 or more, heart failure or GI upset",
+     "if": "Thyrotoxic; hyperthyroid with fever 38 °C (100.4 °F) or more, pulse 130 or more, heart failure or GI upset",
      "ddx": {
       "lead": [
        "Thyroid storm"
@@ -1285,7 +1307,7 @@
     },
     {
      "id": "temp",
-     "if": "Cold or heat exposure; core under 35 °C, or hot after heat",
+     "if": "Cold or heat exposure; core under 35 °C (95 °F), or hot after heat",
      "ddx": {
       "lead": [
        "Hypothermia",
@@ -1308,7 +1330,7 @@
       },
       {
        "item": "Hypothermia: ECLS",
-       "dose": "Direct transfer criteria: cardiac arrest, core under 30 °C, systolic under 90 or a ventricular dysrhythmia",
+       "dose": "Direct transfer criteria: cardiac arrest, core under 30 °C (86 °F), systolic under 90 or a ventricular dysrhythmia",
        "status": "ok",
        "sources": [
         {
@@ -1330,7 +1352,7 @@
       },
       {
        "item": "Heat stroke: cooling",
-       "dose": "Up to the neck in 1.7 to 15 °C water, stirred; about 1 °C every 5 minutes; the most effective method for exertional heat stroke; the stop point and the rest are in pw_environmental",
+       "dose": "Up to the neck in 1.7 to 15 °C (35.1 to 59 °F) water, stirred; about 1 °C (1.8 °F) every 5 minutes; the most effective method for exertional heat stroke; the stop point and the rest are in pw_environmental",
        "status": "ok",
        "sources": [
         {
@@ -1422,7 +1444,7 @@
     "Blood cultures, then IV antibiotics within the hour, not held for a scan",
     "Lumbar puncture now; antibiotics once the CSF results are back from the lab",
     "CT head first, then antibiotics after the radiology report",
-    "Paracetamol and fluids, then reassess the confusion in an hour"
+    "Acetaminophen (paracetamol) and fluids, then reassess the confusion in an hour"
    ],
    "answer": 0,
    "chainStep": "Blood cultures, then antibiotics within 1 hour of arrival, with dexamethasone with or before the first dose when bacterial meningitis is suspected; image before the lumbar puncture when consciousness is low or falling, then the LP when safe",
@@ -1933,7 +1955,7 @@
    "id": "end_temp",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Cold or heat exposure. Hypothermia below 35 °C: rewarm (passive and active external when the circulation is stable, active internal when that fails), handle gently, and involve an ECLS centre for cardiac arrest, a core under 30 °C, a systolic under 90 or a ventricular dysrhythmia. Heat stroke is cooled at once (cold-water immersion for exertional heat stroke); heat illness and cold injury continue in the environmental pathway (pw_environmental)."
+   "summary": "Cold or heat exposure. Hypothermia below 35 °C (95 °F): rewarm (passive and active external when the circulation is stable, active internal when that fails), handle gently, and involve an ECLS centre for cardiac arrest, a core under 30 °C (86 °F), a systolic under 90 or a ventricular dysrhythmia. Heat stroke is cooled at once (cold-water immersion for exertional heat stroke); heat illness and cold injury continue in the environmental pathway (pw_environmental)."
   },
   {
    "id": "end_htn",
@@ -2037,7 +2059,7 @@
     },
     {
      "id": "ca",
-     "if": "Calcium high, symptomatic; adjusted 3.0 mmol/L (12 mg/dL) or more",
+     "if": "Calcium high, symptomatic; adjusted 12 mg/dL (3.0 mmol/L) or more",
      "ddx": {
       "lead": [
        "Hypercalcemia"
@@ -2892,8 +2914,8 @@
     "hypo_result": "woke"
    },
    "results": {
-    "front": "Capillary glucose 2.4 mmol/L (43 mg/dL). Drowsy, GCS 13, cannot swallow safely; SpO2 97% on air, BP 146/84, HR 104, temperature 36.6 °C.",
-    "hypo_result": "Ten minutes after 200 mL of 10% glucose: glucose 7.8 mmol/L, talking normally and fully oriented. He takes insulin glargine and a sulfonylurea."
+    "front": "Capillary glucose 43 mg/dL (2.4 mmol/L). Drowsy, GCS 13, cannot swallow safely; SpO2 97% on air, BP 146/84, HR 104, temperature 36.6 °C (97.9 °F).",
+    "hypo_result": "Ten minutes after 200 mL of 10% glucose: glucose 7.8 mmol/L (140 mg/dL), talking normally and fully oriented. He takes insulin glargine and a sulfonylurea."
    }
   },
   {
@@ -2906,8 +2928,8 @@
     "clues": "focal"
    },
    "results": {
-    "front": "Capillary glucose 3.1 mmol/L (56 mg/dL). Drowsy, GCS 13, not safe to swallow; BP 172/94, HR 88, SpO2 96%, temperature 36.9 °C.",
-    "hypo_result": "Glucose now 7.2 mmol/L, but she is still confused and her speech is still slurred.",
+    "front": "Capillary glucose 56 mg/dL (3.1 mmol/L). Drowsy, GCS 13, not safe to swallow; BP 172/94, HR 88, SpO2 96%, temperature 36.9 °C (98.4 °F).",
+    "hypo_result": "Glucose now 7.2 mmol/L (130 mg/dL), but she is still confused and her speech is still slurred.",
     "clues": "Her daughter last saw her well at 7 a.m., 90 minutes ago. Right facial droop and right arm weakness; no fever, injury or seizure."
    }
   },
@@ -2919,7 +2941,7 @@
     "front": "opioid"
    },
    "results": {
-    "front": "Respiratory rate 6 and shallow, pinpoint pupils, SpO2 84% on air; GCS 7; capillary glucose 5.6 mmol/L; BP 108/64, HR 58, temperature 36.2 °C."
+    "front": "Respiratory rate 6 and shallow, pinpoint pupils, SpO2 84% on air; GCS 7; capillary glucose 5.6 mmol/L (101 mg/dL); BP 108/64, HR 58, temperature 36.2 °C (97.2 °F)."
    }
   },
   {
@@ -2931,7 +2953,7 @@
     "coma_ct": "bleed"
    },
    "results": {
-    "front": "GCS 6, snoring respirations; pupils equal, not pinpoint; capillary glucose 6.8 mmol/L; BP 214/118, HR 62, SpO2 93%, temperature 37.0 °C.",
+    "front": "GCS 6, snoring respirations; pupils equal, not pinpoint; capillary glucose 6.8 mmol/L (122 mg/dL); BP 214/118, HR 62, SpO2 93%, temperature 37.0 °C (98.6 °F).",
     "coma_ct": "Non-contrast CT: a large left basal ganglia hemorrhage with intraventricular extension."
    }
   },
@@ -2947,7 +2969,7 @@
     "hypona_resp": "better"
    },
    "results": {
-    "front": "GCS 7, not protecting the airway; pupils equal and reactive, not pinpoint; capillary glucose 6.1 mmol/L; BP 128/70, HR 96, SpO2 95%, temperature 36.5 °C.",
+    "front": "GCS 7, not protecting the airway; pupils equal and reactive, not pinpoint; capillary glucose 6.1 mmol/L (110 mg/dL); BP 128/70, HR 96, SpO2 95%, temperature 36.5 °C (97.7 °F).",
     "coma_ct": "Non-contrast CT: no bleed, no mass, no fracture.",
     "coma_clues": "No fever, stiff neck, injury, seizure, toxin, alcohol, thyroid history or cold exposure.",
     "hypona_resp": "After two 150 mL infusions the sodium is 114 mmol/L and she is opening her eyes to voice and moving all four limbs.",
@@ -2962,7 +2984,7 @@
     "front": "shock"
    },
    "results": {
-    "front": "BP 78/44, HR 124, SpO2 89% on air, temperature 38.6 °C, lactate 5.1 mmol/L; GCS 13, protecting the airway; capillary glucose 7.4 mmol/L."
+    "front": "BP 78/44, HR 124, SpO2 89% on air, temperature 38.6 °C (101.5 °F), lactate 5.1 mmol/L; GCS 13, protecting the airway; capillary glucose 7.4 mmol/L (133 mg/dL)."
    }
   },
   {
@@ -2973,7 +2995,7 @@
     "front": "dka"
    },
    "results": {
-    "front": "Capillary glucose 32 mmol/L (576 mg/dL), blood ketones 5.8 mmol/L; GCS 14, protecting the airway; BP 98/60, HR 122, SpO2 99%, temperature 37.1 °C."
+    "front": "Capillary glucose 576 mg/dL (32 mmol/L), blood ketones 5.8 mmol/L; GCS 14, protecting the airway; BP 98/60, HR 122, SpO2 99%, temperature 37.1 °C (98.8 °F)."
    }
   },
   {
@@ -2984,7 +3006,7 @@
     "front": "co2"
    },
    "results": {
-    "front": "SpO2 99% on a 15 L reservoir mask; arterial gas pH 7.26, PaCO2 9.8 kPa (74 mm Hg); GCS 12, protecting the airway; capillary glucose 7.0 mmol/L; BP 150/90, HR 104, temperature 37.2 °C."
+    "front": "SpO2 99% on a 15 L reservoir mask; arterial gas pH 7.26, PaCO2 74 mm Hg (9.8 kPa); GCS 12, protecting the airway; capillary glucose 7.0 mmol/L (126 mg/dL); BP 150/90, HR 104, temperature 37.2 °C (99 °F)."
    }
   },
   {
@@ -2996,7 +3018,7 @@
     "clues": "fever"
    },
    "results": {
-    "front": "Capillary glucose 5.9 mmol/L; GCS 13, protecting the airway; BP 112/68, HR 118, SpO2 98%, temperature 39.4 °C.",
+    "front": "Capillary glucose 5.9 mmol/L (106 mg/dL); GCS 13, protecting the airway; BP 112/68, HR 118, SpO2 98%, temperature 39.4 °C (102.9 °F).",
     "clues": "Neck stiffness; no rash; no focal deficit, injury or seizure; pupils equal and reactive."
    }
   },
@@ -3010,7 +3032,7 @@
     "head_result": "bleed"
    },
    "results": {
-    "front": "Capillary glucose 6.4 mmol/L; GCS 14 (confused), protecting the airway; BP 158/84, HR 80, SpO2 96%, temperature 36.7 °C.",
+    "front": "Capillary glucose 6.4 mmol/L (115 mg/dL); GCS 14 (confused), protecting the airway; BP 158/84, HR 80, SpO2 96%, temperature 36.7 °C (98.1 °F).",
     "clues": "Bruise over the right temple; the fall was 3 hours ago and he is still GCS 14; no fever, no focal weakness, no seizure.",
     "head_result": "CT head: a right acute subdural hematoma with 6 mm of midline shift."
    }
@@ -3028,7 +3050,7 @@
     "behave": "calm"
    },
    "results": {
-    "front": "Capillary glucose 6.0 mmol/L; GCS 14, protecting the airway; BP 136/78, HR 84, SpO2 95%, temperature 36.8 °C.",
+    "front": "Capillary glucose 6.0 mmol/L (108 mg/dL); GCS 14, protecting the airway; BP 136/78, HR 84, SpO2 95%, temperature 36.8 °C (98.2 °F).",
     "clues": "A small graze on the forehead; the fall was 4 hours ago and he is still GCS 14; no focal deficit, fever or seizure.",
     "head_result": "CT head: no bleed, no fracture.",
     "lab_result": "Sodium, calcium, glucose, urea, creatinine, liver tests and blood count normal. 4AT: inattentive and fluctuating, consistent with delirium.",
@@ -3045,7 +3067,7 @@
     "clues": "seizure"
    },
    "results": {
-    "front": "Capillary glucose 5.4 mmol/L; GCS 13, protecting the airway; BP 138/82, HR 96, SpO2 97%, temperature 37.0 °C.",
+    "front": "Capillary glucose 5.4 mmol/L (97 mg/dL); GCS 13, protecting the airway; BP 138/82, HR 96, SpO2 97%, temperature 37.0 °C (98.6 °F).",
     "clues": "Rhythmic eyelid twitching continues; she has missed her levetiracetam for 3 days; no injury, fever or focal weakness."
    }
   },
@@ -3058,7 +3080,7 @@
     "clues": "tox"
    },
    "results": {
-    "front": "Capillary glucose 5.8 mmol/L; GCS 13, protecting the airway; BP 104/62, HR 128, SpO2 96%, temperature 37.6 °C.",
+    "front": "Capillary glucose 5.8 mmol/L (104 mg/dL); GCS 13, protecting the airway; BP 104/62, HR 128, SpO2 96%, temperature 37.6 °C (99.7 °F).",
     "clues": "Dilated pupils, hot dry skin, a distended bladder and absent bowel sounds; an empty bottle of amitriptyline by the bed; no injury, no focal deficit."
    }
   },
@@ -3071,7 +3093,7 @@
     "clues": "alcohol"
    },
    "results": {
-    "front": "Capillary glucose 5.2 mmol/L; GCS 14, protecting the airway; BP 128/76, HR 92, SpO2 96%, temperature 36.4 °C.",
+    "front": "Capillary glucose 5.2 mmol/L (94 mg/dL); GCS 14, protecting the airway; BP 128/76, HR 92, SpO2 96%, temperature 36.4 °C (97.5 °F).",
     "clues": "Thin and unkempt; nystagmus and a bilateral lateral gaze palsy; a wide-based, ataxic gait; last drink this morning, no tremor or sweating; no sign of a head injury, no focal weakness, no fever."
    }
   },
@@ -3084,7 +3106,7 @@
     "clues": "storm"
    },
    "results": {
-    "front": "Capillary glucose 6.6 mmol/L; GCS 14, protecting the airway; BP 152/64, HR 148 and irregular, SpO2 96%, temperature 39.1 °C.",
+    "front": "Capillary glucose 6.6 mmol/L (119 mg/dL); GCS 14, protecting the airway; BP 152/64, HR 148 and irregular, SpO2 96%, temperature 39.1 °C (102.4 °F).",
     "clues": "Known Graves' disease; she stopped methimazole 2 months ago. Goiter with a bruit, tremor and lid lag; no neck stiffness or rash; chest and urine clear."
    }
   },
@@ -3097,7 +3119,7 @@
     "clues": "myx"
    },
    "results": {
-    "front": "Capillary glucose 4.6 mmol/L; GCS 12, protecting the airway; BP 98/60, HR 46, respiratory rate 12, SpO2 95%, core temperature 33.8 °C.",
+    "front": "Capillary glucose 4.6 mmol/L (83 mg/dL); GCS 12, protecting the airway; BP 98/60, HR 46, respiratory rate 12, SpO2 95%, core temperature 33.8 °C (92.8 °F).",
     "clues": "A thyroidectomy scar; puffy face, dry skin and slow-relaxing reflexes; the missing tablets were levothyroxine; no cold exposure, injury or focal deficit."
    }
   },
@@ -3110,7 +3132,7 @@
     "clues": "temp"
    },
    "results": {
-    "front": "Capillary glucose 5.0 mmol/L; GCS 13, protecting the airway; BP 104/66, HR 52, SpO2 94%; bladder temperature 31.2 °C.",
+    "front": "Capillary glucose 5.0 mmol/L (90 mg/dL); GCS 13, protecting the airway; BP 104/66, HR 52, SpO2 94%; bladder temperature 31.2 °C (88.2 °F).",
     "clues": "Found outdoors in wet clothing overnight; not shivering; no thyroid history or scar, normal reflexes; no alcohol on his breath, no injury, no focal deficit."
    }
   },
@@ -3123,7 +3145,7 @@
     "clues": "htn"
    },
    "results": {
-    "front": "Capillary glucose 6.2 mmol/L; GCS 14, protecting the airway; BP 232/134 on repeat, HR 88, SpO2 98%, temperature 36.9 °C.",
+    "front": "Capillary glucose 6.2 mmol/L (112 mg/dL); GCS 14, protecting the airway; BP 232/134 on repeat, HR 88, SpO2 98%, temperature 36.9 °C (98.4 °F).",
     "clues": "Papilledema and retinal hemorrhages; no focal deficit, neck stiffness, injury or seizure."
    }
   },
@@ -3137,7 +3159,7 @@
     "lab_result": "na_mod"
    },
    "results": {
-    "front": "Capillary glucose 6.0 mmol/L; GCS 14, protecting the airway; BP 132/78, HR 82, SpO2 97%, temperature 36.8 °C.",
+    "front": "Capillary glucose 6.0 mmol/L (108 mg/dL); GCS 14, protecting the airway; BP 132/78, HR 82, SpO2 97%, temperature 36.8 °C (98.2 °F).",
     "clues": "No focal deficit, injury, fever, seizure or toxidrome; no alcohol; she started sertraline 2 weeks ago.",
     "lab_result": "Sodium 121 mmol/L with a low serum osmolality; calcium, glucose, urea, liver tests and blood count normal. Confused and nauseated, but no vomiting."
    }
@@ -3153,10 +3175,10 @@
     "ca_resp": "still_high"
    },
    "results": {
-    "front": "Capillary glucose 6.3 mmol/L; GCS 14, protecting the airway; BP 108/66, HR 104, SpO2 95%, temperature 36.9 °C; dry mucous membranes.",
+    "front": "Capillary glucose 6.3 mmol/L (113 mg/dL); GCS 14, protecting the airway; BP 108/66, HR 104, SpO2 95%, temperature 36.9 °C (98.4 °F); dry mucous membranes.",
     "clues": "Thirsty and constipated; no focal deficit, injury, fever, seizure or toxidrome; no alcohol.",
-    "lab_result": "Albumin-adjusted calcium 3.9 mmol/L (15.6 mg/dL), PTH suppressed; creatinine 1.8 mg/dL, up from 1.0; sodium normal.",
-    "ca_resp": "After 24 hours of IV saline the adjusted calcium is 3.5 mmol/L (14 mg/dL)."
+    "lab_result": "Albumin-adjusted calcium 15.6 mg/dL (3.9 mmol/L), PTH suppressed; creatinine 1.8 mg/dL, up from 1.0; sodium normal.",
+    "ca_resp": "After 24 hours of IV saline the adjusted calcium is 14 mg/dL (3.5 mmol/L)."
    }
   },
   {
@@ -3169,9 +3191,9 @@
     "lab_result": "uremia"
    },
    "results": {
-    "front": "Capillary glucose 5.9 mmol/L; GCS 13, protecting the airway; BP 104/64, HR 102, SpO2 96%, temperature 36.8 °C.",
+    "front": "Capillary glucose 5.9 mmol/L (106 mg/dL); GCS 13, protecting the airway; BP 104/64, HR 102, SpO2 96%, temperature 36.8 °C (98.2 °F).",
     "clues": "No focal deficit, injury, fever, seizure or toxidrome; no liver disease; he has been taking ibuprofen for back pain.",
-    "lab_result": "Urea 58 mmol/L (BUN 162 mg/dL), creatinine 9.6 mg/dL (850 µmol/L), potassium 5.4 mmol/L; drowsiness unchanged after fluids and stopping the ibuprofen; sodium, calcium and glucose normal."
+    "lab_result": "BUN 162 mg/dL (urea 58 mmol/L), creatinine 9.6 mg/dL (850 µmol/L), potassium 5.4 mmol/L; drowsiness unchanged after fluids and stopping the ibuprofen; sodium, calcium and glucose normal."
    }
   },
   {
@@ -3184,7 +3206,7 @@
     "lab_result": "he"
    },
    "results": {
-    "front": "Capillary glucose 5.6 mmol/L; GCS 13, protecting the airway; BP 112/70, HR 90, SpO2 96%, temperature 36.9 °C.",
+    "front": "Capillary glucose 5.6 mmol/L (101 mg/dL); GCS 13, protecting the airway; BP 112/70, HR 90, SpO2 96%, temperature 36.9 °C (98.4 °F).",
     "clues": "Jaundice and ascites; no bowel movement for 4 days; no focal deficit, injury, fever, seizure or toxidrome; no alcohol for 2 years.",
     "lab_result": "Asterixis; sodium 134 mmol/L; calcium, urea, creatinine and glucose normal; no other cause on the first labs."
    }
@@ -3201,7 +3223,7 @@
     "behave": "distressed"
    },
    "results": {
-    "front": "Capillary glucose 6.8 mmol/L; GCS 14, protecting the airway; BP 148/80, HR 92, SpO2 95%, temperature 37.2 °C.",
+    "front": "Capillary glucose 6.8 mmol/L (122 mg/dL); GCS 14, protecting the airway; BP 148/80, HR 92, SpO2 95%, temperature 37.2 °C (99 °F).",
     "clues": "No focal deficit, injury, fever, seizure or toxidrome; no alcohol; no new medicines.",
     "lab_result": "Sodium, calcium, glucose, renal and liver tests and blood count normal; urine dipstick positive for leukocytes and nitrites, with no urinary symptoms. 4AT consistent with delirium.",
     "cause": "No new drug; a loaded rectum, last bowel movement 6 days ago; bladder scan 120 mL.",
@@ -3218,7 +3240,7 @@
     "lab_result": "normal"
    },
    "results": {
-    "front": "Capillary glucose 5.6 mmol/L; GCS 15, protecting the airway; BP 142/86, HR 78, SpO2 98%, temperature 36.7 °C.",
+    "front": "Capillary glucose 5.6 mmol/L (101 mg/dL); GCS 15, protecting the airway; BP 142/86, HR 78, SpO2 98%, temperature 36.7 °C (98.1 °F).",
     "clues": "No focal deficit, injury, fever, seizure or toxidrome; no alcohol or new medicines; she is asking fewer repeated questions now.",
     "lab_result": "Sodium, calcium, glucose, renal and liver tests and blood count normal. 4AT 0: alert, oriented, attention normal."
    }
@@ -3233,7 +3255,7 @@
     "coma_clues": "fever"
    },
    "results": {
-    "front": "GCS 7, not protecting the airway; pupils equal and reactive, not pinpoint; capillary glucose 6.4 mmol/L; BP 118/72, HR 122, SpO2 95%, temperature 39.6 °C.",
+    "front": "GCS 7, not protecting the airway; pupils equal and reactive, not pinpoint; capillary glucose 6.4 mmol/L (115 mg/dL); BP 118/72, HR 122, SpO2 95%, temperature 39.6 °C (103.3 °F).",
     "coma_ct": "Non-contrast CT: no bleed, no mass, no swelling.",
     "coma_clues": "Neck stiffness and a few petechiae on the legs; no injury, no seizure seen, no pills found."
    }
@@ -3248,7 +3270,7 @@
     "coma_clues": "tox"
    },
    "results": {
-    "front": "GCS 6, not protecting the airway; pupils dilated, not pinpoint; capillary glucose 6.0 mmol/L; BP 96/60, HR 132, SpO2 94%, temperature 37.4 °C.",
+    "front": "GCS 6, not protecting the airway; pupils dilated, not pinpoint; capillary glucose 6.0 mmol/L (108 mg/dL); BP 96/60, HR 132, SpO2 94%, temperature 37.4 °C (99.3 °F).",
     "coma_ct": "Non-contrast CT: no bleed, no mass.",
     "coma_clues": "Empty blister packs of amitriptyline by the bed; warm, dry skin; the ECG shows a wide QRS; no fever, injury or seizure."
    }
@@ -3263,7 +3285,7 @@
     "coma_clues": "seizure"
    },
    "results": {
-    "front": "GCS 6, not protecting the airway; pupils equal and reactive, not pinpoint; capillary glucose 5.8 mmol/L; BP 146/88, HR 110, SpO2 93%, temperature 37.3 °C.",
+    "front": "GCS 6, not protecting the airway; pupils equal and reactive, not pinpoint; capillary glucose 5.8 mmol/L (104 mg/dL); BP 146/88, HR 110, SpO2 93%, temperature 37.3 °C (99.1 °F).",
     "coma_ct": "Non-contrast CT: no bleed, no mass, no fracture.",
     "coma_clues": "A witnessed tonic-clonic seizure an hour ago; subtle rhythmic twitching of the right hand, eyes deviated to the left; no fever, injury or pills."
    }
@@ -3278,7 +3300,7 @@
     "coma_clues": "alcohol"
    },
    "results": {
-    "front": "GCS 7, not protecting the airway; pupils equal, not pinpoint; capillary glucose 4.4 mmol/L; BP 104/66, HR 98, SpO2 95%, temperature 35.9 °C.",
+    "front": "GCS 7, not protecting the airway; pupils equal, not pinpoint; capillary glucose 4.4 mmol/L (79 mg/dL); BP 104/66, HR 98, SpO2 95%, temperature 35.9 °C (96.6 °F).",
     "coma_ct": "Non-contrast CT: no bleed, no fracture.",
     "coma_clues": "Very thin; on doll's-eye testing neither eye moves outward; blood alcohol low; no fever, seizure, pills or cold exposure."
    }
@@ -3293,7 +3315,7 @@
     "coma_clues": "myx"
    },
    "results": {
-    "front": "GCS 7, not protecting the airway; pupils equal, not pinpoint; capillary glucose 4.2 mmol/L; BP 92/58, HR 40, respiratory rate 10, SpO2 94%, core temperature 32.4 °C.",
+    "front": "GCS 7, not protecting the airway; pupils equal, not pinpoint; capillary glucose 4.2 mmol/L (76 mg/dL); BP 92/58, HR 40, respiratory rate 10, SpO2 94%, core temperature 32.4 °C (90.3 °F).",
     "coma_ct": "Non-contrast CT: no bleed, no mass.",
     "coma_clues": "A thyroidectomy scar, a puffy face and dry skin; her levothyroxine has not been collected for 4 months; no cold exposure, fever, seizure or pills."
    }
@@ -3308,7 +3330,7 @@
     "coma_clues": "temp"
    },
    "results": {
-    "front": "GCS 6, not protecting the airway; pupils sluggish, not pinpoint; capillary glucose 5.4 mmol/L; BP 92/54, HR 38, SpO2 92%; esophageal temperature 27.8 °C.",
+    "front": "GCS 6, not protecting the airway; pupils sluggish, not pinpoint; capillary glucose 5.4 mmol/L (97 mg/dL); BP 92/54, HR 38, SpO2 92%; esophageal temperature 27.8 °C (82 °F).",
     "coma_ct": "Non-contrast CT: no bleed, no fracture.",
     "coma_clues": "Found outdoors in thin clothing; not shivering; no thyroid history or scar; no alcohol, pills, fever or seizure."
    }
@@ -3322,7 +3344,7 @@
     "clues": "withdrawal"
    },
    "results": {
-    "front": "Capillary glucose 6.2 mmol/L; GCS 14, protecting the airway; BP 168/98, HR 124, SpO2 97%, temperature 37.6 °C.",
+    "front": "Capillary glucose 6.2 mmol/L (112 mg/dL); GCS 14, protecting the airway; BP 168/98, HR 124, SpO2 97%, temperature 37.6 °C (99.7 °F).",
     "clues": "Coarse tremor and drenching sweats; he is picking at insects he sees on the wall; last drink 2 days ago; no ataxia or eye signs, no injury, no focal deficit."
    }
   },
@@ -3334,7 +3356,7 @@
     "front": "shock_other"
    },
    "results": {
-    "front": "BP 76/44, HR 128, cool and clammy; temperature 36.2 °C, no cough, urinary symptoms or other infection clue; GCS 14, protecting the airway; capillary glucose 6.8 mmol/L; SpO2 96%."
+    "front": "BP 76/44, HR 128, cool and clammy; temperature 36.2 °C (97.2 °F), no cough, urinary symptoms or other infection clue; GCS 14, protecting the airway; capillary glucose 6.8 mmol/L (122 mg/dL); SpO2 96%."
    }
   },
   {
@@ -3345,7 +3367,7 @@
     "front": "hypox"
    },
    "results": {
-    "front": "SpO2 84% on air; arterial gas PaO2 6.9 kPa (52 mm Hg), PaCO2 4.1 kPa (31 mm Hg); GCS 14, protecting the airway; capillary glucose 6.1 mmol/L; BP 112/70, HR 118, temperature 37.0 °C."
+    "front": "SpO2 84% on air; arterial gas PaO2 52 mm Hg (6.9 kPa), PaCO2 31 mm Hg (4.1 kPa); GCS 14, protecting the airway; capillary glucose 6.1 mmol/L (110 mg/dL); BP 112/70, HR 118, temperature 37.0 °C (98.6 °F)."
    }
   },
   {
@@ -3357,7 +3379,7 @@
     "coma_ct": "lesion"
    },
    "results": {
-    "front": "GCS 7, not protecting the airway; left pupil larger than the right, not pinpoint; capillary glucose 6.6 mmol/L; BP 158/90, HR 58, SpO2 95%, temperature 36.8 °C.",
+    "front": "GCS 7, not protecting the airway; left pupil larger than the right, not pinpoint; capillary glucose 6.6 mmol/L (119 mg/dL); BP 158/90, HR 58, SpO2 95%, temperature 36.8 °C (98.2 °F).",
     "coma_ct": "Non-contrast CT: a large right frontal mass with surrounding edema and 9 mm of midline shift; no blood."
    }
   },
@@ -3371,7 +3393,7 @@
     "lab_result": "other_lab"
    },
    "results": {
-    "front": "Capillary glucose 7.1 mmol/L; GCS 13, protecting the airway; BP 104/62, HR 104, SpO2 95%, temperature 37.4 °C; dry mucous membranes.",
+    "front": "Capillary glucose 7.1 mmol/L (128 mg/dL); GCS 13, protecting the airway; BP 104/62, HR 104, SpO2 95%, temperature 37.4 °C (99.3 °F); dry mucous membranes.",
     "clues": "No focal deficit, injury, fever, seizure or toxidrome; no alcohol; no new medicines.",
     "lab_result": "Sodium 162 mmol/L; urea raised; calcium, glucose, creatinine and liver tests normal."
    }
@@ -3387,7 +3409,7 @@
     "hypona_resp": "not_better"
    },
    "results": {
-    "front": "Capillary glucose 6.0 mmol/L; GCS 12, protecting the airway; BP 128/76, HR 90, SpO2 96%, temperature 36.8 °C.",
+    "front": "Capillary glucose 6.0 mmol/L (108 mg/dL); GCS 12, protecting the airway; BP 128/76, HR 90, SpO2 96%, temperature 36.8 °C (98.2 °F).",
     "clues": "Vomiting twice in the department; no focal deficit, injury, fever, seizure or toxidrome; no alcohol.",
     "lab_result": "Sodium 111 mmol/L with a low serum osmolality; calcium, glucose, urea, liver tests and blood count normal.",
     "hypona_resp": "After two 150 mL infusions the sodium is 116 mmol/L, but he is still drowsy and vomiting."
@@ -3403,7 +3425,7 @@
     "head_result": "fracture"
    },
    "results": {
-    "front": "Capillary glucose 5.9 mmol/L; GCS 14, protecting the airway; BP 136/82, HR 88, SpO2 98%, temperature 36.7 °C.",
+    "front": "Capillary glucose 5.9 mmol/L (106 mg/dL); GCS 14, protecting the airway; BP 136/82, HR 88, SpO2 98%, temperature 36.7 °C (98.1 °F).",
     "clues": "Boggy swelling over the left parietal scalp; GCS still 14 three hours after the injury; no focal weakness, seizure or fever.",
     "head_result": "CT head: a linear left parietal skull fracture; no intracranial blood."
    }
@@ -3419,10 +3441,10 @@
     "ca_resp": "normalized"
    },
    "results": {
-    "front": "Capillary glucose 6.1 mmol/L; GCS 14, protecting the airway; BP 104/60, HR 102, SpO2 97%, temperature 36.9 °C; dry mucous membranes.",
+    "front": "Capillary glucose 6.1 mmol/L (110 mg/dL); GCS 14, protecting the airway; BP 104/60, HR 102, SpO2 97%, temperature 36.9 °C (98.4 °F); dry mucous membranes.",
     "clues": "Thirsty; no focal deficit, injury, fever, seizure or toxidrome; no alcohol.",
-    "lab_result": "Albumin-adjusted calcium 3.2 mmol/L (12.8 mg/dL), PTH high-normal; sodium normal; creatinine 1.4 mg/dL, up from 0.9.",
-    "ca_resp": "After 24 hours of IV saline the adjusted calcium is 2.5 mmol/L (10.0 mg/dL) and she is clearer."
+    "lab_result": "Albumin-adjusted calcium 12.8 mg/dL (3.2 mmol/L), PTH high-normal; sodium normal; creatinine 1.4 mg/dL, up from 0.9.",
+    "ca_resp": "After 24 hours of IV saline the adjusted calcium is 10.0 mg/dL (2.5 mmol/L) and she is clearer."
    }
   },
   {
@@ -3434,7 +3456,7 @@
     "clues": "fever_source"
    },
    "results": {
-    "front": "Capillary glucose 7.1 mmol/L; GCS 14, protecting the airway; BP 108/64, HR 104, RR 24, SpO2 95% on air, temperature 38.6 °C.",
+    "front": "Capillary glucose 7.1 mmol/L (128 mg/dL); GCS 14, protecting the airway; BP 108/64, HR 104, RR 24, SpO2 95% on air, temperature 38.6 °C (101.5 °F).",
     "clues": "Crackles at the right base; no neck stiffness, rash, focal deficit, injury or seizure; pupils equal and reactive."
    }
   }

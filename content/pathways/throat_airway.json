@@ -219,6 +219,24 @@
    "label": "Epistaxis review 2022",
    "title": "Epistaxis in dental and maxillofacial practice: a comprehensive review (J Korean Assoc Oral Maxillofac Surg 2022)",
    "url": "https://pubmed.ncbi.nlm.nih.gov/35221303/"
+  },
+  {
+   "docId": "pmid:25263284",
+   "label": "BMJ Clin Evid 2014 croup",
+   "title": "Croup (BMJ Clinical Evidence 2014), a systematic overview",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25263284/"
+  },
+  {
+   "docId": "pmid:29939678",
+   "label": "StatPearls: Orbital Cellulitis",
+   "title": "Orbital Cellulitis (StatPearls, updated 2026; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29939678/"
+  },
+  {
+   "docId": "url:9115c6d54fdb",
+   "label": "FDA label: vancomycin",
+   "title": "Vancomycin Injection (Baxter) prescribing information, FDA label via DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=99e523d8-9bde-43cb-8434-497015e5dcbd"
   }
  ],
  "differential": [
@@ -609,18 +627,22 @@
     },
     {
      "gte": 6,
-     "lte": 12,
-     "text": "6 to 12: severe (the source's band is 6 to 11)"
+     "lte": 11,
+     "text": "6 to 11: severe"
     },
     {
-     "gte": 13,
-     "text": "Over 12: impending respiratory failure"
+     "gte": 12,
+     "text": "12 or more: impending respiratory failure"
     }
    ],
    "sources": [
     {
      "docId": "pmid:28613724",
-     "where": "Evaluation, Tables 1 and 2; Treatment / Management"
+     "where": "Evaluation, Tables 1 and 2 (\"6-11 | Severe\"; Table 2 prints \">12\" for impending respiratory failure); Treatment / Management"
+    },
+    {
+     "docId": "pmid:25263284",
+     "where": "Definitions of severity: severe croup at a Westley Croup Score of 6 to 11; impending respiratory failure \"corresponding to a Westley Croup Score greater than 11\""
     }
    ],
    "note": "This pathway treats stridor at rest as moderate to severe at any total, and a child goes home only with no stridor at rest.",
@@ -654,6 +676,15 @@
       "consciousness": 1
      },
      "expect": 17
+    },
+    {
+     "picks": {
+      "air": 2,
+      "stridor": 2,
+      "retractions": 3,
+      "consciousness": 1
+     },
+     "expect": 12
     }
    ]
   }
@@ -1466,6 +1497,22 @@
      ]
     },
     {
+     "item": "Vancomycin, weight-based",
+     "dose": "15 to 20 mg/kg IV every 8 to 12 hours, usual maximum 2 g a dose, adjusted to renal function and drug levels (StatPearls orbital cellulitis review); the US label and the StatPearls vancomycin review give 2 g a day, with a first daily dose of at least 15 mg/kg",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29939678",
+       "where": "Treatment / Management: \"adults may receive 15 to 20 mg/kg intravenously every 8 to 12 hours, with a usual maximum of 2 g per dose\""
+      },
+      {
+       "docId": "url:9115c6d54fdb",
+       "where": "2.2: \"The usual daily intravenous dosage of Vancomycin Injection is 2 grams (g) divided either as 500 mg every 6 hours or 1 g every 12 hours\"; \"The initial daily dose should be no less than 15 mg/kg\""
+      }
+     ],
+     "note": "The fixed 1 g twice daily is the label's usual adult dose (and the StatPearls peritonsillar abscess regimen); a StatPearls review gives the weight-based dose. The 2020 US vancomycin consensus was not openly readable."
+    },
+    {
      "item": "Corticosteroid",
      "dose": "Dexamethasone 8 to 10 mg IV three times daily or methylprednisolone 2 to 3 mg/kg IV; eases pain and shortens recovery",
      "status": "ok",
@@ -1637,7 +1684,7 @@
    "orders": [
     {
      "item": "Centor",
-     "dose": "1 point each: tonsillar exudates, tender anterior cervical nodes, fever (temperature over 38 C), absence of cough",
+     "dose": "1 point each: tonsillar exudates, tender anterior cervical nodes, fever (temperature over 38 C, 100.4 F), absence of cough",
      "status": "ok",
      "sources": [
       {
@@ -2034,7 +2081,7 @@
    "ask": "Croup, no stridor at rest (Westley 2 or less). Treatment?",
    "options": [
     "Oral dexamethasone as a single dose, then home",
-    "Nebulized salbutamol, repeated until the stridor settles",
+    "Nebulized albuterol (salbutamol), repeated until the stridor settles",
     "Nebulized epinephrine, then home right after the dose",
     "A cough syrup with dextromethorphan at bedtime"
    ],
@@ -2076,7 +2123,7 @@
    "ask": "Croup with stridor at rest or a Westley score of 3 or more. Treatment?",
    "options": [
     "Nebulized epinephrine plus dexamethasone, then observe",
-    "Nebulized salbutamol plus dexamethasone, then observe",
+    "Nebulized albuterol plus dexamethasone, then observe",
     "Heliox first, holding epinephrine and steroids for later",
     "Intubation now, with a tube a half size smaller"
    ],
@@ -2546,7 +2593,7 @@
    "options": [
     "Chest films, then rigid bronchoscopy even if normal",
     "Abdominal thrusts now, to clear the airway completely",
-    "Inhaled salbutamol for the wheeze, then reassess her in the department",
+    "Inhaled albuterol for the wheeze, then reassess her in the department",
     "A blind finger sweep of the mouth for the peanut"
    ],
    "answer": 0,

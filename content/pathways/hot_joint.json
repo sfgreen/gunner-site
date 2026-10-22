@@ -161,6 +161,18 @@
    "label": "StatPearls review: gonococcal arthritis",
    "title": "Gonococcal Arthritis (StatPearls)",
    "url": "https://pubmed.ncbi.nlm.nih.gov/29261865/"
+  },
+  {
+   "docId": "pmid:29939678",
+   "label": "StatPearls: Orbital Cellulitis",
+   "title": "Orbital Cellulitis (StatPearls, updated 2026; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29939678/"
+  },
+  {
+   "docId": "url:9115c6d54fdb",
+   "label": "FDA label: vancomycin",
+   "title": "Vancomycin Injection (Baxter) prescribing information, FDA label via DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=99e523d8-9bde-43cb-8434-497015e5dcbd"
   }
  ],
  "differential": [
@@ -696,7 +708,7 @@
    ],
    "answer": 0,
    "chainStep": "Hip ultrasound for an effusion and a hip x-ray; WBC, ESR and CRP; temperature and weight bearing for the Kocher criteria; blood culture before any antibiotic if septic arthritis is suspected",
-   "why": "The workup is a WBC, CRP and ESR, a hip x-ray and an ultrasound, which is extremely accurate for an intracapsular effusion. The x-ray also looks for Perthes disease or a slipped capital femoral epiphysis in an older child. The Kocher criteria are fever over 38.5 C (101.3 F), refusal to bear weight, ESR over 40 mm/h and WBC over 12,000/uL. Transient synovitis is diagnosed after this workup, not before it; ultrasound guides any aspiration, and MRI is for settings that do not aspirate effusions routinely.",
+   "why": "The workup is a WBC, CRP and ESR, a hip x-ray and an ultrasound, which is extremely accurate for an intracapsular effusion. The x-ray also looks for Perthes disease or a slipped capital femoral epiphysis in an older child. The Kocher criteria are fever over 101.3 F (38.5 C), refusal to bear weight, ESR over 40 mm/h and WBC over 12,000/uL. Transient synovitis is diagnosed after this workup, not before it; ultrasound guides any aspiration, and MRI is for settings that do not aspirate effusions routinely.",
    "next": "hip_result",
    "sources": [
     {
@@ -904,6 +916,22 @@
        "where": "Administration, pediatric dosage"
       }
      ]
+    },
+    {
+     "item": "Vancomycin, children, weight-based",
+     "dose": "40 to 60 mg/kg a day IV divided every 6 to 8 hours, usual maximum 4 g a day (StatPearls orbital cellulitis review); the US label and the StatPearls vancomycin review give 10 mg/kg every 6 hours",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29939678",
+       "where": "Treatment / Management: \"Vancomycin may be dosed in children at 40 to 60 mg/kg/d intravenously divided every 6 to 8 hours, with a usual maximum daily dose of 4 g\""
+      },
+      {
+       "docId": "url:9115c6d54fdb",
+       "where": "2.3: \"The usual intravenous dosage of vancomycin is 10 mg/kg per dose given every 6 hours\""
+      }
+     ],
+     "note": "10 mg/kg every 6 hours (40 mg/kg a day) is the low end of the weight-based range. The PIDS/IDSA 2023 pediatric guideline was not openly accessible."
     },
     {
      "item": "Ceftriaxone, children",
@@ -1276,6 +1304,22 @@
        "where": "Administration, adult dosage; Monitoring"
       }
      ]
+    },
+    {
+     "item": "Vancomycin, weight-based",
+     "dose": "15 to 20 mg/kg IV every 8 to 12 hours, usual maximum 2 g a dose, adjusted to renal function and drug levels (StatPearls orbital cellulitis review); the US label and the StatPearls vancomycin review give 2 g a day, with a first daily dose of at least 15 mg/kg",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29939678",
+       "where": "Treatment / Management: \"adults may receive 15 to 20 mg/kg intravenously every 8 to 12 hours, with a usual maximum of 2 g per dose\""
+      },
+      {
+       "docId": "url:9115c6d54fdb",
+       "where": "2.2: \"The usual daily intravenous dosage of Vancomycin Injection is 2 grams (g) divided either as 500 mg every 6 hours or 1 g every 12 hours\"; \"The initial daily dose should be no less than 15 mg/kg\""
+      }
+     ],
+     "note": "The fixed 1 g every 12 hours is the label's usual adult dose; a StatPearls review gives the weight-based dose. The 2020 US vancomycin consensus was not openly readable."
     }
    ]
   },
@@ -1334,6 +1378,22 @@
        "where": "Administration, adult dosage; Monitoring"
       }
      ]
+    },
+    {
+     "item": "Vancomycin, weight-based",
+     "dose": "15 to 20 mg/kg IV every 8 to 12 hours, usual maximum 2 g a dose, adjusted to renal function and drug levels (StatPearls orbital cellulitis review); the US label and the StatPearls vancomycin review give 2 g a day, with a first daily dose of at least 15 mg/kg",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29939678",
+       "where": "Treatment / Management: \"adults may receive 15 to 20 mg/kg intravenously every 8 to 12 hours, with a usual maximum of 2 g per dose\""
+      },
+      {
+       "docId": "url:9115c6d54fdb",
+       "where": "2.2: \"The usual daily intravenous dosage of Vancomycin Injection is 2 grams (g) divided either as 500 mg every 6 hours or 1 g every 12 hours\"; \"The initial daily dose should be no less than 15 mg/kg\""
+      }
+     ],
+     "note": "The fixed 1 g every 12 hours is the label's usual adult dose; a StatPearls review gives the weight-based dose. The 2020 US vancomycin consensus was not openly readable."
     },
     {
      "item": "Duration with Pseudomonas",
@@ -1399,6 +1459,22 @@
        "where": "Administration, adult dosage; Monitoring"
       }
      ]
+    },
+    {
+     "item": "Vancomycin, weight-based",
+     "dose": "15 to 20 mg/kg IV every 8 to 12 hours, usual maximum 2 g a dose, adjusted to renal function and drug levels (StatPearls orbital cellulitis review); the US label and the StatPearls vancomycin review give 2 g a day, with a first daily dose of at least 15 mg/kg",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29939678",
+       "where": "Treatment / Management: \"adults may receive 15 to 20 mg/kg intravenously every 8 to 12 hours, with a usual maximum of 2 g per dose\""
+      },
+      {
+       "docId": "url:9115c6d54fdb",
+       "where": "2.2: \"The usual daily intravenous dosage of Vancomycin Injection is 2 grams (g) divided either as 500 mg every 6 hours or 1 g every 12 hours\"; \"The initial daily dose should be no less than 15 mg/kg\""
+      }
+     ],
+     "note": "The fixed 1 g every 12 hours is the label's usual adult dose; a StatPearls review gives the weight-based dose. The 2020 US vancomycin consensus was not openly readable."
     }
    ]
   },
@@ -1450,6 +1526,22 @@
        "where": "Administration, adult dosage; Monitoring"
       }
      ]
+    },
+    {
+     "item": "Vancomycin, weight-based",
+     "dose": "15 to 20 mg/kg IV every 8 to 12 hours, usual maximum 2 g a dose, adjusted to renal function and drug levels (StatPearls orbital cellulitis review); the US label and the StatPearls vancomycin review give 2 g a day, with a first daily dose of at least 15 mg/kg",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29939678",
+       "where": "Treatment / Management: \"adults may receive 15 to 20 mg/kg intravenously every 8 to 12 hours, with a usual maximum of 2 g per dose\""
+      },
+      {
+       "docId": "url:9115c6d54fdb",
+       "where": "2.2: \"The usual daily intravenous dosage of Vancomycin Injection is 2 grams (g) divided either as 500 mg every 6 hours or 1 g every 12 hours\"; \"The initial daily dose should be no less than 15 mg/kg\""
+      }
+     ],
+     "note": "The fixed 1 g every 12 hours is the label's usual adult dose; a StatPearls review gives the weight-based dose. The 2020 US vancomycin consensus was not openly readable."
     },
     {
      "item": "Ceftriaxone",
@@ -1869,18 +1961,18 @@
     },
     {
      "item": "HLA-B*5801 test",
-     "dose": "Before allopurinol: conditionally recommended for patients of Southeast Asian descent (for example Han Chinese, Korean, Thai) and for African American patients",
+     "dose": "Before allopurinol: conditionally recommended for patients of Southeast Asian descent (for example Han Chinese, Korean, Thai) and for African American patients, in whom the allele is more common (7.4% and 3.8%, against 0.7% in white and Hispanic people); universal testing in others is conditionally recommended against",
      "status": "ok",
      "sources": [
       {
        "docId": "pmid:32391934",
-       "where": "Initiating ULT, HLA-B*5801"
+       "where": "Initiating ULT, HLA-B*5801: prevalence \"is highest among persons of Han Chinese, Korean, and Thai descent (7.4%) (66), lower among African Americans (3.8%), and even lower among whites and Hispanics (0.7% each)\""
       }
      ]
     },
     {
      "item": "Lower urate target",
-     "dose": "Consider a target under 300 micromol/L (5 mg/dL) with tophi or chronic gouty arthritis",
+     "dose": "Consider a target under 5 mg/dL (300 micromol/L) with tophi or chronic gouty arthritis",
      "status": "ok",
      "sources": [
       {
@@ -2268,7 +2360,7 @@
   {
    "id": "septic_shock",
    "label": "Septic knee in shock",
-   "vignette": "71-year-old man with diabetes, 2 days of a hot, swollen right knee, now confused. Temperature 39.4 C, BP 82/48, HR 124, RR 26. Lactate 4.8 mmol/L. Weight 80 kg. No joint replacement, no bleeding disorder, no anticoagulant.",
+   "vignette": "71-year-old man with diabetes, 2 days of a hot, swollen right knee, now confused. Temperature 39.4 C (102.9 F), BP 82/48, HR 124, RR 26. Lactate 4.8 mmol/L. Weight 80 kg. No joint replacement, no bleeding disorder, no anticoagulant.",
    "picks": {
     "front": "septic_shock"
    },
@@ -2279,7 +2371,7 @@
   {
    "id": "pji",
    "label": "Infected knee replacement",
-   "vignette": "68-year-old woman with a right total knee replacement 4 years ago, 3 days of a hot, swollen, painful knee. Temperature 38.2 C, BP 134/78, HR 84. Alert. No anticoagulant.",
+   "vignette": "68-year-old woman with a right total knee replacement 4 years ago, 3 days of a hot, swollen, painful knee. Temperature 38.2 C (100.8 F), BP 134/78, HR 84. Alert. No anticoagulant.",
    "picks": {
     "front": "prosthesis"
    },
@@ -2290,7 +2382,7 @@
   {
    "id": "hemophilia",
    "label": "Knee bleed in hemophilia A",
-   "vignette": "24-year-old man with severe hemophilia A, no known inhibitor, a swollen, painful left knee since this morning after climbing stairs. Temperature 36.9 C, BP 126/74, HR 88. Weight 70 kg.",
+   "vignette": "24-year-old man with severe hemophilia A, no known inhibitor, a swollen, painful left knee since this morning after climbing stairs. Temperature 36.9 C (98.4 F), BP 126/74, HR 88. Weight 70 kg.",
    "picks": {
     "front": "hemophilia"
    },
@@ -2301,7 +2393,7 @@
   {
    "id": "dgi",
    "label": "Arthritis-dermatitis syndrome",
-   "vignette": "22-year-old woman with a new sexual partner, 4 days of fever and joint pains that moved from joint to joint, now a painful, swollen right wrist. Temperature 38.3 C, BP 118/70, HR 98.",
+   "vignette": "22-year-old woman with a new sexual partner, 4 days of fever and joint pains that moved from joint to joint, now a painful, swollen right wrist. Temperature 38.3 C (100.9 F), BP 118/70, HR 98.",
    "picks": {
     "front": "dgi"
    },
@@ -2312,7 +2404,7 @@
   {
    "id": "child_septic",
    "label": "Septic hip in a child",
-   "vignette": "5-year-old boy, a day of fever and refusing to walk; he cries when his right hip is moved. Temperature 39.1 C (102.4 F). Fully immunized, no injury.",
+   "vignette": "5-year-old boy, a day of fever and refusing to walk; he cries when his right hip is moved. Temperature 102.4 F (39.1 C). Fully immunized, no injury.",
    "picks": {
     "front": "child_hip",
     "hip_result": "risk",
@@ -2327,7 +2419,7 @@
   {
    "id": "child_ts_aspirated",
    "label": "Transient synovitis after a negative tap",
-   "vignette": "6-year-old girl, a day of right hip pain and limping after a cold last week; this morning she would not stand on the leg. Temperature 38.7 C (101.7 F).",
+   "vignette": "6-year-old girl, a day of right hip pain and limping after a cold last week; this morning she would not stand on the leg. Temperature 101.7 F (38.7 C).",
    "picks": {
     "front": "child_hip",
     "hip_result": "risk",
@@ -2342,7 +2434,7 @@
   {
    "id": "child_ts_clinical",
    "label": "Transient synovitis, low risk",
-   "vignette": "7-year-old boy, a limp and mild left hip pain since waking, a runny nose last week. Temperature 37.2 C (99.0 F). He walks in with a limp.",
+   "vignette": "7-year-old boy, a limp and mild left hip pain since waking, a runny nose last week. Temperature 99.0 F (37.2 C). He walks in with a limp.",
    "picks": {
     "front": "child_hip",
     "hip_result": "low"
@@ -2355,7 +2447,7 @@
   {
    "id": "child_no_effusion",
    "label": "Limp without a hip effusion",
-   "vignette": "8-year-old boy, 2 weeks of an intermittent limp with right hip and knee ache, no fever. Temperature 36.8 C.",
+   "vignette": "8-year-old boy, 2 weeks of an intermittent limp with right hip and knee ache, no fever. Temperature 36.8 C (98.2 F).",
    "picks": {
     "front": "child_hip",
     "hip_result": "none"
@@ -2368,7 +2460,7 @@
   {
    "id": "septic_gpc",
    "label": "Staphylococcal septic knee",
-   "vignette": "61-year-old man with knee osteoarthritis, a corticosteroid injection into the left knee 10 days ago, now 2 days of a hot, swollen left knee; he cannot bear weight. Temperature 38.6 C, BP 138/82, HR 102. Creatinine normal, no immunosuppression.",
+   "vignette": "61-year-old man with knee osteoarthritis, a corticosteroid injection into the left knee 10 days ago, now 2 days of a hot, swollen left knee; he cannot bear weight. Temperature 38.6 C (101.5 F), BP 138/82, HR 102. Creatinine normal, no immunosuppression.",
    "picks": {
     "front": "native",
     "fluid": "gpc"
@@ -2381,7 +2473,7 @@
   {
    "id": "septic_gnr",
    "label": "Gram-negative septic knee in a drug user",
-   "vignette": "38-year-old man who injects drugs, 3 days of a hot, swollen right knee. Temperature 38.4 C, BP 128/76, HR 104. Creatinine normal.",
+   "vignette": "38-year-old man who injects drugs, 3 days of a hot, swollen right knee. Temperature 38.4 C (101.1 F), BP 128/76, HR 104. Creatinine normal.",
    "picks": {
     "front": "native",
     "fluid": "gnr"
@@ -2394,7 +2486,7 @@
   {
    "id": "gonococcal_fluid",
    "label": "Gonococcal septic knee",
-   "vignette": "19-year-old man with several recent sexual partners, 2 days of a hot, swollen left knee; no rash, no tendon pain. Temperature 38.1 C, BP 124/72, HR 96.",
+   "vignette": "19-year-old man with several recent sexual partners, 2 days of a hot, swollen left knee; no rash, no tendon pain. Temperature 38.1 C (100.6 F), BP 124/72, HR 96.",
    "picks": {
     "front": "native",
     "fluid": "gndc"
@@ -2407,7 +2499,7 @@
   {
    "id": "septic_stain_neg",
    "label": "Septic ankle, Gram stain negative",
-   "vignette": "55-year-old woman with type 2 diabetes, 2 days of a hot, swollen right ankle. Temperature 38.8 C, BP 132/80, HR 106. Creatinine normal.",
+   "vignette": "55-year-old woman with type 2 diabetes, 2 days of a hot, swollen right ankle. Temperature 38.8 C (101.8 F), BP 132/80, HR 106. Creatinine normal.",
    "picks": {
     "front": "native",
     "fluid": "stain_neg"
@@ -2420,7 +2512,7 @@
   {
    "id": "gnr_other",
    "label": "Gram-negative septic knee, no Pseudomonas risk",
-   "vignette": "81-year-old woman treated for an E. coli urinary infection last week, 2 days of a hot, swollen right knee. Temperature 38.5 C, BP 136/78, HR 100. Does not inject drugs, not immunosuppressed. Creatinine normal.",
+   "vignette": "81-year-old woman treated for an E. coli urinary infection last week, 2 days of a hot, swollen right knee. Temperature 38.5 C (101.3 F), BP 136/78, HR 100. Does not inject drugs, not immunosuppressed. Creatinine normal.",
    "picks": {
     "front": "native",
     "fluid": "gnr_other"
@@ -2433,7 +2525,7 @@
   {
    "id": "crystal_septic",
    "label": "Septic knee with urate crystals",
-   "vignette": "66-year-old man with gout, 2 days of a hot, swollen right knee and rigors. Temperature 38.9 C, BP 134/80, HR 108. Creatinine normal.",
+   "vignette": "66-year-old man with gout, 2 days of a hot, swollen right knee and rigors. Temperature 38.9 C (102 F), BP 134/80, HR 108. Creatinine normal.",
    "picks": {
     "front": "native",
     "fluid": "crystal_septic"
@@ -2446,7 +2538,7 @@
   {
    "id": "inflam_febrile",
    "label": "Febrile inflammatory knee, Gram stain negative",
-   "vignette": "47-year-old woman with type 2 diabetes, 3 days of a hot, swollen left knee and fever. No tick exposure, no recent infection. Temperature 38.7 C, BP 128/78, HR 104. Creatinine normal.",
+   "vignette": "47-year-old woman with type 2 diabetes, 3 days of a hot, swollen left knee and fever. No tick exposure, no recent infection. Temperature 38.7 C (101.7 F), BP 128/78, HR 104. Creatinine normal.",
    "picks": {
     "front": "native",
     "fluid": "inflam_febrile"
@@ -2459,7 +2551,7 @@
   {
    "id": "gout_on_ult",
    "label": "Gout flare on allopurinol",
-   "vignette": "58-year-old man with gout on allopurinol 300 mg daily for 2 years, woke with a hot, swollen right knee. Temperature 37.6 C, BP 142/88. eGFR 82; no other medicines.",
+   "vignette": "58-year-old man with gout on allopurinol 300 mg daily for 2 years, woke with a hot, swollen right knee. Temperature 37.6 C (99.7 F), BP 142/88. eGFR 82; no other medicines.",
    "picks": {
     "front": "native",
     "fluid": "urate",
@@ -2474,7 +2566,7 @@
   {
    "id": "gout_first",
    "label": "First gout flare",
-   "vignette": "44-year-old man, previously well, 12 hours of a hot, swollen left ankle after a weekend of heavy drinking. Temperature 37.4 C. eGFR 96, no medicines.",
+   "vignette": "44-year-old man, previously well, 12 hours of a hot, swollen left ankle after a weekend of heavy drinking. Temperature 37.4 C (99.3 F). eGFR 96, no medicines.",
    "picks": {
     "front": "native",
     "fluid": "urate",
@@ -2489,7 +2581,7 @@
   {
    "id": "gout_indicated",
    "label": "Tophaceous gout, not on ULT",
-   "vignette": "67-year-old man with CKD stage 3a and 3 gout flares this year, a hot, swollen right knee for a day. Not on urate-lowering therapy. Temperature 37.5 C. eGFR 52; takes amlodipine only.",
+   "vignette": "67-year-old man with CKD stage 3a and 3 gout flares this year, a hot, swollen right knee for a day. Not on urate-lowering therapy. Temperature 37.5 C (99.5 F). eGFR 52; takes amlodipine only.",
    "picks": {
     "front": "native",
     "fluid": "urate",
@@ -2504,7 +2596,7 @@
   {
    "id": "cppd",
    "label": "Pseudogout of the knee",
-   "vignette": "78-year-old woman, a hot, swollen right knee since she woke 8 hours ago. Temperature 37.8 C, BP 146/84. No joint replacement.",
+   "vignette": "78-year-old woman, a hot, swollen right knee since she woke 8 hours ago. Temperature 37.8 C (100 F), BP 146/84. No joint replacement.",
    "picks": {
     "front": "native",
     "fluid": "cpp"
@@ -2517,7 +2609,7 @@
   {
    "id": "lyme",
    "label": "Lyme arthritis of the knee",
-   "vignette": "34-year-old man from Connecticut, 3 weeks of a large, mildly painful left knee effusion; he hiked in the woods last summer and remembers an expanding rash. Temperature 37.1 C. Not taking any medicines.",
+   "vignette": "34-year-old man from Connecticut, 3 weeks of a large, mildly painful left knee effusion; he hiked in the woods last summer and remembers an expanding rash. Temperature 37.1 C (98.8 F). Not taking any medicines.",
    "picks": {
     "front": "native",
     "fluid": "inflam",
@@ -2532,7 +2624,7 @@
   {
    "id": "reactive",
    "label": "Reactive arthritis after diarrhea",
-   "vignette": "26-year-old man, a hot, swollen right knee and a painful left heel 3 weeks after a bout of bloody diarrhea; his eyes were red last week. No tick exposure. Temperature 37.3 C.",
+   "vignette": "26-year-old man, a hot, swollen right knee and a painful left heel 3 weeks after a bout of bloody diarrhea; his eyes were red last week. No tick exposure. Temperature 37.3 C (99.1 F).",
    "picks": {
     "front": "native",
     "fluid": "inflam",
@@ -2547,7 +2639,7 @@
   {
    "id": "inflam_other",
    "label": "Inflammatory knee, no cause found",
-   "vignette": "45-year-old woman who gardens in a Lyme-endemic county, a warm, swollen right knee for 10 days, no injury and no recent infection. Temperature 37.0 C.",
+   "vignette": "45-year-old woman who gardens in a Lyme-endemic county, a warm, swollen right knee for 10 days, no injury and no recent infection. Temperature 37.0 C (98.6 F).",
    "picks": {
     "front": "native",
     "fluid": "inflam",
@@ -2562,7 +2654,7 @@
   {
    "id": "hemarthrosis",
    "label": "Hemarthrosis on apixaban",
-   "vignette": "76-year-old man on apixaban for atrial fibrillation, a hot, swollen left knee for 6 hours; no fall. Temperature 37.2 C, BP 138/80.",
+   "vignette": "76-year-old man on apixaban for atrial fibrillation, a hot, swollen left knee for 6 hours; no fall. Temperature 37.2 C (99 F), BP 138/80.",
    "picks": {
     "front": "native",
     "fluid": "blood"
@@ -2575,7 +2667,7 @@
   {
    "id": "noninflammatory",
    "label": "Noninflammatory effusion",
-   "vignette": "62-year-old woman with knee osteoarthritis, a swollen, warm-feeling right knee for 4 days after gardening, no fever. Temperature 36.9 C.",
+   "vignette": "62-year-old woman with knee osteoarthritis, a swollen, warm-feeling right knee for 4 days after gardening, no fever. Temperature 36.9 C (98.4 F).",
    "picks": {
     "front": "native",
     "fluid": "noninflam"

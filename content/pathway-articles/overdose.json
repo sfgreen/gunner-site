@@ -47,7 +47,7 @@
     },
     {
       "lead": "Naloxone for slow, shallow breathing.",
-      "text": "0.4 to 2 mg IV, repeated every 2 to 3 minutes; question the diagnosis if 10 mg brings no response. Observe at least 4 hours after reversal. No flumazenil in benzodiazepine dependence or a mixed overdose with a cyclic antidepressant.",
+      "text": "0.4 to 2 mg IV, repeated every 2 to 3 minutes (StatPearls starts at 0.04 to 0.1 mg in opioid dependence); question the diagnosis if 10 mg brings no response. Observe at least 4 hours after reversal. No flumazenil in benzodiazepine dependence or a mixed overdose with a cyclic antidepressant.",
       "refs": [
         "naloxone",
         "nalox_resp",
@@ -305,7 +305,7 @@
       ]
     },
     {
-      "text": "Naloxone 10 mg as a single push. It starts at 0.4 to 2 mg; 10 mg without a response means question the diagnosis.",
+      "text": "Naloxone 10 mg as a single push. The label starts at 0.4 to 2 mg (StatPearls: 0.04 to 0.1 mg in opioid dependence); 10 mg without a response means question the diagnosis.",
       "refs": [
         "naloxone"
       ]

@@ -2409,7 +2409,7 @@
     "front": "unstable"
    },
    "results": {
-    "front": "Monitor: complete heart block at 38; BP 74/40; drowsy but rousable; glucose 6.1 mmol/L (110 mg/dL)."
+    "front": "Monitor: complete heart block at 38; BP 74/40; drowsy but rousable; glucose 110 mg/dL (6.1 mmol/L)."
    }
   },
   {
@@ -2420,7 +2420,7 @@
     "front": "glucose"
    },
    "results": {
-    "front": "Fingerstick glucose 2.6 mmol/L (47 mg/dL); sinus tachycardia on the ECG; alert, no focal deficit."
+    "front": "Fingerstick glucose 47 mg/dL (2.6 mmol/L); sinus tachycardia on the ECG; alert, no focal deficit."
    }
   },
   {
@@ -2431,7 +2431,7 @@
     "front": "focal"
    },
    "results": {
-    "front": "Glucose 6.8 mmol/L (122 mg/dL); sinus rhythm; dysarthria, double vision on right gaze, and right arm drift."
+    "front": "Glucose 122 mg/dL (6.8 mmol/L); sinus rhythm; dysarthria, double vision on right gaze, and right arm drift."
    }
   },
   {
@@ -2442,7 +2442,7 @@
     "front": "thunderclap"
    },
    "results": {
-    "front": "The headache was at its worst within a minute of onset; glucose 6.3 mmol/L (113 mg/dL); sinus rhythm; no weakness, numbness, speech or visual deficit."
+    "front": "The headache was at its worst within a minute of onset; glucose 113 mg/dL (6.3 mmol/L); sinus rhythm; no weakness, numbness, speech or visual deficit."
    }
   },
   {
@@ -2453,7 +2453,7 @@
     "front": "cardiac"
    },
    "results": {
-    "front": "Narrow regular tachycardia at 186 on the ECG; BP 118/76; glucose 5.4 mmol/L (97 mg/dL); alert, neurological exam normal."
+    "front": "Narrow regular tachycardia at 186 on the ECG; BP 118/76; glucose 97 mg/dL (5.4 mmol/L); alert, neurological exam normal."
    }
   },
   {
@@ -2464,7 +2464,7 @@
     "front": "drug"
    },
    "results": {
-    "front": "Phenytoin level 34 mg/L; glucose 5.0 mmol/L (90 mg/dL); sinus rhythm; nystagmus on looking to either side, broad-based gait; strength, sensation, speech and fields normal."
+    "front": "Phenytoin level 34 mg/L; glucose 90 mg/dL (5.0 mmol/L); sinus rhythm; nystagmus on looking to either side, broad-based gait; strength, sensation, speech and fields normal."
    }
   },
   {
@@ -2478,7 +2478,7 @@
     "hints_result": "peripheral"
    },
    "results": {
-    "front": "Glucose 5.6 mmol/L (101 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 101 mg/dL (5.6 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Constant for 30 hours, worse when the head moves, never gone.",
     "avs_nyst": "Horizontal-torsional nystagmus beating left at rest, stronger on left gaze, still beating left on right gaze.",
     "hints_result": "Head impulse to the right: corrective saccade; to the left: normal. Nystagmus beats left in every gaze; no skew on alternate cover; finger rub heard equally; walks unaided, veering to the right."
@@ -2496,7 +2496,7 @@
     "mri_result": "infarct"
    },
    "results": {
-    "front": "Glucose 9.2 mmol/L (166 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 166 mg/dL (9.2 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Constant since onset 14 hours ago, worse with head movement.",
     "avs_nyst": "Nystagmus beats right on right gaze and left on left gaze.",
     "hints_result": "Head impulse normal to both sides; nystagmus changes direction with gaze; small skew on alternate cover; hearing equal; cannot walk without support.",
@@ -2515,7 +2515,7 @@
     "mri_result": "infarct"
    },
    "results": {
-    "front": "Glucose 6.4 mmol/L (115 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 115 mg/dL (6.4 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Constant for 10 hours, worse with head movement.",
     "avs_nyst": "Left-beating horizontal nystagmus at rest.",
     "hints_result": "Head impulse to the right: corrective saccade; nystagmus beats left in all gaze directions; no skew; cannot hear a finger rub in the right ear, Weber lateralizes to the left; walks with support.",
@@ -2534,7 +2534,7 @@
     "mri_result": "infarct"
    },
    "results": {
-    "front": "Glucose 5.9 mmol/L (106 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 106 mg/dL (5.9 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Constant for 20 hours, worse with head movement.",
     "avs_nyst": "Right-beating horizontal-torsional nystagmus at rest.",
     "hints_result": "Head impulse to the left: corrective saccade; nystagmus beats right in all gaze; no skew; hearing equal; cannot sit or stand unaided, falls to the left.",
@@ -2553,7 +2553,7 @@
     "mri_result": "bleed"
    },
    "results": {
-    "front": "Glucose 7.0 mmol/L (126 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside. The ache built over an hour; not a thunderclap.",
+    "front": "Glucose 126 mg/dL (7.0 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside. The ache built over an hour; not a thunderclap.",
     "timing": "Constant since onset 3 hours ago.",
     "avs_nyst": "Gaze-evoked nystagmus to each side, no nystagmus looking straight ahead.",
     "hints_result": "Head impulse normal both ways; nystagmus changes direction with gaze; no skew; hearing equal; cannot stand without falling.",
@@ -2572,7 +2572,7 @@
     "mri_result": "normal"
    },
    "results": {
-    "front": "Glucose 8.1 mmol/L (146 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 146 mg/dL (8.1 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Constant for 30 hours, worse when he moves.",
     "avs_nyst": "No nystagmus at rest or on side gaze, with or without fixation.",
     "ais_result": "Cannot walk without support (grade 2); smooth pursuit is saccadic.",
@@ -2590,7 +2590,7 @@
     "ais_result": "steady"
    },
    "results": {
-    "front": "Glucose 5.2 mmol/L (94 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 94 mg/dL (5.2 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Constant for 2 days, a little worse when she moves.",
     "avs_nyst": "No nystagmus at rest or on side gaze.",
     "ais_result": "Walks unaided with mild imbalance (grade 1); pursuit and saccades normal."
@@ -2609,7 +2609,7 @@
     "audio": "ssnhl"
    },
    "results": {
-    "front": "Glucose 5.5 mmol/L (99 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 99 mg/dL (5.5 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Constant for 48 hours, worse with head movement.",
     "avs_nyst": "Right-beating horizontal-torsional nystagmus at rest.",
     "hints_result": "Head impulse to the left: corrective saccade; nystagmus beats right in all gaze; no skew; cannot hear a finger rub on the left, Weber lateralizes to the right; walks unaided, veering to the left.",
@@ -2630,7 +2630,7 @@
     "audio": "normal"
    },
    "results": {
-    "front": "Glucose 6.0 mmol/L (108 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 108 mg/dL (6.0 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Constant for 26 hours, worse when the head moves.",
     "avs_nyst": "Left-beating horizontal-torsional nystagmus at rest.",
     "hints_result": "Head impulse to the right: corrective saccade; nystagmus beats left in all gaze; no skew; finger rub fainter on the right; walks unaided, veering to the right.",
@@ -2651,7 +2651,7 @@
     "audio": "other_loss"
    },
    "results": {
-    "front": "Glucose 5.8 mmol/L (104 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 104 mg/dL (5.8 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Constant for 30 hours, worse when the head moves.",
     "avs_nyst": "Left-beating horizontal-torsional nystagmus at rest.",
     "hints_result": "Head impulse to the right: corrective saccade; nystagmus beats left in all gaze; no skew; finger rub fainter on the right, Weber lateralizes to the left; walks unaided, veering to the right.",
@@ -2670,7 +2670,7 @@
     "epley_result": "resolved"
    },
    "results": {
-    "front": "Glucose 5.7 mmol/L (103 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 103 mg/dL (5.7 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Spells of 20 to 30 seconds, only on lying down, rolling over or looking up; well in between.",
     "positional": "Standing pressure 136/80 at 3 minutes; right Dix-Hallpike: upbeat-torsional nystagmus after 5 seconds, building then fading by 30 seconds; left Dix-Hallpike and supine roll negative.",
     "epley_result": "Repeat right Dix-Hallpike: no nystagmus, no vertigo."
@@ -2687,7 +2687,7 @@
     "epley_result": "persists"
    },
    "results": {
-    "front": "Glucose 6.2 mmol/L (112 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 112 mg/dL (6.2 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Spells of under a minute on rolling to the left or lying back; well between.",
     "positional": "Standing pressure steady; left Dix-Hallpike: upbeat-torsional nystagmus after a few seconds, gone by 40 seconds; right Dix-Hallpike and supine roll negative.",
     "epley_result": "Repeat left Dix-Hallpike: the same upbeat-torsional nystagmus, weaker."
@@ -2704,7 +2704,7 @@
     "epley_result": "converted"
    },
    "results": {
-    "front": "Glucose 5.3 mmol/L (95 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 95 mg/dL (5.3 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Brief spells on lying back and turning in bed; well between.",
     "positional": "Standing pressure steady; right Dix-Hallpike: upbeat-torsional nystagmus after a short delay, fading within 30 seconds; left side and supine roll negative.",
     "epley_result": "Right Dix-Hallpike now negative, but the supine roll test brings out horizontal nystagmus beating toward the ground on turning to each side, stronger to the right."
@@ -2720,7 +2720,7 @@
     "positional": "hc"
    },
    "results": {
-    "front": "Glucose 5.1 mmol/L (92 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 92 mg/dL (5.1 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Spells of under a minute on turning over in bed; well between.",
     "positional": "Standing pressure steady; both Dix-Hallpike tests negative; supine roll: horizontal nystagmus beating toward the ground on turning to each side, stronger to the left, fading within a minute."
    }
@@ -2736,7 +2736,7 @@
     "mri_result": "other"
    },
    "results": {
-    "front": "Glucose 5.4 mmol/L (97 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 97 mg/dL (5.4 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Spells on lying down and on bending forward; well when sitting still.",
     "positional": "Standing pressure steady; on both Dix-Hallpike tests, downbeat nystagmus starts at once and lasts as long as the head is held; little vertigo with it.",
     "mri_result": "MRI: an enhancing mass in the cerebellar vermis; no infarct."
@@ -2752,7 +2752,7 @@
     "positional": "orthostatic"
    },
    "results": {
-    "front": "Glucose 5.8 mmol/L (104 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 104 mg/dL (5.8 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Spells within seconds of standing up, never on lying down or rolling; well between; furosemide was started 10 days ago.",
     "positional": "Lying 128/72; standing at 2 minutes 102/64, with the dizziness; Dix-Hallpike and supine roll negative."
    }
@@ -2767,7 +2767,7 @@
     "positional": "pressure"
    },
    "results": {
-    "front": "Glucose 5.0 mmol/L (90 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 90 mg/dL (5.0 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Brief spells set off by straining, coughing or loud sound; well between.",
     "positional": "Standing pressure steady; Dix-Hallpike and supine roll negative; pressing on the left tragus brings out nystagmus and vertigo."
    }
@@ -2782,7 +2782,7 @@
     "positional": "negative"
    },
    "results": {
-    "front": "Glucose 4.9 mmol/L (88 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 88 mg/dL (4.9 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Two spells of seconds on getting up from bed; none since.",
     "positional": "Standing pressure steady; Dix-Hallpike to each side and supine roll negative; no sound or pressure trigger."
    }
@@ -2797,7 +2797,7 @@
     "spont": "ear"
    },
    "results": {
-    "front": "Glucose 5.3 mmol/L (95 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 95 mg/dL (5.3 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Attacks of 2 to 4 hours out of the blue; well between; none today.",
     "spont": "Left ear: hearing loss, tinnitus and fullness with each attack; no migraine history; normal neurological exam."
    }
@@ -2812,7 +2812,7 @@
     "spont": "migraine"
    },
    "results": {
-    "front": "Glucose 5.0 mmol/L (90 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 90 mg/dL (5.0 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Episodes of 1 to 6 hours out of the blue; well between.",
     "spont": "No hearing loss, tinnitus or fullness; throbbing headache with light and sound sensitivity in most episodes; normal exam between."
    }
@@ -2827,7 +2827,7 @@
     "spont": "tia"
    },
    "results": {
-    "front": "Glucose 7.4 mmol/L (133 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 133 mg/dL (7.4 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Three attacks of 5 to 10 minutes over 2 days, out of the blue; well between and now.",
     "spont": "No ear symptoms; no migraine history or features; vascular risk factors as above; neurological exam normal now."
    }
@@ -2842,7 +2842,7 @@
     "spont": "low"
    },
    "results": {
-    "front": "Glucose 5.1 mmol/L (92 mg/dL); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "front": "Glucose 92 mg/dL (5.1 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
     "timing": "Two spells of about 10 minutes out of the blue; well between and now.",
     "spont": "No hearing loss, tinnitus or fullness; no migraine history or features; no vascular risk factors and no neck pain; no double vision, slurred speech, swallowing trouble or numbness with the spells; cranial nerves, fields, eye movements, coordination and gait normal."
    }

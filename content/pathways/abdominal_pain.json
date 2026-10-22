@@ -119,6 +119,18 @@
    "label": "WSES diverticulitis 2020",
    "title": "2020 update of the WSES guidelines for the management of acute colonic diverticulitis in the emergency setting",
    "url": "https://pubmed.ncbi.nlm.nih.gov/32381121/"
+  },
+  {
+   "docId": "url:8e5bf9092a50",
+   "label": "FDA label: metronidazole",
+   "title": "Metronidazole Injection USP (Baxter) prescribing information, FDA label via DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d762edb-12ac-429d-b1f0-7af5d3b909d4"
+  },
+  {
+   "docId": "pmid:30969550",
+   "label": "StatPearls: Metronidazole",
+   "title": "Metronidazole (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30969550/"
   }
  ],
  "differential": [
@@ -784,6 +796,26 @@
      ]
     },
     {
+     "item": "Metronidazole interval",
+     "dose": "500 mg every 6 hours in WSES, and 7.5 mg/kg (about 500 mg for 70 kg) every 6 hours on the US label; StatPearls gives 500 mg IV or orally every 8 hours for intra-abdominal infection",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:31921329",
+       "where": "Antimicrobial therapy, regimens: \"ceftriaxone 2 g 24-hourly + metronidazole 500 mg 6-hourly\""
+      },
+      {
+       "docId": "url:8e5bf9092a50",
+       "where": "Dosage and Administration, Table 1: \"Maintenance Dosage 7.5 mg/kg infused intravenously over one hour every six hours (approximately 500 mg for a 70-kg adult)\""
+      },
+      {
+       "docId": "pmid:30969550",
+       "where": "Administration: \"Dosing for intra-abdominal infections: Oral, IV: 500 mg every 8 hours as in an appropriate combination regimen.\""
+      }
+     ],
+     "note": "WSES and the US label give every 6 hours; the StatPearls review gives every 8 hours for intra-abdominal infection."
+    },
+    {
      "item": "Course",
      "dose": "3 to 5 days, or until inflammatory markers normalize",
      "status": "ok",
@@ -1045,6 +1077,26 @@
        "where": "2.3; Q2.3 narrative citing the 2017 WSES regimens"
       }
      ]
+    },
+    {
+     "item": "Metronidazole interval",
+     "dose": "500 mg every 6 hours in WSES, and 7.5 mg/kg (about 500 mg for 70 kg) every 6 hours on the US label; StatPearls gives 500 mg IV or orally every 8 hours for intra-abdominal infection",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:32295644",
+       "where": "Q2.3 narrative citing the 2017 WSES regimens: \"ceftriazone 2 g 24-hourly + metronidazole 500 mg 6-hourly\""
+      },
+      {
+       "docId": "url:8e5bf9092a50",
+       "where": "Dosage and Administration, Table 1: \"Maintenance Dosage 7.5 mg/kg infused intravenously over one hour every six hours (approximately 500 mg for a 70-kg adult)\""
+      },
+      {
+       "docId": "pmid:30969550",
+       "where": "Administration: \"Dosing for intra-abdominal infections: Oral, IV: 500 mg every 8 hours as in an appropriate combination regimen.\""
+      }
+     ],
+     "note": "WSES and the US label give every 6 hours; the StatPearls review gives every 8 hours for intra-abdominal infection."
     }
    ],
    "next": "end_appy"
@@ -1652,7 +1704,7 @@
    ],
    "answer": 0,
    "chainStep": "Resuscitate to MAP 65 or more, urine 0.5 mL/kg/h and a falling lactate; broad-spectrum antibiotics now; emergency surgical source control",
-   "why": "In shock with peritonitis, antibiotics start as soon as possible and resuscitation targets a MAP of 65, a urine output of 0.5 mL/kg/h and a normalizing lactate; the cause is controlled in theatre.",
+   "why": "In shock with peritonitis, antibiotics start as soon as possible and resuscitation targets a MAP of 65, a urine output of 0.5 mL/kg/h and a normalizing lactate; the cause is controlled in the operating room.",
    "sources": [
     {
      "docId": "pmid:28702076",
@@ -1673,7 +1725,7 @@
    "options": [
     "CT angiography now; a symptomatic aneurysm is repaired",
     "Outpatient ultrasound in 3 months",
-    "Permissive hypotension and theatre without imaging",
+    "Permissive hypotension and the operating room without imaging",
     "Discharge with analgesia"
    ],
    "answer": 0,

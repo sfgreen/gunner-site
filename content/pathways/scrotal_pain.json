@@ -981,8 +981,8 @@
     "Admit for analgesia and reassess the testis in the morning"
    ],
    "answer": 0,
-   "chainStep": "TWIST score: testicular swelling 2, hard testis 2, absent cremasteric reflex 1, nausea or vomiting 1, high-riding testis 1; 5 or more to theatre, 3 to 4 ultrasound now, 0 to 2 low risk",
-   "why": "Torsion cannot always be excluded on history and exam, so a score sorts who goes to theatre: TWIST gives 2 points each for testicular swelling and a hard testis, and 1 each for an absent cremasteric reflex, nausea or vomiting and a high-riding testis. Waiting for a urine NAAT or reassessing in the morning spends the testis's time, and infection on the urine favors epididymitis without excluding torsion; a nuclear scan is not readily available and delays the decision. Single signs fail too: a normal cremasteric reflex or pain past 24 hours does not exclude torsion. No relief when the testis is lifted (a negative Prehn sign) fits torsion; relief (a positive Prehn sign) fits epididymo-orchitis.",
+   "chainStep": "TWIST score: testicular swelling 2, hard testis 2, absent cremasteric reflex 1, nausea or vomiting 1, high-riding testis 1; 5 or more to the operating room, 3 to 4 ultrasound now, 0 to 2 low risk",
+   "why": "Torsion cannot always be excluded on history and exam, so a score sorts who goes to the operating room: TWIST gives 2 points each for testicular swelling and a hard testis, and 1 each for an absent cremasteric reflex, nausea or vomiting and a high-riding testis. Waiting for a urine NAAT or reassessing in the morning spends the testis's time, and infection on the urine favors epididymitis without excluding torsion; a nuclear scan is not readily available and delays the decision. Single signs fail too: a normal cremasteric reflex or pain past 24 hours does not exclude torsion. No relief when the testis is lifted (a negative Prehn sign) fits torsion; relief (a positive Prehn sign) fits epididymo-orchitis.",
    "next": "twist_result",
    "sources": [
     {
@@ -1062,8 +1062,8 @@
    "ask": "TWIST 5 or more in an adolescent. Next?",
    "options": [
     "Urology for emergency exploration; no ultrasound first",
-    "Colour Doppler first to confirm absent flow, then theatre",
-    "Urinalysis and urine NAAT first, then decide on theatre",
+    "Colour Doppler first to confirm absent flow, then the operating room",
+    "Urinalysis and urine NAAT first, then decide on surgery",
     "Manual detorsion, then discharge if the pain settles"
    ],
    "answer": 0,
@@ -1098,7 +1098,7 @@
    ],
    "answer": 0,
    "chainStep": "Colour Doppler and grey-scale ultrasound of both testes without delay, with urology aware; any doubt about flow means exploration",
-   "why": "With torsion possible but not likely enough to go straight to theatre, ultrasound without delay, both sides for comparison, sorts torsion from its mimics. Torsion is excluded only by a normal straight cord with symmetrical normal testes, and doubt still means exploration. A nuclear scan or MRI is not readily available and delays the decision, and CT is not the modality for testicular perfusion.",
+   "why": "With torsion possible but not likely enough to go straight to the operating room, ultrasound without delay, both sides for comparison, sorts torsion from its mimics. Torsion is excluded only by a normal straight cord with symmetrical normal testes, and doubt still means exploration. A nuclear scan or MRI is not readily available and delays the decision, and CT is not the modality for testicular perfusion.",
    "next": "doppler_result",
    "sources": [
     {
@@ -1179,11 +1179,11 @@
    "id": "or_access",
    "kind": "branch",
    "stage": "Result",
-   "label": "Theatre and a surgeon",
+   "label": "Operating room and a surgeon",
    "outcomes": [
     {
      "id": "now",
-     "if": "Theatre now; a urologist on site",
+     "if": "Operating room now; a urologist on site",
      "ddx": {
       "lead": [],
       "out": []
@@ -1192,7 +1192,7 @@
     },
     {
      "id": "transfer",
-     "if": "Hours to theatre; transfer needed, no urologist here",
+     "if": "Hours to the operating room; transfer needed, no urologist here",
      "ddx": {
       "lead": [],
       "out": []
@@ -1205,7 +1205,7 @@
    "id": "detorsion",
    "kind": "step",
    "stage": "Manage",
-   "ask": "Torsion likely; theatre is hours away. While transfer is arranged?",
+   "ask": "Torsion likely; the operating room is hours away. While transfer is arranged?",
    "options": [
     "Manual detorsion outward, then exploration as planned",
     "Formal ultrasound first, and transfer once it confirms no flow",
@@ -1214,7 +1214,7 @@
    ],
    "answer": 0,
    "chainStep": "Manual detorsion while transfer is arranged: rotate outward (medial to lateral), repeat as needed, judge by sudden pain relief and returning Doppler flow; urgent exploration and fixation still follow",
-   "why": "Manual detorsion buys time: it can restore blood flow and relieve pain while theatre is arranged. Torsion usually twists medially, so the testis is turned outward first, possibly several times since twists run 180 to 720 degrees; instant pain relief and returning Doppler flow mark success. About 40% twist the other way, so pain that does not settle means the direction may be wrong. A formal scan before transfer only delays a high-risk testis, which needs surgery rather than imaging. Detorsion never replaces surgery: exploration and fixation follow whatever the result.",
+   "why": "Manual detorsion buys time: it can restore blood flow and relieve pain while surgery is arranged. Torsion usually twists medially, so the testis is turned outward first, possibly several times since twists run 180 to 720 degrees; instant pain relief and returning Doppler flow mark success. About 40% twist the other way, so pain that does not settle means the direction may be wrong. A formal scan before transfer only delays a high-risk testis, which needs surgery rather than imaging. Detorsion never replaces surgery: exploration and fixation follow whatever the result.",
    "next": "explore_find",
    "sources": [
     {
@@ -1267,7 +1267,7 @@
     },
     {
      "item": "No relief",
-     "dose": "The twist may run outward (about 40% of torsions); consider the opposite direction, or go straight to theatre",
+     "dose": "The twist may run outward (about 40% of torsions); consider the opposite direction, or go straight to the operating room",
      "status": "ok",
      "sources": [
       {
@@ -1356,7 +1356,7 @@
    "id": "explore",
    "kind": "step",
    "stage": "Manage",
-   "ask": "Torsion found in theatre. Operation?",
+   "ask": "Torsion found at surgery. Operation?",
    "options": [
     "Untwist; fix both, or remove a dead testis and fix the other",
     "Untwist and fix the twisted testis; leave the other side alone",
@@ -1502,7 +1502,7 @@
    "id": "end_nonviable",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Torsion with a dead testis: orchiectomy and fixation of the other testis. After 24 hours few testes survive, which is why a likely torsion goes to theatre without waiting."
+   "summary": "Torsion with a dead testis: orchiectomy and fixation of the other testis. After 24 hours few testes survive, which is why a likely torsion goes to the operating room without waiting."
   },
   {
    "id": "appendix_care",
@@ -2055,7 +2055,7 @@
    "results": {
     "front": "No shock, hernia or perineal change. The left hemiscrotum is swollen and very tender; the testis lies high.",
     "trauma_result": "Ultrasound: tunica albuginea continuous; no flow in the left testis; a whirlpool twist in the left cord.",
-    "or_access": "The urologist is in the hospital and a theatre is free.",
+    "or_access": "The urologist is in the hospital and an operating room is free.",
     "explore_find": "The left cord is twisted 360 degrees; the tunica albuginea is intact.",
     "explore_result": "The testis pinks up after untwisting."
    }
@@ -2114,7 +2114,7 @@
   },
   {
    "id": "torsion_classic",
-   "label": "Testicular torsion, theatre on site",
+   "label": "Testicular torsion, operating room on site",
    "vignette": "15-year-old boy woke at 5 am with sudden severe left testicular pain and has vomited twice; pain for 3 hours. BP 128/76, HR 104, temperature 37.1.",
    "picks": {
     "front": "acute",
@@ -2126,14 +2126,14 @@
    "results": {
     "front": "Not in shock; no injury, groin bulge, lump or perineal change. The left testis is exquisitely tender.",
     "twist_result": "Left testis swollen, hard and high-riding with a horizontal lie; cremasteric reflex absent on the left; vomiting. TWIST 7.",
-    "or_access": "The on-call urologist is in the hospital and a theatre is free.",
+    "or_access": "The on-call urologist is in the hospital and an operating room is free.",
     "explore_find": "The left cord is twisted 540 degrees.",
     "explore_result": "The testis pinks up within minutes of untwisting."
    }
   },
   {
    "id": "torsion_rural",
-   "label": "Testicular torsion, hours from theatre",
+   "label": "Testicular torsion, hours from the operating room",
    "vignette": "16-year-old at a rural emergency department, 2 hours of sudden right testicular pain with nausea. BP 132/80, HR 98, temperature 36.9.",
    "picks": {
     "front": "acute",
@@ -2166,7 +2166,7 @@
     "front": "Not in shock; no injury, groin bulge, lump or perineal change. The left hemiscrotum is tender.",
     "twist_result": "Left testis swollen and hard, normally placed; cremasteric reflex present; no nausea. TWIST 4.",
     "doppler_result": "No flow in a heterogeneous left testis; a whirlpool twist in the left cord. The right side is normal.",
-    "or_access": "A theatre is free and the urologist is in the hospital.",
+    "or_access": "An operating room is free and the urologist is in the hospital.",
     "explore_find": "The left cord is twisted 720 degrees.",
     "explore_result": "The testis is black and unchanged after 15 minutes in warm saline gauze."
    }
@@ -2186,7 +2186,7 @@
     "front": "Not in shock; no injury, groin bulge, lump or perineal change. The left testis is tender.",
     "twist_result": "Left testis swollen, soft and normally placed; cremasteric reflex present; nauseated. TWIST 3.",
     "doppler_result": "Left testicular flow reduced compared with the right; the cord is not clearly seen; no avascular nodule identified.",
-    "or_access": "A theatre is free and the urologist is in the hospital.",
+    "or_access": "An operating room is free and the urologist is in the hospital.",
     "explore_find": "No twist of the cord; a torsed, necrotic appendix testis at the upper pole; no bell clapper deformity."
    }
   },

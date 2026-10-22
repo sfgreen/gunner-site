@@ -251,6 +251,24 @@
    "label": "Mediastinum 2021 review",
    "title": "Smoke inhalation injury: a narrative review (Mediastinum 2021)",
    "url": "https://pubmed.ncbi.nlm.nih.gov/35118322/"
+  },
+  {
+   "docId": "pmid:28722939",
+   "label": "StatPearls: Naloxone",
+   "title": "Naloxone (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722939/"
+  },
+  {
+   "docId": "url:8b91b4e8a488",
+   "label": "FDA label: thiamine",
+   "title": "Thiamine Hydrochloride Injection USP prescribing information (Meitheal), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bfe8ac7-9294-4980-9635-90f8e6f6dd8e"
+  },
+  {
+   "docId": "pmid:26900382",
+   "label": "AES 2016",
+   "title": "Evidence-Based Guideline: Treatment of Convulsive Status Epilepticus in Children and Adults (American Epilepsy Society)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26900382/"
   }
  ],
  "differential": [
@@ -599,6 +617,21 @@
      ]
     },
     {
+     "item": "Thiamine",
+     "dose": "With IV dextrose when thiamine status is marginal; AES gives 100 mg IV before 50 mL of 50% dextrose in its seizure algorithm",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8b91b4e8a488",
+       "where": "Indications"
+      },
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, stabilization phase, item 5"
+      }
+     ]
+    },
+    {
      "item": "Octreotide",
      "dose": "Listed sulfonylurea antidote alongside glucose; dose not in the open sources read",
      "status": "pending",
@@ -652,6 +685,22 @@
        "where": "Dosage and Administration, Usage in Adults, Opioid Overdose, Known or Suspected"
       }
      ]
+    },
+    {
+     "item": "Starting dose when opioid-dependent",
+     "dose": "StatPearls: a small first IV dose, usually 0.04 to 0.1 mg, in an opioid-dependent patient; 0.4 mg without known dependence; 1 to 2 mg IV for apnea or near-apnea with cyanosis; then 0.1 to 0.4 mg IV until breathing is adequate. The label starts at 0.4 to 2 mg",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:28722939",
+       "where": "Administration: \"A small initial IV dose (usually 0.04 mg to 0.1 mg) is recommended in patients who are opioid-dependent with symptoms of opioid overdose to avoid opioid withdrawal symptoms. Larger initial doses (such as 0.4 mg) are recommended in patients without a known history of opioid dependency.\""
+      },
+      {
+       "docId": "url:6b61f293a866",
+       "where": "Dosage and Administration, Opioid Overdose"
+      }
+     ],
+     "note": "The label gives 0.4 to 2 mg for any known or suspected overdose and warns that an abrupt, complete reversal precipitates withdrawal in dependence; StatPearls titrates to breathing, not full reversal, and starts lower in dependence."
     },
     {
      "item": "Opioid dependence",
@@ -3295,7 +3344,7 @@
   {
    "id": "cocaine",
    "label": "Cocaine, sympathomimetic",
-   "vignette": "24-year-old man brought from a club, agitated and pacing, after using cocaine. HR 132, BP 176/104, RR 22, temperature 39.0 C, SpO2 98%.",
+   "vignette": "24-year-old man brought from a club, agitated and pacing, after using cocaine. HR 132, BP 176/104, RR 22, temperature 39.0 C (102.2 F), SpO2 98%.",
    "picks": {
     "front": "stable",
     "tox_exam": "symp"
@@ -3308,7 +3357,7 @@
   {
    "id": "jimsonweed",
    "label": "Jimsonweed, anticholinergic",
-   "vignette": "19-year-old man brought by friends after drinking a tea brewed from seeds at a party; he is picking at the air and mumbling. HR 126, BP 148/90, RR 18, temperature 38.4 C, SpO2 98%. Healthy, no medical history.",
+   "vignette": "19-year-old man brought by friends after drinking a tea brewed from seeds at a party; he is picking at the air and mumbling. HR 126, BP 148/90, RR 18, temperature 38.4 C (101.1 F), SpO2 98%. Healthy, no medical history.",
    "picks": {
     "front": "stable",
     "tox_exam": "antichol"
@@ -3321,7 +3370,7 @@
   {
    "id": "serotonin",
    "label": "Serotonin toxicity",
-   "vignette": "55-year-old woman on sertraline who started tramadol for back pain 2 days ago; now agitated, shaking and sweating. HR 118, BP 158/92, RR 20, temperature 38.6 C.",
+   "vignette": "55-year-old woman on sertraline who started tramadol for back pain 2 days ago; now agitated, shaking and sweating. HR 118, BP 158/92, RR 20, temperature 38.6 C (101.5 F).",
    "picks": {
     "front": "stable",
     "tox_exam": "sero"

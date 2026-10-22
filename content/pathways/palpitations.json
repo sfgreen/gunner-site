@@ -2305,7 +2305,7 @@
     },
     {
      "item": "Insulin with glucose",
-     "dose": "UK: 10 units soluble insulin in 25 g glucose IV; US review: 10 units regular insulin with 50 mL of 50% dextrose; blood glucose checks for up to 12 hours; if pre-treatment glucose is under 7.0 mmol/L, 10% glucose at 50 mL/h for 5 hours",
+     "dose": "UK: 10 units soluble insulin in 25 g glucose IV; US review: 10 units regular insulin with 50 mL of 50% dextrose; blood glucose checks for up to 12 hours; if pre-treatment glucose is under 7.0 mmol/L (126 mg/dL), 10% glucose at 50 mL/h for 5 hours",
      "status": "ok",
      "sources": [
       {
@@ -2321,7 +2321,7 @@
     },
     {
      "item": "Albuterol",
-     "dose": "UK: nebulized salbutamol (albuterol) 10 to 20 mg as an adjunct; not alone in severe hyperkalemia",
+     "dose": "UK: nebulized albuterol (salbutamol) 10 to 20 mg as an adjunct; not alone in severe hyperkalemia",
      "status": "ok",
      "sources": [
       {

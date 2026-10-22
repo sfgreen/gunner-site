@@ -337,7 +337,7 @@
     },
     {
      "item": "Glucose target",
-     "dose": "Keep it between 4 and 11 mmol/L (72 to 198 mg/dL) in acute stroke",
+     "dose": "Keep it between 72 to 198 mg/dL (4 and 11 mmol/L) in acute stroke",
      "status": "ok",
      "sources": [
       {
@@ -369,7 +369,7 @@
    "outcomes": [
     {
      "id": "hypo",
-     "if": "Glucose low; below 4 mmol/L (72 mg/dL) with the deficit",
+     "if": "Glucose low; below 72 mg/dL (4 mmol/L) with the deficit",
      "ddx": {
       "lead": [
        "Hypoglycemia"
@@ -424,7 +424,7 @@
    "id": "hypo_tx",
    "kind": "step",
    "stage": "Stabilize",
-   "ask": "Glucose below 4 mmol/L with a new deficit. Next?",
+   "ask": "Glucose below 4 mmol/L (72 mg/dL) with a new deficit. Next?",
    "options": [
     "Correct the glucose, then reassess the deficit",
     "Give alteplase now; the window is closing",
@@ -433,7 +433,7 @@
    ],
    "answer": 0,
    "chainStep": "Correct the glucose, then reassess; if the deficit persists, image it as a suspected stroke",
-   "why": "Hypoglycemia has to be excluded as the cause of the deficit, and glucose in acute stroke is kept between 4 and 11 mmol/L. A lytic needs intracranial hemorrhage excluded by imaging, and aspirin waits for imaging too.",
+   "why": "Hypoglycemia has to be excluded as the cause of the deficit, and glucose in acute stroke is kept between 4 and 11 mmol/L (72 to 198 mg/dL). A lytic needs intracranial hemorrhage excluded by imaging, and aspirin waits for imaging too.",
    "orders": [
     {
      "item": "Glucose",
@@ -1507,14 +1507,14 @@
    "stage": "Imaging",
    "ask": "No bleed, 4.5 to 24 hours since last known well, NIHSS over 5. Imaging?",
    "options": [
-    "CT angiography plus CT perfusion or diffusion MRI",
+    "CT angiography, plus CT perfusion or diffusion MRI past 6 hours",
     "No more imaging: it is too late for any reperfusion",
     "Alteplase now, since the non-contrast CT shows no bleed",
     "Carotid ultrasound in the morning, then decide on treatment"
    ],
    "answer": 0,
-   "chainStep": "CT angiography plus CT perfusion (or diffusion-weighted MRI) to look for a proximal occlusion with a limited core",
-   "why": "Thrombectomy is offered up to 24 hours after last known well, wake-up strokes included, for a proximal anterior occlusion on CT angiography with brain to save on CT perfusion or diffusion MRI, and is considered on the same terms for a basilar occlusion, so the imaging decides it. The lytic recommendations in NICE stop at 4.5 hours.",
+   "chainStep": "CT angiography for a proximal occlusion; beyond 6 hours add CT perfusion (or diffusion-weighted MRI) to show a limited core",
+   "why": "Thrombectomy is offered up to 24 hours after last known well, wake-up strokes included, for a proximal anterior occlusion on CT angiography. Within 6 hours the occlusion selects it; beyond 6 hours NICE adds CT perfusion or the MR equivalent to show brain to save, and a basilar occlusion is considered on the same terms, so the imaging decides it. The lytic recommendations in NICE stop at 4.5 hours.",
    "orders": [
     {
      "item": "Lysis beyond 4.5 hours selected by imaging",
@@ -1526,7 +1526,7 @@
    "sources": [
     {
      "docId": "url:64e48d5d8ef3",
-     "where": "1.3.2; 1.4.6; 1.4.7; 1.4.1"
+     "where": "1.3.2: \"Add CT perfusion imaging (or MR equivalent) if thrombectomy might be indicated beyond 6 hours of symptom onset\"; 1.4.5; 1.4.6; 1.4.7; 1.4.1"
     }
    ]
   },
@@ -1555,6 +1555,24 @@
       "out": []
      },
      "next": "aspirin"
+    },
+    {
+     "id": "wake_none",
+     "if": "Wake-up stroke, no large vessel occlusion; woke with the deficit, last known well over 4.5 hours ago",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Lysis selected by imaging",
+       "dose": "Wake-up strokes selected by MRI or perfusion mismatch are in the ESO 2021 thrombolysis guideline, not readable here; not keyed",
+       "status": "pending"
+      }
+     ],
+     "next": "end_wake"
     },
     {
      "id": "core",
@@ -2459,6 +2477,12 @@
    "summary": "Proximal anterior occlusion with a large established core: NICE asks for a limited core before thrombectomy beyond 6 hours, and thrombectomy for a large core is not in the sources read, so this route stops. Aspirin once hemorrhage is excluded; decompressive hemicraniectomy is considered within 48 hours for an MCA infarct with NIHSS above 15, reduced consciousness and at least half the MCA territory on CT."
   },
   {
+   "id": "end_wake",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Wake-up stroke with no large vessel occlusion: thrombectomy needs an occlusion, and NICE's lytic recommendations run to 4.5 hours from onset, so neither is keyed here. Thrombolysis selected by MRI or perfusion mismatch in a wake-up stroke is in the ESO 2021 guideline, not readable here, and is a stroke specialist's call. Without a lytic: swallow screen, then aspirin 300 mg within 24 hours and daily for 2 weeks once hemorrhage is excluded."
+  },
+  {
    "id": "end_tia_af",
    "kind": "end",
    "stage": "Outcome",
@@ -2499,7 +2523,7 @@
     "hypo_result": "resolved"
    },
    "results": {
-    "first_look": "Fingerstick glucose 2.1 mmol/L (38 mg/dL). Alert, airway clear, no seizure.",
+    "first_look": "Fingerstick glucose 38 mg/dL (2.1 mmol/L). Alert, airway clear, no seizure.",
     "hypo_result": "Fifteen minutes after glucose: speech and right arm strength back to normal."
    }
   },
@@ -2516,8 +2540,8 @@
     "cta_early": "none"
    },
    "results": {
-    "first_look": "Fingerstick glucose 3.2 mmol/L (58 mg/dL). Alert, airway clear.",
-    "hypo_result": "Glucose now 7.4 mmol/L; the left face and arm weakness is unchanged, NIHSS 7.",
+    "first_look": "Fingerstick glucose 58 mg/dL (3.2 mmol/L). Alert, airway clear.",
+    "hypo_result": "Glucose now 7.4 mmol/L (133 mg/dL); the left face and arm weakness is unchanged, NIHSS 7.",
     "ct_result": "Non-contrast CT: no bleed; 1 hour 40 minutes since last known well.",
     "lysis_ci": "No contraindication on the lists; no anticoagulant, so clotting results are not awaited.",
     "bp_check": "BP 168/92.",
@@ -2533,7 +2557,7 @@
     "seizure_result": "todd"
    },
    "results": {
-    "first_look": "Tonic-clonic seizure lasting 2 minutes, then right arm weakness; glucose 5.8 mmol/L; GCS 15 on arrival.",
+    "first_look": "Tonic-clonic seizure lasting 2 minutes, then right arm weakness; glucose 5.8 mmol/L (104 mg/dL); GCS 15 on arrival.",
     "seizure_result": "Non-contrast CT and CT angiography normal; over the next hour the right arm returns to full strength."
    }
   },
@@ -2546,7 +2570,7 @@
     "seizure_result": "lvo"
    },
    "results": {
-    "first_look": "Seizure lasting 1 minute, then dense left hemiparesis and gaze deviation to the right; glucose 6.2 mmol/L; GCS 14.",
+    "first_look": "Seizure lasting 1 minute, then dense left hemiparesis and gaze deviation to the right; glucose 6.2 mmol/L (112 mg/dL); GCS 14.",
     "seizure_result": "Non-contrast CT: no bleed. CT angiography: right M1 occlusion. NIHSS 16."
    }
   },
@@ -2559,7 +2583,7 @@
     "tia_risk": "high"
    },
    "results": {
-    "first_look": "Fully recovered; glucose 7.1 mmol/L; examination normal.",
+    "first_look": "Fully recovered; glucose 7.1 mmol/L (128 mg/dL); examination normal.",
     "tia_risk": "Specialist review the same day: ABCD2 score 6; MRI shows no bleed; no significant carotid stenosis; ECG in sinus rhythm."
    }
   },
@@ -2572,7 +2596,7 @@
     "tia_risk": "low"
    },
    "results": {
-    "first_look": "Fully recovered; glucose 5.0 mmol/L; examination normal.",
+    "first_look": "Fully recovered; glucose 5.0 mmol/L (90 mg/dL); examination normal.",
     "tia_risk": "Specialist review within 24 hours: ABCD2 score 0; the diagnosis of TIA is uncertain."
    }
   },
@@ -2585,7 +2609,7 @@
     "tia_risk": "carotid"
    },
    "results": {
-    "first_look": "Fully recovered; glucose 6.0 mmol/L; examination normal.",
+    "first_look": "Fully recovered; glucose 6.0 mmol/L (108 mg/dL); examination normal.",
     "tia_risk": "Specialist review the same day: carotid imaging shows an 80% stenosis of the left internal carotid (NASCET)."
    }
   },
@@ -2601,7 +2625,7 @@
     "cta_early": "lvo"
    },
    "results": {
-    "first_look": "Glucose 6.4 mmol/L; alert, airway clear; dense right hemiparesis and aphasia, NIHSS 18.",
+    "first_look": "Glucose 6.4 mmol/L (115 mg/dL); alert, airway clear; dense right hemiparesis and aphasia, NIHSS 18.",
     "ct_result": "Non-contrast CT: no bleed; 1 hour 15 minutes since last known well.",
     "lysis_ci": "No contraindication on the lists; INR 1.0.",
     "bp_check": "BP 198/112 on repeat.",
@@ -2620,7 +2644,7 @@
     "cta_early": "basilar"
    },
    "results": {
-    "first_look": "Glucose 5.6 mmol/L; drowsy but rousable, GCS 13, airway clear; NIHSS 15.",
+    "first_look": "Glucose 5.6 mmol/L (101 mg/dL); drowsy but rousable, GCS 13, airway clear; NIHSS 15.",
     "ct_result": "Non-contrast CT: no bleed; 2 hours 20 minutes since last known well.",
     "lysis_ci": "No contraindication on the lists; INR 1.0.",
     "bp_check": "BP 176/98.",
@@ -2637,7 +2661,7 @@
     "late_result": "salvage"
    },
    "results": {
-    "first_look": "Glucose 6.8 mmol/L; alert; left hemiparesis and neglect, NIHSS 14.",
+    "first_look": "Glucose 6.8 mmol/L (122 mg/dL); alert; left hemiparesis and neglect, NIHSS 14.",
     "ct_result": "Non-contrast CT: no bleed; 10 hours since last known well.",
     "late_result": "CT angiography: right M1 occlusion. CT perfusion: a small core with a large area of brain to save."
    }
@@ -2652,9 +2676,24 @@
     "late_result": "none"
    },
    "results": {
-    "first_look": "Glucose 7.0 mmol/L; alert; right hemiparesis, NIHSS 7.",
+    "first_look": "Glucose 7.0 mmol/L (126 mg/dL); alert; right hemiparesis, NIHSS 7.",
     "ct_result": "Non-contrast CT: no bleed; 16 hours since last known well.",
     "late_result": "CT angiography: no large vessel occlusion. Swallow screen passed."
+   }
+  },
+  {
+   "id": "late_wake_no_lvo",
+   "label": "Woke with it, no occlusion",
+   "vignette": "66-year-old woman who went to bed well at 11 p.m. and woke at 6 a.m. unable to find her words, with a weak right hand; she arrives at 7 a.m. BP 168/92. Independent before; no anticoagulant.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "late",
+    "late_result": "wake_none"
+   },
+   "results": {
+    "first_look": "Glucose 119 mg/dL (6.6 mmol/L); alert; expressive aphasia and right hand weakness, NIHSS 7.",
+    "ct_result": "Non-contrast CT: no bleed; 8 hours since last known well.",
+    "late_result": "CT angiography: no large vessel occlusion."
    }
   },
   {
@@ -2668,7 +2707,7 @@
     "ich_site": "supra"
    },
    "results": {
-    "first_look": "Glucose 6.1 mmol/L; alert, GCS 15; left hemiparesis, NIHSS 8.",
+    "first_look": "Glucose 6.1 mmol/L (110 mg/dL); alert, GCS 15; left hemiparesis, NIHSS 8.",
     "ct_result": "Non-contrast CT: right basal ganglia hemorrhage, small to moderate.",
     "ich_drug": "Warfarin taken last night; INR 5.0.",
     "ich_site": "Supratentorial, no hydrocephalus; systolic 186, GCS 15, 2 hours 30 minutes from onset."
@@ -2685,7 +2724,7 @@
     "ich_site": "supra"
    },
    "results": {
-    "first_look": "Glucose 5.9 mmol/L; GCS 14, airway clear; right hemiparesis, NIHSS 10.",
+    "first_look": "Glucose 5.9 mmol/L (106 mg/dL); GCS 14, airway clear; right hemiparesis, NIHSS 10.",
     "ct_result": "Non-contrast CT: left lobar hemorrhage, small to moderate, no blood in the ventricles.",
     "ich_drug": "Dabigatran 150 mg taken 4 hours ago.",
     "ich_site": "Supratentorial, no hydrocephalus; systolic 172, 2 hours from onset."
@@ -2702,7 +2741,7 @@
     "ich_site": "supra"
    },
    "results": {
-    "first_look": "Glucose 6.6 mmol/L; alert, GCS 15; left hemiparesis, NIHSS 9.",
+    "first_look": "Glucose 6.6 mmol/L (119 mg/dL); alert, GCS 15; left hemiparesis, NIHSS 9.",
     "ct_result": "Non-contrast CT: right thalamic hemorrhage, small to moderate.",
     "ich_drug": "Apixaban 5 mg taken 3 hours ago.",
     "ich_site": "Supratentorial, no hydrocephalus; systolic 194, 1 hour 30 minutes from onset."
@@ -2719,7 +2758,7 @@
     "ich_site": "cerebellar"
    },
    "results": {
-    "first_look": "Glucose 6.9 mmol/L; GCS 9 and falling, snoring respirations.",
+    "first_look": "Glucose 6.9 mmol/L (124 mg/dL); GCS 9 and falling, snoring respirations.",
     "ct_result": "Non-contrast CT: right cerebellar hemorrhage compressing the fourth ventricle, with hydrocephalus.",
     "ich_drug": "No anticoagulant or antiplatelet; INR 1.0, platelets normal.",
     "ich_site": "Cerebellar, hydrocephalus on CT; GCS down from 12 to 9 within the hour."
@@ -2736,7 +2775,7 @@
     "ich_site": "over220"
    },
    "results": {
-    "first_look": "Glucose 5.4 mmol/L; alert, GCS 15; right face and arm weakness, NIHSS 6.",
+    "first_look": "Glucose 5.4 mmol/L (97 mg/dL); alert, GCS 15; right face and arm weakness, NIHSS 6.",
     "ct_result": "Non-contrast CT: small left putaminal hemorrhage.",
     "ich_drug": "No anticoagulant or antiplatelet; INR 1.0.",
     "ich_site": "Supratentorial, no hydrocephalus; systolic 232 on repeat, 1 hour 20 minutes from onset."
@@ -2753,7 +2792,7 @@
     "cta_nolytic": "lvo"
    },
    "results": {
-    "first_look": "Glucose 6.3 mmol/L; alert, airway clear; right hemiparesis and aphasia, NIHSS 17.",
+    "first_look": "Glucose 6.3 mmol/L (113 mg/dL); alert, airway clear; right hemiparesis and aphasia, NIHSS 17.",
     "ct_result": "Non-contrast CT: no bleed; 2 hours since last known well.",
     "lysis_ci": "INR 2.4 on warfarin.",
     "cta_nolytic": "CT angiography: left M1 occlusion."
@@ -2771,7 +2810,7 @@
     "cta_nolytic": "none"
    },
    "results": {
-    "first_look": "Glucose 6.0 mmol/L; alert, airway clear; left face and arm weakness, NIHSS 8.",
+    "first_look": "Glucose 6.0 mmol/L (108 mg/dL); alert, airway clear; left face and arm weakness, NIHSS 8.",
     "ct_result": "Non-contrast CT: no bleed; 1 hour 45 minutes since last known well.",
     "lysis_ci": "No contraindication on the lists; INR 1.0.",
     "bp_check": "BP 214/118 after two doses of an IV antihypertensive; still above 185/110.",
@@ -2787,7 +2826,7 @@
     "ct_result": "other"
    },
    "results": {
-    "first_look": "Glucose 5.9 mmol/L; alert; mild right hand clumsiness and dysarthria, NIHSS 2.",
+    "first_look": "Glucose 5.9 mmol/L (106 mg/dL); alert; mild right hand clumsiness and dysarthria, NIHSS 2.",
     "ct_result": "Non-contrast CT: no bleed; 2 hours since last known well; the deficit is mild and not disabling."
    }
   },
@@ -2802,7 +2841,7 @@
     "ich_site": "no_rapid"
    },
    "results": {
-    "first_look": "Witnessed tonic-clonic seizure, then left hemiparesis; glucose 5.5 mmol/L; GCS 14.",
+    "first_look": "Witnessed tonic-clonic seizure, then left hemiparesis; glucose 5.5 mmol/L (99 mg/dL); GCS 14.",
     "seizure_result": "Non-contrast CT: right frontal lobar hemorrhage. CT angiography: an arteriovenous malformation at its edge.",
     "ich_drug": "No anticoagulant or antiplatelet; INR 1.0.",
     "ich_site": "Lobar hemorrhage from an arteriovenous malformation: a structural cause."
@@ -2817,7 +2856,7 @@
     "seizure_result": "persists"
    },
    "results": {
-    "first_look": "Seizure lasting 90 seconds, then right arm weakness and aphasia; glucose 6.1 mmol/L; GCS 14.",
+    "first_look": "Seizure lasting 90 seconds, then right arm weakness and aphasia; glucose 6.1 mmol/L (110 mg/dL); GCS 14.",
     "seizure_result": "Non-contrast CT and CT angiography: no bleed, no occlusion. Two hours later the weakness and aphasia are unchanged."
    }
   },
@@ -2831,7 +2870,7 @@
     "late_result": "core"
    },
    "results": {
-    "first_look": "Glucose 6.5 mmol/L; drowsy but rousable, GCS 13; gaze deviated to the right, NIHSS 20.",
+    "first_look": "Glucose 6.5 mmol/L (117 mg/dL); drowsy but rousable, GCS 13; gaze deviated to the right, NIHSS 20.",
     "ct_result": "Non-contrast CT: no bleed; 12 hours since last known well.",
     "late_result": "CT angiography: right internal carotid terminus occlusion. CT perfusion: a large established core with little brain left to save."
    }
@@ -2846,7 +2885,7 @@
     "late_result": "basilar"
    },
    "results": {
-    "first_look": "Glucose 6.2 mmol/L; drowsy, GCS 13, airway clear; NIHSS 12.",
+    "first_look": "Glucose 6.2 mmol/L (112 mg/dL); drowsy, GCS 13, airway clear; NIHSS 12.",
     "ct_result": "Non-contrast CT: no bleed; 14 hours since last known well.",
     "late_result": "CT angiography: basilar artery occlusion. Perfusion imaging: no extensive brainstem infarct, brain to save."
    }
@@ -2860,7 +2899,7 @@
     "tia_risk": "af"
    },
    "results": {
-    "first_look": "Fully recovered; glucose 6.4 mmol/L; examination normal apart from an irregularly irregular pulse.",
+    "first_look": "Fully recovered; glucose 6.4 mmol/L (115 mg/dL); examination normal apart from an irregularly irregular pulse.",
     "tia_risk": "Specialist review the same day: ECG shows atrial fibrillation; MRI shows no bleed; no significant carotid stenosis."
    }
   },
@@ -2874,7 +2913,7 @@
     "ich_drug": "other"
    },
    "results": {
-    "first_look": "Glucose 6.0 mmol/L; alert, GCS 15; left hemiparesis, NIHSS 7.",
+    "first_look": "Glucose 6.0 mmol/L (108 mg/dL); alert, GCS 15; left hemiparesis, NIHSS 7.",
     "ct_result": "Non-contrast CT: right basal ganglia hemorrhage, small to moderate.",
     "ich_drug": "Edoxaban taken 5 hours ago."
    }
@@ -2890,7 +2929,7 @@
     "ich_site": "cerebellar_small"
    },
    "results": {
-    "first_look": "Glucose 6.7 mmol/L; alert, GCS 15; right limb ataxia, NIHSS 2.",
+    "first_look": "Glucose 6.7 mmol/L (121 mg/dL); alert, GCS 15; right limb ataxia, NIHSS 2.",
     "ct_result": "Non-contrast CT: small right cerebellar hemorrhage; the fourth ventricle is open.",
     "ich_drug": "Aspirin daily; no anticoagulant; INR 1.0, platelets normal.",
     "ich_site": "Cerebellar, no hydrocephalus; alert, GCS 15."
@@ -2905,7 +2944,7 @@
     "ct_result": "sah"
    },
    "results": {
-    "first_look": "Glucose 5.7 mmol/L; GCS 15; neck stiffness; right third nerve palsy.",
+    "first_look": "Glucose 5.7 mmol/L (103 mg/dL); GCS 15; neck stiffness; right third nerve palsy.",
     "ct_result": "Non-contrast CT: blood in the basal cisterns and both Sylvian fissures."
    }
   }

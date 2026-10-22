@@ -202,6 +202,12 @@
    "label": "Front Surg 2026",
    "title": "Reverse shoulder arthroplasty following a diagnosis of bilateral posterior shoulder dislocation secondary to electric shock: a case report and literature review",
    "url": "https://pubmed.ncbi.nlm.nih.gov/42064242/"
+  },
+  {
+   "docId": "pmid:28846257",
+   "label": "StatPearls: Acute Compartment Syndrome",
+   "title": "Acute Compartment Syndrome (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846257/"
   }
  ],
  "differential": [
@@ -271,7 +277,7 @@
     },
     {
      "item": "Analgesia, adult arm or lower-leg long-bone fracture",
-     "dose": "Mild: oral paracetamol. Moderate: oral paracetamol and codeine. Severe: IV paracetamol with IV morphine titrated to effect. IV opioids with caution, and no NSAIDs, in frail or older adults. NSAIDs may supplement, except in frail or older adults",
+     "dose": "Mild: oral acetaminophen (paracetamol). Moderate: oral acetaminophen and codeine. Severe: IV acetaminophen with IV morphine titrated to effect. IV opioids with caution, and no NSAIDs, in frail or older adults. NSAIDs may supplement, except in frail or older adults",
      "status": "ok",
      "sources": [
       {
@@ -282,7 +288,7 @@
     },
     {
      "item": "Analgesia, child long-bone fracture",
-     "dose": "Mild to moderate: oral ibuprofen, paracetamol or both. Moderate to severe: intranasal or IV opioid (IV once access is in)",
+     "dose": "Mild to moderate: oral ibuprofen, acetaminophen or both. Moderate to severe: intranasal or IV opioid (IV once access is in)",
      "status": "ok",
      "sources": [
       {
@@ -576,7 +582,7 @@
    ],
    "answer": 0,
    "chainStep": "IV antibiotics within 1 hour (cefazolin; add gram-negative cover for type III); tetanus by ACIP Table 6; photograph; saline-soaked dressing under an occlusive film; realign and splint; repeat the neurovascular exam; operative irrigation and debridement (wound excision) by orthopedic and plastic surgeons",
-   "why": "Every open fracture gets IV antibiotics as soon as possible, ideally within an hour: US trauma guidance names cefazolin for Gustilo I and II and adds gram-negative cover, such as gentamicin, for type III. Handle the wound only to remove gross contamination and to photograph it, then a saline-soaked dressing under an occlusive film; washouts outside the operating theatre are not indicated. Realign and splint, repeating the neurovascular exam after every manoeuvre.",
+   "why": "Every open fracture gets IV antibiotics as soon as possible, ideally within an hour: US trauma guidance names cefazolin for Gustilo I and II and adds gram-negative cover, such as gentamicin, for type III. Handle the wound only to remove gross contamination and to photograph it, then a saline-soaked dressing under an occlusive film; washouts outside the operating room are not indicated. Realign and splint, repeating the neurovascular exam after every manoeuvre.",
    "next": "end_open",
    "sources": [
     {
@@ -678,7 +684,7 @@
      "status": "pending"
     },
     {
-     "item": "Wound before theatre",
+     "item": "Wound before surgery",
      "dose": "Remove gross contamination and photograph only, then saline-soaked gauze under an occlusive film; no irrigation of long-bone, hindfoot or midfoot open fractures in the ED",
      "status": "ok",
      "sources": [
@@ -766,8 +772,8 @@
     "MRI of the limb to confirm the diagnosis before doing anything else"
    ],
    "answer": 0,
-   "chainStep": "Split casts and release circumferential dressings to the skin; keep the limb at heart level, not elevated; urgent senior orthopedic review; reassess within 30 minutes; record analgesic doses; hourly documented checks",
-   "why": "Pain out of proportion and pain on passive stretch of the compartment's muscles are the key early findings, with paraesthesias; paralysis, pallor and pulselessness are very late and may never appear, so a pulse rules nothing out. Release circumferential dressings to expose the skin and re-evaluate within 30 minutes. Keep the limb at heart level: a review warns that elevation reduces arterial flow further, while BOAST says to elevate it, so the two differ. Record every analgesic dose and rate, and document checks hourly while the limb is at risk.",
+   "chainStep": "Split casts and release circumferential dressings to the skin; keep the limb at heart level (StatPearls; BOAST 2025 elevates it); urgent senior orthopedic review; reassess within 30 minutes; record analgesic doses; hourly documented checks",
+   "why": "Pain out of proportion and pain on passive stretch of the compartment's muscles are the key early findings, with paraesthesias; paralysis, pallor and pulselessness are very late and may never appear, so a pulse rules nothing out. Release circumferential dressings to expose the skin and re-evaluate within 30 minutes. On limb position the sources differ: two reviews, StatPearls among them, keep the limb at heart level because elevation reduces arterial flow further, while BOAST 2025 says to elevate it. Record every analgesic dose and rate, and document checks hourly while the limb is at risk.",
    "next": "acs_exam",
    "sources": [
     {
@@ -781,6 +787,10 @@
     {
      "docId": "pmid:25067973",
      "where": "Treatment"
+    },
+    {
+     "docId": "pmid:28846257",
+     "where": "Treatment / Management"
     }
    ],
    "orders": [
@@ -797,15 +807,23 @@
     },
     {
      "item": "Limb position",
-     "dose": "At the level of the heart, not elevated",
-     "status": "ok",
+     "dose": "At heart level, not elevated (a 2014 review and StatPearls); BOAST 2025: elevated",
+     "status": "conflict",
      "sources": [
       {
        "docId": "pmid:25067973",
-       "where": "Treatment"
+       "where": "Treatment: \"The limb should not be elevated and instead kept at the level of the heart so as not to decrease arterial flow any further\""
+      },
+      {
+       "docId": "pmid:28846257",
+       "where": "Treatment / Management: \"Keep the extremity at the level of the heart to prevent hypo-perfusion.\""
+      },
+      {
+       "docId": "url:a7996ebb0527",
+       "where": "Standards for practice: \"circumferential dressings released to expose the skin and the limb elevated\""
       }
      ],
-     "note": "BOAST 2025 says elevate; this review keeps the limb at heart level so arterial inflow is not reduced further"
+     "note": "BOAST 2025, the UK standard, elevates the limb; the two reviews keep it at heart level so arterial inflow is not reduced further."
     },
     {
      "item": "Monitoring",
@@ -1153,13 +1171,13 @@
    "ask": "Anterior dislocation on the films. Next?",
    "options": [
     "Closed reduction; recheck nerves and pulses; repeat the films",
-    "Open reduction in theatre as the first attempt at relocation",
+    "Open reduction in the operating room as the first attempt at relocation",
     "A sling for a week, then reduce it at the fracture clinic",
     "Closed reduction, then discharge home without repeat films"
    ],
    "answer": 0,
    "chainStep": "Closed reduction by a technique you know (procedural sedation if it fails); repeat the nerve and circulation exam; post-reduction x-rays in two planes; sling as needed for 1 week",
-   "why": "Use a closed technique you are experienced with; if it fails, procedural sedation and analgesia is the first choice, and theatre or open reduction is needed only rarely. Afterward, re-examine and document nerves and circulation and x-ray in two planes: post-reduction films find fractures the first films missed, 15% of those detected in one series. A sling as needed for 1 week is enough; longer immobilization made no clinically relevant difference.",
+   "why": "Use a closed technique you are experienced with; if it fails, procedural sedation and analgesia is the first choice, and the operating room or open reduction is needed only rarely. Afterward, re-examine and document nerves and circulation and x-ray in two planes: post-reduction films find fractures the first films missed, 15% of those detected in one series. A sling as needed for 1 week is enough; longer immobilization made no clinically relevant difference.",
    "next": "end_shoulder",
    "sources": [
     {
@@ -1588,8 +1606,8 @@
     "MRI before any x-ray"
    ],
    "answer": 0,
-   "chainStep": "Immediate analgesia (paracetamol every 6 hours, opioids if needed, a nerve block if still not enough or to limit opioids; no NSAIDs), pain reassessed within 30 minutes; hip x-rays; MRI if clear, CT if MRI is not available within 24 hours or is contraindicated",
-   "why": "Analgesia comes at once, including for people with cognitive impairment, and should be enough to tolerate passive external rotation of the leg. Paracetamol every 6 hours, opioids if that is not enough, and a nerve block from trained staff when paracetamol and opioids fall short or to limit the opioid dose; US trauma guidance cites strong evidence that regional anesthesia improves perioperative management. NSAIDs are not recommended. Plain films first; if they are clear and a fracture is still suspected, MRI, or CT when MRI is not available within 24 hours or is contraindicated. The ACR rates MRI and CT both usually appropriate after clear films.",
+   "chainStep": "Immediate analgesia (acetaminophen every 6 hours, opioids if needed, a nerve block if still not enough or to limit opioids; no NSAIDs), pain reassessed within 30 minutes; hip x-rays; MRI if clear, CT if MRI is not available within 24 hours or is contraindicated",
+   "why": "Analgesia comes at once, including for people with cognitive impairment, and should be enough to tolerate passive external rotation of the leg. Acetaminophen every 6 hours, opioids if that is not enough, and a nerve block from trained staff when acetaminophen and opioids fall short or to limit the opioid dose; US trauma guidance cites strong evidence that regional anesthesia improves perioperative management. NSAIDs are not recommended. Plain films first; if they are clear and a fracture is still suspected, MRI, or CT when MRI is not available within 24 hours or is contraindicated. The ACR rates MRI and CT both usually appropriate after clear films.",
    "next": "hip_result",
    "sources": [
     {
@@ -1611,7 +1629,7 @@
    ],
    "orders": [
     {
-     "item": "Paracetamol",
+     "item": "Acetaminophen",
      "dose": "Every 6 hours preoperatively unless contraindicated",
      "status": "ok",
      "sources": [
@@ -1622,13 +1640,13 @@
      ]
     },
     {
-     "item": "Paracetamol dose",
+     "item": "Acetaminophen dose",
      "dose": "No mg dose stated in CG124",
      "status": "pending"
     },
     {
      "item": "Opioids",
-     "dose": "Add if paracetamol alone is not enough",
+     "dose": "Add if acetaminophen alone is not enough",
      "status": "ok",
      "sources": [
       {
@@ -1639,7 +1657,7 @@
     },
     {
      "item": "Nerve block",
-     "dose": "Consider when paracetamol and opioids are not enough, or to limit the opioid dose; by trained staff; never a substitute for early surgery. TQIP: peri-operative regional anesthesia reduces pain and might reduce delirium",
+     "dose": "Consider when acetaminophen and opioids are not enough, or to limit the opioid dose; by trained staff; never a substitute for early surgery. TQIP: peri-operative regional anesthesia reduces pain and might reduce delirium",
      "status": "ok",
      "sources": [
       {

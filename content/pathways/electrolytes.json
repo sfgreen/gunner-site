@@ -538,7 +538,7 @@
     },
     {
      "id": "ca_high",
-     "if": "Calcium 3.0 mmol/L (12 mg/dL) or more, or symptomatic; thirst, vomiting, confusion",
+     "if": "Calcium 12 mg/dL (3.0 mmol/L) or more, or symptomatic; thirst, vomiting, confusion",
      "ddx": {
       "lead": [
        "Hypercalcemia"
@@ -789,7 +789,7 @@
    "orders": [
     {
      "item": "Insulin with glucose",
-     "dose": "UK: 10 units soluble insulin in 25 g glucose IV; US review: 10 units regular insulin with 50 mL of 50% dextrose; if pre-treatment glucose is under 7.0 mmol/L, 10% glucose at 50 mL/h for 5 hours",
+     "dose": "UK: 10 units soluble insulin in 25 g glucose IV; US review: 10 units regular insulin with 50 mL of 50% dextrose; if pre-treatment glucose is under 7.0 mmol/L (126 mg/dL), 10% glucose at 50 mL/h for 5 hours",
      "status": "ok",
      "sources": [
       {
@@ -804,7 +804,7 @@
     },
     {
      "item": "Albuterol",
-     "dose": "Nebulized salbutamol (albuterol) 10 to 20 mg as an adjunct; not alone in severe hyperkalemia",
+     "dose": "Nebulized albuterol (salbutamol) 10 to 20 mg as an adjunct; not alone in severe hyperkalemia",
      "status": "ok",
      "sources": [
       {
@@ -3019,8 +3019,8 @@
    },
    "results": {
     "front": "Sinus rhythm at 92, short QT.",
-    "which": "Adjusted calcium 3.1 mmol/L (12.4 mg/dL); dry mucosa; creatinine raised.",
-    "hc_after": "After 4 L of saline the adjusted calcium is 2.55 mmol/L (10.2 mg/dL); PTH sent."
+    "which": "Adjusted calcium 12.4 mg/dL (3.1 mmol/L); dry mucosa; creatinine raised.",
+    "hc_after": "After 4 L of saline the adjusted calcium is 10.2 mg/dL (2.55 mmol/L); PTH sent."
    }
   },
   {
@@ -3034,8 +3034,8 @@
    },
    "results": {
     "front": "Sinus rhythm at 96, short QT. Confused but rousable.",
-    "which": "Adjusted calcium 3.7 mmol/L (14.8 mg/dL); dry; creatinine mildly raised.",
-    "hc_after": "After 3 L of saline the calcium is 3.5 mmol/L (14.0 mg/dL); PTH low, phosphate normal."
+    "which": "Adjusted calcium 14.8 mg/dL (3.7 mmol/L); dry; creatinine mildly raised.",
+    "hc_after": "After 3 L of saline the calcium is 14.0 mg/dL (3.5 mmol/L); PTH low, phosphate normal."
    }
   },
   {
@@ -3049,8 +3049,8 @@
    },
    "results": {
     "front": "Sinus rhythm at 90, short QT.",
-    "which": "Adjusted calcium 3.6 mmol/L (14.4 mg/dL); dry.",
-    "hc_after": "After saline the calcium is 3.3 mmol/L (13.2 mg/dL); PTH high, phosphate low."
+    "which": "Adjusted calcium 14.4 mg/dL (3.6 mmol/L); dry.",
+    "hc_after": "After saline the calcium is 13.2 mg/dL (3.3 mmol/L); PTH high, phosphate low."
    }
   },
   {
@@ -3064,8 +3064,8 @@
    },
    "results": {
     "front": "Sinus rhythm at 84.",
-    "which": "Adjusted calcium 3.4 mmol/L (13.6 mg/dL); dry.",
-    "hc_after": "After saline the calcium is 3.2 mmol/L (12.8 mg/dL); PTH suppressed. Node biopsy from last week: non-caseating granulomas."
+    "which": "Adjusted calcium 13.6 mg/dL (3.4 mmol/L); dry.",
+    "hc_after": "After saline the calcium is 12.8 mg/dL (3.2 mmol/L); PTH suppressed. Node biopsy from last week: non-caseating granulomas."
    }
   },
   {
@@ -3078,7 +3078,7 @@
    },
    "results": {
     "front": "Sinus rhythm at 70, normal intervals.",
-    "which": "Adjusted calcium 2.75 mmol/L (11.0 mg/dL), no symptoms; magnesium and potassium normal."
+    "which": "Adjusted calcium 11.0 mg/dL (2.75 mmol/L), no symptoms; magnesium and potassium normal."
    }
   },
   {
@@ -3091,7 +3091,7 @@
    },
    "results": {
     "front": "Monitor: sinus rhythm, QTc 520 ms. Carpopedal spasm; Chvostek sign positive. Adjusted calcium 1.7 mmol/L.",
-    "hypoca_mg": "Magnesium 0.3 mmol/L (0.7 mg/dL); creatinine normal."
+    "hypoca_mg": "Magnesium 0.7 mg/dL (0.3 mmol/L); creatinine normal."
    }
   },
   {
@@ -3128,7 +3128,7 @@
    },
    "results": {
     "front": "Sinus rhythm at 84, QTc 470 ms; no arrhythmia.",
-    "which": "Magnesium 0.4 mmol/L (1.0 mg/dL); calcium and potassium normal; tremor and twitching, no tetany. Creatinine normal."
+    "which": "Magnesium 1.0 mg/dL (0.4 mmol/L); calcium and potassium normal; tremor and twitching, no tetany. Creatinine normal."
    }
   },
   {
@@ -3141,7 +3141,7 @@
    },
    "results": {
     "front": "Sinus rhythm at 58.",
-    "which": "Phosphate 0.25 mmol/L (0.8 mg/dL), potassium 3.2, magnesium 0.6 mmol/L; the feed is running at the full target."
+    "which": "Phosphate 0.8 mg/dL (0.25 mmol/L), potassium 3.2, magnesium 0.6 mmol/L; the feed is running at the full target."
    }
   }
  ],

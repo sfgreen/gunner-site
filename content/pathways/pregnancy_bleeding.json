@@ -407,13 +407,13 @@
    "ask": "Pregnant, fundus above the umbilicus, no pulse; CPR under way. Add?",
    "options": [
     "Manual left uterine displacement; resuscitative hysterotomy if no pulse returns by 4 minutes",
-    "Tilt the board to the left side, then move her to theatre for a cesarean delivery",
+    "Tilt the board to the left side, then move her to the operating room for a cesarean delivery",
     "Withhold defibrillation and epinephrine to protect the fetus, and wait for obstetrics to arrive",
     "Keep up standard CPR and leave delivery of the baby until the arrest is over"
    ],
    "answer": 0,
    "chainStep": "CPR flat on her back with manual left uterine displacement; ACLS unchanged, defibrillation included; resuscitative hysterotomy where she lies if no pulse by 4 minutes, delivery within 5",
-   "why": "Above the umbilicus the uterus compresses the vena cava and aorta. Push it to the left by hand and keep her flat: tilting the board weakens compressions. Airway, compressions, drugs and defibrillation are the same as outside pregnancy. From 20 weeks, if circulation has not returned within 4 minutes, start a resuscitative hysterotomy where she lies, aiming to deliver within 5 minutes; moving her to theatre loses that time, and it is still worth doing after 5 minutes. With a non-shockable rhythm or an unwitnessed arrest, FEBRASGO starts it as soon as possible.",
+   "why": "Above the umbilicus the uterus compresses the vena cava and aorta. Push it to the left by hand and keep her flat: tilting the board weakens compressions. Airway, compressions, drugs and defibrillation are the same as outside pregnancy. From 20 weeks, if circulation has not returned within 4 minutes, start a resuscitative hysterotomy where she lies, aiming to deliver within 5 minutes; moving her to the operating room loses that time, and it is still worth doing after 5 minutes. With a non-shockable rhythm or an unwitnessed arrest, FEBRASGO starts it as soon as possible.",
    "next": "end_arrest",
    "sources": [
     {
@@ -601,7 +601,7 @@
     },
     {
      "item": "Anti-D, RhD-negative, first trimester",
-     "dose": "The sources disagree; see the note. This pathway does not key an answer on it",
+     "dose": "US label (RhoGAM): 300 micrograms within 72 hours for actual or threatened loss up to and including 12 weeks, or an ectopic pregnancy; NICE NG126 (2026): none up to 11+6 weeks. Not keyed; see the note",
      "status": "conflict",
      "sources": [
       {
@@ -614,7 +614,7 @@
       },
       {
        "docId": "url:a968f5149de0",
-       "where": "1 Indications and Usage; 2.1 table"
+       "where": "1 Indications and Usage: \"actual or threatened pregnancy loss at any stage of gestation and ectopic pregnancy\"; 2.1 table: \"RhoGAM (300 µg) (1500 IU) | Actual or threatened termination of pregnancy (spontaneous or induced) up to and including 12 weeks gestation\""
       },
       {
        "docId": "pmid:32809356",
@@ -637,7 +637,7 @@
    "options": [
     "Remove the tissue from the os at the bedside, then emergency uterine evacuation",
     "Misoprostol 800 micrograms and expectant care while the fluids run in",
-    "Fluids and vasopressors, leaving the tissue in place until she reaches theatre for evacuation",
+    "Fluids and vasopressors, leaving the tissue in place until she reaches the operating room for evacuation",
     "Mifepristone, then misoprostol 48 hours later, once she has been stabilized"
    ],
    "answer": 0,
@@ -661,7 +661,7 @@
    "orders": [
     {
      "item": "Uterine evacuation",
-     "dose": "Aspiration or suction curettage; NICE offers manual vacuum aspiration under local anaesthetic or surgery in theatre",
+     "dose": "Aspiration or suction curettage; NICE offers manual vacuum aspiration under local anaesthetic or surgery in the operating room",
      "status": "ok",
      "sources": [
       {
@@ -692,7 +692,7 @@
     },
     {
      "item": "Anti-D, RhD-negative, first trimester",
-     "dose": "The sources disagree; see the note. This pathway does not key an answer on it",
+     "dose": "US label (RhoGAM): 300 micrograms within 72 hours for actual or threatened loss up to and including 12 weeks, or an ectopic pregnancy; NICE NG126 (2026): none up to 11+6 weeks. Not keyed; see the note",
      "status": "conflict",
      "sources": [
       {
@@ -705,7 +705,7 @@
       },
       {
        "docId": "url:a968f5149de0",
-       "where": "1 Indications and Usage; 2.1 table"
+       "where": "1 Indications and Usage: \"actual or threatened pregnancy loss at any stage of gestation and ectopic pregnancy\"; 2.1 table: \"RhoGAM (300 µg) (1500 IU) | Actual or threatened termination of pregnancy (spontaneous or induced) up to and including 12 weeks gestation\""
       },
       {
        "docId": "pmid:32809356",
@@ -924,7 +924,7 @@
     },
     {
      "item": "Anti-D, RhD-negative, first trimester",
-     "dose": "The sources disagree; see the note. This pathway does not key an answer on it",
+     "dose": "US label (RhoGAM): 300 micrograms within 72 hours for actual or threatened loss up to and including 12 weeks, or an ectopic pregnancy; NICE NG126 (2026): none up to 11+6 weeks. Not keyed; see the note",
      "status": "conflict",
      "sources": [
       {
@@ -937,7 +937,7 @@
       },
       {
        "docId": "url:a968f5149de0",
-       "where": "1 Indications and Usage; 2.1 table"
+       "where": "1 Indications and Usage: \"actual or threatened pregnancy loss at any stage of gestation and ectopic pregnancy\"; 2.1 table: \"RhoGAM (300 µg) (1500 IU) | Actual or threatened termination of pregnancy (spontaneous or induced) up to and including 12 weeks gestation\""
       },
       {
        "docId": "pmid:32809356",
@@ -1007,7 +1007,7 @@
     },
     {
      "item": "Uterine aspiration",
-     "dose": "Manual vacuum aspiration under local anaesthetic, or surgery in theatre",
+     "dose": "Manual vacuum aspiration under local anaesthetic, or surgery in the operating room",
      "status": "ok",
      "sources": [
       {
@@ -1029,7 +1029,7 @@
     },
     {
      "item": "Anti-D, RhD-negative, first trimester",
-     "dose": "The sources disagree; see the note. This pathway does not key an answer on it",
+     "dose": "US label (RhoGAM): 300 micrograms within 72 hours for actual or threatened loss up to and including 12 weeks, or an ectopic pregnancy; NICE NG126 (2026): none up to 11+6 weeks. Not keyed; see the note",
      "status": "conflict",
      "sources": [
       {
@@ -1042,7 +1042,7 @@
       },
       {
        "docId": "url:a968f5149de0",
-       "where": "1 Indications and Usage; 2.1 table"
+       "where": "1 Indications and Usage: \"actual or threatened pregnancy loss at any stage of gestation and ectopic pregnancy\"; 2.1 table: \"RhoGAM (300 µg) (1500 IU) | Actual or threatened termination of pregnancy (spontaneous or induced) up to and including 12 weeks gestation\""
       },
       {
        "docId": "pmid:32809356",
@@ -1133,7 +1133,7 @@
     },
     {
      "item": "Anti-D, RhD-negative, first trimester",
-     "dose": "The sources disagree; see the note. This pathway does not key an answer on it",
+     "dose": "US label (RhoGAM): 300 micrograms within 72 hours for actual or threatened loss up to and including 12 weeks, or an ectopic pregnancy; NICE NG126 (2026): none up to 11+6 weeks. Not keyed; see the note",
      "status": "conflict",
      "sources": [
       {
@@ -1146,7 +1146,7 @@
       },
       {
        "docId": "url:a968f5149de0",
-       "where": "1 Indications and Usage; 2.1 table"
+       "where": "1 Indications and Usage: \"actual or threatened pregnancy loss at any stage of gestation and ectopic pregnancy\"; 2.1 table: \"RhoGAM (300 µg) (1500 IU) | Actual or threatened termination of pregnancy (spontaneous or induced) up to and including 12 weeks gestation\""
       },
       {
        "docId": "pmid:32809356",
@@ -2392,7 +2392,7 @@
    "stage": "Manage",
    "ask": "Atony, still bleeding after oxytocin and further uterotonics. Next?",
    "options": [
-    "Uterine balloon tamponade, with theatre and blood ready if it fails",
+    "Uterine balloon tamponade, with the operating room and blood ready if it fails",
     "Uterine artery embolization first, before a balloon or compression is tried",
     "Hysterectomy straight away, before a balloon, compression sutures or embolization are tried",
     "Another hour of oxytocin infusion before anything else"

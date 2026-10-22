@@ -538,8 +538,18 @@
     {
      "item": "Hydrocortisone",
      "dose": "200 mg a day: 50 mg IV every 6 hours or a continuous infusion; SSC 2021 started it at norepinephrine or epinephrine 0.25 mcg/kg/min or more, at least 4 hours after starting",
-     "status": "pending",
-     "note": "SSC 2026 broadened the indication; primary text not read."
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34599691",
+       "where": "Recommendation 58 remark: \"IV hydrocortisone at a dose of 200 mg/day given as 50 mg intravenously every 6 h or as a continuous infusion. It is suggested that this is commenced at a dose of norepinephrine or epinephrine ≥ 0.25 mcg/kg/min at least 4 h after initiation\""
+      },
+      {
+       "docId": "pmid:42272214",
+       "where": "Table 1, corticosteroids (revisited); text: \"broadens the recommendation for corticosteroid use to all septic shock patients\""
+      }
+     ],
+     "note": "SSC 2026 broadens the suggestion to septic shock without the 2021 vasopressor threshold (read in a summary, Table 1, not the primary text); the dose is the 2021 remark's."
     },
     {
      "item": "Epinephrine",
@@ -1020,14 +1030,14 @@
     "Step down to an oral antibiotic chosen by the culture",
     "Continue IV antibiotics to the end of the course",
     "Stop all antibiotics now that she is afebrile and eating",
-    "Step down to oral co-amoxiclav whatever the culture shows"
+    "Step down to oral amoxicillin-clavulanate (co-amoxiclav) whatever the culture shows"
    ],
    "answer": 0,
-   "chainStep": "Review IV antibiotics by 48 hours and step down to oral by the culture: cefalexin 500 mg two or three times a day for 7 to 10 days, or co-amoxiclav or trimethoprim if susceptible",
-   "why": "IV antibiotics are reviewed by 48 hours with a step down to oral where possible, switching to a narrow-spectrum agent if the organism is resistant. Courses run 7 to 14 days by agent. Co-amoxiclav and trimethoprim are used only when the culture shows susceptibility.",
+   "chainStep": "Review IV antibiotics by 48 hours and step down to oral by the culture: cephalexin (cefalexin) 500 mg two or three times a day for 7 to 10 days, or amoxicillin-clavulanate or trimethoprim if susceptible",
+   "why": "IV antibiotics are reviewed by 48 hours with a step down to oral where possible, switching to a narrow-spectrum agent if the organism is resistant. Courses run 7 to 14 days by agent. Amoxicillin-clavulanate and trimethoprim are used only when the culture shows susceptibility.",
    "orders": [
     {
-     "item": "Cefalexin",
+     "item": "Cephalexin",
      "dose": "500 mg two or three times a day (up to 1 to 1.5 g three or four times a day if severe) for 7 to 10 days",
      "status": "ok",
      "sources": [
@@ -1038,7 +1048,7 @@
      ]
     },
     {
-     "item": "Co-amoxiclav (culture susceptible only)",
+     "item": "Amoxicillin-clavulanate (culture susceptible only)",
      "dose": "500/125 mg three times a day for 7 to 10 days",
      "status": "ok",
      "sources": [
@@ -1859,9 +1869,19 @@
      "orders": [
       {
        "item": "Listeria age cutoff",
-       "dose": "IDSA over 50 (Table 4, not yet read); WHO 2025 over 60",
+       "dose": "IDSA 2004 over 50 (Table 4); WHO 2025 over 60",
        "status": "conflict",
-       "note": "The sources set different age cutoffs; IDSA Table 4 is an image in the open copy"
+       "sources": [
+        {
+         "docId": "pmid:15494903",
+         "where": "Table 4, row \">50 years\": \"S. pneumoniae, N. meningitidis, L. monocytogenes, aerobic gram-negative bacilli\"; \"Vancomycin plus ampicillin plus a third-generation cephalosporin\""
+        },
+        {
+         "docId": "url:a2af80c8370d",
+         "where": "B.2.2: \"risk factors for Listeria monocytogenes infection (i.e. age over 60 years, pregnancy, immunocompromised state)\""
+        }
+       ],
+       "note": "The sources set different age cutoffs: IDSA 2004 adds ampicillin over 50 years, WHO 2025 over 60."
       }
      ],
      "next": "regimen_std"
@@ -1878,9 +1898,19 @@
      "orders": [
       {
        "item": "Listeria age cutoff",
-       "dose": "IDSA over 50 (Table 4, not yet read); WHO 2025 over 60",
+       "dose": "IDSA 2004 over 50 (Table 4); WHO 2025 over 60",
        "status": "conflict",
-       "note": "The sources set different age cutoffs; IDSA Table 4 is an image in the open copy"
+       "sources": [
+        {
+         "docId": "pmid:15494903",
+         "where": "Table 4, row \">50 years\": \"S. pneumoniae, N. meningitidis, L. monocytogenes, aerobic gram-negative bacilli\"; \"Vancomycin plus ampicillin plus a third-generation cephalosporin\""
+        },
+        {
+         "docId": "url:a2af80c8370d",
+         "where": "B.2.2: \"risk factors for Listeria monocytogenes infection (i.e. age over 60 years, pregnancy, immunocompromised state)\""
+        }
+       ],
+       "note": "The sources set different age cutoffs: IDSA 2004 adds ampicillin over 50 years, WHO 2025 over 60."
       }
      ],
      "next": "regimen_amp"
@@ -1896,11 +1926,11 @@
     "IV ceftriaxone or cefotaxime",
     "IV vancomycin alone",
     "High-dose oral amoxicillin",
-    "IV aciclovir alone"
+    "IV acyclovir (aciclovir) alone"
    ],
    "answer": 0,
    "chainStep": "IV ceftriaxone (or cefotaxime) at meningitis doses plus vancomycin to a trough of 15 to 20 mcg/mL; dexamethasone 0.15 mg/kg every 6 hours, first dose with or just before the antibiotic",
-   "why": "A third-generation cephalosporin is the empiric backbone. Vancomycin is never a single agent; IDSA 2004 pairs it with the cephalosporin, assuming resistance is likely, while WHO adds it where resistant pneumococci are common. Oral agents reach too little CSF, and aciclovir is not routine unless herpes encephalitis is strongly suspected.",
+   "why": "A third-generation cephalosporin is the empiric backbone. Vancomycin is never a single agent; IDSA 2004 pairs it with the cephalosporin, assuming resistance is likely, while WHO adds it where resistant pneumococci are common. Oral agents reach too little CSF, and acyclovir is not routine unless herpes encephalitis is strongly suspected.",
    "note": "Dexamethasone after antibiotics have started: IDSA 2004 says do not give it to adults; NICE NG240 says give it as soon as possible if it is less than 12 hours late; WHO 2025 says with the first dose or as soon as possible after.",
    "orders": [
     {
@@ -1944,7 +1974,7 @@
      ]
     },
     {
-     "item": "Aciclovir",
+     "item": "Acyclovir",
      "dose": "Not routine unless herpes simplex encephalitis is strongly suspected",
      "status": "ok",
      "sources": [
@@ -1984,7 +2014,7 @@
    ],
    "answer": 0,
    "chainStep": "Add IV ampicillin or amoxicillin to ceftriaxone (or cefotaxime) and vancomycin; dexamethasone with or just before the first dose",
-   "why": "Listeria is intrinsically resistant to third-generation cephalosporins, ceftriaxone and cefotaxime included, so ampicillin or amoxicillin is added for anyone over 50 (the IDSA cutoff; its Table 4 is not yet read) or over 60 (WHO 2025), pregnant or immunocompromised. Vancomycin never replaces the cephalosporin.",
+   "why": "Listeria is intrinsically resistant to third-generation cephalosporins, ceftriaxone and cefotaxime included, so ampicillin or amoxicillin is added for anyone over 50 (IDSA 2004 Table 4) or over 60 (WHO 2025), pregnant or immunocompromised. Vancomycin never replaces the cephalosporin.",
    "note": "Dexamethasone after antibiotics have started: IDSA 2004 says do not give it to adults; NICE NG240 says give it as soon as possible if it is less than 12 hours late; WHO 2025 says with the first dose or as soon as possible after.",
    "orders": [
     {
@@ -1994,7 +2024,7 @@
     },
     {
      "item": "Confirmed Listeria",
-     "dose": "IV amoxicillin or ampicillin for 21 days; infection specialist advice on co-trimoxazole for the first 7 days",
+     "dose": "IV amoxicillin or ampicillin for 21 days; infection specialist advice on TMP-SMX (co-trimoxazole) for the first 7 days",
      "status": "ok",
      "sources": [
       {
@@ -2034,7 +2064,7 @@
     },
     {
      "docId": "pmid:15494903",
-     "where": "Vancomycin"
+     "where": "Vancomycin; Table 4, over 50 years"
     }
    ],
    "next": "end_mening_amp"
@@ -2056,7 +2086,7 @@
    "orders": [
     {
      "item": "Fever",
-     "dose": "A single oral temperature of 38.3 C (101 F) or more, or 38.0 C (100.4 F) or more sustained over 1 hour",
+     "dose": "A single oral temperature of 101 F (38.3 C) or more, or 100.4 F (38.0 C) or more sustained over 1 hour",
      "status": "ok",
      "sources": [
       {
@@ -2321,12 +2351,12 @@
     "Urine culture, then fluids alone until the culture is back"
    ],
    "answer": 0,
-   "chainStep": "Midstream urine culture, then an oral antibiotic by local resistance, switched by the culture: ciprofloxacin 500 mg twice a day for 7 days (StatPearls: 14 days in men) where fluoroquinolone resistance is 10% or less (one IV dose of ceftriaxone first if it is higher); NICE first choice cefalexin 500 mg two or three times a day for 7 to 10 days; return if not better in 48 hours",
+   "chainStep": "Midstream urine culture, then an oral antibiotic by local resistance, switched by the culture: ciprofloxacin 500 mg twice a day for 7 days (StatPearls: 14 days in men) where fluoroquinolone resistance is 10% or less (one IV dose of ceftriaxone first if it is higher); NICE first choice cephalexin 500 mg two or three times a day for 7 to 10 days; return if not better in 48 hours",
    "why": "Send a midstream urine culture before antibiotics, offer an antibiotic chosen with local resistance in mind, and give it orally when the patient can take it and is not ill enough to need IV. Seek help if it worsens or does not improve within 48 hours; signs of sepsis mean hospital.",
    "note": "NICE NG111 restricts ciprofloxacin to when other first choices are unsuitable; US teaching gives an oral fluoroquinolone first. The current US guideline, IDSA 2025 complicated UTI (pmid:41419213), was read in abstract only, and its abstract names no agent.",
    "orders": [
     {
-     "item": "Cefalexin",
+     "item": "Cephalexin",
      "dose": "500 mg two or three times a day (up to 1 to 1.5 g three or four times a day if severe) for 7 to 10 days",
      "status": "ok",
      "sources": [
@@ -2348,7 +2378,7 @@
      ]
     },
     {
-     "item": "Co-amoxiclav or trimethoprim",
+     "item": "Amoxicillin-clavulanate or trimethoprim",
      "dose": "Only once the culture shows susceptibility",
      "status": "ok",
      "sources": [
@@ -2585,7 +2615,7 @@
    "results": {
     "first_look": "Lactate 1.8 mmol/L. Creatinine 2.1 mg/dL (baseline 0.8), platelets 88,000.",
     "source": "Left costovertebral angle tenderness. Urine: pyuria, nitrite positive.",
-    "uti_result": "Renal imaging: no hydronephrosis, no abscess. By 48 hours she is afebrile and eating; the urine grows E. coli susceptible to cefalexin."
+    "uti_result": "Renal imaging: no hydronephrosis, no abscess. By 48 hours she is afebrile and eating; the urine grows E. coli susceptible to cephalexin."
    }
   },
   {

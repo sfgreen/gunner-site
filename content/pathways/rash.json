@@ -1015,7 +1015,7 @@
     },
     {
      "item": "Staphylococcal TSS case definition",
-     "dose": "Fever 38.9 C or more, diffuse macular erythroderma, desquamation 1 to 2 weeks after onset, systolic 90 mm Hg or less, and 3 or more organ systems involved",
+     "dose": "Fever 38.9 C (102 F) or more, diffuse macular erythroderma, desquamation 1 to 2 weeks after onset, systolic 90 mm Hg or less, and 3 or more organ systems involved",
      "status": "ok",
      "sources": [
       {
@@ -2130,14 +2130,15 @@
     },
     {
      "item": "SCORTEN mortality",
-     "dose": "0 to 1 point, 3.2%; 2, 12.1%; 3, 35.3%; 4, 58.3%; over 5, 90%",
+     "dose": "0 to 1 point, 3.2%; 2, 12.1%; 3, 35.3%; 4, 58.3%; 5 or more, 90%",
      "status": "ok",
      "sources": [
       {
        "docId": "pmid:29083827",
-       "where": "Evaluation: Table 2"
+       "where": "Evaluation: Table 2 (\"> 5 | 90\"); text: \"greater than 90% if 5 or more risk factors are present\""
       }
-     ]
+     ],
+     "note": "Table 2 prints the top band as over 5; the same chapter's text puts 5 or more risk factors at over 90%, so 5 belongs to the top band."
     },
     {
      "item": "Prophylactic antibiotics",
@@ -2176,7 +2177,7 @@
    ],
    "answer": 0,
    "chainStep": "Prevent hypothermia; nonadherent dressings, leaving detached epidermis in place; crystalloid to a MAP over 65 mm Hg and urine output 0.5 to 1 mL/kg/h; opioid analgesia; enteral nutrition; early ophthalmology (within 24 hours in one guideline); genital mucosal care; systemic immunomodulation only as a specialist decision",
-   "why": "Supportive care until the skin heals is the mainstay: fluids guided by perfusion and urine output, pain control, wound care with nonadherent dressings, warmth against hypothermia, and nutrition. The eyes need ophthalmology early, because ocular complications are common and sometimes serious; one guideline sets the review within the first 24 hours, so waiting for the skin to heal is too late. Prophylactic antibiotics do not change survival, and transfer is early, not saved for a rising score. Systemic corticosteroids, ciclosporin and IVIG have no proven benefit and the sources disagree on them, so they are not an ED order.",
+   "why": "Supportive care until the skin heals is the mainstay: fluids guided by perfusion and urine output, pain control, wound care with nonadherent dressings, warmth against hypothermia, and nutrition. The eyes need ophthalmology early, because ocular complications are common and sometimes serious; one guideline sets the review within the first 24 hours, so waiting for the skin to heal is too late. Prophylactic antibiotics do not change survival, and transfer is early, not saved for a rising score. Systemic corticosteroids, cyclosporine (ciclosporin) and IVIG have no proven benefit and the sources disagree on them, so they are not an ED order.",
    "orders": [
     {
      "item": "Fluids",
@@ -2232,7 +2233,7 @@
      ]
     },
     {
-     "item": "Corticosteroids, ciclosporin, IVIG",
+     "item": "Corticosteroids, cyclosporine, IVIG",
      "dose": "A specialist decision, not an ED order",
      "status": "conflict",
      "sources": [
@@ -2249,7 +2250,7 @@
        "where": "Results: pharmacologic therapy"
       }
      ],
-     "note": "StatPearls: no proven treatment, and some studies link corticosteroids to higher mortality; EuroSCAR found no benefit from corticosteroids or IVIG over supportive care; an Indian review favors early dexamethasone and ciclosporin 3 mg/kg a day; 4 of 10 pediatric guidelines recommend systemic corticosteroids and 5 of 10 IVIG; the review's synthesis says consider early corticosteroids case by case."
+     "note": "StatPearls: no proven treatment, and some studies link corticosteroids to higher mortality; EuroSCAR found no benefit from corticosteroids or IVIG over supportive care; an Indian review favors early dexamethasone and cyclosporine 3 mg/kg a day; 4 of 10 pediatric guidelines recommend systemic corticosteroids and 5 of 10 IVIG; the review's synthesis says consider early corticosteroids case by case."
     },
     {
      "item": "Prophylactic antibiotics",
@@ -2301,7 +2302,7 @@
     "Stop recent drugs and transfer to a burn unit as SJS/TEN, with IV immunoglobulin"
    ],
    "answer": 0,
-   "chainStep": "Admit (ICU if extensive); IV nafcillin or oxacillin 100 to 150 mg/kg a day divided every 6 hours, or cefazolin 50 to 100 mg/kg a day divided every 8 hours; vancomycin if MRSA is likely; emollients and nonadherent dressings; fluids and temperature control; paracetamol or opioids, no NSAIDs, no silver sulfadiazine; about 10 days in all",
+   "chainStep": "Admit (ICU if extensive); IV nafcillin or oxacillin 100 to 150 mg/kg a day divided every 6 hours, or cefazolin 50 to 100 mg/kg a day divided every 8 hours; vancomycin if MRSA is likely; emollients and nonadherent dressings; fluids and temperature control; acetaminophen (paracetamol) or opioids, no NSAIDs, no silver sulfadiazine; about 10 days in all",
    "why": "Severe, generalized scalded skin needs admission and IV antibiotics against Staphylococcus aureus, with fluids, warmth and wound care, because the lost epidermis leaks fluid and heat. NSAIDs are avoided for the risk of kidney impairment. Clindamycin may cut toxin production, but up to 50% of strains are resistant, so it is never used alone. The inside of the mouth is spared, which separates scalded skin from SJS/TEN, a drug reaction with mucosal erosions.",
    "orders": [
     {
@@ -2675,7 +2676,7 @@
    "id": "end_em",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Erythema multiforme: remove and treat the trigger (aciclovir or valacyclovir if herpes is suspected, antibiotics for mycoplasma), supportive mouth and lip care, ophthalmology for eye involvement, and admission for severe pain, dehydration or poor intake. Recurrent herpes-associated attacks are suppressed with aciclovir 400 mg or valacyclovir 500 mg twice daily for at least 6 months."
+   "summary": "Erythema multiforme: remove and treat the trigger (acyclovir (aciclovir) or valacyclovir if herpes is suspected, antibiotics for mycoplasma), supportive mouth and lip care, ophthalmology for eye involvement, and admission for severe pain, dehydration or poor intake. Recurrent herpes-associated attacks are suppressed with acyclovir 400 mg or valacyclovir 500 mg twice daily for at least 6 months."
   },
   {
    "id": "wide_look",
@@ -2935,8 +2936,8 @@
     "Continue the drug at a lower dose, with an antihistamine and weekly liver tests"
    ],
    "answer": 0,
-   "chainStep": "Stop the culprit drug for good; admit; score RegiSCAR and repeat the blood count, liver, kidney and other organ tests; moderate or severe DRESS: prednisolone or equivalent 0.5 to 1.0 mg/kg a day, tapered over 2 to 3 months; a possible case (RegiSCAR 2 to 3): a moderate-potency topical steroid and close follow-up (EAACI, children); ciclosporin, IVIG or other agents for steroid-resistant or steroid-dependent disease",
-   "why": "Withdrawing the offending drug immediately, with supportive care, comes first, and systemic corticosteroids are the standard treatment for moderate and severe DRESS: prednisolone 0.5 to 1.0 mg/kg a day, tapered over 2 to 3 months. A possible case without organ injury (RegiSCAR 2 to 3) gets a moderate-potency topical steroid with supportive care and close follow-up in the EAACI pediatric paper. A rapid reduction can cause severe or fatal flares and relapses, so a 5-day burst is wrong. IVIG, ciclosporin and other agents are for steroid-resistant or steroid-dependent disease or when steroids are contraindicated, not first-line, and the drug is never continued.",
+   "chainStep": "Stop the culprit drug for good; admit; score RegiSCAR and repeat the blood count, liver, kidney and other organ tests; moderate or severe DRESS: prednisolone or equivalent 0.5 to 1.0 mg/kg a day, tapered over 2 to 3 months; a possible case (RegiSCAR 2 to 3): a moderate-potency topical steroid and close follow-up (EAACI, children); cyclosporine, IVIG or other agents for steroid-resistant or steroid-dependent disease",
+   "why": "Withdrawing the offending drug immediately, with supportive care, comes first, and systemic corticosteroids are the standard treatment for moderate and severe DRESS: prednisolone 0.5 to 1.0 mg/kg a day, tapered over 2 to 3 months. A possible case without organ injury (RegiSCAR 2 to 3) gets a moderate-potency topical steroid with supportive care and close follow-up in the EAACI pediatric paper. A rapid reduction can cause severe or fatal flares and relapses, so a 5-day burst is wrong. IVIG, cyclosporine and other agents are for steroid-resistant or steroid-dependent disease or when steroids are contraindicated, not first-line, and the drug is never continued.",
    "orders": [
     {
      "item": "Culprit drug",
@@ -2984,7 +2985,7 @@
     },
     {
      "item": "Steroid-resistant or dependent",
-     "dose": "Immunosuppressants such as ciclosporin, IVIG, biologics or plasmapheresis",
+     "dose": "Immunosuppressants such as cyclosporine, IVIG, biologics or plasmapheresis",
      "status": "ok",
      "sources": [
       {
@@ -3130,7 +3131,7 @@
    ],
    "answer": 0,
    "chainStep": "Map the spread (one dermatome, adjacent dermatomes, or scattered); look at the forehead, eyelid and nose tip and ask about eye pain or blurred vision; ask about immunosuppression and pregnancy; look for eczema beneath punched-out erosions; check the mouth, hands and feet; vesicle PCR when the diagnosis is uncertain or the patient is immunocompromised",
-   "why": "The plan turns on distribution and host. Zoster in one dermatome is treated by mouth; vesicles on the nose tip (the Hutchinson sign) mark nasociliary involvement and strongly predict eye complications; more than 20 lesions outside the primary and adjacent dermatomes is dissemination, and immunocompromise or dissemination means IV aciclovir; pregnancy changes the chickenpox plan; and punched-out erosions on eczema are eczema herpeticum. PCR is the most reliable test and the Tzanck smear is less sensitive and specific, but antivirals are not delayed for a definitive diagnosis. Systemic corticosteroids are not routinely recommended in zoster.",
+   "why": "The plan turns on distribution and host. Zoster in one dermatome is treated by mouth; vesicles on the nose tip (the Hutchinson sign) mark nasociliary involvement and strongly predict eye complications; more than 20 lesions outside the primary and adjacent dermatomes is dissemination, and immunocompromise or dissemination means IV acyclovir; pregnancy changes the chickenpox plan; and punched-out erosions on eczema are eczema herpeticum. PCR is the most reliable test and the Tzanck smear is less sensitive and specific, but antivirals are not delayed for a definitive diagnosis. Systemic corticosteroids are not routinely recommended in zoster.",
    "orders": [
     {
      "item": "Disseminated zoster",
@@ -3211,7 +3212,7 @@
      "orders": [
       {
        "item": "Antiviral",
-       "dose": "By mouth, ideally within 72 hours, not delayed for the diagnosis or the eye review: valacyclovir 1,000 mg every 8 hours, aciclovir 800 mg 5 times a day or famciclovir 500 mg 3 times a day, for at least 7 days",
+       "dose": "By mouth, ideally within 72 hours, not delayed for the diagnosis or the eye review: valacyclovir 1,000 mg every 8 hours, acyclovir 800 mg 5 times a day or famciclovir 500 mg 3 times a day, for at least 7 days",
        "status": "ok",
        "sources": [
         {
@@ -3268,7 +3269,7 @@
      "orders": [
       {
        "item": "Well child",
-       "dose": "Symptom care; aciclovir is not recommended with normal immunity",
+       "dose": "Symptom care; acyclovir is not recommended with normal immunity",
        "status": "ok",
        "sources": [
         {
@@ -3319,7 +3320,7 @@
      "orders": [
       {
        "item": "Mild disease",
-       "dose": "Oral aciclovir 30 to 60 mg/kg a day in 3 doses in children, 400 mg 3 times a day in adults; or valacyclovir 20 mg/kg a day in children, 500 mg 3 times a day in adults; 7 to 21 days or until all lesions crust",
+       "dose": "Oral acyclovir 30 to 60 mg/kg a day in 3 doses in children, 400 mg 3 times a day in adults; or valacyclovir 20 mg/kg a day in children, 500 mg 3 times a day in adults; 7 to 21 days or until all lesions crust",
        "status": "ok",
        "sources": [
         {
@@ -3330,7 +3331,7 @@
       },
       {
        "item": "Severe or immunocompromised",
-       "dose": "Admit for IV aciclovir 5 to 10 mg/kg every 8 hours, then oral once improving and crusting",
+       "dose": "Admit for IV acyclovir 5 to 10 mg/kg every 8 hours, then oral once improving and crusting",
        "status": "ok",
        "sources": [
         {
@@ -3376,7 +3377,7 @@
      "orders": [
       {
        "item": "Care",
-       "dose": "Supportive: NSAIDs or paracetamol for pain and fever, and hydration; resolves in 7 to 10 days; no licensed antiviral",
+       "dose": "Supportive: NSAIDs or acetaminophen for pain and fever, and hydration; resolves in 7 to 10 days; no licensed antiviral",
        "status": "ok",
        "sources": [
         {
@@ -3409,12 +3410,12 @@
    "options": [
     "Oral valacyclovir 1 g three times a day now, with analgesia for the pain",
     "No antiviral, since antivirals help when started within 24 hours of the rash",
-    "Admit for IV aciclovir 10 mg/kg every 8 hours for 7 days, then oral",
+    "Admit for IV acyclovir 10 mg/kg every 8 hours for 7 days, then oral",
     "Oral valacyclovir with prednisolone as standard, to prevent postherpetic neuralgia"
    ],
    "answer": 0,
-   "chainStep": "An oral antiviral within 72 hours of rash onset, most effective within 48 hours: valacyclovir 1 g three times a day, aciclovir 800 mg five times a day or famciclovir 500 mg three times a day, with renal dosing if needed; analgesia (paracetamol, NSAIDs, opioids if severe); infectious until the lesions dry; recombinant zoster vaccine later for adults 50 or older",
-   "why": "Antivirals hasten healing, cut acute pain and help prevent postherpetic neuralgia, and the window is 72 hours, not 24: valacyclovir is most effective within 48 hours of the rash, and its efficacy after 72 hours is not established. One dermatome in an immunocompetent patient is treated by mouth; IV aciclovir is for the immunocompromised and for disseminated disease. Systemic corticosteroids are not routinely recommended; trials gave variable results.",
+   "chainStep": "An oral antiviral within 72 hours of rash onset, most effective within 48 hours: valacyclovir 1 g three times a day, acyclovir 800 mg five times a day or famciclovir 500 mg three times a day, with renal dosing if needed; analgesia (acetaminophen, NSAIDs, opioids if severe); infectious until the lesions dry; recombinant zoster vaccine later for adults 50 or older",
+   "why": "Antivirals hasten healing, cut acute pain and help prevent postherpetic neuralgia, and the window is 72 hours, not 24: valacyclovir is most effective within 48 hours of the rash, and its efficacy after 72 hours is not established. One dermatome in an immunocompetent patient is treated by mouth; IV acyclovir is for the immunocompromised and for disseminated disease. Systemic corticosteroids are not routinely recommended; trials gave variable results.",
    "orders": [
     {
      "item": "Timing",
@@ -3440,7 +3441,7 @@
      "note": "StatPearls Herpes Zoster gives 5 days; its herpes zoster ophthalmicus chapter gives at least 7."
     },
     {
-     "item": "Aciclovir",
+     "item": "Acyclovir",
      "dose": "Label: 800 mg five times a day for 7 to 10 days",
      "status": "conflict",
      "sources": [
@@ -3464,7 +3465,7 @@
     },
     {
      "item": "Analgesia",
-     "dose": "NSAIDs or paracetamol; opioids if severe",
+     "dose": "NSAIDs or acetaminophen; opioids if severe",
      "status": "ok",
      "sources": [
       {
@@ -3545,17 +3546,17 @@
    "stage": "Manage",
    "ask": "Disseminated zoster, or VZV on immunosuppression. Next?",
    "options": [
-    "Admit; IV aciclovir 10 mg/kg every 8 hours by ideal weight, over 1 hour each",
+    "Admit; IV acyclovir 10 mg/kg every 8 hours by ideal weight, over 1 hour each",
     "Oral valacyclovir 1 g three times a day, as for zoster in one dermatome",
-    "Admit; IV aciclovir 5 mg/kg every 8 hours, the dose for herpes simplex infection",
+    "Admit; IV acyclovir 5 mg/kg every 8 hours, the dose for herpes simplex infection",
     "Varicella zoster immune globulin now, to treat the spreading rash"
    ],
    "answer": 0,
-   "chainStep": "Admit; IV aciclovir 10 mg/kg every 8 hours for 7 days (under 12 years, 20 mg/kg), each dose over at least 1 hour, by ideal body weight in obesity and adjusted to kidney function; isolation per infection control; look for hepatitis, pneumonitis and encephalitis",
+   "chainStep": "Admit; IV acyclovir 10 mg/kg every 8 hours for 7 days (under 12 years, 20 mg/kg), each dose over at least 1 hour, by ideal body weight in obesity and adjusted to kidney function; isolation per infection control; look for hepatitis, pneumonitis and encephalitis",
    "why": "The label dose for zoster in immunocompromised patients is 10 mg/kg every 8 hours for 7 days in adults and adolescents; 5 mg/kg every 8 hours is the dose for herpes simplex in the immunocompromised. Each infusion runs over at least 1 hour to lower the risk of kidney tubular damage, and obese patients are dosed by ideal body weight. Disseminated zoster can reach the liver or brain, so oral treatment at home is not enough, and immune globulin has no place in treatment once the rash appears.",
    "orders": [
     {
-     "item": "IV aciclovir",
+     "item": "IV acyclovir",
      "dose": "Zoster in immunocompromised patients: 10 mg/kg over 1 hour every 8 hours for 7 days (12 years or older); 20 mg/kg under 12",
      "status": "conflict",
      "sources": [
@@ -3568,7 +3569,7 @@
        "where": "Treatment / management"
       }
      ],
-     "note": "The StatPearls herpes zoster ophthalmicus chapter gives IV aciclovir 10 to 15 mg/kg every 8 hours for 7 to 10 days; the label gives 10 mg/kg for 7 days."
+     "note": "The StatPearls herpes zoster ophthalmicus chapter gives IV acyclovir 10 to 15 mg/kg every 8 hours for 7 to 10 days; the label gives 10 mg/kg for 7 days."
     },
     {
      "item": "Obesity",
@@ -3644,7 +3645,7 @@
    "id": "end_iv_acv",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Disseminated or immunocompromised VZV: admission for IV aciclovir 10 mg/kg every 8 hours by ideal weight with kidney dosing, isolation, and a watch for hepatitis, pneumonitis and encephalitis. Forehead, eyelid or nose-tip lesions: urgent ophthalmology too, because referral is mandatory when the eye may be involved."
+   "summary": "Disseminated or immunocompromised VZV: admission for IV acyclovir 10 mg/kg every 8 hours by ideal weight with kidney dosing, isolation, and a watch for hepatitis, pneumonitis and encephalitis. Forehead, eyelid or nose-tip lesions: urgent ophthalmology too, because referral is mandatory when the eye may be involved."
   },
   {
    "id": "varicella",
@@ -3652,17 +3653,17 @@
    "stage": "Manage",
    "ask": "Chickenpox, rash under 24 hours old, adult or pregnant, no complications. Next?",
    "options": [
-    "Oral aciclovir now, with daily review, and a return at once for any new cough",
+    "Oral acyclovir now, with daily review, and a return at once for any new cough",
     "Varicella zoster immune globulin today, to shorten the illness and protect the baby",
     "No antiviral; adult chickenpox is managed with symptom care, as in children",
-    "Admit for IV aciclovir 10 mg/kg every 8 hours, as for chickenpox pneumonitis"
+    "Admit for IV acyclovir 10 mg/kg every 8 hours, as for chickenpox pneumonitis"
    ],
    "answer": 0,
-   "chainStep": "Within 24 hours of the first lesion: oral aciclovir (pregnancy: 800 mg five times a day for 7 days); daily review; pregnant: urgent assessment and fetal follow-up; hospital for respiratory symptoms, neurological symptoms other than headache, a hemorrhagic rash or bleeding, a dense rash or many mucosal lesions, or significant immunosuppression; IV aciclovir 10 mg/kg three times a day for 5 to 10 days for pneumonia or severe disease",
-   "why": "Adult chickenpox is more severe, and antivirals are advised in adults, pregnant women included, when they can start early; in pregnancy, presentation within 24 hours of the first lesion earns 7 days of oral aciclovir. Uncomplicated cases go home with daily review, and IV aciclovir is kept for severe disease or complications such as pneumonia, whose risk is highest after 18 to 20 weeks. Immune globulin has no place in treatment once the rash appears.",
+   "chainStep": "Within 24 hours of the first lesion: oral acyclovir (pregnancy: 800 mg five times a day for 7 days); daily review; pregnant: urgent assessment and fetal follow-up; hospital for respiratory symptoms, neurological symptoms other than headache, a hemorrhagic rash or bleeding, a dense rash or many mucosal lesions, or significant immunosuppression; IV acyclovir 10 mg/kg three times a day for 5 to 10 days for pneumonia or severe disease",
+   "why": "Adult chickenpox is more severe, and antivirals are advised in adults, pregnant women included, when they can start early; in pregnancy, presentation within 24 hours of the first lesion earns 7 days of oral acyclovir. Uncomplicated cases go home with daily review, and IV acyclovir is kept for severe disease or complications such as pneumonia, whose risk is highest after 18 to 20 weeks. Immune globulin has no place in treatment once the rash appears.",
    "orders": [
     {
-     "item": "Oral aciclovir, pregnancy",
+     "item": "Oral acyclovir, pregnancy",
      "dose": "Within 24 hours of rash onset: 7 days, for example 800 mg five times a day",
      "status": "ok",
      "sources": [
@@ -3673,7 +3674,7 @@
      ]
     },
     {
-     "item": "Oral aciclovir, other adults",
+     "item": "Oral acyclovir, other adults",
      "dose": "Label: 800 mg four times a day for 5 days (adults and children over 40 kg)",
      "status": "conflict",
      "sources": [
@@ -3718,7 +3719,7 @@
      ]
     },
     {
-     "item": "IV aciclovir",
+     "item": "IV acyclovir",
      "dose": "Severe chickenpox or complications; pneumonia: 10 mg/kg three times a day for 5 to 10 days",
      "status": "ok",
      "sources": [
@@ -3760,25 +3761,25 @@
    "id": "end_varicella",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Chickenpox in an adult or in pregnancy: oral aciclovir when seen within 24 hours of the first lesion, daily review, and admission for IV aciclovir at the first respiratory or neurological sign or a hemorrhagic or dense rash; pneumonitis is the risk, highest after 18 to 20 weeks of pregnancy."
+   "summary": "Chickenpox in an adult or in pregnancy: oral acyclovir when seen within 24 hours of the first lesion, daily review, and admission for IV acyclovir at the first respiratory or neurological sign or a hemorrhagic or dense rash; pneumonitis is the risk, highest after 18 to 20 weeks of pregnancy."
   },
   {
    "id": "end_varicella_other",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "A well child: symptom care; aciclovir is not recommended with normal immunity. An adult or pregnant woman after 24 hours without complications: antivirals not routinely advised in pregnancy, a clinical decision (UKHSA); StatPearls advises them in adults within 24 to 48 hours. Respiratory or neurological symptoms, a hemorrhagic or dense rash, or immunosuppression: hospital."
+   "summary": "A well child: symptom care; acyclovir is not recommended with normal immunity. An adult or pregnant woman after 24 hours without complications: antivirals not routinely advised in pregnancy, a clinical decision (UKHSA); StatPearls advises them in adults within 24 to 48 hours. Respiratory or neurological symptoms, a hemorrhagic or dense rash, or immunosuppression: hospital."
   },
   {
    "id": "end_eh",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Eczema herpeticum: a systemic antiviral now, by mouth for mild disease (aciclovir or valacyclovir for 7 to 21 days or until crusted) or IV aciclovir in hospital when severe or immunocompromised; ophthalmology when the face or eyelids are involved, contact precautions, and a watch for secondary bacterial infection."
+   "summary": "Eczema herpeticum: a systemic antiviral now, by mouth for mild disease (acyclovir or valacyclovir for 7 to 21 days or until crusted) or IV acyclovir in hospital when severe or immunocompromised; ophthalmology when the face or eyelids are involved, contact precautions, and a watch for secondary bacterial infection."
   },
   {
    "id": "end_hfmd",
    "kind": "end",
    "stage": "Outcome",
-   "summary": "Hand, foot and mouth disease: supportive care with fluids and analgesia (paracetamol or NSAIDs); it settles in 7 to 10 days, there is no licensed antiviral, and steroids were linked to more severe disease."
+   "summary": "Hand, foot and mouth disease: supportive care with fluids and analgesia (acetaminophen or NSAIDs); it settles in 7 to 10 days, there is no licensed antiviral, and steroids were linked to more severe disease."
   },
   {
    "id": "urticaria",
@@ -3788,7 +3789,7 @@
    "options": [
     "A standard-dose second-generation H1 antihistamine; ask about triggers",
     "IM epinephrine 0.5 mg now, then observation for a biphasic reaction",
-    "A sedating first-generation antihistamine, such as chlorphenamine, as first-line",
+    "A sedating first-generation antihistamine, such as chlorpheniramine (chlorphenamine), as first-line",
     "Allergy blood tests and a full screen before treatment is started"
    ],
    "answer": 0,
@@ -4106,7 +4107,7 @@
   {
    "id": "mening_shock",
    "label": "Purpura in septic shock",
-   "vignette": "19-year-old college student, 12 hours of fever, leg pains and cold hands; now drowsy. T 39.4 C, HR 138, BP 82/44, RR 28, weight 70 kg.",
+   "vignette": "19-year-old college student, 12 hours of fever, leg pains and cold hands; now drowsy. T 39.4 C (102.9 F), HR 138, BP 82/44, RR 28, weight 70 kg.",
    "picks": {
     "front": "shock",
     "shock_skin": "purpura"
@@ -4119,7 +4120,7 @@
   {
    "id": "tss",
    "label": "Toxic shock during a period",
-   "vignette": "22-year-old woman on day 3 of her period, 1 day of fever, vomiting, watery diarrhea and dizziness. T 39.6 C, HR 132, BP 78/40, weight 58 kg.",
+   "vignette": "22-year-old woman on day 3 of her period, 1 day of fever, vomiting, watery diarrhea and dizziness. T 39.6 C (103.3 F), HR 132, BP 78/40, weight 58 kg.",
    "picks": {
     "front": "shock",
     "shock_skin": "red"
@@ -4132,7 +4133,7 @@
   {
    "id": "sepsis_other",
    "label": "Urosepsis with an incidental rash",
-   "vignette": "67-year-old man, 2 days of dysuria and fever, now confused. T 38.9 C, HR 124, BP 80/46, RR 26.",
+   "vignette": "67-year-old man, 2 days of dysuria and fever, now confused. T 38.9 C (102 F), HR 124, BP 80/46, RR 26.",
    "picks": {
     "front": "shock",
     "shock_skin": "other"
@@ -4145,7 +4146,7 @@
   {
    "id": "mening",
    "label": "Fever and spreading purpura, not in shock",
-   "vignette": "17-year-old, 8 hours of fever, headache and vomiting; a few spots on the legs. T 39.1 C, HR 112, BP 112/68, weight 60 kg.",
+   "vignette": "17-year-old, 8 hours of fever, headache and vomiting; a few spots on the legs. T 39.1 C (102.4 F), HR 112, BP 112/68, weight 60 kg.",
    "picks": {
     "front": "purpura",
     "purp_result": "mening"
@@ -4158,7 +4159,7 @@
   {
    "id": "meningitis_spots",
    "label": "Meningitis signs with a few spots",
-   "vignette": "20-year-old woman, 1 day of fever, severe headache and a stiff neck; a few spots on her ankles. T 39.2 C, HR 108, BP 118/70, weight 64 kg.",
+   "vignette": "20-year-old woman, 1 day of fever, severe headache and a stiff neck; a few spots on her ankles. T 39.2 C (102.6 F), HR 108, BP 118/70, weight 64 kg.",
    "picks": {
     "front": "purpura",
     "purp_result": "meningitis"
@@ -4171,7 +4172,7 @@
   {
    "id": "rmsf",
    "label": "Fever and petechiae after a camping trip",
-   "vignette": "34-year-old man, camped in the North Carolina woods 6 days ago; 4 days of fever, severe headache and aching muscles, then spots on the wrists and ankles. T 39.0 C, HR 108, BP 118/72, weight 80 kg.",
+   "vignette": "34-year-old man, camped in the North Carolina woods 6 days ago; 4 days of fever, severe headache and aching muscles, then spots on the wrists and ankles. T 39.0 C (102.2 F), HR 108, BP 118/72, weight 80 kg.",
    "picks": {
     "front": "purpura",
     "purp_result": "rmsf"
@@ -4184,7 +4185,7 @@
   {
    "id": "ttp",
    "label": "Confusion, bruising and schistocytes",
-   "vignette": "38-year-old woman, 3 days of tiredness, bruises and petechiae; confused this morning. T 37.6 C, HR 104, BP 128/78, weight 65 kg.",
+   "vignette": "38-year-old woman, 3 days of tiredness, bruises and petechiae; confused this morning. T 37.6 C (99.7 F), HR 104, BP 128/78, weight 65 kg.",
    "picks": {
     "front": "purpura",
     "purp_result": "ttp"
@@ -4197,7 +4198,7 @@
   {
    "id": "tma_low",
    "label": "Schistocytes with a low PLASMIC score",
-   "vignette": "45-year-old man, 1 week of headache and tiredness, then petechiae on his legs; no diarrhea. T 37.0 C, HR 96, BP 178/104, weight 82 kg.",
+   "vignette": "45-year-old man, 1 week of headache and tiredness, then petechiae on his legs; no diarrhea. T 37.0 C (98.6 F), HR 96, BP 178/104, weight 82 kg.",
    "picks": {
     "front": "purpura",
     "purp_result": "tma"
@@ -4210,7 +4211,7 @@
   {
    "id": "hus",
    "label": "Bloody diarrhea, then kidney injury",
-   "vignette": "4-year-old, 5 days of bloody diarrhea after a petting farm visit; now pale, puffy and passing little urine. T 37.4 C, HR 132, BP 112/70, weight 16 kg.",
+   "vignette": "4-year-old, 5 days of bloody diarrhea after a petting farm visit; now pale, puffy and passing little urine. T 37.4 C (99.3 F), HR 132, BP 112/70, weight 16 kg.",
    "picks": {
     "front": "purpura",
     "purp_result": "hus"
@@ -4223,7 +4224,7 @@
   {
    "id": "itp",
    "label": "Petechiae and gum bleeding, otherwise well",
-   "vignette": "29-year-old woman, 2 days of spots on her legs and gum bleeding after brushing; no other symptoms, no new drugs. T 36.8 C, HR 82, BP 118/74, weight 60 kg.",
+   "vignette": "29-year-old woman, 2 days of spots on her legs and gum bleeding after brushing; no other symptoms, no new drugs. T 36.8 C (98.2 F), HR 82, BP 118/74, weight 60 kg.",
    "picks": {
     "front": "purpura",
     "purp_result": "itp"
@@ -4236,7 +4237,7 @@
   {
    "id": "itp_child",
    "label": "A well child with petechiae after a cold",
-   "vignette": "4-year-old boy, 2 days of scattered petechiae and a few shin bruises, 2 weeks after a cold; active and eating. T 36.9 C, HR 104, weight 17 kg.",
+   "vignette": "4-year-old boy, 2 days of scattered petechiae and a few shin bruises, 2 weeks after a cold; active and eating. T 36.9 C (98.4 F), HR 104, weight 17 kg.",
    "picks": {
     "front": "purpura",
     "purp_result": "itp_obs"
@@ -4249,7 +4250,7 @@
   {
    "id": "dic",
    "label": "Bruising and oozing with metastatic cancer",
-   "vignette": "72-year-old man with metastatic prostate cancer, 1 week of bruising and oozing from old cannula sites; no fever. T 36.9 C, HR 92, BP 132/80.",
+   "vignette": "72-year-old man with metastatic prostate cancer, 1 week of bruising and oozing from old cannula sites; no fever. T 36.9 C (98.4 F), HR 92, BP 132/80.",
    "picks": {
     "front": "purpura",
     "purp_result": "dic"
@@ -4262,7 +4263,7 @@
   {
    "id": "igav",
    "label": "Purple spots and sore ankles in a child",
-   "vignette": "6-year-old boy, rash on the legs and buttocks, sore ankles and mild belly pain; a cold last week. T 37.2 C, HR 96, BP 98/60.",
+   "vignette": "6-year-old boy, rash on the legs and buttocks, sore ankles and mild belly pain; a cold last week. T 37.2 C (99 F), HR 96, BP 98/60.",
    "picks": {
     "front": "purpura",
     "purp_result": "vasc"
@@ -4275,7 +4276,7 @@
   {
    "id": "petechiae_benign",
    "label": "Facial petechiae after a night of vomiting",
-   "vignette": "45-year-old man, fine red spots on the face and neck after a night of vomiting; feels well. T 36.7 C, HR 78, BP 126/80.",
+   "vignette": "45-year-old man, fine red spots on the face and neck after a night of vomiting; feels well. T 36.7 C (98.1 F), HR 78, BP 126/80.",
    "picks": {
     "front": "purpura",
     "purp_result": "normal"
@@ -4288,7 +4289,7 @@
   {
    "id": "ten",
    "label": "Skin peeling 3 weeks after lamotrigine",
-   "vignette": "52-year-old woman, lamotrigine started 3 weeks ago; 2 days of fever and sore eyes, now painful skin coming away. T 38.6 C, HR 128, BP 112/70, weight 70 kg.",
+   "vignette": "52-year-old woman, lamotrigine started 3 weeks ago; 2 days of fever and sore eyes, now painful skin coming away. T 38.6 C (101.5 F), HR 128, BP 112/70, weight 70 kg.",
    "picks": {
     "front": "blisters",
     "blister_type": "sjs"
@@ -4301,7 +4302,7 @@
   {
    "id": "sjs_target",
    "label": "Dusky targets on TMP-SMX",
-   "vignette": "41-year-old man, TMP-SMX for 10 days for a urinary infection; 3 days of fever, then a spreading rash and a sore mouth. T 38.4 C, HR 110, BP 124/78.",
+   "vignette": "41-year-old man, TMP-SMX for 10 days for a urinary infection; 3 days of fever, then a spreading rash and a sore mouth. T 38.4 C (101.1 F), HR 110, BP 124/78.",
    "picks": {
     "front": "target",
     "target_result": "sjs"
@@ -4314,7 +4315,7 @@
   {
    "id": "ssss",
    "label": "Peeling toddler, mouth spared",
-   "vignette": "3-year-old, 2 days of fever and irritability; red, tender skin that began on the face and in the folds is now peeling. T 38.5 C, HR 140, BP 94/58, capillary refill 2 seconds, weight 15 kg.",
+   "vignette": "3-year-old, 2 days of fever and irritability; red, tender skin that began on the face and in the folds is now peeling. T 38.5 C (101.3 F), HR 140, BP 94/58, capillary refill 2 seconds, weight 15 kg.",
    "picks": {
     "front": "blisters",
     "blister_type": "ssss"
@@ -4327,7 +4328,7 @@
   {
    "id": "pv",
    "label": "Mouth erosions for weeks, then blisters",
-   "vignette": "54-year-old woman, 6 weeks of painful mouth sores, now fragile blisters on the scalp and chest that break into raw patches; no new medicines in 6 months. T 37.0 C, HR 84, BP 130/80.",
+   "vignette": "54-year-old woman, 6 weeks of painful mouth sores, now fragile blisters on the scalp and chest that break into raw patches; no new medicines in 6 months. T 37.0 C (98.6 F), HR 84, BP 130/80.",
    "picks": {
     "front": "blisters",
     "blister_type": "pv"
@@ -4340,7 +4341,7 @@
   {
    "id": "bp",
    "label": "Itch, then tense blisters, at 81",
-   "vignette": "81-year-old man, 3 weeks of intense itch, then tense blisters on the arms, thighs and belly; otherwise well. T 36.8 C, HR 76, BP 138/78, weight 72 kg.",
+   "vignette": "81-year-old man, 3 weeks of intense itch, then tense blisters on the arms, thighs and belly; otherwise well. T 36.8 C (98.2 F), HR 76, BP 138/78, weight 72 kg.",
    "picks": {
     "front": "blisters",
     "blister_type": "bp"
@@ -4353,7 +4354,7 @@
   {
    "id": "contact_blisters",
    "label": "Streaks of blisters after clearing poison ivy",
-   "vignette": "45-year-old man, 2 days of itchy streaks of blisters on both forearms and shins after clearing poison ivy; otherwise well. T 36.9 C, HR 76, BP 128/80.",
+   "vignette": "45-year-old man, 2 days of itchy streaks of blisters on both forearms and shins after clearing poison ivy; otherwise well. T 36.9 C (98.4 F), HR 76, BP 128/80.",
    "picks": {
     "front": "blisters",
     "blister_type": "other"
@@ -4366,7 +4367,7 @@
   {
    "id": "em",
    "label": "Targets on the hands after a cold sore",
-   "vignette": "24-year-old man, a cold sore last week; now round spots on the hands and forearms and a sore lip. T 37.1 C, HR 78, BP 122/76.",
+   "vignette": "24-year-old man, a cold sore last week; now round spots on the hands and forearms and a sore lip. T 37.1 C (98.8 F), HR 78, BP 122/76.",
    "picks": {
     "front": "target",
     "target_result": "em"
@@ -4379,7 +4380,7 @@
   {
    "id": "dress",
    "label": "Fever and facial swelling 4 weeks after allopurinol",
-   "vignette": "48-year-old man, allopurinol started 4 weeks ago; 4 days of fever, an itchy spreading rash and a swollen face. T 38.9 C, HR 104, BP 128/76, weight 70 kg.",
+   "vignette": "48-year-old man, allopurinol started 4 weeks ago; 4 days of fever, an itchy spreading rash and a swollen face. T 38.9 C (102 F), HR 104, BP 128/76, weight 70 kg.",
    "picks": {
     "front": "widespread",
     "wide_result": "dress"
@@ -4392,7 +4393,7 @@
   {
    "id": "erythro",
    "label": "Psoriasis turning to erythroderma",
-   "vignette": "66-year-old man with long-standing plaque psoriasis, ran out of his creams; 1 week of spreading redness, now nearly all of his skin, with shivering. No new medicines. T 37.9 C, HR 104, BP 122/70.",
+   "vignette": "66-year-old man with long-standing plaque psoriasis, ran out of his creams; 1 week of spreading redness, now nearly all of his skin, with shivering. No new medicines. T 37.9 C (100.2 F), HR 104, BP 122/70.",
    "picks": {
     "front": "widespread",
     "wide_result": "erythro"
@@ -4405,7 +4406,7 @@
   {
    "id": "measles",
    "label": "Unvaccinated child with fever, cough and rash",
-   "vignette": "3-year-old, unvaccinated, 4 days of fever, cough, runny nose and red eyes; a rash started behind the ears and spread down. T 39.5 C, HR 140, BP 96/60, capillary refill 2 seconds.",
+   "vignette": "3-year-old, unvaccinated, 4 days of fever, cough, runny nose and red eyes; a rash started behind the ears and spread down. T 39.5 C (103.1 F), HR 140, BP 96/60, capillary refill 2 seconds.",
    "picks": {
     "front": "fever"
    },
@@ -4416,7 +4417,7 @@
   {
    "id": "drug_exanthem",
    "label": "Pink rash a week into amoxicillin",
-   "vignette": "30-year-old woman, amoxicillin started 7 days ago for sinusitis; an itchy pink rash on the trunk and arms; feels well. T 36.9 C, HR 80, BP 118/72.",
+   "vignette": "30-year-old woman, amoxicillin started 7 days ago for sinusitis; an itchy pink rash on the trunk and arms; feels well. T 36.9 C (98.4 F), HR 80, BP 118/72.",
    "picks": {
     "front": "widespread",
     "wide_result": "mild"
@@ -4429,7 +4430,7 @@
   {
    "id": "zoster",
    "label": "A band of blisters on the chest",
-   "vignette": "64-year-old woman, 3 days of burning pain on the left chest, then a band of blisters 2 days ago; no immunosuppression. T 37.0 C, HR 80, BP 134/80.",
+   "vignette": "64-year-old woman, 3 days of burning pain on the left chest, then a band of blisters 2 days ago; no immunosuppression. T 37.0 C (98.6 F), HR 80, BP 134/80.",
    "picks": {
     "front": "vesicles",
     "ves_result": "zoster"
@@ -4442,7 +4443,7 @@
   {
    "id": "hzo",
    "label": "Forehead vesicles and the nose tip",
-   "vignette": "71-year-old man, 2 days of pain over the right forehead, now vesicles there and on the tip of the nose; the right eye is red and gritty. T 37.2 C, HR 84, BP 142/84.",
+   "vignette": "71-year-old man, 2 days of pain over the right forehead, now vesicles there and on the tip of the nose; the right eye is red and gritty. T 37.2 C (99 F), HR 84, BP 142/84.",
    "picks": {
     "front": "vesicles",
     "ves_result": "hzo"
@@ -4455,7 +4456,7 @@
   {
    "id": "dissem",
    "label": "Zoster spreading after a kidney transplant",
-   "vignette": "58-year-old man on tacrolimus and prednisone after a kidney transplant; 3 days of a painful band on the right flank, now scattered blisters over the trunk and limbs. T 38.2 C, HR 98, BP 136/82, weight 60 kg, creatinine 1.3 mg/dL (his baseline).",
+   "vignette": "58-year-old man on tacrolimus and prednisone after a kidney transplant; 3 days of a painful band on the right flank, now scattered blisters over the trunk and limbs. T 38.2 C (100.8 F), HR 98, BP 136/82, weight 60 kg, creatinine 1.3 mg/dL (his baseline).",
    "picks": {
     "front": "vesicles",
     "ves_result": "dissem"
@@ -4468,7 +4469,7 @@
   {
    "id": "varicella_preg",
    "label": "Chickenpox at 24 weeks",
-   "vignette": "27-year-old, 24 weeks pregnant, never had chickenpox; a rash appeared 12 hours ago; no cough or breathlessness. T 38.0 C, HR 96, BP 112/68, SpO2 98%, weight 68 kg.",
+   "vignette": "27-year-old, 24 weeks pregnant, never had chickenpox; a rash appeared 12 hours ago; no cough or breathlessness. T 38.0 C (100.4 F), HR 96, BP 112/68, SpO2 98%, weight 68 kg.",
    "picks": {
     "front": "vesicles",
     "ves_result": "varicella"
@@ -4481,7 +4482,7 @@
   {
    "id": "varicella_child",
    "label": "A well child with chickenpox",
-   "vignette": "5-year-old, unvaccinated, 2 days of an itchy spotty rash after a classmate had chickenpox; eating and playing. T 38.1 C, HR 110, weight 19 kg.",
+   "vignette": "5-year-old, unvaccinated, 2 days of an itchy spotty rash after a classmate had chickenpox; eating and playing. T 38.1 C (100.6 F), HR 110, weight 19 kg.",
    "picks": {
     "front": "vesicles",
     "ves_result": "varicella_other"
@@ -4494,7 +4495,7 @@
   {
    "id": "eh",
    "label": "Sudden sores on a child's eczema",
-   "vignette": "8-year-old with atopic eczema, 2 days of sudden painful sores on the face and neck; feverish. T 38.3 C, HR 112, weight 25 kg.",
+   "vignette": "8-year-old with atopic eczema, 2 days of sudden painful sores on the face and neck; feverish. T 38.3 C (100.9 F), HR 112, weight 25 kg.",
    "picks": {
     "front": "vesicles",
     "ves_result": "eh"
@@ -4507,7 +4508,7 @@
   {
    "id": "hfmd",
    "label": "Toddler with mouth ulcers and spots on the palms",
-   "vignette": "2-year-old, 1 day of fever and refusing to eat; spots on the hands, feet and in the mouth; drinking a little, wet nappies. T 38.2 C, HR 130.",
+   "vignette": "2-year-old, 1 day of fever and refusing to eat; spots on the hands, feet and in the mouth; drinking a little, wet nappies. T 38.2 C (100.8 F), HR 130.",
    "picks": {
     "front": "vesicles",
     "ves_result": "hfmd"
@@ -4531,7 +4532,7 @@
   {
    "id": "abscess",
    "label": "Large thigh abscess with spreading redness",
-   "vignette": "35-year-old man, painful swelling on the thigh for 4 days; MRSA causes many skin infections locally. T 37.4 C, HR 88, BP 128/80.",
+   "vignette": "35-year-old man, painful swelling on the thigh for 4 days; MRSA causes many skin infections locally. T 37.4 C (99.3 F), HR 88, BP 128/80.",
    "picks": {
     "front": "skin",
     "skin_result": "abscess"
@@ -4544,7 +4545,7 @@
   {
    "id": "cellulitis",
    "label": "Spreading redness on the forearm",
-   "vignette": "62-year-old woman, 2 days of a red, hot, tender patch on the forearm after a gardening scratch. T 37.6 C, HR 90, BP 136/80.",
+   "vignette": "62-year-old woman, 2 days of a red, hot, tender patch on the forearm after a gardening scratch. T 37.6 C (99.7 F), HR 90, BP 136/80.",
    "picks": {
     "front": "skin",
     "skin_result": "cellulitis"
@@ -4557,7 +4558,7 @@
   {
    "id": "nsti",
    "label": "Thigh pain far beyond the redness",
-   "vignette": "50-year-old man with diabetes, 1 day of severe thigh pain after a minor graze. T 38.4 C, HR 110, BP 118/74.",
+   "vignette": "50-year-old man with diabetes, 1 day of severe thigh pain after a minor graze. T 38.4 C (101.1 F), HR 110, BP 118/74.",
    "picks": {
     "front": "skin",
     "skin_result": "nsti"
@@ -4570,7 +4571,7 @@
   {
    "id": "local",
    "label": "An itchy patch under a watch strap",
-   "vignette": "40-year-old man, 4 days of an itchy red patch on the wrist under a new watch strap; otherwise well. T 36.8 C, HR 72, BP 124/78.",
+   "vignette": "40-year-old man, 4 days of an itchy red patch on the wrist under a new watch strap; otherwise well. T 36.8 C (98.2 F), HR 72, BP 124/78.",
    "picks": {
     "front": "other"
    },

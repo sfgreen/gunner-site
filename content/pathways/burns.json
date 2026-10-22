@@ -1199,12 +1199,12 @@
     "Cool water if the burn happened in the last few minutes, then a dry sheet over it"
    ],
    "answer": 0,
-   "chainStep": "Within 3 hours: cool water (12 to 25 °C) for 20 minutes, running on the limbs, wet cold compresses on the head, face, trunk and groin; limited in large burns, small children, the frail and shock, keeping the patient warm; after 3 hours, cover without cooling; no ice; cling film or a clean nonadherent dressing; no creams before transfer",
+   "chainStep": "Within 3 hours: cool water (12 to 25 °C, 53.6 to 77 °F) for 20 minutes, running on the limbs, wet cold compresses on the head, face, trunk and groin; limited in large burns, small children, the frail and shock, keeping the patient warm; after 3 hours, cover without cooling; no ice; cling film or a clean nonadherent dressing; no creams before transfer",
    "why": "Cool running water for 20 minutes gives the most benefit and still helps up to 3 hours after the burn: it eases pain and reduces the need for grafting. Ice is harmful: it deepens the injury through prolonged vasoconstriction. Large burns, infants, older and frail patients and those in shock lose heat fast, so cooling is done with care and the patient is kept warm. Afterwards the wound is covered with cling film or a clean nonadherent dressing; creams and ointments are left off before transfer, so the burn center can assess the wound.",
    "orders": [
     {
      "item": "Cooling",
-     "dose": "Cool running water (12 to 25 °C) for at least 20 minutes or until the pain is relieved, started as soon as possible and no later than 3 hours after the burn; running water on the limbs, alternating wet cold compresses on the head, face, trunk and groin",
+     "dose": "Cool running water (12 to 25 °C, 53.6 to 77 °F) for at least 20 minutes or until the pain is relieved, started as soon as possible and no later than 3 hours after the burn; running water on the limbs, alternating wet cold compresses on the head, face, trunk and groin",
      "status": "ok",
      "sources": [
       {

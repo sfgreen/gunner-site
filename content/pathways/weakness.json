@@ -353,7 +353,7 @@
     },
     {
      "id": "glucose",
-     "if": "Glucose low; under 4 mmol/L (72 mg/dL) on the fingerstick",
+     "if": "Glucose low; under 72 mg/dL (4 mmol/L) on the fingerstick",
      "ddx": {
       "lead": [
        "Hypoglycemia"
@@ -363,7 +363,7 @@
      "orders": [
       {
        "item": "Hypoglycemia",
-       "dose": "Blood glucose under 4.0 mmol/L (72 mg/dL), treated without delay",
+       "dose": "Blood glucose under 72 mg/dL (4.0 mmol/L), treated without delay",
        "status": "ok",
        "sources": [
         {
@@ -2374,7 +2374,7 @@
   {
    "id": "mg_trigger",
    "label": "Myasthenic crisis after a chest infection",
-   "vignette": "67-year-old man with myasthenia gravis on pyridostigmine 60 mg four times a day; urgent care started levofloxacin for a cough 2 days ago. Now struggling to swallow and short of breath. T 38.2 °C, HR 104, SpO2 93%, weight 72 kg.",
+   "vignette": "67-year-old man with myasthenia gravis on pyridostigmine 60 mg four times a day; urgent care started levofloxacin for a cough 2 days ago. Now struggling to swallow and short of breath. T 38.2 °C (100.8 °F), HR 104, SpO2 93%, weight 72 kg.",
    "picks": {
     "front": "airway",
     "pattern_result": "mg",
@@ -2391,7 +2391,7 @@
   {
    "id": "mg_none",
    "label": "Myasthenic crisis, no trigger found",
-   "vignette": "33-year-old woman with myasthenia gravis on pyridostigmine, 4 days of worsening double vision, slurred speech, choking on liquids and arm weakness; taking her doses as prescribed. T 36.8 °C, HR 84, SpO2 97%, weight 70 kg.",
+   "vignette": "33-year-old woman with myasthenia gravis on pyridostigmine, 4 days of worsening double vision, slurred speech, choking on liquids and arm weakness; taking her doses as prescribed. T 36.8 °C (98.2 °F), HR 84, SpO2 97%, weight 70 kg.",
    "picks": {
     "front": "stable",
     "pattern_result": "mg",
@@ -2421,7 +2421,7 @@
   {
    "id": "bot_food",
    "label": "A family dinner",
-   "vignette": "47-year-old man and his wife both developed blurred and double vision and trouble swallowing 18 hours after a family dinner. Fully alert. T 36.9 °C, HR 92, weight 78 kg.",
+   "vignette": "47-year-old man and his wife both developed blurred and double vision and trouble swallowing 18 hours after a family dinner. Fully alert. T 36.9 °C (98.4 °F), HR 92, weight 78 kg.",
    "picks": {
     "front": "airway",
     "pattern_result": "bot",
@@ -2438,7 +2438,7 @@
   {
    "id": "bot_wound",
    "label": "Double vision in a heroin user",
-   "vignette": "31-year-old woman who injects heroin; 2 days of double vision, slurred speech and difficulty swallowing. Alert. T 37.0 °C, HR 96, weight 58 kg.",
+   "vignette": "31-year-old woman who injects heroin; 2 days of double vision, slurred speech and difficulty swallowing. Alert. T 37.0 °C (98.6 °F), HR 96, weight 58 kg.",
    "picks": {
     "front": "stable",
     "pattern_result": "bot",

@@ -1012,7 +1012,7 @@
    "id": "insulin",
    "kind": "step",
    "stage": "Manage",
-   "ask": "Potassium at least 3.5, replaced first if it was lower. Insulin?",
+   "ask": "Potassium 3.5 or more on arrival, or raised above 3.5 if it was low. Insulin?",
    "options": [
     "Fixed-rate IV short-acting insulin, 0.1 units/kg/h",
     "Fixed-rate IV insulin at 0.05 units/kg/h from the start, on saline alone",
@@ -1316,7 +1316,7 @@
    ],
    "answer": 0,
    "chainStep": "Check the insulin pump, connection and residual volume; if working, increase the infusion by 1 unit/h hourly until ketones fall at least 0.5 mmol/L an hour",
-   "why": "The JBDS targets are ketones down at least 0.5 mmol/L an hour, or bicarbonate up and glucose down 3 mmol/L an hour. When they are missed, first check that the pump works, is connected and holds the right residual volume; if it does, the infusion goes up 1 unit/h every hour until the targets are met. Ketones and glucose are reviewed hourly, not at 4 hours, and bicarbonate may even delay the fall in ketones.",
+   "why": "The JBDS targets are ketones down at least 0.5 mmol/L an hour, or bicarbonate up and glucose down 3 mmol/L (54 mg/dL) an hour. When they are missed, first check that the pump works, is connected and holds the right residual volume; if it does, the infusion goes up 1 unit/h every hour until the targets are met. Ketones and glucose are reviewed hourly, not at 4 hours, and bicarbonate may even delay the fall in ketones.",
    "next": "dex",
    "sources": [
     {
@@ -1517,7 +1517,7 @@
    ],
    "answer": 0,
    "chainStep": "Increase IV potassium (concentrated potassium by central line in a monitored bed if needed); recheck hourly; senior review of the insulin rate",
-   "why": "Hypokalemia under 3.5 develops in about half of patients despite replacement, and severe hypokalemia carries a higher mortality. JBDS reviews the regimen, rechecks hourly, gives more concentrated potassium where it can be given safely, and considers 0.05 units/kg/h insulin once the glucose is under 14 mmol/L. The consensus replaces potassium until it is above 3.5, and when it is low at the start it delays insulin until then. Bicarbonate worsens hypokalemia.",
+   "why": "Hypokalemia under 3.5 develops in about half of patients despite replacement, and severe hypokalemia carries a higher mortality. JBDS reviews the regimen, rechecks hourly, gives more concentrated potassium where it can be given safely, and considers 0.05 units/kg/h insulin once the glucose is under 14 mmol/L (252 mg/dL). The consensus replaces potassium until it is above 3.5, and when it is low at the start it delays insulin until then. Bicarbonate worsens hypokalemia.",
    "next": "resolve",
    "sources": [
     {
@@ -1547,7 +1547,7 @@
     },
     {
      "item": "Insulin",
-     "dose": "JBDS: consider 0.05 units/kg/h once glucose is under 14 mmol/L; the consensus delays insulin when potassium is under 3.5 on admission",
+     "dose": "JBDS: consider 0.05 units/kg/h once glucose is under 14 mmol/L (252 mg/dL); the consensus delays insulin when potassium is under 3.5 on admission",
      "status": "ok",
      "sources": [
       {
@@ -1962,7 +1962,7 @@
     "Give another liter of 0.9% saline as a rapid bolus"
    ],
    "answer": 0,
-   "chainStep": "Glucose falling over 5 mmol/L (90 mg/dL) an hour: check the rate of fall of osmolality; consider reducing the fluid rate; no insulin while the glucose is still falling",
+   "chainStep": "Glucose falling over 90 mg/dL (5 mmol/L) an hour: check the rate of fall of osmolality; consider reducing the fluid rate; no insulin while the glucose is still falling",
    "why": "Glucose should fall no faster than 90 to 120 mg/dL an hour (JBDS: 5 mmol/L) and osmolality no faster than 3 to 8 mOsm/kg an hour, because fast shifts risk cerebral edema and osmotic demyelination. When glucose falls faster than that on fluid alone, JBDS checks the osmolality trend and considers slowing the fluid. Insulin waits until the glucose stops falling.",
    "next": "hhs_insulin",
    "sources": [
@@ -1991,7 +1991,7 @@
     "IV insulin at a rate that brings the glucose under 250 within 2 hours"
    ],
    "answer": 0,
-   "chainStep": "Fixed-rate IV insulin 0.05 units/kg/h once the glucose plateaus with a positive fluid balance; 0.1 units/kg/h if ketones 3.0 or more, ketonuria 2+, pH under 7.3 or bicarbonate under 18 (mixed DKA and HHS); dextrose 5 or 10% at 125 mL/h once glucose is under 14 mmol/L (250 mg/dL)",
+   "chainStep": "Fixed-rate IV insulin 0.05 units/kg/h once the glucose plateaus with a positive fluid balance; 0.1 units/kg/h if ketones 3.0 or more, ketonuria 2+, pH under 7.3 or bicarbonate under 18 (mixed DKA and HHS); dextrose 5 or 10% at 125 mL/h once glucose is under 250 mg/dL (14 mmol/L)",
    "why": "HHS needs less insulin than DKA: both sources start a fixed-rate infusion at 0.05 units/kg/h when ketones are under 3.0 and there is no acidosis, and 0.1 for mixed DKA and HHS. JBDS starts it only once the glucose has plateaued with a positive balance, unless ketones are over 3.0 (the JBDS care pathway also starts 0.05 at once for ketones over 1.0 to 3.0); the consensus notes that some withhold insulin this way. Subcutaneous rapid-acting insulin is not for HHS. Glucose should fall no faster than 90 to 120 mg/dL an hour, toward 200 to 250 mg/dL (JBDS: 10 to 15 mmol/L) in the first 24 hours.",
    "next": "hhs_osm",
    "sources": [
@@ -2026,7 +2026,7 @@
     },
     {
      "item": "Dextrose",
-     "dose": "5 or 10% at 125 mL/h once glucose is under 14 mmol/L, alongside the insulin and fluid",
+     "dose": "5 or 10% at 125 mL/h once glucose is under 14 mmol/L (252 mg/dL), alongside the insulin and fluid",
      "status": "ok",
      "sources": [
       {
@@ -2120,7 +2120,7 @@
    ],
    "answer": 0,
    "chainStep": "Osmolality falling 3 to 8 mOsm/kg an hour with sodium rising: continue 0.9% saline at the same rate",
-   "why": "As glucose falls, water moves into cells and the sodium rises: about 1.6 mmol/L for each 100 mg/dL fall in glucose (consensus), or 2.4 for each 5.5 mmol/L (JBDS). That rise is not a reason for hypotonic fluid; a rising sodium matters only if the osmolality is not falling with it. With the osmolality on target, the same fluid continues. Sodium should fall no more than 10 mmol/L in 24 hours. Older US teaching (ADA 2009) switched to 0.45% after the first hour when the corrected sodium was normal or high; the 2024 consensus dropped that rule: the initial rise in serum sodium is not an indication to give hypotonic fluids.",
+   "why": "As glucose falls, water moves into cells and the sodium rises: about 1.6 mmol/L for each 100 mg/dL fall in glucose (consensus), or 2.4 for each 5.5 mmol/L, 99 mg/dL (JBDS). That rise is not a reason for hypotonic fluid; a rising sodium matters only if the osmolality is not falling with it. With the osmolality on target, the same fluid continues. Sodium should fall no more than 10 mmol/L in 24 hours. Older US teaching (ADA 2009) switched to 0.45% after the first hour when the corrected sodium was normal or high; the 2024 consensus dropped that rule: the initial rise in serum sodium is not an indication to give hypotonic fluids.",
    "next": "hhs_vte",
    "sources": [
     {
@@ -2154,7 +2154,7 @@
    ],
    "answer": 0,
    "chainStep": "Osmolality not falling despite a positive fluid balance and appropriate insulin: switch to 0.45% saline at the same rate",
-   "why": "0.45% saline is used only when the osmolality is not falling despite an adequate positive balance with 0.9% saline and appropriate insulin; with a negative balance the answer is more 0.9% saline. There are no data for fluids weaker than 0.45%, and fast osmotic shifts risk cerebral edema and osmotic demyelination. JBDS also raises an infusion already running to 0.1 units/kg/h when the glucose falls less than 5 mmol/L an hour despite adequate fluid.",
+   "why": "0.45% saline is used only when the osmolality is not falling despite an adequate positive balance with 0.9% saline and appropriate insulin; with a negative balance the answer is more 0.9% saline. There are no data for fluids weaker than 0.45%, and fast osmotic shifts risk cerebral edema and osmotic demyelination. JBDS also raises an infusion already running to 0.1 units/kg/h when the glucose falls less than 5 mmol/L (90 mg/dL) an hour despite adequate fluid.",
    "next": "hhs_vte",
    "sources": [
     {
@@ -3111,7 +3111,7 @@
      "where": "Fluid replacement"
     }
    ],
-   "note": "Consensus: 1.6 mmol/L for each 100 mg/dL fall. JBDS gives 2.4 for each 5.5 mmol/L, a larger rise. The rise is not a reason for hypotonic fluid; it matters only if the osmolality is not falling.",
+   "note": "Consensus: 1.6 mmol/L for each 100 mg/dL fall. JBDS gives 2.4 for each 5.5 mmol/L (99 mg/dL), a larger rise. The rise is not a reason for hypotonic fluid; it matters only if the osmolality is not falling.",
    "tests": [
     {
      "inputs": {

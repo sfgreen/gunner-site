@@ -278,7 +278,7 @@
       },
       {
         "q": "Why does the sodium rise as HHS is treated?",
-        "a": "As glucose falls, water moves into cells: about 1.6 mmol/L for each 100 mg/dL fall in glucose (consensus; JBDS gives 2.4 for each 5.5 mmol/L). That rise alone is not a reason for hypotonic fluid; it matters only if the osmolality is not falling.",
+        "a": "As glucose falls, water moves into cells: about 1.6 mmol/L for each 100 mg/dL fall in glucose (consensus; JBDS gives 2.4 for each 5.5 mmol/L, 99 mg/dL). That rise alone is not a reason for hypotonic fluid; it matters only if the osmolality is not falling.",
         "refs": [
           "hhs_na",
           "calc:na_rise"
