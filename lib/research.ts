@@ -12,6 +12,34 @@ export type ResearchEntry = {
 
 export const RESEARCH: ResearchEntry[] = [
   {
+    href: '/research/which-nbme-is-most-predictive',
+    title: 'Which NBME is the real you?',
+    finding: 'One student’s forms land a median 23 points apart, much of it noise; no single form predicts better, and when your best form misleads you.',
+    sample: '230 students with two or more forms',
+    published: '2026-10-22',
+  },
+  {
+    href: '/research/most-missed-step-2-ck-topics',
+    title: 'Everyone misses the same questions',
+    finding: 'Strong and weak students find the same questions hard, and the hard ones are the less famous half of familiar topics.',
+    sample: '998 people, 315,216 first tries',
+    published: '2026-10-22',
+  },
+  {
+    href: '/research/step-2-ck-time-per-question',
+    title: 'Going slower did not come with more right answers',
+    finding: 'The slowest quarter took 2.6 times as long per question as the fastest and got the same share right.',
+    sample: '383 people, 427,282 timed answers',
+    published: '2026-10-22',
+  },
+  {
+    href: '/research/model-misses-app-users',
+    title: 'Why our own model is worse on our own users',
+    finding: 'The score model misses app users twice as much as the Reddit posters it learned from, and the reason is not the one the folklore gives.',
+    sample: '29 app users against 40 unseen posters',
+    published: '2026-10-22',
+  },
+  {
     href: '/research/dedicated-calendar',
     title: 'The dedicated schedule nobody wrote down',
     finding: 'When each NBME and UWSA actually gets sat, how many forms people take, and what another week of dedicated is worth.',
