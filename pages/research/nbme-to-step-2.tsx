@@ -55,7 +55,7 @@ export default function Research({ record }: { record: Record }) {
       eyebrow="Research"
       title="What actually predicts your Step 2 score"
       lede={<>269 r/step2 score reports, one calibrated model, and its out-of-sample record, updated every Monday. Written by a medical student who believed the folklore until he checked it.</>}
-      crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research/nbme-to-step-2', label: 'Research' }]}
+      crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research', label: 'Research' }]}
       metaTitle="NBME to Step 2 CK: What 269 Real Score Reports Show"
       metaDesc={desc}
       campaign={CAMPAIGN}

@@ -24,7 +24,7 @@ const NAV_LINKS: { href: string; label: string }[] = [
   { href: '/wards', label: 'On the wards' },
   { href: '/readiness', label: 'Readiness check' },
   { href: '/step-2-score-predictor', label: 'Predictor' },
-  { href: '/research/nbme-to-step-2', label: 'Research' },
+  { href: '/research', label: 'Research' },
   { href: '/guides', label: 'Guides' },
 ];
 
