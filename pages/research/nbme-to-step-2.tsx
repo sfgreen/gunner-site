@@ -176,6 +176,7 @@ export default function Research({ record }: { record: Record }) {
       <Fig n={3} src="/research/fig5_recency_weight.svg" alt="Exponential decay curve showing the weight a practice form carries as a function of days before the exam"
         caption="Weight of a form in the anchor by days before the exam. A form from three weeks out counts half; six weeks out, a quarter." />
       <p>This also explains the belief that old forms "deflate." They do read lower, but mostly because of when people take them, not which form it is. Once you account for the student and for timing, NBME 10 through 15 collapse to within a point or two of each other.</p>
+      <p>How far apart one student's own forms land, and whether any single form deserves more trust than the rest, has <Link href="/research/which-nbme-is-most-predictive">its own post</Link>.</p>
 
       <h3>3.3 Three forms genuinely read off scale, and they're not the ones people complain about</h3>
       <Fig n={4} src="/research/fig3_form_offsets.svg" alt="Horizontal bar chart of how each practice form reads relative to the NBME scale, with 95% confidence intervals and sample sizes"
