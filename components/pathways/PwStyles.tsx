@@ -1,15 +1,17 @@
-// Styles for the pathway article and hub, scoped under .pw, in the Score Report
-// register (styles/globals.css supplies the base palette). Only what these pages
-// add is declared here.
+// Styles for the pathway article and hub, scoped under .pw. Not ported to the app
+// look's blocks yet (components/app); until then the --pw tokens point at the app
+// tokens (styles/globals.css), so the pages follow light and dark like the rest of
+// the site, and sticky offsets clear the app-look nav (--nav-h). Only what these
+// pages add is declared here.
 //
-// Tokens added (SITE_REDESIGN 3.0, the AA fixes):
-//   --pw-ink-3 #6b717d   labels and meta on bg and bg-2 (4.66 and 4.90:1); on bg-3
-//                        panels labels use --ink-dim (5.32:1) instead
-//   --pw-link  #2459c9   links (5.96:1 on bg; the site blue #2f6fed is 4.32:1)
-//   --pw-green-ink #086b33  green text (5.36:1 or better on every surface here)
-//   --pw-gold-ink  #8a5700  amber text on the gold tint (5.21:1)
-//   --pw-red-ink   #a83224  red text on the red tint (5.83:1)
-//   --pw-control   #858a93  input and option borders (3.29:1, the 3:1 UI floor)
+//   --pw-ink-3      labels and meta          -> --ink-3
+//   --pw-link       links                    -> --key
+//   --pw-green-ink  green text               -> --wards
+//   --pw-gold-ink   amber text               -> --step2
+//   --pw-red-ink    red text                 -> --bad
+//   --pw-control    input and option borders -> --ctl (the 3:1 UI floor)
+//   --pw-band       the dark store band      -> --st-card (dark in both themes)
+//   --pw-sm         anchor offset under the nav and, on phones, the jump bar
 // Type: 1.2 ratio from 17px (12, 14, 17, 20, 24, 29, 35, 42). Space: 4/8 grid.
 // Motion: 140ms micro, 240ms for the sticky bar, ease-out, transform and opacity
 // only; globals.css zeroes it under prefers-reduced-motion.
@@ -17,16 +19,16 @@ export default function PwStyles() {
   return (
     <style jsx global>{`
       .pw {
-        --pw-ink-3: #6b717d;
-        --pw-link: #2459c9;
-        --pw-green-ink: #086b33;
-        --pw-gold-ink: #8a5700;
-        --pw-red-ink: #a83224;
-        --pw-control: #858a93;
-        --pw-band: #191c23;
-        --pw-on-band-2: #c3c5c9;
+        --pw-ink-3: var(--ink-3);
+        --pw-link: var(--key);
+        --pw-green-ink: var(--wards);
+        --pw-gold-ink: var(--step2);
+        --pw-red-ink: var(--bad);
+        --pw-control: var(--ctl);
+        --pw-band: var(--st-card);
+        --pw-on-band-2: var(--st-ink-2);
         --pw-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
-        color-scheme: light;
+        --pw-sm: calc(var(--nav-h) + 64px);
         overflow-wrap: break-word;
       }
       .pw-srcs, .pw-cites, .pw-tab, .pw-ends, .pw-draft { overflow-wrap: anywhere; }
@@ -43,8 +45,9 @@ export default function PwStyles() {
       .pw-main { min-width: 0; max-width: 720px; }
       .pw-toc { display: none; }
       @media (min-width: 1024px) {
+        .pw { --pw-sm: calc(var(--nav-h) + 24px); }
         .pw-grid { grid-template-columns: minmax(0, 720px) 240px; justify-content: space-between; }
-        .pw-toc { display: block; position: sticky; top: 24px; align-self: start; max-height: calc(100vh - 48px); overflow: auto; margin-top: 112px; }
+        .pw-toc { display: block; position: sticky; top: calc(var(--nav-h) + 24px); align-self: start; max-height: calc(100vh - var(--nav-h) - 48px); overflow: auto; margin-top: 112px; }
       }
 
       /* ---------- hero ---------- */
@@ -68,14 +71,14 @@ export default function PwStyles() {
       .pw-jump a span { font: 700 12px/1 var(--mono); letter-spacing: 0.04em; border: 1px solid var(--hair-strong); border-radius: 999px; padding: 8px 12px; color: var(--ink); background: var(--bg-2); transition: background 140ms var(--pw-ease); }
       .pw-jump a:hover span { background: var(--bg-3); }
       @media (max-width: 1023px) {
-        .pw-jump { position: sticky; top: 0; z-index: 4; background: var(--bg); border-bottom: 1px solid var(--hair); padding: 4px 0; }
+        .pw-jump { position: sticky; top: var(--nav-h); z-index: 4; background: var(--bg); border-bottom: 1px solid var(--hair); padding: 4px 0; }
       }
       .pw-trust { display: flex; gap: 12px; align-items: flex-start; background: var(--green-soft); border: 1px solid rgba(13, 148, 72, 0.22); border-radius: 12px; padding: 12px 16px; margin: 0 0 24px; font-size: 14px; line-height: 1.5; }
       .pw-trust .pw-ic { color: var(--pw-green-ink); margin-top: 2px; }
       .pw-trust p { margin: 0; }
 
       /* The one lifted object on the page: the answer. */
-      .pw-short { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 16px; padding: 24px; margin: 0 0 24px; box-shadow: var(--lift); scroll-margin-top: 64px; }
+      .pw-short { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 16px; padding: 24px; margin: 0 0 24px; box-shadow: var(--lift); scroll-margin-top: var(--pw-sm); }
       .pw .pw-k { font: 700 12px/1.4 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--pw-green-ink); margin: 0 0 12px; }
       .pw-short ol { margin: 0; padding-left: 24px; }
       .pw-short li { margin: 0 0 8px; }
@@ -87,7 +90,7 @@ export default function PwStyles() {
       .pw-band-h { font-size: 20px; line-height: 1.3; font-weight: 800; letter-spacing: -0.01em; margin: 0 0 8px; }
       .pw-band-p { color: var(--pw-on-band-2); font-size: 14px; line-height: 1.55; max-width: 56ch; }
       .pw-band-row { display: flex; flex-wrap: wrap; gap: 12px; }
-      .pw .pw-btn-act { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; background: var(--gold); color: #1a1403; font-weight: 800; font-size: 14px; padding: 12px 16px; border-radius: 12px; text-decoration: none; transition: transform 140ms var(--pw-ease); }
+      .pw .pw-btn-act { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; background: var(--st-act); color: var(--st-on-act); font-weight: 800; font-size: 14px; padding: 12px 16px; border-radius: 12px; text-decoration: none; transition: transform 140ms var(--pw-ease); }
       .pw .pw-btn-act:hover { text-decoration: none; transform: translateY(-1px); }
       .pw .pw-btn-ghost { display: inline-flex; align-items: center; min-height: 44px; padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.35); color: #fff; font-weight: 700; font-size: 14px; text-decoration: none; }
       .pw .pw-btn-quiet { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 16px; border-radius: 12px; border: 1px solid var(--pw-control); background: var(--bg-2); color: var(--ink); font-weight: 700; font-size: 14px; text-decoration: none; }
@@ -95,8 +98,8 @@ export default function PwStyles() {
       .pw .pw-btn-block { width: 100%; }
 
       /* ---------- section rhythm ---------- */
-      .pw-main > section { scroll-margin-top: 64px; }
-      .pw .pw-h2 { font-size: 29px; line-height: 1.2; letter-spacing: -0.018em; font-weight: 800; margin: 48px 0 16px; scroll-margin-top: 64px; }
+      .pw-main > section { scroll-margin-top: var(--pw-sm); }
+      .pw .pw-h2 { font-size: 29px; line-height: 1.2; letter-spacing: -0.018em; font-weight: 800; margin: 48px 0 16px; scroll-margin-top: var(--pw-sm); }
       .pw .pw-h3 { font-size: 20px; line-height: 1.3; margin: 32px 0 8px; }
       .pw-intro { color: var(--ink-dim); max-width: 68ch; }
       .pw-muted { color: var(--ink-dim); }
@@ -104,7 +107,7 @@ export default function PwStyles() {
       /* ---------- at a glance ---------- */
       .pw-glance { list-style: none; padding: 0; margin: 0; }
       .pw-glance > li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 12px; padding: 12px 0; border-top: 1px solid var(--hair); }
-      .pw-gn { width: 28px; height: 28px; border-radius: 14px; background: var(--ink); color: #fff; font: 700 12px/28px var(--mono); text-align: center; }
+      .pw-gn { width: 28px; height: 28px; border-radius: 14px; background: var(--ink); color: var(--bg); font: 700 12px/28px var(--mono); text-align: center; }
       .pw-gs { font: 700 12px/1.4 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--pw-ink-3); margin: 0 0 4px; }
       .pw-gt { font-weight: 600; margin: 0; }
       .pw-gt a { color: var(--ink); text-decoration: none; }
@@ -116,7 +119,7 @@ export default function PwStyles() {
       .pw-gc { font: 600 12px/1.4 var(--mono); background: var(--bg-3); border: 1px solid var(--hair); padding: 4px 8px; border-radius: 999px; color: var(--ink); }
 
       /* ---------- steps ---------- */
-      .pw-step { background: var(--bg-2); border: 1px solid var(--hair); border-radius: 16px; padding: 24px; margin: 16px 0; scroll-margin-top: 64px; }
+      .pw-step { background: var(--bg-2); border: 1px solid var(--hair); border-radius: 16px; padding: 24px; margin: 16px 0; scroll-margin-top: var(--pw-sm); }
       .pw-sk { display: block; font: 700 12px/1.4 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--pw-ink-3); margin: 0 0 8px; }
       .pw-step h3, .pw-case h3 { font-size: 20px; line-height: 1.3; letter-spacing: -0.01em; margin: 0 0 12px; }
       .pw-nbs { margin: 0 0 12px; }
@@ -156,7 +159,7 @@ export default function PwStyles() {
       .pw-cite-plain { color: var(--ink-dim); }
 
       /* ---------- forks ---------- */
-      .pw-fork { border-left: 3px solid var(--green); background: var(--bg-3); border-radius: 0 12px 12px 0; padding: 16px; margin: 16px 0; scroll-margin-top: 64px; }
+      .pw-fork { border-left: 3px solid var(--green); background: var(--bg-3); border-radius: 0 12px 12px 0; padding: 16px; margin: 16px 0; scroll-margin-top: var(--pw-sm); }
       .pw-fork h3 { font-size: 17px; line-height: 1.35; margin: 0 0 4px; }
       .pw-fk { display: inline-flex; gap: 4px; align-items: center; font: 700 12px/1.4 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--pw-green-ink); margin-right: 8px; vertical-align: 1px; }
       .pw-fork .pw-tab thead th, .pw-fork .pw-tab td[data-l]::before { color: var(--ink-dim); }
@@ -173,7 +176,7 @@ export default function PwStyles() {
       .pw-findex h3 a { color: var(--ink); text-decoration: none; }
       .pw-findex h3 a:hover { text-decoration: underline; }
       .pw-ends { list-style: none; padding: 0; margin: 0; }
-      .pw-ends > li { background: var(--bg-2); border: 1px solid var(--hair); border-radius: 12px; padding: 16px; margin: 0 0 12px; scroll-margin-top: 64px; }
+      .pw-ends > li { background: var(--bg-2); border: 1px solid var(--hair); border-radius: 12px; padding: 16px; margin: 0 0 12px; scroll-margin-top: var(--pw-sm); }
       .pw-ends p { margin: 0; }
       .pw-from { font-size: 14px; color: var(--ink-dim); margin-top: 8px; }
 
@@ -209,7 +212,7 @@ export default function PwStyles() {
       /* ---------- calculators ---------- */
       .pw-calcs { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
       @media (min-width: 640px) { .pw-calcs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-      .pw-calc { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 16px; padding: 16px; scroll-margin-top: 64px; min-width: 0; }
+      .pw-calc { background: var(--bg-2); border: 1px solid var(--hair-strong); border-radius: 16px; padding: 16px; scroll-margin-top: var(--pw-sm); min-width: 0; }
       .pw-calc h3 { font: 700 12px/1.4 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--pw-green-ink); margin: 0 0 12px; }
       .pw-fields { display: grid; gap: 8px; grid-template-columns: minmax(0, 1fr); }
       .pw-field { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-width: 0; }

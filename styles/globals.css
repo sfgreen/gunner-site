@@ -1,52 +1,216 @@
-/* The Score Report register, defined once.
+/* The app look, site-wide: every token and the page base, defined once.
  *
- * Fourteen files were each redeclaring this palette in their own styled-jsx
- * global block. That is how they drifted: the same token name carried slightly
- * different values depending on which page you were on, and a change had to be
- * made fourteen times to stick.
+ * One palette for the whole site (the approved SITE_M3_VISUAL values, 2026-10-21):
+ * light by default, dark from the visitor's system setting. styles/wards.css
+ * (the .mk component vocabulary) and styles/app.css (the React blocks) read these;
+ * nothing else declares a color. The Score Report register (paper #faf9f6, DM Sans)
+ * was retired on 2026-10-22: its variable names are kept at the bottom as aliases
+ * of the app tokens, so page-local styles that are not ported yet take the new
+ * palette in both themes. Delete an alias once grep finds no user.
  *
- * Page-level styled-jsx still owns component styling. Only the shared
- * vocabulary lives here: colour, type, elevation, motion.
+ * Spacing is a 4/8 grid. Type is a 1.333 scale from 16 (12, 16, 21, 28, 38, 50, 67);
+ * display leading 1.0, headings 1.1, body 1.55.
  */
-
 :root {
-  /* surfaces, warm paper rather than neutral grey */
-  --bg: #faf9f6;
-  --bg-2: #ffffff;
-  --bg-3: #f3f2ee;
-  --panel: #ffffff;
+  color-scheme: light;
+  --bg: #f4f8fc;
+  --card: #ffffff;
+  --card-2: #eef3f9;
+  --ink: #0b1220;
+  --ink-2: #3b4658;
+  --ink-3: #566173;
+  --line: #dde6f1;
+  --line-2: #c5d1e0;
+  --ctl: #7c8799;
+  --act: #0060df;
+  --act-hov: #004fbf;
+  --on-act: #ffffff;
+  --act-glow: rgba(10,132,255,0.38);
+  --key: #0060df;
+  --focus: #0a6cff;
+  --wards: #08722f;
+  --wards-tint: rgba(48,209,88,0.14);
+  --shelf: #7a35c9;
+  --shelf-tint: rgba(191,90,242,0.14);
+  --step2: #7d5a00;
+  --step2-tint: rgba(255,204,0,0.22);
+  --ed: #4a5568;
+  --ed-tint: rgba(74,85,104,0.12);
+  --ok: #08722f;
+  --bad: #c0241b;
+  --bad-tint: rgba(192,36,27,0.08);
+  --differ: #7d5a00;
+  --differ-fill: #ffcc00;
+  --on-differ: #0b1220;
+  --rule-c: #7a35c9;
+  --shadow-a: rgba(11,18,32,0.06);
+  --shadow-b: rgba(11,18,32,0.10);
+  --st-bg: #070c18;
+  --st-bg-2: #0b1324;
+  --st-card: #111a2e;
+  --st-card-2: #0c1322;
+  --st-line: rgba(255,255,255,0.08);
+  --st-line-2: rgba(255,255,255,0.16);
+  --st-ctl: #66748d;
+  --st-ink: #eef2f8;
+  --st-ink-2: #aab4c5;
+  --st-ink-3: #97a2b4;
+  --st-act: #0a6fe0;
+  --st-act-hov: #1a7ff0;
+  --st-on-act: #ffffff;
+  --st-blue: #4da3ff;
+  --st-green: #30d158;
+  --st-gold: #ffd60a;
+  --st-purple: #c77dff;
+  --st-red: #ff6b62;
+  --st-ok-tint: rgba(48,209,88,0.14);
+  --st-bad-tint: rgba(255,107,98,0.14);
+  --st-on-red: #1a0605;
+  --st-glow-a: rgba(10,132,255,0.30);
+  --st-glow-b: rgba(191,90,242,0.18);
+  --st-glow-c: rgba(48,209,88,0.16);
+  --st-glow-d: rgba(255,214,10,0.14);
+  --st-grid: rgba(255,255,255,0.035);
+  --st-bezel: #05070b;
+  --st-bezel-hi: rgba(255,255,255,0.14);
+  --st-shadow: rgba(0,4,16,0.55);
+  --st-card-glow: rgba(10,132,255,0.16);
+  --st-bezel-top: #23272f;
+  --st-screen: #000000;
+  --st-white: #ffffff;
+  --st-on-gold: #0b1220;
+  --st-on-green: #04130a;
+  --hi-inset: rgba(255,255,255,0.18);
+  --ring-green: rgba(48,209,88,0.18);
+  --ring-gold: rgba(255,214,10,0.18);
+  --ring-blue: rgba(77,163,255,0.40);
+  --glow-green: rgba(48,209,88,0.65);
+  --glow-gold: rgba(255,214,10,0.40);
+  --glow-red: rgba(255,107,98,0.35);
+  --focus-ring: rgba(77,163,255,0.18);
+  --blue-35: rgba(77,163,255,0.35);
+  --sh-seg: rgba(0,0,0,0.30);
+  --warn-bg: rgba(255,214,10,0.08);
+  --warn-line: rgba(255,214,10,0.40);
+  /* Figures drawn for a white page (the research charts) sit on this in both themes. */
+  --paper: #ffffff;
+  --paper-line: #dde6f1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #070a12;
+    --card: #0f1524;
+    --card-2: #141b2d;
+    --ink: #eef2f8;
+    --ink-2: #b3bdcc;
+    --ink-3: #8f9aad;
+    --line: #1d2638;
+    --line-2: #2c3850;
+    --ctl: #66748d;
+    --act: #0a6fe0;
+    --act-hov: #1a7ff0;
+    --on-act: #ffffff;
+    --act-glow: rgba(10,132,255,0.45);
+    --key: #4da3ff;
+    --focus: #4da3ff;
+    --wards: #30d158;
+    --wards-tint: rgba(48,209,88,0.14);
+    --shelf: #c77dff;
+    --shelf-tint: rgba(191,90,242,0.16);
+    --step2: #ffd60a;
+    --step2-tint: rgba(255,214,10,0.14);
+    --ed: #aab4c5;
+    --ed-tint: rgba(170,180,197,0.12);
+    --ok: #30d158;
+    --bad: #ff6b62;
+    --bad-tint: rgba(255,107,98,0.10);
+    --differ: #ffd60a;
+    --differ-fill: #ffd60a;
+    --on-differ: #0b1220;
+    --rule-c: #c77dff;
+    --shadow-a: rgba(0,0,0,0.30);
+    --shadow-b: rgba(0,0,0,0.45);
+    --st-bg: #0b1224;
+    --st-bg-2: #0e1730;
+    --st-card: #121c33;
+    --st-card-2: #0c1426;
+    --st-line: rgba(255,255,255,0.09);
+    --st-line-2: rgba(255,255,255,0.18);
+    --st-ctl: #6b7a94;
+    --st-ink: #eef2f8;
+    --st-ink-2: #aab4c5;
+    --st-ink-3: #99a4b6;
+    --st-act: #0a6fe0;
+    --st-act-hov: #1a7ff0;
+    --st-on-act: #ffffff;
+    --st-blue: #4da3ff;
+    --st-green: #30d158;
+    --st-gold: #ffd60a;
+    --st-purple: #c77dff;
+    --st-red: #ff6b62;
+    --st-ok-tint: rgba(48,209,88,0.14);
+    --st-bad-tint: rgba(255,107,98,0.14);
+    --st-on-red: #1a0605;
+    --st-glow-a: rgba(10,132,255,0.34);
+    --st-glow-b: rgba(191,90,242,0.22);
+    --st-glow-c: rgba(48,209,88,0.18);
+    --st-glow-d: rgba(255,214,10,0.16);
+    --st-grid: rgba(255,255,255,0.04);
+    --st-bezel: #020306;
+    --st-bezel-hi: rgba(255,255,255,0.16);
+    --st-shadow: rgba(0,0,0,0.65);
+    --paper-line: #2c3850;
+  }
+}
+/* Non-color tokens. --nav-h is the sticky nav's height: offset anything else that sticks. */
+:root {
+  --r-sm: 12px; --r-md: 16px; --r-lg: 20px; --r-xl: 28px;
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --d-micro: 120ms; --d-move: 240ms;
+  --f-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  --wm-font: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  --nav-h: 64px;
+}
+@media (min-width: 960px) { :root { --nav-h: 72px; } }
 
-  /* hairlines carry a hint of the ink hue so they read as drawn, not applied */
-  --hair: rgba(25, 28, 35, 0.10);
-  --hair-strong: rgba(25, 28, 35, 0.17);
-
-  --ink: #191c23;
-  --ink-dim: #5d6470;
-  --ink-faint: #9aa0ab;
-
-  --green: #0d9448;
-  --green-glow: rgba(13, 148, 72, 0.14);
-  --green-soft: rgba(13, 148, 72, 0.09);
-  --blue: #2f6fed;
-  --blue-glow: rgba(47, 111, 237, 0.14);
-  --blue-soft: rgba(47, 111, 237, 0.09);
-  --gold: #e08e00;
-  --gold-ink: #b87400;
-  --gold-soft: rgba(224, 142, 0, 0.12);
-  --red: #c0392b;
-  --red-soft: rgba(192, 57, 43, 0.09);
-
-  /* elevation: one soft shadow used sparingly, on the page's primary object
-     only. Shadowing every card is what makes a page read as flat and busy at
-     the same time. */
-  --lift: 0 1px 2px rgba(25, 28, 35, 0.04), 0 8px 24px -12px rgba(25, 28, 35, 0.18);
-  --lift-lg: 0 2px 4px rgba(25, 28, 35, 0.05), 0 22px 48px -20px rgba(25, 28, 35, 0.26);
-
-  --radius: 12px;
-  --radius-sm: 9px;
-
-  --mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
-  --sans: "DM Sans", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+/* Score Report names, retired 2026-10-22: each one points at the app token with the
+   same job. --bg and --ink already meant the same thing in both registers. --bg-2 was
+   the raised white surface there (67 uses), so it is the card here; the app look has
+   no rule that reads --bg-2. The last six were read but never defined anywhere. */
+:root {
+  --bg-2: var(--card);
+  --bg-3: var(--card-2);
+  --panel: var(--card);
+  --hair: var(--line);
+  --hair-strong: var(--line-2);
+  --ink-dim: var(--ink-2);
+  --ink-faint: var(--ink-3);
+  --green: var(--wards);
+  --green-soft: var(--wards-tint);
+  --green-glow: var(--wards-tint);
+  --blue: var(--key);
+  --blue-soft: var(--focus-ring);
+  --blue-glow: var(--focus-ring);
+  --gold: var(--step2);
+  --gold-ink: var(--step2);
+  --gold-soft: var(--step2-tint);
+  --red: var(--bad);
+  --red-soft: var(--bad-tint);
+  --violet: var(--shelf);
+  --lift: 0 1px 2px var(--shadow-a), 0 8px 24px -12px var(--shadow-b);
+  --lift-lg: 0 1px 2px var(--shadow-a), 0 16px 40px -12px var(--shadow-b);
+  --radius: var(--r-sm);
+  --radius-sm: 8px;
+  --mono: var(--f-mono);
+  --sans: var(--f-sans);
+  --dim: var(--ink-2);
+  --faint: var(--ink-3);
+  --bg1: var(--card);
+  --bg2: var(--card);
+  --bg3: var(--card-2);
+  --hair2: var(--line);
 }
 
 * { box-sizing: border-box; }
@@ -57,19 +221,17 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: var(--sans);
-  font-size: 17px;
-  line-height: 1.6;
+  font: 400 18px/1.55 var(--f-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* No horizontal scroll on phones, whatever a child does. */
   overflow-x: hidden;
 }
 
-a { color: var(--blue); text-decoration: none; }
+a { color: var(--key); text-decoration: none; }
 a:hover { text-decoration: underline; }
-:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 3px; }
-::selection { background: var(--blue); color: #fff; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 3px; }
+::selection { background: var(--act); color: var(--on-act); }
 
 img, svg, video { max-width: 100%; height: auto; }
 
