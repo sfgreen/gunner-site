@@ -736,7 +736,7 @@ export default function EdNextBestStep({ live }: { live: Live }) {
       </div>
 
       <h2>How this was built</h2>
-      <p>Each presentation started as a full branching pathway: every result an ED workup can return, the patient who walks each branch, and the orders with their doses. Every dose, threshold and time window in those pathways was checked word for word against the source it cites (a guideline, a drug label or a named review), and then a second, independent pass went through each one trying to break it. Where the sources disagree, the pathway shows both sides instead of picking one quietly. This page condenses {ALL.length} of those pathways to the steps Step 2 CK asks about.</p>
+      <p>Each presentation started as a full branching pathway: every result an ED workup can return, the patient who walks each branch, and the orders with their doses. Every dose, threshold and time window in those pathways is quoted from the source it cites (a guideline, a drug label or a named review), and a second, independent pass went through each one trying to break it. Where the sources disagree, the pathway shows both sides instead of picking one quietly; where a source could not be read in full, the step says so. This page condenses {ALL.length} of those pathways to the steps Step 2 CK asks about.</p>
       <p>Guidelines are named under each presentation. Where US and UK or European sources differ, the pathway records both; this page gives the answer the pathway keys and flags the split where a question could turn on it. This page is for exam preparation and is not clinical advice; real patients get local protocols and a senior.</p>
       </div>
     </LabLayout>
