@@ -176,6 +176,7 @@ export default function Research({ record }: { record: Record }) {
       <Fig n={3} src="/research/fig5_recency_weight.svg" alt="Exponential decay curve showing the weight a practice form carries as a function of days before the exam"
         caption="Weight of a form in the anchor by days before the exam. A form from three weeks out counts half; six weeks out, a quarter." />
       <p>This also explains the belief that old forms "deflate." They do read lower, but mostly because of when people take them, not which form it is. Once you account for the student and for timing, NBME 10 through 15 collapse to within a point or two of each other.</p>
+      <p>How far apart one student's own forms land, and whether any single form deserves more trust than the rest, has <Link href="/research/which-nbme-is-most-predictive">its own post</Link>.</p>
 
       <h3>3.3 Three forms genuinely read off scale, and they're not the ones people complain about</h3>
       <Fig n={4} src="/research/fig3_form_offsets.svg" alt="Horizontal bar chart of how each practice form reads relative to the NBME scale, with 95% confidence intervals and sample sizes"
@@ -206,7 +207,7 @@ export default function Research({ record }: { record: Record }) {
         <div className="c"><div className="n">{forum ? forum.within7Pct : 80}<span>%</span></div><div className="l">of those posters within 7 points</div></div>
         <div className="c"><div className="n">{app ? app.inside : 4}<span> / {app ? app.n : 7}</span></div><div className="l">app users inside their range</div></div>
       </div>
-      <p>On the Reddit posters the frozen model did about as well as in-sample, which is the result you hope for. On the app users it did worse: {app ? app.n : 7} students so far, {app ? app.inside : 4} inside their range, one of them a 40-point miss from a single stale form. Seven is not enough to conclude anything. I am posting it anyway, and it updates every Monday{asOf ? ` (numbers above as of ${asOf})` : ''}, inside the app under the readiness gauge and on the <Link href="/readiness/methodology">methodology page</Link>. If the app population keeps missing worse than the forum population, the model gets refit for that population, not the other way round.</p>
+      <p>On the Reddit posters the frozen model did about as well as in-sample, which is the result you hope for. On the app users it did worse: {app ? app.n : 7} students so far, {app ? app.inside : 4} inside their range, one of them a 40-point miss from a single stale form. Seven is not enough to conclude anything. I am posting it anyway, and it updates every Monday{asOf ? ` (numbers above as of ${asOf})` : ''}, inside the app under the readiness gauge and on the <Link href="/readiness/methodology">methodology page</Link>. If the app population keeps missing worse than the forum population, the model gets refit for that population, not the other way round. It did keep missing worse, and the refit failed its own test; <Link href="/research/model-misses-app-users">the follow-up</Link> is about who it misses and why.</p>
 
       <h2>4. Try it</h2>
       <ReadinessCheck surface="research_nbme_step2" title="Your forms, the model's projection" initial={[{ form: 'NBME 14', score: '240', days: '21' }, { form: 'UWSA 2', score: '250', days: '7' }, { form: 'NBME 9', score: '', days: '' }]} />
