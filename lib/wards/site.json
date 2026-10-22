@@ -10,7 +10,9 @@
   "end",
   "sticky",
   "case",
-  "footer"
+  "footer",
+  "mid",
+  "toc"
  ],
  "groups": [
   {

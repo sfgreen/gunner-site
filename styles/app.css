@@ -1,0 +1,97 @@
+/* The React blocks (components/app, documented in components/app/README.md).
+ *
+ * The blocks render the .mk vocabulary from styles/wards.css, so a React page and a
+ * wards page are the same CSS, not two copies of it. This file holds only what the
+ * wards pages never needed: islands, category accents beyond green, the table, the
+ * stat strip, the paper figure, and the frame that holds content not yet built from
+ * blocks. Colors come only from the tokens in styles/globals.css; spacing is a 4/8 grid.
+ */
+
+/* ---------- islands ----------
+   Every block renders inside its own .mk scope so it works anywhere, including inside
+   the wrappers that still carry page-local legacy styles (whose class names collide
+   with .mk ones: .cta, .faq, .refs, .wrap). display: contents adds no box, so sticky
+   elements and grid items behave as if the block's markup sat directly in the page. */
+.mk.isl { display: contents; }
+
+/* ---------- category accents: wards green (wards.css), shelf purple, step2 gold, ED gray,
+   site (no category) the brand blue of the home page ---------- */
+.mk .dot.purple { background: var(--st-purple); box-shadow: 0 0 0 3px var(--shelf-tint); }
+.mk .dot.gray { background: var(--ed); box-shadow: 0 0 0 3px var(--ed-tint); }
+.mk .art-hd.c-shelf .key { color: var(--shelf); }
+.mk .art-hd.c-step2 .key { color: var(--step2); }
+.mk .art-hd.c-ed .key { color: var(--ed); }
+.mk .art-hd.c-site .key { color: var(--key); }
+.mk .meta .rv { display: inline-flex; align-items: center; gap: 4px; color: var(--ok); font-weight: 600; }
+
+/* ---------- the page frame: content that is not built from blocks yet ----------
+   Same 1200px grid and gutters as .mk .wrap, so a wrapped page lines up under the
+   wordmark. The measure is the reading column, left-aligned like the wards articles. */
+.ax-page { width: 100%; max-width: 1200px; margin: 0 auto; padding: 24px 16px 64px; }
+.ax-page .ax-col { max-width: var(--measure, 720px); min-width: 0; }
+.ax-page.m-article { --measure: 720px; }
+.ax-page.m-tool { --measure: 680px; }
+.ax-page.m-wide { --measure: none; }
+.ax-page .art-hd { margin-bottom: 32px; }
+@media (min-width: 760px) { .ax-page { padding: 24px 40px 88px; } }
+
+/* ---------- article body spacing (wards: <div style="height:48px"> after the grid) ---------- */
+.mk .art-b { padding-bottom: 48px; }
+.mk .toc .toc-x { margin-top: 24px; }
+
+/* ---------- table: a scrolling container, never a page that scrolls sideways ---------- */
+.mk .tbl-w { margin-top: 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--r-md); background: var(--card); box-shadow: inset 0 0 0 1px var(--line); }
+.mk .tbl { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+.mk .tbl caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.mk .tbl thead th { padding: 12px 16px; text-align: left; vertical-align: bottom; font: 600 13px/1.3 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); background: var(--card-2); white-space: nowrap; }
+.mk .tbl td, .mk .tbl tbody th { padding: 12px 16px; text-align: left; vertical-align: top; color: var(--ink-2); box-shadow: inset 0 1px 0 var(--line); }
+.mk .tbl tbody th { font-weight: 600; color: var(--ink); }
+.mk .tbl .n { text-align: right; font-family: var(--f-mono); font-variant-numeric: tabular-nums; font-feature-settings: "zero" 1; white-space: nowrap; }
+.mk .tbl .n b, .mk .tbl .n strong { color: var(--ink); }
+.mk .tbl tr.hl > * { background: var(--focus-ring); color: var(--ink); }
+.mk .tbl-w:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* ---------- stat strip: the numbers that answer the page, each with what it counts ---------- */
+.mk .sts { display: grid; grid-template-columns: minmax(0, 1fr); margin-top: 16px; box-shadow: inset 0 1px 0 var(--line), inset 0 -1px 0 var(--line); }
+.mk .sts > div { min-width: 0; padding: 16px 0; }
+.mk .sts > div + div { box-shadow: inset 0 1px 0 var(--line); }
+.mk .sts .v { display: block; font: 800 38px/1 var(--f-sans); letter-spacing: -.03em; font-variant-numeric: tabular-nums; color: var(--ink); }
+.mk .sts .v.bad { color: var(--bad); }
+.mk .sts .v.good { color: var(--ok); }
+.mk .sts .c { display: block; margin-top: 8px; font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+.mk .sts-src { margin-top: 8px; font: 500 13px/1.5 var(--f-mono); color: var(--ink-3); }
+@media (min-width: 600px) {
+  .mk .sts { grid-template-columns: repeat(var(--n, 3), minmax(0, 1fr)); }
+  .mk .sts > div { padding: 16px 16px 16px 0; }
+  .mk .sts > div + div { padding-left: 16px; box-shadow: inset 1px 0 0 var(--line); }
+}
+
+/* ---------- paper figure: charts drawn for a white page stay legible in dark mode ---------- */
+.mk .figp { margin-top: 24px; }
+.mk .figp .pp { padding: 12px; border-radius: var(--r-md); background: var(--paper); box-shadow: inset 0 0 0 1px var(--paper-line); }
+.mk .figp img { display: block; width: 100%; height: auto; }
+.mk .figp figcaption { margin-top: 12px; font-size: 15px; line-height: 1.5; color: var(--ink-2); max-width: 66ch; }
+.mk .figp figcaption b { color: var(--ink); font-weight: 600; }
+
+/* ---------- links in running text: underlined, never told apart by color alone ----------
+   (.mk a inherits color and the base drops the underline. Source lines, .srcl, keep their own style.) */
+.mk :is(.prs, .stand, .band-b, .cta .b) a,
+.mk :is(.tip, .trap, .fa) > p:not(.lbl):not(.srcl) a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.mk :is(.prs, .stand) a, .mk :is(.tip, .trap, .fa) > p:not(.lbl):not(.srcl) a { color: var(--key); }
+
+/* ---------- long store labels wrap on phones instead of pushing the page sideways ---------- */
+@media (max-width: 599px) {
+  .mk .btn { white-space: normal; text-align: center; }
+  .mk .btn-act, .mk .btn-q { padding-block: 8px; }
+}
+
+/* ---------- bridge: two Score Report patterns copy-pasted across unported pages ----------
+   Both were drawn as "ink with white text", and ink flips in dark mode. Until those
+   pages are built from blocks (DrillCard, StoreButton), they take the app's dark card
+   and the action blue. .m3vp .ax-page outranks the pages' own .pitch and .cta rules,
+   scoped or global. Delete when grep finds no class="pitch" and no className="pri". */
+.m3vp .ax-page .pitch { background: radial-gradient(70% 90% at 100% 0%, var(--st-glow-a), transparent 60%), var(--st-card); color: var(--st-ink); box-shadow: inset 0 0 0 1px var(--st-line); }
+.m3vp .ax-page .pitch .btn-store { background: var(--st-act); color: var(--st-on-act); }
+.m3vp .ax-page .pitch .btn-store:hover { background: var(--st-act-hov); filter: none; }
+.m3vp .ax-page .cta .pri { background: var(--act); color: var(--on-act); }
+.m3vp .ax-page .cta .pri:hover { background: var(--act-hov); filter: none; }

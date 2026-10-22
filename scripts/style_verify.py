@@ -19,6 +19,15 @@ page actually contain rules for the classes the page uses?
 Most of the CSS here is styled-jsx, INLINED into the HTML rather than served
 from _next/static/css, so both sources are collected.
 
+THE APP LOOK (2026-10-22). Every page now shares one system: tokens in
+styles/globals.css, the .mk vocabulary in styles/wards.css, the React blocks in
+styles/app.css + components/app. So each route is also held to a contract:
+exactly one app-look root (.m3vp), one nav (header.sn) and one footer
+(footer.foot), and the delivered CSS defines the app tokens in both themes.
+A route that fails it has lost the shared chrome (an ERROR). Separately, every
+Score Report palette literal or DM Sans still in a page's CSS is counted as a
+WARNING: that is the porting burn-down, and it should reach zero.
+
 Usage:
     python3 scripts/style_verify.py                      # live site
     python3 scripts/style_verify.py --base http://localhost:3111
@@ -44,22 +53,38 @@ UA = "Mozilla/5.0 (compatible; StepGunnerStyleVerify/1.0; +https://stepgunner.co
 # One representative of every distinct LAYOUT. A layout regression hits every
 # page that shares the component, so one per family is enough.
 ROUTES = [
-    "/",
-    "/guides",
-    "/guides/pediatrics",
-    "/guides/internal-medicine",
-    "/readiness",
-    "/readiness/methodology",
-    "/step-2-score-predictor",
-    "/research/nbme-to-step-2",   # /research itself has no index page
-    "/step-2-ck-percentiles",
-    "/partner",
+    "/",                          # WardsPage (home)
     "/wards",
     "/wards/abg-interpretation",
     "/wards/soap-note",
+    "/guides",                    # SiteShell + page-local
+    "/guides/pediatrics",         # GuideLayout (blocks)
+    "/guides/internal-medicine",
+    "/readiness",                 # SiteShell, tool measure
+    "/readiness/methodology",
+    "/step-2-score-predictor",
+    "/research",                  # LabLayout, the research index
+    "/research/nbme-to-step-2",   # LabLayout, a research post
+    "/step-2-ck-percentiles",
+    "/step-2-ck-emergency-medicine",
+    "/partner",
+    "/privacy",                   # DocLayout
+    "/support",
+    "/chiefs",                    # SiteShell with its own nav button
     "/pathways",                  # ED pathways hub (PathwaysHub + PwStyles)
     "/pathways/chest-pain",       # one ED pathway article (PathwayArticle + PwStyles)
 ]
+
+# The shared chrome, once per page (lib/app/chrome.js renders it for every page).
+SHELL = {
+    "app-look root (.m3vp)": r'class="m3vp"',
+    "nav (header.sn)": r'<header class="sn"',
+    "footer (footer.foot)": r'<footer class="foot"',
+}
+# Declarations only styles/globals.css makes: the app tokens, light and dark.
+TOKENS = (r"--act:\s*#0060df", r"--st-bg:\s*#070c18", r"prefers-color-scheme:\s*dark\)\s*\{\s*:root")
+# The retired Score Report register: paper, ink, dim, faint, green, gold, blue, panel tint, red, DM Sans.
+RETIRED = re.compile(r"#faf9f6|#191c23|#5d6470|#9aa0ab|#0d9448|#e08e00|#2f6fed|#b87400|#f3f2ee|#c0392b|DM Sans", re.I)
 
 # Classes that legitimately carry no CSS of their own.
 IGNORE_EXACT = {"active", "show", "open", "selected", "disabled", "hidden", "sr-only"}
@@ -124,6 +149,17 @@ def main() -> int:
             continue
 
         css = page_css(a.base, url, html)
+        for name, pat in SHELL.items():
+            n = len(re.findall(pat, html))
+            if n != 1:
+                errors.append(f"{route}: {n} x {name}, expected exactly 1 (the shared app-look chrome)")
+        missing_tokens = [t for t in TOKENS if not re.search(t, css)]
+        if missing_tokens:
+            errors.append(f"{route}: the app tokens are not in this page's CSS ({len(missing_tokens)} of {len(TOKENS)} missing)")
+        retired = RETIRED.findall(css)
+        if retired:
+            warnings.append(f"{route}: {len(retired)} Score Report literal(s) left in page CSS "
+                            f"({', '.join(sorted(set(x.lower() for x in retired)))}): port to the app tokens")
         classes = used_classes(html)
         if len(classes) < MIN_CLASSES:
             print(f"  skip  {route:34} only {len(classes)} classes")

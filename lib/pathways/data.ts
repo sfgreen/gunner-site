@@ -562,7 +562,34 @@ export function buildArticle(entry: Entry, published: Entry[]): ArticleVM {
     const ss = sentencesOf(t.text);
     return ss.length > 1 ? { lead: ss[0], text: ss.slice(1).join(' ') } : { lead: null, text: t.text };
   });
-  const shortAnswer = (ed.shortAnswer || []).map((s) => ({ lead: s.lead, text: s.text }));
+  // Each short-answer line carries the sources behind the nodes its `refs` point
+  // at (a step's own and its orders', a fork's orders', a calculator's), as
+  // indexes into the article's sources: the mono source line under the line.
+  const srcOfRefs = (refs: string[] | undefined): number[] | undefined => {
+    const out: number[] = [];
+    const add = (rs: SourceRef[] | undefined) => {
+      for (const r of rs || []) {
+        const i = srcIndex.get(r.docId);
+        if (i !== undefined && !out.includes(i)) out.push(i);
+      }
+    };
+    for (const ref of refs || []) {
+      if (ref.startsWith('calc:')) {
+        add(calcById.get(ref.slice(5))?.sources);
+        continue;
+      }
+      const n = byId.get(ref);
+      if (!n) continue;
+      if (n.kind === 'step') {
+        add(n.sources);
+        for (const o of n.orders || []) add(o.sources);
+      } else if (n.kind === 'branch') {
+        for (const oc of n.outcomes) for (const o of oc.orders || []) add(o.sources);
+      }
+    }
+    return opt(out);
+  };
+  const shortAnswer = (ed.shortAnswer || []).map((s) => ({ lead: s.lead, text: s.text, src: srcOfRefs(s.refs) }));
 
   // ---- reading time: the text a reader sees without clicking, at 230 words a minute ----
   const stepById = new Map<string, StepVM>();

@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import { useEffect, useRef } from 'react';
-import { SPRITE } from '../lib/wards/render';
+import { SPRITE } from '../lib/app/chrome';
 import { mount } from '../lib/wards/client';
 
-// The frame for the app-look pages (home, /wards and the wards articles): head tags,
-// the icon sprite, and the server-rendered HTML from lib/wards/render. The styles live
-// in styles/wards.css, scoped under .m3vp so the Score Report pages are untouched.
+// The frame for the wards pages (home, /wards and the wards articles): head tags, the
+// icon sprite, and the server-rendered HTML from lib/wards/render, whose nav and footer
+// are the same strings every React page gets from components/app/AppShell
+// (lib/app/chrome.js). Components: styles/wards.css; tokens: styles/globals.css.
 // client.js attaches its listeners once the HTML is in the DOM and removes them on
 // unmount; React never re-renders the HTML, so the DOM it edits stays its own.
 export type WardsHead = {
@@ -36,9 +37,10 @@ export default function WardsPage({ head, html, page, mountOpts }: {
       <Head>
         <title>{head.title}</title>
         <meta name="description" content={head.description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" content="#f4f8fc" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#070a12" media="(prefers-color-scheme: dark)" />
+        <meta key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        {/* Keyed: next/head keeps one meta per name unless each has a key, which dropped the light one. */}
+        <meta key="theme-light" name="theme-color" content="#f4f8fc" media="(prefers-color-scheme: light)" />
+        <meta key="theme-dark" name="theme-color" content="#070a12" media="(prefers-color-scheme: dark)" />
         <link rel="canonical" href={url} />
         <meta property="og:title" content={head.title} />
         <meta property="og:description" content={head.description} />

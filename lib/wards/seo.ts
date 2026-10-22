@@ -1,7 +1,7 @@
 // Structured data for the wards pages: Article + FAQPage + BreadcrumbList, built from
 // the same content JSON the page renders, so the markup never claims what the page
 // does not show.
-import { BYLINE, CREDENTIAL } from './render';
+import { BYLINE, CREDENTIAL } from '../app/chrome';
 
 const BASE = 'https://stepgunner.com';
 export const PUBLISHED = '2026-10-21';

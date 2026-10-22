@@ -1,169 +1,10 @@
-/* The app-look pages: home, /wards and the wards articles (ported from the approved
- * SITE_M3_VISUAL mock, 2026-10-21). Every rule is scoped under .m3vp, including the
- * tokens, so the Score Report pages (globals.css) keep their own palette. Light by
- * default; the dark palette follows the visitor's system setting.
- * Spacing is a 4/8 grid. Colors come only from the token blocks below.
+/* The app-look component vocabulary: the .mk classes the wards pages are built from
+ * (ported from the approved SITE_M3_VISUAL mock, 2026-10-21) and that the React blocks
+ * in components/app reuse, so both render the same thing. .m3vp is the page root (the
+ * ground, the type, focus, icons); .mk scopes the components. The tokens they read are
+ * defined once, site-wide, in styles/globals.css: light by default, dark from the
+ * visitor's system setting. Spacing is a 4/8 grid; colors come only from the tokens.
  */
-.m3vp {
-  color-scheme: light;
-  --bg: #f4f8fc;
-  --bg-2: #eaf1f9;
-  --card: #ffffff;
-  --card-2: #eef3f9;
-  --ink: #0b1220;
-  --ink-2: #3b4658;
-  --ink-3: #566173;
-  --line: #dde6f1;
-  --line-2: #c5d1e0;
-  --ctl: #7c8799;
-  --act: #0060df;
-  --act-hov: #004fbf;
-  --on-act: #ffffff;
-  --act-glow: rgba(10,132,255,0.38);
-  --key: #0060df;
-  --focus: #0a6cff;
-  --wards: #08722f;
-  --wards-tint: rgba(48,209,88,0.14);
-  --shelf: #7a35c9;
-  --shelf-tint: rgba(191,90,242,0.14);
-  --step2: #7d5a00;
-  --step2-tint: rgba(255,204,0,0.22);
-  --ed: #4a5568;
-  --ed-tint: rgba(74,85,104,0.12);
-  --ok: #08722f;
-  --bad: #c0241b;
-  --bad-tint: rgba(192,36,27,0.08);
-  --differ: #7d5a00;
-  --differ-fill: #ffcc00;
-  --on-differ: #0b1220;
-  --rule-c: #7a35c9;
-  --shadow-a: rgba(11,18,32,0.06);
-  --shadow-b: rgba(11,18,32,0.10);
-  --st-bg: #070c18;
-  --st-bg-2: #0b1324;
-  --st-card: #111a2e;
-  --st-card-2: #0c1322;
-  --st-line: rgba(255,255,255,0.08);
-  --st-line-2: rgba(255,255,255,0.16);
-  --st-ctl: #66748d;
-  --st-ink: #eef2f8;
-  --st-ink-2: #aab4c5;
-  --st-ink-3: #97a2b4;
-  --st-act: #0a6fe0;
-  --st-act-hov: #1a7ff0;
-  --st-on-act: #ffffff;
-  --st-blue: #4da3ff;
-  --st-green: #30d158;
-  --st-gold: #ffd60a;
-  --st-purple: #c77dff;
-  --st-red: #ff6b62;
-  --st-ok-tint: rgba(48,209,88,0.14);
-  --st-bad-tint: rgba(255,107,98,0.14);
-  --st-on-red: #1a0605;
-  --st-glow-a: rgba(10,132,255,0.30);
-  --st-glow-b: rgba(191,90,242,0.18);
-  --st-glow-c: rgba(48,209,88,0.16);
-  --st-glow-d: rgba(255,214,10,0.14);
-  --st-grid: rgba(255,255,255,0.035);
-  --st-bezel: #05070b;
-  --st-bezel-hi: rgba(255,255,255,0.14);
-  --st-shadow: rgba(0,4,16,0.55);
-  --st-card-glow: rgba(10,132,255,0.16);
-  --st-bezel-top: #23272f;
-  --st-screen: #000000;
-  --st-white: #ffffff;
-  --st-on-gold: #0b1220;
-  --st-on-green: #04130a;
-  --hi-inset: rgba(255,255,255,0.18);
-  --ring-green: rgba(48,209,88,0.18);
-  --ring-gold: rgba(255,214,10,0.18);
-  --ring-blue: rgba(77,163,255,0.40);
-  --glow-green: rgba(48,209,88,0.65);
-  --glow-gold: rgba(255,214,10,0.40);
-  --glow-red: rgba(255,107,98,0.35);
-  --focus-ring: rgba(77,163,255,0.18);
-  --blue-35: rgba(77,163,255,0.35);
-  --sh-seg: rgba(0,0,0,0.30);
-  --warn-bg: rgba(255,214,10,0.08);
-  --warn-line: rgba(255,214,10,0.40);
-}
-@media (prefers-color-scheme: dark) {
-  .m3vp {
-    color-scheme: dark;
-    --bg: #070a12;
-    --bg-2: #0a0f1b;
-    --card: #0f1524;
-    --card-2: #141b2d;
-    --ink: #eef2f8;
-    --ink-2: #b3bdcc;
-    --ink-3: #8f9aad;
-    --line: #1d2638;
-    --line-2: #2c3850;
-    --ctl: #66748d;
-    --act: #0a6fe0;
-    --act-hov: #1a7ff0;
-    --on-act: #ffffff;
-    --act-glow: rgba(10,132,255,0.45);
-    --key: #4da3ff;
-    --focus: #4da3ff;
-    --wards: #30d158;
-    --wards-tint: rgba(48,209,88,0.14);
-    --shelf: #c77dff;
-    --shelf-tint: rgba(191,90,242,0.16);
-    --step2: #ffd60a;
-    --step2-tint: rgba(255,214,10,0.14);
-    --ed: #aab4c5;
-    --ed-tint: rgba(170,180,197,0.12);
-    --ok: #30d158;
-    --bad: #ff6b62;
-    --bad-tint: rgba(255,107,98,0.10);
-    --differ: #ffd60a;
-    --differ-fill: #ffd60a;
-    --on-differ: #0b1220;
-    --rule-c: #c77dff;
-    --shadow-a: rgba(0,0,0,0.30);
-    --shadow-b: rgba(0,0,0,0.45);
-    --st-bg: #0b1224;
-    --st-bg-2: #0e1730;
-    --st-card: #121c33;
-    --st-card-2: #0c1426;
-    --st-line: rgba(255,255,255,0.09);
-    --st-line-2: rgba(255,255,255,0.18);
-    --st-ctl: #6b7a94;
-    --st-ink: #eef2f8;
-    --st-ink-2: #aab4c5;
-    --st-ink-3: #99a4b6;
-    --st-act: #0a6fe0;
-    --st-act-hov: #1a7ff0;
-    --st-on-act: #ffffff;
-    --st-blue: #4da3ff;
-    --st-green: #30d158;
-    --st-gold: #ffd60a;
-    --st-purple: #c77dff;
-    --st-red: #ff6b62;
-    --st-ok-tint: rgba(48,209,88,0.14);
-    --st-bad-tint: rgba(255,107,98,0.14);
-    --st-on-red: #1a0605;
-    --st-glow-a: rgba(10,132,255,0.34);
-    --st-glow-b: rgba(191,90,242,0.22);
-    --st-glow-c: rgba(48,209,88,0.18);
-    --st-glow-d: rgba(255,214,10,0.16);
-    --st-grid: rgba(255,255,255,0.04);
-    --st-bezel: #020306;
-    --st-bezel-hi: rgba(255,255,255,0.16);
-    --st-shadow: rgba(0,0,0,0.65);
-  }
-}
-/* Non-color tokens. Spacing is a 4/8 grid; every margin, padding and gap is a multiple of 4.
-   Type: 1.333 ratio from 16 (12, 16, 21, 28, 38, 50, 67). Display leading 1.0, headings 1.1, body 1.55. */
-.m3vp {
-  --r-sm: 12px; --r-md: 16px; --r-lg: 20px; --r-xl: 28px;
-  --ease: cubic-bezier(.2, .8, .2, 1);
-  --d-micro: 120ms; --d-move: 240ms;
-  --f-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
-  --wm-font: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
-}
 .m3vp [hidden] { display: none !important; }
 .m3vp { min-height: 100vh; background: var(--bg); color: var(--ink); font: 400 18px/1.55 var(--f-sans); -webkit-font-smoothing: antialiased; }
 .m3vp :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
@@ -264,7 +105,7 @@
   linear-gradient(var(--st-grid) 1px, transparent 1px) 0 0 / 24px 24px,
   linear-gradient(90deg, var(--st-grid) 1px, transparent 1px) 0 0 / 24px 24px,
   var(--st-bg); box-shadow: 0 24px 64px -24px var(--st-shadow), inset 0 0 0 1px var(--st-line); color: var(--st-ink); }
-.mk .stage-band { position: relative; overflow: hidden; color: var(--st-ink); background:
+.mk .stage-band { position: relative; overflow: hidden; overflow: clip; color: var(--st-ink); background:
   radial-gradient(50% 70% at 85% 0%, var(--st-glow-a), transparent 60%),
   radial-gradient(40% 60% at 0% 100%, var(--st-glow-b), transparent 60%),
   linear-gradient(var(--st-grid) 1px, transparent 1px) 0 0 / 24px 24px,
@@ -284,7 +125,7 @@
   var(--st-bg); }
 .mk .stage-band .lbl, .mk .stage .lbl { color: var(--st-ink-3); }
 .mk .stage-band .h-2, .mk .stage-band .h-3, .mk .stage-band b { color: var(--st-ink); }
-.mk .stage-band .sec-sub, .mk .stage-band p { color: var(--st-ink-2); }
+.mk .stage-band .sec-sub, .mk .stage-band :where(p) { color: var(--st-ink-2); }
 .mk .stage-band .key { color: var(--st-blue); }
 .mk .stage-band.c-step2 .key { color: var(--st-gold); }
 .mk .stage-band .kick { color: var(--st-ink-2); }
@@ -606,6 +447,7 @@
 .mk .tip { margin-top: 16px; padding: 16px 20px; border-radius: var(--r-md); background: var(--wards-tint); }
 .mk .tip .lbl { display: flex; align-items: center; gap: 8px; color: var(--wards); }
 .mk .tip p + p { margin-top: 4px; }
+.mk .tip .tt { margin-top: 4px; font-weight: 600; }
 .mk .fxl { display: grid; gap: 16px; margin-top: 16px; }
 .mk .fxi { padding: 20px; border-radius: var(--r-lg); background: var(--card); box-shadow: 0 1px 2px var(--shadow-a), inset 0 0 0 1px var(--line); scroll-margin-top: 88px; }
 .mk .fxf { margin-top: 12px; padding: 12px 16px; border-radius: var(--r-sm); background: var(--st-card); color: var(--st-ink); font: 500 17px/1.6 var(--f-mono); font-feature-settings: "zero" 1; overflow-wrap: anywhere; }
@@ -735,8 +577,14 @@
 @media (min-width: 960px) {
   .mk .abg-g { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); }
   .mk .abg-in { padding: 28px; position: sticky; top: 72px; align-self: start; }
+  /* The dark card's overflow: hidden makes it a scroll container, so the form could not
+     stick (the Stage band had the same cause, fixed with clip). Clip still rounds the corners. */
+  .mk .dark-card:has(> .abg-g) { overflow: clip; }
   .mk .abg-out { padding: 28px; box-shadow: inset 1px 0 0 var(--st-line); }
 }
+/* The form is about 750px tall: in a shorter window a sticky form would hide its own
+   last rows (the worked cases) until the read ends, so it only sticks where it fits. */
+@media (min-width: 960px) and (max-height: 859px) { .mk .abg-in { position: static; } }
 
 /* the template */
 .mk .tpl-hd { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; padding: 12px; box-shadow: inset 0 -1px 0 var(--st-line); }
@@ -896,10 +744,6 @@
 .mk .tc-cta span { font-size: 16px; color: var(--st-ink-2); }
 
 /* ---------- live-site additions ---------- */
-/* The body behind the page (overscroll, safe areas) takes the page ground. Two literal
-   values, the --bg tokens above; :has() keeps them off every other page. */
-:root:has(.m3vp) { --bg: #f4f8fc; }
-@media (prefers-color-scheme: dark) { :root:has(.m3vp) { --bg: #070a12; } }
 .mk .refb { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 16px 0 0; padding: 8px 16px; border-radius: 12px; background: var(--wards-tint); color: var(--ink); font-size: 17px; }
 .mk .refb strong { font-family: var(--f-mono); color: var(--wards); }
 .mk .forms .c-rm { width: 44px; padding-right: 0; }
