@@ -66,7 +66,8 @@ export type ArticleVM = {
   seoTitle: string; metaDescription: string; h1: string; dek: string; updated: string | null;
   counts: { steps: number; forks: number; sources: number; cases: number; minutes: number };
   jump: { label: string; anchor: string }[];
-  shortAnswer: { lead: string; text: string }[];
+  /** `src`: indexes into `sources`, the sources behind the nodes the line's refs name. */
+  shortAnswer: { lead: string; text: string; src?: number[] }[];
   glance: GlanceVM[];
   /** Thresholds show as chips in the glance unless a fork-index section lists them. */
   glanceChips: boolean;

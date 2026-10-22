@@ -6,7 +6,8 @@
 // 2. Editorial: content/pathway-articles/<slug>.json, the per-pathway article
 //    layer (hero, short answer, section questions, checklist, rounds, traps, FAQ,
 //    related) and the publishing gate (`published`, `signedOff`). `refs` are
-//    audit pointers back into the pathway and are never rendered.
+//    audit pointers back into the pathway. They are never rendered as such;
+//    the short answer shows the sources of the nodes its refs name.
 import type { Calculator } from './calc';
 
 export type SourceRef = { docId: string; where?: string };
