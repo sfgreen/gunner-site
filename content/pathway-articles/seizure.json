@@ -1,6 +1,7 @@
 {
   "id": "seizure",
   "slug": "seizure",
+  "published": true,
   "signedOff": false,
   "updated": "2026-10-22",
   "seoTitle": "Status Epilepticus Algorithm: Lorazepam, Second-Line, Doses",

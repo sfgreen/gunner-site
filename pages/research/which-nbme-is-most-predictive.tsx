@@ -216,6 +216,7 @@ export default function WhichNbme() {
       crumb={[{ href: '/step-2-score-predictor', label: 'Score predictor' }, { href: PATH, label: 'Research' }]}
       metaTitle="Which NBME Is Most Predictive of Step 2 CK? 230 Real Reports"
       metaDesc={desc}
+      ogImage="/og/research/which-nbme-is-most-predictive.png"
       campaign={CAMPAIGN}
       head={<>
         <link rel="canonical" href={`https://stepgunner.com${PATH}`} />
@@ -347,19 +348,21 @@ export default function WhichNbme() {
 
       <h2>2. How far apart your forms are</h2>
       <Fig n={1} src="/research/wn_fig1_spread.svg" alt="Histogram of the gap between each student's best and worst practice form, 230 students, median 23 points, middle half 17 to 32" caption="Best printed form minus worst, one bar per 4 points. Gold line is the median; the shaded band is the middle half of students." />
-      <table className="tbl">
-        <thead><tr><th>Best form minus worst, 230 students</th><th className="n">points</th></tr></thead>
-        <tbody>
-          <tr className="hi"><td>Median gap</td><td className="n"><b>23</b></td></tr>
-          <tr><td>95% interval on that median (bootstrap)</td><td className="n">21.5 to 25</td></tr>
-          <tr><td>Middle half of students</td><td className="n">17 to 32</td></tr>
-          <tr><td>90th percentile</td><td className="n">44</td></tr>
-          <tr><td>Widest</td><td className="n">71</td></tr>
-          <tr><td>Gap of 10 or more</td><td className="n">95% of students</td></tr>
-          <tr><td>Gap of 20 or more</td><td className="n">64%</td></tr>
-          <tr><td>Gap of 30 or more</td><td className="n">30%</td></tr>
-        </tbody>
-      </table>
+      <div className="tblwrap">
+        <table className="tbl">
+          <thead><tr><th>Best form minus worst, 230 students</th><th className="n">points</th></tr></thead>
+          <tbody>
+            <tr className="hi"><td>Median gap</td><td className="n"><b>23</b></td></tr>
+            <tr><td>95% interval on that median (bootstrap)</td><td className="n">21.5 to 25</td></tr>
+            <tr><td>Middle half of students</td><td className="n">17 to 32</td></tr>
+            <tr><td>90th percentile</td><td className="n">44</td></tr>
+            <tr><td>Widest</td><td className="n">71</td></tr>
+            <tr><td>Gap of 10 or more</td><td className="n">95% of students</td></tr>
+            <tr><td>Gap of 20 or more</td><td className="n">64%</td></tr>
+            <tr><td>Gap of 30 or more</td><td className="n">30%</td></tr>
+          </tbody>
+        </table>
+      </div>
       <p>The gap grows with how many forms you sit, which is what you would expect of a best minus worst: more draws, wider range. Students who sat three or four forms (23 of them) had a median gap of 18; five or six (66), 20; seven or eight (83), 24; nine or more (53), 28.</p>
       <p>The widest gap, 71, belongs to a student whose two lowest forms were sat 250 and 300 days before the exam. That is not the same person on two days. It is the same person eight months apart, which is the first hint about what the gap is made of.</p>
       <p><strong>Does it hold up?</strong> Applying the per-form corrections the predictor uses: median 22. NBME forms only (227 students): 21. Dropping anyone with a form outside the 1st to 99th percentile of all scores (209 left): 23. Leaving out the thread that served as a blind test for an earlier post (199 left): 23.</p>

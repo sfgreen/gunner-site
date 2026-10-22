@@ -1,20 +1,30 @@
 // Build-time only (fs): loads the pathways and their editorial layer, applies the
 // publishing gate, and turns both into the plain view model the pages render.
 //
-// THE PUBLISHING GATE. A pathway goes live only after Danny signs it off
-// medically (editorial `signedOff: true`). On a production build
-// (VERCEL_ENV=production) only signed-off articles are generated, listed and put
-// in the sitemap; with none signed off there are no pathway pages at all and the
-// hub 404s. Everywhere else (Vercel previews, local) every approved pathway
-// renders, with a visible draft banner and noindex, so the drafts can be read.
+// THE PUBLISHING GATE. An article is live when its editorial file says
+// `published: true` (Danny, 2026-10-22: "just publish the pathways") or
+// `signedOff: true` (his per-pathway medical read). On a production build
+// (VERCEL_ENV=production) only live articles are generated, listed, linked and
+// put in the sitemap. Everywhere else (Vercel previews, local) every approved
+// pathway renders, and one that is not live carries a draft banner and noindex.
+//
+// The two flags are not the same claim. `published` puts a page on the site;
+// only `signedOff` puts "Medically reviewed by" on it and `lastReviewed` in its
+// structured data.
 import fs from 'fs';
 import path from 'path';
 import type {
   Pathway, PathwayNode, StepNode, BranchNode, EndNode, Order, SourceRef, Editorial, RoundsPresent,
 } from './types';
-import type { Calculator } from './calc';
 import { WORLDS, worldLabel } from './config';
 import { getGuide } from '../guides';
+import type {
+  ArticleVM, Block, CalcVM, CaseVM, Cite, CiteRefs, DisagreeVM, EndItemVM, ForkVM, FromRef, GlanceVM, Lead, LinkVM,
+  NextVM, OrderVM, PresentVM, SectionVM, StepVM,
+} from './view';
+import { forkAnchor, nodeAnchor } from './view';
+
+export type { ArticleVM } from './view';
 
 const ROOT = process.cwd();
 const PW_DIR = path.join(ROOT, 'content', 'pathways');
@@ -85,7 +95,7 @@ function readEditorial(slug: string): { ed: Editorial; source: EditorialSource }
   // The DKA mock's editorial, for building the template before the real file
   // lands. Never on production, and it is never signed off.
   if (slug === 'dka-hhs' && !isProductionBuild() && fs.existsSync(FIXTURE)) {
-    return { ed: { ...JSON.parse(fs.readFileSync(FIXTURE, 'utf8')), signedOff: false }, source: 'fixture' };
+    return { ed: { ...JSON.parse(fs.readFileSync(FIXTURE, 'utf8')), published: false, signedOff: false }, source: 'fixture' };
   }
   return null;
 }
@@ -96,7 +106,7 @@ function pendingEditorial(p: Pathway): Editorial {
   const stages: string[] = [];
   for (const n of p.nodes) if (n.kind === 'step' && !stages.includes(n.stage)) stages.push(n.stage);
   return {
-    id: p.id, slug: slugOf(p.id), signedOff: false, updated: '',
+    id: p.id, slug: slugOf(p.id), published: false, signedOff: false, updated: '',
     seoTitle: `${p.title}: the ED pathway | Step Gunner`,
     metaDescription: `${p.title} for Step 2 CK: the ED algorithm fork by fork, with doses and the guideline line each one comes from.`,
     h1: p.title, dek: '', jumpLinks: [], shortAnswer: [],
@@ -111,7 +121,12 @@ export type Entry = {
   editorial: Editorial;
   source: EditorialSource;
   signedOff: boolean;
+  /** published || signedOff: on the live site, indexable, in the sitemap. */
+  live: boolean;
 };
+
+/** The gate, on an editorial file's own flags. */
+const isLive = (ed: Editorial): boolean => ed.published === true || ed.signedOff === true;
 
 /** Every pathway this build publishes, in file order. */
 export function publishedEntries(): Entry[] {
@@ -124,72 +139,14 @@ export function publishedEntries(): Entry[] {
     if (found && found.ed.id && slugOf(found.ed.id) !== slug) {
       throw new Error(`content/pathway-articles/${slug}.json has id ${found.ed.id}, expected ${p.id}`);
     }
-    const signedOff = !!found && found.source === 'file' && found.ed.signedOff === true;
-    if (prod && !signedOff) continue;
-    out.push({ pathway: p, slug, editorial: found ? found.ed : pendingEditorial(p), source: found ? found.source : 'pending', signedOff });
+    const fromFile = !!found && found.source === 'file';
+    const signedOff = fromFile && found!.ed.signedOff === true;
+    const live = fromFile && isLive(found!.ed);
+    if (prod && !live) continue;
+    out.push({ pathway: p, slug, editorial: found ? found.ed : pendingEditorial(p), source: found ? found.source : 'pending', signedOff, live });
   }
   return out;
 }
-
-// ---------------------------------------------------------------- view model types
-
-/** A citation: `src` indexes the article's `sources` (the pathway's own list,
- *  in order), so a URL used by forty orders ships once. -1 is a docId the
- *  pathway does not list (the content gate forbids it); `label` then names it. */
-export type Cite = { src: number; where: string; label?: string };
-export type OrderVM = { item: string; dose: string; status: Order['status']; note: string | null; cites: Cite[] };
-export type StepVM = {
-  kind: 'step'; id: string; anchor: string; stage: string; ask: string; chainStep: string; note: string | null;
-  orders: OrderVM[]; calcs: { id: string; title: string }[]; options: string[]; answer: number; why: string; cites: Cite[];
-  /** Set when this step is the last on its route. */
-  end: NextVM | null;
-};
-/** Where a fork outcome or a step leads. For an endpoint, `text` is its short
- *  label when the summary opens with one ("DKA resolved: ...") and the page has
- *  an endpoints section to link to; otherwise the whole summary. */
-export type NextVM = { kind: 'step' | 'fork' | 'end' | 'missing'; text: string; anchor: string | null };
-export type ForkRowVM = { id: string; result: string; meaning: string; next: NextVM; orders: OrderVM[]; lead: string[]; out: string[] };
-export type ForkVM = { kind: 'fork'; id: string; anchor: string; label: string; rows: ForkRowVM[] };
-/** A Result-stage section: every fork's thresholds, each linking to its table. */
-export type ForkIndexVM = { kind: 'forkIndex'; items: { id: string; label: string; anchor: string; chips: string[] }[] };
-/** An Outcome-stage section: where the routes end, and which results lead there. */
-export type EndsVM = {
-  kind: 'ends';
-  items: { id: string; anchor: string; label: string | null; rest: string; from: { label: string; anchor: string }[] }[];
-};
-export type Block = StepVM | ForkVM | ForkIndexVM | EndsVM;
-export type SectionVM = { anchor: string; stage: string; heading: string; intro: string | null; blocks: Block[]; pending: boolean };
-export type GlanceVM = { n: number; anchor: string; stage: string; text: string; forks: { label: string; anchor: string; chips: string[] }[] };
-export type CaseVM = { id: string; label: string; vignette: string; forks: { label: string; result: string; outcome: string; next: string }[] };
-export type DisagreeVM = { item: string; dose: string; note: string | null; cites: Cite[]; context: string; anchor: string };
-export type CalcVM = Omit<Calculator, 'tests' | 'sources'> & { anchor: string; cites: Cite[]; usedBy: { anchor: string; ask: string }[] };
-export type LinkVM = { href: string; label: string; kind: string };
-export type Lead = { lead: string | null; text: string };
-export type PresentVM = { intro: string | null; oneLiner: string | null; paragraphs: Lead[]; plan: Lead[] };
-
-export type ArticleVM = {
-  id: string; slug: string; ct: string; title: string; short: string; world: string; worldLabel: string;
-  signedOff: boolean; reviewedDate: string | null; editorialPending: boolean; fixture: boolean; noindex: boolean;
-  seoTitle: string; metaDescription: string; h1: string; dek: string; updated: string | null;
-  counts: { steps: number; forks: number; sources: number; cases: number; minutes: number };
-  jump: { label: string; anchor: string }[];
-  shortAnswer: { lead: string; text: string }[];
-  glance: GlanceVM[];
-  sections: SectionVM[];
-  checklist: { heading: string; items: { label: string | null; text: string }[] } | null;
-  calculators: CalcVM[];
-  rounds: { present: PresentVM | null; pimp: { q: string; a: string }[] } | null;
-  traps: Lead[];
-  disagree: DisagreeVM[];
-  cases: CaseVM[];
-  faq: { q: string; a: string }[];
-  sources: { label: string; title: string; url: string }[];
-  differential: string[];
-  related: { slug: string; title: string }[];
-  also: LinkVM[];
-  appCount: number;
-  searchTerm: string;
-};
 
 // ---------------------------------------------------------------- helpers
 
@@ -298,6 +255,9 @@ const SPECIAL_ANCHORS: Record<string, string> = {
   traps: 'traps', disagree: 'disagree', patients: 'patients', cases: 'patients', faq: 'faq', sources: 'sources', related: 'related',
 };
 
+/** An array, or nothing: empty lists stay out of the page data. */
+const opt = <T>(xs: T[]): T[] | undefined => (xs.length ? xs : undefined);
+
 export function buildArticle(entry: Entry, published: Entry[]): ArticleVM {
   const { pathway: p, editorial: ed } = entry;
   const byId = new Map<string, PathwayNode>(p.nodes.map((n) => [n.id, n]));
@@ -305,16 +265,28 @@ export function buildArticle(entry: Entry, published: Entry[]): ArticleVM {
   const calcById = new Map((p.calculators || []).map((c) => [c.id, c]));
   const steps = p.nodes.filter((n): n is StepNode => n.kind === 'step');
   const branches = p.nodes.filter((n): n is BranchNode => n.kind === 'branch');
-  const nodeAnchor = (id: string) => `n-${id}`;
-  const forkAnchor = (id: string) => `f-${id}`;
 
-  const cites = (refs: SourceRef[] | undefined): Cite[] =>
-    (refs || []).map((r) => {
-      const i = srcIndex.has(r.docId) ? srcIndex.get(r.docId)! : -1;
-      return i >= 0 ? { src: i, where: r.where || '' } : { src: -1, where: r.where || '', label: r.docId };
-    });
-  const orders = (os: Order[] | undefined): OrderVM[] =>
-    (os || []).map((o) => ({ item: o.item, dose: o.dose, status: o.status, note: o.note || null, cites: cites(o.sources) }));
+  // Each distinct citation ships once; blocks carry its index.
+  const citeTable: Cite[] = [];
+  const citeKey = new Map<string, number>();
+  const cites = (refs: SourceRef[] | undefined): CiteRefs | undefined =>
+    opt((refs || []).map((r) => {
+      const src = srcIndex.has(r.docId) ? srcIndex.get(r.docId)! : -1;
+      const c: Cite = { src, ...(r.where ? { where: r.where } : {}), ...(src < 0 ? { label: r.docId } : {}) };
+      const key = `${c.src}\u0000${c.where || ''}\u0000${c.label || ''}`;
+      if (!citeKey.has(key)) {
+        citeKey.set(key, citeTable.length);
+        citeTable.push(c);
+      }
+      return citeKey.get(key)!;
+    }));
+  const orders = (os: Order[] | undefined): OrderVM[] | undefined =>
+    opt((os || []).map((o) => ({
+      item: o.item, dose: o.dose,
+      ...(o.status && o.status !== 'ok' ? { status: o.status } : {}),
+      ...(o.note ? { note: o.note } : {}),
+      cites: cites(o.sources),
+    })));
 
   // ---- which section each node belongs to ----
   // Steps go to the section of their stage (or the section whose optional
@@ -351,35 +323,40 @@ export function buildArticle(entry: Entry, published: Entry[]): ArticleVM {
   allSpecs.forEach((s, i) => {
     for (const n of p.nodes) if (n.kind === 'end' && !endSection.has(n.id) && (pinned.has(n.id) ? claimed.get(n.id) === i : n.stage === s.stage)) endSection.set(n.id, i);
   });
-  const endAnchor = (id: string) => `e-${id}`;
 
+  // Where a route goes, by id. An endpoint with no entry of its own reads in
+  // full where it is reached, from one shared table (endText).
+  const endText: Record<string, string> = {};
   const nextOf = (id: string): NextVM => {
     const n = byId.get(id);
-    if (!n) return { kind: 'missing', text: '', anchor: null };
-    if (n.kind === 'step') return { kind: 'step', text: n.chainStep, anchor: nodeAnchor(n.id) };
-    if (n.kind === 'branch') return { kind: 'fork', text: n.label, anchor: forkAnchor(n.id) };
-    const listed = endSection.has(n.id);
-    const { label } = splitEnd(n.summary);
-    return { kind: 'end', text: listed && label ? label : n.summary, anchor: listed ? endAnchor(n.id) : null };
+    if (!n) return { kind: 'missing' };
+    if (n.kind === 'step') return { kind: 'step', to: n.id };
+    if (n.kind === 'branch') return { kind: 'fork', to: n.id };
+    if (!endSection.has(n.id)) endText[n.id] = n.summary;
+    return { kind: 'end', to: n.id };
   };
 
   const stepVM = (n: StepNode): StepVM => {
     const q = shuffleOptions(n.options, n.answer, `${p.id}:${n.id}`);
     const nx = nextOf(n.next);
     return {
-      kind: 'step', id: n.id, anchor: nodeAnchor(n.id), stage: n.stage, ask: n.ask, chainStep: n.chainStep,
-      note: n.note || null, orders: orders(n.orders),
-      calcs: (n.calcs || []).filter((c) => calcById.has(c)).map((c) => ({ id: c, title: calcById.get(c)!.title })),
+      kind: 'step', id: n.id, stage: n.stage, ask: n.ask, chainStep: n.chainStep,
+      ...(n.note ? { note: n.note } : {}),
+      orders: orders(n.orders),
+      calcs: opt((n.calcs || []).filter((c) => calcById.has(c))),
       options: q.options, answer: q.answer, why: n.why, cites: cites(n.sources),
-      end: nx.kind === 'end' ? nx : null,
+      ...(nx.kind === 'end' ? { end: nx } : {}),
     };
   };
 
   const forkVM = (b: BranchNode): ForkVM => ({
-    kind: 'fork', id: b.id, anchor: forkAnchor(b.id), label: b.label,
+    kind: 'fork', id: b.id, label: b.label,
     rows: b.outcomes.map((o) => {
       const { result, meaning } = splitIf(o.if);
-      return { id: o.id, result, meaning, next: nextOf(o.next), orders: orders(o.orders), lead: o.ddx?.lead || [], out: o.ddx?.out || [] };
+      return {
+        result, ...(meaning ? { meaning } : {}), next: nextOf(o.next), orders: orders(o.orders),
+        lead: opt(o.ddx?.lead || []), out: opt(o.ddx?.out || []),
+      };
     }),
   });
 
@@ -408,15 +385,10 @@ export function buildArticle(entry: Entry, published: Entry[]): ArticleVM {
 
   const indexStages = new Set(branches.map((b) => b.stage));
   const usedAnchors = new Set<string>();
-  const sections: SectionVM[] = allSpecs.map((s, i) => {
+  const sections: (SectionVM & { stage: string })[] = allSpecs.map((s, i) => {
     const blocks: Block[] = [];
     if (indexStages.has(s.stage) && !(s.nodes && s.nodes.length)) {
-      blocks.push({
-        kind: 'forkIndex',
-        items: branches.filter((b) => b.stage === s.stage).map((b) => ({
-          id: b.id, label: b.label, anchor: forkAnchor(b.id), chips: b.outcomes.map((o) => splitIf(o.if).result),
-        })),
-      });
+      blocks.push({ kind: 'forkIndex', forks: branches.filter((b) => b.stage === s.stage).map((b) => b.id) });
     }
     const order = s.nodes && s.nodes.length ? s.nodes : p.nodes.map((n) => n.id);
     for (const id of order) if (claimed.get(id) === i) emit(id, blocks);
@@ -424,19 +396,19 @@ export function buildArticle(entry: Entry, published: Entry[]): ArticleVM {
     if (ends.length) {
       blocks.push({
         kind: 'ends',
-        items: ends.map((e) => {
+        items: ends.map((e): EndItemVM => {
           const { label, rest } = splitEnd(e.summary);
-          const from: { label: string; anchor: string }[] = [];
-          for (const b of branches) for (const o of b.outcomes) if (o.next === e.id) from.push({ label: `${b.label}: ${splitIf(o.if).result}`, anchor: forkAnchor(b.id) });
-          for (const st of steps) if (st.next === e.id) from.push({ label: st.ask, anchor: nodeAnchor(st.id) });
-          return { id: e.id, anchor: endAnchor(e.id), label, rest, from };
+          const from: FromRef[] = [];
+          for (const b of branches) b.outcomes.forEach((o, row) => { if (o.next === e.id) from.push({ fork: b.id, row }); });
+          for (const st of steps) if (st.next === e.id) from.push({ step: st.id });
+          return { id: e.id, ...(label ? { label } : {}), rest, from: opt(from) };
         }),
       });
     }
     let anchor = `s-${anchorize(s.stage) || i}`;
     while (usedAnchors.has(anchor)) anchor = `${anchor}-${i}`;
     usedAnchors.add(anchor);
-    return { anchor, stage: s.stage, heading: s.heading, intro: s.intro || null, blocks, pending: i >= specs.length };
+    return { anchor, stage: s.stage, heading: s.heading, ...(s.intro ? { intro: s.intro } : {}), blocks };
   });
   // Anything still unplaced (a fork on a cycle, say) goes last, never dropped.
   const lastWithSteps = [...sections].reverse().find((s) => s.blocks.some((b) => b.kind === 'step')) || sections[sections.length - 1];
@@ -454,13 +426,12 @@ export function buildArticle(entry: Entry, published: Entry[]): ArticleVM {
     while (cur && !seen.has(cur.id) && glance.length < 14) {
       seen.add(cur.id);
       if (cur.kind === 'step') {
-        glance.push({ n: glance.length + 1, anchor: nodeAnchor(cur.id), stage: cur.stage, text: cur.chainStep, forks: [] });
+        glance.push({ step: cur.id, forks: [] });
         cur = byId.get(cur.next);
       } else if (cur.kind === 'branch') {
         const b: BranchNode = cur;
         const row = glance[glance.length - 1];
-        const chips = hasForkIndex ? [] : b.outcomes.map((o) => splitIf(o.if).result);
-        if (row) row.forks.push({ label: b.label, anchor: forkAnchor(b.id), chips });
+        if (row) row.forks.push(b.id);
         const pick = b.outcomes.find((o) => o.id === picks[b.id])
           || b.outcomes.find((o) => byId.get(o.next)?.kind !== 'end')
           || b.outcomes[0];
@@ -473,29 +444,29 @@ export function buildArticle(entry: Entry, published: Entry[]): ArticleVM {
   const calculators: CalcVM[] = (p.calculators || []).map((c) => {
     const { tests: _t, sources, ...rest } = c;
     return {
-      ...rest, anchor: `calc-${c.id}`, cites: cites(sources),
-      usedBy: steps.filter((s) => (s.calcs || []).includes(c.id)).map((s) => ({ anchor: nodeAnchor(s.id), ask: s.ask })),
+      ...rest, cites: cites(sources),
+      usedBy: opt(steps.filter((s) => (s.calcs || []).includes(c.id)).map((s) => s.id)),
     };
   });
 
-  // ---- where the guidelines disagree: every conflict order, once ----
+  // ---- where the guidelines disagree: every conflict order, once, by location ----
   const disagree: DisagreeVM[] = [];
   const seenConflict = new Set<string>();
-  const addConflicts = (os: Order[] | undefined, context: string, anchor: string) => {
-    for (const o of os || []) {
+  const addConflicts = (os: Order[] | undefined, at: { node: string; row?: number }) => {
+    (os || []).forEach((o, order) => {
       const key = `${o.item}\u0000${o.dose}`;
-      if (o.status !== 'conflict' || seenConflict.has(key)) continue;
+      if (o.status !== 'conflict' || seenConflict.has(key)) return;
       seenConflict.add(key);
-      disagree.push({ item: o.item, dose: o.dose, note: o.note || null, cites: cites(o.sources), context, anchor });
-    }
+      disagree.push({ ...at, order });
+    });
   };
   for (const n of p.nodes) {
-    if (n.kind === 'step') addConflicts(n.orders, n.ask, nodeAnchor(n.id));
-    if (n.kind === 'branch') for (const o of n.outcomes) addConflicts(o.orders, `${n.label}: ${splitIf(o.if).result}`, forkAnchor(n.id));
+    if (n.kind === 'step') addConflicts(n.orders, { node: n.id });
+    if (n.kind === 'branch') n.outcomes.forEach((o, row) => addConflicts(o.orders, { node: n.id, row }));
   }
 
   // ---- practice patients: three cases that between them walk the most forks ----
-  const walk = (c: Pathway['cases'][number]) => {
+  const walk = (c: Pathway['cases'][number]): CaseVM['forks'] => {
     const forks: CaseVM['forks'] = [];
     let cur = byId.get(p.start);
     const seen = new Set<string>();
@@ -504,11 +475,12 @@ export function buildArticle(entry: Entry, published: Entry[]): ArticleVM {
       if (cur.kind === 'step') cur = byId.get(cur.next);
       else if (cur.kind === 'branch') {
         const b: BranchNode = cur;
-        const o = b.outcomes.find((x) => x.id === c.picks[b.id]);
-        if (!o) break;
-        const nx = nextOf(o.next);
-        forks.push({ label: b.label, result: c.results[b.id] || '', outcome: splitIf(o.if).result, next: nx.text });
-        cur = byId.get(o.next);
+        const row = b.outcomes.findIndex((x) => x.id === c.picks[b.id]);
+        if (row < 0) break;
+        // Resolve the row's next now so an unlisted endpoint lands in endText.
+        nextOf(b.outcomes[row].next);
+        forks.push({ fork: b.id, row, ...(c.results[b.id] ? { result: c.results[b.id] } : {}) });
+        cur = byId.get(b.outcomes[row].next);
       } else break;
     }
     return forks;
@@ -593,6 +565,21 @@ export function buildArticle(entry: Entry, published: Entry[]): ArticleVM {
   const shortAnswer = (ed.shortAnswer || []).map((s) => ({ lead: s.lead, text: s.text }));
 
   // ---- reading time: the text a reader sees without clicking, at 230 words a minute ----
+  const stepById = new Map<string, StepVM>();
+  const forkById = new Map<string, ForkVM>();
+  for (const s of visible) for (const b of s.blocks) {
+    if (b.kind === 'step') stepById.set(b.id, b);
+    if (b.kind === 'fork') forkById.set(b.id, b);
+  }
+  const nextWords = (n: NextVM): number => {
+    if (!n.to) return 0;
+    if (n.kind === 'step') return words(stepById.get(n.to)?.chainStep);
+    if (n.kind === 'fork') return words(forkById.get(n.to)?.label);
+    const e = byId.get(n.to);
+    if (!e || e.kind !== 'end') return 0;
+    const { label } = splitEnd(e.summary);
+    return words(endSection.has(e.id) && label ? label : e.summary);
+  };
   let wc = words(ed.dek) + shortAnswer.reduce((a, s) => a + words(s.lead) + words(s.text), 0);
   for (const s of visible) {
     wc += words(s.heading) + words(s.intro);
@@ -600,9 +587,9 @@ export function buildArticle(entry: Entry, published: Entry[]): ArticleVM {
       if (b.kind === 'step') {
         // The quick check's options and rationale stay hidden until a pick, so they are not counted.
         wc += words(b.ask) + words(b.chainStep) + words(b.note);
-        wc += b.orders.reduce((a, o) => a + words(o.item) + words(o.dose) + words(o.note), 0);
+        wc += (b.orders || []).reduce((a, o) => a + words(o.item) + words(o.dose) + words(o.note), 0);
       } else if (b.kind === 'fork') {
-        wc += b.rows.reduce((a, r) => a + words(r.result) + words(r.meaning) + words(r.next.text), 0);
+        wc += b.rows.reduce((a, r) => a + words(r.result) + words(r.meaning) + nextWords(r.next), 0);
       } else if (b.kind === 'ends') {
         wc += b.items.reduce((a, e) => a + words(e.label) + words(e.rest), 0);
       }
@@ -613,16 +600,26 @@ export function buildArticle(entry: Entry, published: Entry[]): ArticleVM {
   wc += traps.reduce((a, t) => a + words(t.lead) + words(t.text), 0) + faq.reduce((a, f) => a + words(f.q) + words(f.a), 0);
   wc += cases.reduce((a, c) => a + words(c.vignette), 0);
 
+  // The differential diagnoses the fork tables actually name ("Leading: ..."),
+  // for structured data: a name in JSON-LD should be on the page.
+  const named = new Set<string>();
+  for (const b of Array.from(forkById.values())) for (const r of b.rows) for (const d of [...(r.lead || []), ...(r.out || [])]) named.add(d);
+  const mentions = p.differential.filter((d) => named.has(d));
+
   const short = shortName(p.title);
+  const draft = !entry.live;
   return plain({
-    id: p.id, slug: entry.slug, ct: p.id, title: p.title, short, world: p.world, worldLabel: worldLabel(p.world),
+    id: p.id, slug: entry.slug, title: p.title, short, worldLabel: worldLabel(p.world),
     signedOff: entry.signedOff, reviewedDate: entry.signedOff ? ed.signedOffDate || ed.updated || null : null,
-    editorialPending: entry.source === 'pending', fixture: entry.source === 'fixture', noindex: !entry.signedOff,
+    draft, editorialPending: entry.source === 'pending', fixture: entry.source === 'fixture',
     seoTitle: ed.seoTitle, metaDescription: ed.metaDescription, h1: ed.h1, dek: ed.dek || '', updated: ed.updated || null,
     counts: { steps: steps.length, forks: branches.length, sources: p.sources.length, cases: p.cases.length, minutes: Math.max(1, Math.round(wc / 230)) },
-    jump, shortAnswer, glance, sections: visible, checklist, calculators, rounds, traps, disagree, cases, faq,
+    jump, shortAnswer, glance, glanceChips: !hasForkIndex,
+    // `stage` matched the jump links above; the page never reads it.
+    sections: visible.map(({ stage: _s, ...rest }) => rest),
+    checklist, calculators, rounds, traps, disagree, cases, faq,
     sources: p.sources.map((s) => ({ label: s.label, title: s.title, url: s.url })),
-    differential: p.differential, related, also,
+    cites: citeTable, endText, mentions, related, also,
     appCount: allPathways().length, searchTerm: p.synonyms[0] || short,
   });
 }
@@ -637,6 +634,8 @@ export type HubVM = {
   groups: { world: string; label: string; cards: HubCard[] }[];
   counts: { pathways: number; cases: number; sources: number };
   anyDraft: boolean; noindex: boolean;
+  /** The newest article date: the hub's dateModified and sitemap lastmod. */
+  updated: string | null;
 };
 
 export function buildHub(published: Entry[]): HubVM {
@@ -649,7 +648,7 @@ export function buildHub(published: Entry[]): HubVM {
     return {
       slug: e.slug, title: p.title, world: p.world, first, trap,
       steps: p.nodes.filter((n) => n.kind === 'step').length, cases: p.cases.length,
-      draft: !e.signedOff, pending: e.source === 'pending', haystack,
+      draft: !e.live, pending: e.source === 'pending', haystack,
     };
   });
   const worlds = Object.keys(WORLDS).concat(cards.map((c) => c.world)).filter((w, i, a) => a.indexOf(w) === i);
@@ -658,22 +657,23 @@ export function buildHub(published: Entry[]): HubVM {
     .filter((g) => g.cards.length);
   const sources = new Set(published.flatMap((e) => e.pathway.sources.map((s) => s.docId)));
   const anyDraft = cards.some((c) => c.draft);
+  const updated = published.map((e) => e.editorial.updated).filter(Boolean).sort().pop() || null;
   return plain({
     groups,
     counts: { pathways: cards.length, cases: published.reduce((a, e) => a + e.pathway.cases.length, 0), sources: sources.size },
-    anyDraft, noindex: anyDraft || cards.length === 0,
+    anyDraft, noindex: anyDraft || cards.length === 0, updated,
   });
 }
 
-/** Sitemap rows: signed-off articles only, in every environment (a draft is
- *  noindex, so listing it would contradict the page). The hub joins once one
- *  article is signed off. */
+/** Sitemap rows: live articles only (published or signed off), in every
+ *  environment (a draft is noindex, so listing it would contradict the page).
+ *  The hub joins with the first live article, its lastmod the newest of theirs. */
 export function sitemapPathways(): { path: string; lastmod: string | null }[] {
   // The sitemap renders per request, so this reads the small editorial files and
-  // opens a pathway file only for an article that is signed off.
+  // opens a pathway file only for an article that is live.
   const out: { path: string; lastmod: string | null }[] = [];
   if (!fs.existsSync(ED_DIR)) return out;
-  const signed: { slug: string; updated: string | null }[] = [];
+  const live: { slug: string; updated: string | null }[] = [];
   for (const name of fs.readdirSync(ED_DIR).filter((n) => n.endsWith('.json')).sort()) {
     const slug = name.slice(0, -'.json'.length);
     let found: ReturnType<typeof readEditorial> = null;
@@ -685,16 +685,16 @@ export function sitemapPathways(): { path: string; lastmod: string | null }[] {
       console.error(`sitemap: skipping pathway article ${slug}: ${(err as Error).message}`);
       continue;
     }
-    if (!found || found.source !== 'file' || found.ed.signedOff !== true) continue;
+    if (!found || found.source !== 'file' || !isLive(found.ed)) continue;
     const file = path.join(PW_DIR, `${idOf(slug).replace(/^pw_/, '')}.json`);
     if (!fs.existsSync(file)) continue;
     const p = JSON.parse(fs.readFileSync(file, 'utf8')) as Pathway;
     if (p.status !== 'approved' || slugOf(p.id) !== slug) continue;
-    signed.push({ slug, updated: found.ed.updated || null });
+    live.push({ slug, updated: found.ed.updated || null });
   }
-  if (!signed.length) return out;
-  const latest = signed.map((e) => e.updated).filter(Boolean).sort().pop() || null;
+  if (!live.length) return out;
+  const latest = live.map((e) => e.updated).filter(Boolean).sort().pop() || null;
   out.push({ path: '/pathways', lastmod: latest });
-  for (const e of signed) out.push({ path: `/pathways/${e.slug}`, lastmod: e.updated });
+  for (const e of live) out.push({ path: `/pathways/${e.slug}`, lastmod: e.updated });
   return out;
 }

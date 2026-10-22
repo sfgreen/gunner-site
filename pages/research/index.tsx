@@ -38,6 +38,7 @@ export default function ResearchIndex() {
       crumb={[{ href: '/research', label: 'Research' }]}
       metaTitle="Step 2 CK Research: Score Reports, NBME Forms and the Free 120"
       metaDesc={desc}
+      ogImage="/og/research/index.png"
       campaign={CAMPAIGN}
       head={<>
         <link rel="canonical" href="https://stepgunner.com/research" />

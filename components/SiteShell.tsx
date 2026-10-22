@@ -15,7 +15,7 @@ import { appStoreUrl, track, referrerHost } from '../lib/analytics';
 // it lives in. A form is easier to use narrow, prose reads best near 65
 // characters, and neither should shift the wordmark.
 //
-// Breakpoints are declared once (720 tablet, 560 phone) instead of the six
+// Breakpoints are declared once (1079 nav, 560 phone) instead of the six
 // different values that were scattered across files.
 
 export type Measure = 'wide' | 'article' | 'tool';
@@ -26,6 +26,7 @@ const NAV_LINKS: { href: string; label: string }[] = [
   { href: '/step-2-score-predictor', label: 'Predictor' },
   { href: '/research', label: 'Research' },
   { href: '/guides', label: 'Guides' },
+  { href: '/pathways', label: 'ED Pathways' },
 ];
 
 export default function SiteShell({
@@ -194,7 +195,7 @@ export default function SiteShell({
         .burger {
           display: none; flex-direction: column; gap: 3.5px; cursor: pointer;
           background: none; border: 1px solid var(--hair-strong); border-radius: 8px;
-          padding: 9px 10px; min-width: 40px; min-height: 40px;
+          padding: 9px 10px; min-width: 44px; min-height: 44px;
           align-items: center; justify-content: center;
         }
         .burger i { display: block; width: 16px; height: 1.5px; background: var(--ink); }
@@ -234,8 +235,13 @@ export default function SiteShell({
         .foot :global(a) { color: var(--ink-dim); text-decoration: none; }
         .foot :global(a:hover) { color: var(--ink); text-decoration: underline; }
 
-        /* ---- 720: nav links give way, they are the first thing to crowd ---- */
-        @media (max-width: 720px) {
+        /* ---- 1079: nav links give way, they are the first thing to crowd ----
+           Six mono links, the wordmark and the longest per-page CTA ("Get the
+           free Medicine deck") measure about 1,070px, so the row only fits at
+           the nav's full 1,080px. Below that the links overflowed the page
+           sideways (they did from 721 to about 850px even with five links), so
+           they move into the menu instead. */
+        @media (max-width: 1079px) {
           .links { display: none; }
           .burger { display: flex; }
           .sheet { display: flex; }

@@ -57,6 +57,8 @@ ROUTES = [
     "/wards",
     "/wards/abg-interpretation",
     "/wards/soap-note",
+    "/pathways",                  # ED pathways hub (PathwaysHub + PwStyles)
+    "/pathways/chest-pain",       # one ED pathway article (PathwayArticle + PwStyles)
 ]
 
 # Classes that legitimately carry no CSS of their own.

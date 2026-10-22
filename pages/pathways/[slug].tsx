@@ -4,9 +4,9 @@ import { buildArticle, publishedEntries } from '../../lib/pathways/data';
 import type { ArticleVM } from '../../lib/pathways/data';
 
 // One static page per published pathway. "Published" is decided at build time
-// by lib/pathways/data: on production only Danny's signed-off articles exist
-// (none yet, so this route builds no pages there); previews and local builds
-// render every approved pathway as a noindex draft.
+// by lib/pathways/data: on production only live articles (`published` or
+// `signedOff`) exist; previews and local builds render every approved pathway,
+// with a noindex draft banner on any that is not live.
 export default function PathwayPage({ vm }: { vm: ArticleVM }) {
   return <PathwayArticle vm={vm} />;
 }

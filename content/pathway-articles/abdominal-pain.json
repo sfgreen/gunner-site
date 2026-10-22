@@ -1,6 +1,7 @@
 {
   "id": "abdominal_pain",
   "slug": "abdominal-pain",
+  "published": true,
   "signedOff": false,
   "updated": "2026-10-22",
   "seoTitle": "Acute Abdominal Pain Workup: ED Algorithm by Quadrant",

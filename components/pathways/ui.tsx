@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useState, RefObject } from 'react';
 import { appStoreUrl, track, referrerHost } from '../../lib/analytics';
 import { PATHWAYS_LIVE, StoreLoc } from '../../lib/pathways/config';
-import type { Cite, OrderVM } from '../../lib/pathways/data';
+import type { Cite, OrderStatus } from '../../lib/pathways/view';
 
 // Shared atoms for the pathway article and hub. Icons are SF Symbols-style
 // strokes drawn inline (no icon font, no emoji); status is always icon + word,
@@ -71,14 +71,14 @@ export function Cites({ cites, sources }: { cites: Cite[]; sources: Source[] }) 
   );
 }
 
-const STATUS: Record<OrderVM['status'], { word: string; icon: string }> = {
+const STATUS: Record<OrderStatus, { word: string; icon: string }> = {
   ok: { word: 'Use', icon: 'check' },
   avoid: { word: 'Avoid', icon: 'x' },
   conflict: { word: 'Sources differ', icon: 'warn' },
   pending: { word: 'Not stated', icon: 'dash' },
 };
 
-export function StatusChip({ status }: { status: OrderVM['status'] }) {
+export function StatusChip({ status = 'ok' }: { status?: OrderStatus }) {
   const s = STATUS[status] || STATUS.ok;
   return (
     <span className={`pw-chip ${status}`}>

@@ -48,9 +48,9 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
   // Per-form conversion pages: the hub owns the broad query, each child owns
   // its own form query, so they do not compete.
   const formPages = allFormSlugs().map((slug) => urlNode(`/step-2-score-predictor/${slug}`, 'monthly', '0.8'));
-  // ED pathways enter one at a time, on Danny's medical sign-off (signedOff in
-  // content/pathway-articles/<slug>.json); the hub joins with the first. lastmod
-  // is the article's own date, the one signal Google reads here.
+  // ED pathways: every live article (published or signedOff in
+  // content/pathway-articles/<slug>.json) and the hub with them. lastmod is the
+  // article's own date, the one signal Google reads here.
   const pathwayPages = sitemapPathways().map(
     (p) => `  <url><loc>${BASE}${p.path}</loc>${p.lastmod ? `<lastmod>${p.lastmod}</lastmod>` : ''}</url>`,
   );

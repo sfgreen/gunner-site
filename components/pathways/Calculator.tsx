@@ -1,7 +1,8 @@
 import { useId, useState } from 'react';
 import { Cites, Source } from './ui';
 import { runFormula, pointsTotal, bandFor, prettyExpr, Band } from '../../lib/pathways/calc';
-import type { CalcVM } from '../../lib/pathways/data';
+import { calcAnchor, nodeAnchor } from '../../lib/pathways/view';
+import type { CalcVM, Lookup } from '../../lib/pathways/view';
 
 // One bedside calculator, entirely from content: inputs, formula, bands, note and
 // sources come from the pathway JSON, the arithmetic from lib/pathways/calc (the
@@ -13,7 +14,7 @@ function bandText(b: Band): string {
   return b.text;
 }
 
-export default function Calculator({ calc, sources }: { calc: CalcVM; sources: Source[] }) {
+export default function Calculator({ calc, sources, lk }: { calc: CalcVM; sources: Source[]; lk: Lookup }) {
   const uid = useId();
   const inputs = calc.inputs || [];
   const [raw, setRaw] = useState<Record<string, string>>(() =>
@@ -36,7 +37,7 @@ export default function Calculator({ calc, sources }: { calc: CalcVM; sources: S
   }
 
   return (
-    <div className="pw-calc" id={calc.anchor}>
+    <div className="pw-calc" id={calcAnchor(calc.id)}>
       <h3>{calc.title}</h3>
       {calc.kind === 'formula' ? (
         <>
@@ -140,14 +141,14 @@ export default function Calculator({ calc, sources }: { calc: CalcVM; sources: S
         </ul>
       )}
       {calc.note && <p className="pw-calc-note">{calc.note}</p>}
-      <Cites cites={calc.cites} sources={sources} />
-      {calc.usedBy.length > 0 && (
+      <Cites cites={lk.cites(calc.cites)} sources={sources} />
+      {calc.usedBy && calc.usedBy.length > 0 && (
         <p className="pw-usedby">
           Used at:{' '}
-          {calc.usedBy.map((u, k) => (
-            <span key={u.anchor}>
+          {calc.usedBy.map((id, k) => (
+            <span key={id}>
               {k > 0 && '; '}
-              <a href={`#${u.anchor}`}>{u.ask}</a>
+              <a href={`#${nodeAnchor(id)}`}>{lk.step(id)?.ask}</a>
             </span>
           ))}
         </p>

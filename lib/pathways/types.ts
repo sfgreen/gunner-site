@@ -5,8 +5,8 @@
 //    Doses, forks, quick checks, conflicts, cases and sources all come from here.
 // 2. Editorial: content/pathway-articles/<slug>.json, the per-pathway article
 //    layer (hero, short answer, section questions, checklist, rounds, traps, FAQ,
-//    related) and the publishing gate (`signedOff`). `refs` are audit pointers
-//    back into the pathway and are never rendered.
+//    related) and the publishing gate (`published`, `signedOff`). `refs` are
+//    audit pointers back into the pathway and are never rendered.
 import type { Calculator } from './calc';
 
 export type SourceRef = { docId: string; where?: string };
@@ -78,6 +78,9 @@ export type EdText = { text: string } & Refs;
 export type Editorial = {
   id: string;
   slug: string;
+  /** On the site: generated, indexed, listed, in the sitemap. Not a review claim. */
+  published?: boolean;
+  /** Danny's per-pathway medical read: the only flag behind "Medically reviewed by". */
   signedOff: boolean;
   /** Optional: the sign-off date for MedicalWebPage.lastReviewed; falls back to `updated`. */
   signedOffDate?: string;

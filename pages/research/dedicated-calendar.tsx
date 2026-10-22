@@ -23,7 +23,7 @@ function Fig({ src, alt, caption, n }: { src: string; alt: string; caption: stri
 export default function DedicatedCalendar() {
   const store = appStoreUrl(CAMPAIGN);
   const title = 'Nobody tells you when to take each NBME. Here is when 269 people actually did.';
-  const desc = 'The dedicated-period form schedule reconstructed from 269 real score reports: the median day each NBME and UWSA gets sat, how many forms people take, and what more time is worth.';
+  const desc = 'The Step 2 CK dedicated schedule from 269 real score reports: the median day each NBME and UWSA gets sat, how many forms people take, and what more time is worth.';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ScholarlyArticle',
@@ -43,8 +43,9 @@ export default function DedicatedCalendar() {
       title="The dedicated schedule nobody wrote down"
       lede={<>269 students, 2,042 reported practice scores, and the form calendar almost all of them converged on without being told. When each NBME actually gets sat, how many people take, and what another week is worth.</>}
       crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research', label: 'Research' }]}
-      metaTitle="Step 2 CK Dedicated Schedule: When to Take Each NBME, from 269 Real Reports"
+      metaTitle="Step 2 CK Dedicated Schedule: When to Take Each NBME, 269 Reports"
       metaDesc={desc}
+      ogImage="/og/research/dedicated-calendar.png"
       campaign={CAMPAIGN}
       head={<>
         <link rel="canonical" href="https://stepgunner.com/research/dedicated-calendar" />
@@ -80,6 +81,7 @@ export default function DedicatedCalendar() {
         .fig img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--hair); background: var(--bg); display: block; }
         .fig figcaption { font-size: 13px; color: var(--ink-dim); line-height: 1.6; margin-top: 10px; } .fig figcaption b { color: var(--ink); }
         .tbl { width: 100%; border-collapse: collapse; margin: 8px 0 24px; font-size: 14.5px; background: var(--bg-2); border: 1px solid var(--hair); border-radius: 12px; overflow: hidden; }
+        .tblwrap { overflow-x: auto; }
         .tbl th { text-align: left; font-family: var(--mono); font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); padding: 9px 12px; border-bottom: 1px solid var(--hair-strong); background: var(--bg-3); }
         .tbl td { padding: 9px 12px; border-bottom: 1px solid var(--hair); color: var(--ink-dim); } .tbl tr:last-child td { border-bottom: 0; }
         .tbl td.n, .tbl th.n { text-align: right; font-family: var(--mono); } .tbl td.n b { color: var(--ink); }
@@ -121,23 +123,25 @@ export default function DedicatedCalendar() {
 
       <Fig n={1} src="/research/cal_fig1_schedule.svg" alt="Median days before the exam that each NBME, UWSA and the Free 120 is sat, with the interquartile range for each" caption="Gold dot is the median day; the bar is the middle half of students. Time runs right to left toward exam day." />
 
-      <table className="tbl">
-        <thead><tr><th>form</th><th className="n">students</th><th className="n">median days out</th><th className="n">middle half</th></tr></thead>
-        <tbody>
-          <tr><td>NBME 9</td><td className="n">88</td><td className="n"><b>56</b></td><td className="n">35 to 95</td></tr>
-          <tr><td>NBME 10</td><td className="n">140</td><td className="n"><b>45</b></td><td className="n">28 to 72</td></tr>
-          <tr><td>UWSA 1</td><td className="n">75</td><td className="n"><b>37</b></td><td className="n">24 to 60</td></tr>
-          <tr><td>NBME 11</td><td className="n">152</td><td className="n"><b>35</b></td><td className="n">23 to 57</td></tr>
-          <tr><td>NBME 12</td><td className="n">137</td><td className="n"><b>25</b></td><td className="n">18 to 42</td></tr>
-          <tr><td>NBME 13</td><td className="n">162</td><td className="n"><b>21</b></td><td className="n">14 to 31</td></tr>
-          <tr><td>UWSA 3</td><td className="n">25</td><td className="n"><b>21</b></td><td className="n">9 to 30</td></tr>
-          <tr><td>NBME 14</td><td className="n">165</td><td className="n"><b>15</b></td><td className="n">10 to 24</td></tr>
-          <tr><td>NBME 15</td><td className="n">165</td><td className="n"><b>10</b></td><td className="n">7 to 16</td></tr>
-          <tr><td>UWSA 2</td><td className="n">104</td><td className="n"><b>10</b></td><td className="n">7 to 22</td></tr>
-          <tr><td>NBME 16</td><td className="n">47</td><td className="n"><b>6</b></td><td className="n">4 to 7</td></tr>
-          <tr className="hi"><td>Free 120</td><td className="n">171</td><td className="n"><b>3</b></td><td className="n">2 to 4</td></tr>
-        </tbody>
-      </table>
+      <div className="tblwrap">
+        <table className="tbl">
+          <thead><tr><th>form</th><th className="n">students</th><th className="n">median days out</th><th className="n">middle half</th></tr></thead>
+          <tbody>
+            <tr><td>NBME 9</td><td className="n">88</td><td className="n"><b>56</b></td><td className="n">35 to 95</td></tr>
+            <tr><td>NBME 10</td><td className="n">140</td><td className="n"><b>45</b></td><td className="n">28 to 72</td></tr>
+            <tr><td>UWSA 1</td><td className="n">75</td><td className="n"><b>37</b></td><td className="n">24 to 60</td></tr>
+            <tr><td>NBME 11</td><td className="n">152</td><td className="n"><b>35</b></td><td className="n">23 to 57</td></tr>
+            <tr><td>NBME 12</td><td className="n">137</td><td className="n"><b>25</b></td><td className="n">18 to 42</td></tr>
+            <tr><td>NBME 13</td><td className="n">162</td><td className="n"><b>21</b></td><td className="n">14 to 31</td></tr>
+            <tr><td>UWSA 3</td><td className="n">25</td><td className="n"><b>21</b></td><td className="n">9 to 30</td></tr>
+            <tr><td>NBME 14</td><td className="n">165</td><td className="n"><b>15</b></td><td className="n">10 to 24</td></tr>
+            <tr><td>NBME 15</td><td className="n">165</td><td className="n"><b>10</b></td><td className="n">7 to 16</td></tr>
+            <tr><td>UWSA 2</td><td className="n">104</td><td className="n"><b>10</b></td><td className="n">7 to 22</td></tr>
+            <tr><td>NBME 16</td><td className="n">47</td><td className="n"><b>6</b></td><td className="n">4 to 7</td></tr>
+            <tr className="hi"><td>Free 120</td><td className="n">171</td><td className="n"><b>3</b></td><td className="n">2 to 4</td></tr>
+          </tbody>
+        </table>
+      </div>
 
       <p>Read that column again. It is in order. Perfectly in order, from NBME 9 at eight weeks out down to the Free 120 at three days, and nobody coordinated it.</p>
       <p>What happened is that everyone independently decided the newest forms are the most representative and should go last, closest to the real thing, where they work as a final read. NBME 9 is the oldest so it goes first, when a bad number does the least damage. It is a sensible instinct and the whole population had it.</p>
@@ -161,14 +165,16 @@ export default function DedicatedCalendar() {
 
       <h2>4. What the calendar converts into</h2>
       <p>A schedule is only useful if it tells you what moving it buys. From the same set, 178 students with three or more dated forms improved at a median of <strong>1.73 points per week</strong>. The fast quarter managed 3.5, the slow quarter 0.8, and 91% improved at all.</p>
-      <table className="tbl">
-        <thead><tr><th>more time</th><th className="n">what the median student gains</th></tr></thead>
-        <tbody>
-          <tr><td>one more week</td><td className="n"><b>about 2 points</b></td></tr>
-          <tr><td>two more weeks</td><td className="n"><b>about 3 points</b></td></tr>
-          <tr><td>four more weeks</td><td className="n"><b>about 7 points</b></td></tr>
-        </tbody>
-      </table>
+      <div className="tblwrap">
+        <table className="tbl">
+          <thead><tr><th>more time</th><th className="n">what the median student gains</th></tr></thead>
+          <tbody>
+            <tr><td>one more week</td><td className="n"><b>about 2 points</b></td></tr>
+            <tr><td>two more weeks</td><td className="n"><b>about 3 points</b></td></tr>
+            <tr><td>four more weeks</td><td className="n"><b>about 7 points</b></td></tr>
+          </tbody>
+        </table>
+      </div>
       <p>That is the number to hold against whatever a delay costs you. Some people should absolutely push. What the data kills is the specific fantasy that two more weeks turns a 245 into a 260.</p>
 
       <section className="pitch">

@@ -15,7 +15,7 @@ import type { HubVM } from '../../lib/pathways/data';
 
 const BASE = 'https://stepgunner.com';
 const CT = 'pw_hub';
-const OG = 'https://stepgunner.com/og/research-nbme-step2.png';
+const OG = 'https://stepgunner.com/og/pathways/index.png';
 
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9%.]+/g, ' ').trim();
 
@@ -84,8 +84,12 @@ export default function PathwaysHub({ vm }: { vm: HubVM }) {
     };
   }, []);
 
-  const title = 'ED Pathways for Step 2 CK: the next best step, fork by fork';
-  const description = `${total} emergency presentations the way Step 2 CK asks them: the first move, the fork that decides everything after it, and the trap each one is built around.`;
+  // Search intent first: students type "ED algorithms" and "EM rotation", and
+  // the ED study guide (/step-2-ck-emergency-medicine) already owns "Step 2 CK
+  // emergency medicine", so this page leads with pathways and algorithms.
+  const title = `ED Pathways for Step 2 CK and EM Rotations: ${total} Algorithms`;
+  const description = `${total} ED algorithms for Step 2 CK and your EM rotation: the first move, each fork and its thresholds, and every dose quoted from the source it cites.`;
+  const dek = `${total} emergency presentations as branching algorithms: the first move, each fork and the threshold that decides it, the orders with their doses, and the source line behind every one. For Step 2 CK and for the shift.`;
   const ld = [
     {
       '@context': 'https://schema.org',
@@ -93,6 +97,11 @@ export default function PathwaysHub({ vm }: { vm: HubVM }) {
       name: title,
       description,
       url: `${BASE}/pathways`,
+      image: OG,
+      inLanguage: 'en-US',
+      author: { '@type': 'Person', name: 'Danny Varghese', url: `${BASE}/` },
+      publisher: { '@type': 'Organization', name: 'Step Gunner', legalName: 'Rezumab LLC', url: `${BASE}/` },
+      ...(vm.updated ? { dateModified: vm.updated } : {}),
       mainEntity: {
         '@type': 'ItemList',
         itemListElement: vm.groups.flatMap((g) => g.cards).map((c, i) => ({
@@ -122,11 +131,18 @@ export default function PathwaysHub({ vm }: { vm: HubVM }) {
         {vm.noindex && <meta name="robots" content="noindex" />}
         <link rel="canonical" href={`${BASE}/pathways`} />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Step Gunner" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={`${BASE}/pathways`} />
         <meta property="og:image" content={OG} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="ED pathways for Step 2 CK and EM rotations, Step Gunner" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={OG} />
         {ld.map((j, i) => (
           <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(j).replace(/</g, '\\u003c') }} />
         ))}
@@ -138,20 +154,20 @@ export default function PathwaysHub({ vm }: { vm: HubVM }) {
             <nav className="pw-crumb" aria-label="Breadcrumb">
               <ol>
                 <li><Link href="/">Home</Link></li>
-                <li aria-current="page">Pathways</li>
+                <li aria-current="page">ED Pathways</li>
               </ol>
             </nav>
             {drafts > 0 && (
               <div className="pw-draft" role="note">
                 <Icon name="warn" />
                 <p>
-                  <b>{drafts === total ? 'Draft: none of these pathways is medically reviewed yet.' : `${drafts} of ${total} pathways are drafts, not yet medically reviewed.`}</b> A preview, not indexed and not on the live site; on production only signed-off pathways are listed.
+                  <b>{drafts === total ? 'Draft: none of these pathways is published yet.' : `${drafts} of ${total} pathways are unpublished drafts.`}</b> A preview, not indexed and not on the live site; on production only published pathways are listed.
                 </p>
               </div>
             )}
             <p className="pw-eyebrow">ED pathways</p>
-            <h1>The next best step in the ED</h1>
-            <p className="pw-dek">{description}</p>
+            <h1>ED pathways for Step 2 CK and EM rotations</h1>
+            <p className="pw-dek">{dek}</p>
             <ul className="pw-meta">
               <li>By <b>Danny Varghese</b></li>
               <li><b>{total}</b> presentations</li>

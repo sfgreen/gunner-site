@@ -48,6 +48,7 @@ export default function TimePerQuestion() {
       crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: PATH, label: 'Research' }]}
       metaTitle="Step 2 CK Time Per Question: Does Going Slower Help?"
       metaDesc={desc}
+      ogImage="/og/research/step-2-ck-time-per-question.png"
       campaign={CAMPAIGN}
       head={<>
         <link rel="canonical" href={`https://stepgunner.com${PATH}`} />
@@ -84,6 +85,7 @@ export default function TimePerQuestion() {
         .fig img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--hair); background: var(--bg); display: block; }
         .fig figcaption { font-size: 13px; color: var(--ink-dim); line-height: 1.6; margin-top: 10px; } .fig figcaption b { color: var(--ink); }
         .tbl { width: 100%; border-collapse: collapse; margin: 8px 0 24px; font-size: 14.5px; background: var(--bg-2); border: 1px solid var(--hair); border-radius: 12px; overflow: hidden; }
+        .tblwrap { overflow-x: auto; }
         .tbl th { text-align: left; font-family: var(--mono); font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); padding: 9px 12px; border-bottom: 1px solid var(--hair-strong); background: var(--bg-3); }
         .tbl td { padding: 9px 12px; border-bottom: 1px solid var(--hair); color: var(--ink-dim); } .tbl tr:last-child td { border-bottom: 0; }
         .tbl td.n, .tbl th.n { text-align: right; font-family: var(--mono); } .tbl td.n b { color: var(--ink); }
@@ -128,15 +130,17 @@ export default function TimePerQuestion() {
       <h2>2. Fastest to slowest</h2>
       <Fig n={1} src="/research/speed_fig1_deciles.svg" alt="Mean accuracy for ten groups of about 38 people each, ordered by their median seconds per question from about 8 to 33 seconds; every group sits between 75 and 78 percent" caption="383 people in ten groups of about 38, ordered by their median time per question. Accuracy stays between 75% and 78% from 8 seconds to 33 seconds. The bars are 95% intervals." />
 
-      <table className="tbl">
-        <thead><tr><th>speed quarter</th><th className="n">people</th><th className="n">median per question</th><th className="n">right</th><th className="n">95% interval</th></tr></thead>
-        <tbody>
-          <tr className="hi"><td>fastest</td><td className="n">96</td><td className="n">10.2 s</td><td className="n"><b>77.0%</b></td><td className="n">75.3 to 78.6</td></tr>
-          <tr><td>second</td><td className="n">96</td><td className="n">14.9 s</td><td className="n"><b>77.1%</b></td><td className="n">75.5 to 78.5</td></tr>
-          <tr><td>third</td><td className="n">96</td><td className="n">19.6 s</td><td className="n"><b>75.4%</b></td><td className="n">73.6 to 77.3</td></tr>
-          <tr className="hi"><td>slowest</td><td className="n">95</td><td className="n">27.0 s</td><td className="n"><b>76.3%</b></td><td className="n">74.5 to 78.1</td></tr>
-        </tbody>
-      </table>
+      <div className="tblwrap">
+        <table className="tbl">
+          <thead><tr><th>speed quarter</th><th className="n">people</th><th className="n">median per question</th><th className="n">right</th><th className="n">95% interval</th></tr></thead>
+          <tbody>
+            <tr className="hi"><td>fastest</td><td className="n">96</td><td className="n">10.2 s</td><td className="n"><b>77.0%</b></td><td className="n">75.3 to 78.6</td></tr>
+            <tr><td>second</td><td className="n">96</td><td className="n">14.9 s</td><td className="n"><b>77.1%</b></td><td className="n">75.5 to 78.5</td></tr>
+            <tr><td>third</td><td className="n">96</td><td className="n">19.6 s</td><td className="n"><b>75.4%</b></td><td className="n">73.6 to 77.3</td></tr>
+            <tr className="hi"><td>slowest</td><td className="n">95</td><td className="n">27.0 s</td><td className="n"><b>76.3%</b></td><td className="n">74.5 to 78.1</td></tr>
+          </tbody>
+        </table>
+      </div>
 
       <p>The slowest quarter spent about 17 more seconds on every question and got <strong>0.7 points fewer</strong> right, with an interval from 3.1 points fewer to 1.7 points more. Put plainly, about 76 or 77 of every 100 questions right, whichever end you are on. Across everyone, the correlation between time per question and accuracy is <strong>-0.12</strong> (interval -0.26 to 0.01): close to nothing, and if anything leaning the wrong way for the advice.</p>
 
@@ -164,17 +168,19 @@ export default function TimePerQuestion() {
       <h2>5. How long each kind of question takes</h2>
       <p>Nobody publishes per-question timing for Step 2 practice, so here it is, from all 450,766 answers by 998 people. &ldquo;First look&rdquo; is the median the first time each person met a question.</p>
       <Fig n={3} src="/research/speed_fig3_types.svg" alt="Median seconds per question by question type, from 7.3 seconds for Dx Buzzwords to 18.3 seconds for Next Best Step, all far below the exam's 90 seconds per question" caption="Gold is the median, the bar is the middle half of answers. The dashed line is the exam's average allowance of 90 seconds per question. App questions are much shorter than exam vignettes, so these are not pacing targets." />
-      <table className="tbl">
-        <thead><tr><th>question type</th><th className="n">answers</th><th className="n">median</th><th className="n">first look</th><th className="n">stem words</th></tr></thead>
-        <tbody>
-          <tr><td>Dx Buzzwords (clue to diagnosis)</td><td className="n">6,733</td><td className="n"><b>7.3 s</b></td><td className="n">8.5 s</td><td className="n">19</td></tr>
-          <tr><td>Buzzwords (one-line recall)</td><td className="n">93,588</td><td className="n"><b>8.5 s</b></td><td className="n">9.7 s</td><td className="n">14</td></tr>
-          <tr><td>Visual Dx (image)</td><td className="n">11,008</td><td className="n"><b>9.7 s</b></td><td className="n">12.8 s</td><td className="n">21</td></tr>
-          <tr><td>CK Gold (vignette)</td><td className="n">213,725</td><td className="n"><b>16.2 s</b></td><td className="n">18.8 s</td><td className="n">41</td></tr>
-          <tr><td>NBME Practice (vignette)</td><td className="n">3,810</td><td className="n"><b>16.7 s</b></td><td className="n">20.7 s</td><td className="n">77</td></tr>
-          <tr className="hi"><td>Next Best Step (management)</td><td className="n">121,711</td><td className="n"><b>18.3 s</b></td><td className="n">21.1 s</td><td className="n">36</td></tr>
-        </tbody>
-      </table>
+      <div className="tblwrap">
+        <table className="tbl">
+          <thead><tr><th>question type</th><th className="n">answers</th><th className="n">median</th><th className="n">first look</th><th className="n">stem words</th></tr></thead>
+          <tbody>
+            <tr><td>Dx Buzzwords (clue to diagnosis)</td><td className="n">6,733</td><td className="n"><b>7.3 s</b></td><td className="n">8.5 s</td><td className="n">19</td></tr>
+            <tr><td>Buzzwords (one-line recall)</td><td className="n">93,588</td><td className="n"><b>8.5 s</b></td><td className="n">9.7 s</td><td className="n">14</td></tr>
+            <tr><td>Visual Dx (image)</td><td className="n">11,008</td><td className="n"><b>9.7 s</b></td><td className="n">12.8 s</td><td className="n">21</td></tr>
+            <tr><td>CK Gold (vignette)</td><td className="n">213,725</td><td className="n"><b>16.2 s</b></td><td className="n">18.8 s</td><td className="n">41</td></tr>
+            <tr><td>NBME Practice (vignette)</td><td className="n">3,810</td><td className="n"><b>16.7 s</b></td><td className="n">20.7 s</td><td className="n">77</td></tr>
+            <tr className="hi"><td>Next Best Step (management)</td><td className="n">121,711</td><td className="n"><b>18.3 s</b></td><td className="n">21.1 s</td><td className="n">36</td></tr>
+          </tbody>
+        </table>
+      </div>
       <p>The slowest kind is the management question, Next Best Step at 18.3 seconds, slower than full CK Gold vignettes at 16.2 even though its stems are shorter (36 words against 41). Every type runs far under the exam&apos;s 90 seconds, which says more about how short these questions are than about anyone&apos;s pace. From May 2026 the exam runs in sixteen 30-minute blocks of no more than 20 questions, so 90 seconds a question is the floor of what you get on average.</p>
 
       <h2>6. What did not survive</h2>

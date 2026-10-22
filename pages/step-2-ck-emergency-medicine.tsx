@@ -6,9 +6,11 @@
 // off the medicine before this ships.
 // No em or en dashes anywhere in the copy (site rule).
 import { Fragment } from 'react';
+import type { GetStaticProps } from 'next';
 import Link from 'next/link';
 import LabLayout from '../components/LabLayout';
 import { appStoreUrl, track, referrerHost } from '../lib/analytics';
+import { publishedEntries } from '../lib/pathways/data';
 
 const CAMPAIGN = 'article_ed_next_best_step';
 const PUBLISHED = '2026-10-22';
@@ -16,6 +18,8 @@ const PATH = '/step-2-ck-emergency-medicine';
 
 type Presentation = {
   id: string;
+  /** The /pathways/<slug> article this card condenses. */
+  pathway: string;
   name: string;
   first: string;
   steps: string[];
@@ -31,6 +35,7 @@ const GROUPS: Group[] = [
     items: [
       {
         id: 'chest-pain',
+        pathway: 'chest-pain',
         name: 'Chest pain',
         first: 'A 12-lead ECG within 10 minutes of first contact, with the pressure in both arms. Everything after it forks on that tracing.',
         steps: [
@@ -45,6 +50,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'palpitations',
+        pathway: 'palpitations',
         name: 'Palpitations and arrhythmia',
         first: 'Monitor, vitals and a 12-lead ECG. A tachyarrhythmia causing shock or ischemia gets synchronized cardioversion now.',
         steps: [
@@ -58,6 +64,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'syncope',
+        pathway: 'syncope',
         name: 'Syncope',
         first: 'Monitor, vitals, a 12-lead ECG, glucose if it could be low, and the witness account.',
         steps: [
@@ -71,6 +78,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'hypertension',
+        pathway: 'hypertensive-emergency',
         name: 'Severely raised blood pressure',
         first: 'Pressures in both arms, then a screen for organ damage and pregnancy. The number alone never earns IV treatment.',
         steps: [
@@ -85,6 +93,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'leg',
+        pathway: 'leg-swelling',
         name: 'Painful or swollen leg',
         first: 'Both legs: pulses, color, warmth, sensation and movement. A cold, pale, pulseless foot gets IV heparin and an emergency vascular review.',
         steps: [
@@ -103,6 +112,7 @@ const GROUPS: Group[] = [
     items: [
       {
         id: 'dyspnea',
+        pathway: 'dyspnea',
         name: 'Shortness of breath',
         first: 'Airway, oxygen to a target saturation, monitoring and an ECG.',
         steps: [
@@ -117,6 +127,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'throat',
+        pathway: 'throat-airway',
         name: 'Sore throat, stridor and nosebleed',
         first: 'Airway first: look for drooling, stridor, distress or swelling, and keep the patient calm.',
         steps: [
@@ -136,6 +147,7 @@ const GROUPS: Group[] = [
     items: [
       {
         id: 'stroke',
+        pathway: 'stroke',
         name: 'Stroke and focal deficit',
         first: 'Airway, a fingerstick glucose and the time last known well. Low glucose is corrected before the deficit is judged.',
         steps: [
@@ -150,6 +162,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'headache',
+        pathway: 'headache',
         name: 'Headache',
         first: 'Vital signs, GCS and a neurologic exam with the fundi; time the onset and screen for red flags.',
         steps: [
@@ -164,6 +177,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'seizure',
+        pathway: 'seizure',
         name: 'Seizure',
         first: 'Airway, a fingerstick glucose and the time the seizure began.',
         steps: [
@@ -177,6 +191,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'ams',
+        pathway: 'altered-mental-status',
         name: 'Altered mental status',
         first: 'ABC, oxygen saturation, a capillary glucose, vitals and temperature.',
         steps: [
@@ -191,6 +206,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'weakness',
+        pathway: 'weakness',
         name: 'Acute weakness',
         first: 'Airway, cough and swallow, a fingerstick glucose, then bedside FVC with inspiratory and expiratory pressures if the weakness is generalized or bulbar.',
         steps: [
@@ -210,6 +226,7 @@ const GROUPS: Group[] = [
     items: [
       {
         id: 'abdominal-pain',
+        pathway: 'abdominal-pain',
         name: 'Abdominal pain',
         first: 'Vitals, IV access, blood count, lactate, electrolytes and creatinine, and a pregnancy test in anyone who could be pregnant.',
         steps: [
@@ -224,6 +241,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'gi-bleed',
+        pathway: 'gi-bleed',
         name: 'GI bleeding',
         first: 'Two large-bore IVs, crossmatch, blood count and clotting; ask about anticoagulants, antiplatelets and liver disease.',
         steps: [
@@ -238,6 +256,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'flank-pain',
+        pathway: 'flank-pain',
         name: 'Flank pain and urinary retention',
         first: 'Vitals, abdomen, bladder exam, a urine test and an hCG where relevant. An aneurysm or shock without fever goes elsewhere first.',
         steps: [
@@ -251,6 +270,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'scrotal-pain',
+        pathway: 'scrotal-pain',
         name: 'Scrotal pain',
         first: 'Vitals and a full exam of testes, groin and perineum now.',
         steps: [
@@ -264,6 +284,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'pregnancy-bleeding',
+        pathway: 'pregnancy-bleeding',
         name: 'Bleeding in pregnancy',
         first: 'Airway, breathing, pulse and vitals; IV access, blood count, group and Rh, and an hCG if not known.',
         steps: [
@@ -283,6 +304,7 @@ const GROUPS: Group[] = [
     items: [
       {
         id: 'dka',
+        pathway: 'dka-hhs',
         name: 'DKA and HHS',
         first: 'ABCs, large-bore IV access and isotonic fluid, with an ECG and a cardiac monitor.',
         steps: [
@@ -297,6 +319,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'electrolytes',
+        pathway: 'electrolytes',
         name: 'Electrolyte emergencies',
         first: 'A cardiac monitor and a 12-lead ECG, with a blood gas for the potassium.',
         steps: [
@@ -311,6 +334,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'tox',
+        pathway: 'overdose',
         name: 'Overdose and poisoning',
         first: 'ABCs, a fingerstick glucose, an ECG and a call to the poison center.',
         steps: [
@@ -325,6 +349,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'sepsis',
+        pathway: 'sepsis-fever',
         name: 'Sepsis and fever',
         first: 'Vitals and a lactate; screen with SIRS, NEWS or MEWS. qSOFA alone is not a screen.',
         steps: [
@@ -344,6 +369,7 @@ const GROUPS: Group[] = [
     items: [
       {
         id: 'trauma',
+        pathway: 'trauma',
         name: 'Major trauma',
         first: 'Stop catastrophic external bleeding, then airway with the neck held, breathing, circulation, disability and exposure.',
         steps: [
@@ -358,6 +384,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'limb-injury',
+        pathway: 'limb-injury',
         name: 'Limb injury',
         first: 'Primary survey and bleeding control, then document the nerves and pulses in both limbs.',
         steps: [
@@ -372,6 +399,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'back-pain',
+        pathway: 'back-pain',
         name: 'Back pain',
         first: 'Vitals, the abdomen for a pulsatile mass, red flags and a neurologic exam.',
         steps: [
@@ -385,6 +413,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'hot-joint',
+        pathway: 'hot-joint',
         name: 'Hot swollen joint',
         first: 'Vital signs and a sepsis screen; ask about a joint replacement and a bleeding disorder.',
         steps: [
@@ -399,6 +428,7 @@ const GROUPS: Group[] = [
       },
       {
         id: 'eye',
+        pathway: 'eye',
         name: 'Red eye and sudden vision loss',
         first: 'ABCs and the story first; a chemical splash is irrigated at once, and every other eye gets the visual acuity checked.',
         steps: [
@@ -486,7 +516,12 @@ const FAQ: { q: string; a: string }[] = [
   },
 ];
 
-function PresentationCard({ p }: { p: Presentation }) {
+/** The pathway articles this build publishes, slug to title: a card links its
+ *  full pathway only when that page exists, so a gated build never links a 404. */
+type Live = Record<string, string>;
+
+function PresentationCard({ p, live }: { p: Presentation; live: Live }) {
+  const full = live[p.pathway];
   return (
     <section className="pres" id={p.id}>
       <h3>{p.name}</h3>
@@ -496,11 +531,17 @@ function PresentationCard({ p }: { p: Presentation }) {
       </div>
       <div className="row trap"><span className="k">Trap</span><p>{p.trap}</p></div>
       <div className="src">Sources: {p.sources}</div>
+      {full && (
+        <Link className="full" href={`/pathways/${p.pathway}`}>
+          Full pathway: {full}<span aria-hidden="true">&rarr;</span>
+        </Link>
+      )}
     </section>
   );
 }
 
-export default function EdNextBestStep() {
+export default function EdNextBestStep({ live }: { live: Live }) {
+  const liveCount = Object.keys(live).length;
   const store = appStoreUrl(CAMPAIGN);
   const title = 'Step 2 CK emergency medicine: the next best step for 26 ED presentations';
   const desc = 'The first move, the fork and the trap for 26 ED chief complaints on Step 2 CK, from chest pain to scrotal pain, with doses from current guidelines.';
@@ -533,6 +574,7 @@ export default function EdNextBestStep() {
       crumb={[{ href: '/guides', label: 'Guides' }, { href: PATH, label: 'Emergency medicine' }]}
       metaTitle="Step 2 CK Emergency Medicine: Next Best Step for 26 Presentations"
       metaDesc={desc}
+      ogImage="/og/step-2-ck-emergency-medicine.png"
       campaign={CAMPAIGN}
       head={<>
         <link rel="canonical" href={`https://stepgunner.com${PATH}`} />
@@ -580,6 +622,9 @@ export default function EdNextBestStep() {
         .pres .trap { background: rgba(240,180,41,0.09); border-radius: 10px; padding: 8px 10px; margin: 10px -10px 6px; }
         .pres .trap .k { color: var(--gold); }
         .pres .src { font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint); letter-spacing: 0.2px; line-height: 1.5; margin-top: 8px; }
+        .pres .full { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-size: 14px; font-weight: 700; color: var(--blue); }
+        .pres .full:hover { text-decoration: underline; }
+        .prose .hubline { font-size: 15px; margin: 0 0 18px; }
         .tblwrap { overflow-x: auto; margin: 8px 0 24px; }
         .tbl { width: 100%; border-collapse: collapse; font-size: 14.5px; background: var(--bg-2); border: 1px solid var(--hair); border-radius: 12px; overflow: hidden; }
         .tbl th { text-align: left; font-family: var(--mono); font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); padding: 9px 12px; border-bottom: 1px solid var(--hair-strong); background: var(--bg-3); }
@@ -607,6 +652,12 @@ export default function EdNextBestStep() {
         <p>Almost every ED question on Step 2 CK asks for one of two things: the first move, or the fork that decides everything after it. The first move is nearly always the bedside test that changes the plan within minutes: an ECG for chest pain, palpitations and syncope; a fingerstick glucose for confusion, seizure, stroke and weakness; a pregnancy test for abdominal pain and bleeding.</p>
         <p>The fork is a result: ST elevation or not, potassium above or below 3.5, a TWIST score of 5 or more. And the trap is usually a test ordered when the answer was to treat. You decompress a tension pneumothorax on the signs, give antibiotics before the CT in meningitis, and give dexamethasone before the MRI in cord compression.</p>
       </div>
+
+      {liveCount > 0 && (
+        <p className="hubline">
+          Each presentation below links to its full pathway, with every fork, every order and dose, and the source behind each one. Browse all {liveCount} in <Link href="/pathways">ED pathways</Link>.
+        </p>
+      )}
 
       <section className="pitch">
         <div className="pk">Practice the next best step</div>
@@ -641,7 +692,7 @@ export default function EdNextBestStep() {
       {GROUPS.map((g, gi) => (
         <div key={g.title}>
           <h2>{g.title}</h2>
-          {g.items.map((p) => <PresentationCard key={p.id} p={p} />)}
+          {g.items.map((p) => <PresentationCard key={p.id} p={p} live={live} />)}
           {gi === 2 && (
             <section className="pitch">
               <div className="pk">The part between the algorithms</div>
@@ -691,3 +742,9 @@ export default function EdNextBestStep() {
     </LabLayout>
   );
 }
+
+// Which cards can link a full pathway: the articles this build publishes
+// (lib/pathways/data's gate), slug to title.
+export const getStaticProps: GetStaticProps = async () => ({
+  props: { live: Object.fromEntries(publishedEntries().map((e) => [e.slug, e.pathway.title])) },
+});

@@ -1,6 +1,7 @@
 {
   "id": "sepsis_fever",
   "slug": "sepsis-fever",
+  "published": true,
   "signedOff": false,
   "updated": "2026-10-22",
   "seoTitle": "Sepsis Management Algorithm: Fluids, Pressors, Antibiotics",

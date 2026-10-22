@@ -1,6 +1,7 @@
 {
   "id": "chest_pain",
   "slug": "chest-pain",
+  "published": true,
   "signedOff": false,
   "updated": "2026-10-22",
   "seoTitle": "Chest Pain Algorithm: STEMI, NSTEMI and Dissection",

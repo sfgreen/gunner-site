@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Cites, Icon, Source } from './ui';
-import type { Cite } from '../../lib/pathways/data';
+import type { Cite } from '../../lib/pathways/view';
 
 // The step's own options as a self-test. Options arrive shuffled with a stable
 // seed (the JSON keys every answer first); the first pick locks the check and

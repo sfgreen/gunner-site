@@ -12,8 +12,8 @@
 // - Bytes are copied verbatim, so `diff` against the source proves the copy.
 // - A copy whose source is gone or no longer approved is removed (git keeps it),
 //   otherwise a pathway pulled back to draft would stay on the site.
-// - The publishing gate (Danny's medical sign-off) is NOT decided here. It lives
-//   in the per-pathway editorial file, read by lib/pathways/data.ts at build.
+// - The publishing gate (`published` or `signedOff`) is NOT decided here. It
+//   lives in the per-pathway editorial file, read by lib/pathways/data.ts at build.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
