@@ -49,6 +49,7 @@ export default function ModelMissesAppUsers() {
       crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: PATH, label: 'Research' }]}
       metaTitle="Step 2 Score Predictor Accuracy: Who Our Model Misses, and Why"
       metaDesc={desc}
+      ogImage="/og/research/model-misses-app-users.png"
       campaign={CAMPAIGN}
       head={<>
         <link rel="canonical" href={`https://stepgunner.com${PATH}`} />

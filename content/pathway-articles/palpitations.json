@@ -1,0 +1,392 @@
+{
+  "id": "palpitations",
+  "slug": "palpitations",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Tachycardia Algorithm: SVT, AFib with RVR, VT and Torsades",
+  "metaDescription": "Palpitations and tachycardia for EM and IM rotations: cardioversion, modified Valsalva, adenosine, AF rate control, CHA2DS2-VASc, WPW, VT and torsades.",
+  "h1": "Palpitations and arrhythmia in the ED: the tachycardia algorithm, fork by fork",
+  "dek": "For the student on an EM or IM rotation with a racing heart on the monitor and a resident about to ask what is next: unstable or not, the 12-lead, SVT from Valsalva to adenosine, AF rate control and anticoagulation, pre-excited AF, wide-complex tachycardia, torsades, hyperkalemia, and what you will be pimped on.",
+  "jumpLinks": [
+    {
+      "label": "Unstable or not",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Read the rhythm",
+      "stage": "Result"
+    },
+    {
+      "label": "Outcomes",
+      "stage": "Outcome"
+    },
+    {
+      "label": "Treat the rhythm",
+      "stage": "Manage"
+    },
+    {
+      "label": "Find the cause",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Stroke prevention",
+      "stage": "Disposition"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Unstable means a shock.",
+      "text": "A tachyarrhythmia causing hypotension, confusion, chest pain or heart failure gets synchronized cardioversion now, sedated if awake. A stable patient gets a 12-lead first, before any drug.",
+      "refs": [
+        "triage",
+        "front",
+        "sync_cv"
+      ]
+    },
+    {
+      "lead": "Regular and narrow: Valsalva, then adenosine.",
+      "text": "Modified Valsalva first (strain, then lie flat with the legs raised); then adenosine 6 mg rapid push with a flush, 12 mg if no conversion in 1 to 2 minutes.",
+      "refs": [
+        "vagal",
+        "adenosine"
+      ]
+    },
+    {
+      "lead": "Adenosine did not hold it.",
+      "text": "IV diltiazem 0.25 mg/kg over 2 minutes, verapamil 5 to 10 mg, or an IV beta blocker, never a calcium channel blocker and a beta blocker within hours of each other, and no calcium channel blocker with hypotension or a reduced EF; cardioversion if drugs fail.",
+      "refs": [
+        "nodal"
+      ]
+    },
+    {
+      "lead": "AF: find the driver, then check the EF.",
+      "text": "Sepsis, bleeding or PE is treated first, without aggressive rate control. EF over 40%: IV diltiazem or a beta blocker. EF 40% or less: a beta blocker or digoxin, no IV diltiazem or verapamil.",
+      "refs": [
+        "af_first",
+        "af_type",
+        "af_rate",
+        "af_lowef"
+      ]
+    },
+    {
+      "lead": "Cardioversion depends on the clock.",
+      "text": "Clear onset under 48 hours, or 3 weeks of therapeutic anticoagulation: early cardioversion is an option. Over 48 hours or unknown: rate control, then 3 weeks of anticoagulation or imaging first (ESC draws the line at 24 hours). Either way, anticoagulation continues at least 4 weeks after.",
+      "refs": [
+        "af_onset",
+        "early_cv",
+        "late_af"
+      ]
+    },
+    {
+      "lead": "Anticoagulate by the score.",
+      "text": "CHA2DS2-VASc 2 or more in a man, 3 or more in a woman: a DOAC unless there is moderate to severe mitral stenosis or a mechanical valve. Aspirin is not an alternative.",
+      "refs": [
+        "af_stroke",
+        "calc:cha2ds2_vasc"
+      ]
+    },
+    {
+      "lead": "Fast, broad, irregular: no AV nodal blocker.",
+      "text": "Stable pre-excited AF gets procainamide or ibutilide, unstable a shock; adenosine, diltiazem, verapamil, beta blockers, digoxin and amiodarone can precipitate VF.",
+      "refs": [
+        "wpw"
+      ]
+    },
+    {
+      "lead": "Wide and regular: treat as VT. Twisting: magnesium.",
+      "text": "Procainamide, amiodarone or synchronized cardioversion, no verapamil or diltiazem. Torsades: magnesium sulfate 2 g IV whatever the level, and potassium to 4.5 to 5.",
+      "refs": [
+        "wct",
+        "tdp"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do first for palpitations or a tachycardia on the monitor?",
+      "intro": "Monitor, vitals and a 12-lead during the tachycardia, checking for shock, confusion, chest pain or heart failure. Instability from the rhythm means a shock now; a hyperkalemia pattern on the ECG means IV calcium now.",
+      "refs": [
+        "triage",
+        "sync_cv",
+        "hyperk"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "SVT, AF, flutter, VT or sinus: how do you read the rhythm?",
+      "intro": "The pulse and vitals sort stable from unstable; the 12-lead then names the branch: regular narrow, AF or flutter, pre-excited AF, regular wide, torsades, a hyperkalemia pattern, sinus, or normal.",
+      "refs": [
+        "front",
+        "ecg",
+        "vagal_result",
+        "adenosine_result",
+        "af_type",
+        "af_onset",
+        "af_score",
+        "sinus_cause",
+        "normal_result"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How do you treat SVT, AF with RVR, VT and torsades?",
+      "intro": "Valsalva, adenosine, then a nodal blocker for regular narrow SVT; rate control by the EF and cardioversion by the clock for AF; no nodal blocker in pre-excited AF; VT treatment for a wide regular rhythm of unclear mechanism; magnesium for torsades.",
+      "refs": [
+        "vagal",
+        "adenosine",
+        "nodal",
+        "af_lowef",
+        "af_rate",
+        "early_cv",
+        "late_af",
+        "wpw",
+        "wct",
+        "tdp"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "Sinus tachycardia, new AF or a normal ECG: what do you look for?",
+      "intro": "Sinus tachycardia is a response, so find its cause. New AF: a driver, the EF and thyroid function. A normal ECG between episodes: red flags, then ambulatory monitoring matched to how often it happens.",
+      "refs": [
+        "sinus_step",
+        "af_first",
+        "normal_step"
+      ]
+    },
+    {
+      "stage": "Disposition",
+      "heading": "Who needs anticoagulation for atrial fibrillation?",
+      "intro": "Score CHA2DS2-VASc whatever the rhythm does next: 2 or more in a man or 3 or more in a woman means anticoagulation; ESC 2024's CHA2DS2-VA drops sex.",
+      "refs": [
+        "af_stroke",
+        "calc:cha2ds2_vasc"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Where does each arrhythmia end up?",
+      "intro": "Converted SVT goes home with cardiology follow-up; AF leaves with a rate plan and a stroke-risk decision; pre-excited AF goes on to ablation; VT is admitted to find the cause.",
+      "refs": [
+        "end_svt_home",
+        "end_svt_nodal",
+        "end_af_high",
+        "end_wpw",
+        "end_vt",
+        "end_tdp",
+        "end_hyperk",
+        "end_cv"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "Before you push adenosine",
+    "items": [
+      {
+        "text": "A 12-lead recorded during the tachycardia, before any drug.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "Stable: no hypotension, altered mental status, chest pain, acute heart failure or shock.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "Regular and narrow, QRS under 120 ms; not irregular, not wide with pre-excitation.",
+        "refs": [
+          "ecg",
+          "wpw"
+        ]
+      },
+      {
+        "text": "A modified Valsalva tried first.",
+        "refs": [
+          "vagal"
+        ]
+      },
+      {
+        "text": "No bronchospasm, and no second- or third-degree AV block or sinus node disease without a working pacemaker.",
+        "refs": [
+          "adenosine"
+        ]
+      },
+      {
+        "text": "Caffeine or theophylline may need a larger dose; dipyridamole means a smaller one.",
+        "refs": [
+          "adenosine"
+        ]
+      },
+      {
+        "text": "Rapid push over 1 to 2 seconds as close to the patient as possible, a rapid saline flush, and the ECG recording.",
+        "refs": [
+          "adenosine"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the rhythm and stability, then the driver, the EF, the clock and the score. For example: 58-year-old man with hypertension and palpitations that began abruptly 18 hours ago; stable, BP 142/88, HR 134. The 12-lead shows atrial fibrillation at 134, narrow QRS, no pre-excitation. No driver: no fever, bleeding, breathlessness or chest pain; echo EF 60% with no valve disease; TSH, hemoglobin and electrolytes normal. The onset is clear and under 48 hours, so early cardioversion is an option: rate control with IV diltiazem 0.25 mg/kg over 2 minutes, or synchronized cardioversion under sedation at 150 to 200 J, with anticoagulation started before and continued at least 4 weeks after. CHA2DS2-VASc 1 for hypertension: long-term anticoagulation is reasonable and decided with him.",
+    "presentRefs": ["case:af_18h", "af_first", "af_rate", "af_onset", "early_cv", "af_stroke"],
+    "pimp": [
+      {
+        "q": "Why no adenosine in a fast, broad, irregular rhythm?",
+        "a": "If it is pre-excited AF, the accessory pathway, not the AV node, carries the rate, and adenosine and the other AV nodal blockers can precipitate VF or hemodynamic collapse.",
+        "refs": [
+          "wpw"
+        ]
+      },
+      {
+        "q": "Why does adenosine need a rapid push and a flush?",
+        "a": "It works only as a rapid bolus, given over 1 to 2 seconds as close to the patient as possible and chased with a rapid saline flush.",
+        "refs": [
+          "adenosine"
+        ]
+      },
+      {
+        "q": "What is the modified Valsalva, and how well does it work?",
+        "a": "A semi-recumbent strain for about 15 seconds, blowing into a 10 mL syringe hard enough to move the plunger, then straight to supine with the legs raised. It converted 43% against 17% for the standard strain.",
+        "refs": [
+          "vagal"
+        ]
+      },
+      {
+        "q": "Why no diltiazem in AF with an EF of 30%?",
+        "a": "IV diltiazem and verapamil are Class 3: Harm with moderate or severe LV systolic dysfunction. Beta blockers and/or digoxin control the rate there, with IV amiodarone if they fail or cannot be used.",
+        "refs": [
+          "af_lowef",
+          "case:af_lowef"
+        ]
+      },
+      {
+        "q": "When can AF be cardioverted without 3 weeks of anticoagulation first?",
+        "a": "With a clear onset under 48 hours in the US guideline and CAEP, under 24 hours in ESC 2024. The US rule still continues anticoagulation at least 4 weeks after the cardioversion.",
+        "refs": [
+          "af_onset",
+          "early_cv",
+          "late_af",
+          "end_af_low"
+        ]
+      },
+      {
+        "q": "Torsades with a normal magnesium. Still give it?",
+        "a": "Yes: magnesium sulfate 2 g IV whatever the serum level, repeated if the runs persist, with the offending drug stopped and potassium replaced to 4.5 to 5 mmol/L.",
+        "refs": [
+          "tdp"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "Adenosine before the 12-lead in a stable patient. Record the rhythm first.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "text": "Diltiazem, adenosine or amiodarone for pre-excited AF. Procainamide or ibutilide, or a shock.",
+      "refs": [
+        "wpw"
+      ]
+    },
+    {
+      "text": "Verapamil for a wide-complex tachycardia called SVT with aberrancy. Treat it as VT.",
+      "refs": [
+        "wct"
+      ]
+    },
+    {
+      "text": "Rate-controlling AF that sepsis or bleeding is driving. Treat the cause; aggressive rate control is avoided.",
+      "refs": [
+        "af_first",
+        "end_af_secondary"
+      ]
+    },
+    {
+      "text": "Cardioverting stable AF of unknown onset today. Three weeks of anticoagulation or imaging first.",
+      "refs": [
+        "late_af"
+      ]
+    },
+    {
+      "text": "Aspirin instead of anticoagulation, or stopping anticoagulation because sinus rhythm came back. The score decides.",
+      "refs": [
+        "af_stroke"
+      ]
+    },
+    {
+      "text": "Procainamide or amiodarone for torsades. Magnesium; procainamide is contraindicated and amiodarone prolongs the QT.",
+      "refs": [
+        "tdp"
+      ]
+    },
+    {
+      "text": "Sodium polystyrene sulfonate first for hyperkalemia with ECG changes. IV calcium first.",
+      "refs": [
+        "hyperk"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the adenosine dose for SVT?",
+      "a": "6 mg as a rapid IV bolus over 1 to 2 seconds, as close to the patient as possible, chased with a rapid saline flush. If there is no conversion within 1 to 2 minutes, 12 mg, which the US label allows once more (ESC adds 18 mg). Try a modified Valsalva first, and avoid adenosine with bronchospasm or second- or third-degree AV block.",
+      "refs": [
+        "adenosine",
+        "vagal"
+      ]
+    },
+    {
+      "q": "How do you rate control AF with RVR?",
+      "a": "First look for a driver such as sepsis, bleeding or PE, and treat that instead. With an EF over 40%: IV diltiazem 0.25 mg/kg over 2 minutes (0.35 mg/kg after 15 minutes) or IV metoprolol 2.5 to 5 mg, up to 3 doses. With an EF of 40% or less: a beta blocker or digoxin, never IV diltiazem or verapamil. Aim for a resting rate under 100 to 110.",
+      "refs": [
+        "af_first",
+        "af_rate",
+        "af_lowef"
+      ]
+    },
+    {
+      "q": "When can you cardiovert atrial fibrillation?",
+      "a": "At once when it is causing instability. Otherwise when the onset is clearly under 48 hours (24 in ESC 2024) or after 3 weeks of uninterrupted therapeutic anticoagulation; if neither, imaging to exclude intracardiac thrombus first. Anticoagulation continues at least 4 weeks afterward, then by stroke risk. Electrical cardioversion for AF starts at 150 to 200 J.",
+      "refs": [
+        "sync_cv",
+        "af_onset",
+        "early_cv",
+        "late_af"
+      ]
+    },
+    {
+      "q": "What is the CHA2DS2-VASc cutoff for anticoagulation?",
+      "a": "2 or more in a man or 3 or more in a woman: anticoagulate, with a DOAC over warfarin unless there is moderate to severe mitral stenosis or a mechanical valve. 1 in a man or 2 in a woman: reasonable. ESC 2024 uses CHA2DS2-VA without sex: recommended at 2 or more, considered at 1. Aspirin is not an alternative, and flutter is scored the same way.",
+      "refs": [
+        "af_stroke",
+        "calc:cha2ds2_vasc"
+      ]
+    },
+    {
+      "q": "How do you treat a stable wide-complex tachycardia?",
+      "a": "As VT when the mechanism is not certain: IV procainamide or IV amiodarone (150 mg over 10 minutes, then an infusion), or synchronized cardioversion under sedation, which ESC makes first-line when sedation is safe; US exam answers usually pick a drug first. Never verapamil or diltiazem. Adenosine only if SVT is likely and the resting ECG shows no pre-excitation.",
+      "refs": [
+        "wct"
+      ]
+    },
+    {
+      "q": "What is the first treatment for hyperkalemia with ECG changes?",
+      "a": "IV calcium, which improves the ECG within about 3 minutes but does not lower the potassium: calcium gluconate 1 g in the US consensus, 6.8 mmol in the UK guideline, repeated if there is no effect in 5 to 10 minutes. Then insulin with glucose and nebulized albuterol, glucose checks for up to 12 hours, and removal, by dialysis in a hemodialysis patient.",
+      "refs": [
+        "hyperk"
+      ]
+    }
+  ],
+  "related": [
+    "syncope",
+    "electrolytes",
+    "dyspnea",
+    "chest_pain"
+  ]
+}

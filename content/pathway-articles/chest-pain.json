@@ -1,0 +1,357 @@
+{
+  "id": "chest_pain",
+  "slug": "chest-pain",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Chest Pain Algorithm: STEMI, NSTEMI and Dissection",
+  "metaDescription": "Chest pain in the ED: ECG in 10 minutes, STEMI time targets, PCI or tenecteplase, hs-troponin and the HEART score, NSTEMI heparin, and aortic dissection.",
+  "h1": "Chest pain in the ED: the ECG-first algorithm, fork by fork",
+  "dek": "For the student on an EM, IM or cardiology rotation with chest pain in the next bay and a resident asking what is next. The 10-minute ECG, the STEMI clock, troponin and the HEART score, the dissection that must never get a lytic, and the doses you will be asked.",
+  "jumpLinks": [
+    {
+      "label": "First move",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Right-sided leads",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Troponin and HEART",
+      "stage": "Labs"
+    },
+    {
+      "label": "Dissection",
+      "stage": "Imaging"
+    },
+    {
+      "label": "PCI or lysis",
+      "stage": "Reperfuse"
+    },
+    {
+      "label": "Doses",
+      "stage": "Manage"
+    },
+    {
+      "label": "Discharge",
+      "stage": "Disposition"
+    },
+    {
+      "label": "Negative troponin, higher risk",
+      "stage": "Outcome"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "ECG in 10 minutes.",
+      "text": "A 12-lead within 10 minutes of first medical contact, with the blood pressure in both arms while it prints.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "lead": "Inferior STEMI: right-sided leads first.",
+      "text": "V4R before any nitroglycerin; right ventricular involvement means no nitroglycerin.",
+      "refs": [
+        "rv_leads",
+        "rv_check"
+      ]
+    },
+    {
+      "lead": "The STEMI clock: 90 or 120 minutes.",
+      "text": "Primary PCI within 90 minutes of first contact, or 120 with a transfer. Beyond 120 minutes with symptoms under 12 hours and no contraindication: fibrinolysis now, then transfer for angiography at 2 to 24 hours.",
+      "refs": [
+        "pci",
+        "lytic",
+        "pci_access"
+      ]
+    },
+    {
+      "lead": "No prasugrel after a stroke or TIA.",
+      "text": "Aspirin 162 to 325 mg chewed plus ticagrelor 180 mg, heparin for PCI, and a high-intensity statin.",
+      "refs": [
+        "pci_meds"
+      ]
+    },
+    {
+      "lead": "No ST elevation: troponin twice.",
+      "text": "hs-troponin now and at 1 to 2 hours. Fibrinolysis without ST elevation brings harm, except a true posterior STEMI found on V7 to V9.",
+      "refs": [
+        "troponin"
+      ]
+    },
+    {
+      "lead": "NSTEMI: heparin by weight, angiography by risk.",
+      "text": "60 IU/kg bolus (max 4,000) then 12 IU/kg/h (max 1,000); angiography under 2 hours if unstable, under 24 if high risk, under 72 if intermediate.",
+      "refs": [
+        "nste_meds"
+      ]
+    },
+    {
+      "lead": "Low HEART, negative troponins: home.",
+      "text": "A HEART score of 3 or less with both troponins below the 99th percentile marks a 30-day risk under 1%: home without urgent cardiac testing (the guideline's Table 6 writes the cut as under 3).",
+      "refs": [
+        "heart",
+        "calc:heart"
+      ]
+    },
+    {
+      "lead": "Dissection: CT angiography, beta blocker first, never a lytic.",
+      "text": "Heart rate 60 to 80 first, then a vasodilator to a systolic under 120; type A goes to emergency surgery.",
+      "refs": [
+        "cta",
+        "aas_meds",
+        "aas_type"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do first for chest pain in the ED?",
+      "intro": "A 12-lead ECG within 10 minutes of first contact, and the blood pressure in both arms while it prints. The chest x-ray does not come before the ECG.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Which ECG and troponin findings decide the chest pain route?",
+      "intro": "ST elevation and its territory, a pericarditis pattern and the features of an aortic syndrome come off the first ECG; the troponin and the HEART score sort everyone else.",
+      "refs": [
+        "first_look",
+        "pci_access",
+        "trop_result"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "Why get right-sided leads in an inferior STEMI?",
+      "intro": "V4R looks for right ventricular involvement before any nitroglycerin, because that infarct drops its pressure on nitrates.",
+      "refs": [
+        "rv_leads",
+        "rv_check"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "How do you use high-sensitivity troponin and the HEART score?",
+      "intro": "No ST elevation means an hs-troponin now and again at 1 to 2 hours, read against the assay's own thresholds, with the HEART score sorting the negatives.",
+      "refs": [
+        "troponin",
+        "calc:heart"
+      ]
+    },
+    {
+      "stage": "Imaging",
+      "heading": "How do you rule out aortic dissection?",
+      "intro": "CT angiography of the chest, abdomen and pelvis. A chest x-ray cannot rule it out, and a D-dimer does not come first.",
+      "refs": [
+        "cta"
+      ]
+    },
+    {
+      "stage": "Reperfuse",
+      "heading": "PCI or fibrinolysis: what are the STEMI time targets?",
+      "intro": "Primary PCI within 90 minutes of first contact, or 120 with a transfer. Beyond 120 minutes with symptoms under 12 hours and no contraindication, fibrinolysis now and then transfer.",
+      "refs": [
+        "pci",
+        "lytic",
+        "pci_access"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "Which drugs and doses for STEMI, NSTEMI and dissection?",
+      "intro": "Aspirin and a P2Y12 inhibitor, never prasugrel after a stroke or TIA; weight-based heparin; a high-intensity statin; tenecteplase by weight when lysing; and in dissection a beta blocker before any vasodilator.",
+      "refs": [
+        "pci_meds",
+        "lytic_dose",
+        "nste_meds",
+        "aas_meds"
+      ]
+    },
+    {
+      "stage": "Disposition",
+      "heading": "When can a chest pain patient go home?",
+      "intro": "A HEART score of 3 or less with troponins below the 99th percentile, or one undetectable hs-troponin with symptoms that began 3 or more hours before arrival and a normal ECG. This pathway does not handle pulmonary embolism: weigh it by pretest probability before discharge.",
+      "refs": [
+        "heart"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "What if the troponin is negative but the risk is not low?",
+      "intro": "HEART 4 to 6 is intermediate risk, where further testing may be indicated; HEART 7 or more makes invasive coronary angiography the recommendation. A pericarditis pattern gets no cath lab and no lytic.",
+      "refs": [
+        "end_intermediate",
+        "end_high_risk",
+        "end_mimic"
+      ]
+    }
+  ],
+  "checklist": null,
+  "rounds": {
+    "present": "Lead with the ECG and the clock. One-liner: 58-year-old man with 40 minutes of substernal pressure radiating to the left arm, diaphoretic, with an inferior STEMI: 2 mm ST elevation in II, III and aVF on the first ECG. Arm pressures equal and no back pain, so no features of an aortic syndrome. V4R shows 1 mm ST elevation, so the right ventricle is involved and he gets no nitroglycerin. Cath lab on site, so primary PCI with a first-contact-to-device goal of 90 minutes. Meds: aspirin 162 to 325 mg chewed, ticagrelor 180 mg, unfractionated heparin 70 to 100 U/kg for PCI to an ACT of 250 to 300 seconds, and a high-intensity statin.",
+    "presentRefs": ["case:inferior_rv", "first_look", "rv_leads", "rv_check", "pci_access", "pci", "pci_meds"],
+    "pimp": [
+      {
+        "q": "Why right-sided leads before nitroglycerin in an inferior STEMI?",
+        "a": "V4R looks for right ventricular involvement, the inferior STEMI whose pressure falls on nitroglycerin; with the right ventricle involved, nitroglycerin is avoided.",
+        "refs": [
+          "rv_leads",
+          "rv_check"
+        ]
+      },
+      {
+        "q": "What is the first-contact-to-device target, and when do you lyse instead?",
+        "a": "Primary PCI within 90 minutes of first medical contact, or 120 with a transfer. If PCI is more than 120 minutes away, symptoms began under 12 hours ago and nothing contraindicates it, give a fibrinolytic and transfer at once.",
+        "refs": [
+          "pci",
+          "lytic"
+        ]
+      },
+      {
+        "q": "Which P2Y12 inhibitor is contraindicated after a stroke or TIA?",
+        "a": "Prasugrel: Class 3, Harm. Ticagrelor 180 mg is the partner for aspirin instead when PCI is the plan.",
+        "refs": [
+          "pci_meds"
+        ]
+      },
+      {
+        "q": "Tenecteplase dose for a 72 kg patient?",
+        "a": "40 mg as a single IV bolus. The bands run 30 mg under 60 kg, 35 mg for 60 to 69, 40 mg for 70 to 79, 45 mg for 80 to 89 and 50 mg for 90 kg and over.",
+        "refs": [
+          "lytic_dose"
+        ]
+      },
+      {
+        "q": "Does fibrinolysis help without ST elevation?",
+        "a": "No: it brings harm and no benefit, except in a true posterior STEMI, where ST depression in V1 to V3 calls for V7 to V9.",
+        "refs": [
+          "troponin"
+        ]
+      },
+      {
+        "q": "Why a beta blocker before a vasodilator in aortic dissection?",
+        "a": "Rate first, then pressure: a vasodilator is avoided as the initial drug and added only after the beta blocker, aiming for a heart rate of 60 to 80 and a systolic under 120.",
+        "refs": [
+          "aas_meds"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "Waiting for the troponin before the ECG. The ECG within 10 minutes decides the route.",
+      "refs": [
+        "triage",
+        "troponin"
+      ]
+    },
+    {
+      "text": "Nitroglycerin for an inferior STEMI before V4R. Right ventricular involvement means no nitroglycerin.",
+      "refs": [
+        "rv_leads",
+        "rv_check"
+      ]
+    },
+    {
+      "text": "Fibrinolysis for ST depression. It brings harm and no benefit, unless posterior leads show a true posterior STEMI.",
+      "refs": [
+        "troponin"
+      ]
+    },
+    {
+      "text": "Transferring for PCI whatever the delay. Over 120 minutes, with symptoms under 12 hours and no contraindication, lyse first, then transfer.",
+      "refs": [
+        "lytic"
+      ]
+    },
+    {
+      "text": "Prasugrel after a prior stroke or TIA. Class 3, Harm.",
+      "refs": [
+        "pci_meds"
+      ]
+    },
+    {
+      "text": "A chest x-ray or a D-dimer to rule out dissection. CT angiography; the film is neither sensitive nor specific enough.",
+      "refs": [
+        "cta"
+      ]
+    },
+    {
+      "text": "A heparin drip or a lytic in suspected dissection. A suspected dissection is an absolute contraindication to fibrinolysis, and the first drug is an IV beta blocker.",
+      "refs": [
+        "cta",
+        "aas_meds"
+      ]
+    },
+    {
+      "text": "The cath lab for diffuse ST elevation with PR depression. That is pericarditis, a STEMI mimic: no cath lab, no fibrinolytic.",
+      "refs": [
+        "first_look",
+        "end_mimic"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the first step for chest pain in the ED?",
+      "a": "A 12-lead ECG within 10 minutes of first medical contact, with the blood pressure taken in both arms while it prints. The ECG sorts ST elevation from everything else, and an arm pressure gap or pulse deficit with abrupt severe pain points to an aortic syndrome. A chest x-ray helps look for other causes but does not come before the ECG.",
+      "refs": [
+        "triage",
+        "first_look"
+      ]
+    },
+    {
+      "q": "What is the HEART score and how is it used?",
+      "a": "Five items scored 0 to 2: history, ECG, age, risk factors and troponin. 0 to 3 is low risk, 4 to 6 moderate and 7 to 10 high. With troponins below the 99th percentile, 3 or less means home without urgent cardiac testing, 4 to 6 may need further testing, and 7 or more makes invasive coronary angiography the recommendation even with a negative troponin.",
+      "refs": [
+        "calc:heart",
+        "trop_result",
+        "heart",
+        "end_intermediate",
+        "end_high_risk"
+      ]
+    },
+    {
+      "q": "When is fibrinolysis given instead of PCI?",
+      "a": "When primary PCI cannot happen within 120 minutes of first medical contact, symptoms began under 12 hours ago and there is no contraindication, a suspected aortic dissection being an absolute one. Tenecteplase is a single weight-based IV bolus, given with aspirin, clopidogrel and enoxaparin, then immediate transfer for angiography at 2 to 24 hours, or rescue PCI if reperfusion fails.",
+      "refs": [
+        "lytic",
+        "lytic_dose"
+      ]
+    },
+    {
+      "q": "What is the heparin dose for NSTEMI?",
+      "a": "Unfractionated heparin 60 IU/kg as a bolus, maximum 4,000 units, then 12 IU/kg/h, maximum 1,000 units an hour, aiming for an aPTT of 60 to 80 seconds. When no early invasive approach is planned, enoxaparin 1 mg/kg every 12 hours, or every 24 hours with a CrCl under 30, or fondaparinux are the alternatives.",
+      "refs": [
+        "nste_meds"
+      ]
+    },
+    {
+      "q": "How fast should an NSTEMI go to the cath lab?",
+      "a": "By risk: under 2 hours if unstable with shock, heart failure, refractory angina, VT or VF; under 24 hours if high risk, such as a GRACE over 140, a steeply rising troponin despite treatment or ongoing dynamic ST changes; and before discharge, under 72 hours, at intermediate risk. With angiography within 24 hours, the ticagrelor load waits for PCI.",
+      "refs": [
+        "nste_meds"
+      ]
+    },
+    {
+      "q": "How is acute aortic dissection managed in the ED?",
+      "a": "CT angiography of the chest, abdomen and pelvis confirms it. Then an IV beta blocker such as esmolol, metoprolol or labetalol to a heart rate of 60 to 80, and only then a vasodilator to a systolic under 120, with an arterial line in the ICU and IV opioids for pain. Type A goes to emergency surgery, and fibrinolysis is absolutely contraindicated.",
+      "refs": [
+        "cta",
+        "aas_meds",
+        "aas_type"
+      ]
+    }
+  ],
+  "related": [
+    "syncope",
+    "dyspnea",
+    "htn",
+    "palpitations"
+  ]
+}

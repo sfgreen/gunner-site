@@ -1,0 +1,411 @@
+{
+  "id": "dka_hhs",
+  "slug": "dka-hhs",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "DKA Management Algorithm: Fluids, Potassium, Insulin",
+  "metaDescription": "DKA and HHS management for your EM or IM rotation: fluid first, potassium before insulin, the 0.1 units/kg/h drip, dextrose under 250, and resolution.",
+  "h1": "DKA and HHS management: the ED algorithm, fork by fork",
+  "dek": "For the student on an EM or IM rotation with a DKA admission and a resident about to ask what is next: the criteria, the order set, how to run the drip hour by hour, the bedside math, and what you will be pimped on. Every dose comes with the line of the guideline it is from.",
+  "jumpLinks": [
+    {
+      "label": "First moves",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Criteria",
+      "stage": "Labs"
+    },
+    {
+      "label": "Trigger",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Fluids, potassium, insulin",
+      "stage": "Manage"
+    },
+    {
+      "label": "Resolution",
+      "stage": "Disposition"
+    },
+    {
+      "label": "Not DKA",
+      "stage": "Outcome"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Fluid first.",
+      "text": "0.9% saline or a balanced crystalloid at 500 to 1,000 mL/h for the first 2 to 4 hours (JBDS: 1 L in the first hour); smaller boluses in older adults, heart failure or dialysis. Insulin waits until fluid is running.",
+      "refs": [
+        "triage",
+        "fluids"
+      ]
+    },
+    {
+      "lead": "Potassium before insulin.",
+      "text": "Under 3.5: hold the insulin and give IV potassium until the level is above 3.5 (consensus; JBDS gives more potassium with senior review and does not state a hold). 3.5 to 5.0 and passing urine: insulin with potassium in every liter. Over 5.0: insulin, no potassium yet.",
+      "refs": [
+        "k",
+        "k_low",
+        "k_mid",
+        "k_high",
+        "calc:k_bands"
+      ]
+    },
+    {
+      "lead": "Fixed-rate insulin.",
+      "text": "Short-acting insulin at 0.1 units/kg/h IV. A 0.1 units/kg bolus only if the infusion will be delayed; usual basal insulin continues.",
+      "refs": [
+        "insulin"
+      ]
+    },
+    {
+      "lead": "Dextrose, not a stop.",
+      "text": "Once glucose is under 250 mg/dL with ketones still up, add 5 to 10% dextrose and drop insulin to 0.05 units/kg/h. Stopping the infusion for a normal glucose leaves the ketoacidosis untreated.",
+      "refs": [
+        "glu",
+        "dex",
+        "insulin"
+      ]
+    },
+    {
+      "lead": "Bicarbonate is rare.",
+      "text": "The consensus considers it only for a venous pH under 7.0, and only to get above 7.0. JBDS does not recommend it.",
+      "refs": [
+        "acid",
+        "bicarb",
+        "no_bicarb"
+      ]
+    },
+    {
+      "lead": "Resolution is chemical.",
+      "text": "Ketones under 0.6, pH 7.3 or more, bicarbonate 18 or more. Start subcutaneous insulin 1 to 2 hours before the drip stops (JBDS: stop it 30 to 60 minutes after short-acting insulin with a meal).",
+      "refs": [
+        "resolve",
+        "transition"
+      ]
+    },
+    {
+      "lead": "HHS is slower.",
+      "text": "Saline first; insulin at 0.05 units/kg/h once the glucose stops falling on fluid (JBDS); osmolality down 3 to 8 an hour; prophylactic LMWH unless contraindicated.",
+      "refs": [
+        "hhs_fluid",
+        "hhs_glu",
+        "hhs_insulin",
+        "hhs_osm",
+        "hhs_vte"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do first in suspected DKA?",
+      "intro": "ABCs, large-bore access, 0.9% saline, an ECG and a cardiac monitor. Shock gets repeated 500 mL boluses; a patient who cannot protect the airway gets critical care.",
+      "refs": [
+        "triage",
+        "front",
+        "shock",
+        "airway"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Which numbers decide each DKA fork?",
+      "intro": "Potassium decides when insulin starts, venous pH decides bicarbonate, glucose under 250 decides dextrose, and in HHS the hourly osmolality decides the fluid.",
+      "refs": [
+        "k",
+        "acid",
+        "glu",
+        "hhs_osm"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "Which labs confirm DKA or HHS, and how severe is it?",
+      "intro": "Glucose, blood beta-hydroxybutyrate, a venous gas, electrolytes and osmolality separate DKA from HHS, mixed states and euglycemic DKA, and grade the severity.",
+      "refs": [
+        "labs",
+        "dx",
+        "k_check"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "What triggered it, and is a low bicarbonate still DKA?",
+      "intro": "Look for infection, missed insulin, MI and SGLT2 inhibitors while the labs run. Late on, with ketones under 0.6 and a pH of 7.3 or more, a low bicarbonate with a high chloride is saline, not ketoacidosis.",
+      "refs": [
+        "trigger_ask",
+        "trigger",
+        "hyperchlor"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How much fluid, potassium and insulin, and when does dextrose go in?",
+      "intro": "Fluid, then a potassium level, then the fixed-rate drip, then dextrose under 250, with bicarbonate considered only under pH 7.0. HHS runs slower: saline alone first, less insulin, and an osmolality that falls 3 to 8 an hour.",
+      "refs": [
+        "fluids",
+        "k_low",
+        "k_mid",
+        "k_high",
+        "insulin",
+        "dex",
+        "bicarb",
+        "hhs_fluid",
+        "hhs_insulin",
+        "hhs_osm"
+      ]
+    },
+    {
+      "stage": "Disposition",
+      "heading": "When is DKA resolved, and how do you come off the drip?",
+      "intro": "Severe DKA goes to ICU or high-dependency care. Resolution is chemical in DKA and holistic in HHS, and subcutaneous insulin overlaps the drip.",
+      "refs": [
+        "icu",
+        "transition",
+        "hhs_done"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "What if it is alcoholic ketoacidosis, an MI, or DKA that will not resolve?",
+      "intro": "Ketoacidosis with a normal glucose, no diabetes and heavy drinking is alcoholic ketoacidosis. An MI trigger means ICU with the chest pain pathway alongside, and DKA unresolved at 24 hours needs senior and specialist review.",
+      "refs": [
+        "end_aka",
+        "end_mi",
+        "end_unresolved",
+        "end_not_crisis"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "Running the drip: the hourly checklist",
+    "items": [
+      {
+        "text": "Every 1 to 2 hours: capillary glucose (JBDS reviews glucose and ketones hourly).",
+        "refs": [
+          "insulin",
+          "slow"
+        ]
+      },
+      {
+        "text": "2 hours after the insulin starts, then every 4 hours: potassium (JBDS: venous potassium at 60 minutes, 2 hours, then 2-hourly).",
+        "refs": [
+          "k_mid"
+        ]
+      },
+      {
+        "text": "Every 4 hours until resolution: electrolytes, phosphate, creatinine, beta-hydroxybutyrate and venous pH.",
+        "refs": [
+          "insulin"
+        ]
+      },
+      {
+        "text": "Targets: ketones falling at least 0.5 mmol/L an hour (JBDS); potassium 4 to 5; glucose 150 to 200 mg/dL once dextrose is running.",
+        "refs": [
+          "slow",
+          "k_mid",
+          "dex"
+        ]
+      },
+      {
+        "text": "Ketones not falling: check the pump, the connection and the residual volume first; if all work, raise the insulin 1 unit/h every hour until the target is met.",
+        "refs": [
+          "slow"
+        ]
+      },
+      {
+        "text": "Glucose under 70 mg/dL and nil by mouth: IV glucose at once (JBDS: 100 mL of 20% or 200 mL of 10% over 15 minutes), recheck in 10 to 15 minutes, then insulin continues at a reviewed rate with more dextrose (JBDS stops the infusion while the low is treated).",
+        "refs": [
+          "hypo"
+        ]
+      },
+      {
+        "text": "Escalate: potassium under 3.5 on the drip (more IV potassium, hourly checks, senior review of the insulin rate), a new headache or falling GCS (treat as cerebral edema at once), or no resolution by 24 hours (senior and specialist review).",
+        "refs": [
+          "hypok",
+          "cerebral",
+          "end_unresolved"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the one-liner: 24-year-old woman with type 1 diabetes and moderate DKA (venous pH 7.14, bicarbonate 11, anion gap 25, beta-hydroxybutyrate 5.1) after 2 days without insulin, hemodynamically stable. Then go problem by problem so your resident hears each fork. DKA: on the fixed-rate drip at 0.1 units/kg/h (6 units/h at 60 kg); at hour 5 the glucose is 196 with ketones 2.4, so dextrose is added and insulin is down to 0.05 units/kg/h (3 units/h), with ketones falling 0.54 an hour, on target. Potassium: 4.6 on arrival and passing urine, so potassium in every liter aiming for 4 to 5, rechecked 2 hours after the insulin started, then every 4. Acid-base: pH 7.14, so no bicarbonate (considered only under 7.0). Trigger: missed insulin; infection and ischemia screened, with no fever, clear chest and urine, and an ECG in sinus rhythm without ischemia. Disposition: resolution is ketones under 0.6, pH 7.3 or more and bicarbonate 18 or more; then her usual subcutaneous insulin, started 1 to 2 hours before the drip stops, with education, sick day rules and follow-up in 2 to 4 weeks.",
+    "presentRefs": ["case:missed_insulin", "dx", "trigger", "k_mid", "insulin", "dex", "no_bicarb", "resolve", "transition"],
+    "pimp": [
+      {
+        "q": "Why fluid before insulin?",
+        "a": "Hypotension in DKA is usually low circulating volume, and insulin before adequate fluid can cause cardiovascular collapse as water leaves the intravascular space.",
+        "refs": [
+          "shock",
+          "triage"
+        ]
+      },
+      {
+        "q": "Why check potassium before the insulin?",
+        "a": "Total body potassium is depleted even when the serum level is normal or high, and insulin drives it into cells: starting insulin on a low potassium risks life-threatening arrhythmias and respiratory muscle weakness.",
+        "refs": [
+          "k_check",
+          "k_low"
+        ]
+      },
+      {
+        "q": "Why not stop the insulin once the glucose is normal?",
+        "a": "Glucose usually falls under 250 mg/dL within 4 to 8 hours, well before the ketoacidosis resolves. Dextrose is added so the insulin can keep running until the ketones clear.",
+        "refs": [
+          "dex"
+        ]
+      },
+      {
+        "q": "Why not give bicarbonate routinely?",
+        "a": "Fluid and insulin resolve the acidosis, and bicarbonate adds hypokalemia, cerebral edema and paradoxical CNS acidosis, with no advantage for cardiac or neurologic outcomes or for recovery.",
+        "refs": [
+          "no_bicarb",
+          "bicarb"
+        ]
+      },
+      {
+        "q": "The ketones are gone but the bicarbonate is still under 18. Still DKA?",
+        "a": "Not if ketones are under 0.6 and the venous pH is 7.3 or more: large volumes of saline cause a hyperchloremic, normal anion gap acidosis in recovery. It is self-limiting, and mistaking it for DKA delays the switch to subcutaneous insulin.",
+        "refs": [
+          "hyperchlor",
+          "resolve",
+          "case:shock"
+        ]
+      },
+      {
+        "q": "Why does the sodium rise as HHS is treated?",
+        "a": "As glucose falls, water moves into cells: about 1.6 mmol/L for each 100 mg/dL fall in glucose (consensus; JBDS gives 2.4 for each 5.5 mmol/L, 99 mg/dL). That rise alone is not a reason for hypotonic fluid; it matters only if the osmolality is not falling.",
+        "refs": [
+          "hhs_na",
+          "calc:na_rise"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "Insulin before fluid. A priming insulin bolus or a bicarbonate push before the fluid is running: fluid comes first, and a bolus is only for an infusion that will be delayed.",
+      "refs": [
+        "triage",
+        "shock",
+        "insulin"
+      ]
+    },
+    {
+      "text": "Urine ketones. They underestimate early and overestimate late; blood beta-hydroxybutyrate is the test to diagnose and to follow.",
+      "refs": [
+        "labs"
+      ]
+    },
+    {
+      "text": "0.45% saline as the first fluid. Hypotonic saline is not an opening fluid in DKA, and in HHS it waits for an osmolality that stops falling despite a positive balance.",
+      "refs": [
+        "fluids",
+        "hhs_half"
+      ]
+    },
+    {
+      "text": "Starting insulin with a potassium of 3.0. Insulin drives potassium into cells and can cause life-threatening arrhythmias: potassium goes in first.",
+      "refs": [
+        "k_low",
+        "case:low_k"
+      ]
+    },
+    {
+      "text": "Bicarbonate for a venous pH of 7.14. The consensus line is under 7.0, and the goal is above 7.0, not normal.",
+      "refs": [
+        "no_bicarb",
+        "bicarb",
+        "case:missed_insulin"
+      ]
+    },
+    {
+      "text": "Stopping the insulin at hour 5 because the glucose is 196. The ketones are still 2.4: add dextrose and drop to 0.05 units/kg/h.",
+      "refs": [
+        "dex",
+        "case:missed_insulin"
+      ]
+    },
+    {
+      "text": "A CT head before mannitol or hypertonic saline when the GCS falls on treatment. Treat first; image after.",
+      "refs": [
+        "cerebral"
+      ]
+    },
+    {
+      "text": "No insulin because the glucose is 182. Euglycemic DKA is DKA: insulin plus dextrose from the start, and the SGLT2 inhibitor stops.",
+      "refs": [
+        "eu_start",
+        "case:eu_sglt2"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the first step in managing DKA?",
+      "a": "IV fluid, with ABCs, large-bore access, an ECG and cardiac monitoring. 0.9% saline or a balanced crystalloid runs at 500 to 1,000 mL/h for the first 2 to 4 hours (JBDS: 1 L in the first hour), with smaller boluses for older adults, heart failure or dialysis. Insulin starts only once fluid is running and the potassium is known.",
+      "refs": [
+        "triage",
+        "fluids",
+        "k_check"
+      ]
+    },
+    {
+      "q": "What potassium level do you need before starting insulin in DKA?",
+      "a": "Above 3.5 mmol/L in the 2024 ADA/EASD consensus text; its Figure 4 puts exactly 3.5 in the band where insulin starts. Below that, hold the insulin and give IV potassium first. JBDS gives more potassium with senior review and does not state a hold, and older US teaching (ADA 2009) held insulin under 3.3.",
+      "refs": [
+        "k_low",
+        "calc:k_bands",
+        "source:pmid:39052901"
+      ]
+    },
+    {
+      "q": "What is the insulin dose for DKA?",
+      "a": "A fixed-rate IV infusion of short-acting insulin at 0.1 units/kg/h by estimated weight: 7 units an hour at 70 kg. A 0.1 units/kg bolus is given only if the infusion will be delayed, and usual basal insulin continues. The rate drops to 0.05 units/kg/h once the glucose falls under 250 mg/dL, with dextrose added.",
+      "refs": [
+        "insulin",
+        "dex",
+        "calc:insulin_rate"
+      ]
+    },
+    {
+      "q": "When do you give bicarbonate in DKA?",
+      "a": "The 2024 consensus considers it only when the venous pH is under 7.0: 100 mmol of 8.4% in 400 mL sterile water every 2 hours until the pH is above 7.0, not normal, rechecking the potassium. JBDS does not recommend it, and ADA 2009 used pH under 6.9. At 7.0 or above, fluid and insulin clear the acidosis.",
+      "refs": [
+        "bicarb",
+        "no_bicarb",
+        "source:pmid:39052901"
+      ]
+    },
+    {
+      "q": "How do you know DKA has resolved?",
+      "a": "Ketones under 0.6 mmol/L, venous pH 7.3 or more and bicarbonate 18 or more. With those ketone and pH marks met, a low bicarbonate with a high chloride and a normal anion gap after large volumes of saline is hyperchloremic acidosis, not persistent DKA. Then subcutaneous insulin starts 1 to 2 hours before the infusion stops.",
+      "refs": [
+        "resolve",
+        "hyperchlor",
+        "transition"
+      ]
+    },
+    {
+      "q": "How is HHS treatment different from DKA?",
+      "a": "Fluid alone first, since 0.9% saline lowers the glucose and osmolality on its own: 1 L in the first hour and about half the deficit over 12 hours. Insulin is lower, 0.05 units/kg/h (0.1 when ketones are 3.0 or more), and JBDS starts it only once the glucose stops falling on fluid. Osmolality should fall 3 to 8 mOsm/kg an hour, and everyone gets prophylactic LMWH unless contraindicated.",
+      "refs": [
+        "hhs_fluid",
+        "hhs_insulin",
+        "hhs_osm",
+        "hhs_vte"
+      ]
+    }
+  ],
+  "related": [
+    "peds_vomiting",
+    "peds_breathing",
+    "electrolytes",
+    "ams"
+  ]
+}

@@ -1,0 +1,2673 @@
+{
+ "id": "pw_limb_injury",
+ "title": "Limb injury",
+ "world": "msk",
+ "synonyms": [
+  "limb injury",
+  "extremity trauma",
+  "fracture",
+  "open fracture",
+  "compartment syndrome",
+  "pulseless limb",
+  "vascular injury",
+  "dislocation",
+  "shoulder dislocation",
+  "posterior shoulder dislocation",
+  "knee dislocation",
+  "Ottawa ankle rules",
+  "Ottawa knee rule",
+  "ankle injury",
+  "scaphoid fracture",
+  "hip fracture",
+  "supracondylar fracture",
+  "Salter-Harris",
+  "growth plate fracture",
+  "non-accidental injury",
+  "child abuse fracture",
+  "tetanus prophylaxis"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:a987a9b7885d",
+   "label": "NICE NG37",
+   "title": "Fractures (complex): assessment and management",
+   "url": "https://www.nice.org.uk/guidance/ng37"
+  },
+  {
+   "docId": "url:6770dcd9eb67",
+   "label": "NICE NG38",
+   "title": "Fractures (non-complex): assessment and management",
+   "url": "https://www.nice.org.uk/guidance/ng38"
+  },
+  {
+   "docId": "url:289fecda08af",
+   "label": "NICE CG124",
+   "title": "Hip fracture: management",
+   "url": "https://www.nice.org.uk/guidance/cg124"
+  },
+  {
+   "docId": "url:77b1607e3dd6",
+   "label": "NICE CG89",
+   "title": "Child maltreatment: when to suspect maltreatment in under 18s",
+   "url": "https://www.nice.org.uk/guidance/cg89"
+  },
+  {
+   "docId": "url:a6a447031c8d",
+   "label": "BOAST open fractures 2017",
+   "title": "BOAST: Open Fractures",
+   "url": "https://www.boa.ac.uk/resource/boast-4-pdf.html"
+  },
+  {
+   "docId": "url:a7996ebb0527",
+   "label": "BOAST compartment syndrome 2025",
+   "title": "BOAST: Diagnosis and Management of Compartment Syndrome of the Extremities",
+   "url": "https://www.boa.ac.uk/resource/boast-10-pdf.html"
+  },
+  {
+   "docId": "url:9bc191c2ce0c",
+   "label": "BOAST supracondylar 2020",
+   "title": "BOAST: Supracondylar Fractures of the Humerus in Children",
+   "url": "https://www.boa.ac.uk/resource/boast-11-pdf.html"
+  },
+  {
+   "docId": "url:83a1fd76937f",
+   "label": "BOAST arterial injury 2026",
+   "title": "BOAST: Diagnosis and management of arterial injuries associated with musculoskeletal trauma",
+   "url": "https://www.boa.ac.uk/resource/diagnosis-and-management-of-arterial-injuries-associated-with-musculoskeletal-trauma.html"
+  },
+  {
+   "docId": "url:1731408a0e56",
+   "label": "ACS TQIP orthopaedic 2015",
+   "title": "ACS TQIP Best Practices in the Management of Orthopaedic Trauma",
+   "url": "https://www.facs.org/media/mkbnhqtw/ortho_guidelines.pdf"
+  },
+  {
+   "docId": "url:c3c36e196360",
+   "label": "ACR knee trauma ratings",
+   "title": "ACR Appropriateness Criteria: Acute Trauma to the Knee, ratings tables",
+   "url": "https://acsearch.acr.org/list/GetAppendix?TopicId=78&PanelName=Musculoskeletal"
+  },
+  {
+   "docId": "url:26f9de1d38ec",
+   "label": "ACR ankle trauma ratings",
+   "title": "ACR Appropriateness Criteria: Acute Trauma to the Ankle, ratings tables",
+   "url": "https://acsearch.acr.org/list/GetAppendix?TopicId=94&PanelName=Musculoskeletal"
+  },
+  {
+   "docId": "url:9380338ef7a7",
+   "label": "ACR hand and wrist ratings",
+   "title": "ACR Appropriateness Criteria: Acute Hand and Wrist Trauma, ratings tables",
+   "url": "https://acsearch.acr.org/list/GetAppendix?TopicId=77&PanelName=Musculoskeletal"
+  },
+  {
+   "docId": "url:2867dc01ef0d",
+   "label": "ACR acute hip pain ratings",
+   "title": "ACR Appropriateness Criteria: Acute Hip Pain, ratings tables",
+   "url": "https://acsearch.acr.org/list/GetAppendix?TopicId=189&PanelName=Musculoskeletal"
+  },
+  {
+   "docId": "url:4841956df118",
+   "label": "ACR acute shoulder pain ratings",
+   "title": "ACR Appropriateness Criteria: Acute Shoulder Pain, ratings tables",
+   "url": "https://acsearch.acr.org/list/GetAppendix?TopicId=91&PanelName=Musculoskeletal"
+  },
+  {
+   "docId": "url:aa07391974b8",
+   "label": "ACR suspected abuse ratings",
+   "title": "ACR Appropriateness Criteria: Suspected Physical Abuse, Child, ratings tables",
+   "url": "https://acsearch.acr.org/list/GetAppendix?TopicId=101&PanelName=Pediatric"
+  },
+  {
+   "docId": "pmid:29702631",
+   "label": "ACIP 2018",
+   "title": "Prevention of Pertussis, Tetanus, and Diphtheria with Vaccines in the United States: Recommendations of the Advisory Committee on Immunization Practices (ACIP)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29702631/"
+  },
+  {
+   "docId": "pmid:31971933",
+   "label": "ACIP 2020",
+   "title": "Use of Tetanus Toxoid, Reduced Diphtheria Toxoid, and Acellular Pertussis Vaccines: Updated Recommendations of the Advisory Committee on Immunization Practices, United States, 2019",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31971933/"
+  },
+  {
+   "docId": "pmid:12595378",
+   "label": "BMJ 2003 Ottawa ankle",
+   "title": "Accuracy of Ottawa ankle rules to exclude fractures of the ankle and mid-foot: systematic review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/12595378/"
+  },
+  {
+   "docId": "pmid:37215241",
+   "label": "Ottawa knee review 2023",
+   "title": "Diagnostic Accuracy of Ottawa Knee Rule for Diagnosis of Fracture in Patients with Knee Trauma; a Systematic Review and Meta-analysis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37215241/"
+  },
+  {
+   "docId": "pmid:27582981",
+   "label": "BESS/BOA 2015",
+   "title": "BESS/BOA Patient Care Pathways: Traumatic anterior shoulder instability",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27582981/"
+  },
+  {
+   "docId": "pmid:42573533",
+   "label": "Dutch shoulder guideline 2026",
+   "title": "Clinical practice on treatment of primary traumatic anterior shoulder dislocation: a multidisciplinary guideline",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42573533/"
+  },
+  {
+   "docId": "pmid:29592987",
+   "label": "BMJ Case Rep 2018",
+   "title": "Seizure-induced unilateral posterior dislocation of the shoulder: a diagnosis not to be missed",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29592987/"
+  },
+  {
+   "docId": "pmid:28321343",
+   "label": "Case Rep Emerg Med 2017",
+   "title": "Knee Dislocation: A Case Report, Diagnostic Vascular Work-Up, and Literature Review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28321343/"
+  },
+  {
+   "docId": "pmid:31362557",
+   "label": "Bone Joint J 2019",
+   "title": "Clinical and cost implications of using immediate MRI in the management of patients with a suspected scaphoid fracture and negative radiographs: results from the SMaRT trial",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31362557/"
+  },
+  {
+   "docId": "pmid:20414381",
+   "label": "Int J Emerg Med 2010",
+   "title": "Initial management of potential occult scaphoid fracture in Australasia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20414381/"
+  },
+  {
+   "docId": "pmid:29581164",
+   "label": "CMAJ 2018",
+   "title": "Low-risk ankle injuries in children",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29581164/"
+  },
+  {
+   "docId": "pmid:26320769",
+   "label": "Ann R Coll Surg Engl 2015",
+   "title": "An aide-memoire for the Salter-Harris classification of paediatric growth plate fractures",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26320769/"
+  },
+  {
+   "docId": "pmid:25067973",
+   "label": "Open Orthop J 2014 compartment review",
+   "title": "The Pathophysiology, Diagnosis and Current Management of Acute Compartment Syndrome",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25067973/"
+  },
+  {
+   "docId": "pmid:42064242",
+   "label": "Front Surg 2026",
+   "title": "Reverse shoulder arthroplasty following a diagnosis of bilateral posterior shoulder dislocation secondary to electric shock: a case report and literature review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42064242/"
+  },
+  {
+   "docId": "pmid:28846257",
+   "label": "StatPearls: Acute Compartment Syndrome",
+   "title": "Acute Compartment Syndrome (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846257/"
+  }
+ ],
+ "differential": [
+  "Arterial injury",
+  "Open fracture",
+  "Compartment syndrome",
+  "Shoulder dislocation",
+  "Knee dislocation",
+  "Ankle fracture",
+  "Ankle sprain",
+  "Midfoot fracture",
+  "Knee fracture",
+  "Scaphoid fracture",
+  "Hip fracture",
+  "Supracondylar fracture",
+  "Non-accidental injury"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Limb injury in the ED. First?",
+   "options": [
+    "Primary survey, stop the bleeding, then document both limbs' nerves and pulses",
+    "X-ray the limb first, then examine it once the films are back from radiology",
+    "Check capillary refill alone; a brisk refill excludes a vascular injury",
+    "Doppler the distal pulse; a signal excludes a vascular injury"
+   ],
+   "answer": 0,
+   "chainStep": "Primary survey; control bleeding with direct pressure, packing or a tourniquet; document nerves, motor grade and pulses in both limbs, timed; analgesia by severity",
+   "why": "Treat the patient before the limb: the primary survey comes first, and bleeding is controlled at once by direct pressure, wound packing or a tourniquet as distal as possible, never blind clamping. Then document, for both limbs, which nerves and pulses were checked and when, with sensibility and an MRC motor grade, and time every repeat. Hard signs (no palpable pulse, continued bleeding, an expanding haematoma) diagnose a vascular injury; capillary return or a Doppler signal cannot exclude one.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "url:83a1fd76937f",
+     "where": "Emergency clinical care"
+    },
+    {
+     "docId": "url:a987a9b7885d",
+     "where": "1.2.1, 1.2.2, 1.3.7"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Haemorrhage control",
+     "dose": "Direct pressure, wound packing, or a tourniquet applied as distally as possible; no blind clamping",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:83a1fd76937f",
+       "where": "Emergency clinical care"
+      }
+     ]
+    },
+    {
+     "item": "Neurovascular record",
+     "dose": "Both limbs: nerves tested and when, sensibility, MRC motor grade, pulses and when; time every repeat",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a987a9b7885d",
+       "where": "1.3.7"
+      }
+     ]
+    },
+    {
+     "item": "Analgesia, adult arm or lower-leg long-bone fracture",
+     "dose": "Mild: oral acetaminophen (paracetamol). Moderate: oral acetaminophen and codeine. Severe: IV acetaminophen with IV morphine titrated to effect. IV opioids with caution, and no NSAIDs, in frail or older adults. NSAIDs may supplement, except in frail or older adults",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:6770dcd9eb67",
+       "where": "1.1.4 to 1.1.7"
+      }
+     ]
+    },
+    {
+     "item": "Analgesia, child long-bone fracture",
+     "dose": "Mild to moderate: oral ibuprofen, acetaminophen or both. Moderate to severe: intranasal or IV opioid (IV once access is in)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:6770dcd9eb67",
+       "where": "1.1.8"
+      }
+     ]
+    },
+    {
+     "item": "Analgesic doses",
+     "dose": "No mg or mg/kg doses are stated in NG38",
+     "status": "pending"
+    }
+   ],
+   "note": "Not in this version: major trauma (a trauma pathway will follow); in children, open fractures, compartment syndrome, and pulseless limbs other than at the elbow; the hand and digits, pelvis and spine; closed long-bone shaft fractures beyond splinting and analgesia; gunshot wounds; sprain care."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Primary survey, age and the limb",
+   "outcomes": [
+    {
+     "id": "major",
+     "if": "Major trauma or unstable; shock, ongoing bleeding or other injuries",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_major",
+     "orders": [
+      {
+       "item": "Unstable with uncontrolled bleeding",
+       "dose": "Emergency resuscitation and surgery at the same time",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:83a1fd76937f",
+         "where": "Emergency clinical care"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "child",
+     "if": "Child under 16, stable; one limb injured",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "child_front"
+    },
+    {
+     "id": "pulseless",
+     "if": "Adult, no pulse below the injury; limb cold and deformed",
+     "ddx": {
+      "lead": [
+       "Arterial injury"
+      ],
+      "out": []
+     },
+     "next": "realign",
+     "orders": [
+      {
+       "item": "If the fracture is open",
+       "dose": "IV antibiotics as soon as possible and tetanus by ACIP Table 6, as on the open fracture route; wound excision immediately because of the vascular compromise",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:a6a447031c8d",
+         "where": "Standards for practice"
+        },
+        {
+         "docId": "pmid:29702631",
+         "where": "Table 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "open",
+     "if": "Adult, open fracture; a wound over the fracture, limb perfused",
+     "ddx": {
+      "lead": [
+       "Open fracture"
+      ],
+      "out": []
+     },
+     "next": "open_abx"
+    },
+    {
+     "id": "acs",
+     "if": "Adult, tense limb or pain out of proportion; compartment syndrome feared",
+     "ddx": {
+      "lead": [
+       "Compartment syndrome"
+      ],
+      "out": []
+     },
+     "next": "acs_release"
+    },
+    {
+     "id": "deform",
+     "if": "Shoulder or knee dislocation; adult, deformed, locked, or back in after going out, pulses present",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "disloc"
+    },
+    {
+     "id": "none",
+     "if": "Adult, none of these; pulses present, skin intact",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "site"
+    }
+   ]
+  },
+  {
+   "id": "realign",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "No pulse below a deformed limb. Next?",
+   "options": [
+    "Realign and splint now, then repeat the pulse check",
+    "Angiography first, then correct the deformity once it is mapped",
+    "Doppler at the foot; if there is a signal, observe",
+    "Splint it as it lies and wait for the x-rays"
+   ],
+   "answer": 0,
+   "chainStep": "Realign and splint the pulseless deformed limb now; repeat and document the arterial and nerve exam",
+   "why": "A pulseless deformed limb is realigned and splinted urgently, then the arterial exam is repeated and documented. A Doppler signal does not exclude a vascular injury. If hard signs persist once alignment is restored, the next move is surgery; NICE warns against delaying revascularization for angiography in complex fractures.",
+   "next": "realign_result",
+   "sources": [
+    {
+     "docId": "url:83a1fd76937f",
+     "where": "Emergency clinical care"
+    },
+    {
+     "docId": "url:a987a9b7885d",
+     "where": "1.2.2, 1.2.3, 1.2.5"
+    }
+   ],
+   "note": "A child's supracondylar fracture follows its own route through the child branch."
+  },
+  {
+   "id": "realign_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Pulses after realignment",
+   "outcomes": [
+    {
+     "id": "restored",
+     "if": "Pulse back, not a knee; equal to the other side, limb warm",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_restored",
+     "orders": [
+      {
+       "item": "Arterial exam",
+       "dose": "Repeat and document; a pulse that does not feel the same as the other side is a vascular injury until CT angiography shows otherwise",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:83a1fd76937f",
+         "where": "Emergency clinical care; footnote ii"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "restored_knee",
+     "if": "Knee pulse back after reduction; equal to the other side",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "knee_abi"
+    },
+    {
+     "id": "absent",
+     "if": "Still no pulse; limb cold after realignment",
+     "ddx": {
+      "lead": [
+       "Arterial injury"
+      ],
+      "out": []
+     },
+     "next": "revasc"
+    }
+   ]
+  },
+  {
+   "id": "revasc",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Realigned and splinted, still pulseless and cold. Next?",
+   "options": [
+    "Vascular and orthopedic surgery now; revascularization begun within the hour",
+    "Observe in a warm room and recheck the pulses in 4 hours",
+    "Formal catheter angiography first to map the injury, then decide on surgery",
+    "Definitive fracture fixation first, then repair the artery after"
+   ],
+   "answer": 0,
+   "chainStep": "Emergency consultant vascular and orthopedic surgery: revascularization begun within 1 hour of arrival, temporary shunt first, skeletal stabilization after reperfusion; consider fasciotomy afterward",
+   "why": "Hard signs that persist after alignment and reduction mean immediate surgical exploration: there is no safe ischaemic time, and revascularization begins within an hour of arrival. A temporary shunt restores flow first; the skeleton is reduced and stabilized right after reperfusion, before definitive vascular repair, so fixing the fracture first is backwards. BOAST recommends CT angiography whenever an arterial injury is suspected, done alongside any whole-body CT, while NICE warns against delaying revascularization for angiography in complex fractures. Fasciotomy is always considered once flow returns.",
+   "next": "end_revasc",
+   "sources": [
+    {
+     "docId": "url:a987a9b7885d",
+     "where": "1.2.3, 1.2.4, 1.2.5"
+    },
+    {
+     "docId": "url:83a1fd76937f",
+     "where": "Background; Emergency clinical care"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Revascularization",
+     "dose": "Emergency; begin within 1 hour of arrival",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:83a1fd76937f",
+       "where": "Emergency clinical care"
+      }
+     ]
+    },
+    {
+     "item": "Temporary vascular shunt",
+     "dose": "First surgical step, before skeletal stabilization and definitive vascular reconstruction (NICE: after a long-bone fracture)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a987a9b7885d",
+       "where": "1.2.4"
+      },
+      {
+       "docId": "url:83a1fd76937f",
+       "where": "Emergency clinical care"
+      }
+     ]
+    },
+    {
+     "item": "CT angiography",
+     "dose": "BOAST: recommended when an arterial injury is suspected, with any whole-body CT. NICE: do not delay revascularization for angiography in complex fractures",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:83a1fd76937f",
+       "where": "Emergency clinical care"
+      },
+      {
+       "docId": "url:a987a9b7885d",
+       "where": "1.2.5"
+      }
+     ]
+    },
+    {
+     "item": "Fasciotomy",
+     "dose": "Always consider after revascularization",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:83a1fd76937f",
+       "where": "Emergency clinical care"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "open_abx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Open fracture, limb perfused. First orders?",
+   "options": [
+    "IV antibiotics, tetanus, photo, saline-soaked dressing, then splint",
+    "Wash the wound out thoroughly in the department, then close it primarily",
+    "IV antibiotics only if the wound looks visibly contaminated",
+    "Oral antibiotics, a dressing, and fracture clinic next week"
+   ],
+   "answer": 0,
+   "chainStep": "IV antibiotics within 1 hour (cefazolin; add gram-negative cover for type III); tetanus by ACIP Table 6; photograph; saline-soaked dressing under an occlusive film; realign and splint; repeat the neurovascular exam; operative irrigation and debridement (wound excision) by orthopedic and plastic surgeons",
+   "why": "Every open fracture gets IV antibiotics as soon as possible, ideally within an hour: US trauma guidance names cefazolin for Gustilo I and II and adds gram-negative cover, such as gentamicin, for type III. Handle the wound only to remove gross contamination and to photograph it, then a saline-soaked dressing under an occlusive film; washouts outside the operating room are not indicated. Realign and splint, repeating the neurovascular exam after every manoeuvre.",
+   "next": "end_open",
+   "sources": [
+    {
+     "docId": "url:a6a447031c8d",
+     "where": "Standards for practice"
+    },
+    {
+     "docId": "url:a987a9b7885d",
+     "where": "1.2.20 to 1.2.22, 1.3.5"
+    },
+    {
+     "docId": "url:1731408a0e56",
+     "where": "Open fractures"
+    }
+   ],
+   "orders": [
+    {
+     "item": "IV antibiotics",
+     "dose": "As soon as possible, ideally within 1 hour of injury (BOAST); within 1 hour of presentation (TQIP); immediately in the ED if not yet given (NICE)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a6a447031c8d",
+       "where": "Standards for practice"
+      },
+      {
+       "docId": "url:1731408a0e56",
+       "where": "Open fractures"
+      },
+      {
+       "docId": "url:a987a9b7885d",
+       "where": "1.2.22"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotic, Gustilo I or II",
+     "dose": "First-generation cephalosporin (cefazolin)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1731408a0e56",
+       "where": "Open fractures"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotic, Gustilo III",
+     "dose": "Cefazolin plus gram-negative cover (for example, gentamicin)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1731408a0e56",
+       "where": "Open fractures"
+      }
+     ]
+    },
+    {
+     "item": "Severe contamination or impaired vascularity",
+     "dose": "Add anaerobic cover (for example, penicillin)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1731408a0e56",
+       "where": "Open fractures"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotic doses",
+     "dose": "Not stated in TQIP, BOAST or NICE; BOAST asks each network to publish an antibiotic guideline",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:a6a447031c8d",
+       "where": "Standards for practice"
+      }
+     ]
+    },
+    {
+     "item": "Tetanus, tetanus-prone wound",
+     "dose": "Soil or dirt, puncture, avulsion or crush wounds: Td or Tdap if fewer than 3 doses or the history is unknown, or 5 or more years since the last dose; TIG as well if fewer than 3 doses or unknown, in a separate syringe and site. An unknown history counts as no doses. Td or Tdap 0.5 mL IM, preferably the deltoid. HIV infection or severe immunodeficiency with a contaminated wound: TIG regardless of history.",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29702631",
+       "where": "Tetanus prophylaxis for wound management; Table 6 and footnotes; Td and Tdap dosage and administration"
+      },
+      {
+       "docId": "pmid:31971933",
+       "where": "Summary"
+      }
+     ],
+     "note": "ACIP 2018 says more than five years in its text and 5 or more years in its Table 6 footnote; only a last dose exactly 5 years ago is affected. ACIP 2020 allows Td or Tdap."
+    },
+    {
+     "item": "TIG dose",
+     "dose": "Not stated in the ACIP texts read",
+     "status": "pending"
+    },
+    {
+     "item": "Wound before surgery",
+     "dose": "Remove gross contamination and photograph only, then saline-soaked gauze under an occlusive film; no irrigation of long-bone, hindfoot or midfoot open fractures in the ED",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a6a447031c8d",
+       "where": "Standards for practice"
+      },
+      {
+       "docId": "url:a987a9b7885d",
+       "where": "1.2.20, 1.2.21, 1.3.5"
+      }
+     ]
+    },
+    {
+     "item": "Wound excision",
+     "dose": "Immediately if highly contaminated (agricultural, aquatic, sewage) or with vascular compromise; within 12 hours for high-energy fractures; within 24 hours for the rest (NICE, BOAST). TQIP: within 24 hours of presentation when possible, and the 6-hour rule is not endorsed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a987a9b7885d",
+       "where": "1.2.28"
+      },
+      {
+       "docId": "url:a6a447031c8d",
+       "where": "Standards for practice, debridement timing"
+      },
+      {
+       "docId": "url:1731408a0e56",
+       "where": "Open fractures"
+      }
+     ]
+    },
+    {
+     "item": "Definitive soft tissue cover",
+     "dose": "Within 72 hours of injury if not done at wound excision. TQIP: within 7 days when a graft or flap is needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a987a9b7885d",
+       "where": "1.2.29"
+      },
+      {
+       "docId": "url:1731408a0e56",
+       "where": "Open fractures, key messages"
+      }
+     ]
+    },
+    {
+     "item": "Destination",
+     "dose": "Long bone, hindfoot or midfoot: a centre with combined orthopedic and plastic surgery (orthoplastic) care",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a6a447031c8d",
+       "where": "Standards for practice"
+      },
+      {
+       "docId": "url:a987a9b7885d",
+       "where": "1.1.12"
+      }
+     ]
+    },
+    {
+     "item": "Tibial fracture",
+     "dose": "Stay alert for compartment syndrome for 48 hours after injury or fixation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a987a9b7885d",
+       "where": "1.2.7"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acs_release",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Tense limb or pain out of proportion; compartment syndrome is feared. First?",
+   "options": [
+    "Split casts and dressings to skin; senior review; recheck in 30 minutes",
+    "More opioid now, and reassess the leg in 4 hours",
+    "Wait for the pulse to fade before calling it compartment syndrome",
+    "MRI of the limb to confirm the diagnosis before doing anything else"
+   ],
+   "answer": 0,
+   "chainStep": "Split casts and release circumferential dressings to the skin; keep the limb at heart level (StatPearls; BOAST 2025 elevates it); urgent senior orthopedic review; reassess within 30 minutes; record analgesic doses; hourly documented checks",
+   "why": "Pain out of proportion and pain on passive stretch of the compartment's muscles are the key early findings, with paraesthesias; paralysis, pallor and pulselessness are very late and may never appear, so a pulse rules nothing out. Release circumferential dressings to expose the skin and re-evaluate within 30 minutes. On limb position the sources differ: two reviews, StatPearls among them, keep the limb at heart level because elevation reduces arterial flow further, while BOAST 2025 says to elevate it. Record every analgesic dose and rate, and document checks hourly while the limb is at risk.",
+   "next": "acs_exam",
+   "sources": [
+    {
+     "docId": "url:a7996ebb0527",
+     "where": "Background; Standards for practice"
+    },
+    {
+     "docId": "url:1731408a0e56",
+     "where": "Compartment syndrome"
+    },
+    {
+     "docId": "pmid:25067973",
+     "where": "Treatment"
+    },
+    {
+     "docId": "pmid:28846257",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Dressings and casts",
+     "dose": "Release circumferential dressings to expose the skin with the limb elevated, and re-evaluate within 30 minutes (BOAST)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a7996ebb0527",
+       "where": "Standards for practice"
+      }
+     ]
+    },
+    {
+     "item": "Limb position",
+     "dose": "At heart level, not elevated (a 2014 review and StatPearls); BOAST 2025: elevated",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:25067973",
+       "where": "Treatment: \"The limb should not be elevated and instead kept at the level of the heart so as not to decrease arterial flow any further\""
+      },
+      {
+       "docId": "pmid:28846257",
+       "where": "Treatment / Management: \"Keep the extremity at the level of the heart to prevent hypo-perfusion.\""
+      },
+      {
+       "docId": "url:a7996ebb0527",
+       "where": "Standards for practice: \"circumferential dressings released to expose the skin and the limb elevated\""
+      }
+     ],
+     "note": "BOAST 2025, the UK standard, elevates the limb; the two reviews keep it at heart level so arterial inflow is not reduced further."
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Hourly documented assessment while at risk; record the dose and rate of analgesics, especially opiates",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a7996ebb0527",
+       "where": "Standards for practice"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acs_exam",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Thirty minutes after release",
+   "outcomes": [
+    {
+     "id": "persist",
+     "if": "Signs persist; awake, reliable exam",
+     "ddx": {
+      "lead": [
+       "Compartment syndrome"
+      ],
+      "out": []
+     },
+     "next": "fasciotomy"
+    },
+    {
+     "id": "unclear",
+     "if": "Inconclusive; or the exam cannot be relied on",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "acs_pressure"
+    },
+    {
+     "id": "settled",
+     "if": "Signs settled; pain eased, passive stretch painless",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_acs_settled"
+    }
+   ]
+  },
+  {
+   "id": "acs_pressure",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "After release the signs are inconclusive, or cannot be judged. Next?",
+   "options": [
+    "Measure compartment pressures with a BP; hourly exams",
+    "Discharge once the pain score has fallen with analgesia",
+    "A single recheck of the limb in 6 hours, then decide",
+    "MRI of the limb to look for muscle oedema before deciding"
+   ],
+   "answer": 0,
+   "chainStep": "Measure pressure in every suspected compartment with a concurrent blood pressure; hourly documented exam; senior surgical review; fasciotomy if diastolic minus compartment pressure is under 30 mmHg",
+   "why": "When signs are inconclusive or the exam is impossible (impaired consciousness, a regional block), keep examining hourly, get senior surgical review, and measure every suspected compartment with a blood pressure taken at the same time. US trauma guidance diagnoses compartment syndrome when the diastolic pressure minus the compartment pressure is under 30 mmHg, then decompresses, and does not recommend absolute pressures. BOAST says a gap under 30 mmHg indicates an increased risk, that a consultant decides between decompression and further monitoring, and that urgent decompression should be considered when the absolute pressure is over 40 mmHg.",
+   "next": "acs_gap",
+   "sources": [
+    {
+     "docId": "url:a7996ebb0527",
+     "where": "Standards for practice; footnote ***"
+    },
+    {
+     "docId": "url:1731408a0e56",
+     "where": "Compartment syndrome"
+    },
+    {
+     "docId": "url:a987a9b7885d",
+     "where": "1.2.7"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Pressure gap",
+     "dose": "Diastolic minus compartment pressure under 30 mmHg: fasciotomy (TQIP); an increased risk, consultant decides (BOAST)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1731408a0e56",
+       "where": "Compartment syndrome"
+      },
+      {
+       "docId": "url:a7996ebb0527",
+       "where": "Footnote ***"
+      }
+     ]
+    },
+    {
+     "item": "Absolute pressure",
+     "dose": "BOAST: over 40 mmHg, consider urgent decompression. TQIP: absolute pressure is not recommended",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a7996ebb0527",
+       "where": "Footnote ***"
+      },
+      {
+       "docId": "url:1731408a0e56",
+       "where": "Compartment syndrome"
+      }
+     ],
+     "note": "The two sources differ here; both use the gap under 30 mmHg."
+    },
+    {
+     "item": "Continuous pressure monitoring",
+     "dose": "Consider after a tibial fracture when signs cannot be read (unconscious, nerve block); stay alert for 48 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a987a9b7885d",
+       "where": "1.2.7"
+      }
+     ]
+    },
+    {
+     "item": "Repeat exams",
+     "dose": "Every 1 to 2 hours for at least 24 to 48 hours (TQIP); hourly while at risk (BOAST)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1731408a0e56",
+       "where": "Compartment syndrome"
+      },
+      {
+       "docId": "url:a7996ebb0527",
+       "where": "Standards for practice"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acs_gap",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Pressure gap: diastolic minus compartment pressure",
+   "outcomes": [
+    {
+     "id": "low",
+     "if": "Gap under 30 mmHg; diastolic minus compartment pressure",
+     "ddx": {
+      "lead": [
+       "Compartment syndrome"
+      ],
+      "out": []
+     },
+     "next": "fasciotomy"
+    },
+    {
+     "id": "safe",
+     "if": "Gap 30 mmHg or more; keep examining",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_acs_pressure"
+    }
+   ]
+  },
+  {
+   "id": "fasciotomy",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Compartment syndrome: signs persist after release, or the pressure gap is under 30 mmHg. Next?",
+   "options": [
+    "Emergency fasciotomy of all involved compartments, left open",
+    "Observe and repeat the compartment pressures in 4 hours",
+    "One small incision over the most swollen compartment, closed after",
+    "Fix the fracture first; fasciotomy only if signs persist after"
+   ],
+   "answer": 0,
+   "chainStep": "Emergency fasciotomy of all involved compartments (two-incision, four-compartment in the leg), incisions left open, non-viable muscle debrided; plastic surgery within 24 hours; re-look within 72 hours",
+   "why": "The diagnosis is clinical in an awake patient with a reliable exam; when the exam cannot be relied on, a gap under 30 mmHg makes it in US guidance, while BOAST leaves that call to a consultant. Once it is diagnosed, immediate surgical decompression follows: early fasciotomy improves outcomes. Open every involved compartment, a two-incision four-compartment release in the leg, debride dead muscle and leave the wounds open; discuss with plastic surgery within 24 hours and re-explore within 72.",
+   "next": "end_fasciotomy",
+   "sources": [
+    {
+     "docId": "url:a7996ebb0527",
+     "where": "Standards for practice"
+    },
+    {
+     "docId": "url:1731408a0e56",
+     "where": "Compartment syndrome"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Late presentation",
+     "dose": "Delayed presentation or diagnosis carries a high surgical risk: two consultants decide, and non-operative care with renal assessment and protection is an option",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a7996ebb0527",
+       "where": "Standards for practice"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "disloc",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The deformed joint",
+   "outcomes": [
+    {
+     "id": "shoulder",
+     "if": "Shoulder; deformed, or locked after a seizure or shock",
+     "ddx": {
+      "lead": [
+       "Shoulder dislocation"
+      ],
+      "out": []
+     },
+     "next": "shoulder_prep"
+    },
+    {
+     "id": "knee",
+     "if": "Knee; tibia displaced on the femur, or grossly unstable after it went out",
+     "ddx": {
+      "lead": [
+       "Knee dislocation"
+      ],
+      "out": []
+     },
+     "next": "knee_reduce"
+    }
+   ]
+  },
+  {
+   "id": "shoulder_prep",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Deformed or locked shoulder, pulses present. Before any reduction?",
+   "options": [
+    "Document the axillary nerve and pulses; AP plus an axial view",
+    "Reduce it first, and x-ray only if the reduction attempt fails",
+    "A single AP view is enough to confirm or exclude it",
+    "Bedside ultrasound instead of x-rays to confirm the dislocation"
+   ],
+   "answer": 0,
+   "chainStep": "Document the nerve (axillary) and circulation exam before reduction; analgesia; AP plus an axial view (modified axial or scapular lateral if pain prevents it)",
+   "why": "Document the nerve and circulation exam before relocation: clinically apparent nerve injury occurs in about 13.5% of dislocations, two thirds of it axillary. Two views confirm the dislocation and its direction: the AP is obligatory, and the second should be an axial view, or a modified axial or scapular lateral if pain prevents it. A posterior dislocation, associated with seizures and electric shock, is easily missed: its signs on the AP film are unreliable, which is why the axillary view matters. Ultrasound is not a substitute for radiographs.",
+   "next": "shoulder_xr",
+   "sources": [
+    {
+     "docId": "pmid:27582981",
+     "where": "Associated injuries; Secondary care: acute dislocation"
+    },
+    {
+     "docId": "pmid:42573533",
+     "where": "Recommendations: diagnostic evaluation"
+    },
+    {
+     "docId": "pmid:29592987",
+     "where": "Background; Discussion"
+    },
+    {
+     "docId": "pmid:42064242",
+     "where": "Introduction"
+    },
+    {
+     "docId": "url:4841956df118",
+     "where": "Variant 1"
+    }
+   ]
+  },
+  {
+   "id": "shoulder_xr",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Shoulder films and the nerve exam",
+   "outcomes": [
+    {
+     "id": "ant",
+     "if": "Anterior dislocation; humeral head in front of the glenoid",
+     "ddx": {
+      "lead": [
+       "Shoulder dislocation"
+      ],
+      "out": []
+     },
+     "next": "shoulder_reduce"
+    },
+    {
+     "id": "post",
+     "if": "Posterior dislocation; head behind the glenoid on the axial view",
+     "ddx": {
+      "lead": [
+       "Shoulder dislocation"
+      ],
+      "out": []
+     },
+     "next": "end_posterior",
+     "orders": [
+      {
+       "item": "CT",
+       "dose": "Before any attempt at closed reduction; confirms the diagnosis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29592987",
+         "where": "Discussion"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "none",
+     "if": "No dislocation; head sits in the glenoid on both views",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_shoulder_none",
+     "orders": [
+      {
+       "item": "Displaced low-energy proximal humerus fracture",
+       "dose": "Non-surgical if uncomplicated; consider surgery with an open wound, skin tenting, vascular injury, fracture-dislocation or a split humeral head",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:6770dcd9eb67",
+         "where": "1.4.8"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "shoulder_reduce",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Anterior dislocation on the films. Next?",
+   "options": [
+    "Closed reduction; recheck nerves and pulses; repeat the films",
+    "Open reduction in the operating room as the first attempt at relocation",
+    "A sling for a week, then reduce it at the fracture clinic",
+    "Closed reduction, then discharge home without repeat films"
+   ],
+   "answer": 0,
+   "chainStep": "Closed reduction by a technique you know (procedural sedation if it fails); repeat the nerve and circulation exam; post-reduction x-rays in two planes; sling as needed for 1 week",
+   "why": "Use a closed technique you are experienced with; if it fails, procedural sedation and analgesia is the first choice, and the operating room or open reduction is needed only rarely. Afterward, re-examine and document nerves and circulation and x-ray in two planes: post-reduction films find fractures the first films missed, 15% of those detected in one series. A sling as needed for 1 week is enough; longer immobilization made no clinically relevant difference.",
+   "next": "end_shoulder",
+   "sources": [
+    {
+     "docId": "pmid:42573533",
+     "where": "Recommendations: reduction technique, pain management during reduction, immobilization; Diagnostic evaluation"
+    },
+    {
+     "docId": "pmid:27582981",
+     "where": "Secondary care: principles of safe reduction"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Sling",
+     "dose": "As needed for 1 week",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42573533",
+       "where": "Recommendations: immobilization"
+      }
+     ]
+    },
+    {
+     "item": "Age 40 to 60",
+     "dose": "Ultrasound or MRI of the rotator cuff (clinically relevant tears in about 40%)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27582981",
+       "where": "Further investigations"
+      }
+     ]
+    },
+    {
+     "item": "Greater tuberosity fragment",
+     "dose": "More than 5 mm displaced on post-reduction films: surgery",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27582981",
+       "where": "Greater tuberosity fracture, summary"
+      }
+     ]
+    },
+    {
+     "item": "Nerve deficit",
+     "dose": "No clinical recovery: EMG at 6 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27582981",
+       "where": "Neurological injury, summary"
+      }
+     ]
+    },
+    {
+     "item": "Sedation agent and dose",
+     "dose": "Not stated in the guidelines read",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "knee_reduce",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Knee dislocation, out or already back in, foot pulses present. Next?",
+   "options": [
+    "Reduce if still out and splint; repeat the pulse exam and measure an ABI",
+    "Splint and discharge home; palpable foot pulses exclude an arterial injury",
+    "MRI of the knee tonight, before any vascular check",
+    "Doppler at the ankle; a signal excludes an arterial injury"
+   ],
+   "answer": 0,
+   "chainStep": "Reduce and splint; repeat and document the pulse and nerve exam; ABI; CT angiography if the ABI is under 0.90 or a pulse differs from the other side; admit for frequent pulse checks",
+   "why": "A knee that dislocated and went back in carries much the same neurovascular risk as one still out. Collaterals can keep foot pulses palpable for a time even with a transected popliteal artery, and capillary return or a Doppler signal cannot exclude a vascular injury. Reduce, then repeat the arterial exam and measure an ABI: in the selective approach, an ABI under 0.90 goes to emergent angiography and 0.90 or more is admitted for observation and frequent pulse checks. That approach is not proven for every centre, and the ACR rates CT angiography usually appropriate first imaging after a knee dislocation, so imaging every dislocated knee is also defensible. A pulse that does not feel the same as the other side is an arterial injury until CT angiography shows otherwise.",
+   "next": "knee_abi",
+   "sources": [
+    {
+     "docId": "pmid:28321343",
+     "where": "Discussion: definition; selective angiography"
+    },
+    {
+     "docId": "url:a987a9b7885d",
+     "where": "1.2.2"
+    },
+    {
+     "docId": "url:c3c36e196360",
+     "where": "Variant 8"
+    },
+    {
+     "docId": "url:83a1fd76937f",
+     "where": "Footnote ii"
+    }
+   ],
+   "note": "A pulse lost after reduction is a hard sign: immediate surgical exploration, as on the pulseless route."
+  },
+  {
+   "id": "knee_abi",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Pulses and ABI after reduction",
+   "outcomes": [
+    {
+     "id": "abnormal",
+     "if": "ABI under 0.90; or a pulse present but weaker than the other side",
+     "ddx": {
+      "lead": [
+       "Arterial injury"
+      ],
+      "out": []
+     },
+     "next": "end_knee_cta"
+    },
+    {
+     "id": "normal",
+     "if": "ABI 0.90 or more; pulses equal on both sides",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_knee_obs"
+    }
+   ]
+  },
+  {
+   "id": "site",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Where the injury is",
+   "outcomes": [
+    {
+     "id": "ankle_knee",
+     "if": "Ankle, midfoot or knee; twisted or knocked",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ottawa"
+    },
+    {
+     "id": "wrist",
+     "if": "Wrist; fall on the outstretched hand, snuffbox tender",
+     "ddx": {
+      "lead": [
+       "Scaphoid fracture"
+      ],
+      "out": []
+     },
+     "next": "scaphoid"
+    },
+    {
+     "id": "hip",
+     "if": "Older adult, hip; fell, cannot bear weight",
+     "ddx": {
+      "lead": [
+       "Hip fracture"
+      ],
+      "out": []
+     },
+     "next": "hip_xr"
+    },
+    {
+     "id": "other",
+     "if": "Another site; not walked in this version",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_other_site"
+    }
+   ]
+  },
+  {
+   "id": "ottawa",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Ankle, midfoot or knee injury. Who needs an x-ray?",
+   "options": [
+    "Only those positive on the Ottawa ankle, foot or knee rule",
+    "Only those who cannot bear any weight at all on the leg",
+    "Only those with a visible deformity or marked bruising",
+    "MRI instead of an x-ray for any twisting injury of the joint"
+   ],
+   "answer": 0,
+   "chainStep": "Ottawa ankle and foot rules (over age 5): with pain in the malleolar or midfoot zone, x-ray for bone tenderness at the posterior edge or tip of either malleolus, the navicular or the base of the fifth metatarsal, or inability to take 4 steps both right after the injury and in the department; Ottawa knee rule (over age 2): x-ray for age 55 or more, isolated patellar tenderness, fibular head tenderness, inability to flex to 90 degrees, or inability to bear weight both after the injury and in the department",
+   "why": "The Ottawa rules are built to rule fractures out. Ankle and midfoot: pooled sensitivity of almost 100% with modest specificity, cutting radiographs by 30 to 40%, and a negative likelihood ratio of 0.07 in children. Knee: pooled sensitivity 98%, specificity 43%. NICE applies the knee rule over age 2 and the ankle and foot rules over age 5. The ACR rates ankle radiographs usually appropriate when the rule is positive and usually not appropriate when it is negative, and words its knee trigger as focal tenderness, an effusion or inability to bear weight.",
+   "next": "ottawa_result",
+   "sources": [
+    {
+     "docId": "pmid:12595378",
+     "where": "Introduction; Abstract"
+    },
+    {
+     "docId": "pmid:37215241",
+     "where": "Introduction; Abstract"
+    },
+    {
+     "docId": "url:6770dcd9eb67",
+     "where": "1.2.1, 1.2.2"
+    },
+    {
+     "docId": "url:26f9de1d38ec",
+     "where": "Variants 1 and 2"
+    },
+    {
+     "docId": "url:c3c36e196360",
+     "where": "Variant 2"
+    },
+    {
+     "docId": "pmid:26320769",
+     "where": "Figure 1 legend"
+    }
+   ],
+   "note": "Stiell's 1992 derivation says both immediately and in the department; the BMJ 2003 review and the ACR paraphrase it with or."
+  },
+  {
+   "id": "ottawa_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The rule, then the film",
+   "outcomes": [
+    {
+     "id": "clear",
+     "if": "No fracture; rule negative, or a clear film outside the low-risk child pattern",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_no_fx",
+     "orders": [
+      {
+       "item": "Knee, clear film, occult fracture or derangement still suspected",
+       "dose": "MRI without contrast is the next study",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:c3c36e196360",
+         "where": "Variants 3, 4 and 5"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ankle_fx",
+     "if": "Ankle fracture on the film; malleolar, or a child's growth plate fracture into the joint",
+     "ddx": {
+      "lead": [
+       "Ankle fracture"
+      ],
+      "out": []
+     },
+     "next": "end_ankle_fx",
+     "orders": [
+      {
+       "item": "Adult unimalleolar fracture, non-surgical",
+       "dose": "Weight-bearing as tolerated; orthopedic follow-up within 2 weeks if stability is uncertain; review if not improving at 6 weeks",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:6770dcd9eb67",
+         "where": "1.4.1"
+        }
+       ]
+      },
+      {
+       "item": "Ankle fracture surgery",
+       "dose": "If needed, consider the day of injury or the next day",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:6770dcd9eb67",
+         "where": "1.4.2"
+        }
+       ]
+      },
+      {
+       "item": "Child, intra-articular distal tibia fracture",
+       "dose": "Definitive plan with a children's orthopedic trauma specialist within 24 hours of diagnosis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:a987a9b7885d",
+         "where": "1.2.35"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "foot_fx",
+     "if": "Midfoot fracture on the film; navicular or fifth metatarsal base",
+     "ddx": {
+      "lead": [
+       "Midfoot fracture"
+      ],
+      "out": []
+     },
+     "next": "end_foot_fx"
+    },
+    {
+     "id": "knee_fx",
+     "if": "Knee fracture on the film; such as the tibial plateau",
+     "ddx": {
+      "lead": [
+       "Knee fracture"
+      ],
+      "out": []
+     },
+     "next": "end_knee_fx",
+     "orders": [
+      {
+       "item": "Tibial plateau fracture",
+       "dose": "CT or MRI next for further bone or soft tissue injury (both usually appropriate)",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:c3c36e196360",
+         "where": "Variant 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "child_low",
+     "if": "Child, low-risk ankle injury; distal fibula tender, film clear or a nondisplaced fibular physis fracture",
+     "ddx": {
+      "lead": [
+       "Ankle sprain"
+      ],
+      "out": []
+     },
+     "next": "end_child_low",
+     "orders": [
+      {
+       "item": "Low-risk ankle injury",
+       "dose": "An ankle brace and a self-paced return to activity, not a cast or backslab; primary care follow-up; orthopedics only if not improving as expected",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29581164",
+         "where": "Points 1, 3, 4 and 5"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "scaphoid",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Fall on the outstretched hand, tender in the anatomical snuffbox. Next?",
+   "options": [
+    "Immobilize; scaphoid x-rays, then MRI or repeat films if clear",
+    "Discharge without any support if the first x-ray is clear",
+    "Ultrasound of the wrist to exclude a fracture, then discharge",
+    "A bone scan of the wrist the same day, before any x-ray"
+   ],
+   "answer": 0,
+   "chainStep": "Wrist radiographs with scaphoid views; immobilize (below-elbow backslab or splint); if clear, MRI, CT or repeat radiographs at 10 to 14 days; fracture clinic",
+   "why": "Radiographs come first in US practice (ACR); NICE goes further and considers MRI as first-line imaging after a thorough exam. A clear first film does not end it: across reported cohorts with these signs and normal films, a weighted average of 3.7% had an occult scaphoid fracture. Immobilization while the diagnosis is settled is the usual pathway, and for the next study the ACR rates MRI, CT and repeat radiographs at 10 to 14 days all usually appropriate. Ultrasound and bone scan are usually not appropriate first.",
+   "next": "scaphoid_xr",
+   "sources": [
+    {
+     "docId": "url:9380338ef7a7",
+     "where": "Variants 1 and 2"
+    },
+    {
+     "docId": "url:6770dcd9eb67",
+     "where": "1.2.3"
+    },
+    {
+     "docId": "pmid:20414381",
+     "where": "Background; Discussion"
+    },
+    {
+     "docId": "pmid:31362557",
+     "where": "Introduction; Methods"
+    }
+   ]
+  },
+  {
+   "id": "scaphoid_xr",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Scaphoid views",
+   "outcomes": [
+    {
+     "id": "fx",
+     "if": "Scaphoid fracture on the films; immobilize, fracture clinic",
+     "ddx": {
+      "lead": [
+       "Scaphoid fracture"
+      ],
+      "out": []
+     },
+     "next": "end_scaphoid_fx"
+    },
+    {
+     "id": "clear",
+     "if": "Clear films; snuffbox still tender",
+     "ddx": {
+      "lead": [
+       "Scaphoid fracture"
+      ],
+      "out": []
+     },
+     "next": "end_scaphoid"
+    }
+   ]
+  },
+  {
+   "id": "hip_xr",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Older adult, hip pain after a fall, cannot bear weight. First?",
+   "options": [
+    "Analgesia now, then hip x-rays; MRI if they are clear",
+    "Hold analgesia until the surgeon has examined the hip",
+    "An NSAID for the pain, then x-rays",
+    "MRI before any x-ray"
+   ],
+   "answer": 0,
+   "chainStep": "Immediate analgesia (acetaminophen every 6 hours, opioids if needed, a nerve block if still not enough or to limit opioids; no NSAIDs), pain reassessed within 30 minutes; hip x-rays; MRI if clear, CT if MRI is not available within 24 hours or is contraindicated",
+   "why": "Analgesia comes at once, including for people with cognitive impairment, and should be enough to tolerate passive external rotation of the leg. Acetaminophen every 6 hours, opioids if that is not enough, and a nerve block from trained staff when acetaminophen and opioids fall short or to limit the opioid dose; US trauma guidance cites strong evidence that regional anesthesia improves perioperative management. NSAIDs are not recommended. Plain films first; if they are clear and a fracture is still suspected, MRI, or CT when MRI is not available within 24 hours or is contraindicated. The ACR rates MRI and CT both usually appropriate after clear films.",
+   "next": "hip_result",
+   "sources": [
+    {
+     "docId": "url:289fecda08af",
+     "where": "1.1.1, 1.3.1 to 1.3.6, 1.3.9"
+    },
+    {
+     "docId": "url:6770dcd9eb67",
+     "where": "1.1.6"
+    },
+    {
+     "docId": "url:2867dc01ef0d",
+     "where": "Variants 1 and 2"
+    },
+    {
+     "docId": "url:1731408a0e56",
+     "where": "Geriatric hip fractures"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Acetaminophen",
+     "dose": "Every 6 hours preoperatively unless contraindicated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:289fecda08af",
+       "where": "1.3.4"
+      }
+     ]
+    },
+    {
+     "item": "Acetaminophen dose",
+     "dose": "No mg dose stated in CG124",
+     "status": "pending"
+    },
+    {
+     "item": "Opioids",
+     "dose": "Add if acetaminophen alone is not enough",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:289fecda08af",
+       "where": "1.3.5"
+      }
+     ]
+    },
+    {
+     "item": "Nerve block",
+     "dose": "Consider when acetaminophen and opioids are not enough, or to limit the opioid dose; by trained staff; never a substitute for early surgery. TQIP: peri-operative regional anesthesia reduces pain and might reduce delirium",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:289fecda08af",
+       "where": "1.3.6"
+      },
+      {
+       "docId": "url:1731408a0e56",
+       "where": "Geriatric hip fractures, key messages"
+      }
+     ]
+    },
+    {
+     "item": "NSAIDs",
+     "dose": "Not recommended in hip fracture, nor in frail or older adults with fractures",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:289fecda08af",
+       "where": "1.3.9"
+      },
+      {
+       "docId": "url:6770dcd9eb67",
+       "where": "1.1.6"
+      }
+     ]
+    },
+    {
+     "item": "Pain reassessment",
+     "dose": "Within 30 minutes of the first analgesia; enough relief to tolerate passive external rotation of the leg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:289fecda08af",
+       "where": "1.3.1, 1.3.3"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hip_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Hip x-rays, and MRI if they were clear",
+   "outcomes": [
+    {
+     "id": "fx",
+     "if": "Hip fracture; on the x-ray, or on MRI after clear films",
+     "ddx": {
+      "lead": [
+       "Hip fracture"
+      ],
+      "out": []
+     },
+     "next": "hip_surgery"
+    },
+    {
+     "id": "nofx",
+     "if": "No fracture; clear x-rays and a clear MRI",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_hip_nofx"
+    }
+   ]
+  },
+  {
+   "id": "hip_surgery",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Hip fracture confirmed. When to operate?",
+   "options": [
+    "Day of admission or the next, correcting what can be corrected",
+    "In about a week, once the bruising and swelling have settled",
+    "No surgery: skin traction and bed rest for several weeks",
+    "Once the INR is fully normal, however long that takes"
+   ],
+   "answer": 0,
+   "chainStep": "Surgery on the day of, or the day after, admission (US: within 48 hours); correct anaemia, anticoagulation, volume depletion, electrolytes, diabetes, heart failure, arrhythmia or ischaemia and chest infection without delaying it; orthogeriatric care from admission",
+   "why": "NICE: operate on the day of, or the day after, admission, and identify and treat correctable comorbidities at once so they do not delay surgery. US trauma guidance asks for surgery as soon as able, preferably within 48 hours. Operative fixation or replacement is the primary treatment, inside an orthogeriatric hip fracture programme from admission.",
+   "next": "end_hip",
+   "sources": [
+    {
+     "docId": "url:289fecda08af",
+     "where": "1.2.1, 1.2.2, 1.8.1"
+    },
+    {
+     "docId": "url:1731408a0e56",
+     "where": "Geriatric hip fractures"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Displaced intracapsular fracture",
+     "dose": "Replacement arthroplasty (total hip replacement or hemiarthroplasty)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:289fecda08af",
+       "where": "1.6.2"
+      }
+     ]
+    },
+    {
+     "item": "Trochanteric fracture above and including the lesser trochanter",
+     "dose": "NICE: an extramedullary implant such as a sliding hip screw in preference to an intramedullary nail (except reverse oblique). TQIP: sliding hip screw or cephalomedullary nail if stable; cephalomedullary nail if unstable, reverse oblique or subtrochanteric",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:289fecda08af",
+       "where": "1.6.9"
+      },
+      {
+       "docId": "url:1731408a0e56",
+       "where": "Geriatric hip fractures, Table 1"
+      }
+     ],
+     "note": "The two differ for unstable trochanteric fractures."
+    },
+    {
+     "item": "Subtrochanteric fracture",
+     "dose": "Intramedullary nail",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:289fecda08af",
+       "where": "1.6.10"
+      }
+     ]
+    },
+    {
+     "item": "Mobilization",
+     "dose": "Physiotherapy assessment and mobilization the day after surgery",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:289fecda08af",
+       "where": "1.7.1"
+      }
+     ]
+    },
+    {
+     "item": "Warfarin",
+     "dose": "Reverse at once so surgery is not delayed; agent and dose not stated in CG124",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:289fecda08af",
+       "where": "1.2.2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "child_front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The child's injury",
+   "outcomes": [
+    {
+     "id": "elbow",
+     "if": "Elbow; swollen after a fall on the outstretched hand",
+     "ddx": {
+      "lead": [
+       "Supracondylar fracture"
+      ],
+      "out": []
+     },
+     "next": "sc_exam"
+    },
+    {
+     "id": "ankle_knee",
+     "if": "Ankle, midfoot or knee, age 5 or over (knee 2 or over); twisted or knocked, the story fits",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ottawa"
+    },
+    {
+     "id": "nai",
+     "if": "Age 2 or under; fracture the story does not explain, or not yet walking",
+     "ddx": {
+      "lead": [
+       "Non-accidental injury"
+      ],
+      "out": []
+     },
+     "next": "nai_step"
+    },
+    {
+     "id": "nai_older",
+     "if": "Over age 2; fracture the story does not explain",
+     "ddx": {
+      "lead": [
+       "Non-accidental injury"
+      ],
+      "out": []
+     },
+     "next": "end_nai_older",
+     "orders": [
+      {
+       "item": "Imaging over 24 months",
+       "dose": "Radiographs of the area of interest usually appropriate; a skeletal survey may be appropriate",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:aa07391974b8",
+         "where": "Variant 2"
+        }
+       ]
+      },
+      {
+       "item": "Referral",
+       "dose": "Suspected maltreatment: refer to children's social care",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:77b1607e3dd6",
+         "where": "Using this guidance 4"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "other",
+     "if": "Another site; not walked in this version",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_other_site"
+    }
+   ]
+  },
+  {
+   "id": "sc_exam",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Child, swollen deformed elbow after a fall on the outstretched hand. First?",
+   "options": [
+    "Document radial pulse, refill, and radial, median, ulnar nerves",
+    "X-ray first, and examine the hand once the films are back",
+    "Check the radial pulse only; nerves can wait until after surgery",
+    "Test grip strength, and discharge home if the grip is good"
+   ],
+   "answer": 0,
+   "chainStep": "Documented exam: radial pulse, digital capillary refill, radial, median (including anterior interosseous) and ulnar nerve function; analgesia; elbow x-rays; orthopedics",
+   "why": "BOAST requires a documented assessment on presentation and again before surgery: the radial pulse, digital capillary refill and each of the radial, median (including anterior interosseous) and ulnar nerves. US trauma guidance asks that every child with this fracture be checked for nerve and vascular injury and an ipsilateral distal radius fracture, and that any radiographic sign of a supracondylar fracture, a posterior fat pad sign included, prompt orthopedic evaluation.",
+   "next": "sc_result",
+   "sources": [
+    {
+     "docId": "url:9bc191c2ce0c",
+     "where": "Standards for practice 1"
+    },
+    {
+     "docId": "url:1731408a0e56",
+     "where": "Pediatric supracondylar humerus fractures"
+    }
+   ],
+   "note": "An elbow dislocation, or a normal film with no fat pad sign, is not walked in this version."
+  },
+  {
+   "id": "sc_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Elbow film and the hand",
+   "outcomes": [
+    {
+     "id": "perfused",
+     "if": "Hand perfused with a radial pulse; fracture or fat pad sign on the film",
+     "ddx": {
+      "lead": [
+       "Supracondylar fracture"
+      ],
+      "out": []
+     },
+     "next": "end_sc_perfused",
+     "orders": [
+      {
+       "item": "Displaced fracture, perfused hand",
+       "dose": "Surgery on the day of injury; night-time operating only for a documented urgent indication (BOAST). TQIP: within 12 to 18 hours for Gartland III",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:9bc191c2ce0c",
+         "where": "Standards for practice"
+        },
+        {
+         "docId": "url:1731408a0e56",
+         "where": "Pediatric supracondylar humerus fractures"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "vasc",
+     "if": "Displaced fracture; no radial pulse, or a poorly perfused hand",
+     "ddx": {
+      "lead": [
+       "Supracondylar fracture"
+      ],
+      "out": []
+     },
+     "next": "sc_urgent"
+    }
+   ]
+  },
+  {
+   "id": "sc_urgent",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Displaced supracondylar fracture, no radial pulse or poor perfusion. Next?",
+   "options": [
+    "Urgent reduction and pinning; explore only if still ischaemic",
+    "Brachial angiography before any attempt at reduction",
+    "Splint it and fix the fracture on the next day's trauma list",
+    "Explore the brachial artery for any absent pulse, perfused or not"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent closed reduction and pinning (at least 2 K-wires); reassess perfusion; explore the brachial artery if the hand stays ischaemic; observe a pink, perfused hand without a pulse; monitor for compartment syndrome",
+   "why": "An absent radial pulse or impaired perfusion of the hand makes surgery urgent, and US guidance calls for immediate closed reduction when perfusion is decreased. Most vascular impairment resolves with reduction. A hand that is pink and perfused without a radial pulse does not need brachial exploration: NICE says to consider observation rather than immediate vascular intervention, and US guidance decides case by case. A hand that stays ischaemic after reduction needs the brachial artery explored by a surgeon able to repair small vessels.",
+   "next": "end_sc_urgent",
+   "sources": [
+    {
+     "docId": "url:9bc191c2ce0c",
+     "where": "Standards for practice"
+    },
+    {
+     "docId": "url:a987a9b7885d",
+     "where": "1.2.6"
+    },
+    {
+     "docId": "url:1731408a0e56",
+     "where": "Pediatric supracondylar humerus fractures"
+    }
+   ]
+  },
+  {
+   "id": "nai_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Infant not yet walking, a femoral fracture, an account that does not fit. Next?",
+   "options": [
+    "Skeletal survey, head CT, and a child protection referral",
+    "Treat the fracture, discharge home, and follow up in clinic",
+    "Raise concerns only if a second unexplained injury appears",
+    "A bone density scan, and no further workup if it is normal"
+   ],
+   "answer": 0,
+   "chainStep": "Record exactly what is seen and said; skeletal survey and non-contrast head CT (24 months or younger); child protection referral; address before discharge",
+   "why": "A fracture with an absent or unsuitable explanation, and no condition that weakens bone such as osteogenesis imperfecta, is a reason to suspect maltreatment, and suspicion means referral to children's social care under local safeguarding arrangements. NICE asks that non-accidental injury be addressed before discharge in every child with a femoral fracture, above all those not yet walking or talking. For a child 24 months or younger, the ACR rates a skeletal survey and a non-contrast head CT usually appropriate, and a repeat skeletal survey at 10 to 14 days if the first survey and CT are negative.",
+   "next": "end_nai",
+   "sources": [
+    {
+     "docId": "url:77b1607e3dd6",
+     "where": "1.1.9; Using this guidance 3 and 4"
+    },
+    {
+     "docId": "url:6770dcd9eb67",
+     "where": "1.7.1"
+    },
+    {
+     "docId": "url:aa07391974b8",
+     "where": "Variants 1 and 7"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Skeletal survey",
+     "dose": "Usually appropriate at 24 months or younger when abuse is a concern; repeat at 10 to 14 days if the first survey and head CT are negative",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:aa07391974b8",
+       "where": "Variants 1 and 7"
+      }
+     ]
+    },
+    {
+     "item": "Head CT",
+     "dose": "Without contrast; usually appropriate at 24 months or younger",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:aa07391974b8",
+       "where": "Variant 1"
+      }
+     ]
+    },
+    {
+     "item": "Record",
+     "dose": "Exactly what is observed and heard, from whom and when",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:77b1607e3dd6",
+       "where": "Using this guidance 3"
+      }
+     ]
+    },
+    {
+     "item": "Referral",
+     "dose": "Suspected maltreatment: refer to children's social care under local multi-agency safeguarding arrangements",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:77b1607e3dd6",
+       "where": "Using this guidance 4"
+      }
+     ],
+     "note": "UK wording. The US route (a report to child protective services) is not stated in the sources read."
+    },
+    {
+     "item": "Admission and fracture care",
+     "dose": "Admit every child with a femoral shaft fracture; 0 to 6 months: Pavlik harness or Gallows traction",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:6770dcd9eb67",
+       "where": "1.4.9"
+      }
+     ]
+    },
+    {
+     "item": "Regional block",
+     "dose": "Consider a femoral nerve or fascia iliaca block in the ED for a suspected displaced femoral fracture",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:6770dcd9eb67",
+       "where": "1.1.11"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_major",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Major trauma or an unstable patient: primary survey and resuscitation first; continue in the major trauma pathway (pw_trauma)."
+  },
+  {
+   "id": "end_restored",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pulse back after realignment: keep repeating and documenting the arterial exam. A pulse that does not feel the same as the other side means an arterial injury until CT angiography shows otherwise. Then image and treat the injury itself."
+  },
+  {
+   "id": "end_revasc",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pulseless limb after realignment: emergency revascularization begun within an hour of arrival, a temporary shunt first, the skeleton stabilized after reperfusion, and fasciotomy considered once flow returns."
+  },
+  {
+   "id": "end_open",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Open fracture: IV antibiotics within the hour (cefazolin, with gram-negative cover for type III), tetanus by history, photograph and a saline-soaked dressing under an occlusive film, splint, and operative irrigation and debridement (wound excision): immediately if highly contaminated, within 12 hours if high energy, otherwise within 24 hours (US: within 24 hours of presentation)."
+  },
+  {
+   "id": "end_fasciotomy",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Compartment syndrome: emergency fasciotomy of every involved compartment, wounds left open, plastic surgery within 24 hours and a re-look within 72."
+  },
+  {
+   "id": "end_acs_pressure",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pressure gap 30 mmHg or more: no decompression for now. Keep documented checks going (hourly while at risk per BOAST; every 1 to 2 hours for 24 to 48 hours per TQIP), and consider continuous pressure monitoring while the exam cannot be read, with 48 hours of alertness after a tibial fracture (NICE)."
+  },
+  {
+   "id": "end_acs_settled",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Signs settled once the cast or dressing was released: keep hourly documented checks while at risk, and stay alert for compartment syndrome after a tibial fracture."
+  },
+  {
+   "id": "end_shoulder",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Anterior shoulder dislocation: closed reduction, nerves and pulses rechecked, post-reduction films in two planes, a sling as needed for a week; rotator cuff imaging at age 40 to 60, and surgery for a tuberosity fragment displaced more than 5 mm."
+  },
+  {
+   "id": "end_posterior",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Posterior shoulder dislocation, easily missed on the AP film and at the first exam: CT before any attempt at closed reduction, then orthopedic reduction. The seizure itself is managed outside this pathway."
+  },
+  {
+   "id": "end_shoulder_none",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No dislocation on two views: treat what the films show. A low-energy displaced proximal humerus fracture without a wound, skin tenting, vascular injury, fracture-dislocation or a split humeral head is managed without surgery; any of those makes surgery worth considering."
+  },
+  {
+   "id": "end_knee_cta",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Knee dislocation with an ABI under 0.90 or a weaker pulse: CT angiography now, with consultant vascular input. A popliteal artery injury is an emergency: revascularization begins within an hour of arrival, and fasciotomy is considered after."
+  },
+  {
+   "id": "end_knee_obs",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Knee dislocation, ABI 0.90 or more with equal pulses: admit for observation and frequent pulse checks, because a popliteal injury can still declare itself; the ACR also rates CT angiography usually appropriate after a knee dislocation."
+  },
+  {
+   "id": "end_no_fx",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No fracture: the Ottawa rule is negative, or the film is clear outside the low-risk child pattern. No fracture care is needed; sprain care is not in this pathway yet. At the knee, if an occult fracture or internal derangement is still suspected after a clear film, MRI is the next study (ACR)."
+  },
+  {
+   "id": "end_ankle_fx",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ankle fracture on the film. An adult's unimalleolar fracture managed without surgery: weight-bearing as tolerated, orthopedic follow-up within 2 weeks if stability is uncertain, and review if not improving at 6 weeks; if surgery is needed, the day of injury or the next. A child's growth plate fracture into the joint of the distal tibia: a definitive plan with a children's orthopedic trauma specialist within 24 hours. Salter-Harris types: I, through the physis; II, through the physis and metaphysis; III, through the physis and epiphysis; IV, through the physis, epiphysis and metaphysis; V, compression of the physis."
+  },
+  {
+   "id": "end_foot_fx",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Midfoot fracture on the foot series: splint, analgesia and orthopedics; management not walked in this version."
+  },
+  {
+   "id": "end_knee_fx",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Knee fracture on the film: splint, analgesia and orthopedics. After a tibial plateau fracture, CT or MRI is the next study for further bone or soft tissue injury (the ACR rates both usually appropriate)."
+  },
+  {
+   "id": "end_child_low",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Low-risk ankle injury in a child, including the presumed Salter-Harris I of the distal fibula: in one study 97% were ligament injuries, not growth plate fractures. An ankle brace with a self-paced return to activity recovered better than a cast or backslab for three weeks; follow up in primary care, orthopedics only if recovery stalls. Salter-Harris types: I, through the physis; II, through the physis and metaphysis; III, through the physis and epiphysis; IV, through the physis, epiphysis and metaphysis; V, compression of the physis."
+  },
+  {
+   "id": "end_scaphoid_fx",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Scaphoid fracture on the films: immobilize in a below-elbow backslab and follow up at the next available fracture clinic."
+  },
+  {
+   "id": "end_scaphoid",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Clear scaphoid films with the snuffbox still tender: keep the wrist immobilized; MRI, CT or repeat radiographs at 10 to 14 days are all usually appropriate next (ACR), and NICE favours MRI; fracture clinic follow-up."
+  },
+  {
+   "id": "end_hip",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hip fracture: immediate analgesia with a nerve block when needed, surgery on the day of or the day after admission (US: within 48 hours), arthroplasty for a displaced intracapsular fracture, orthogeriatric care and mobilization the day after surgery."
+  },
+  {
+   "id": "end_hip_nofx",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No hip fracture on x-ray or MRI: the occult fracture workup is complete. Why the patient fell and how they will mobilize are outside this pathway."
+  },
+  {
+   "id": "end_sc_perfused",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Supracondylar fracture with a perfused hand and a radial pulse: orthopedics, with the documented neurovascular exam repeated before any surgery. A displaced fracture (Gartland II or III) is reduced and pinned on the day of injury (US guidance: within 12 to 18 hours for Gartland III); night-time operating needs a documented urgent reason. An undisplaced fracture or a fat pad sign alone can be managed without surgery."
+  },
+  {
+   "id": "end_sc_urgent",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Displaced supracondylar fracture with vascular compromise: urgent reduction and pinning; explore the brachial artery if the hand stays ischaemic, observe a pink hand without a pulse, and keep monitoring for compartment syndrome after surgery."
+  },
+  {
+   "id": "end_nai",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Unexplained femoral fracture in a child not yet walking: admit, treat the fracture (Pavlik harness or Gallows traction under 6 months), image for occult injury with a skeletal survey and head CT, record exactly what was seen and said, and refer for child protection."
+  },
+  {
+   "id": "end_nai_older",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Unexplained fracture over age 2: suspect maltreatment and refer to children's social care; the ACR rates radiographs of the area of interest usually appropriate, a skeletal survey only may be appropriate."
+  },
+  {
+   "id": "end_other_site",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "This injury site is not walked in this version: treat the patient first, document nerves and pulses, splint, give analgesia by severity, film the injured part and refer to orthopedics."
+  }
+ ],
+ "cases": [
+  {
+   "id": "major_trauma",
+   "label": "Major trauma, not an isolated limb",
+   "vignette": "31-year-old motorcyclist thrown at speed. HR 132, BP 82/50, GCS 13. An open wound on the right thigh is bleeding steadily.",
+   "picks": {
+    "front": "major"
+   },
+   "results": {
+    "front": "Primary survey: shocked, with ongoing thigh bleeding, a tender abdomen and a bruised chest wall. Multiple injuries: this is major trauma."
+   }
+  },
+  {
+   "id": "ankle_pulseless",
+   "label": "Pulseless ankle, pulse back after realignment",
+   "vignette": "58-year-old woman slipped on ice. Her right ankle is visibly deformed and the foot looks pale. HR 92, BP 138/80. No other injury.",
+   "picks": {
+    "front": "pulseless",
+    "realign_result": "restored"
+   },
+   "results": {
+    "front": "Ankle grossly deformed, skin intact; no dorsalis pedis or posterior tibial pulse, foot cool. Primary survey otherwise clear.",
+    "realign_result": "After realignment and a splint, both foot pulses are back and feel the same as on the left; the foot is warm and pink."
+   }
+  },
+  {
+   "id": "knee_pulseless",
+   "label": "Knee dislocation, still pulseless after reduction",
+   "vignette": "26-year-old man missed a ladder rung and landed on his left leg. The knee is deformed. HR 98, BP 130/78. No other injury on the primary survey.",
+   "picks": {
+    "front": "pulseless",
+    "realign_result": "absent"
+   },
+   "results": {
+    "front": "Left knee grossly deformed with the tibia displaced on the femur; skin intact; foot cold and pale with no pedal pulses.",
+    "realign_result": "Knee reduced and splinted: still no popliteal or foot pulses, and the foot stays cold and pale."
+   }
+  },
+  {
+   "id": "open_tibia",
+   "label": "Open tibial fracture with soil in the wound",
+   "vignette": "41-year-old man; a quad bike rolled onto his left leg in a field. HR 104, BP 132/84. He does not know when he last had a tetanus shot.",
+   "picks": {
+    "front": "open"
+   },
+   "results": {
+    "front": "4 cm wound over the mid tibia with bone visible and soil in it; foot warm, pulses present, sensation intact. Primary survey otherwise clear."
+   }
+  },
+  {
+   "id": "acs_clinical",
+   "label": "Compartment syndrome under a backslab",
+   "vignette": "19-year-old man with a closed tibial shaft fracture from a football tackle, splinted in an above-knee backslab 5 hours ago. His leg pain is now far worse despite repeated morphine.",
+   "picks": {
+    "front": "acs",
+    "acs_exam": "persist"
+   },
+   "results": {
+    "front": "Calf tense under the backslab; foot warm, pulses present, skin intact; passively extending his toes makes him cry out.",
+    "acs_exam": "Backslab and bandage split to the skin. Thirty minutes later the pain is unchanged and passive toe stretch is still agony. He is awake and clear."
+   }
+  },
+  {
+   "id": "acs_block",
+   "label": "Compartment signs hidden by a nerve block",
+   "vignette": "28-year-old woman with a closed tibial shaft fracture after slipping on a wet step, in a below-knee backslab. A nerve block was given for pain an hour ago, and the nurse finds the calf swelling.",
+   "picks": {
+    "front": "acs",
+    "acs_exam": "unclear",
+    "acs_gap": "low"
+   },
+   "results": {
+    "front": "Calf tense and swollen under the backslab; foot warm, pulses present, skin intact. The block numbs the leg, so pain and passive stretch cannot be judged.",
+    "acs_exam": "Backslab split to the skin. Thirty minutes later the calf is still tense, and the leg is still numb from the block, so the exam cannot be relied on.",
+    "acs_gap": "BP 118/72; anterior compartment 54 mmHg: gap 18 mmHg."
+   }
+  },
+  {
+   "id": "shoulder_anterior",
+   "label": "First anterior shoulder dislocation",
+   "vignette": "23-year-old man fell onto his outstretched arm playing rugby; it has never happened before. He holds the right arm away from his side and will not move it.",
+   "picks": {
+    "front": "deform",
+    "disloc": "shoulder",
+    "shoulder_xr": "ant"
+   },
+   "results": {
+    "front": "Right shoulder squared off; radial pulse present, skin intact. Primary survey clear.",
+    "disloc": "The deformity is at the shoulder: the contour is lost below the acromion.",
+    "shoulder_xr": "Sensation over the lateral shoulder and deltoid contraction intact; radial pulse present. AP and axial views: humeral head in front of and below the glenoid, no fracture."
+   }
+  },
+  {
+   "id": "shoulder_posterior",
+   "label": "Posterior dislocation after a seizure",
+   "vignette": "44-year-old man with epilepsy, brought in after a witnessed tonic-clonic seizure. His left shoulder hurts and he holds the arm against his body.",
+   "picks": {
+    "front": "deform",
+    "disloc": "shoulder",
+    "shoulder_xr": "post"
+   },
+   "results": {
+    "front": "Left arm held in internal rotation, and external rotation is blocked. Radial pulse present, skin intact. He is now alert.",
+    "disloc": "The problem is at the shoulder: it is locked and will not rotate outward.",
+    "shoulder_xr": "Deltoid and lateral shoulder sensation intact. The AP view is read as nearly normal; the axial view shows the humeral head behind the glenoid."
+   }
+  },
+  {
+   "id": "shoulder_humerus",
+   "label": "Suspected dislocation, a humerus fracture instead",
+   "vignette": "72-year-old woman tripped and fell onto her right shoulder. She cannot lift the arm, and the shoulder looks swollen and misshapen.",
+   "picks": {
+    "front": "deform",
+    "disloc": "shoulder",
+    "shoulder_xr": "none"
+   },
+   "results": {
+    "front": "Right shoulder swollen and misshapen, with bruising spreading down the arm; radial pulse present, skin intact.",
+    "disloc": "The deformity is at the shoulder.",
+    "shoulder_xr": "Lateral shoulder sensation and pulses intact. AP and axial views: the humeral head sits in the glenoid; a displaced surgical neck fracture of the humerus, skin not tented, humeral head intact."
+   }
+  },
+  {
+   "id": "knee_low_abi",
+   "label": "Knee dislocation, low ABI",
+   "vignette": "29-year-old man; a car bumper struck his knee at low speed in a parking lot. The knee is deformed. HR 90, BP 126/80. No other injury.",
+   "picks": {
+    "front": "deform",
+    "disloc": "knee",
+    "knee_abi": "abnormal"
+   },
+   "results": {
+    "front": "Left knee deformed; foot warm with pedal pulses present; skin intact.",
+    "disloc": "The deformity is at the knee: the tibia is displaced on the femur.",
+    "knee_abi": "After reduction and a splint, the dorsalis pedis is weaker than on the right; ABI 0.78."
+   }
+  },
+  {
+   "id": "knee_normal_abi",
+   "label": "Knee dislocation, normal ABI",
+   "vignette": "47-year-old woman with obesity stepped off a curb and felt her right knee give way. The knee is deformed. HR 88, BP 142/86.",
+   "picks": {
+    "front": "deform",
+    "disloc": "knee",
+    "knee_abi": "normal"
+   },
+   "results": {
+    "front": "Right knee deformed; foot warm, pulses present, skin intact.",
+    "disloc": "At the knee: the tibia is displaced sideways on the femur.",
+    "knee_abi": "After reduction, the foot pulses are equal to the left; ABI 1.02."
+   }
+  },
+  {
+   "id": "ankle_ottawa_negative",
+   "label": "Ottawa-negative ankle",
+   "vignette": "27-year-old woman rolled her left ankle stepping off a curb and walked in.",
+   "picks": {
+    "front": "none",
+    "site": "ankle_knee",
+    "ottawa_result": "clear"
+   },
+   "results": {
+    "front": "Pulses present, skin intact, no deformity, pain in proportion.",
+    "site": "Left ankle: swelling over the outer ligaments.",
+    "ottawa_result": "Walks 4 steps in the department; no tenderness at the posterior edge or tip of either malleolus, the navicular or the base of the fifth metatarsal. Ottawa negative: no film."
+   }
+  },
+  {
+   "id": "ankle_malleolar",
+   "label": "Lateral malleolar fracture",
+   "vignette": "45-year-old man inverted his right ankle playing tennis and could not walk on it.",
+   "picks": {
+    "front": "none",
+    "site": "ankle_knee",
+    "ottawa_result": "ankle_fx"
+   },
+   "results": {
+    "front": "Pulses present, skin intact, no deformity, pain in proportion.",
+    "site": "Right ankle: swollen over the lateral malleolus.",
+    "ottawa_result": "Tender at the tip of the lateral malleolus and cannot take 4 steps: Ottawa positive. X-ray: isolated lateral malleolar fracture, ankle joint congruent."
+   }
+  },
+  {
+   "id": "knee_plateau",
+   "label": "Tibial plateau fracture",
+   "vignette": "62-year-old woman fell down two steps onto her left knee. The knee is swollen and she could not stand on it.",
+   "picks": {
+    "front": "none",
+    "site": "ankle_knee",
+    "ottawa_result": "knee_fx"
+   },
+   "results": {
+    "front": "Pulses present, skin intact; knee swollen but not deformed; pain in proportion.",
+    "site": "Left knee: swollen and tender over the lateral tibial plateau.",
+    "ottawa_result": "Age 62 and unable to take 4 steps in the department: Ottawa knee rule positive. X-ray: lateral tibial plateau fracture."
+   }
+  },
+  {
+   "id": "child_fibula",
+   "label": "Child with distal fibular tenderness",
+   "vignette": "9-year-old boy twisted his right ankle playing football and is limping.",
+   "picks": {
+    "front": "child",
+    "child_front": "ankle_knee",
+    "ottawa_result": "child_low"
+   },
+   "results": {
+    "front": "Stable child; pulses present, skin intact.",
+    "child_front": "Right ankle swollen and tender over the distal fibula; he slipped while running, and the story fits.",
+    "ottawa_result": "Tender at the tip of the lateral malleolus and over the distal fibular growth plate: Ottawa positive. X-ray: no fracture."
+   }
+  },
+  {
+   "id": "scaphoid_snuffbox",
+   "label": "Snuffbox tenderness after a fall",
+   "vignette": "24-year-old man fell from a skateboard onto his outstretched hand. His right wrist hurts.",
+   "picks": {
+    "front": "none",
+    "site": "wrist",
+    "scaphoid_xr": "clear"
+   },
+   "results": {
+    "front": "Pulses present, skin intact, no deformity.",
+    "site": "Right wrist: tender in the anatomical snuffbox and over the scaphoid tubercle; grip is painful.",
+    "scaphoid_xr": "Scaphoid views: no fracture."
+   }
+  },
+  {
+   "id": "hip_intracapsular",
+   "label": "Displaced intracapsular hip fracture",
+   "vignette": "84-year-old woman with mild dementia fell at home and cannot stand. She takes warfarin. Her right leg is shortened and externally rotated.",
+   "picks": {
+    "front": "none",
+    "site": "hip",
+    "hip_result": "fx"
+   },
+   "results": {
+    "front": "Pulses present, skin intact; right leg shortened and externally rotated; pain in proportion.",
+    "site": "Right hip: pain on any movement, and she cannot bear weight.",
+    "hip_result": "Hip x-rays: displaced intracapsular (subcapital) femoral neck fracture."
+   }
+  },
+  {
+   "id": "hip_clear",
+   "label": "Hip pain, no fracture on x-ray or MRI",
+   "vignette": "79-year-old man slipped in his kitchen and landed on his left hip; he could not get up.",
+   "picks": {
+    "front": "none",
+    "site": "hip",
+    "hip_result": "nofx"
+   },
+   "results": {
+    "front": "Pulses present, skin intact, no deformity.",
+    "site": "Left hip: tender and painful to rotate; he cannot bear weight.",
+    "hip_result": "Hip x-rays: no fracture. MRI the same day: no fracture, muscle bruising only."
+   }
+  },
+  {
+   "id": "sc_perfused",
+   "label": "Supracondylar fracture, hand perfused",
+   "vignette": "6-year-old girl fell from the monkey bars onto her outstretched left hand. Her elbow is swollen and she will not move it.",
+   "picks": {
+    "front": "child",
+    "child_front": "elbow",
+    "sc_result": "perfused"
+   },
+   "results": {
+    "front": "Stable child; no other injury.",
+    "child_front": "Left elbow swollen and deformed above the joint; she fell from height onto her hand, and the story fits.",
+    "sc_result": "Hand pink and warm, radial pulse present, brisk capillary refill; radial, median, anterior interosseous and ulnar function intact. X-ray: displaced extension-type supracondylar fracture."
+   }
+  },
+  {
+   "id": "sc_pulseless",
+   "label": "Supracondylar fracture, no radial pulse",
+   "vignette": "7-year-old boy fell off a trampoline onto his outstretched right hand. The elbow is swollen and deformed.",
+   "picks": {
+    "front": "child",
+    "child_front": "elbow",
+    "sc_result": "vasc"
+   },
+   "results": {
+    "front": "Stable child; no other injury.",
+    "child_front": "Right elbow grossly swollen and deformed above the joint; the fall explains it.",
+    "sc_result": "No radial pulse; the hand is pink and warm with brisk capillary refill; anterior interosseous function absent. X-ray: completely displaced supracondylar fracture."
+   }
+  },
+  {
+   "id": "infant_femur",
+   "label": "Femoral fracture in an infant",
+   "vignette": "4-month-old boy brought in for crying whenever his left leg is moved. His parents say he rolled off the sofa onto the carpet yesterday.",
+   "picks": {
+    "front": "child",
+    "child_front": "nai"
+   },
+   "results": {
+    "front": "Stable infant, not yet crawling or pulling to stand; no other injury seen on first look.",
+    "child_front": "Left thigh swollen; x-ray: femoral shaft fracture. A short roll onto carpet does not explain it, no bone disease is known, and he is not yet independently mobile."
+   }
+  },
+  {
+   "id": "acs_settled",
+   "label": "Compartment signs that settle after release",
+   "vignette": "38-year-old woman with a distal radius fracture, reduced and placed in a below-elbow backslab with a tight bandage 3 hours ago. Her forearm now throbs far more than before.",
+   "picks": {
+    "front": "acs",
+    "acs_exam": "settled"
+   },
+   "results": {
+    "front": "Forearm tense under the bandage; hand warm, radial pulse present, skin intact; passive finger extension hurts.",
+    "acs_exam": "Bandage and backslab released to the skin. Thirty minutes later the pain has eased and passive finger stretch is painless."
+   }
+  },
+  {
+   "id": "acs_gap_safe",
+   "label": "Unreadable exam, safe pressure gap",
+   "vignette": "52-year-old man with a closed tibial shaft fracture in a backslab, very drowsy after a night of heavy drinking. The calf looks swollen.",
+   "picks": {
+    "front": "acs",
+    "acs_exam": "unclear",
+    "acs_gap": "safe"
+   },
+   "results": {
+    "front": "Calf swollen and firm under the backslab; foot warm, pulses present, skin intact. He is too drowsy to report pain or cooperate with passive stretch.",
+    "acs_exam": "Backslab split to the skin. Thirty minutes later the calf is still firm and he is still too drowsy to examine reliably.",
+    "acs_gap": "BP 132/84; highest compartment pressure 26 mmHg: gap 58 mmHg."
+   }
+  },
+  {
+   "id": "knee_pulse_restored",
+   "label": "Pulseless knee, pulse back after reduction, low ABI",
+   "vignette": "33-year-old man; his knee buckled backward in a rugby tackle. The knee is deformed and the foot is cold. HR 96, BP 128/76. No other injury.",
+   "picks": {
+    "front": "pulseless",
+    "realign_result": "restored_knee",
+    "knee_abi": "abnormal"
+   },
+   "results": {
+    "front": "Left knee grossly deformed with the tibia displaced on the femur; skin intact; foot cold with no pedal pulses.",
+    "realign_result": "Knee reduced and splinted: the foot warms and both pedal pulses return, feeling equal to the right.",
+    "knee_abi": "The pulses feel equal, but the ABI is 0.82."
+   }
+  },
+  {
+   "id": "foot_fifth_metatarsal",
+   "label": "Fifth metatarsal base fracture",
+   "vignette": "39-year-old woman went over on her left foot stepping off a curb and is limping.",
+   "picks": {
+    "front": "none",
+    "site": "ankle_knee",
+    "ottawa_result": "foot_fx"
+   },
+   "results": {
+    "front": "Pulses present, skin intact, no deformity, pain in proportion.",
+    "site": "Left foot: swollen on the outer side of the midfoot.",
+    "ottawa_result": "Tender at the base of the fifth metatarsal: Ottawa foot rule positive. Foot x-ray: fracture at the base of the fifth metatarsal."
+   }
+  },
+  {
+   "id": "adult_elbow_other",
+   "label": "Adult elbow injury, another site",
+   "vignette": "35-year-old man fell off his bike onto his right elbow.",
+   "picks": {
+    "front": "none",
+    "site": "other"
+   },
+   "results": {
+    "front": "Pulses present, skin intact, no deformity, pain in proportion.",
+    "site": "Right elbow: swollen and tender over the radial head; no ankle, knee, wrist or hip injury."
+   }
+  },
+  {
+   "id": "child_forearm_other",
+   "label": "Child forearm injury, another site",
+   "vignette": "10-year-old girl fell from a scooter onto her outstretched left hand. Her forearm is sore and swollen.",
+   "picks": {
+    "front": "child",
+    "child_front": "other"
+   },
+   "results": {
+    "front": "Stable child; pulses present, skin intact.",
+    "child_front": "Left distal forearm swollen and tender, elbow normal; the fall explains it."
+   }
+  },
+  {
+   "id": "child_humerus_older",
+   "label": "Unexplained humerus fracture over age 2",
+   "vignette": "6-year-old girl brought in with a painful, swollen right upper arm. Her mother says she fell off the bed; her father says she fell down the stairs.",
+   "picks": {
+    "front": "child",
+    "child_front": "nai_older"
+   },
+   "results": {
+    "front": "Stable child; pulses present, skin intact.",
+    "child_front": "X-ray: spiral fracture of the humeral shaft. The two accounts conflict, and a fall off a bed does not explain this fracture."
+   }
+  },
+  {
+   "id": "scaphoid_waist",
+   "label": "Scaphoid waist fracture on the films",
+   "vignette": "19-year-old woman fell onto her outstretched right hand while running. Her wrist hurts.",
+   "picks": {
+    "front": "none",
+    "site": "wrist",
+    "scaphoid_xr": "fx"
+   },
+   "results": {
+    "front": "Pulses present, skin intact, no deformity.",
+    "site": "Right wrist: tender in the anatomical snuffbox; grip is painful.",
+    "scaphoid_xr": "Scaphoid views: fracture through the scaphoid waist."
+   }
+  }
+ ]
+}

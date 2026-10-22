@@ -1,0 +1,398 @@
+{
+  "id": "rash",
+  "slug": "rash",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Dermatologic Emergencies: Purpura, SJS/TEN, DRESS, Zoster",
+  "metaDescription": "Rash in the ED, fork by fork: anaphylaxis first, non-blanching purpura and meningococcal disease, TTP and ITP, SJS/TEN and SCORTEN, DRESS, zoster, abscess.",
+  "h1": "Rash and skin emergencies: the ED algorithm, fork by fork",
+  "dek": "For the student on an EM, IM or dermatology rotation with a patient and a rash and a resident about to ask what is next: the first look, shock with a rash, non-blanching spots, blisters and SJS/TEN, drug rashes, vesicles and zoster, hives, abscesses, and the traps.",
+  "jumpLinks": [
+    {
+      "label": "First look",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Reading the rash",
+      "stage": "Result"
+    },
+    {
+      "label": "Endpoints and handoffs",
+      "stage": "Outcome"
+    },
+    {
+      "label": "Antibiotics, antivirals, steroids",
+      "stage": "Manage"
+    },
+    {
+      "label": "Bloods for purpura and drug rashes",
+      "stage": "Labs"
+    },
+    {
+      "label": "Blisters, targets, vesicles",
+      "stage": "Diagnose"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Airway, breathing and pressure before the rash.",
+      "text": "Anaphylaxis gets epinephrine before any skin diagnosis. Then all the skin, the conjunctivae, mouth and genitals, and every drug started in the last 8 weeks.",
+      "refs": [
+        "triage",
+        "end_airway"
+      ]
+    },
+    {
+      "lead": "Shock with a rash: antibiotics within 1 hour.",
+      "text": "Blood cultures without delaying them and a fluid bolus, then the whole skin: purpura is the meningococcal route, diffuse redness the toxic shock route.",
+      "refs": [
+        "shock_resus",
+        "shock_skin"
+      ]
+    },
+    {
+      "lead": "Non-blanching spots with fever: ceftriaxone without waiting for results.",
+      "text": "Blood cultures and IV ceftriaxone within 1 hour of arrival; a normal CRP or white count does not rule out meningococcal disease. No platelets before TTP is excluded, unless bleeding is major.",
+      "refs": [
+        "purp_first",
+        "ttp"
+      ]
+    },
+    {
+      "lead": "The count, film and clotting sort the purpura.",
+      "text": "Schistocytes with PLASMIC 6 or 7: ADAMTS13 drawn, then plasma exchange and steroids now. Isolated low platelets: ITP. Palpable purpura with normal platelets: vasculitis. A tick risk: doxycycline at any age.",
+      "refs": [
+        "purp_result",
+        "ttp",
+        "rmsf"
+      ]
+    },
+    {
+      "lead": "Mucosal erosions and detaching skin: stop every suspect drug.",
+      "text": "SCORTEN within 24 hours and again on day 3, early transfer to a burn unit or ICU, early ophthalmology, and no prophylactic antibiotics.",
+      "refs": [
+        "sjs_stop",
+        "sjs_care"
+      ]
+    },
+    {
+      "lead": "A rash weeks after a new drug, with fever, eosinophils or organ injury, raises DRESS.",
+      "text": "Stop the drug and admit; moderate or severe disease gets prednisolone 0.5 to 1.0 mg/kg a day, tapered over 2 to 3 months.",
+      "refs": [
+        "wide_look",
+        "dress"
+      ]
+    },
+    {
+      "lead": "Vesicles: the host and the distribution decide.",
+      "text": "One dermatome, immunocompetent: oral valacyclovir 1 g three times a day within 72 hours. Nose tip: urgent ophthalmology. Disseminated or immunocompromised: IV acyclovir (aciclovir) 10 mg/kg every 8 hours (20 mg/kg under 12 years).",
+      "refs": [
+        "ves_look",
+        "zoster",
+        "ves_result",
+        "iv_acv"
+      ]
+    },
+    {
+      "lead": "Hives without anaphylaxis: a second-generation antihistamine.",
+      "text": "A fluctuant abscess: incision and drainage, with an antibiotic for size over 5 cm, surrounding cellulitis, a hard-to-drain site, multiple abscesses or immunosuppression.",
+      "refs": [
+        "urticaria",
+        "abscess",
+        "end_abscess"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do first for a patient with a rash in the ED?",
+      "intro": "Airway, breathing and blood pressure, then the whole skin with the mucosa, and the drug history. Shock with a rash gets antibiotics within 1 hour.",
+      "refs": [
+        "triage",
+        "shock_resus"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "How do you read the rash: purpura, blisters, targets, vesicles or redness?",
+      "intro": "The first look sorts the rash by type; the forks then read the skin in shock, the purpura bloods, the blistering pattern, the targets, the drug history and bloods, the vesicles and a hot lump.",
+      "refs": [
+        "front",
+        "shock_skin",
+        "purp_result",
+        "blister_type",
+        "target_result",
+        "wide_result",
+        "ves_result",
+        "skin_result"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How are meningococcal disease, TTP, SJS/TEN, DRESS and zoster treated?",
+      "intro": "Ceftriaxone with droplet precautions, doxycycline for rickettsiae, plasma exchange for TTP, steroids for adult ITP under 30, drug withdrawal and transfer for SJS/TEN, a long steroid taper for DRESS, and antivirals by host and distribution.",
+      "refs": [
+        "mening_tx",
+        "tss",
+        "rmsf",
+        "ttp",
+        "itp",
+        "sjs_stop",
+        "sjs_care",
+        "dress",
+        "zoster",
+        "iv_acv",
+        "varicella",
+        "urticaria",
+        "abscess"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "Which bloods for non-blanching spots or a drug rash?",
+      "intro": "Count with film, clotting, kidney and liver tests and cultures for purpura; eosinophils, atypical lymphocytes and organ tests for a widespread drug rash; urine and blood pressure for palpable purpura.",
+      "refs": [
+        "purp_first",
+        "wide_look",
+        "vasc"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "Blisters, targets or vesicles: what separates the diagnoses?",
+      "intro": "The mucosa, the Nikolsky sign, the detached area and the drug history for blisters; target shape and site for erythema multiforme against SJS; distribution and host for vesicles; isolation first for fever with a rash; fluctuance for a hot lump.",
+      "refs": [
+        "blister_look",
+        "target_look",
+        "ves_look",
+        "fever_flags",
+        "skin_exam"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Where does each rash end up?",
+      "intro": "Every branch closes on a diagnosis and its plan, and several hand on: anaphylaxis to dyspnea, shock and necrotizing infection to sepsis and fever, cellulitis to the swollen leg pathway.",
+      "refs": [
+        "end_airway",
+        "end_mening",
+        "end_ttp",
+        "end_sjs",
+        "end_dress",
+        "end_zoster",
+        "end_cellulitis"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "SCORTEN within 24 hours, repeated on day 3",
+    "items": [
+      {
+        "text": "Age over 40: 1 point.",
+        "refs": [
+          "sjs_stop"
+        ]
+      },
+      {
+        "text": "Heart rate 120 or more: 1 point.",
+        "refs": [
+          "sjs_stop"
+        ]
+      },
+      {
+        "text": "Cancer: 1 point.",
+        "refs": [
+          "sjs_stop"
+        ]
+      },
+      {
+        "text": "Detachment of 10% or more of body surface on day 1: 1 point.",
+        "refs": [
+          "sjs_stop"
+        ]
+      },
+      {
+        "text": "BUN over 28 mg/dL: 1 point.",
+        "refs": [
+          "sjs_stop"
+        ]
+      },
+      {
+        "text": "Bicarbonate under 20: 1 point.",
+        "refs": [
+          "sjs_stop"
+        ]
+      },
+      {
+        "text": "Glucose over 252 mg/dL: 1 point.",
+        "refs": [
+          "sjs_stop"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "52-year-old woman with toxic epidermal necrolysis 3 weeks after starting lamotrigine: 2 days of fever and sore eyes, now painful skin coming away. Temperature 38.6, HR 128, BP 112/70. Mouth, lips, conjunctivae and genitals eroded; dusky macules with flaccid blisters, Nikolsky positive, about 35% of body surface detached, so TEN rather than SJS. SCORTEN 3: age over 40, heart rate 120 or more and detachment over 10%; BUN 18, bicarbonate 23 and glucose 130 score nothing, and there is no cancer. Plan: lamotrigine and any other suspect drug stopped and never restarted; early transfer to a burn unit or ICU; a warmed room, nonadherent dressings with the detached epidermis left in place, fluids to a MAP over 65 and urine output 0.5 to 1 mL/kg/h, opioids, early ophthalmology; skin swabs on day 1 and every 48 hours, no prophylactic antibiotics; SCORTEN again on day 3.",
+    "presentRefs": [
+      "case:ten",
+      "blister_look",
+      "sjs_stop",
+      "sjs_care"
+    ],
+    "pimp": [
+      {
+        "q": "Why look in the mouth, eyes and genitals?",
+        "a": "Mucosal involvement is the hallmark of SJS/TEN, present in 90% and often 1 to 3 days before the skin.",
+        "refs": [
+          "triage",
+          "blister_look"
+        ]
+      },
+      {
+        "q": "Petechiae and a low count. Why not transfuse platelets?",
+        "a": "In TTP a platelet transfusion is contraindicated unless bleeding is major, and in HUS platelets are given sparingly.",
+        "refs": [
+          "purp_first"
+        ]
+      },
+      {
+        "q": "Why give doxycycline to a child under 8 with possible RMSF?",
+        "a": "Short courses do not cause clinically significant tooth staining, and untreated RMSF can kill 20% to 30%.",
+        "refs": [
+          "rmsf"
+        ]
+      },
+      {
+        "q": "Why not clindamycin alone for toxic shock?",
+        "a": "It suppresses toxin production but is bacteriostatic, so it is added to broad cover and never given alone.",
+        "refs": [
+          "tss"
+        ]
+      },
+      {
+        "q": "Erythema multiforme or SJS?",
+        "a": "Raised 3-zone targets, acral and symmetric, usually after an infection such as herpes simplex, are erythema multiforme; flat dusky 2-zone targets on the trunk with detachment, after a drug, are SJS. The mouth does not separate them.",
+        "refs": [
+          "target_look"
+        ]
+      },
+      {
+        "q": "Why not a 5-day prednisolone burst for DRESS?",
+        "a": "A rapid reduction can cause severe or fatal flares and relapses; the taper runs over 2 to 3 months.",
+        "refs": [
+          "dress"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "Measuring and photographing the rash before the vital signs. Anaphylaxis and shock come first.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "text": "Holding antibiotics for a lactate, a blood count or a biopsy in shock with a rash. They go in within 1 hour.",
+      "refs": [
+        "shock_resus"
+      ]
+    },
+    {
+      "text": "A lumbar puncture to confirm meningococcal disease with spreading purpura. Not with extensive or rapidly spreading purpura; the throat swab, blood culture and PCR do that work.",
+      "refs": [
+        "mening_tx"
+      ]
+    },
+    {
+      "text": "Waiting for serology before doxycycline after a tick risk. Early serology is often negative; treat on suspicion, at any age.",
+      "refs": [
+        "rmsf"
+      ]
+    },
+    {
+      "text": "Platelets before TTP is excluded, or plasma exchange held until ADAMTS13 returns. Draw the sample, then start the exchange.",
+      "refs": [
+        "purp_first",
+        "ttp"
+      ]
+    },
+    {
+      "text": "IVIG first-line for an adult with ITP and platelets under 30. Corticosteroids first; IVIG joins them when a faster rise is needed.",
+      "refs": [
+        "itp"
+      ]
+    },
+    {
+      "text": "Prophylactic antibiotics in SJS/TEN. They do not change survival; swab the skin and treat infection.",
+      "refs": [
+        "sjs_stop",
+        "sjs_care"
+      ]
+    },
+    {
+      "text": "Varicella zoster immune globulin to treat chickenpox. It has no place once the rash appears.",
+      "refs": [
+        "varicella",
+        "iv_acv"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What do you do for a non-blanching rash with fever?",
+      "a": "Treat it as meningococcal disease: blood cultures and IV ceftriaxone within 1 hour of arrival, without waiting for results, because a normal CRP or white count does not rule it out. Purpura over 2 mm, a spreading rash or meningitis signs are red flags. Then the count, film, clotting and kidney tests sort ITP, TTP, HUS, DIC and vasculitis.",
+      "refs": [
+        "purp_first"
+      ]
+    },
+    {
+      "q": "What is the treatment for meningococcal disease?",
+      "a": "IV ceftriaxone, droplet precautions for at least 24 hours of effective antibiotics, no lumbar puncture while purpura spreads, no routine corticosteroids, and intensive care. The sources differ on the dose: StatPearls gives 2 g every 12 hours in adults in one chapter and 80 mg/kg a day in another, and NICE gives no milligram dose. Close contacts get chemoprophylaxis, such as ciprofloxacin 500 mg once in adults, rather than waiting for a fever.",
+      "refs": [
+        "mening_tx"
+      ]
+    },
+    {
+      "q": "How is TTP treated?",
+      "a": "Draw ADAMTS13 first, then start plasma exchange with corticosteroids without waiting for the result, with urgent hematology; caplacizumab and rituximab are considered alongside. A PLASMIC score above 5 means a high probability. No platelet transfusion unless bleeding is major. ADAMTS13 activity under 10% confirms it; over 20%, look for another cause.",
+      "refs": [
+        "ttp",
+        "end_ttp"
+      ]
+    },
+    {
+      "q": "What is the SCORTEN score?",
+      "a": "A severity score for SJS/TEN, calculated within 24 hours and again on day 3: 1 point each for age over 40, heart rate 120 or more, cancer, detachment of 10% or more of the body surface, BUN over 28 mg/dL, bicarbonate under 20 and glucose over 252 mg/dL. Mortality rises from 3.2% at 0 to 1 point to 58.3% at 4.",
+      "refs": [
+        "sjs_stop"
+      ]
+    },
+    {
+      "q": "How do you tell SJS from TEN?",
+      "a": "By the detached skin as a share of body surface: SJS under 10%, SJS-TEN overlap 10% to 30%, TEN over 30%. Both come with mucosal erosions, present in 90% and often 1 to 3 days before the skin, a positive Nikolsky sign, and usually a drug started within the last 8 weeks. Both need every suspect drug stopped and early transfer.",
+      "refs": [
+        "blister_look",
+        "sjs_stop"
+      ]
+    },
+    {
+      "q": "What is the treatment for shingles?",
+      "a": "In one dermatome in an immunocompetent adult: an oral antiviral within 72 hours of the rash, most effective within 48, such as valacyclovir 1 g three times a day, with analgesia. Vesicles on the nose tip mean urgent ophthalmology. Disseminated zoster or VZV on immunosuppression means admission for IV acyclovir 10 mg/kg every 8 hours. Systemic steroids are not routine.",
+      "refs": [
+        "zoster",
+        "ves_look",
+        "iv_acv",
+        "ves_result"
+      ]
+    }
+  ],
+  "related": [
+    "sepsis_fever",
+    "peds_fever",
+    "leg_swelling",
+    "dyspnea"
+  ]
+}

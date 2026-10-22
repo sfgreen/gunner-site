@@ -1,0 +1,80 @@
+{
+  "id": "htn",
+  "slug": "hypertensive-emergency",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Hypertensive Emergency vs Urgency: BP Targets and Drugs",
+  "metaDescription": "Hypertensive emergency management for EM and IM rotations: the organ damage screen, BP targets by condition, nicardipine, esmolol, stimulants, pregnancy.",
+  "h1": "Severe hypertension in the ED: emergency, urgency and the targets, fork by fork",
+  "dek": "For the student on an EM or IM rotation with a pressure of 180/120 or more and a resident about to ask what is next: the organ damage screen, the scan before the target, the target and drug for each compelling condition, stimulants, pheochromocytoma, pregnancy, and what you will be pimped on.",
+  "jumpLinks": [
+    {"label": "First moves", "stage": "Stabilize"},
+    {"label": "Which organ", "stage": "Result"},
+    {"label": "Scan first", "stage": "Imaging"},
+    {"label": "Targets and drugs", "stage": "Manage"},
+    {"label": "No organ damage", "stage": "Disposition"},
+    {"label": "Outcomes", "stage": "Outcome"}
+  ],
+  "shortAnswer": [
+    {"lead": "Organ damage, not the number.", "text": "BP in both arms and the pulses, neurologic exam, fundi, ECG, creatinine and a urine dipstick, a pregnancy test and a drug history. Acute organ damage makes it an emergency; without it, no IV drugs.", "refs": ["triage", "urgency"]},
+    {"lead": "Scan before the target.", "text": "Neurologic signs, or a GCS below 13 once the airway is protected: non-contrast CT head first, because a bleed or an infarct has its own target.", "refs": ["airway_ct", "ct_neuro"]},
+    {"lead": "No compelling condition: 25%, then 160/100.", "text": "ICU, arterial line and a titratable IV agent: systolic down no more than 25% in the first hour, under 160/100 over the next 2 to 6 hours, then cautiously to 130 to 140 over 24 to 48 hours.", "refs": ["htn_icu"]},
+    {"lead": "Dissection: fast, beta blocker first.", "text": "Esmolol or labetalol first, systolic 120 or less within 20 minutes, heart rate 60 to 80 (BIHS: 60 or less); a vasodilator only after the beta blocker.", "refs": ["dissect_bp"]},
+    {"lead": "Stroke has its own numbers.", "text": "Bleed with a systolic of 150 to 220: 130 to 139, never below 130 (AHA/ACC; BIHS 140 to 180, NICE 140 or below). Lytic planned: below 185/110 before, under 180/105 for 24 hours. No reperfusion: leave it alone under 220/120 for the first 48 to 72 hours.", "refs": ["ich_bp", "ais_lytic", "ais_none"]},
+    {"lead": "Stimulants: benzodiazepine first.", "text": "Cocaine or amphetamine: IV benzodiazepine titrated until calm, no beta blocker alone. Pressure still severe: IV phentolamine, or IV nitroglycerin (BIHS; AHA/ACC keeps IV nitroglycerin for ACS or pulmonary edema).", "refs": ["coc_step", "coc_second"]},
+    {"lead": "Pheochromocytoma: alpha before beta.", "text": "IV phentolamine, nicardipine or clevidipine with IV fluids; a beta blocker before alpha blockade can precipitate a crisis.", "refs": ["pheo_step"]},
+    {"lead": "Pregnancy: 160/110 and magnesium.", "text": "Severe range (160 systolic or 110 diastolic or more): labetalol, oral nifedipine or IV hydralazine now, first to below 160/110. A fit: IV magnesium sulfate, 4 g load then 1 g an hour (NICE; US label 4 to 5 g; StatPearls 6 g, then 2 g).", "refs": ["preg_bp", "mag"]}
+  ],
+  "sections": [
+    {"stage": "Stabilize", "heading": "What do you do first for a blood pressure over 180/120?", "intro": "Airway and vitals, then the organ damage screen and a pregnancy test before any drug; a GCS below 13 gets the airway and a CT head before the BP plan.", "refs": ["triage", "airway_ct"]},
+    {"stage": "Result", "heading": "Hypertensive emergency or urgency: which organ is damaged?", "intro": "The screen sorts the patient by the organ or the cause: brain, aorta, heart, lungs, kidney or retina, stimulants, pheochromocytoma or pregnancy. No acute organ damage is a branch of its own.", "refs": ["front", "neuro_ct", "ais_elig", "agent_limits", "cta", "coc_resp", "preg_fit"]},
+    {"stage": "Imaging", "heading": "Does severe hypertension with confusion need a CT first?", "intro": "Yes: a non-contrast CT head now, while the IV agent is prepared. Hypertensive encephalopathy is a diagnosis of exclusion, and a focal deficit raises suspicion for a stroke.", "refs": ["ct_neuro"]},
+    {"stage": "Manage", "heading": "What are the BP targets and drugs for each hypertensive emergency?", "intro": "The condition sets the pace: no more than 25% off the systolic in the first hour for most, 120 within 20 minutes for dissection, the stroke numbers for a bleed or infarct, no more than 20 to 25% of the mean pressure in ACS and 25% in pulmonary edema, and below 160/110 first in pregnancy.", "refs": ["htn_icu", "htn_asthma", "ich_bp", "ais_lytic", "ais_none", "dissect_bp", "acs_bp", "pulm_bp", "coc_step", "coc_second", "pheo_step", "mag", "preg_bp"]},
+    {"stage": "Disposition", "heading": "Hypertensive urgency: can the patient go home?", "intro": "Without acute organ damage: no IV drugs and no rapid lowering; restart or step up oral therapy, or confirm a new diagnosis, with a review within 7 days.", "refs": ["urgency"]},
+    {"stage": "Outcome", "heading": "Where does each severe hypertension case end up?", "intro": "Emergencies go to the ICU on a titratable infusion or to the pathway that owns the organ: stroke, chest pain, dyspnea, seizure or headache. Severe hypertension without organ damage is lowered slowly by mouth, preferably as an outpatient.", "refs": ["end_htn_emerg", "end_ich", "end_type_a", "end_acs", "end_pulm", "end_eclampsia", "end_urgency", "urgency"]}
+  ],
+  "checklist": {
+    "heading": "The organ damage screen at 180/120 or more",
+    "items": [
+      {"text": "BP in both arms, and the pulses.", "refs": ["triage"]},
+      {"text": "Neurologic exam and the fundi, for hemorrhages or papilledema.", "refs": ["triage"]},
+      {"text": "12-lead ECG; troponin and a chest film as the findings direct.", "refs": ["triage"]},
+      {"text": "Creatinine and electrolytes; full blood count, LDH and haptoglobin.", "refs": ["triage"]},
+      {"text": "Urine dipstick for blood and protein.", "refs": ["triage"]},
+      {"text": "A pregnancy test in a woman of childbearing age.", "refs": ["triage"]},
+      {"text": "Ask about cocaine and other drugs; a urine drug screen when cocaine or methamphetamine is suspected.", "refs": ["triage"]}
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the pressure and the organ it has damaged, then the scan and the target. For example: 44-year-old man who stopped his blood pressure tablets a month ago, with 2 days of worsening headache and vomiting, now disoriented to the date; BP 238/136 in both arms, GCS 14, no focal deficit, flame hemorrhages and disc swelling in both fundi, ECG with LVH and no ischemic change. Non-contrast CT shows no bleed or infarct, with patchy low density in both occipital lobes: hypertensive encephalopathy, a diagnosis of exclusion. No asthma or heart block. Plan: ICU with an arterial line and a titratable IV agent such as nicardipine from 5 mg/h; systolic down no more than 25% in the first hour, under 160/100 over the next 2 to 6 hours, then cautiously to 130 to 140 over 24 to 48 hours, then oral therapy.",
+    "presentRefs": ["case:encephalopathy", "front", "ct_neuro", "neuro_ct", "htn_icu", "agent_limits"],
+    "pimp": [
+      {"q": "Why not bring the pressure to normal quickly?", "a": "Rapid correction can starve organs whose autoregulation is lost. Without a compelling condition, the systolic comes down no more than 25% in the first hour.", "refs": ["htn_icu"]},
+      {"q": "Why a beta blocker before a vasodilator in dissection?", "a": "A vasodilator alone, nitroprusside included, drives the heart rate up. Esmolol or labetalol goes first, and a vasodilator only once the beta blocker is running and the pressure is still not controlled.", "refs": ["dissect_bp"]},
+      {"q": "Why not a beta blocker first in cocaine hypertension?", "a": "Beta blockade is controversial because of unopposed alpha stimulation, more so with cocaine. Benzodiazepines cut central sympathetic outflow and settle the tachycardia, the pressure, the agitation and the seizure risk.", "refs": ["coc_step"]},
+      {"q": "Why not labetalol in a patient with asthma?", "a": "Labetalol is contraindicated in bronchial asthma, heart block beyond first degree and severe bradycardia. Nicardipine or clevidipine instead; neither has negative inotropic or chronotropic effects.", "refs": ["htn_asthma"]},
+      {"q": "What pressure does a stroke patient need before a lytic?", "a": "Below 185 systolic and 110 diastolic before it starts, then below 180/105 for at least 24 hours after; 180/105 or less during and for 24 hours after any thrombectomy.", "refs": ["ais_lytic"]},
+      {"q": "Which BP drugs are off limits in pregnancy?", "a": "ACE inhibitors, ARBs, renin inhibitors and nitroprusside. The three for immediate treatment are labetalol, oral nifedipine and IV hydralazine; after birth NICE offers enalapril.", "refs": ["preg_bp"]}
+    ]
+  },
+  "traps": [
+    {"text": "IV drugs for a high number with no organ damage. Oral therapy, and a review within 7 days.", "refs": ["urgency"]},
+    {"text": "Short-acting nifedipine to bring the pressure down outside pregnancy. It is not used; oral nifedipine belongs to the pregnancy route.", "refs": ["urgency", "htn_icu", "airway_ct", "preg_bp"]},
+    {"text": "Lowering the pressure before the CT in a confused or drowsy patient. A bleed or an infarct changes the target.", "refs": ["airway_ct", "ct_neuro"]},
+    {"text": "The 25% rule for a dissection. The target there is a systolic of 120 or less within 20 minutes, beta blocker first.", "refs": ["dissect_bp"]},
+    {"text": "Lowering the pressure in an ischemic stroke with no reperfusion. Under 220/120 it is left alone for the first 48 to 72 hours.", "refs": ["ais_none"]},
+    {"text": "A beta blocker first in pheochromocytoma, or alone after cocaine. Unopposed alpha stimulation.", "refs": ["pheo_step", "coc_step"]},
+    {"text": "A beta blocker in hypertensive pulmonary edema. Contraindicated: IV nitroglycerin with a loop diuretic.", "refs": ["pulm_bp"]},
+    {"text": "Diazepam or phenytoin for an eclamptic fit. Magnesium sulfate, with no alternative anticonvulsant in its place.", "refs": ["mag"]}
+  ],
+  "faq": [
+    {"q": "What is the difference between hypertensive emergency and urgency?", "a": "Acute organ damage, not the number. Both start at 180/120 or more; an emergency adds damage such as encephalopathy, a stroke, a dissection, ACS, pulmonary edema, kidney injury or retinal hemorrhages, and usually means the ICU and a titratable IV agent (BIHS treats eye changes alone by mouth over days). Without damage, oral therapy lowers it over days to weeks, with review within 7 days.", "refs": ["triage", "front", "htn_icu", "urgency"]},
+    {"q": "How fast do you lower blood pressure in a hypertensive emergency?", "a": "Without a compelling condition, the 2025 AHA/ACC guideline lowers the systolic by no more than 25% in the first hour, to under 160/100 over the next 2 to 6 hours, then cautiously to 130 to 140 over 24 to 48 hours. Aortic dissection goes faster, a systolic of 120 or less within 20 minutes, beta blocker first; a stroke or pregnancy has its own numbers.", "refs": ["htn_icu", "dissect_bp", "ich_bp", "preg_bp"]},
+    {"q": "What is the nicardipine dose for a hypertensive emergency?", "a": "Start at 5 mg/h and increase by 2.5 mg/h every 5 minutes to a maximum of 15 mg/h; not with advanced aortic stenosis. Clevidipine starts at 1 to 2 mg/h, doubling every 90 seconds until the pressure nears target, to a maximum of 21 mg/h (StatPearls gives 32). Both are the choice when a beta blocker is ruled out.", "refs": ["htn_icu", "htn_asthma"]},
+    {"q": "What is the BP target in intracerebral hemorrhage?", "a": "When the systolic starts at 150 to 220, the 2025 AHA/ACC guideline lowers it at once to 130 to 139 and holds it for at least 7 days, stopping the drugs below 130. The sources differ: BIHS calls 140 to 180 appropriate and NICE aims for 140 or below. Above 220, AHA/ACC still does not go below 130; BIHS keeps the systolic at 140 or more.", "refs": ["ich_bp"]},
+    {"q": "How do you treat severe hypertension in pregnancy?", "a": "160 systolic or 110 diastolic or more is treated at once with labetalol, oral nifedipine or IV hydralazine, first to below 160/110, then 135/85 or less. Oral nifedipine is 10 to 20 mg, repeated in 20 minutes if needed. Magnesium sulfate is given after a fit and considered with severe headache, visual scotomata or birth within 24 hours. No ACE inhibitor, ARB or nitroprusside before birth.", "refs": ["preg_bp"]},
+    {"q": "What is the magnesium sulfate dose for eclampsia?", "a": "NICE: 4 g IV over 5 to 15 minutes, then 1 g an hour until 24 hours after the last fit, with 2 to 4 g more for a recurrent fit. The US label loads 4 to 5 g and describes 1 to 2 g an hour; StatPearls loads 6 g, then 2 g an hour. Before each dose: a knee jerk, breathing about 16 a minute or more, and urine of 100 mL or more over 4 hours.", "refs": ["mag"]}
+  ],
+  "related": ["stroke", "headache", "chest_pain", "syncope"]
+}

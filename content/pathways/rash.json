@@ -1,0 +1,4583 @@
+{
+ "id": "pw_rash",
+ "title": "Rash and skin emergencies",
+ "world": "derm",
+ "synonyms": [
+  "rash",
+  "skin rash",
+  "skin emergency",
+  "petechiae",
+  "purpura",
+  "non-blanching rash",
+  "meningococcemia",
+  "meningococcal sepsis",
+  "Rocky Mountain spotted fever",
+  "RMSF",
+  "TTP",
+  "PLASMIC",
+  "HUS",
+  "ITP",
+  "DIC",
+  "palpable purpura",
+  "IgA vasculitis",
+  "Henoch-Schonlein purpura",
+  "leukocytoclastic vasculitis",
+  "Stevens-Johnson syndrome",
+  "SJS",
+  "toxic epidermal necrolysis",
+  "TEN",
+  "SCORTEN",
+  "Nikolsky sign",
+  "staphylococcal scalded skin syndrome",
+  "SSSS",
+  "pemphigus vulgaris",
+  "bullous pemphigoid",
+  "DRESS",
+  "RegiSCAR",
+  "drug rash",
+  "erythroderma",
+  "exfoliative dermatitis",
+  "toxic shock syndrome",
+  "TSS",
+  "shingles",
+  "herpes zoster",
+  "Hutchinson sign",
+  "herpes zoster ophthalmicus",
+  "disseminated zoster",
+  "chickenpox",
+  "varicella",
+  "aciclovir",
+  "acyclovir",
+  "valacyclovir",
+  "eczema herpeticum",
+  "hand, foot and mouth disease",
+  "erythema multiforme",
+  "target lesions",
+  "measles",
+  "scarlet fever",
+  "Kawasaki disease",
+  "urticaria",
+  "hives",
+  "skin abscess",
+  "incision and drainage"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:33204386",
+   "label": "WAO 2020 (anaphylaxis)",
+   "title": "World Allergy Organization anaphylaxis guidance 2020 (World Allergy Organ J)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33204386/"
+  },
+  {
+   "docId": "url:51eff9d2bb81",
+   "label": "NICE NG253",
+   "title": "Suspected sepsis in people aged 16 or over: recognition, assessment and early management (NICE NG253, 2025)",
+   "url": "https://www.nice.org.uk/guidance/ng253"
+  },
+  {
+   "docId": "url:4a5f477fcfcd",
+   "label": "NICE NG240",
+   "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management (NICE NG240, 2024)",
+   "url": "https://www.nice.org.uk/guidance/ng240"
+  },
+  {
+   "docId": "pmid:31751039",
+   "label": "StatPearls: meningococcal disease",
+   "title": "Meningococcal Disease (Neisseria meningitidis Infection) (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31751039/"
+  },
+  {
+   "docId": "pmid:30521270",
+   "label": "StatPearls: meningococcemia",
+   "title": "Meningococcemia (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30521270/"
+  },
+  {
+   "docId": "pmid:29493956",
+   "label": "StatPearls: petechiae",
+   "title": "Petechiae (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29493956/"
+  },
+  {
+   "docId": "pmid:28613631",
+   "label": "StatPearls: RMSF",
+   "title": "Rocky Mountain Spotted Fever and Related Spotted Fever Rickettsioses (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613631/"
+  },
+  {
+   "docId": "url:6a486de45e43",
+   "label": "FDA label: Doxy 100",
+   "title": "Doxy 100 (doxycycline for injection) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b256babb-1bba-4b0c-8837-d13ba3af7659"
+  },
+  {
+   "docId": "pmid:32914526",
+   "label": "ISTH TTP treatment 2020",
+   "title": "ISTH guidelines for treatment of thrombotic thrombocytopenic purpura (J Thromb Haemost 2020)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32914526/"
+  },
+  {
+   "docId": "pmid:32914582",
+   "label": "ISTH TTP diagnosis 2020",
+   "title": "ISTH guidelines for the diagnosis of thrombotic thrombocytopenic purpura (J Thromb Haemost 2020)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32914582/"
+  },
+  {
+   "docId": "pmid:28613472",
+   "label": "StatPearls: TTP",
+   "title": "Thrombotic Thrombocytopenic Purpura (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613472/"
+  },
+  {
+   "docId": "pmid:32310498",
+   "label": "StatPearls: HUS",
+   "title": "Hemolytic Uremic Syndrome (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32310498/"
+  },
+  {
+   "docId": "pmid:31794604",
+   "label": "ASH ITP 2019",
+   "title": "American Society of Hematology 2019 guidelines for immune thrombocytopenia (Blood Adv 2019)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31794604/"
+  },
+  {
+   "docId": "pmid:32965953",
+   "label": "StatPearls: ITP",
+   "title": "Immune Thrombocytopenia (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32965953/"
+  },
+  {
+   "docId": "pmid:28722864",
+   "label": "StatPearls: DIC",
+   "title": "Disseminated Intravascular Coagulation (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722864/"
+  },
+  {
+   "docId": "pmid:29489227",
+   "label": "StatPearls: leukocytoclastic vasculitis",
+   "title": "Leukocytoclastic Vasculitis (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29489227/"
+  },
+  {
+   "docId": "pmid:39379139",
+   "label": "UK IgA vasculitis recommendations 2024",
+   "title": "National recommendations for the management of children and young people with IgA vasculitis (Arch Dis Child 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39379139/"
+  },
+  {
+   "docId": "pmid:29083827",
+   "label": "StatPearls: SJS/TEN",
+   "title": "Stevens-Johnson Syndrome and Toxic Epidermal Necrolysis (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29083827/"
+  },
+  {
+   "docId": "pmid:29692452",
+   "label": "SJS/TEN review 2018",
+   "title": "Management of Stevens-Johnson Syndrome-Toxic Epidermal Necrolysis: Looking Beyond Guidelines (Indian J Dermatol 2018), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29692452/"
+  },
+  {
+   "docId": "pmid:41698348",
+   "label": "Pediatric SJS/TEN guideline review 2026",
+   "title": "Diagnosis and Management of SJS and TEN in Pediatric Patients: A Systematic Review of Clinical Guidelines (Pediatr Dermatol 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41698348/"
+  },
+  {
+   "docId": "pmid:42219898",
+   "label": "Pediatric SJS/TEN consensus 2026",
+   "title": "Development of Multidisciplinary Consensus-Informed Guidance for the Management of Paediatric SJS and TEN (J Paediatr Child Health 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42219898/"
+  },
+  {
+   "docId": "pmid:28846262",
+   "label": "StatPearls: SSSS",
+   "title": "Staphylococcal Scalded Skin Syndrome (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846262/"
+  },
+  {
+   "docId": "pmid:32809695",
+   "label": "StatPearls: pemphigus vulgaris",
+   "title": "Pemphigus Vulgaris (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32809695/"
+  },
+  {
+   "docId": "pmid:29438767",
+   "label": "Pemphigus panel 2020",
+   "title": "Diagnosis and management of pemphigus: Recommendations of an international panel of experts (J Am Acad Dermatol 2020)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29438767/"
+  },
+  {
+   "docId": "pmid:40665541",
+   "label": "Canadian BP consensus 2025",
+   "title": "Navigating Bullous Pemphigoid: Consensus Recommendations for Diagnosis and Management, a Canadian Perspective (J Cutan Med Surg 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40665541/"
+  },
+  {
+   "docId": "pmid:30570995",
+   "label": "StatPearls: bullous pemphigoid",
+   "title": "Bullous Pemphigoid (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30570995/"
+  },
+  {
+   "docId": "pmid:29261983",
+   "label": "StatPearls: erythema multiforme",
+   "title": "Erythema Multiforme (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29261983/"
+  },
+  {
+   "docId": "pmid:30422592",
+   "label": "StatPearls: cutaneous drug reactions",
+   "title": "Cutaneous Adverse Drug Reaction (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30422592/"
+  },
+  {
+   "docId": "pmid:39156598",
+   "label": "WAO DRESS review 2024",
+   "title": "The systemic treatments for DRESS beyond corticosteroids (World Allergy Organ J 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39156598/"
+  },
+  {
+   "docId": "pmid:40589376",
+   "label": "EAACI pediatric DRESS 2025",
+   "title": "Clinical diagnosis and management of DRESS in children: an EAACI position paper (Pediatr Allergy Immunol 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40589376/"
+  },
+  {
+   "docId": "pmid:32119455",
+   "label": "StatPearls: erythroderma",
+   "title": "Exfoliative Dermatitis (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32119455/"
+  },
+  {
+   "docId": "pmid:39526626",
+   "label": "Erythroderma review 2025",
+   "title": "Erythroderma in the elderly (J Dermatol 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39526626/"
+  },
+  {
+   "docId": "pmid:29083727",
+   "label": "StatPearls: TSS",
+   "title": "Toxic Shock Syndrome (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29083727/"
+  },
+  {
+   "docId": "pmid:38247655",
+   "label": "TSS review 2024",
+   "title": "Toxic Shock Syndrome: A Literature Review (Antibiotics 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38247655/"
+  },
+  {
+   "docId": "url:580c0ce4514d",
+   "label": "CDC TSS case definition 2011",
+   "title": "Toxic Shock Syndrome (Other Than Streptococcal) 2011 Case Definition (CDC NNDSS)",
+   "url": "https://ndc.services.cdc.gov/case-definitions/toxic-shock-syndrome-2011/"
+  },
+  {
+   "docId": "pmid:28846330",
+   "label": "StatPearls: measles",
+   "title": "Measles (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846330/"
+  },
+  {
+   "docId": "url:ffbe05602c2d",
+   "label": "UKHSA measles guidelines",
+   "title": "National measles guidelines, version 8 (UKHSA, July 2026)",
+   "url": "https://assets.publishing.service.gov.uk/media/6a69d8c64dda8076771a4313/UKHSA-national-measles-guidelines-version-8.pdf"
+  },
+  {
+   "docId": "pmid:29939666",
+   "label": "StatPearls: scarlet fever",
+   "title": "Scarlet Fever (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29939666/"
+  },
+  {
+   "docId": "url:375c70b8f24e",
+   "label": "UKHSA scarlet fever factsheet",
+   "title": "Scarlet fever: factsheet (UKHSA)",
+   "url": "https://www.gov.uk/government/publications/scarlet-fever-symptoms-diagnosis-treatment/scarlet-fever-factsheet"
+  },
+  {
+   "docId": "pmid:30725848",
+   "label": "StatPearls: Kawasaki",
+   "title": "Kawasaki Disease (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30725848/"
+  },
+  {
+   "docId": "pmid:28722854",
+   "label": "StatPearls: herpes zoster",
+   "title": "Herpes Zoster (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722854/"
+  },
+  {
+   "docId": "pmid:32491711",
+   "label": "StatPearls: HZO",
+   "title": "Herpes Zoster Ophthalmicus (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32491711/"
+  },
+  {
+   "docId": "url:61b3e605c340",
+   "label": "FDA label: Valtrex",
+   "title": "Valtrex (valacyclovir hydrochloride) tablets prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f8e0d8f8-cb73-4206-a484-88f5c4fbd719"
+  },
+  {
+   "docId": "url:c282bfad72db",
+   "label": "FDA label: aciclovir injection",
+   "title": "Aciclovir sodium injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ae921e4e-b8ae-4a45-acc1-32e5e719812b"
+  },
+  {
+   "docId": "url:80be37952fb0",
+   "label": "FDA label: aciclovir tablets",
+   "title": "Aciclovir tablets prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05f42300-2a06-45f1-a9b9-6e5c84ae58ec"
+  },
+  {
+   "docId": "pmid:28846365",
+   "label": "StatPearls: varicella",
+   "title": "Varicella-Zoster Virus (Chickenpox) (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846365/"
+  },
+  {
+   "docId": "url:68bf3a5f1c73",
+   "label": "UKHSA rash in pregnancy",
+   "title": "Guidance on the investigation, diagnosis and management of viral illness (plus syphilis), or exposure to viral rash illness, in pregnancy (UKHSA, August 2024)",
+   "url": "https://assets.publishing.service.gov.uk/media/66a90597a3c2a28abb50d9f6/viral-rash-in-pregnancy-guidance-syphilis-august-2024.pdf"
+  },
+  {
+   "docId": "pmid:32809616",
+   "label": "StatPearls: eczema herpeticum",
+   "title": "Eczema Herpeticum (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32809616/"
+  },
+  {
+   "docId": "pmid:28613736",
+   "label": "StatPearls: HFMD",
+   "title": "Hand, Foot, and Mouth Disease (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613736/"
+  },
+  {
+   "docId": "pmid:41649409",
+   "label": "Urticaria guideline 2026",
+   "title": "The International Guideline for the Definition, Classification, Diagnosis and Management of Urticaria (Allergy 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41649409/"
+  },
+  {
+   "docId": "pmid:35033131",
+   "label": "WSES 2022 SSTI pathways",
+   "title": "WSES/GAIS/WSIS/SIS-E/AAST global clinical pathways for patients with skin and soft tissue infections (World J Emerg Surg 2022)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35033131/"
+  },
+  {
+   "docId": "pmid:32310532",
+   "label": "StatPearls: incision and drainage",
+   "title": "Incision and Drainage (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32310532/"
+  }
+ ],
+ "differential": [
+  "Anaphylaxis",
+  "Meningococcal disease",
+  "Bacterial meningitis",
+  "Rocky Mountain spotted fever",
+  "Toxic shock syndrome",
+  "Sepsis from another source",
+  "TTP",
+  "HUS",
+  "ITP",
+  "DIC",
+  "IgA vasculitis",
+  "Cutaneous small vessel vasculitis",
+  "SJS/TEN",
+  "Staphylococcal scalded skin syndrome",
+  "Pemphigus vulgaris",
+  "Bullous pemphigoid",
+  "Erythema multiforme",
+  "DRESS",
+  "Erythroderma",
+  "Simple drug or viral exanthem",
+  "Measles",
+  "Scarlet fever",
+  "Kawasaki disease",
+  "Herpes zoster",
+  "Disseminated or immunocompromised VZV",
+  "Varicella",
+  "Eczema herpeticum",
+  "Hand, foot and mouth disease",
+  "Urticaria",
+  "Skin abscess",
+  "Cellulitis",
+  "Necrotizing infection"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Rash in the ED. First moves?",
+   "options": [
+    "Airway, breathing and pressure first; then all the skin, mouth, eyes and genitals",
+    "The rash first, measured and photographed; then the airway, breathing and pressure",
+    "Airway, breathing and pressure first; then a skin biopsy before treatment starts",
+    "Airway, breathing and pressure first; then the rash, and the mouth if it is sore"
+   ],
+   "answer": 0,
+   "chainStep": "Airway, breathing and blood pressure first, treating anaphylaxis before anything else; full vital signs with temperature; examine all the skin, the conjunctivae, mouth and genitals, noting whether spots blanch; list every drug started in the last 8 weeks",
+   "why": "Hives or swelling of acute onset with breathing trouble, low blood pressure or severe gut symptoms is anaphylaxis, and epinephrine comes before any skin diagnosis. In suspected sepsis the skin is examined for mottling, cyanosis and a non-blanching petechial or purpuric rash, and when meningococcal disease is possible all of the body is checked, the conjunctivae included, because rashes are harder to see on brown, black or tanned skin. The mouth, eyes and genitals are examined because mucosal involvement is the hallmark of SJS/TEN, and the drug history reaches back 8 weeks because SJS/TEN appears within 8 weeks of starting a drug. A biopsy confirms several of these diagnoses, but never before the airway, breathing and pressure, and a rash photographed before the vital signs leaves anaphylaxis and shock untreated.",
+   "orders": [
+    {
+     "item": "Anaphylaxis",
+     "dose": "Highly likely with acute skin or mucosal signs plus breathing trouble, low blood pressure or severe gut symptoms; or with low pressure, bronchospasm or laryngeal involvement after a likely allergen, even without skin signs",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Table 2: clinical criteria for anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Skin in suspected sepsis",
+     "dose": "Look for mottled or ashen skin, cyanosis, a non-blanching petechial or purpuric rash, any breach of the skin, or another rash suggesting infection",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:51eff9d2bb81",
+       "where": "1.3.3"
+      }
+     ]
+    },
+    {
+     "item": "Looking for a non-blanching rash",
+     "dose": "Check all over the body and the conjunctivae; rashes are harder to see on brown, black or tanned skin, and a blanching rash can turn non-blanching",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.1.12"
+      }
+     ]
+    },
+    {
+     "item": "Drug history",
+     "dose": "SJS/TEN usually within 8 weeks of starting a drug, most often 4 days to 4 weeks; DRESS usually 2 to 8 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "History and physical"
+      },
+      {
+       "docId": "pmid:39156598",
+       "where": "Introduction"
+      }
+     ]
+    }
+   ],
+   "note": "Burns go to pw_burns and bites and stings to pw_environmental. Not in this version: impetigo, scabies, chronic rashes such as psoriasis or eczema without a complication, secondary syphilis, mpox, and the newborn with a rash. Children get only the ED flags here, except the febrile child with petechiae or purpura, handed here by pw_peds_fever for the meningococcal, TTP and ITP routes; the children's pathways carry the rest.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "pmid:33204386",
+     "where": "Table 2: clinical criteria for anaphylaxis"
+    },
+    {
+     "docId": "url:51eff9d2bb81",
+     "where": "1.3.3"
+    },
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "1.1.12; Table 3"
+    },
+    {
+     "docId": "pmid:29083827",
+     "where": "History and physical"
+    },
+    {
+     "docId": "pmid:39156598",
+     "where": "Introduction"
+    }
+   ]
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Airway, circulation, temperature and the skin",
+   "outcomes": [
+    {
+     "id": "airway",
+     "if": "Anaphylaxis or angioedema; hives with wheeze, stridor, low pressure or gut symptoms, or a swollen tongue or throat, or lip swelling without hives",
+     "ddx": {
+      "lead": [
+       "Anaphylaxis"
+      ],
+      "out": []
+     },
+     "next": "end_airway"
+    },
+    {
+     "id": "shock",
+     "if": "Shock with a rash, no hives or swelling; low pressure or poor perfusion",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "shock_resus"
+    },
+    {
+     "id": "purpura",
+     "if": "Non-blanching spots, not in shock; petechiae or purpura",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "purp_first"
+    },
+    {
+     "id": "blisters",
+     "if": "Widespread blisters or peeling, not in shock; bullae or skin sliding off",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "blister_look"
+    },
+    {
+     "id": "target",
+     "if": "Target lesions, not in shock; rings with a dark center, few or no blisters",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "target_look"
+    },
+    {
+     "id": "vesicles",
+     "if": "Vesicles, not in shock; small fluid blisters, grouped or scattered",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ves_look"
+    },
+    {
+     "id": "widespread",
+     "if": "Widespread red rash, not in shock; after a new drug, afebrile, or red all over; no blisters or wheals",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "wide_look"
+    },
+    {
+     "id": "fever",
+     "if": "Fever and a blanching rash, no new drug; spots, no vesicles or wheals, not in shock, not red all over",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "fever_flags"
+    },
+    {
+     "id": "hives",
+     "if": "Hives without anaphylaxis; wheals, lips may swell, breathing, pressure and gut normal",
+     "ddx": {
+      "lead": [
+       "Urticaria"
+      ],
+      "out": []
+     },
+     "next": "urticaria"
+    },
+    {
+     "id": "skin",
+     "if": "Hot, tender area or lump; one red, painful area, not in shock",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "skin_exam"
+    },
+    {
+     "id": "other",
+     "if": "None of these; a well patient, normal vital signs, no fever",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_well"
+    }
+   ]
+  },
+  {
+   "id": "end_airway",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Anaphylaxis: IM epinephrine before anything else, in the dyspnea pathway (pw_dyspnea), which has the dose, the repeats and the refractory route. Swelling of the lips or tongue without hives, as on an ACE inhibitor, goes to the throat and airway pathway (pw_throat_airway)."
+  },
+  {
+   "id": "shock_resus",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Shock with a rash and a suspected infection, no hives. First hour?",
+   "options": [
+    "Blood cultures, IV antibiotics within 1 hour, a fluid bolus; then the whole skin",
+    "Blood cultures and a fluid bolus; antibiotics once the lactate and blood count return",
+    "A fluid bolus and IV hydrocortisone; antibiotics once a blood culture turns positive",
+    "A skin biopsy and blood cultures; antibiotics once the rash has a diagnosis"
+   ],
+   "answer": 0,
+   "chainStep": "Blood cultures without delaying antibiotics; broad-spectrum IV antibiotics within 1 hour; an isotonic crystalloid bolus without delay, reassessed after each; senior review; then examine the whole skin for purpura, diffuse redness or necrotizing signs",
+   "why": "Suspected infection with a high risk of severe illness gets broad-spectrum IV antibiotics within 1 hour and an IV fluid bolus within the hour; waiting for a lactate, a blood count or a positive culture loses that hour, and a biopsy diagnosis takes longer still. When meningococcal disease is possible, antibiotics also start within 1 hour of arrival. Hydrocortisone is not a first-hour drug here: corticosteroids are not routine in meningococcal disease, low-dose replacement being kept for septic shock that does not respond to high-dose vasoactive drugs, and they are not recommended as adjuncts in toxic shock syndrome.",
+   "orders": [
+    {
+     "item": "Antibiotics",
+     "dose": "Broad-spectrum IV antibiotics within 1 hour of the NEWS2 score at the first ED assessment, for anyone at high risk of severe illness or death from sepsis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:51eff9d2bb81",
+       "where": "1.8.3"
+      }
+     ]
+    },
+    {
+     "item": "Fluid bolus",
+     "dose": "NICE NG253: without delay, within 1 hour; 250 mL over 10 to 15 minutes, repeated to 1,000 mL in all, reassessing after each",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:51eff9d2bb81",
+       "where": "1.8.4; 1.8.6 to 1.8.8"
+      },
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI: Surviving Sepsis summary"
+      }
+     ],
+     "note": "SSC, as summarized in WSES 2022 and in the SSC 2026 open summary that pw_sepsis_fever cites, gives at least 30 mL/kg of IV crystalloid within the first 3 hours for sepsis-induced hypoperfusion or septic shock; NICE NG253 (2025) uses 250 mL boluses up to 1,000 mL in total, reassessing after each."
+    },
+    {
+     "item": "Fluid type",
+     "dose": "Isotonic crystalloid: a balanced solution such as Hartmann's, or 0.9% saline if no balanced solution is available",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:51eff9d2bb81",
+       "where": "1.8.5"
+      }
+     ]
+    },
+    {
+     "item": "Suspected meningococcal disease",
+     "dose": "Antibiotics within 1 hour of arrival, with the blood tests taken before they start",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.5.1"
+      }
+     ]
+    }
+   ],
+   "next": "shock_skin",
+   "sources": [
+    {
+     "docId": "url:51eff9d2bb81",
+     "where": "1.8.3; 1.8.4"
+    },
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "1.5.1; 1.8.6; 1.8.7"
+    },
+    {
+     "docId": "pmid:29083727",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:35033131",
+     "where": "NSTI: Surviving Sepsis summary"
+    }
+   ]
+  },
+  {
+   "id": "shock_skin",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The whole skin, resuscitation running",
+   "outcomes": [
+    {
+     "id": "purpura",
+     "if": "Purpura in shock; non-blanching spots or spreading bruise-like patches",
+     "ddx": {
+      "lead": [
+       "Meningococcal disease"
+      ],
+      "out": []
+     },
+     "next": "mening_tx"
+    },
+    {
+     "id": "red",
+     "if": "Diffuse red rash in shock; sunburn-like redness with fever",
+     "ddx": {
+      "lead": [
+       "Toxic shock syndrome"
+      ],
+      "out": []
+     },
+     "next": "tss"
+    },
+    {
+     "id": "other",
+     "if": "Neither purpura nor diffuse redness; another rash, necrotizing signs included",
+     "ddx": {
+      "lead": [
+       "Sepsis from another source"
+      ],
+      "out": []
+     },
+     "next": "end_sepsis"
+    }
+   ]
+  },
+  {
+   "id": "mening_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Meningococcal disease likely; antibiotics running. Next?",
+   "options": [
+    "IV ceftriaxone with droplet precautions; no lumbar puncture while purpura spreads",
+    "IV ceftriaxone; a lumbar puncture now to confirm the organism and its sensitivity",
+    "IV ceftriaxone; close contacts are watched and treated if they develop a fever",
+    "IV ceftriaxone; droplet precautions can stop once the first dose is in"
+   ],
+   "answer": 0,
+   "chainStep": "Continue IV ceftriaxone (StatPearls adult dose 2 g every 12 hours); droplet precautions for at least 24 hours of effective antibiotics; throat swab for meningococcal culture; no lumbar puncture with extensive or spreading purpura; no routine corticosteroids; ICU; public health for contact prophylaxis",
+   "why": "Ceftriaxone is the antibiotic for suspected or confirmed meningococcal disease in hospital. A lumbar puncture is not done with extensive or rapidly spreading purpura, so it does not confirm the organism here; the throat swab, blood culture and whole-blood PCR do that work. Droplet precautions continue for at least 24 hours after effective antibiotics start, not just past the first dose, and close contacts get chemoprophylaxis rather than waiting for a fever. Corticosteroids are not routine in meningococcal disease; dexamethasone is the bacterial meningitis drug when meningitis is strongly suspected, stopped once the organism is meningococcus, and low-dose replacement steroids are kept for septic shock that does not respond to high-dose vasoactive drugs.",
+   "orders": [
+    {
+     "item": "Ceftriaxone dose",
+     "dose": "2 g IV every 12 hours in adults; 50 mg/kg every 12 hours in children over 1 month",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:31751039",
+       "where": "Treatment / management: dosages"
+      },
+      {
+       "docId": "pmid:30521270",
+       "where": "Treatment / management"
+      }
+     ],
+     "note": "StatPearls meningococcemia gives 80 mg/kg a day in 1 or 2 doses; NICE NG240 gives no milligram dose (the BNF or local guidance); pw_sepsis_fever leaves the meningitis dose pending."
+    },
+    {
+     "item": "Duration",
+     "dose": "NICE NG240: stop after 5 days if the person has recovered",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.7.2"
+      }
+     ],
+     "note": "StatPearls gives 7 days in its meningococcemia chapter and 5 to 6 days in its meningococcal disease chapter; NICE stops at 5 days once the person has recovered."
+    },
+    {
+     "item": "Lumbar puncture",
+     "dose": "Not with extensive or rapidly spreading purpura",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.4.12"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroids",
+     "dose": "Not routinely in meningococcal disease; low-dose replacement considered only for septic shock not responding to high-dose vasoactive drugs",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.8.6; 1.8.7"
+      }
+     ]
+    },
+    {
+     "item": "Meningitis strongly suspected",
+     "dose": "IV dexamethasone with or before the first antibiotic if possible, or as soon as possible if under 12 hours late; stopped once the organism is not pneumococcus or Hib",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.8.1; 1.8.3; 1.8.5"
+      }
+     ],
+     "note": "IDSA 2004 (pw_sepsis_fever) does not start it in adults who have already had antibiotics."
+    },
+    {
+     "item": "Meningitis, organism unknown",
+     "dose": "Ceftriaxone with vancomycin until the organism is identified, as in pw_sepsis_fever",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31751039",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Droplet precautions",
+     "dose": "For at least 24 hours after effective antibiotics start",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31751039",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Throat swab",
+     "dose": "Bacterial throat swab for meningococcal culture, preferably before antibiotics",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.5.2"
+      }
+     ]
+    },
+    {
+     "item": "Close contacts",
+     "dose": "Adults: ciprofloxacin 500 mg by mouth once, ceftriaxone 250 mg IM once, or rifampin 600 mg twice daily for 2 days (not in pregnancy). Children over 1 month: rifampin 10 mg/kg every 12 hours for 4 doses, ceftriaxone 125 mg IM once under 15 years, or ciprofloxacin 20 mg/kg (maximum 500 mg)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30521270",
+       "where": "Chemoprophylaxis for contacts"
+      },
+      {
+       "docId": "pmid:31751039",
+       "where": "Pearls and other issues"
+      }
+     ]
+    },
+    {
+     "item": "Severe antibiotic allergy",
+     "dose": "Infection specialist advice and consider chloramphenicol",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.7.3"
+      }
+     ]
+    },
+    {
+     "item": "Tick risk",
+     "dose": "Doxycycline now, as on the rickettsial route, whether or not the spots blanch; never delayed for tests",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613631",
+       "where": "History and physical; Treatment / management; Differential diagnosis"
+      }
+     ]
+    }
+   ],
+   "next": "end_mening",
+   "sources": [
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "1.4.12; 1.5.2; 1.7.1; 1.8.5; 1.8.6; 1.8.7"
+    },
+    {
+     "docId": "pmid:31751039",
+     "where": "Treatment / management; Pearls and other issues"
+    },
+    {
+     "docId": "pmid:30521270",
+     "where": "Chemoprophylaxis for contacts"
+    },
+    {
+     "docId": "pmid:28613631",
+     "where": "Differential diagnosis"
+    }
+   ]
+  },
+  {
+   "id": "end_mening",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Meningococcal disease: IV ceftriaxone within 1 hour of arrival, droplet precautions for at least 24 hours, no lumbar puncture while purpura spreads, no routine steroids, and chemoprophylaxis for close contacts. Resuscitation, pressors and the meningitis route continue in the sepsis and fever pathway (pw_sepsis_fever)."
+  },
+  {
+   "id": "tss",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Fever, shock and a diffuse red rash. Next?",
+   "options": [
+    "Remove any tampon or packing; IV broad cover plus clindamycin; look for a deep source",
+    "Clindamycin alone as the antitoxin drug, since it switches off toxin production",
+    "Broad IV antibiotics plus IV methylprednisolone for the toxin-driven shock",
+    "Broad IV antibiotics; clindamycin once group A streptococcus is grown"
+   ],
+   "answer": 0,
+   "chainStep": "Remove tampons, nasal packing or other foreign bodies at once, swabbing the site; blood and site cultures; broad IV antibiotics with MRSA cover (vancomycin or linezolid) and gram-negative cover, plus clindamycin to suppress toxin production; urgent surgical review for any soft tissue or wound source; norepinephrine for fluid-refractory shock; ICU",
+   "why": "Any source of toxin, such as a tampon or nasal packing, comes out at once, and a soft tissue source, necrotizing fasciitis above all, needs emergency surgery. Until the organism is known the regimen is broad, usually with vancomycin or linezolid for MRSA plus gram-negative cover, and clindamycin is added because it suppresses toxin production; it is bacteriostatic, so it is never given alone, and waiting for group A streptococcus to grow delays the antitoxin effect. Corticosteroids are not recommended as adjuncts in toxic shock syndrome.",
+   "orders": [
+    {
+     "item": "Source control",
+     "dose": "Remove tampons, nasal packing or any other source at once; emergency surgical review for a wound or necrotizing source",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083727",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "pmid:38247655",
+       "where": "7.2 source control"
+      }
+     ]
+    },
+    {
+     "item": "Empiric antibiotics",
+     "dose": "Broad-spectrum: vancomycin or linezolid where MRSA is common, with gram-negative cover, plus clindamycin; clindamycin never alone",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083727",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Clindamycin dose",
+     "dose": "Not stated in the toxic shock sources read; pw_sepsis_fever uses WSES 2022's 600 to 900 mg IV every 8 hours for necrotizing soft tissue infection",
+     "status": "pending"
+    },
+    {
+     "item": "Once the organism is known",
+     "dose": "Group A streptococcus: penicillin; MSSA: clindamycin plus flucloxacillin or nafcillin; 7 to 14 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083727",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Shock",
+     "dose": "IV crystalloid; norepinephrine first for shock refractory to fluids; ICU for everyone",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083727",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "IVIG",
+     "dose": "Can be considered for shock refractory to fluids and vasopressors; 2 g/kg is acceptable; trial evidence is limited and meta-analyses disagree",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083727",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "pmid:38247655",
+       "where": "7.4.2"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroids",
+     "dose": "Not recommended as adjunctive therapy",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:29083727",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Staphylococcal TSS case definition",
+     "dose": "Fever 38.9 C (102 F) or more, diffuse macular erythroderma, desquamation 1 to 2 weeks after onset, systolic 90 mm Hg or less, and 3 or more organ systems involved",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:580c0ce4514d",
+       "where": "Clinical criteria"
+      }
+     ]
+    }
+   ],
+   "next": "end_tss",
+   "sources": [
+    {
+     "docId": "pmid:29083727",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:38247655",
+     "where": "7.3; 7.4.1"
+    },
+    {
+     "docId": "url:580c0ce4514d",
+     "where": "Clinical criteria"
+    }
+   ]
+  },
+  {
+   "id": "end_tss",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Toxic shock syndrome: the source out at once, broad IV antibiotics with clindamycin, and the ICU; a necrotizing soft tissue source goes to emergency surgery (pw_sepsis_fever). Treatment starts on suspicion, since a confirmed staphylococcal case needs desquamation 1 to 2 weeks later."
+  },
+  {
+   "id": "end_sepsis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Shock with another rash: the sepsis and fever pathway (pw_sepsis_fever) takes the source search, the fluids and the pressors, including emergency surgery for necrotizing infection. Once the patient is stable, read the rash again with this pathway's routes."
+  },
+  {
+   "id": "purp_first",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Non-blanching spots, not in shock. Next?",
+   "options": [
+    "Count, film, clotting, creatinine; if febrile, cultures and IV ceftriaxone first",
+    "A platelet transfusion first if the count is low; then the film and the clotting",
+    "Count, film, clotting, creatinine; if febrile, antibiotics once they are back",
+    "A skin biopsy of a fresh spot first; then the count, film and clotting"
+   ],
+   "answer": 0,
+   "chainStep": "With fever: blood cultures and IV ceftriaxone within 1 hour of arrival, without waiting for results; blood count with film and reticulocytes, PT, APTT and fibrinogen, creatinine and electrolytes, liver tests, CRP, lactate, whole-blood meningococcal PCR and a throat swab; urine dipstick and microscopy; no platelets before TTP is excluded unless bleeding is major",
+   "why": "A non-blanching rash with fever raises meningococcal disease: purpura over 2 mm, a spreading rash, or meningitis signs with the rash are red flags, antibiotics start within 1 hour of arrival once it is suspected, and a normal CRP or white count does not rule it out, so the antibiotic does not wait for the bloods. The count, film, clotting, kidney tests and urine then separate the other causes: ITP, TTP, HUS, DIC and vasculitis. Platelets do not go first: in TTP a platelet transfusion is contraindicated unless bleeding is major, and in HUS platelets are given sparingly. A biopsy can help vasculitis later, not now.",
+   "orders": [
+    {
+     "item": "Red flags",
+     "dose": "Strongly suspect meningococcal disease with purpura over 2 mm, a rapidly progressive or spreading non-blanching rash, or meningitis signs with a non-blanching rash",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.1.9"
+      }
+     ]
+    },
+    {
+     "item": "Bloods with fever",
+     "dose": "Blood culture, white count, CRP, lactate and whole-blood meningococcal and pneumococcal PCR before the antibiotics; antibiotics within 1 hour of arrival",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.5.1; 1.5.3"
+      }
+     ]
+    },
+    {
+     "item": "Normal CRP or white count",
+     "dose": "Does not rule out meningococcal disease",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.5.4"
+      }
+     ]
+    },
+    {
+     "item": "Fever and petechiae alone",
+     "dose": "Meningococcal disease in 1.4% of children with fever and petechiae in a large UK cohort; in highly vaccinated populations a cautious approach gives many children unnecessary antibiotics",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29493956",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Other causes",
+     "dose": "Blood count, renal, liver and coagulation profiles; urine dipstick and microscopy when HSP, HUS or lupus is possible",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29493956",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Platelet transfusion",
+     "dose": "Contraindicated in TTP unless bleeding is major; given sparingly in HUS",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28613472",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "pmid:32310498",
+       "where": "Treatment / management"
+      }
+     ]
+    }
+   ],
+   "next": "purp_result",
+   "sources": [
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "1.1.9; 1.5.1; 1.5.3; 1.5.4"
+    },
+    {
+     "docId": "pmid:29493956",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:28613472",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:32310498",
+     "where": "Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "purp_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Count, film, clotting, kidneys and the history",
+   "outcomes": [
+    {
+     "id": "mening",
+     "if": "Meningococcal disease likely; fever with spreading purpura, no schistocytes, no tick risk",
+     "ddx": {
+      "lead": [
+       "Meningococcal disease"
+      ],
+      "out": []
+     },
+     "next": "mening_tx"
+    },
+    {
+     "id": "meningitis",
+     "if": "Meningitis signs, purpura not spreading; fever, stiff neck, a few spots",
+     "ddx": {
+      "lead": [
+       "Bacterial meningitis",
+       "Meningococcal disease"
+      ],
+      "out": []
+     },
+     "next": "end_meningitis"
+    },
+    {
+     "id": "rmsf",
+     "if": "Rickettsial infection possible; fever, a tick risk, spots from wrists and ankles",
+     "ddx": {
+      "lead": [
+       "Rocky Mountain spotted fever"
+      ],
+      "out": []
+     },
+     "next": "rmsf"
+    },
+    {
+     "id": "ttp",
+     "if": "TTP likely; schistocytes, normal clotting, PLASMIC 6 or 7, no bloody diarrhea",
+     "ddx": {
+      "lead": [
+       "TTP"
+      ],
+      "out": []
+     },
+     "next": "ttp"
+    },
+    {
+     "id": "hus",
+     "if": "STEC-HUS likely; bloody diarrhea, then schistocytes and kidney injury",
+     "ddx": {
+      "lead": [
+       "HUS"
+      ],
+      "out": []
+     },
+     "next": "end_hus"
+    },
+    {
+     "id": "tma",
+     "if": "Schistocytes, PLASMIC 5 or less; normal clotting, no bloody diarrhea",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "ADAMTS13",
+       "dose": "Plasma sample before plasma exchange or any blood product",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:32914582",
+         "where": "Recommendation 2, step 1"
+        }
+       ]
+      },
+      {
+       "item": "Plasma exchange and corticosteroids",
+       "dose": "Consider them, on the clinician's judgment of the individual patient",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:32914582",
+         "where": "Recommendation 2, step 2"
+        }
+       ]
+      },
+      {
+       "item": "Caplacizumab",
+       "dose": "Not until the ADAMTS13 activity result is available",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "pmid:32914582",
+         "where": "Recommendation 2, step 3"
+        }
+       ]
+      }
+     ],
+     "next": "end_tma"
+    },
+    {
+     "id": "itp",
+     "if": "ITP in an adult, platelets under 30; isolated, film and clotting normal",
+     "ddx": {
+      "lead": [
+       "ITP"
+      ],
+      "out": []
+     },
+     "next": "itp"
+    },
+    {
+     "id": "itp_obs",
+     "if": "ITP, platelets 30 or more, or a child; minor bleeding only",
+     "ddx": {
+      "lead": [
+       "ITP"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Adults, platelets 30 or more",
+       "dose": "Observation rather than corticosteroids; steroids may suit a count at the low end, comorbidity, anticoagulants or antiplatelets, an upcoming procedure, or age over 60",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31794604",
+         "where": "Recommendation 1b"
+        }
+       ]
+      },
+      {
+       "item": "Adults, platelets 20 or more",
+       "dose": "Outpatient care rather than admission; hematology follow-up within 24 to 72 hours",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31794604",
+         "where": "Recommendation 2b; good practice statement"
+        }
+       ]
+      },
+      {
+       "item": "Children, no or minor bleeding",
+       "dose": "Observation rather than corticosteroids or IVIG",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31794604",
+         "where": "Recommendations for children"
+        }
+       ]
+      },
+      {
+       "item": "Children, non-life-threatening mucosal bleeding",
+       "dose": "Corticosteroids rather than IVIG: prednisone 2 to 4 mg/kg a day (maximum 120 mg) for 5 to 7 days",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31794604",
+         "where": "Recommendations for children"
+        }
+       ]
+      }
+     ],
+     "next": "end_itp_obs"
+    },
+    {
+     "id": "dic",
+     "if": "DIC, no fever or meningism; low platelets, long PT, low fibrinogen",
+     "ddx": {
+      "lead": [
+       "DIC"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Treat the cause",
+       "dose": "Antibiotics for sepsis, delivery for abruption, surgery for trauma: the mainstay",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28722864",
+         "where": "Treatment / management"
+        }
+       ]
+      },
+      {
+       "item": "Transfusion",
+       "dose": "Only for bleeding, high bleeding risk or a procedure: platelets under 50 x 10^9/L when bleeding, 10 to 20 at high risk without bleeding; fresh frozen plasma 15 to 30 mL/kg and cryoprecipitate for factors",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28722864",
+         "where": "Treatment / management"
+        }
+       ]
+      },
+      {
+       "item": "Not bleeding",
+       "dose": "Prophylactic heparin or LMWH",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28722864",
+         "where": "Treatment / management"
+        }
+       ]
+      }
+     ],
+     "next": "end_dic"
+    },
+    {
+     "id": "vasc",
+     "if": "Palpable purpura; platelets and clotting normal",
+     "ddx": {
+      "lead": [
+       "IgA vasculitis",
+       "Cutaneous small vessel vasculitis"
+      ],
+      "out": [
+       "ITP",
+       "TTP"
+      ]
+     },
+     "next": "vasc"
+    },
+    {
+     "id": "normal",
+     "if": "All normal; flat spots, no spread, no meningism",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "ITP",
+       "TTP",
+       "HUS"
+      ]
+     },
+     "next": "end_purp_other"
+    }
+   ]
+  },
+  {
+   "id": "rmsf",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Fever and petechiae after a tick risk, spreading from the wrists and ankles. Next?",
+   "options": [
+    "Doxycycline now, at any age, without waiting for the acute serology result",
+    "Doxycycline once the acute serology is positive; ceftriaxone until then",
+    "Azithromycin for a child under 8; doxycycline for adults and older children",
+    "Ciprofloxacin, which covers rickettsiae and meningococci together"
+   ],
+   "answer": 0,
+   "chainStep": "Doxycycline as soon as rickettsial infection is suspected, whatever the age (under 45 kg, 2.2 mg/kg every 12 hours; 45 kg or more, the adult dose); acute IFA serology now and convalescent serology 2 to 10 weeks later; usually 5 to 7 days for uncomplicated infection",
+   "why": "Doxycycline is the treatment of choice for rickettsial disease in adults and children, and early treatment is the strongest determinant of outcome: untreated RMSF can kill 20% to 30%. It starts on suspicion, because IgG is often undetectable in the first week and a negative early result does not exclude the disease. Children under 8 get it too: short courses do not cause clinically significant tooth staining, and the risk from delayed treatment is far greater. Macrolides and chloramphenicol are inferior alternatives for when doxycycline cannot be used, and fluoroquinolones are linked to worse outcomes.",
+   "orders": [
+    {
+     "item": "Doxycycline, under 45 kg",
+     "dose": "2.2 mg/kg every 12 hours for severe or life-threatening infection such as RMSF; 45 kg or more, the adult dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:6a486de45e43",
+       "where": "Dosage and administration: pediatric patients"
+      }
+     ]
+    },
+    {
+     "item": "Doxycycline, adults",
+     "dose": "Label: 200 mg on day 1 in one or two infusions, then 100 to 200 mg a day by severity",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:6a486de45e43",
+       "where": "Dosage and administration: adults"
+      }
+     ],
+     "note": "The CDC 2016 rickettsial guideline (MMWR) was not reachable, so its adult regimen is not quoted here."
+    },
+    {
+     "item": "Children under 8",
+     "dose": "Doxycycline too: short courses do not cause clinically significant tooth staining or enamel hypoplasia, and delayed treatment risks severe disease and death",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613631",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Fluoroquinolones",
+     "dose": "Not recommended: linked to poorer clinical outcomes",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28613631",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Chloramphenicol",
+     "dose": "Only when doxycycline cannot be used, as in allergy; more toxic, with inferior outcomes and relapses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613631",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Serology",
+     "dose": "IFA IgG on acute serum in week 1 and convalescent serum 2 to 10 weeks later; a fourfold rise confirms; an early negative does not exclude",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613631",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Duration",
+     "dose": "Typically 5 to 7 days for uncomplicated infection",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613631",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Ceftriaxone already running",
+     "dose": "Whether to continue it beside doxycycline until meningococcal disease is excluded is not in the open sources read (CDC MMWR 2016 not reachable)",
+     "status": "pending"
+    }
+   ],
+   "next": "end_rmsf",
+   "sources": [
+    {
+     "docId": "pmid:28613631",
+     "where": "Treatment / management; Evaluation"
+    },
+    {
+     "docId": "url:6a486de45e43",
+     "where": "Dosage and administration"
+    }
+   ]
+  },
+  {
+   "id": "end_rmsf",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Rocky Mountain spotted fever: doxycycline on suspicion at any age, never waiting for serology, which is often negative in the first week; fluoroquinolones are not used. Petechiae usually mean more advanced disease, so a fever after a tick risk is treated before the rash turns petechial."
+  },
+  {
+   "id": "ttp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Schistocytes, normal clotting, PLASMIC 6 or 7. Next?",
+   "options": [
+    "ADAMTS13 sample, then plasma exchange and steroids now; hematology urgently",
+    "A platelet transfusion to 50, then plasma exchange once the ADAMTS13 is reported",
+    "Plasma exchange once the ADAMTS13 activity comes back under 10%",
+    "IV immunoglobulin and corticosteroids, as for immune thrombocytopenia"
+   ],
+   "answer": 0,
+   "chainStep": "Draw ADAMTS13 activity (with inhibitor or anti-ADAMTS13 IgG) before any plasma or blood product; urgent hematology; start therapeutic plasma exchange with corticosteroids without waiting for the result; caplacizumab and rituximab considered with hematology; no platelet transfusion unless bleeding is major",
+   "why": "With a high pretest probability, the plasma sample for ADAMTS13 is taken before plasma exchange or any blood product, and plasma exchange with corticosteroids starts without waiting for the result; ISTH strongly recommends adding corticosteroids to plasma exchange. A PLASMIC score above 5 means a high probability: it needs schistocytes and gives a point each for platelets under 30, hemolysis, MCV under 90, INR under 1.5, creatinine under 2.0, no cancer and no transplant. A platelet transfusion is contraindicated unless bleeding is major. IVIG with steroids is the ITP approach; plasma exchange removes the antibodies, and the plasma replenishes ADAMTS13.",
+   "orders": [
+    {
+     "item": "ADAMTS13",
+     "dose": "Plasma sample for activity and inhibitor or anti-ADAMTS13 IgG before plasma exchange or any blood product",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32914582",
+       "where": "Recommendation 1, step 1"
+      }
+     ]
+    },
+    {
+     "item": "Plasma exchange with corticosteroids",
+     "dose": "Start without waiting for ADAMTS13; one plasma volume (typically 40 mL/kg) once daily, with plasma as the replacement fluid",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32914526",
+       "where": "Recommendation 1"
+      },
+      {
+       "docId": "pmid:32914582",
+       "where": "Recommendation 1, step 2"
+      },
+      {
+       "docId": "pmid:28613472",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroid dose",
+     "dose": "Prednisone 1 mg/kg a day if neurologically intact; if severely ill, methylprednisolone 1,000 mg IV daily for 3 days or 125 mg 2 to 4 times a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613472",
+       "where": "Treatment / management"
+      }
+     ],
+     "note": "ISTH 2020 names no preferred agent or dose."
+    },
+    {
+     "item": "Caplacizumab",
+     "dose": "Suggested for an acute event; consider it early, before ADAMTS13 is back, when suspicion is high, with an experienced clinician",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32914526",
+       "where": "Recommendation 5"
+      },
+      {
+       "docId": "pmid:32914582",
+       "where": "Recommendation 1, step 3"
+      }
+     ]
+    },
+    {
+     "item": "Rituximab",
+     "dose": "Suggested in addition to corticosteroids and plasma exchange for a first event",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32914526",
+       "where": "Recommendation 2"
+      }
+     ]
+    },
+    {
+     "item": "Platelet transfusion",
+     "dose": "Contraindicated unless bleeding is major",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28613472",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "PLASMIC score",
+     "dose": "Needs schistocytes; 1 point each: platelets under 30,000, hemolysis (reticulocytes over 2.5%, undetectable haptoglobin or indirect bilirubin over 2 mg/dL), MCV under 90, INR under 1.5, creatinine under 2.0, no cancer, no transplant; above 5 is a high probability",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613472",
+       "where": "Evaluation: PLASMIC score"
+      }
+     ]
+    },
+    {
+     "item": "ADAMTS13 result",
+     "dose": "Under 10 IU/dL (10% of normal) is positive; over 20 IU/dL, consider other diagnoses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32914582",
+       "where": "Recommendation 1, step 4"
+      }
+     ]
+    }
+   ],
+   "next": "end_ttp",
+   "sources": [
+    {
+     "docId": "pmid:32914582",
+     "where": "Recommendation 1"
+    },
+    {
+     "docId": "pmid:32914526",
+     "where": "Recommendations 1, 2 and 5"
+    },
+    {
+     "docId": "pmid:28613472",
+     "where": "Evaluation; Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_ttp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Suspected TTP: ADAMTS13 drawn first, then plasma exchange and corticosteroids without waiting for it, with hematology deciding on caplacizumab and rituximab; platelets only for major bleeding. ADAMTS13 activity under 10% confirms it; over 20%, look for another cause."
+  },
+  {
+   "id": "end_tma",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Lower-probability thrombotic microangiopathy: ADAMTS13 drawn before any plasma or blood product, plasma exchange and corticosteroids on clinical judgment, no caplacizumab until ADAMTS13 returns under 10%, hematology, and a search for another cause."
+  },
+  {
+   "id": "end_meningitis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Meningitis signs with a few spots that are not spreading: the bacterial meningitis route in pw_sepsis_fever, with the lumbar puncture when it is safe; antibiotics never wait for it."
+  },
+  {
+   "id": "end_hus",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "STEC-HUS: supportive care with careful volume repletion, red cells as needed, platelets sparingly, and no antibiotics or antimotility drugs, which are linked to worse outcomes; about half need renal replacement therapy, so involve nephrology early. Stool is tested for Shiga toxin, and ADAMTS13 is sent to rule out TTP."
+  },
+  {
+   "id": "itp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Adult, newly found platelets of 12, petechiae and gum bleeding only. Next?",
+   "options": [
+    "Corticosteroids, admitted; HIV and hepatitis C tests for a secondary cause",
+    "A platelet transfusion now to lift the count above 50, then a repeat count",
+    "Observation and a repeat count in a week, as with platelets of 30 or more",
+    "IV immunoglobulin first-line, with corticosteroids held back for a relapse"
+   ],
+   "answer": 0,
+   "chainStep": "Newly diagnosed adult ITP, platelets under 30 with no or minor bleeding: prednisone 0.5 to 2.0 mg/kg a day or dexamethasone 40 mg a day for 4 days, 6 weeks or less in all; admit when under 20 at diagnosis; tests for secondary causes (HIV, hepatitis C); critical bleeding: platelet transfusion with IVIG and corticosteroids",
+   "why": "In adults with newly diagnosed ITP and platelets under 30 who have no or only minor mucocutaneous bleeding, ASH suggests corticosteroids rather than observation, and under 20 at diagnosis it suggests admission. Observation is the answer for adults with platelets of 30 or more and for children with no or minor bleeding. IVIG joins the corticosteroid when a more rapid rise is needed, and replaces it only when corticosteroids are contraindicated. A platelet transfusion is for critical bleeding, with IVIG and steroids, because the rise lasts less than an hour. ITP is a diagnosis of exclusion, and infections such as HIV and hepatitis C cause secondary ITP.",
+   "orders": [
+    {
+     "item": "Corticosteroids, platelets under 30",
+     "dose": "Suggested over observation in newly diagnosed adults with no or minor mucocutaneous bleeding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31794604",
+       "where": "Recommendation 1a"
+      }
+     ]
+    },
+    {
+     "item": "Platelets 30 or more",
+     "dose": "Observation rather than corticosteroids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31794604",
+       "where": "Recommendation 1b"
+      }
+     ]
+    },
+    {
+     "item": "Agent and dose",
+     "dose": "Prednisone 0.5 to 2.0 mg/kg a day or dexamethasone 40 mg a day for 4 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31794604",
+       "where": "Recommendation 4"
+      }
+     ]
+    },
+    {
+     "item": "Course",
+     "dose": "6 weeks or less including the taper, not longer",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31794604",
+       "where": "Recommendation 3"
+      }
+     ]
+    },
+    {
+     "item": "Admission",
+     "dose": "Suggested for newly diagnosed adults under 20 with no or minor bleeding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31794604",
+       "where": "Recommendation 2a"
+      }
+     ]
+    },
+    {
+     "item": "Secondary causes",
+     "dose": "Infections (HIV, hepatitis C, cytomegalovirus, Epstein-Barr virus), drugs, lupus, chronic lymphocytic leukemia; test adults for HIV and hepatitis C",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32965953",
+       "where": "Etiology"
+      },
+      {
+       "docId": "pmid:31794604",
+       "where": "Table 2: 2011 recommendations retained, 4.1.A"
+      }
+     ]
+    },
+    {
+     "item": "Critical bleeding",
+     "dose": "Platelet transfusion (1 apheresis unit or 4 to 6 pooled units) with IVIG 1 g/kg (repeated the next day if still under 50) and glucocorticoids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32965953",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "IVIG with the corticosteroid",
+     "dose": "When a more rapid rise is needed, 1 g/kg once, repeated if necessary; IVIG or anti-D first-line only if corticosteroids are contraindicated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31794604",
+       "where": "Table 2: 2011 recommendations retained, 4.3.A"
+      }
+     ]
+    },
+    {
+     "item": "Children",
+     "dose": "Newly diagnosed with no or minor bleeding: observation rather than IVIG",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31794604",
+       "where": "Recommendations for children"
+      }
+     ]
+    }
+   ],
+   "next": "end_itp",
+   "sources": [
+    {
+     "docId": "pmid:31794604",
+     "where": "Recommendations 1a, 1b, 2a, 3, 4 (adults); Table 2, 4.1.A and 4.3.A"
+    },
+    {
+     "docId": "pmid:32965953",
+     "where": "Etiology; Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_itp_obs",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Adults with platelets of 30 or more and no or minor bleeding: observation rather than corticosteroids, as outpatients, with hematology in 24 to 72 hours; steroids may suit a low count, comorbidity, anticoagulants or antiplatelets, a procedure, or age over 60. Children with skin-only bleeding: observation; non-life-threatening mucosal bleeding: prednisone 2 to 4 mg/kg a day (maximum 120 mg) for 5 to 7 days rather than IVIG."
+  },
+  {
+   "id": "end_itp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Adult ITP with platelets under 30 and minor bleeding: a short course of prednisone or dexamethasone, admission when under 20 at diagnosis, and a search for secondary causes; children with no or minor bleeding are observed instead. Critical bleeding gets platelets with IVIG and steroids."
+  },
+  {
+   "id": "end_dic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "DIC: treat the cause (sepsis, an obstetric emergency, trauma or cancer). Platelets and plasma only for bleeding, a high bleeding risk or a procedure: platelets under 50 when bleeding, under 10 to 20 at high risk without bleeding; fresh frozen plasma 15 to 30 mL/kg and cryoprecipitate replace factors; prophylactic heparin or LMWH when not bleeding. Fever with DIC and purpura follows the meningococcal route."
+  },
+  {
+   "id": "vasc",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Palpable purpura on the legs and buttocks, platelets and clotting normal. Next?",
+   "options": [
+    "Urinalysis, blood pressure and creatinine; review recent drugs and infections",
+    "A repeat platelet count in a week, and no other tests while the count stays normal",
+    "Skin biopsy first; urine and pressure once the biopsy shows IgA deposits",
+    "Clotting factor assays and a bleeding work-up, since the spots are purpuric"
+   ],
+   "answer": 0,
+   "chainStep": "Urinalysis (protein to creatinine ratio if protein is present), blood pressure and creatinine at diagnosis; recent drugs, infections and vaccines; skin biopsy with DIF when the cause is unclear; in a child with IgA vasculitis, urinalysis weekly for 4 to 6 weeks, then monthly to 6 months",
+   "why": "Palpable purpura on the legs and buttocks with a normal platelet count is small vessel vasculitis, and the kidney decides the urgency: children with IgA vasculitis need urinalysis at diagnosis and repeatedly for 6 months, and blood pressure at diagnosis. The common triggers are drugs (beta-lactams, NSAIDs, allopurinol, sulfonamides and others) and preceding infections, so removing the trigger is treatment. A skin biopsy with DIF confirms it, but it does not replace the urine and pressure check; the bleeding into the skin comes from inflamed small vessels (red cell extravasation on biopsy), so with normal clotting a bleeding work-up adds nothing.",
+   "orders": [
+    {
+     "item": "Kidney screen",
+     "dose": "Urinalysis frequently for 6 months (weekly for the first 4 to 6 weeks, then monthly); blood pressure at diagnosis and with nephritis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39379139",
+       "where": "Table 3: recommendations 3.1, 3.2"
+      }
+     ]
+    },
+    {
+     "item": "Specialist advice (children)",
+     "dose": "Severe gut involvement, significant nephritis (protein to creatinine ratio over 250 mg/mmol, nephrotic or nephritic syndrome, kidney insufficiency), CNS involvement or pulmonary hemorrhage",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39379139",
+       "where": "Table 3: recommendation 2.1"
+      }
+     ]
+    },
+    {
+     "item": "Triggers",
+     "dose": "Antibiotics including beta-lactams, NSAIDs, allopurinol, sulfonamides, thiazides, phenytoin, quinolones, propylthiouracil; preceding infections; screen for hepatitis B and C, HIV and endocarditis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489227",
+       "where": "History and physical"
+      }
+     ]
+    },
+    {
+     "item": "Skin biopsy",
+     "dose": "With DIF; H&E of a lesion under 48 hours old, DIF of one under 24 hours old",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489227",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "No systemic symptoms",
+     "dose": "Blood count with differential, basic metabolic panel, liver tests, urinalysis, and a urine protein to creatinine ratio if protein is present",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489227",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ],
+   "next": "end_vasc",
+   "sources": [
+    {
+     "docId": "pmid:39379139",
+     "where": "Table 3: recommendations 2.1, 3.1, 3.2"
+    },
+    {
+     "docId": "pmid:29489227",
+     "where": "History and physical; Evaluation; Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_vasc",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cutaneous small vessel vasculitis: remove the trigger (stop a suspect drug, treat an infection); most idiopathic cases settle within weeks to months. IgA vasculitis in a child: urinalysis weekly for 4 to 6 weeks and then monthly to 6 months, blood pressure checks, specialist advice for significant nephritis, severe gut involvement, CNS signs or pulmonary hemorrhage, and corticosteroids considered for severe abdominal pain or GI bleeding once intussusception is excluded."
+  },
+  {
+   "id": "end_purp_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Non-blanching spots with a normal count, film and clotting and no spread: with fever, the antibiotics continue and a senior decides on admission, because normal blood tests do not rule out meningococcal disease. Afebrile and well with an obvious cause, such as trauma or spots confined above the nipple line, observation is enough, and the person goes home if nothing spreads, told to return if the rash spreads or changes or new symptoms appear."
+  },
+  {
+   "id": "blister_look",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Widespread blisters or peeling skin. What decides the route?",
+   "options": [
+    "Mouth, eyes and genitals; Nikolsky sign; the skin area lost; drugs in the last 8 weeks",
+    "A swab of the blister fluid for culture first; the full examination once it is reported",
+    "The itch and the age; mucosa and drug history once the blisters spread further",
+    "Viral PCR of the blister fluid; the drug list reviewed if the PCR is negative"
+   ],
+   "answer": 0,
+   "chainStep": "Examine the mouth, eyes and genitals; test the Nikolsky sign; estimate detached skin as a share of body surface; list every drug started in the last 8 weeks; blood count, clotting, urea, electrolytes, bicarbonate, glucose and liver tests; urgent skin biopsy (frozen section) and a perilesional biopsy for DIF",
+   "why": "Mucosal involvement is the hallmark of SJS/TEN, present in 90% and often 1 to 3 days before the skin, while the inside of the mouth is spared in staphylococcal scalded skin and classic bullous pemphigoid spares the mucosa. A positive Nikolsky sign marks detaching epidermis in SJS/TEN and in scalded skin. The detached area grades SJS (under 10%), overlap (10% to 30%) and TEN (over 30%) and enters SCORTEN, and the drug history covers 8 weeks because that is when SJS/TEN appears. Blister fluid cultures are typically negative in scalded skin, and waiting for any result delays stopping a culprit drug.",
+   "orders": [
+    {
+     "item": "Mucosa",
+     "dose": "Involved in 90% of SJS/TEN, often 1 to 3 days before the skin; the inside of the mouth is spared in scalded skin; classic bullous pemphigoid has no mucosal involvement",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "History and physical"
+      },
+      {
+       "docId": "pmid:28846262",
+       "where": "History and physical"
+      },
+      {
+       "docId": "pmid:40665541",
+       "where": "Table 2"
+      }
+     ]
+    },
+    {
+     "item": "Extent",
+     "dose": "SJS under 10% of body surface; SJS-TEN overlap 10% to 30%; TEN over 30%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29692452",
+       "where": "Clinical features"
+      }
+     ]
+    },
+    {
+     "item": "Biopsy",
+     "dose": "Urgent frozen section shows full-thickness necrosis in SJS/TEN, with negative DIF; DIF for pemphigoid is taken from perilesional skin, not a blister",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:40665541",
+       "where": "Diagnosis"
+      }
+     ]
+    },
+    {
+     "item": "Bloods",
+     "dose": "Blood count, ESR, clotting, urea and electrolytes and liver tests, for supportive care, organ failure and prognosis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ],
+   "next": "blister_type",
+   "sources": [
+    {
+     "docId": "pmid:29083827",
+     "where": "History and physical; Evaluation"
+    },
+    {
+     "docId": "pmid:28846262",
+     "where": "History and physical; Evaluation"
+    },
+    {
+     "docId": "pmid:29692452",
+     "where": "Clinical features"
+    },
+    {
+     "docId": "pmid:40665541",
+     "where": "Diagnosis"
+    }
+   ]
+  },
+  {
+   "id": "blister_type",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Mucosa, Nikolsky sign, extent and drugs",
+   "outcomes": [
+    {
+     "id": "sjs",
+     "if": "SJS/TEN pattern; acute, dusky skin detaching, mucosal erosions",
+     "ddx": {
+      "lead": [
+       "SJS/TEN"
+      ],
+      "out": []
+     },
+     "next": "sjs_stop"
+    },
+    {
+     "id": "ssss",
+     "if": "Scalded skin pattern; child, tender red skin peeling, mouth spared",
+     "ddx": {
+      "lead": [
+       "Staphylococcal scalded skin syndrome"
+      ],
+      "out": []
+     },
+     "next": "ssss"
+    },
+    {
+     "id": "pv",
+     "if": "Pemphigus pattern; weeks of mouth erosions, then flaccid blisters",
+     "ddx": {
+      "lead": [
+       "Pemphigus vulgaris"
+      ],
+      "out": []
+     },
+     "next": "pv"
+    },
+    {
+     "id": "bp",
+     "if": "Pemphigoid pattern; older, itchy tense blisters, mouth spared",
+     "ddx": {
+      "lead": [
+       "Bullous pemphigoid"
+      ],
+      "out": []
+     },
+     "next": "bp"
+    },
+    {
+     "id": "other",
+     "if": "Other blisters; impetigo, burns, contact or bite blisters",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_blister_other"
+    }
+   ]
+  },
+  {
+   "id": "sjs_stop",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Acute mucosal erosions and detaching skin, usually after a new drug. First?",
+   "options": [
+    "Stop every suspect drug now; SCORTEN within 24 hours; a burn unit or ICU early",
+    "Stop the likeliest drug and keep the others until patch testing names the culprit",
+    "Start prophylactic IV antibiotics for the open skin; stop drugs once the biopsy is back",
+    "Keep the drugs while a test dose confirms the culprit; then a specialist unit"
+   ],
+   "answer": 0,
+   "chainStep": "Stop all suspect drugs now and never restart them; SCORTEN on day 1 and again on day 3; early transfer to a burn unit or ICU experienced in SJS/TEN; skin swabs on day 1 and every 48 hours; no prophylactic antibiotics",
+   "why": "In the ED two measures matter most: stopping the offending drug and early referral to a burn unit or ICU experienced in the disease; done within 24 hours of blistering, they lower the infection rate and improve survival. SCORTEN is scored in the first 24 hours and again on day 3. Rechallenge is contraindicated, so no drug is kept or test-dosed to find the culprit, and patch testing is only an adjunct. Prophylactic antibiotics do not change survival; skin swabs on day 1 and every 48 hours find the infection that needs treatment.",
+   "orders": [
+    {
+     "item": "Culprit drug",
+     "dose": "Stop it, with early referral to a burn unit or ICU; within 24 hours of blistering, these lower infection and improve survival",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Rechallenge",
+     "dose": "Contraindicated in SJS and TEN",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "SCORTEN",
+     "dose": "1 point each: age over 40, heart rate 120 or more, cancer, detachment of 10% or more of body surface on day 1, BUN over 28 mg/dL, bicarbonate under 20, glucose over 252 mg/dL; within 24 hours, repeated on day 3",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "Evaluation: SCORTEN"
+      }
+     ]
+    },
+    {
+     "item": "SCORTEN mortality",
+     "dose": "0 to 1 point, 3.2%; 2, 12.1%; 3, 35.3%; 4, 58.3%; 5 or more, 90%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "Evaluation: Table 2 (\"> 5 | 90\"); text: \"greater than 90% if 5 or more risk factors are present\""
+      }
+     ],
+     "note": "Table 2 prints the top band as over 5; the same chapter's text puts 5 or more risk factors at over 90%, so 5 belongs to the top band."
+    },
+    {
+     "item": "Prophylactic antibiotics",
+     "dose": "Not recommended; swab the skin on day 1 and every 48 hours and treat infection, rapid deterioration or a sudden fall in temperature",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "Treatment / management: wound care"
+      }
+     ]
+    }
+   ],
+   "next": "sjs_care",
+   "sources": [
+    {
+     "docId": "pmid:29083827",
+     "where": "Evaluation; Treatment / management"
+    },
+    {
+     "docId": "pmid:29692452",
+     "where": "Clinical features"
+    }
+   ]
+  },
+  {
+   "id": "sjs_care",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "SJS/TEN, the suspect drugs stopped. Supportive care?",
+   "options": [
+    "Warmed room, nonadherent dressings, fluids by urine output, opioids, early ophthalmology",
+    "Warmed room, nonadherent dressings, fluids, and prophylactic IV antibiotics for the open skin",
+    "Warmed room, nonadherent dressings, fluids, opioids; ophthalmology once the skin has healed",
+    "Ward care with daily dermatology input; transfer if the SCORTEN rises on day 3"
+   ],
+   "answer": 0,
+   "chainStep": "Prevent hypothermia; nonadherent dressings, leaving detached epidermis in place; crystalloid to a MAP over 65 mm Hg and urine output 0.5 to 1 mL/kg/h; opioid analgesia; enteral nutrition; early ophthalmology (within 24 hours in one guideline); genital mucosal care; systemic immunomodulation only as a specialist decision",
+   "why": "Supportive care until the skin heals is the mainstay: fluids guided by perfusion and urine output, pain control, wound care with nonadherent dressings, warmth against hypothermia, and nutrition. The eyes need ophthalmology early, because ocular complications are common and sometimes serious; one guideline sets the review within the first 24 hours, so waiting for the skin to heal is too late. Prophylactic antibiotics do not change survival, and transfer is early, not saved for a rising score. Systemic corticosteroids, cyclosporine (ciclosporin) and IVIG have no proven benefit and the sources disagree on them, so they are not an ED order.",
+   "orders": [
+    {
+     "item": "Fluids",
+     "dose": "StatPearls: crystalloid by a burn protocol such as Parkland, to a MAP over 65 mm Hg, CVP 8 to 12 mm Hg and urine output 0.5 to 1 mL/kg/h",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "Treatment / management"
+      }
+     ],
+     "note": "The 2026 pediatric consensus found no agreement on burns-based requirements and advises individualized fluids by volume status, urine output and biochemistry, not a fixed burns formula."
+    },
+    {
+     "item": "Eyes",
+     "dose": "Early ophthalmology, with lubricants and topical antibiotic or steroid drops as directed; one guideline sets the review within the first 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "Treatment / management: complications"
+      },
+      {
+       "docId": "pmid:41698348",
+       "where": "Results: multidisciplinary care"
+      }
+     ]
+    },
+    {
+     "item": "Wound care",
+     "dose": "Nonadherent dressings; detached epidermis left in place as a natural dressing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "pmid:41698348",
+       "where": "Results: supportive care"
+      }
+     ]
+    },
+    {
+     "item": "Nutrition",
+     "dose": "Enteral rather than parenteral, 20 to 25 kcal/kg a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroids, cyclosporine, IVIG",
+     "dose": "A specialist decision, not an ED order",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "Treatment / management: pharmacotherapy"
+      },
+      {
+       "docId": "pmid:29692452",
+       "where": "Management"
+      },
+      {
+       "docId": "pmid:41698348",
+       "where": "Results: pharmacologic therapy"
+      }
+     ],
+     "note": "StatPearls: no proven treatment, and some studies link corticosteroids to higher mortality; EuroSCAR found no benefit from corticosteroids or IVIG over supportive care; an Indian review favors early dexamethasone and cyclosporine 3 mg/kg a day; 4 of 10 pediatric guidelines recommend systemic corticosteroids and 5 of 10 IVIG; the review's synthesis says consider early corticosteroids case by case."
+    },
+    {
+     "item": "Prophylactic antibiotics",
+     "dose": "Not recommended; they do not change survival",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:29083827",
+       "where": "Treatment / management: wound care"
+      }
+     ]
+    }
+   ],
+   "next": "end_sjs",
+   "sources": [
+    {
+     "docId": "pmid:29083827",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:41698348",
+     "where": "Results: supportive care; multidisciplinary care; ocular care"
+    },
+    {
+     "docId": "pmid:42219898",
+     "where": "Results; Discussion"
+    },
+    {
+     "docId": "pmid:29692452",
+     "where": "Management"
+    }
+   ]
+  },
+  {
+   "id": "end_sjs",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "SJS/TEN: every suspect drug stopped and never restarted, SCORTEN in the first 24 hours and again on day 3, early transfer to a burn unit or ICU, early ophthalmology and supportive care; systemic immunomodulation is a specialist decision because the evidence conflicts."
+  },
+  {
+   "id": "ssss",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Child, fever, tender red skin peeling with a positive Nikolsky sign, mouth spared. Next?",
+   "options": [
+    "Admit; IV antistaphylococcal antibiotic, fluids and skin care; no NSAIDs",
+    "Admit; IV antistaphylococcal antibiotic and ibuprofen for the fever and pain",
+    "Oral clindamycin alone as an outpatient, to switch off the toxin",
+    "Stop recent drugs and transfer to a burn unit as SJS/TEN, with IV immunoglobulin"
+   ],
+   "answer": 0,
+   "chainStep": "Admit (ICU if extensive); IV nafcillin or oxacillin 100 to 150 mg/kg a day divided every 6 hours, or cefazolin 50 to 100 mg/kg a day divided every 8 hours; vancomycin if MRSA is likely; emollients and nonadherent dressings; fluids and temperature control; acetaminophen (paracetamol) or opioids, no NSAIDs, no silver sulfadiazine; about 10 days in all",
+   "why": "Severe, generalized scalded skin needs admission and IV antibiotics against Staphylococcus aureus, with fluids, warmth and wound care, because the lost epidermis leaks fluid and heat. NSAIDs are avoided for the risk of kidney impairment. Clindamycin may cut toxin production, but up to 50% of strains are resistant, so it is never used alone. The inside of the mouth is spared, which separates scalded skin from SJS/TEN, a drug reaction with mucosal erosions.",
+   "orders": [
+    {
+     "item": "Children, MSSA",
+     "dose": "Nafcillin or oxacillin 100 to 150 mg/kg a day divided every 6 hours, or cefazolin 50 to 100 mg/kg a day divided every 8 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846262",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "MRSA suspected",
+     "dose": "Vancomycin: recent healthcare exposure or high local MRSA prevalence",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846262",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Milder cases",
+     "dose": "An oral beta-lactamase-resistant penicillin or first-generation cephalosporin for at least 1 week",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846262",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Clindamycin",
+     "dose": "May reduce toxin production, but up to 50% of strains are resistant: not as monotherapy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846262",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "NSAIDs",
+     "dose": "Avoid: risk of kidney impairment",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28846262",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Silver sulfadiazine",
+     "dose": "Avoid: systemic absorption and toxicity",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28846262",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Duration",
+     "dose": "10 days unless clinical judgment says longer",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846262",
+       "where": "Treatment / management"
+      }
+     ]
+    }
+   ],
+   "next": "end_ssss",
+   "sources": [
+    {
+     "docId": "pmid:28846262",
+     "where": "History and physical; Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_blister_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Not in this version: bullous impetigo, burns, contact and bite blisters. Scalded skin in an adult, usually with kidney failure or immunocompromise, is treated as on the scalded skin route."
+  },
+  {
+   "id": "end_ssss",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Staphylococcal scalded skin syndrome: admission, IV antistaphylococcal antibiotics (vancomycin when MRSA is likely), fluids, warmth and gentle skin care, and no NSAIDs; the inside of the mouth is spared, and children usually heal with little or no scarring."
+  },
+  {
+   "id": "pv",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Weeks of mouth erosions, now flaccid blisters, no new drug. Next?",
+   "options": [
+    "Lesional and perilesional biopsies with DIF; dermatology; systemic corticosteroids",
+    "Clobetasol 0.05% cream as first-line treatment, with a biopsy if blisters keep forming",
+    "A 5-day prednisolone burst without a biopsy, then a clinic visit in a month",
+    "Stop her regular medicines and transfer to a burn unit for presumed TEN"
+   ],
+   "answer": 0,
+   "chainStep": "Biopsy a fresh lesion for histology and perilesional skin for DIF; desmoglein serology (ELISA or IIF); dermatology; systemic corticosteroids, with rituximab (anti-CD20) first-line for moderate to severe disease; ask about penicillamine, ACE inhibitors, ARBs and cephalosporins",
+   "why": "Pemphigus is confirmed by a compatible clinical picture and histology plus either a positive DIF of perilesional skin or serum autoantibodies against the epithelial cell surface, so a burst without a biopsy skips the diagnosis. Systemic corticosteroids are the backbone, they take several weeks to work, and an anti-CD20 antibody such as rituximab joins them first-line for moderate to severe disease. A superpotent topical steroid as first-line is the pemphigoid approach. SJS/TEN is a drug reaction; only about 5% have no recent drug.",
+   "orders": [
+    {
+     "item": "Diagnosis",
+     "dose": "Clinical picture and histology, plus a positive DIF of perilesional skin or serum autoantibodies against the epithelial cell surface",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29438767",
+       "where": "Diagnosis"
+      }
+     ]
+    },
+    {
+     "item": "First line",
+     "dose": "Systemic corticosteroids; an anti-CD20 antibody such as rituximab with them for moderate to severe disease",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32809695",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "pmid:29438767",
+       "where": "First-line treatment"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroid dose",
+     "dose": "Not extracted: the panel's dosing table and the EADV and BAD guidelines were not read, and StatPearls gives no dose",
+     "status": "pending"
+    },
+    {
+     "item": "Drug-induced pemphigus",
+     "dose": "D-penicillamine, ACE inhibitors, ARBs and cephalosporins",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29438767",
+       "where": "Medical history"
+      }
+     ]
+    }
+   ],
+   "next": "end_pv",
+   "sources": [
+    {
+     "docId": "pmid:29438767",
+     "where": "Diagnosis; Therapeutic management; Medical history"
+    },
+    {
+     "docId": "pmid:32809695",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:29083827",
+     "where": "History and physical"
+    }
+   ]
+  },
+  {
+   "id": "end_pv",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pemphigus vulgaris: lesional and perilesional biopsies with DIF or serology, dermatology, systemic corticosteroids, and rituximab with them for moderate to severe disease; the response takes weeks."
+  },
+  {
+   "id": "bp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Older adult, itchy tense blisters on the trunk and limbs, mouth spared. Next?",
+   "options": [
+    "Perilesional biopsy for DIF; clobetasol 0.05% cream first-line; dermatology",
+    "IV methylprednisolone pulses and rituximab as the first-line treatment",
+    "Oral prednisone 2 mg/kg a day as first-line, tapered off over the next 2 weeks",
+    "Stop his regular medicines and transfer to a burn unit as for toxic epidermal necrolysis"
+   ],
+   "answer": 0,
+   "chainStep": "Perilesional biopsy (not a blister) for DIF in Michel medium or saline, plus histology; anti-BP180 and BP230 serology; clobetasol propionate 0.05% cream once or twice daily, up to 20 g a day, sparing the face and folds; prednisone 0.5 to 1.0 mg/kg a day when topical treatment is not practical; doxycycline 200 mg a day may be added",
+   "why": "Classic bullous pemphigoid is intensely itchy with tense blisters, typically after 70 and with the mucosa spared, and DIF of perilesional skin, not a blister, shows linear IgG or C3 along the dermal-epidermal junction. Clobetasol propionate 0.05% is first-line where it is practical: against oral prednisone it controlled more patients at 3 weeks with fewer severe adverse events and lower mortality. When topical treatment is impractical, prednisone is 0.5 to 1.0 mg/kg a day, tapered slowly over 6 to 9 months or longer, not over 2 weeks; rituximab is for resistant disease. With the mouth spared, tense blisters and no new drug, this is not toxic epidermal necrolysis.",
+   "orders": [
+    {
+     "item": "Diagnosis",
+     "dose": "Clinical picture and histology with DIF showing linear IgG or C3 along the dermal-epidermal junction, or positive serology",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40665541",
+       "where": "Recommendation: diagnosis"
+      }
+     ]
+    },
+    {
+     "item": "Clobetasol propionate 0.05%",
+     "dose": "First-line where appropriate, once or twice daily up to 20 g a day, sparing the face and folds",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40665541",
+       "where": "Recommendation: topical treatment"
+      },
+      {
+       "docId": "pmid:30570995",
+       "where": "Treatment / management"
+      }
+     ],
+     "note": "StatPearls makes systemic corticosteroids the mainstay and keeps clobetasol for localized disease under 20% of the body surface in the elderly; the Canadian consensus makes clobetasol first-line wherever topical treatment is practical."
+    },
+    {
+     "item": "Prednisone",
+     "dose": "0.5 to 1.0 mg/kg a day when topical treatment is not practical",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40665541",
+       "where": "Recommendation: systemic corticosteroids"
+      },
+      {
+       "docId": "pmid:30570995",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Taper",
+     "dose": "Slowly, over 6 to 9 months or longer",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30570995",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Doxycycline",
+     "dose": "200 mg a day can be added throughout treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40665541",
+       "where": "Recommendation: doxycycline"
+      }
+     ]
+    },
+    {
+     "item": "Resistant disease",
+     "dose": "Azathioprine, mycophenolate or methotrexate; IVIG, rituximab or omalizumab when the others fail",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30570995",
+       "where": "Treatment / management"
+      }
+     ]
+    }
+   ],
+   "next": "end_bp",
+   "sources": [
+    {
+     "docId": "pmid:40665541",
+     "where": "Recommendations; Diagnosis; Treatment"
+    },
+    {
+     "docId": "pmid:30570995",
+     "where": "Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_bp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bullous pemphigoid: perilesional DIF with linear IgG or C3 at the dermal-epidermal junction, superpotent topical clobetasol first-line, prednisone 0.5 to 1.0 mg/kg a day when topical treatment is impractical, and dermatology follow-up for a taper over months."
+  },
+  {
+   "id": "target_look",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Target lesions. What separates erythema multiforme from SJS?",
+   "options": [
+    "Raised 3-ring targets on the limbs vs flat dusky 2-ring targets on the trunk",
+    "Mouth erosions mean SJS; targets without mouth sores mean erythema multiforme",
+    "A recent cold sore means SJS; a new drug points to erythema multiforme instead",
+    "Itchy targets mean erythema multiforme; painless ones mean SJS"
+   ],
+   "answer": 0,
+   "chainStep": "Look at shape and site: typical raised targets with 3 zones, under 3 cm, acral and symmetric (erythema multiforme) vs atypical flat 2-zone purpuric targets, mainly on the trunk, with blisters and detachment (SJS); check the mucosa and the detached area; ask about cold sores, mycoplasma and new drugs",
+   "why": "Erythema multiforme has typical targets with 3 concentric zones, under 3 cm, mainly acral and symmetric, and about 90% follow an infection, herpes simplex most often. SJS lacks typical targets: its target-like lesions have 2 zones, turn purpuric, sit mainly on the trunk and come with detachment, and a drug is usually the cause. The mouth does not separate them, because significant mucosal involvement defines erythema multiforme major, and typical erythema multiforme lesions do not itch, while SJS erosions are painful.",
+   "orders": [
+    {
+     "item": "Erythema multiforme",
+     "dose": "Round lesions with 3 concentric zones, under 3 cm, mainly acral and symmetric; about 90% triggered by infection, herpes simplex most often",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261983",
+       "where": "Etiology; History and physical"
+      }
+     ]
+    },
+    {
+     "item": "SJS",
+     "dose": "No typical targets: asymmetric target-like lesions with 2 zones that turn purpuric, mainly axial, usually from a drug",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261983",
+       "where": "Differential diagnosis"
+      }
+     ]
+    }
+   ],
+   "next": "target_result",
+   "sources": [
+    {
+     "docId": "pmid:29261983",
+     "where": "Introduction; Etiology; History and physical; Differential diagnosis"
+    },
+    {
+     "docId": "pmid:29083827",
+     "where": "History and physical"
+    }
+   ]
+  },
+  {
+   "id": "target_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Lesion shape, site, mucosa and trigger",
+   "outcomes": [
+    {
+     "id": "em",
+     "if": "Erythema multiforme; raised 3-ring targets on the limbs, no detachment",
+     "ddx": {
+      "lead": [
+       "Erythema multiforme"
+      ],
+      "out": []
+     },
+     "next": "end_em"
+    },
+    {
+     "id": "sjs",
+     "if": "SJS pattern; flat dusky targets on the trunk, blisters, a new drug",
+     "ddx": {
+      "lead": [
+       "SJS/TEN"
+      ],
+      "out": []
+     },
+     "next": "sjs_stop"
+    }
+   ]
+  },
+  {
+   "id": "end_em",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Erythema multiforme: remove and treat the trigger (acyclovir (aciclovir) or valacyclovir if herpes is suspected, antibiotics for mycoplasma), supportive mouth and lip care, ophthalmology for eye involvement, and admission for severe pain, dehydration or poor intake. Recurrent herpes-associated attacks are suppressed with acyclovir 400 mg or valacyclovir 500 mg twice daily for at least 6 months."
+  },
+  {
+   "id": "wide_look",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Widespread red rash, no blisters, not in shock. Next?",
+   "options": [
+    "Fever, mucosa, nodes, facial swelling; eosinophils, liver and kidney tests",
+    "An oral antihistamine now; blood tests if the rash lasts beyond a week",
+    "Oral prednisolone for 5 days, started before the blood tests are taken",
+    "A skin biopsy first, with the blood tests once the histology is reported"
+   ],
+   "answer": 0,
+   "chainStep": "Temperature; mouth, eyes and lymph nodes; facial swelling; share of skin involved; blood count with differential (eosinophils, atypical lymphocytes), liver and kidney tests; every drug started in the last 8 weeks",
+   "why": "A drug rash needs admission when the skin signs are severe (over 60% of the skin, confluent redness, facial swelling, mucosal erosions, blisters), with high fever, lymphadenopathy or hypotension, or when the bloods show eosinophils over 1,000 per mm3, atypical lymphocytes or abnormal liver tests. Those are the features of DRESS, which appears weeks after the drug, and the bloods show its eosinophilia and organ injury, so an antihistamine with the bloods put off for a week misses it. Oral corticosteroids are often used for drug rashes but have no proven efficacy, and a biopsy does not replace the blood tests.",
+   "orders": [
+    {
+     "item": "Admission signs",
+     "dose": "Skin over 60%, confluent redness, facial edema, skin pain, palpable purpura, necrosis, blisters or detachment, Nikolsky sign, mucosal erosions; high fever, nodes, arthritis, dyspnea, hypotension; eosinophils over 1,000 per mm3, atypical lymphocytes, abnormal liver tests",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30422592",
+       "where": "Additional considerations"
+      }
+     ]
+    },
+    {
+     "item": "DRESS timing",
+     "dose": "WAO 2024: usually 2 to 8 weeks after the drug",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:39156598",
+       "where": "Introduction"
+      }
+     ],
+     "note": "StatPearls (Cutaneous Adverse Drug Reaction) gives 2 to 6 weeks."
+    },
+    {
+     "item": "RegiSCAR",
+     "dose": "2 to 3 possible, 4 to 5 probable, over 5 definite",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40589376",
+       "where": "Diagnostic criteria"
+      }
+     ]
+    },
+    {
+     "item": "RegiSCAR items",
+     "dose": "The scoring items sit in a supplement (Figure S3) that was not read",
+     "status": "pending"
+    },
+    {
+     "item": "Erythroderma",
+     "dose": "Confluent redness over 90% of the body surface",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39526626",
+       "where": "Clinical features"
+      }
+     ]
+    },
+    {
+     "item": "Simple drug exanthem",
+     "dose": "1 day to 3 weeks after the drug, no mucosal involvement, starting on the trunk and spreading symmetrically",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30422592",
+       "where": "Clinical significance"
+      }
+     ]
+    }
+   ],
+   "next": "wide_result",
+   "sources": [
+    {
+     "docId": "pmid:30422592",
+     "where": "Clinical significance; Additional considerations"
+    },
+    {
+     "docId": "pmid:39156598",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:40589376",
+     "where": "Diagnostic criteria"
+    },
+    {
+     "docId": "pmid:39526626",
+     "where": "Clinical features"
+    }
+   ]
+  },
+  {
+   "id": "wide_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Drug history, bloods, extent and age",
+   "outcomes": [
+    {
+     "id": "dress",
+     "if": "DRESS possible or likely; a drug weeks ago, fever, eosinophils or organ injury",
+     "ddx": {
+      "lead": [
+       "DRESS"
+      ],
+      "out": []
+     },
+     "next": "dress"
+    },
+    {
+     "id": "erythro",
+     "if": "Erythroderma, no DRESS features; red over 90% of the skin",
+     "ddx": {
+      "lead": [
+       "Erythroderma"
+      ],
+      "out": []
+     },
+     "next": "erythro"
+    },
+    {
+     "id": "mild",
+     "if": "Rash only; afebrile, well, mucosa spared, normal bloods",
+     "ddx": {
+      "lead": [
+       "Simple drug or viral exanthem"
+      ],
+      "out": []
+     },
+     "next": "end_well"
+    }
+   ]
+  },
+  {
+   "id": "fever_flags",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Fever and a widespread spotty rash, no new drug. First move?",
+   "options": [
+    "A side room until measles is excluded; then eyes, mouth, nodes, hands and feet",
+    "The open waiting room until seen, since most of these rashes are viral",
+    "A throat swab first, with a side room if it is negative for group A strep",
+    "Bloods for eosinophils and liver enzymes before deciding where the patient waits"
+   ],
+   "answer": 0,
+   "chainStep": "Isolate on arrival in a side room as a possible measles case; ask about vaccination and contacts; look for cough, coryza, conjunctivitis and white buccal spots (measles), a sore throat with a sandpaper rash and strawberry tongue (scarlet fever), and 5 or more days of fever with conjunctival injection, red lips or tongue, swollen red hands and feet and a cervical node (Kawasaki disease)",
+   "why": "Anyone with fever and a rash is potentially infectious, so the patient goes to a side room on arrival rather than the waiting room, and a suspected measles case is notified and isolated without waiting for a test. The rest of the look sorts the three ED flags: the 3 Cs with buccal spots for measles, a sore throat with the sandpaper rash for scarlet fever, and at least 5 days of fever with 4 of the 5 criteria for Kawasaki disease. A throat swab or blood tests come after isolation, not before.",
+   "orders": [
+    {
+     "item": "Tick risk",
+     "dose": "Doxycycline now, as on the rickettsial route, whether or not the spots blanch; never delayed for tests",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613631",
+       "where": "History and physical; Treatment / management; Differential diagnosis"
+      }
+     ]
+    },
+    {
+     "item": "Measles",
+     "dose": "Isolate on arrival; inform infection control; notify the health protection team as soon as it is suspected; supportive care; vitamin A daily for 2 days (WHO, AAP)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ffbe05602c2d",
+       "where": "Section 2 surveillance; 3.1; 3.2.1"
+      },
+      {
+       "docId": "pmid:28846330",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Scarlet fever",
+     "dose": "Penicillin V or amoxicillin by mouth for 10 days, or one IM dose of benzathine penicillin G; a macrolide or clindamycin for allergy, by local resistance; away from nursery, school or work until 24 hours after starting",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29939666",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "url:375c70b8f24e",
+       "where": "Diagnosis and treatment; protection"
+      }
+     ]
+    },
+    {
+     "item": "Kawasaki disease",
+     "dose": "Fever 5 days or more with 4 of 5: bilateral non-exudative conjunctival injection; red mouth, strawberry tongue or cracked lips; polymorphous rash; red, swollen hands and feet; a cervical node over 1.5 cm. IVIG 2 g/kg over 10 to 12 hours with aspirin, ideally within 7 to 10 days of fever onset",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725848",
+       "where": "History and physical; Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Kawasaki aspirin dose",
+     "dose": "StatPearls 2023: 80 to 100 mg/kg a day divided every 6 hours until afebrile for over 48 hours, then 3 to 5 mg/kg a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725848",
+       "where": "Treatment / management"
+      }
+     ],
+     "note": "The 2024 AHA scientific statement is in an LWW journal (barred) and was not read."
+    }
+   ],
+   "next": "end_fever_rash",
+   "sources": [
+    {
+     "docId": "url:ffbe05602c2d",
+     "where": "3.1; 3.2.1; Section 2: surveillance"
+    },
+    {
+     "docId": "pmid:28846330",
+     "where": "History and physical; Treatment / management"
+    },
+    {
+     "docId": "pmid:28613631",
+     "where": "Differential diagnosis"
+    },
+    {
+     "docId": "pmid:29939666",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "url:375c70b8f24e",
+     "where": "Symptoms; Diagnosis and treatment"
+    },
+    {
+     "docId": "pmid:30725848",
+     "where": "History and physical; Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "dress",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Rash weeks after a new drug, with fever, eosinophilia or organ injury. Next?",
+   "options": [
+    "Stop the drug, admit, treat by severity; a systemic steroid tapers over 2 to 3 months",
+    "Stop the drug; a 5-day oral prednisolone burst as an outpatient, with no taper after",
+    "Stop the drug; IV immunoglobulin as first-line in place of corticosteroids, on the ward",
+    "Continue the drug at a lower dose, with an antihistamine and weekly liver tests"
+   ],
+   "answer": 0,
+   "chainStep": "Stop the culprit drug for good; admit; score RegiSCAR and repeat the blood count, liver, kidney and other organ tests; moderate or severe DRESS: prednisolone or equivalent 0.5 to 1.0 mg/kg a day, tapered over 2 to 3 months; a possible case (RegiSCAR 2 to 3): a moderate-potency topical steroid and close follow-up (EAACI, children); cyclosporine, IVIG or other agents for steroid-resistant or steroid-dependent disease",
+   "why": "Withdrawing the offending drug immediately, with supportive care, comes first, and systemic corticosteroids are the standard treatment for moderate and severe DRESS: prednisolone 0.5 to 1.0 mg/kg a day, tapered over 2 to 3 months. A possible case without organ injury (RegiSCAR 2 to 3) gets a moderate-potency topical steroid with supportive care and close follow-up in the EAACI pediatric paper. A rapid reduction can cause severe or fatal flares and relapses, so a 5-day burst is wrong. IVIG, cyclosporine and other agents are for steroid-resistant or steroid-dependent disease or when steroids are contraindicated, not first-line, and the drug is never continued.",
+   "orders": [
+    {
+     "item": "Culprit drug",
+     "dose": "Withdraw it immediately, with supportive therapy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39156598",
+       "where": "Introduction"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroid",
+     "dose": "Prednisolone or equivalent 0.5 to 1.0 mg/kg a day for moderate and severe DRESS, tapered over 2 to 3 months",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39156598",
+       "where": "Introduction"
+      }
+     ]
+    },
+    {
+     "item": "Rapid taper",
+     "dose": "Can cause severe or fatal flares or relapses",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:39156598",
+       "where": "Introduction"
+      }
+     ]
+    },
+    {
+     "item": "Possible DRESS (RegiSCAR 2 to 3)",
+     "dose": "Moderate-potency topical corticosteroid, supportive care and close follow-up for progression (EAACI, children)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40589376",
+       "where": "Severity-based treatment: recommendation 3"
+      }
+     ]
+    },
+    {
+     "item": "Steroid-resistant or dependent",
+     "dose": "Immunosuppressants such as cyclosporine, IVIG, biologics or plasmapheresis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39156598",
+       "where": "Abstract; Introduction"
+      }
+     ]
+    }
+   ],
+   "next": "end_dress",
+   "sources": [
+    {
+     "docId": "pmid:39156598",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:40589376",
+     "where": "Severity-based classification and treatment"
+    }
+   ]
+  },
+  {
+   "id": "end_dress",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "DRESS: the culprit drug stopped for good, admission, systemic corticosteroids for moderate or severe disease tapered over 2 to 3 months, and a watch on the liver, kidneys and other organs; a fast taper invites relapse."
+  },
+  {
+   "id": "erythro",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Red, scaling skin over 90% of the body, not in shock, no organ injury. Next?",
+   "options": [
+    "Admit; fluids, warmth, electrolytes; emollients, wet dressings, mild topical steroid",
+    "A potent topical steroid as an outpatient, with dermatology to follow",
+    "IV antibiotics from the start, because the lost skin barrier invites infection",
+    "A skin biopsy first; treatment starts once the histology names the cause"
+   ],
+   "answer": 0,
+   "chainStep": "Admit when severe; monitor hemodynamics, temperature, fluid balance, electrolytes and albumin; lukewarm baths, wet dressings, mild topical corticosteroids and bland emollients; oral antihistamine; antibiotics for signs of secondary infection; skin biopsy, with DIF if a blistering or connective tissue disease is possible; treat the cause (psoriasis, eczema, drugs, cutaneous T-cell lymphoma)",
+   "why": "Erythroderma can be life-threatening and may need admission; care centers on monitoring and keeping metabolic and hemodynamic stability, because uncontrolled erythroderma brings electrolyte imbalance, dehydration and low protein. Symptoms are treated with lukewarm baths, wet dressings, mild topical corticosteroids, bland emollients and oral antihistamines; antibiotics are for signs of secondary infection; and the underlying cause is found and treated. A biopsy helps find the cause, but it does not replace the admission.",
+   "orders": [
+    {
+     "item": "Admission",
+     "dose": "When severe; monitor and keep metabolic and hemodynamic stability; electrolyte imbalance, dehydration and low protein can become life-threatening",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32119455",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "pmid:39526626",
+       "where": "Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Skin care",
+     "dose": "Bed rest, lukewarm baths, wet dressings, mild topical corticosteroids and bland emollients; oral antihistamines may help",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32119455",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotics",
+     "dose": "For findings of secondary infection",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32119455",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Workup",
+     "dose": "Histopathology, with DIF for bullous or connective tissue disease; ESR and CRP raised in most",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32119455",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Causes",
+     "dose": "Preexisting dermatoses (psoriasis about half in some series, eczema), drugs (antiepileptics, sulfonamides, penicillins, vancomycin, lithium, allopurinol), malignancy such as CTCL; some idiopathic",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32119455",
+       "where": "Etiology"
+      }
+     ]
+    }
+   ],
+   "next": "end_erythro",
+   "sources": [
+    {
+     "docId": "pmid:32119455",
+     "where": "Etiology; Evaluation; Treatment / management"
+    },
+    {
+     "docId": "pmid:39526626",
+     "where": "Treatment"
+    }
+   ]
+  },
+  {
+   "id": "end_erythro",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Erythroderma: admission when severe, protection of fluids, electrolytes and temperature, soothing skin care, and a search for the cause, psoriasis and eczema most often, then drugs and cutaneous T-cell lymphoma. Fever with low blood pressure and diffuse redness is the toxic shock route at the front door."
+  },
+  {
+   "id": "end_fever_rash",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Fever and a rash after a tick risk: doxycycline now, as on the rickettsial route, even while the spots blanch. Fever with a spotty rash and no new drug: this pathway carries only the ED flags; the children's pathways are not built yet, and other causes in adults, such as secondary syphilis, are not in this version. Measles: isolate on arrival, tell infection control, notify public health on suspicion, care is supportive, and vitamin A is given for 2 days. Scarlet fever: penicillin V or amoxicillin for 10 days, away from school until 24 hours of antibiotics. Kawasaki disease: 5 days of fever with 4 of the 5 criteria, or coronary changes on echocardiography in an incomplete case, means admission for IVIG and aspirin, ideally within 7 to 10 days of fever onset."
+  },
+  {
+   "id": "end_well",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Not a skin emergency: a local rash, or a widespread blanching rash in a well patient with normal bloods and no mucosal signs, often a simple drug or viral exanthem. Stop a suspect drug, treat the itch with a topical steroid and an oral antihistamine, and return for fever, blisters, mouth sores, facial swelling or a spreading rash. Not in this version: burns, bites and stings, scabies, impetigo, chronic dermatoses and secondary syphilis."
+  },
+  {
+   "id": "ves_look",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Vesicles. What decides the plan?",
+   "options": [
+    "Their spread, the eye and nose tip, immune status, pregnancy and eczema beneath",
+    "A Tzanck smear first; start an antiviral once it shows multinucleated giant cells",
+    "Vesicle PCR first, with an antiviral held back until the result is positive",
+    "Oral steroids first to settle the inflammation, then decide on an antiviral"
+   ],
+   "answer": 0,
+   "chainStep": "Map the spread (one dermatome, adjacent dermatomes, or scattered); look at the forehead, eyelid and nose tip and ask about eye pain or blurred vision; ask about immunosuppression and pregnancy; look for eczema beneath punched-out erosions; check the mouth, hands and feet; vesicle PCR when the diagnosis is uncertain or the patient is immunocompromised",
+   "why": "The plan turns on distribution and host. Zoster in one dermatome is treated by mouth; vesicles on the nose tip (the Hutchinson sign) mark nasociliary involvement and strongly predict eye complications; more than 20 lesions outside the primary and adjacent dermatomes is dissemination, and immunocompromise or dissemination means IV acyclovir; pregnancy changes the chickenpox plan; and punched-out erosions on eczema are eczema herpeticum. PCR is the most reliable test and the Tzanck smear is less sensitive and specific, but antivirals are not delayed for a definitive diagnosis. Systemic corticosteroids are not routinely recommended in zoster.",
+   "orders": [
+    {
+     "item": "Disseminated zoster",
+     "dose": "More than 20 skin lesions outside the primary or adjacent dermatomes; may also involve liver or brain",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722854",
+       "where": "History and physical"
+      }
+     ]
+    },
+    {
+     "item": "Hutchinson sign",
+     "dose": "Vesicles on the tip or side of the nose: nasociliary involvement, which strongly predicts ocular complications",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32491711",
+       "where": "History and physical"
+      }
+     ]
+    },
+    {
+     "item": "Testing",
+     "dose": "PCR of vesicle fluid is the most reliable test; the Tzanck smear is less sensitive and specific",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722854",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ],
+   "next": "ves_result",
+   "sources": [
+    {
+     "docId": "pmid:28722854",
+     "where": "History and physical; Evaluation"
+    },
+    {
+     "docId": "pmid:32491711",
+     "where": "History and physical; Treatment / management"
+    },
+    {
+     "docId": "pmid:32809616",
+     "where": "History and physical"
+    }
+   ]
+  },
+  {
+   "id": "ves_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Spread, eye, immunity, pregnancy and the skin beneath",
+   "outcomes": [
+    {
+     "id": "zoster",
+     "if": "Shingles, one dermatome; immunocompetent, eye and nose tip spared",
+     "ddx": {
+      "lead": [
+       "Herpes zoster"
+      ],
+      "out": []
+     },
+     "next": "zoster"
+    },
+    {
+     "id": "hzo",
+     "if": "Ophthalmic zoster, immunocompetent; forehead, eyelid or nose tip",
+     "ddx": {
+      "lead": [
+       "Herpes zoster"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Antiviral",
+       "dose": "By mouth, ideally within 72 hours, not delayed for the diagnosis or the eye review: valacyclovir 1,000 mg every 8 hours, acyclovir 800 mg 5 times a day or famciclovir 500 mg 3 times a day, for at least 7 days",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:32491711",
+         "where": "Treatment / management"
+        }
+       ]
+      },
+      {
+       "item": "Ophthalmology",
+       "dose": "Referral is mandatory when ocular involvement is suspected",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:32491711",
+         "where": "National and international guidelines"
+        }
+       ]
+      }
+     ],
+     "next": "end_hzo"
+    },
+    {
+     "id": "dissem",
+     "if": "Disseminated or immunocompromised VZV; beyond adjacent dermatomes, or on immunosuppression",
+     "ddx": {
+      "lead": [
+       "Disseminated or immunocompromised VZV"
+      ],
+      "out": []
+     },
+     "next": "iv_acv"
+    },
+    {
+     "id": "varicella",
+     "if": "Chickenpox, adult or pregnant, rash under 24 hours; crops, immunocompetent",
+     "ddx": {
+      "lead": [
+       "Varicella"
+      ],
+      "out": []
+     },
+     "next": "varicella"
+    },
+    {
+     "id": "varicella_other",
+     "if": "Chickenpox, other; a well child, or an adult after 24 hours",
+     "ddx": {
+      "lead": [
+       "Varicella"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Well child",
+       "dose": "Symptom care; acyclovir is not recommended with normal immunity",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846365",
+         "where": "Treatment / management"
+        }
+       ]
+      },
+      {
+       "item": "Adult or pregnant, after 24 hours",
+       "dose": "UKHSA (pregnancy): antivirals not routinely advised without complications, a clinical decision; StatPearls advises them in adults within 24 to 48 hours",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "url:68bf3a5f1c73",
+         "where": "3.3: chickenpox in pregnancy"
+        },
+        {
+         "docId": "pmid:28846365",
+         "where": "Treatment / management"
+        }
+       ],
+       "note": "UKHSA does not routinely advise antivirals after 24 hours in uncomplicated chickenpox in pregnancy; StatPearls advises antivirals in adults if they can start within 24 to 48 hours of the rash."
+      },
+      {
+       "item": "Hospital",
+       "dose": "Respiratory or neurological symptoms, a hemorrhagic or dense rash, or significant immunosuppression",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:68bf3a5f1c73",
+         "where": "3.3: chickenpox in pregnancy"
+        }
+       ]
+      }
+     ],
+     "next": "end_varicella_other"
+    },
+    {
+     "id": "eh",
+     "if": "Eczema herpeticum; punched-out erosions on eczema",
+     "ddx": {
+      "lead": [
+       "Eczema herpeticum"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Mild disease",
+       "dose": "Oral acyclovir 30 to 60 mg/kg a day in 3 doses in children, 400 mg 3 times a day in adults; or valacyclovir 20 mg/kg a day in children, 500 mg 3 times a day in adults; 7 to 21 days or until all lesions crust",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:32809616",
+         "where": "Treatment / management"
+        }
+       ]
+      },
+      {
+       "item": "Severe or immunocompromised",
+       "dose": "Admit for IV acyclovir 5 to 10 mg/kg every 8 hours, then oral once improving and crusting",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:32809616",
+         "where": "Treatment / management"
+        }
+       ]
+      },
+      {
+       "item": "Face or eyelids",
+       "dose": "Ophthalmology review",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:32809616",
+         "where": "Consultations"
+        }
+       ]
+      },
+      {
+       "item": "In hospital",
+       "dose": "Contact precautions; watch for secondary bacterial infection",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:32809616",
+         "where": "Treatment / management"
+        }
+       ]
+      }
+     ],
+     "next": "end_eh"
+    },
+    {
+     "id": "hfmd",
+     "if": "Hand, foot and mouth; child, mouth ulcers, spots on palms and soles",
+     "ddx": {
+      "lead": [
+       "Hand, foot and mouth disease"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Care",
+       "dose": "Supportive: NSAIDs or acetaminophen for pain and fever, and hydration; resolves in 7 to 10 days; no licensed antiviral",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613736",
+         "where": "Treatment / management"
+        }
+       ]
+      },
+      {
+       "item": "Steroids",
+       "dose": "Linked to a higher risk of severe disease",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "pmid:28613736",
+         "where": "Treatment / management"
+        }
+       ]
+      }
+     ],
+     "next": "end_hfmd"
+    }
+   ]
+  },
+  {
+   "id": "zoster",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Shingles in one dermatome, under 72 hours, immunocompetent. Next?",
+   "options": [
+    "Oral valacyclovir 1 g three times a day now, with analgesia for the pain",
+    "No antiviral, since antivirals help when started within 24 hours of the rash",
+    "Admit for IV acyclovir 10 mg/kg every 8 hours for 7 days, then oral",
+    "Oral valacyclovir with prednisolone as standard, to prevent postherpetic neuralgia"
+   ],
+   "answer": 0,
+   "chainStep": "An oral antiviral within 72 hours of rash onset, most effective within 48 hours: valacyclovir 1 g three times a day, acyclovir 800 mg five times a day or famciclovir 500 mg three times a day, with renal dosing if needed; analgesia (acetaminophen, NSAIDs, opioids if severe); infectious until the lesions dry; recombinant zoster vaccine later for adults 50 or older",
+   "why": "Antivirals hasten healing, cut acute pain and help prevent postherpetic neuralgia, and the window is 72 hours, not 24: valacyclovir is most effective within 48 hours of the rash, and its efficacy after 72 hours is not established. One dermatome in an immunocompetent patient is treated by mouth; IV acyclovir is for the immunocompromised and for disseminated disease. Systemic corticosteroids are not routinely recommended; trials gave variable results.",
+   "orders": [
+    {
+     "item": "Timing",
+     "dose": "At the earliest sign, most effective within 48 hours of the rash; efficacy after 72 hours not established",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:61b3e605c340",
+       "where": "1.1 Adult patients: herpes zoster; 2.1 Adult dosing"
+      }
+     ]
+    },
+    {
+     "item": "Valacyclovir",
+     "dose": "Label: 1 g three times a day for 7 days",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:61b3e605c340",
+       "where": "2.1 Adult dosing: herpes zoster"
+      }
+     ],
+     "note": "StatPearls Herpes Zoster gives 5 days; its herpes zoster ophthalmicus chapter gives at least 7."
+    },
+    {
+     "item": "Acyclovir",
+     "dose": "Label: 800 mg five times a day for 7 to 10 days",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:80be37952fb0",
+       "where": "Dosage and administration: herpes zoster"
+      }
+     ],
+     "note": "StatPearls Herpes Zoster gives 5 days; its herpes zoster ophthalmicus chapter gives at least 7, or 7 to 10."
+    },
+    {
+     "item": "Famciclovir",
+     "dose": "500 mg three times a day for 7 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722854",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Analgesia",
+     "dose": "NSAIDs or acetaminophen; opioids if severe",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32491711",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Systemic corticosteroids",
+     "dose": "Not routinely recommended; trial results variable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32491711",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Infectivity",
+     "dose": "Most infectious until the lesions dry out",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722854",
+       "where": "History and physical"
+      }
+     ]
+    },
+    {
+     "item": "Vaccine",
+     "dose": "Recombinant zoster vaccine for adults 50 or older, and 19 or older at increased risk from immunosuppression",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722854",
+       "where": "Treatment / management"
+      }
+     ]
+    }
+   ],
+   "next": "end_zoster",
+   "sources": [
+    {
+     "docId": "url:61b3e605c340",
+     "where": "1.1 Adult patients; 2.1 Adult dosing"
+    },
+    {
+     "docId": "url:80be37952fb0",
+     "where": "Dosage and administration"
+    },
+    {
+     "docId": "pmid:28722854",
+     "where": "Treatment / management; History and physical"
+    },
+    {
+     "docId": "pmid:32491711",
+     "where": "Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_zoster",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Shingles in an immunocompetent adult: an oral antiviral within 72 hours of the rash, analgesia, and care with susceptible contacts until the lesions dry; recombinant zoster vaccine later lowers the risk of zoster and postherpetic neuralgia."
+  },
+  {
+   "id": "end_hzo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Herpes zoster ophthalmicus: an oral antiviral now, ideally within 72 hours and never delayed for the eye review, and urgent ophthalmology, because referral is mandatory when the eye may be involved. The eye pathway (pw_eye) covers the red eye and vision loss but does not yet cover zoster itself."
+  },
+  {
+   "id": "iv_acv",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Disseminated zoster, or VZV on immunosuppression. Next?",
+   "options": [
+    "Admit; IV acyclovir 10 mg/kg every 8 hours by ideal weight, over 1 hour each",
+    "Oral valacyclovir 1 g three times a day, as for zoster in one dermatome",
+    "Admit; IV acyclovir 5 mg/kg every 8 hours, the dose for herpes simplex infection",
+    "Varicella zoster immune globulin now, to treat the spreading rash"
+   ],
+   "answer": 0,
+   "chainStep": "Admit; IV acyclovir 10 mg/kg every 8 hours for 7 days (under 12 years, 20 mg/kg), each dose over at least 1 hour, by ideal body weight in obesity and adjusted to kidney function; isolation per infection control; look for hepatitis, pneumonitis and encephalitis",
+   "why": "The label dose for zoster in immunocompromised patients is 10 mg/kg every 8 hours for 7 days in adults and adolescents; 5 mg/kg every 8 hours is the dose for herpes simplex in the immunocompromised. Each infusion runs over at least 1 hour to lower the risk of kidney tubular damage, and obese patients are dosed by ideal body weight. Disseminated zoster can reach the liver or brain, so oral treatment at home is not enough, and immune globulin has no place in treatment once the rash appears.",
+   "orders": [
+    {
+     "item": "IV acyclovir",
+     "dose": "Zoster in immunocompromised patients: 10 mg/kg over 1 hour every 8 hours for 7 days (12 years or older); 20 mg/kg under 12",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:c282bfad72db",
+       "where": "Dosage and administration: varicella-zoster infections"
+      },
+      {
+       "docId": "pmid:32491711",
+       "where": "Treatment / management"
+      }
+     ],
+     "note": "The StatPearls herpes zoster ophthalmicus chapter gives IV acyclovir 10 to 15 mg/kg every 8 hours for 7 to 10 days; the label gives 10 mg/kg for 7 days."
+    },
+    {
+     "item": "Obesity",
+     "dose": "Dose by ideal body weight",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c282bfad72db",
+       "where": "Dosage and administration"
+      }
+     ]
+    },
+    {
+     "item": "Infusion",
+     "dose": "Over at least 1 hour, to reduce the risk of renal tubular damage",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c282bfad72db",
+       "where": "Warnings"
+      }
+     ]
+    },
+    {
+     "item": "Isolation",
+     "dose": "Airborne and contact precautions for disseminated zoster are CDC guidance, and cdc.gov was not reachable",
+     "status": "pending"
+    },
+    {
+     "item": "Visceral spread",
+     "dose": "Hepatitis or encephalitis, potentially lethal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722854",
+       "where": "History and physical"
+      }
+     ]
+    },
+    {
+     "item": "Varicella zoster immune globulin",
+     "dose": "Post-exposure prophylaxis, not treatment: UKHSA says it has no place once the chickenpox rash appears",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:68bf3a5f1c73",
+       "where": "3.3 Generalised vesicular rash illness in pregnancy"
+      }
+     ]
+    }
+   ],
+   "next": "end_iv_acv",
+   "sources": [
+    {
+     "docId": "url:c282bfad72db",
+     "where": "Dosage and administration; Indications; Warnings"
+    },
+    {
+     "docId": "pmid:28722854",
+     "where": "History and physical"
+    },
+    {
+     "docId": "url:68bf3a5f1c73",
+     "where": "3.3 Generalised vesicular rash illness in pregnancy"
+    },
+    {
+     "docId": "pmid:32491711",
+     "where": "National and international guidelines; Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_iv_acv",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Disseminated or immunocompromised VZV: admission for IV acyclovir 10 mg/kg every 8 hours by ideal weight with kidney dosing, isolation, and a watch for hepatitis, pneumonitis and encephalitis. Forehead, eyelid or nose-tip lesions: urgent ophthalmology too, because referral is mandatory when the eye may be involved."
+  },
+  {
+   "id": "varicella",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Chickenpox, rash under 24 hours old, adult or pregnant, no complications. Next?",
+   "options": [
+    "Oral acyclovir now, with daily review, and a return at once for any new cough",
+    "Varicella zoster immune globulin today, to shorten the illness and protect the baby",
+    "No antiviral; adult chickenpox is managed with symptom care, as in children",
+    "Admit for IV acyclovir 10 mg/kg every 8 hours, as for chickenpox pneumonitis"
+   ],
+   "answer": 0,
+   "chainStep": "Within 24 hours of the first lesion: oral acyclovir (pregnancy: 800 mg five times a day for 7 days); daily review; pregnant: urgent assessment and fetal follow-up; hospital for respiratory symptoms, neurological symptoms other than headache, a hemorrhagic rash or bleeding, a dense rash or many mucosal lesions, or significant immunosuppression; IV acyclovir 10 mg/kg three times a day for 5 to 10 days for pneumonia or severe disease",
+   "why": "Adult chickenpox is more severe, and antivirals are advised in adults, pregnant women included, when they can start early; in pregnancy, presentation within 24 hours of the first lesion earns 7 days of oral acyclovir. Uncomplicated cases go home with daily review, and IV acyclovir is kept for severe disease or complications such as pneumonia, whose risk is highest after 18 to 20 weeks. Immune globulin has no place in treatment once the rash appears.",
+   "orders": [
+    {
+     "item": "Oral acyclovir, pregnancy",
+     "dose": "Within 24 hours of rash onset: 7 days, for example 800 mg five times a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:68bf3a5f1c73",
+       "where": "3.3: chickenpox in pregnancy"
+      }
+     ]
+    },
+    {
+     "item": "Oral acyclovir, other adults",
+     "dose": "Label: 800 mg four times a day for 5 days (adults and children over 40 kg)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:80be37952fb0",
+       "where": "Dosage and administration: chickenpox"
+      }
+     ],
+     "note": "The UKHSA pregnancy regimen is 800 mg five times a day for 7 days; the label's adult chickenpox regimen is 800 mg four times a day for 5 days, started within 24 hours."
+    },
+    {
+     "item": "After 24 hours",
+     "dose": "Not routinely advised without complications; a clinical decision",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:68bf3a5f1c73",
+       "where": "3.3: chickenpox in pregnancy"
+      }
+     ]
+    },
+    {
+     "item": "Adults",
+     "dose": "Antiviral advised if it can start within 24 to 48 hours of the rash",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846365",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Hospital",
+     "dose": "Respiratory symptoms; neurological symptoms other than headache; hemorrhagic rash or bleeding; dense rash or numerous mucosal lesions; significant immunosuppression",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:68bf3a5f1c73",
+       "where": "3.3: chickenpox in pregnancy"
+      }
+     ]
+    },
+    {
+     "item": "IV acyclovir",
+     "dose": "Severe chickenpox or complications; pneumonia: 10 mg/kg three times a day for 5 to 10 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:68bf3a5f1c73",
+       "where": "3.3: chickenpox in pregnancy"
+      }
+     ]
+    },
+    {
+     "item": "Varicella zoster immune globulin",
+     "dose": "No place in treatment once the rash appears",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:68bf3a5f1c73",
+       "where": "3.3: chickenpox in pregnancy"
+      }
+     ]
+    }
+   ],
+   "next": "end_varicella",
+   "sources": [
+    {
+     "docId": "url:68bf3a5f1c73",
+     "where": "3.3 Generalised vesicular rash illness in pregnancy"
+    },
+    {
+     "docId": "pmid:28846365",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "url:80be37952fb0",
+     "where": "Dosage and administration"
+    }
+   ]
+  },
+  {
+   "id": "end_varicella",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Chickenpox in an adult or in pregnancy: oral acyclovir when seen within 24 hours of the first lesion, daily review, and admission for IV acyclovir at the first respiratory or neurological sign or a hemorrhagic or dense rash; pneumonitis is the risk, highest after 18 to 20 weeks of pregnancy."
+  },
+  {
+   "id": "end_varicella_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A well child: symptom care; acyclovir is not recommended with normal immunity. An adult or pregnant woman after 24 hours without complications: antivirals not routinely advised in pregnancy, a clinical decision (UKHSA); StatPearls advises them in adults within 24 to 48 hours. Respiratory or neurological symptoms, a hemorrhagic or dense rash, or immunosuppression: hospital."
+  },
+  {
+   "id": "end_eh",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Eczema herpeticum: a systemic antiviral now, by mouth for mild disease (acyclovir or valacyclovir for 7 to 21 days or until crusted) or IV acyclovir in hospital when severe or immunocompromised; ophthalmology when the face or eyelids are involved, contact precautions, and a watch for secondary bacterial infection."
+  },
+  {
+   "id": "end_hfmd",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hand, foot and mouth disease: supportive care with fluids and analgesia (acetaminophen or NSAIDs); it settles in 7 to 10 days, there is no licensed antiviral, and steroids were linked to more severe disease."
+  },
+  {
+   "id": "urticaria",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Hives for 2 days, breathing, pressure and gut normal. Treatment?",
+   "options": [
+    "A standard-dose second-generation H1 antihistamine; ask about triggers",
+    "IM epinephrine 0.5 mg now, then observation for a biphasic reaction",
+    "A sedating first-generation antihistamine, such as chlorpheniramine (chlorphenamine), as first-line",
+    "Allergy blood tests and a full screen before treatment is started"
+   ],
+   "answer": 0,
+   "chainStep": "A second-generation H1 antihistamine at the standard dose (for example cetirizine, loratadine, fexofenadine or bilastine), up to fourfold for chronic urticaria not controlled at the standard dose; a history for triggers (infection, NSAIDs or other drugs, food); no routine tests in acute urticaria; return at once for throat or tongue swelling, breathlessness or faintness",
+   "why": "A standard-dose modern second-generation H1 antihistamine is the first-line treatment for urticaria; the first-generation drugs are sedating and anticholinergic. Acute urticaria is self-limiting and needs no routine diagnostic tests beyond a history for triggers such as a recent infection, an NSAID or a food. Epinephrine is for anaphylaxis, and skin signs with normal breathing, blood pressure and gut do not meet those criteria.",
+   "orders": [
+    {
+     "item": "First line",
+     "dose": "A standard-dose second-generation H1 antihistamine (bilastine, cetirizine, desloratadine, ebastine, fexofenadine, levocetirizine, loratadine, mizolastine, rupatadine)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41649409",
+       "where": "Treatment: H1-antihistamines"
+      }
+     ]
+    },
+    {
+     "item": "Chronic urticaria not controlled",
+     "dose": "Up to fourfold the standard dose, as second line, rather than mixing antihistamines",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41649409",
+       "where": "Treatment: updosing"
+      }
+     ]
+    },
+    {
+     "item": "Tests",
+     "dose": "No routine diagnostic measures in acute spontaneous urticaria",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41649409",
+       "where": "Diagnostic workup in acute urticaria"
+      }
+     ]
+    },
+    {
+     "item": "First-generation antihistamines",
+     "dose": "Sedating and anticholinergic, with many interactions",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:41649409",
+       "where": "Treatment: H1-antihistamines"
+      }
+     ]
+    }
+   ],
+   "next": "end_urticaria",
+   "sources": [
+    {
+     "docId": "pmid:41649409",
+     "where": "Diagnostic workup in acute urticaria; Treatment: H1-antihistamines"
+    },
+    {
+     "docId": "pmid:33204386",
+     "where": "Table 2: clinical criteria for anaphylaxis"
+    }
+   ]
+  },
+  {
+   "id": "end_urticaria",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute urticaria without anaphylaxis: a second-generation antihistamine, avoidance of any trigger found, and no routine tests; wheals or angioedema for more than 6 weeks is chronic urticaria."
+  },
+  {
+   "id": "skin_exam",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Hot, red, tender area or lump, not in shock. Next?",
+   "options": [
+    "Feel for fluctuance, ultrasound if unsure, and look for necrotizing signs",
+    "Swab the intact skin and pick the antibiotic by the culture result",
+    "CT of the area first to look for gas, before treatment begins",
+    "Needle aspiration as the first treatment, with drainage if it fills again"
+   ],
+   "answer": 0,
+   "chainStep": "Examine for fluctuance; bedside ultrasound when the examination is equivocal; look for pain out of proportion, edema, bullae or necrosis, crepitus and rapid spread; vital signs for sepsis",
+   "why": "An abscess is usually fluctuant and cellulitis is not, and the treatment differs: drainage for an abscess, antibiotics without drainage for cellulitis. When the examination is equivocal, ultrasound shows a collection, its size and its site. The triad of swelling, redness and disproportionate pain raises suspicion of necrotizing infection, a rapidly progressive skin infection is treated as necrotizing from the start, and when suspicion is high imaging must neither delay nor deter surgery. Needle aspiration drained pus in 26% against 80% for incision and drainage, and culture is not routine.",
+   "orders": [
+    {
+     "item": "Ultrasound",
+     "dose": "When the examination is equivocal, to show an abscess, its size and location",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32310532",
+       "where": "Indications"
+      }
+     ]
+    },
+    {
+     "item": "Necrotizing signs",
+     "dose": "Edema, erythema, severe crescendo pain out of proportion, bullae or necrosis, crepitus; fever, tachycardia, hypotension",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Necrotizing soft tissue infections: clinical presentation"
+      }
+     ]
+    },
+    {
+     "item": "Rapid progression",
+     "dose": "Treat as necrotizing from the beginning; imaging must neither delay nor deter surgery when suspicion is high",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Necrotizing soft tissue infections"
+      }
+     ]
+    },
+    {
+     "item": "Culture",
+     "dose": "Not routine; helpful when immunosuppressed, neutropenic, severe or not responding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Purulent cellulitis"
+      }
+     ]
+    }
+   ],
+   "next": "skin_result",
+   "sources": [
+    {
+     "docId": "pmid:32310532",
+     "where": "Indications; Technique or treatment"
+    },
+    {
+     "docId": "pmid:35033131",
+     "where": "Necrotizing soft tissue infections; Purulent cellulitis"
+    }
+   ]
+  },
+  {
+   "id": "skin_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Fluctuance, ultrasound and necrotizing signs",
+   "outcomes": [
+    {
+     "id": "abscess",
+     "if": "Abscess; fluctuant, or pus on ultrasound, no necrotizing signs",
+     "ddx": {
+      "lead": [
+       "Skin abscess"
+      ],
+      "out": []
+     },
+     "next": "abscess"
+    },
+    {
+     "id": "cellulitis",
+     "if": "Cellulitis, no pus; spreading redness, pain in proportion",
+     "ddx": {
+      "lead": [
+       "Cellulitis"
+      ],
+      "out": []
+     },
+     "next": "end_cellulitis"
+    },
+    {
+     "id": "nsti",
+     "if": "Necrotizing signs; pain out of proportion, bullae, crepitus or rapid spread",
+     "ddx": {
+      "lead": [
+       "Necrotizing infection"
+      ],
+      "out": []
+     },
+     "next": "end_nsti"
+    }
+   ]
+  },
+  {
+   "id": "abscess",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Fluctuant abscess, no necrotizing signs. Next?",
+   "options": [
+    "Incision and drainage, adding an antibiotic for size over 5 cm or spreading cellulitis",
+    "Oral antibiotics first, with incision and drainage if it has not shrunk in 48 hours",
+    "Incision and drainage plus a 14-day antibiotic course from the start, so it does not recur",
+    "Warm compresses to bring it to a head, with incision once it points"
+   ],
+   "answer": 0,
+   "chainStep": "Incision and drainage, breaking up loculations, the wound left open and lightly packed; an antibiotic for 5 days (7 to 10 if slow to settle) for an abscess over 5 cm, surrounding cellulitis, a hard-to-drain site (face, hand, genitalia), multiple abscesses, immunosuppression or no response to drainage: TMP-SMX 160/800 mg or doxycycline 100 mg every 12 hours where over 10% of S. aureus is MRSA or risk is high, otherwise cephalexin 500 mg every 6 hours or amoxicillin-clavulanate 1 g every 8 hours; IV vancomycin or linezolid if admitted",
+   "why": "Incision, evacuation of the pus and breaking up loculations treat an abscess, and antibiotics without drainage can leave a hard lump of sterile pus walled in by fibrous tissue. An antibiotic is added for abscesses over 5 cm, sites hard to drain, failure of drainage alone, multiple abscesses and immunosuppression, and abscesses with surrounding cellulitis generally get one, aimed at Staphylococcus aureus including community MRSA where more than 10% of isolates are MRSA. The course is 5 days, extended to 7 to 10 if symptoms persist, not 14 from the start, and a compress does not drain the pus.",
+   "orders": [
+    {
+     "item": "Drainage",
+     "dose": "Incision, evacuation of pus and debris, probing to break up loculations; wound left open and lightly packed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Simple abscess: treatment"
+      }
+     ]
+    },
+    {
+     "item": "When to add an antibiotic",
+     "dose": "Over 5 cm, a hard-to-drain site (face, hand, genitalia), no response to drainage alone, multiple sites, immunosuppression; generally with surrounding cellulitis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Simple abscess: treatment; Purulent cellulitis"
+      }
+     ]
+    },
+    {
+     "item": "Purulent cellulitis, MRSA common or high risk",
+     "dose": "TMP-SMX 160/800 to 320/1600 mg, minocycline 100 mg or doxycycline 100 mg, every 12 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Purulent cellulitis: outpatient therapy"
+      }
+     ]
+    },
+    {
+     "item": "Purulent cellulitis, MRSA uncommon",
+     "dose": "Amoxicillin-clavulanate 1 g every 8 hours or cephalexin 500 mg every 6 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Purulent cellulitis: outpatient therapy"
+      }
+     ]
+    },
+    {
+     "item": "Inpatient",
+     "dose": "Vancomycin 25 to 30 mg/kg load, then 15 to 20 mg/kg every 12 hours, or linezolid 600 mg every 12 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Purulent cellulitis: inpatient therapy"
+      }
+     ]
+    },
+    {
+     "item": "Duration",
+     "dose": "5 days, extended up to 7 to 10 if symptoms have not resolved",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Simple abscess: treatment"
+      }
+     ]
+    },
+    {
+     "item": "Prolonged antibiotics without drainage",
+     "dose": "Can leave sterile pus inside thick fibrous tissue, a hard lump",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Simple abscess"
+      }
+     ]
+    }
+   ],
+   "next": "end_abscess",
+   "sources": [
+    {
+     "docId": "pmid:35033131",
+     "where": "Simple abscess; Purulent cellulitis"
+    }
+   ]
+  },
+  {
+   "id": "end_abscess",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Skin abscess: incision and drainage is the treatment; an antibiotic is added for size over 5 cm, surrounding cellulitis, a hard-to-drain site, multiple abscesses, immunosuppression or no response, with MRSA cover where it is common. A recurrent abscess at one site needs a search for a local cause such as a pilonidal cyst, hidradenitis or a foreign body."
+  },
+  {
+   "id": "end_cellulitis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cellulitis without pus: the painful or swollen leg pathway (pw_leg_swelling) has the antibiotic choices, MRSA criteria and follow-up, which apply at other sites too; around the eye, the eye pathway (pw_eye); a septic patient, the sepsis and fever pathway (pw_sepsis_fever)."
+  },
+  {
+   "id": "end_nsti",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Necrotizing soft tissue infection: emergency surgical debridement with broad antibiotics and clindamycin or linezolid, in the sepsis and fever pathway (pw_sepsis_fever); imaging never delays the surgeon, and a rapidly progressive skin infection is treated as necrotizing from the start."
+  }
+ ],
+ "cases": [
+  {
+   "id": "anaph",
+   "label": "Anaphylaxis after peanuts",
+   "vignette": "34-year-old woman, hives and swollen lips 20 minutes after a peanut snack; now wheezing. HR 124, BP 84/50, SpO2 91% on air, weight 62 kg.",
+   "picks": {
+    "front": "airway"
+   },
+   "results": {
+    "front": "Generalized hives, swollen lips, diffuse wheeze; BP 84/50."
+   }
+  },
+  {
+   "id": "mening_shock",
+   "label": "Purpura in septic shock",
+   "vignette": "19-year-old college student, 12 hours of fever, leg pains and cold hands; now drowsy. T 39.4 C (102.9 F), HR 138, BP 82/44, RR 28, weight 70 kg.",
+   "picks": {
+    "front": "shock",
+    "shock_skin": "purpura"
+   },
+   "results": {
+    "front": "BP 82/44, cold mottled legs, capillary refill 5 seconds; no hives, no lip swelling, no wheeze.",
+    "shock_skin": "Non-blanching purpura spreading over the legs and trunk, some lesions over 5 mm; neck stiff."
+   }
+  },
+  {
+   "id": "tss",
+   "label": "Toxic shock during a period",
+   "vignette": "22-year-old woman on day 3 of her period, 1 day of fever, vomiting, watery diarrhea and dizziness. T 39.6 C (103.3 F), HR 132, BP 78/40, weight 58 kg.",
+   "picks": {
+    "front": "shock",
+    "shock_skin": "red"
+   },
+   "results": {
+    "front": "BP 78/40, HR 132, warm peripheries; no hives or lip swelling, chest clear.",
+    "shock_skin": "Diffuse sunburn-like redness over the trunk and limbs, palms included; red conjunctivae and throat; a tampon in place for 2 days; no purpura, no painful swelling."
+   }
+  },
+  {
+   "id": "sepsis_other",
+   "label": "Urosepsis with an incidental rash",
+   "vignette": "67-year-old man, 2 days of dysuria and fever, now confused. T 38.9 C (102 F), HR 124, BP 80/46, RR 26.",
+   "picks": {
+    "front": "shock",
+    "shock_skin": "other"
+   },
+   "results": {
+    "front": "BP 80/46, HR 124, capillary refill 4 seconds; no hives or swelling.",
+    "shock_skin": "A few scattered blanching red papules on the back; no purpura, no diffuse redness, no painful swelling or crepitus; cloudy urine, nitrite positive."
+   }
+  },
+  {
+   "id": "mening",
+   "label": "Fever and spreading purpura, not in shock",
+   "vignette": "17-year-old, 8 hours of fever, headache and vomiting; a few spots on the legs. T 39.1 C (102.4 F), HR 112, BP 112/68, weight 60 kg.",
+   "picks": {
+    "front": "purpura",
+    "purp_result": "mening"
+   },
+   "results": {
+    "front": "Non-blanching petechiae on the legs and in the conjunctivae; BP 112/68, warm, capillary refill 2 seconds.",
+    "purp_result": "Purpura over 3 mm now spreading onto the trunk; neck stiff; no outdoor trips or tick bites; platelets 98, INR 1.4, fibrinogen 1.6 g/L; no schistocytes."
+   }
+  },
+  {
+   "id": "meningitis_spots",
+   "label": "Meningitis signs with a few spots",
+   "vignette": "20-year-old woman, 1 day of fever, severe headache and a stiff neck; a few spots on her ankles. T 39.2 C (102.6 F), HR 108, BP 118/70, weight 64 kg.",
+   "picks": {
+    "front": "purpura",
+    "purp_result": "meningitis"
+   },
+   "results": {
+    "front": "A few non-blanching petechiae on both ankles; BP 118/70, warm, capillary refill 2 seconds.",
+    "purp_result": "Neck stiff, photophobia; the same few petechiae, none new over 2 hours, no purpura; no tick bite or outdoor trip; platelets 190, film without schistocytes, clotting normal."
+   }
+  },
+  {
+   "id": "rmsf",
+   "label": "Fever and petechiae after a camping trip",
+   "vignette": "34-year-old man, camped in the North Carolina woods 6 days ago; 4 days of fever, severe headache and aching muscles, then spots on the wrists and ankles. T 39.0 C (102.2 F), HR 108, BP 118/72, weight 80 kg.",
+   "picks": {
+    "front": "purpura",
+    "purp_result": "rmsf"
+   },
+   "results": {
+    "front": "Non-blanching petechiae on the wrists, ankles, palms and soles; BP 118/72, warm.",
+    "purp_result": "Petechiae spread from the wrists and ankles to the palms, soles and trunk; pulled a tick off his thigh on the trip; neck supple; platelets 88, sodium 129, ALT 92; no schistocytes; clotting normal."
+   }
+  },
+  {
+   "id": "ttp",
+   "label": "Confusion, bruising and schistocytes",
+   "vignette": "38-year-old woman, 3 days of tiredness, bruises and petechiae; confused this morning. T 37.6 C (99.7 F), HR 104, BP 128/78, weight 65 kg.",
+   "picks": {
+    "front": "purpura",
+    "purp_result": "ttp"
+   },
+   "results": {
+    "front": "Petechiae on the legs and bruises on the arms; BP 128/78, warm.",
+    "purp_result": "Hb 7.8 g/dL, platelets 12, schistocytes on the film, reticulocytes 6%, haptoglobin undetectable, indirect bilirubin 2.8 mg/dL, MCV 86, INR 1.1, creatinine 1.1 mg/dL; no cancer, no transplant; no diarrhea; PLASMIC 7."
+   }
+  },
+  {
+   "id": "tma_low",
+   "label": "Schistocytes with a low PLASMIC score",
+   "vignette": "45-year-old man, 1 week of headache and tiredness, then petechiae on his legs; no diarrhea. T 37.0 C (98.6 F), HR 96, BP 178/104, weight 82 kg.",
+   "picks": {
+    "front": "purpura",
+    "purp_result": "tma"
+   },
+   "results": {
+    "front": "Petechiae on both legs; BP 178/104, warm.",
+    "purp_result": "Hb 9.1 g/dL, platelets 40, schistocytes on the film, reticulocytes 4%, haptoglobin low, MCV 92, INR 1.1, creatinine 2.4 mg/dL; no cancer, no transplant; no diarrhea; PLASMIC 4."
+   }
+  },
+  {
+   "id": "hus",
+   "label": "Bloody diarrhea, then kidney injury",
+   "vignette": "4-year-old, 5 days of bloody diarrhea after a petting farm visit; now pale, puffy and passing little urine. T 37.4 C (99.3 F), HR 132, BP 112/70, weight 16 kg.",
+   "picks": {
+    "front": "purpura",
+    "purp_result": "hus"
+   },
+   "results": {
+    "front": "Petechiae on the legs; BP 112/70, warm hands, capillary refill 2 seconds.",
+    "purp_result": "Hb 7.2 g/dL, platelets 45, schistocytes on the film, LDH raised, haptoglobin low; PT normal; creatinine 2.6 mg/dL; stool positive for Shiga toxin; afebrile."
+   }
+  },
+  {
+   "id": "itp",
+   "label": "Petechiae and gum bleeding, otherwise well",
+   "vignette": "29-year-old woman, 2 days of spots on her legs and gum bleeding after brushing; no other symptoms, no new drugs. T 36.8 C (98.2 F), HR 82, BP 118/74, weight 60 kg.",
+   "picks": {
+    "front": "purpura",
+    "purp_result": "itp"
+   },
+   "results": {
+    "front": "Non-blanching petechiae on both shins; a little blood at the gum margin; BP 118/74.",
+    "purp_result": "Platelets 12; Hb 13.4 g/dL, white cells 6.8 with a normal differential; film: large platelets, no schistocytes; PT, APTT and fibrinogen normal; creatinine normal; first ever episode."
+   }
+  },
+  {
+   "id": "itp_child",
+   "label": "A well child with petechiae after a cold",
+   "vignette": "4-year-old boy, 2 days of scattered petechiae and a few shin bruises, 2 weeks after a cold; active and eating. T 36.9 C (98.4 F), HR 104, weight 17 kg.",
+   "picks": {
+    "front": "purpura",
+    "purp_result": "itp_obs"
+   },
+   "results": {
+    "front": "Scattered non-blanching petechiae on the legs and trunk; warm, capillary refill 2 seconds.",
+    "purp_result": "Platelets 18; Hb and white cells normal; film normal apart from large platelets; clotting normal; no mouth, nose or gut bleeding; no lymph nodes or spleen."
+   }
+  },
+  {
+   "id": "dic",
+   "label": "Bruising and oozing with metastatic cancer",
+   "vignette": "72-year-old man with metastatic prostate cancer, 1 week of bruising and oozing from old cannula sites; no fever. T 36.9 C (98.4 F), HR 92, BP 132/80.",
+   "picks": {
+    "front": "purpura",
+    "purp_result": "dic"
+   },
+   "results": {
+    "front": "Bruises and petechiae on the arms, oozing at cannula sites; BP 132/80, warm.",
+    "purp_result": "Platelets 48, PT 19 seconds (INR 1.8), fibrinogen 0.9 g/L, D-dimer markedly raised, a few schistocytes; creatinine 1.0 mg/dL; neck supple, afebrile."
+   }
+  },
+  {
+   "id": "igav",
+   "label": "Purple spots and sore ankles in a child",
+   "vignette": "6-year-old boy, rash on the legs and buttocks, sore ankles and mild belly pain; a cold last week. T 37.2 C (99 F), HR 96, BP 98/60.",
+   "picks": {
+    "front": "purpura",
+    "purp_result": "vasc"
+   },
+   "results": {
+    "front": "Non-blanching spots on the legs and buttocks; BP 98/60, warm.",
+    "purp_result": "Raised, palpable purple spots on the legs and buttocks; platelets 310, film normal; PT and APTT normal; afebrile, neck supple."
+   }
+  },
+  {
+   "id": "petechiae_benign",
+   "label": "Facial petechiae after a night of vomiting",
+   "vignette": "45-year-old man, fine red spots on the face and neck after a night of vomiting; feels well. T 36.7 C (98.1 F), HR 78, BP 126/80.",
+   "picks": {
+    "front": "purpura",
+    "purp_result": "normal"
+   },
+   "results": {
+    "front": "Pinpoint non-blanching spots on the face, neck and upper chest; BP 126/80.",
+    "purp_result": "Spots confined above the nipple line, none new over 4 hours of observation; platelets 260, film normal; PT, APTT and fibrinogen normal; creatinine normal; afebrile, neck supple."
+   }
+  },
+  {
+   "id": "ten",
+   "label": "Skin peeling 3 weeks after lamotrigine",
+   "vignette": "52-year-old woman, lamotrigine started 3 weeks ago; 2 days of fever and sore eyes, now painful skin coming away. T 38.6 C (101.5 F), HR 128, BP 112/70, weight 70 kg.",
+   "picks": {
+    "front": "blisters",
+    "blister_type": "sjs"
+   },
+   "results": {
+    "front": "Sheets of skin detaching on the trunk and arms, painful; BP 112/70.",
+    "blister_type": "Mouth, lips, conjunctivae and genitals eroded; dusky macules with flaccid blisters coalescing; Nikolsky positive; about 35% of body surface detached; BUN 18 mg/dL, bicarbonate 23, glucose 130 mg/dL; no cancer."
+   }
+  },
+  {
+   "id": "sjs_target",
+   "label": "Dusky targets on TMP-SMX",
+   "vignette": "41-year-old man, TMP-SMX for 10 days for a urinary infection; 3 days of fever, then a spreading rash and a sore mouth. T 38.4 C (101.1 F), HR 110, BP 124/78.",
+   "picks": {
+    "front": "target",
+    "target_result": "sjs"
+   },
+   "results": {
+    "front": "Dusky target-like spots on the chest and back with a few small blisters, no sheets of peeling; sore mouth; BP 124/78.",
+    "target_result": "Flat dusky purpuric targets with 2 zones on the chest and back; a few blisters; lips and mouth eroded; about 6% of the skin detached; started TMP-SMX 10 days ago."
+   }
+  },
+  {
+   "id": "ssss",
+   "label": "Peeling toddler, mouth spared",
+   "vignette": "3-year-old, 2 days of fever and irritability; red, tender skin that began on the face and in the folds is now peeling. T 38.5 C (101.3 F), HR 140, BP 94/58, capillary refill 2 seconds, weight 15 kg.",
+   "picks": {
+    "front": "blisters",
+    "blister_type": "ssss"
+   },
+   "results": {
+    "front": "Tender red skin peeling in the neck, armpits and groin; BP 94/58, capillary refill 2 seconds.",
+    "blister_type": "Skin wrinkles and slides off with light pressure (Nikolsky positive) in the folds; crusting and radial fissures around the mouth and eyes; inside of the mouth normal; no new medicines."
+   }
+  },
+  {
+   "id": "pv",
+   "label": "Mouth erosions for weeks, then blisters",
+   "vignette": "54-year-old woman, 6 weeks of painful mouth sores, now fragile blisters on the scalp and chest that break into raw patches; no new medicines in 6 months. T 37.0 C (98.6 F), HR 84, BP 130/80.",
+   "picks": {
+    "front": "blisters",
+    "blister_type": "pv"
+   },
+   "results": {
+    "front": "Fragile flaccid blisters and raw patches on the scalp and chest; BP 130/80.",
+    "blister_type": "Flaccid blisters and erosions on the scalp and chest; extensive erosions on the gums and palate; no target lesions; no new drugs."
+   }
+  },
+  {
+   "id": "bp",
+   "label": "Itch, then tense blisters, at 81",
+   "vignette": "81-year-old man, 3 weeks of intense itch, then tense blisters on the arms, thighs and belly; otherwise well. T 36.8 C (98.2 F), HR 76, BP 138/78, weight 72 kg.",
+   "picks": {
+    "front": "blisters",
+    "blister_type": "bp"
+   },
+   "results": {
+    "front": "Many tense blisters, some 2 cm, on the arms, thighs and belly; BP 138/78.",
+    "blister_type": "Tense fluid-filled blisters on red and on normal-looking skin of the trunk and limbs; mouth and eyes normal; Nikolsky negative; no new medicines."
+   }
+  },
+  {
+   "id": "contact_blisters",
+   "label": "Streaks of blisters after clearing poison ivy",
+   "vignette": "45-year-old man, 2 days of itchy streaks of blisters on both forearms and shins after clearing poison ivy; otherwise well. T 36.9 C (98.4 F), HR 76, BP 128/80.",
+   "picks": {
+    "front": "blisters",
+    "blister_type": "other"
+   },
+   "results": {
+    "front": "Linear streaks of vesicles and bullae on both forearms and shins; BP 128/80.",
+    "blister_type": "Linear blisters where the plants brushed the skin; mouth and eyes normal; Nikolsky negative; no new drugs; no detachment."
+   }
+  },
+  {
+   "id": "em",
+   "label": "Targets on the hands after a cold sore",
+   "vignette": "24-year-old man, a cold sore last week; now round spots on the hands and forearms and a sore lip. T 37.1 C (98.8 F), HR 78, BP 122/76.",
+   "picks": {
+    "front": "target",
+    "target_result": "em"
+   },
+   "results": {
+    "front": "Round target lesions on the hands and forearms; no blisters on the skin; BP 122/76.",
+    "target_result": "Raised round lesions with 3 zones, symmetric on the palms, backs of the hands and forearms; 2 small lip erosions; no detachment; no new drugs."
+   }
+  },
+  {
+   "id": "dress",
+   "label": "Fever and facial swelling 4 weeks after allopurinol",
+   "vignette": "48-year-old man, allopurinol started 4 weeks ago; 4 days of fever, an itchy spreading rash and a swollen face. T 38.9 C (102 F), HR 104, BP 128/76, weight 70 kg.",
+   "picks": {
+    "front": "widespread",
+    "wide_result": "dress"
+   },
+   "results": {
+    "front": "Widespread red morbilliform rash and facial swelling; no blisters; BP 128/76.",
+    "wide_result": "Rash over 60% of the skin, facial edema, tender neck nodes; mouth and eyes clear; eosinophils 2.1 x 10^9/L with atypical lymphocytes; ALT 412 U/L; creatinine 1.0 mg/dL."
+   }
+  },
+  {
+   "id": "erythro",
+   "label": "Psoriasis turning to erythroderma",
+   "vignette": "66-year-old man with long-standing plaque psoriasis, ran out of his creams; 1 week of spreading redness, now nearly all of his skin, with shivering. No new medicines. T 37.9 C (100.2 F), HR 104, BP 122/70.",
+   "picks": {
+    "front": "widespread",
+    "wide_result": "erythro"
+   },
+   "results": {
+    "front": "Nearly all of the skin red and scaling; no blisters; BP 122/70.",
+    "wide_result": "Red scaling skin over 95% of the body, thick plaques at the elbows and knees; mouth and eyes clear; eosinophils normal, albumin 30 g/L, liver and kidney tests normal; no new drug."
+   }
+  },
+  {
+   "id": "measles",
+   "label": "Unvaccinated child with fever, cough and rash",
+   "vignette": "3-year-old, unvaccinated, 4 days of fever, cough, runny nose and red eyes; a rash started behind the ears and spread down. T 39.5 C (103.1 F), HR 140, BP 96/60, capillary refill 2 seconds.",
+   "picks": {
+    "front": "fever"
+   },
+   "results": {
+    "front": "Blotchy red rash spreading from the hairline down to the trunk, no blisters; white spots on the buccal mucosa; red, watery eyes; no new medicines; BP 96/60, warm."
+   }
+  },
+  {
+   "id": "drug_exanthem",
+   "label": "Pink rash a week into amoxicillin",
+   "vignette": "30-year-old woman, amoxicillin started 7 days ago for sinusitis; an itchy pink rash on the trunk and arms; feels well. T 36.9 C (98.4 F), HR 80, BP 118/72.",
+   "picks": {
+    "front": "widespread",
+    "wide_result": "mild"
+   },
+   "results": {
+    "front": "Pink blanching spots on the trunk and arms, no blisters; BP 118/72.",
+    "wide_result": "Blanching morbilliform rash on the trunk and arms; no facial swelling; mouth and eyes normal; no enlarged nodes; eosinophils 0.3 x 10^9/L, ALT 22 U/L, creatinine normal."
+   }
+  },
+  {
+   "id": "zoster",
+   "label": "A band of blisters on the chest",
+   "vignette": "64-year-old woman, 3 days of burning pain on the left chest, then a band of blisters 2 days ago; no immunosuppression. T 37.0 C (98.6 F), HR 80, BP 134/80.",
+   "picks": {
+    "front": "vesicles",
+    "ves_result": "zoster"
+   },
+   "results": {
+    "front": "Grouped vesicles on a red base in a band on the left chest; BP 134/80.",
+    "ves_result": "Vesicles confined to one left thoracic dermatome; forehead, eyelids and nose tip clear; no lesions elsewhere; no immunosuppressive drugs; rash 2 days old."
+   }
+  },
+  {
+   "id": "hzo",
+   "label": "Forehead vesicles and the nose tip",
+   "vignette": "71-year-old man, 2 days of pain over the right forehead, now vesicles there and on the tip of the nose; the right eye is red and gritty. T 37.2 C (99 F), HR 84, BP 142/84.",
+   "picks": {
+    "front": "vesicles",
+    "ves_result": "hzo"
+   },
+   "results": {
+    "front": "Vesicles on the right forehead and nose; BP 142/84.",
+    "ves_result": "Vesicles across the right forehead and upper eyelid and on the nose tip (Hutchinson sign); red right eye; not immunosuppressed; rash 1 day old."
+   }
+  },
+  {
+   "id": "dissem",
+   "label": "Zoster spreading after a kidney transplant",
+   "vignette": "58-year-old man on tacrolimus and prednisone after a kidney transplant; 3 days of a painful band on the right flank, now scattered blisters over the trunk and limbs. T 38.2 C (100.8 F), HR 98, BP 136/82, weight 60 kg, creatinine 1.3 mg/dL (his baseline).",
+   "picks": {
+    "front": "vesicles",
+    "ves_result": "dissem"
+   },
+   "results": {
+    "front": "Vesicles in a band on the right flank and scattered over the trunk and limbs; BP 136/82.",
+    "ves_result": "Dermatomal vesicles at T10 plus more than 20 vesicles scattered over the trunk and limbs; on tacrolimus and prednisone."
+   }
+  },
+  {
+   "id": "varicella_preg",
+   "label": "Chickenpox at 24 weeks",
+   "vignette": "27-year-old, 24 weeks pregnant, never had chickenpox; a rash appeared 12 hours ago; no cough or breathlessness. T 38.0 C (100.4 F), HR 96, BP 112/68, SpO2 98%, weight 68 kg.",
+   "picks": {
+    "front": "vesicles",
+    "ves_result": "varicella"
+   },
+   "results": {
+    "front": "Scattered itchy vesicles on the face, trunk and scalp; BP 112/68.",
+    "ves_result": "Vesicles in crops on the face, trunk and scalp, a few dozen in all; mouth clear; chest clear, SpO2 98%; no neurological symptoms; not immunosuppressed; rash 12 hours old."
+   }
+  },
+  {
+   "id": "varicella_child",
+   "label": "A well child with chickenpox",
+   "vignette": "5-year-old, unvaccinated, 2 days of an itchy spotty rash after a classmate had chickenpox; eating and playing. T 38.1 C (100.6 F), HR 110, weight 19 kg.",
+   "picks": {
+    "front": "vesicles",
+    "ves_result": "varicella_other"
+   },
+   "results": {
+    "front": "Itchy vesicles and crusts scattered over the trunk, face and scalp; warm, capillary refill 2 seconds.",
+    "ves_result": "Vesicles in crops of different ages on the trunk, face and scalp; chest clear; no neurological signs; no immunosuppression; well."
+   }
+  },
+  {
+   "id": "eh",
+   "label": "Sudden sores on a child's eczema",
+   "vignette": "8-year-old with atopic eczema, 2 days of sudden painful sores on the face and neck; feverish. T 38.3 C (100.9 F), HR 112, weight 25 kg.",
+   "picks": {
+    "front": "vesicles",
+    "ves_result": "eh"
+   },
+   "results": {
+    "front": "Clusters of small blisters and sores on the face and neck; BP 102/64, warm.",
+    "ves_result": "Monomorphic punched-out erosions with blood crusts over the eczema on the face and neck; eyelids spared; not immunosuppressed."
+   }
+  },
+  {
+   "id": "hfmd",
+   "label": "Toddler with mouth ulcers and spots on the palms",
+   "vignette": "2-year-old, 1 day of fever and refusing to eat; spots on the hands, feet and in the mouth; drinking a little, wet nappies. T 38.2 C (100.8 F), HR 130.",
+   "picks": {
+    "front": "vesicles",
+    "ves_result": "hfmd"
+   },
+   "results": {
+    "front": "Small vesicles on the hands and feet and ulcers in the mouth; warm, capillary refill 2 seconds.",
+    "ves_result": "Small oval vesicles on the palms, soles and buttocks; ulcers on the tongue and palate; moist mucosa, wet nappies; eczema absent."
+   }
+  },
+  {
+   "id": "urticaria",
+   "label": "Hives after a cold",
+   "vignette": "26-year-old woman, 2 days of itchy raised wheals that come and go, after a cold; no lip swelling, breathing fine, no vomiting. HR 84, BP 120/76, SpO2 99%.",
+   "picks": {
+    "front": "hives"
+   },
+   "results": {
+    "front": "Wheals on the trunk and arms; no angioedema, no wheeze; BP 120/76; no vomiting or abdominal pain."
+   }
+  },
+  {
+   "id": "abscess",
+   "label": "Large thigh abscess with spreading redness",
+   "vignette": "35-year-old man, painful swelling on the thigh for 4 days; MRSA causes many skin infections locally. T 37.4 C (99.3 F), HR 88, BP 128/80.",
+   "picks": {
+    "front": "skin",
+    "skin_result": "abscess"
+   },
+   "results": {
+    "front": "A hot, tender swelling on the right thigh; BP 128/80.",
+    "skin_result": "Fluctuant swelling with redness spreading 3 cm beyond it; ultrasound: a 6 cm collection; pain in proportion; no bullae or crepitus."
+   }
+  },
+  {
+   "id": "cellulitis",
+   "label": "Spreading redness on the forearm",
+   "vignette": "62-year-old woman, 2 days of a red, hot, tender patch on the forearm after a gardening scratch. T 37.6 C (99.7 F), HR 90, BP 136/80.",
+   "picks": {
+    "front": "skin",
+    "skin_result": "cellulitis"
+   },
+   "results": {
+    "front": "A red, hot, tender area on the left forearm; BP 136/80.",
+    "skin_result": "Spreading redness 10 cm across, warm and tender; no fluctuance, and ultrasound shows no collection; pain in proportion; no bullae or crepitus."
+   }
+  },
+  {
+   "id": "nsti",
+   "label": "Thigh pain far beyond the redness",
+   "vignette": "50-year-old man with diabetes, 1 day of severe thigh pain after a minor graze. T 38.4 C (101.1 F), HR 110, BP 118/74.",
+   "picks": {
+    "front": "skin",
+    "skin_result": "nsti"
+   },
+   "results": {
+    "front": "A swollen, painful right thigh with faint redness; BP 118/74.",
+    "skin_result": "Pain far beyond the faint redness, tense swelling past its edge, a dusky bulla, and crepitus over the thigh."
+   }
+  },
+  {
+   "id": "local",
+   "label": "An itchy patch under a watch strap",
+   "vignette": "40-year-old man, 4 days of an itchy red patch on the wrist under a new watch strap; otherwise well. T 36.8 C (98.2 F), HR 72, BP 124/78.",
+   "picks": {
+    "front": "other"
+   },
+   "results": {
+    "front": "A sharply outlined itchy red patch under the watch strap on one wrist only; vital signs normal."
+   }
+  }
+ ]
+}

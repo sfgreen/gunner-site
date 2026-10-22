@@ -1,0 +1,2080 @@
+{
+ "id": "pw_back_pain",
+ "title": "Back pain",
+ "world": "msk",
+ "synonyms": [
+  "back pain",
+  "low back pain",
+  "LBP",
+  "lumbago",
+  "sciatica",
+  "radiculopathy",
+  "red flags",
+  "cauda equina syndrome",
+  "CES",
+  "spinal epidural abscess",
+  "SEA",
+  "vertebral osteomyelitis",
+  "discitis",
+  "spinal cord compression",
+  "metastatic spinal cord compression",
+  "MSCC",
+  "spinal metastases",
+  "vertebral compression fracture",
+  "osteoporotic fracture"
+ ],
+ "reviewBy": "2028-04-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:52877065666d",
+   "label": "NICE NG59",
+   "title": "Low back pain and sciatica in over 16s: assessment and management",
+   "url": "https://www.nice.org.uk/guidance/ng59"
+  },
+  {
+   "docId": "url:565d0d449838",
+   "label": "NICE NG234",
+   "title": "Spinal metastases and metastatic spinal cord compression",
+   "url": "https://www.nice.org.uk/guidance/ng234"
+  },
+  {
+   "docId": "pmid:34794594",
+   "label": "ACR LBP 2021",
+   "title": "ACR Appropriateness Criteria Low Back Pain: 2021 Update",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34794594/"
+  },
+  {
+   "docId": "url:a7bbc67be392",
+   "label": "VA/DoD LBP 2022",
+   "title": "VA/DoD Clinical Practice Guideline for the Diagnosis and Treatment of Low Back Pain",
+   "url": "https://www.healthquality.va.gov/HEALTHQUALITY/guidelines/Pain/lbp/VADODLBPCPGFinal508.pdf"
+  },
+  {
+   "docId": "url:00024f763e36",
+   "label": "GIRFT CES 2026",
+   "title": "GIRFT National Suspected Cauda Equina Syndrome (CES) Pathway, updated March 2026",
+   "url": "https://gettingitrightfirsttime.co.uk/wp-content/uploads/2026/04/National-Suspected-Cauda-Equina-Pathway-March-2026.pdf"
+  },
+  {
+   "docId": "pmid:33324773",
+   "label": "SEA review 2020",
+   "title": "Spinal Epidural Abscess: A Review Highlighting Early Diagnosis and Management (review, JMA J)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33324773/"
+  },
+  {
+   "docId": "pmid:35136714",
+   "label": "Vertebral osteomyelitis review 2022",
+   "title": "Diagnosis of vertebral osteomyelitis (review, J Bone Jt Infect)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35136714/"
+  },
+  {
+   "docId": "pmid:35478046",
+   "label": "BHOF 2022",
+   "title": "The clinician's guide to prevention and treatment of osteoporosis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35478046/"
+  },
+  {
+   "docId": "url:0ab6c49010b1",
+   "label": "Ibuprofen label",
+   "title": "Ibuprofen tablets USP, FDA prescribing information (DailyMed)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e080f7da-a506-4c04-a227-c1be77234f01"
+  },
+  {
+   "docId": "url:1a7c7f9b337f",
+   "label": "Naproxen label",
+   "title": "Naproxen tablets, FDA prescribing information (DailyMed)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=86a3e612-3bfe-432f-9afd-972bb8a6644e"
+  },
+  {
+   "docId": "pmid:28044125",
+   "label": "SEA review 2016",
+   "title": "Spinal Epidural Abscess: A Review with Special Emphasis on Earlier Diagnosis (review, BioMed Res Int)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28044125/"
+  },
+  {
+   "docId": "pmid:39407862",
+   "label": "Culture-negative NVO review 2024",
+   "title": "Culture-Negative Native Vertebral Osteomyelitis: A Narrative Review of an Underdescribed Condition (review, J Clin Med)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39407862/"
+  }
+ ],
+ "differential": [
+  "Ruptured AAA",
+  "Sepsis",
+  "Spinal epidural abscess",
+  "Vertebral osteomyelitis",
+  "Metastatic spinal cord compression",
+  "Spinal metastases",
+  "Cauda equina syndrome",
+  "Vertebral fracture",
+  "Sciatica",
+  "Nonspecific low back pain"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Adult with back pain in the ED. First move?",
+   "options": [
+    "Vitals, abdomen for a pulsatile mass, red flags, neuro exam",
+    "Lumbar spine x-ray first to screen for a fracture or tumour",
+    "Analgesia now, and discharge home if the pain eases",
+    "ESR and CRP first to screen for infection or cancer"
+   ],
+   "answer": 0,
+   "chainStep": "Vital signs and an abdominal exam for a pulsatile mass; red-flag history (cancer, weight loss, fever, IV drug use, immunosuppression, steroids, trauma, bladder or saddle symptoms); full lower-limb neurological exam",
+   "why": "Most back pain is benign, so the first job is finding the few patients for whom it is not. History and exam look for progressive or serious neurological deficits and for the red flags of malignancy, fracture, infection and cauda equina syndrome, and back pain can be referred from an aortic aneurysm. Imaging and laboratory tests follow the red flags; without them, routine imaging is not done.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "url:a7bbc67be392",
+     "where": "Recommendations 1 to 3 and discussion"
+    },
+    {
+     "docId": "url:52877065666d",
+     "where": "1.1.1"
+    },
+    {
+     "docId": "pmid:34794594",
+     "where": "Table 1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Red flags",
+     "dose": "Cancer or infection: history of cancer, unexplained weight loss, immunosuppression, urinary infection, IV drug use, prolonged corticosteroids, pain not improving with conservative care. Fracture: significant trauma, a minor fall or heavy lift in a potentially osteoporotic or older person, prolonged steroids. Cauda equina: acute urinary retention or overflow incontinence, loss of anal tone or fecal incontinence, saddle anesthesia, bilateral or progressive leg weakness",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34794594",
+       "where": "Table 1"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: children, pregnancy, inflammatory back pain (spondyloarthritis), and back pain referred from the kidney, pancreas or pelvis."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Vitals, abdomen, red flags and neuro exam",
+   "outcomes": [
+    {
+     "id": "aaa",
+     "if": "Aneurysm suspected, or shock without fever; a pulsatile mass, a known aneurysm, or hypotension without fever",
+     "next": "end_aaa",
+     "ddx": {
+      "lead": [
+       "Ruptured AAA"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "sepsis",
+     "if": "Septic shock; fever with hypotension, no pulsatile mass",
+     "next": "end_sepsis",
+     "ddx": {
+      "lead": [
+       "Sepsis"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "infection",
+     "if": "Infection risk; fever, IV drug use, immunosuppression or a recent spinal procedure, blood pressure normal",
+     "next": "inf_labs",
+     "ddx": {
+      "lead": [
+       "Spinal epidural abscess",
+       "Vertebral osteomyelitis"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "mscc",
+     "if": "Known cancer, new neurological signs; weakness, sensory change, gait or bladder trouble, no fever or infection risk",
+     "next": "mscc_dex",
+     "ddx": {
+      "lead": [
+       "Metastatic spinal cord compression"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "ces",
+     "if": "Cauda equina features; new bladder, bowel, saddle or sexual change, or severe or progressive weakness in both legs, no known cancer or infection risk",
+     "next": "ces_bladder",
+     "ddx": {
+      "lead": [
+       "Cauda equina syndrome"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "mets",
+     "if": "Known cancer or weight loss, neuro intact; pain suggesting spinal metastases, no infection risk",
+     "next": "mets_mri",
+     "ddx": {
+      "lead": [
+       "Spinal metastases"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "trauma",
+     "if": "High-energy trauma; a fall from height or a high-speed crash",
+     "next": "end_trauma",
+     "ddx": {
+      "lead": [
+       "Vertebral fracture"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "fracture",
+     "if": "Fracture risk; minor trauma, osteoporosis, long-term steroids or older age, no other red flag",
+     "next": "frac_xray",
+     "ddx": {
+      "lead": [
+       "Vertebral fracture"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "deficit",
+     "if": "Progressive deficit in one leg; for example a worsening foot drop, no cancer, infection or CES feature",
+     "next": "end_deficit",
+     "ddx": {
+      "lead": [
+       "Sciatica"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "none",
+     "if": "No red flags; nonspecific back pain, with or without sciatica",
+     "next": "ns_imaging",
+     "ddx": {
+      "lead": [
+       "Nonspecific low back pain",
+       "Sciatica"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "end_aaa",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Back pain with a pulsatile mass or known aneurysm, or shock without fever: continue in the abdominal pain pathway (pw_abdominal_pain), which takes shock with a mass or known aneurysm as a suspected rupture, other shock through its unstable route, and a stable painful aneurysm to CT angiography."
+  },
+  {
+   "id": "end_sepsis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Septic shock with back pain: resuscitate and treat in the sepsis pathway (pw_sepsis_fever), which has no spinal source route; once resuscitation is under way, back pain with fever or IV drug use needs an emergent gadolinium MRI of the spine for an epidural abscess or vertebral osteomyelitis."
+  },
+  {
+   "id": "end_deficit",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Severe or progressive neurological deficit: MRI of the lumbar spine without contrast now and a spinal surgical opinion; this is not the no-red-flag route."
+  },
+  {
+   "id": "end_trauma",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "High-energy trauma: the spine is assessed and imaged as part of the trauma workup, under the spine trauma criteria; not covered in this pathway."
+  },
+  {
+   "id": "inf_labs",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Back pain with an infection risk, pressure normal. Labs?",
+   "options": [
+    "Blood cultures, ESR and CRP",
+    "A white count; image only if it is raised",
+    "Lumbar puncture for a CSF culture",
+    "Urine culture alone; treat as a urinary infection"
+   ],
+   "answer": 0,
+   "chainStep": "Two sets of blood cultures, ESR and CRP; no lumbar puncture until an epidural abscess is ruled out",
+   "why": "ESR and CRP are the screening tests: together their sensitivity for vertebral osteomyelitis is 94 to 100%, and the ESR is almost uniformly raised in epidural abscess, while the white count is raised in only about two-thirds. Blood cultures grow the organism in about 60% and guide the antibiotic. A lumbar puncture is avoided until an epidural abscess has been ruled out.",
+   "next": "inf_mri",
+   "sources": [
+    {
+     "docId": "pmid:33324773",
+     "where": "5.2 Laboratory examinations"
+    },
+    {
+     "docId": "pmid:35136714",
+     "where": "Laboratory studies; Biopsy methods and microbiology"
+    },
+    {
+     "docId": "url:a7bbc67be392",
+     "where": "Sidebar 1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Blood cultures",
+     "dose": "Two sets, aerobic and anaerobic; positive in about 58%; earlier antibiotics may lower the yield",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35136714",
+       "where": "Biopsy methods and microbiology"
+      }
+     ]
+    },
+    {
+     "item": "Lumbar puncture",
+     "dose": "Avoid until an epidural abscess is ruled out",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:33324773",
+       "where": "5.2 Laboratory examinations"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "inf_mri",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Infection suspected. Imaging?",
+   "options": [
+    "MRI of the spine without and with gadolinium, emergently",
+    "Lumbar x-rays; MRI only if they show bone destruction",
+    "Whole-body bone scan to find the infected level first",
+    "Repeat the ESR in a week; image if it is still high"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent MRI of the spine without and with gadolinium",
+   "why": "For suspected spinal infection, MRI without and with IV contrast is preferred for its sensitivity and specificity: it shows epidural and paravertebral spread, contrast with fat suppression picks out an abscess, and it finds infection before bone destruction shows on x-ray or CT. Patients highly suspected of an epidural abscess (a deficit, severe focal back pain, unexplained fever, a raised CRP or ESR) get an emergent MRI.",
+   "next": "inf_result",
+   "sources": [
+    {
+     "docId": "pmid:34794594",
+     "where": "Variant 7 discussion and rating table"
+    },
+    {
+     "docId": "pmid:33324773",
+     "where": "Abstract; 8. Strategies"
+    },
+    {
+     "docId": "url:a7bbc67be392",
+     "where": "Sidebar 1"
+    }
+   ],
+   "note": "The vertebral osteomyelitis review also advises a plain spine x-ray as an initial test, to find other causes and count the levels; it is insensitive early and never replaces the MRI."
+  },
+  {
+   "id": "inf_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "MRI with gadolinium",
+   "outcomes": [
+    {
+     "id": "sea_deficit",
+     "if": "Epidural abscess with a deficit; weakness, sensory change or bladder trouble",
+     "next": "sea_treat",
+     "ddx": {
+      "lead": [
+       "Spinal epidural abscess"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Decompression",
+       "dose": "Immediate surgical decompression for an abscess with neurological deficits, unless serious medical illness forbids it or paralysis has been complete for more than 3 days",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33324773",
+         "where": "6. Management and prognosis; 9. Conclusions"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sea_intact",
+     "if": "Epidural abscess, neuro intact; no weakness, sensory or bladder change",
+     "next": "sea_treat",
+     "ddx": {
+      "lead": [
+       "Spinal epidural abscess"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Antibiotics alone",
+       "dose": "An option only with no deficit and a known organism; 30 to 40% fail without surgery, so careful neurological and imaging checks continue and surgery follows promptly on any deterioration",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33324773",
+         "where": "Abstract; 6. Management and prognosis; 9. Conclusions"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "vo",
+     "if": "Vertebral osteomyelitis, no abscess; disc and end-plate infection",
+     "next": "nvo_cultures",
+     "ddx": {
+      "lead": [
+       "Vertebral osteomyelitis"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "neg",
+     "if": "No infection seen; MRI normal or nonspecific",
+     "next": "end_inf_neg",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "sea_treat",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Epidural abscess on MRI. Next?",
+   "options": [
+    "IV antibiotics now and an emergency spine surgery review",
+    "Hold antibiotics until a CT-guided aspirate grows the organism",
+    "Lumbar puncture for CSF culture before choosing an antibiotic",
+    "Oral antibiotics at home and an outpatient spine review"
+   ],
+   "answer": 0,
+   "chainStep": "Blood cultures, then empiric IV vancomycin plus a third or fourth generation cephalosporin (or plus piperacillin-tazobactam), narrowed to the organism; emergency spine surgery review, with decompression now for any deficit; frequent neurological checks",
+   "why": "Antibiotics start empirically, before the organism is known, covering staphylococci including MRSA, streptococci and gram-negative bacilli, for example vancomycin plus a third or fourth generation cephalosporin. A deficit means immediate decompression. Without one, antibiotics alone are an option when the organism is known, but 30 to 40% fail and weakness can progress to paralysis within 24 hours, so the spine surgeons are involved from the start.",
+   "next": "end_sea",
+   "sources": [
+    {
+     "docId": "pmid:33324773",
+     "where": "3. Pathogens; 6. Management and prognosis; 8. Strategies; 9. Conclusions"
+    },
+    {
+     "docId": "pmid:28044125",
+     "where": "6. Treatment"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Empiric antibiotics",
+     "dose": "Cover staphylococci including MRSA, streptococci and aerobic gram-negative bacilli: vancomycin plus a third or fourth generation cephalosporin (ceftazidime or cefepime) or plus piperacillin-tazobactam; narrow once the organism is isolated; not withheld before surgery with suspected sepsis or neurological symptoms",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28044125",
+       "where": "6. Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotic doses",
+     "dose": "Not stated in the open review read; the IDSA 2015 vertebral osteomyelitis guideline was not openly accessible",
+     "status": "pending"
+    },
+    {
+     "item": "Duration",
+     "dose": "Usually 4 to 8 weeks, guided by the clinical, laboratory and imaging response (a 2016 review gives 4 to 16 weeks)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33324773",
+       "where": "6. Management and prognosis"
+      },
+      {
+       "docId": "pmid:28044125",
+       "where": "6. Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Neurological checks",
+     "dose": "Frequent and careful; weakness can progress to complete paralysis within 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33324773",
+       "where": "6. Management and prognosis; 8. Strategies"
+      }
+     ]
+    },
+    {
+     "item": "S. aureus in the blood",
+     "dose": "Consider transesophageal echo in selected patients to rule out endocarditis as the source",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35136714",
+       "where": "Biopsy methods and microbiology"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_sea",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Spinal epidural abscess: blood cultures, gadolinium MRI, empiric IV vancomycin plus a third or fourth generation cephalosporin for weeks (reviews give 4 to 8, and 4 to 16), narrowed to the organism, and decompression now for any deficit; antibiotics alone only when intact with a known organism, under close watch."
+  },
+  {
+   "id": "nvo_cultures",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Vertebral osteomyelitis, no abscess. How is the organism found?",
+   "options": [
+    "Blood cultures, antibiotics held; biopsy if no typical organism",
+    "Image-guided biopsy now, even with S. aureus in the blood",
+    "Empiric antibiotics, and no biopsy whatever the cultures show",
+    "A repeat MRI in 2 to 4 weeks before any sampling"
+   ],
+   "answer": 0,
+   "chainStep": "Two sets of blood cultures, antibiotics held while stable; image-guided biopsy for culture and histology if they do not grow S. aureus, S. lugdunensis or Brucella",
+   "why": "Management rests on isolating the organism. When blood cultures grow a typical organism (Staphylococcus aureus, S. lugdunensis or Brucella), no further investigation may be needed; otherwise an image-guided biopsy is warranted, sent for both microbiology and histology. A repeat MRI in 2 to 4 weeks is for findings that may be degenerative, not for naming the organism. In a stable patient, empiric antibiotics are suggested to wait until the organism is identified, since an antibiotic-free period can improve the biopsy yield; sepsis or a deficit needing surgery is the exception.",
+   "next": "nvo_bc",
+   "sources": [
+    {
+     "docId": "pmid:35136714",
+     "where": "Biopsy methods and microbiology; Figure 1; Imaging modalities"
+    },
+    {
+     "docId": "pmid:39407862",
+     "where": "4.1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Empiric antibiotics before the biopsy",
+     "dose": "Suggested: withhold until the organism is identified, except in critically ill patients with sepsis or a neurological deficit needing surgery; an antibiotic-free period of at least 4 days can maximize the biopsy yield",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39407862",
+       "where": "4.1"
+      }
+     ]
+    },
+    {
+     "item": "Endocarditis",
+     "dose": "Consider transesophageal echo in selected patients to rule out endocarditis as the source",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35136714",
+       "where": "Biopsy methods and microbiology"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nvo_bc",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Blood cultures",
+   "outcomes": [
+    {
+     "id": "sa",
+     "if": "S. aureus in the blood; a typical organism, so a biopsy may be unnecessary",
+     "next": "end_nvo_bact",
+     "ddx": {
+      "lead": [
+       "Vertebral osteomyelitis"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "neg",
+     "if": "No typical organism; cultures negative or an atypical organism, biopsy next",
+     "next": "end_nvo_biopsy",
+     "ddx": {
+      "lead": [
+       "Vertebral osteomyelitis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Nondiagnostic biopsy",
+       "dose": "A second percutaneous biopsy at least 3 days after the first, or an open biopsy",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:35136714",
+         "where": "Biopsy methods and microbiology; Figure 1"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_nvo_bact",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Vertebral osteomyelitis with S. aureus in the blood: the organism is known, so no biopsy may be needed; consider an echo for endocarditis; treat by the organism for 6 to 12 weeks."
+  },
+  {
+   "id": "end_nvo_biopsy",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Vertebral osteomyelitis with negative blood cultures: antibiotics held while stable, image-guided biopsy for culture and histology, repeated or done open if nondiagnostic; then therapy by the organism, or vancomycin plus a third or fourth generation cephalosporin if none is found, for 6 to 12 weeks."
+  },
+  {
+   "id": "end_inf_neg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No infection seen on MRI: look for another cause of the fever and the pain; when the findings were nonspecific, a repeat MRI in 2 to 4 weeks can clarify them."
+  },
+  {
+   "id": "mscc_dex",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Known cancer, new neurological signs with back pain. First?",
+   "options": [
+    "Dexamethasone now, call oncology, whole-spine MRI as soon as possible",
+    "Plain spine x-rays first to look for a metastasis",
+    "Whole-spine MRI within a week; no steroid until then",
+    "Lumbar MRI only, at the level of the pain, within 24 hours",
+    "Whole-spine MRI first; dexamethasone only once compression is proven"
+   ],
+   "answer": 0,
+   "chainStep": "Dexamethasone 16 mg orally (or the equivalent IV dose) now; contact the MSCC coordinator (oncology) immediately; MRI of the whole spine as soon as possible and within 24 hours; immobilise if instability is suspected; prompt analgesia",
+   "why": "Cancer with signs of cord or cauda equina compression is an oncological emergency: contact the MSCC coordinator at once, give 16 mg of dexamethasone as soon as possible, and get an MRI as soon as possible and always within 24 hours, with sagittal T1 or STIR of the whole spine. The steroid does not wait for the scan; it stops if the MRI rules out metastases and compression. A plain x-ray is never used to diagnose or rule out metastases or compression.",
+   "next": "mscc_result",
+   "sources": [
+    {
+     "docId": "url:565d0d449838",
+     "where": "1.3.2; 1.5.2; 1.5.5; 1.5.9; 1.8.1; 1.8.2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Dexamethasone",
+     "dose": "16 mg orally (or the equivalent parenteral dose) as soon as possible; then 16 mg daily while awaiting surgery or radiotherapy; reduce gradually after surgery or once radiotherapy starts",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:565d0d449838",
+       "where": "1.8.1"
+      }
+     ]
+    },
+    {
+     "item": "While on dexamethasone",
+     "dose": "Monitor blood glucose; give a proton pump inhibitor",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:565d0d449838",
+       "where": "1.8.8"
+      }
+     ]
+    },
+    {
+     "item": "Immobilisation",
+     "dose": "Without delay if neurological signs suggest spinal instability; nurse flat or with partial elevation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:565d0d449838",
+       "where": "1.4.1; 1.4.3"
+      }
+     ]
+    },
+    {
+     "item": "Pain",
+     "dose": "Prompt analgesia, non-opioid or opioid, including while waiting for imaging or treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:565d0d449838",
+       "where": "1.7.1; 1.7.6"
+      }
+     ]
+    },
+    {
+     "item": "MRI contraindicated",
+     "dose": "CT instead",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:565d0d449838",
+       "where": "1.5.7"
+      }
+     ]
+    }
+   ],
+   "note": "NICE NG234 is the only open source read for the dexamethasone dose; US regimens were not read."
+  },
+  {
+   "id": "mscc_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Whole-spine MRI",
+   "outcomes": [
+    {
+     "id": "mscc",
+     "if": "MSCC confirmed; tumour compressing the cord or cauda equina",
+     "next": "mscc_treat",
+     "ddx": {
+      "lead": [
+       "Metastatic spinal cord compression"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "none",
+     "if": "No compression; nothing presses on the cord or cauda equina",
+     "next": "end_mscc_none",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Metastatic spinal cord compression"
+      ]
+     },
+     "orders": [
+      {
+       "item": "Dexamethasone",
+       "dose": "Stop if spinal metastases and MSCC are both ruled out",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:565d0d449838",
+         "where": "1.8.2"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mscc_treat",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "MRI confirms MSCC. Definitive treatment?",
+   "options": [
+    "Surgery if suitable, otherwise radiotherapy within 24 hours",
+    "Dexamethasone alone; radiotherapy if the weakness progresses",
+    "Biopsy the primary tumour before any definitive treatment",
+    "Routine oncology clinic referral to plan treatment"
+   ],
+   "answer": 0,
+   "chainStep": "Plan with oncology and spinal surgery now; surgery as soon as possible to halt or reverse neurological decline if suitable, otherwise urgent radiotherapy within 24 hours (8 Gy single fraction); dexamethasone 16 mg daily until then",
+   "why": "The plan is made with the oncologist and spinal surgeon of the MSCC team. Surgery meant to halt or reverse neurological decline is offered as soon as possible after the signs appear; MSCC not suitable for surgery gets urgent radiotherapy within 24 hours, usually 8 Gy in a single fraction, unless complete paraplegia has lasted 2 weeks or more with pain controlled, or the prognosis is poor. An unknown primary is biopsied first only when there is no need for immediate treatment.",
+   "next": "end_mscc",
+   "sources": [
+    {
+     "docId": "url:565d0d449838",
+     "where": "1.11.1; 1.11.2; 1.11.3; 1.10.4; 1.10.5"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Surgery",
+     "dose": "Decompression and/or stabilisation, as soon as possible after the neurological signs begin; stabilisation even with a severe deficit if instability causes mechanical pain not controlled by analgesia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:565d0d449838",
+       "where": "1.11.3; 1.11.7; 1.11.8"
+      }
+     ]
+    },
+    {
+     "item": "Radiotherapy",
+     "dose": "Within 24 hours when surgery is not suitable; 8 Gy single fraction unless at high risk of side effects; postoperative radiotherapy once recovered from surgery",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:565d0d449838",
+       "where": "1.10.4; 1.10.5; 1.10.8"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_mscc",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Metastatic spinal cord compression: dexamethasone 16 mg and whole-spine MRI as soon as possible, always within 24 hours, then surgery as soon as possible or radiotherapy within 24 hours, planned with oncology and spinal surgery."
+  },
+  {
+   "id": "end_mscc_none",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No cord or cauda equina compression on MRI: look for another cause of the neurological signs; dexamethasone stops if metastases and compression are both ruled out, and any spinal metastases are planned with the MSCC team."
+  },
+  {
+   "id": "mets_mri",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Known cancer or weight loss, back pain, neurologically intact. Imaging?",
+   "options": [
+    "MRI of the whole spine within a week",
+    "Plain spine x-rays; MRI only if they show a lesion",
+    "Emergency MRI tonight and dexamethasone 16 mg now",
+    "No imaging yet; review in 6 weeks"
+   ],
+   "answer": 0,
+   "chainStep": "MRI of the whole spine within 1 week; advice from the MSCC coordinator within 24 hours if cancer is known, urgent oncology assessment if it is only suspected; analgesia; explain the warning symptoms of cord compression",
+   "why": "Suspected spinal metastases without signs of compression get an MRI within a week at the local hospital, with advice from the MSCC coordinator within 24 hours for a person with known cancer, and an urgent oncology assessment when cancer is only suspected. A plain film is insensitive (half the bone must be eroded before it shows), so a normal x-ray never rules out metastases and never replaces the MRI. Overnight MRI is only for when treatment must start immediately, and steroids are not routine without neurological signs.",
+   "next": "mets_result",
+   "sources": [
+    {
+     "docId": "url:565d0d449838",
+     "where": "1.3.3; 1.3.5; 1.5.3; 1.5.4; 1.5.9; 1.8.7"
+    },
+    {
+     "docId": "pmid:34794594",
+     "where": "Variant 7 discussion and rating table"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Warning symptoms",
+     "dose": "Explain the symptoms of cord compression and who to contact at once if they appear or existing symptoms worsen",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:565d0d449838",
+       "where": "1.2.2; Box 1"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroids",
+     "dose": "Not routine without neurological signs; consider for severe pain or a haematological malignancy",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:565d0d449838",
+       "where": "1.8.3; 1.8.7"
+      }
+     ]
+    },
+    {
+     "item": "Immobilisation",
+     "dose": "Consider with moderate to severe pain on movement",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:565d0d449838",
+       "where": "1.4.2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mets_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Whole-spine MRI",
+   "outcomes": [
+    {
+     "id": "mets",
+     "if": "Spinal metastases; no epidural extension or compression",
+     "next": "end_mets",
+     "ddx": {
+      "lead": [
+       "Spinal metastases"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Radiotherapy",
+       "dose": "8 Gy single fraction for non-mechanical spinal pain",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:565d0d449838",
+         "where": "1.10.2"
+        }
+       ]
+      },
+      {
+       "item": "Instability or uncontrolled pain",
+       "dose": "Consider vertebroplasty or kyphoplasty, radiofrequency ablation, surgical stabilisation or surgery to prevent MSCC",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:565d0d449838",
+         "where": "1.11.6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "none",
+     "if": "No metastases; no spinal metastases or compression",
+     "next": "end_mets_none",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "end_mets",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Spinal metastases without compression: planned with the MSCC team; 8 Gy single-fraction radiotherapy for non-mechanical pain, an intervention for instability or uncontrolled pain, and the warning symptoms explained."
+  },
+  {
+   "id": "end_mets_none",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No spinal metastases on MRI: manage the back pain on its merits; unexplained weight loss still needs its own urgent cancer assessment, and a person with cancer is told which symptoms mean coming back urgently."
+  },
+  {
+   "id": "ces_bladder",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Possible cauda equina syndrome. Bladder assessment?",
+   "options": [
+    "Bladder scan as an adjunct; record perianal sensation",
+    "Bladder scan; MRI only if the residual is over 200 mL",
+    "Rectal exam for tone; MRI only if the tone is reduced",
+    "Urine culture first; treat a urinary infection if present"
+   ],
+   "answer": 0,
+   "chainStep": "Bladder scan before and after voiding (catheterise if over 600 mL, recording sensation and a catheter tug); record perianal sensation; keep nil by mouth; request the emergency MRI whatever the residual",
+   "why": "A bladder scan is a useful adjunct but never decides the MRI or the surgery on its own: 60% of patients who needed emergency decompression had a residual under 200 mL. Over 200 mL makes CES 20 times more likely, and over 600 mL means catheterising. No single symptom or sign is diagnostic, an MRI alone cannot diagnose CES, and normal physical tests do not rule it out when the symptoms are there. GIRFT does not require a digital rectal exam, only recorded perianal sensation; VA/DoD lists a change in rectal tone among the red flags.",
+   "next": "ces_pvr",
+   "sources": [
+    {
+     "docId": "url:00024f763e36",
+     "where": "Bladder scan; Clinical presentation; Emergency referral documentation"
+    },
+    {
+     "docId": "url:a7bbc67be392",
+     "where": "Sidebar 1"
+    }
+   ],
+   "note": "Bilateral sciatica with none of these symptoms is a warning sign in the GIRFT pathway: urgent MSK triage within 2 weeks with safety-netting, not an emergency MRI."
+  },
+  {
+   "id": "ces_pvr",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Bladder scan",
+   "outcomes": [
+    {
+     "id": "retention",
+     "if": "Retention; unable to void, bladder over 600 mL",
+     "next": "ces_mri",
+     "ddx": {
+      "lead": [
+       "Cauda equina syndrome"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Catheter",
+       "dose": "Over 600 mL: catheterise, document whether it is sensate, perform a catheter tug",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:00024f763e36",
+         "where": "Bladder scan"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "high",
+     "if": "Residual over 200 mL; CES 20 times more likely",
+     "next": "ces_mri",
+     "ddx": {
+      "lead": [
+       "Cauda equina syndrome"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Catheter",
+       "dose": "Over 600 mL: catheterise, document whether it is sensate, perform a catheter tug",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:00024f763e36",
+         "where": "Bladder scan"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "low",
+     "if": "Residual 200 mL or less; this does not exclude CES",
+     "next": "ces_mri",
+     "ddx": {
+      "lead": [
+       "Cauda equina syndrome"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "ces_mri",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Suspected cauda equina syndrome, bladder scanned. Next?",
+   "options": [
+    "Emergency MRI within 4 hours of the request; nil by mouth",
+    "Spinal surgeons to approve the scan before it is booked",
+    "Lumbar spine x-ray first, then MRI if it is abnormal",
+    "Urgent outpatient MRI within 2 weeks"
+   ],
+   "answer": 0,
+   "chainStep": "Emergency MRI of the lumbar spine (sagittal T2 first) as soon as possible and within 4 hours of the request, at the presenting hospital; nil by mouth; CT or CT myelogram if MRI is absolutely contraindicated",
+   "why": "MRI is the investigation, as soon as possible and certainly within 4 hours of the request; discussing it with the spinal surgeons first is not required and only adds delay. Keep the patient nil by mouth in case surgery follows. Radiography has no supporting evidence in suspected CES. If MRI is absolutely contraindicated, CT or a CT myelogram can show whether the cauda equina is compressed.",
+   "next": "ces_result",
+   "sources": [
+    {
+     "docId": "url:00024f763e36",
+     "where": "Imaging; MRI protocol"
+    },
+    {
+     "docId": "pmid:34794594",
+     "where": "Variant 4 rating table and discussion"
+    },
+    {
+     "docId": "url:a7bbc67be392",
+     "where": "Sidebar 1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Sequence",
+     "dose": "Sagittal T2 is the single sequence needed to screen for cauda equina compression",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:00024f763e36",
+       "where": "MRI protocol"
+      }
+     ]
+    },
+    {
+     "item": "Contrast",
+     "dose": "Not needed for a disc; MRI without and with contrast when malignancy, infection or inflammation is suspected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34794594",
+       "where": "Variant 4 discussion"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ces_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Emergency MRI",
+   "outcomes": [
+    {
+     "id": "compressed",
+     "if": "Cauda equina compressed; a large disc prolapse",
+     "next": "ces_surgery",
+     "ddx": {
+      "lead": [
+       "Cauda equina syndrome"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "root",
+     "if": "One nerve root compressed; no cauda equina compression",
+     "next": "end_ces_root",
+     "ddx": {
+      "lead": [
+       "Sciatica"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Rest of the spine",
+       "dose": "No cauda equina compression: a sagittal T2 of the cervical and thoracic spine in the same session",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:00024f763e36",
+         "where": "MRI protocol"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "none",
+     "if": "No cause found; no compression anywhere",
+     "next": "end_ces_none",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Rest of the spine",
+       "dose": "No cauda equina compression: a sagittal T2 of the cervical and thoracic spine in the same session",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:00024f763e36",
+         "where": "MRI protocol"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ces_surgery",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "MRI shows a large disc compressing the cauda equina. Next?",
+   "options": [
+    "Immediate referral for emergency decompression; nil by mouth",
+    "Repeat the MRI in 24 hours to see if it progresses",
+    "Analgesia and bed rest; operate if retention develops",
+    "Elective discectomy on the next routine list"
+   ],
+   "answer": 0,
+   "chainStep": "Immediate referral to the spinal surgical service; decompression as quickly as possible (with painless retention and overflow, within 24 hours of the MRI); nil by mouth; catheterise before surgery",
+   "why": "Confirmed compression goes to the spinal surgeons at once. Incomplete CES is operated on as quickly as possible, as an emergency between NCEPOD E1 and E2; painless retention with overflow (CES-R) still goes to surgery within 24 hours of the MRI, and about 70% of those patients benefit. Treating before the symptoms become severe can reduce the risk of permanent disability, so nobody waits for retention to appear.",
+   "next": "end_ces",
+   "sources": [
+    {
+     "docId": "url:00024f763e36",
+     "where": "When to refer; Surgical timing; Surgical technique; Definition of Cauda Equina Syndrome"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Timing",
+     "dose": "Incomplete CES: as quickly as possible (NCEPOD E1 to E2). Painless retention with overflow: within 24 hours of the MRI",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:00024f763e36",
+       "where": "Surgical timing"
+      }
+     ]
+    },
+    {
+     "item": "Bladder",
+     "dose": "Catheterise before surgery starts, to avoid bladder distension injury",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:00024f763e36",
+       "where": "Surgical technique"
+      }
+     ]
+    },
+    {
+     "item": "Transfer",
+     "dose": "If needed, a Category 2 blue light ambulance",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:00024f763e36",
+       "where": "Emergency referral to surgical team with MRI"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_ces",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cauda equina syndrome: a bladder scan as an adjunct only, an emergency MRI within 4 hours of the request, and decompression as quickly as possible."
+  },
+  {
+   "id": "end_ces_root",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No cauda equina compression, one root compressed: the sciatica is very likely to improve; safety-net with the CES warning card and video, and refer to MSK triage. Bladder, bowel or saddle symptoms one root does not explain still need another cause looked for, with referral to other specialties."
+  },
+  {
+   "id": "end_ces_none",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No cause found on MRI: consider other diagnoses, including other causes of the retention, and referral to other specialties."
+  },
+  {
+   "id": "frac_xray",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Fracture risk, no other red flag. Imaging?",
+   "options": [
+    "AP and lateral lumbar spine x-rays",
+    "No imaging; treat as nonspecific back pain",
+    "Whole-body bone scan with SPECT",
+    "CT of the lumbar spine with IV contrast"
+   ],
+   "answer": 0,
+   "chainStep": "AP and lateral lumbar spine x-rays; MRI without contrast or CT when the film is inconclusive or to judge acuity and canal compromise",
+   "why": "With minor trauma, a suspected compression fracture, osteoporosis or steroid use, AP and lateral radiographs are the initial study of choice. MRI without contrast and CT are also rated usually appropriate: MRI shows whether a fracture is acute and can separate benign from malignant collapse. A bone scan is not an initial test, and IV contrast adds nothing to CT for fractures.",
+   "next": "frac_result",
+   "sources": [
+    {
+     "docId": "pmid:34794594",
+     "where": "Variant 6 discussion and rating table"
+    },
+    {
+     "docId": "url:a7bbc67be392",
+     "where": "Sidebar 1"
+    }
+   ]
+  },
+  {
+   "id": "frac_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Lumbar spine x-rays",
+   "outcomes": [
+    {
+     "id": "vcf",
+     "if": "Compression fracture; a wedged vertebral body, neuro intact",
+     "next": "frac_mgmt",
+     "ddx": {
+      "lead": [
+       "Vertebral fracture"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "none",
+     "if": "No fracture seen; no collapse on the film",
+     "next": "ns_manage",
+     "ddx": {
+      "lead": [
+       "Nonspecific low back pain"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Occult fracture",
+       "dose": "Inconclusive film or persisting suspicion: advanced imaging (MRI without contrast); a bone scan with SPECT can find radiographically occult fractures",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34794594",
+         "where": "Variant 6 discussion"
+        },
+        {
+         "docId": "url:a7bbc67be392",
+         "where": "Sidebar 1"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "frac_mgmt",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Osteoporotic compression fracture, neuro intact. Management?",
+   "options": [
+    "Analgesia, mobilise, DXA, and a bone drug whatever the T-score",
+    "Analgesia; a bone drug only if the DXA T-score is -2.5 or lower",
+    "Vertebroplasty now to relieve the pain",
+    "Calcitonin nasal spray as the long-term bone drug"
+   ],
+   "answer": 0,
+   "chainStep": "Analgesia and mobilisation; osteoporosis drug treatment for a vertebral fracture regardless of BMD (for example alendronate 70 mg weekly; no bisphosphonate with eGFR below 30 to 35); DXA",
+   "why": "A hip or vertebral fracture is an indication to treat osteoporosis regardless of BMD, so the decision to treat does not depend on the T-score; DXA is still done, secondary causes are ruled out, and hypocalcemia is corrected before a bisphosphonate. Agents that reduce both vertebral and non-vertebral fractures (alendronate, risedronate, zoledronic acid, denosumab and others) are preferred over calcitonin, which is second line. Acute fracture pain is managed conservatively with analgesics, limited bed rest, bracing and physical therapy; vertebroplasty is not generally recommended: against sham procedures it gave little benefit for pain.",
+   "next": "end_frac",
+   "sources": [
+    {
+     "docId": "pmid:35478046",
+     "where": "Who should be considered for treatment; Management of acute fracture pain; Table 13; FDA-approved drugs; Calcitonin salmon"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Alendronate",
+     "dose": "70 mg weekly (the most commonly used treatment dose) or 10 mg daily; bisphosphonates are contraindicated with eGFR below 30 to 35 mL/min",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35478046",
+       "where": "Alendronate; Bisphosphonates"
+      }
+     ]
+    },
+    {
+     "item": "BMD testing",
+     "dose": "DXA for postmenopausal women and men 50 or older with an adult-age fracture",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35478046",
+       "where": "BMD testing"
+      }
+     ]
+    },
+    {
+     "item": "Acute fracture pain",
+     "dose": "Analgesics (acetaminophen, NSAIDs, opioids, calcitonin), limited bed rest, bracing, physical therapy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35478046",
+       "where": "Management of acute fracture pain"
+      }
+     ]
+    },
+    {
+     "item": "Vertebroplasty or kyphoplasty",
+     "dose": "Not generally recommended",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:35478046",
+       "where": "Table 13; Management of acute fracture pain"
+      }
+     ]
+    },
+    {
+     "item": "Calcium and vitamin D",
+     "dose": "Total calcium 1200 mg a day for women 51 or older (1000 mg for men 50 to 70); vitamin D 800 to 1000 units a day; monitor 25-hydroxyvitamin D",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35478046",
+       "where": "Universal recommendations"
+      }
+     ]
+    },
+    {
+     "item": "Before a bisphosphonate",
+     "dose": "Rule out secondary causes; correct hypocalcemia first",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35478046",
+       "where": "Diagnostic assessment recommendations; Bisphosphonates"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_frac",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Osteoporotic compression fracture: x-rays, analgesia and mobilisation, DXA and a secondary-cause workup, calcium and vitamin D, and osteoporosis treatment regardless of BMD; vertebroplasty is not routine."
+  },
+  {
+   "id": "ns_imaging",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "No red flags on history or exam. Imaging?",
+   "options": [
+    "No imaging unless red flags appear",
+    "Lumbar spine x-ray to reassure the patient",
+    "MRI of the lumbar spine to look for a disc",
+    "CT of the lumbar spine to exclude a fracture"
+   ],
+   "answer": 0,
+   "chainStep": "No imaging for back pain or sciatica without red flags",
+   "why": "Uncomplicated acute low back pain, with or without radiculopathy, is benign and self-limited and does not warrant imaging: disc abnormalities are common in people without pain, and nothing supports imaging before conservative treatment. Imaging is for red flags, or for a candidate for surgery or intervention whose symptoms persist after about 6 weeks of treatment.",
+   "next": "ns_type",
+   "sources": [
+    {
+     "docId": "pmid:34794594",
+     "where": "Introduction/Background; Variant 1 discussion and rating table"
+    },
+    {
+     "docId": "url:52877065666d",
+     "where": "1.1.4; 1.1.6"
+    },
+    {
+     "docId": "url:a7bbc67be392",
+     "where": "Recommendation 3"
+    }
+   ]
+  },
+  {
+   "id": "ns_type",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Leg symptoms",
+   "outcomes": [
+    {
+     "id": "back",
+     "if": "Back pain only; no radiating leg pain",
+     "next": "ns_manage",
+     "ddx": {
+      "lead": [
+       "Nonspecific low back pain"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "sciatica",
+     "if": "Sciatica; leg pain in one nerve root pattern",
+     "next": "ns_manage",
+     "ddx": {
+      "lead": [
+       "Sciatica"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Gabapentinoids, other antiepileptics, oral corticosteroids, benzodiazepines",
+       "dose": "Not offered for sciatica: no overall benefit and evidence of harm",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "url:52877065666d",
+         "where": "1.2.16"
+        }
+       ],
+       "note": "VA/DoD 2022 finds insufficient evidence for or against gabapentin or pregabalin (rec 20) and recommends against benzodiazepines (rec 29)."
+      },
+      {
+       "item": "NSAIDs in sciatica",
+       "dose": "Limited evidence of benefit and a risk of harm; lowest effective dose for the shortest time",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:52877065666d",
+         "where": "1.2.20; 1.2.21"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bilateral",
+     "if": "Bilateral sciatica, no CES symptom; sudden onset, or one leg spreading to both",
+     "next": "end_bilateral",
+     "orders": [
+      {
+       "item": "Bilateral sciatica, no CES symptoms",
+       "dose": "Sudden onset bilateral sciatica, or unilateral sciatica that has become bilateral, without CES symptoms: urgent referral to MSK triage, seen within 2 weeks, with the CES warning card and video; new or worsening CES symptoms mean an emergency referral",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:00024f763e36",
+         "where": "Warning signs; Making an urgent referral"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ns_manage",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "No serious cause found. Treatment?",
+   "options": [
+    "Stay active and an NSAID at the lowest effective dose",
+    "Bed rest until the pain settles, then a gradual return",
+    "Acetaminophen (paracetamol) alone, to avoid NSAID risks",
+    "An opioid as the first drug, for a few days",
+    "A short course of oral prednisone"
+   ],
+   "answer": 0,
+   "chainStep": "Advice to stay active and keep up normal activities; ibuprofen 400 mg every 4 to 6 hours as needed, or naproxen 500 mg then 250 mg every 6 to 8 hours, at the lowest effective dose for the shortest time; no bed rest, routine opioid, systemic steroid or routine imaging",
+   "why": "Self-management with encouragement to continue normal activities runs through every step, and advice to remain active is the self-care step for acute pain. Oral NSAIDs are the drug to consider, at the lowest effective dose for the shortest time, weighing gastrointestinal, liver and cardiorenal risk and age. Acetaminophen alone is not offered and VA/DoD suggests against acetaminophen; opioids are not routine for acute pain, a weak opioid only when an NSAID is contraindicated, not tolerated or ineffective; systemic corticosteroids are suggested against.",
+   "next": "ns_dispo",
+   "sources": [
+    {
+     "docId": "url:52877065666d",
+     "where": "1.2.1; 1.2.22 to 1.2.27"
+    },
+    {
+     "docId": "url:a7bbc67be392",
+     "where": "Sidebar 3; Recommendations 19, 25 and 28"
+    },
+    {
+     "docId": "url:0ab6c49010b1",
+     "where": "Dosage and administration"
+    },
+    {
+     "docId": "url:1a7c7f9b337f",
+     "where": "2.4 Management of pain"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Ibuprofen",
+     "dose": "400 mg every 4 to 6 hours as needed for mild to moderate pain (doses over 400 mg were no more effective in analgesic trials); never over 3,200 mg a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0ab6c49010b1",
+       "where": "Dosage and administration"
+      }
+     ]
+    },
+    {
+     "item": "Naproxen",
+     "dose": "500 mg, then 250 mg every 6 to 8 hours as needed; no more than 1,250 mg a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1a7c7f9b337f",
+       "where": "2.4 Management of pain"
+      }
+     ]
+    },
+    {
+     "item": "NSAID cautions",
+     "dose": "Lowest effective dose for the shortest time; weigh gastrointestinal, liver and cardiorenal toxicity and age; consider gastroprotection",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:52877065666d",
+       "where": "1.2.22 to 1.2.24"
+      }
+     ]
+    },
+    {
+     "item": "Superficial heat",
+     "dose": "ACP 2017 recommends it for acute or subacute pain (moderate-quality evidence); read from the abstract only, because the full text is not openly accessible",
+     "status": "pending"
+    },
+    {
+     "item": "Acetaminophen alone",
+     "dose": "Not offered",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:52877065666d",
+       "where": "1.2.26"
+      },
+      {
+       "docId": "url:a7bbc67be392",
+       "where": "Recommendation 25"
+      }
+     ]
+    },
+    {
+     "item": "Opioids",
+     "dose": "Not routine for acute pain; a weak opioid only if an NSAID is contraindicated, not tolerated or ineffective; not for chronic pain",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:52877065666d",
+       "where": "1.2.25; 1.2.27; 1.2.28"
+      }
+     ],
+     "note": "VA/DoD 2022 makes no recommendation on short-term opioids for acute low back pain."
+    },
+    {
+     "item": "Systemic corticosteroids",
+     "dose": "Suggested against, with or without radicular symptoms",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:a7bbc67be392",
+       "where": "Recommendation 28"
+      }
+     ]
+    },
+    {
+     "item": "Non-benzodiazepine muscle relaxant",
+     "dose": "Insufficient evidence for or against a short course in acute pain",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a7bbc67be392",
+       "where": "Recommendation 23"
+      }
+     ],
+     "note": "ACP 2017 (abstract read) recommends NSAIDs or skeletal muscle relaxants for acute or subacute pain."
+    },
+    {
+     "item": "Benzodiazepines",
+     "dose": "Recommended against",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:a7bbc67be392",
+       "where": "Recommendation 29"
+      }
+     ]
+    }
+   ],
+   "note": "Heat and bed rest rest on abstracts: ACP 2017 recommends superficial heat for acute or subacute pain (moderate-quality evidence), and a 2010 Cochrane review found small gains in pain and function from advice to stay active over bed rest in acute low back pain, with little or no difference in sciatica."
+  },
+  {
+   "id": "ns_dispo",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Pain controlled, walking. Before discharge?",
+   "options": [
+    "Explain cauda equina warning signs; keep up work and activity",
+    "Off work until the pain has gone completely, then review",
+    "An MRI in 2 weeks to be sure nothing serious was missed",
+    "Come back only if the pain is no better in 6 weeks"
+   ],
+   "answer": 0,
+   "chainStep": "Safety-net: return at once for numbness around the back passage or between the thighs, altered feeling when wiping, trouble passing or controlling urine, loss of bowel control, or new weakness in both legs; promote return to work and normal activities",
+   "why": "People with back pain need to know which symptoms mean coming back at once: numbness in or around the back passage, altered feeling when wiping, increasing difficulty passing or controlling urine, leaking from the bowel, or a change in sexual function. Return to work and normal activities is promoted rather than delayed until the pain has gone, and new or changed symptoms prompt a fresh look for another diagnosis.",
+   "next": "ns_follow",
+   "sources": [
+    {
+     "docId": "url:00024f763e36",
+     "where": "Safety netting"
+    },
+    {
+     "docId": "url:52877065666d",
+     "where": "1.1.1; 1.2.15"
+    }
+   ]
+  },
+  {
+   "id": "ns_follow",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Review at about 6 weeks",
+   "outcomes": [
+    {
+     "id": "settles",
+     "if": "Settles; back to normal activities",
+     "next": "end_ns_home",
+     "ddx": {
+      "lead": [],
+      "out": []
+     }
+    },
+    {
+     "id": "back_persists",
+     "if": "Back pain not improving at 6 weeks; no leg pain, no new symptom",
+     "next": "end_ns_not_improving",
+     "ddx": {
+      "lead": [
+       "Nonspecific low back pain"
+      ],
+      "out": []
+     }
+    },
+    {
+     "id": "sciatica_persists",
+     "if": "Sciatica persists after 6 weeks; would consider surgery",
+     "next": "ns_persist",
+     "ddx": {
+      "lead": [
+       "Sciatica"
+      ],
+      "out": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "ns_persist",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Sciatica still limiting after 6 weeks; would consider surgery. Next?",
+   "options": [
+    "Lumbar MRI without contrast; spinal surgical opinion",
+    "Gabapentin or pregabalin for the leg pain",
+    "A course of oral prednisone for the leg pain",
+    "Referral to a surgeon for lumbar spinal fusion"
+   ],
+   "answer": 0,
+   "chainStep": "MRI of the lumbar spine without contrast; spinal surgical opinion, with decompression considered when non-surgical treatment has failed and the MRI matches the symptoms",
+   "why": "Imaging earns its place when symptoms persist after 6 weeks of conservative treatment in a patient who would consider surgery or intervention, and MRI without contrast is the study of choice. Decompression is considered when non-surgical treatment has not improved pain or function and the imaging matches the sciatica. Gabapentinoids and oral corticosteroids are not offered for sciatica, and spinal fusion is not offered for low back pain outside a trial.",
+   "next": "end_ns_refer",
+   "sources": [
+    {
+     "docId": "pmid:34794594",
+     "where": "Variant 3 discussion and rating table"
+    },
+    {
+     "docId": "url:52877065666d",
+     "where": "1.1.6; 1.2.16; 1.3.8; 1.3.9"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Epidural injection",
+     "dose": "Local anaesthetic and steroid can be considered for acute and severe sciatica",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:52877065666d",
+       "where": "1.3.5"
+      }
+     ],
+     "note": "VA/DoD 2022 finds insufficient evidence for or against epidural steroid injections (rec 37)."
+    }
+   ]
+  },
+  {
+   "id": "end_bilateral",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Sudden onset bilateral sciatica, or unilateral sciatica that has become bilateral, without CES symptoms: urgent referral to MSK triage, seen within 2 weeks, with the CES warning card and video; new or worsening CES symptoms mean an emergency referral."
+  },
+  {
+   "id": "end_ns_home",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Back pain that settles with self-management: staying active, an NSAID at the lowest effective dose for the shortest time, and the warning symptoms explained."
+  },
+  {
+   "id": "end_ns_not_improving",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Back pain not improving after 6 weeks: reassess, because failure to improve after a month is itself a red flag for cancer or infection (plain films per VA/DoD); MRI without contrast if a candidate for surgery or intervention or if diagnostic doubt remains; otherwise no routine imaging, and a structured exercise programme."
+  },
+  {
+   "id": "end_ns_refer",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Persisting sciatica in a surgical candidate: MRI without contrast and a spinal surgical opinion; decompression when non-surgical care has failed and the imaging matches."
+  }
+ ],
+ "cases": [
+  {
+   "id": "rupture",
+   "label": "Ruptured AAA presenting as back pain",
+   "vignette": "71-year-old man who smokes, sudden severe low back pain spreading to the left flank for an hour, lightheaded. BP 84/52, HR 118, temperature 36.8.",
+   "picks": {
+    "front": "aaa"
+   },
+   "results": {
+    "front": "A tender, pulsatile mass above the umbilicus. No fever. Legs neurologically normal."
+   }
+  },
+  {
+   "id": "septic",
+   "label": "Septic shock in a person who injects drugs",
+   "vignette": "36-year-old man who injects heroin, 4 days of worsening mid-back pain and rigors. BP 82/46, HR 126, temperature 39.6.",
+   "picks": {
+    "front": "sepsis"
+   },
+   "results": {
+    "front": "No pulsatile mass. Track marks on both arms; mottled knees; strength and sensation normal in both legs."
+   }
+  },
+  {
+   "id": "sea_deficit",
+   "label": "Epidural abscess with weakness",
+   "vignette": "44-year-old woman who injects drugs, 6 days of severe thoracolumbar back pain and fevers, now struggling to climb stairs. BP 128/76, HR 104, temperature 38.7.",
+   "picks": {
+    "front": "infection",
+    "inf_result": "sea_deficit"
+   },
+   "results": {
+    "front": "No pulsatile mass. Point tenderness over L1; hip flexion 3/5 on both sides; reduced pinprick on both thighs.",
+    "inf_result": "Gadolinium MRI: a rim-enhancing dorsal epidural collection from T11 to L2 compressing the thecal sac."
+   }
+  },
+  {
+   "id": "sea_intact",
+   "label": "Epidural abscess, neurologically intact",
+   "vignette": "63-year-old man with diabetes on hemodialysis through a tunneled line, 5 days of severe low back pain, temperature 38.4. BP 142/84, HR 98.",
+   "picks": {
+    "front": "infection",
+    "inf_result": "sea_intact"
+   },
+   "results": {
+    "front": "No pulsatile mass. Focal tenderness over L4; strength, sensation and reflexes normal.",
+    "inf_result": "Gadolinium MRI: a small enhancing ventral epidural abscess at L4 to L5 with discitis, no root or thecal sac compression. The admission blood cultures have grown MSSA."
+   }
+  },
+  {
+   "id": "vo_bacteremia",
+   "label": "Vertebral osteomyelitis with S. aureus bacteremia",
+   "vignette": "68-year-old man with diabetes, 3 weeks of worsening low back pain and night sweats, temperature 38.1, BP 138/82. An infected foot ulcer was treated last month.",
+   "picks": {
+    "front": "infection",
+    "inf_result": "vo",
+    "nvo_bc": "sa"
+   },
+   "results": {
+    "front": "No pulsatile mass. Tender over L3; legs neurologically normal.",
+    "inf_result": "Gadolinium MRI: L2 to L3 discitis with end-plate edema and enhancement; no epidural or paravertebral abscess. ESR 96, CRP 84.",
+    "nvo_bc": "Both sets of blood cultures grow Staphylococcus aureus."
+   }
+  },
+  {
+   "id": "vo_culture_neg",
+   "label": "Vertebral osteomyelitis, cultures negative",
+   "vignette": "57-year-old woman, 6 weeks after a lumbar epidural steroid injection, with increasing low back pain and evening temperatures to 37.9. BP 124/78.",
+   "picks": {
+    "front": "infection",
+    "inf_result": "vo",
+    "nvo_bc": "neg"
+   },
+   "results": {
+    "front": "No pulsatile mass. Tender over L4; legs neurologically normal.",
+    "inf_result": "Gadolinium MRI: L4 to L5 discitis and osteomyelitis; no epidural abscess. ESR 88, CRP 64.",
+    "nvo_bc": "Two sets of blood cultures: no growth at 5 days."
+   }
+  },
+  {
+   "id": "inf_negative",
+   "label": "Transplant patient with fever, MRI clear",
+   "vignette": "49-year-old man on tacrolimus and prednisone after a kidney transplant, a week of low back pain and a temperature of 38.0. BP 132/80.",
+   "picks": {
+    "front": "infection",
+    "inf_result": "neg"
+   },
+   "results": {
+    "front": "No pulsatile mass. Diffuse lumbar tenderness; neurological exam normal.",
+    "inf_result": "MRI without and with gadolinium: no epidural collection, discitis or marrow edema."
+   }
+  },
+  {
+   "id": "mscc",
+   "label": "Metastatic cord compression",
+   "vignette": "62-year-old woman with metastatic breast cancer on hormone therapy, 3 weeks of worsening mid-back pain, now unsteady and both legs feel heavy. BP 136/82, afebrile.",
+   "picks": {
+    "front": "mscc",
+    "mscc_result": "mscc"
+   },
+   "results": {
+    "front": "No pulsatile mass. Hip flexion 4/5 on both sides, brisk knee reflexes, reduced sensation below T10.",
+    "mscc_result": "Whole-spine MRI: a T10 metastasis with epidural tumour compressing the cord; further deposits at T4 and L2."
+   }
+  },
+  {
+   "id": "mscc_ruled_out",
+   "label": "Cancer with numbness, no compression",
+   "vignette": "74-year-old man with prostate cancer on hormone therapy, 2 weeks of low back pain and numbness down the outside of the left leg. Afebrile.",
+   "picks": {
+    "front": "mscc",
+    "mscc_result": "none"
+   },
+   "results": {
+    "front": "No pulsatile mass. Reduced pinprick over the left L5 dermatome; strength and reflexes normal.",
+    "mscc_result": "Whole-spine MRI: a degenerative L4 to L5 disc protrusion touching the left L5 root; no metastases and no compression of the cord or cauda equina."
+   }
+  },
+  {
+   "id": "mets",
+   "label": "Spinal metastases without compression",
+   "vignette": "66-year-old man treated for lung cancer last year, 4 weeks of progressive mid-back pain that wakes him at night. Afebrile.",
+   "picks": {
+    "front": "mets",
+    "mets_result": "mets"
+   },
+   "results": {
+    "front": "No pulsatile mass. Tender over T8; strength, sensation, reflexes and gait normal.",
+    "mets_result": "Whole-spine MRI: T8 and L1 metastases with no epidural extension and no compression."
+   }
+  },
+  {
+   "id": "weight_loss",
+   "label": "Weight loss and night pain, MRI clear",
+   "vignette": "58-year-old woman, 2 months of constant low back pain worse at night, and 7 kg of weight loss she did not plan. No cancer diagnosis. Afebrile.",
+   "picks": {
+    "front": "mets",
+    "mets_result": "none"
+   },
+   "results": {
+    "front": "No pulsatile mass. Neurological exam normal.",
+    "mets_result": "Whole-spine MRI: degenerative change only; no metastases or compression."
+   }
+  },
+  {
+   "id": "ces_low_residual",
+   "label": "Cauda equina syndrome with a low residual",
+   "vignette": "39-year-old man, 5 days of low back pain and sciatica now in both legs; since this morning, numbness when he wipes and a weak stream. No cancer history, afebrile.",
+   "picks": {
+    "front": "ces",
+    "ces_pvr": "low",
+    "ces_result": "compressed"
+   },
+   "results": {
+    "front": "No pulsatile mass. Reduced pinprick around the anus; ankle plantarflexion 4/5 on both sides.",
+    "ces_pvr": "Voided 300 mL; post-void residual 120 mL.",
+    "ces_result": "MRI: a large L5 to S1 disc prolapse filling the canal and compressing the cauda equina."
+   }
+  },
+  {
+   "id": "ces_retention_clear",
+   "label": "Urinary retention, MRI clear",
+   "vignette": "70-year-old man, a week of low back pain, and today he cannot pass urine. No saddle numbness, no cancer history, afebrile.",
+   "picks": {
+    "front": "ces",
+    "ces_pvr": "retention",
+    "ces_result": "none"
+   },
+   "results": {
+    "front": "No pulsatile mass. Perianal sensation normal; legs neurologically normal.",
+    "ces_pvr": "Unable to void; bladder scan 780 mL.",
+    "ces_result": "MRI: no compression of the cauda equina; mild degenerative change. The cervical and thoracic sagittal T2 is normal."
+   }
+  },
+  {
+   "id": "ces_root_only",
+   "label": "Bladder symptoms with sciatica, one root on MRI",
+   "vignette": "45-year-old woman, 10 days of right sciatica; she now says her bladder feels different and she is unsure when it is full. No cancer history, afebrile.",
+   "picks": {
+    "front": "ces",
+    "ces_pvr": "high",
+    "ces_result": "root"
+   },
+   "results": {
+    "front": "No pulsatile mass. Perianal sensation normal to testing; right ankle reflex absent; strength normal.",
+    "ces_pvr": "Voided 250 mL; post-void residual 260 mL.",
+    "ces_result": "MRI: a right L5 to S1 disc protrusion compressing the S1 root; the cauda equina is not compressed. The cervical and thoracic sagittal T2 is normal."
+   }
+  },
+  {
+   "id": "major_trauma",
+   "label": "Back pain after a high-speed crash",
+   "vignette": "27-year-old man thrown from a motorcycle at highway speed, now with low back pain. BP 124/78, HR 102.",
+   "picks": {
+    "front": "trauma"
+   },
+   "results": {
+    "front": "High-energy mechanism; midline lumbar tenderness; legs neurologically normal; no pulsatile mass."
+   }
+  },
+  {
+   "id": "compression_fracture",
+   "label": "Osteoporotic compression fracture",
+   "vignette": "74-year-old woman with osteoporosis, sudden mid-back pain after lifting a laundry basket 3 days ago. No cancer history, afebrile, kidney function normal.",
+   "picks": {
+    "front": "fracture",
+    "frac_result": "vcf"
+   },
+   "results": {
+    "front": "No pulsatile mass. Tender over L1; neurological exam normal.",
+    "frac_result": "X-rays: anterior wedge compression of L1 with 30% height loss; the posterior wall is intact."
+   }
+  },
+  {
+   "id": "fall_no_fracture",
+   "label": "Minor fall, no fracture",
+   "vignette": "60-year-old woman with osteoporosis, low back pain for 3 days after sitting down hard on a step. No stomach or kidney problems, afebrile.",
+   "picks": {
+    "front": "fracture",
+    "frac_result": "none",
+    "ns_follow": "settles"
+   },
+   "results": {
+    "front": "No pulsatile mass. Paraspinal tenderness without midline tenderness; neurological exam normal.",
+    "frac_result": "X-rays: no fracture or collapse; mild degenerative change.",
+    "ns_follow": "At 6 weeks the pain has gone and she is back to her usual activities."
+   }
+  },
+  {
+   "id": "foot_drop",
+   "label": "Worsening foot drop",
+   "vignette": "52-year-old man, 2 weeks of left sciatica, now catching his left toes when he walks and worse each day. No cancer, fever, drug use or steroids; bladder, bowel and saddle sensation normal.",
+   "picks": {
+    "front": "deficit"
+   },
+   "results": {
+    "front": "No pulsatile mass. Left ankle dorsiflexion 2/5, down from 4/5 three days ago; perianal sensation, bladder and right leg normal; afebrile."
+   }
+  },
+  {
+   "id": "bilateral_sciatica",
+   "label": "Sciatica spreading to both legs",
+   "vignette": "47-year-old woman, a week of right sciatica that since yesterday runs down both legs. Bladder, bowel, saddle sensation and sexual function unchanged; no red-flag history, afebrile.",
+   "picks": {
+    "front": "none",
+    "ns_type": "bilateral"
+   },
+   "results": {
+    "front": "No pulsatile mass. Straight-leg raise positive on both sides; strength, reflexes and perianal sensation normal.",
+    "ns_type": "Radicular pain now down both legs below the knees; no bladder, bowel, saddle or sexual change."
+   }
+  },
+  {
+   "id": "nonspecific",
+   "label": "Nonspecific low back pain that lingers",
+   "vignette": "34-year-old warehouse worker, 2 days of low back pain after lifting, no leg pain. No cancer, steroid or drug use, no weight loss, afebrile.",
+   "picks": {
+    "front": "none",
+    "ns_type": "back",
+    "ns_follow": "back_persists"
+   },
+   "results": {
+    "front": "No pulsatile mass. Paraspinal spasm and tenderness; neurological exam normal.",
+    "ns_type": "No pain below the buttocks.",
+    "ns_follow": "At 6 weeks: daily low back pain still, no leg pain, no new symptoms; exam unchanged and still no cancer or infection risk."
+   }
+  },
+  {
+   "id": "sciatica",
+   "label": "Sciatica that does not settle",
+   "vignette": "41-year-old woman, 5 days of low back pain shooting down the back of the left leg to the foot after a weekend of gardening. No red-flag history, afebrile.",
+   "picks": {
+    "front": "none",
+    "ns_type": "sciatica",
+    "ns_follow": "sciatica_persists"
+   },
+   "results": {
+    "front": "No pulsatile mass. Straight-leg raise positive on the left at 40 degrees; ankle reflexes symmetric; strength, saddle sensation and bladder normal.",
+    "ns_type": "Pain below the knee in an S1 pattern, one root only.",
+    "ns_follow": "After 6 weeks of treatment the leg pain still limits walking and work; she would consider surgery."
+   }
+  }
+ ]
+}

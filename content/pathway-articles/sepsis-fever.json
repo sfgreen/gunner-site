@@ -1,0 +1,85 @@
+{
+  "id": "sepsis_fever",
+  "slug": "sepsis-fever",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Sepsis Management Algorithm: Fluids, Pressors, Antibiotics",
+  "metaDescription": "Septic shock in the ED, fork by fork: antibiotics within 1 hour, 30 mL/kg crystalloid, norepinephrine to a MAP of 65, meningitis and neutropenic fever.",
+  "h1": "Sepsis and septic shock management: the ED algorithm, fork by fork",
+  "dek": "For the student on an EM or IM rotation with a septic patient and a resident about to ask what is next: the screen, the first hour, pressors, source control, meningitis and neutropenic fever, what to say on rounds, and what you will be pimped on.",
+  "jumpLinks": [
+    {"label": "Screen and first hour", "stage": "Stabilize"},
+    {"label": "MAP, source, CSF", "stage": "Result"},
+    {"label": "Pressors and antibiotics", "stage": "Manage"},
+    {"label": "Kidney imaging", "stage": "Imaging"},
+    {"label": "Meningitis and the LP", "stage": "Diagnose"},
+    {"label": "Neutropenic fever", "stage": "Labs"},
+    {"label": "Who goes home", "stage": "Disposition"},
+    {"label": "Endpoints", "stage": "Outcome"}
+  ],
+  "shortAnswer": [
+    {"lead": "Screen with SIRS, NEWS or MEWS and a lactate.", "text": "qSOFA is not recommended as a single screening tool, and a lactate alone neither rules sepsis in nor out. Procalcitonin does not decide when antibiotics start.", "refs": ["triage"]},
+    {"lead": "Antibiotics within 1 hour.", "text": "Cultures first only if that delays the antibiotics less than 45 minutes. Possible sepsis without shock gets a rapid workup and antibiotics within 3 hours if the concern persists.", "refs": ["resus", "bundle", "possible"]},
+    {"lead": "At least 30 mL/kg of crystalloid for hypoperfusion.", "text": "Balanced crystalloid over saline, within the first 3 hours, by actual weight (adjusted or ideal if BMI over 30); albumin only after large crystalloid volumes, starches never. NICE NG253 gives 250 mL boluses instead, up to 1,000 mL, reassessing after each.", "refs": ["resus"]},
+    {"lead": "Norepinephrine to a MAP of 65.", "text": "60 to 65 at 65 or older. Start it peripherally rather than wait for a central line; dopamine is not first line.", "refs": ["norepi", "map_check"]},
+    {"lead": "Vasopressin before more norepinephrine.", "text": "MAP below target on norepinephrine 0.25 mcg/kg/min or more: add vasopressin at a fixed 0.03 units/min, and IV hydrocortisone 200 mg a day (SSC 2021 at least 4 hours in; SSC 2026 broadened it); epinephrine next if the MAP is still inadequate.", "refs": ["vaso_steroid", "pressor_check"]},
+    {"lead": "Find the source and control it.", "text": "Image the kidneys now in urinary sepsis, debride necrotizing infection as soon as possible, at the latest within 6 hours of admission, and remove a suspected line once other access is in.", "refs": ["uti_image", "uti_drain", "nsti_surgery", "line_mgmt"]},
+    {"lead": "Meningitis: antibiotics never wait.", "text": "The LP comes first only with no CT criterion, no contraindication and no delay. Otherwise blood cultures, dexamethasone 0.15 mg/kg and antibiotics go in before the CT. Listeria risk adds ampicillin or amoxicillin.", "refs": ["mening_first", "ct_first", "regimen_amp"]},
+    {"lead": "Fever within 6 weeks of chemotherapy is treated as neutropenic infection.", "text": "Assess within 15 minutes, first antibiotic within 1 hour: an antipseudomonal beta-lactam alone, with vancomycin only for line, skin, pneumonia or instability. MASCC 21 or more, with no clinical exclusion and home supports in place, can go home after a first dose and 4 hours of observation.", "refs": ["fn_first", "fn_inpatient", "fn_result", "fn_outpatient"]}
+  ],
+  "sections": [
+    {"stage": "Stabilize", "heading": "How do you screen for sepsis, and what goes in during the first hour?", "intro": "Score the vitals and draw a lactate; then cultures, antibiotics and fluid run together. Meningitis features in shock add dexamethasone with the first antibiotic and defer the LP.", "refs": ["triage", "resus", "mening_resus"]},
+    {"stage": "Result", "heading": "Septic shock, sepsis or neither: how do the findings sort the patient?", "intro": "Each fork reads one result: the first look, the MAP after fluid and on norepinephrine, the source, the CT and CSF, Listeria risk and the ANC.", "refs": ["first_look", "map_check", "pressor_check", "source", "ct_criteria", "csf_result", "listeria", "fn_result"]},
+    {"stage": "Manage", "heading": "Which vasopressor and which antibiotics in septic shock?", "intro": "Norepinephrine first and vasopressin before escalating it; the antibiotic regimen then follows the source: pneumonia, skin, line, meningitis or neutropenia.", "refs": ["norepi", "vaso_steroid", "cap_abx", "nsti_abx", "cell_iv", "line_mgmt", "regimen_std", "regimen_amp", "fn_inpatient"]},
+    {"stage": "Imaging", "heading": "When do you image the kidneys in urosepsis?", "intro": "Now, in sepsis, for an obstruction or abscess that needs drainage. Antibiotics never wait for the scan.", "refs": ["uti_image"]},
+    {"stage": "Diagnose", "heading": "When does the LP come before antibiotics in suspected meningitis?", "intro": "Only when it is safe and quick. The same stage covers possible sepsis with infection uncertain, and sepsis with no source found.", "refs": ["mening_first", "lp_first", "possible", "unclear"]},
+    {"stage": "Labs", "heading": "What do you do in the first hour of neutropenic fever?", "intro": "Assess within 15 minutes, draw at least two sets of blood cultures and baseline labs, and give the first antibiotic within 1 hour.", "refs": ["fn_first"]},
+    {"stage": "Disposition", "heading": "Who can go home with neutropenic fever, pyelonephritis or cellulitis?", "intro": "Low-risk febrile neutropenia after a first dose and 4 hours of observation; pyelonephritis without sepsis that is taking oral fluids; early, mild cellulitis on an oral beta-lactam.", "refs": ["fn_outpatient", "pyelo_oral", "cell_oral"]},
+    {"stage": "Outcome", "heading": "Where does each septic patient end up?", "intro": "Every branch ends on a named diagnosis and its plan, from the drained obstructed kidney to the non-infectious mimic whose antibiotics stop.", "refs": ["end_uti_drain", "end_nsti", "end_mening", "end_fn_high", "end_mimic"]}
+  ],
+  "checklist": {
+    "heading": "The first hour: what has to be done",
+    "items": [
+      {"text": "Vitals scored with SIRS, NEWS or MEWS, and a blood lactate.", "refs": ["triage"]},
+      {"text": "Blood cultures, if they delay the antibiotics less than 45 minutes.", "refs": ["resus"]},
+      {"text": "Broad-spectrum antibiotics within 1 hour; MRSA cover only at high MRSA risk.", "refs": ["resus", "bundle"]},
+      {"text": "At least 30 mL/kg of IV balanced crystalloid within 3 hours for hypoperfusion (NICE NG253: 250 mL boluses, up to 1,000 mL); repeat the lactate.", "refs": ["resus"]},
+      {"text": "MAP under 65 after the fluid (under 60 at 65 or older): norepinephrine, peripherally until a central line.", "refs": ["map_check", "norepi"]},
+      {"text": "A source that needs emergent control identified or excluded.", "refs": ["bundle"]},
+      {"text": "Meningitis features: dexamethasone 10 to 20 minutes before or with the first antibiotic.", "refs": ["mening_resus"]},
+      {"text": "Chemotherapy in the last 6 weeks: assessed within 15 minutes, two sets of blood cultures.", "refs": ["fn_first"]}
+    ]
+  },
+  "rounds": {
+    "present": "71-year-old woman with septic shock from an infected, obstructed right kidney after 2 days of fever and right flank pain, now confused. Shock: lactate 5.4; 2 L of balanced crystalloid, at least 30 mL/kg at 64 kg, left a MAP of 56, so norepinephrine was started peripherally. Still on 0.3 mcg/kg/min with a MAP of 54 at 4 hours, so vasopressin 0.03 units/min is added and IV hydrocortisone 200 mg a day. Source: right costovertebral angle tenderness, nitrite-positive urine with many white cells, and right hydronephrosis behind a 9 mm proximal ureteric stone. Urine culture before antibiotics; IV antibiotics running. Plan: urgent drainage, where ACR rates percutaneous nephrostomy usually appropriate for a septic, hypotensive patient.",
+    "presentRefs": ["case:urosepsis_shock", "resus", "norepi", "vaso_steroid", "uti_image", "uti_drain"],
+    "pimp": [
+      {"q": "Why not screen with qSOFA?", "a": "It is not recommended as a single screening tool compared with SIRS, NEWS or MEWS.", "refs": ["triage"]},
+      {"q": "Why norepinephrine and not dopamine?", "a": "Against dopamine, norepinephrine had lower mortality and fewer arrhythmias.", "refs": ["norepi"]},
+      {"q": "Why not push the MAP to 85?", "a": "Higher targets did not improve survival. The initial target is 65, or 60 to 65 at 65 or older.", "refs": ["norepi"]},
+      {"q": "Why does a pregnant patient with meningitis get ampicillin?", "a": "Listeria is intrinsically resistant to third-generation cephalosporins. Pregnancy, immunocompromise and age over 50 (IDSA) or over 60 (WHO 2025) add ampicillin or amoxicillin.", "refs": ["regimen_amp", "listeria"]},
+      {"q": "Why not a CT before every LP?", "a": "Routine imaging before LP is not recommended, and LP without a prior CT was associated with lower mortality than LP after CT. The CT is for the CT criteria.", "refs": ["lp_first", "mening_first"]},
+      {"q": "Why not add an aminoglycoside in high-risk neutropenic fever?", "a": "It brought more toxicity and no better survival. Antipseudomonal beta-lactam monotherapy is recommended.", "refs": ["fn_inpatient"]}
+    ]
+  },
+  "traps": [
+    {"text": "qSOFA alone, or a normal lactate, as the reason to stop worrying. qSOFA is not a single screening tool, and a lactate alone neither rules sepsis in nor out.", "refs": ["triage"]},
+    {"text": "Holding antibiotics until the source is confirmed or imaged. In probable sepsis or shock they go in within 1 hour, and imaging never comes first.", "refs": ["resus", "bundle", "uti_image"]},
+    {"text": "Albumin or starch as the opening fluid. Crystalloid is first line, albumin only after large crystalloid volumes, starches never.", "refs": ["resus"]},
+    {"text": "CT, then LP, then antibiotics. When the LP has to wait, blood cultures, dexamethasone and antibiotics go in first.", "refs": ["ct_first", "mening_first"]},
+    {"text": "A plain film, a CT or a low LRINEC before calling surgery for necrotizing signs. Imaging must not delay debridement, and a low LRINEC does not rule it out.", "refs": ["nsti_surgery", "skin_look"]},
+    {"text": "Vancomycin as standard in febrile neutropenia. It is kept for suspected catheter infection, skin or soft tissue infection, pneumonia or hemodynamic instability.", "refs": ["fn_inpatient", "fn_first"]},
+    {"text": "Treating through an infected central line. Get other vascular access, then remove it promptly.", "refs": ["line_mgmt"]},
+    {"text": "Ceftriaxone alone for meningitis at 68 or in pregnancy. Listeria needs ampicillin or amoxicillin added.", "refs": ["regimen_amp", "case:mening_ct", "case:mening_pregnant"]}
+  ],
+  "faq": [
+    {"q": "What is in the first hour of sepsis treatment?", "a": "For probable sepsis or shock: blood cultures if they delay antibiotics less than 45 minutes, broad-spectrum antibiotics within 1 hour, and at least 30 mL/kg of IV balanced crystalloid within 3 hours for hypoperfusion, with a repeat lactate. Norepinephrine can start during the fluid if the shock is unstable. NICE NG253 gives 250 mL boluses, up to 1,000 mL in all, instead of the 30 mL/kg.", "refs": ["resus"]},
+    {"q": "What MAP target is used in septic shock?", "a": "An initial MAP of 65 mm Hg, or 60 to 65 for adults 65 or older; higher targets did not improve survival. Norepinephrine is the first-line vasopressor, started peripherally for a short period in a vein at or above the antecubital fossa rather than waiting for a central line.", "refs": ["norepi"]},
+    {"q": "When do you add vasopressin and hydrocortisone in septic shock?", "a": "When the MAP stays below target on norepinephrine 0.25 mcg/kg/min or more: add vasopressin at a fixed 0.03 units/min rather than escalating the norepinephrine, and IV hydrocortisone 200 mg a day, 50 mg every 6 hours. SSC 2021 started the steroid at least 4 hours in; SSC 2026 broadened it to septic shock. Epinephrine comes next if the MAP is still inadequate.", "refs": ["vaso_steroid", "pressor_check"]},
+    {"q": "Do you need a CT before the LP in suspected meningitis?", "a": "Not routinely. Image first only for a CT criterion: altered consciousness, focal signs, papilledema, a new seizure, immunocompromise or CNS disease. IDSA images for any abnormal level of consciousness; WHO (GCS under 10) and NICE (9 or less) are narrower. When the LP has to wait, blood cultures, dexamethasone and antibiotics go in first.", "refs": ["ct_criteria", "mening_first", "ct_first"]},
+    {"q": "What is the empiric antibiotic regimen for bacterial meningitis?", "a": "IV ceftriaxone or cefotaxime plus vancomycin, with dexamethasone 0.15 mg/kg every 6 hours, the first dose 10 to 20 minutes before or with the first antibiotic. Add ampicillin or amoxicillin for Listeria risk: over 50 (IDSA) or over 60 (WHO 2025), pregnancy or immunocompromise. WHO adds vancomycin only where resistant pneumococci are common.", "refs": ["regimen_std", "regimen_amp", "end_mening"]},
+    {"q": "What antibiotics are used for febrile neutropenia?", "a": "High risk: admit for an IV antipseudomonal beta-lactam alone (cefepime, meropenem, imipenem-cilastatin or piperacillin-tazobactam) within 1 hour, with vancomycin only for line, skin, pneumonia or instability. Low risk, MASCC 21 or more with no exclusion and home supports: first dose in the ED, at least 4 hours of observation, then oral ciprofloxacin or levofloxacin plus amoxicillin-clavulanate.", "refs": ["fn_inpatient", "fn_outpatient", "fn_result"]}
+  ],
+  "related": ["flank_pain", "peds_fever", "leg_swelling", "rash"]
+}

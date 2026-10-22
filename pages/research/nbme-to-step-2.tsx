@@ -58,12 +58,12 @@ export default function Research({ record }: { record: Record }) {
       crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: '/research', label: 'Research' }]}
       metaTitle="NBME to Step 2 CK: What 269 Real Score Reports Show"
       metaDesc={desc}
+      ogImage="/og/research/nbme-to-step-2.png"
       campaign={CAMPAIGN}
       head={<>
         <link rel="canonical" href="https://stepgunner.com/research/nbme-to-step-2" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={desc} />
-        <meta property="og:image" content="https://stepgunner.com/og/research-nbme-step2.png" />
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -96,6 +96,7 @@ export default function Research({ record }: { record: Record }) {
         .fig img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--hair); background: var(--bg); display: block; }
         .fig figcaption { font-size: 13px; color: var(--ink-dim); line-height: 1.6; margin-top: 10px; } .fig figcaption b { color: var(--ink); }
         .tbl { width: 100%; border-collapse: collapse; margin: 8px 0 24px; font-size: 14.5px; background: var(--bg-2); border: 1px solid var(--hair); border-radius: 12px; overflow: hidden; }
+        .tblwrap { overflow-x: auto; }
         .tbl th { text-align: left; font-family: var(--mono); font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); padding: 9px 12px; border-bottom: 1px solid var(--hair-strong); background: var(--bg-3); }
         .tbl td { padding: 9px 12px; border-bottom: 1px solid var(--hair); color: var(--ink-dim); } .tbl tr:last-child td { border-bottom: 0; }
         .tbl td.n, .tbl th.n { text-align: right; font-family: var(--mono); } .tbl td.n b { color: var(--ink); }
@@ -159,16 +160,18 @@ export default function Research({ record }: { record: Record }) {
       <p>92% of students beat their recency-weighted practice average, median +11. The fixed number is the part that's wrong:</p>
       <Fig n={2} src="/research/fig2_climb_by_band.svg" alt="Bar chart of mean climb from practice average to real score, by practice-average band, with 95% confidence intervals"
         caption="Mean climb by starting band, bootstrap 95% intervals. The +10 rule is about right only in the middle." />
-      <table className="tbl">
-        <thead><tr><th>Practice average</th><th className="n">Students</th><th className="n">Climbed by</th></tr></thead>
-        <tbody>
-          <tr><td>under 235</td><td className="n">35</td><td className="n"><b>+20</b></td></tr>
-          <tr><td>235 to 244</td><td className="n">67</td><td className="n"><b>+12</b></td></tr>
-          <tr><td>245 to 254</td><td className="n">75</td><td className="n"><b>+11</b></td></tr>
-          <tr><td>255 to 264</td><td className="n">38</td><td className="n"><b>+5</b></td></tr>
-          <tr><td>265 and up</td><td className="n">24</td><td className="n"><b>+2</b></td></tr>
-        </tbody>
-      </table>
+      <div className="tblwrap">
+        <table className="tbl">
+          <thead><tr><th>Practice average</th><th className="n">Students</th><th className="n">Climbed by</th></tr></thead>
+          <tbody>
+            <tr><td>under 235</td><td className="n">35</td><td className="n"><b>+20</b></td></tr>
+            <tr><td>235 to 244</td><td className="n">67</td><td className="n"><b>+12</b></td></tr>
+            <tr><td>245 to 254</td><td className="n">75</td><td className="n"><b>+11</b></td></tr>
+            <tr><td>255 to 264</td><td className="n">38</td><td className="n"><b>+5</b></td></tr>
+            <tr><td>265 and up</td><td className="n">24</td><td className="n"><b>+2</b></td></tr>
+          </tbody>
+        </table>
+      </div>
       <p>If you're averaging 230, "add 10" undersells you. If you're averaging 262, it oversells you by a lot, and that is the group most likely to set a 270 target off it.</p>
 
       <h3>3.2 Your most recent form matters far more than your first one</h3>
@@ -181,16 +184,18 @@ export default function Research({ record }: { record: Record }) {
       <h3>3.3 Three forms genuinely read off scale, and they're not the ones people complain about</h3>
       <Fig n={4} src="/research/fig3_form_offsets.svg" alt="Horizontal bar chart of how each practice form reads relative to the NBME scale, with 95% confidence intervals and sample sizes"
         caption="Level offsets from a two-way fixed-effects model (student + days out), 160 students and 1,043 dated forms, empirical-Bayes shrunk. Left reads low, right reads high." />
-      <table className="tbl">
-        <thead><tr><th>Form</th><th>Reads</th><th>Confidence</th></tr></thead>
-        <tbody>
-          <tr><td>NBME 9</td><td>about 6 points low</td><td>solid, 71 students</td></tr>
-          <tr><td>NBME 10 to 16</td><td>on scale</td><td>treated as equated, 788 sittings</td></tr>
-          <tr><td>UWSA 1</td><td>on scale</td><td>69 students</td></tr>
-          <tr><td>UWSA 2</td><td>about 5 points high</td><td>solid, 93 students</td></tr>
-          <tr><td>UWSA 3</td><td>about 8 points low</td><td>thin, 22 students</td></tr>
-        </tbody>
-      </table>
+      <div className="tblwrap">
+        <table className="tbl">
+          <thead><tr><th>Form</th><th>Reads</th><th>Confidence</th></tr></thead>
+          <tbody>
+            <tr><td>NBME 9</td><td>about 6 points low</td><td>solid, 71 students</td></tr>
+            <tr><td>NBME 10 to 16</td><td>on scale</td><td>treated as equated, 788 sittings</td></tr>
+            <tr><td>UWSA 1</td><td>on scale</td><td>69 students</td></tr>
+            <tr><td>UWSA 2</td><td>about 5 points high</td><td>solid, 93 students</td></tr>
+            <tr><td>UWSA 3</td><td>about 8 points low</td><td>thin, 22 students</td></tr>
+          </tbody>
+        </table>
+      </div>
       <p>So "UWSA 2 is inflated" survives, at about five points, not the fifteen people throw around. "NBME 9 is useless" doesn't: it's a fine form that prints about six under the others. The one nobody warned me about is UWSA 3, which reads low by a lot, though only 22 people had taken it, so hold that one loosely.</p>
 
       <h3>3.4 How wrong the model is, in sample</h3>

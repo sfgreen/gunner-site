@@ -1,0 +1,3232 @@
+{
+ "id": "pw_trauma",
+ "title": "Major trauma",
+ "world": "em",
+ "synonyms": [
+  "major trauma",
+  "polytrauma",
+  "multiple injuries",
+  "trauma",
+  "primary survey",
+  "ABCDE",
+  "ATLS",
+  "hemorrhagic shock",
+  "haemorrhagic shock",
+  "massive transfusion",
+  "massive transfusion protocol",
+  "MTP",
+  "tranexamic acid",
+  "TXA",
+  "permissive hypotension",
+  "tension pneumothorax",
+  "open pneumothorax",
+  "sucking chest wound",
+  "massive hemothorax",
+  "hemothorax",
+  "flail chest",
+  "cardiac tamponade",
+  "FAST",
+  "eFAST",
+  "blunt abdominal trauma",
+  "splenic laceration",
+  "liver laceration",
+  "seatbelt sign",
+  "pelvic fracture",
+  "pelvic binder",
+  "gunshot wound",
+  "stab wound",
+  "penetrating abdominal trauma",
+  "local wound exploration",
+  "cervical spine",
+  "Canadian C-spine rule",
+  "NEXUS",
+  "head injury",
+  "traumatic brain injury",
+  "subdural hematoma",
+  "anticoagulant reversal",
+  "warfarin reversal",
+  "PCC",
+  "trauma in pregnancy",
+  "uterine displacement",
+  "pediatric trauma"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:5b868a47d05f",
+   "label": "NICE NG39",
+   "title": "Major trauma: assessment and initial management (NICE NG39, 2016)",
+   "url": "https://www.nice.org.uk/guidance/ng39"
+  },
+  {
+   "docId": "url:4031d253fb1d",
+   "label": "NICE NG41",
+   "title": "Spinal injury: assessment and initial management (NICE NG41, 2016)",
+   "url": "https://www.nice.org.uk/guidance/ng41"
+  },
+  {
+   "docId": "url:ed1c1f5fb274",
+   "label": "NICE NG232",
+   "title": "Head injury: assessment and early management (NICE NG232, 2023)",
+   "url": "https://www.nice.org.uk/guidance/ng232"
+  },
+  {
+   "docId": "pmid:36859355",
+   "label": "European bleeding 2023",
+   "title": "The European guideline on management of major bleeding and coagulopathy following trauma: sixth edition (Crit Care 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36859355/"
+  },
+  {
+   "docId": "url:1176c205d68a",
+   "label": "ACS TQIP MTP 2014",
+   "title": "ACS TQIP Massive Transfusion in Trauma Guidelines (2014)",
+   "url": "https://www.facs.org/media/zcjdtrd1/transfusion_guildelines.pdf"
+  },
+  {
+   "docId": "url:43c32c194927",
+   "label": "ACS TQIP imaging 2018",
+   "title": "ACS TQIP Best Practices Guidelines in Imaging (2018)",
+   "url": "https://www.facs.org/media/oxdjw5zj/imaging_guidelines.pdf"
+  },
+  {
+   "docId": "url:be86a08e2cd9",
+   "label": "ACS TQP geriatric 2023",
+   "title": "ACS Trauma Quality Programs Best Practices Guidelines: Geriatric Trauma Management (2023)",
+   "url": "https://www.facs.org/media/ubyj2ubl/best-practices-guidelines-geriatric-trauma.pdf"
+  },
+  {
+   "docId": "pmid:41094688",
+   "label": "WSES-AAST thoracic 2025",
+   "title": "Thoracic trauma WSES-AAST guidelines (World J Emerg Surg 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41094688/"
+  },
+  {
+   "docId": "pmid:40383767",
+   "label": "WJES needle 2025",
+   "title": "Meta-analysis of the optimal needle length and decompression site for tension pneumothorax and consensus recommendations on current ATLS and ETC guidelines (World J Emerg Surg 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40383767/"
+  },
+  {
+   "docId": "pmid:28115984",
+   "label": "WSES pelvic 2017",
+   "title": "Pelvic trauma: WSES classification and guidelines (World J Emerg Surg 2017)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28115984/"
+  },
+  {
+   "docId": "pmid:28828034",
+   "label": "WSES spleen 2017",
+   "title": "Splenic trauma: WSES classification and guidelines for adult and pediatric patients (World J Emerg Surg 2017)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28828034/"
+  },
+  {
+   "docId": "pmid:32228707",
+   "label": "WSES liver 2020",
+   "title": "Liver trauma: WSES 2020 guidelines (World J Emerg Surg 2020)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32228707/"
+  },
+  {
+   "docId": "pmid:35246190",
+   "label": "WSES bowel 2022",
+   "title": "WSES guidelines on blunt and penetrating bowel injury: diagnosis, investigations, and treatment (World J Emerg Surg 2022)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35246190/"
+  },
+  {
+   "docId": "pmid:38816766",
+   "label": "WSES elderly 2023",
+   "title": "The 2023 WSES guidelines on the management of trauma in elderly and frail patients (World J Emerg Surg 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38816766/"
+  },
+  {
+   "docId": "pmid:42064346",
+   "label": "EANS pregnancy TBI 2026",
+   "title": "The management of severe isolated traumatic brain injury in pregnancy: a joint consensus statement (Brain Spine 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42064346/"
+  },
+  {
+   "docId": "pmid:42110677",
+   "label": "FEBRASGO 2026",
+   "title": "Cardiopulmonary arrest and cardiopulmonary resuscitation in pregnancy (FEBRASGO position statement 3, 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42110677/"
+  },
+  {
+   "docId": "pmid:42597218",
+   "label": "Alloimmunization review 2025",
+   "title": "Red blood cell alloimmunization and pregnancy: diagnosis and management (Pregnancy, 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42597218/"
+  },
+  {
+   "docId": "url:2a9fe9c19e10",
+   "label": "FDA label: Kcentra",
+   "title": "Kcentra (prothrombin complex concentrate, human) prescribing information",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee1afb8-324c-42e4-8bf0-f0c9da5e6d42"
+  },
+  {
+   "docId": "url:20b209257bcc",
+   "label": "FDA Andexxa 2025",
+   "title": "FDA: Update on the safety of Andexxa (December 2025)",
+   "url": "https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/update-safety-andexxa"
+  },
+  {
+   "docId": "pmid:33128246",
+   "label": "FIGO/ICM 2021",
+   "title": "FIGO/ICM guidelines for preventing Rhesus disease: a call to action (Int J Gynaecol Obstet 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33128246/"
+  },
+  {
+   "docId": "pmid:31798673",
+   "label": "WSES TBI 2019",
+   "title": "WSES consensus conference guidelines: monitoring and management of severe adult traumatic brain injury patients with polytrauma in the first 24 hours (World J Emerg Surg 2019)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31798673/"
+  },
+  {
+   "docId": "pmid:31827593",
+   "label": "WSES-AAST kidney 2019",
+   "title": "Kidney and uro-trauma: WSES-AAST guidelines (World J Emerg Surg 2019)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31827593/"
+  },
+  {
+   "docId": "pmid:39730103",
+   "label": "MTP review 2025",
+   "title": "A comprehensive review of massive transfusion and major hemorrhage protocols: origins, core principles and practical implementation (Braz J Anesthesiol 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39730103/"
+  }
+ ],
+ "differential": [
+  "Tension pneumothorax",
+  "Simple pneumothorax",
+  "Open pneumothorax",
+  "Hemothorax",
+  "Massive hemothorax",
+  "Flail chest",
+  "Cardiac tamponade",
+  "Hemorrhagic shock",
+  "Neurogenic shock",
+  "Aortocaval compression",
+  "Intra-abdominal bleeding",
+  "Pelvic bleeding",
+  "Solid organ injury",
+  "Bowel injury",
+  "Traumatic brain injury",
+  "Cervical spine injury"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Major trauma in the bay. Order of the primary survey?",
+   "options": [
+    "Stop catastrophic external bleeding, then airway with the neck held, breathing, circulation, disability, exposure",
+    "Whole-body CT first, then the airway, breathing and circulation once the radiologist has reported on the whole scan",
+    "Circulation first: two IV lines and fluids before the airway is assessed",
+    "Airway, then circulation, then breathing, then disability and exposure"
+   ],
+   "answer": 0,
+   "chainStep": "Primary survey in order: catastrophic bleeding, airway with in-line neck protection, breathing, circulation, disability, exposure",
+   "why": "NICE records the primary survey as <C>ABCDE: catastrophic haemorrhage, airway with in-line spinal immobilisation, breathing, circulation, disability and exposure; the head injury guideline puts airway, breathing and circulation before any other injury. External bleeding is stopped with direct pressure, and on a limb with a tourniquet when pressure fails. CT is for the patient who is responding to resuscitation or stable, and the history and secondary survey come after the primary survey, not before it.",
+   "sources": [
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.8.1; 1.5.1; 1.5.2; 1.5.31"
+    },
+    {
+     "docId": "url:4031d253fb1d",
+     "where": "1.1.1; 1.1.2"
+    },
+    {
+     "docId": "url:ed1c1f5fb274",
+     "where": "1.4.1"
+    },
+    {
+     "docId": "pmid:36859355",
+     "where": "Recommendation 2"
+    }
+   ],
+   "next": "airway",
+   "orders": [
+    {
+     "item": "Catastrophic external bleeding",
+     "dose": "Direct pressure with a simple dressing; a tourniquet on a limb when direct pressure has failed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5b868a47d05f",
+       "where": "1.5.1; 1.5.2"
+      },
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 2"
+      }
+     ]
+    },
+    {
+     "item": "Cervical spine",
+     "dose": "Manual in-line stabilisation, particularly during any airway intervention; avoid moving the rest of the spine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4031d253fb1d",
+       "where": "1.1.2"
+      }
+     ]
+    },
+    {
+     "item": "Access",
+     "dose": "Peripheral IV; intraosseous if it fails, while central access is achieved. A child: intraosseous first-line when peripheral access is expected to be difficult",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5b868a47d05f",
+       "where": "1.5.16; 1.5.17"
+      }
+     ]
+    },
+    {
+     "item": "Analgesia",
+     "dose": "IV morphine first-line, titrated to effect; ketamine in analgesic doses second-line. NICE gives no mg doses",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:5b868a47d05f",
+       "where": "1.7.4; 1.7.6"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: traumatic cardiac arrest and resuscitative thoracotomy (the ERC 2025 guideline was not openly accessible), burns (pw_burns), drowning (pw_environmental), field triage, blunt cardiac and aortic injury, diaphragm and urethral injury beyond a flag, the obtunded patient's spine, thoracolumbar injury, a small hemothorax and a positive FAST with a pelvic fracture. The headache pathway does not cover head injury; its CT rules are walked here. Head CT rules here are the NICE rules for 16 and over; a child's rules (NICE under 16 and PECARN) are in pw_peds_vomiting."
+  },
+  {
+   "id": "airway",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Airway and conscious level",
+   "outcomes": [
+    {
+     "id": "protect",
+     "if": "Cannot protect the airway; GCS 8 or less, obstruction or failing ventilation",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "rsi"
+    },
+    {
+     "id": "airway_ok",
+     "if": "Airway patent; talking, GCS above 8",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "breathing"
+    }
+   ]
+  },
+  {
+   "id": "rsi",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Cannot protect the airway. Next?",
+   "options": [
+    "Rapid sequence induction and intubation, the neck held in line",
+    "Nasopharyngeal airway and a collar, then intubate after the head CT",
+    "Supraglottic airway as the definitive airway, then the CT",
+    "Surgical airway first, ahead of an attempt at intubation"
+   ],
+   "answer": 0,
+   "chainStep": "Drug-assisted rapid sequence induction and intubation with manual in-line stabilisation; basic manoeuvres or a supraglottic device if it fails, until a surgical airway",
+   "why": "Intubate without delay for airway obstruction, a GCS of 8 or less, hypoventilation or hypoxaemia. Drug-assisted RSI is the definitive airway in major trauma, with the neck held in line throughout any airway intervention. Waiting for the CT leaves a coma with an unprotected airway. If RSI fails, basic manoeuvres, adjuncts or a supraglottic device bridge to a surgical airway: the fallback, not the first move.",
+   "sources": [
+    {
+     "docId": "pmid:36859355",
+     "where": "Recommendation 3"
+    },
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.2.1; 1.2.2"
+    },
+    {
+     "docId": "url:4031d253fb1d",
+     "where": "1.1.2"
+    },
+    {
+     "docId": "url:ed1c1f5fb274",
+     "where": "1.8.8"
+    }
+   ],
+   "next": "breathing",
+   "orders": [
+    {
+     "item": "Ventilation after intubation, head injury",
+     "dose": "Avoid hypoxaemia; normoventilation; PaO2 above 13 kPa and PaCO2 4.5 to 5.0 kPa unless there is evidence of raised intracranial pressure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 3"
+      },
+      {
+       "docId": "url:ed1c1f5fb274",
+       "where": "1.8.10"
+      }
+     ],
+     "note": "NICE transfer targets"
+    },
+    {
+     "item": "Signs of herniation",
+     "dose": "Hyperventilation only as a life-saving bridge",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 3"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "breathing",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Chest exam, film and eFAST",
+   "outcomes": [
+    {
+     "id": "tension",
+     "if": "Tension pneumothorax; one side silent and hyperresonant, with low pressure or severe respiratory compromise",
+     "ddx": {
+      "lead": [
+       "Tension pneumothorax"
+      ],
+      "out": []
+     },
+     "next": "decompress"
+    },
+    {
+     "id": "open",
+     "if": "Open pneumothorax; a chest wall wound that sucks air",
+     "ddx": {
+      "lead": [
+       "Open pneumothorax"
+      ],
+      "out": []
+     },
+     "next": "open_dressing"
+    },
+    {
+     "id": "hemothorax",
+     "if": "Large hemothorax; one side dull, a large collection on the film or eFAST",
+     "ddx": {
+      "lead": [
+       "Hemothorax"
+      ],
+      "out": []
+     },
+     "next": "chest_drain"
+    },
+    {
+     "id": "flail",
+     "if": "Flail segment; part of the chest wall moves in on breathing in",
+     "ddx": {
+      "lead": [
+       "Flail chest"
+      ],
+      "out": []
+     },
+     "next": "flail_step"
+    },
+    {
+     "id": "simple_ptx",
+     "if": "Simple pneumothorax; one side quiet, no tension, pressure normal",
+     "ddx": {
+      "lead": [
+       "Simple pneumothorax"
+      ],
+      "out": []
+     },
+     "next": "end_simple_ptx"
+    },
+    {
+     "id": "breathing_ok",
+     "if": "Breathing normal; equal air entry, no pneumothorax, hemothorax or flail",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "circulation"
+    }
+   ]
+  },
+  {
+   "id": "end_simple_ptx",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Simple pneumothorax: a chest tube is the treatment of choice; a small one (2 cm or less) in a stable patient can be observed for at least 24 hours."
+  },
+  {
+   "id": "decompress",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Tension pneumothorax with low pressure. Next?",
+   "options": [
+    "Decompress now, ahead of imaging, then a chest drain",
+    "Chest x-ray first to confirm the side, then decompress",
+    "CT chest to look for other injuries, then decompress",
+    "High-flow oxygen and repeat the chest exam in 15 minutes"
+   ],
+   "answer": 0,
+   "chainStep": "Decompress now without imaging (open thoracostomy where skilled, otherwise a needle), then a chest drain; watch for recurrence",
+   "why": "With haemodynamic instability or severe respiratory compromise, a tension pneumothorax is decompressed before imaging. In hospital NICE decompresses by open thoracostomy followed by a chest drain; WSES-AAST makes the chest tube the treatment of choice, with needle or finger thoracostomy when a tube is not yet possible. A film, a CT or a repeat examination leaves a life-threatening condition untreated.",
+   "sources": [
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.4.1; 1.4.2; 1.3.5; 1.3.6"
+    },
+    {
+     "docId": "pmid:41094688",
+     "where": "Pneumothorax and hemothorax recommendations; Treatment"
+    },
+    {
+     "docId": "pmid:40383767",
+     "where": "Introduction; Conclusion"
+    }
+   ],
+   "next": "circulation",
+   "orders": [
+    {
+     "item": "Needle site",
+     "dose": "ATLS (as reported in the 2025 meta-analysis): 4th or 5th intercostal space, anterior midaxillary line, a 5 cm needle in small adults or 8 cm in larger ones. European Trauma Course and WSES-AAST: 2nd intercostal space, midclavicular line (WSES-AAST also accepts the 5th, midaxillary). The meta-analysis suggests a 7 cm needle: right side, 2nd midclavicular or 5th midaxillary; left side, 2nd midclavicular",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40383767",
+       "where": "Introduction; Conclusion"
+      },
+      {
+       "docId": "pmid:41094688",
+       "where": "Treatment"
+      }
+     ],
+     "note": "ATLS and the European Trauma Course disagree on the site. NICE uses open thoracostomy in hospital, and in the field where the expertise is available."
+    },
+    {
+     "item": "Chest drain",
+     "dose": "Through the thoracostomy in a patient breathing spontaneously; lateral insertion, 4th to 6th intercostal space, anterior or midaxillary line",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5b868a47d05f",
+       "where": "1.3.5"
+      },
+      {
+       "docId": "pmid:41094688",
+       "where": "Treatment"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "open_dressing",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Sucking chest wound. First?",
+   "options": [
+    "Occlusive dressing taped on three sides, watch for tension, then a chest drain",
+    "Pack the wound tightly with gauze and leave the packing in place until the patient reaches the operating room",
+    "Suture the wound closed in the resuscitation bay",
+    "Chest x-ray first, then cover the wound if it still sucks air"
+   ],
+   "answer": 0,
+   "chainStep": "Occlusive dressing taped on three sides over the open pneumothorax and watch for tension; then a chest drain and repair of the chest wall defect, with antibiotic prophylaxis",
+   "why": "Cover the open pneumothorax with an occlusive dressing and watch for a tension pneumothorax: NICE's pre-hospital guidance describes a simple occlusive dressing, WSES-AAST a three-sided one; neither waits for a film. The chest tube then comes first and the chest wall defect is repaired after it, so closing the wound outright in the bay is not the first step.",
+   "sources": [
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.3.7"
+    },
+    {
+     "docId": "pmid:41094688",
+     "where": "Treatment"
+    }
+   ],
+   "next": "circulation",
+   "orders": [
+    {
+     "item": "Antibiotic prophylaxis",
+     "dose": "Indicated for an open pneumothorax (not for a tube in blunt or spontaneous pneumothorax); agent and dose not stated",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:41094688",
+       "where": "Treatment"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "chest_drain",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Large hemothorax, tachycardic or hypotensive. Next?",
+   "options": [
+    "Large-bore chest drain, with blood products ready",
+    "Needle aspiration of the blood, then repeat the film",
+    "Thoracotomy now, ahead of a chest drain",
+    "Observe and repeat the film in 24 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Large-bore chest drain (28 to 40 Fr); measure the first output and the hourly rate",
+   "why": "A chest tube is the treatment of choice for haemothorax, and in an unstable patient it is drained with a large tube whatever its size: 28 to 40 Fr, because smaller tubes leave retained blood that raises the empyema risk. The decision to operate rests on the drain output and the haemodynamics, so the drain goes in first. Observation is for a small haemothorax, under 300 mL, in a stable patient.",
+   "sources": [
+    {
+     "docId": "pmid:41094688",
+     "where": "Pneumothorax and hemothorax recommendations; Treatment"
+    }
+   ],
+   "next": "drain_output"
+  },
+  {
+   "id": "drain_output",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Chest drain output",
+   "outcomes": [
+    {
+     "id": "massive",
+     "if": "Massive or still bleeding; over 1,500 mL, 200 mL an hour for 3 hours, or unstable from chest bleeding",
+     "ddx": {
+      "lead": [
+       "Massive hemothorax"
+      ],
+      "out": []
+     },
+     "next": "end_thoracotomy",
+     "orders": [
+      {
+       "item": "Operative threshold",
+       "dose": "Operate for haemodynamic instability from chest bleeding, or more than 1,500 mL, or more than 200 mL an hour over 3 consecutive hours with no other cause",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:41094688",
+         "where": "Pneumothorax and hemothorax recommendations; Treatment"
+        }
+       ],
+       "note": "The recommendation box writes more than 1,500 mL in 24 hours; the text writes more than 1,500 mL of blood and defines a massive hemothorax as a rapid loss of more than 1,500 mL into the chest."
+      }
+     ]
+    },
+    {
+     "id": "drained",
+     "if": "Drained and slowing; under 1,500 mL, output falling",
+     "ddx": {
+      "lead": [
+       "Hemothorax"
+      ],
+      "out": []
+     },
+     "next": "circulation"
+    }
+   ]
+  },
+  {
+   "id": "end_thoracotomy",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Massive hemothorax: to the operating room for operative control, with balanced blood products and TXA running. WSES-AAST operates for instability from chest bleeding, more than 1,500 mL, or more than 200 mL an hour over 3 hours; its recommendation box puts the 1,500 mL over 24 hours, its text as a rapid loss."
+  },
+  {
+   "id": "flail_step",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Flail segment, oxygenating on a mask, pressure normal. Next?",
+   "options": [
+    "Oxygen and strong analgesia; consider rib fixation once stable",
+    "Intubate now, although he is still oxygenating well on the face mask",
+    "Withhold opioids so that they do not blunt his breathing",
+    "Rib fixation in the operating room now, before the rest of the survey"
+   ],
+   "answer": 0,
+   "chainStep": "Oxygen to target and effective analgesia; NIV or ventilation only for respiratory failure; surgical rib stabilisation within 48 to 72 hours once stable",
+   "why": "The contused lung under a flail segment is treated with oxygen and analgesia that lets him breathe deeply and cough; non-invasive or mechanical ventilation is for respiratory failure. Surgical stabilisation should be considered in all haemodynamically stable patients with a flail chest, within 48 to 72 hours, and instability is a contraindication, so it waits for the survey to finish and the patient to be stable.",
+   "sources": [
+    {
+     "docId": "pmid:41094688",
+     "where": "Thoracic wall injuries recommendations; Lung contusion recommendations; Lung parenchymal injuries recommendations and text"
+    }
+   ],
+   "next": "circulation",
+   "orders": [
+    {
+     "item": "Rib fixation timing",
+     "dose": "Within 48 to 72 hours; if early surgery is contraindicated, as soon as possible within 3 to 7 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41094688",
+       "where": "Thoracic wall injuries recommendations"
+      }
+     ]
+    },
+    {
+     "item": "Analgesia",
+     "dose": "Epidural and multimodal analgesia are conditionally recommended in blunt chest trauma; agents and doses not stated",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:41094688",
+       "where": "Lung parenchymal injuries text"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "circulation",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Circulation: pressure, pulse and the heart",
+   "outcomes": [
+    {
+     "id": "shock",
+     "if": "Hemorrhagic shock; hypotensive and tachycardic, bleeding likely",
+     "ddx": {
+      "lead": [
+       "Hemorrhagic shock"
+      ],
+      "out": []
+     },
+     "next": "resus"
+    },
+    {
+     "id": "tamponade",
+     "if": "Tamponade; penetrating chest wound, low pressure, full neck veins, pericardial fluid on eFAST",
+     "ddx": {
+      "lead": [
+       "Cardiac tamponade"
+      ],
+      "out": []
+     },
+     "next": "tamponade_step",
+     "orders": [
+      {
+       "item": "Decompression",
+       "dose": "Immediate surgical intervention is the only meaningful treatment of the unstable patient with a penetrating cardiac injury; a positive FAST leads to emergent surgery",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:43c32c194927",
+         "where": "Chest imaging, cardiac injury"
+        }
+       ]
+      },
+      {
+       "item": "Pericardiocentesis as a bridge",
+       "dose": "Not in this pathway's open sources",
+       "status": "pending"
+      },
+      {
+       "item": "REBOA",
+       "dose": "Generally not indicated with pericardial tamponade",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "pmid:41094688",
+         "where": "Treatment"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "preg",
+     "if": "Pregnant, hypotensive lying flat; uterus at or above the umbilicus",
+     "ddx": {
+      "lead": [
+       "Aortocaval compression",
+       "Hemorrhagic shock"
+      ],
+      "out": []
+     },
+     "next": "preg_step"
+    },
+    {
+     "id": "neuro_shock",
+     "if": "Hypotensive without bleeding; slow pulse, warm skin, a cord deficit",
+     "ddx": {
+      "lead": [
+       "Neurogenic shock"
+      ],
+      "out": []
+     },
+     "next": "end_neuro_shock",
+     "orders": [
+      {
+       "item": "Vasopressor",
+       "dose": "Identify the cause of the hypotension before choosing a vasopressor; norepinephrine is suggested for neurogenic shock in older adults, at the lowest dose that keeps tissue perfusion",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:38816766",
+         "where": "Q 3.3; Statement 3.3.3"
+        }
+       ]
+      },
+      {
+       "item": "Spinal cord injury",
+       "dose": "No methylprednisolone, nimodipine or naloxone for neuroprotection",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "url:4031d253fb1d",
+         "where": "1.7.3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "stable",
+     "if": "Stable; normal pressure and pulse",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "disability"
+    }
+   ]
+  },
+  {
+   "id": "end_neuro_shock",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Neurogenic shock: identify the cause of the hypotension before choosing a vasopressor, because vasopressors are not routine for hypotension from bleeding; norepinephrine is suggested for neurogenic shock in older adults. Vasopressor support is not walked in this version."
+  },
+  {
+   "id": "tamponade_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Stab wound beside the sternum, hypotensive, neck veins full, pericardial fluid on eFAST. Next?",
+   "options": [
+    "Emergency surgery to open the pericardium, blood running",
+    "CT chest to map the track, then decide on surgery",
+    "A fluid bolus, then repeat the eFAST in 15 minutes",
+    "Left chest drain for the low pressure, then reassess"
+   ],
+   "answer": 0,
+   "chainStep": "Emergency surgery to decompress the pericardium and repair the heart, without further imaging; blood products running",
+   "why": "Immediate surgical intervention is the only meaningful treatment of an unstable patient with a penetrating cardiac injury, and the FAST cardiac view is how the blood around the heart is found; a positive FAST leads to emergent surgery. CT is considered only when the FAST is negative in a stable patient. REBOA is generally not indicated with pericardial tamponade.",
+   "sources": [
+    {
+     "docId": "url:43c32c194927",
+     "where": "Chest imaging, cardiac injury; Chest imaging, ultrasonography"
+    },
+    {
+     "docId": "pmid:41094688",
+     "where": "Treatment"
+    }
+   ],
+   "next": "end_tamponade"
+  },
+  {
+   "id": "end_tamponade",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Traumatic tamponade: pericardial blood on eFAST in a hypotensive patient with a penetrating chest wound goes to emergency surgery without further imaging; REBOA is not used. Pericardiocentesis as a bridge is not in this pathway's open sources yet."
+  },
+  {
+   "id": "preg_step",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Pregnant, uterus above the umbilicus, hypotensive lying flat. First?",
+   "options": [
+    "Manual left uterine displacement, or tilt her to the left",
+    "Emergency cesarean delivery to take the uterus off the vena cava",
+    "Keep her flat and start a vasopressor to lift the pressure",
+    "Hold the CT until the obstetric team has scanned the baby"
+   ],
+   "answer": 0,
+   "chainStep": "Manual left uterine displacement, or left lateral tilt with the spine protected; maternal-fetal team now; anti-D if RhD-negative",
+   "why": "Once the uterus reaches the umbilicus, lying flat compresses the inferior vena cava. The EANS consensus positions the pregnant woman with severe TBI in left lateral tilt or with manual left displacement of the uterus, and FEBRASGO uses manual displacement during CPR, where tilting the table is not indicated because it weakens compressions. Resuscitative hysterotomy belongs to cardiac arrest: from 20 weeks, if circulation has not returned within 4 minutes. CT is not delayed for fear of fetal radiation.",
+   "sources": [
+    {
+     "docId": "pmid:42064346",
+     "where": "Suggestions 4, 12 and 30; Suggestion 12 footnote"
+    },
+    {
+     "docId": "pmid:42110677",
+     "where": "Key points; manual uterine displacement; resuscitative hysterotomy"
+    }
+   ],
+   "next": "preg_response",
+   "orders": [
+    {
+     "item": "RhD-negative mother",
+     "dose": "Anti-D after blunt abdominal trauma, a sensitizing event; 300 micrograms (1,500 IU) covers 30 mL of fetal whole blood; when screening suggests a larger bleed, Kleihauer-Betke or flow cytometry sizes the extra dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33128246",
+       "where": "Anti-Rh(D) dosing; Recommendations, middle priority"
+      },
+      {
+       "docId": "pmid:42597218",
+       "where": "Prevention"
+      }
+     ]
+    },
+    {
+     "item": "Maternal-fetal medicine",
+     "dose": "Involved immediately to assess viability and choose the fetal monitoring",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42064346",
+       "where": "Suggestion 30"
+      }
+     ],
+     "note": "Stated for severe TBI in pregnancy."
+    },
+    {
+     "item": "Fetal monitoring duration",
+     "dose": "Not stated in the open sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Uncrossmatched red cells",
+     "dose": "Group O RhD-negative for women of child-bearing potential",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1176c205d68a",
+       "where": "Operational Aspects of the Transfusion Service"
+      }
+     ]
+    },
+    {
+     "item": "Pelvic binder",
+     "dose": "Positioned cautiously in pregnant women",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28115984",
+       "where": "Role of pelvic binder"
+      }
+     ]
+    },
+    {
+     "item": "Cardiac arrest",
+     "dose": "Manual uterine displacement during CPR; resuscitative hysterotomy from 20 weeks if circulation has not returned within 4 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42110677",
+       "where": "Key points"
+      }
+     ]
+    }
+   ],
+   "note": "No open source read states this move for the hypotensive pregnant trauma patient without TBI or arrest; RCOG Green-top 56, the SOGC trauma guideline and ERC 2025 are blocked. The key carries the reason both sources give. Whether the permissive pressure target changes in pregnancy is not in the open sources read."
+  },
+  {
+   "id": "preg_response",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After displacing the uterus",
+   "outcomes": [
+    {
+     "id": "recovers",
+     "if": "Pressure recovers; off the vena cava, the pulse settles",
+     "ddx": {
+      "lead": [
+       "Aortocaval compression"
+      ],
+      "out": []
+     },
+     "next": "disability"
+    },
+    {
+     "id": "bleeding",
+     "if": "Still hypotensive; she is bleeding",
+     "ddx": {
+      "lead": [
+       "Hemorrhagic shock"
+      ],
+      "out": []
+     },
+     "next": "resus"
+    }
+   ]
+  },
+  {
+   "id": "resus",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Hypotensive after injury, bleeding likely. Resuscitation?",
+   "options": [
+    "Massive transfusion: plasma, platelets and red cells in a fixed ratio, with TXA",
+    "Two liters of warm crystalloid to a normal pressure, then blood if it falls again",
+    "Red cells alone, holding plasma until the INR and fibrinogen results are back",
+    "Norepinephrine to a systolic of 120 before the first unit of blood is hung"
+   ],
+   "answer": 0,
+   "chainStep": "Activate the massive transfusion protocol: plasma to red cells 1:1 to 1:2 with platelets, TXA 1 g over 10 minutes then 1 g over 8 hours within 3 hours, permissive hypotension until bleeding is controlled, except with severe TBI, and only in selected older adults",
+   "why": "Once massive transfusion triggers are met, universal blood products replace crystalloid or colloid: plasma and red cells between 1:1 and 1:2, with platelets, allowing permissive hypotension until surgery or angioembolization has begun to stop the bleeding. TXA goes in as soon as possible and within 3 hours of injury. The fixed ratio switches to laboratory-guided transfusion once bleeding is controlled. Norepinephrine is added to volume only if restricted replacement misses the target pressure, not in place of blood.",
+   "sources": [
+    {
+     "docId": "url:1176c205d68a",
+     "where": "Triggers for Initiating Massive Transfusion; Blood Product Resuscitation in the Trauma Bay; Therapeutic Adjuncts"
+    },
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.5.4; 1.5.5; 1.5.18; 1.5.20; 1.5.24; 1.5.27"
+    },
+    {
+     "docId": "pmid:36859355",
+     "where": "Recommendations 13, 14 and 23"
+    }
+   ],
+   "next": "fast",
+   "orders": [
+    {
+     "item": "Activate the protocol",
+     "dose": "One or more of: ABC score 2 or more (pulse over 120, systolic under 90, positive FAST, penetrating torso injury), persistent instability, active bleeding needing operation or angioembolization, transfusion in the trauma bay",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1176c205d68a",
+       "where": "Triggers for Initiating Massive Transfusion"
+      }
+     ],
+     "note": "NICE activates on physiology and the response to immediate volume resuscitation, not on a risk tool applied at a single time point (NG39 1.5.13, 1.5.14)."
+    },
+    {
+     "item": "ABC score cutoffs",
+     "dose": "ACS TQIP writes pulse over 120 and systolic under 90; a 2025 review's table of the score gives heart rate 120 or more and systolic 90 or less; one point each with a positive FAST and a penetrating torso injury, 2 or more to activate",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:1176c205d68a",
+       "where": "Triggers for Initiating Massive Transfusion: \"pulse >120, SBP<90, + FAST, and penetrating torso injury\""
+      },
+      {
+       "docId": "pmid:39730103",
+       "where": "Table 2, Assessment of Blood Consumption (ABC): \"SAP ≤ 90 mmHg; HR ≥ 120 bpm\""
+      }
+     ],
+     "note": "The two sources set the edges differently: a pulse of exactly 120 or a systolic of exactly 90 scores a point in the review's table but not in the TQIP text."
+    },
+    {
+     "item": "Plasma to red cells",
+     "dose": "1:1 to 1:2 (ACS TQIP); NICE: 1:1 in adults, 1:1 by weight in children",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1176c205d68a",
+       "where": "Blood Product Resuscitation in the Trauma Bay"
+      },
+      {
+       "docId": "url:5b868a47d05f",
+       "where": "1.5.24; 1.5.25"
+      }
+     ],
+     "note": "The European guideline accepts plasma to red cells of at least 1:2, or fibrinogen concentrate or cryoprecipitate with red cells."
+    },
+    {
+     "item": "Platelets",
+     "dose": "One apheresis or pooled unit for each 6 units of red cells",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1176c205d68a",
+       "where": "Blood Product Resuscitation in the Trauma Bay"
+      }
+     ]
+    },
+    {
+     "item": "Crystalloid",
+     "dose": "Blood products rather than crystalloid once triggers are met; NICE: no crystalloid in hospital for active bleeding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1176c205d68a",
+       "where": "Blood Product Resuscitation in the Trauma Bay"
+      },
+      {
+       "docId": "url:5b868a47d05f",
+       "where": "1.5.23"
+      }
+     ],
+     "note": "The European guideline starts 0.9% saline or a balanced crystalloid in the hypotensive bleeding patient and avoids Ringer's lactate in severe head trauma (Recommendation 15)."
+    },
+    {
+     "item": "Tranexamic acid",
+     "dose": "1 g IV over 10 minutes, then 1 g over 8 hours, as soon as possible and within 3 hours of injury; not after 3 hours unless there is hyperfibrinolysis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1176c205d68a",
+       "where": "Therapeutic Adjuncts in Massive Transfusion"
+      },
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 23"
+      },
+      {
+       "docId": "url:5b868a47d05f",
+       "where": "1.5.4; 1.5.5"
+      }
+     ]
+    },
+    {
+     "item": "Pressure target",
+     "dose": "Systolic 80 to 90 mmHg (MAP 50 to 60) until major bleeding stops, with no brain injury; with severe TBI (GCS 8 or less), MAP 80 or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 13"
+      },
+      {
+       "docId": "url:5b868a47d05f",
+       "where": "1.5.21"
+      }
+     ]
+    },
+    {
+     "item": "Older adult",
+     "dose": "Permissive hypotension only in selected patients, with perfusion monitored; no routine vasopressors for haemorrhagic hypotension",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38816766",
+       "where": "Q 3.3; Q 3.4"
+      }
+     ]
+    },
+    {
+     "item": "Calcium",
+     "dose": "Monitor ionised calcium, above all during massive transfusion; calcium chloride is the preferred agent (10 mL of 10% contains 270 mg of elemental calcium); the dose and the trigger are not stated",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 31; Recommendation 31 rationale"
+      }
+     ]
+    },
+    {
+     "item": "Fibrinogen",
+     "dose": "Fibrinogen concentrate or cryoprecipitate when fibrinogen is 1.5 g/L or less; start with 3 to 4 g, or 15 to 20 single-donor units of cryoprecipitate",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 29"
+      }
+     ]
+    },
+    {
+     "item": "Vasopressor",
+     "dose": "Norepinephrine in addition to fluids only when restricted volume replacement does not reach the target",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 14"
+      }
+     ]
+    }
+   ],
+   "note": "Permissive hypotension is not in the key: the open sources do not say whether the target changes in pregnancy, and WSES applies it only to selected older adults."
+  },
+  {
+   "id": "fast",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Hypotensive on blood. Find the source?",
+   "options": [
+    "eFAST with chest and pelvic films in the bay",
+    "Whole-body CT now, while the blood runs in",
+    "Diagnostic peritoneal lavage ahead of the ultrasound",
+    "Wait for a falling hemoglobin before imaging"
+   ],
+   "answer": 0,
+   "chainStep": "eFAST with chest and pelvic x-rays in the resuscitation bay; CT only once the patient responds",
+   "why": "In the unstable patient, imaging is limited to what directs intervention: chest and pelvic films and the FAST, extended to the chest, which has largely replaced peritoneal lavage. CT is for the patient who responds to resuscitation or is stable. A first hemoglobin in the normal range can mask early bleeding.",
+   "sources": [
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.5.29; 1.5.31"
+    },
+    {
+     "docId": "pmid:28115984",
+     "where": "Recommendations for diagnostic tools"
+    },
+    {
+     "docId": "pmid:41094688",
+     "where": "Diagnosis recommendations"
+    },
+    {
+     "docId": "url:43c32c194927",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:36859355",
+     "where": "Recommendations 8 and 9"
+    }
+   ],
+   "next": "source"
+  },
+  {
+   "id": "source",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "eFAST, chest and pelvic films",
+   "outcomes": [
+    {
+     "id": "fast_pos",
+     "if": "FAST positive; free fluid in the abdomen",
+     "ddx": {
+      "lead": [
+       "Intra-abdominal bleeding"
+      ],
+      "out": []
+     },
+     "next": "lap"
+    },
+    {
+     "id": "pelvis",
+     "if": "Pelvic ring disruption; FAST negative",
+     "ddx": {
+      "lead": [
+       "Pelvic bleeding"
+      ],
+      "out": []
+     },
+     "next": "binder"
+    },
+    {
+     "id": "fast_neg",
+     "if": "No source seen; FAST negative, no hemothorax or pelvic fracture",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "fast_neg_step"
+    }
+   ]
+  },
+  {
+   "id": "lap",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Hypotensive on blood, FAST positive. Next?",
+   "options": [
+    "Laparotomy now, blood running",
+    "CT abdomen first to grade the injury",
+    "Angioembolization of the spleen first",
+    "Repeat the FAST in 30 minutes"
+   ],
+   "answer": 0,
+   "chainStep": "Trauma laparotomy now, damage control when not responding, with blood products running",
+   "why": "FAST is highly specific, so an unstable patient with a positive FAST goes to the operating room; haemodynamically decompensated patients with a positive FAST proceed directly to trauma laparotomy. Damage control surgery is for the patient not responding to resuscitation. CT is for the patient who responds or is stable, and non-operative management is contraindicated in unresponsive instability.",
+   "sources": [
+    {
+     "docId": "url:43c32c194927",
+     "where": "Abdominal imaging, FAST"
+    },
+    {
+     "docId": "pmid:35246190",
+     "where": "Blunt abdominal trauma: observation and nonoperative management"
+    },
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.5.31; 1.5.37"
+    },
+    {
+     "docId": "pmid:28828034",
+     "where": "Adult non-operative management; Adult operative management"
+    },
+    {
+     "docId": "pmid:36859355",
+     "where": "Recommendations 6 and 19"
+    }
+   ],
+   "next": "end_lap",
+   "orders": [
+    {
+     "item": "Head injury during haemorrhage control",
+     "dose": "Finish the primary survey (GCS, pupils, exposure); with a head injury, CT head once bleeding is controlled, and the target becomes MAP 80 or more (WSES: systolic over 100 or MAP over 80 during interventions for life-threatening haemorrhage)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5b868a47d05f",
+       "where": "1.8.1; 1.8.7"
+      },
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 13"
+      },
+      {
+       "docId": "pmid:31798673",
+       "where": "Recommendation 5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_lap",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Laparotomy. In shock, damage control surgery with blood products and TXA running. In a compensated patient, prompt exploration for CT signs of bowel injury, or for a penetrating wound with peritonitis, evisceration, impalement or a gunshot track across the peritoneum; laparoscopy only in a compensated patient and experienced hands. Finish the primary survey (GCS, pupils, exposure) before leaving the bay; with a head injury, CT head once bleeding is controlled, and the target becomes MAP 80 or more."
+  },
+  {
+   "id": "binder",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Hypotensive, pelvic ring disrupted on the film, FAST negative. Next?",
+   "options": [
+    "Pelvic binder centred on the greater trochanters",
+    "CT of the pelvis first, to classify the fracture pattern",
+    "Spring the pelvis again to grade how loose the ring is",
+    "Laparotomy, since the FAST may have missed blood"
+   ],
+   "answer": 0,
+   "chainStep": "Pelvic binder around the greater trochanters and symphysis now, blood and TXA running; retrograde urethrogram before any catheter if there is blood at the meatus or a perineal hematoma",
+   "why": "Non-invasive external compression is the early move to stabilise the ring and reduce pelvic bleeding, and purpose-made binders work better than a sheet; it sits around the greater trochanters and the symphysis pubis. CT is for the stable or stabilised patient, and repeated springing of the pelvis can increase the bleeding. WSES notes that in an unstable pelvic patient E-FAST may be adequate to exclude the need for laparotomy.",
+   "sources": [
+    {
+     "docId": "pmid:28115984",
+     "where": "Role of pelvic binder, recommendations and text; Recommendations for diagnostic tools and text"
+    },
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.5.3"
+    },
+    {
+     "docId": "pmid:36859355",
+     "where": "Recommendation 20"
+    }
+   ],
+   "next": "binder_result",
+   "orders": [
+    {
+     "item": "Binder duration",
+     "dose": "Removed as soon as physiologically justifiable, replaced by external or definitive fixation; not kept more than 24 to 48 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28115984",
+       "where": "Role of pelvic binder, recommendations and text"
+      }
+     ]
+    },
+    {
+     "item": "Urethral injury",
+     "dose": "Perineal hematoma or pelvic disruption with signs: retrograde urethrogram before a urethral catheter; suprapubic catheter if it is positive",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28115984",
+       "where": "Recommendations for diagnostic tools and text"
+      }
+     ]
+    },
+    {
+     "item": "Rectal injury",
+     "dose": "Perineal and rectal examination when suspected; proctoscopy if positive",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28115984",
+       "where": "Recommendations for diagnostic tools"
+      }
+     ]
+    },
+    {
+     "item": "Pregnancy and older adults",
+     "dose": "Position the binder cautiously",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28115984",
+       "where": "Role of pelvic binder"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "binder_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After the binder and blood",
+   "outcomes": [
+    {
+     "id": "responds",
+     "if": "Responds; pressure recovers and holds",
+     "ddx": {
+      "lead": [
+       "Pelvic bleeding"
+      ],
+      "out": []
+     },
+     "next": "disability"
+    },
+    {
+     "id": "nonresp",
+     "if": "Still hypotensive; binder on, blood running",
+     "ddx": {
+      "lead": [
+       "Pelvic bleeding"
+      ],
+      "out": []
+     },
+     "next": "pelvic_pack"
+    }
+   ]
+  },
+  {
+   "id": "pelvic_pack",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Binder on, blood running, pelvis still bleeding. Next?",
+   "options": [
+    "Angioembolization, or preperitoneal packing if faster",
+    "CT angiography to map the bleeding vessel, then decide the next move",
+    "Remove the binder to examine the pelvis properly",
+    "Definitive internal fixation of the pelvis tonight"
+   ],
+   "answer": 0,
+   "chainStep": "Angioembolization, or preperitoneal pelvic packing with external fixation when angiography cannot be done in time; repeat angiography if bleeding persists",
+   "why": "After the binder, haemostatic resuscitation and exclusion of other sources, a pelvis that keeps bleeding goes to angiography and embolization or to preperitoneal packing. WSES treats the two as complementary: packing with external fixation, especially where there is no angiography service, and angiography for ongoing bleeding afterwards. CT needs a stable patient, the binder stays on, and definitive fixation waits until the patient is resuscitated.",
+   "sources": [
+    {
+     "docId": "pmid:28115984",
+     "where": "Role of pre-peritoneal pelvic packing; Role of angioembolization; Ideal time-window for definitive fixation"
+    },
+    {
+     "docId": "pmid:36859355",
+     "where": "Recommendation 21"
+    },
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.5.40"
+    }
+   ],
+   "next": "end_pelvic_pack",
+   "orders": [
+    {
+     "item": "External fixation",
+     "dose": "A required adjunct to preperitoneal packing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28115984",
+       "where": "Role of external pelvic fixation"
+      }
+     ]
+    },
+    {
+     "item": "REBOA",
+     "dose": "Zone III REBOA may be considered as a bridge with suspected pelvic bleeding and a systolic under 90 or no response to blood",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28115984",
+       "where": "Role of REBOA"
+      },
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 21"
+      }
+     ]
+    },
+    {
+     "item": "Head injury during haemorrhage control",
+     "dose": "Finish the primary survey (GCS, pupils, exposure); with a head injury, CT head once bleeding is controlled, and the target becomes MAP 80 or more (WSES: systolic over 100 or MAP over 80 during interventions for life-threatening haemorrhage)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5b868a47d05f",
+       "where": "1.8.1; 1.8.7"
+      },
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 13"
+      },
+      {
+       "docId": "pmid:31798673",
+       "where": "Recommendation 5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_pelvic_pack",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Unstable pelvic fracture bleeding: binder, haemostatic resuscitation, then angioembolization or preperitoneal packing with external fixation, used together as needed and repeated if bleeding persists; definitive fixation once resuscitated. Finish the primary survey (GCS, pupils, exposure) before leaving the bay; with a head injury, CT head once bleeding is controlled, and the target becomes MAP 80 or more."
+  },
+  {
+   "id": "fast_neg_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Hypotensive on blood; FAST negative, no hemothorax or pelvic fracture. Next?",
+   "options": [
+    "Keep transfusing, repeat the FAST, look for other losses",
+    "Stand down the protocol now: the FAST has excluded bleeding",
+    "Send the patient to CT now, whether or not the pressure responds",
+    "Start norepinephrine and stop the blood products for now"
+   ],
+   "answer": 0,
+   "chainStep": "Keep transfusing; repeat the FAST; look for retroperitoneal, long-bone and external blood loss and other causes of shock",
+   "why": "A negative FAST does not exclude intraperitoneal or retroperitoneal haemorrhage, and in a hypotensive patient with haemorrhage significant abdominal bleeding must still be suspected; serial FAST raises the sensitivity. The US algorithm sends the unstable, FAST-negative patient to a search for other causes of instability. CT waits for a response to resuscitation.",
+   "sources": [
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.5.30; 1.5.31"
+    },
+    {
+     "docId": "pmid:36859355",
+     "where": "Recommendation 8 rationale"
+    },
+    {
+     "docId": "url:43c32c194927",
+     "where": "Abdominal imaging, FAST; Figure 4, initial assessment of blunt abdominal trauma"
+    }
+   ],
+   "next": "fast_neg_result"
+  },
+  {
+   "id": "fast_neg_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Repeat FAST and the response",
+   "outcomes": [
+    {
+     "id": "repeat_pos",
+     "if": "Repeat FAST positive; new free fluid in the abdomen",
+     "ddx": {
+      "lead": [
+       "Intra-abdominal bleeding"
+      ],
+      "out": []
+     },
+     "next": "lap"
+    },
+    {
+     "id": "fn_responds",
+     "if": "Responds to blood; pressure recovers and holds",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "disability"
+    },
+    {
+     "id": "fn_nonresp",
+     "if": "Still unstable; repeat FAST negative, no response to blood",
+     "ddx": {
+      "lead": [
+       "Hemorrhagic shock"
+      ],
+      "out": []
+     },
+     "next": "end_fn_nonresp"
+    }
+   ]
+  },
+  {
+   "id": "end_fn_nonresp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Unstable, no source on eFAST and films: keep transfusing and search again for retroperitoneal, long-bone and external loss and for shock without bleeding (tension, tamponade, spinal cord injury); not walked further in this version."
+  },
+  {
+   "id": "disability",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "GCS, pupils and the head",
+   "outcomes": [
+    {
+     "id": "head_ct",
+     "if": "Head injury, high risk, 16 or over; GCS 12 or less, under 15 at 2 hours, a focal deficit, a skull fracture sign, or vomiting more than once",
+     "ddx": {
+      "lead": [
+       "Traumatic brain injury"
+      ],
+      "out": []
+     },
+     "next": "head_ct"
+    },
+    {
+     "id": "seizure",
+     "if": "Seizure after the head injury; at the scene or in the bay",
+     "ddx": {
+      "lead": [
+       "Traumatic brain injury"
+      ],
+      "out": []
+     },
+     "next": "end_seizure"
+    },
+    {
+     "id": "anticoag",
+     "if": "On an anticoagulant; head injury, GCS 15, with or without loss of consciousness",
+     "ddx": {
+      "lead": [
+       "Traumatic brain injury"
+      ],
+      "out": []
+     },
+     "next": "anticoag_ct"
+    },
+    {
+     "id": "ct_lesser",
+     "if": "Head injury, lesser risk, 16 or over; not anticoagulated, lost consciousness or amnesia with age 65 or over, a clotting disorder, a dangerous mechanism or over 30 minutes of retrograde amnesia",
+     "ddx": {
+      "lead": [
+       "Traumatic brain injury"
+      ],
+      "out": []
+     },
+     "next": "end_ct_lesser"
+    },
+    {
+     "id": "d_ok",
+     "if": "GCS 15; no head injury risk factor",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "exposure"
+    }
+   ]
+  },
+  {
+   "id": "head_ct",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Head injury with a high-risk feature. Next?",
+   "options": [
+    "CT head within 1 hour",
+    "Skull x-ray first; CT if it shows a fracture",
+    "MRI brain as the first scan",
+    "Observe for 4 hours; scan if the GCS falls"
+   ],
+   "answer": 0,
+   "chainStep": "Non-contrast CT head within 1 hour of the risk factor; CT cervical spine with it when indicated",
+   "why": "In anyone 16 or over, a GCS of 12 or less on arrival, under 15 at 2 hours, a suspected open, depressed or basal skull fracture, a post-traumatic seizure, a focal deficit or more than one vomit means a CT head within 1 hour. CT is the primary investigation for traumatic brain injury; MRI is not, and skull films are not used to diagnose brain injury. Four hours of observation is for a child with only one lesser risk factor, not for these adults.",
+   "sources": [
+    {
+     "docId": "url:ed1c1f5fb274",
+     "where": "1.5.1; 1.5.2; 1.5.4; 1.5.8; 1.5.12"
+    }
+   ],
+   "next": "head_result",
+   "orders": [
+    {
+     "item": "CT cervical spine with the head",
+     "dose": "Within 1 hour if GCS 12 or less, intubated, blunt polytrauma of the head with the chest, abdomen or pelvis in someone alert and stable, or suspected injury with age 65 or over, a dangerous mechanism, a focal peripheral deficit or limb paraesthesia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed1c1f5fb274",
+       "where": "1.6.2"
+      }
+     ]
+    },
+    {
+     "item": "Tranexamic acid, isolated head injury",
+     "dose": "GCS 12 or less without active extracranial bleeding: consider a 2 g IV bolus at 16 and over (15 to 30 mg/kg, maximum 2 g, under 16), as soon as possible within 2 hours of injury, before imaging",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed1c1f5fb274",
+       "where": "1.3.17"
+      },
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 23 rationale"
+      }
+     ],
+     "note": "UK regimen. The European guideline (R23 rationale) reports CRASH-3, a 1 g bolus then 1 g over 8 hours within 3 hours, which reduced head injury death in mild and moderate, not severe, TBI."
+    },
+    {
+     "item": "Severe TBI pressure",
+     "dose": "MAP 80 mmHg or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 13"
+      },
+      {
+       "docId": "url:ed1c1f5fb274",
+       "where": "1.8.10"
+      }
+     ]
+    },
+    {
+     "item": "Platelets",
+     "dose": "Above 100 x 10^9/L with TBI; above 50 x 10^9/L with ongoing bleeding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 30"
+      }
+     ]
+    },
+    {
+     "item": "A dilated pupil or other signs of herniation",
+     "dose": "Hyperventilation only as a life-saving bridge to the scan and the neurosurgeon",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 3"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "head_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT head",
+   "outcomes": [
+    {
+     "id": "bleed",
+     "if": "Intracranial bleed; new hemorrhage on CT",
+     "ddx": {
+      "lead": [
+       "Traumatic brain injury"
+      ],
+      "out": []
+     },
+     "next": "end_neuro"
+    },
+    {
+     "id": "ct_clear",
+     "if": "CT head normal; no blood, no fracture",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "exposure"
+    }
+   ]
+  },
+  {
+   "id": "end_neuro",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Traumatic intracranial bleed: discuss with a neurosurgeon now and admit. Any anticoagulant is reversed at once, by the drug; in an anticoagulated older adult the CT is repeated at 6 to 8 hours, or sooner with any worsening. Keep MAP 80 or more when the injury is severe, and platelets above 100."
+  },
+  {
+   "id": "end_ct_lesser",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Lesser-risk head injury: CT head within 8 hours of the injury (within the hour if presenting more than 8 hours after it); a GCS still under 15 at 2 hours moves to CT within 1 hour."
+  },
+  {
+   "id": "end_seizure",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Post-traumatic seizure: a CT head within 1 hour. Continue in the seizure pathway, which treats a continuing seizure and walks the post-traumatic route: the scan, a neurosurgical discussion for a bleed, and admission."
+  },
+  {
+   "id": "anticoag_ct",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "On an anticoagulant, hit the head; GCS 15. Next?",
+   "options": [
+    "CT head now, before deciding on reversal",
+    "Reverse the anticoagulant now, then scan if symptoms appear",
+    "Home with written head injury advice; GCS 15 needs no scan",
+    "Admit for neurological observation without a scan"
+   ],
+   "answer": 0,
+   "chainStep": "Prompt CT head (NICE: within 8 hours of injury, or within the hour if presenting later), with CT of the cervical spine; coagulation screen; reversal only if a bleed is found",
+   "why": "Older adults on anticoagulants bleed intracranially more often, and about 3% have an intracranial injury with no clinical sign. WSES calls for a prompt head CT even after minor head trauma; NICE scans within 8 hours anyone 65 or over with any loss of consciousness or amnesia, and considers it in anyone anticoagulated. Reversal is for bleeding: with head trauma but no bleed on imaging, no preventive reversal.",
+   "sources": [
+    {
+     "docId": "pmid:38816766",
+     "where": "Imaging, summary of evidence; Q 4.1; Q 4.2 statements"
+    },
+    {
+     "docId": "url:ed1c1f5fb274",
+     "where": "1.5.9; 1.5.13"
+    },
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.5.12"
+    }
+   ],
+   "next": "ac_result",
+   "orders": [
+    {
+     "item": "Coagulation screen",
+     "dose": "aPTT, Thromboplastin Time (TT), PT, INR and anti-Xa levels",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38816766",
+       "where": "Q 4.1"
+      }
+     ]
+    },
+    {
+     "item": "Cervical spine",
+     "dose": "An older adult who needs a head CT has a concurrent screening CT of the cervical spine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38816766",
+       "where": "Imaging, summary of evidence"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ac_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT head",
+   "outcomes": [
+    {
+     "id": "vka_bleed",
+     "if": "Bleed on CT; on warfarin, INR raised",
+     "ddx": {
+      "lead": [
+       "Traumatic brain injury"
+      ],
+      "out": []
+     },
+     "next": "reverse"
+    },
+    {
+     "id": "doac_bleed",
+     "if": "Bleed on CT; on a direct oral anticoagulant",
+     "ddx": {
+      "lead": [
+       "Traumatic brain injury"
+      ],
+      "out": []
+     },
+     "next": "end_neuro",
+     "orders": [
+      {
+       "item": "Dabigatran",
+       "dose": "Idarucizumab 5 g IV for life-threatening bleeding",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:36859355",
+         "where": "Recommendation 35"
+        }
+       ]
+      },
+      {
+       "item": "Apixaban or rivaroxaban",
+       "dose": "PCC 25 to 50 units/kg",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:36859355",
+         "where": "Recommendation 34"
+        }
+       ],
+       "note": "WSES elderly gives a fixed 2,000 units when andexanet is unavailable."
+      },
+      {
+       "item": "Andexanet alfa",
+       "dose": "FDA (December 2025): risks outweigh benefits; no longer sold in the US after 22 December 2025",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "url:20b209257bcc",
+         "where": "Update"
+        }
+       ],
+       "note": "The European guideline (2023) suggests it for apixaban or rivaroxaban, especially with TBI (Recommendation 34)."
+      },
+      {
+       "item": "Drug levels",
+       "dose": "Measure DOAC levels where available. WSES reverses only critically ill patients with measurable levels in haemorrhagic shock not responding to resuscitation; the European guideline treats life-threatening bleeding, including TBI, with idarucizumab 5 g for dabigatran",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:38816766",
+         "where": "Q 4.3"
+        },
+        {
+         "docId": "pmid:36859355",
+         "where": "Recommendations 34 and 35"
+        }
+       ],
+       "note": "The two sources differ."
+      },
+      {
+       "item": "Haematology",
+       "dose": "Consult immediately on reversing any anticoagulant other than a vitamin K antagonist",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:5b868a47d05f",
+         "where": "1.5.10"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ac_clear",
+     "if": "CT head normal; no blood, no fracture",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "exposure",
+     "orders": [
+      {
+       "item": "Anticoagulant, CT head clear",
+       "dose": "No reversal; WSES: close monitoring within a 24-hour observation protocol, then repeat CT; earlier CT with any deterioration",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:38816766",
+         "where": "Imaging, summary of evidence; Statement 4.2.2"
+        }
+       ],
+       "note": "NICE NG232 does not admit on anticoagulation alone after a normal CT."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "reverse",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Warfarin, INR 3.1, 70 kg, subdural on CT. Reverse with?",
+   "options": [
+    "4-factor PCC 25 units/kg (1,750 units) with vitamin K IV",
+    "Fresh frozen plasma 15 mL/kg, repeating it until the INR is normal",
+    "Vitamin K 10 mg by mouth and repeat the INR tomorrow",
+    "Idarucizumab 5 g IV, then recheck the INR"
+   ],
+   "answer": 0,
+   "chainStep": "4-factor PCC by INR and weight (INR 2 to under 4: 25 units/kg, maximum 2,500 units) with IV vitamin K; neurosurgical discussion; repeat CT at 6 to 8 hours",
+   "why": "A bleed in a critical organ on a vitamin K antagonist is reversed now with 4-factor PCC and IV vitamin K. The label doses PCC by the pre-dose INR and weight: 25 units/kg for an INR of 2 to under 4, not over 2,500 units, so 1,750 units at 70 kg, with vitamin K given at the same time. Plasma is not used to reverse a VKA in major trauma, vitamin K alone takes time to act, and idarucizumab reverses dabigatran, not warfarin.",
+   "sources": [
+    {
+     "docId": "url:2a9fe9c19e10",
+     "where": "2.1; Table 1"
+    },
+    {
+     "docId": "pmid:38816766",
+     "where": "Q 4.2 recommendations and statements"
+    },
+    {
+     "docId": "pmid:36859355",
+     "where": "Recommendations 33 and 35"
+    },
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.5.6; 1.5.8; 1.5.9"
+    }
+   ],
+   "next": "end_neuro",
+   "orders": [
+    {
+     "item": "4-factor PCC (Kcentra)",
+     "dose": "Pre-dose INR 2 to under 4: 25 units/kg (maximum 2,500); 4 to 6: 35 units/kg (maximum 3,500); over 6: 50 units/kg (maximum 5,000); weight capped at 100 kg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2a9fe9c19e10",
+       "where": "2.1; Table 1"
+      },
+      {
+       "docId": "pmid:38816766",
+       "where": "Q 4.2 recommendations"
+      }
+     ],
+     "note": "The label says repeat dosing is not recommended; WSES gives further doses if needed to reach an INR under 1.5."
+    },
+    {
+     "item": "Vitamin K",
+     "dose": "IV with the PCC: 5 mg (WSES) or 5 to 10 mg (European guideline)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38816766",
+       "where": "Q 4.2 recommendations"
+      },
+      {
+       "docId": "pmid:36859355",
+       "where": "Recommendation 33"
+      },
+      {
+       "docId": "url:2a9fe9c19e10",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "Repeat CT",
+     "dose": "At 6 to 8 hours, or sooner with subtle neurological worsening",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:be86a08e2cd9",
+       "where": "Anticoagulation assessment and reversal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "exposure",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Primary survey done. Exposure?",
+   "options": [
+    "Undress fully to find the injuries, then cover and warm",
+    "Leave the patient uncovered until the secondary survey ends",
+    "Expose the injured limbs and chest, leaving the rest covered",
+    "Cool to 33 degrees to protect the brain"
+   ],
+   "answer": 0,
+   "chainStep": "Expose fully for the secondary survey, then cover and warm to keep normothermia",
+   "why": "Exposure completes the primary survey: the whole patient is examined, then ongoing heat loss is minimised and a cold patient warmed back to normothermia. Hypothermia worsens coagulopathy and is one of the triggers for damage control.",
+   "sources": [
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.8.1; 1.6.1"
+    },
+    {
+     "docId": "pmid:36859355",
+     "where": "Recommendations 18 and 19"
+    },
+    {
+     "docId": "url:1176c205d68a",
+     "where": "Massive Transfusion in the Intensive Care Unit"
+    }
+   ],
+   "next": "secondary",
+   "orders": [
+    {
+     "item": "Before a urethral catheter",
+     "dose": "Blood at the meatus, a perineal hematoma or a high-riding prostate: retrograde urethrogram first",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28115984",
+       "where": "Diagnostic tools text"
+      },
+      {
+       "docId": "pmid:31827593",
+       "where": "Bladder; Urethra"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "secondary",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Secondary survey",
+   "outcomes": [
+    {
+     "id": "blunt",
+     "if": "Blunt torso injury; a tender abdomen, a seatbelt or handlebar bruise, or a pelvic fracture",
+     "ddx": {
+      "lead": [
+       "Solid organ injury",
+       "Bowel injury"
+      ],
+      "out": []
+     },
+     "next": "ct_body"
+    },
+    {
+     "id": "penetrating",
+     "if": "Penetrating abdominal wound; pressure normal",
+     "ddx": {
+      "lead": [
+       "Bowel injury"
+      ],
+      "out": []
+     },
+     "next": "pen_look"
+    },
+    {
+     "id": "neck",
+     "if": "Neck pain; awake, GCS 15, no head injury",
+     "ddx": {
+      "lead": [
+       "Cervical spine injury"
+      ],
+      "out": []
+     },
+     "next": "cspine"
+    },
+    {
+     "id": "limb",
+     "if": "A limb injury; the rest of the survey and any CT clear",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_limb",
+     "orders": [
+      {
+       "item": "Whole-body CT",
+       "dose": "Adult with blunt major trauma and suspected multiple injuries: whole-body CT, vertex to mid-thigh",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:5b868a47d05f",
+         "where": "1.5.34"
+        }
+       ]
+      },
+      {
+       "item": "Cervical spine",
+       "dose": "A painful limb injury is a NEXUS distracting injury, so the neck is imaged rather than cleared at the bedside",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:43c32c194927",
+         "where": "Table 4"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "nothing",
+     "if": "Nothing further; secondary survey clear",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_survey_clear"
+    }
+   ]
+  },
+  {
+   "id": "ct_body",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Stable, or responding to blood, after blunt trauma. Imaging?",
+   "options": [
+    "Contrast-enhanced CT now",
+    "Laparotomy now, skipping the scan",
+    "Repeat the FAST, and scan if it turns positive",
+    "Home with return advice if the FAST is negative"
+   ],
+   "answer": 0,
+   "chainStep": "Contrast-enhanced CT: whole-body (vertex to mid-thigh) for an adult with blunt multiple injuries, limited to the regions needing it in a child",
+   "why": "Contrast-enhanced CT is the standard for the stable or stabilised trauma patient and the best screen for blunt abdominal trauma. For an adult with blunt major trauma and suspected multiple injuries it is whole-body, vertex to mid-thigh; children do not routinely have whole-body CT. FAST is not a screen for whether CT is needed, a negative FAST does not rule out abdominal injury, and only an existing indication for laparotomy skips the scan.",
+   "sources": [
+    {
+     "docId": "pmid:28828034",
+     "where": "Adult diagnostic procedures; Pediatric diagnostic procedures"
+    },
+    {
+     "docId": "url:43c32c194927",
+     "where": "Abdominal imaging, key points"
+    },
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.5.31; 1.5.33; 1.5.34; 1.5.36"
+    },
+    {
+     "docId": "pmid:28115984",
+     "where": "Recommendations for diagnostic tools"
+    }
+   ],
+   "next": "ct_result",
+   "orders": [
+    {
+     "item": "Child",
+     "dose": "No routine whole-body CT; FAST only in shock or when CT is not available; chest x-ray or ultrasound first for the chest",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5b868a47d05f",
+       "where": "1.4.6; 1.4.7; 1.5.36"
+      },
+      {
+       "docId": "url:43c32c194927",
+       "where": "FAST in the pediatric patient"
+      }
+     ]
+    },
+    {
+     "item": "Older adult",
+     "dose": "Low threshold for CT; IV contrast is not withheld for fear of kidney injury",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38816766",
+       "where": "Q 2.4"
+      }
+     ]
+    },
+    {
+     "item": "Pelvic fracture, now stable",
+     "dose": "Multiphasic CT with IV contrast to exclude pelvic haemorrhage",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28115984",
+       "where": "Recommendations for diagnostic tools"
+      }
+     ]
+    }
+   ],
+   "note": "NICE goes straight to CT in major trauma rather than doing a FAST first (NG39 1.5.32); US practice may do the FAST in the bay. Either way the stable patient's answer is the CT."
+  },
+  {
+   "id": "ct_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Contrast CT",
+   "outcomes": [
+    {
+     "id": "solid",
+     "if": "Splenic laceration; no contrast blush, no other injury needing surgery",
+     "ddx": {
+      "lead": [
+       "Solid organ injury"
+      ],
+      "out": []
+     },
+     "next": "nom_step"
+    },
+    {
+     "id": "blush",
+     "if": "Arterial blush, adult; active contrast extravasation from spleen, liver or pelvis",
+     "ddx": {
+      "lead": [
+       "Solid organ injury",
+       "Pelvic bleeding"
+      ],
+      "out": []
+     },
+     "next": "ae_step"
+    },
+    {
+     "id": "child_blush",
+     "if": "Arterial blush, child; contrast extravasation, haemodynamically stable",
+     "ddx": {
+      "lead": [
+       "Solid organ injury"
+      ],
+      "out": []
+     },
+     "next": "nom_step",
+     "orders": [
+      {
+       "item": "Child",
+       "dose": "A blush alone is not an absolute indication for angioembolization; most stable children are managed without it",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28828034",
+         "where": "Pediatric non-operative management; Pediatric AG/AE"
+        },
+        {
+         "docId": "pmid:32228707",
+         "where": "Non-operative management"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pelvis_noblush",
+     "if": "Pelvic fracture, no blush; pressure holding after the binder",
+     "ddx": {
+      "lead": [
+       "Pelvic bleeding"
+      ],
+      "out": []
+     },
+     "next": "end_pelvis_noblush"
+    },
+    {
+     "id": "free_air",
+     "if": "Bowel injury signs; free air, extraluminal contrast or a bowel-wall defect",
+     "ddx": {
+      "lead": [
+       "Bowel injury"
+      ],
+      "out": []
+     },
+     "next": "end_lap"
+    },
+    {
+     "id": "ct_neg",
+     "if": "No injury on CT; after a seatbelt or handlebar blow",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_observe"
+    }
+   ]
+  },
+  {
+   "id": "end_pelvis_noblush",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pelvic fracture without a blush in a responder: binder until external or definitive fixation; with a pelvic hematoma of 500 cm3 or more, arterial bleeding is strongly suspected even without a blush."
+  },
+  {
+   "id": "nom_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Stable, splenic laceration on CT. Management?",
+   "options": [
+    "Non-operative management with monitoring and serial exams",
+    "Splenectomy now, because of the grade of the laceration on CT",
+    "Open repair of the spleen now, while the patient is stable",
+    "Discharge home with outpatient review in a week"
+   ],
+   "answer": 0,
+   "chainStep": "Non-operative management: admission with monitoring, serial examination and hemoglobin, an operating room and angiography on hand; splenectomy if it fails",
+   "why": "A haemodynamically stable patient with no other abdominal injury needing surgery has an initial attempt at non-operative management whatever the grade, where intensive monitoring, angiography, an operating room and blood are immediately available. In a stable child with an isolated splenic injury, splenectomy should be avoided, and a blush alone is not an absolute indication for embolization. Observation with bed rest over the first 48 to 72 hours is the cornerstone, which discharge skips.",
+   "sources": [
+    {
+     "docId": "pmid:28828034",
+     "where": "Adult non-operative management; Adult operative management; Adult follow-up; Pediatric non-operative management; Pediatric AG/AE"
+    }
+   ],
+   "next": "end_nom",
+   "orders": [
+    {
+     "item": "Failure",
+     "dose": "Splenectomy when NOM with angioembolization fails and the patient stays unstable, the hematocrit falls significantly or transfusion continues",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28828034",
+       "where": "Adult operative management"
+      }
+     ]
+    },
+    {
+     "item": "Activity",
+     "dose": "Restricted 4 to 6 weeks after minor injuries, up to 2 to 4 months after moderate and severe ones; a child after at least 6 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28828034",
+       "where": "Adult follow-up; Pediatric follow-up"
+      }
+     ]
+    },
+    {
+     "item": "Vaccination after splenectomy",
+     "dose": "Pneumococcal, Haemophilus influenzae and meningococcal vaccines, no sooner than 14 days after splenectomy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28828034",
+       "where": "Infection prophylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Liver laceration",
+     "dose": "Non-operative management is the treatment of choice for all stable minor, moderate and severe liver injuries with no other injury needing surgery",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32228707",
+       "where": "Non-operative management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_nom",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Splenic laceration managed without surgery: admission, serial examination and hemoglobin, with angiography and an operating room on hand; splenectomy if non-operative management fails; activity restricted for weeks. In a stable child, splenectomy is avoided. Finish the primary survey (GCS, pupils, exposure) before leaving the bay; with a head injury, CT head once bleeding is controlled, and the target becomes MAP 80 or more."
+  },
+  {
+   "id": "ae_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Stable now, arterial blush on CT. Next?",
+   "options": [
+    "Angiography and embolization",
+    "Laparotomy, although the patient is now stable",
+    "Repeat CT in 24 hours to see if it settles",
+    "Transfuse to a hemoglobin of 10 and observe"
+   ],
+   "answer": 0,
+   "chainStep": "Angiography and embolization of the bleeding artery",
+   "why": "Contrast extravasation on CT predicts the need for angioembolization: in the pelvis it may help regardless of haemodynamic status, and in the spleen or liver it may be the first-line intervention in a stable patient with a blush. Interventional radiology is used for active arterial pelvic haemorrhage unless open surgery is needed for other injuries.",
+   "sources": [
+    {
+     "docId": "pmid:28115984",
+     "where": "Role of angioembolization"
+    },
+    {
+     "docId": "pmid:28828034",
+     "where": "Adult non-operative management"
+    },
+    {
+     "docId": "pmid:32228707",
+     "where": "Non-operative management"
+    },
+    {
+     "docId": "url:5b868a47d05f",
+     "where": "1.5.40; 1.5.41"
+    }
+   ],
+   "next": "end_ae"
+  },
+  {
+   "id": "end_ae",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Arterial blush in a stable patient: angioembolization, repeated if bleeding continues; surgery if the patient deteriorates. Finish the primary survey (GCS, pupils, exposure) before leaving the bay; with a head injury, CT head once bleeding is controlled, and the target becomes MAP 80 or more."
+  },
+  {
+   "id": "end_observe",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No injury on CT after a seatbelt or handlebar blow: admit for serial examination, because the first CT misses about 1 in 5 bowel injuries and they can declare themselves late; re-image after 6 hours if the CT was equivocal."
+  },
+  {
+   "id": "pen_look",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Penetrating abdominal wound, pressure normal. First?",
+   "options": [
+    "Look for laparotomy signs and the track of the wound",
+    "Let the FAST decide: the operating room if free fluid, home if not",
+    "CT of the abdomen before examining the wound or the belly",
+    "Close the wound and start antibiotics"
+   ],
+   "answer": 0,
+   "chainStep": "Examine for hard signs (peritonitis, evisceration, impalement, blood per rectum, hematemesis, enteric matter in the wound) and the wound track before any imaging",
+   "why": "The decision starts at the bedside. Decompensation, peritonitis, blood per rectum, enteric matter in the wound, impalement, evisceration, haematemesis or blood in the NG aspirate are hard signs for laparotomy. A gunshot is different from a stab: its trajectory, cavitation and high rate of hollow viscus injury make non-operative management the exception, kept for a tangential wound with no tenderness and a clear CT. Free fluid on FAST is non-specific for bowel injury, and in gunshot wounds clinical examination found the need for surgery better than CT.",
+   "sources": [
+    {
+     "docId": "pmid:35246190",
+     "where": "Penetrating abdominal trauma: observation and nonoperative management; Blunt abdominal trauma: observation and nonoperative management; Recommendation 11"
+    }
+   ],
+   "next": "pen_type"
+  },
+  {
+   "id": "pen_type",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Examination and the wound track",
+   "outcomes": [
+    {
+     "id": "lap_sign",
+     "if": "Laparotomy sign; peritonitis, evisceration, impalement, or a gunshot track across the peritoneum",
+     "ddx": {
+      "lead": [
+       "Bowel injury"
+      ],
+      "out": []
+     },
+     "next": "end_lap"
+    },
+    {
+     "id": "stab_clean",
+     "if": "Anterior stab, no hard sign; compensated, reliable exam",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "lwe"
+    },
+    {
+     "id": "pen_ct",
+     "if": "No hard sign; a flank or back wound, or a tangential gunshot",
+     "ddx": {
+      "lead": [
+       "Bowel injury"
+      ],
+      "out": []
+     },
+     "next": "end_pen_ct"
+    }
+   ]
+  },
+  {
+   "id": "end_pen_ct",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Flank, back or tangential gunshot wound with no hard sign: contrast-enhanced CT; a gunshot is observed for at least 48 hours with a low threshold to explore; a negative CT alone does not send the patient home unless a tangential extraperitoneal track is confirmed."
+  },
+  {
+   "id": "lwe",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Anterior abdominal stab, no hard sign, pressure normal. Next?",
+   "options": [
+    "Local wound exploration: is the fascia breached?",
+    "Laparotomy now, before assessing the wound",
+    "Close the wound and discharge after a clear FAST scan",
+    "Diagnostic peritoneal lavage, operating if the fluid holds red cells"
+   ],
+   "answer": 0,
+   "chainStep": "Local wound exploration (or screening laparoscopy) for peritoneal breach: home if the fascia is intact, at least 48 hours of serial examination if breached",
+   "why": "With no immediate indication for laparotomy, local wound exploration shows whether the peritoneum has been breached; a screening laparoscopy is the alternative. A negative CT alone should not send the patient home unless a tangential, extraperitoneal track is confirmed. Lavage that counts red cells is too sensitive, and its low positive predictive value leads to unnecessary laparotomies.",
+   "sources": [
+    {
+     "docId": "pmid:35246190",
+     "where": "Penetrating abdominal trauma: observation and nonoperative management; Diagnostic peritoneal lavage; Recommendations 12 and 20"
+    }
+   ],
+   "next": "lwe_result"
+  },
+  {
+   "id": "lwe_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Local wound exploration",
+   "outcomes": [
+    {
+     "id": "intact",
+     "if": "Fascia intact; the track stops above it",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_lwe_home"
+    },
+    {
+     "id": "breached",
+     "if": "Fascia breached; the track enters the peritoneum",
+     "ddx": {
+      "lead": [
+       "Bowel injury"
+      ],
+      "out": []
+     },
+     "next": "end_serial"
+    }
+   ]
+  },
+  {
+   "id": "end_lwe_home",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Stab wound that does not breach the anterior fascia: home, other injuries permitting."
+  },
+  {
+   "id": "end_serial",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Stab wound through the fascia in a compensated, examinable patient: non-operative management at a specialist centre, with at least 48 hours of serial examination by consistent senior surgeons, vital signs and inflammatory markers. An unexplained fall in hemoglobin, worsening vital signs or a changing examination means exploration, by laparoscopy or laparotomy."
+  },
+  {
+   "id": "cspine",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Neck pain after a crash; awake, GCS 15, no head injury. Next?",
+   "options": [
+    "Apply the Canadian C-spine rule or NEXUS before imaging",
+    "Three-view neck x-rays first, then CT if they are abnormal",
+    "MRI of the cervical spine as the first test",
+    "Take the collar off and check how far the neck turns"
+   ],
+   "answer": 0,
+   "chainStep": "Bedside decision rule (Canadian C-spine rule or NEXUS) in the alert, stable adult; CT cervical spine when imaging is indicated, MRI after CT for a neurological deficit",
+   "why": "In the awake, stable adult a clinical decision rule decides imaging: NICE uses the Canadian C-spine rule, and ACS TQIP accepts NEXUS or the Canadian rule. Neck rotation is tested only in a person with a low-risk factor and no high-risk factor. When imaging is indicated in an adult it is CT, not plain films, and MRI follows CT for a neurological abnormality. TQIP states that NEXUS and the Canadian rule do not apply to children or to adults 55 and older, and advises more liberal imaging in older adults.",
+   "sources": [
+    {
+     "docId": "url:4031d253fb1d",
+     "where": "1.1.5; 1.4.7; 1.4.8; 1.5.6; 1.5.7"
+    },
+    {
+     "docId": "url:43c32c194927",
+     "where": "Cervical spine imaging, key points; Table 4"
+    }
+   ],
+   "next": "cspine_result",
+   "orders": [
+    {
+     "item": "NEXUS: image if any",
+     "dose": "Focal neurologic deficit, midline spinal tenderness, altered level of consciousness, intoxication, distracting injury",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:43c32c194927",
+       "where": "Table 4"
+      }
+     ]
+    },
+    {
+     "item": "Spinal cord injury",
+     "dose": "No methylprednisolone, nimodipine or naloxone for neuroprotection",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:4031d253fb1d",
+       "where": "1.7.3"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cspine_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Canadian C-spine rule",
+   "outcomes": [
+    {
+     "id": "imaging",
+     "if": "Imaging indicated; age 65 or over, a dangerous mechanism, limb paraesthesia, no low-risk factor, or cannot rotate 45 degrees",
+     "ddx": {
+      "lead": [
+       "Cervical spine injury"
+      ],
+      "out": []
+     },
+     "next": "end_ct_cspine"
+    },
+    {
+     "id": "cs_clear",
+     "if": "Low risk; no high-risk factor, a low-risk factor, turns 45 degrees each way",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_no_imaging"
+    }
+   ]
+  },
+  {
+   "id": "end_ct_cspine",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cervical spine imaging indicated: CT in an adult, with the spine immobilised until it is read; MRI after CT for any neurological abnormality that could be the cord. TQIP states that NEXUS and the Canadian rule do not apply to children or to adults 55 and older, and advises more liberal imaging in older adults."
+  },
+  {
+   "id": "end_no_imaging",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Low risk by the Canadian C-spine rule and able to rotate 45 degrees each way: no imaging and no immobilisation."
+  },
+  {
+   "id": "end_limb",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A limb injury with the rest of the survey clear: continue in the limb injury pathway, which covers the neurovascular check, open fractures, compartment syndrome, dislocations and the hip."
+  },
+  {
+   "id": "end_survey_clear",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No further injury on the secondary survey: the injuries already found are managed as above. Admission and onward care are outside this pathway."
+  }
+ ],
+ "cases": [
+  {
+   "id": "fast_pos",
+   "label": "Unstable, FAST positive",
+   "vignette": "28-year-old motorcyclist thrown at speed. Pale and sweaty, answering questions. BP 78/50, HR 132, SpO2 96%. Bruising over the left flank.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "shock",
+    "source": "fast_pos"
+   },
+   "results": {
+    "airway": "Answering in full sentences; GCS 14, airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 78/50, HR 132, cool peripheries; no external bleeding.",
+    "source": "FAST: free fluid in Morison's pouch and around the spleen. Chest and pelvic films normal."
+   }
+  },
+  {
+   "id": "fast_neg_repeat",
+   "label": "Unstable, FAST negative, then positive",
+   "vignette": "52-year-old pedestrian struck by a van. Groaning but answers questions. BP 84/56, HR 124. Abrasions over the left lower ribs.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "shock",
+    "source": "fast_neg",
+    "fast_neg_result": "repeat_pos"
+   },
+   "results": {
+    "airway": "Answers questions; GCS 14, airway clear.",
+    "breathing": "Equal air entry; the film shows left lower rib fractures, no pneumothorax or hemothorax.",
+    "circulation": "BP 84/56, HR 124, cold and clammy; no external bleeding.",
+    "source": "FAST negative in all four views. Chest film: left lower rib fractures, no hemothorax. Pelvic film normal.",
+    "fast_neg_result": "Repeat FAST 10 minutes later, 2 units each of red cells and plasma in: new free fluid around the spleen. BP 82/54."
+   }
+  },
+  {
+   "id": "fast_neg_responder",
+   "label": "Unstable, FAST negative, responds to blood",
+   "vignette": "39-year-old cyclist hit side-on by a car. Alert. BP 86/58, HR 124.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "shock",
+    "source": "fast_neg",
+    "fast_neg_result": "fn_responds",
+    "disability": "d_ok",
+    "secondary": "blunt",
+    "ct_result": "blush"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 86/58, HR 124; no external bleeding. Shock index 1.4; ABC score 2 so far (pulse over 120, systolic under 90).",
+    "source": "FAST negative in all four views; chest and pelvic films normal.",
+    "fast_neg_result": "After 2 units of red cells and 2 of plasma: BP 112/70, HR 96, holding over 20 minutes; repeat FAST still negative.",
+    "disability": "GCS 15, pupils equal; no head injury.",
+    "secondary": "Tender left upper quadrant with grazes over the left lower ribs.",
+    "ct_result": "CT: a grade III splenic laceration with a contrast blush; no other injury."
+   }
+  },
+  {
+   "id": "pelvis_nonresponder",
+   "label": "Unstable pelvic fracture, not responding",
+   "vignette": "66-year-old pedestrian struck at speed. Confused, answering in words. BP 76/48, HR 126. Legs lie unequally.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "shock",
+    "source": "pelvis",
+    "binder_result": "nonresp"
+   },
+   "results": {
+    "airway": "Speaking in words; GCS 13, airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 76/48, HR 126; no external bleeding. Shock index 1.7; ABC score 2 so far (pulse over 120, systolic under 90).",
+    "source": "FAST negative. Pelvic film: a wide symphysis diastasis with a disrupted left sacroiliac joint. Chest film clear.",
+    "binder_result": "Binder on, 4 units each of red cells and plasma in: BP 74/46, HR 126."
+   }
+  },
+  {
+   "id": "pelvis_responder",
+   "label": "Unstable pelvic fracture, responds, blush on CT",
+   "vignette": "30-year-old motorcyclist pinned under his bike. Talking, with severe pelvic pain. BP 88/60, HR 126.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "shock",
+    "source": "pelvis",
+    "binder_result": "responds",
+    "disability": "d_ok",
+    "secondary": "blunt",
+    "ct_result": "blush"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 88/60, HR 126; no external bleeding. Shock index 1.4; ABC score 2 so far (pulse over 120, systolic under 90).",
+    "source": "FAST negative. Pelvic film: an open-book pelvic fracture. Chest film clear.",
+    "binder_result": "Binder on, 2 units each of red cells and plasma in: BP 110/72, HR 98, holding.",
+    "disability": "GCS 15, pupils equal; no head injury.",
+    "secondary": "Pelvis bound; perineum and urethral meatus normal; abdomen soft.",
+    "ct_result": "CT: active contrast extravasation from a branch of the left internal iliac artery beside the fracture; spleen and liver intact."
+   }
+  },
+  {
+   "id": "massive_htx",
+   "label": "Massive hemothorax",
+   "vignette": "40-year-old man stabbed in the right chest. Breathless. BP 86/54, HR 128, SpO2 90%.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "hemothorax",
+    "drain_output": "massive"
+   },
+   "results": {
+    "airway": "Speaking in short phrases; airway clear.",
+    "breathing": "Right chest dull to percussion with absent breath sounds, trachea central; eFAST shows a large right pleural collection.",
+    "drain_output": "1,700 mL of blood on insertion of the drain, still running."
+   }
+  },
+  {
+   "id": "tamponade",
+   "label": "Penetrating chest wound, tamponade",
+   "vignette": "24-year-old man stabbed once beside the left sternal border. Anxious and pale. BP 78/52, HR 126.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "tamponade"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; eFAST shows lung sliding on both sides and no hemothorax.",
+    "circulation": "BP 78/52, HR 126, neck veins distended, heart sounds quiet; eFAST pericardial view: fluid around the heart."
+   }
+  },
+  {
+   "id": "severe_tbi",
+   "label": "Severe head injury, bleed on CT",
+   "vignette": "22-year-old motorcyclist thrown from his bike without a helmet; found unresponsive. BP 152/88, HR 64.",
+   "picks": {
+    "airway": "protect",
+    "breathing": "breathing_ok",
+    "circulation": "stable",
+    "disability": "head_ct",
+    "head_result": "bleed"
+   },
+   "results": {
+    "airway": "GCS 7 (E1 V2 M4), snoring respirations, blood pooling in the mouth.",
+    "breathing": "After intubation: equal air entry; chest film clear.",
+    "circulation": "BP 150/86, HR 62; no external bleeding.",
+    "disability": "GCS 7 before intubation; right pupil larger and sluggish.",
+    "head_result": "CT head: a right acute subdural hematoma with midline shift."
+   }
+  },
+  {
+   "id": "seizure",
+   "label": "Seizure after a head injury",
+   "vignette": "35-year-old woman thrown from a horse onto her head. Drowsy but talking. BP 128/76, HR 92.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "stable",
+    "disability": "seizure"
+   },
+   "results": {
+    "airway": "Talking; GCS 14, airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 128/76, HR 92; no external bleeding.",
+    "disability": "GCS 14, pupils equal. Paramedics saw a 1-minute generalized seizure at the scene, none since."
+   }
+  },
+  {
+   "id": "warfarin_bleed",
+   "label": "Older adult on warfarin, subdural",
+   "vignette": "78-year-old man on warfarin for atrial fibrillation tripped on the stairs and hit his head; brief loss of consciousness, now alert. BP 148/82, HR 84. Weight 70 kg.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "stable",
+    "disability": "anticoag",
+    "ac_result": "vka_bleed"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 148/82, HR 84, irregular; no external bleeding.",
+    "disability": "GCS 15, pupils equal, no focal deficit, no vomiting; he lost consciousness briefly at the time.",
+    "ac_result": "CT head: an 8 mm left acute subdural hematoma, no midline shift. INR 3.1."
+   }
+  },
+  {
+   "id": "doac_bleed",
+   "label": "Older adult on dabigatran, contusion",
+   "vignette": "84-year-old woman on dabigatran for atrial fibrillation fell in the bathroom and hit her head. She cannot remember the fall. BP 156/80, HR 76.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "stable",
+    "disability": "anticoag",
+    "ac_result": "doac_bleed"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 156/80, HR 76; no external bleeding.",
+    "disability": "GCS 15, pupils equal, no focal deficit; no memory of the fall.",
+    "ac_result": "CT head: a right frontal contusion with surrounding blood. Last dabigatran dose 4 hours ago."
+   }
+  },
+  {
+   "id": "apixaban_clear",
+   "label": "Older adult on apixaban, CT clear",
+   "vignette": "82-year-old woman on apixaban tripped over a rug and struck her forehead. She does not remember landing. BP 142/78, HR 80.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "stable",
+    "disability": "anticoag",
+    "ac_result": "ac_clear",
+    "secondary": "nothing"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 142/78, HR 80; no external bleeding.",
+    "disability": "GCS 15, pupils equal, no focal deficit, no vomiting; amnesia for the fall.",
+    "ac_result": "CT head and cervical spine: no intracranial blood, no fracture.",
+    "secondary": "A forehead bruise only; abdomen soft, pelvis stable, spine and limbs not tender."
+   }
+  },
+  {
+   "id": "tension",
+   "label": "Tension pneumothorax, then a seatbelt injury",
+   "vignette": "34-year-old belted driver in a high-speed head-on crash; struck his head on the wheel. Agitated and breathless. BP 82/50, HR 134, SpO2 84%.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "tension",
+    "circulation": "stable",
+    "disability": "head_ct",
+    "head_result": "ct_clear",
+    "secondary": "blunt",
+    "ct_result": "free_air"
+   },
+   "results": {
+    "airway": "Shouting; airway clear.",
+    "breathing": "Left chest silent and hyperresonant, trachea pushed to the right, neck veins full; SpO2 84% on oxygen.",
+    "circulation": "After decompression and a chest drain: BP 116/74, HR 96.",
+    "disability": "GCS 15, pupils equal; he has vomited twice since the crash.",
+    "head_result": "CT head: no intracranial injury, no fracture.",
+    "secondary": "Bruising across the lower abdomen in the line of the lap belt; tender below the umbilicus.",
+    "ct_result": "CT: free intraperitoneal air and a thickened, poorly enhancing loop of jejunum; no solid organ injury."
+   }
+  },
+  {
+   "id": "hemothorax_drained",
+   "label": "Hemothorax drained, then an ankle injury",
+   "vignette": "45-year-old roofer fell about 3 m onto his right side. Breathless with right chest pain. BP 104/66, HR 108, SpO2 92%.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "hemothorax",
+    "drain_output": "drained",
+    "circulation": "stable",
+    "disability": "d_ok",
+    "secondary": "limb"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Right base dull with reduced breath sounds; the film shows a large right hemothorax and fractures of ribs 6 to 8.",
+    "drain_output": "800 mL on insertion, then 40 mL over the next hour.",
+    "circulation": "BP 122/78, HR 94 after the drain.",
+    "disability": "GCS 15; no head injury.",
+    "secondary": "Whole-body CT after the drain: right rib 6 to 8 fractures and the drained hemothorax only; cervical spine, abdomen and pelvis clear. A swollen, tender right ankle he cannot bear weight on; foot warm, pulses present. Abdomen, pelvis and spine unremarkable."
+   }
+  },
+  {
+   "id": "flail_rollover",
+   "label": "Flail chest, then neck pain after a rollover",
+   "vignette": "52-year-old driver in a high-speed rollover. Short of breath with left chest pain. BP 138/84, HR 98, SpO2 93% on a mask.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "flail",
+    "circulation": "stable",
+    "disability": "d_ok",
+    "secondary": "neck",
+    "cspine_result": "imaging"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "A segment of the left lateral chest wall moves in as he breathes in; air entry equal, no pneumothorax or hemothorax on the film.",
+    "circulation": "BP 136/82, HR 96.",
+    "disability": "GCS 15; no head injury, pupils equal.",
+    "secondary": "Neck pain since the crash with midline tenderness at C5; moves all four limbs, no numbness.",
+    "cspine_result": "A high-speed rollover: a dangerous mechanism, a high-risk factor. Whole-body CT, cervical spine included: left rib 4 to 7 fractures under the flail segment, no spinal fracture; abdomen and pelvis clear."
+   }
+  },
+  {
+   "id": "gunshot",
+   "label": "Gunshot wound to the abdomen",
+   "vignette": "26-year-old man shot once in the abdomen. Alert. BP 118/74, HR 96.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "stable",
+    "disability": "d_ok",
+    "secondary": "penetrating",
+    "pen_type": "lap_sign"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 118/74, HR 96; no external bleeding.",
+    "disability": "GCS 15.",
+    "secondary": "Entry wound 3 cm left of the umbilicus; no exit wound.",
+    "pen_type": "Tender around the wound; a film shows the bullet in the right flank, so the track crosses the peritoneal cavity."
+   }
+  },
+  {
+   "id": "stab_intact",
+   "label": "Anterior stab, fascia intact",
+   "vignette": "31-year-old man stabbed once in the right lower abdomen with a small knife. BP 126/78, HR 88.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "stable",
+    "disability": "d_ok",
+    "secondary": "penetrating",
+    "pen_type": "stab_clean",
+    "lwe_result": "intact"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 126/78, HR 88.",
+    "disability": "GCS 15.",
+    "secondary": "A 2 cm stab wound in the right lower quadrant, no longer bleeding.",
+    "pen_type": "Abdomen soft and non-tender away from the wound; no evisceration, blood per rectum or hematemesis.",
+    "lwe_result": "Under local anaesthetic the track ends in the subcutaneous fat; the anterior fascia is intact."
+   }
+  },
+  {
+   "id": "stab_breached",
+   "label": "Sucking chest wound and an abdominal stab through the fascia",
+   "vignette": "29-year-old man stabbed twice, in the right chest and the left lower abdomen. Breathless. BP 120/76, HR 112, SpO2 91%.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "open",
+    "circulation": "stable",
+    "disability": "d_ok",
+    "secondary": "penetrating",
+    "pen_type": "stab_clean",
+    "lwe_result": "breached"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Air bubbles in and out of a 3 cm wound over the right chest with each breath; right air entry reduced.",
+    "circulation": "BP 122/78, HR 94 after the dressing and drain.",
+    "disability": "GCS 15.",
+    "secondary": "A 2 cm stab wound in the left lower quadrant; the chest is dressed and drained.",
+    "pen_type": "Abdomen soft, tender only at the wound; no evisceration, blood per rectum or hematemesis.",
+    "lwe_result": "The track passes through the anterior fascia into the peritoneum."
+   }
+  },
+  {
+   "id": "pregnant_recovers",
+   "label": "Pregnant at 31 weeks, low pressure flat, low-risk neck",
+   "vignette": "27-year-old woman, 31 weeks pregnant, belted driver in a low-speed rear-end crash; she walked from the car. Now faint, with neck pain. BP 88/54, HR 112.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "preg",
+    "preg_response": "recovers",
+    "disability": "d_ok",
+    "secondary": "neck",
+    "cspine_result": "cs_clear"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "Supine on the trolley: BP 88/54, HR 112. Fundus 4 cm above the umbilicus; no vaginal bleeding.",
+    "preg_response": "With the uterus pushed to the left: BP 114/70, HR 92 within minutes.",
+    "disability": "GCS 15; no head injury.",
+    "secondary": "Neck pain since the crash; she sits comfortably, has no midline tenderness and no limb symptoms. Abdomen soft, no belt bruise.",
+    "cspine_result": "BP 114/70 and holding since the uterus was displaced. No high-risk factor; low-risk factors present; she turns her head 45 degrees to each side."
+   }
+  },
+  {
+   "id": "pregnant_bleeding",
+   "label": "Pregnant at 28 weeks, bleeding into the abdomen",
+   "vignette": "33-year-old woman, 28 weeks pregnant, front passenger in a high-speed crash. Pale and drowsy but answering. BP 80/50, HR 128.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "preg",
+    "preg_response": "bleeding",
+    "source": "fast_pos"
+   },
+   "results": {
+    "airway": "Answering questions; GCS 14, airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "Supine on the board: BP 80/50, HR 128. Fundus above the umbilicus.",
+    "preg_response": "Board tilted left and the uterus displaced: BP 82/52, HR 130.",
+    "source": "FAST: free fluid in the right upper quadrant and around the spleen. Chest and pelvic films normal."
+   }
+  },
+  {
+   "id": "child_spleen",
+   "label": "Child, handlebar injury, splenic laceration",
+   "vignette": "10-year-old boy came off his bike onto the handlebar. Left upper abdominal pain. BP 108/70, HR 96.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "stable",
+    "disability": "d_ok",
+    "secondary": "blunt",
+    "ct_result": "solid"
+   },
+   "results": {
+    "airway": "Crying but talking; airway clear.",
+    "breathing": "Equal air entry; chest film normal.",
+    "circulation": "BP 108/70, HR 96, warm, capillary refill 2 seconds.",
+    "disability": "GCS 15; no head injury.",
+    "secondary": "A round handlebar bruise below the left costal margin; tender left upper quadrant.",
+    "ct_result": "CT abdomen with IV contrast: a grade III splenic laceration, no contrast blush, no other injury."
+   }
+  },
+  {
+   "id": "child_clear",
+   "label": "Child, handlebar bruise, CT clear",
+   "vignette": "8-year-old girl fell onto her bike handlebar. Mild central abdominal pain. BP 104/66, HR 92.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "stable",
+    "disability": "d_ok",
+    "secondary": "blunt",
+    "ct_result": "ct_neg"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; chest film normal.",
+    "circulation": "BP 104/66, HR 92.",
+    "disability": "GCS 15; no head injury.",
+    "secondary": "A circular handlebar bruise just left of the umbilicus, mildly tender there.",
+    "ct_result": "CT abdomen with IV contrast: no solid organ injury, no free fluid, no free air."
+   }
+  },
+  {
+   "id": "simple_ptx",
+   "label": "Simple pneumothorax",
+   "vignette": "23-year-old cyclist thrown onto the left side of his chest. Sharp left chest pain. BP 124/78, HR 92, SpO2 95%.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "simple_ptx"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Left air entry slightly reduced, trachea central, no hypotension; the film shows a 1.5 cm left apical pneumothorax."
+   }
+  },
+  {
+   "id": "neurogenic_shock",
+   "label": "Hypotension from a cord injury",
+   "vignette": "74-year-old man fell down a flight of stairs onto his back. BP 84/50, HR 52.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "neuro_shock"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 84/50, HR 52, feet warm and pink; eFAST and pelvic film negative, no external bleeding; no movement or sensation below the nipples."
+   }
+  },
+  {
+   "id": "fast_neg_nonresponder",
+   "label": "Unstable, FAST negative, not responding",
+   "vignette": "58-year-old motorcyclist hit a barrier at speed. Groaning, answers questions. BP 80/52, HR 128.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "shock",
+    "source": "fast_neg",
+    "fast_neg_result": "fn_nonresp"
+   },
+   "results": {
+    "airway": "Answers questions; GCS 14, airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 80/52, HR 128; no external bleeding. Shock index 1.6; ABC score 2 so far (pulse over 120, systolic under 90).",
+    "source": "FAST negative in all four views; chest and pelvic films normal.",
+    "fast_neg_result": "Repeat FAST still negative after 4 units each of red cells and plasma: BP 78/50, HR 132."
+   }
+  },
+  {
+   "id": "pelvis_noblush",
+   "label": "Unstable pelvic fracture, responds, no blush on CT",
+   "vignette": "44-year-old rider crushed when her horse fell on her. Talking, with pelvic pain. BP 86/56, HR 124.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "shock",
+    "source": "pelvis",
+    "binder_result": "responds",
+    "disability": "d_ok",
+    "secondary": "blunt",
+    "ct_result": "pelvis_noblush"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 86/56, HR 124; no external bleeding. Shock index 1.4; ABC score 2 so far (pulse over 120, systolic under 90).",
+    "source": "FAST negative. Pelvic film: a lateral compression fracture with a disrupted right sacroiliac joint. Chest film clear.",
+    "binder_result": "Binder on, 2 units each of red cells and plasma in: BP 112/70, HR 96, holding.",
+    "disability": "GCS 15, pupils equal; no head injury.",
+    "secondary": "Pelvis bound; perineum and urethral meatus normal; abdomen soft.",
+    "ct_result": "CT: pelvic ring fractures with a small pelvic hematoma, no contrast extravasation; spleen and liver intact."
+   }
+  },
+  {
+   "id": "lesser_head",
+   "label": "Head injury, lesser risk",
+   "vignette": "61-year-old cyclist struck by a car; helmet cracked, brief loss of consciousness. Now alert. BP 138/82, HR 88. Takes no regular medicines.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "stable",
+    "disability": "ct_lesser"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 138/82, HR 88; no external bleeding.",
+    "disability": "GCS 15, pupils equal, no focal deficit, no vomiting; he lost consciousness briefly at the scene."
+   }
+  },
+  {
+   "id": "child_blush",
+   "label": "Child, handlebar injury, splenic blush",
+   "vignette": "9-year-old girl came off her bike onto the handlebar. Left upper abdominal pain. BP 106/68, HR 98.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "stable",
+    "disability": "d_ok",
+    "secondary": "blunt",
+    "ct_result": "child_blush"
+   },
+   "results": {
+    "airway": "Crying but talking; airway clear.",
+    "breathing": "Equal air entry; chest film normal.",
+    "circulation": "BP 106/68, HR 98, warm, capillary refill 2 seconds.",
+    "disability": "GCS 15; no head injury.",
+    "secondary": "A handlebar bruise below the left costal margin; tender left upper quadrant.",
+    "ct_result": "CT abdomen with IV contrast: a grade III splenic laceration with a small contrast blush; no other injury. Still stable."
+   }
+  },
+  {
+   "id": "flank_stab",
+   "label": "Flank stab wound, no hard sign",
+   "vignette": "36-year-old man stabbed once in the right flank. BP 128/80, HR 90.",
+   "picks": {
+    "airway": "airway_ok",
+    "breathing": "breathing_ok",
+    "circulation": "stable",
+    "disability": "d_ok",
+    "secondary": "penetrating",
+    "pen_type": "pen_ct"
+   },
+   "results": {
+    "airway": "Talking; airway clear.",
+    "breathing": "Equal air entry; no pneumothorax or hemothorax on the film or eFAST, chest wall stable.",
+    "circulation": "BP 128/80, HR 90.",
+    "disability": "GCS 15.",
+    "secondary": "A 2 cm stab wound in the right flank, behind the anterior axillary line; not bleeding.",
+    "pen_type": "Abdomen soft and non-tender; no evisceration, blood per rectum, hematuria or hematemesis."
+   }
+  }
+ ]
+}

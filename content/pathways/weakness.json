@@ -1,0 +1,2720 @@
+{
+ "id": "pw_weakness",
+ "title": "Acute weakness",
+ "world": "neuro",
+ "synonyms": [
+  "acute weakness",
+  "generalized weakness",
+  "flaccid paralysis",
+  "acute flaccid paralysis",
+  "ascending paralysis",
+  "descending paralysis",
+  "Guillain-Barre syndrome",
+  "GBS",
+  "AIDP",
+  "myasthenic crisis",
+  "myasthenia gravis",
+  "cholinergic crisis",
+  "botulism",
+  "infant botulism",
+  "floppy infant",
+  "tick paralysis",
+  "periodic paralysis",
+  "hypokalemic paralysis",
+  "transverse myelitis",
+  "sensory level",
+  "functional weakness",
+  "Hoover sign",
+  "respiratory failure",
+  "FVC",
+  "20/30/40 rule",
+  "IVIG",
+  "plasma exchange",
+  "botulism antitoxin",
+  "BabyBIG"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:31541214",
+   "label": "Leonhard 2019 (GBS ten steps)",
+   "title": "Diagnosis and management of Guillain-Barre syndrome in ten steps (Nat Rev Neurol 2019), international consensus guideline",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31541214/"
+  },
+  {
+   "docId": "pmid:33956777",
+   "label": "CDC botulism 2021",
+   "title": "Clinical Guidelines for Diagnosis and Treatment of Botulism, 2021 (MMWR Recomm Rep)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33956777/"
+  },
+  {
+   "docId": "pmid:38152089",
+   "label": "German MG guideline 2023",
+   "title": "Guideline for the management of myasthenic syndromes (German Neurological Society; Ther Adv Neurol Disord 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38152089/"
+  },
+  {
+   "docId": "pmid:38321574",
+   "label": "Nordic MG guidance 2024",
+   "title": "Generalized myasthenia gravis with acetylcholine receptor antibodies: a guidance for treatment (Eur J Neurol 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38321574/"
+  },
+  {
+   "docId": "pmid:32733360",
+   "label": "Front Neurol MG review 2020",
+   "title": "A practical approach to managing patients with myasthenia gravis: opinions and a review of the literature (Front Neurol 2020)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32733360/"
+  },
+  {
+   "docId": "pmid:41149784",
+   "label": "Neurol Int MG crisis review 2025",
+   "title": "Management of myasthenic crisis and emerging roles of molecularly targeted therapies: a narrative review (Neurol Int 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41149784/"
+  },
+  {
+   "docId": "pmid:30335287",
+   "label": "StatPearls: GBS",
+   "title": "Guillain-Barre Syndrome (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30335287/"
+  },
+  {
+   "docId": "pmid:32644757",
+   "label": "StatPearls: MG",
+   "title": "Myasthenia Gravis (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32644757/"
+  },
+  {
+   "docId": "pmid:29494040",
+   "label": "StatPearls: cholinergic crisis",
+   "title": "Cholinergic Crisis (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29494040/"
+  },
+  {
+   "docId": "pmid:29261883",
+   "label": "StatPearls: neostigmine",
+   "title": "Neostigmine (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29261883/"
+  },
+  {
+   "docId": "pmid:29630230",
+   "label": "StatPearls: infant botulism",
+   "title": "Infantile Botulism (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29630230/"
+  },
+  {
+   "docId": "pmid:29262244",
+   "label": "StatPearls: tick paralysis",
+   "title": "Tick Paralysis (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29262244/"
+  },
+  {
+   "docId": "pmid:32644604",
+   "label": "StatPearls: hypokalemic periodic paralysis",
+   "title": "Hypokalemic Periodic Paralysis (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32644604/"
+  },
+  {
+   "docId": "pmid:32644728",
+   "label": "StatPearls: transverse myelitis",
+   "title": "Transverse Myelitis (StatPearls, updated 2022), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32644728/"
+  },
+  {
+   "docId": "pmid:31855394",
+   "label": "StatPearls: functional disorder",
+   "title": "Functional Neurologic Disorder (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31855394/"
+  },
+  {
+   "docId": "pmid:34283457",
+   "label": "StatPearls: anesthesia in MG",
+   "title": "Anesthesia for Patients With Myasthenia Gravis (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34283457/"
+  },
+  {
+   "docId": "url:012ad2173fa0",
+   "label": "FDA label: Mestinon",
+   "title": "Mestinon (pyridostigmine bromide) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a851795e-b7a8-40c3-9922-5e79d3eb4d92"
+  },
+  {
+   "docId": "url:70acc34ef4ac",
+   "label": "FDA label: BAT",
+   "title": "BAT (Botulism Antitoxin Heptavalent, Equine) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9f3c4292-8773-4781-8264-d71c80d3eabd"
+  },
+  {
+   "docId": "url:8559de08e0f6",
+   "label": "FDA label: BabyBIG",
+   "title": "BabyBIG (Botulism Immune Globulin Intravenous, Human) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9ec59262-35c1-4d8e-8451-a7cfbacb0675"
+  },
+  {
+   "docId": "url:f6b9d499c4fc",
+   "label": "FDA label: Gamunex-C",
+   "title": "Gamunex-C (immune globulin injection, human, 10%) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4fe97dac-d952-40f5-9c6a-67cda048ad8f"
+  },
+  {
+   "docId": "url:d0e50eecf004",
+   "label": "FDA label: ciprofloxacin",
+   "title": "Ciprofloxacin tablets prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3b3d22dc-df09-4910-8c9b-1204eeedbd68"
+  },
+  {
+   "docId": "url:c00b94cb2b5b",
+   "label": "FDA label: gentamicin",
+   "title": "Gentamicin sulfate injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=977180b3-a222-4282-d485-4a3217674305"
+  },
+  {
+   "docId": "url:64e48d5d8ef3",
+   "label": "NICE NG128",
+   "title": "Stroke and transient ischaemic attack in over 16s: diagnosis and initial management (2019, updated 2022)",
+   "url": "https://www.nice.org.uk/guidance/ng128"
+  },
+  {
+   "docId": "url:565d0d449838",
+   "label": "NICE NG234",
+   "title": "Spinal metastases and metastatic spinal cord compression (2023)",
+   "url": "https://www.nice.org.uk/guidance/ng234"
+  },
+  {
+   "docId": "url:00024f763e36",
+   "label": "GIRFT CES pathway",
+   "title": "National Suspected Cauda Equina Syndrome Pathway (GIRFT, NHS England, updated March 2026)",
+   "url": "https://gettingitrightfirsttime.co.uk/wp-content/uploads/2026/04/National-Suspected-Cauda-Equina-Pathway-March-2026.pdf"
+  },
+  {
+   "docId": "url:d7f5ea663cd5",
+   "label": "FDA label: Protopam",
+   "title": "Protopam (pralidoxime chloride) for injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2741d8fd-51c2-46be-880b-99f2b20a6137"
+  },
+  {
+   "docId": "url:ddbf6bf0c79c",
+   "label": "JBDS hypoglycaemia 2023",
+   "title": "The Hospital Management of Hypoglycaemia in Adults with Diabetes Mellitus (JBDS 01), revised January 2023",
+   "url": "https://abcd.care/sites/default/files/site_uploads/JBDS_Guidelines_Current/JBDS_01_Hypo_Guideline_with_QR_code_January_2023.pdf"
+  },
+  {
+   "docId": "pmid:29083673",
+   "label": "StatPearls: botulism",
+   "title": "Botulism (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29083673/"
+  }
+ ],
+ "differential": [
+  "Guillain-Barre syndrome",
+  "Miller Fisher syndrome",
+  "Myasthenic crisis",
+  "Cholinergic crisis",
+  "Botulism",
+  "Infant botulism",
+  "Tick paralysis",
+  "Transverse myelitis",
+  "Spinal cord compression",
+  "Stroke",
+  "Potassium disorder or periodic paralysis",
+  "Hypoglycemia",
+  "Functional weakness",
+  "Myopathy or rhabdomyolysis"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Acute weakness in the ED. First moves?",
+   "options": [
+    "Airway, swallow, breathing and a fingerstick glucose; then the bloods",
+    "Pulse oximetry and an arterial blood gas to judge how well the patient breathes",
+    "Non-contrast CT of the head, with the glucose added to the main lab panel",
+    "A urine drug screen first, as intoxication can mimic the weakness"
+   ],
+   "answer": 0,
+   "chainStep": "Check airway, cough and swallow; fingerstick glucose; if the weakness is generalized or bulbar, bedside FVC with maximal inspiratory and expiratory pressures, repeated (end-tidal CO2 in an infant); a sudden focal deficit goes straight to the stroke pathway for immediate imaging; electrolytes with magnesium and phosphate, blood count, kidney and liver tests",
+   "why": "Breathing is measured, not judged by eye: not every patient heading for respiratory failure is breathless, and the oximeter and the blood gas can stay normal until late, because hypoxia and hypercapnia come late in neuromuscular failure. A weak face or bulbar muscles can block the upper airway before the diaphragm fails. Hypoglycemia is excluded in anyone with sudden neurological symptoms, and every suspected GBS gets a blood count, glucose, electrolytes, kidney and liver tests, with magnesium and phosphate because both can cause acute weakness. A sudden focal deficit is a suspected stroke, diagnosed rapidly in the stroke pathway. Intoxication is one of the things weakness gets mistaken for, but the breathing and the glucose come first.",
+   "orders": [
+    {
+     "item": "Bedside spirometry, generalized or bulbar weakness",
+     "dose": "Serial vital capacity, maximal inspiratory and maximal expiratory pressure; at risk of respiratory failure if FVC under 20 mL/kg, MIP under 30 cm H2O or MEP under 40 cm H2O (the 20/30/40 rule)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31541214",
+       "where": "Step 6"
+      },
+      {
+       "docId": "pmid:33956777",
+       "where": "Respiratory monitoring"
+      }
+     ]
+    },
+    {
+     "item": "Face too weak to seal the mouthpiece",
+     "dose": "Use a mask device; without spirometry, the single breath count or sniff nasal inspiratory pressure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Monitoring: recommendations"
+      }
+     ]
+    },
+    {
+     "item": "Infant with suspected botulism",
+     "dose": "Continuous end-tidal CO2 is the most effective bedside measure of respiratory depression",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29630230",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Oximetry and blood gas",
+     "dose": "Not reliable early markers: hypoxia and hypercapnia can come late in neuromuscular respiratory failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Respiratory monitoring"
+      }
+     ]
+    },
+    {
+     "item": "Bloods",
+     "dose": "Glucose, electrolytes with magnesium and phosphate, blood count, kidney and liver tests, thyroid function",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31541214",
+       "where": "Step 2 laboratory investigations"
+      },
+      {
+       "docId": "pmid:30335287",
+       "where": "Evaluation: laboratory investigations"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: trauma, poisoning and toxidromes including organophosphates (the toxicology pathway, pw_tox), weakness in critical illness, chronic or slowly progressive weakness, and children beyond infant botulism.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "pmid:31541214",
+     "where": "Step 2 laboratory investigations; Step 6"
+    },
+    {
+     "docId": "pmid:33956777",
+     "where": "Diagnosis of botulism; Key points for clinicians; Respiratory monitoring"
+    },
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.1.2; 1.1.3"
+    },
+    {
+     "docId": "url:ddbf6bf0c79c",
+     "where": "Treatment of hypoglycaemia algorithms"
+    },
+    {
+     "docId": "pmid:30335287",
+     "where": "Evaluation: laboratory investigations"
+    }
+   ]
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Breathing, bulbar function, glucose, potassium and the first exam",
+   "outcomes": [
+    {
+     "id": "airway",
+     "if": "Breathing at risk; FVC under 20 mL/kg, MIP under 30 or MEP under 40 cm H2O, or pooled secretions",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "intubate"
+    },
+    {
+     "id": "unstable",
+     "if": "Drowsy, shocked or arrhythmic; reduced consciousness, low pressure or an unstable rhythm",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_unstable"
+    },
+    {
+     "id": "glucose",
+     "if": "Glucose low; under 72 mg/dL (4 mmol/L) on the fingerstick",
+     "ddx": {
+      "lead": [
+       "Hypoglycemia"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Hypoglycemia",
+       "dose": "Blood glucose under 72 mg/dL (4.0 mmol/L), treated without delay",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:ddbf6bf0c79c",
+         "where": "Treatment of hypoglycaemia algorithms; Management of hypoglycaemia"
+        }
+       ]
+      }
+     ],
+     "next": "end_glucose"
+    },
+    {
+     "id": "potassium",
+     "if": "Potassium abnormal; low or high, with flaccid weakness",
+     "ddx": {
+      "lead": [
+       "Potassium disorder or periodic paralysis"
+      ],
+      "out": []
+     },
+     "next": "end_k"
+    },
+    {
+     "id": "focal",
+     "if": "Sudden focal weakness; one side of the face, arm or leg",
+     "ddx": {
+      "lead": [
+       "Stroke"
+      ],
+      "out": []
+     },
+     "next": "end_stroke"
+    },
+    {
+     "id": "spine",
+     "if": "Cord signs with a red flag; a level with cancer, fever or drug use, or saddle loss with no level",
+     "ddx": {
+      "lead": [
+       "Spinal cord compression"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Known cancer with neurological signs",
+       "dose": "Dexamethasone 16 mg orally (or the parenteral equivalent) as soon as possible; MRI as soon as possible and always within 24 hours",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:565d0d449838",
+         "where": "1.8.1; 1.5.2"
+        }
+       ]
+      },
+      {
+       "item": "Suspected cauda equina syndrome",
+       "dose": "Emergency MRI as soon as possible and certainly within 4 hours of the request",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:00024f763e36",
+         "where": "MRI imaging"
+        }
+       ]
+      }
+     ],
+     "next": "end_spine"
+    },
+    {
+     "id": "level",
+     "if": "Sensory level, no red flag; no cancer, fever or drug use, with or without bladder change",
+     "ddx": {
+      "lead": [
+       "Spinal cord compression",
+       "Transverse myelitis"
+      ],
+      "out": []
+     },
+     "next": "mri"
+    },
+    {
+     "id": "stable",
+     "if": "No breathing cutoff crossed; glucose and potassium normal, no pooled secretions, no sudden focal deficit, no cord or saddle signs",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "end_glucose",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Low glucose with weakness: correct it now; the altered mental status pathway (pw_ams) has the doses. Weakness that persists once the glucose is normal starts this pathway again, and a sudden focal deficit goes to the stroke pathway (pw_stroke)."
+  },
+  {
+   "id": "end_k",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Weakness with an abnormal potassium. Low-potassium paralysis from a shift (periodic paralysis, including thyrotoxic): oral potassium chloride first; IV only for arrhythmia, a failed swallow or respiratory weakness, as 40 mEq/L in 5% mannitol at no more than 20 mEq/h, at most 200 mEq in 24 hours, on continuous ECG, with potassium followed for 24 hours, because total body potassium is not depleted and aggressive repletion risks rebound hyperkalemia; ECG and thyroid tests at a first attack. In thyrotoxic periodic paralysis, treatment of the hyperthyroidism is the mainstay. Other potassium emergencies: pw_electrolytes."
+  },
+  {
+   "id": "end_unstable",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Resuscitate first; a drowsy patient goes to pw_ams; altered consciousness argues against GBS."
+  },
+  {
+   "id": "end_stroke",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Sudden focal weakness: the stroke pathway (pw_stroke) takes it from here, with the glucose checked, the time last known well fixed, and immediate imaging."
+  },
+  {
+   "id": "end_spine",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cord or cauda equina signs with a red flag: the back pain pathway (pw_back_pain) takes it from here: dexamethasone 16 mg now and an MRI within 24 hours for known cancer, an emergency MRI within 4 hours of the request for suspected cauda equina syndrome, and its infection route for fever or injection drug use."
+  },
+  {
+   "id": "intubate",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Breathing at risk: FVC under 20 mL/kg, weak MIP or pooled secretions. Next?",
+   "options": [
+    "Admit to the ICU and support the breathing before the blood gas fails",
+    "High-flow oxygen on a general ward, with hourly pulse oximetry checks",
+    "IVIG now, since immunotherapy is what reverses the weakness",
+    "Noninvasive ventilation on a general medical ward, with nursing checks"
+   ],
+   "answer": 0,
+   "chainStep": "Admit to the ICU; support ventilation now (in GBS intubate, no succinylcholine; in myasthenic crisis noninvasive ventilation first if parameters allow); aspiration precautions; serial FVC, MIP and MEP",
+   "why": "Evolving respiratory distress with imminent respiratory insufficiency, severe swallowing trouble or a weak cough are reasons for intensive care, and in GBS up to 22% need ventilation within the first week. The oximeter and the gas are late markers, so waiting for them, or treating with oxygen on a ward, waits too long. IVIG is slow to act and is not the treatment for botulism, so it does not come before the airway. In GBS noninvasive ventilation is not recommended and succinylcholine is avoided because it can cause hyperkalemia; in myasthenic crisis noninvasive ventilation can come first if parameters allow, escalating quickly to intubation in intensive care; in botulism paralytics are avoided or used only after careful thought.",
+   "orders": [
+    {
+     "item": "GBS: ventilation",
+     "dose": "Indicated with impending respiratory failure: the 20/30/40 rule, a weak cough, accessory muscle use, PaCO2 over 48 mm Hg or PaO2 under 56 mm Hg; noninvasive ventilation not recommended",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30335287",
+       "where": "Treatment: mechanical intubation"
+      }
+     ]
+    },
+    {
+     "item": "GBS: succinylcholine",
+     "dose": "Avoid during intubation; it can precipitate hyperkalemia",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30335287",
+       "where": "Treatment: mechanical intubation"
+      }
+     ]
+    },
+    {
+     "item": "Myasthenic crisis: ventilation",
+     "dose": "Noninvasive ventilation first if parameters allow; intubate in intensive care if they fail to improve or the patient tires",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32733360",
+       "where": "The MG patient in crisis"
+      }
+     ]
+    },
+    {
+     "item": "MG: paralytics",
+     "dose": "Resistant to succinylcholine and highly sensitive to nondepolarizing agents such as rocuronium; dose carefully",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34283457",
+       "where": "Anesthetic considerations"
+      }
+     ]
+    },
+    {
+     "item": "Botulism: paralytics",
+     "dose": "Avoid, or use only after careful consideration with appropriate monitoring",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Neuromuscular blocking agents"
+      }
+     ]
+    },
+    {
+     "item": "Intubation drugs and doses",
+     "dose": "Induction agents and doses are not in the sources read",
+     "status": "pending"
+    }
+   ],
+   "note": "Patients paralyzed by GBS or botulism are usually fully conscious: explain each procedure.",
+   "next": "recheck",
+   "sources": [
+    {
+     "docId": "pmid:31541214",
+     "where": "Step 3"
+    },
+    {
+     "docId": "pmid:33956777",
+     "where": "Respiratory monitoring; Neuromuscular blocking agents"
+    },
+    {
+     "docId": "pmid:30335287",
+     "where": "Treatment: mechanical intubation"
+    },
+    {
+     "docId": "pmid:32733360",
+     "where": "The MG patient in crisis"
+    }
+   ]
+  },
+  {
+   "id": "recheck",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Glucose, potassium and cord signs, breathing supported",
+   "outcomes": [
+    {
+     "id": "glucose",
+     "if": "Glucose low; hypoglycemia on the fingerstick",
+     "ddx": {
+      "lead": [
+       "Hypoglycemia"
+      ],
+      "out": []
+     },
+     "next": "end_glucose"
+    },
+    {
+     "id": "potassium",
+     "if": "Potassium abnormal; low or high, with flaccid weakness",
+     "ddx": {
+      "lead": [
+       "Potassium disorder or periodic paralysis"
+      ],
+      "out": []
+     },
+     "next": "end_k"
+    },
+    {
+     "id": "spine",
+     "if": "Cord signs with a red flag; a level with cancer, fever or drug use, or saddle loss, breathing supported",
+     "ddx": {
+      "lead": [
+       "Spinal cord compression"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Known cancer with neurological signs",
+       "dose": "Dexamethasone 16 mg orally (or the parenteral equivalent) as soon as possible; MRI as soon as possible and always within 24 hours",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:565d0d449838",
+         "where": "1.8.1; 1.5.2"
+        }
+       ]
+      },
+      {
+       "item": "Suspected cauda equina syndrome",
+       "dose": "Emergency MRI as soon as possible and certainly within 4 hours of the request",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:00024f763e36",
+         "where": "MRI imaging"
+        }
+       ]
+      }
+     ],
+     "next": "end_spine"
+    },
+    {
+     "id": "level",
+     "if": "Sensory level, no red flag; no cancer, fever or drug use, breathing supported",
+     "ddx": {
+      "lead": [
+       "Spinal cord compression",
+       "Transverse myelitis"
+      ],
+      "out": []
+     },
+     "next": "mri"
+    },
+    {
+     "id": "clear",
+     "if": "Glucose, potassium and cord exam normal; no sensory level",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "mri",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Sensory level, no cancer, fever or drug use. Imaging?",
+   "options": [
+    "Emergency MRI of the whole spine, without and with gadolinium",
+    "Non-contrast CT of the head to rule out a stroke as the cause",
+    "Lumbar puncture for CSF cells and protein before the imaging",
+    "Plain thoracic spine x-rays to look for a collapsed vertebra"
+   ],
+   "answer": 0,
+   "chainStep": "Emergency MRI of the whole spine without and with gadolinium; brain MRI with and without gadolinium if myelitis is found",
+   "why": "A sharp sensory level points to the spinal cord and casts doubt on GBS. A compressive lesion has to be excluded first, and that is done by MRI, not by a head CT, a lumbar puncture or plain films: the whole spine with and without gadolinium separates compressive from non-compressive lesions.",
+   "next": "mri_result",
+   "sources": [
+    {
+     "docId": "pmid:32644728",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:31541214",
+     "where": "Box 1"
+    },
+    {
+     "docId": "pmid:30335287",
+     "where": "Table: features that argue against GBS"
+    }
+   ]
+  },
+  {
+   "id": "mri_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Whole-spine MRI",
+   "outcomes": [
+    {
+     "id": "compress",
+     "if": "Cord compression; a disc, mass or collection presses on the cord",
+     "ddx": {
+      "lead": [
+       "Spinal cord compression"
+      ],
+      "out": []
+     },
+     "next": "end_compress"
+    },
+    {
+     "id": "myelitis",
+     "if": "Myelitis, no compression; T2 signal within the cord",
+     "ddx": {
+      "lead": [
+       "Transverse myelitis"
+      ],
+      "out": [
+       "Spinal cord compression"
+      ]
+     },
+     "next": "tm_step"
+    },
+    {
+     "id": "normal",
+     "if": "No cord lesion; no compression and no signal change",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Spinal cord compression"
+      ]
+     },
+     "next": "end_cord_normal"
+    }
+   ]
+  },
+  {
+   "id": "end_compress",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cord compression on MRI: an emergency for the spinal surgeons. Metastatic compression (dexamethasone 16 mg as soon as possible) and epidural abscess follow pw_back_pain; a disc or other benign compression goes straight to the spinal team."
+  },
+  {
+   "id": "tm_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Cord signal on MRI, no compression. Next?",
+   "options": [
+    "High-dose IV steroids now, with the LP and antibody tests sent alongside",
+    "Emergency decompressive laminectomy at the level of the cord signal change",
+    "Dexamethasone 16 mg and radiotherapy to the cord lesion within 24 hours",
+    "Plasma exchange as the first treatment, before a glucocorticoid"
+   ],
+   "answer": 0,
+   "chainStep": "High-dose IV methylprednisolone or dexamethasone now, for 3 to 5 days; LP (cells, protein, glucose, VDRL, oligoclonal bands, IgG index, cytology); brain MRI with and without gadolinium; serum AQP4 and MOG antibodies, B12, methylmalonic acid, ANA, Ro, La, syphilis, HIV, TSH; plasma exchange if no response",
+   "why": "Once compression is excluded, high-dose IV glucocorticoids are the first-line treatment and start as soon as possible, without waiting for the test results. Plasma exchange is for disease that fails to respond to steroids. There is nothing to decompress, and dexamethasone with radiotherapy treats metastatic compression, which the MRI has excluded.",
+   "orders": [
+    {
+     "item": "IV glucocorticoid",
+     "dose": "High dose, as soon as possible, methylprednisolone or dexamethasone for 3 to 5 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644728",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Glucocorticoid dose",
+     "dose": "The mg dose is not stated in the source read",
+     "status": "pending"
+    },
+    {
+     "item": "Plasma exchange",
+     "dose": "If the myelitis fails to respond to glucocorticoids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644728",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Workup",
+     "dose": "Brain MRI with and without gadolinium; LP with cells, protein, glucose, VDRL, oligoclonal bands, IgG index and cytology; serum AQP4 and MOG antibodies, B12, methylmalonic acid, ANA, Ro, La, syphilis, HIV, TSH",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644728",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Bladder",
+     "dose": "Urinary retention may be the first sign of myelitis; check for it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644728",
+       "where": "History and physical"
+      }
+     ]
+    }
+   ],
+   "next": "end_tm",
+   "sources": [
+    {
+     "docId": "pmid:32644728",
+     "where": "Evaluation; Treatment / management"
+    },
+    {
+     "docId": "url:565d0d449838",
+     "where": "1.8.1"
+    }
+   ]
+  },
+  {
+   "id": "end_tm",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Transverse myelitis: compression excluded on MRI, high-dose IV glucocorticoids without waiting for results, plasma exchange if they fail, and a search for multiple sclerosis, NMOSD (AQP4 antibodies), MOG antibody disease, infection and systemic autoimmune disease. About a third recover with little or no deficit, a third keep a moderate permanent disability and a third are permanently disabled."
+  },
+  {
+   "id": "end_cord_normal",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Sensory level with a normal spine MRI: neither compression nor myelitis is shown, so other causes come back into play. A sharp sensory level argues against GBS, but GBS can show enhancing nerve roots on gadolinium MRI and a raised CSF protein. Not covered further in this version."
+  },
+  {
+   "id": "pattern",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Breathing measures safe or supported; glucose and potassium normal. Next?",
+   "options": [
+    "History of infection, food, wounds and drugs; pupils, reflexes, skin search",
+    "Send antiganglioside antibodies, and let that result decide the treatment",
+    "Nerve conduction studies first, ahead of a detailed bedside examination",
+    "MRI of the brain and whole spine with gadolinium as the opening investigation"
+   ],
+   "answer": 0,
+   "chainStep": "History: onset and direction of spread, infection in the last 6 weeks, home-canned food, injection drug use and wounds, medicines, outdoor exposure; exam: pupils, eye movements, bulbar muscles, fatigability, reflexes, sensation, and a full skin search for a tick",
+   "why": "The bedside pattern sorts the causes. GBS is rapidly progressive bilateral weakness, usually rising from the legs, with reduced or absent reflexes, and two thirds report an infection in the 6 weeks before. Botulism is symmetric cranial nerve palsies, then descending weakness, in an alert, afebrile patient, and unreactive pupils are expected but not always seen; home-canned food and injection drug use are the classic exposures. In myasthenia the weakness fluctuates and the pupils, reflexes and sensation are normal. Tick paralysis mimics GBS, so the scalp, axillae, between the digits and the perineum are searched. Antiganglioside antibodies are of limited value and treatment does not wait for them; nerve conduction can be normal in the first week; and MRI is not routine in GBS.",
+   "orders": [
+    {
+     "item": "Tick search",
+     "dose": "Scalp (most often behind the ears), axillae, between the digits and the perineum; there may be more than one tick",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29262244",
+       "where": "History and physical; Pearls and other issues"
+      }
+     ]
+    },
+    {
+     "item": "Botulism exposures",
+     "dose": "Ask about home-canned food and injection drug use; their absence does not rule botulism out",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Exposure risk factors"
+      }
+     ]
+    }
+   ],
+   "next": "pattern_result",
+   "sources": [
+    {
+     "docId": "pmid:31541214",
+     "where": "Step 1; Step 2"
+    },
+    {
+     "docId": "pmid:33956777",
+     "where": "Diagnosis of botulism; Exposure risk factors"
+    },
+    {
+     "docId": "pmid:32644757",
+     "where": "History and physical"
+    },
+    {
+     "docId": "pmid:29262244",
+     "where": "History and physical"
+    },
+    {
+     "docId": "pmid:31855394",
+     "where": "History and physical"
+    }
+   ]
+  },
+  {
+   "id": "pattern_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "History and examination pattern",
+   "outcomes": [
+    {
+     "id": "gbs",
+     "if": "Ascending, reflexes reduced or absent, no tick; legs first, mild sensory change, normal pupils",
+     "ddx": {
+      "lead": [
+       "Guillain-Barre syndrome"
+      ],
+      "out": []
+     },
+     "next": "gbs_lp"
+    },
+    {
+     "id": "tick",
+     "if": "Ascending, reflexes absent, tick attached; found on the skin search",
+     "ddx": {
+      "lead": [
+       "Tick paralysis"
+      ],
+      "out": []
+     },
+     "next": "tick_step"
+    },
+    {
+     "id": "mg",
+     "if": "Known myasthenia, weaker; fatigable ptosis or bulbar weakness, reflexes present",
+     "ddx": {
+      "lead": [
+       "Myasthenic crisis",
+       "Cholinergic crisis"
+      ],
+      "out": []
+     },
+     "next": "mg_look"
+    },
+    {
+     "id": "mg_new",
+     "if": "Myasthenia, new and untreated; fatigable ptosis, diplopia or bulbar weakness, reflexes present",
+     "ddx": {
+      "lead": [
+       "Myasthenic crisis"
+      ],
+      "out": []
+     },
+     "next": "mg_crisis"
+    },
+    {
+     "id": "mfs",
+     "if": "Ophthalmoplegia, ataxia and areflexia; little limb weakness",
+     "ddx": {
+      "lead": [
+       "Miller Fisher syndrome"
+      ],
+      "out": []
+     },
+     "next": "end_mfs"
+    },
+    {
+     "id": "bot",
+     "if": "Descending, afebrile and alert; cranial nerve palsies first, sensation normal",
+     "ddx": {
+      "lead": [
+       "Botulism"
+      ],
+      "out": []
+     },
+     "next": "bot_step"
+    },
+    {
+     "id": "infant",
+     "if": "Floppy infant under 1 year; constipation, weak suck and cry",
+     "ddx": {
+      "lead": [
+       "Infant botulism"
+      ],
+      "out": []
+     },
+     "next": "infant_step"
+    },
+    {
+     "id": "functional",
+     "if": "Inconsistent weakness; positive Hoover sign, normal reflexes and tone",
+     "ddx": {
+      "lead": [
+       "Functional weakness"
+      ],
+      "out": []
+     },
+     "next": "func_step"
+    },
+    {
+     "id": "other",
+     "if": "None of these patterns; for example tender proximal muscles, dark urine",
+     "ddx": {
+      "lead": [
+       "Myopathy or rhabdomyolysis"
+      ],
+      "out": []
+     },
+     "next": "end_other"
+    }
+   ]
+  },
+  {
+   "id": "end_mfs",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Miller Fisher syndrome, the GBS variant of ophthalmoplegia, areflexia and ataxia: usually mild, and most recover completely without treatment within 6 months, so treatment is generally not recommended; monitor closely, because a subgroup goes on to limb weakness, bulbar or facial palsy, or respiratory failure. Anti-GQ1b antibodies are found in up to 90%."
+  },
+  {
+   "id": "end_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Not covered in this version: inflammatory myositis, rhabdomyolysis, toxic myopathy (statins, colchicine), and low phosphate or high magnesium, all on the GBS differential."
+  },
+  {
+   "id": "gbs_lp",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Ascending weakness, reflexes reduced or absent, no tick found. Next test?",
+   "options": [
+    "Lumbar puncture for CSF protein and cells; nerve conduction studies",
+    "Stool culture for Campylobacter to confirm the infection that triggered it",
+    "Contrast MRI of the brain as the test that confirms the diagnosis",
+    "Serum creatine kinase and a muscle biopsy from the weakest muscle"
+   ],
+   "answer": 0,
+   "chainStep": "Lumbar puncture: CSF protein and cell count (before IVIG if possible); nerve conduction studies, repeated in 2 to 3 weeks if normal early",
+   "why": "CSF examination belongs in the initial evaluation, mainly to rule out other causes; the classic finding is a raised protein with a normal cell count. Nerve conduction studies are not required but are recommended wherever possible, and can be normal in the first week. Testing for the preceding infection does not usually help the diagnosis, MRI is not part of the routine workup, and GBS is a disease of the peripheral nerves and nerve roots, not muscle.",
+   "orders": [
+    {
+     "item": "CSF",
+     "dose": "Protein and cell count; protein is normal in 30 to 50% in the first week, so a normal protein does not rule GBS out",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31541214",
+       "where": "Step 2: CSF examination"
+      }
+     ]
+    },
+    {
+     "item": "Timing against IVIG",
+     "dose": "IVIG can raise CSF protein and white cells, complicating interpretation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30335287",
+       "where": "Evaluation: CSF analysis"
+      }
+     ]
+    },
+    {
+     "item": "Nerve conduction studies",
+     "dose": "Wherever possible; may be normal within 1 week of onset",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31541214",
+       "where": "Step 2: electrodiagnostic studies"
+      }
+     ]
+    },
+    {
+     "item": "Antiganglioside antibodies",
+     "dose": "Limited value; do not wait for the result before treating",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31541214",
+       "where": "Step 2: laboratory investigations"
+      }
+     ]
+    }
+   ],
+   "next": "csf",
+   "sources": [
+    {
+     "docId": "pmid:31541214",
+     "where": "Step 2"
+    },
+    {
+     "docId": "pmid:30335287",
+     "where": "Evaluation: CSF analysis"
+    }
+   ]
+  },
+  {
+   "id": "csf",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CSF protein and cell count",
+   "outcomes": [
+    {
+     "id": "aod",
+     "if": "Protein raised, cells normal; albuminocytologic dissociation",
+     "ddx": {
+      "lead": [
+       "Guillain-Barre syndrome"
+      ],
+      "out": []
+     },
+     "next": "gbs_severity"
+    },
+    {
+     "id": "early",
+     "if": "Protein and cells normal; within 2 weeks of onset",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "gbs_severity"
+    },
+    {
+     "id": "mild",
+     "if": "Cells 10 to 50 per microliter; mild pleocytosis",
+     "ddx": {
+      "lead": [
+       "Guillain-Barre syndrome"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Mild pleocytosis",
+       "dose": "Compatible with GBS but should prompt alternative diagnoses such as infectious polyradiculitis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31541214",
+         "where": "Step 2: CSF examination"
+        }
+       ]
+      }
+     ],
+     "next": "gbs_severity"
+    },
+    {
+     "id": "pleo",
+     "if": "Cells over 50 per microliter; marked pleocytosis",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_pleo"
+    }
+   ]
+  },
+  {
+   "id": "end_pleo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Marked CSF pleocytosis, over 50 cells per microliter, points away from GBS: look for leptomeningeal malignancy or an infection or inflammation of the cord or nerve roots (Lyme disease, CMV, HIV among them). Not covered further in this version."
+  },
+  {
+   "id": "gbs_severity",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Walking and time since onset",
+   "outcomes": [
+    {
+     "id": "unable",
+     "if": "Cannot walk 10 m unaided; within 2 weeks of the onset of weakness",
+     "ddx": {
+      "lead": [
+       "Guillain-Barre syndrome"
+      ],
+      "out": []
+     },
+     "next": "gbs_tx"
+    },
+    {
+     "id": "late",
+     "if": "Cannot walk 10 m, 2 to 4 weeks from onset; plasma exchange window",
+     "ddx": {
+      "lead": [
+       "Guillain-Barre syndrome"
+      ],
+      "out": []
+     },
+     "next": "end_gbs_late"
+    },
+    {
+     "id": "walks",
+     "if": "Walks 10 m unaided; no rapid progression, bulbar, autonomic or breathing trouble",
+     "ddx": {
+      "lead": [
+       "Guillain-Barre syndrome"
+      ],
+      "out": []
+     },
+     "next": "end_gbs_mild"
+    },
+    {
+     "id": "walks_fast",
+     "if": "Walks 10 m but worsening fast; or autonomic, bulbar or breathing trouble",
+     "ddx": {
+      "lead": [
+       "Guillain-Barre syndrome"
+      ],
+      "out": []
+     },
+     "next": "end_gbs_walks_fast"
+    }
+   ]
+  },
+  {
+   "id": "end_gbs_late",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Plasma exchange has trial evidence when started within 4 weeks; IVIG trials covered the first 2 weeks, and beyond these windows evidence is lacking."
+  },
+  {
+   "id": "end_gbs_walks_fast",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Evidence is limited, but immunotherapy should be considered."
+  },
+  {
+   "id": "end_gbs_mild",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Mild GBS, still walking 10 m unaided: the evidence for immunotherapy is limited, but it should be considered if the weakness progresses rapidly or autonomic, bulbar or respiratory trouble appears; keep measuring the breathing and watching the rhythm and blood pressure."
+  },
+  {
+   "id": "gbs_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "GBS, cannot walk 10 m unaided, within 2 weeks of onset. Treatment?",
+   "options": [
+    "IVIG 0.4 g/kg daily for 5 days, or a course of plasma exchange",
+    "High-dose IV methylprednisolone, then a tapering oral steroid",
+    "Plasma exchange, followed straight away by a full IVIG course",
+    "Supportive care, with immunotherapy kept for ventilated patients"
+   ],
+   "answer": 0,
+   "chainStep": "IVIG 0.4 g/kg daily for 5 days (or plasma exchange 200 to 250 mL/kg over five sessions); serial FVC, MIP and MEP; swallow and cough checks; continuous ECG, heart rate and blood pressure; bowel and bladder; DVT prevention",
+   "why": "Immunotherapy starts when the patient cannot walk 10 m unaided: IVIG within 2 weeks of the onset of weakness and plasma exchange within 4 weeks are equally effective, and IVIG is usually chosen because it is easier to give. Eight trials of corticosteroids showed no benefit and oral steroids worsened outcome. Plasma exchange followed by IVIG is no better than either alone. Waiting for a ventilator misses the treatment threshold.",
+   "orders": [
+    {
+     "item": "IVIG",
+     "dose": "0.4 g/kg daily for 5 days, started within 2 weeks of the onset of weakness",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31541214",
+       "where": "Step 4; Step 5"
+      }
+     ]
+    },
+    {
+     "item": "Plasma exchange",
+     "dose": "200 to 250 mL plasma per kg over five sessions, started within 4 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31541214",
+       "where": "Step 4; Step 5"
+      }
+     ]
+    },
+    {
+     "item": "Plasma exchange with autonomic instability",
+     "dose": "Avoid: large fluid shifts can cause hypotension",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30335287",
+       "where": "Treatment: immunotherapy"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroids",
+     "dose": "Not beneficial; oral corticosteroids worsened outcome",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:31541214",
+       "where": "Step 5"
+      },
+      {
+       "docId": "pmid:30335287",
+       "where": "Treatment: corticosteroids"
+      }
+     ]
+    },
+    {
+     "item": "IVIG contraindication",
+     "dose": "IgA deficiency with antibodies against IgA and a history of hypersensitivity",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:f6b9d499c4fc",
+       "where": "4 Contraindications"
+      }
+     ]
+    },
+    {
+     "item": "IVIG warnings",
+     "dose": "Thrombosis and renal dysfunction (boxed warning); the Gamunex-C label lists PI, ITP and CIDP, not GBS",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f6b9d499c4fc",
+       "where": "Boxed warning; 1 Indications and usage"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Vital capacity, MIP and MEP; neck, arm and leg strength; swallow and cough; ECG, heart rate, blood pressure, bowel and bladder",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31541214",
+       "where": "Step 6"
+      }
+     ]
+    },
+    {
+     "item": "Prevention",
+     "dose": "Standard-practice prevention of pressure ulcers, hospital infections and deep vein thrombosis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31541214",
+       "where": "Step 7"
+      }
+     ]
+    },
+    {
+     "item": "DVT prophylaxis agent and dose",
+     "dose": "Not in the sources read",
+     "status": "pending"
+    }
+   ],
+   "note": "The EAN/PNS 2023 GBS guideline was not readable here; the doses are from the 2019 international ten-step guideline.",
+   "next": "gbs_icu",
+   "sources": [
+    {
+     "docId": "pmid:31541214",
+     "where": "Step 4; Step 5; Step 6; Step 7"
+    },
+    {
+     "docId": "pmid:30335287",
+     "where": "Treatment: immunotherapy; corticosteroids"
+    },
+    {
+     "docId": "url:f6b9d499c4fc",
+     "where": "Boxed warning; 1; 4"
+    }
+   ]
+  },
+  {
+   "id": "gbs_icu",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Serial breathing, swallow and autonomic checks",
+   "outcomes": [
+    {
+     "id": "icu",
+     "if": "ICU criteria met; FVC under 20 mL/kg, dysautonomia, bulbar palsy or fast decline",
+     "ddx": {
+      "lead": [
+       "Guillain-Barre syndrome"
+      ],
+      "out": []
+     },
+     "next": "end_gbs_icu"
+    },
+    {
+     "id": "ward",
+     "if": "No ICU criteria; FVC steady over 20 mL/kg, swallow and rhythm normal",
+     "ddx": {
+      "lead": [
+       "Guillain-Barre syndrome"
+      ],
+      "out": []
+     },
+     "next": "end_gbs_ward"
+    }
+   ]
+  },
+  {
+   "id": "end_gbs_icu",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "GBS needing intensive care: IVIG or plasma exchange, ventilation when respiratory failure is imminent (no succinylcholine), and continuous ECG and blood pressure for dysautonomia. The EGRIS estimates the chance of ventilation within a week. About 80% walk independently at 6 months."
+  },
+  {
+   "id": "end_gbs_ward",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "GBS stable on the ward: IVIG or plasma exchange, with serial FVC, MIP and MEP, swallow and cough checks, ECG and blood pressure; move to intensive care if respiratory, bulbar or autonomic failure appears. Up to two thirds of GBS deaths come in the recovery phase, from arrhythmias, blood pressure swings or mucus plugs."
+  },
+  {
+   "id": "tick_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Ascending, areflexic weakness and an engorged tick attached. Next?",
+   "options": [
+    "Remove the whole tick with fine forceps, then search for any others",
+    "IVIG 0.4 g/kg daily for 5 days to stop the ascending paralysis",
+    "Doxycycline by mouth, leaving the tick in place for the lab to identify",
+    "Watch it for 24 hours first, since weakness can worsen after removal"
+   ],
+   "answer": 0,
+   "chainStep": "Remove the tick: fine forceps close to the skin, gentle steady upward and outward traction, no mouthparts left; search for more ticks; supportive care with serial breathing measures",
+   "why": "Removing the tick is the treatment: fine forceps close to the skin with gentle, steady upward and outward traction, leaving no mouthparts behind. Patients can carry more than one tick. Plasmapheresis and immune globulin do not help, and antibiotics treat tick-borne infections, which fever or a rash would suggest, not the toxin. Removal is the treatment, done now; Australian Ixodes holocyclus paralysis can worsen after removal, and that is watched in hospital after the tick is out.",
+   "orders": [
+    {
+     "item": "Tick removal",
+     "dose": "Fine forceps close to the skin, gentle steady upward and outward traction, no mouthparts left in the wound",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29262244",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "IVIG or plasma exchange",
+     "dose": "Not helpful in tick paralysis",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:29262244",
+       "where": "History and physical"
+      }
+     ]
+    },
+    {
+     "item": "Observation",
+     "dose": "Supportive care; ventilation in severe cases; Australian Ixodes holocyclus paralysis can worsen for 24 to 48 hours after removal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29262244",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Fever or rash",
+     "dose": "Rare in tick paralysis; raises suspicion of a tick-borne infection",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29262244",
+       "where": "Pearls and other issues"
+      }
+     ]
+    }
+   ],
+   "next": "end_tick",
+   "sources": [
+    {
+     "docId": "pmid:29262244",
+     "where": "History and physical; Treatment / management; Pearls and other issues"
+    }
+   ]
+  },
+  {
+   "id": "end_tick",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Tick paralysis: the whole tick removed and the skin searched for more. With North American Dermacentor ticks most recover fully within hours; Australian Ixodes holocyclus paralysis can worsen for 24 to 48 hours after removal, so the breathing is watched as an inpatient. If the weakness does not lift, look for a second tick and reconsider the differential: GBS, botulism, myasthenia and spinal cord lesions."
+  },
+  {
+   "id": "mg_look",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Known MG on pyridostigmine, weaker over days. Next?",
+   "options": [
+    "Look for cholinergic signs and a trigger before any more pyridostigmine",
+    "Raise the pyridostigmine dose, as weakness in MG means underdosing",
+    "Start high-dose prednisone today to treat the myasthenic exacerbation",
+    "Start levofloxacin to cover a chest infection as the most likely trigger"
+   ],
+   "answer": 0,
+   "chainStep": "Hold further pyridostigmine increases; examine for cholinergic signs (small pupils, salivation, bronchial secretions, sweating, diarrhea, cramps, fasciculations, slow pulse); look for a trigger: infection, a new drug, a recent dose change",
+   "why": "Weakness on pyridostigmine can be underdosing or overdosing, and the two crises look alike: more anticholinesterase in a cholinergic crisis can have grave consequences, so the cholinergic signs are looked for first. Infection and drugs (aminoglycosides, fluoroquinolones, magnesium) are common triggers; fluoroquinolones have neuromuscular blocking activity and are avoided in MG. Steroids started alone can transiently worsen weakness early in a crisis.",
+   "orders": [
+    {
+     "item": "More pyridostigmine",
+     "dose": "Not until cholinergic crisis is excluded: a failure to improve can mean overdose",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:012ad2173fa0",
+       "where": "Warnings"
+      }
+     ]
+    },
+    {
+     "item": "Admission",
+     "dose": "Impending or manifest crisis: a monitoring or intensive care unit with neuromuscular experience",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38152089",
+       "where": "Recommendation 2.4.3a"
+      },
+      {
+       "docId": "pmid:38321574",
+       "where": "MG crisis: recommendations"
+      }
+     ]
+    }
+   ],
+   "next": "mg_type",
+   "sources": [
+    {
+     "docId": "url:012ad2173fa0",
+     "where": "Warnings; Adverse reactions"
+    },
+    {
+     "docId": "pmid:29494040",
+     "where": "Etiology"
+    },
+    {
+     "docId": "pmid:32644757",
+     "where": "History and physical"
+    },
+    {
+     "docId": "url:d0e50eecf004",
+     "where": "5.5"
+    },
+    {
+     "docId": "pmid:41149784",
+     "where": "2.4"
+    }
+   ]
+  },
+  {
+   "id": "mg_type",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Pupils, secretions, drug chart and infection screen",
+   "outcomes": [
+    {
+     "id": "chol",
+     "if": "Cholinergic signs; small pupils, secretions, fasciculations, slow pulse",
+     "ddx": {
+      "lead": [
+       "Cholinergic crisis"
+      ],
+      "out": []
+     },
+     "next": "chol_step"
+    },
+    {
+     "id": "trigger",
+     "if": "Trigger found, no cholinergic signs; an infection or a culprit drug",
+     "ddx": {
+      "lead": [
+       "Myasthenic crisis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Infection",
+       "dose": "Treat it, avoiding fluoroquinolones (avoid in MG) and aminoglycosides (use with caution in MG)",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:d0e50eecf004",
+         "where": "Boxed warning; 5.5"
+        },
+        {
+         "docId": "url:c00b94cb2b5b",
+         "where": "Precautions"
+        }
+       ]
+      },
+      {
+       "item": "Culprit drug",
+       "dose": "Stop it where possible: fluoroquinolones, aminoglycosides, magnesium (prolongs paralysis in MG)",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:d0e50eecf004",
+         "where": "5.5"
+        },
+        {
+         "docId": "url:c00b94cb2b5b",
+         "where": "Precautions"
+        },
+        {
+         "docId": "pmid:33956777",
+         "where": "Medications to use with caution"
+        },
+        {
+         "docId": "pmid:32644757",
+         "where": "History and physical"
+        }
+       ]
+      }
+     ],
+     "next": "mg_crisis"
+    },
+    {
+     "id": "none",
+     "if": "No trigger, no cholinergic signs; afebrile, no new drug",
+     "ddx": {
+      "lead": [
+       "Myasthenic crisis"
+      ],
+      "out": []
+     },
+     "next": "mg_crisis"
+    }
+   ]
+  },
+  {
+   "id": "chol_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Small pupils, secretions, fasciculations and a slow pulse on pyridostigmine. Next?",
+   "options": [
+    "Stop all anticholinesterases, give atropine, and support breathing",
+    "Double the pyridostigmine, since this is undertreated myasthenia",
+    "IVIG 0.4 g/kg daily for 5 days for the worsening myasthenia",
+    "Neostigmine IV, a faster-acting anticholinesterase than pyridostigmine"
+   ],
+   "answer": 0,
+   "chainStep": "Stop all anticholinesterases; atropine IV for the muscarinic effects, repeated until the secretions dry; secure the airway if secretions block it or the respiratory muscles fail; ICU",
+   "why": "Cholinergic crisis is overdose: muscarinic signs (small pupils, salivation and bronchial secretions, a slow pulse) with nicotinic cramps, fasciculation and weakness. All anticholinesterases are stopped and atropine is given; atropine does not reverse the nicotinic weakness, so ventilation may be needed. More pyridostigmine or neostigmine adds to the overdose, and IVIG treats a myasthenic crisis, not this.",
+   "orders": [
+    {
+     "item": "Anticholinesterases",
+     "dose": "Stop all of them at once",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:012ad2173fa0",
+       "where": "Warnings"
+      },
+      {
+       "docId": "pmid:29261883",
+       "where": "Toxicity"
+      }
+     ]
+    },
+    {
+     "item": "Atropine",
+     "dose": "Adults typically 2 mg, children about 0.03 to 0.05 mg/kg, repeated until the secretions dry; it does not act on nicotinic receptors",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29494040",
+       "where": "Treatment: inpatient management"
+      },
+      {
+       "docId": "url:d7f5ea663cd5",
+       "where": "Dosage and Administration, Organophosphate Poisoning"
+      }
+     ],
+     "note": "StatPearls titrates to atropinization (tachycardia, dry flushed skin, mydriasis); the pralidoxime label (pw_tox) titrates to inhibited secretions or atropine toxicity; neither is specific to pyridostigmine excess."
+    },
+    {
+     "item": "Airway",
+     "dose": "Intubate for secretions that block the airway, GCS under 8, hemodynamic instability or profound respiratory muscle weakness",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29494040",
+       "where": "Treatment: emergency room management"
+      }
+     ]
+    },
+    {
+     "item": "Routine atropine for side effects",
+     "dose": "Masks the signs of overdose and can lead into cholinergic crisis",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:012ad2173fa0",
+       "where": "Warnings"
+      }
+     ]
+    }
+   ],
+   "next": "end_chol",
+   "sources": [
+    {
+     "docId": "url:012ad2173fa0",
+     "where": "Warnings; Adverse reactions"
+    },
+    {
+     "docId": "pmid:29261883",
+     "where": "Toxicity"
+    },
+    {
+     "docId": "pmid:29494040",
+     "where": "Pathophysiology; Treatment"
+    }
+   ]
+  },
+  {
+   "id": "end_chol",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cholinergic crisis from pyridostigmine excess: every anticholinesterase stopped, atropine for the muscarinic effects, and the breathing supported, since atropine does not reverse the nicotinic weakness. Atropine taken routinely for side effects can hide the warning signs."
+  },
+  {
+   "id": "mg_crisis",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Myasthenic crisis or impending crisis, no cholinergic signs. Treatment?",
+   "options": [
+    "IVIG or plasma exchange in intensive care, treating any trigger",
+    "IV methylprednisolone as the first treatment, without IVIG or exchange",
+    "Urgent thymectomy this admission to remove the antibody source",
+    "Start or raise pyridostigmine, and admit to a general medical ward"
+   ],
+   "answer": 0,
+   "chainStep": "ICU; IVIG 0.4 g/kg daily for 5 days (or 1 g/kg daily for 2 days) or plasma exchange; treat the trigger; continuous respiratory and bulbar watch; steroids only alongside IVIG or plasma exchange",
+   "why": "Impending and manifest myasthenic crisis are treated in a monitoring or intensive care unit with IVIG or plasma exchange, which are equally effective. Steroids alone can transiently worsen weakness early, so they are added alongside IVIG or plasma exchange, and very high doses are kept for a delayed or poor response. Thymectomy waits until the patient is off the ventilator and stable. Vital capacity and blood gases do not reliably predict who will need ventilation in MG, so observation in hospital is continuous.",
+   "orders": [
+    {
+     "item": "IVIG",
+     "dose": "0.4 g/kg on 5 consecutive days, or 1 g/kg on 2 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38152089",
+       "where": "2.4.3: intravenous immunoglobulin"
+      },
+      {
+       "docId": "pmid:32733360",
+       "where": "The MG patient in crisis"
+      }
+     ]
+    },
+    {
+     "item": "Plasma exchange",
+     "dose": "Typically 5 to 10 treatments until stable (German guideline); usually 4 to 6 exchanges (Front Neurol review)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:38152089",
+       "where": "2.4.3: plasmapheresis"
+      },
+      {
+       "docId": "pmid:32733360",
+       "where": "The MG patient in crisis"
+      }
+     ],
+     "note": "The German guideline gives 5 to 10 treatments until stable; the Front Neurol review usually 4 to 6."
+    },
+    {
+     "item": "Choosing",
+     "dose": "Plasma exchange is contraindicated in sepsis; IVIG in hypercoagulability, renal failure or immunoglobulin hypersensitivity",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38152089",
+       "where": "2.4.3"
+      }
+     ]
+    },
+    {
+     "item": "Pyridostigmine during the crisis",
+     "dose": "Gilhus 2024 (Nordic): stop during a crisis to limit secretions and plugging, restart before weaning; the Mestinon label says crisis calls for more",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:38321574",
+       "where": "MG crisis"
+      },
+      {
+       "docId": "url:012ad2173fa0",
+       "where": "Warnings"
+      },
+      {
+       "docId": "pmid:32733360",
+       "where": "The MG patient in crisis"
+      }
+     ],
+     "note": "The 2024 Nordic guidance stops pyridostigmine during a crisis to prevent mucus and airway plugging, restarting it before weaning, and the 2020 review says it may worsen secretions; the Mestinon label, citing 1960s work, says myasthenic crisis suggests the need for more intensive anticholinesterase therapy (StatPearls on neostigmine says the same)."
+    },
+    {
+     "item": "Corticosteroids",
+     "dose": "Added alongside IVIG or plasma exchange, not alone; very high doses as add-on in intensive care for a delayed (over 1 week) or insufficient response",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38321574",
+       "where": "MG crisis"
+      },
+      {
+       "docId": "pmid:32733360",
+       "where": "The MG patient in crisis"
+      },
+      {
+       "docId": "pmid:41149784",
+       "where": "2.4"
+      }
+     ]
+    },
+    {
+     "item": "Breathing",
+     "dose": "Vital capacity and blood gases do not reliably predict the need for respiratory support in MG",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38321574",
+       "where": "MG crisis"
+      }
+     ]
+    },
+    {
+     "item": "Fluoroquinolones",
+     "dose": "Avoid in MG: they can exacerbate the weakness",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:d0e50eecf004",
+       "where": "Boxed warning; 5.5"
+      }
+     ]
+    },
+    {
+     "item": "Aminoglycosides and magnesium",
+     "dose": "Use aminoglycosides with caution in MG (they can aggravate weakness); magnesium prolongs paralysis in MG",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c00b94cb2b5b",
+       "where": "Precautions"
+      },
+      {
+       "docId": "pmid:33956777",
+       "where": "Medications to use with caution"
+      }
+     ]
+    }
+   ],
+   "next": "end_mg",
+   "sources": [
+    {
+     "docId": "pmid:38152089",
+     "where": "Recommendation 2.4.3a; 2.4.3"
+    },
+    {
+     "docId": "pmid:38321574",
+     "where": "MG crisis"
+    },
+    {
+     "docId": "pmid:32733360",
+     "where": "The MG patient in crisis"
+    },
+    {
+     "docId": "pmid:41149784",
+     "where": "2.4"
+    },
+    {
+     "docId": "pmid:29494040",
+     "where": "Etiology"
+    }
+   ]
+  },
+  {
+   "id": "end_mg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Myasthenic crisis: intensive care, IVIG or plasma exchange, and the trigger treated (infection treated without fluoroquinolones or aminoglycosides, culprit drugs stopped). The 2024 Nordic guidance stops pyridostigmine during the crisis and restarts it before weaning; the Mestinon label, citing 1960s work, says the opposite. Afterwards immunotherapy is usually intensified, and thymectomy waits until the patient is off the ventilator and stable."
+  },
+  {
+   "id": "bot_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Alert and afebrile; cranial nerve palsies, then descending weakness. Next?",
+   "options": [
+    "Call public health now for antitoxin; draw serum before it runs",
+    "Plasma exchange to clear the circulating toxin from the blood",
+    "IVIG 0.4 g/kg daily for 5 days to neutralize circulating toxin",
+    "Skin-test for horse serum allergy before ordering the equine antitoxin"
+   ],
+   "answer": 0,
+   "chainStep": "Call the local or state health department emergency line now for an expert consult and BAT from CDC; serum (no anticoagulant), stool and gastric specimens, serum before BAT; BAT one vial IV in adults as early as possible on clinical grounds; epinephrine at hand; serial neuro and respiratory checks",
+   "why": "Suspected botulism is treated with antitoxin on clinical grounds, as early as possible and best within 2 days, because laboratory confirmation takes days and can be negative. The health department arranges the consult and releases antitoxin from CDC. Serum is drawn before the antitoxin, which neutralizes the toxin, but the antitoxin is never delayed for a specimen. Plasmapheresis has shown no clear benefit, immune globulin and plasma exchange are the treatments for GBS, and skin testing is no longer recommended.",
+   "orders": [
+    {
+     "item": "Public health",
+     "dose": "Call the local or state health department emergency on-call line at once for an expert consultation and antitoxin from CDC",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Recommendations (diagnosis)"
+      }
+     ]
+    },
+    {
+     "item": "BAT",
+     "dose": "Adults (17 or older): one vial IV, diluted 1:10 in normal saline, starting at 0.5 mL/min and doubling every 30 minutes as tolerated to 2 mL/min; children 1 to under 17: 20 to 100% of the adult dose by weight; infants: 10%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:70acc34ef4ac",
+       "where": "2 Dosage and administration"
+      },
+      {
+       "docId": "pmid:33956777",
+       "where": "Botulinum antitoxin treatment: dose; Infants and children: dose"
+      }
+     ]
+    },
+    {
+     "item": "Timing",
+     "dose": "As early as possible, greatest benefit within 2 days; still given whenever paralysis is progressing; it cannot reverse existing paralysis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Timing; Background"
+      }
+     ]
+    },
+    {
+     "item": "Specimens",
+     "dose": "Serum before BAT (10 to 15 mL from blood drawn without anticoagulant), stool, gastric aspirate; refrigerate, do not freeze; never delay BAT for a specimen",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Laboratory testing; Table 5"
+      }
+     ]
+    },
+    {
+     "item": "Skin testing before BAT",
+     "dose": "Not routinely",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Allergic reactions: recommendations"
+      }
+     ]
+    },
+    {
+     "item": "Anaphylaxis",
+     "dose": "Rate under 2%; epinephrine and antihistamine at hand; serum sickness can follow 10 to 21 days later",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Allergic reactions"
+      },
+      {
+       "docId": "url:70acc34ef4ac",
+       "where": "5.1; 5.2"
+      }
+     ]
+    },
+    {
+     "item": "Glucose meters",
+     "dose": "BAT contains maltose, which falsely raises GDH-PQQ meter readings and can hide hypoglycemia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:70acc34ef4ac",
+       "where": "5.4"
+      }
+     ]
+    },
+    {
+     "item": "Drugs to use with care",
+     "dose": "Aminoglycosides, magnesium, clindamycin, tetracycline or calcium only after careful consideration, with monitoring",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Treatments other than antitoxin: recommendation"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Serial neuro exams, spirometry (mask if the face is weak), end-tidal CO2; continuous cardiac rhythm; urinary retention, ileus, dry eyes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Monitoring: recommendations"
+      }
+     ]
+    },
+    {
+     "item": "No response",
+     "dose": "Signs still progressing more than a day after one vial: consider other diagnoses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Retreatment of adults: recommendations"
+      }
+     ]
+    }
+   ],
+   "next": "bot_source",
+   "sources": [
+    {
+     "docId": "pmid:33956777",
+     "where": "Diagnosis recommendations; Laboratory testing; Botulinum antitoxin treatment; Allergic reactions; Treatments other than antitoxin"
+    },
+    {
+     "docId": "url:70acc34ef4ac",
+     "where": "2; 5.1; 5.4"
+    }
+   ]
+  },
+  {
+   "id": "bot_source",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Exposure history",
+   "outcomes": [
+    {
+     "id": "wound",
+     "if": "Wound source; injection drug use with an abscess or wound",
+     "ddx": {
+      "lead": [
+       "Botulism"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Wound",
+       "dose": "Debridement is the center of wound treatment; antimicrobials do not treat the botulism itself",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33956777",
+         "where": "Antimicrobials"
+        }
+       ]
+      },
+      {
+       "item": "Wound antibiotics",
+       "dose": "After the antitoxin, with debridement: penicillin G 3 million units IV every 4 hours, or metronidazole 500 mg every 8 hours if penicillin-allergic",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29083673",
+         "where": "Treatment / management"
+        }
+       ]
+      }
+     ],
+     "next": "end_bot_wound"
+    },
+    {
+     "id": "food",
+     "if": "Food or no source found; home-canned food, or no exposure",
+     "ddx": {
+      "lead": [
+       "Botulism"
+      ],
+      "out": []
+     },
+     "next": "end_bot"
+    }
+   ]
+  },
+  {
+   "id": "end_bot_wound",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Wound botulism: antitoxin as early as possible, the wound debrided and its infection treated as the clinical situation requires (penicillin G or metronidazole for a wound source), and the health department involved. Aminoglycosides can worsen the paralysis."
+  },
+  {
+   "id": "end_bot",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Foodborne or source-unknown botulism: antitoxin on clinical grounds, the health department called at once so the food and anyone else who ate it can be traced, serum sent before the antitoxin, and serial breathing checks; no exposure history does not rule it out. Paralysis lasts weeks to months, and with intensive care almost all survive."
+  },
+  {
+   "id": "infant_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Infant under 1 year: hypotonia, constipation, weak suck and cry. Next?",
+   "options": [
+    "BabyBIG IV on clinical grounds; ICU with a low threshold to intubate",
+    "IV gentamicin and ampicillin for presumed sepsis in a young infant",
+    "Equine heptavalent antitoxin (BAT) as the first-choice antitoxin in infants",
+    "Glycerin suppository to obtain the stool for the toxin assay"
+   ],
+   "answer": 0,
+   "chainStep": "BabyBIG 1.0 mL/kg (50 mg/kg) as a single IV infusion as soon as the clinical diagnosis is made, via the California infant botulism program; ICU, continuous end-tidal CO2, low threshold to intubate; lumbar puncture to rule out meningitis; no antibiotics, no aminoglycosides",
+   "why": "Infant botulism is treated with human-derived botulism immune globulin (BabyBIG), given as soon as the clinical diagnosis is made and obtained through the California Department of Public Health program; BAT is the antitoxin for other toxin types and for older patients. Antibiotics are not indicated and aminoglycosides worsen the weakness. Stool is collected by enema with sterile water, not with glycerin suppositories. About half need intubation, so the threshold is low.",
+   "orders": [
+    {
+     "item": "BabyBIG",
+     "dose": "1.0 mL/kg (50 mg/kg) as a single IV infusion; start at 0.5 mL/kg/h, then 1.0 mL/kg/h after 15 minutes if no reaction; toxin type A or B, under 1 year",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8559de08e0f6",
+       "where": "1; 2.2; 2.3"
+      }
+     ]
+    },
+    {
+     "item": "Access",
+     "dose": "Through the California Department of Public Health Infant Botulism Treatment and Prevention Program",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Infants and children"
+      }
+     ]
+    },
+    {
+     "item": "Airway",
+     "dose": "About half need intubation; ICU, low threshold, continuous end-tidal CO2",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29630230",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotics",
+     "dose": "Not indicated",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:29630230",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Aminoglycosides",
+     "dose": "Strictly avoid: they worsen the weakness",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:29630230",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "pmid:33956777",
+       "where": "Antimicrobials"
+      }
+     ]
+    },
+    {
+     "item": "Stool",
+     "dose": "Enema with sterile nonbacteriostatic water; no glycerin suppositories",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33956777",
+       "where": "Collection and transportation of specimens"
+      },
+      {
+       "docId": "pmid:29630230",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Lumbar puncture",
+     "dose": "To rule out meningitis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29630230",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ],
+   "next": "end_infant",
+   "sources": [
+    {
+     "docId": "url:8559de08e0f6",
+     "where": "1; 2.2; 2.3"
+    },
+    {
+     "docId": "pmid:33956777",
+     "where": "Infants and children: infant botulism syndrome; Collection of specimens"
+    },
+    {
+     "docId": "pmid:29630230",
+     "where": "Evaluation; Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_infant",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Infant botulism: BabyBIG on clinical grounds, intensive care with a low threshold to intubate, and no antibiotics or aminoglycosides. About 20% are linked to raw honey, which infants should not be given."
+  },
+  {
+   "id": "func_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Hoover sign positive; reflexes, tone and plantars normal. Next?",
+   "options": [
+    "Treat the symptoms as real; physiotherapy, CBT and follow-up",
+    "An SSRI as the main treatment, in place of a therapy referral",
+    "Tell her the Hoover sign shows the weakness is not real",
+    "IVIG while the nerve conduction studies are being arranged"
+   ],
+   "answer": 0,
+   "chainStep": "Acknowledge the symptoms as real; refer for physiotherapy and cognitive behavioral therapy; arrange follow-up; further tests only as the presentation requires",
+   "why": "Functional weakness is inconsistent, with normal reflexes and a positive Hoover sign (the weak leg presses down when the other leg lifts against resistance). The symptoms are real and not intentional. Confronting the patient, or calling it just psychological, is what the source warns against, and medication is for a comorbid anxiety or depression, not a substitute for therapy. Psychotherapy, mainly CBT, is first line, with physiotherapy alongside, and frequent follow-up is one of the most important parts of treatment; there is nothing for IVIG to treat.",
+   "orders": [
+    {
+     "item": "Psychotherapy",
+     "dose": "CBT, first line",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31855394",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Physical therapy",
+     "dose": "First line with CBT for motor symptoms",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31855394",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Medication",
+     "dose": "For comorbid anxiety or depression",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31855394",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Tests",
+     "dose": "Guided by the presentation; most patients with weakness have EMG or MRI",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31855394",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ],
+   "next": "end_func",
+   "sources": [
+    {
+     "docId": "pmid:31855394",
+     "where": "History and physical; Evaluation; Treatment / management; Differential diagnosis"
+    }
+   ]
+  },
+  {
+   "id": "end_func",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Functional weakness: diagnosed on positive signs such as the Hoover sign and collapsing weakness, with normal reflexes; the symptoms are real and not deliberate. CBT and physiotherapy with regular follow-up; tests only as the presentation needs."
+  }
+ ],
+ "cases": [
+  {
+   "id": "gbs_vent",
+   "label": "GBS with failing breathing",
+   "vignette": "44-year-old man, 9 days of tingling feet, then legs and arms weakening; diarrhea 2 weeks ago. Speaks in short phrases. HR 118, BP 152/94, SpO2 95% on air, weight 80 kg.",
+   "picks": {
+    "front": "airway",
+    "pattern_result": "gbs",
+    "csf": "early",
+    "gbs_severity": "unable",
+    "gbs_icu": "icu",
+    "recheck": "clear"
+   },
+   "results": {
+    "front": "FVC 1.3 L (16 mL/kg), MIP 25 cm H2O, weak cough.",
+    "pattern_result": "Legs 2/5, arms 4/5, bilateral facial weakness; reflexes absent throughout; pupils and eye movements normal; no sensory level; no tick on a full skin search.",
+    "csf": "CSF protein within the reference range, 2 white cells per microliter; day 5 of weakness.",
+    "gbs_severity": "Bedbound, cannot stand; weakness began 5 days ago.",
+    "gbs_icu": "Ventilated; heart rate swinging 50 to 130, blood pressure labile.",
+    "recheck": "Glucose 110 mg/dL, potassium 4.2 mmol/L; no sensory level, saddle sensation normal."
+   }
+  },
+  {
+   "id": "gbs_ward",
+   "label": "GBS stable on the ward",
+   "vignette": "29-year-old woman, 6 days of tingling hands and feet, then legs giving way; a flu-like illness 3 weeks ago. HR 88, BP 122/76, SpO2 98%, weight 60 kg.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "gbs",
+    "csf": "aod",
+    "gbs_severity": "unable",
+    "gbs_icu": "ward"
+   },
+   "results": {
+    "front": "FVC 3.1 L (52 mL/kg), MIP 70 cm H2O, strong cough; glucose 96 mg/dL, potassium 4.0 mmol/L; no focal deficit, no sensory level, saddle sensation and bladder normal.",
+    "pattern_result": "Legs 3/5 and arms 4/5, symmetric; reflexes absent; pupils, eye movements and swallow normal; no tick.",
+    "csf": "CSF protein raised at 1.2 g/L, 3 white cells per microliter.",
+    "gbs_severity": "Cannot walk 10 m without help; 6 days from the first weakness.",
+    "gbs_icu": "FVC steady at 3.0 L over 24 hours; swallow and cough normal; sinus rhythm, blood pressure steady."
+   }
+  },
+  {
+   "id": "gbs_walks",
+   "label": "Mild GBS, still walking",
+   "vignette": "35-year-old man, 4 days of tingling feet and heavy legs after a cold. HR 76, BP 128/80, SpO2 99%.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "gbs",
+    "csf": "aod",
+    "gbs_severity": "walks"
+   },
+   "results": {
+    "front": "FVC 4.6 L, MIP 90 cm H2O; glucose 92 mg/dL, potassium 4.3 mmol/L; no focal deficit, no sensory level, bladder normal.",
+    "pattern_result": "Distal leg weakness 4+/5; ankle reflexes absent, knee reflexes reduced; cranial nerves and pupils normal; no tick.",
+    "csf": "CSF protein raised at 0.9 g/L, 1 white cell per microliter.",
+    "gbs_severity": "Walks 10 m unaided with a slightly wide gait; no change over 24 hours."
+   }
+  },
+  {
+   "id": "gbs_pleo",
+   "label": "Not GBS after all",
+   "vignette": "41-year-old man with HIV, off treatment, 1 week of tingling feet, then weak legs, now clumsy hands. Afebrile. HR 90, BP 118/72, SpO2 98%.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "gbs",
+    "csf": "pleo"
+   },
+   "results": {
+    "front": "FVC 3.9 L, MIP 80 cm H2O; glucose 101 mg/dL, potassium 3.9 mmol/L; no focal deficit, no sensory level, saddle sensation and bladder normal.",
+    "pattern_result": "Legs 3/5, hands 4/5; reflexes absent; pupils and cranial nerves normal; no tick.",
+    "csf": "CSF 160 white cells per microliter, protein raised."
+   }
+  },
+  {
+   "id": "tick",
+   "label": "A tick behind the ear",
+   "vignette": "38-year-old woman, home from a hiking trip in Montana 5 days ago; unsteady since yesterday, legs now weak, hands tingling. Afebrile, no rash.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "tick"
+   },
+   "results": {
+    "front": "FVC 2.9 L, MIP 60 cm H2O; glucose 92 mg/dL, potassium 4.1 mmol/L; no focal deficit, no sensory level, bladder normal.",
+    "pattern_result": "Legs 2/5, arms 4/5; reflexes absent; pupils normal; parting her hair, an engorged tick is attached behind the right ear."
+   }
+  },
+  {
+   "id": "mg_trigger",
+   "label": "Myasthenic crisis after a chest infection",
+   "vignette": "67-year-old man with myasthenia gravis on pyridostigmine 60 mg four times a day; urgent care started levofloxacin for a cough 2 days ago. Now struggling to swallow and short of breath. T 38.2 °C (100.8 °F), HR 104, SpO2 93%, weight 72 kg.",
+   "picks": {
+    "front": "airway",
+    "pattern_result": "mg",
+    "mg_type": "trigger",
+    "recheck": "clear"
+   },
+   "results": {
+    "front": "FVC 1.1 L (15 mL/kg), weak cough, saliva pooling.",
+    "pattern_result": "Bilateral ptosis worse on sustained upgaze, nasal speech, weak neck flexion; reflexes present; sensation normal.",
+    "mg_type": "Pupils 4 mm and reactive, no sweating, diarrhea or fasciculations, HR 104; saliva pools from the weak swallow, no excess secretion; chest x-ray shows right lower lobe consolidation; levofloxacin on the drug chart.",
+    "recheck": "Glucose 128 mg/dL, potassium 4.0 mmol/L; no sensory level."
+   }
+  },
+  {
+   "id": "mg_none",
+   "label": "Myasthenic crisis, no trigger found",
+   "vignette": "33-year-old woman with myasthenia gravis on pyridostigmine, 4 days of worsening double vision, slurred speech, choking on liquids and arm weakness; taking her doses as prescribed. T 36.8 °C (98.2 °F), HR 84, SpO2 97%, weight 70 kg.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "mg",
+    "mg_type": "none"
+   },
+   "results": {
+    "front": "FVC 1.6 L (23 mL/kg), MIP 35 cm H2O, cough weak but clearing; glucose 90 mg/dL, potassium 4.2 mmol/L; no sensory level.",
+    "pattern_result": "Fatigable ptosis and diplopia, nasal speech, proximal arm weakness; reflexes present; sensation normal.",
+    "mg_type": "Pupils normal, mouth dry, no fasciculations, HR 84; afebrile, chest x-ray and urine clear; no new drug."
+   }
+  },
+  {
+   "id": "mg_chol",
+   "label": "Too much pyridostigmine",
+   "vignette": "58-year-old woman with myasthenia gravis, weaker over 3 days despite extra pyridostigmine doses she took at home. BP 110/70, SpO2 96%, weight 60 kg.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "mg",
+    "mg_type": "chol"
+   },
+   "results": {
+    "front": "FVC 2.2 L (37 mL/kg), MIP 40 cm H2O; glucose 98 mg/dL, potassium 3.9 mmol/L; no sensory level.",
+    "pattern_result": "Ptosis, weak neck flexion and proximal limbs; reflexes present; sensation normal.",
+    "mg_type": "Pupils 2 mm, drooling, wet chest, abdominal cramps and diarrhea, fasciculations in both thighs, HR 52; afebrile; no new drug besides the extra pyridostigmine."
+   }
+  },
+  {
+   "id": "bot_food",
+   "label": "A family dinner",
+   "vignette": "47-year-old man and his wife both developed blurred and double vision and trouble swallowing 18 hours after a family dinner. Fully alert. T 36.9 °C (98.4 °F), HR 92, weight 78 kg.",
+   "picks": {
+    "front": "airway",
+    "pattern_result": "bot",
+    "bot_source": "food",
+    "recheck": "clear"
+   },
+   "results": {
+    "front": "FVC 1.4 L (18 mL/kg), secretions pooling.",
+    "pattern_result": "Bilateral ptosis, ophthalmoplegia, dilated poorly reactive pupils, facial weakness, arms weaker than legs; reflexes reduced; sensation normal; no tick.",
+    "bot_source": "Home-canned green beans served at the dinner; no wounds, no drug use.",
+    "recheck": "Glucose 102 mg/dL, potassium 3.9 mmol/L; no sensory level."
+   }
+  },
+  {
+   "id": "bot_wound",
+   "label": "Double vision in a heroin user",
+   "vignette": "31-year-old woman who injects heroin; 2 days of double vision, slurred speech and difficulty swallowing. Alert. T 37.0 °C (98.6 °F), HR 96, weight 58 kg.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "bot",
+    "bot_source": "wound"
+   },
+   "results": {
+    "front": "FVC 2.8 L, MIP 55 cm H2O; glucose 88 mg/dL, potassium 4.0 mmol/L; no sensory level.",
+    "pattern_result": "Ptosis, ophthalmoplegia, fixed dilated pupils, dysarthria, proximal arm weakness; reflexes reduced; sensation normal; no tick.",
+    "bot_source": "A fluctuant abscess at an injection site on the thigh; no home-canned food."
+   }
+  },
+  {
+   "id": "infant",
+   "label": "A floppy 3-month-old",
+   "vignette": "3-month-old girl, 4 days of constipation, then feeding poorly with a weak cry; her parents say she is floppy. Afebrile, weight 5.6 kg.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "infant"
+   },
+   "results": {
+    "front": "Breathing comfortably, end-tidal CO2 normal; glucose 80 mg/dL, potassium 4.5 mmol/L.",
+    "pattern_result": "Generalized hypotonia, head lag, bilateral ptosis, pupils that tire with repeated light, weak suck and gag; reflexes diminished; no tick. Her grandmother has been giving her honey on the pacifier."
+   }
+  },
+  {
+   "id": "functional",
+   "label": "A leg that gives way",
+   "vignette": "26-year-old woman, left leg weakness coming and going for a week, now dragging it into triage. HR 82, BP 118/74.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "functional"
+   },
+   "results": {
+    "front": "FVC 3.8 L; glucose 94 mg/dL, potassium 4.1 mmol/L; not sudden, no face or arm weakness, no sensory level, bladder normal.",
+    "pattern_result": "Left leg collapses under light pressure; when she lifts the right leg against resistance the left heel presses down; reflexes, tone and plantars normal and symmetric; sensory loss patchy, not in a dermatome."
+   }
+  },
+  {
+   "id": "myopathy",
+   "label": "Aching, weak thighs",
+   "vignette": "70-year-old man on atorvastatin, 3 days of aching thighs and shoulders, now unable to rise from a chair; dark urine.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "other"
+   },
+   "results": {
+    "front": "FVC 3.4 L; glucose 112 mg/dL, potassium 4.6 mmol/L, creatinine raised; no focal deficit, no sensory level.",
+    "pattern_result": "Proximal weakness with tender thighs and shoulders; reflexes present; pupils and eye movements normal; sensation normal."
+   }
+  },
+  {
+   "id": "hypoglycemia",
+   "label": "Weak and sweaty on insulin",
+   "vignette": "62-year-old woman on insulin, found weak and sweaty at home, barely able to lift her arms.",
+   "picks": {
+    "front": "glucose"
+   },
+   "results": {
+    "front": "Fingerstick glucose 40 mg/dL (2.2 mmol/L); airway clear, breathing comfortably."
+   }
+  },
+  {
+   "id": "potassium",
+   "label": "Paralyzed at 3 a.m.",
+   "vignette": "26-year-old man woke at 3 a.m. unable to lift his legs or arms; he played soccer last evening, then ate a large meal. HR 112, BP 136/70.",
+   "picks": {
+    "front": "potassium"
+   },
+   "results": {
+    "front": "Potassium 1.9 mmol/L, ECG with U waves; FVC 3.8 L; glucose 102 mg/dL."
+   }
+  },
+  {
+   "id": "stroke",
+   "label": "Sudden one-sided weakness",
+   "vignette": "71-year-old man, right arm and leg weakness and slurred speech that began suddenly 50 minutes ago. BP 168/94.",
+   "picks": {
+    "front": "focal"
+   },
+   "results": {
+    "front": "Right face, arm and leg weak, word-finding trouble; breathing comfortably; glucose 124 mg/dL, potassium 4.2 mmol/L."
+   }
+  },
+  {
+   "id": "spine_flag",
+   "label": "Weak legs after breast cancer",
+   "vignette": "64-year-old woman treated for breast cancer 3 years ago, 2 weeks of mid-back pain, now both legs weak and numb.",
+   "picks": {
+    "front": "spine"
+   },
+   "results": {
+    "front": "Sensory level at T8, legs 3/5 with brisk reflexes; bladder emptying normally; breathing comfortably; glucose 99 mg/dL, potassium 4.0 mmol/L."
+   }
+  },
+  {
+   "id": "cord_compress",
+   "label": "Stiff, weak legs and a rising numbness",
+   "vignette": "45-year-old man, 3 days of stiff, weak legs and numbness creeping up from his feet; no cancer history, no fever, no drug use.",
+   "picks": {
+    "front": "level",
+    "mri_result": "compress"
+   },
+   "results": {
+    "front": "Sensory level at T10, brisk knee reflexes, upgoing plantars; saddle sensation and bladder normal; breathing comfortably; glucose 95 mg/dL, potassium 4.4 mmol/L.",
+    "mri_result": "A thoracic disc herniation at T9 to T10 compresses the cord."
+   }
+  },
+  {
+   "id": "myelitis",
+   "label": "A band around the chest",
+   "vignette": "28-year-old woman, a week after a viral illness, 2 days of a tight band around her chest and numb, weak legs.",
+   "picks": {
+    "front": "level",
+    "mri_result": "myelitis"
+   },
+   "results": {
+    "front": "Sensory level at T6, legs 3/5, brisk reflexes; saddle sensation normal, bladder emptying normally; breathing comfortably; glucose 88 mg/dL, potassium 4.1 mmol/L.",
+    "mri_result": "No compression; T2 signal within the cord at T6 and T7, enhancing with gadolinium."
+   }
+  },
+  {
+   "id": "cord_normal",
+   "label": "A level with a normal scan",
+   "vignette": "55-year-old man, 4 days of numb legs up to the lower chest and weak legs; no cancer history, no fever, no drug use.",
+   "picks": {
+    "front": "level",
+    "mri_result": "normal"
+   },
+   "results": {
+    "front": "Sensory level at T10, legs 4/5; saddle sensation and bladder normal; breathing comfortably; glucose 104 mg/dL, potassium 4.3 mmol/L.",
+    "mri_result": "Whole-spine MRI with and without gadolinium: no compression and no signal change in the cord."
+   }
+  },
+  {
+   "id": "vent_glucose",
+   "label": "Drooling and limp on insulin",
+   "vignette": "52-year-old man on insulin and a sulfonylurea, found limp and drooling, unable to clear his secretions. HR 104, BP 142/88, SpO2 92%.",
+   "picks": {
+    "front": "airway",
+    "recheck": "glucose"
+   },
+   "results": {
+    "front": "Secretions pooling, too weak to cough them clear; FVC not obtainable.",
+    "recheck": "Breathing supported; fingerstick glucose 32 mg/dL (1.8 mmol/L); potassium 4.1 mmol/L; no sensory level."
+   }
+  },
+  {
+   "id": "vent_potassium",
+   "label": "Paralyzed and short of breath",
+   "vignette": "31-year-old man woke unable to move his arms or legs and is now short of breath; he ran a half marathon yesterday. HR 118, BP 140/72, weight 75 kg.",
+   "picks": {
+    "front": "airway",
+    "recheck": "potassium"
+   },
+   "results": {
+    "front": "FVC 1.3 L (17 mL/kg), MIP 28 cm H2O, weak cough.",
+    "recheck": "Breathing supported; potassium 1.6 mmol/L with U waves on the ECG; glucose 108 mg/dL; no sensory level."
+   }
+  },
+  {
+   "id": "vent_level",
+   "label": "Numb to the neck and breathless",
+   "vignette": "40-year-old woman, 2 days of numbness rising from her feet to her neck, weak arms and legs, now breathless; no cancer history, no fever, no drug use. Weight 64 kg.",
+   "picks": {
+    "front": "airway",
+    "recheck": "level",
+    "mri_result": "myelitis"
+   },
+   "results": {
+    "front": "FVC 1.1 L (17 mL/kg), MIP 26 cm H2O, paradoxical breathing.",
+    "recheck": "Breathing supported; glucose 96 mg/dL, potassium 4.0 mmol/L; sensory level at C5, brisk reflexes in the legs.",
+    "mri_result": "No compression; T2 signal within the cord from C3 to C5, enhancing with gadolinium."
+   }
+  },
+  {
+   "id": "mg_new",
+   "label": "Drooping eyelids, then choking",
+   "vignette": "29-year-old woman, 3 weeks of drooping eyelids and double vision that worsen through the day, now choking on food and slurring her speech; no diagnosis yet and no regular medicines. HR 88, SpO2 97%, weight 62 kg.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "mg_new"
+   },
+   "results": {
+    "front": "FVC 1.6 L (26 mL/kg), MIP 38 cm H2O, cough weak but clearing; glucose 90 mg/dL, potassium 4.1 mmol/L; no sensory level.",
+    "pattern_result": "Fatigable ptosis on sustained upgaze, diplopia, nasal speech, weak neck flexion; reflexes present; pupils normal, no excess secretions; sensation normal."
+   }
+  },
+  {
+   "id": "gbs_mild_pleo",
+   "label": "GBS with a few CSF cells",
+   "vignette": "37-year-old man, 8 days of tingling feet, then weak legs and hands; a sore throat 3 weeks ago. HR 90, BP 126/78, SpO2 98%, weight 82 kg.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "gbs",
+    "csf": "mild",
+    "gbs_severity": "unable",
+    "gbs_icu": "ward"
+   },
+   "results": {
+    "front": "FVC 4.0 L (49 mL/kg), MIP 75 cm H2O; glucose 98 mg/dL, potassium 4.0 mmol/L; no focal deficit, no sensory level, bladder normal.",
+    "pattern_result": "Legs 3/5, hands 4/5, symmetric; reflexes absent; pupils and cranial nerves normal; no tick.",
+    "csf": "CSF protein raised at 1.0 g/L, 24 white cells per microliter.",
+    "gbs_severity": "Cannot walk 10 m without help; 8 days from the first weakness.",
+    "gbs_icu": "FVC steady at 3.9 L over 24 hours; swallow and cough normal; sinus rhythm, blood pressure steady."
+   }
+  },
+  {
+   "id": "gbs_late",
+   "label": "GBS at three weeks",
+   "vignette": "58-year-old woman, weakness rising from her feet for 3 weeks, seen now for the first time; she can no longer walk. HR 84, BP 130/80, SpO2 97%.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "gbs",
+    "csf": "aod",
+    "gbs_severity": "late"
+   },
+   "results": {
+    "front": "FVC 2.6 L, MIP 55 cm H2O; glucose 101 mg/dL, potassium 4.2 mmol/L; no focal deficit, no sensory level, bladder normal.",
+    "pattern_result": "Legs 2/5, arms 4/5; reflexes absent; pupils normal; no tick.",
+    "csf": "CSF protein raised at 1.6 g/L, 2 white cells per microliter.",
+    "gbs_severity": "Cannot walk 10 m; weakness began 3 weeks ago."
+   }
+  },
+  {
+   "id": "gbs_walks_fast",
+   "label": "Still walking, but worse by the hour",
+   "vignette": "45-year-old man, 3 days of tingling feet and weak legs after a diarrheal illness; weaker since he arrived this morning. HR 112, BP 168/96, SpO2 98%.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "gbs",
+    "csf": "aod",
+    "gbs_severity": "walks_fast"
+   },
+   "results": {
+    "front": "FVC 4.2 L, MIP 80 cm H2O; glucose 94 mg/dL, potassium 4.3 mmol/L; no focal deficit, no sensory level, bladder normal.",
+    "pattern_result": "Legs 4/5, arms 5/5; reflexes absent in the legs; pupils normal; no tick.",
+    "csf": "CSF protein raised at 0.8 g/L, 3 white cells per microliter.",
+    "gbs_severity": "Walks 10 m unaided, but strength has fallen over 6 hours and the heart rate swings between 60 and 130."
+   }
+  },
+  {
+   "id": "unstable",
+   "label": "Weak, drowsy and hypotensive",
+   "vignette": "74-year-old man brought in weak and drowsy after 2 days of feeling unwell at home.",
+   "picks": {
+    "front": "unstable"
+   },
+   "results": {
+    "front": "GCS 11, BP 78/44, HR 128 and irregular; glucose 118 mg/dL, potassium 4.4 mmol/L."
+   }
+  },
+  {
+   "id": "mfs",
+   "label": "Double vision and an unsteady walk",
+   "vignette": "36-year-old man, 4 days of double vision and an unsteady walk, a week after a diarrheal illness. Alert, afebrile. HR 80, BP 124/78.",
+   "picks": {
+    "front": "stable",
+    "pattern_result": "mfs"
+   },
+   "results": {
+    "front": "FVC 4.5 L, MIP 90 cm H2O; glucose 92 mg/dL, potassium 4.1 mmol/L; no focal deficit, no sensory level, bladder normal.",
+    "pattern_result": "Bilateral ophthalmoplegia, ataxic gait, reflexes absent; limb strength nearly normal; pupils reactive; swallow normal; no tick."
+   }
+  },
+  {
+   "id": "vent_spine",
+   "label": "Breast cancer, weak legs, failing breath",
+   "vignette": "62-year-old woman treated for breast cancer 3 years ago, 4 days of mid-back pain, now both legs weak and numb below the chest; breathless. Weight 70 kg.",
+   "picks": {
+    "front": "airway",
+    "recheck": "spine"
+   },
+   "results": {
+    "front": "FVC 1.2 L (17 mL/kg), MIP 28 cm H2O, weak cough.",
+    "recheck": "Breathing supported; glucose 104 mg/dL, potassium 4.1 mmol/L; sensory level at T6, legs 2/5 with brisk reflexes."
+   }
+  }
+ ]
+}

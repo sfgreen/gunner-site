@@ -23,7 +23,7 @@ function Fig({ src, alt, caption, n }: { src: string; alt: string; caption: stri
 export default function FreeOneTwenty() {
   const store = appStoreUrl(CAMPAIGN);
   const title = 'The Free 120 predicts better than its reputation. Almost nobody takes it in time to use it.';
-  const desc = 'A Free 120 to Step 2 CK conversion table from 215 real score reports, plus how it compares with NBME and UWSA forms as a predictor, and the timing problem that wastes it.';
+  const desc = 'A Free 120 to Step 2 CK conversion table from 215 real score reports, how it compares with NBME and UWSA as a predictor, and the timing problem that wastes it.';
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ScholarlyArticle',
@@ -43,8 +43,9 @@ export default function FreeOneTwenty() {
       title="What a Free 120 percentage is actually worth"
       lede={<>215 students who posted a current-form Free 120 percentage and then a real Step 2 score. The conversion table nobody publishes, and the reason most people get nothing out of it.</>}
       crumb={[{ href: '/free120', label: 'Free 120' }, { href: '/research', label: 'Research' }]}
-      metaTitle="Free 120 to Step 2 CK Score: Conversion Table from 215 Real Reports"
+      metaTitle="Free 120 to Step 2 CK Score Conversion Table: 215 Real Reports"
       metaDesc={desc}
+      ogImage="/og/research/free-120-to-step-2.png"
       campaign={CAMPAIGN}
       head={<>
         <link rel="canonical" href="https://stepgunner.com/research/free-120-to-step-2" />
@@ -82,6 +83,7 @@ export default function FreeOneTwenty() {
         .fig img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--hair); background: var(--bg); display: block; }
         .fig figcaption { font-size: 13px; color: var(--ink-dim); line-height: 1.6; margin-top: 10px; } .fig figcaption b { color: var(--ink); }
         .tbl { width: 100%; border-collapse: collapse; margin: 8px 0 24px; font-size: 14.5px; background: var(--bg-2); border: 1px solid var(--hair); border-radius: 12px; overflow: hidden; }
+        .tblwrap { overflow-x: auto; }
         .tbl th { text-align: left; font-family: var(--mono); font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); padding: 9px 12px; border-bottom: 1px solid var(--hair-strong); background: var(--bg-3); }
         .tbl td { padding: 9px 12px; border-bottom: 1px solid var(--hair); color: var(--ink-dim); } .tbl tr:last-child td { border-bottom: 0; }
         .tbl td.n, .tbl th.n { text-align: right; font-family: var(--mono); } .tbl td.n b { color: var(--ink); }
@@ -125,16 +127,18 @@ export default function FreeOneTwenty() {
 
       <Fig n={1} src="/research/f120_fig2_bands.svg" alt="Median real Step 2 score by Free 120 band, with the interquartile range of each band" caption="Gold dot is the median; the bar is the middle half of students in that band. The spread is the point: a band tells you the centre, not your score." />
 
-      <table className="tbl">
-        <thead><tr><th>Free 120, current form</th><th className="n">students</th><th className="n">median real Step 2</th><th className="n">middle half</th></tr></thead>
-        <tbody>
-          <tr><td>65 to 69%</td><td className="n">12</td><td className="n"><b>247</b></td><td className="n">242 to 251</td></tr>
-          <tr><td>70 to 74%</td><td className="n">31</td><td className="n"><b>250</b></td><td className="n">246 to 258</td></tr>
-          <tr className="hi"><td>75 to 79%</td><td className="n">68</td><td className="n"><b>256</b></td><td className="n">252 to 261</td></tr>
-          <tr><td>80 to 84%</td><td className="n">50</td><td className="n"><b>261</b></td><td className="n">255 to 267</td></tr>
-          <tr><td>85% and up</td><td className="n">48</td><td className="n"><b>270</b></td><td className="n">265 to 273</td></tr>
-        </tbody>
-      </table>
+      <div className="tblwrap">
+        <table className="tbl">
+          <thead><tr><th>Free 120, current form</th><th className="n">students</th><th className="n">median real Step 2</th><th className="n">middle half</th></tr></thead>
+          <tbody>
+            <tr><td>65 to 69%</td><td className="n">12</td><td className="n"><b>247</b></td><td className="n">242 to 251</td></tr>
+            <tr><td>70 to 74%</td><td className="n">31</td><td className="n"><b>250</b></td><td className="n">246 to 258</td></tr>
+            <tr className="hi"><td>75 to 79%</td><td className="n">68</td><td className="n"><b>256</b></td><td className="n">252 to 261</td></tr>
+            <tr><td>80 to 84%</td><td className="n">50</td><td className="n"><b>261</b></td><td className="n">255 to 267</td></tr>
+            <tr><td>85% and up</td><td className="n">48</td><td className="n"><b>270</b></td><td className="n">265 to 273</td></tr>
+          </tbody>
+        </table>
+      </div>
 
       <p>Six students scored under 65% with a median of 250, which I am not going to band, because six students is not a band. If you are under 65 with a week left, the honest answer is that I do not have enough people like you to tell you anything.</p>
       <p><strong>Read the fourth column, not the third.</strong> A 78% has a median of 256, and the middle half of students at that band landed between 252 and 261. The full range at that band ran from 241 to 272. The median is a real signal and the spread around it is thirty points wide, and both things are true at once.</p>
@@ -143,16 +147,18 @@ export default function FreeOneTwenty() {
       <Fig n={2} src="/research/f120_fig1_scatter.svg" alt="Scatter of Free 120 percent correct against actual Step 2 CK score for 215 students, with the fitted line" caption="215 students. The correlation is 0.55, which is not what a test with no signal looks like." />
       <p>I ran every single-number rule I could build against the 205 students who had both a Free 120 and at least one NBME or UWSA, scoring each one leave-one-out so nothing gets graded on its own fit:</p>
 
-      <table className="tbl">
-        <thead><tr><th>single-number rule</th><th className="n">mean miss against the real score</th></tr></thead>
-        <tbody>
-          <tr className="hi"><td>Free 120 percentage alone</td><td className="n"><b>5.9 points</b></td></tr>
-          <tr><td>Best NBME or UWSA form</td><td className="n">5.4</td></tr>
-          <tr><td>Plain average of every form</td><td className="n">5.3</td></tr>
-          <tr><td>Recency-weighted NBME/UWSA average</td><td className="n">5.2</td></tr>
-          <tr className="hi"><td>Forms and the Free 120 together</td><td className="n"><b>5.0</b></td></tr>
-        </tbody>
-      </table>
+      <div className="tblwrap">
+        <table className="tbl">
+          <thead><tr><th>single-number rule</th><th className="n">mean miss against the real score</th></tr></thead>
+          <tbody>
+            <tr className="hi"><td>Free 120 percentage alone</td><td className="n"><b>5.9 points</b></td></tr>
+            <tr><td>Best NBME or UWSA form</td><td className="n">5.4</td></tr>
+            <tr><td>Plain average of every form</td><td className="n">5.3</td></tr>
+            <tr><td>Recency-weighted NBME/UWSA average</td><td className="n">5.2</td></tr>
+            <tr className="hi"><td>Forms and the Free 120 together</td><td className="n"><b>5.0</b></td></tr>
+          </tbody>
+        </table>
+      </div>
 
       <p>One free 120-question exam, taken in an afternoon, gets you within 5.9 points. A full set of paid NBMEs gets you to 5.2. That gap is smaller than most people would guess.</p>
       <p>The bottom row is the part I did not expect. Adding the Free 120 on top of the forms improves the prediction, 5.2 to 5.0. It is not re-measuring what the NBMEs already told you. It carries something of its own, which makes sense once you say it out loud: it is the only practice material written by the organisation that writes the real exam.</p>

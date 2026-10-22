@@ -1,0 +1,2593 @@
+{
+ "id": "pw_seizure",
+ "title": "Seizure",
+ "world": "neuro",
+ "synonyms": [
+  "seizure",
+  "convulsion",
+  "fit",
+  "status epilepticus",
+  "convulsive status epilepticus",
+  "refractory status epilepticus",
+  "first seizure",
+  "first unprovoked seizure",
+  "breakthrough seizure",
+  "epilepsy",
+  "postictal",
+  "eclampsia",
+  "alcohol withdrawal seizure",
+  "hyponatremic seizure",
+  "isoniazid overdose",
+  "pyridoxine",
+  "post-traumatic seizure",
+  "lorazepam",
+  "midazolam",
+  "fosphenytoin",
+  "levetiracetam",
+  "valproate",
+  "functional seizures",
+  "dissociative seizures",
+  "psychogenic nonepileptic seizures",
+  "PNES",
+  "convulsive syncope"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:26900382",
+   "label": "AES 2016",
+   "title": "Evidence-Based Guideline: Treatment of Convulsive Status Epilepticus in Children and Adults (American Epilepsy Society, 2016)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26900382/"
+  },
+  {
+   "docId": "url:44d97365d556",
+   "label": "NICE NG217",
+   "title": "Epilepsies in children, young people and adults (2022, updated 2026)",
+   "url": "https://www.nice.org.uk/guidance/ng217"
+  },
+  {
+   "docId": "url:ed91553c28fb",
+   "label": "NICE NG133",
+   "title": "Hypertension in pregnancy: diagnosis and management (2019, updated 2023)",
+   "url": "https://www.nice.org.uk/guidance/ng133"
+  },
+  {
+   "docId": "url:ed1c1f5fb274",
+   "label": "NICE NG232",
+   "title": "Head injury: assessment and early management (2023)",
+   "url": "https://www.nice.org.uk/guidance/ng232"
+  },
+  {
+   "docId": "url:053089e98c8e",
+   "label": "NICE CG100",
+   "title": "Alcohol-use disorders: diagnosis and management of physical complications (2010, updated 2017)",
+   "url": "https://www.nice.org.uk/guidance/cg100"
+  },
+  {
+   "docId": "url:7b949a5cebeb",
+   "label": "NICE CG109",
+   "title": "Transient loss of consciousness ('blackouts') in over 16s (2010, updated 2023)",
+   "url": "https://www.nice.org.uk/guidance/cg109"
+  },
+  {
+   "docId": "url:4a5f477fcfcd",
+   "label": "NICE NG240",
+   "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management (2024)",
+   "url": "https://www.nice.org.uk/guidance/ng240"
+  },
+  {
+   "docId": "pmid:15494903",
+   "label": "IDSA meningitis 2004",
+   "title": "Practice guidelines for the management of bacterial meningitis (IDSA, 2004)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15494903/"
+  },
+  {
+   "docId": "url:64e48d5d8ef3",
+   "label": "NICE NG128",
+   "title": "Stroke and transient ischaemic attack in over 16s: diagnosis and initial management (2019, updated 2022)",
+   "url": "https://www.nice.org.uk/guidance/ng128"
+  },
+  {
+   "docId": "pmid:27935814",
+   "label": "SfE hyponatraemia 2016",
+   "title": "Society for Endocrinology emergency guidance: emergency management of severe symptomatic hyponatraemia in adult patients (2016)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27935814/"
+  },
+  {
+   "docId": "url:a9b2f42c7c05",
+   "label": "FDA label: Ativan",
+   "title": "Ativan (lorazepam) Injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5fc0e987-61c9-40c4-b0d5-fcea07c8733e"
+  },
+  {
+   "docId": "url:0ea2cefd9415",
+   "label": "FDA label: diazepam injection",
+   "title": "Diazepam Injection USP prescribing information (Hospira), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f"
+  },
+  {
+   "docId": "url:0d2d6c44cce5",
+   "label": "FDA label: Cerebyx",
+   "title": "Cerebyx (fosphenytoin sodium) injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d4c36fad-0ba2-4cd4-9c5e-dcf843f38a5a"
+  },
+  {
+   "docId": "url:3d588e6f3ee3",
+   "label": "FDA label: isoniazid",
+   "title": "Isoniazid Tablets USP prescribing information (Teva), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9499f1cf-2f46-4047-8b71-90aee7dee854"
+  },
+  {
+   "docId": "url:1d4b714d9283",
+   "label": "FDA label: magnesium sulfate",
+   "title": "Magnesium Sulfate Injection USP 50% prescribing information (Fresenius Kabi), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6a5d362b-7aa7-40d3-898d-09407cce0713"
+  },
+  {
+   "docId": "url:8b91b4e8a488",
+   "label": "FDA label: thiamine",
+   "title": "Thiamine Hydrochloride Injection USP prescribing information (Meitheal), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bfe8ac7-9294-4980-9635-90f8e6f6dd8e"
+  },
+  {
+   "docId": "url:b1149372731c",
+   "label": "NICE NG126",
+   "title": "Ectopic pregnancy and miscarriage: diagnosis and initial management (2019, updated 2026)",
+   "url": "https://www.nice.org.uk/guidance/ng126"
+  },
+  {
+   "docId": "pmid:29262111",
+   "label": "StatPearls hyponatremia (review)",
+   "title": "StatPearls: Hyponatremia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29262111/"
+  },
+  {
+   "docId": "pmid:29939554",
+   "label": "StatPearls SIADH (review)",
+   "title": "StatPearls: Syndrome of Inappropriate Antidiuretic Hormone Secretion",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29939554/"
+  },
+  {
+   "docId": "pmid:31869161",
+   "label": "StatPearls osmotic demyelination (review)",
+   "title": "StatPearls: Central Pontine Myelinolysis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31869161/"
+  },
+  {
+   "docId": "url:0d1d8dbd9530",
+   "label": "FDA tolvaptan",
+   "title": "FDA label: Samsca (tolvaptan) tablets",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5526617c-c7b9-4556-886d-729bbabbc566"
+  },
+  {
+   "docId": "pmid:34742248",
+   "label": "BMC Emerg Med 2021 review",
+   "title": "Prevention of alcohol withdrawal seizure recurrence and treatment of other alcohol withdrawal symptoms in the emergency department: a rapid review (BMC Emerg Med 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34742248/"
+  }
+ ],
+ "differential": [
+  "Status epilepticus",
+  "Hypoglycemia",
+  "Eclampsia",
+  "Hyponatremia",
+  "Alcohol withdrawal",
+  "Isoniazid toxicity",
+  "Traumatic brain injury",
+  "Meningitis",
+  "Stroke",
+  "Epilepsy",
+  "Vasovagal syncope",
+  "Cardiac syncope",
+  "Functional seizures"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "A patient presents with a seizure. First moves?",
+   "options": [
+    "ABCs, a fingerstick glucose, and the time the seizure began",
+    "Load an antiseizure drug first; check the glucose after",
+    "Non-contrast CT first; the glucose with the laboratory panel",
+    "An EEG first, to confirm it is a seizure"
+   ],
+   "answer": 0,
+   "chainStep": "Airway, breathing, circulation; oxygen; ECG monitoring; fingerstick glucose; time the seizure from onset; IV access and blood tests",
+   "why": "The first 5 minutes are stabilization: airway, breathing and circulation, the seizure timed from its onset, oxygen, ECG monitoring and a fingerstick glucose, then IV access and blood tests. A correctable cause such as hypoglycemia must be sought and corrected at once. NICE calls for resuscitation and immediate emergency treatment once a convulsive seizure has lasted 5 minutes, so treatment does not wait for a scan or an EEG.",
+   "next": "first_look",
+   "sources": [
+    {
+     "docId": "pmid:26900382",
+     "where": "Figure 1, stabilization phase, items 1 to 6; Background"
+    },
+    {
+     "docId": "url:44d97365d556",
+     "where": "7.1.1"
+    },
+    {
+     "docId": "url:a9b2f42c7c05",
+     "where": "Dosage and Administration, Status Epilepticus, General Advice"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Oxygen",
+     "dose": "By nasal cannula or mask; consider intubation if respiratory assistance is needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, stabilization phase, item 3"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "ECG monitoring and vital signs",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, stabilization phase, items 2 and 4"
+      }
+     ]
+    },
+    {
+     "item": "IV access and blood tests",
+     "dose": "Electrolytes, blood count, toxicology screen and, if appropriate, antiseizure drug levels",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, stabilization phase, item 6"
+      }
+     ]
+    },
+    {
+     "item": "Pregnancy",
+     "dose": "Ask: eclampsia is the convulsive condition of pre-eclampsia, which begins after 20 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "Terms used in this guideline: eclampsia, pre-eclampsia"
+      }
+     ]
+    }
+   ],
+   "note": "Adults only. Not in this version: children (febrile and neonatal seizures), nonconvulsive status epilepticus found on EEG, overdoses other than isoniazid, and alcohol withdrawal delirium."
+  },
+  {
+   "id": "first_look",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Glucose, airway, clock and pregnancy",
+   "outcomes": [
+    {
+     "id": "hypo",
+     "if": "Glucose under 60 mg/dL; fingerstick at the bedside",
+     "ddx": {
+      "lead": [
+       "Hypoglycemia"
+      ],
+      "out": []
+     },
+     "next": "hypo_tx"
+    },
+    {
+     "id": "eclampsia",
+     "if": "Eclampsia; over 20 weeks pregnant or after birth, new hypertension of 140/90 or more, glucose normal",
+     "ddx": {
+      "lead": [
+       "Eclampsia"
+      ],
+      "out": [
+       "Hypoglycemia"
+      ]
+     },
+     "next": "mag"
+    },
+    {
+     "id": "status",
+     "if": "Still seizing at 5 minutes; or seizures without waking between, glucose normal, no hypertension in pregnancy",
+     "ddx": {
+      "lead": [
+       "Status epilepticus"
+      ],
+      "out": [
+       "Hypoglycemia"
+      ]
+     },
+     "next": "benzo"
+    },
+    {
+     "id": "not_waking",
+     "if": "Seizure over, not waking; no convulsing, airway at risk, glucose normal, no hypertension in pregnancy",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Hypoglycemia"
+      ]
+     },
+     "next": "airway"
+    },
+    {
+     "id": "awake",
+     "if": "Seizure over, awake; one seizure, glucose normal, no hypertension in pregnancy",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Hypoglycemia",
+       "Status epilepticus"
+      ]
+     },
+     "next": "baseline_workup"
+    }
+   ]
+  },
+  {
+   "id": "hypo_tx",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Fingerstick glucose under 60 mg/dL. Next?",
+   "options": [
+    "Thiamine 100 mg IV, then 50 mL of 50% dextrose IV",
+    "Lorazepam first; correct the glucose once the seizure stops",
+    "Wait for the laboratory glucose to confirm it first"
+   ],
+   "answer": 0,
+   "chainStep": "Thiamine 100 mg IV, then 50 mL of 50% dextrose IV",
+   "why": "With a fingerstick glucose under 60 mg/dL, AES gives adults thiamine 100 mg IV and then 50 mL of 50% dextrose IV, inside the stabilization phase. Hypoglycemia is a correctable cause that must be sought and corrected at once, so it waits neither for the benzodiazepine nor for a laboratory value. Thiamine is indicated where rapid restoration is needed, as in Wernicke's encephalopathy, and when IV dextrose is given to someone with marginal thiamine status, to avoid precipitating heart failure.",
+   "next": "hypo_result",
+   "sources": [
+    {
+     "docId": "pmid:26900382",
+     "where": "Figure 1, stabilization phase, item 5"
+    },
+    {
+     "docId": "url:a9b2f42c7c05",
+     "where": "Dosage and Administration, Status Epilepticus, General Advice"
+    },
+    {
+     "docId": "url:8b91b4e8a488",
+     "where": "Indications and Usage"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Thiamine",
+     "dose": "100 mg IV, before the dextrose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, stabilization phase, item 5"
+      }
+     ]
+    },
+    {
+     "item": "Dextrose",
+     "dose": "50 mL of 50% dextrose (D50W) IV",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, stabilization phase, item 5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hypo_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After the dextrose",
+   "outcomes": [
+    {
+     "id": "woke",
+     "if": "Seizure stopped, waking; glucose now normal",
+     "ddx": {
+      "lead": [
+       "Hypoglycemia"
+      ],
+      "out": []
+     },
+     "next": "end_hypo"
+    },
+    {
+     "id": "still",
+     "if": "Still seizing at 5 minutes; glucose now normal",
+     "ddx": {
+      "lead": [
+       "Status epilepticus"
+      ],
+      "out": []
+     },
+     "next": "benzo"
+    }
+   ]
+  },
+  {
+   "id": "end_hypo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypoglycemic seizure: thiamine 100 mg IV, then 50 mL of 50% dextrose, and the seizure stopped. Why the glucose fell is a separate workup, not in this pathway."
+  },
+  {
+   "id": "mag",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "A fit after 20 weeks of pregnancy or after birth, with new hypertension. Anticonvulsant?",
+   "options": [
+    "IV magnesium sulfate: a loading dose, then an infusion",
+    "IV lorazepam now, then a fosphenytoin load if she fits again",
+    "IV levetiracetam loading dose, then an infusion",
+    "IV diazepam now; magnesium if she has another fit"
+   ],
+   "answer": 0,
+   "chainStep": "IV magnesium sulfate: 4 g over 5 to 15 minutes (US label 4 to 5 g), then an infusion (1 g an hour; US label 1 to 2 g) continued for 24 hours after the last fit",
+   "why": "Eclampsia is the convulsive condition of pre-eclampsia, and NICE counts it among the features of severe pre-eclampsia. After an eclamptic fit NICE gives IV magnesium sulfate and says not to use diazepam, phenytoin or other anticonvulsants as an alternative to it. NICE uses the Collaborative Eclampsia Trial regimen; the US label also describes 1 to 2 g an hour after the IV load. Before each dose the knee jerk should be present, breathing about 16 a minute or more and urine output 100 mL or more over the preceding 4 hours, with an injectable calcium salt at hand.",
+   "next": "mag_result",
+   "sources": [
+    {
+     "docId": "url:ed91553c28fb",
+     "where": "1.8.1; 1.8.4; 1.8.5; 1.5.7; Terms used in this guideline: eclampsia"
+    },
+    {
+     "docId": "url:1d4b714d9283",
+     "where": "Dosage and Administration, In Pre-eclampsia or Eclampsia; Precautions"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Magnesium sulfate load",
+     "dose": "4 g IV over 5 to 15 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.8.4"
+      }
+     ]
+    },
+    {
+     "item": "Magnesium sulfate load, US label",
+     "dose": "4 to 5 g IV in 250 mL (or 4 g diluted to a 10 or 20% solution, IV over 3 to 4 minutes)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1d4b714d9283",
+       "where": "Dosage and Administration, In Pre-eclampsia or Eclampsia"
+      }
+     ]
+    },
+    {
+     "item": "Magnesium sulfate infusion",
+     "dose": "1 g an hour for 24 hours; after a fit, until 24 hours after the last fit",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.8.4"
+      }
+     ]
+    },
+    {
+     "item": "Magnesium sulfate, US label",
+     "dose": "After the initial IV dose, some clinicians give 1 to 2 g an hour; no more than 30 to 40 g in 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1d4b714d9283",
+       "where": "Dosage and Administration, In Pre-eclampsia or Eclampsia"
+      }
+     ]
+    },
+    {
+     "item": "Magnesium monitoring",
+     "dose": "Knee jerk present and breathing about 16 a minute or more; urine output 100 mL or more over the 4 hours before each dose; injectable calcium salt immediately available",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1d4b714d9283",
+       "where": "Precautions"
+      }
+     ]
+    },
+    {
+     "item": "Diazepam, phenytoin or another anticonvulsant instead of magnesium",
+     "dose": "Do not use",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.8.5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mag_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "On the magnesium",
+   "outcomes": [
+    {
+     "id": "no_refit",
+     "if": "No further fits; on the infusion",
+     "ddx": {
+      "lead": [
+       "Eclampsia"
+      ],
+      "out": []
+     },
+     "next": "bp_check"
+    },
+    {
+     "id": "refit",
+     "if": "Another fit on the infusion; a recurrent eclamptic fit",
+     "ddx": {
+      "lead": [
+       "Eclampsia"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Further magnesium sulfate",
+       "dose": "2 to 4 g IV over 5 to 15 minutes",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:ed91553c28fb",
+         "where": "1.8.4"
+        }
+       ]
+      }
+     ],
+     "next": "bp_check"
+    }
+   ]
+  },
+  {
+   "id": "bp_check",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Blood pressure on the magnesium",
+   "outcomes": [
+    {
+     "id": "severe",
+     "if": "Severe hypertension; 160 systolic or 110 diastolic, or more",
+     "ddx": {
+      "lead": [
+       "Eclampsia"
+      ],
+      "out": []
+     },
+     "next": "bp_tx"
+    },
+    {
+     "id": "below_severe",
+     "if": "Below the severe range; under 160/110, still 140/90 or more",
+     "ddx": {
+      "lead": [
+       "Eclampsia"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Antihypertensive (NICE)",
+       "dose": "Labetalol for hypertension in pre-eclampsia (nifedipine if labetalol is not suitable), aiming for 135/85 or less",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:ed91553c28fb",
+         "where": "1.5.6; Table 2"
+        }
+       ]
+      },
+      {
+       "item": "Antihypertensive below the severe range (US)",
+       "dose": "The US treatment threshold is not in the sources read",
+       "status": "pending"
+      },
+      {
+       "item": "Birth",
+       "dose": "Antenatally: eclampsia is a threshold for planned early birth before 37 weeks (antenatal corticosteroids if preterm); from 37 weeks, initiate birth within 24 to 48 hours; a senior obstetrician decides timing",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:ed91553c28fb",
+         "where": "1.5.7; 1.5.8; 1.5.11; Table 3"
+        }
+       ]
+      }
+     ],
+     "next": "end_eclampsia_mild"
+    }
+   ]
+  },
+  {
+   "id": "bp_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Eclampsia on magnesium; BP still over 160 systolic or 110 diastolic. Next?",
+   "options": [
+    "Lower it now: labetalol, oral nifedipine or IV hydralazine",
+    "No antihypertensive yet; recheck after the magnesium load",
+    "Treat it once the pressure passes 180 systolic or 120 diastolic",
+    "A second magnesium load for the blood pressure"
+   ],
+   "answer": 0,
+   "chainStep": "Treat severe hypertension now: labetalol (oral or IV), oral nifedipine or IV hydralazine; monitor the response; antenatally, a senior obstetrician decides on timing of birth",
+   "why": "Severe hypertension, over 160 systolic or over 110 diastolic, in pregnancy or after birth is treated immediately with labetalol, oral nifedipine or IV hydralazine, and the response is monitored. NICE lists magnesium as the anticonvulsant and these three as the antihypertensives.",
+   "next": "end_eclampsia",
+   "sources": [
+    {
+     "docId": "url:ed91553c28fb",
+     "where": "1.8.6; 1.8.7; Terms used in this guideline: severe hypertension; 1.5.7; 1.5.8; 1.5.11; Table 3"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Antihypertensive",
+     "dose": "Labetalol (oral or IV), oral nifedipine or IV hydralazine, immediately; NG133 states no doses",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.8.6"
+      }
+     ]
+    },
+    {
+     "item": "Fluid with hydralazine",
+     "dose": "Consider up to 500 mL crystalloid before or with the first IV hydralazine dose, antenatally",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.8.8"
+      }
+     ]
+    },
+    {
+     "item": "Birth",
+     "dose": "Antenatally: eclampsia is a threshold for planned early birth before 37 weeks (antenatal corticosteroids if preterm); from 37 weeks, initiate birth within 24 to 48 hours; a senior obstetrician decides timing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed91553c28fb",
+       "where": "1.5.7; 1.5.8; 1.5.11; Table 3"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_eclampsia",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Eclampsia: IV magnesium sulfate (4 g over 5 to 15 minutes, then 1 g an hour until 24 hours after the last fit, and 2 to 4 g more for a recurrent fit), never diazepam or phenytoin in its place, and immediate treatment of severe hypertension; antenatally, a senior obstetrician decides on timing of birth."
+  },
+  {
+   "id": "end_eclampsia_mild",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Eclampsia with blood pressure below the severe range: magnesium sulfate as above, never diazepam or phenytoin in its place, and a senior obstetrician decides on birth. NICE offers labetalol for hypertension in pre-eclampsia, aiming for 135/85 or less; the US treatment threshold below the severe range is not in the sources read."
+  },
+  {
+   "id": "airway",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "The seizure has stopped, but the patient is not waking and the airway is at risk. First?",
+   "options": [
+    "Secure the airway, oxygen, intubation if needed",
+    "Flumazenil IV to reverse any benzodiazepine on board",
+    "CT head first, with the airway secured afterwards"
+   ],
+   "answer": 0,
+   "chainStep": "Open and protect the airway; oxygen; intubate if respiratory assistance is needed; ECG monitoring",
+   "why": "Airway, breathing and circulation come first, with oxygen and intubation when respiratory assistance is needed. Flumazenil is contraindicated after a benzodiazepine given to control a life-threatening condition such as status epilepticus, and it can lead to withdrawal reactions including seizures.",
+   "next": "nw_result",
+   "sources": [
+    {
+     "docId": "pmid:26900382",
+     "where": "Figure 1, stabilization phase, items 1, 3 and 4"
+    },
+    {
+     "docId": "url:0ea2cefd9415",
+     "where": "Overdosage"
+    }
+   ]
+  },
+  {
+   "id": "nw_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Over the next minutes",
+   "outcomes": [
+    {
+     "id": "another",
+     "if": "Another convulsion without waking; a second seizure, no recovery between",
+     "ddx": {
+      "lead": [
+       "Status epilepticus"
+      ],
+      "out": []
+     },
+     "next": "benzo"
+    },
+    {
+     "id": "no_more",
+     "if": "No further convulsion, still not waking; consciousness stays low",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_not_waking"
+    }
+   ]
+  },
+  {
+   "id": "end_not_waking",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Not waking after a seizure, with no further convulsion: the airway comes first. Nonconvulsive status epilepticus, where seizures produce a continuous or fluctuating twilight state, is one cause to look for; when to get an EEG and imaging is not in the open sources read (the Neurocritical Care Society guideline was not readable here)."
+  },
+  {
+   "id": "benzo",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Status epilepticus, glucose checked. First drug?",
+   "options": [
+    "IV lorazepam, IM midazolam or IV diazepam",
+    "IV fosphenytoin 20 mg PE/kg as the first drug",
+    "Keep timing it; treat if it passes 30 minutes",
+    "Intubate first, then give the benzodiazepine"
+   ],
+   "answer": 0,
+   "chainStep": "A benzodiazepine from 5 minutes: IV lorazepam, IM midazolam or IV diazepam, as one full dose",
+   "why": "A benzodiazepine is the initial therapy of choice from 5 minutes (Level A): IM midazolam, IV lorazepam or IV diazepam. Fosphenytoin belongs to the second phase, from 20 minutes. Protocols use 5 minutes to keep seizures from reaching 30, and repeated seizures without full recovery between them count as status. Respiratory depression is less common with a benzodiazepine than with placebo: untreated status is what threatens the breathing.",
+   "next": "iv_access",
+   "sources": [
+    {
+     "docId": "pmid:26900382",
+     "where": "Abstract, Results; Background; Recommendations and Algorithm"
+    },
+    {
+     "docId": "url:44d97365d556",
+     "where": "7.1.1; 7.1.3"
+    }
+   ],
+   "orders": [
+    {
+     "item": "If none of the three is available",
+     "dose": "IV phenobarbital 15 mg/kg, single dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, initial therapy phase"
+      }
+     ]
+    },
+    {
+     "item": "Prehospital alternatives",
+     "dose": "Rectal diazepam 0.2 to 0.5 mg/kg (max 20 mg, single dose), intranasal or buccal midazolam",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, initial therapy phase; Recommendations and Algorithm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "iv_access",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "IV access",
+   "outcomes": [
+    {
+     "id": "iv",
+     "if": "IV line in; placed at the first attempts",
+     "next": "lzp_dose"
+    },
+    {
+     "id": "no_iv",
+     "if": "No IV access yet; veins not found",
+     "next": "im_mid"
+    }
+   ]
+  },
+  {
+   "id": "lzp_dose",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "IV line in, an adult over 40 kg. Lorazepam dose?",
+   "options": [
+    "4 mg IV slowly; one repeat dose if the seizure continues",
+    "1 mg IV, repeated every 2 to 3 minutes until the seizure stops",
+    "8 mg IV in one push",
+    "0.4 mg IV, then reassess in 20 minutes"
+   ],
+   "answer": 0,
+   "chainStep": "Lorazepam 4 mg IV slowly (2 mg a minute); one repeat dose if the seizure continues",
+   "why": "AES doses IV lorazepam at 0.1 mg/kg, at most 4 mg a dose, with one repeat; the US label gives adults 4 mg slowly at 2 mg a minute and a further 4 mg if seizures continue or recur after a 10 to 15 minute observation period. NICE gives the second dose if the seizure has not stopped 5 to 10 minutes after the first. Initial therapy is one adequate full dose, not broken into small doses.",
+   "next": "benzo_result",
+   "sources": [
+    {
+     "docId": "pmid:26900382",
+     "where": "Figure 1, initial therapy phase; Recommendations and Algorithm"
+    },
+    {
+     "docId": "url:a9b2f42c7c05",
+     "where": "Dosage and Administration, Status Epilepticus, Intravenous Injection"
+    },
+    {
+     "docId": "url:44d97365d556",
+     "where": "7.1.8"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Lorazepam (AES)",
+     "dose": "0.1 mg/kg a dose, maximum 4 mg a dose; may repeat once",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, initial therapy phase"
+      }
+     ]
+    },
+    {
+     "item": "Lorazepam (US label)",
+     "dose": "4 mg IV slowly (2 mg/min) at 18 and older; a further 4 mg if seizures continue or recur after a 10 to 15 minute observation period",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a9b2f42c7c05",
+       "where": "Dosage and Administration, Status Epilepticus, Intravenous Injection"
+      }
+     ]
+    },
+    {
+     "item": "Second dose (NICE)",
+     "dose": "If the seizure does not stop within 5 to 10 minutes of the first dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44d97365d556",
+       "where": "7.1.8"
+      }
+     ]
+    },
+    {
+     "item": "IV diazepam instead",
+     "dose": "0.15 to 0.2 mg/kg a dose, maximum 10 mg a dose, may repeat once (AES); label: 5 to 10 mg IV, repeated at 10 to 15 minute intervals to a maximum of 30 mg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, initial therapy phase"
+      },
+      {
+       "docId": "url:0ea2cefd9415",
+       "where": "Dosage and Administration table, Status Epilepticus"
+      }
+     ]
+    },
+    {
+     "item": "Breathing",
+     "dose": "Assure airway patency, monitor respiration closely, give ventilatory support as required",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a9b2f42c7c05",
+       "where": "Warnings, Use in Status Epilepticus, Respiratory Depression"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "im_mid",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "No IV access yet, an adult over 40 kg. First drug?",
+   "options": [
+    "Midazolam 10 mg IM, one dose",
+    "Midazolam 2 mg IM, repeated every 5 minutes",
+    "Keep trying for a line, then lorazepam 4 mg IV",
+    "Fosphenytoin 20 mg PE/kg IM"
+   ],
+   "answer": 0,
+   "chainStep": "Midazolam 10 mg IM (over 40 kg), one dose",
+   "why": "Without established IV access, IM midazolam is more effective than IV lorazepam (Level A): 10 mg for an adult over 40 kg, as a single dose; AES gives initial therapy as one adequate full dose, never split into small repeats, and IM fosphenytoin should ordinarily not be used in status epilepticus.",
+   "next": "benzo_result",
+   "sources": [
+    {
+     "docId": "pmid:26900382",
+     "where": "Abstract, Results; Figure 1, initial therapy phase; Recommendations and Algorithm"
+    },
+    {
+     "docId": "url:0d2d6c44cce5",
+     "where": "2.3"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Midazolam IM",
+     "dose": "10 mg over 40 kg, 5 mg for 13 to 40 kg, single dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, initial therapy phase"
+      }
+     ]
+    },
+    {
+     "item": "If it continues and a line is in",
+     "dose": "NICE gives a second benzodiazepine dose 5 to 10 minutes after the first; AES repeats only IV lorazepam or IV diazepam and otherwise moves to second therapy at 20 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44d97365d556",
+       "where": "7.1.8"
+      },
+      {
+       "docId": "pmid:26900382",
+       "where": "Recommendations and Algorithm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "benzo_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After the benzodiazepine",
+   "outcomes": [
+    {
+     "id": "stopped",
+     "if": "Seizure stopped; breathing, starting to rouse",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "se_cause"
+    },
+    {
+     "id": "continues",
+     "if": "Still seizing after the benzodiazepine; 20 minutes in, no clue to a toxin",
+     "ddx": {
+      "lead": [
+       "Status epilepticus"
+      ],
+      "out": []
+     },
+     "next": "second"
+    },
+    {
+     "id": "inh",
+     "if": "Still seizing, isoniazid found; an empty bottle of isoniazid tablets",
+     "ddx": {
+      "lead": [
+       "Isoniazid toxicity"
+      ],
+      "out": []
+     },
+     "next": "pyridoxine"
+    },
+    {
+     "id": "stopped_unrousable",
+     "if": "Convulsions stopped, not waking; no return toward baseline",
+     "ddx": {
+      "lead": [
+       "Status epilepticus"
+      ],
+      "out": []
+     },
+     "next": "end_not_waking"
+    }
+   ]
+  },
+  {
+   "id": "second",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Still convulsing after the benzodiazepine, 20 minutes in. Next?",
+   "options": [
+    "One second-line load: levetiracetam, fosphenytoin or valproate",
+    "A third and a fourth lorazepam dose, 4 mg each, 5 minutes apart",
+    "Fosphenytoin 20 mg PE/kg at 300 mg PE a minute",
+    "An EEG to confirm seizures, then a second-line drug"
+   ],
+   "answer": 0,
+   "chainStep": "Second-line IV at 20 minutes, one full dose: levetiracetam 60 mg/kg (max 4,500 mg), fosphenytoin 20 mg PE/kg (max 1,500 mg PE) or valproate 40 mg/kg (max 3,000 mg)",
+   "why": "The second phase starts at 20 minutes and should be judged by 40. Fosphenytoin, valproic acid and levetiracetam are all reasonable, with no clear evidence that one is better; NICE adds that levetiracetam may be quicker to give, with fewer adverse effects. IV lorazepam is repeated only once. Fosphenytoin runs no faster than 150 mg PE a minute in adults because of severe hypotension and arrhythmias.",
+   "next": "second_result",
+   "sources": [
+    {
+     "docId": "pmid:26900382",
+     "where": "Recommendations and Algorithm; Figure 1, second therapy phase"
+    },
+    {
+     "docId": "url:44d97365d556",
+     "where": "7.1.9"
+    },
+    {
+     "docId": "url:0d2d6c44cce5",
+     "where": "Boxed warning"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Levetiracetam",
+     "dose": "60 mg/kg IV, maximum 4,500 mg, single dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, second therapy phase"
+      }
+     ]
+    },
+    {
+     "item": "Fosphenytoin",
+     "dose": "20 mg PE/kg IV, maximum 1,500 mg PE, single dose (AES); label: 15 to 20 mg PE/kg at 100 to 150 mg PE/min, with continuous ECG, blood pressure and respiratory monitoring",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, second therapy phase"
+      },
+      {
+       "docId": "url:0d2d6c44cce5",
+       "where": "Highlights, Dosage and Administration (2.3); 2.3"
+      }
+     ]
+    },
+    {
+     "item": "Valproic acid",
+     "dose": "40 mg/kg IV, maximum 3,000 mg, single dose; follow the MHRA valproate safety measures",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, second therapy phase"
+      },
+      {
+       "docId": "url:44d97365d556",
+       "where": "7.1.9"
+      }
+     ]
+    },
+    {
+     "item": "Phenobarbital",
+     "dose": "15 mg/kg IV, only if none of the three is available",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, second therapy phase"
+      }
+     ]
+    },
+    {
+     "item": "Fosphenytoin or phenytoin",
+     "dose": "Fosphenytoin preferred when both are available; phenytoin is an acceptable alternative",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Abstract, Results"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "second_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After the second-line drug",
+   "outcomes": [
+    {
+     "id": "stopped2",
+     "if": "Seizure stopped; within 40 minutes of onset",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "se_cause"
+    },
+    {
+     "id": "refractory",
+     "if": "Still seizing at 40 minutes; after a benzodiazepine and a second-line load",
+     "ddx": {
+      "lead": [
+       "Status epilepticus"
+      ],
+      "out": []
+     },
+     "next": "refractory"
+    },
+    {
+     "id": "stopped_unrousable",
+     "if": "Convulsions stopped, not waking; no return toward baseline",
+     "ddx": {
+      "lead": [
+       "Status epilepticus"
+      ],
+      "out": []
+     },
+     "next": "end_not_waking"
+    }
+   ]
+  },
+  {
+   "id": "refractory",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Still seizing at 40 minutes, after a benzodiazepine and a second-line drug. Next?",
+   "options": [
+    "Another second-line drug, or anesthetic doses on continuous EEG",
+    "A neuromuscular blocker, then reassess in an hour",
+    "Two more 4 mg lorazepam doses, then observe on the general ward",
+    "Hold further drugs until a formal EEG confirms the seizures"
+   ],
+   "answer": 0,
+   "chainStep": "Refractory status: expert guidance; another second-line drug or anesthetic doses of midazolam, propofol, pentobarbital or thiopental with continuous EEG; intubate if respiratory assistance is needed",
+   "why": "From 40 minutes there is no clear evidence to guide therapy. AES lists a repeat second-line drug or anesthetic doses of thiopental, midazolam, pentobarbital or propofol, all with continuous EEG monitoring; NICE tries an alternative second-line drug under expert guidance, then phenobarbital or general anaesthesia. AES counts paralytics among the inefficient therapies, and IV lorazepam is repeated only once.",
+   "next": "end_refractory",
+   "sources": [
+    {
+     "docId": "pmid:26900382",
+     "where": "Recommendations and Algorithm; Figure 1, third therapy phase; Background"
+    },
+    {
+     "docId": "url:44d97365d556",
+     "where": "7.1.10; 7.1.11"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Anesthetic infusion",
+     "dose": "Agent named (midazolam, propofol, pentobarbital or thiopental); doses not in the open sources read (Neurocritical Care Society 2012 not readable here)",
+     "status": "pending"
+    },
+    {
+     "item": "Continuous EEG",
+     "dose": "With any anesthetic dosing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, third therapy phase"
+      }
+     ]
+    },
+    {
+     "item": "Airway",
+     "dose": "Consider intubation if respiratory assistance is needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, stabilization phase, item 3"
+      }
+     ]
+    },
+    {
+     "item": "Phenobarbital (NICE third line)",
+     "dose": "Under expert guidance; AES dose 15 mg/kg IV",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44d97365d556",
+       "where": "7.1.11"
+      },
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, second therapy phase"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_refractory",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Refractory convulsive status epilepticus: expert guidance, then another second-line drug or anesthetic doses of midazolam, propofol, pentobarbital or thiopental with continuous EEG. The infusion doses and the ICU course are not in the open sources read."
+  },
+  {
+   "id": "pyridoxine",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Still seizing after the benzodiazepine; an empty isoniazid bottle is found. Next?",
+   "options": [
+    "IV pyridoxine: gram for gram, or 5 g if the amount is unknown",
+    "IV fosphenytoin 20 mg PE/kg at 100 to 150 mg PE a minute",
+    "Sodium bicarbonate IV first, for the metabolic acidosis",
+    "Activated charcoal down a nasogastric tube, then reassess the seizures"
+   ],
+   "answer": 0,
+   "chainStep": "Pyridoxine IV over 3 to 5 minutes, gram for gram with the isoniazid, or 5 g if the amount is unknown; repeat if seizures continue; protect the airway",
+   "why": "In a seizing patient after isoniazid, the label gives a slow IV bolus of pyridoxine equal gram for gram to the isoniazid, or 5 g in an adult when the amount is unknown, repeated if seizures continue, with diazepam if there is no response. Phenytoin is used cautiously because isoniazid interferes with its metabolism. Limiting absorption runs alongside, with the airway protected, but does not replace pyridoxine, and bicarbonate can worsen hypercarbia in a patient who is hypoventilating.",
+   "next": "end_inh",
+   "sources": [
+    {
+     "docId": "url:3d588e6f3ee3",
+     "where": "Overdosage, Treatment"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Pyridoxine",
+     "dose": "Slow IV bolus over 3 to 5 minutes, gram for gram with the isoniazid; 5 g in an adult if the amount is unknown; repeat if seizures continue (rarely more than 10 g)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3d588e6f3ee3",
+       "where": "Overdosage, Treatment, For the Symptomatic Patient"
+      }
+     ]
+    },
+    {
+     "item": "No response to pyridoxine",
+     "dose": "Diazepam",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3d588e6f3ee3",
+       "where": "Overdosage, Treatment, For the Symptomatic Patient"
+      }
+     ]
+    },
+    {
+     "item": "Phenytoin",
+     "dose": "Only cautiously: isoniazid interferes with its metabolism",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3d588e6f3ee3",
+       "where": "Overdosage, Treatment, For the Symptomatic Patient"
+      }
+     ]
+    },
+    {
+     "item": "Blood tests",
+     "dose": "Gases, electrolytes, BUN, glucose; type and cross-match for possible hemodialysis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3d588e6f3ee3",
+       "where": "Overdosage, General"
+      }
+     ]
+    },
+    {
+     "item": "Ventilation",
+     "dose": "Monitor blood carbon dioxide; support mechanically if there is respiratory insufficiency",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3d588e6f3ee3",
+       "where": "Overdosage, Rapid Control of Metabolic Acidosis"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_inh",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Isoniazid seizures: IV pyridoxine gram for gram (5 g if the amount is unknown), repeated if seizures continue, diazepam if there is no response, and airway and ventilation support; dialysis is probably not needed once pyridoxine, diazepam and bicarbonate control the seizures and acidosis."
+  },
+  {
+   "id": "se_cause",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "The seizures have stopped. Next?",
+   "options": [
+    "Find the cause: electrolytes, toxicology, drug levels",
+    "Discharge home once awake, with a neurology letter",
+    "Flumazenil IV now, to reverse the lorazepam or midazolam"
+   ],
+   "answer": 0,
+   "chainStep": "Seek and correct the cause: electrolytes including sodium, glucose, blood count, toxicology screen, antiseizure drug levels if on treatment",
+   "why": "Status epilepticus may come from a correctable acute cause such as hypoglycemia, hyponatremia or another metabolic or toxic derangement, which must be sought and corrected at once, and missed antiseizure doses are another cause. Flumazenil is contraindicated after a benzodiazepine given for status epilepticus.",
+   "next": "se_cause_result",
+   "sources": [
+    {
+     "docId": "url:a9b2f42c7c05",
+     "where": "Dosage and Administration, Status Epilepticus, General Advice"
+    },
+    {
+     "docId": "pmid:26900382",
+     "where": "Figure 1, stabilization phase, item 6"
+    },
+    {
+     "docId": "url:44d97365d556",
+     "where": "7.1.4; 7.1.5"
+    },
+    {
+     "docId": "url:0ea2cefd9415",
+     "where": "Overdosage"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Emergency management plan",
+     "dose": "Agree one if status epilepticus may recur",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44d97365d556",
+       "where": "7.1.12"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "se_cause_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "First labs and history",
+   "outcomes": [
+    {
+     "id": "se_hypona",
+     "if": "Sodium under 120 mmol/L; other labs normal",
+     "ddx": {
+      "lead": [
+       "Hyponatremia"
+      ],
+      "out": []
+     },
+     "next": "hypona_tx"
+    },
+    {
+     "id": "se_levels",
+     "if": "Known epilepsy, drug level low; doses missed",
+     "ddx": {
+      "lead": [
+       "Epilepsy"
+      ],
+      "out": []
+     },
+     "next": "end_se_epilepsy"
+    },
+    {
+     "id": "se_none",
+     "if": "No further cause on first labs; no epilepsy history",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_se_nocause"
+    }
+   ]
+  },
+  {
+   "id": "end_se_epilepsy",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Status epilepticus in known epilepsy with a low drug level: non-adherence is a cause of status. Agree an emergency management plan if status may recur; how to restart or reload the usual drug is not in the open sources read."
+  },
+  {
+   "id": "end_se_nocause",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Status epilepticus with no further cause on the first labs: brain imaging, since CT can show an acute lesion behind a new-onset seizure, and an emergency management plan if status may recur. EEG timing and the rest of the inpatient workup are not in the open sources read."
+  },
+  {
+   "id": "hypona_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "A seizure with a sodium under 120 mmol/L. Next?",
+   "options": [
+    "3% hypertonic saline now, for a 5 mmol/L rise in an hour",
+    "Fluid restriction and a repeat sodium in the morning",
+    "Correct the sodium to 135 mmol/L within 24 hours",
+    "Urine osmolality and urine sodium first, then treat the cause"
+   ],
+   "answer": 0,
+   "chainStep": "150 mL of 3% hypertonic saline IV over 20 minutes; check the sodium during a second 150 mL; repeat twice or until it has risen 5 mmol/L; no more than 10 mmol/L in the first 24 hours",
+   "why": "A seizure is a severe symptom of hyponatremia, and severe symptoms need immediate hypertonic saline whatever the cause: the aim is a 5 mmol/L rise in the first hour, then no more than 10 mmol/L in the first 24 hours, because over-correction risks osmotic demyelination. Management follows the symptoms, not the number, and urine osmolality and sodium define the cause after emergency treatment.",
+   "next": "end_hypona",
+   "sources": [
+    {
+     "docId": "pmid:27935814",
+     "where": "Clinical assessment; Treatment of severe symptomatic hyponatraemia; Managing over-correction; Figure 1; Figure 3 caption"
+    }
+   ],
+   "orders": [
+    {
+     "item": "3% hypertonic saline (SfE)",
+     "dose": "150 mL IV over 20 minutes; check sodium while giving a second 150 mL; repeat twice or until a 5 mmol/L rise",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935814",
+       "where": "Figure 1"
+      }
+     ]
+    },
+    {
+     "item": "3% hypertonic saline (US review)",
+     "dose": "100 mL IV boluses over 10 minutes as needed, aiming for 4 to 6 mEq/L in the first 4 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29262111",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:29939554",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "A review; the 2013 US expert panel itself was not readable. The SIADH chapter of the same review gives one 100 mL bolus over the first 3 to 4 hours."
+    },
+    {
+     "item": "24-hour correction limit",
+     "dose": "SfE: 10 mmol/L in the first 24 hours, 18 in 48, then 8 a day to 130; StatPearls: 8 to 12 a day, and 6 to 8 when hyponatremia has lasted 48 hours or more or its duration is unknown; StatPearls SIADH: no more than 8 a day; tolvaptan label: over 12 in 24 hours can cause osmotic demyelination",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:27935814",
+       "where": "Managing over-correction; Figure 1, box 4"
+      },
+      {
+       "docId": "pmid:31869161",
+       "where": "Treatment / Management, prevention"
+      },
+      {
+       "docId": "pmid:29939554",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "url:0d1d8dbd9530",
+       "where": "Boxed warning"
+      }
+     ],
+     "note": "The sources set different 24-hour limits; the tolvaptan label advises slower correction in severe malnutrition, alcoholism or advanced liver disease."
+    },
+    {
+     "item": "Over-correction",
+     "dose": "Stop hypertonic fluid if the rise passes 10 mmol/L in 24 hours or 18 mmol/L in 48 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935814",
+       "where": "Managing over-correction"
+      }
+     ]
+    },
+    {
+     "item": "Sodium checks",
+     "dose": "At 6 hours, 12 hours, then daily until stable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935814",
+       "where": "Figure 1, box 4"
+      }
+     ]
+    }
+   ],
+   "note": "UK Society for Endocrinology regimen. The 2014 European guideline and the 2013 US expert panel were not readable here, so US bolus volumes are not shown."
+  },
+  {
+   "id": "end_hypona",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hyponatremic seizure: 3% hypertonic saline at once, a 5 mmol/L rise in the first hour, then no more than 10 mmol/L in the first 24 hours; the cause is worked up after emergency treatment."
+  },
+  {
+   "id": "baseline_workup",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "One seizure, now over; awake, glucose normal. Next?",
+   "options": [
+    "Witness account, exam, electrolytes, 12-lead ECG",
+    "Load levetiracetam now, then take the history",
+    "An EEG first; the ECG once it is back",
+    "Glucose and sodium; leave the ECG to the ward team"
+   ],
+   "answer": 0,
+   "chainStep": "Witness history and examination; glucose, sodium and other electrolytes; 12-lead ECG",
+   "why": "A detailed history, using eyewitness accounts and video where possible, and an examination come first; a 12-lead ECG looks for cardiac conditions that mimic a seizure, and metabolic disturbance, including hypoglycemia, can cause seizures. Antiseizure medication starts once epilepsy is diagnosed. An EEG cannot exclude epilepsy and is not used routinely for a blackout. Imaging is offered when a structural cause is suspected, and NICE does not CT established epilepsy after a typical seizure.",
+   "next": "cause",
+   "sources": [
+    {
+     "docId": "url:44d97365d556",
+     "where": "1.2.1; 1.2.2; 1.2.3; 1.2.4; 1.2.6; 1.3.7; 4.2.1"
+    },
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.1.1.2; 1.1.2.2; 1.2.2.1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Witness account",
+     "dose": "What happened before, during and after: posture, prodrome, eyes, jerking and its length, tongue bite, recovery",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.1.1.2"
+      }
+     ]
+    },
+    {
+     "item": "12-lead ECG",
+     "dose": "To find cardiac conditions that could mimic an epileptic seizure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44d97365d556",
+       "where": "1.2.2"
+      }
+     ]
+    },
+    {
+     "item": "Pregnancy test",
+     "dose": "In women of reproductive age, think about offering one even when symptoms are non-specific",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.4.5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cause",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "History, exam, labs and ECG",
+   "outcomes": [
+    {
+     "id": "first",
+     "if": "First seizure, no cause found; normal exam, sodium and ECG, no trigger",
+     "ddx": {
+      "lead": [
+       "Epilepsy"
+      ],
+      "out": [
+       "Hyponatremia"
+      ]
+     },
+     "next": "first_dispo"
+    },
+    {
+     "id": "known",
+     "if": "Known epilepsy, usual seizure; on treatment, nothing new on exam",
+     "ddx": {
+      "lead": [
+       "Epilepsy"
+      ],
+      "out": []
+     },
+     "next": "known_step"
+    },
+    {
+     "id": "alcohol",
+     "if": "Alcohol withdrawal; heavy daily drinking, stopped 1 to 2 days ago",
+     "ddx": {
+      "lead": [
+       "Alcohol withdrawal"
+      ],
+      "out": []
+     },
+     "next": "etoh_step"
+    },
+    {
+     "id": "trauma",
+     "if": "Seizure after a head injury; a post-traumatic seizure",
+     "ddx": {
+      "lead": [
+       "Traumatic brain injury"
+      ],
+      "out": []
+     },
+     "next": "head_ct"
+    },
+    {
+     "id": "fever",
+     "if": "Fever and a stiff neck; headache, possible meningitis",
+     "ddx": {
+      "lead": [
+       "Meningitis"
+      ],
+      "out": []
+     },
+     "next": "mening"
+    },
+    {
+     "id": "deficit",
+     "if": "One-sided deficit persists; weakness or aphasia not clearing",
+     "ddx": {
+      "lead": [
+       "Stroke"
+      ],
+      "out": []
+     },
+     "next": "stroke_img"
+    },
+    {
+     "id": "hypona",
+     "if": "Sodium under 120 mmol/L; other labs normal",
+     "ddx": {
+      "lead": [
+       "Hyponatremia"
+      ],
+      "out": []
+     },
+     "next": "hypona_tx"
+    },
+    {
+     "id": "faint",
+     "if": "Features of a faint; upright, sweaty and pale first, brief jerks, quick recovery, normal ECG",
+     "ddx": {
+      "lead": [
+       "Vasovagal syncope"
+      ],
+      "out": []
+     },
+     "next": "faint_step"
+    },
+    {
+     "id": "cardiac",
+     "if": "ECG red flag; long QT, heart block or a conduction abnormality",
+     "ddx": {
+      "lead": [
+       "Cardiac syncope"
+      ],
+      "out": []
+     },
+     "next": "cardiac_step"
+    },
+    {
+     "id": "functional",
+     "if": "Possible functional seizures; changing, unusually long events, many unexplained symptoms",
+     "ddx": {
+      "lead": [
+       "Functional seizures"
+      ],
+      "out": []
+     },
+     "next": "functional_step"
+    }
+   ]
+  },
+  {
+   "id": "first_dispo",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "First unprovoked seizure; back to baseline, normal exam, sodium and ECG. Plan?",
+   "options": [
+    "No drug yet; urgent first-seizure referral, EEG, imaging, no driving",
+    "Start levetiracetam today and refer to neurology in 3 months",
+    "Routine neurology clinic in 3 months; driving can continue meanwhile",
+    "An EEG today, and discharge without follow-up if the EEG is normal"
+   ],
+   "answer": 0,
+   "chainStep": "No antiseizure drug yet; urgent referral to a first-seizure specialist (seen within 2 weeks); EEG and brain imaging; no driving until assessed; seizure safety advice",
+   "why": "After a first seizure NICE refers urgently, to be seen within 2 weeks, and does not routinely start an antiseizure medication: it considers one for a neurological deficit, unequivocal epileptic activity on EEG, a structural abnormality on imaging, or a risk the person finds unacceptable. EEG supports the diagnosis but cannot exclude epilepsy. Imaging looks for a structural cause: NICE calls MRI the investigation of choice, uses CT when MRI is contraindicated, and notes that CT can show an acute lesion behind a new-onset seizure. Anyone who has lost consciousness must not drive while waiting for specialist assessment.",
+   "next": "end_first",
+   "sources": [
+    {
+     "docId": "url:44d97365d556",
+     "where": "1.1.1; 1.1.8; 1.2.4; 1.2.5; 1.2.6; 1.2.7; 1.3.1; 1.3.2; 1.3 rationale; 4.2.2; 4.2 rationale"
+    },
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.5.2.1; 1.5.2.2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Referral",
+     "dose": "Urgent, for an appointment within 2 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44d97365d556",
+       "where": "1.1.1"
+      }
+     ]
+    },
+    {
+     "item": "EEG",
+     "dose": "Routine awake EEG if an epileptic seizure is suspected; as soon as possible, ideally within 72 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44d97365d556",
+       "where": "1.2.5; 1.2.7"
+      }
+     ]
+    },
+    {
+     "item": "Brain imaging",
+     "dose": "MRI is the investigation of choice (CT if MRI is contraindicated; MRI within 6 weeks once epilepsy is diagnosed); CT can show an acute lesion behind a new-onset seizure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44d97365d556",
+       "where": "1.2.4; 1.3.1; 1.3.2; 1.3 rationale"
+      }
+     ]
+    },
+    {
+     "item": "Antiseizure medication",
+     "dose": "Consider if any of these apply: a neurological deficit, unequivocal epileptic activity on EEG, a structural abnormality on imaging, or a risk of further seizures the person considers unacceptable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44d97365d556",
+       "where": "4.2.2"
+      }
+     ]
+    },
+    {
+     "item": "Driving",
+     "dose": "Not while waiting for specialist assessment; eligibility advice at first presentation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.5.2.1; 1.5.2.2"
+      }
+     ]
+    },
+    {
+     "item": "Safety advice",
+     "dose": "How to recognise a further seizure, first aid and safety, whom to contact",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44d97365d556",
+       "where": "1.1.8"
+      }
+     ]
+    }
+   ],
+   "note": "The seizure-free interval before driving again is set by the licensing authority; NICE points to the UK DVLA rules, and the US state rules are not in the sources read."
+  },
+  {
+   "id": "end_first",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "First unprovoked seizure with a normal workup: no antiseizure drug yet, urgent specialist referral within 2 weeks, an EEG (ideally within 72 hours) and brain imaging, safety advice, and no driving until assessed."
+  },
+  {
+   "id": "known_step",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Known epilepsy, a typical seizure, back to baseline. Next?",
+   "options": [
+    "Ask about missed doses; check the level",
+    "Switch to a different antiseizure drug today",
+    "A CT head before discharge"
+   ],
+   "answer": 0,
+   "chainStep": "Ask about adherence and triggers; antiseizure drug level if seizures are uncontrolled or adherence is in doubt; no routine CT after a typical seizure",
+   "why": "Non-adherence to antiseizure medication can cause status epilepticus, and NICE considers drug levels when seizures are uncontrolled or adherence is poor, and lists adherence and seizure triggers among the topics to discuss with people with epilepsy. A CT is not done for established epilepsy after a typical seizure unless there are other concerns.",
+   "next": "levels",
+   "sources": [
+    {
+     "docId": "url:44d97365d556",
+     "where": "7.1.5; 4.4.3; 1.3.7; 2.1.6"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Antiseizure drug level",
+     "dose": "Consider with uncontrolled seizures, side effects or poor adherence",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44d97365d556",
+       "where": "4.4.3"
+      }
+     ]
+    },
+    {
+     "item": "CT head",
+     "dose": "Not after a typical seizure in established epilepsy, unless there are other concerns",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:44d97365d556",
+       "where": "1.3.7"
+      }
+     ]
+    },
+    {
+     "item": "Reloading a missed drug",
+     "dose": "Not in the open sources read (the ACEP seizure policies were not readable here)",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "levels",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Drug level and history",
+   "outcomes": [
+    {
+     "id": "low",
+     "if": "Level low; doses missed this week",
+     "ddx": {
+      "lead": [
+       "Epilepsy"
+      ],
+      "out": []
+     },
+     "next": "end_adherence"
+    },
+    {
+     "id": "in_range",
+     "if": "Level in range; no missed doses",
+     "ddx": {
+      "lead": [
+       "Epilepsy"
+      ],
+      "out": []
+     },
+     "next": "end_breakthrough"
+    }
+   ]
+  },
+  {
+   "id": "end_adherence",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Breakthrough seizure from missed doses, confirmed by a low level: talk through adherence and triggers. How to restart or reload the drug is not in the open sources read."
+  },
+  {
+   "id": "end_breakthrough",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Seizure despite a level in range and no missed doses: uncontrolled seizures rather than non-adherence. NICE refers urgently, within 2 weeks, when a seizure recurs after a period of remission; dose changes are outside this pathway."
+  },
+  {
+   "id": "etoh_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "A seizure in alcohol withdrawal, now back to baseline. Next?",
+   "options": [
+    "Lorazepam, IV thiamine and admission for withdrawal care",
+    "Load IV phenytoin, then admit for withdrawal care",
+    "Discharge once sober, with outpatient detoxification advice",
+    "Start a long-term antiseizure drug and discharge"
+   ],
+   "answer": 0,
+   "chainStep": "Quick-acting benzodiazepine (lorazepam) for withdrawal seizures; parenteral then oral thiamine; admit for medically assisted withdrawal; no phenytoin",
+   "why": "For alcohol withdrawal seizures NICE considers a quick-acting benzodiazepine such as lorazepam to reduce the likelihood of further seizures, and says not to offer phenytoin. Acute withdrawal with seizures is an indication to offer admission for medically assisted withdrawal. A harmful or dependent drinker who is malnourished and attends the emergency department gets parenteral thiamine, then oral. Long-term antiseizure medication starts once epilepsy is diagnosed.",
+   "next": "end_etoh",
+   "sources": [
+    {
+     "docId": "url:053089e98c8e",
+     "where": "1.1.1.1; 1.1.5.1; 1.1.5.3; 1.2.1.3"
+    },
+    {
+     "docId": "url:44d97365d556",
+     "where": "4.2.1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Lorazepam",
+     "dose": "2 mg IV once after the seizure (ED studies); NICE CG100 names a quick-acting benzodiazepine without a dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34742248",
+       "where": "Results: benzodiazepines; Table 2"
+      },
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.1.5.1"
+      }
+     ]
+    },
+    {
+     "item": "Phenytoin",
+     "dose": "Do not offer for alcohol withdrawal seizures",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.1.5.3"
+      }
+     ]
+    },
+    {
+     "item": "Thiamine",
+     "dose": "Parenteral, then oral, if malnourished or at risk (NICE); label: 100 mg IV initially in Wernicke-Korsakoff syndrome",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.2.1.3; 1.2.1.4"
+      },
+      {
+       "docId": "url:8b91b4e8a488",
+       "where": "Dosage and Administration"
+      }
+     ],
+     "note": "Wernicke treatment doses differ by guideline (Royal College and UK 500 mg IV every 8 hours; EFNS 200 mg IV every 8 hours); see pw_ams and pw_agitation."
+    },
+    {
+     "item": "Withdrawal care",
+     "dose": "Admit; local protocols to assess and monitor; a symptom-triggered regimen in hospital",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.1.1.1; 1.1.2.2; 1.1.3.4"
+      }
+     ]
+    },
+    {
+     "item": "Brain imaging after a first withdrawal seizure",
+     "dose": "Not in the open sources read",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "end_etoh",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Alcohol withdrawal seizure: a quick-acting benzodiazepine such as lorazepam, never phenytoin, parenteral thiamine when malnourished, and admission for medically assisted withdrawal with symptom-triggered treatment."
+  },
+  {
+   "id": "head_ct",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "A seizure after a head injury. Next?",
+   "options": [
+    "Non-contrast CT head within 1 hour",
+    "MRI brain as the first scan",
+    "Observe for 4 hours; scan if the GCS falls",
+    "Skull x-ray first; CT if it shows a fracture"
+   ],
+   "answer": 0,
+   "chainStep": "CT head within 1 hour of the post-traumatic seizure",
+   "why": "In anyone 16 or over, a post-traumatic seizure calls for a CT head within 1 hour. CT is the primary investigation for traumatic brain injury; MRI is not, and plain skull x-rays are not used to diagnose brain injury without discussion with a neuroscience unit.",
+   "next": "head_result",
+   "sources": [
+    {
+     "docId": "url:ed1c1f5fb274",
+     "where": "1.5.1; 1.5.2; 1.5.4; 1.5.8"
+    }
+   ]
+  },
+  {
+   "id": "head_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT head",
+   "outcomes": [
+    {
+     "id": "bleed",
+     "if": "Bleed on CT; a new intracranial hemorrhage",
+     "ddx": {
+      "lead": [
+       "Traumatic brain injury"
+      ],
+      "out": []
+     },
+     "next": "end_head_bleed"
+    },
+    {
+     "id": "clear",
+     "if": "CT normal; GCS 15, no further seizure",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_head_clear"
+    }
+   ]
+  },
+  {
+   "id": "end_head_bleed",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Post-traumatic seizure with a bleed on CT: discuss with a neurosurgeon and admit. Antiseizure prophylaxis is not in the open sources read."
+  },
+  {
+   "id": "end_head_clear",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Post-traumatic seizure, CT normal, GCS 15, no further seizure: NICE admits for new imaging abnormalities, a GCS not back to 15, or continuing worrying symptoms such as further seizures; here admission rests on clinical concern. Antiseizure prophylaxis is not in the open sources read."
+  },
+  {
+   "id": "mening",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "A seizure with fever and a stiff neck. Next?",
+   "options": [
+    "Cultures, dexamethasone and antibiotics now; CT before any LP",
+    "Lumbar puncture first; antibiotics once the CSF results are back",
+    "CT head first; antibiotics after the report",
+    "Dexamethasone now; antibiotics after the CT"
+   ],
+   "answer": 0,
+   "chainStep": "Cultures, dexamethasone and antibiotics now; CT before any LP",
+   "why": "Fever, headache, neck stiffness and altered consciousness are the red flag combination for bacterial meningitis. NICE lists seizures among the new focal neurological features that put imaging before the lumbar puncture, so bloods are taken and antibiotics given before the CT; antibiotics start within an hour of arrival. For strongly suspected bacterial meningitis NICE gives IV dexamethasone with or before the first antibiotic dose, but never lets it delay the antibiotics. IDSA ties a seizure in the week before presentation to an abnormal CT, recommends CT before the tap in selected adults, gives blood cultures and antibiotics before the patient goes to CT, and starts dexamethasone before or at least with the first antimicrobial dose.",
+   "next": "end_mening",
+   "sources": [
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "Table 2 (adults); 1.4.1; 1.4.7; 1.4.8; 1.8.1; 1.8.5"
+    },
+    {
+     "docId": "pmid:15494903",
+     "where": "Initial management approach; CT before lumbar puncture: the 301-adult study and the Table 2 recommendation (B-II); adjunctive dexamethasone in adults"
+    }
+   ]
+  },
+  {
+   "id": "end_mening",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Suspected bacterial meningitis with a seizure: blood cultures and antibiotics first, CT before any lumbar puncture. The regimen, dexamethasone and the CSF steps continue in the sepsis and fever pathway (pw_sepsis_fever)."
+  },
+  {
+   "id": "stroke_img",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "After the seizure, a one-sided deficit persists. Next?",
+   "options": [
+    "Non-contrast CT now as a suspected stroke, then CT angiography",
+    "Call it Todd paralysis and discharge once the weakness fades",
+    "Lorazepam, then repeat the neurological examination in the morning",
+    "Alteplase now, before the scan"
+   ],
+   "answer": 0,
+   "chainStep": "Image as a suspected stroke: immediate non-contrast CT, then CT angiography if thrombectomy might be indicated",
+   "why": "Brain imaging is immediate with a non-enhanced CT when thrombolysis or thrombectomy might be indicated, followed by CT angiography if thrombectomy is possible. A thrombolytic is given only once intracranial hemorrhage has been excluded.",
+   "next": "end_stroke",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.3.2; 1.4.1"
+    }
+   ]
+  },
+  {
+   "id": "end_stroke",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A deficit that persists after a seizure: image it as a suspected stroke. Whether a lytic can follow a seizure at onset, and the rest of the route, belong to the stroke pathway (pw_stroke), which has its own seizure-at-onset branch."
+  },
+  {
+   "id": "faint_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "A collapse with a few jerks: upright, pale and sweaty first, awake within a minute, normal ECG. Next?",
+   "options": [
+    "An uncomplicated faint: no seizure workup or drug",
+    "First-seizure clinic referral within 2 weeks",
+    "An EEG and a first-seizure referral before discharge",
+    "An antiseizure drug until the first-seizure clinic visit"
+   ],
+   "answer": 0,
+   "chainStep": "Diagnose an uncomplicated faint; no EEG; ECG and report to the GP; no further immediate management",
+   "why": "Posture, a provoking factor and a prodrome such as sweating or feeling hot point to an uncomplicated faint, and brief seizure activity can occur during a faint without meaning epilepsy. A bitten tongue, head-turning, unusual posturing, prolonged jerking or confusion afterwards would point to a seizure instead. EEG is not used routinely to investigate a blackout.",
+   "next": "end_faint",
+   "sources": [
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.1.4.3; 1.1.4.5; 1.2.2.1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "ECG and report",
+     "dose": "A copy to the GP with the diagnosis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.1.4.5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_faint",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Uncomplicated faint with brief jerking: no seizure workup and no further immediate management; the ECG and the report go to the GP."
+  },
+  {
+   "id": "cardiac_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "A collapse with jerking, and the ECG shows a red flag. Next?",
+   "options": [
+    "Urgent cardiovascular assessment, within 24 hours",
+    "First-seizure clinic within 2 weeks, with an EEG beforehand",
+    "Start an antiseizure drug; follow up in clinic",
+    "Discharge as an uncomplicated faint"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent cardiovascular assessment, reviewed within 24 hours; no driving while waiting",
+   "why": "A blackout with an ECG abnormality such as a conduction abnormality, heart block, or a long or short QT is a red flag: refer urgently for cardiovascular assessment, reviewed within 24 hours, as for a family history of sudden cardiac death under 40. The ECG after a first suspected seizure is there to catch cardiac mimics, EEG is not routine for a blackout, and an uncomplicated faint is diagnosed only when nothing suggests another cause.",
+   "next": "end_cardiac",
+   "sources": [
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.1.2.2; 1.1.4.2; 1.1.4.3; 1.2.2.1"
+    },
+    {
+     "docId": "url:44d97365d556",
+     "where": "1.2.2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Driving",
+     "dose": "Not while waiting for the cardiovascular assessment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7b949a5cebeb",
+       "where": "1.5.4.3"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_cardiac",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Seizure-like collapse with an ECG red flag: urgent cardiovascular assessment within 24 hours, not a seizure workup, and no driving meanwhile."
+  },
+  {
+   "id": "functional_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Events that change over time, unusually long, with many unexplained symptoms; labs and ECG normal. Next?",
+   "options": [
+    "Neurological referral; ask for a video of the next event",
+    "Tell the patient these are not real seizures, then discharge",
+    "Diagnose epilepsy and start an antiseizure drug",
+    "A routine EEG today, then decide"
+   ],
+   "answer": 0,
+   "chainStep": "Refer for neurological assessment; record the next event on video or with a witness account",
+   "why": "Events that change over time, multiple unexplained physical symptoms and unusually prolonged events raise psychogenic nonepileptic seizures, but the distinction from epilepsy is complex, so NICE refers for neurological assessment and asks for a video or witness account of the next event. Antiseizure medication starts only once epilepsy is diagnosed, and an EEG cannot exclude it.",
+   "next": "end_functional",
+   "sources": [
+    {
+     "docId": "url:7b949a5cebeb",
+     "where": "1.4.1.1; 1.4.1.2"
+    },
+    {
+     "docId": "url:44d97365d556",
+     "where": "1.2.1; 1.2.6; 4.2.1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Video EEG of a typical event",
+     "dose": "Not stated for suspected PNES in the open sources read",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "end_functional",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Possible psychogenic nonepileptic (functional, dissociative) seizures: refer for neurological assessment and capture the next event on video. This pathway does not make the diagnosis, and a dissociative seizure can look like convulsive status epilepticus."
+  }
+ ],
+ "cases": [
+  {
+   "id": "hypo_woke",
+   "label": "Hypoglycemic seizure",
+   "vignette": "58-year-old man with type 2 diabetes on insulin, brought in by ambulance convulsing; the convulsion began a minute before arrival. Weight 84 kg.",
+   "picks": {
+    "first_look": "hypo",
+    "hypo_result": "woke"
+   },
+   "results": {
+    "first_look": "Fingerstick glucose 38 mg/dL; convulsing for 2 minutes so far, airway held open with a jaw thrust.",
+    "hypo_result": "A minute after the dextrose, 4 minutes from onset, the convulsion stops; he opens his eyes and answers. Glucose 142 mg/dL."
+   }
+  },
+  {
+   "id": "hypo_status",
+   "label": "Low glucose, then status after all",
+   "vignette": "45-year-old woman with type 1 diabetes, a witnessed generalized seizure at a bus stop; paramedics put the onset 4 minutes before arrival. Weight 62 kg. Not pregnant.",
+   "picks": {
+    "first_look": "hypo",
+    "hypo_result": "still",
+    "iv_access": "iv",
+    "benzo_result": "stopped",
+    "se_cause_result": "se_none"
+   },
+   "results": {
+    "first_look": "Fingerstick glucose 52 mg/dL; convulsing, airway open with suction.",
+    "hypo_result": "Glucose now 168 mg/dL; still convulsing 6 minutes after onset.",
+    "iv_access": "IV line in the left forearm.",
+    "benzo_result": "The convulsion stops 2 minutes after the first 4 mg of lorazepam; breathing, starting to rouse.",
+    "se_cause_result": "Sodium 138 mmol/L, calcium normal, toxicology screen negative; no history of epilepsy."
+   }
+  },
+  {
+   "id": "eclampsia_34w",
+   "label": "Eclampsia at 34 weeks",
+   "vignette": "24-year-old at 34 weeks in her first pregnancy, a generalized seizure in the waiting room lasting about a minute. BP 172/114, protein 3+ on dipstick.",
+   "picks": {
+    "first_look": "eclampsia",
+    "mag_result": "no_refit",
+    "bp_check": "severe"
+   },
+   "results": {
+    "first_look": "Glucose 96 mg/dL; seizure over, drowsy, airway clear; 34 weeks pregnant, BP 172/114.",
+    "mag_result": "No further fits on the infusion.",
+    "bp_check": "BP 170/112 twenty minutes into the infusion."
+   }
+  },
+  {
+   "id": "eclampsia_postpartum",
+   "label": "Eclampsia after birth, a second fit",
+   "vignette": "31-year-old, 5 days after a vaginal birth, with a severe headache and flashing lights, then a generalized seizure at home. BP 168/112.",
+   "picks": {
+    "first_look": "eclampsia",
+    "mag_result": "refit",
+    "bp_check": "severe"
+   },
+   "results": {
+    "first_look": "Glucose 104 mg/dL; seizure over, confused, airway clear; 5 days postpartum, BP 168/112.",
+    "mag_result": "A second generalized fit 20 minutes into the infusion.",
+    "bp_check": "BP 166/112 after the extra magnesium."
+   }
+  },
+  {
+   "id": "eclampsia_37w",
+   "label": "Eclampsia below the severe blood pressure range",
+   "vignette": "28-year-old at 37 weeks, BP 150/96 with 2+ protein at last week's visit, has a generalized seizure at home lasting about a minute.",
+   "picks": {
+    "first_look": "eclampsia",
+    "mag_result": "no_refit",
+    "bp_check": "below_severe"
+   },
+   "results": {
+    "first_look": "Glucose 90 mg/dL; seizure over, drowsy, airway clear; 37 weeks pregnant, BP 152/98.",
+    "mag_result": "No further fits on the infusion.",
+    "bp_check": "BP 148/96 twenty minutes into the infusion."
+   }
+  },
+  {
+   "id": "not_waking",
+   "label": "Not waking after a seizure",
+   "vignette": "62-year-old man at a shelter; paramedics gave midazolam for a convulsion lasting 6 minutes, which stopped 15 minutes ago. Weight 70 kg.",
+   "picks": {
+    "first_look": "not_waking",
+    "nw_result": "no_more"
+   },
+   "results": {
+    "first_look": "Glucose 112 mg/dL; no convulsing; GCS 6, snoring respirations, SpO2 88% on air.",
+    "nw_result": "No further convulsion; an hour later the GCS is still 7, airway protected."
+   }
+  },
+  {
+   "id": "not_waking_status",
+   "label": "A second seizure before waking",
+   "vignette": "39-year-old woman with epilepsy on levetiracetam, a generalized seizure at work; she has not woken since. Weight 66 kg. Not pregnant.",
+   "picks": {
+    "first_look": "not_waking",
+    "nw_result": "another",
+    "iv_access": "iv",
+    "benzo_result": "stopped",
+    "se_cause_result": "se_levels"
+   },
+   "results": {
+    "first_look": "Glucose 98 mg/dL; the seizure ended 8 minutes ago; GCS 7, gurgling airway, SpO2 90%.",
+    "nw_result": "A second generalized convulsion begins before she has woken.",
+    "iv_access": "IV line in.",
+    "benzo_result": "The convulsion stops after the second 4 mg dose of lorazepam; breathing.",
+    "se_cause_result": "Levetiracetam level low; she ran out of tablets 4 days ago. Sodium and glucose normal."
+   }
+  },
+  {
+   "id": "status_no_iv",
+   "label": "Status without IV access",
+   "vignette": "71-year-old woman on a thiazide, found convulsing by her daughter about 6 minutes before arrival. Weight 58 kg.",
+   "picks": {
+    "first_look": "status",
+    "iv_access": "no_iv",
+    "benzo_result": "stopped",
+    "se_cause_result": "se_hypona"
+   },
+   "results": {
+    "first_look": "Glucose 124 mg/dL; still convulsing at 7 minutes; BP 150/84; airway open with a nasal airway.",
+    "iv_access": "Two attempts fail; no IV access yet.",
+    "benzo_result": "The convulsion stops 4 minutes after the IM midazolam; breathing.",
+    "se_cause_result": "Once a line is in: sodium 112 mmol/L; glucose and calcium normal."
+   }
+  },
+  {
+   "id": "status_second_line",
+   "label": "Status needing a second-line drug",
+   "vignette": "52-year-old man, a witnessed generalized seizure in a restaurant that has not stopped; onset 6 minutes before arrival; no known epilepsy. Weight 90 kg.",
+   "picks": {
+    "first_look": "status",
+    "iv_access": "iv",
+    "benzo_result": "continues",
+    "second_result": "stopped2",
+    "se_cause_result": "se_none"
+   },
+   "results": {
+    "first_look": "Glucose 132 mg/dL; still convulsing; BP 168/96; airway held open with a jaw thrust and suction.",
+    "iv_access": "IV line in.",
+    "benzo_result": "Still convulsing 20 minutes from onset after two 4 mg doses of lorazepam; his partner knows of no drugs or toxins.",
+    "second_result": "The convulsion stops 8 minutes into the levetiracetam infusion.",
+    "se_cause_result": "Sodium 139 mmol/L, glucose 118 mg/dL, calcium normal, toxicology screen negative; no epilepsy history."
+   }
+  },
+  {
+   "id": "refractory",
+   "label": "Refractory status",
+   "vignette": "64-year-old man with a previous stroke, convulsing on arrival by ambulance; the seizure began 10 minutes earlier. Weight 78 kg.",
+   "picks": {
+    "first_look": "status",
+    "iv_access": "iv",
+    "benzo_result": "continues",
+    "second_result": "refractory"
+   },
+   "results": {
+    "first_look": "Glucose 140 mg/dL; still convulsing; BP 176/98; breathing supported with a bag and mask.",
+    "iv_access": "IV line in.",
+    "benzo_result": "Still convulsing 20 minutes from onset after two 4 mg doses of lorazepam; no toxin in the history.",
+    "second_result": "Still convulsing at 40 minutes, after a full fosphenytoin load."
+   }
+  },
+  {
+   "id": "stopped_not_waking",
+   "label": "Convulsions stop, but no waking",
+   "vignette": "66-year-old woman with a previous stroke, convulsing on arrival by ambulance; the seizure began 7 minutes earlier. Weight 70 kg.",
+   "picks": {
+    "first_look": "status",
+    "iv_access": "iv",
+    "benzo_result": "stopped_unrousable"
+   },
+   "results": {
+    "first_look": "Glucose 134 mg/dL; still convulsing; BP 158/90; airway open with suction.",
+    "iv_access": "IV line in.",
+    "benzo_result": "The convulsions stop after the first 4 mg of lorazepam, but 30 minutes later she has not woken and is no better; GCS 7."
+   }
+  },
+  {
+   "id": "second_line_not_waking",
+   "label": "Convulsions stop on the second-line drug, but no waking",
+   "vignette": "57-year-old man found convulsing in the street; the seizure began at least 8 minutes before arrival. No history available. Weight 82 kg.",
+   "picks": {
+    "first_look": "status",
+    "iv_access": "iv",
+    "benzo_result": "continues",
+    "second_result": "stopped_unrousable"
+   },
+   "results": {
+    "first_look": "Glucose 121 mg/dL; still convulsing; BP 170/92; airway held open with a jaw thrust.",
+    "iv_access": "IV line in.",
+    "benzo_result": "Still convulsing 20 minutes from onset after two 4 mg doses of lorazepam; no toxin in the history.",
+    "second_result": "The convulsions stop during the valproate load, but 30 minutes later he has not woken and is no better; GCS 6."
+   }
+  },
+  {
+   "id": "isoniazid",
+   "label": "Seizures that need pyridoxine",
+   "vignette": "19-year-old woman found convulsing in her dorm room; the seizure has lasted at least 8 minutes. No history available. Weight 55 kg.",
+   "picks": {
+    "first_look": "status",
+    "iv_access": "iv",
+    "benzo_result": "inh"
+   },
+   "results": {
+    "first_look": "Glucose 186 mg/dL; still convulsing; BP 128/76; airway open with suction.",
+    "iv_access": "IV line in.",
+    "benzo_result": "Still convulsing after two 4 mg doses of lorazepam; her roommate brings an empty bottle of isoniazid 300 mg tablets, about 20 missing."
+   }
+  },
+  {
+   "id": "first_seizure",
+   "label": "First unprovoked seizure",
+   "vignette": "27-year-old man, a witnessed generalized seizure at the gym lasting about a minute, a bitten tongue and 15 minutes of confusion afterwards. No alcohol, drugs, head injury or fever. He drives to work.",
+   "picks": {
+    "first_look": "awake",
+    "cause": "first"
+   },
+   "results": {
+    "first_look": "Glucose 102 mg/dL; seizure over, awake and talking.",
+    "cause": "Normal neurological exam; sodium 140 mmol/L, calcium normal; ECG sinus rhythm, QTc 410 ms; no trigger found."
+   }
+  },
+  {
+   "id": "breakthrough_missed",
+   "label": "Breakthrough seizure, missed doses",
+   "vignette": "33-year-old woman with epilepsy on lamotrigine, a generalized seizure at home like her usual ones; awake now.",
+   "picks": {
+    "first_look": "awake",
+    "cause": "known",
+    "levels": "low"
+   },
+   "results": {
+    "first_look": "Glucose 95 mg/dL; seizure over, awake and talking; not pregnant.",
+    "cause": "Her usual seizure type; normal exam, sodium and ECG; no head injury, fever or alcohol.",
+    "levels": "Lamotrigine level low; she admits missing doses this week after a pharmacy mix-up."
+   }
+  },
+  {
+   "id": "breakthrough_adherent",
+   "label": "Breakthrough seizure, every dose taken",
+   "vignette": "45-year-old man with focal epilepsy on carbamazepine, seizure-free for 2 years until a typical seizure at work; awake now.",
+   "picks": {
+    "first_look": "awake",
+    "cause": "known",
+    "levels": "in_range"
+   },
+   "results": {
+    "first_look": "Glucose 110 mg/dL; seizure over, awake and talking.",
+    "cause": "His usual seizure type; normal exam, sodium and ECG; no head injury, fever or alcohol.",
+    "levels": "Carbamazepine level in range; pharmacy records show no missed doses."
+   }
+  },
+  {
+   "id": "alcohol",
+   "label": "Alcohol withdrawal seizure",
+   "vignette": "50-year-old man who drinks a litre of vodka a day and stopped 36 hours ago; thin and eating little. A witnessed generalized seizure lasting about a minute.",
+   "picks": {
+    "first_look": "awake",
+    "cause": "alcohol"
+   },
+   "results": {
+    "first_look": "Glucose 88 mg/dL; seizure over, awake, tremulous and sweating.",
+    "cause": "Normal exam apart from a tremor; sodium 136 mmol/L; ECG sinus tachycardia; last drink 36 hours ago, no head injury."
+   }
+  },
+  {
+   "id": "head_bleed",
+   "label": "Post-traumatic seizure, bleed on CT",
+   "vignette": "68-year-old woman fell down the stairs and struck her head; her husband saw a 30-second convulsion moments later.",
+   "picks": {
+    "first_look": "awake",
+    "cause": "trauma",
+    "head_result": "bleed"
+   },
+   "results": {
+    "first_look": "Glucose 110 mg/dL; seizure over, awake, GCS 15, a scalp laceration.",
+    "cause": "The convulsion followed the head strike; sodium and ECG normal; no anticoagulant.",
+    "head_result": "CT head: an acute subdural hematoma over the left convexity."
+   }
+  },
+  {
+   "id": "head_clear",
+   "label": "Post-traumatic seizure, CT clear",
+   "vignette": "22-year-old man hit his head in a cycling crash without a helmet; a friend saw a brief convulsion right after the impact.",
+   "picks": {
+    "first_look": "awake",
+    "cause": "trauma",
+    "head_result": "clear"
+   },
+   "results": {
+    "first_look": "Glucose 98 mg/dL; seizure over, awake, GCS 15.",
+    "cause": "The convulsion followed the impact; sodium and ECG normal.",
+    "head_result": "CT head normal; GCS 15, no further seizure."
+   }
+  },
+  {
+   "id": "meningitis",
+   "label": "Seizure with fever and a stiff neck",
+   "vignette": "41-year-old woman, a generalized seizure at home; her partner says she has been unwell for 2 days.",
+   "picks": {
+    "first_look": "awake",
+    "cause": "fever"
+   },
+   "results": {
+    "first_look": "Glucose 118 mg/dL; seizure over, awake but drowsy and slow to answer; not pregnant.",
+    "cause": "Temperature 39.2, neck stiffness, headache; sodium and ECG normal."
+   }
+  },
+  {
+   "id": "stroke",
+   "label": "A seizure, then a deficit that stays",
+   "vignette": "74-year-old man with atrial fibrillation, not anticoagulated, a witnessed brief generalized seizure 50 minutes ago.",
+   "picks": {
+    "first_look": "awake",
+    "cause": "deficit"
+   },
+   "results": {
+    "first_look": "Glucose 126 mg/dL; seizure over, awake.",
+    "cause": "Right face and arm weakness and aphasia, unchanged at 40 minutes; sodium normal; ECG atrial fibrillation."
+   }
+  },
+  {
+   "id": "hyponatremia",
+   "label": "Hyponatremia found after one seizure",
+   "vignette": "29-year-old woman, a generalized seizure after a marathon in which she drank water at every station.",
+   "picks": {
+    "first_look": "awake",
+    "cause": "hypona"
+   },
+   "results": {
+    "first_look": "Glucose 92 mg/dL; seizure over, awake but nauseated; not pregnant.",
+    "cause": "Sodium 117 mmol/L; exam otherwise normal; ECG normal."
+   }
+  },
+  {
+   "id": "faint",
+   "label": "A faint with a few jerks",
+   "vignette": "19-year-old man fainted while sitting up for a blood test: he felt hot and sweaty and went pale, then his arms jerked for a few seconds. Awake within a minute and fully oriented; no tongue bite.",
+   "picks": {
+    "first_look": "awake",
+    "cause": "faint"
+   },
+   "results": {
+    "first_look": "Glucose 90 mg/dL; event over, awake and talking.",
+    "cause": "Normal exam, sodium and ECG; prodromal sweating, provoked by the needle, brief jerks, no confusion afterwards."
+   }
+  },
+  {
+   "id": "long_qt",
+   "label": "Long QT behind the seizure",
+   "vignette": "24-year-old woman, a sudden collapse with jerking when her alarm clock went off; no warning, awake within a minute. Her brother died suddenly at 30.",
+   "picks": {
+    "first_look": "awake",
+    "cause": "cardiac"
+   },
+   "results": {
+    "first_look": "Glucose 94 mg/dL; event over, awake and talking; not pregnant.",
+    "cause": "ECG: QTc 520 ms. Exam and sodium normal."
+   }
+  },
+  {
+   "id": "functional",
+   "label": "Possible functional seizures",
+   "vignette": "32-year-old woman on her fourth emergency visit this year for seizures; tonight's event lasted about 20 minutes with fluctuating movements and stopped before the paramedics arrived. She has several unexplained physical symptoms.",
+   "picks": {
+    "first_look": "awake",
+    "cause": "functional"
+   },
+   "results": {
+    "first_look": "Glucose 101 mg/dL; event over, awake and talking; not pregnant.",
+    "cause": "Normal exam, sodium, glucose and ECG; the events have changed in character over the year and last 15 to 30 minutes; no tongue bite."
+   }
+  }
+ ]
+}

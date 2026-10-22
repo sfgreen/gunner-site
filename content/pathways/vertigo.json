@@ -1,0 +1,2851 @@
+{
+ "id": "pw_vertigo",
+ "title": "Dizziness and vertigo",
+ "world": "neuro",
+ "synonyms": [
+  "dizziness",
+  "dizzy",
+  "vertigo",
+  "room spinning",
+  "acute vestibular syndrome",
+  "AVS",
+  "acute imbalance syndrome",
+  "HINTS",
+  "HINTS plus",
+  "head impulse test",
+  "test of skew",
+  "nystagmus",
+  "truncal ataxia",
+  "vestibular neuritis",
+  "vestibular neuronitis",
+  "labyrinthitis",
+  "posterior circulation stroke",
+  "cerebellar stroke",
+  "AICA stroke",
+  "Wallenberg syndrome",
+  "cerebellar hemorrhage",
+  "vertebrobasilar TIA",
+  "BPPV",
+  "benign paroxysmal positional vertigo",
+  "Dix-Hallpike",
+  "Epley maneuver",
+  "supine roll test",
+  "barbecue roll",
+  "Gufoni maneuver",
+  "Meniere disease",
+  "vestibular migraine",
+  "sudden sensorineural hearing loss",
+  "perilymphatic fistula",
+  "superior canal dehiscence",
+  "orthostatic hypotension",
+  "meclizine",
+  "vestibular rehabilitation"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:36943963",
+   "label": "StatPearls: dizzy patient",
+   "title": "Evaluation of the Dizzy and Unbalanced Patient (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36943963/"
+  },
+  {
+   "docId": "pmid:42851915",
+   "label": "Front Neurol 2026 posterior stroke review",
+   "title": "Diagnostic challenges in posterior circulation ischemic stroke presenting with acute dizziness and vertigo (Front Neurol 2026), a narrative review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42851915/"
+  },
+  {
+   "docId": "pmid:42859937",
+   "label": "J Neurol 2026 neuro-otology update",
+   "title": "An update on neuro-otology and neuro-ophthalmology: new developments in the last three years (J Neurol 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42859937/"
+  },
+  {
+   "docId": "pmid:41665728",
+   "label": "J Neurol 2026 HINTS plus review",
+   "title": "HINTS+ to diagnose AICA stroke: systematic review of acute unilateral hearing loss in the acute vestibular syndrome (J Neurol 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41665728/"
+  },
+  {
+   "docId": "pmid:32462345",
+   "label": "J Neurol 2020 imaging study",
+   "title": "Risk of acute brain lesions in dizzy patients presenting to the emergency room: who needs imaging and who does not? (J Neurol 2020)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32462345/"
+  },
+  {
+   "docId": "pmid:35723133",
+   "label": "Barany AUVP criteria 2022",
+   "title": "Acute unilateral vestibulopathy/vestibular neuritis: diagnostic criteria (Barany Society, J Vestib Res 2022)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35723133/"
+  },
+  {
+   "docId": "pmid:34719447",
+   "label": "Barany vestibular migraine criteria 2022",
+   "title": "Vestibular migraine: diagnostic criteria, update (Barany Society and International Headache Society, J Vestib Res 2022)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34719447/"
+  },
+  {
+   "docId": "pmid:39973595",
+   "label": "J Vestib Res 2025 steroid trial",
+   "title": "Acute unilateral vestibulopathy and corticosteroid treatment: a randomized placebo-controlled double-blind trial (J Vestib Res 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39973595/"
+  },
+  {
+   "docId": "url:64e48d5d8ef3",
+   "label": "NICE NG128",
+   "title": "Stroke and transient ischaemic attack in over 16s: diagnosis and initial management (2019, updated 2022)",
+   "url": "https://www.nice.org.uk/guidance/ng128"
+  },
+  {
+   "docId": "url:f808c8a50ffb",
+   "label": "NICE NG98",
+   "title": "Hearing loss in adults: assessment and management (2018, updated 2023)",
+   "url": "https://www.nice.org.uk/guidance/ng98"
+  },
+  {
+   "docId": "pmid:29261987",
+   "label": "StatPearls: BPPV",
+   "title": "Benign Paroxysmal Positional Vertigo (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29261987/"
+  },
+  {
+   "docId": "pmid:29083696",
+   "label": "StatPearls: Dix-Hallpike",
+   "title": "Dix-Hallpike Maneuver (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29083696/"
+  },
+  {
+   "docId": "pmid:33085434",
+   "label": "StatPearls: Epley",
+   "title": "Epley Maneuver (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33085434/"
+  },
+  {
+   "docId": "pmid:31751056",
+   "label": "StatPearls: vestibular neuronitis",
+   "title": "Vestibular Neuronitis (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31751056/"
+  },
+  {
+   "docId": "pmid:32809341",
+   "label": "StatPearls: labyrinthitis",
+   "title": "Labyrinthitis (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32809341/"
+  },
+  {
+   "docId": "pmid:30725640",
+   "label": "StatPearls: Meniere disease",
+   "title": "Meniere Disease (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30725640/"
+  },
+  {
+   "docId": "pmid:29939636",
+   "label": "StatPearls: vestibular migraine",
+   "title": "Migraine-Associated Vertigo (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29939636/"
+  },
+  {
+   "docId": "pmid:33351419",
+   "label": "StatPearls: sensorineural hearing loss",
+   "title": "Sensorineural Hearing Loss (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33351419/"
+  },
+  {
+   "docId": "pmid:33085368",
+   "label": "StatPearls: perilymphatic fistula",
+   "title": "Perilymphatic Fistula (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33085368/"
+  },
+  {
+   "docId": "pmid:28846238",
+   "label": "StatPearls: orthostatic hypotension",
+   "title": "Orthostatic Hypotension (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846238/"
+  },
+  {
+   "docId": "pmid:28722891",
+   "label": "StatPearls: central vertigo",
+   "title": "Central Vertigo (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722891/"
+  },
+  {
+   "docId": "pmid:32310544",
+   "label": "StatPearls: vertebrobasilar stroke",
+   "title": "Vertebrobasilar Stroke (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32310544/"
+  },
+  {
+   "docId": "pmid:31082120",
+   "label": "StatPearls: cerebellar hemorrhage",
+   "title": "Cerebellar Hemorrhage (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31082120/"
+  },
+  {
+   "docId": "pmid:34283519",
+   "label": "StatPearls: vestibular rehabilitation",
+   "title": "Vestibular Rehabilitation (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34283519/"
+  },
+  {
+   "docId": "pmid:32809480",
+   "label": "StatPearls: meclizine",
+   "title": "Meclizine (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32809480/"
+  },
+  {
+   "docId": "pmid:31335081",
+   "label": "StatPearls: promethazine",
+   "title": "Promethazine (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31335081/"
+  },
+  {
+   "docId": "pmid:31082149",
+   "label": "StatPearls: aminoglycosides",
+   "title": "Aminoglycosides (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31082149/"
+  },
+  {
+   "docId": "pmid:29494051",
+   "label": "StatPearls: phenytoin toxicity",
+   "title": "Phenytoin Toxicity (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29494051/"
+  },
+  {
+   "docId": "pmid:29939629",
+   "label": "StatPearls: carbamazepine toxicity",
+   "title": "Carbamazepine Toxicity (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29939629/"
+  },
+  {
+   "docId": "pmid:29489229",
+   "label": "StatPearls: vertebrobasilar insufficiency",
+   "title": "Vertebrobasilar Insufficiency (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29489229/"
+  },
+  {
+   "docId": "pmid:37166022",
+   "label": "SAEM GRACE-3 2023",
+   "title": "Guidelines for reasonable and appropriate care in the emergency department 3 (GRACE-3): acute dizziness and vertigo in the emergency department (Acad Emerg Med 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37166022/"
+  },
+  {
+   "docId": "url:42279d67da8d",
+   "label": "NICE NG228",
+   "title": "Subarachnoid haemorrhage caused by a ruptured aneurysm: diagnosis and management (2022)",
+   "url": "https://www.nice.org.uk/guidance/ng228"
+  },
+  {
+   "docId": "pmid:34414300",
+   "label": "ESO DAPT 2021",
+   "title": "European Stroke Organisation expedited recommendation for the use of short-term dual antiplatelet therapy early after minor stroke and high-risk TIA",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34414300/"
+  }
+ ],
+ "differential": [
+  "Posterior circulation stroke",
+  "Cerebellar hemorrhage",
+  "Vertebrobasilar TIA",
+  "Vestibular neuritis",
+  "Labyrinthitis",
+  "Sudden sensorineural hearing loss",
+  "Posterior canal BPPV",
+  "Horizontal canal BPPV",
+  "Central positional vertigo",
+  "Meniere disease",
+  "Vestibular migraine",
+  "Orthostatic hypotension",
+  "Perilymphatic fistula or canal dehiscence",
+  "Hypoglycemia",
+  "Cardiac arrhythmia",
+  "Drug toxicity",
+  "Demyelination or posterior fossa mass"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Dizzy in the ED. First moves?",
+   "options": [
+    "Vitals, a fingerstick glucose, a 12-lead ECG, the drug list and a neurological exam",
+    "A non-contrast CT of the head first, then the history and the exam once it is reported",
+    "Ask whether the room spins or they feel faint, and sort the workup by that word",
+    "Meclizine 25 mg now, then examine the eyes and the gait once the vertigo settles"
+   ],
+   "answer": 0,
+   "chainStep": "Vitals; fingerstick glucose; 12-lead ECG; the drug list and recent changes, with a level for phenytoin or carbamazepine; neurological exam for a focal deficit, which goes straight to the stroke pathway; a thunderclap headache goes to the headache pathway; then the timing and triggers",
+   "why": "Every dizzy or unbalanced patient gets a point-of-care glucose and an ECG, because hypoglycemia and arrhythmias are deadly causes that can be treated at once. The history covers the drugs and any recent change, and the exam looks for central signs such as dysarthria, diplopia or truncal ataxia; an obvious focal deficit goes straight to the stroke pathway. The patient's own word for the dizziness is unreliable: more than half change their description when asked again minutes later, so timing and triggers sort it instead. GRACE-3 applies only once obvious general medical causes, such as a dysrhythmia or a drug side effect, and obvious stroke are handled, the stroke through institutional stroke protocols. A CT first is the wrong order, since its sensitivity for an ischemic stroke in dizzy patients is 7 to 28.5%, and a vestibular suppressant given before the exam can take away the nystagmus the exam depends on.",
+   "orders": [
+    {
+     "item": "Glucose and ECG",
+     "dose": "Point-of-care glucose and a 12-lead ECG for every dizzy or unbalanced patient",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36943963",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Drug list",
+     "dose": "Current drugs and recent changes; antihypertensives, antibiotics, diuretics, NSAIDs, antiepileptics and antidepressants are common causes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36943963",
+       "where": "History and physical; Differential diagnosis"
+      }
+     ]
+    },
+    {
+     "item": "Anticonvulsant level",
+     "dose": "Phenytoin therapeutic range 10 to 20 mg/L; carbamazepine 4 to 12 mg/L",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29494051",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:29939629",
+       "where": "Continuing education activity"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: children, dizziness after a head injury (pw_trauma), and chronic dizziness lasting months, such as persistent postural-perceptual dizziness or bilateral vestibulopathy.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "pmid:36943963",
+     "where": "Evaluation; History and physical"
+    },
+    {
+     "docId": "pmid:42851915",
+     "where": "Figure 1; Bedside neurological examination; Limitations of stroke scales and neuroimaging; HINTS examination"
+    },
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.1.2"
+    },
+    {
+     "docId": "url:42279d67da8d",
+     "where": "1.1.3"
+    },
+    {
+     "docId": "pmid:37166022",
+     "where": "At-a-glance summary, general note; Introduction; Table 2"
+    }
+   ]
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Vitals, glucose, ECG, drugs, headache and the neurological exam",
+   "outcomes": [
+    {
+     "id": "unstable",
+     "if": "Unstable; shock, an unstable rhythm or falling consciousness",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_unstable"
+    },
+    {
+     "id": "glucose",
+     "if": "Glucose low; hypoglycemia on the fingerstick",
+     "ddx": {
+      "lead": [
+       "Hypoglycemia"
+      ],
+      "out": []
+     },
+     "next": "end_glucose"
+    },
+    {
+     "id": "focal",
+     "if": "Focal deficit; weakness, numbness, slurred speech, double vision or field loss",
+     "ddx": {
+      "lead": [
+       "Posterior circulation stroke"
+      ],
+      "out": []
+     },
+     "next": "end_stroke"
+    },
+    {
+     "id": "cardiac",
+     "if": "Cardiac clue, stable, no focal deficit; arrhythmia or block on the ECG, chest pain or a faint",
+     "ddx": {
+      "lead": [
+       "Cardiac arrhythmia"
+      ],
+      "out": []
+     },
+     "next": "end_cardiac"
+    },
+    {
+     "id": "drug",
+     "if": "Toxic level or ototoxic drug, no focal deficit; a high anticonvulsant level, or vertigo on gentamicin",
+     "ddx": {
+      "lead": [
+       "Drug toxicity"
+      ],
+      "out": []
+     },
+     "next": "end_drug"
+    },
+    {
+     "id": "thunderclap",
+     "if": "Thunderclap headache; peak within 5 minutes, with the dizziness",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_headache"
+    },
+    {
+     "id": "clear",
+     "if": "None of these; stable, glucose and ECG normal, no focal deficit, drug cause or thunderclap",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Hypoglycemia"
+      ]
+     },
+     "next": "timing_step"
+    }
+   ]
+  },
+  {
+   "id": "end_unstable",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Resuscitate before the vestibular exam: shock, an unstable rhythm or a falling level of consciousness come first, with an ECG, pulse oximetry and close supervision. An unstable rhythm goes to pw_palpitations and a drowsy or confused patient to pw_ams; a posterior fossa bleed found on imaging goes to pw_stroke."
+  },
+  {
+   "id": "end_glucose",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Low glucose with dizziness: treat it now; the altered mental status pathway (pw_ams) has the doses. Hypoglycemia is excluded first in anyone with sudden neurological symptoms, and dizziness that persists once the glucose is normal starts this pathway again."
+  },
+  {
+   "id": "end_headache",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Dizziness with a thunderclap headache: the headache pathway (pw_headache) takes it; a cerebellar bleed found on the scan goes on to pw_stroke."
+  },
+  {
+   "id": "end_stroke",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Dizziness with a focal deficit: the stroke pathway (pw_stroke) takes it, with the time last known well and immediate imaging. The NIHSS under-represents posterior circulation deficits, and a normal non-contrast CT does not exclude a posterior fossa infarct."
+  },
+  {
+   "id": "end_cardiac",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Dizziness with a cardiac clue points to a cardiac or autonomic cause: an arrhythmia or conduction block goes to pw_palpitations, chest pain to pw_chest_pain, and a faint (transient loss of consciousness) to pw_syncope."
+  },
+  {
+   "id": "end_drug",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A drug cause. Anticonvulsant toxicity rises with the level: phenytoin brings nystagmus at 20 to 30 mg/L and ataxia, slurred speech and vomiting at 30 to 40 mg/L; carbamazepine (therapeutic 4 to 12 mg/L) brings ataxia from 11 to 15 mg/L and needs an ECG for QRS prolongation. Levels are repeated and trended, and an overdose goes to pw_tox. Aminoglycosides: gentamicin, streptomycin and tobramycin mostly damage the vestibular system; vestibular loss is often salvageable while hearing loss is irreversible, so serial audiometry may be considered. Whether to stop or switch the antibiotic is not in the sources read."
+  },
+  {
+   "id": "timing_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Stable, normal glucose and ECG, no focal deficit. What sorts the dizziness next?",
+   "options": [
+    "Timing and triggers: continuous, set off by something, or out of the blue",
+    "The patient's own word for it: spinning, lightheaded, rocking or off balance",
+    "A non-contrast CT of the head, with the bedside tests chosen by its result",
+    "How bad the nausea and vomiting are, since a stroke seldom causes either"
+   ],
+   "answer": 0,
+   "chainStep": "Take the timing and triggers: acute and continuous (the acute vestibular syndrome), episodic and triggered, or episodic and spontaneous",
+   "why": "Timing and triggers sort dizziness; the type of dizziness the patient describes does not, because the description is unreliable. Continuous symptoms are then stratified by nystagmus, triggered attacks get positional testing, and spontaneous attacks are evaluated for a TIA. Nausea and vomiting do not point away from a stroke: with dizziness, they are the commonest symptoms of a posterior circulation stroke. A CT cannot carry the decision.",
+   "next": "timing",
+   "sources": [
+    {
+     "docId": "pmid:42851915",
+     "where": "Figure 1; Bedside neurological examination; Clinical presentation"
+    },
+    {
+     "docId": "pmid:36943963",
+     "where": "History and physical"
+    },
+    {
+     "docId": "pmid:37166022",
+     "where": "At-a-glance summary, definitions; Introduction"
+    }
+   ]
+  },
+  {
+   "id": "timing",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Timing and triggers",
+   "outcomes": [
+    {
+     "id": "avs",
+     "if": "Continuous since onset; constant for hours or days, worse when the head moves",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "avs_exam"
+    },
+    {
+     "id": "triggered",
+     "if": "Triggered attacks; brief spells set off by lying down, rolling, standing or strain",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "trig_step"
+    },
+    {
+     "id": "spontaneous",
+     "if": "Spontaneous attacks; minutes to hours, out of the blue, well between them",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "spont_step"
+    }
+   ]
+  },
+  {
+   "id": "avs_exam",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Continuous vertigo or imbalance since onset. Next?",
+   "options": [
+    "Look for nystagmus at rest and on side gaze, then check standing and walking",
+    "Dix-Hallpike on both sides, since positional testing comes before the eye exam",
+    "A non-contrast CT first, with the bedside tests chosen once it is reported",
+    "Meclizine first, and examine the eyes once the vertigo has eased"
+   ],
+   "answer": 0,
+   "chainStep": "Examine for spontaneous and gaze-evoked nystagmus, with Frenzel lenses if available; then standing and gait. Nystagmus: HINTS plus hearing. No nystagmus: graded gait and truncal stability, with pursuit and saccades",
+   "why": "In continuous dizziness, spontaneous or gaze-evoked nystagmus picks the bedside test: HINTS (with hearing) when it is present, graded gait and truncal stability with eye movement testing when it is not. Only about half of dizzy patients have spontaneous nystagmus, and its absence can reflect fixation, timing, the examiner or a vestibular suppressant already given. The eyes at rest and on gaze come first; positional testing is how triggered attacks are diagnosed, and vertigo present without any movement points away from BPPV. A clear CT can falsely reassure.",
+   "next": "avs_nyst",
+   "sources": [
+    {
+     "docId": "pmid:42851915",
+     "where": "Figure 1; HINTS examination"
+    },
+    {
+     "docId": "pmid:29083696",
+     "where": "Equipment"
+    },
+    {
+     "docId": "pmid:29261987",
+     "where": "History and physical: key considerations"
+    },
+    {
+     "docId": "pmid:32462345",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:37166022",
+     "where": "Box 1, Recommendations 2 and 4"
+    }
+   ]
+  },
+  {
+   "id": "avs_nyst",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Nystagmus at rest and on side gaze",
+   "outcomes": [
+    {
+     "id": "nyst",
+     "if": "Nystagmus present; spontaneous, or on side gaze with the head still",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "hints"
+    },
+    {
+     "id": "none",
+     "if": "No nystagmus; none at rest or on gaze, still dizzy or unsteady",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ais"
+    }
+   ]
+  },
+  {
+   "id": "hints",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Continuous vertigo with nystagmus. Next?",
+   "options": [
+    "HINTS by a trained examiner, plus a bedside hearing check and the gait",
+    "A non-contrast CT; if it is clear, call it vestibular neuritis and treat",
+    "Dix-Hallpike on each side to find the semicircular canal involved",
+    "The head impulse by itself; a corrective saccade on it means a stroke"
+   ],
+   "answer": 0,
+   "chainStep": "HINTS by an at least moderately trained examiner: head impulse to each side, nystagmus direction on gaze, alternate cover test for skew; add a bedside hearing test (HINTS plus), confirmed by audiometry; grade standing and gait",
+   "why": "HINTS is for the patient who is dizzy now, with nystagmus, examined by a clinician trained in it (GRACE-3 recommendation 2). A corrective saccade on the head impulse, nystagmus that beats one way and no skew is the peripheral pattern; a normal head impulse, direction-changing nystagmus or a skew is central, and one central component makes the whole result central. New one-sided hearing loss counts as a fourth central sign (HINTS plus) because strokes in the AICA territory can cause an abnormal head impulse; adding it raised sensitivity for AICA strokes from 73.3% to 91.1%. Done well, HINTS may outperform an early MRI, whereas a clear CT can falsely reassure. The head impulse read alone, and backwards, misleads: the corrective saccade is the peripheral finding.",
+   "orders": [
+    {
+     "item": "Who can be examined",
+     "dose": "A patient with continuous dizziness and nystagmus, examined by a clinician trained in HINTS; the head impulse only with spontaneous nystagmus, since in others a normal head impulse falsely suggests stroke",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Box 1, Recommendation 2; Question 1, HINTS"
+      },
+      {
+       "docId": "pmid:36943963",
+       "where": "History and physical: HINTS exam"
+      }
+     ]
+    },
+    {
+     "item": "No trained examiner",
+     "dose": "A trained specialist does the HINTS, in person or by telemedicine, or MRI with DWI is used (GRACE-3 next best); CT with or without CTA is insufficient to rule out ischemic stroke",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "At-a-glance summary, AVS; Box 4, Question 1"
+      }
+     ]
+    },
+    {
+     "item": "HINTS accuracy",
+     "dose": "Sensitivity 92.7% and specificity 91.1%; with new hearing loss added (HINTS plus), 95.7% and 80.7%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41665728",
+       "where": "Abstract: results"
+      }
+     ]
+    },
+    {
+     "item": "Hearing",
+     "dose": "Finger rub at the bedside for new one-sided hearing loss, even when the HINTS looks peripheral; confirm a loss with audiometry",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Box 1, Recommendation 3"
+      },
+      {
+       "docId": "pmid:42859937",
+       "where": "Diagnostic algorithms"
+      },
+      {
+       "docId": "pmid:41665728",
+       "where": "Abstract: conclusions"
+      }
+     ]
+    },
+    {
+     "item": "Gait with a peripheral HINTS",
+     "dose": "Cannot stand unaided: MRI with DWI to confirm or exclude a stroke; all eye signs peripheral, no hearing loss and stands unaided: vestibular neuritis without neuroimaging",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Question 1, Recommendations 2 and 3; Table 3"
+      },
+      {
+       "docId": "pmid:42851915",
+       "where": "Ocular motor testing"
+      }
+     ],
+     "note": "GRACE-3 sets the imaging threshold at inability to stand independently; Front Neurol 2026 counts grade 2 to 3 instability among the most sensitive central signs (80.8%), and in the GRACE-3 gait table 28% of grade 2 and 100% of grade 3 patients had a stroke."
+    }
+   ],
+   "note": "Untrained emergency physicians do not reliably apply or interpret HINTS, and most emergency physicians have not been trained in it; with a less experienced examiner the residual risk is higher, so a trained specialist or MRI with DWI stands in, and video head impulse testing may help where it is available.",
+   "next": "hints_result",
+   "sources": [
+    {
+     "docId": "pmid:42851915",
+     "where": "HINTS examination; Figure 1"
+    },
+    {
+     "docId": "pmid:36943963",
+     "where": "History and physical: HINTS exam"
+    },
+    {
+     "docId": "pmid:31751056",
+     "where": "Physical exam: HINTS"
+    },
+    {
+     "docId": "pmid:41665728",
+     "where": "Abstract; Introduction"
+    },
+    {
+     "docId": "pmid:42859937",
+     "where": "Diagnostic algorithms"
+    },
+    {
+     "docId": "pmid:32462345",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:37166022",
+     "where": "Box 1, Recommendations 1 to 3; Question 1, HINTS; At-a-glance summary, AVS; Box 4, Question 1"
+    }
+   ]
+  },
+  {
+   "id": "hints_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "HINTS plus hearing and gait",
+   "outcomes": [
+    {
+     "id": "peripheral",
+     "if": "Peripheral HINTS, hearing intact; corrective saccade, one-way nystagmus, no skew, stands unaided",
+     "ddx": {
+      "lead": [
+       "Vestibular neuritis"
+      ],
+      "out": []
+     },
+     "next": "neuritis"
+    },
+    {
+     "id": "central",
+     "if": "Central or equivocal HINTS; normal head impulse, direction-changing nystagmus, a skew, or unclear",
+     "ddx": {
+      "lead": [
+       "Posterior circulation stroke",
+       "Cerebellar hemorrhage"
+      ],
+      "out": []
+     },
+     "next": "mri"
+    },
+    {
+     "id": "hearing",
+     "if": "Peripheral HINTS, new hearing loss; one ear newly deaf at the bedside",
+     "ddx": {
+      "lead": [
+       "Labyrinthitis",
+       "Posterior circulation stroke"
+      ],
+      "out": []
+     },
+     "next": "mri"
+    },
+    {
+     "id": "truncal",
+     "if": "Peripheral HINTS, cannot stand unaided; falls when upright, hearing intact",
+     "ddx": {
+      "lead": [
+       "Posterior circulation stroke"
+      ],
+      "out": []
+     },
+     "next": "mri"
+    }
+   ]
+  },
+  {
+   "id": "neuritis",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Peripheral HINTS, hearing intact, stands unaided. Next?",
+   "options": [
+    "A suppressant or antiemetic for up to 3 days, then vestibular exercises",
+    "Meclizine three times a day for as long as the vertigo and the nausea last",
+    "Valacyclovir for a week, since vestibular neuritis is viral",
+    "A non-contrast CT of the head to exclude a cerebellar stroke"
+   ],
+   "answer": 0,
+   "chainStep": "Antiemetic or vestibular suppressant short term only, no longer than 3 to 5 days (meclizine 25 to 100 mg a day; promethazine 12.5 to 25 mg every 4 to 6 hours as needed); within 3 days of onset, a shared decision on short-term steroids; vestibular rehabilitation for everyone, with balance exercises at home; referral to a specialist and to primary care; return at once for new weakness, numbness, double vision, slurred speech or a worse gait; MRI if the findings are inconsistent, with stroke risk factors and no improvement in 48 hours, or with new deficits",
+   "why": "With all-peripheral eye signs, normal hearing and the patient able to stand unaided, this is vestibular neuritis, and GRACE-3 diagnoses it without neuroimaging; a CT would add only false reassurance. Antiemetics, antihistamines and benzodiazepines are for a few days only (GRACE-3: no longer than 3 to 5), because longer use inhibits central compensation, which physiotherapy and balance exercises promote; GRACE-3 refers everyone with neuritis for vestibular rehabilitation. Antivirals, alone or with a steroid, have not been shown to work; short-term steroids are a shared decision within 3 days of onset (see the order). A peripheral pattern lowers the chance of a stroke without excluding it, so an atypical course or a new deficit goes to imaging.",
+   "orders": [
+    {
+     "item": "Vestibular suppressants and antiemetics",
+     "dose": "Short term only: no longer than 3 to 5 days (GRACE-3), about 3 days in StatPearls; longer use inhibits central compensation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "At-a-glance summary, discharge; Question 4, decision criteria"
+      },
+      {
+       "docId": "pmid:31751056",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "pmid:32809341",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Meclizine",
+     "dose": "25 to 100 mg a day by mouth for vertigo; the lowest dose in older adults, in whom long-term use raises the risk of delirium and falls",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32809480",
+       "where": "Administration; Specific patient populations"
+      }
+     ]
+    },
+    {
+     "item": "Promethazine",
+     "dose": "12.5 to 25 mg, repeated every 4 to 6 hours as needed, for nausea and vomiting; IM into deep muscle, IV only with caution (severe tissue damage); on the Beers list for older adults",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31335081",
+       "where": "Administration; Specific patient populations"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroids",
+     "dose": "Within 3 days of onset, a shared decision weighing the risks and benefits of short-term steroids (GRACE-3 recommendation 14, conditional, very low certainty); if chosen, start in the ED or the same day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Box 1, Recommendation 14; Box 4, Question 4"
+      },
+      {
+       "docId": "pmid:31751056",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "pmid:39973595",
+       "where": "Abstract: conclusions"
+      }
+     ],
+     "note": "Relative contraindications include poorly controlled diabetes or bipolar disorder with mania. StatPearls calls their efficacy controversial, citing a 2011 Cochrane review; a 2025 placebo-controlled trial, published after GRACE-3, found no improvement in caloric or head impulse recovery."
+    },
+    {
+     "item": "Steroid regimen",
+     "dose": "The drug and dose are not stated in GRACE-3 or the other sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Antivirals",
+     "dose": "Not effective, alone or with a glucocorticoid",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31751056",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Vestibular rehabilitation",
+     "dose": "Refer everyone with vestibular neuritis, whether or not steroids are used; balance exercises learned with guidance and done at home",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "At-a-glance summary, discharge"
+      },
+      {
+       "docId": "pmid:42859937",
+       "where": "Acute unilateral vestibulopathy: therapy"
+      }
+     ]
+    },
+    {
+     "item": "Referral",
+     "dose": "Discharged patients go both to a specialist (otolaryngology, neurology or vestibular) and to their primary care physician",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "At-a-glance summary, discharge"
+      }
+     ]
+    },
+    {
+     "item": "Imaging",
+     "dose": "None when the examination confirms a peripheral disorder (GRACE-3); MRI, not CT, if the findings are inconsistent, with stroke risk factors and no improvement in 48 hours, or with a new deficit",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "At-a-glance summary, AVS"
+      },
+      {
+       "docId": "pmid:32462345",
+       "where": "Abstract"
+      },
+      {
+       "docId": "pmid:31751056",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:42851915",
+       "where": "Figure 1"
+      }
+     ]
+    },
+    {
+     "item": "Return advice",
+     "dose": "Come back for worsening or new neurological symptoms: weakness or numbness, double vision, slurred speech, gait disturbance",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32809341",
+       "where": "Treatment / management"
+      }
+     ]
+    }
+   ],
+   "next": "end_neuritis",
+   "sources": [
+    {
+     "docId": "pmid:31751056",
+     "where": "Evaluation; Treatment / management"
+    },
+    {
+     "docId": "pmid:32809341",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:32462345",
+     "where": "Abstract; Introduction"
+    },
+    {
+     "docId": "pmid:42851915",
+     "where": "Figure 1"
+    },
+    {
+     "docId": "pmid:42859937",
+     "where": "Acute unilateral vestibulopathy: therapy"
+    },
+    {
+     "docId": "pmid:34283519",
+     "where": "Introduction; Clinical significance"
+    },
+    {
+     "docId": "pmid:35723133",
+     "where": "Abstract: criteria"
+    },
+    {
+     "docId": "pmid:37166022",
+     "where": "Question 1, Recommendations 2 and 3; Box 1, Recommendation 14; At-a-glance summary, discharge; Box 4, Question 4"
+    }
+   ]
+  },
+  {
+   "id": "end_neuritis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Vestibular neuritis: continuous vertigo for a day or more with direction-fixed horizontal-torsional nystagmus, a corrective saccade when the head is turned toward the side opposite the fast phase, no skew, no new hearing loss, and the patient able to stand unaided. Symptom relief for a few days only, a shared decision on short-term steroids within 3 days of onset, and vestibular rehabilitation for everyone; referral to a specialist and to primary care, explicit return advice, and early follow-up with vascular imaging where risk factors accumulate."
+  },
+  {
+   "id": "ais",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Continuous dizziness or imbalance, no nystagmus. Next?",
+   "options": [
+    "Grade standing and walking, and test smooth pursuit and saccades",
+    "HINTS anyway; a normal head impulse here means a stroke",
+    "Meclizine and a clinic visit, since no nystagmus means a peripheral cause",
+    "Non-contrast CT; a clear scan makes the cause a peripheral one"
+   ],
+   "answer": 0,
+   "chainStep": "Grade gait unsteadiness (0 normal; 1 mild to moderate imbalance, walks independently; 2 severe imbalance standing, or cannot walk without support; 3 falls when upright, cannot stand unaided); test smooth pursuit and saccades; grade 2 or 3 or a central eye sign: MRI with diffusion and vascular imaging",
+   "why": "Without nystagmus the patient falls outside HINTS, so the bedside exam rests on gait and truncal stability and on eye movements. In one systematic review 49.4% of central acute vestibular syndromes had no nystagmus, and neither its absence nor the absence of severe imbalance is evidence of a peripheral cause. The head impulse is not used without spontaneous nystagmus, because bilaterally normal impulses would falsely suggest a stroke. A clear CT can falsely reassure. Some algorithms, such as STANDING, also look for a positional nystagmus when there is no spontaneous one.",
+   "orders": [
+    {
+     "item": "Grading",
+     "dose": "Grade 1 mild to moderate imbalance, walks independently; grade 2 severe imbalance standing, or cannot walk without support; grade 3 falls when upright, cannot stand unaided; stroke in 7%, 28% and 100% of grades 1 to 3 in the study GRACE-3 tabulates",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Table 3"
+      },
+      {
+       "docId": "pmid:42859937",
+       "where": "Diagnostic algorithms"
+      }
+     ]
+    },
+    {
+     "item": "Who is imaged",
+     "dose": "Grade 2 or 3, or a central eye sign: MRI with vascular imaging. Walks unaided with normal eye movements: see the note",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:32462345",
+       "where": "Abstract; Results"
+      },
+      {
+       "docId": "pmid:42851915",
+       "where": "Figure 1"
+      },
+      {
+       "docId": "pmid:37166022",
+       "where": "Box 1, Recommendation 4; Table 3"
+      }
+     ],
+     "note": "The J Neurol 2020 pathway suggests imaging for every dizzy patient with acute imbalance (a third had an acute lesion on delayed MRI); the 2026 Front Neurol review makes it a risk-based choice between imaging, observation and discharge with return advice when there is neither nystagmus nor marked instability. GRACE-3 suggests grading the gait here (conditional) but sets no imaging threshold for patients without nystagmus."
+    }
+   ],
+   "next": "ais_result",
+   "sources": [
+    {
+     "docId": "pmid:42851915",
+     "where": "HINTS examination; Gait and postural stability assessment; Figure 1"
+    },
+    {
+     "docId": "pmid:42859937",
+     "where": "Acute vestibular syndrome; Diagnostic algorithms"
+    },
+    {
+     "docId": "pmid:32462345",
+     "where": "Abstract; Introduction"
+    },
+    {
+     "docId": "pmid:37166022",
+     "where": "Box 1, Recommendations 4 and 5; Table 3; Question 1, HINTS"
+    }
+   ]
+  },
+  {
+   "id": "ais_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Gait, truncal stability and eye movements",
+   "outcomes": [
+    {
+     "id": "unsteady",
+     "if": "Grade 2 or 3, or central eye signs; severe imbalance standing, cannot walk unaided, or saccadic pursuit",
+     "ddx": {
+      "lead": [
+       "Posterior circulation stroke"
+      ],
+      "out": []
+     },
+     "next": "mri"
+    },
+    {
+     "id": "steady",
+     "if": "Grade 0 or 1, eye movements normal; walks independently, no central eye sign",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_ais_low"
+    }
+   ]
+  },
+  {
+   "id": "end_ais_low",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Continuous dizziness with no nystagmus, an independent gait and normal eye movements: the bedside exam has not cleared it, because neither finding is evidence of a peripheral cause. The sources differ on what follows: one pathway images every patient with acute imbalance, the other makes it a risk-based choice of MRI, observation, or discharge with explicit return advice and early follow-up. Isolated dizziness can be the warning sign of an impending major posterior circulation stroke."
+  },
+  {
+   "id": "mri",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "The bedside exam cannot call it peripheral. Imaging?",
+   "options": [
+    "MRI with diffusion and angiography; CT and CTA first in a lytic window",
+    "Non-contrast CT; if it is normal, treat it as vestibular neuritis",
+    "Carotid duplex and an echocardiogram as the first imaging tests to order",
+    "Repeat the HINTS in 24 hours, and image if the pattern changes"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent MRI brain with diffusion-weighted imaging and CT or MR angiography of the vertebral and basilar arteries; if MRI cannot be done promptly, or reperfusion is being considered (pw_stroke), non-contrast CT with CT angiography first; a normal CT does not exclude a posterior fossa infarct",
+   "why": "A central HINTS, new one-sided hearing loss, inability to walk unaided, central eye signs, and atypical positional nystagmus or neurological symptoms with the spells all need imaging now, and the test is MRI with diffusion, the most sensitive routine test for acute ischemia, with angiography of the posterior circulation. Within a thrombolysis or thrombectomy window, or with a severe headache at onset, a non-contrast CT comes first, with CT angiography if thrombectomy might be indicated. Non-contrast CT detects a bleed well but finds only 7 to 28.5% of ischemic strokes in dizzy patients, and a normal CT can falsely reassure. GRACE-3 recommends stroke-protocol MRI with DWI and MRA for a central or equivocal HINTS, and against routine CT or CTA to separate central from peripheral causes. Echocardiography and carotid ultrasound may complete a stroke workup later; they do not replace brain imaging.",
+   "orders": [
+    {
+     "item": "Stroke protocol MRI",
+     "dose": "For a central or equivocal HINTS: MRI with DWI and MRA (GRACE-3 recommendation 7); no routine noncontrast CT or CTA to tell central from peripheral (recommendation 5)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Box 1, Recommendations 5 and 7"
+      }
+     ]
+    },
+    {
+     "item": "CT first",
+     "dose": "When reperfusion or another time-critical treatment is possible, or signs suggest a hemorrhage (severe headache, falling consciousness, cannot sit or stand upright): CT first, with CTA or CT perfusion if reperfusion is indicated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Box 4, Question 1: possible candidate for reperfusion; signs of ICH"
+      },
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.3.2"
+      }
+     ]
+    },
+    {
+     "item": "MRI unavailable or contraindicated",
+     "dose": "Admit for a later inpatient MRI, or transfer when the result decides admission; with an absolute contraindication, CT/CTA plus CT perfusion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Box 4, Question 1: MRI unavailable; absolute contraindication to MRI"
+      }
+     ]
+    },
+    {
+     "item": "MRI with diffusion",
+     "dose": "Sensitivity about 80 to 90% in the first 48 hours (GRACE-3); most sensitive routine test, 79.8% in acute dizziness; falsely negative in about 1 in 5 posterior strokes scanned within 24 to 48 hours, and in up to 53% of infarcts 10 mm or smaller",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Box 4, Question 1: optimal timing of MRI"
+      },
+      {
+       "docId": "pmid:42851915",
+       "where": "Limitations of stroke scales and neuroimaging"
+      }
+     ]
+    },
+    {
+     "item": "Non-contrast CT",
+     "dose": "Highly sensitive for acute hemorrhage; finds 7 to 28.5% of ischemic strokes in dizzy patients",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31082120",
+       "where": "Continuing education activity"
+      },
+      {
+       "docId": "pmid:42851915",
+       "where": "Limitations of stroke scales and neuroimaging"
+      }
+     ]
+    },
+    {
+     "item": "Vascular imaging",
+     "dose": "CT or MR angiography of the vertebral and basilar arteries, above all in younger patients, with neck pain or recent neck trauma, or with recurrent stereotyped episodes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42851915",
+       "where": "Limitations of stroke scales and neuroimaging"
+      },
+      {
+       "docId": "pmid:35723133",
+       "where": "Imaging"
+      }
+     ]
+    },
+    {
+     "item": "Reperfusion",
+     "dose": "For a suspected diffusion-negative posterior stroke presenting as continuous vertigo or imbalance, an individual decision: the evidence is insufficient",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42851915",
+       "where": "When bedside assessment and imaging remain inconclusive"
+      }
+     ]
+    }
+   ],
+   "next": "mri_result",
+   "sources": [
+    {
+     "docId": "pmid:35723133",
+     "where": "Imaging"
+    },
+    {
+     "docId": "pmid:42851915",
+     "where": "Figure 1; Limitations of stroke scales and neuroimaging"
+    },
+    {
+     "docId": "pmid:36943963",
+     "where": "Evaluation; History and physical"
+    },
+    {
+     "docId": "pmid:32462345",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:31082120",
+     "where": "Continuing education activity"
+    },
+    {
+     "docId": "pmid:41665728",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:29489229",
+     "where": "Continuing education activity"
+    },
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.3.2"
+    },
+    {
+     "docId": "pmid:37166022",
+     "where": "Box 1, Recommendations 5 and 7; Box 4, Question 1; Box 4, Question 3"
+    }
+   ]
+  },
+  {
+   "id": "mri_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "MRI with diffusion and vascular imaging",
+   "outcomes": [
+    {
+     "id": "infarct",
+     "if": "Infarct or vessel lesion; acute infarct on diffusion, dissection or occlusion",
+     "ddx": {
+      "lead": [
+       "Posterior circulation stroke"
+      ],
+      "out": []
+     },
+     "next": "end_pcs"
+    },
+    {
+     "id": "bleed",
+     "if": "Posterior fossa bleed; cerebellar hemorrhage",
+     "ddx": {
+      "lead": [
+       "Cerebellar hemorrhage"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Surgical evacuation",
+       "dose": "Urgent evacuation for neurological deterioration, brainstem compression, hydrocephalus from ventricular obstruction, or 15 mL or more (AHA, as reported by StatPearls)",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:31082120",
+         "where": "Continuing education activity"
+        },
+        {
+         "docId": "url:64e48d5d8ef3",
+         "where": "1.9.3; 1.9.4"
+        }
+       ],
+       "note": "NICE NG128 lists posterior fossa haemorrhage among bleeds that rarely need surgery and get medical treatment first, while advising that previously fit people with hydrocephalus be considered for surgery; the AHA recommendation, as StatPearls reports it, sets broader surgical triggers including a volume of 15 mL. pw_stroke shows only the NICE side and should add this StatPearls report."
+      }
+     ],
+     "next": "end_bleed"
+    },
+    {
+     "id": "other",
+     "if": "Another central lesion; demyelination or a posterior fossa mass",
+     "ddx": {
+      "lead": [
+       "Demyelination or posterior fossa mass"
+      ],
+      "out": []
+     },
+     "next": "end_other"
+    },
+    {
+     "id": "normal",
+     "if": "Normal, another central sign; no infarct, bleed, mass or vessel lesion",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Cerebellar hemorrhage",
+       "Demyelination or posterior fossa mass"
+      ]
+     },
+     "next": "mri_neg"
+    },
+    {
+     "id": "normal_hearing",
+     "if": "Normal, deafness the only sign; peripheral HINTS, stands unaided, one ear deaf",
+     "ddx": {
+      "lead": [
+       "Labyrinthitis",
+       "Sudden sensorineural hearing loss"
+      ],
+      "out": [
+       "Cerebellar hemorrhage",
+       "Demyelination or posterior fossa mass"
+      ]
+     },
+     "next": "hearing"
+    }
+   ]
+  },
+  {
+   "id": "end_pcs",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Posterior circulation stroke or a vessel lesion on imaging: the stroke pathway (pw_stroke) takes the infarct, for reperfusion if still within a window, antiplatelets and secondary prevention. Treatment of a vertebral or basilar dissection itself is outside both pathways; stroke specialists decide it. Large cerebellar or brainstem infarcts need neurocritical monitoring for edema, hydrocephalus and rapid deterioration."
+  },
+  {
+   "id": "end_bleed",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cerebellar hemorrhage: the stroke pathway's hemorrhage route (pw_stroke) takes it, with blood pressure control and reversal of anticoagulation. When to evacuate is disputed (see the order): close neurosurgical monitoring either way, and immediate repeat imaging for any deterioration."
+  },
+  {
+   "id": "end_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Another central cause on MRI, such as demyelination or a posterior fossa mass: outside this pathway; neurology or neurosurgery takes it. Central causes of continuous vertigo also include drug intoxication and thiamine deficiency."
+  },
+  {
+   "id": "mri_neg",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Bedside signs not peripheral, MRI normal. Next?",
+   "options": [
+    "Admit or observe, and repeat the MRI in 3 to 14 days if suspicion persists",
+    "Discharge as vestibular neuritis, since the MRI has excluded a stroke",
+    "Vestibular rehabilitation for presumed neuritis, as the diffusion scan is clear",
+    "Thrombolysis now, as early diffusion scans are often falsely negative"
+   ],
+   "answer": 0,
+   "chainStep": "Admit or observe with high-risk features; repeat MRI with diffusion after 3 to 14 days if suspicion persists; vascular imaging of the posterior circulation; explicit return advice and early follow-up if discharged; a newly deaf ear also gets an audiogram and ENT review within 24 hours",
+   "why": "A normal early diffusion scan does not exclude a posterior circulation stroke: it is falsely negative in about 1 in 5 posterior strokes in the first 24 to 48 hours and in about half of small posterior fossa strokes within 48 hours. GRACE-3 puts early MRI sensitivity at about 80 to 90% in the first 48 hours, so the time since onset shapes how a normal scan is read. When suspicion persists, a repeat MRI after 3 to 14 days is the confirmatory step (Front Neurol), and high-risk patients are admitted or observed. Calling it neuritis on the strength of the scan is the trap, and reperfusion for a suspected diffusion-negative stroke is an individual decision, not a reflex. A standard MRI cannot see an isolated labyrinthine infarct either, so a newly deaf ear keeps the stroke question open and still gets its own urgent hearing review.",
+   "next": "end_mri_neg",
+   "sources": [
+    {
+     "docId": "pmid:42851915",
+     "where": "When bedside assessment and imaging remain inconclusive; Limitations of stroke scales and neuroimaging"
+    },
+    {
+     "docId": "pmid:32462345",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:35723133",
+     "where": "Imaging"
+    },
+    {
+     "docId": "pmid:42859937",
+     "where": "Bedside examination: hearing loss"
+    },
+    {
+     "docId": "url:f808c8a50ffb",
+     "where": "1.1.2"
+    },
+    {
+     "docId": "pmid:37166022",
+     "where": "Box 4, Question 1: optimal timing of MRI; Question 1, MRI"
+    }
+   ]
+  },
+  {
+   "id": "end_mri_neg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Central bedside signs with a normal early MRI: treated as a possible stroke until a repeat MRI after 3 to 14 days settles it; admission or observation for high-risk features, explicit return advice and early vascular follow-up if discharged."
+  },
+  {
+   "id": "hearing",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Vertigo with new one-sided hearing loss, MRI normal. Next?",
+   "options": [
+    "Formal audiometry and ENT review within 24 hours",
+    "Meclizine for the vertigo; the hearing returns as the vertigo settles",
+    "Repeat the MRI in 3 to 14 days before the ENT referral",
+    "Intratympanic gentamicin to settle the vertigo"
+   ],
+   "answer": 0,
+   "chainStep": "Pure tone audiogram as soon as possible; ENT or emergency review within 24 hours for hearing loss that came on over 3 days or less within the past 30 days; if a sudden sensorineural loss is confirmed, consider a steroid; MRI with detail of the internal auditory meatus",
+   "why": "Vertigo with new one-sided hearing loss is labyrinthitis only once a stroke is excluded, because AICA strokes cause exactly this, and a standard MRI cannot see an isolated labyrinthine infarct. The hearing loss needs its own urgent route: an audiogram as soon as possible, and NICE sends hearing loss that came on suddenly within the past 30 days for review within 24 hours. A confirmed sudden sensorineural loss is a reason to consider a steroid. Intratympanic gentamicin is cytotoxic to vestibular cells and is kept for refractory Meniere disease.",
+   "orders": [
+    {
+     "item": "Audiometry",
+     "dose": "Pure tone audiogram as soon as possible; a sudden sensorineural loss is more than 30 dB at three consecutive frequencies over 72 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33351419",
+       "where": "Sudden sensorineural hearing loss"
+      }
+     ]
+    },
+    {
+     "item": "Referral",
+     "dose": "Sudden onset (over 3 days or less) within the past 30 days: seen within 24 hours by ENT or the emergency department",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f808c8a50ffb",
+       "where": "1.1.2"
+      }
+     ]
+    },
+    {
+     "item": "Weber test",
+     "dose": "In a one-sided sensorineural loss the sound lateralizes to the good ear",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33351419",
+       "where": "Evaluation: Rinne and Weber tests"
+      }
+     ]
+    }
+   ],
+   "next": "audio",
+   "sources": [
+    {
+     "docId": "url:f808c8a50ffb",
+     "where": "1.1.2; 1.4.1"
+    },
+    {
+     "docId": "pmid:33351419",
+     "where": "Sudden sensorineural hearing loss; Treatment / management"
+    },
+    {
+     "docId": "pmid:32809341",
+     "where": "History and physical; Treatment / management"
+    },
+    {
+     "docId": "pmid:42859937",
+     "where": "Bedside examination: hearing loss"
+    },
+    {
+     "docId": "pmid:42851915",
+     "where": "Clinical presentation"
+    },
+    {
+     "docId": "pmid:30725640",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:31082149",
+     "where": "Adverse effects"
+    }
+   ]
+  },
+  {
+   "id": "audio",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Pure tone audiogram",
+   "outcomes": [
+    {
+     "id": "ssnhl",
+     "if": "Sensorineural loss confirmed; over 30 dB at three consecutive frequencies",
+     "ddx": {
+      "lead": [
+       "Sudden sensorineural hearing loss",
+       "Labyrinthitis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Steroid, for the hearing loss",
+       "dose": "Consider a steroid for idiopathic sudden sensorineural loss (NICE); the StatPearls regimen is prednisone 1 mg/kg/day, maximum 60 mg/day, for 7 days, tapered over the next week. Steroids are not supported for the vertigo of viral labyrinthitis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:f808c8a50ffb",
+         "where": "1.4.1"
+        },
+        {
+         "docId": "pmid:33351419",
+         "where": "Treatment / management"
+        },
+        {
+         "docId": "pmid:32809341",
+         "where": "Treatment / management"
+        }
+       ]
+      },
+      {
+       "item": "No improvement",
+       "dose": "Repeat the audiogram; consider salvage intratympanic steroids",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33351419",
+         "where": "Treatment / management"
+        }
+       ]
+      }
+     ],
+     "next": "end_ssnhl"
+    },
+    {
+     "id": "other_loss",
+     "if": "Conductive or partial loss; an air-bone gap, or short of the 30 dB rule",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_audio_other"
+    },
+    {
+     "id": "normal",
+     "if": "Hearing normal on the audiogram; the bedside loss is not confirmed",
+     "ddx": {
+      "lead": [
+       "Vestibular neuritis"
+      ],
+      "out": [
+       "Sudden sensorineural hearing loss",
+       "Labyrinthitis"
+      ]
+     },
+     "next": "neuritis"
+    }
+   ]
+  },
+  {
+   "id": "end_audio_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hearing loss that is conductive, or sensorineural but short of the sudden-loss definition: ENT review; outside this pathway's sources."
+  },
+  {
+   "id": "end_ssnhl",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Vertigo with a sudden sensorineural hearing loss and a clear MRI: labyrinthitis with sudden hearing loss, a diagnosis of exclusion. ENT now; consider a steroid for the hearing (prednisone 1 mg/kg/day, maximum 60 mg/day, for 7 days and then tapered over a week in the StatPearls regimen), MRI with detail of the internal auditory meatus, and salvage intratympanic steroid if the hearing does not improve. Vestibular suppressants for no more than 72 hours."
+  },
+  {
+   "id": "trig_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Attacks set off by a trigger, well between them. Next?",
+   "options": [
+    "Screen for brainstem symptoms, then standing BP and positional tests",
+    "MRI of the brain before positional testing, to exclude a stroke first",
+    "HINTS, to separate a central from a peripheral cause before anything else",
+    "Meclizine, with outpatient vestibular function testing next week"
+   ],
+   "answer": 0,
+   "chainStep": "Ask about double vision, slurred speech or drop attacks with the spells; with any of them, MRI and vascular imaging first; otherwise lying and standing blood pressure, with a fall within 3 minutes; Dix-Hallpike to each side, avoided with cervical instability, acute neck trauma, dissection or vertebrobasilar insufficiency; supine roll test for the horizontal canal; ask about sound, strain or pressure triggers",
+   "why": "Triggered attacks are sorted at the bedside: a positive Dix-Hallpike is posterior canal BPPV, the supine roll test finds the horizontal canal, and with negative positional tests an orthostatic drop points to orthostatic hypotension. Diplopia, dysarthria or drop attacks with the spells point away from typical BPPV toward vertebrobasilar insufficiency or another central cause (GRACE-3: consider central paroxysmal positional vertigo), so they are asked about first and go to imaging; atypical nystagmus also calls for MRI. StatPearls lists vertebrobasilar insufficiency as a contraindication to the Dix-Hallpike, a risk GRACE-3 calls negligible in practice (see the order). HINTS is a test for continuous vertigo with nystagmus, not for a patient who is well between attacks. GRACE-3 recommends the Dix-Hallpike for triggered attacks, against routine CT or CTA, and against routine MRI for typical posterior canal BPPV.",
+   "orders": [
+    {
+     "item": "Dix-Hallpike contraindications",
+     "dose": "StatPearls lists cervical instability, acute neck trauma, cervical disc prolapse, Chiari malformation, carotid sinus syncope, vascular dissection and vertebrobasilar insufficiency as absolute contraindications",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29083696",
+       "where": "Contraindications"
+      },
+      {
+       "docId": "pmid:37166022",
+       "where": "Question 3, harms and burden"
+      }
+     ],
+     "note": "GRACE-3 says cervical spine instability or vertebrobasilar atherosclerosis could in theory lead to complications, but that practically the risk is negligible; the greater danger it names is calling a central positional vertigo BPPV."
+    },
+    {
+     "item": "Imaging",
+     "dose": "No routine CT or CTA for triggered attacks; no routine MRI or MRA for typical posterior canal BPPV with the characteristic nystagmus",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Box 1, Recommendations 12 and 13"
+      }
+     ]
+    },
+    {
+     "item": "Orthostatic drop",
+     "dose": "Systolic down 20 mm Hg or diastolic down 10 mm Hg within 3 minutes of standing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846238",
+       "where": "Continuing education activity"
+      }
+     ]
+    }
+   ],
+   "next": "positional",
+   "sources": [
+    {
+     "docId": "pmid:36943963",
+     "where": "History and physical"
+    },
+    {
+     "docId": "pmid:42851915",
+     "where": "Figure 1"
+    },
+    {
+     "docId": "pmid:29083696",
+     "where": "Contraindications; Technique; Clinical significance"
+    },
+    {
+     "docId": "pmid:29261987",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:28846238",
+     "where": "Continuing education activity"
+    },
+    {
+     "docId": "pmid:29489229",
+     "where": "History and physical; Continuing education activity"
+    },
+    {
+     "docId": "pmid:37166022",
+     "where": "Box 1, Recommendations 11 to 13; Box 4, Question 3; Question 3, harms and burden; Question 2, conclusions"
+    }
+   ]
+  },
+  {
+   "id": "positional",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Standing pressure and positional tests",
+   "outcomes": [
+    {
+     "id": "pc",
+     "if": "Posterior canal BPPV, no red flags; upbeat-torsional nystagmus after a delay, gone within a minute",
+     "ddx": {
+      "lead": [
+       "Posterior canal BPPV"
+      ],
+      "out": []
+     },
+     "next": "epley"
+    },
+    {
+     "id": "hc",
+     "if": "Horizontal canal BPPV; horizontal nystagmus on each supine roll turn, Dix-Hallpike negative",
+     "ddx": {
+      "lead": [
+       "Horizontal canal BPPV"
+      ],
+      "out": []
+     },
+     "next": "hc_step"
+    },
+    {
+     "id": "atypical",
+     "if": "Atypical or red flags; atypical nystagmus, or diplopia, dysarthria, drop attacks, headache or new deafness",
+     "ddx": {
+      "lead": [
+       "Central positional vertigo",
+       "Vertebrobasilar TIA"
+      ],
+      "out": []
+     },
+     "next": "mri"
+    },
+    {
+     "id": "orthostatic",
+     "if": "Orthostatic drop, positional tests negative; systolic down 20 or diastolic 10",
+     "ddx": {
+      "lead": [
+       "Orthostatic hypotension"
+      ],
+      "out": []
+     },
+     "next": "oh_step"
+    },
+    {
+     "id": "pressure",
+     "if": "Sound or pressure trigger; vertigo on straining or loud noise, positional tests negative",
+     "ddx": {
+      "lead": [
+       "Perilymphatic fistula or canal dehiscence"
+      ],
+      "out": []
+     },
+     "next": "end_plf"
+    },
+    {
+     "id": "negative",
+     "if": "All negative; no positional nystagmus, standing pressure steady, no pressure trigger",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_trig_neg"
+    }
+   ]
+  },
+  {
+   "id": "epley",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Posterior canal BPPV on the Dix-Hallpike. Next?",
+   "options": [
+    "An Epley maneuver toward the affected ear now, with no imaging",
+    "MRI of the brain first, then a maneuver if the scan is clear",
+    "A barbecue roll toward the affected ear",
+    "An Epley, then a soft collar and sleeping upright for 48 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Epley maneuver toward the side positive on the Dix-Hallpike (the Semont is an equal alternative); antiemetic premedication optional; repeat the Dix-Hallpike, and the maneuver if necessary; no postmaneuver restrictions; no imaging or vestibular suppressants; follow-up in 1 month",
+   "why": "GRACE-3 recommends the Epley at the time of diagnosis (strong recommendation), and a canalith repositioning maneuver treats posterior canal BPPV unless it is contraindicated. The Epley and Semont maneuvers are equally effective, and in a Cochrane review the Epley made resolution far more likely than a sham maneuver, with a number needed to treat of 3. Postmaneuver restrictions such as a collar or sleeping upright are not needed. Imaging is not ordered for typical BPPV, outpatient vestibular suppressants are recommended against, and the barbecue roll is a maneuver for the horizontal canal, not the posterior one.",
+   "orders": [
+    {
+     "item": "Epley maneuver",
+     "dose": "Head turned 45 degrees toward the affected ear; laid back to head-hanging 20 to 30 degrees for 20 to 30 seconds; head turned 90 degrees to the other side for about 20 seconds; a further 90 degrees with the body on its side, nearly face down, for 20 to 30 seconds; then sit up",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261987",
+       "where": "Repositioning maneuvers: Epley"
+      }
+     ]
+    },
+    {
+     "item": "Repositioning maneuvers",
+     "dose": "Severe cervical disease, suspected vertebrobasilar disease, unstable cardiovascular disease, high-grade carotid stenosis",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:29261987",
+       "where": "Repositioning maneuvers: contraindications"
+      }
+     ]
+    },
+    {
+     "item": "Antiemetic",
+     "dose": "Premedication with ondansetron or promethazine is optional; antiemetics have little or no effect on the vertigo itself",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33085434",
+       "where": "Complications"
+      },
+      {
+       "docId": "pmid:29261987",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Outpatient vestibular suppressants",
+     "dose": "Not used for BPPV (GRACE-3 against outpatient meclizine and similar); a few days at most for residual mild symptoms after a successful maneuver",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "At-a-glance summary, BPPV; Question 5, decision criteria"
+      },
+      {
+       "docId": "pmid:29261987",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Not trained in the Epley",
+     "dose": "Urgent outpatient referral for treatment within 72 hours, ideally to a trained specialist (GRACE-3 next best)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "At-a-glance summary, BPPV"
+      }
+     ]
+    },
+    {
+     "item": "After the maneuver",
+     "dose": "No postural restrictions; follow-up 1 month after treatment; recurrence about 15% a year",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261987",
+       "where": "Repositioning maneuvers; Deterrence and patient education; Prognosis"
+      }
+     ]
+    }
+   ],
+   "next": "epley_result",
+   "sources": [
+    {
+     "docId": "pmid:29261987",
+     "where": "Treatment / management; Repositioning maneuvers; Evaluation"
+    },
+    {
+     "docId": "pmid:33085434",
+     "where": "Technique or treatment; Complications; Clinical significance"
+    },
+    {
+     "docId": "pmid:34283519",
+     "where": "Techniques"
+    },
+    {
+     "docId": "pmid:37166022",
+     "where": "Box 1, Recommendations 13 and 15; At-a-glance summary, BPPV"
+    }
+   ]
+  },
+  {
+   "id": "epley_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Repeat Dix-Hallpike after the maneuver",
+   "outcomes": [
+    {
+     "id": "resolved",
+     "if": "Cleared; the repeat Dix-Hallpike is negative",
+     "ddx": {
+      "lead": [
+       "Posterior canal BPPV"
+      ],
+      "out": []
+     },
+     "next": "end_bppv"
+    },
+    {
+     "id": "persists",
+     "if": "Still positive; the same upbeat-torsional nystagmus",
+     "ddx": {
+      "lead": [
+       "Posterior canal BPPV"
+      ],
+      "out": []
+     },
+     "next": "end_bppv_persist"
+    },
+    {
+     "id": "converted",
+     "if": "Converted to the horizontal canal; the supine roll test is now positive",
+     "ddx": {
+      "lead": [
+       "Horizontal canal BPPV"
+      ],
+      "out": []
+     },
+     "next": "hc_step"
+    }
+   ]
+  },
+  {
+   "id": "end_bppv",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Posterior canal BPPV treated: home without imaging or vestibular suppressants, with a warning that recurrence is common (about 15% a year) and falls are a risk, and follow-up 1 month after treatment. Recurrent BPPV goes to ENT."
+  },
+  {
+   "id": "end_bppv_persist",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Posterior canal BPPV still positive after one Epley: the commonest reasons are the wrong canal or the wrong diagnosis, so a supine roll test comes next, then the maneuver again with good technique (specialists often treat two to four times). If symptoms persist despite several properly performed maneuvers, GRACE-3 suggests considering MRI to exclude a structural cause, and/or a neurology consult; typical posterior canal BPPV can go to a vestibular specialist without an MRI. Surgery, preferably posterior canal occlusion, is only for refractory cases after multiple sessions."
+  },
+  {
+   "id": "hc_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Horizontal canal BPPV on the supine roll test. Next?",
+   "options": [
+    "A barbecue roll or Gufoni maneuver, or a vestibular service referral",
+    "An Epley maneuver toward the side with the stronger nystagmus on the roll test",
+    "MRI of the brain, since horizontal positional nystagmus is central",
+    "Meclizine for a week, then outpatient vestibular function testing"
+   ],
+   "answer": 0,
+   "chainStep": "Horizontal canal repositioning: barbecue (barrel) roll or Gufoni maneuver, done at least three times in a row; referral to a tertiary or vestibular service where the maneuvers are not available; no imaging for typical BPPV",
+   "why": "The horizontal canal needs its own maneuvers, distinct from the Epley: the barbecue roll or the Gufoni maneuver, repeated at least three times in a row, and StatPearls advises tertiary referral for horizontal canal BPPV. GRACE-3 suggests the supine roll test when the history fits BPPV but the Dix-Hallpike is negative or horizontal, and a Lempert (barbecue) roll or Gufoni maneuver for brisk geotropic nystagmus. Horizontal nystagmus that beats toward or away from the ground on each turn of the supine roll test is the diagnostic finding, and imaging is not ordered for patients who meet the criteria for BPPV; atypical features still need it, because cerebellar strokes can also cause horizontal positional nystagmus. Vestibular suppressants are not an effective treatment.",
+   "next": "end_hc",
+   "sources": [
+    {
+     "docId": "pmid:29261987",
+     "where": "Physical examination; Evaluation; Treatment / management"
+    },
+    {
+     "docId": "pmid:34283519",
+     "where": "Techniques"
+    },
+    {
+     "docId": "pmid:42859937",
+     "where": "Horizontal canal PPPV: therapy"
+    },
+    {
+     "docId": "pmid:29083696",
+     "where": "Clinical significance"
+    },
+    {
+     "docId": "pmid:42851915",
+     "where": "Table 1"
+    },
+    {
+     "docId": "pmid:37166022",
+     "where": "Box 4, Question 3: when to consider hc-BPPV; Box 4, Question 5: wrong nystagmus"
+    }
+   ]
+  },
+  {
+   "id": "end_hc",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Horizontal canal BPPV: a barbecue roll or Gufoni maneuver, repeated at least three times, or referral to a vestibular service; no imaging or long-term suppressants, follow-up at 1 month, and ENT if it recurs."
+  },
+  {
+   "id": "oh_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Dizzy on standing, an orthostatic drop, positional tests negative. Next?",
+   "options": [
+    "Look for the cause: the drugs, fluid or blood loss, autonomic failure",
+    "Start midodrine today, and leave the current blood pressure drugs as they are",
+    "An Epley maneuver, as the dizziness comes with a change of position",
+    "MRI of the brain to look for a central cause of the dizziness"
+   ],
+   "answer": 0,
+   "chainStep": "Find the cause: reconcile the drugs (antihypertensives, diuretics, alpha-blockers, nitrates, antidepressants, antipsychotics); look for volume depletion, bleeding, anemia or hyperglycemia, and for signs of autonomic failure; non-drug measures first; fludrocortisone or midodrine only if they fail",
+   "why": "Orthostatic hypotension is managed through its cause, so the first move is the drug list and a search for volume depletion, blood loss or autonomic failure. Non-drug measures are the cornerstone; fludrocortisone and midodrine are first-line drugs only when those fail, because pressor drugs raise the pressure indiscriminately and can worsen supine hypertension. With negative positional tests there is nothing to reposition.",
+   "orders": [
+    {
+     "item": "Causes",
+     "dose": "Volume depletion (anemia, dehydration, hemorrhage, hyperglycemia); drugs (alpha-blockers, antihypertensives, diuretics, nitrates, tricyclics, SSRIs, antipsychotics, beta-blockers)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846238",
+       "where": "Etiology"
+      }
+     ]
+    },
+    {
+     "item": "Non-drug measures",
+     "dose": "Rise in stages, keep hydrated, avoid alcohol, heat and large meals, sleep with the head of the bed raised, cross the legs on standing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846238",
+       "where": "Summary of non-pharmacological treatments"
+      }
+     ]
+    },
+    {
+     "item": "Fludrocortisone",
+     "dose": "First-line with midodrine when non-drug measures fail; no more than 0.2 mg a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846238",
+       "where": "Treatment / management: pharmacological"
+      }
+     ]
+    },
+    {
+     "item": "Midodrine dose",
+     "dose": "The dose is not in the sources read",
+     "status": "pending"
+    }
+   ],
+   "next": "end_oh",
+   "sources": [
+    {
+     "docId": "pmid:28846238",
+     "where": "Etiology; History and physical; Treatment / management"
+    },
+    {
+     "docId": "pmid:36943963",
+     "where": "History and physical; Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_oh",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Orthostatic hypotension: managed through its cause, drug review first, with non-drug measures and drugs only when those fail. A blackout on standing goes to the syncope pathway (pw_syncope), and a drop from hidden bleeding to pw_gi_bleed."
+  },
+  {
+   "id": "end_plf",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Vertigo set off by loud sound, straining or pressure on the ear (a Tullio phenomenon, or nystagmus on the fistula test) points to a third-window lesion: a perilymphatic fistula, above all after barotrauma, a temporal bone fracture or stapes surgery, or superior canal dehiscence. ENT and audiometry; CT of the temporal bone shows a pneumolabyrinth that confirms a fistula, or a dehiscent superior canal. Conservative care comes first, with head elevation, bed rest and no straining or heavy lifting; surgery is more widely accepted for a fistula with a known cause, and superior canal dehiscence is treated surgically."
+  },
+  {
+   "id": "end_trig_neg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Triggered dizziness with negative positional tests, a steady standing pressure and no pressure trigger: no diagnosis yet. An isolated attack is not called BPPV unless the Dix-Hallpike is positive, and dizziness that comes without movement suggests a central cause. Follow-up with explicit return advice; attacks that turn out to come out of the blue are evaluated for TIA, vestibular migraine and Meniere disease."
+  },
+  {
+   "id": "spont_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Attacks out of the blue, well between them. Next?",
+   "options": [
+    "Ask about the ear, migraine features and vascular risk; full exam",
+    "Dix-Hallpike testing to set off an attack while in the department",
+    "A CT of the head now, to exclude a tumor as the cause of the attacks",
+    "Daily meclizine to prevent the next attack, then a clinic visit"
+   ],
+   "answer": 0,
+   "chainStep": "Ask about one-sided hearing loss, tinnitus or fullness with the attacks, how long they last, migraine history and features, vascular risk factors, neck pain and neurological symptoms during attacks; neurological exam with cranial nerves, visual fields, eye movements, limb coordination and gait; audiogram if the ear is involved; no routine CT",
+   "why": "Spontaneous attacks are mostly vestibular migraine, Meniere disease or a TIA, and the history separates them: ear symptoms with the attacks, migraine features, and the vascular risk. GRACE-3 asks for a detailed history and an exam focused on cranial nerves, visual fields, eye movements, coordination and gait, and recommends against routine CT. The exam is often normal between attacks, which does not exclude a vascular cause. Positional testing belongs to triggered attacks, and a daily vestibular suppressant is no prevention: long-term use is discouraged and, in older adults, raises the risk of delirium and falls.",
+   "next": "spont",
+   "sources": [
+    {
+     "docId": "pmid:36943963",
+     "where": "History and physical"
+    },
+    {
+     "docId": "pmid:42851915",
+     "where": "Episodic isolated dizziness and posterior circulation TIA; Figure 1"
+    },
+    {
+     "docId": "pmid:34283519",
+     "where": "Enhancing healthcare team outcomes"
+    },
+    {
+     "docId": "pmid:32809480",
+     "where": "Specific patient populations"
+    },
+    {
+     "docId": "pmid:37166022",
+     "where": "Box 1, Recommendations 8 and 9; Box 4, Question 2"
+    }
+   ]
+  },
+  {
+   "id": "spont",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Ear, migraine and vascular history",
+   "outcomes": [
+    {
+     "id": "ear",
+     "if": "Recurrent attacks with ear symptoms; two or more over weeks or months, with one-sided hearing loss, tinnitus or fullness",
+     "ddx": {
+      "lead": [
+       "Meniere disease"
+      ],
+      "out": []
+     },
+     "next": "meniere_step"
+    },
+    {
+     "id": "migraine",
+     "if": "Recurrent attacks, migraine features, ear spared; migraine history, headache, light or sound sensitivity",
+     "ddx": {
+      "lead": [
+       "Vestibular migraine"
+      ],
+      "out": []
+     },
+     "next": "vm_step"
+    },
+    {
+     "id": "tia",
+     "if": "TIA concern, not a recurrent ear or migraine pattern; vascular risk, neck pain, a deadly D such as diplopia or dysarthria, or a first attack with deafness",
+     "ddx": {
+      "lead": [
+       "Vertebrobasilar TIA"
+      ],
+      "out": []
+     },
+     "next": "tia_step"
+    },
+    {
+     "id": "low",
+     "if": "Low TIA risk, not an ear or migraine pattern; no vascular risk, neck pain, deadly D such as diplopia or dysarthria, or deafness",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_spont_low"
+    }
+   ]
+  },
+  {
+   "id": "meniere_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Recurrent attacks of hours with one-sided ear symptoms. Next?",
+   "options": [
+    "Audiogram and ENT, a low-salt diet, and drugs for the attacks",
+    "Intratympanic gentamicin now, before diet or tablets are tried",
+    "Caloric and vestibular function testing to make the diagnosis",
+    "An Epley maneuver toward the ear with the hearing loss"
+   ],
+   "answer": 0,
+   "chainStep": "Audiogram (low to mid frequency sensorineural loss); ENT; MRI with contrast to exclude a mimic such as a retrocochlear lesion, and syphilis serology; sodium 1500 to 2300 mg a day, less caffeine and alcohol; antiemetic and vestibular suppressant for attacks (meclizine 12.5 to 25 mg every 8 hours); a diuretic or betahistine can be considered; intratympanic therapy, then surgery, for refractory disease",
+   "why": "Two or more attacks of 20 minutes to 12 hours, an audiometric low-frequency loss in one ear tied to the attacks, and fluctuating tinnitus or fullness in that ear is Meniere disease. Audiometry makes the diagnosis; AAO-HNS, as reported by StatPearls, recommends against routine vestibular testing to establish it. Treatment is stepwise: diet first, drugs for the attacks, then intratympanic injections and surgery only for refractory disease. The evidence for diet, diuretics and betahistine is rated low or very low, and betahistine is not FDA approved.",
+   "orders": [
+    {
+     "item": "Criteria",
+     "dose": "Two or more attacks of 20 minutes to 12 hours; audiometric hearing loss below 2000 Hz, over 30 dB, in that ear and tied to the attacks; fluctuating tinnitus or fullness in that ear; not better explained by another vestibular diagnosis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42859937",
+       "where": "Table 2, Meniere's disease criteria"
+      }
+     ]
+    },
+    {
+     "item": "Diet",
+     "dose": "Sodium 1500 to 2300 mg a day; limit caffeine and alcohol; no trial shows it prevents attacks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725640",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Meclizine",
+     "dose": "12.5 to 25 mg every 8 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32809480",
+       "where": "Administration"
+      }
+     ]
+    },
+    {
+     "item": "Diuretic or betahistine",
+     "dose": "Can be considered: a thiazide with or without a potassium-sparing agent first; betahistine is not FDA approved; the evidence is low or very low",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725640",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "pmid:42859937",
+       "where": "Meniere's disease: therapy"
+      }
+     ]
+    },
+    {
+     "item": "Refractory disease",
+     "dose": "Intratympanic steroid; intratympanic gentamicin; then surgery",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725640",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Referral",
+     "dose": "Primary care and an otolaryngologist, neurologist or vestibular specialist",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Box 4, Question 2: probable vestibular migraine; At-a-glance summary, s-EVS"
+      }
+     ]
+    }
+   ],
+   "next": "end_meniere",
+   "sources": [
+    {
+     "docId": "pmid:42859937",
+     "where": "Table 2, Meniere's disease criteria; Meniere's disease: therapy"
+    },
+    {
+     "docId": "pmid:30725640",
+     "where": "Evaluation; Treatment / management"
+    },
+    {
+     "docId": "pmid:32809480",
+     "where": "Administration"
+    }
+   ]
+  },
+  {
+   "id": "end_meniere",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Meniere disease: ENT, audiogram and an MRI to exclude mimics; low-salt diet, drugs for the attacks, and stepwise escalation to intratympanic therapy and surgery for refractory disease."
+  },
+  {
+   "id": "vm_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Recurrent attacks with migraine features, normal exam between. Next?",
+   "options": [
+    "Antiemetic or suppressant for the attack; prevention in follow-up",
+    "Sumatriptan, which has been shown to stop the vertigo of an attack",
+    "MRI with gadolinium, which can confirm the vestibular migraine",
+    "An Epley maneuver, as vestibular migraine attacks can be positional"
+   ],
+   "answer": 0,
+   "chainStep": "Treat the attack with an antiemetic and a vestibular suppressant; lifestyle and trigger advice, with preventive treatment discussed in follow-up (topiramate 50 to 100 mg a day was studied); exclude a TIA before settling on the diagnosis",
+   "why": "Vestibular migraine, at least five attacks of 5 minutes to 72 hours with a migraine history and migraine features in at least half of them, has no diagnostic test, so the history makes it once other causes, including a TIA, are excluded. Acute attacks are treated with antiemetic and antivertigo drugs; a Cochrane review found no convincing evidence that triptans relieve the vertigo. Prevention starts with lifestyle and triggers.",
+   "orders": [
+    {
+     "item": "Criteria",
+     "dose": "At least 5 episodes of moderate or severe vestibular symptoms lasting 5 minutes to 72 hours; current or past migraine; migraine features (headache, photophobia and phonophobia, or visual aura) in at least half of them",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34719447",
+       "where": "Criteria A to C"
+      }
+     ]
+    },
+    {
+     "item": "Acute attack",
+     "dose": "Antiemetic and antivertigo drugs, including benzodiazepines; no convincing evidence for triptans",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29939636",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Prevention",
+     "dose": "Lifestyle, dietary triggers and sleep first; topiramate 50 to 100 mg a day reduced vertigo and headache in a prospective study",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29939636",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Referral",
+     "dose": "Primary care and a neurologist, otolaryngologist or vestibular specialist",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Box 4, Question 2: probable vestibular migraine; At-a-glance summary, s-EVS"
+      }
+     ]
+    }
+   ],
+   "next": "end_vm",
+   "sources": [
+    {
+     "docId": "pmid:34719447",
+     "where": "Criteria A to D"
+    },
+    {
+     "docId": "pmid:29939636",
+     "where": "Evaluation; Treatment / management; Differential diagnosis"
+    }
+   ]
+  },
+  {
+   "id": "end_vm",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Vestibular migraine: treat the attack, then lifestyle and preventive treatment in clinic; the diagnosis stands only once other vestibular causes and a TIA are excluded."
+  },
+  {
+   "id": "tia_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Spontaneous attacks with a TIA concern. Next?",
+   "options": [
+    "Possible posterior TIA: MRI, vessel imaging, urgent stroke review",
+    "Meclizine and a clinic visit, as the exam between attacks is normal",
+    "Dix-Hallpike testing, with an Epley maneuver if it is positive",
+    "A non-contrast head CT, and reassurance if it is normal"
+   ],
+   "answer": 0,
+   "chainStep": "Treat as a possible posterior circulation TIA: specialist stroke review within 24 hours; MRI with diffusion on the day of assessment; CT or MR angiography of the vertebral and basilar arteries; cardiovascular risk stratification; aspirin 300 mg at once for a suspected TIA unless contraindicated",
+   "why": "Spontaneous attacks that are not a recurrent ear or migraine pattern can be posterior circulation TIAs, and a first attack with one-sided hearing loss raises an AICA stroke; the exam is often normal between attacks and early imaging often negative, so neither excludes a vascular cause. GRACE-3 suggests CTA or MRA of the head and neck when there is concern for TIA and recommends against routine CT; vascular imaging of the posterior circulation and cardiovascular risk stratification are considered; NICE gives aspirin 300 mg at once for a suspected TIA, with specialist review within 24 hours and MRI on the day of assessment, and advises against CT for a suspected TIA unless it could show an alternative diagnosis.",
+   "orders": [
+    {
+     "item": "Aspirin",
+     "dose": "300 mg daily, started immediately for a suspected TIA, unless contraindicated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.1.4"
+      }
+     ]
+    },
+    {
+     "item": "Specialist review",
+     "dose": "Within 24 hours of the onset of symptoms",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.1.5"
+      }
+     ]
+    },
+    {
+     "item": "MRI",
+     "dose": "Consider after specialist assessment, the same day, with diffusion-weighted and blood-sensitive sequences",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.2.2"
+      }
+     ]
+    },
+    {
+     "item": "Vascular imaging",
+     "dose": "CTA or MRA of the head and neck (GRACE-3 recommendation 10), with cardiovascular risk stratification",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Box 1, Recommendation 10"
+      },
+      {
+       "docId": "pmid:42851915",
+       "where": "Episodic isolated dizziness and posterior circulation TIA"
+      }
+     ]
+    },
+    {
+     "item": "CT",
+     "dose": "No routine CT to separate a TIA from vestibular migraine or Meniere disease",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:37166022",
+       "where": "Box 1, Recommendation 9"
+      },
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.2.1"
+      }
+     ]
+    },
+    {
+     "item": "ABCD2 score",
+     "dose": "Not for urgency or referral (NICE); 4 or more selects dual antiplatelets in pw_stroke (ESO)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.1.6"
+      },
+      {
+       "docId": "pmid:36943963",
+       "where": "History and physical"
+      },
+      {
+       "docId": "pmid:34414300",
+       "where": "Recommendation 1"
+      },
+      {
+       "docId": "pmid:37166022",
+       "where": "Question 1, vascular risk factors"
+      }
+     ],
+     "note": "NICE NG128 says not to use scoring systems such as ABCD2 to assess the risk of stroke or decide the urgency of referral; StatPearls uses ABCD2 within TiTrATE to flag features of brain ischemia; ESO uses an ABCD2 of 4 or more, after assessment, to select 21 days of aspirin plus clopidogrel (pw_stroke); GRACE-3 lets clinicians factor vascular risk, including the ABCD2 score, into decisions, while their absence does not exclude a cerebrovascular cause."
+    }
+   ],
+   "next": "end_tia",
+   "sources": [
+    {
+     "docId": "pmid:42851915",
+     "where": "Episodic isolated dizziness and posterior circulation TIA; Figure 1; Clinical presentation"
+    },
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.1.4; 1.1.5; 1.1.6; 1.2.1; 1.2.2"
+    },
+    {
+     "docId": "pmid:36943963",
+     "where": "History and physical"
+    },
+    {
+     "docId": "pmid:34414300",
+     "where": "Recommendation 1"
+    },
+    {
+     "docId": "pmid:37166022",
+     "where": "Box 1, Recommendations 9 and 10; At-a-glance summary, s-EVS"
+    }
+   ]
+  },
+  {
+   "id": "end_spont_low",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Spontaneous attacks at low risk of TIA that are not a recurrent ear or migraine pattern: GRACE-3 advises against routine neuroimaging and against CT here. A careful history and exam, referral to primary care and a vestibular specialist, and explicit return advice; BPPV and vestibular migraine are common TIA mimics, and in younger patients a vertebral artery dissection is worth considering."
+  },
+  {
+   "id": "end_tia",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Possible posterior circulation TIA: the stroke pathway's TIA route (pw_stroke) takes it, with aspirin for a suspected TIA, specialist review within 24 hours, MRI and vascular imaging, and secondary prevention once the diagnosis is confirmed."
+  }
+ ],
+ "cases": [
+  {
+   "id": "unstable_block",
+   "label": "Dizzy and shocked in heart block",
+   "vignette": "71-year-old man, sudden dizziness and vomiting at home, then grey and clammy. HR 38, BP 74/40, SpO2 95% on air.",
+   "picks": {
+    "front": "unstable"
+   },
+   "results": {
+    "front": "Monitor: complete heart block at 38; BP 74/40; drowsy but rousable; glucose 110 mg/dL (6.1 mmol/L)."
+   }
+  },
+  {
+   "id": "hypo",
+   "label": "Dizzy and sweaty on insulin",
+   "vignette": "58-year-old woman with type 1 diabetes on insulin, dizzy, shaky and sweating an hour after missing lunch. HR 104, BP 132/80, SpO2 99%.",
+   "picks": {
+    "front": "glucose"
+   },
+   "results": {
+    "front": "Fingerstick glucose 47 mg/dL (2.6 mmol/L); sinus tachycardia on the ECG; alert, no focal deficit."
+   }
+  },
+  {
+   "id": "focal_stroke",
+   "label": "Vertigo with diplopia and arm drift",
+   "vignette": "66-year-old man with hypertension and diabetes, vertigo and vomiting since waking 3 hours ago, speech thick. HR 88, BP 178/96, SpO2 97%.",
+   "picks": {
+    "front": "focal"
+   },
+   "results": {
+    "front": "Glucose 122 mg/dL (6.8 mmol/L); sinus rhythm; dysarthria, double vision on right gaze, and right arm drift."
+   }
+  },
+  {
+   "id": "thunderclap",
+   "label": "Dizzy with a thunderclap headache",
+   "vignette": "54-year-old woman, sudden severe headache while lifting a box 2 hours ago, then dizziness and vomiting. HR 90, BP 168/94, GCS 15.",
+   "picks": {
+    "front": "thunderclap"
+   },
+   "results": {
+    "front": "The headache was at its worst within a minute of onset; glucose 113 mg/dL (6.3 mmol/L); sinus rhythm; no weakness, numbness, speech or visual deficit."
+   }
+  },
+  {
+   "id": "svt",
+   "label": "Lightheaded with a racing heart",
+   "vignette": "45-year-old woman, 20 minutes of lightheadedness with a racing heart, no spinning, no loss of consciousness. HR 186, BP 118/76, SpO2 98%.",
+   "picks": {
+    "front": "cardiac"
+   },
+   "results": {
+    "front": "Narrow regular tachycardia at 186 on the ECG; BP 118/76; glucose 97 mg/dL (5.4 mmol/L); alert, neurological exam normal."
+   }
+  },
+  {
+   "id": "phenytoin",
+   "label": "Unsteady after a phenytoin dose rise",
+   "vignette": "39-year-old man with epilepsy on phenytoin, 3 days of unsteadiness and a sense that the room moves, since his dose was raised last week. HR 78, BP 126/80.",
+   "picks": {
+    "front": "drug"
+   },
+   "results": {
+    "front": "Phenytoin level 34 mg/L; glucose 90 mg/dL (5.0 mmol/L); sinus rhythm; nystagmus on looking to either side, broad-based gait; strength, sensation, speech and fields normal."
+   }
+  },
+  {
+   "id": "neuritis",
+   "label": "Vestibular neuritis",
+   "vignette": "42-year-old woman, woke yesterday with constant spinning and vomiting, worse with any head movement; a cold last week. HR 88, BP 128/78.",
+   "picks": {
+    "front": "clear",
+    "timing": "avs",
+    "avs_nyst": "nyst",
+    "hints_result": "peripheral"
+   },
+   "results": {
+    "front": "Glucose 101 mg/dL (5.6 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Constant for 30 hours, worse when the head moves, never gone.",
+    "avs_nyst": "Horizontal-torsional nystagmus beating left at rest, stronger on left gaze, still beating left on right gaze.",
+    "hints_result": "Head impulse to the right: corrective saccade; to the left: normal. Nystagmus beats left in every gaze; no skew on alternate cover; finger rub heard equally; walks unaided, veering to the right."
+   }
+  },
+  {
+   "id": "pica_central",
+   "label": "Cerebellar stroke with a central HINTS",
+   "vignette": "69-year-old man with diabetes and hypertension, 14 hours of constant vertigo and vomiting since lunch. HR 84, BP 172/94.",
+   "picks": {
+    "front": "clear",
+    "timing": "avs",
+    "avs_nyst": "nyst",
+    "hints_result": "central",
+    "mri_result": "infarct"
+   },
+   "results": {
+    "front": "Glucose 166 mg/dL (9.2 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Constant since onset 14 hours ago, worse with head movement.",
+    "avs_nyst": "Nystagmus beats right on right gaze and left on left gaze.",
+    "hints_result": "Head impulse normal to both sides; nystagmus changes direction with gaze; small skew on alternate cover; hearing equal; cannot walk without support.",
+    "mri_result": "Diffusion: acute infarct in the left inferior cerebellum, PICA territory; vertebral and basilar arteries patent."
+   }
+  },
+  {
+   "id": "aica",
+   "label": "AICA stroke that looks like labyrinthitis",
+   "vignette": "73-year-old woman with hypertension and high cholesterol, sudden vertigo, vomiting and deafness in the right ear 10 hours ago. HR 80, BP 168/90.",
+   "picks": {
+    "front": "clear",
+    "timing": "avs",
+    "avs_nyst": "nyst",
+    "hints_result": "hearing",
+    "mri_result": "infarct"
+   },
+   "results": {
+    "front": "Glucose 115 mg/dL (6.4 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Constant for 10 hours, worse with head movement.",
+    "avs_nyst": "Left-beating horizontal nystagmus at rest.",
+    "hints_result": "Head impulse to the right: corrective saccade; nystagmus beats left in all gaze directions; no skew; cannot hear a finger rub in the right ear, Weber lateralizes to the left; walks with support.",
+    "mri_result": "Diffusion: acute infarct in the right middle cerebellar peduncle and lateral pons, AICA territory."
+   }
+  },
+  {
+   "id": "medulla",
+   "label": "Lateral medullary stroke, cannot stand",
+   "vignette": "48-year-old man, neck pain after a chiropractic session yesterday, then constant vertigo and vomiting for 20 hours. HR 82, BP 154/90.",
+   "picks": {
+    "front": "clear",
+    "timing": "avs",
+    "avs_nyst": "nyst",
+    "hints_result": "truncal",
+    "mri_result": "infarct"
+   },
+   "results": {
+    "front": "Glucose 106 mg/dL (5.9 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Constant for 20 hours, worse with head movement.",
+    "avs_nyst": "Right-beating horizontal-torsional nystagmus at rest.",
+    "hints_result": "Head impulse to the left: corrective saccade; nystagmus beats right in all gaze; no skew; hearing equal; cannot sit or stand unaided, falls to the left.",
+    "mri_result": "Diffusion: small acute infarct in the left dorsolateral medulla; CT angiography: left vertebral artery dissection."
+   }
+  },
+  {
+   "id": "cerebellar_bleed",
+   "label": "Cerebellar hemorrhage, alert",
+   "vignette": "62-year-old woman with long-standing hypertension, sudden vertigo, vomiting and an occipital ache that built over the first hour, 3 hours ago. Alert, GCS 15. HR 74, BP 196/104.",
+   "picks": {
+    "front": "clear",
+    "timing": "avs",
+    "avs_nyst": "nyst",
+    "hints_result": "central",
+    "mri_result": "bleed"
+   },
+   "results": {
+    "front": "Glucose 126 mg/dL (7.0 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside. The ache built over an hour; not a thunderclap.",
+    "timing": "Constant since onset 3 hours ago.",
+    "avs_nyst": "Gaze-evoked nystagmus to each side, no nystagmus looking straight ahead.",
+    "hints_result": "Head impulse normal both ways; nystagmus changes direction with gaze; no skew; hearing equal; cannot stand without falling.",
+    "mri_result": "CT then MRI: right cerebellar hematoma, 2.5 cm; fourth ventricle open, no hydrocephalus."
+   }
+  },
+  {
+   "id": "ais_neg_mri",
+   "label": "Imbalance without nystagmus, early MRI normal",
+   "vignette": "77-year-old man with diabetes, hypertension and a TIA last year, 30 hours of constant dizziness and unsteadiness, vomited twice. HR 76, BP 164/88.",
+   "picks": {
+    "front": "clear",
+    "timing": "avs",
+    "avs_nyst": "none",
+    "ais_result": "unsteady",
+    "mri_result": "normal"
+   },
+   "results": {
+    "front": "Glucose 146 mg/dL (8.1 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Constant for 30 hours, worse when he moves.",
+    "avs_nyst": "No nystagmus at rest or on side gaze, with or without fixation.",
+    "ais_result": "Cannot walk without support (grade 2); smooth pursuit is saccadic.",
+    "mri_result": "Diffusion normal at 32 hours; no bleed, mass or vessel narrowing; hearing equal."
+   }
+  },
+  {
+   "id": "ais_steady",
+   "label": "Mild constant dizziness, steady gait",
+   "vignette": "52-year-old woman, 2 days of constant mild dizziness and unsteadiness, no vomiting, no vascular risk factors. HR 72, BP 124/78.",
+   "picks": {
+    "front": "clear",
+    "timing": "avs",
+    "avs_nyst": "none",
+    "ais_result": "steady"
+   },
+   "results": {
+    "front": "Glucose 94 mg/dL (5.2 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Constant for 2 days, a little worse when she moves.",
+    "avs_nyst": "No nystagmus at rest or on side gaze.",
+    "ais_result": "Walks unaided with mild imbalance (grade 1); pursuit and saccades normal."
+   }
+  },
+  {
+   "id": "lab_ssnhl",
+   "label": "Labyrinthitis with sudden hearing loss",
+   "vignette": "34-year-old man, 70 kg, woke 2 days ago with constant spinning, vomiting and a muffled left ear, after a cold. HR 86, BP 124/76.",
+   "picks": {
+    "front": "clear",
+    "timing": "avs",
+    "avs_nyst": "nyst",
+    "hints_result": "hearing",
+    "mri_result": "normal_hearing",
+    "audio": "ssnhl"
+   },
+   "results": {
+    "front": "Glucose 99 mg/dL (5.5 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Constant for 48 hours, worse with head movement.",
+    "avs_nyst": "Right-beating horizontal-torsional nystagmus at rest.",
+    "hints_result": "Head impulse to the left: corrective saccade; nystagmus beats right in all gaze; no skew; cannot hear a finger rub on the left, Weber lateralizes to the right; walks unaided, veering to the left.",
+    "mri_result": "Diffusion normal; no lesion in the brainstem, cerebellum or internal auditory canals; the left ear is still deaf.",
+    "audio": "Left sensorineural loss of 45 to 60 dB at 1, 2 and 4 kHz with no air-bone gap; right ear normal."
+   }
+  },
+  {
+   "id": "hearing_unconfirmed",
+   "label": "Bedside hearing loss not confirmed",
+   "vignette": "56-year-old woman, 26 hours of constant spinning and vomiting after a viral illness; thinks her right ear sounds dull. HR 90, BP 136/82.",
+   "picks": {
+    "front": "clear",
+    "timing": "avs",
+    "avs_nyst": "nyst",
+    "hints_result": "hearing",
+    "mri_result": "normal_hearing",
+    "audio": "normal"
+   },
+   "results": {
+    "front": "Glucose 108 mg/dL (6.0 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Constant for 26 hours, worse when the head moves.",
+    "avs_nyst": "Left-beating horizontal-torsional nystagmus at rest.",
+    "hints_result": "Head impulse to the right: corrective saccade; nystagmus beats left in all gaze; no skew; finger rub fainter on the right; walks unaided, veering to the right.",
+    "mri_result": "Diffusion normal; no bleed, mass or vessel lesion; finger rub still fainter on the right.",
+    "audio": "Pure tone audiogram normal and symmetric in both ears."
+   }
+  },
+  {
+   "id": "partial_loss",
+   "label": "Bedside hearing loss short of a sudden loss",
+   "vignette": "45-year-old man, 30 hours of constant spinning and vomiting after a cold; his right ear sounds muffled. HR 84, BP 130/80.",
+   "picks": {
+    "front": "clear",
+    "timing": "avs",
+    "avs_nyst": "nyst",
+    "hints_result": "hearing",
+    "mri_result": "normal_hearing",
+    "audio": "other_loss"
+   },
+   "results": {
+    "front": "Glucose 104 mg/dL (5.8 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Constant for 30 hours, worse when the head moves.",
+    "avs_nyst": "Left-beating horizontal-torsional nystagmus at rest.",
+    "hints_result": "Head impulse to the right: corrective saccade; nystagmus beats left in all gaze; no skew; finger rub fainter on the right, Weber lateralizes to the left; walks unaided, veering to the right.",
+    "mri_result": "Diffusion normal; no bleed, mass or vessel lesion; finger rub still fainter on the right.",
+    "audio": "Right sensorineural loss of 25 dB at 4 and 8 kHz only, no air-bone gap; left ear normal."
+   }
+  },
+  {
+   "id": "bppv_cured",
+   "label": "Posterior canal BPPV, cleared by an Epley",
+   "vignette": "67-year-old woman, 4 days of brief spinning when she lies down, rolls over in bed or looks up; fine between spells. HR 74, BP 138/82.",
+   "picks": {
+    "front": "clear",
+    "timing": "triggered",
+    "positional": "pc",
+    "epley_result": "resolved"
+   },
+   "results": {
+    "front": "Glucose 103 mg/dL (5.7 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Spells of 20 to 30 seconds, only on lying down, rolling over or looking up; well in between.",
+    "positional": "Standing pressure 136/80 at 3 minutes; right Dix-Hallpike: upbeat-torsional nystagmus after 5 seconds, building then fading by 30 seconds; left Dix-Hallpike and supine roll negative.",
+    "epley_result": "Repeat right Dix-Hallpike: no nystagmus, no vertigo."
+   }
+  },
+  {
+   "id": "bppv_persist",
+   "label": "Posterior canal BPPV, still positive",
+   "vignette": "74-year-old man, a week of spinning for seconds when he rolls to the left in bed. HR 70, BP 142/84.",
+   "picks": {
+    "front": "clear",
+    "timing": "triggered",
+    "positional": "pc",
+    "epley_result": "persists"
+   },
+   "results": {
+    "front": "Glucose 112 mg/dL (6.2 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Spells of under a minute on rolling to the left or lying back; well between.",
+    "positional": "Standing pressure steady; left Dix-Hallpike: upbeat-torsional nystagmus after a few seconds, gone by 40 seconds; right Dix-Hallpike and supine roll negative.",
+    "epley_result": "Repeat left Dix-Hallpike: the same upbeat-torsional nystagmus, weaker."
+   }
+  },
+  {
+   "id": "bppv_convert",
+   "label": "BPPV converted to the horizontal canal",
+   "vignette": "59-year-old woman, 3 days of spinning for seconds when she lies back in bed. HR 76, BP 130/80.",
+   "picks": {
+    "front": "clear",
+    "timing": "triggered",
+    "positional": "pc",
+    "epley_result": "converted"
+   },
+   "results": {
+    "front": "Glucose 95 mg/dL (5.3 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Brief spells on lying back and turning in bed; well between.",
+    "positional": "Standing pressure steady; right Dix-Hallpike: upbeat-torsional nystagmus after a short delay, fading within 30 seconds; left side and supine roll negative.",
+    "epley_result": "Right Dix-Hallpike now negative, but the supine roll test brings out horizontal nystagmus beating toward the ground on turning to each side, stronger to the right."
+   }
+  },
+  {
+   "id": "hc_bppv",
+   "label": "Horizontal canal BPPV",
+   "vignette": "48-year-old man, 5 days of spinning whenever he turns his head from side to side in bed. HR 72, BP 128/80.",
+   "picks": {
+    "front": "clear",
+    "timing": "triggered",
+    "positional": "hc"
+   },
+   "results": {
+    "front": "Glucose 92 mg/dL (5.1 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Spells of under a minute on turning over in bed; well between.",
+    "positional": "Standing pressure steady; both Dix-Hallpike tests negative; supine roll: horizontal nystagmus beating toward the ground on turning to each side, stronger to the left, fading within a minute."
+   }
+  },
+  {
+   "id": "central_positional",
+   "label": "Positional vertigo from a cerebellar mass",
+   "vignette": "61-year-old man, 3 weeks of dizziness on lying down and on bending forward, with morning headaches. HR 70, BP 134/82.",
+   "picks": {
+    "front": "clear",
+    "timing": "triggered",
+    "positional": "atypical",
+    "mri_result": "other"
+   },
+   "results": {
+    "front": "Glucose 97 mg/dL (5.4 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Spells on lying down and on bending forward; well when sitting still.",
+    "positional": "Standing pressure steady; on both Dix-Hallpike tests, downbeat nystagmus starts at once and lasts as long as the head is held; little vertigo with it.",
+    "mri_result": "MRI: an enhancing mass in the cerebellar vermis; no infarct."
+   }
+  },
+  {
+   "id": "orthostatic",
+   "label": "Dizzy on standing after a new diuretic",
+   "vignette": "79-year-old woman, a week of lightheadedness and unsteadiness within seconds of standing up, never when lying down. HR 82, BP 128/72 lying.",
+   "picks": {
+    "front": "clear",
+    "timing": "triggered",
+    "positional": "orthostatic"
+   },
+   "results": {
+    "front": "Glucose 104 mg/dL (5.8 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Spells within seconds of standing up, never on lying down or rolling; well between; furosemide was started 10 days ago.",
+    "positional": "Lying 128/72; standing at 2 minutes 102/64, with the dizziness; Dix-Hallpike and supine roll negative."
+   }
+  },
+  {
+   "id": "fistula",
+   "label": "Pressure-triggered vertigo after a dive",
+   "vignette": "31-year-old man, 5 days of brief vertigo when he strains, coughs or hears loud music, since a scuba dive; the left ear feels full. HR 70, BP 122/76.",
+   "picks": {
+    "front": "clear",
+    "timing": "triggered",
+    "positional": "pressure"
+   },
+   "results": {
+    "front": "Glucose 90 mg/dL (5.0 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Brief spells set off by straining, coughing or loud sound; well between.",
+    "positional": "Standing pressure steady; Dix-Hallpike and supine roll negative; pressing on the left tragus brings out nystagmus and vertigo."
+   }
+  },
+  {
+   "id": "trig_negative",
+   "label": "Two triggered spells, tests negative",
+   "vignette": "36-year-old woman, two spells of spinning on getting out of bed 3 days ago, none since; well now. HR 68, BP 118/72.",
+   "picks": {
+    "front": "clear",
+    "timing": "triggered",
+    "positional": "negative"
+   },
+   "results": {
+    "front": "Glucose 88 mg/dL (4.9 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Two spells of seconds on getting up from bed; none since.",
+    "positional": "Standing pressure steady; Dix-Hallpike to each side and supine roll negative; no sound or pressure trigger."
+   }
+  },
+  {
+   "id": "meniere",
+   "label": "Meniere disease",
+   "vignette": "47-year-old woman, three attacks over 4 months of spinning for 2 to 4 hours with roaring tinnitus and fullness in the left ear, hearing dull afterward; well between. HR 74, BP 126/78.",
+   "picks": {
+    "front": "clear",
+    "timing": "spontaneous",
+    "spont": "ear"
+   },
+   "results": {
+    "front": "Glucose 95 mg/dL (5.3 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Attacks of 2 to 4 hours out of the blue; well between; none today.",
+    "spont": "Left ear: hearing loss, tinnitus and fullness with each attack; no migraine history; normal neurological exam."
+   }
+  },
+  {
+   "id": "vest_migraine",
+   "label": "Vestibular migraine",
+   "vignette": "33-year-old woman with migraine since her teens, six episodes this year of dizziness with nausea lasting 1 to 6 hours. HR 70, BP 116/72.",
+   "picks": {
+    "front": "clear",
+    "timing": "spontaneous",
+    "spont": "migraine"
+   },
+   "results": {
+    "front": "Glucose 90 mg/dL (5.0 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Episodes of 1 to 6 hours out of the blue; well between.",
+    "spont": "No hearing loss, tinnitus or fullness; throbbing headache with light and sound sensitivity in most episodes; normal exam between."
+   }
+  },
+  {
+   "id": "vb_tia",
+   "label": "Attacks of vertigo in a vascular patient",
+   "vignette": "72-year-old man with diabetes, hypertension and a 40 pack-year smoking history, three attacks of vertigo and unsteadiness over 2 days, each 5 to 10 minutes, out of the blue; well now. HR 78, BP 158/90.",
+   "picks": {
+    "front": "clear",
+    "timing": "spontaneous",
+    "spont": "tia"
+   },
+   "results": {
+    "front": "Glucose 133 mg/dL (7.4 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Three attacks of 5 to 10 minutes over 2 days, out of the blue; well between and now.",
+    "spont": "No ear symptoms; no migraine history or features; vascular risk factors as above; neurological exam normal now."
+   }
+  },
+  {
+   "id": "spont_low",
+   "label": "Brief spontaneous spells, low TIA risk",
+   "vignette": "29-year-old woman, two spells of dizziness out of the blue over a week, each about 10 minutes; no neck pain; well now. HR 72, BP 116/70.",
+   "picks": {
+    "front": "clear",
+    "timing": "spontaneous",
+    "spont": "low"
+   },
+   "results": {
+    "front": "Glucose 92 mg/dL (5.1 mmol/L); sinus rhythm, normal ECG; no weakness, numbness, speech or visual deficit; no anticonvulsant or aminoglycoside.",
+    "timing": "Two spells of about 10 minutes out of the blue; well between and now.",
+    "spont": "No hearing loss, tinnitus or fullness; no migraine history or features; no vascular risk factors and no neck pain; no double vision, slurred speech, swallowing trouble or numbness with the spells; cranial nerves, fields, eye movements, coordination and gait normal."
+   }
+  }
+ ]
+}

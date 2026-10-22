@@ -1,0 +1,3288 @@
+{
+ "id": "pw_pregnancy_bleeding",
+ "title": "Bleeding in pregnancy and obstetric emergencies",
+ "world": "obgyn",
+ "synonyms": [
+  "bleeding in pregnancy",
+  "vaginal bleeding in pregnancy",
+  "first trimester bleeding",
+  "threatened abortion",
+  "threatened miscarriage",
+  "spontaneous abortion",
+  "missed abortion",
+  "incomplete abortion",
+  "inevitable abortion",
+  "ruptured ectopic",
+  "molar pregnancy",
+  "hydatidiform mole",
+  "third trimester bleeding",
+  "antepartum hemorrhage",
+  "placenta previa",
+  "placental abruption",
+  "vasa previa",
+  "uterine rupture",
+  "postpartum hemorrhage",
+  "PPH",
+  "uterine atony",
+  "retained placenta",
+  "uterine inversion",
+  "anti-D",
+  "RhoGAM",
+  "Kleihauer-Betke",
+  "perimortem cesarean",
+  "maternal cardiac arrest",
+  "obstetric emergency"
+ ],
+ "reviewBy": "2029-06-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:b1149372731c",
+   "label": "NICE NG126",
+   "title": "Ectopic pregnancy and miscarriage: diagnosis and initial management (NICE NG126, updated June 2026)",
+   "url": "https://www.nice.org.uk/guidance/ng126"
+  },
+  {
+   "docId": "url:efb7fab61e75",
+   "label": "NICE NG235",
+   "title": "Intrapartum care (NICE NG235, 2023)",
+   "url": "https://www.nice.org.uk/guidance/ng235"
+  },
+  {
+   "docId": "url:e655ed211af1",
+   "label": "NICE NG192",
+   "title": "Caesarean birth (NICE NG192, 2021)",
+   "url": "https://www.nice.org.uk/guidance/ng192"
+  },
+  {
+   "docId": "url:4e3de39fcc54",
+   "label": "NICE NG121",
+   "title": "Intrapartum care for women with existing medical conditions or obstetric complications and their babies (NICE NG121, 2019)",
+   "url": "https://www.nice.org.uk/guidance/ng121"
+  },
+  {
+   "docId": "url:cdef34560e1d",
+   "label": "NICE NG25",
+   "title": "Preterm labour and birth (NICE NG25, 2015, updated 2022)",
+   "url": "https://www.nice.org.uk/guidance/ng25"
+  },
+  {
+   "docId": "url:ed91553c28fb",
+   "label": "NICE NG133",
+   "title": "Hypertension in pregnancy: diagnosis and management (NICE NG133, 2019)",
+   "url": "https://www.nice.org.uk/guidance/ng133"
+  },
+  {
+   "docId": "url:0a6fcc001c7d",
+   "label": "WHO PPH 2025",
+   "title": "Consolidated guidelines for the prevention, diagnosis and treatment of postpartum haemorrhage (WHO, 2025)",
+   "url": "https://iris.who.int/server/api/core/bitstreams/88bf11a5-93b6-4d6b-bdaa-856b46c8ed3c/content"
+  },
+  {
+   "docId": "pmid:35297039",
+   "label": "FIGO PPH 2022",
+   "title": "FIGO recommendations on the management of postpartum hemorrhage 2022 (Int J Gynaecol Obstet)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35297039/"
+  },
+  {
+   "docId": "pmid:33128246",
+   "label": "FIGO Rh 2021",
+   "title": "FIGO/ICM guidelines for preventing Rhesus disease: A call to action (Int J Gynaecol Obstet 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33128246/"
+  },
+  {
+   "docId": "pmid:34669197",
+   "label": "FIGO GTD 2021",
+   "title": "Diagnosis and management of gestational trophoblastic disease: 2021 update (FIGO Cancer Report)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34669197/"
+  },
+  {
+   "docId": "pmid:42110677",
+   "label": "FEBRASGO 2026",
+   "title": "Cardiopulmonary arrest and cardiopulmonary resuscitation in pregnancy (FEBRASGO position statement 3, 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42110677/"
+  },
+  {
+   "docId": "pmid:39941678",
+   "label": "Review: vasa previa 2025",
+   "title": "Vasa Previa: Prenatal Diagnosis and the Rationale Behind Using a 5 cm Distance from Internal Os (J Clin Med 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39941678/"
+  },
+  {
+   "docId": "pmid:30969682",
+   "label": "StatPearls review: ectopic pregnancy",
+   "title": "Ectopic Pregnancy (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30969682/"
+  },
+  {
+   "docId": "pmid:30969640",
+   "label": "StatPearls review: placenta previa",
+   "title": "Placenta Previa (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30969640/"
+  },
+  {
+   "docId": "pmid:29493960",
+   "label": "StatPearls review: placental abruption",
+   "title": "Placental Abruption (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29493960/"
+  },
+  {
+   "docId": "pmid:32644635",
+   "label": "StatPearls review: uterine rupture",
+   "title": "Uterine Rupture (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32644635/"
+  },
+  {
+   "docId": "pmid:30480973",
+   "label": "StatPearls review: perimortem cesarean",
+   "title": "Perimortem Cesarean Delivery (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30480973/"
+  },
+  {
+   "docId": "pmid:28613498",
+   "label": "StatPearls review: threatened miscarriage",
+   "title": "Threatened Miscarriage (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613498/"
+  },
+  {
+   "docId": "pmid:32809356",
+   "label": "StatPearls review: early pregnancy loss",
+   "title": "Early Pregnancy Loss (Spontaneous Abortion) (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32809356/"
+  },
+  {
+   "docId": "pmid:32644497",
+   "label": "StatPearls review: incomplete miscarriage",
+   "title": "Incomplete Miscarriage (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32644497/"
+  },
+  {
+   "docId": "pmid:29763164",
+   "label": "StatPearls review: postpartum hemorrhage",
+   "title": "Postpartum Hemorrhage (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29763164/"
+  },
+  {
+   "docId": "pmid:29630290",
+   "label": "StatPearls review: uterine atony",
+   "title": "Uterine Atony (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29630290/"
+  },
+  {
+   "docId": "pmid:30247846",
+   "label": "StatPearls review: uterine inversion",
+   "title": "Uterine Inversion (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30247846/"
+  },
+  {
+   "docId": "pmid:28613626",
+   "label": "StatPearls review: Kleihauer-Betke test",
+   "title": "Kleihauer-Betke Test (StatPearls)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613626/"
+  },
+  {
+   "docId": "url:c671b092fd76",
+   "label": "FDA label: methylergonovine",
+   "title": "Methylergonovine maleate injection prescribing information",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a9a3079e-b62b-4858-920e-d8f5cb38481e"
+  },
+  {
+   "docId": "url:cf41d02114b8",
+   "label": "FDA label: Hemabate",
+   "title": "Hemabate (carboprost tromethamine) prescribing information",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3d282998-ff0c-480a-bd80-155606ef0a65"
+  },
+  {
+   "docId": "url:2270778e8f6f",
+   "label": "FDA label: Pitocin",
+   "title": "Pitocin (oxytocin injection) prescribing information",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6e5a66fc-e507-497c-b5ce-44a8c95898ad"
+  },
+  {
+   "docId": "url:a968f5149de0",
+   "label": "FDA label: RhoGAM",
+   "title": "RhoGAM Ultra-Filtered PLUS (Rho(D) immune globulin) prescribing information",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d87e4d0b-2442-4135-b3f9-5c4f74845b87"
+  }
+ ],
+ "differential": [
+  "Ectopic pregnancy",
+  "Miscarriage",
+  "Molar pregnancy",
+  "Placenta previa",
+  "Placental abruption",
+  "Vasa previa",
+  "Uterine rupture",
+  "Uterine atony",
+  "Genital tract trauma",
+  "Retained placenta",
+  "Coagulopathy",
+  "Uterine inversion",
+  "Pre-eclampsia or eclampsia"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Pregnant or just delivered, bleeding or acutely unwell. First moves?",
+   "options": [
+    "Airway, breathing, pulse, vitals; IV access, blood count, group and Rh; hCG if not known",
+    "Digital cervical exam to judge dilation, then bloods and imaging as the findings suggest",
+    "Quantitative hCG first, holding the other tests until the level is back to guide the workup next",
+    "Transvaginal ultrasound before vitals or bloods, so the site of the pregnancy is known first"
+   ],
+   "answer": 0,
+   "chainStep": "Airway, breathing, pulse and vitals; IV access; blood count, group and Rh type; pregnancy test if pregnancy is not known; establish the gestation",
+   "why": "Resuscitation in pregnancy follows the usual algorithm, so check airway, breathing and pulse first. A pulse over 100 or a pressure under 100/60 is a warning sign of an ectopic. Send a blood count and the blood group with Rh type, offer a pregnancy test whenever pregnancy is possible, and set the gestation, which picks the route. After 20 weeks, check earlier scans for the placenta before any vaginal exam.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "pmid:30480973",
+     "where": "Technique"
+    },
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.4.4; 1.4.5"
+    },
+    {
+     "docId": "url:4e3de39fcc54",
+     "where": "1.14.5; 1.14.8"
+    },
+    {
+     "docId": "pmid:33128246",
+     "where": "Box 1, high priority"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Rh type",
+     "dose": "Determine the mother's Rh type early; anti-D after a sensitizing event is handled on each route",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33128246",
+       "where": "Box 1, high priority"
+      },
+      {
+       "docId": "pmid:32809356",
+       "where": "Evaluation, additional studies"
+      }
+     ]
+    }
+   ],
+   "note": "Major trauma in pregnancy belongs to the trauma pathway. A seizure or headache with hypertension hands off to the seizure and headache pathways."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Pulse, vitals, pregnancy test and gestation",
+   "outcomes": [
+    {
+     "id": "arrest",
+     "if": "Cardiac arrest, pregnant; no pulse, fundus at or above the umbilicus",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "arrest_cpr"
+    },
+    {
+     "id": "htn",
+     "if": "Hypertension after 20 weeks or after birth; new BP over 140/90 with a seizure, severe headache or visual change, no heavy bleeding",
+     "ddx": {
+      "lead": [
+       "Pre-eclampsia or eclampsia"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Pre-eclampsia and eclampsia (NICE)",
+       "dose": "Pre-eclampsia: new hypertension over 140/90 after 20 weeks with proteinuria or other new organ dysfunction; severe headache and visual blurring or flashing are its symptoms. Eclampsia: the convulsive form",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:ed91553c28fb",
+         "where": "Terms used in this guideline; 1.1.1"
+        }
+       ]
+      }
+     ],
+     "next": "end_htn"
+    },
+    {
+     "id": "scope",
+     "if": "Outside this pathway; pregnancy test negative, 14+0 to 19+6 weeks, arrest with the fundus below the umbilicus, or bleeding over 24 hours after birth",
+     "orders": [
+      {
+       "item": "Arrest before 20 weeks",
+       "dose": "Resuscitative hysterotomy is not recommended when the fundus is below the umbilicus (under 20 weeks); standard ACLS",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30480973",
+         "where": "Contraindications; Technique"
+        }
+       ]
+      },
+      {
+       "item": "Secondary postpartum hemorrhage",
+       "dose": "Bleeding from 24 hours to 12 weeks after birth; its management is not covered here",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29763164",
+         "where": "Continuing Education Activity"
+        }
+       ]
+      }
+     ],
+     "next": "end_scope"
+    },
+    {
+     "id": "early_shock",
+     "if": "Early pregnancy, in shock; positive test, up to 13 weeks, hypotensive or tachycardic",
+     "ddx": {
+      "lead": [
+       "Ectopic pregnancy",
+       "Miscarriage"
+      ],
+      "out": []
+     },
+     "next": "early_shock"
+    },
+    {
+     "id": "early",
+     "if": "Early pregnancy, stable; positive test, up to 13 weeks, pulse and BP normal",
+     "ddx": {
+      "lead": [
+       "Miscarriage",
+       "Ectopic pregnancy"
+      ],
+      "out": []
+     },
+     "next": "tvus"
+    },
+    {
+     "id": "late_shock",
+     "if": "After 20 weeks, bleeding with shock; hypotensive or tachycardic",
+     "ddx": {
+      "lead": [
+       "Placenta previa",
+       "Placental abruption"
+      ],
+      "out": []
+     },
+     "next": "deliver_now"
+    },
+    {
+     "id": "late",
+     "if": "After 20 weeks, bleeding, stable; pulse and BP normal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "late_us"
+    },
+    {
+     "id": "pph",
+     "if": "After birth, heavy bleeding; within 24 hours of delivery",
+     "ddx": {
+      "lead": [
+       "Uterine atony"
+      ],
+      "out": []
+     },
+     "next": "pph_fundus"
+    }
+   ]
+  },
+  {
+   "id": "arrest_cpr",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Pregnant, fundus above the umbilicus, no pulse; CPR under way. Add?",
+   "options": [
+    "Manual left uterine displacement; resuscitative hysterotomy if no pulse returns by 4 minutes",
+    "Tilt the board to the left side, then move her to the operating room for a cesarean delivery",
+    "Withhold defibrillation and epinephrine to protect the fetus, and wait for obstetrics to arrive",
+    "Keep up standard CPR and leave delivery of the baby until the arrest is over"
+   ],
+   "answer": 0,
+   "chainStep": "CPR flat on her back with manual left uterine displacement; ACLS unchanged, defibrillation included; resuscitative hysterotomy where she lies if no pulse by 4 minutes, delivery within 5",
+   "why": "Above the umbilicus the uterus compresses the vena cava and aorta. Push it to the left by hand and keep her flat: tilting the board weakens compressions. Airway, compressions, drugs and defibrillation are the same as outside pregnancy. From 20 weeks, if circulation has not returned within 4 minutes, start a resuscitative hysterotomy where she lies, aiming to deliver within 5 minutes; moving her to the operating room loses that time, and it is still worth doing after 5 minutes. With a non-shockable rhythm or an unwitnessed arrest, FEBRASGO starts it as soon as possible.",
+   "next": "end_arrest",
+   "sources": [
+    {
+     "docId": "pmid:42110677",
+     "where": "Key points; Manual uterine displacement; Resuscitative hysterotomy"
+    },
+    {
+     "docId": "pmid:30480973",
+     "where": "Indications; Technique"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Manual left uterine displacement",
+     "dose": "One or both hands on the right side of the uterus, pushing it to the left; do not tilt the table",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42110677",
+       "where": "Manual uterine displacement"
+      }
+     ]
+    },
+    {
+     "item": "Resuscitative hysterotomy",
+     "dose": "From 20 weeks with no return of circulation by 4 minutes: start at the site of collapse, deliver within 5 minutes; still perform it if 5 minutes have passed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42110677",
+       "where": "Key points; Resuscitative hysterotomy"
+      },
+      {
+       "docId": "pmid:30480973",
+       "where": "Indications; Technique"
+      }
+     ]
+    },
+    {
+     "item": "ACLS",
+     "dose": "Airway management, CPR and defibrillation as in a woman who is not pregnant",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30480973",
+       "where": "Technique"
+      }
+     ]
+    },
+    {
+     "item": "Neonatal team",
+     "dose": "Call them in when the fetus may be viable, beyond 22 to 24 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42110677",
+       "where": "Gestational age and resuscitative hysterotomy"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "early_shock",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Positive test in early pregnancy, in shock. Next?",
+   "options": [
+    "Resuscitate, call gynecology now, and find the source: bedside ultrasound and a speculum exam",
+    "Two serum hCG levels 48 hours apart, then a transvaginal scan once the pattern of change is clear",
+    "CT of the abdomen and pelvis with contrast to find where the bleeding is coming from",
+    "Methotrexate now, before the result of a scan, to stop a likely ectopic from growing"
+   ],
+   "answer": 0,
+   "chainStep": "Resuscitate; gynecology now; bedside ultrasound for free fluid and a speculum exam for tissue in the os; blood count, group and Rh type for transfusion",
+   "why": "Instability changes the order. NICE sends the unstable woman straight to the emergency department, and her hemodynamic state sets the management of a suspected ectopic. Free fluid on the scan can be hemoperitoneum; the speculum shows an open os or tissue in the canal. hCG levels and CT only delay treatment, and methotrexate is contraindicated when she is unstable.",
+   "next": "shock_source",
+   "sources": [
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.4.1; 1.4.4; 1.7.4"
+    },
+    {
+     "docId": "pmid:30969682",
+     "where": "Treatment / Management; History and Physical"
+    },
+    {
+     "docId": "pmid:32809356",
+     "where": "History and Physical; Evaluation, additional studies"
+    }
+   ]
+  },
+  {
+   "id": "shock_source",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Bedside ultrasound and speculum exam",
+   "outcomes": [
+    {
+     "id": "ruptured",
+     "if": "Suspected ruptured ectopic; free fluid, no intrauterine pregnancy, os closed",
+     "ddx": {
+      "lead": [
+       "Ectopic pregnancy"
+      ],
+      "out": []
+     },
+     "next": "ectopic_rupture"
+    },
+    {
+     "id": "miscarriage",
+     "if": "Bleeding miscarriage or cervical shock; os open, tissue in the canal, no free fluid",
+     "ddx": {
+      "lead": [
+       "Miscarriage"
+      ],
+      "out": []
+     },
+     "next": "misc_shock"
+    },
+    {
+     "id": "unclear",
+     "if": "Source not found; no free fluid, no tissue in the os",
+     "ddx": {
+      "lead": [
+       "Ectopic pregnancy"
+      ],
+      "out": []
+     },
+     "next": "end_shock_unclear"
+    }
+   ]
+  },
+  {
+   "id": "ectopic_rupture",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Positive test, free fluid, empty uterus, still hypotensive. Next?",
+   "options": [
+    "Emergency surgery now: laparoscopy, or laparotomy if her condition demands it",
+    "Methotrexate, then serial hCG on days 4 and 7 to confirm the treatment has worked",
+    "Formal transvaginal scan and repeat hCG in 48 hours before a decision on surgery",
+    "CT angiography first, to find the bleeding vessel for embolization by radiology"
+   ],
+   "answer": 0,
+   "chainStep": "Emergency surgery, laparoscopic where her condition allows; salpingectomy for a ruptured tube; resuscitation and blood continue; no methotrexate",
+   "why": "Signs of a ruptured ectopic mean urgent surgery. NICE asks for laparoscopy whenever possible, taking her condition into account. Hemodynamic instability and rupture are absolute contraindications to methotrexate, and waiting for hCG or imaging only adds blood loss. With a ruptured tube, salpingectomy is the preferred operation.",
+   "next": "end_ruptured",
+   "sources": [
+    {
+     "docId": "pmid:30969682",
+     "where": "Treatment / Management; surgical management"
+    },
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.16.1; 1.17.1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Methotrexate",
+     "dose": "Avoid: hemodynamic instability and a ruptured ectopic are absolute contraindications",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30969682",
+       "where": "Treatment / Management, methotrexate contraindications"
+      }
+     ]
+    },
+    {
+     "item": "Salpingectomy",
+     "dose": "Preferred with rupture or major tubal damage; NICE offers it unless she has other risk factors for infertility",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30969682",
+       "where": "Treatment / Management, surgical"
+      },
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.17.1"
+      }
+     ]
+    },
+    {
+     "item": "Anti-D, RhD-negative, first trimester",
+     "dose": "US label (RhoGAM): 300 micrograms within 72 hours for actual or threatened loss up to and including 12 weeks, or an ectopic pregnancy; NICE NG126 (2026): none up to 11+6 weeks. Not keyed; see the note",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.18.1 to 1.18.3"
+      },
+      {
+       "docId": "pmid:33128246",
+       "where": "Box 1, middle priority"
+      },
+      {
+       "docId": "url:a968f5149de0",
+       "where": "1 Indications and Usage: \"actual or threatened pregnancy loss at any stage of gestation and ectopic pregnancy\"; 2.1 table: \"RhoGAM (300 µg) (1500 IU) | Actual or threatened termination of pregnancy (spontaneous or induced) up to and including 12 weeks gestation\""
+      },
+      {
+       "docId": "pmid:32809356",
+       "where": "Treatment / Management, surgical"
+      },
+      {
+       "docId": "pmid:28613498",
+       "where": "Treatment / Management, prevent alloimmunization"
+      }
+     ],
+     "note": "NICE NG126 (June 2026): no anti-D up to 11+6 weeks for an ectopic pregnancy, miscarriage or threatened miscarriage, even with surgery; at 12+0 to 12+6 weeks, offer at least 250 IU (50 micrograms) with medical or surgical management, and consider it for threatened miscarriage with heavy or recurrent bleeding. FIGO 2021: 500 IU (100 micrograms) after an ectopic pregnancy at any gestation or a surgical abortion, and after a spontaneous or medical miscarriage beyond 10 weeks. US: the RhoGAM label covers actual or threatened pregnancy loss at any stage and ectopic pregnancy (300 micrograms up to and including 12 weeks), and StatPearls gives it after any surgical uterine evacuation; StatPearls: 50 to 120 micrograms IM in the first trimester, 300 after 12 weeks."
+    }
+   ]
+  },
+  {
+   "id": "misc_shock",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Os open, tissue in the canal, hypotensive. Next?",
+   "options": [
+    "Remove the tissue from the os at the bedside, then emergency uterine evacuation",
+    "Misoprostol 800 micrograms and expectant care while the fluids run in",
+    "Fluids and vasopressors, leaving the tissue in place until she reaches the operating room for evacuation",
+    "Mifepristone, then misoprostol 48 hours later, once she has been stabilized"
+   ],
+   "answer": 0,
+   "chainStep": "Remove products of conception from the cervical os at the bedside; resuscitate; emergency uterine evacuation (aspiration or suction curettage)",
+   "why": "Hemorrhage and instability rule out expectant and medical care: she needs the uterus emptied as an emergency. Tissue lodged in the cervical canal can cause cervical shock, a vagal fall in pressure and pulse that fluids do not correct and that settles once the tissue is taken out at the bedside.",
+   "next": "end_misc_shock",
+   "sources": [
+    {
+     "docId": "pmid:32809356",
+     "where": "Treatment / Management; Complications, cervical shock"
+    },
+    {
+     "docId": "pmid:32644497",
+     "where": "Treatment / Management, surgical"
+    },
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.12.1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Uterine evacuation",
+     "dose": "Aspiration or suction curettage; NICE offers manual vacuum aspiration under local anaesthetic or surgery in the operating room",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644497",
+       "where": "Treatment / Management, surgical"
+      },
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.12.1"
+      }
+     ]
+    },
+    {
+     "item": "Prophylactic antibiotic",
+     "dose": "Doxycycline 200 mg 1 hour before uterine evacuation; the route differs between sources",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:32809356",
+       "where": "Treatment / Management, surgical"
+      },
+      {
+       "docId": "pmid:32644497",
+       "where": "Treatment / Management, surgical"
+      }
+     ],
+     "note": "StatPearls Early Pregnancy Loss gives it orally; StatPearls Incomplete Miscarriage gives it intravenously."
+    },
+    {
+     "item": "Anti-D, RhD-negative, first trimester",
+     "dose": "US label (RhoGAM): 300 micrograms within 72 hours for actual or threatened loss up to and including 12 weeks, or an ectopic pregnancy; NICE NG126 (2026): none up to 11+6 weeks. Not keyed; see the note",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.18.1 to 1.18.3"
+      },
+      {
+       "docId": "pmid:33128246",
+       "where": "Box 1, middle priority"
+      },
+      {
+       "docId": "url:a968f5149de0",
+       "where": "1 Indications and Usage: \"actual or threatened pregnancy loss at any stage of gestation and ectopic pregnancy\"; 2.1 table: \"RhoGAM (300 µg) (1500 IU) | Actual or threatened termination of pregnancy (spontaneous or induced) up to and including 12 weeks gestation\""
+      },
+      {
+       "docId": "pmid:32809356",
+       "where": "Treatment / Management, surgical"
+      },
+      {
+       "docId": "pmid:28613498",
+       "where": "Treatment / Management, prevent alloimmunization"
+      }
+     ],
+     "note": "NICE NG126 (June 2026): no anti-D up to 11+6 weeks for an ectopic pregnancy, miscarriage or threatened miscarriage, even with surgery; at 12+0 to 12+6 weeks, offer at least 250 IU (50 micrograms) with medical or surgical management, and consider it for threatened miscarriage with heavy or recurrent bleeding. FIGO 2021: 500 IU (100 micrograms) after an ectopic pregnancy at any gestation or a surgical abortion, and after a spontaneous or medical miscarriage beyond 10 weeks. US: the RhoGAM label covers actual or threatened pregnancy loss at any stage and ectopic pregnancy (300 micrograms up to and including 12 weeks), and StatPearls gives it after any surgical uterine evacuation; StatPearls: 50 to 120 micrograms IM in the first trimester, 300 after 12 weeks."
+    }
+   ]
+  },
+  {
+   "id": "tvus",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Positive test, early pregnancy, stable. Next?",
+   "options": [
+    "Transvaginal ultrasound for location and heartbeat, with a speculum exam",
+    "A single quantitative hCG to decide whether the pregnancy is in the uterus",
+    "Methotrexate today if the hCG is above the discriminatory level, without a scan",
+    "CT of the abdomen and pelvis to look for an ectopic pregnancy"
+   ],
+   "answer": 0,
+   "chainStep": "Transvaginal ultrasound to locate the pregnancy and look for a fetal pole and heartbeat; speculum exam for the os and tissue",
+   "why": "A transvaginal scan shows where the pregnancy is and whether there is a heartbeat; a serum hCG cannot locate it. Methotrexate on a first visit needs a definite ectopic with a viable intrauterine pregnancy excluded. The speculum exam shows whether the os is open and tissue is passing.",
+   "next": "tvus_result",
+   "sources": [
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.5.1; 1.8.2; 1.15.1"
+    },
+    {
+     "docId": "pmid:32809356",
+     "where": "History and Physical"
+    }
+   ]
+  },
+  {
+   "id": "tvus_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Transvaginal ultrasound and speculum exam",
+   "outcomes": [
+    {
+     "id": "viable",
+     "if": "Viable intrauterine pregnancy; heartbeat seen, os closed",
+     "ddx": {
+      "lead": [
+       "Miscarriage"
+      ],
+      "out": []
+     },
+     "next": "threatened"
+    },
+    {
+     "id": "uncertain",
+     "if": "Viability uncertain; no heartbeat yet, embryo under 7 mm or sac under 25 mm with no embryo",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Repeat scan",
+       "dose": "US: repeat in 7 to 10 days. NICE: a second scan at least 7 days after the first before any diagnosis; a 24-hour contact number meanwhile",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:32809356",
+         "where": "Evaluation, early intrauterine pregnancies of unknown viability"
+        },
+        {
+         "docId": "url:b1149372731c",
+         "where": "1.6.3; 1.6.6; 1.6.12"
+        }
+       ]
+      }
+     ],
+     "next": "end_uncertain"
+    },
+    {
+     "id": "missed",
+     "if": "Missed miscarriage; no heartbeat at 7 mm or more, or an empty sac of 25 mm or more, confirmed, os closed",
+     "ddx": {
+      "lead": [
+       "Miscarriage"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Confirming the diagnosis",
+       "dose": "US criteria: an embryo of 7 mm or more without a heartbeat, or a sac of 25 mm or more without an embryo, is diagnostic; NICE asks for a second opinion or a second scan at least 7 days later first",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:32809356",
+         "where": "Evaluation, findings consistent with pregnancy failure"
+        },
+        {
+         "docId": "url:b1149372731c",
+         "where": "1.6.4"
+        }
+       ]
+      }
+     ],
+     "next": "missed"
+    },
+    {
+     "id": "retained",
+     "if": "Incomplete or inevitable miscarriage; os open, tissue in the uterus or canal, no fever",
+     "ddx": {
+      "lead": [
+       "Miscarriage"
+      ],
+      "out": []
+     },
+     "next": "incomplete"
+    },
+    {
+     "id": "septic",
+     "if": "Septic miscarriage; fever, uterine tenderness, offensive discharge",
+     "next": "end_septic"
+    },
+    {
+     "id": "complete",
+     "if": "Complete miscarriage; uterus empty, os closed, an earlier scan showed an intrauterine pregnancy",
+     "ddx": {
+      "lead": [
+       "Miscarriage"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Follow-up",
+       "dose": "Home urine pregnancy test 3 weeks after the miscarriage; return if positive (NICE states it after expectant management). Without an earlier scan confirming an intrauterine pregnancy, treat it as a pregnancy of unknown location",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:b1149372731c",
+         "where": "1.10.5; 1.6.13"
+        }
+       ]
+      }
+     ],
+     "next": "end_complete"
+    },
+    {
+     "id": "molar",
+     "if": "Molar pregnancy suspected; cystic placenta, no fetal parts, hCG far above dates",
+     "ddx": {
+      "lead": [
+       "Molar pregnancy"
+      ],
+      "out": []
+     },
+     "next": "molar"
+    },
+    {
+     "id": "not_seen",
+     "if": "No intrauterine pregnancy; an adnexal mass, or nothing seen",
+     "ddx": {
+      "lead": [
+       "Ectopic pregnancy"
+      ],
+      "out": []
+     },
+     "next": "end_abdo"
+    }
+   ]
+  },
+  {
+   "id": "threatened",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Heartbeat seen, os closed, light bleeding. Plan?",
+   "options": [
+    "Expectant care; review if bleeding worsens; progesterone only after a past miscarriage",
+    "Strict bed rest at home and pelvic rest until the bleeding has stopped completely, then a repeat scan",
+    "Misoprostol to complete what is likely to become a miscarriage",
+    "Uterine aspiration to prevent a later, heavier miscarriage"
+   ],
+   "answer": 0,
+   "chainStep": "Expectant care: return if bleeding worsens or lasts beyond 14 days; vaginal micronised progesterone 400 mg twice daily if she has miscarried before; no bed rest",
+   "why": "A viable intrauterine pregnancy with a closed os is managed expectantly. NICE asks her to return if the bleeding worsens or lasts beyond 14 days, and offers vaginal progesterone only to women who have miscarried before. Bed rest does not prevent miscarriage. Misoprostol and aspiration would end a viable pregnancy.",
+   "next": "end_threatened",
+   "sources": [
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.9.1; 1.9.2; 1.9.3"
+    },
+    {
+     "docId": "pmid:28613498",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Progesterone, previous miscarriage",
+     "dose": "Vaginal micronised progesterone 400 mg twice daily; continue to 16 completed weeks once a heartbeat is confirmed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.9.2; 1.9.3"
+      },
+      {
+       "docId": "pmid:28613498",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Anti-D, RhD-negative, first trimester",
+     "dose": "US label (RhoGAM): 300 micrograms within 72 hours for actual or threatened loss up to and including 12 weeks, or an ectopic pregnancy; NICE NG126 (2026): none up to 11+6 weeks. Not keyed; see the note",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.18.1 to 1.18.3"
+      },
+      {
+       "docId": "pmid:33128246",
+       "where": "Box 1, middle priority"
+      },
+      {
+       "docId": "url:a968f5149de0",
+       "where": "1 Indications and Usage: \"actual or threatened pregnancy loss at any stage of gestation and ectopic pregnancy\"; 2.1 table: \"RhoGAM (300 µg) (1500 IU) | Actual or threatened termination of pregnancy (spontaneous or induced) up to and including 12 weeks gestation\""
+      },
+      {
+       "docId": "pmid:32809356",
+       "where": "Treatment / Management, surgical"
+      },
+      {
+       "docId": "pmid:28613498",
+       "where": "Treatment / Management, prevent alloimmunization"
+      }
+     ],
+     "note": "NICE NG126 (June 2026): no anti-D up to 11+6 weeks for an ectopic pregnancy, miscarriage or threatened miscarriage, even with surgery; at 12+0 to 12+6 weeks, offer at least 250 IU (50 micrograms) with medical or surgical management, and consider it for threatened miscarriage with heavy or recurrent bleeding. FIGO 2021: 500 IU (100 micrograms) after an ectopic pregnancy at any gestation or a surgical abortion, and after a spontaneous or medical miscarriage beyond 10 weeks. US: the RhoGAM label covers actual or threatened pregnancy loss at any stage and ectopic pregnancy (300 micrograms up to and including 12 weeks), and StatPearls gives it after any surgical uterine evacuation; StatPearls: 50 to 120 micrograms IM in the first trimester, 300 after 12 weeks."
+    }
+   ]
+  },
+  {
+   "id": "missed",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Confirmed missed miscarriage, stable, no infection. Options?",
+   "options": [
+    "Expectant care, mifepristone then misoprostol, or uterine aspiration, after discussing each",
+    "Oxytocin infusion on the ward to make the uterus expel the pregnancy, and surgery if that fails overnight",
+    "Repeat hCG in 48 hours to confirm the pregnancy has failed",
+    "Admit for daily hCG until the level halves, then choose treatment"
+   ],
+   "answer": 0,
+   "chainStep": "Discuss expectant care (NICE first line, 7 to 14 days), mifepristone 200 mg by mouth then misoprostol 800 micrograms 24 (US) or 48 (NICE) hours later, or uterine aspiration",
+   "why": "All three work when she is stable and not infected. US practice lets her preference choose; NICE starts with 7 to 14 days of expectant care unless, for example, she is at higher risk from bleeding or shows signs of infection, and offers medication if waiting is not acceptable. Mifepristone before misoprostol succeeds more often than misoprostol alone. Serial hCG belongs to a pregnancy of unknown location, not to a miscarriage the scan has confirmed. Oxytocin is not one of the options: its label calls curettage the primary therapy in the first trimester.",
+   "next": "end_missed",
+   "sources": [
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.8.5; 1.10.1; 1.10.2; 1.11.1; 1.12.1"
+    },
+    {
+     "docId": "pmid:32809356",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:2270778e8f6f",
+     "where": "Indications and Usage"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Mifepristone and misoprostol (NICE)",
+     "dose": "Mifepristone 200 mg by mouth, then 48 hours later misoprostol 800 micrograms vaginal, oral or sublingual",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.11.1"
+      }
+     ],
+     "note": "The US regimen waits 24 hours; see the next order."
+    },
+    {
+     "item": "Mifepristone and misoprostol (US, StatPearls)",
+     "dose": "Mifepristone 200 mg by mouth, then 24 hours later misoprostol 800 micrograms vaginally; misoprostol may be repeated once, 3 hours to 7 days later",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32809356",
+       "where": "Treatment / Management, medications"
+      }
+     ]
+    },
+    {
+     "item": "Uterine aspiration",
+     "dose": "Manual vacuum aspiration under local anaesthetic, or surgery in the operating room",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.12.1"
+      }
+     ]
+    },
+    {
+     "item": "After medical management",
+     "dose": "Home urine pregnancy test 3 weeks later",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.11.7"
+      }
+     ]
+    },
+    {
+     "item": "Anti-D, RhD-negative, first trimester",
+     "dose": "US label (RhoGAM): 300 micrograms within 72 hours for actual or threatened loss up to and including 12 weeks, or an ectopic pregnancy; NICE NG126 (2026): none up to 11+6 weeks. Not keyed; see the note",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.18.1 to 1.18.3"
+      },
+      {
+       "docId": "pmid:33128246",
+       "where": "Box 1, middle priority"
+      },
+      {
+       "docId": "url:a968f5149de0",
+       "where": "1 Indications and Usage: \"actual or threatened pregnancy loss at any stage of gestation and ectopic pregnancy\"; 2.1 table: \"RhoGAM (300 µg) (1500 IU) | Actual or threatened termination of pregnancy (spontaneous or induced) up to and including 12 weeks gestation\""
+      },
+      {
+       "docId": "pmid:32809356",
+       "where": "Treatment / Management, surgical"
+      },
+      {
+       "docId": "pmid:28613498",
+       "where": "Treatment / Management, prevent alloimmunization"
+      }
+     ],
+     "note": "NICE NG126 (June 2026): no anti-D up to 11+6 weeks for an ectopic pregnancy, miscarriage or threatened miscarriage, even with surgery; at 12+0 to 12+6 weeks, offer at least 250 IU (50 micrograms) with medical or surgical management, and consider it for threatened miscarriage with heavy or recurrent bleeding. FIGO 2021: 500 IU (100 micrograms) after an ectopic pregnancy at any gestation or a surgical abortion, and after a spontaneous or medical miscarriage beyond 10 weeks. US: the RhoGAM label covers actual or threatened pregnancy loss at any stage and ectopic pregnancy (300 micrograms up to and including 12 weeks), and StatPearls gives it after any surgical uterine evacuation; StatPearls: 50 to 120 micrograms IM in the first trimester, 300 after 12 weeks."
+    }
+   ]
+  },
+  {
+   "id": "incomplete",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Os open, tissue in the uterus, stable, no infection. Options?",
+   "options": [
+    "Expectant care, misoprostol, or uterine aspiration, after discussing each",
+    "Mifepristone by mouth, then misoprostol 48 hours later, as for a missed miscarriage",
+    "Repeat the scan in 7 to 10 days, then offer treatment",
+    "Antibiotics for 7 days, then a repeat scan"
+   ],
+   "answer": 0,
+   "chainStep": "Discuss expectant care, misoprostol alone (NICE 600 micrograms once, vaginal, oral or sublingual; US 800 vaginally) or uterine aspiration; no mifepristone for an incomplete miscarriage",
+   "why": "Expectant, medical and surgical care all work for an incomplete or inevitable miscarriage, and waiting does well when tissue is already passing. NICE uses misoprostol alone, 600 micrograms once (800 as an alternative), and does not offer mifepristone here. A repeat scan in 7 to 10 days is for uncertain viability, not a miscarriage already under way, and antibiotics are not indicated unless there is an infection.",
+   "next": "end_incomplete",
+   "sources": [
+    {
+     "docId": "url:b1149372731c",
+     "where": "1.11.3; 1.11.4; 1.12.1"
+    },
+    {
+     "docId": "pmid:32644497",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:32809356",
+     "where": "Introduction; Evaluation; Treatment / Management, efficacy"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Misoprostol (NICE)",
+     "dose": "600 micrograms once, vaginal, oral or sublingual; 800 micrograms as an alternative",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.11.3"
+      }
+     ]
+    },
+    {
+     "item": "Misoprostol (US and WHO, StatPearls)",
+     "dose": "US: 800 micrograms vaginally, a second dose 3 hours to 7 days later if needed. WHO: 400 micrograms sublingually or 600 micrograms orally once, under 14 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644497",
+       "where": "Treatment / Management, expectant and medical"
+      }
+     ]
+    },
+    {
+     "item": "Mifepristone",
+     "dose": "Not for an incomplete miscarriage",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.11.4"
+      }
+     ]
+    },
+    {
+     "item": "Surgery instead",
+     "dose": "Hemodynamic instability, high risk of hemorrhage, sepsis, or failed expectant or medical care",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644497",
+       "where": "Treatment / Management, surgical"
+      }
+     ]
+    },
+    {
+     "item": "Anti-D, RhD-negative, first trimester",
+     "dose": "US label (RhoGAM): 300 micrograms within 72 hours for actual or threatened loss up to and including 12 weeks, or an ectopic pregnancy; NICE NG126 (2026): none up to 11+6 weeks. Not keyed; see the note",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:b1149372731c",
+       "where": "1.18.1 to 1.18.3"
+      },
+      {
+       "docId": "pmid:33128246",
+       "where": "Box 1, middle priority"
+      },
+      {
+       "docId": "url:a968f5149de0",
+       "where": "1 Indications and Usage: \"actual or threatened pregnancy loss at any stage of gestation and ectopic pregnancy\"; 2.1 table: \"RhoGAM (300 µg) (1500 IU) | Actual or threatened termination of pregnancy (spontaneous or induced) up to and including 12 weeks gestation\""
+      },
+      {
+       "docId": "pmid:32809356",
+       "where": "Treatment / Management, surgical"
+      },
+      {
+       "docId": "pmid:28613498",
+       "where": "Treatment / Management, prevent alloimmunization"
+      }
+     ],
+     "note": "NICE NG126 (June 2026): no anti-D up to 11+6 weeks for an ectopic pregnancy, miscarriage or threatened miscarriage, even with surgery; at 12+0 to 12+6 weeks, offer at least 250 IU (50 micrograms) with medical or surgical management, and consider it for threatened miscarriage with heavy or recurrent bleeding. FIGO 2021: 500 IU (100 micrograms) after an ectopic pregnancy at any gestation or a surgical abortion, and after a spontaneous or medical miscarriage beyond 10 weeks. US: the RhoGAM label covers actual or threatened pregnancy loss at any stage and ectopic pregnancy (300 micrograms up to and including 12 weeks), and StatPearls gives it after any surgical uterine evacuation; StatPearls: 50 to 120 micrograms IM in the first trimester, 300 after 12 weeks."
+    }
+   ]
+  },
+  {
+   "id": "molar",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Cystic placenta, no fetal parts, hCG far above dates. Treatment?",
+   "options": [
+    "Suction evacuation under ultrasound guidance, then serial hCG until normal",
+    "Misoprostol to induce passage of the mole at home, then a scan in 2 weeks to confirm it has gone",
+    "Methotrexate first, with evacuation later if the hCG plateaus",
+    "Hysterotomy to remove the mole intact for histology"
+   ],
+   "answer": 0,
+   "chainStep": "Suction evacuation and curettage under ultrasound guidance, oxytocin infusion from the start of suction, histology; anti-D if RhD-negative; hCG every 1 to 2 weeks",
+   "why": "Suction evacuation, ideally under ultrasound guidance, is the preferred method whatever the uterine size when she wants to keep her fertility, and histology makes the diagnosis. Medical induction and hysterotomy raise morbidity and the risk of persistent disease needing chemotherapy. Prophylactic chemotherapy is kept for special situations, such as when hCG follow-up is not possible.",
+   "next": "end_molar",
+   "sources": [
+    {
+     "docId": "pmid:34669197",
+     "where": "Clinical presentation, molar pregnancy; Treatment, molar pregnancy"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Oxytocin",
+     "dose": "An IV infusion may start at the onset of suction and continue for several hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34669197",
+       "where": "Treatment, molar pregnancy"
+      }
+     ]
+    },
+    {
+     "item": "Blood",
+     "dose": "Available when the uterus is larger than 16 weeks' size",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34669197",
+       "where": "Treatment, molar pregnancy"
+      }
+     ]
+    },
+    {
+     "item": "Anti-D",
+     "dose": "Rh immune globulin for RhD-negative women at evacuation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34669197",
+       "where": "Treatment, molar pregnancy"
+      },
+      {
+       "docId": "pmid:33128246",
+       "where": "Miscarriage"
+      }
+     ]
+    },
+    {
+     "item": "hCG follow-up",
+     "dose": "Every 1 to 2 weeks; partial mole: one more normal level 1 month after it normalizes; complete mole: monthly for 6 months after it normalizes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34669197",
+       "where": "Treatment, molar pregnancy"
+      }
+     ]
+    },
+    {
+     "item": "Contraception",
+     "dose": "Oral contraceptives are safe during follow-up",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34669197",
+       "where": "Treatment, molar pregnancy"
+      }
+     ]
+    },
+    {
+     "item": "Hysterectomy",
+     "dose": "An alternative to suction if her family is complete",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34669197",
+       "where": "Treatment, molar pregnancy"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "late_us",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Bleeding after 20 weeks, stable. Before any digital exam?",
+   "options": [
+    "Placental site from earlier scans or ultrasound; continuous fetal monitoring",
+    "Digital cervical exam to check dilation and the presenting part",
+    "Kleihauer-Betke test first, to show whether the blood is fetal",
+    "Speculum and digital exam together first, then ultrasound if the os is closed"
+   ],
+   "answer": 0,
+   "chainStep": "Earlier scans and ultrasound for the placental site (transabdominal, then transvaginal if previa is suspected); continuous fetal monitoring; speculum exam; no digital exam until previa is excluded",
+   "why": "Find the placenta before any digital exam, which can provoke massive bleeding from a previa. Check earlier scans, scan transabdominally and then transvaginally if previa is suspected (the transvaginal scan is safe), and start continuous fetal monitoring. A speculum exam is safe. The Kleihauer-Betke test measures fetal blood in her circulation and does not diagnose an abruption; ultrasound cannot exclude one either. In labour, check earlier scans first: with a known fundal placenta no scan is needed, and imaging never delays delivery once the tracing shows bradycardia.",
+   "next": "late_result",
+   "sources": [
+    {
+     "docId": "pmid:30969640",
+     "where": "History and Physical; Evaluation"
+    },
+    {
+     "docId": "url:4e3de39fcc54",
+     "where": "1.14.5"
+    },
+    {
+     "docId": "pmid:29493960",
+     "where": "History and Physical; Evaluation"
+    },
+    {
+     "docId": "pmid:32644635",
+     "where": "Evaluation"
+    }
+   ],
+   "note": "NICE NG121 states this order for bleeding in labour; StatPearls states it for any bleeding in the second or third trimester."
+  },
+  {
+   "id": "late_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Ultrasound, fetal heart tracing and exam",
+   "outcomes": [
+    {
+     "id": "previa",
+     "if": "Placenta previa, preterm, bleeding settled; placenta over the os, soft uterus, fetus well",
+     "ddx": {
+      "lead": [
+       "Placenta previa"
+      ],
+      "out": []
+     },
+     "next": "previa"
+    },
+    {
+     "id": "abruption",
+     "if": "Abruption, mother and fetus stable; tender uterus, placenta clear of the os, preterm",
+     "ddx": {
+      "lead": [
+       "Placental abruption"
+      ],
+      "out": [
+       "Placenta previa"
+      ]
+     },
+     "next": "abr_stable"
+    },
+    {
+     "id": "term",
+     "if": "Settled at term; previa from 36 weeks, abruption from 37 weeks",
+     "ddx": {
+      "lead": [
+       "Placenta previa",
+       "Placental abruption"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Previa at term",
+       "dose": "Cesarean delivery from 36 weeks",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30969640",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "url:e655ed211af1",
+         "where": "1.2.6"
+        }
+       ]
+      },
+      {
+       "item": "Abruption at term",
+       "dose": "Conservative care is limited to a mild abruption before 37 weeks, so at term plan delivery",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29493960",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Anti-D, RhD-negative",
+       "dose": "300 micrograms (1,500 IU) IM within 72 hours; extra doses sized by a test for a large bleed",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33128246",
+         "where": "Box 1, middle priority"
+        },
+        {
+         "docId": "url:a968f5149de0",
+         "where": "2.1"
+        }
+       ]
+      }
+     ],
+     "next": "end_term"
+    },
+    {
+     "id": "abr_demise",
+     "if": "Abruption with fetal death; mother stable",
+     "ddx": {
+      "lead": [
+       "Placental abruption"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Delivery",
+       "dose": "Deliver promptly; vaginal birth often carries less risk with coagulopathy",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29493960",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Bloods",
+       "dose": "Clotting studies with fibrinogen, type and crossmatch",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29493960",
+         "where": "Evaluation; Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "After birth",
+       "dose": "Watch for postpartum hemorrhage and a changing clotting profile",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29493960",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Anti-D, RhD-negative",
+       "dose": "After fetal death; a Kleihauer-Betke test helps size the dose",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33128246",
+         "where": "Box 1, middle priority"
+        }
+       ]
+      }
+     ],
+     "next": "end_abr_demise"
+    },
+    {
+     "id": "deliver",
+     "if": "Needs delivery now; heavy ongoing bleeding, or fetal compromise once viable",
+     "ddx": {
+      "lead": [
+       "Placental abruption",
+       "Vasa previa",
+       "Uterine rupture"
+      ],
+      "out": []
+     },
+     "next": "deliver_now"
+    },
+    {
+     "id": "no_cause",
+     "if": "No cause found; placenta clear of the os, soft uterus, normal tracing, bleeding settled",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Placenta previa"
+      ]
+     },
+     "orders": [
+      {
+       "item": "No cause",
+       "dose": "Common: in many cases no cause will be identifiable",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:4e3de39fcc54",
+         "where": "1.14.6"
+        }
+       ]
+      }
+     ],
+     "next": "rh_late"
+    }
+   ]
+  },
+  {
+   "id": "deliver_now",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "After 20 weeks: shock, heavy ongoing bleeding, or a viable fetus in distress. Next?",
+   "options": [
+    "Emergency cesarean now: category 1, within 30 minutes of the decision",
+    "Formal ultrasound to confirm the cause before deciding on the route of birth",
+    "Corticosteroids and observation on the ward for 48 hours, delivering if the bleeding carries on after that",
+    "Oxytocin to speed labor and aim for a vaginal birth within the next few hours"
+   ],
+   "answer": 0,
+   "chainStep": "Emergency cesarean (category 1, within 30 minutes of the decision); with maternal bleeding or shock, two large-bore IVs, crossmatch, clotting studies and the major hemorrhage protocol; neonatal team",
+   "why": "Shock, heavy or continuing bleeding, or a failing fetal heart after 20 weeks means delivery now. NICE lists suspected uterine rupture, major abruption and persistent fetal bradycardia as category 1, done within 30 minutes. A previa with excessive or continuous bleeding is delivered by cesarean whatever the gestation, imaging delays the laparotomy a rupture needs, and a torn vasa previa bleeds the fetus's own blood. The oxytocin label rules it out with total previa or vasa previa and advises against it with a scarred uterus.",
+   "next": "end_deliver",
+   "sources": [
+    {
+     "docId": "url:e655ed211af1",
+     "where": "1.4.2; 1.4.3; 1.4.8"
+    },
+    {
+     "docId": "pmid:30969640",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:32644635",
+     "where": "Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "pmid:29493960",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:4e3de39fcc54",
+     "where": "1.14.1; 1.14.9"
+    },
+    {
+     "docId": "pmid:39941678",
+     "where": "Introduction"
+    },
+    {
+     "docId": "url:2270778e8f6f",
+     "where": "Contraindications; Warnings"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Maternal bleeding or shock",
+     "dose": "Two large-bore IVs, blood count, crossmatch, clotting studies; trigger the major haemorrhage protocol",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30969640",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "url:4e3de39fcc54",
+       "where": "1.14.9"
+      }
+     ]
+    },
+    {
+     "item": "Where",
+     "dose": "A unit with on-site blood transfusion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:e655ed211af1",
+       "where": "1.4.8"
+      }
+     ]
+    },
+    {
+     "item": "Uterine rupture at surgery",
+     "dose": "Midline incision when intraperitoneal bleeding is suspected; repair a small tear; hysterectomy for instability or major injury",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644635",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Anesthesia for uterine rupture",
+     "dose": "General anesthesia is usually needed; neuraxial is contraindicated with hemodynamic instability",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644635",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Neonatal team",
+     "dose": "Present at the birth and told about the bleed, as the baby may be anemic",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29493960",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Oxytocin running when rupture is suspected",
+     "dose": "Stopping it is not stated in this pathway's sources",
+     "status": "pending"
+    },
+    {
+     "item": "Anti-D, RhD-negative",
+     "dose": "300 micrograms (1,500 IU) IM within 72 hours; extra doses sized by a test for a large bleed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33128246",
+       "where": "Box 1, middle priority"
+      },
+      {
+       "docId": "url:a968f5149de0",
+       "where": "2.1"
+      }
+     ]
+    }
+   ],
+   "note": "Fetal death after an abruption in a stable mother is a different decision: see the abruption with fetal death outcome."
+  },
+  {
+   "id": "previa",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Placenta previa, preterm, bleeding settled, mother and fetus well. Plan?",
+   "options": [
+    "Admit, corticosteroids, cesarean at 36 to 37 weeks or sooner if bleeding is heavy",
+    "Induction of labor at 37 weeks, with a cesarean if the labor stalls",
+    "Cesarean today at this gestation, before the next bleed comes",
+    "Discharge home today with no restrictions, and a routine growth scan and clinic visit at 36 weeks"
+   ],
+   "answer": 0,
+   "chainStep": "Admit; corticosteroids if preterm birth may be needed; planned cesarean at 36 to 37 weeks; cesarean at any gestation for heavy or continuing bleeding",
+   "why": "A previa is delivered by cesarean; labor is ruled out with a complete previa. When the bleeding settles before 36 weeks, expectant care in hospital is reasonable, with corticosteroids for the baby's lungs and magnesium for neuroprotection if preterm birth becomes imminent, and the cesarean is planned for 36 to 37 weeks. Excessive or continuing bleeding means cesarean whatever the gestation. Discharge is considered once she has gone 48 hours without bleeding and the fetus is well.",
+   "next": "rh_late",
+   "sources": [
+    {
+     "docId": "pmid:30969640",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:e655ed211af1",
+     "where": "1.2.6"
+    },
+    {
+     "docId": "url:cdef34560e1d",
+     "where": "1.9.2"
+    },
+    {
+     "docId": "url:2270778e8f6f",
+     "where": "Contraindications"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Corticosteroids for fetal lungs",
+     "dose": "NICE: offer at 24+0 to 33+6 weeks in suspected or established preterm labour or a planned preterm birth; consider at 34+0 to 35+6. StatPearls gives them to admitted previa patients who qualify",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cdef34560e1d",
+       "where": "1.9.2; 1.9.3"
+      },
+      {
+       "docId": "pmid:30969640",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroid agent and dose",
+     "dose": "Not stated in NICE NG25",
+     "status": "pending"
+    },
+    {
+     "item": "Magnesium for neuroprotection",
+     "dose": "Planned or established preterm birth within 24 hours: offer at 24+0 to 29+6 weeks, consider at 30+0 to 33+6; 4 g IV over 15 minutes, then 1 g an hour until birth or for 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cdef34560e1d",
+       "where": "1.10.2; 1.10.3; 1.10.4"
+      },
+      {
+       "docId": "pmid:30969640",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Bloods",
+     "dose": "Two large-bore IVs, blood count, type and screen, clotting; crossmatch 2 to 4 units if bleeding is substantial",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30969640",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Previous cesarean",
+     "dose": "Scan for placenta accreta spectrum",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:e655ed211af1",
+       "where": "1.2.7"
+      }
+     ]
+    },
+    {
+     "item": "The cesarean",
+     "dose": "Regional anaesthesia preferred; a unit with on-site blood transfusion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:e655ed211af1",
+       "where": "1.4.8; 1.4.11"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "abr_stable",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Tender uterus, placenta clear of the os, mother and fetus stable, preterm. Plan?",
+   "options": [
+    "Admit for maternal and fetal monitoring, clotting studies and crossmatched blood",
+    "Discharge home without follow-up: a normal placenta on ultrasound has excluded an abruption",
+    "Emergency cesarean now, before the abruption extends",
+    "Kleihauer-Betke test to confirm the abruption, then decide"
+   ],
+   "answer": 0,
+   "chainStep": "Admit; continuous maternal and fetal monitoring; blood count, clotting studies with fibrinogen, type and crossmatch; deliver if mother or fetus deteriorates; corticosteroids if preterm birth becomes likely",
+   "why": "Abruption is a clinical diagnosis: ultrasound cannot confirm or exclude it, and the Kleihauer-Betke test measures fetal blood in her circulation rather than diagnosing it. A mild abruption with a stable mother and fetus before 37 weeks can be managed conservatively in hospital, with blood crossmatched. Deterioration of either means delivery.",
+   "next": "rh_late",
+   "sources": [
+    {
+     "docId": "pmid:29493960",
+     "where": "Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "url:cdef34560e1d",
+     "where": "1.9.2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Bloods",
+     "dose": "Blood count, type and crossmatch, clotting studies (fibrinogen, prothrombin time, partial thromboplastin time)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29493960",
+       "where": "Evaluation; Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Deterioration",
+     "dose": "Deliver for maternal decompensation or fetal distress, by emergency cesarean if needed; vaginal birth often carries less risk with coagulopathy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29493960",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Fetal death",
+     "dose": "Deliver promptly; then watch for postpartum hemorrhage and a changing clotting profile",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29493960",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Follow-up",
+     "dose": "Serial growth scans: abruption raises the risk of growth restriction",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29493960",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroids for fetal lungs",
+     "dose": "NICE: offer at 24+0 to 33+6 weeks in suspected or established preterm labour or a planned preterm birth; consider at 34+0 to 35+6",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cdef34560e1d",
+       "where": "1.9.2; 1.9.3"
+      }
+     ]
+    },
+    {
+     "item": "Corticosteroid agent and dose",
+     "dose": "Not stated in NICE NG25",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "rh_late",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Blood group and antibody screen",
+   "outcomes": [
+    {
+     "id": "rhneg",
+     "if": "RhD-negative; antibody screen negative",
+     "next": "anti_d"
+    },
+    {
+     "id": "rhpos",
+     "if": "RhD-positive; anti-D not indicated",
+     "next": "end_late_rhpos"
+    }
+   ]
+  },
+  {
+   "id": "anti_d",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "RhD-negative, not sensitized, bleeding after 20 weeks. Next?",
+   "options": [
+    "Anti-D within 72 hours; test for a large bleed to size the dose",
+    "No anti-D now, because the bleeding has stopped and the placenta looks normal on the scan",
+    "Wait for the routine antenatal dose at 28 weeks",
+    "Anti-D after birth, once the baby's group is known to be RhD-positive"
+   ],
+   "answer": 0,
+   "chainStep": "Anti-D 300 micrograms (1,500 IU) IM within 72 hours, covering 30 mL of fetal whole blood; screen for a large fetomaternal bleed (rosette, then Kleihauer-Betke) and add doses if needed",
+   "why": "Bleeding after 20 weeks is a sensitizing event in an RhD-negative woman. Give anti-D within 72 hours: 300 micrograms (1,500 IU) covers 30 mL of fetal whole blood, or 15 mL of fetal red cells. A rosette screen, then a Kleihauer-Betke test if it is positive, sizes any extra dose. Waiting for 28 weeks or for the birth leaves this bleed uncovered.",
+   "next": "end_late_rhneg",
+   "sources": [
+    {
+     "docId": "pmid:33128246",
+     "where": "Box 1, middle priority; Postpartum administration"
+    },
+    {
+     "docId": "url:a968f5149de0",
+     "where": "1 Indications and Usage; 2.1; 11 Description"
+    },
+    {
+     "docId": "pmid:28613626",
+     "where": "Introduction; Clinical Significance"
+    },
+    {
+     "docId": "pmid:29493960",
+     "where": "Evaluation"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Anti-D",
+     "dose": "300 micrograms (1,500 IU) IM within 72 hours; covers 30 mL of fetal whole blood (15 mL of fetal red cells)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33128246",
+       "where": "Postpartum administration; Box 1"
+      },
+      {
+       "docId": "url:a968f5149de0",
+       "where": "2.1; 11 Description"
+      },
+      {
+       "docId": "pmid:28613626",
+       "where": "Introduction"
+      }
+     ]
+    },
+    {
+     "item": "A large bleed",
+     "dose": "Rosette screen, then Kleihauer-Betke if positive; extra vials by the fetal blood volume",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:28613626",
+       "where": "Clinical Significance; Calculation"
+      },
+      {
+       "docId": "url:a968f5149de0",
+       "where": "2.1 table"
+      }
+     ],
+     "note": "StatPearls: vials = (% fetal cells x 50) / 30, rounded, then one vial added. The RhoGAM label: 20 micrograms per mL of fetal red cells, rounded up to the next whole syringe."
+    },
+    {
+     "item": "Later doses",
+     "dose": "A dose before 26 to 28 weeks is repeated every 12 weeks; a postpartum dose within 72 hours if the baby is RhD-positive",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:a968f5149de0",
+       "where": "2.1 table notes"
+      }
+     ]
+    }
+   ],
+   "note": "The trauma pathway states the same dose: 300 micrograms (1,500 IU) covers 30 mL of fetal whole blood."
+  },
+  {
+   "id": "pph_fundus",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Abdominal palpation for the fundus",
+   "outcomes": [
+    {
+     "id": "felt",
+     "if": "Fundus felt; the uterus can be palpated through the abdomen",
+     "next": "pph_first"
+    },
+    {
+     "id": "absent",
+     "if": "No fundus felt; a mass in the vagina, possible inversion",
+     "ddx": {
+      "lead": [
+       "Uterine inversion"
+      ],
+      "out": []
+     },
+     "next": "inversion"
+    }
+   ]
+  },
+  {
+   "id": "pph_first",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Heavy bleeding soon after birth, fundus felt. First response?",
+   "options": [
+    "Call for help; uterine massage, IV oxytocin, tranexamic acid 1 g IV, fluids; look for the cause",
+    "Methylergonovine IV push first, then oxytocin if the uterus stays soft",
+    "Oxytocin alone first, adding tranexamic acid if bleeding persists after 30 minutes",
+    "Tranexamic acid alone at first, keeping uterotonics back for bleeding that is still going after 3 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Call for help; uterine massage; IV oxytocin; tranexamic acid 1 g IV over 10 minutes within 3 hours of birth; isotonic crystalloid; empty the bladder; examine for the cause (tone, trauma, tissue, thrombin)",
+   "why": "The first-response bundle runs together: uterine massage, IV oxytocin (the first-line uterotonic), tranexamic acid and isotonic crystalloid, then an examination for the cause. Tranexamic acid is 1 g IV over 10 minutes within 3 hours of birth, whatever the cause, with a second gram if bleeding continues after 30 minutes; delay, even a short one, reduces its benefit, and after 3 hours WHO does not support it. Methylergonovine is not given IV routinely. If no fundus can be felt, think of inversion: uterotonics stop until it is replaced.",
+   "next": "pph_cause",
+   "sources": [
+    {
+     "docId": "url:0a6fcc001c7d",
+     "where": "Recommendations 24, 26, 27 with remarks, 28, 29"
+    },
+    {
+     "docId": "pmid:35297039",
+     "where": "Treatment recommendations; Etiologies; Administration of TXA"
+    },
+    {
+     "docId": "url:efb7fab61e75",
+     "where": "1.10.33; 1.10.35"
+    },
+    {
+     "docId": "url:c671b092fd76",
+     "where": "Warnings"
+    },
+    {
+     "docId": "pmid:30247846",
+     "where": "Initial Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Oxytocin (US label)",
+     "dose": "10 to 40 units added to a running IV infusion (maximum 40 units in 1,000 mL), rate adjusted to keep the uterus contracted; or 10 units IM after the placenta",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2270778e8f6f",
+       "where": "Dosage B, control of postpartum uterine bleeding"
+      }
+     ]
+    },
+    {
+     "item": "Tranexamic acid",
+     "dose": "1 g IV at 1 mL a minute (over 10 minutes) within 3 hours of birth; a second 1 g if bleeding continues after 30 minutes or restarts within 24 hours; not after 3 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 27 and remarks"
+      }
+     ],
+     "note": "NICE NG235 gives the same dose with no time limit stated."
+    },
+    {
+     "item": "Fluids",
+     "dose": "Isotonic crystalloid in preference to colloid",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 28"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen (NICE)",
+     "dose": "Consider 15 L/minute by non-rebreathing mask, target saturation 94% to 98%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efb7fab61e75",
+       "where": "1.10.33"
+      }
+     ]
+    },
+    {
+     "item": "Definition of postpartum hemorrhage",
+     "dose": "The sources differ; see the note",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 22"
+      },
+      {
+       "docId": "pmid:29763164",
+       "where": "Continuing Education Activity"
+      }
+     ],
+     "note": "WHO 2025: 300 mL or more with an abnormal sign (pulse over 100, shock index over 1, systolic under 100 or diastolic under 60), or 500 mL or more, within 24 hours. US (StatPearls): a cumulative loss of 1,000 mL or more, or blood loss with signs of hypovolemia."
+    },
+    {
+     "item": "Anti-D after birth",
+     "dose": "RhD-negative mother, RhD-positive baby: 300 micrograms (1,500 IU) IM within 72 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33128246",
+       "where": "Postpartum administration"
+      },
+      {
+       "docId": "url:a968f5149de0",
+       "where": "2.1 table"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pph_cause",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Uterus, placenta, genital tract and clotting",
+   "outcomes": [
+    {
+     "id": "tone",
+     "if": "Atony; soft boggy uterus, placenta complete, no tear",
+     "ddx": {
+      "lead": [
+       "Uterine atony"
+      ],
+      "out": []
+     },
+     "next": "second_line"
+    },
+    {
+     "id": "tone_settled",
+     "if": "Atony, settled; uterus firm after massage and oxytocin",
+     "ddx": {
+      "lead": [
+       "Uterine atony"
+      ],
+      "out": []
+     },
+     "next": "end_atony"
+    },
+    {
+     "id": "trauma",
+     "if": "Genital tract tear; firm uterus, bright bleeding from a laceration",
+     "ddx": {
+      "lead": [
+       "Genital tract trauma"
+      ],
+      "out": []
+     },
+     "next": "repair"
+    },
+    {
+     "id": "tissue",
+     "if": "Retained placenta; not delivered, or delivered incomplete",
+     "ddx": {
+      "lead": [
+       "Retained placenta"
+      ],
+      "out": []
+     },
+     "next": "retained"
+    },
+    {
+     "id": "thrombin",
+     "if": "Coagulopathy; firm uterus, no tear, blood not clotting, fibrinogen low",
+     "ddx": {
+      "lead": [
+       "Coagulopathy"
+      ],
+      "out": []
+     },
+     "next": "coag"
+    }
+   ]
+  },
+  {
+   "id": "second_line",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Still bleeding on oxytocin: blood pressure and asthma",
+   "outcomes": [
+    {
+     "id": "htn",
+     "if": "Hypertensive, no asthma; BP 140/90 or more, or pre-eclampsia",
+     "next": "carboprost"
+    },
+    {
+     "id": "htn_asthma",
+     "if": "Hypertensive, with asthma; BP 140/90 or more, or pre-eclampsia",
+     "next": "miso"
+    },
+    {
+     "id": "normo",
+     "if": "Normotensive; BP below 140/90",
+     "next": "methylerg"
+    }
+   ]
+  },
+  {
+   "id": "miso",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Atony on oxytocin, hypertensive and asthmatic. Next uterotonic?",
+   "options": [
+    "Misoprostol 800 micrograms sublingually",
+    "Carboprost 250 micrograms deep IM, repeated at 15 to 90 minute intervals",
+    "Methylergonovine 0.2 mg IM, repeated at 2 to 4 hour intervals",
+    "Oxytocin plus ergometrine by intramuscular injection"
+   ],
+   "answer": 0,
+   "chainStep": "Misoprostol 800 micrograms sublingually; no carboprost with asthma; no methylergonovine or ergometrine with hypertension or pre-eclampsia",
+   "why": "NICE does not offer carboprost to women with asthma because of the risk of bronchospasm, and suggests prostaglandin E1 for postpartum hemorrhage in asthma; misoprostol is a prostaglandin E1 analog. Hypertension and pre-eclampsia rule out methylergonovine and oxytocin with ergometrine. WHO recommends sublingual misoprostol 800 micrograms when the bleeding does not respond to oxytocin.",
+   "next": "atony_response",
+   "sources": [
+    {
+     "docId": "url:4e3de39fcc54",
+     "where": "1.4.2; 1.4.4"
+    },
+    {
+     "docId": "url:0a6fcc001c7d",
+     "where": "Recommendation 25"
+    },
+    {
+     "docId": "pmid:29763164",
+     "where": "Treatment / Management, misoprostol"
+    },
+    {
+     "docId": "url:c671b092fd76",
+     "where": "Contraindications"
+    },
+    {
+     "docId": "url:efb7fab61e75",
+     "where": "1.10.9"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Misoprostol",
+     "dose": "800 micrograms sublingually",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 25"
+      }
+     ]
+    },
+    {
+     "item": "Carboprost",
+     "dose": "Avoid with asthma: risk of bronchospasm",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:4e3de39fcc54",
+       "where": "1.4.2"
+      }
+     ]
+    },
+    {
+     "item": "Methylergonovine or ergometrine",
+     "dose": "Avoid: hypertension and pre-eclampsia are contraindications",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:c671b092fd76",
+       "where": "Contraindications"
+      },
+      {
+       "docId": "url:efb7fab61e75",
+       "where": "1.10.9"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carboprost",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Atony, still bleeding on oxytocin, BP high. Next uterotonic?",
+   "options": [
+    "Carboprost 250 micrograms IM, repeated every 15 to 90 minutes, up to 8 doses",
+    "Methylergonovine 0.2 mg IM, repeated at 2 to 4 hour intervals",
+    "Oxytocin plus ergometrine by intramuscular injection",
+    "IV labetalol first to bring the pressure down, then methylergonovine once it is controlled"
+   ],
+   "answer": 0,
+   "chainStep": "Carboprost 250 micrograms deep IM, repeat at 15 to 90 minute intervals to a total of 2 mg (8 doses); no methylergonovine or ergometrine with hypertension or pre-eclampsia",
+   "why": "Methylergonovine is contraindicated in hypertension and toxemia (pre-eclampsia), and oxytocin with ergometrine in severe hypertension and pre-eclampsia, so NICE moves to carboprost when ergometrine is contraindicated: 250 micrograms deep IM, repeated at 15 to 90 minute intervals to a total of 2 mg. Misoprostol 800 micrograms is the other option.",
+   "next": "atony_response",
+   "sources": [
+    {
+     "docId": "url:c671b092fd76",
+     "where": "Contraindications"
+    },
+    {
+     "docId": "url:efb7fab61e75",
+     "where": "1.10.9; 1.10.34 table 12"
+    },
+    {
+     "docId": "url:cf41d02114b8",
+     "where": "Indications and Usage; Dosage and Administration 2"
+    },
+    {
+     "docId": "pmid:29630290",
+     "where": "Initial Medical Treatment"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Carboprost",
+     "dose": "250 micrograms deep IM; repeat at 15 to 90 minute intervals as needed; no more than 2 mg (8 doses) in total",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cf41d02114b8",
+       "where": "Dosage and Administration 2"
+      },
+      {
+       "docId": "url:efb7fab61e75",
+       "where": "1.10.34 table 12"
+      }
+     ]
+    },
+    {
+     "item": "Carboprost cautions",
+     "dose": "Contraindicated with active cardiac, pulmonary, renal or hepatic disease; use cautiously with a history of asthma, or with hypo- or hypertension",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cf41d02114b8",
+       "where": "Contraindications; Precautions"
+      }
+     ]
+    },
+    {
+     "item": "Methylergonovine or ergometrine",
+     "dose": "Avoid: hypertension and pre-eclampsia are contraindications",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:c671b092fd76",
+       "where": "Contraindications"
+      },
+      {
+       "docId": "url:efb7fab61e75",
+       "where": "1.10.9"
+      }
+     ]
+    },
+    {
+     "item": "Misoprostol",
+     "dose": "800 micrograms sublingually (NICE: or rectally)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 25"
+      },
+      {
+       "docId": "url:efb7fab61e75",
+       "where": "1.10.34 table 12"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "methylerg",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Atony, still bleeding on oxytocin, BP normal. Next uterotonic?",
+   "options": [
+    "Methylergonovine 0.2 mg IM, repeated every 2 to 4 hours if needed",
+    "Uterine balloon tamponade first, keeping the second uterotonic drug for afterwards",
+    "Hysterectomy now, before she becomes coagulopathic",
+    "Methylergonovine 0.2 mg as a rapid IV push"
+   ],
+   "answer": 0,
+   "chainStep": "Methylergonovine 0.2 mg IM, repeat every 2 to 4 hours (not a routine IV push); carboprost 250 micrograms IM is the alternative, avoided in asthma; misoprostol 800 micrograms sublingually",
+   "why": "With a normal pressure an ergot is the usual second drug: methylergonovine 0.2 mg IM, repeatable every 2 to 4 hours. It is not given IV routinely because of sudden hypertension and stroke; if IV is lifesaving, it goes in over at least 60 seconds. Carboprost is the alternative, avoided in asthma. A balloon comes after uterotonics fail, and surgery after conservative measures fail.",
+   "next": "atony_response",
+   "sources": [
+    {
+     "docId": "url:c671b092fd76",
+     "where": "Dosage and Administration, intramuscularly; Warnings"
+    },
+    {
+     "docId": "pmid:29630290",
+     "where": "Initial Medical Treatment"
+    },
+    {
+     "docId": "url:cf41d02114b8",
+     "where": "Indications and Usage"
+    },
+    {
+     "docId": "url:0a6fcc001c7d",
+     "where": "Recommendations 25, 36, 39"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Methylergonovine",
+     "dose": "0.2 mg IM, repeated every 2 to 4 hours as required; IV only as a lifesaving measure, slowly over at least 60 seconds with blood pressure monitoring",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c671b092fd76",
+       "where": "Dosage and Administration, intramuscularly; Warnings"
+      }
+     ]
+    },
+    {
+     "item": "Carboprost with asthma",
+     "dose": "Avoid (StatPearls; NICE does not offer it, for the risk of bronchospasm); the label says use cautiously with a history of asthma and contraindicates it with active pulmonary disease",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:29630290",
+       "where": "Initial Medical Treatment"
+      },
+      {
+       "docId": "url:cf41d02114b8",
+       "where": "Contraindications; Precautions"
+      },
+      {
+       "docId": "url:4e3de39fcc54",
+       "where": "1.4.2; 1.4.4"
+      }
+     ]
+    },
+    {
+     "item": "Misoprostol",
+     "dose": "800 micrograms sublingually (NICE: or rectally)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 25"
+      },
+      {
+       "docId": "url:efb7fab61e75",
+       "where": "1.10.34 table 12"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atony_response",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After the second uterotonic",
+   "outcomes": [
+    {
+     "id": "stops",
+     "if": "Bleeding stops; uterus firm",
+     "next": "end_atony"
+    },
+    {
+     "id": "refractory",
+     "if": "Refractory atony; still bleeding, uterus soft after uterotonics",
+     "next": "refractory"
+    }
+   ]
+  },
+  {
+   "id": "refractory",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Atony, still bleeding after oxytocin and further uterotonics. Next?",
+   "options": [
+    "Uterine balloon tamponade, with the operating room and blood ready if it fails",
+    "Uterine artery embolization first, before a balloon or compression is tried",
+    "Hysterectomy straight away, before a balloon, compression sutures or embolization are tried",
+    "Another hour of oxytocin infusion before anything else"
+   ],
+   "answer": 0,
+   "chainStep": "Bimanual compression while the balloon is prepared; uterine balloon tamponade; blood products; then compression sutures, artery ligation, embolization or hysterectomy if bleeding continues",
+   "why": "When uterotonics fail and retained tissue and trauma are excluded, balloon tamponade is next, with surgery and blood immediately available; bimanual compression holds the bleeding meanwhile. Embolization is for when other measures have failed, and gauze packing is not recommended. If bleeding continues, compression sutures, artery ligation, embolization or hysterectomy follow, and a hysterectomy comes sooner rather than later once those fail.",
+   "next": "end_atony",
+   "sources": [
+    {
+     "docId": "url:0a6fcc001c7d",
+     "where": "Recommendations 33, 36, 37, 38, 39"
+    },
+    {
+     "docId": "url:efb7fab61e75",
+     "where": "1.10.37"
+    },
+    {
+     "docId": "pmid:35297039",
+     "where": "Treatment recommendations; Guidelines that address treatment"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Bimanual compression",
+     "dose": "A temporizing measure until definitive care",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 33"
+      }
+     ]
+    },
+    {
+     "item": "Blood products",
+     "dose": "Transfuse by clinical and laboratory assessment and a protocol; in massive hemorrhage, red cells, plasma and platelets 1:1:1",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 41"
+      },
+      {
+       "docId": "pmid:35297039",
+       "where": "Transfusion ratios"
+      }
+     ]
+    },
+    {
+     "item": "Surgery",
+     "dose": "Compression sutures, uterine and hypogastric artery ligation, hysterectomy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35297039",
+       "where": "Treatment recommendations"
+      },
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 39"
+      }
+     ]
+    },
+    {
+     "item": "Embolization",
+     "dose": "If other measures have failed and the resources are available",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 38"
+      }
+     ]
+    },
+    {
+     "item": "Non-pneumatic anti-shock garment",
+     "dose": "A temporizing measure until appropriate care is available",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 35"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "repair",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Firm uterus, bright bleeding from a tear. Next?",
+   "options": [
+    "Repair the tear promptly under good light and adequate anesthesia",
+    "Carboprost IM, since bleeding this heavy is likely to be atony",
+    "Uterine balloon tamponade to compress the bleeding site",
+    "Pack the vagina tightly and reassess her in 24 hours before attempting a repair"
+   ],
+   "answer": 0,
+   "chainStep": "Examine the genital tract under anesthesia if needed; repair the laceration; continue tranexamic acid and resuscitation",
+   "why": "Bleeding with a firm, contracted uterus points to genital tract trauma, and lacerations are repaired, with an examination under anaesthetic if needed. A balloon is for atony once trauma and retained tissue are excluded, and a uterotonic does not close a tear. Tranexamic acid still applies whatever the cause.",
+   "next": "end_trauma",
+   "sources": [
+    {
+     "docId": "pmid:35297039",
+     "where": "Table 4, first response bundle notes; Etiologies"
+    },
+    {
+     "docId": "url:efb7fab61e75",
+     "where": "1.10.37"
+    },
+    {
+     "docId": "url:0a6fcc001c7d",
+     "where": "Recommendation 36; Recommendation 27 remarks"
+    }
+   ]
+  },
+  {
+   "id": "retained",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Placenta retained, heavy bleeding. Next?",
+   "options": [
+    "Manual removal under anesthesia, with a single dose of prophylactic antibiotics",
+    "Ergometrine IM to make the uterus expel the placenta",
+    "Oxytocin injected into the umbilical vein, then wait another hour for the placenta to separate",
+    "Hysterectomy, since the placenta may be morbidly adherent"
+   ],
+   "answer": 0,
+   "chainStep": "IV access; uterotonics and tranexamic acid continue; manual removal of the placenta under anesthesia; one prophylactic antibiotic dose",
+   "why": "A retained placenta with heavy bleeding comes out by hand, under anaesthetic, with routine antibiotic prophylaxis. Uterotonics are given because she is bleeding, but ergometrine is avoided while the placenta is in, as its tetanic contractions can delay delivery of the placenta. Umbilical vein oxytocin belongs to research.",
+   "next": "end_retained",
+   "sources": [
+    {
+     "docId": "url:0a6fcc001c7d",
+     "where": "Recommendations 30, 31, 32 with remarks"
+    },
+    {
+     "docId": "url:efb7fab61e75",
+     "where": "1.10.24; 1.10.25; 1.10.28"
+    },
+    {
+     "docId": "pmid:35297039",
+     "where": "Table 4, first response bundle notes"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Antibiotic",
+     "dose": "One dose: ampicillin or a first-generation cephalosporin, or amoxicillin 1 g with clavulanic acid 200 mg IV",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 31 remarks"
+      }
+     ]
+    },
+    {
+     "item": "Anaesthetic",
+     "dose": "No uterine exploration or manual removal without one",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efb7fab61e75",
+       "where": "1.10.28"
+      }
+     ]
+    },
+    {
+     "item": "Ergometrine",
+     "dose": "Avoid while the placenta is retained",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 30 remarks"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "coag",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Uterus firm, no tear, blood not clotting, fibrinogen low. Next?",
+   "options": [
+    "Blood products guided by clotting tests: red cells, plasma, and fibrinogen or cryoprecipitate",
+    "A further uterotonic, since a contracted uterus can still be the source",
+    "Uterine balloon tamponade, as for atony, before the clotting tests",
+    "Large volumes of crystalloid, holding back blood products until the hemoglobin falls below a set threshold"
+   ],
+   "answer": 0,
+   "chainStep": "Near-patient coagulation testing; red cells, plasma and platelets (1:1:1 in massive hemorrhage); cryoprecipitate when fibrinogen is under 200 mg/dL, aiming for 150 to 200; tranexamic acid",
+   "why": "A firm uterus with no tear and blood that will not clot is coagulopathy, after abruption, fetal death, severe pre-eclampsia or HELLP, or amniotic fluid embolism. Replace what is missing, guided by clotting tests: in massive hemorrhage, red cells, plasma and platelets 1:1:1, and fibrinogen, the first factor to fall, mostly as cryoprecipitate. Large crystalloid volumes dilute clotting factors further.",
+   "next": "end_coag",
+   "sources": [
+    {
+     "docId": "pmid:35297039",
+     "where": "Transfusion ratios; Fibrinogen and cryoprecipitate; Evidence"
+    },
+    {
+     "docId": "pmid:29763164",
+     "where": "Etiology"
+    },
+    {
+     "docId": "url:efb7fab61e75",
+     "where": "1.10.37"
+    },
+    {
+     "docId": "url:0a6fcc001c7d",
+     "where": "Recommendation 41"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Fibrinogen",
+     "dose": "Replace when under 200 mg/dL; aim for at least 150 to 200 mg/dL",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35297039",
+       "where": "Fibrinogen and cryoprecipitate"
+      }
+     ]
+    },
+    {
+     "item": "Cryoprecipitate",
+     "dose": "10 units raise fibrinogen by about 100 mg/dL; further doses by the level",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35297039",
+       "where": "Fibrinogen and cryoprecipitate"
+      }
+     ]
+    },
+    {
+     "item": "Crystalloid",
+     "dose": "Small 500 mL boluses, reassessing after each; more than 4 L is linked to further bleeding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35297039",
+       "where": "Intravenous fluids; Evidence"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "inversion",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "No fundus felt, a smooth mass in the vagina, heavy bleeding. First?",
+   "options": [
+    "Hold uterotonics and push the fundus back up at once, leaving an attached placenta in place",
+    "Peel the attached placenta off first so the uterus is smaller, then replace the uterus by hand",
+    "Carboprost IM to contract the uterus before replacing it",
+    "Give oxytocin first, then replace the uterus once it has firmed"
+   ],
+   "answer": 0,
+   "chainStep": "Call for help; hold or stop uterotonics; two large-bore IVs and blood; tranexamic acid; immediate manual replacement with the placenta left attached; uterotonics once it is back; tocolytic, then surgery, if it will not go back",
+   "why": "An inverted uterus is replaced by hand at once, with steady pressure on the fundus along the vaginal axis. Uterotonics stop until it is back, then restart to hold it there. Removing an attached placenta first worsens the bleeding. If replacement fails, a tocolytic relaxes the uterus, and failing that, surgery.",
+   "next": "end_inversion",
+   "sources": [
+    {
+     "docId": "pmid:30247846",
+     "where": "Initial Management; Manual Repositioning; Tocolytics; Surgical Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "First moves",
+     "dose": "Call obstetrics, anesthesia and nursing; blood products available; two large-bore IVs with rapid crystalloid",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30247846",
+       "where": "Initial Management"
+      }
+     ]
+    },
+    {
+     "item": "Tranexamic acid",
+     "dose": "1 g IV over 10 minutes within 3 hours of birth, whatever the cause of the bleeding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0a6fcc001c7d",
+       "where": "Recommendation 27 and remarks"
+      }
+     ]
+    },
+    {
+     "item": "Tocolytic if replacement fails",
+     "dose": "Nitroglycerin 50 to 100 micrograms IV, or terbutaline 250 micrograms IV, or magnesium sulfate 4 g IV",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30247846",
+       "where": "Tocolytics"
+      }
+     ]
+    },
+    {
+     "item": "Once replaced",
+     "dose": "Stop the tocolytic; oxytocin infusion; bimanual compression or a hand at the fundus until it stays contracted; watch for reinversion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30247846",
+       "where": "Once repositioned"
+      }
+     ]
+    },
+    {
+     "item": "Surgery",
+     "dose": "Operative replacement when manual attempts fail",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30247846",
+       "where": "Surgical Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_arrest",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Maternal cardiac arrest with the fundus at or above the umbilicus: CPR flat with manual left uterine displacement, ACLS unchanged, and a resuscitative hysterotomy where she lies if circulation has not returned by 4 minutes, delivering within 5. The neonatal team comes when the fetus may be viable."
+  },
+  {
+   "id": "end_htn",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypertension after 20 weeks or after birth with neurological symptoms: a seizure continues in the seizure pathway (eclampsia); a severe headache or visual change without a seizure continues in the headache pathway (pre-eclampsia)."
+  },
+  {
+   "id": "end_scope",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Outside this pathway. Pregnancy test negative: not pregnancy bleeding. Bleeding at 14+0 to 19+6 weeks: second-trimester bleeding and loss are not in this pathway's sources yet; the early route covers up to 13 completed weeks. Arrest with the fundus below the umbilicus: standard ACLS, no resuscitative hysterotomy. Bleeding more than 24 hours after birth (secondary postpartum hemorrhage): not covered yet."
+  },
+  {
+   "id": "end_shock_unclear",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "An ectopic is not excluded until the pregnancy is located; resuscitate, gynecology at the bedside, look for another source; not covered further here."
+  },
+  {
+   "id": "end_septic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Resuscitate, start antibiotics, evacuate the uterus promptly; continue in the sepsis pathway (pw_sepsis_fever)."
+  },
+  {
+   "id": "end_term",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bleeding settled at term: a previa from 36 weeks is delivered by cesarean; an abruption from 37 weeks is delivered rather than managed conservatively, which is for a mild abruption before 37 weeks. Anti-D within 72 hours if she is RhD-negative."
+  },
+  {
+   "id": "end_abr_demise",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Abruption with fetal death, mother stable: deliver promptly; vaginal birth often carries less risk with coagulopathy; clotting studies, blood ready, watch for PPH. Anti-D if she is RhD-negative."
+  },
+  {
+   "id": "end_ruptured",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Suspected ruptured ectopic in shock: resuscitation and emergency surgery, laparoscopic where her condition allows, usually salpingectomy; never methotrexate when she is unstable. Anti-D before 13 weeks: the sources disagree."
+  },
+  {
+   "id": "end_misc_shock",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Miscarriage with shock: remove tissue from the cervical os at the bedside (cervical shock settles once it is out), resuscitate, and evacuate the uterus as an emergency; hemorrhage rules out expectant and medical care."
+  },
+  {
+   "id": "end_threatened",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Threatened miscarriage, viable intrauterine pregnancy with a closed os: expectant care, return if the bleeding worsens or lasts beyond 14 days, vaginal progesterone only after a previous miscarriage, no bed rest. Anti-D before 13 weeks: the sources disagree."
+  },
+  {
+   "id": "end_uncertain",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Intrauterine pregnancy of uncertain viability: one scan cannot diagnose a miscarriage. Rescan in 7 to 10 days (US) or at least 7 days later (NICE), with a 24-hour contact number meanwhile."
+  },
+  {
+   "id": "end_missed",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Missed miscarriage: expectant care, mifepristone then misoprostol (NICE 48 hours apart, US 24), or uterine aspiration, after discussion (NICE starts with 7 to 14 days of expectant care); oxytocin is not a first-trimester option; a home pregnancy test 3 weeks after medical care."
+  },
+  {
+   "id": "end_incomplete",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Incomplete or inevitable miscarriage, stable: expectant care, misoprostol alone (NICE 600 micrograms once; US 800 vaginally) or uterine aspiration; no mifepristone. Surgery if she becomes unstable, bleeds heavily or is infected."
+  },
+  {
+   "id": "end_complete",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Complete miscarriage after a scan had shown an intrauterine pregnancy: no further treatment and a home pregnancy test 3 weeks later. Without that earlier scan, treat it as a pregnancy of unknown location and follow hCG."
+  },
+  {
+   "id": "end_molar",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Suspected molar pregnancy: suction evacuation under ultrasound guidance with histology, anti-D if RhD-negative, then hCG every 1 to 2 weeks to normal and for a set time after (partial mole 1 month, complete mole 6 months); no medical induction or hysterotomy."
+  },
+  {
+   "id": "end_abdo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Stable, positive test, no intrauterine pregnancy (an adnexal mass, or nothing seen): continue in the abdominal pain pathway's ectopic route, where hCG, mass size, heartbeat and pain choose methotrexate, a choice of methotrexate or surgery, or surgery; a pregnancy of unknown location gets two hCG levels 48 hours apart."
+  },
+  {
+   "id": "end_deliver",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bleeding after 20 weeks with shock, heavy continuing bleeding or fetal compromise: emergency (category 1) cesarean within 30 minutes, with blood and the hemorrhage protocol when the mother is bleeding or in shock. Previa bleeding heavily: deliver whatever the gestation. Suspected uterine rupture: laparotomy, repair or hysterectomy. Vasa previa: the blood lost is the fetus's. Anti-D afterwards if she is RhD-negative."
+  },
+  {
+   "id": "end_late_rhneg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Stable bleeding after 20 weeks, RhD-negative: anti-D within 72 hours, 300 micrograms covering 30 mL of fetal whole blood, with extra doses sized by a Kleihauer-Betke test. Previa: admit, corticosteroids if preterm, cesarean at 36 to 37 weeks or sooner for heavy bleeding. Abruption: admit, monitor mother and fetus, clotting studies, deliver if either deteriorates. No cause found: the bleed still needs anti-D."
+  },
+  {
+   "id": "end_late_rhpos",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Stable bleeding after 20 weeks, RhD-positive, so no anti-D. Previa: admit, corticosteroids if preterm, cesarean at 36 to 37 weeks or sooner for heavy bleeding. Abruption: admit, monitor mother and fetus, clotting studies, deliver if either deteriorates. No cause found: often none is identified, and this pathway's sources give no further plan."
+  },
+  {
+   "id": "end_atony",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Uterine atony: massage, IV oxytocin and tranexamic acid; if it keeps bleeding, a second uterotonic chosen by her history (carboprost when she is hypertensive, methylergonovine when her pressure is normal, misoprostol when she is hypertensive and asthmatic, carboprost avoided in asthma); if it still bleeds, bimanual compression and balloon tamponade, then compression sutures, artery ligation, embolization or hysterectomy."
+  },
+  {
+   "id": "end_trauma",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Genital tract trauma, bleeding with a firm uterus: find and repair the tear under good light and anesthesia, with tranexamic acid and resuscitation continuing; a balloon or another uterotonic does not close a laceration."
+  },
+  {
+   "id": "end_retained",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Retained placenta with hemorrhage: the first-response bundle, then manual removal under anesthesia with one prophylactic antibiotic dose; no ergometrine while the placenta is in, and umbilical vein oxytocin only in research."
+  },
+  {
+   "id": "end_coag",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Coagulopathy, blood that will not clot with a firm uterus and no tear: blood products guided by clotting tests, 1:1:1 in massive hemorrhage, fibrinogen replaced when under 200 mg/dL, and small crystalloid volumes."
+  },
+  {
+   "id": "end_inversion",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Uterine inversion: stop uterotonics, replace the fundus by hand at once with the placenta left attached, then restart uterotonics; a tocolytic if it will not go back, and surgery if that fails."
+  }
+ ],
+ "cases": [
+  {
+   "id": "arrest",
+   "label": "Cardiac arrest at 34 weeks",
+   "vignette": "31-year-old at 34 weeks collapses in the obstetric triage waiting area.",
+   "picks": {
+    "front": "arrest"
+   },
+   "results": {
+    "front": "Unresponsive, not breathing, no carotid pulse; the monitor shows pulseless electrical activity. Fundus 4 cm above the umbilicus."
+   }
+  },
+  {
+   "id": "preeclampsia",
+   "label": "Headache and hypertension at 33 weeks",
+   "vignette": "27-year-old at 33 weeks with a severe headache since this morning and flashing lights in her vision. No bleeding.",
+   "picks": {
+    "front": "htn"
+   },
+   "results": {
+    "front": "BP 166/110, pulse 92. Booking BP was 112/70. Urine protein 2+. Pregnancy known, 33 weeks. No seizure."
+   }
+  },
+  {
+   "id": "not_pregnant",
+   "label": "Heavy bleeding, test negative",
+   "vignette": "24-year-old with heavy vaginal bleeding; her period is a week late and she wonders if she was pregnant.",
+   "picks": {
+    "front": "scope"
+   },
+   "results": {
+    "front": "Urine and serum pregnancy tests negative. BP 118/74, pulse 84."
+   }
+  },
+  {
+   "id": "ruptured_ectopic",
+   "label": "Ruptured ectopic in shock",
+   "vignette": "26-year-old, 7 weeks since her last period, sudden lower abdominal pain and pain in the right shoulder tip; she fainted at home. Pale and sweaty.",
+   "picks": {
+    "front": "early_shock",
+    "shock_source": "ruptured"
+   },
+   "results": {
+    "front": "Urine pregnancy test positive, about 7 weeks by dates. BP 82/48, pulse 128 after 1 L of crystalloid.",
+    "shock_source": "Bedside scan: free fluid in the hepatorenal pouch and the pelvis, no intrauterine pregnancy. Speculum: a little dark blood, os closed."
+   }
+  },
+  {
+   "id": "cervical_shock",
+   "label": "Miscarriage with cervical shock",
+   "vignette": "34-year-old, 10 weeks pregnant, heavy bleeding with clots for 3 hours; she feels faint. A scan at 7 weeks showed an intrauterine pregnancy.",
+   "picks": {
+    "front": "early_shock",
+    "shock_source": "miscarriage"
+   },
+   "results": {
+    "front": "Pregnancy known, 10 weeks. BP 78/46, pulse 52, clammy.",
+    "shock_source": "Speculum: tissue bulging through an open os, brisk bleeding. Bedside scan: tissue in the uterus and cervix, no free fluid."
+   }
+  },
+  {
+   "id": "threatened",
+   "label": "Threatened miscarriage",
+   "vignette": "29-year-old, 8 weeks by dates, light bleeding and mild cramps since this morning. No previous pregnancy loss.",
+   "picks": {
+    "front": "early",
+    "tvus_result": "viable"
+   },
+   "results": {
+    "front": "Urine pregnancy test positive, 8 weeks by dates. BP 116/72, pulse 80.",
+    "tvus_result": "Transvaginal scan: single intrauterine pregnancy, crown-rump length 16 mm, heartbeat seen. Speculum: os closed, light bleeding."
+   }
+  },
+  {
+   "id": "uncertain",
+   "label": "Viability not yet known",
+   "vignette": "31-year-old with irregular cycles, about 7 weeks by her last period, spotting for a day.",
+   "picks": {
+    "front": "early",
+    "tvus_result": "uncertain"
+   },
+   "results": {
+    "front": "Urine pregnancy test positive. BP 120/76, pulse 78.",
+    "tvus_result": "Transvaginal scan: intrauterine gestational sac, mean diameter 14 mm, yolk sac, no embryo yet. Speculum: os closed."
+   }
+  },
+  {
+   "id": "missed",
+   "label": "Missed miscarriage",
+   "vignette": "36-year-old, 10 weeks by dates, brown spotting; her nausea has faded over the past week.",
+   "picks": {
+    "front": "early",
+    "tvus_result": "missed"
+   },
+   "results": {
+    "front": "Urine pregnancy test positive. BP 124/78, pulse 76, afebrile.",
+    "tvus_result": "Transvaginal scan: intrauterine pregnancy, crown-rump length 12 mm, no heartbeat; a second sonographer agrees. Speculum: os closed, scant brown blood."
+   }
+  },
+  {
+   "id": "incomplete",
+   "label": "Incomplete miscarriage",
+   "vignette": "27-year-old, 9 weeks by dates, bleeding with clots and cramps since yesterday, now lighter; she passed some tissue at home.",
+   "picks": {
+    "front": "early",
+    "tvus_result": "retained"
+   },
+   "results": {
+    "front": "Urine pregnancy test positive. BP 112/70, pulse 92, afebrile.",
+    "tvus_result": "Transvaginal scan: heterogeneous tissue in the cavity and lower uterus, no gestational sac. Speculum: os open, moderate bleeding, no tissue in the canal."
+   }
+  },
+  {
+   "id": "complete",
+   "label": "Complete miscarriage",
+   "vignette": "33-year-old, 8 weeks by dates. A scan at 6 weeks showed an intrauterine sac with a yolk sac. Heavy bleeding yesterday with passage of tissue; now only spotting.",
+   "picks": {
+    "front": "early",
+    "tvus_result": "complete"
+   },
+   "results": {
+    "front": "Urine pregnancy test positive. BP 118/72, pulse 74.",
+    "tvus_result": "Transvaginal scan: empty uterus, thin endometrium, no adnexal mass or free fluid. Speculum: os closed."
+   }
+  },
+  {
+   "id": "molar",
+   "label": "Molar pregnancy",
+   "vignette": "41-year-old, 11 weeks by dates, bleeding and severe vomiting; her uterus feels larger than her dates.",
+   "picks": {
+    "front": "early",
+    "tvus_result": "molar"
+   },
+   "results": {
+    "front": "Urine pregnancy test positive. BP 132/84, pulse 96.",
+    "tvus_result": "Transvaginal scan: enlarged uterus filled with a cystic placental mass, no fetal parts. Serum hCG far above the range for 11 weeks. Speculum: os closed, dark blood."
+   }
+  },
+  {
+   "id": "ectopic_stable",
+   "label": "Stable tubal ectopic",
+   "vignette": "25-year-old, 6 weeks by dates, left lower abdominal pain and spotting.",
+   "picks": {
+    "front": "early",
+    "tvus_result": "not_seen"
+   },
+   "results": {
+    "front": "Urine pregnancy test positive. BP 118/76, pulse 88.",
+    "tvus_result": "Transvaginal scan: empty uterus; a 20 mm left adnexal mass moving separately from the ovary, no heartbeat; no free fluid. Speculum: os closed."
+   }
+  },
+  {
+   "id": "previa_shock",
+   "label": "Previa bleeding with shock",
+   "vignette": "35-year-old at 33 weeks with a known complete placenta previa, sudden heavy painless bleeding soaking her clothes.",
+   "picks": {
+    "front": "late_shock"
+   },
+   "results": {
+    "front": "Pregnancy at 33 weeks; complete previa on the 20-week and 32-week scans. BP 84/50, pulse 132, bleeding heavily."
+   }
+  },
+  {
+   "id": "previa",
+   "label": "Placenta previa, bleeding settled",
+   "vignette": "30-year-old at 31 weeks, painless bright red bleeding after intercourse, now settling. No scan since 12 weeks.",
+   "picks": {
+    "front": "late",
+    "late_result": "previa",
+    "rh_late": "rhpos"
+   },
+   "results": {
+    "front": "31 weeks. BP 122/76, pulse 88; bleeding settling.",
+    "late_result": "Transabdominal then transvaginal scan: placenta completely covering the internal os. Uterus soft and non-tender. Fetal heart tracing normal.",
+    "rh_late": "O RhD-positive."
+   }
+  },
+  {
+   "id": "abruption",
+   "label": "Mild abruption at 32 weeks",
+   "vignette": "38-year-old smoker at 32 weeks with sudden abdominal pain and a small amount of dark bleeding.",
+   "picks": {
+    "front": "late",
+    "late_result": "abruption",
+    "rh_late": "rhpos"
+   },
+   "results": {
+    "front": "32 weeks. BP 128/80, pulse 92.",
+    "late_result": "Scan: fundal placenta well clear of the os; no clot seen. Uterus mildly tender, with contractions every 5 minutes that relax fully between. Fetal heart tracing normal for gestation.",
+    "rh_late": "A RhD-positive."
+   }
+  },
+  {
+   "id": "no_cause_rhneg",
+   "label": "Small bleed, RhD-negative, no cause",
+   "vignette": "27-year-old at 24 weeks, a small painless bleed this morning, now stopped.",
+   "picks": {
+    "front": "late",
+    "late_result": "no_cause",
+    "rh_late": "rhneg"
+   },
+   "results": {
+    "front": "24 weeks. BP 116/70, pulse 80.",
+    "late_result": "Scan: posterior placenta well clear of the os. Uterus soft, non-tender. Fetal heart tracing normal for gestation. Speculum: cervix closed, no bleeding now.",
+    "rh_late": "O RhD-negative, antibody screen negative."
+   }
+  },
+  {
+   "id": "vasa",
+   "label": "Bleeding as the membranes rupture",
+   "vignette": "32-year-old at 39 weeks in early labor; her membranes rupture with a gush of bright red blood.",
+   "picks": {
+    "front": "late",
+    "late_result": "deliver"
+   },
+   "results": {
+    "front": "39 weeks, in labor. BP 124/78, pulse 90.",
+    "late_result": "Fetal heart tracing: bradycardia to 80, then a sinusoidal pattern since the membranes ruptured. Uterus soft between contractions. 20-week scan: fundal placenta with a velamentous cord insertion."
+   }
+  },
+  {
+   "id": "rupture",
+   "label": "Labor after a cesarean, sudden pain",
+   "vignette": "34-year-old at 39 weeks, one previous cesarean, in labor on an oxytocin infusion; sudden tearing abdominal pain and some bleeding.",
+   "picks": {
+    "front": "late",
+    "late_result": "deliver"
+   },
+   "results": {
+    "front": "39 weeks, in labor. BP 122/80, pulse 98.",
+    "late_result": "Fetal heart tracing: prolonged bradycardia. Earlier scans: fundal placenta. Contractions have stopped; she is tender in the midline, and on vaginal exam the head, at station 0 an hour ago, is now high."
+   }
+  },
+  {
+   "id": "pph_htn",
+   "label": "Postpartum hemorrhage with pre-eclampsia",
+   "vignette": "29-year-old with pre-eclampsia, 20 minutes after a vaginal birth; heavy bleeding.",
+   "picks": {
+    "front": "pph",
+    "pph_fundus": "felt",
+    "pph_cause": "tone",
+    "second_line": "htn",
+    "atony_response": "stops"
+   },
+   "results": {
+    "front": "Delivered 20 minutes ago, placenta complete. BP 158/104, pulse 108; 900 mL on the calibrated drape.",
+    "pph_fundus": "Fundus felt above the umbilicus.",
+    "pph_cause": "Uterus soft and boggy; placenta complete; no tear on inspection; blood clotting normally.",
+    "second_line": "Still bleeding on the oxytocin infusion. BP 156/102. No history of asthma.",
+    "atony_response": "Uterus firm within 15 minutes; bleeding settles."
+   }
+  },
+  {
+   "id": "pph_htn_asthma",
+   "label": "Postpartum hemorrhage, hypertension and asthma",
+   "vignette": "32-year-old with gestational hypertension and asthma on a daily inhaled steroid, 25 minutes after a vaginal birth; heavy bleeding.",
+   "picks": {
+    "front": "pph",
+    "pph_fundus": "felt",
+    "pph_cause": "tone",
+    "second_line": "htn_asthma",
+    "atony_response": "stops"
+   },
+   "results": {
+    "front": "Delivered 25 minutes ago, placenta complete. BP 152/100, pulse 110; 1,000 mL measured.",
+    "pph_fundus": "Fundus felt at the umbilicus.",
+    "pph_cause": "Uterus soft and boggy; placenta complete; no tear; blood clotting.",
+    "second_line": "Still bleeding on the oxytocin infusion. BP 150/98; wheeze-free today.",
+    "atony_response": "Uterus firm 20 minutes after misoprostol; bleeding settles."
+   }
+  },
+  {
+   "id": "pph_settled",
+   "label": "Atony that settles with first-line care",
+   "vignette": "26-year-old, 10 minutes after a vaginal birth that followed a long induced labor; bleeding heavily.",
+   "picks": {
+    "front": "pph",
+    "pph_fundus": "felt",
+    "pph_cause": "tone_settled"
+   },
+   "results": {
+    "front": "Delivered 10 minutes ago, placenta complete. BP 118/72, pulse 102; 650 mL measured.",
+    "pph_fundus": "Fundus felt above the umbilicus.",
+    "pph_cause": "Uterus soft at first, firm after massage and the oxytocin infusion; placenta complete; no tear; bleeding has settled."
+   }
+  },
+  {
+   "id": "pph_refractory",
+   "label": "Refractory atony after twins",
+   "vignette": "35-year-old with asthma, twins delivered vaginally 30 minutes ago; heavy bleeding.",
+   "picks": {
+    "front": "pph",
+    "pph_fundus": "felt",
+    "pph_cause": "tone",
+    "second_line": "normo",
+    "atony_response": "refractory"
+   },
+   "results": {
+    "front": "Delivered 30 minutes ago; both placentas complete. BP 104/62, pulse 116; 1,200 mL measured.",
+    "pph_fundus": "Fundus felt well above the umbilicus.",
+    "pph_cause": "Uterus soft and boggy; placentas complete; no tear; blood clotting.",
+    "second_line": "Still bleeding on oxytocin. BP 102/60.",
+    "atony_response": "After methylergonovine and sublingual misoprostol 800 micrograms the uterus is still soft; 2,000 mL lost in total."
+   }
+  },
+  {
+   "id": "pph_tear",
+   "label": "Bleeding tear after forceps",
+   "vignette": "24-year-old, forceps birth 15 minutes ago, steady bright bleeding.",
+   "picks": {
+    "front": "pph",
+    "pph_fundus": "felt",
+    "pph_cause": "trauma"
+   },
+   "results": {
+    "front": "Delivered 15 minutes ago; placenta complete. BP 114/70, pulse 104; 700 mL measured.",
+    "pph_fundus": "Fundus felt at the umbilicus.",
+    "pph_cause": "Uterus firm and well contracted; placenta complete; a bleeding high vaginal wall tear and a cervical laceration."
+   }
+  },
+  {
+   "id": "pph_retained",
+   "label": "Retained placenta",
+   "vignette": "30-year-old, 40 minutes after birth the placenta has not delivered; bleeding is getting heavier.",
+   "picks": {
+    "front": "pph",
+    "pph_fundus": "felt",
+    "pph_cause": "tissue"
+   },
+   "results": {
+    "front": "Delivered 40 minutes ago. BP 110/68, pulse 110; 800 mL measured.",
+    "pph_fundus": "Fundus felt above the umbilicus.",
+    "pph_cause": "Placenta still in the uterus despite controlled cord traction; uterus soft around it; no tear."
+   }
+  },
+  {
+   "id": "pph_coag",
+   "label": "Bleeding that will not clot",
+   "vignette": "37-year-old, an hour after the vaginal birth of a stillborn baby following a placental abruption; oozing from the episiotomy and IV sites.",
+   "picks": {
+    "front": "pph",
+    "pph_fundus": "felt",
+    "pph_cause": "thrombin"
+   },
+   "results": {
+    "front": "Delivered an hour ago; placenta complete with an adherent clot. BP 100/60, pulse 118; 1,500 mL measured.",
+    "pph_fundus": "Fundus felt at the umbilicus.",
+    "pph_cause": "Uterus firm; no tear; blood in the bowl not clotting; bedside fibrinogen low."
+   }
+  },
+  {
+   "id": "pph_inversion",
+   "label": "Uterine inversion",
+   "vignette": "28-year-old, heavy bleeding and faintness a few minutes after a vaginal birth.",
+   "picks": {
+    "front": "pph",
+    "pph_fundus": "absent"
+   },
+   "results": {
+    "front": "Delivered 10 minutes ago. BP 88/50, pulse 120; 1,000 mL measured.",
+    "pph_fundus": "Sudden severe pain began as the midwife applied cord traction. No uterine fundus felt through the abdomen; a smooth red mass in the vagina with the placenta still attached."
+   }
+  },
+  {
+   "id": "shock_unclear",
+   "label": "Early pregnancy shock, source not found",
+   "vignette": "23-year-old, about 6 weeks by dates, vomiting for two days and fainted at home; little vaginal bleeding.",
+   "picks": {
+    "front": "early_shock",
+    "shock_source": "unclear"
+   },
+   "results": {
+    "front": "Urine pregnancy test positive. BP 84/52, pulse 124.",
+    "shock_source": "Bedside scan: no free fluid, no intrauterine pregnancy seen. Speculum: os closed, no tissue, a little dark blood."
+   }
+  },
+  {
+   "id": "septic",
+   "label": "Septic miscarriage",
+   "vignette": "30-year-old, 11 weeks by dates, bleeding for 5 days, now with lower abdominal pain and an offensive discharge.",
+   "picks": {
+    "front": "early",
+    "tvus_result": "septic"
+   },
+   "results": {
+    "front": "Urine pregnancy test positive. BP 116/72, pulse 98, temperature 38.4.",
+    "tvus_result": "Transvaginal scan: retained tissue in the cavity. Speculum: offensive brown discharge from an open os; the uterus is tender on bimanual exam."
+   }
+  },
+  {
+   "id": "term_previa",
+   "label": "Settled bleed, previa at 37 weeks",
+   "vignette": "33-year-old at 37 weeks, a painless bright red bleed this morning that has stopped. No scan since 20 weeks.",
+   "picks": {
+    "front": "late",
+    "late_result": "term"
+   },
+   "results": {
+    "front": "37 weeks. BP 120/74, pulse 84.",
+    "late_result": "Transabdominal then transvaginal scan: placenta covering the internal os. Uterus soft. Fetal heart tracing normal. Bleeding has stopped."
+   }
+  },
+  {
+   "id": "abr_demise",
+   "label": "Abruption with fetal death",
+   "vignette": "36-year-old at 34 weeks, sudden constant abdominal pain and dark bleeding; she has not felt the baby move since.",
+   "picks": {
+    "front": "late",
+    "late_result": "abr_demise"
+   },
+   "results": {
+    "front": "34 weeks. BP 126/82, pulse 96.",
+    "late_result": "Scan: no fetal heart activity; fundal placenta clear of the os. Uterus firm and tender. Mother stable."
+   }
+  }
+ ]
+}

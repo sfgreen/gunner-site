@@ -1,0 +1,2952 @@
+{
+ "id": "pw_stroke",
+ "title": "Stroke and focal deficit",
+ "world": "neuro",
+ "synonyms": [
+  "stroke",
+  "CVA",
+  "focal deficit",
+  "focal neurologic deficit",
+  "hemiparesis",
+  "aphasia",
+  "facial droop",
+  "code stroke",
+  "TIA",
+  "transient ischemic attack",
+  "ischemic stroke",
+  "large vessel occlusion",
+  "LVO",
+  "thrombolysis",
+  "tPA",
+  "alteplase",
+  "tenecteplase",
+  "thrombectomy",
+  "basilar artery occlusion",
+  "intracerebral hemorrhage",
+  "ICH",
+  "hemorrhagic stroke",
+  "cerebellar hemorrhage",
+  "anticoagulant reversal",
+  "subarachnoid hemorrhage",
+  "Todd paralysis",
+  "hypoglycemia"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:64e48d5d8ef3",
+   "label": "NICE NG128",
+   "title": "Stroke and transient ischaemic attack in over 16s: diagnosis and initial management (2019, updated 2022)",
+   "url": "https://www.nice.org.uk/guidance/ng128"
+  },
+  {
+   "docId": "url:89ad74c1660a",
+   "label": "NICE TA264",
+   "title": "Alteplase for treating acute ischaemic stroke (2012)",
+   "url": "https://www.nice.org.uk/guidance/ta264"
+  },
+  {
+   "docId": "url:c2554e76f391",
+   "label": "NICE TA990",
+   "title": "Tenecteplase for treating acute ischaemic stroke (2024)",
+   "url": "https://www.nice.org.uk/guidance/ta990"
+  },
+  {
+   "docId": "url:4e46abb89dc2",
+   "label": "NICE TA697",
+   "title": "Andexanet alfa for reversing anticoagulation from apixaban or rivaroxaban (2021, updated 2025)",
+   "url": "https://www.nice.org.uk/guidance/ta697"
+  },
+  {
+   "docId": "url:42279d67da8d",
+   "label": "NICE NG228",
+   "title": "Subarachnoid haemorrhage caused by a ruptured aneurysm: diagnosis and management (2022)",
+   "url": "https://www.nice.org.uk/guidance/ng228"
+  },
+  {
+   "docId": "pmid:42095756",
+   "label": "ESO BP 2025",
+   "title": "2025 update to European Stroke Organisation (ESO) guideline on blood pressure management in acute ischaemic stroke and intracerebral haemorrhage",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42095756/"
+  },
+  {
+   "docId": "pmid:34414300",
+   "label": "ESO DAPT 2021",
+   "title": "European Stroke Organisation expedited recommendation for the use of short-term dual antiplatelet therapy early after minor stroke and high-risk TIA",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34414300/"
+  },
+  {
+   "docId": "pmid:38752743",
+   "label": "ESO-ESMINT basilar 2024",
+   "title": "European Stroke Organisation and European Society for Minimally Invasive Neurological Therapy guideline on acute management of basilar artery occlusion",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38752743/"
+  },
+  {
+   "docId": "url:040c6769aed9",
+   "label": "FDA label: Activase",
+   "title": "Activase (alteplase) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c669f77c-fa48-478b-a14b-80b20a0139c2"
+  },
+  {
+   "docId": "url:b01430aafa73",
+   "label": "FDA label: TNKase",
+   "title": "TNKase (tenecteplase) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e647640d-c395-4b4b-a0be-1162f9c21d84"
+  },
+  {
+   "docId": "url:2a9fe9c19e10",
+   "label": "FDA label: Kcentra",
+   "title": "Kcentra (prothrombin complex concentrate, human) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee1afb8-324c-42e4-8bf0-f0c9da5e6d42"
+  },
+  {
+   "docId": "url:353648f072f8",
+   "label": "FDA label: Praxbind",
+   "title": "Praxbind (idarucizumab) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c7400f8a-dcf4-a6df-6d07-983081b1bf34"
+  },
+  {
+   "docId": "url:e774f3366571",
+   "label": "FDA label: Andexxa",
+   "title": "Andexxa (andexanet alfa) prescribing information, DailyMed (SPL version 7)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2d9d90a6-63e6-46ef-96ff-dd6519ae7b6c"
+  },
+  {
+   "docId": "url:20b209257bcc",
+   "label": "FDA Andexxa 2025",
+   "title": "Update on the Safety of Andexxa (FDA Safety Communication, December 18, 2025)",
+   "url": "https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/update-safety-andexxa"
+  },
+  {
+   "docId": "pmid:40815242",
+   "label": "AHA/ACC BP 2025",
+   "title": "2025 AHA/ACC guideline for the prevention, detection, evaluation and management of high blood pressure in adults (JACC copy)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40815242/"
+  },
+  {
+   "docId": "pmid:31082120",
+   "label": "StatPearls: cerebellar hemorrhage",
+   "title": "Cerebellar Hemorrhage (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31082120/"
+  },
+  {
+   "docId": "pmid:22389822",
+   "label": "ABCD2 review 2011",
+   "title": "The ABCD and ABCD2 Scores and the Risk of Stroke following a TIA: A Narrative Review (ISRN Neurol 2011), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22389822/"
+  },
+  {
+   "docId": "pmid:29083778",
+   "label": "StatPearls: TIA",
+   "title": "Transient Ischemic Attack (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29083778/"
+  }
+ ],
+ "differential": [
+  "Ischemic stroke",
+  "Intracerebral hemorrhage",
+  "Subarachnoid hemorrhage",
+  "TIA",
+  "Hypoglycemia",
+  "Todd paralysis"
+ ],
+ "calculators": [
+  {
+   "id": "abcd2",
+   "title": "ABCD2 score",
+   "kind": "points",
+   "items": [
+    {
+     "id": "age",
+     "label": "Age 60 or older",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "bp",
+     "label": "BP 140 systolic or 90 diastolic, or higher",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "diabetes",
+     "label": "Diabetes",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "clinical",
+     "label": "Clinical features",
+     "options": [
+      {
+       "label": "Neither",
+       "points": 0
+      },
+      {
+       "label": "Unilateral weakness",
+       "points": 2
+      },
+      {
+       "label": "Speech impairment without weakness",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "duration",
+     "label": "Duration",
+     "options": [
+      {
+       "label": "Under 10 minutes",
+       "points": 0
+      },
+      {
+       "label": "10 to 59 minutes",
+       "points": 1
+      },
+      {
+       "label": "60 minutes or more",
+       "points": 2
+      }
+     ]
+    }
+   ],
+   "bands": [
+    {
+     "lte": 3,
+     "text": "0 to 3: low risk; 2-day stroke risk 1.0%"
+    },
+    {
+     "gte": 4,
+     "lte": 5,
+     "text": "4 or 5: high-risk TIA for dual antiplatelets (ESO); 2-day stroke risk 4.1%"
+    },
+    {
+     "gte": 6,
+     "text": "6 or 7: high risk; 2-day stroke risk 8.1%"
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:22389822",
+     "where": "Table 1; 3.3"
+    },
+    {
+     "docId": "pmid:29083778",
+     "where": "Evaluation, Stroke Risk Stratification"
+    },
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.1.5; 1.1.6"
+    },
+    {
+     "docId": "pmid:34414300",
+     "where": "Recommendations 1 and 2"
+    }
+   ],
+   "note": "NICE does not use ABCD2 to assess stroke risk or to set the urgency of referral: every suspected TIA sees a specialist within 24 hours. ESO uses 4 or more to select aspirin plus clopidogrel, and 6 or more for ticagrelor plus aspirin.",
+   "tests": [
+    {
+     "picks": {
+      "age": 1,
+      "bp": 1,
+      "diabetes": 1,
+      "clinical": 1,
+      "duration": 1
+     },
+     "expect": 6
+    },
+    {
+     "picks": {},
+     "expect": 0
+    },
+    {
+     "picks": {
+      "age": 1,
+      "bp": 1,
+      "clinical": 1,
+      "duration": 1
+     },
+     "expect": 5
+    },
+    {
+     "picks": {
+      "age": 1,
+      "bp": 1,
+      "diabetes": 1,
+      "clinical": 1,
+      "duration": 2
+     },
+     "expect": 7
+    }
+   ]
+  }
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Suspected stroke. First moves?",
+   "options": [
+    "Airway and breathing, a fingerstick glucose, and the time last known well",
+    "Non-contrast CT first; the glucose can wait for the lab panel",
+    "A heparin bolus now, then the CT when the scanner is free",
+    "Lower the systolic below 140 before anything else"
+   ],
+   "answer": 0,
+   "chainStep": "Check airway and breathing; fingerstick glucose; fix the time last known well; then immediate imaging",
+   "why": "Hypoglycemia has to be excluded as the cause of sudden neurological symptoms, and every reperfusion window is counted from the time last known well. Anticoagulation is not routine in acute stroke. For a deficit that persists, aspirin waits until imaging has excluded hemorrhage, while a resolved TIA gets aspirin 300 mg at once. In acute ischemic stroke NICE lowers the pressure only for a hypertensive emergency, or to 185/110 or lower in a lysis candidate.",
+   "orders": [
+    {
+     "item": "Oxygen",
+     "dose": "Only if saturation drops below 95%; not routine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.5.1"
+      }
+     ]
+    },
+    {
+     "item": "Glucose target",
+     "dose": "Keep it between 72 to 198 mg/dL (4 and 11 mmol/L) in acute stroke",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.5.2"
+      }
+     ]
+    },
+    {
+     "item": "Airway",
+     "dose": "Protect it when consciousness is depressed; the method and the intubation threshold are not in the sources read",
+     "status": "pending"
+    }
+   ],
+   "note": "Not in this version: pregnancy, children, cerebral venous thrombosis, arterial dissection.",
+   "next": "first_look",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.1.2; 1.1.4; 1.4.1; 1.4.6; 1.4.9; 1.4.12; 1.5.9; 1.5.10"
+    }
+   ]
+  },
+  {
+   "id": "first_look",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Glucose, airway and history",
+   "outcomes": [
+    {
+     "id": "hypo",
+     "if": "Glucose low; below 72 mg/dL (4 mmol/L) with the deficit",
+     "ddx": {
+      "lead": [
+       "Hypoglycemia"
+      ],
+      "out": []
+     },
+     "next": "hypo_tx"
+    },
+    {
+     "id": "unstable",
+     "if": "Depressed consciousness; GCS below 13 or the airway at risk, glucose normal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "unstable"
+    },
+    {
+     "id": "seizure",
+     "if": "Seizure at onset; a witnessed seizure, then the deficit, glucose normal",
+     "ddx": {
+      "lead": [
+       "Todd paralysis"
+      ],
+      "out": []
+     },
+     "next": "seizure_img"
+    },
+    {
+     "id": "tia",
+     "if": "Symptoms resolved; fully back to normal, glucose normal",
+     "ddx": {
+      "lead": [
+       "TIA"
+      ],
+      "out": []
+     },
+     "next": "tia_step"
+    },
+    {
+     "id": "deficit",
+     "if": "Deficit persists; GCS 13 or more, glucose normal, no seizure",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ct"
+    }
+   ]
+  },
+  {
+   "id": "hypo_tx",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Glucose below 4 mmol/L (72 mg/dL) with a new deficit. Next?",
+   "options": [
+    "Correct the glucose, then reassess the deficit",
+    "Give alteplase now; the window is closing",
+    "Aspirin 300 mg and admit to the stroke unit",
+    "CT first; treat the glucose after the scan"
+   ],
+   "answer": 0,
+   "chainStep": "Correct the glucose, then reassess; if the deficit persists, image it as a suspected stroke",
+   "why": "Hypoglycemia has to be excluded as the cause of the deficit, and glucose in acute stroke is kept between 4 and 11 mmol/L (72 to 198 mg/dL). A lytic needs intracranial hemorrhage excluded by imaging, and aspirin waits for imaging too.",
+   "orders": [
+    {
+     "item": "Glucose",
+     "dose": "Correct it; the glucose dose and route are not stated in the sources read",
+     "status": "pending"
+    }
+   ],
+   "next": "hypo_result",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.1.2; 1.5.2; 1.4.1; 1.4.9"
+    }
+   ]
+  },
+  {
+   "id": "hypo_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Deficit after the glucose is corrected",
+   "outcomes": [
+    {
+     "id": "resolved",
+     "if": "Deficit gone; back to normal once the glucose is corrected",
+     "ddx": {
+      "lead": [
+       "Hypoglycemia"
+      ],
+      "out": []
+     },
+     "next": "end_hypo"
+    },
+    {
+     "id": "persists",
+     "if": "Deficit persists; glucose now normal, weakness unchanged",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ct"
+    }
+   ]
+  },
+  {
+   "id": "unstable",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "GCS below 13 or the airway at risk. First?",
+   "options": [
+    "Protect the airway, then a non-contrast CT immediately",
+    "Lower the systolic below 140 before the scan",
+    "Alteplase before the scan to save time",
+    "Admit to the ward and scan in the morning"
+   ],
+   "answer": 0,
+   "chainStep": "Protect the airway; oxygen only if saturation is below 95%; immediate non-contrast CT",
+   "why": "A Glasgow Coma Score below 13 is an indication for an immediate non-contrast CT. The stroke type is unknown until the scan: a lytic needs intracranial hemorrhage excluded first, and in acute ischemic stroke NICE lowers the pressure only for a hypertensive emergency. How to secure the airway is not in the sources read.",
+   "orders": [
+    {
+     "item": "Airway",
+     "dose": "Secure it when the patient cannot protect it; intubation criteria are not in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Oxygen",
+     "dose": "Only if saturation drops below 95%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.5.1"
+      }
+     ]
+    }
+   ],
+   "next": "ct_result",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.3.2; 1.4.1; 1.5.1; 1.5.9"
+    }
+   ]
+  },
+  {
+   "id": "seizure_img",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "A witnessed seizure, then a weakness that persists; glucose normal. Next?",
+   "options": [
+    "Non-contrast CT and CT angiography now, as for any stroke",
+    "Call it Todd paralysis and discharge once it fades",
+    "Load an antiseizure drug, then image tomorrow morning",
+    "Give alteplase now, before the scan, to save time"
+   ],
+   "answer": 0,
+   "chainStep": "Image it as a suspected stroke: non-contrast CT now, with CT angiography if thrombectomy might be indicated",
+   "why": "Imaging is immediate whenever thrombolysis or thrombectomy might be indicated, with CT angiography after the plain CT when thrombectomy is possible. The seizure does not tell you what the scan will show, and a lytic is never given before hemorrhage is excluded.",
+   "orders": [
+    {
+     "item": "Lysis after a seizure at onset",
+     "dose": "Not covered by the open sources read; the ESO 2021 thrombolysis guideline is not readable here",
+     "status": "pending"
+    }
+   ],
+   "next": "seizure_result",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.3.2; 1.4.1"
+    }
+   ]
+  },
+  {
+   "id": "seizure_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT and CT angiography",
+   "outcomes": [
+    {
+     "id": "todd",
+     "if": "Clear scans, weakness fading; no bleed, no occlusion, strength back within the hour",
+     "ddx": {
+      "lead": [
+       "Todd paralysis"
+      ],
+      "out": [
+       "Intracerebral hemorrhage"
+      ]
+     },
+     "next": "end_todd"
+    },
+    {
+     "id": "lvo",
+     "if": "Proximal anterior occlusion; no bleed, the deficit persists",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": [
+       "Intracerebral hemorrhage"
+      ]
+     },
+     "next": "mt_early"
+    },
+    {
+     "id": "bleed",
+     "if": "Intracerebral hemorrhage; blood in the brain tissue on the plain CT",
+     "ddx": {
+      "lead": [
+       "Intracerebral hemorrhage"
+      ],
+      "out": []
+     },
+     "next": "ich_coag"
+    },
+    {
+     "id": "persists",
+     "if": "Clear scans, deficit persists; no bleed, no occlusion, no improvement",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Intracerebral hemorrhage"
+      ]
+     },
+     "next": "end_seizure_scope"
+    }
+   ]
+  },
+  {
+   "id": "tia_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Symptoms fully resolved before arrival; glucose normal. Next?",
+   "options": [
+    "Aspirin 300 mg now and specialist assessment within 24 hours",
+    "Score ABCD2; under 4 goes home to a routine clinic",
+    "Admit for a heparin infusion and daily review",
+    "Alteplase now, before the symptoms come back"
+   ],
+   "answer": 0,
+   "chainStep": "Aspirin 300 mg now; specialist assessment and imaging within 24 hours of onset",
+   "why": "Everyone with a suspected TIA gets aspirin 300 mg at once unless contraindicated, and sees a specialist within 24 hours of onset. NICE does not use ABCD2 to decide how urgent the referral is; ESO uses an ABCD2 of 4 or more, after assessment, to select dual antiplatelets. Anticoagulation is not routine in acute stroke, and lytics are recommended for acute ischemic stroke, not for symptoms that have resolved.",
+   "orders": [
+    {
+     "item": "MRI",
+     "dose": "Consider after specialist assessment, the same day, with diffusion-weighted and blood-sensitive sequences",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.2.2"
+      }
+     ]
+    },
+    {
+     "item": "Carotid imaging",
+     "dose": "Urgent, in anyone who could be a candidate for carotid endarterectomy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.2.3"
+      }
+     ]
+    },
+    {
+     "item": "Secondary prevention",
+     "dose": "As soon as the diagnosis of TIA is confirmed, in addition to aspirin",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.1.7"
+      }
+     ]
+    }
+   ],
+   "next": "tia_risk",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.1.4; 1.1.5; 1.1.6; 1.4.12"
+    },
+    {
+     "docId": "url:89ad74c1660a",
+     "where": "1.1"
+    },
+    {
+     "docId": "pmid:34414300",
+     "where": "Recommendation 1"
+    }
+   ],
+   "calcs": [
+    "abcd2"
+   ]
+  },
+  {
+   "id": "tia_risk",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Specialist assessment and imaging",
+   "outcomes": [
+    {
+     "id": "high",
+     "if": "High-risk TIA; ABCD2 4 or more, no bleed on imaging, no stenosis for surgery, no reason to anticoagulate",
+     "next": "dapt"
+    },
+    {
+     "id": "low",
+     "if": "Low risk or uncertain; ABCD2 under 4, or the diagnosis of TIA is in doubt",
+     "next": "end_tia_low"
+    },
+    {
+     "id": "carotid",
+     "if": "Carotid stenosis for surgery; symptomatic 50 to 99% (NASCET) or 70 to 99% (ECST)",
+     "orders": [
+      {
+       "item": "Carotid endarterectomy",
+       "dose": "Assess and refer urgently while symptoms are stable",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:64e48d5d8ef3",
+         "where": "1.2.4"
+        }
+       ]
+      },
+      {
+       "item": "Best medical treatment",
+       "dose": "Blood pressure control, antiplatelet agents, cholesterol lowering, lifestyle advice",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:64e48d5d8ef3",
+         "where": "1.2.4"
+        }
+       ]
+      },
+      {
+       "item": "Dual antiplatelets",
+       "dose": "Untested: the DAPT trials excluded high-grade stenosis with planned revascularization; whether to use them is not stated in the sources read",
+       "status": "pending",
+       "sources": [
+        {
+         "docId": "pmid:34414300",
+         "where": "Considerations before starting DAPT"
+        }
+       ]
+      }
+     ],
+     "next": "end_carotid"
+    },
+    {
+     "id": "af",
+     "if": "Atrial fibrillation found; an indication for anticoagulation",
+     "next": "end_tia_af"
+    }
+   ]
+  },
+  {
+   "id": "dapt",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "High-risk TIA or minor stroke (NIHSS 3 or less) within 24 hours, no bleed on imaging. Antiplatelets?",
+   "options": [
+    "Aspirin plus clopidogrel (300 mg load) for 21 days, then one agent",
+    "Aspirin plus clopidogrel (300 mg load) for a year, then one agent",
+    "Aspirin alone; add clopidogrel only after a second event",
+    "Warfarin (INR 2 to 3) instead of an antiplatelet"
+   ],
+   "answer": 0,
+   "chainStep": "Aspirin plus clopidogrel (300 mg load, then the daily dose) for 21 days, started within 24 hours after brain imaging, then a single antiplatelet",
+   "why": "For a non-cardioembolic minor stroke (NIHSS 3 or less) or a high-risk TIA (ABCD2 4 or more) within 24 hours, ESO recommends 21 days of aspirin plus clopidogrel, then one agent: the benefit was confined to the first 21 days, and in the chronic phase dual therapy has shown no net benefit because bleeding, which accumulates over time, offsets it. Brain imaging comes first. Anticoagulation is not routine in acute stroke, and dual therapy is not routine when there is an indication for anticoagulation.",
+   "orders": [
+    {
+     "item": "Clopidogrel",
+     "dose": "ESO suggests a single 300 mg load if not already taking it, then the daily maintenance dose, up to 21 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34414300",
+       "where": "Loading and maintenance doses"
+      }
+     ],
+     "note": "The trials loaded 300 to 600 mg."
+    },
+    {
+     "item": "Aspirin",
+     "dose": "Trial doses ranged from 50 to 325 mg, at the physician's discretion, up to 21 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34414300",
+       "where": "Loading and maintenance doses"
+      }
+     ]
+    },
+    {
+     "item": "After 21 days",
+     "dose": "A single antiplatelet (strong recommendation, high-quality evidence)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34414300",
+       "where": "Recommendation 1"
+      }
+     ]
+    },
+    {
+     "item": "Ticagrelor instead",
+     "dose": "NIHSS 5 or less or ABCD2 6 or more: ticagrelor 180 mg load with aspirin 300 or 325 mg, then ticagrelor 90 mg twice daily with aspirin 75 to 100 mg, for 30 days (ESO suggests; weak recommendation)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34414300",
+       "where": "Recommendation 2; Loading and maintenance doses"
+      }
+     ]
+    },
+    {
+     "item": "Timing",
+     "dose": "As soon as possible within 24 hours of onset, after brain imaging",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34414300",
+       "where": "Considerations before starting DAPT"
+      }
+     ]
+    },
+    {
+     "item": "With an indication for anticoagulation",
+     "dose": "Dual antiplatelets not routinely",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:34414300",
+       "where": "Considerations before starting DAPT"
+      }
+     ]
+    }
+   ],
+   "next": "end_dapt",
+   "sources": [
+    {
+     "docId": "pmid:34414300",
+     "where": "Recommendation 1; Summary of data for PICO 1; Considerations before starting DAPT"
+    },
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.4.12"
+    }
+   ],
+   "calcs": [
+    "abcd2"
+   ]
+  },
+  {
+   "id": "ct",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Deficit persists and the glucose is normal. Imaging?",
+   "options": [
+    "Non-contrast CT now, plus CT angiography if thrombectomy is possible",
+    "Wait for clotting results before any scan, in case of a lytic",
+    "A contrast-enhanced CT of the head, without the plain scan first",
+    "Carotid ultrasound first, then a CT once the source is known"
+   ],
+   "answer": 0,
+   "chainStep": "Immediate non-contrast CT; CT angiography if thrombectomy might be indicated; add CT perfusion beyond 6 hours",
+   "why": "Brain imaging is immediate with a non-enhanced CT when thrombolysis or thrombectomy might be indicated, followed by CT angiography if thrombectomy is possible, and CT perfusion (or the MR equivalent) beyond 6 hours. Without recent anticoagulant or heparin use, a lytic can start before clotting results are back.",
+   "note": "A thunderclap headache with a normal CT goes to the headache pathway (NICE NG228 1.1.11 to 1.1.13).",
+   "next": "ct_result",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.3.2"
+    },
+    {
+     "docId": "url:040c6769aed9",
+     "where": "2.1"
+    },
+    {
+     "docId": "url:42279d67da8d",
+     "where": "1.1.11 to 1.1.13"
+    }
+   ]
+  },
+  {
+   "id": "ct_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Non-contrast CT",
+   "outcomes": [
+    {
+     "id": "ich",
+     "if": "Intracerebral hemorrhage; blood in the brain tissue",
+     "ddx": {
+      "lead": [
+       "Intracerebral hemorrhage"
+      ],
+      "out": []
+     },
+     "next": "ich_coag"
+    },
+    {
+     "id": "sah",
+     "if": "Subarachnoid hemorrhage; blood in the subarachnoid space",
+     "ddx": {
+      "lead": [
+       "Subarachnoid hemorrhage"
+      ],
+      "out": []
+     },
+     "next": "sah_cta"
+    },
+    {
+     "id": "early",
+     "if": "No bleed, under 4.5 hours; since last known well, with a disabling deficit",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": [
+       "Intracerebral hemorrhage"
+      ]
+     },
+     "next": "lysis_check"
+    },
+    {
+     "id": "late",
+     "if": "No bleed, 4.5 to 24 hours; since last known well or woke with it, NIHSS over 5",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": [
+       "Intracerebral hemorrhage"
+      ]
+     },
+     "next": "cta_late"
+    },
+    {
+     "id": "other",
+     "if": "No bleed, outside these routes; a mild non-disabling deficit, or NIHSS 5 or less after 4.5 hours",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": [
+       "Intracerebral hemorrhage"
+      ]
+     },
+     "next": "end_scope_ischemic"
+    }
+   ]
+  },
+  {
+   "id": "lysis_check",
+   "kind": "step",
+   "stage": "Reperfuse",
+   "ask": "No bleed, under 4.5 hours, disabling deficit. Which history rules out a lytic?",
+   "options": [
+    "A craniotomy 6 weeks ago",
+    "Being 84 years old",
+    "Takes aspirin every day",
+    "Blood pressure 178/104"
+   ],
+   "answer": 0,
+   "chainStep": "Screen for absolute contraindications to alteplase or tenecteplase before the bolus; stop alteplase if the INR is over 1.7 or the aPTT is raised",
+   "why": "Intracranial or intraspinal surgery within 3 months rules out alteplase (2 months on the tenecteplase label). Advanced age is a bleeding risk to weigh, not a contraindication; aspirin is not on the list; and 178/104 is already below the 185/110 threshold.",
+   "orders": [
+    {
+     "item": "Alteplase: do not give",
+     "dose": "Current intracranial or subarachnoid hemorrhage, active internal bleeding, intracranial or intraspinal surgery or serious head trauma within 3 months, an intracranial neoplasm, AVM or aneurysm, a bleeding diathesis, current severe uncontrolled hypertension",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:040c6769aed9",
+       "where": "4.1"
+      }
+     ]
+    },
+    {
+     "item": "Tenecteplase: do not give",
+     "dose": "Active intracranial hemorrhage, active internal bleeding, intracranial or intraspinal surgery or trauma within 2 months, a known bleeding diathesis, current severe uncontrolled hypertension, an intracranial neoplasm, AVM or aneurysm",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:b01430aafa73",
+       "where": "4"
+      }
+     ]
+    },
+    {
+     "item": "Clotting tests",
+     "dose": "Start before the results if there is no recent oral anticoagulant or heparin; stop alteplase if the INR is over 1.7 or the aPTT is raised",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:040c6769aed9",
+       "where": "2.1"
+      }
+     ],
+     "note": "The tenecteplase label says to monitor closely, not stop, when the INR is over 1.7 or the aPTT is raised."
+    },
+    {
+     "item": "Weigh, do not exclude",
+     "dose": "Advanced age, recent major surgery, recent GI or GU bleeding and current anticoagulant use raise the bleeding risk; weigh it against the benefit",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:040c6769aed9",
+       "where": "5.1"
+      }
+     ]
+    },
+    {
+     "item": "Ischemic stroke within the last 3 months",
+     "dose": "Not on either label's stroke contraindication list (alteplase lists recent stroke only for MI or PE, tenecteplase only for STEMI); not stated in the other sources read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:040c6769aed9",
+       "where": "4.2"
+      },
+      {
+       "docId": "url:b01430aafa73",
+       "where": "4"
+      }
+     ]
+    }
+   ],
+   "next": "lysis_ci",
+   "sources": [
+    {
+     "docId": "url:040c6769aed9",
+     "where": "4.1; 5.1; 2.1"
+    },
+    {
+     "docId": "url:b01430aafa73",
+     "where": "4; 2.1"
+    },
+    {
+     "docId": "pmid:42095756",
+     "where": "Abstract (PICO 3 and 4 recommendation)"
+    },
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.5.10"
+    }
+   ]
+  },
+  {
+   "id": "lysis_ci",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Contraindication screen and clotting",
+   "outcomes": [
+    {
+     "id": "clear",
+     "if": "No contraindication; nothing on either label's list",
+     "next": "bp_check"
+    },
+    {
+     "id": "contra",
+     "if": "Lytic contraindicated; e.g. warfarin with an INR over 1.7",
+     "orders": [
+      {
+       "item": "Lytic",
+       "dose": "Not given: alteplase is stopped if the pretreatment INR is over 1.7 or the aPTT is raised",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "url:040c6769aed9",
+         "where": "2.1"
+        }
+       ],
+       "note": "The tenecteplase label says to monitor closely, not stop, when the INR is over 1.7."
+      }
+     ],
+     "next": "cta_nolytic"
+    }
+   ]
+  },
+  {
+   "id": "bp_check",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Blood pressure before the bolus",
+   "outcomes": [
+    {
+     "id": "bp_ok",
+     "if": "Below 185/110",
+     "next": "lytic_dose"
+    },
+    {
+     "id": "bp_high",
+     "if": "Above 185/110; on a repeat reading",
+     "next": "bp_lower"
+    },
+    {
+     "id": "bp_refractory",
+     "if": "Stays above 185/110; despite IV treatment",
+     "orders": [
+      {
+       "item": "Lytic",
+       "dose": "Not given while the pressure stays above 185/110",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "pmid:42095756",
+         "where": "Abstract (PICO 3 and 4 recommendation)"
+        },
+        {
+         "docId": "url:040c6769aed9",
+         "where": "4.1"
+        }
+       ]
+      }
+     ],
+     "next": "cta_nolytic"
+    }
+   ]
+  },
+  {
+   "id": "bp_lower",
+   "kind": "step",
+   "stage": "Reperfuse",
+   "ask": "Eligible for a lytic, but the pressure is above 185/110. Next?",
+   "options": [
+    "Lower it below 185/110, then give the lytic",
+    "Give the lytic now; treat the pressure afterwards",
+    "No lytic: this pressure rules it out for good",
+    "Wait 24 hours for the pressure to settle"
+   ],
+   "answer": 0,
+   "chainStep": "Lower the pressure below 185/110 before the lytic bolus, then keep it below 180/105 for 24 hours",
+   "why": "ESO recommends a pressure below 185/110 before the bolus and below 180/105 during and for 24 hours after; NICE says to consider lowering it to 185/110 or lower in lysis candidates. A pressure that comes down is no reason to withhold the lytic, and waiting a day runs past the 4.5-hour window.",
+   "orders": [
+    {
+     "item": "Target",
+     "dose": "Below 185/110 before the bolus",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42095756",
+       "where": "Abstract (PICO 3 and 4 recommendation)"
+      },
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.5.10"
+      }
+     ]
+    },
+    {
+     "item": "Agent",
+     "dose": "Not named in the sources read",
+     "status": "pending"
+    }
+   ],
+   "next": "lytic_dose",
+   "sources": [
+    {
+     "docId": "pmid:42095756",
+     "where": "Abstract (PICO 3 and 4 recommendation)"
+    },
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.5.10; 1.4.1"
+    }
+   ]
+  },
+  {
+   "id": "lytic_dose",
+   "kind": "step",
+   "stage": "Reperfuse",
+   "ask": "Eligible, pressure below 185/110. Lytic and dose?",
+   "options": [
+    "Alteplase 0.9 mg/kg, max 90 mg: 10% over 1 minute, the rest over 60",
+    "Alteplase 100 mg as an infusion over 2 hours",
+    "Alteplase 15 mg bolus, then 50 mg over 30 minutes and 35 mg over 60",
+    "Tenecteplase by weight, up to 50 mg, as one bolus"
+   ],
+   "answer": 0,
+   "chainStep": "Alteplase 0.9 mg/kg (max 90 mg), 10% as a bolus over 1 minute and the rest over 60 minutes, or tenecteplase by weight (max 25 mg) as one bolus; keep BP below 180/105 for 24 hours",
+   "why": "The stroke dose of alteplase is 0.9 mg/kg to a maximum of 90 mg, 10% as a bolus over 1 minute and the rest over 60 minutes. The 100 mg two-hour infusion is the pulmonary embolism dose, the 15 mg bolus regimen is the accelerated myocardial infarction dose, and 50 mg is the tenecteplase ceiling for STEMI; for stroke, tenecteplase stops at 25 mg.",
+   "orders": [
+    {
+     "item": "Alteplase",
+     "dose": "0.9 mg/kg, max 90 mg: 10% as an IV bolus over 1 minute, the rest infused over 60 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:040c6769aed9",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "Tenecteplase",
+     "dose": "One IV bolus over 5 seconds by weight: under 60 kg 15 mg; 60 to under 70 kg 17.5 mg; 70 to under 80 kg 20 mg; 80 to under 90 kg 22.5 mg; 90 kg or more 25 mg (max 25 mg)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:b01430aafa73",
+       "where": "2.1 Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Window",
+     "dose": "Within 4.5 hours of onset, with intracranial hemorrhage excluded",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.4.1"
+      },
+      {
+       "docId": "url:89ad74c1660a",
+       "where": "1.1"
+      },
+      {
+       "docId": "url:c2554e76f391",
+       "where": "1.1"
+      }
+     ],
+     "note": "The US labels for alteplase and tenecteplase say within 3 hours; NICE and its technology appraisals use 4.5 hours."
+    },
+    {
+     "item": "Which lytic",
+     "dose": "Alteplase or tenecteplase; NICE advises the least expensive suitable option",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c2554e76f391",
+       "where": "1.2"
+      }
+     ]
+    },
+    {
+     "item": "Blood pressure after",
+     "dose": "Below 180/105 during and for 24 hours after; monitor it frequently",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42095756",
+       "where": "Abstract (PICO 3 and 4 recommendation)"
+      },
+      {
+       "docId": "url:040c6769aed9",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "Antiplatelets or anticoagulants in the first 24 hours",
+     "dose": "Not investigated with alteplase for stroke, and prohibited for 24 hours in the trial behind the tenecteplase stroke label; when to start them after a lytic is not stated in the sources read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:040c6769aed9",
+       "where": "5.1"
+      },
+      {
+       "docId": "url:b01430aafa73",
+       "where": "14.1"
+      }
+     ]
+    }
+   ],
+   "next": "cta_early",
+   "sources": [
+    {
+     "docId": "url:040c6769aed9",
+     "where": "2.1; 2.2 Table 1; 2.3"
+    },
+    {
+     "docId": "url:b01430aafa73",
+     "where": "2.1; 2 highlights"
+    }
+   ]
+  },
+  {
+   "id": "cta_early",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT angiography",
+   "outcomes": [
+    {
+     "id": "lvo",
+     "if": "Proximal anterior occlusion; internal carotid or M1, under 6 hours",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": []
+     },
+     "next": "mt_early"
+    },
+    {
+     "id": "basilar",
+     "if": "Basilar occlusion; no extensive brainstem infarct on imaging",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": []
+     },
+     "next": "basilar_mt"
+    },
+    {
+     "id": "none",
+     "if": "No large vessel occlusion",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_ivt"
+    }
+   ]
+  },
+  {
+   "id": "mt_early",
+   "kind": "step",
+   "stage": "Reperfuse",
+   "ask": "Proximal anterior occlusion under 6 hours, NIHSS over 5, independent before. Next?",
+   "options": [
+    "Thrombectomy as soon as possible, with a lytic if eligible",
+    "Wait an hour on the stroke unit, then reassess",
+    "Thrombectomy only if the deficit worsens",
+    "Heparin infusion now and a repeat CT angiogram in 24 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Thrombectomy as soon as possible within 6 hours, together with a lytic if not contraindicated and within its window; BP below 180/105 for 24 hours",
+   "why": "NICE offers thrombectomy as soon as possible within 6 hours for a confirmed proximal anterior occlusion, together with a lytic when it is not contraindicated and within its window, in people with a pre-stroke modified Rankin score under 3 and NIHSS over 5. It is not held back to watch the deficit or to see what a lytic does, and anticoagulation is not routine in acute stroke. Whether a seizure at onset bars the lytic is not in the sources read.",
+   "orders": [
+    {
+     "item": "Selection",
+     "dose": "Pre-stroke modified Rankin score under 3 and NIHSS over 5",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.4.8"
+      }
+     ]
+    },
+    {
+     "item": "Blood pressure",
+     "dose": "Below 180/105 during and for 24 hours after thrombectomy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42095756",
+       "where": "Abstract (PICO 3 and 4 recommendation)"
+      }
+     ]
+    },
+    {
+     "item": "After successful reperfusion",
+     "dose": "Do not lower the systolic intensively below 140 in the first 24 hours",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:42095756",
+       "where": "Abstract; PICO 4"
+      }
+     ]
+    }
+   ],
+   "next": "end_mt",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.4.5; 1.4.8; 1.4.12"
+    }
+   ]
+  },
+  {
+   "id": "basilar_mt",
+   "kind": "step",
+   "stage": "Reperfuse",
+   "ask": "Basilar artery occlusion, lytic running, no extensive brainstem infarct. Next?",
+   "options": [
+    "Thrombectomy as soon as possible, alongside the lytic",
+    "Lytic alone; thrombectomy is only for the anterior circulation",
+    "Stop the lytic and go straight to thrombectomy",
+    "Heparin infusion and observe"
+   ],
+   "answer": 0,
+   "chainStep": "Thrombectomy as soon as possible, together with the lytic, for a basilar occlusion with brain to save",
+   "why": "NICE says to consider thrombectomy together with a lytic, within its window, for a proximal posterior circulation (basilar) occlusion up to 24 hours when imaging shows brain to save. ESO-ESMINT suggests thrombectomy plus best medical treatment over medical treatment alone, a suggestion that rests on patients with NIHSS 10 or more; it suggests a lytic plus thrombectomy over thrombectomy alone, and suggests against reperfusion when there is extensive bilateral or brainstem ischemia.",
+   "orders": [
+    {
+     "item": "Severity",
+     "dose": "The ESO-ESMINT thrombectomy suggestion rests on patients with NIHSS 10 or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38752743",
+       "where": "Abstract; PICO 2, 3 and 4"
+      }
+     ]
+    },
+    {
+     "item": "Extensive bilateral or brainstem ischemia",
+     "dose": "Reperfusion is suggested against",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38752743",
+       "where": "Abstract; PICO 5"
+      }
+     ]
+    },
+    {
+     "item": "Blood pressure",
+     "dose": "Below 180/105 during and for 24 hours after thrombectomy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42095756",
+       "where": "Abstract (PICO 3 and 4 recommendation)"
+      }
+     ]
+    }
+   ],
+   "note": "ESO-ESMINT expert consensus suggests a lytic up to 24 hours in basilar occlusion unless contraindicated (PICO 1); NICE keeps to the licensed window. Not keyed.",
+   "next": "end_basilar",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.4.7; 1.4.12"
+    },
+    {
+     "docId": "pmid:38752743",
+     "where": "Abstract; PICO 2, 3, 4, 5 and 7"
+    }
+   ]
+  },
+  {
+   "id": "cta_nolytic",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT angiography, no lytic",
+   "outcomes": [
+    {
+     "id": "lvo",
+     "if": "Proximal anterior occlusion; under 6 hours, NIHSS over 5",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": []
+     },
+     "next": "mt_nolytic"
+    },
+    {
+     "id": "none",
+     "if": "No large vessel occlusion",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_nolytic"
+    }
+   ]
+  },
+  {
+   "id": "mt_nolytic",
+   "kind": "step",
+   "stage": "Reperfuse",
+   "ask": "No lytic; proximal anterior occlusion under 6 hours, NIHSS over 5, independent before. Next?",
+   "options": [
+    "Thrombectomy as soon as possible, without a lytic",
+    "No thrombectomy without a lytic on board",
+    "Heparin infusion and a repeat CT angiogram in 24 hours",
+    "Aspirin 300 mg and admit to the stroke unit"
+   ],
+   "answer": 0,
+   "chainStep": "Thrombectomy as soon as possible within 6 hours, without a lytic when one is contraindicated; BP below 180/105 for 24 hours",
+   "why": "NICE offers thrombectomy as soon as possible within 6 hours for a confirmed proximal anterior occlusion, with a lytic only if it is not contraindicated, in people with a pre-stroke modified Rankin score under 3 and NIHSS over 5. A contraindicated lytic does not take thrombectomy away, and anticoagulation is not routine in acute stroke.",
+   "orders": [
+    {
+     "item": "Selection",
+     "dose": "Pre-stroke modified Rankin score under 3 and NIHSS over 5",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.4.8"
+      }
+     ]
+    },
+    {
+     "item": "Blood pressure",
+     "dose": "Below 180/105 during and for 24 hours after thrombectomy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42095756",
+       "where": "Abstract (PICO 3 and 4 recommendation)"
+      }
+     ]
+    },
+    {
+     "item": "After successful reperfusion",
+     "dose": "Do not lower the systolic intensively below 140 in the first 24 hours",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:42095756",
+       "where": "Abstract; PICO 4"
+      }
+     ]
+    }
+   ],
+   "next": "end_mt",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.4.5; 1.4.8; 1.4.12"
+    }
+   ]
+  },
+  {
+   "id": "cta_late",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "No bleed, 4.5 to 24 hours since last known well, NIHSS over 5. Imaging?",
+   "options": [
+    "CT angiography, plus CT perfusion or diffusion MRI past 6 hours",
+    "No more imaging: it is too late for any reperfusion",
+    "Alteplase now, since the non-contrast CT shows no bleed",
+    "Carotid ultrasound in the morning, then decide on treatment"
+   ],
+   "answer": 0,
+   "chainStep": "CT angiography for a proximal occlusion; beyond 6 hours add CT perfusion (or diffusion-weighted MRI) to show a limited core",
+   "why": "Thrombectomy is offered up to 24 hours after last known well, wake-up strokes included, for a proximal anterior occlusion on CT angiography. Within 6 hours the occlusion selects it; beyond 6 hours NICE adds CT perfusion or the MR equivalent to show brain to save, and a basilar occlusion is considered on the same terms, so the imaging decides it. The lytic recommendations in NICE stop at 4.5 hours.",
+   "orders": [
+    {
+     "item": "Lysis beyond 4.5 hours selected by imaging",
+     "dose": "Wake-up or late strokes selected by MRI or perfusion mismatch are in the ESO 2021 thrombolysis guideline, not readable here; not keyed",
+     "status": "pending"
+    }
+   ],
+   "next": "late_result",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.3.2: \"Add CT perfusion imaging (or MR equivalent) if thrombectomy might be indicated beyond 6 hours of symptom onset\"; 1.4.5; 1.4.6; 1.4.7; 1.4.1"
+    }
+   ]
+  },
+  {
+   "id": "late_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT angiography and perfusion",
+   "outcomes": [
+    {
+     "id": "salvage",
+     "if": "Occlusion, brain to save; proximal anterior occlusion with a limited core",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": []
+     },
+     "next": "mt_late"
+    },
+    {
+     "id": "none",
+     "if": "No large vessel occlusion; known onset over 4.5 hours ago, not a wake-up stroke",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "aspirin"
+    },
+    {
+     "id": "wake_none",
+     "if": "Wake-up stroke, no large vessel occlusion; woke with the deficit, last known well over 4.5 hours ago",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Lysis selected by imaging",
+       "dose": "Wake-up strokes selected by MRI or perfusion mismatch are in the ESO 2021 thrombolysis guideline, not readable here; not keyed",
+       "status": "pending"
+      }
+     ],
+     "next": "end_wake"
+    },
+    {
+     "id": "core",
+     "if": "Occlusion, large core; little brain left to save on perfusion",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": []
+     },
+     "next": "end_core"
+    },
+    {
+     "id": "basilar",
+     "if": "Basilar occlusion, brain to save; no extensive brainstem infarct",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke"
+      ],
+      "out": []
+     },
+     "next": "basilar_late"
+    }
+   ]
+  },
+  {
+   "id": "basilar_late",
+   "kind": "step",
+   "stage": "Reperfuse",
+   "ask": "Basilar occlusion 4.5 to 24 hours out, brain to save, NIHSS 10 or more. Next?",
+   "options": [
+    "Consider thrombectomy as soon as possible",
+    "No thrombectomy: the posterior circulation is not treated",
+    "Heparin infusion and repeat imaging in 24 hours",
+    "Aspirin and admit to the stroke unit to observe"
+   ],
+   "answer": 0,
+   "chainStep": "Consider thrombectomy as soon as possible for a basilar occlusion up to 24 hours with brain to save; BP below 180/105 for 24 hours after",
+   "why": "NICE says to consider thrombectomy as soon as possible for a proximal posterior circulation (basilar) occlusion up to 24 hours when imaging shows brain to save, in people with a pre-stroke modified Rankin score under 3 and NIHSS over 5. For 6 to 24 hours, ESO-ESMINT pooled the trials and found better functional outcome with thrombectomy plus medical treatment than with medical treatment alone; its suggestion rests on patients with NIHSS 10 or more. Anticoagulation is not routine in acute stroke.",
+   "orders": [
+    {
+     "item": "Selection",
+     "dose": "Pre-stroke modified Rankin score under 3 and NIHSS over 5",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.4.8"
+      }
+     ]
+    },
+    {
+     "item": "Blood pressure",
+     "dose": "Below 180/105 during and for 24 hours after thrombectomy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42095756",
+       "where": "Abstract (PICO 3 and 4 recommendation)"
+      }
+     ]
+    },
+    {
+     "item": "Extensive bilateral or brainstem ischemia",
+     "dose": "Reperfusion is suggested against",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38752743",
+       "where": "Abstract; PICO 5"
+      }
+     ]
+    }
+   ],
+   "note": "ESO-ESMINT expert consensus suggests a lytic up to 24 hours in basilar occlusion unless contraindicated (PICO 1); NICE keeps to the licensed window. Not keyed.",
+   "next": "end_basilar",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.4.7; 1.4.8; 1.4.12"
+    },
+    {
+     "docId": "pmid:38752743",
+     "where": "PICO 3; Abstract; PICO 2, 3 and 4"
+    }
+   ]
+  },
+  {
+   "id": "mt_late",
+   "kind": "step",
+   "stage": "Reperfuse",
+   "ask": "Proximal anterior occlusion past the lytic window, limited core. Next?",
+   "options": [
+    "Thrombectomy as soon as possible, without a lytic",
+    "Alteplase first, then thrombectomy straight after",
+    "No thrombectomy once the 6-hour mark has passed",
+    "Aspirin and admit to the stroke unit to observe"
+   ],
+   "answer": 0,
+   "chainStep": "Thrombectomy as soon as possible, without a lytic past its window; BP below 180/105 for 24 hours",
+   "why": "Past 4.5 hours the lytic is outside its licensed window, so a lytic first is wrong here. NICE offers thrombectomy as soon as possible within 6 hours, and from 6 to 24 hours (wake-up strokes included) when imaging shows a limited infarct core, so 6 hours is not a cut-off; beyond 6 hours the recommendation is thrombectomy alone, not aspirin and observation.",
+   "orders": [
+    {
+     "item": "Selection",
+     "dose": "Pre-stroke modified Rankin score under 3 and NIHSS over 5",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.4.8"
+      }
+     ]
+    },
+    {
+     "item": "Blood pressure",
+     "dose": "Below 180/105 during and for 24 hours after thrombectomy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42095756",
+       "where": "Abstract (PICO 3 and 4 recommendation)"
+      }
+     ]
+    },
+    {
+     "item": "After successful reperfusion",
+     "dose": "Do not lower the systolic intensively below 140 in the first 24 hours",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:42095756",
+       "where": "Abstract; PICO 4"
+      }
+     ]
+    },
+    {
+     "item": "Large established infarct",
+     "dose": "Thrombectomy for a large core is not covered by the sources read; NICE asks for a limited core",
+     "status": "pending"
+    }
+   ],
+   "next": "end_mt_late",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.4.5; 1.4.6; 1.4.8; 1.4.5 to 1.4.8 rationale, anterior circulation"
+    }
+   ]
+  },
+  {
+   "id": "aspirin",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "No bleed, no occlusion, outside every reperfusion window, NIHSS over 5. Antiplatelet?",
+   "options": [
+    "Aspirin 300 mg within 24 hours, daily for 2 weeks",
+    "Heparin infusion for 2 weeks to prevent an early recurrence",
+    "No antiplatelet for 2 weeks, then start long-term therapy",
+    "Aspirin plus clopidogrel (300 mg load) for 21 days"
+   ],
+   "answer": 0,
+   "chainStep": "Swallow screen, then aspirin 300 mg (orally, or rectally or by tube with dysphagia) within 24 hours, daily for 2 weeks, then long-term antithrombotic therapy",
+   "why": "Once imaging has excluded hemorrhage, aspirin 300 mg goes in within 24 hours and continues daily for 2 weeks, when long-term antithrombotic treatment starts. Anticoagulation is not routine in acute stroke, and ESO's dual antiplatelet recommendations cover minor stroke (NIHSS 3 or less with clopidogrel, 5 or less with ticagrelor) or high-risk TIA, not a deficit over 5.",
+   "orders": [
+    {
+     "item": "Swallow",
+     "dose": "Screen before any oral food, fluid or medicine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.6.1"
+      }
+     ]
+    },
+    {
+     "item": "Aspirin",
+     "dose": "300 mg orally, or rectally or by enteral tube with dysphagia, within 24 hours; daily until 2 weeks, then long-term antithrombotic treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.4.9"
+      }
+     ]
+    },
+    {
+     "item": "Dyspepsia on aspirin before",
+     "dose": "Add a proton pump inhibitor",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.4.10"
+      }
+     ]
+    },
+    {
+     "item": "Anticoagulation",
+     "dose": "Not routinely for acute stroke",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.4.12"
+      }
+     ]
+    },
+    {
+     "item": "Blood pressure",
+     "dose": "Anti-hypertensive treatment only if there is a hypertensive emergency with a serious concomitant medical issue: hypertensive encephalopathy, hypertensive nephropathy, hypertensive cardiac failure or myocardial infarction, aortic dissection, pre-eclampsia or eclampsia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.5.9"
+      }
+     ]
+    },
+    {
+     "item": "Systolic over 220 without reperfusion",
+     "dose": "Most trials excluded it, so the effect of lowering is unknown; ESO considers avoiding large falls in the first 24 hours reasonable; no target is stated",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:42095756",
+       "where": "PICO 2, Additional information"
+      }
+     ]
+    }
+   ],
+   "next": "end_aspirin",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.4.9; 1.4.12; 1.6.1"
+    },
+    {
+     "docId": "pmid:34414300",
+     "where": "Recommendation 1; Recommendation 2"
+    }
+   ]
+  },
+  {
+   "id": "ich_coag",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Intracerebral hemorrhage on CT. Next?",
+   "options": [
+    "Find out if an anticoagulant is on board: drug, last dose, INR",
+    "Aspirin 300 mg once the radiologist has reported the scan",
+    "Start heparin now to prevent leg clots and emboli",
+    "Lumbar puncture next, to look for subarachnoid blood too"
+   ],
+   "answer": 0,
+   "chainStep": "Establish the anticoagulant, its dose and the time of the last dose; check the INR; reverse without delay",
+   "why": "Reversal depends on the drug: warfarin with a raised INR is reversed at once with prothrombin complex concentrate and IV vitamin K, dabigatran with idarucizumab, and apixaban or rivaroxaban, now that andexanet is gone from the US, with PCC off-label. Aspirin is for stroke with hemorrhage excluded, and anticoagulation is not routine in acute stroke. The CT has already shown the bleed.",
+   "next": "ich_drug",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.4.16; 1.4.9; 1.4.12"
+    },
+    {
+     "docId": "url:353648f072f8",
+     "where": "1"
+    },
+    {
+     "docId": "url:4e46abb89dc2",
+     "where": "3.2"
+    },
+    {
+     "docId": "url:20b209257bcc",
+     "where": "Summary of the issue"
+    }
+   ]
+  },
+  {
+   "id": "ich_drug",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Anticoagulant and clotting tests",
+   "outcomes": [
+    {
+     "id": "warfarin",
+     "if": "Warfarin, INR raised",
+     "next": "vka_rev"
+    },
+    {
+     "id": "dabigatran",
+     "if": "Dabigatran",
+     "next": "dabi_rev"
+    },
+    {
+     "id": "fxa",
+     "if": "Apixaban or rivaroxaban; not edoxaban",
+     "next": "fxa_rev"
+    },
+    {
+     "id": "antiplatelet",
+     "if": "Antiplatelet only; aspirin or clopidogrel, clotting tests normal",
+     "orders": [
+      {
+       "item": "Platelet transfusion",
+       "dose": "Not covered by the sources read",
+       "status": "pending"
+      }
+     ],
+     "next": "ich_site"
+    },
+    {
+     "id": "other",
+     "if": "Heparin, edoxaban or another agent",
+     "next": "end_reversal_scope"
+    },
+    {
+     "id": "none",
+     "if": "No anticoagulant; clotting tests normal",
+     "next": "ich_site"
+    }
+   ]
+  },
+  {
+   "id": "vka_rev",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Warfarin, INR 5.0, weight 80 kg. Reversal?",
+   "options": [
+    "4-factor PCC 35 units/kg (2,800 units) with IV vitamin K",
+    "4-factor PCC 25 units/kg (2,000 units) with IV vitamin K",
+    "Fresh frozen plasma alone",
+    "IV vitamin K alone; recheck the INR tomorrow"
+   ],
+   "answer": 0,
+   "chainStep": "4-factor PCC by INR and weight (INR 2 to under 4: 25 units/kg, max 2,500; INR 4 to 6: 35 units/kg, max 3,500; INR over 6: 50 units/kg, max 5,000) with IV vitamin K",
+   "why": "NICE reverses warfarin in intracerebral hemorrhage as soon as possible with prothrombin complex concentrate plus IV vitamin K. The Kcentra dose follows the INR band: 25 units/kg for INR 2 to under 4, 35 for 4 to 6, 50 above 6; the label's own example, 80 kg at INR 5.0, is 2,800 units. Vitamin K goes with it to keep the clotting factors up once the PCC wears off.",
+   "orders": [
+    {
+     "item": "4-factor PCC (Kcentra)",
+     "dose": "INR 2 to under 4: 25 units/kg (max 2,500); INR 4 to 6: 35 units/kg (max 3,500); INR over 6: 50 units/kg (max 5,000); weight counted up to 100 kg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2a9fe9c19e10",
+       "where": "2.1 Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Repeat PCC",
+     "dose": "Not recommended; repeat dosing is not established",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:2a9fe9c19e10",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "Vitamin K",
+     "dose": "IV, given with the PCC",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.4.16"
+      },
+      {
+       "docId": "url:2a9fe9c19e10",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "Vitamin K dose",
+     "dose": "Not stated in the sources read",
+     "status": "pending"
+    }
+   ],
+   "next": "ich_site",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.4.16"
+    },
+    {
+     "docId": "url:2a9fe9c19e10",
+     "where": "2.1; Table 1"
+    }
+   ]
+  },
+  {
+   "id": "dabi_rev",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Dabigatran, last dose 4 hours ago. Reversal?",
+   "options": [
+    "Idarucizumab",
+    "Andexanet alfa",
+    "Protamine",
+    "IV vitamin K"
+   ],
+   "answer": 0,
+   "chainStep": "Idarucizumab 5 g IV (two 2.5 g vials, as consecutive infusions or bolus injections)",
+   "why": "Idarucizumab is the specific reversal agent for dabigatran in life-threatening bleeding, 5 g as two 2.5 g vials, and has no effect on other anticoagulants. Andexanet was indicated only for apixaban and rivaroxaban, and it is no longer sold in the US.",
+   "orders": [
+    {
+     "item": "Idarucizumab",
+     "dose": "5 g IV as two 2.5 g/50 mL vials: two consecutive infusions or two bolus injections",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:353648f072f8",
+       "where": "2.1; 2.3"
+      }
+     ]
+    }
+   ],
+   "next": "ich_site",
+   "sources": [
+    {
+     "docId": "url:353648f072f8",
+     "where": "1; 2.1; 2.3; 2.4"
+    },
+    {
+     "docId": "url:e774f3366571",
+     "where": "1"
+    },
+    {
+     "docId": "url:20b209257bcc",
+     "where": "Summary of the issue"
+    }
+   ]
+  },
+  {
+   "id": "fxa_rev",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Apixaban 5 mg twice daily, last dose 3 hours ago. Reversal?",
+   "options": [
+    "Stop apixaban; give four-factor PCC off-label",
+    "Andexanet alfa by the label regimen",
+    "Idarucizumab 5 g as two 2.5 g vials",
+    "IV vitamin K with fresh frozen plasma"
+   ],
+   "answer": 0,
+   "chainStep": "Stop the factor Xa inhibitor and give four-factor PCC off-label where reversal is needed; the PCC dose for factor Xa reversal is not in the sources read",
+   "why": "Life-threatening bleeding on apixaban means reversing it. NICE's appraisal describes prothrombin complex concentrate as part of established clinical management, used outside its marketing authorisation, with limited clinical evidence and no established role for apixaban or rivaroxaban. Andexanet alfa by the label regimen is no longer available in the US: the FDA judged its risks to outweigh its benefits, and it has not been sold there since 22 December 2025. Idarucizumab works only on dabigatran, and vitamin K belongs with PCC in warfarin reversal.",
+   "orders": [
+    {
+     "item": "Four-factor PCC for apixaban or rivaroxaban",
+     "dose": "Used off-label in established care, with limited evidence and no established role; the dose is not in the sources read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:4e46abb89dc2",
+       "where": "3.2; 3.19"
+      }
+     ]
+    },
+    {
+     "item": "Andexanet alfa",
+     "dose": "Withdrawn from the US market after 22 December 2025 (FDA: risks outweigh benefits); its label doses are no longer usable in the US",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:20b209257bcc",
+       "where": "Summary of the issue"
+      },
+      {
+       "docId": "url:e774f3366571",
+       "where": "1; 2.1"
+      }
+     ],
+     "note": "NICE recommends it only for GI bleeding in the UK; its intracranial hemorrhage appraisal was terminated."
+    }
+   ],
+   "note": "Andexanet alfa was approved on anti-factor Xa activity; an improvement in hemostasis was not established. The FDA's December 2025 safety communication reports more thrombosis with it than with usual care in the ANNEXA-I trial.",
+   "next": "ich_site",
+   "sources": [
+    {
+     "docId": "url:4e46abb89dc2",
+     "where": "3.2; 3.19; 1.1; 1.2"
+    },
+    {
+     "docId": "url:20b209257bcc",
+     "where": "Summary of the issue"
+    },
+    {
+     "docId": "url:e774f3366571",
+     "where": "1"
+    },
+    {
+     "docId": "url:353648f072f8",
+     "where": "2.4"
+    },
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.4.16"
+    }
+   ]
+  },
+  {
+   "id": "ich_site",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Hematoma site and course",
+   "outcomes": [
+    {
+     "id": "supra",
+     "if": "Supratentorial, small to moderate; within 6 hours, systolic 150 to 220, no hydrocephalus",
+     "next": "ich_bp"
+    },
+    {
+     "id": "over220",
+     "if": "Over 220 or beyond 6 hours; supratentorial, no hydrocephalus",
+     "next": "ich_bp_case"
+    },
+    {
+     "id": "no_rapid",
+     "if": "No rapid lowering; GCS below 6, massive bleed or structural cause",
+     "next": "end_ich_norapid"
+    },
+    {
+     "id": "cerebellar",
+     "if": "Cerebellar, with hydrocephalus; consciousness falling",
+     "next": "ich_surg"
+    },
+    {
+     "id": "cerebellar_small",
+     "if": "Cerebellar, no hydrocephalus; alert",
+     "next": "end_cerebellar_small"
+    }
+   ]
+  },
+  {
+   "id": "ich_bp_case",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Supratentorial hemorrhage, systolic over 220 or more than 6 hours from onset. Blood pressure?",
+   "options": [
+    "Consider rapid lowering case by case, weighing the risk of harm",
+    "No lowering at all: the trial evidence stops at 220",
+    "Drop the systolic by 100 within the first hour",
+    "Lower it only to just below 185/110, then hold it"
+   ],
+   "answer": 0,
+   "chainStep": "Consider rapid lowering case by case, weighing the risk of harm; when lowering, aim for systolic 140 or below with no more than a 60 mmHg drop in the first hour",
+   "why": "Beyond 6 hours, or with a systolic above 220, NICE considers rapid lowering case by case, taking the risk of harm into account, because there was little evidence in these groups. When it lowers, the aim is 140 or below without a fall of more than 60 mmHg in the first hour; 185/110 is the threshold before a lytic, not an ICH target.",
+   "orders": [
+    {
+     "item": "If lowering",
+     "dose": "Systolic 140 mmHg or lower; no more than a 60 mmHg drop within 1 hour of starting",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.5.6"
+      }
+     ]
+    },
+    {
+     "item": "No rapid lowering",
+     "dose": "A structural cause (tumor, AVM, aneurysm), GCS below 6, early surgery to evacuate the hematoma, or a massive hematoma with a poor prognosis",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.5.7"
+      }
+     ]
+    },
+    {
+     "item": "Agent",
+     "dose": "Not named in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Specialist monitoring for deterioration, with immediate repeat imaging when needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.9.2"
+      }
+     ]
+    }
+   ],
+   "next": "end_ich_med",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.5.5; 1.5.6; 1.5.10; 1.5.4 to 1.5.8 rationale"
+    }
+   ]
+  },
+  {
+   "id": "ich_bp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Supratentorial hemorrhage within 6 hours, systolic 150 to 220. Blood pressure?",
+   "options": [
+    "Lower systolic to 140 or below, by no more than 60 in the first hour",
+    "Lower it to just below 185/110, then hold it there",
+    "Leave it alone unless the systolic rises above 220 mmHg",
+    "Bring the systolic below 110 within the first hour of treatment"
+   ],
+   "answer": 0,
+   "chainStep": "Lower systolic to 140 mmHg or below, a drop of no more than 60 mmHg in the first hour; monitor for deterioration",
+   "why": "NICE considers rapid lowering within 6 hours for a systolic of 150 to 220, aiming for 140 or lower without dropping more than 60 mmHg in the first hour; ESO expert consensus supports early reduction below 140 for small to moderate hematomas. 185/110 is the threshold before a lytic, not an ICH target, and the 2021 ESO guideline NICE quotes keeps the systolic above 110.",
+   "orders": [
+    {
+     "item": "Target",
+     "dose": "Systolic 140 mmHg or lower; no more than a 60 mmHg drop within 1 hour of starting",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.5.6"
+      },
+      {
+       "docId": "pmid:42095756",
+       "where": "Abstract (PICO 7 expert consensus)"
+      },
+      {
+       "docId": "pmid:40815242",
+       "where": "5.3.9.1"
+      }
+     ],
+     "note": "NICE aims for 140 or lower; AHA/ACC 2025 (5.3.9.1) lowers systolic to 130 to under 140 for at least 7 days and stops antihypertensives below 130."
+    },
+    {
+     "item": "Who",
+     "dose": "Within 6 hours with a systolic of 150 to 220; beyond 6 hours or above 220, case by case",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.5.4; 1.5.5"
+      }
+     ]
+    },
+    {
+     "item": "No rapid lowering",
+     "dose": "A structural cause (tumor, AVM, aneurysm), GCS below 6, early surgery to evacuate the hematoma, or a massive hematoma with a poor prognosis",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.5.7"
+      }
+     ]
+    },
+    {
+     "item": "Agent",
+     "dose": "Not named in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Specialist monitoring for deterioration, with immediate repeat imaging when needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.9.2"
+      }
+     ]
+    }
+   ],
+   "next": "end_ich_med",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.5.4; 1.5.6; 1.5.10; 1.5.4 to 1.5.8 rationale, other factors"
+    },
+    {
+     "docId": "pmid:42095756",
+     "where": "Abstract (PICO 7 expert consensus)"
+    }
+   ]
+  },
+  {
+   "id": "ich_surg",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Cerebellar hemorrhage with hydrocephalus, consciousness falling. Next?",
+   "options": [
+    "Urgent neurosurgical referral for surgery",
+    "Observe on the ward without a neurosurgical opinion",
+    "Rapid BP lowering first; surgery only if that fails",
+    "Osmotic therapy and a repeat CT in 24 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent neurosurgical referral and transfer; consider surgery for hydrocephalus in a previously fit patient; no rapid BP lowering when early evacuation is planned",
+   "why": "People with intracerebral hemorrhage are watched for deterioration and referred at once, stroke services keep protocols to transfer symptomatic hydrocephalus to a neurosurgical center, and previously fit people with hydrocephalus are considered for surgery. Rapid BP lowering is not offered to someone about to have early surgery to evacuate the hematoma, and a 24-hour wait ignores the deterioration.",
+   "orders": [
+    {
+     "item": "Surgery",
+     "dose": "Consider it in previously fit people with hydrocephalus; refer and transfer by local protocol",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.9.1; 1.9.3"
+      }
+     ]
+    },
+    {
+     "item": "Evacuating a cerebellar hematoma",
+     "dose": "StatPearls, reporting the AHA/ASA: urgent surgical evacuation with neurologic deterioration, brainstem compression, hydrocephalus from ventricular obstruction, or a hemorrhage of 15 mL or more. NICE gives no size or compression criteria",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.9.3; 1.9.4"
+      },
+      {
+       "docId": "pmid:31082120",
+       "where": "Continuing education activity"
+      }
+     ],
+     "note": "NICE 1.9.3 considers surgery for hydrocephalus, but 1.9.4 lists posterior fossa hemorrhage among bleeds that rarely need surgery and get medical treatment first. The ESO 2025 ICH guideline, which covers cerebellar evacuation, is not readable here. The AHA guideline itself is a Stroke (LWW) paper and was not read; its threshold appears here as the StatPearls review reports it."
+    },
+    {
+     "item": "Rapid BP lowering",
+     "dose": "Not when early surgery to evacuate the hematoma is planned",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:64e48d5d8ef3",
+       "where": "1.5.7"
+      }
+     ]
+    }
+   ],
+   "next": "end_ich_surg",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.9.1; 1.9.2; 1.9.3; 1.5.7"
+    }
+   ]
+  },
+  {
+   "id": "sah_cta",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Subarachnoid blood on the CT. Next?",
+   "options": [
+    "CT angiography of the head now, and call neurosurgery",
+    "Lumbar puncture to confirm the blood, then CT angiography",
+    "Alteplase if still inside 4.5 hours of the onset",
+    "MRI of the brain tomorrow, then refer if an aneurysm shows"
+   ],
+   "answer": 0,
+   "chainStep": "CT angiography of the head without delay; urgent discussion with a neurosurgical center; analgesia, opioids if needed",
+   "why": "Blood in the subarachnoid space on a non-contrast CT makes the diagnosis, so no lumbar puncture is needed. CT angiography follows without delay to find the cause and guide treatment, and transfer is discussed urgently because rebleeding risk is highest in the first 24 hours. Subarachnoid hemorrhage rules out alteplase.",
+   "orders": [
+    {
+     "item": "Pain",
+     "dose": "Effective relief, opioids if needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:42279d67da8d",
+       "where": "1.1.8"
+      }
+     ]
+    },
+    {
+     "item": "Nimodipine",
+     "dose": "Consider enteral nimodipine; the dose is not stated in NICE NG228",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:42279d67da8d",
+       "where": "1.2.1"
+      }
+     ]
+    },
+    {
+     "item": "Lytic",
+     "dose": "Contraindicated in subarachnoid hemorrhage",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:040c6769aed9",
+       "where": "4.1"
+      }
+     ]
+    }
+   ],
+   "next": "end_sah",
+   "sources": [
+    {
+     "docId": "url:42279d67da8d",
+     "where": "1.1.10; 1.1.16; 1.1.17; 1.1.18"
+    },
+    {
+     "docId": "url:040c6769aed9",
+     "where": "4.1"
+    }
+   ]
+  },
+  {
+   "id": "end_hypo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypoglycemia, the stroke mimic: the deficit cleared once the glucose was corrected, so nothing is left for a lytic. Find out why the glucose fell; the glucose dose is not in this pathway's sources."
+  },
+  {
+   "id": "end_todd",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A witnessed seizure, clear CT and CT angiography, and a weakness that fades within the hour: postictal (Todd) paralysis leads, though a small stroke is not excluded. Lysis after a seizure at onset and the seizure workup are not in the sources read; the seizure pathway will take them."
+  },
+  {
+   "id": "end_tia_low",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Low-risk or uncertain TIA: aspirin, no dual antiplatelet therapy (ESO expert consensus, 11 of 11), and secondary prevention once the diagnosis is confirmed."
+  },
+  {
+   "id": "end_carotid",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "TIA with a symptomatic 50 to 99% carotid stenosis (NASCET): urgent referral for carotid endarterectomy, with best medical treatment."
+  },
+  {
+   "id": "end_dapt",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "High-risk TIA or minor stroke: aspirin plus clopidogrel for 21 days, started within 24 hours after brain imaging, then a single antiplatelet; ticagrelor with aspirin for 30 days is the alternative."
+  },
+  {
+   "id": "end_ivt",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ischemic stroke without a large vessel occlusion: alteplase 0.9 mg/kg (max 90 mg) or tenecteplase by weight (max 25 mg) within 4.5 hours, BP below 185/110 before and below 180/105 for 24 hours after. When to start antiplatelets after the lytic is not in the sources read."
+  },
+  {
+   "id": "end_mt",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Proximal anterior occlusion under 6 hours: thrombectomy as soon as possible, with a lytic when eligible; BP below 180/105 for 24 hours, without driving the systolic below 140 after successful reperfusion."
+  },
+  {
+   "id": "end_basilar",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Basilar occlusion with brain to save: thrombectomy as soon as possible, with a lytic only within its window; no reperfusion for extensive bilateral or brainstem infarction."
+  },
+  {
+   "id": "end_mt_late",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Past the lytic window, up to 24 hours: thrombectomy alone for a proximal anterior occlusion with a limited core on perfusion or diffusion imaging."
+  },
+  {
+   "id": "end_aspirin",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ischemic stroke outside every reperfusion window: swallow screen, aspirin 300 mg within 24 hours and daily for 2 weeks, then long-term antithrombotic treatment; no routine anticoagulation."
+  },
+  {
+   "id": "end_ich_med",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Supratentorial intracerebral hemorrhage: reverse any anticoagulant, lower the systolic to 140 or below (AHA/ACC 2025: 130 to under 140, never below 130) without dropping more than 60 mmHg in the first hour (case by case beyond 6 hours or above 220), and watch for deterioration or hydrocephalus."
+  },
+  {
+   "id": "end_ich_surg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cerebellar hemorrhage with hydrocephalus and falling consciousness: airway, urgent neurosurgical referral and transfer; no rapid BP lowering when early evacuation is planned."
+  },
+  {
+   "id": "end_nolytic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No lytic and no large vessel occlusion: once imaging has excluded hemorrhage, aspirin 300 mg within 24 hours and daily for 2 weeks, then long-term antithrombotic treatment."
+  },
+  {
+   "id": "end_scope_ischemic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No bleed, but a deficit outside this pathway's ischemic routes: a mild, non-disabling deficit inside the lytic window, or NIHSS 5 or less beyond 4.5 hours. Whether to lyse a mild deficit is not settled by the open sources read. A non-cardioembolic minor stroke (NIHSS 3 or less) within 24 hours meets the ESO dual antiplatelet recommendation once imaging is done; otherwise aspirin within 24 hours."
+  },
+  {
+   "id": "end_seizure_scope",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A seizure at onset, no bleed and no occlusion, and a deficit that does not fade: a postictal deficit and a stroke without a large vessel occlusion are both possible. Whether a lytic can follow a seizure at onset is not in the open sources read, so this route stops; the seizure pathway will take the workup."
+  },
+  {
+   "id": "end_core",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Proximal anterior occlusion with a large established core: NICE asks for a limited core before thrombectomy beyond 6 hours, and thrombectomy for a large core is not in the sources read, so this route stops. Aspirin once hemorrhage is excluded; decompressive hemicraniectomy is considered within 48 hours for an MCA infarct with NIHSS above 15, reduced consciousness and at least half the MCA territory on CT."
+  },
+  {
+   "id": "end_wake",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Wake-up stroke with no large vessel occlusion: thrombectomy needs an occlusion, and NICE's lytic recommendations run to 4.5 hours from onset, so neither is keyed here. Thrombolysis selected by MRI or perfusion mismatch in a wake-up stroke is in the ESO 2021 guideline, not readable here, and is a stroke specialist's call. Without a lytic: swallow screen, then aspirin 300 mg within 24 hours and daily for 2 weeks once hemorrhage is excluded."
+  },
+  {
+   "id": "end_tia_af",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "TIA with atrial fibrillation: dual antiplatelets are not used routinely when there is an indication for anticoagulation. When to start the anticoagulant is not in the sources read; secondary prevention starts once the diagnosis is confirmed."
+  },
+  {
+   "id": "end_reversal_scope",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Intracerebral hemorrhage on heparin, edoxaban or another anticoagulant: reversal is not covered by the sources read. Idarucizumab works only on dabigatran, and andexanet, which was indicated only for apixaban and rivaroxaban, is no longer sold in the US. Blood pressure, monitoring and surgery follow the rest of this pathway."
+  },
+  {
+   "id": "end_ich_norapid",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No rapid blood pressure lowering: a structural cause (tumor, AVM, aneurysm), a GCS below 6, planned early evacuation, or a massive hematoma with a poor prognosis. The cause and its treatment are outside this pathway's sources; specialist monitoring for deterioration continues."
+  },
+  {
+   "id": "end_cerebellar_small",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cerebellar hemorrhage without hydrocephalus in an alert patient: NICE lists posterior fossa hemorrhage among bleeds that rarely need surgery and get medical treatment first, with specialist monitoring and immediate repeat imaging if function deteriorates. Evacuation criteria are not in the sources read."
+  },
+  {
+   "id": "end_sah",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Subarachnoid hemorrhage: CT angiography for the aneurysm, an urgent call to the neurosurgical center, analgesia, and enteral nimodipine. The rest of the workup, and a thunderclap headache with a normal CT, belong to the headache pathway."
+  }
+ ],
+ "cases": [
+  {
+   "id": "hypo_mimic",
+   "label": "Hypoglycemia, the mimic",
+   "vignette": "71-year-old man on insulin, found at home with slurred speech and right arm weakness; last seen well 1 hour ago. BP 158/88, HR 92, SpO2 97%.",
+   "picks": {
+    "first_look": "hypo",
+    "hypo_result": "resolved"
+   },
+   "results": {
+    "first_look": "Fingerstick glucose 38 mg/dL (2.1 mmol/L). Alert, airway clear, no seizure.",
+    "hypo_result": "Fifteen minutes after glucose: speech and right arm strength back to normal."
+   }
+  },
+  {
+   "id": "hypo_then_stroke",
+   "label": "Low glucose, then a stroke after all",
+   "vignette": "79-year-old woman with type 2 diabetes on a sulfonylurea, sudden left face and arm weakness 70 minutes ago. BP 168/92, HR 84, weight 64 kg. No anticoagulant, no recent surgery, head trauma or bleeding.",
+   "picks": {
+    "first_look": "hypo",
+    "hypo_result": "persists",
+    "ct_result": "early",
+    "lysis_ci": "clear",
+    "bp_check": "bp_ok",
+    "cta_early": "none"
+   },
+   "results": {
+    "first_look": "Fingerstick glucose 58 mg/dL (3.2 mmol/L). Alert, airway clear.",
+    "hypo_result": "Glucose now 7.4 mmol/L (133 mg/dL); the left face and arm weakness is unchanged, NIHSS 7.",
+    "ct_result": "Non-contrast CT: no bleed; 1 hour 40 minutes since last known well.",
+    "lysis_ci": "No contraindication on the lists; no anticoagulant, so clotting results are not awaited.",
+    "bp_check": "BP 168/92.",
+    "cta_early": "CT angiography: no large vessel occlusion."
+   }
+  },
+  {
+   "id": "seizure_todd",
+   "label": "Seizure with Todd paralysis",
+   "vignette": "34-year-old man with epilepsy, off his antiseizure drug for a week; a witnessed generalized seizure at work, then a weak right arm. Last known well 50 minutes ago. BP 142/86, HR 104.",
+   "picks": {
+    "first_look": "seizure",
+    "seizure_result": "todd"
+   },
+   "results": {
+    "first_look": "Tonic-clonic seizure lasting 2 minutes, then right arm weakness; glucose 5.8 mmol/L (104 mg/dL); GCS 15 on arrival.",
+    "seizure_result": "Non-contrast CT and CT angiography normal; over the next hour the right arm returns to full strength."
+   }
+  },
+  {
+   "id": "seizure_stroke",
+   "label": "A seizure that was a stroke",
+   "vignette": "69-year-old woman with atrial fibrillation, not anticoagulated, has a brief witnessed seizure, then left-sided weakness that persists. Last known well 2 hours ago. BP 162/90. Independent at home.",
+   "picks": {
+    "first_look": "seizure",
+    "seizure_result": "lvo"
+   },
+   "results": {
+    "first_look": "Seizure lasting 1 minute, then dense left hemiparesis and gaze deviation to the right; glucose 6.2 mmol/L (112 mg/dL); GCS 14.",
+    "seizure_result": "Non-contrast CT: no bleed. CT angiography: right M1 occlusion. NIHSS 16."
+   }
+  },
+  {
+   "id": "tia_high",
+   "label": "High-risk TIA",
+   "vignette": "66-year-old man with hypertension and diabetes; 25 minutes of left arm weakness and slurred speech 5 hours ago, now back to normal. BP 152/90.",
+   "picks": {
+    "first_look": "tia",
+    "tia_risk": "high"
+   },
+   "results": {
+    "first_look": "Fully recovered; glucose 7.1 mmol/L (128 mg/dL); examination normal.",
+    "tia_risk": "Specialist review the same day: ABCD2 score 6; MRI shows no bleed; no significant carotid stenosis; ECG in sinus rhythm."
+   }
+  },
+  {
+   "id": "tia_low",
+   "label": "Low-risk transient symptoms",
+   "vignette": "45-year-old woman, 3 minutes of tingling in the left hand at her desk an hour ago, with no weakness or speech change; now normal. BP 124/78. No vascular risk factors.",
+   "picks": {
+    "first_look": "tia",
+    "tia_risk": "low"
+   },
+   "results": {
+    "first_look": "Fully recovered; glucose 5.0 mmol/L (90 mg/dL); examination normal.",
+    "tia_risk": "Specialist review within 24 hours: ABCD2 score 0; the diagnosis of TIA is uncertain."
+   }
+  },
+  {
+   "id": "tia_carotid",
+   "label": "TIA from a carotid stenosis",
+   "vignette": "72-year-old man who smokes; 15 minutes of right hand weakness and word-finding trouble this morning, now resolved. BP 148/84.",
+   "picks": {
+    "first_look": "tia",
+    "tia_risk": "carotid"
+   },
+   "results": {
+    "first_look": "Fully recovered; glucose 6.0 mmol/L (108 mg/dL); examination normal.",
+    "tia_risk": "Specialist review the same day: carotid imaging shows an 80% stenosis of the left internal carotid (NASCET)."
+   }
+  },
+  {
+   "id": "mca_bp_high",
+   "label": "M1 occlusion, pressure too high at first",
+   "vignette": "62-year-old man, sudden right-sided weakness and loss of speech while watching TV; his wife called at once. Last known well 1 hour ago. BP 198/112, HR 88, weight 90 kg. Independent before; no anticoagulant, no recent surgery or trauma.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "early",
+    "lysis_ci": "clear",
+    "bp_check": "bp_high",
+    "cta_early": "lvo"
+   },
+   "results": {
+    "first_look": "Glucose 6.4 mmol/L (115 mg/dL); alert, airway clear; dense right hemiparesis and aphasia, NIHSS 18.",
+    "ct_result": "Non-contrast CT: no bleed; 1 hour 15 minutes since last known well.",
+    "lysis_ci": "No contraindication on the lists; INR 1.0.",
+    "bp_check": "BP 198/112 on repeat.",
+    "cta_early": "CT angiography: left M1 occlusion."
+   }
+  },
+  {
+   "id": "basilar",
+   "label": "Basilar artery occlusion",
+   "vignette": "58-year-old woman, sudden vertigo, double vision and slurred speech, then weakness of all four limbs. Last known well 2 hours ago. BP 176/98, weight 70 kg. Independent before; no anticoagulant, no recent surgery or trauma.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "early",
+    "lysis_ci": "clear",
+    "bp_check": "bp_ok",
+    "cta_early": "basilar"
+   },
+   "results": {
+    "first_look": "Glucose 5.6 mmol/L (101 mg/dL); drowsy but rousable, GCS 13, airway clear; NIHSS 15.",
+    "ct_result": "Non-contrast CT: no bleed; 2 hours 20 minutes since last known well.",
+    "lysis_ci": "No contraindication on the lists; INR 1.0.",
+    "bp_check": "BP 176/98.",
+    "cta_early": "CT angiography: basilar artery occlusion; no extensive brainstem infarct on imaging."
+   }
+  },
+  {
+   "id": "late_mt",
+   "label": "Wake-up stroke with brain to save",
+   "vignette": "70-year-old man who went to bed well at 10 p.m. and woke at 7 a.m. with left-sided weakness; he arrives at 8 a.m. BP 164/94. Independent before.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "late",
+    "late_result": "salvage"
+   },
+   "results": {
+    "first_look": "Glucose 6.8 mmol/L (122 mg/dL); alert; left hemiparesis and neglect, NIHSS 14.",
+    "ct_result": "Non-contrast CT: no bleed; 10 hours since last known well.",
+    "late_result": "CT angiography: right M1 occlusion. CT perfusion: a small core with a large area of brain to save."
+   }
+  },
+  {
+   "id": "late_no_lvo",
+   "label": "Past the window, no occlusion",
+   "vignette": "77-year-old woman whose right arm and leg became weak suddenly at 6 p.m. yesterday, 16 hours ago; her daughter brought her in this morning. BP 172/96. Independent before; no anticoagulant.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "late",
+    "late_result": "none"
+   },
+   "results": {
+    "first_look": "Glucose 7.0 mmol/L (126 mg/dL); alert; right hemiparesis, NIHSS 7.",
+    "ct_result": "Non-contrast CT: no bleed; 16 hours since last known well.",
+    "late_result": "CT angiography: no large vessel occlusion. Swallow screen passed."
+   }
+  },
+  {
+   "id": "late_wake_no_lvo",
+   "label": "Woke with it, no occlusion",
+   "vignette": "66-year-old woman who went to bed well at 11 p.m. and woke at 6 a.m. unable to find her words, with a weak right hand; she arrives at 7 a.m. BP 168/92. Independent before; no anticoagulant.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "late",
+    "late_result": "wake_none"
+   },
+   "results": {
+    "first_look": "Glucose 119 mg/dL (6.6 mmol/L); alert; expressive aphasia and right hand weakness, NIHSS 7.",
+    "ct_result": "Non-contrast CT: no bleed; 8 hours since last known well.",
+    "late_result": "CT angiography: no large vessel occlusion."
+   }
+  },
+  {
+   "id": "ich_warfarin",
+   "label": "Hemorrhage on warfarin",
+   "vignette": "76-year-old man on warfarin for atrial fibrillation, sudden left arm and leg weakness and headache 2 hours ago. BP 186/100, weight 80 kg.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "ich",
+    "ich_drug": "warfarin",
+    "ich_site": "supra"
+   },
+   "results": {
+    "first_look": "Glucose 6.1 mmol/L (110 mg/dL); alert, GCS 15; left hemiparesis, NIHSS 8.",
+    "ct_result": "Non-contrast CT: right basal ganglia hemorrhage, small to moderate.",
+    "ich_drug": "Warfarin taken last night; INR 5.0.",
+    "ich_site": "Supratentorial, no hydrocephalus; systolic 186, GCS 15, 2 hours 30 minutes from onset."
+   }
+  },
+  {
+   "id": "ich_dabigatran",
+   "label": "Hemorrhage on dabigatran",
+   "vignette": "81-year-old woman on dabigatran, sudden right-sided weakness and confusion 90 minutes ago. BP 172/94.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "ich",
+    "ich_drug": "dabigatran",
+    "ich_site": "supra"
+   },
+   "results": {
+    "first_look": "Glucose 5.9 mmol/L (106 mg/dL); GCS 14, airway clear; right hemiparesis, NIHSS 10.",
+    "ct_result": "Non-contrast CT: left lobar hemorrhage, small to moderate, no blood in the ventricles.",
+    "ich_drug": "Dabigatran 150 mg taken 4 hours ago.",
+    "ich_site": "Supratentorial, no hydrocephalus; systolic 172, 2 hours from onset."
+   }
+  },
+  {
+   "id": "ich_apixaban",
+   "label": "Hemorrhage on apixaban",
+   "vignette": "68-year-old man on apixaban 5 mg twice daily, sudden slurred speech and left-sided weakness 1 hour ago. BP 194/104.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "ich",
+    "ich_drug": "fxa",
+    "ich_site": "supra"
+   },
+   "results": {
+    "first_look": "Glucose 6.6 mmol/L (119 mg/dL); alert, GCS 15; left hemiparesis, NIHSS 9.",
+    "ct_result": "Non-contrast CT: right thalamic hemorrhage, small to moderate.",
+    "ich_drug": "Apixaban 5 mg taken 3 hours ago.",
+    "ich_site": "Supratentorial, no hydrocephalus; systolic 194, 1 hour 30 minutes from onset."
+   }
+  },
+  {
+   "id": "ich_cerebellar",
+   "label": "Cerebellar hemorrhage, consciousness falling",
+   "vignette": "64-year-old man with untreated hypertension: sudden occipital headache, vomiting and inability to walk, now increasingly drowsy. BP 212/118, HR 58.",
+   "picks": {
+    "first_look": "unstable",
+    "ct_result": "ich",
+    "ich_drug": "none",
+    "ich_site": "cerebellar"
+   },
+   "results": {
+    "first_look": "Glucose 6.9 mmol/L (124 mg/dL); GCS 9 and falling, snoring respirations.",
+    "ct_result": "Non-contrast CT: right cerebellar hemorrhage compressing the fourth ventricle, with hydrocephalus.",
+    "ich_drug": "No anticoagulant or antiplatelet; INR 1.0, platelets normal.",
+    "ich_site": "Cerebellar, hydrocephalus on CT; GCS down from 12 to 9 within the hour."
+   }
+  },
+  {
+   "id": "ich_plain",
+   "label": "Hypertensive hemorrhage, systolic over 220",
+   "vignette": "59-year-old woman with poorly controlled hypertension, sudden right face and arm weakness and slurred speech 1 hour ago. BP 236/124.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "ich",
+    "ich_drug": "none",
+    "ich_site": "over220"
+   },
+   "results": {
+    "first_look": "Glucose 5.4 mmol/L (97 mg/dL); alert, GCS 15; right face and arm weakness, NIHSS 6.",
+    "ct_result": "Non-contrast CT: small left putaminal hemorrhage.",
+    "ich_drug": "No anticoagulant or antiplatelet; INR 1.0.",
+    "ich_site": "Supratentorial, no hydrocephalus; systolic 232 on repeat, 1 hour 20 minutes from onset."
+   }
+  },
+  {
+   "id": "warfarin_mt",
+   "label": "On warfarin, M1 occlusion, no lytic",
+   "vignette": "73-year-old man on warfarin for atrial fibrillation, sudden right-sided weakness and loss of speech; last known well 2 hours ago. BP 168/94, weight 82 kg. Independent before.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "early",
+    "lysis_ci": "contra",
+    "cta_nolytic": "lvo"
+   },
+   "results": {
+    "first_look": "Glucose 6.3 mmol/L (113 mg/dL); alert, airway clear; right hemiparesis and aphasia, NIHSS 17.",
+    "ct_result": "Non-contrast CT: no bleed; 2 hours since last known well.",
+    "lysis_ci": "INR 2.4 on warfarin.",
+    "cta_nolytic": "CT angiography: left M1 occlusion."
+   }
+  },
+  {
+   "id": "bp_refractory",
+   "label": "Pressure that will not come down",
+   "vignette": "67-year-old woman, sudden left face and arm weakness; last known well 1 hour 30 minutes ago. BP 224/122, weight 76 kg. No anticoagulant, no recent surgery, trauma or bleeding.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "early",
+    "lysis_ci": "clear",
+    "bp_check": "bp_refractory",
+    "cta_nolytic": "none"
+   },
+   "results": {
+    "first_look": "Glucose 6.0 mmol/L (108 mg/dL); alert, airway clear; left face and arm weakness, NIHSS 8.",
+    "ct_result": "Non-contrast CT: no bleed; 1 hour 45 minutes since last known well.",
+    "lysis_ci": "No contraindication on the lists; INR 1.0.",
+    "bp_check": "BP 214/118 after two doses of an IV antihypertensive; still above 185/110.",
+    "cta_nolytic": "CT angiography: no large vessel occlusion."
+   }
+  },
+  {
+   "id": "minor_stroke",
+   "label": "Mild, non-disabling deficit",
+   "vignette": "58-year-old man, mild clumsiness of the right hand and slightly slurred speech that began 2 hours ago; he can walk and write. BP 150/88.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "other"
+   },
+   "results": {
+    "first_look": "Glucose 5.9 mmol/L (106 mg/dL); alert; mild right hand clumsiness and dysarthria, NIHSS 2.",
+    "ct_result": "Non-contrast CT: no bleed; 2 hours since last known well; the deficit is mild and not disabling."
+   }
+  },
+  {
+   "id": "seizure_bleed",
+   "label": "A seizure from a hemorrhage",
+   "vignette": "26-year-old woman, a first generalized seizure, then left arm and leg weakness that persists; last known well 1 hour ago. BP 158/92. Takes no medicines.",
+   "picks": {
+    "first_look": "seizure",
+    "seizure_result": "bleed",
+    "ich_drug": "none",
+    "ich_site": "no_rapid"
+   },
+   "results": {
+    "first_look": "Witnessed tonic-clonic seizure, then left hemiparesis; glucose 5.5 mmol/L (99 mg/dL); GCS 14.",
+    "seizure_result": "Non-contrast CT: right frontal lobar hemorrhage. CT angiography: an arteriovenous malformation at its edge.",
+    "ich_drug": "No anticoagulant or antiplatelet; INR 1.0.",
+    "ich_site": "Lobar hemorrhage from an arteriovenous malformation: a structural cause."
+   }
+  },
+  {
+   "id": "seizure_persists",
+   "label": "Seizure, clear scans, deficit stays",
+   "vignette": "61-year-old man with no history of epilepsy, a witnessed seizure at home, then right arm weakness and word-finding trouble; last known well 1 hour 30 minutes ago. BP 156/90.",
+   "picks": {
+    "first_look": "seizure",
+    "seizure_result": "persists"
+   },
+   "results": {
+    "first_look": "Seizure lasting 90 seconds, then right arm weakness and aphasia; glucose 6.1 mmol/L (110 mg/dL); GCS 14.",
+    "seizure_result": "Non-contrast CT and CT angiography: no bleed, no occlusion. Two hours later the weakness and aphasia are unchanged."
+   }
+  },
+  {
+   "id": "late_core",
+   "label": "Late occlusion, large core",
+   "vignette": "75-year-old woman found at 9 a.m. with left-sided paralysis; she was last seen well at 9 p.m. the night before. BP 170/96. Independent before.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "late",
+    "late_result": "core"
+   },
+   "results": {
+    "first_look": "Glucose 6.5 mmol/L (117 mg/dL); drowsy but rousable, GCS 13; gaze deviated to the right, NIHSS 20.",
+    "ct_result": "Non-contrast CT: no bleed; 12 hours since last known well.",
+    "late_result": "CT angiography: right internal carotid terminus occlusion. CT perfusion: a large established core with little brain left to save."
+   }
+  },
+  {
+   "id": "late_basilar",
+   "label": "Basilar occlusion, late",
+   "vignette": "63-year-old man with vertigo, double vision and slurred speech since last evening, worse this morning with weakness of both legs; last known well 14 hours ago. BP 172/94. Independent before.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "late",
+    "late_result": "basilar"
+   },
+   "results": {
+    "first_look": "Glucose 6.2 mmol/L (112 mg/dL); drowsy, GCS 13, airway clear; NIHSS 12.",
+    "ct_result": "Non-contrast CT: no bleed; 14 hours since last known well.",
+    "late_result": "CT angiography: basilar artery occlusion. Perfusion imaging: no extensive brainstem infarct, brain to save."
+   }
+  },
+  {
+   "id": "tia_af",
+   "label": "TIA with atrial fibrillation",
+   "vignette": "78-year-old woman, 20 minutes of left face and arm weakness this morning, now resolved. BP 146/82, pulse irregular.",
+   "picks": {
+    "first_look": "tia",
+    "tia_risk": "af"
+   },
+   "results": {
+    "first_look": "Fully recovered; glucose 6.4 mmol/L (115 mg/dL); examination normal apart from an irregularly irregular pulse.",
+    "tia_risk": "Specialist review the same day: ECG shows atrial fibrillation; MRI shows no bleed; no significant carotid stenosis."
+   }
+  },
+  {
+   "id": "ich_edoxaban",
+   "label": "Hemorrhage on edoxaban",
+   "vignette": "80-year-old man on edoxaban for atrial fibrillation, sudden left-sided weakness 2 hours ago. BP 178/96.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "ich",
+    "ich_drug": "other"
+   },
+   "results": {
+    "first_look": "Glucose 6.0 mmol/L (108 mg/dL); alert, GCS 15; left hemiparesis, NIHSS 7.",
+    "ct_result": "Non-contrast CT: right basal ganglia hemorrhage, small to moderate.",
+    "ich_drug": "Edoxaban taken 5 hours ago."
+   }
+  },
+  {
+   "id": "ich_cerebellar_small",
+   "label": "Small cerebellar hemorrhage on aspirin",
+   "vignette": "71-year-old woman on daily aspirin, sudden vertigo, vomiting and unsteadiness 3 hours ago; alert. BP 182/98.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "ich",
+    "ich_drug": "antiplatelet",
+    "ich_site": "cerebellar_small"
+   },
+   "results": {
+    "first_look": "Glucose 6.7 mmol/L (121 mg/dL); alert, GCS 15; right limb ataxia, NIHSS 2.",
+    "ct_result": "Non-contrast CT: small right cerebellar hemorrhage; the fourth ventricle is open.",
+    "ich_drug": "Aspirin daily; no anticoagulant; INR 1.0, platelets normal.",
+    "ich_site": "Cerebellar, no hydrocephalus; alert, GCS 15."
+   }
+  },
+  {
+   "id": "sah",
+   "label": "Subarachnoid hemorrhage with a deficit",
+   "vignette": "47-year-old woman, a sudden worst-ever headache while lifting that peaked within a minute, then vomiting and a drooping right eyelid. Onset 3 hours ago. BP 168/96.",
+   "picks": {
+    "first_look": "deficit",
+    "ct_result": "sah"
+   },
+   "results": {
+    "first_look": "Glucose 5.7 mmol/L (103 mg/dL); GCS 15; neck stiffness; right third nerve palsy.",
+    "ct_result": "Non-contrast CT: blood in the basal cisterns and both Sylvian fissures."
+   }
+  }
+ ]
+}

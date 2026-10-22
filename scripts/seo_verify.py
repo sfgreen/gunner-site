@@ -17,6 +17,8 @@ gets ignored, so the split is the point.
 """
 
 import argparse
+import html as htmllib
+import json
 import os
 import re
 import ssl
@@ -161,7 +163,61 @@ def check_page(url, base, static_dirs=frozenset()):
     if not tag(r'<meta[^>]*property=["\']og:image["\'][^>]*content=["\'](.*?)["\']', html):
         warns.append("no og:image (link unfurls render bare)")
 
+    fails += check_structured_data(html)
+
     return fails, warns, {"title": title, "desc": desc, "canonical": canonical}
+
+
+def visible_text(html):
+    """The page's text as a reader gets it: no scripts, styles or markup."""
+    body = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", html, flags=re.I | re.S)
+    return re.sub(r"\s+", " ", htmllib.unescape(re.sub(r"<[^>]+>", "", body))).strip()
+
+
+def empty_fields(node, path="$"):
+    """JSON-LD paths whose value is empty: Google drops the item or flags it."""
+    out = []
+    if isinstance(node, dict):
+        for key, value in node.items():
+            out += empty_fields(value, f"{path}.{key}")
+    elif isinstance(node, list):
+        if not node:
+            out.append(path)
+        for i, value in enumerate(node):
+            out += empty_fields(value, f"{path}[{i}]")
+    elif node is None or (isinstance(node, str) and not node.strip()):
+        out.append(path)
+    return out
+
+
+def check_structured_data(html):
+    """Every JSON-LD block parses, has no empty fields, and a FAQPage says
+    exactly what the page shows (Google's rule for FAQ markup)."""
+    fails = []
+    blocks = re.findall(r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', html, re.I | re.S)
+    text = None
+    for i, raw in enumerate(blocks):
+        try:
+            data = json.loads(raw)
+        except json.JSONDecodeError as exc:
+            fails.append(f"JSON-LD block {i + 1} does not parse: {exc}")
+            continue
+        for item in data if isinstance(data, list) else [data]:
+            kind = item.get("@type") if isinstance(item, dict) else None
+            empties = empty_fields(item)
+            if empties:
+                fails.append(f"JSON-LD {kind or 'block'} has empty fields: {', '.join(empties[:5])}")
+            if kind != "FAQPage":
+                continue
+            text = text if text is not None else visible_text(html)
+            for q in item.get("mainEntity") or []:
+                name = re.sub(r"\s+", " ", str(q.get("name", ""))).strip()
+                answer = re.sub(r"\s+", " ", str((q.get("acceptedAnswer") or {}).get("text", ""))).strip()
+                if name not in text:
+                    fails.append(f"FAQPage question not on the page: '{name[:70]}'")
+                elif answer not in text:
+                    fails.append(f"FAQPage answer not on the page, for: '{name[:70]}'")
+    return fails
 
 
 def discover_routes(repo_root):
@@ -183,6 +239,26 @@ def discover_routes(repo_root):
             routes.add(route or "/")
 
     routes |= static_dir_routes(repo_root)
+    pathways = pathway_routes(repo_root)
+    if not pathways:
+        routes.discard("/pathways")  # the hub 404s until an article is live
+    return routes | pathways
+
+
+def pathway_routes(repo_root):
+    """/pathways/<slug> for every live ED pathway article: the editorial file says
+    published or signedOff, the same gate lib/pathways/data.ts applies."""
+    folder = os.path.join(repo_root, "content", "pathway-articles")
+    if not os.path.isdir(folder):
+        return set()
+    routes = set()
+    for name in sorted(os.listdir(folder)):
+        if not name.endswith(".json"):
+            continue
+        with open(os.path.join(folder, name), encoding="utf-8") as fh:
+            editorial = json.load(fh)
+        if editorial.get("published") is True or editorial.get("signedOff") is True:
+            routes.add(f"/pathways/{name[: -len('.json')]}")
     return routes
 
 

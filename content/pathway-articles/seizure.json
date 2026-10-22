@@ -1,0 +1,425 @@
+{
+  "id": "seizure",
+  "slug": "seizure",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Status Epilepticus Algorithm: Lorazepam, Second-Line, Doses",
+  "metaDescription": "Seizure in the ED, fork by fork: glucose first, lorazepam or IM midazolam at 5 minutes, a second-line load at 20, eclampsia, hyponatremia and isoniazid.",
+  "h1": "Seizure and status epilepticus: the ED algorithm, fork by fork",
+  "dek": "For the student on an EM or neurology rotation with a seizing patient and a resident about to ask what is next: the first 5 minutes, the benzodiazepine and second-line doses, eclampsia, hyponatremia and isoniazid, the first-seizure workup, the mimics, what to say on rounds, and the traps.",
+  "jumpLinks": [
+    {
+      "label": "First 5 minutes",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Glucose, clock, response",
+      "stage": "Result"
+    },
+    {
+      "label": "Endpoints",
+      "stage": "Outcome"
+    },
+    {
+      "label": "Drugs and doses",
+      "stage": "Manage"
+    },
+    {
+      "label": "Find the cause",
+      "stage": "Labs"
+    },
+    {
+      "label": "First seizure plan",
+      "stage": "Disposition"
+    },
+    {
+      "label": "CT head and stroke",
+      "stage": "Imaging"
+    },
+    {
+      "label": "Faint, cardiac, functional",
+      "stage": "Diagnose"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "ABCs, glucose and the clock.",
+      "text": "Oxygen, ECG monitoring, a fingerstick glucose and the time the seizure began, then IV access and blood tests. Treatment does not wait for a scan or an EEG.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "lead": "Glucose under 60 mg/dL: thiamine, then dextrose.",
+      "text": "Thiamine 100 mg IV, then 50 mL of 50% dextrose IV, without waiting for the laboratory value.",
+      "refs": [
+        "hypo_tx"
+      ]
+    },
+    {
+      "lead": "Still seizing at 5 minutes: one full benzodiazepine dose.",
+      "text": "IV lorazepam 4 mg slowly in an adult (AES: 0.1 mg/kg, max 4 mg), repeated once; IM midazolam 10 mg over 40 kg when there is no IV line; or IV diazepam.",
+      "refs": [
+        "benzo",
+        "lzp_dose",
+        "im_mid"
+      ]
+    },
+    {
+      "lead": "At 20 minutes: one second-line load.",
+      "text": "Levetiracetam 60 mg/kg (max 4,500 mg), fosphenytoin 20 mg PE/kg (max 1,500 mg PE) or valproate 40 mg/kg (max 3,000 mg); no clear evidence that one is better.",
+      "refs": [
+        "second"
+      ]
+    },
+    {
+      "lead": "At 40 minutes: refractory status.",
+      "text": "Another second-line drug, or anesthetic doses of midazolam, propofol, pentobarbital or thiopental on continuous EEG, under expert guidance.",
+      "refs": [
+        "refractory"
+      ]
+    },
+    {
+      "lead": "Over 20 weeks pregnant or after birth, with hypertension: magnesium.",
+      "text": "4 g IV over 5 to 15 minutes, then 1 g an hour until 24 hours after the last fit (US label: 4 to 5 g, then 1 to 2 g an hour). Never diazepam or phenytoin in its place.",
+      "refs": [
+        "mag",
+        "first_look"
+      ]
+    },
+    {
+      "lead": "Treat the cause that has a specific fix.",
+      "text": "Sodium under 120 mmol/L: 150 mL of 3% saline over 20 minutes, aiming for a 5 mmol/L rise, then no more than 10 in 24 hours (the sources set different limits). Isoniazid: IV pyridoxine gram for gram, or 5 g if the amount is unknown.",
+      "refs": [
+        "hypona_tx",
+        "pyridoxine"
+      ]
+    },
+    {
+      "lead": "A first unprovoked seizure: no routine drug.",
+      "text": "Urgent first-seizure referral within 2 weeks, an EEG and brain imaging, and no driving until assessed.",
+      "refs": [
+        "first_dispo"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do in the first 5 minutes of a seizure?",
+      "intro": "Airway, oxygen, monitoring, a fingerstick glucose and the clock. A glucose under 60 mg/dL is corrected at once, and a patient who stops seizing but does not wake gets the airway secured.",
+      "refs": [
+        "triage",
+        "hypo_tx",
+        "airway"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Status, eclampsia or a single seizure: how do the findings route the patient?",
+      "intro": "The forks read the glucose, the clock and pregnancy, IV access, the response to each drug, the blood pressure on magnesium, the first labs, and the history and ECG after a single seizure.",
+      "refs": [
+        "first_look",
+        "iv_access",
+        "benzo_result",
+        "second_result",
+        "bp_check",
+        "se_cause_result",
+        "cause"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "What are the drugs and doses for status epilepticus?",
+      "intro": "A benzodiazepine from 5 minutes, a second-line load from 20, refractory treatment from 40; magnesium for eclampsia, hypertonic saline for hyponatremia, pyridoxine for isoniazid, lorazepam and thiamine for alcohol withdrawal.",
+      "refs": [
+        "benzo",
+        "lzp_dose",
+        "im_mid",
+        "second",
+        "refractory",
+        "mag",
+        "bp_tx",
+        "hypona_tx",
+        "pyridoxine",
+        "etoh_step",
+        "mening"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "What is the workup once a seizure stops?",
+      "intro": "Seek and correct the cause: electrolytes including sodium, glucose, a blood count, toxicology and drug levels. After a single seizure: the witness account, the exam and a 12-lead ECG.",
+      "refs": [
+        "se_cause",
+        "baseline_workup",
+        "known_step"
+      ]
+    },
+    {
+      "stage": "Disposition",
+      "heading": "What is the plan after a first unprovoked seizure?",
+      "intro": "No antiseizure drug yet, urgent referral within 2 weeks, an EEG and brain imaging, safety advice, and no driving until assessed.",
+      "refs": [
+        "first_dispo"
+      ]
+    },
+    {
+      "stage": "Imaging",
+      "heading": "When does a seizure need a CT head?",
+      "intro": "Within 1 hour after a head injury, and at once as a suspected stroke when a one-sided deficit persists; not after a typical seizure in established epilepsy without other concerns.",
+      "refs": [
+        "head_ct",
+        "stroke_img",
+        "known_step"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "Was it a seizure, a faint, a cardiac event or a functional seizure?",
+      "intro": "Posture, a trigger and a prodrome with quick recovery point to a faint; an ECG red flag to a cardiac cause; changing, unusually long events with many unexplained symptoms to functional seizures.",
+      "refs": [
+        "faint_step",
+        "cardiac_step",
+        "functional_step"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Where does each seizure patient end up?",
+      "intro": "Every branch closes on a diagnosis and its plan. Routes the sources do not settle, such as the anesthetic infusion doses, stop and say so.",
+      "refs": [
+        "end_refractory",
+        "end_eclampsia",
+        "end_hypona",
+        "end_first",
+        "end_etoh",
+        "end_not_waking"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "Status epilepticus by the clock",
+    "items": [
+      {
+        "text": "0 to 5 minutes: ABCs, oxygen, ECG monitoring, fingerstick glucose, time from onset, IV access and blood tests.",
+        "refs": [
+          "triage"
+        ]
+      },
+      {
+        "text": "Glucose under 60 mg/dL: thiamine 100 mg IV, then 50 mL of 50% dextrose IV.",
+        "refs": [
+          "hypo_tx"
+        ]
+      },
+      {
+        "text": "From 5 minutes, one full benzodiazepine dose: IV lorazepam 0.1 mg/kg (max 4 mg), IM midazolam 10 mg over 40 kg, or IV diazepam 0.15 to 0.2 mg/kg (max 10 mg).",
+        "refs": [
+          "benzo",
+          "lzp_dose",
+          "im_mid"
+        ]
+      },
+      {
+        "text": "Still seizing: one repeat dose of IV lorazepam or diazepam (NICE: 5 to 10 minutes after the first).",
+        "refs": [
+          "lzp_dose",
+          "im_mid"
+        ]
+      },
+      {
+        "text": "None of the three available: IV phenobarbital 15 mg/kg.",
+        "refs": [
+          "benzo"
+        ]
+      },
+      {
+        "text": "From 20 minutes: levetiracetam 60 mg/kg (max 4,500 mg), fosphenytoin 20 mg PE/kg (max 1,500 mg PE) or valproate 40 mg/kg (max 3,000 mg), one dose.",
+        "refs": [
+          "second"
+        ]
+      },
+      {
+        "text": "Fosphenytoin no faster than 150 mg PE a minute in adults, with continuous ECG, blood pressure and respiratory monitoring.",
+        "refs": [
+          "second"
+        ]
+      },
+      {
+        "text": "From 40 minutes: refractory status; expert guidance and continuous EEG with any anesthetic dosing.",
+        "refs": [
+          "refractory"
+        ]
+      },
+      {
+        "text": "Over 20 weeks pregnant or after birth with hypertension: magnesium sulfate, not diazepam or phenytoin.",
+        "refs": [
+          "first_look",
+          "mag"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "52-year-old man with convulsive status epilepticus, now stopped after a second-line load. Witnessed generalized seizure in a restaurant, onset 6 minutes before arrival, no known epilepsy; airway held with a jaw thrust and suction, glucose 132 mg/dL, BP 168/96. IV line in; still convulsing 20 minutes from onset after two 4 mg doses of lorazepam, with no drug or toxin history, so levetiracetam 60 mg/kg, capped at 4,500 mg at his 90 kg, and the convulsion stopped 8 minutes into the infusion. Cause: sodium 139, glucose 118, calcium normal, toxicology negative. Plan: brain imaging, since CT can show an acute lesion behind a new-onset seizure, and an emergency management plan if status may recur.",
+    "presentRefs": [
+      "case:status_second_line",
+      "benzo",
+      "lzp_dose",
+      "second",
+      "se_cause",
+      "end_se_nocause"
+    ],
+    "pimp": [
+      {
+        "q": "Why treat at 5 minutes and not 30?",
+        "a": "Protocols use 5 minutes to keep seizures from reaching 30, and repeated seizures without full recovery between them count as status.",
+        "refs": [
+          "benzo"
+        ]
+      },
+      {
+        "q": "No IV line yet. Keep trying for one?",
+        "a": "No. Without established IV access, IM midazolam is more effective than IV lorazepam: 10 mg over 40 kg, one dose.",
+        "refs": [
+          "im_mid"
+        ]
+      },
+      {
+        "q": "Why not lorazepam 1 mg every few minutes?",
+        "a": "Initial therapy is one adequate full dose, not broken into small doses.",
+        "refs": [
+          "lzp_dose"
+        ]
+      },
+      {
+        "q": "Which second-line drug is best?",
+        "a": "None clearly: fosphenytoin, valproate and levetiracetam are all reasonable. NICE adds that levetiracetam may be quicker to give, with fewer adverse effects.",
+        "refs": [
+          "second"
+        ]
+      },
+      {
+        "q": "Why not diazepam for an eclamptic fit?",
+        "a": "NICE gives magnesium sulfate and says not to use diazepam, phenytoin or another anticonvulsant as an alternative to it.",
+        "refs": [
+          "mag"
+        ]
+      },
+      {
+        "q": "The seizure stopped but he will not wake. Flumazenil?",
+        "a": "No. It is contraindicated after a benzodiazepine given for status epilepticus and can lead to withdrawal reactions including seizures.",
+        "refs": [
+          "airway",
+          "se_cause"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "A CT or an EEG before treatment. The first 5 minutes are stabilization and a glucose; treatment does not wait for a scan.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "text": "Timing the seizure to 30 minutes before treating. The benzodiazepine goes in from 5 minutes.",
+      "refs": [
+        "benzo"
+      ]
+    },
+    {
+      "text": "Fosphenytoin as the first drug, or fosphenytoin IM. The benzodiazepine comes first, and IM fosphenytoin should ordinarily not be used in status.",
+      "refs": [
+        "benzo",
+        "im_mid"
+      ]
+    },
+    {
+      "text": "A third and a fourth lorazepam dose. IV lorazepam is repeated only once, then a second-line load.",
+      "refs": [
+        "second"
+      ]
+    },
+    {
+      "text": "A neuromuscular blocker for refractory status. Paralytics are among the inefficient therapies; anesthetic doses go with continuous EEG.",
+      "refs": [
+        "refractory"
+      ]
+    },
+    {
+      "text": "Phenytoin for an alcohol withdrawal seizure. Lorazepam, parenteral thiamine when malnourished, and admission; never phenytoin.",
+      "refs": [
+        "etoh_step"
+      ]
+    },
+    {
+      "text": "Correcting a hyponatremic seizure to 135 mmol/L within 24 hours. Aim for a 5 mmol/L rise in the first hour, then no more than 10 in the first 24 hours; the sources set different limits.",
+      "refs": [
+        "hypona_tx"
+      ]
+    },
+    {
+      "text": "Levetiracetam today after a first unprovoked seizure with a normal workup. NICE does not routinely start a drug; it refers urgently.",
+      "refs": [
+        "first_dispo"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the first-line treatment for status epilepticus?",
+      "a": "A benzodiazepine from 5 minutes, given as one full dose: IV lorazepam 4 mg slowly at 2 mg a minute in an adult (AES: 0.1 mg/kg, max 4 mg), IM midazolam 10 mg over 40 kg, or IV diazepam 0.15 to 0.2 mg/kg (max 10 mg). IV lorazepam or diazepam may be repeated once. IV phenobarbital 15 mg/kg if none of them is available.",
+      "refs": [
+        "benzo",
+        "lzp_dose",
+        "im_mid"
+      ]
+    },
+    {
+      "q": "What is the second-line drug for status epilepticus?",
+      "a": "From 20 minutes, one full load of levetiracetam 60 mg/kg (max 4,500 mg), fosphenytoin 20 mg PE/kg (max 1,500 mg PE) or valproate 40 mg/kg (max 3,000 mg). None is clearly better; NICE notes levetiracetam may be quicker to give with fewer adverse effects. Fosphenytoin runs no faster than 150 mg PE a minute in adults, with ECG and blood pressure monitoring.",
+      "refs": [
+        "second"
+      ]
+    },
+    {
+      "q": "What is the magnesium dose for eclampsia?",
+      "a": "NICE: 4 g IV over 5 to 15 minutes, then 1 g an hour until 24 hours after the last fit, with 2 to 4 g more for a recurrent fit. The US label gives a 4 to 5 g load and, after it, 1 to 2 g an hour, no more than 30 to 40 g in 24 hours. Check the knee jerk, breathing and urine output, and keep calcium at hand.",
+      "refs": [
+        "mag",
+        "mag_result"
+      ]
+    },
+    {
+      "q": "How do you treat a hyponatremic seizure?",
+      "a": "Hypertonic saline at once, whatever the cause: 150 mL of 3% IV over 20 minutes, rechecking the sodium during a second 150 mL, repeated twice or until it has risen 5 mmol/L. Then no more than 10 mmol/L in the first 24 hours, though the sources set different limits; a US review uses 100 mL boluses over 10 minutes. The cause is worked up after emergency treatment.",
+      "refs": [
+        "hypona_tx"
+      ]
+    },
+    {
+      "q": "Do you start an antiseizure drug after a first seizure?",
+      "a": "Not routinely. NICE refers urgently, to be seen within 2 weeks, with an EEG (ideally within 72 hours) and brain imaging, MRI being the investigation of choice. It considers a drug for a neurological deficit, unequivocal epileptic activity on EEG, a structural abnormality on imaging, or a risk the person finds unacceptable. No driving while waiting for the specialist.",
+      "refs": [
+        "first_dispo"
+      ]
+    },
+    {
+      "q": "What is the antidote for isoniazid seizures?",
+      "a": "IV pyridoxine as a slow bolus over 3 to 5 minutes, gram for gram with the isoniazid, or 5 g in an adult when the amount is unknown, repeated if seizures continue (rarely more than 10 g). Diazepam if there is no response, phenytoin only cautiously because isoniazid interferes with its metabolism, and the airway and ventilation supported.",
+      "refs": [
+        "pyridoxine"
+      ]
+    }
+  ],
+  "related": [
+    "ams",
+    "syncope",
+    "agitation",
+    "stroke"
+  ]
+}

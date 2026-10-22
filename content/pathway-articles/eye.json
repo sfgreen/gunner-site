@@ -1,0 +1,332 @@
+{
+  "id": "eye",
+  "slug": "eye",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Red Eye Differential and Vision Loss: The ED Workup",
+  "metaDescription": "Red eye and sudden vision loss in the ED: chemical splash, open globe, angle-closure glaucoma, keratitis, abrasion, CRAO and GCA, with drops and doses.",
+  "h1": "Red eye and sudden vision loss: the ED workup, emergencies first",
+  "dek": "For the student on an EM or ophthalmology rotation with a red or painful eye, or a patient who suddenly cannot see, and a resident asking what is next. What gets irrigated, shielded or cut before anything else, how the pressure, slit lamp and fundus sort the rest, and the drops and doses.",
+  "jumpLinks": [
+    {
+      "label": "Irrigate, shield, cut",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Dangerous or benign",
+      "stage": "Result"
+    },
+    {
+      "label": "The exam",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Newborn discharge",
+      "stage": "Labs"
+    },
+    {
+      "label": "Treatment",
+      "stage": "Manage"
+    },
+    {
+      "label": "Home or ophthalmology now",
+      "stage": "Outcome"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Chemical splash: irrigate first.",
+      "text": "After an anesthetic drop, lactated Ringer or saline for at least 30 minutes until the surface pH reads 7.0 to 7.4; acuity and the slit lamp wait.",
+      "refs": [
+        "chem_irrigate"
+      ]
+    },
+    {
+      "lead": "Possible open globe: shield, do not press.",
+      "text": "A rigid shield, no tonometry, an antiemetic, systemic antibiotics, nil by mouth, CT orbits (never MRI while metal is possible), and ophthalmology for repair within 24 hours.",
+      "refs": [
+        "globe"
+      ]
+    },
+    {
+      "lead": "Tense eye after trauma: canthotomy before CT.",
+      "text": "Lateral canthotomy and cantholysis at the bedside, ideally within 2 hours, when vision is falling.",
+      "refs": [
+        "ocs"
+      ]
+    },
+    {
+      "lead": "Angle closure: suppress aqueous, then pilocarpine.",
+      "text": "Timolol, an alpha-2 agonist and IV acetazolamide first; pilocarpine 1 to 2% once the pressure falls (below 40 in StatPearls, below 50 on the label); laser iridotomy in both eyes. No timolol in asthma or second- or third-degree heart block, no acetazolamide with a sulfa allergy.",
+      "refs": [
+        "aacg_tx"
+      ]
+    },
+    {
+      "lead": "Contact lens ulcer: fluoroquinolone, no patch.",
+      "text": "Lenses out, ciprofloxacin drops, no steroid, and ophthalmology within 24 hours, sooner if the ulcer is large, deep or central.",
+      "refs": [
+        "kerat_tx"
+      ]
+    },
+    {
+      "lead": "Abrasion: antibiotic, no patch, no anesthetic drops for home.",
+      "text": "Evert the lids, erythromycin ointment (a fluoroquinolone for a lens wearer) and oral analgesia. ACEP 2024 supports a small take-home anesthetic supply in selected patients; the AAO did not endorse it.",
+      "refs": [
+        "abrasion_tx"
+      ]
+    },
+    {
+      "lead": "CRAO is a stroke of the eye.",
+      "text": "ESR and CRP now for giant cell arteritis, then a stroke-team workup with brain MRI, carotid duplex, echo and rhythm monitoring; ocular massage and paracentesis do not change outcomes.",
+      "refs": [
+        "crao_first"
+      ]
+    },
+    {
+      "lead": "GCA with vision loss: steroids before the biopsy.",
+      "text": "Pulse IV methylprednisolone (ACR: 500 to 1000 mg daily for 3 to 5 days; EULAR: could be considered), then high-dose prednisone; temporal artery biopsy within 2 weeks.",
+      "refs": [
+        "gca_steroid"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do first for a red eye or sudden vision loss?",
+      "intro": "ABCs and the story. A chemical splash is irrigated before anything else, a possible open globe gets a rigid shield and no pressure, and a tense, bulging eye after trauma with falling vision gets a lateral canthotomy before imaging; everyone else has the vision checked in each eye.",
+      "refs": [
+        "triage",
+        "chem_irrigate",
+        "globe",
+        "ocs"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Which findings separate a dangerous red eye from a benign one?",
+      "intro": "After the front-door forks for a chemical, an open globe, a tense orbit, lid cellulitis or a newborn, the pressure, the slit lamp with fluorescein, the response to phenylephrine and the fundus sort angle closure, keratitis, uveitis, endophthalmitis, scleritis, retinal artery occlusion and detachment from conjunctivitis, episcleritis and a subconjunctival hemorrhage.",
+      "refs": [
+        "front_door",
+        "presentation",
+        "red_result",
+        "fundus_result",
+        "lid_result"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "How do you examine a red eye, a swollen lid and painless vision loss?",
+      "intro": "Pupils, pressure, slit lamp and fluorescein, with the contact lens and surgery history, for the red eye; eye movements, proptosis and vision for lid cellulitis; an afferent pupil check, the fundus and bedside ultrasound for painless loss.",
+      "refs": [
+        "red_exam",
+        "lid_exam",
+        "fundus"
+      ]
+    },
+    {
+      "stage": "Labs",
+      "heading": "Which tests for a newborn with eye discharge?",
+      "intro": "Gram stain, culture and a chlamydia test. Gram-negative intracellular diplococci mean a single dose of systemic ceftriaxone and a search for disseminated infection.",
+      "refs": [
+        "neo_tx"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How do you treat angle closure, keratitis, uveitis, endophthalmitis and CRAO?",
+      "intro": "Aqueous suppressants before pilocarpine for angle closure; a topical fluoroquinolone with no patch for a lens ulcer; steroid and cycloplegic only with ophthalmology for uveitis; intravitreal antibiotics for endophthalmitis; a stroke workup for a retinal artery occlusion; and steroids at once for giant cell arteritis.",
+      "refs": [
+        "aacg_tx",
+        "kerat_tx",
+        "uveitis_tx",
+        "endo_tx",
+        "abrasion_tx",
+        "crao_first",
+        "gca_steroid",
+        "orbit_tx",
+        "gc_tx"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Which red eyes can go home, and which go to ophthalmology now?",
+      "intro": "Viral, allergic and bacterial conjunctivitis, episcleritis and a subconjunctival hemorrhage are managed as outpatients. Scleritis, retinal detachment and a hyphema go to ophthalmology at once, and a normal fundus with persisting loss points behind the eye.",
+      "refs": [
+        "end_viral",
+        "end_allergic",
+        "end_bacterial",
+        "end_episcleritis",
+        "end_sch",
+        "end_scleritis",
+        "end_rd",
+        "end_red_other",
+        "end_fundus_normal"
+      ]
+    }
+  ],
+  "checklist": null,
+  "rounds": {
+    "present": "Give the acuity, the pressure and the pupil, because together they make the diagnosis. One-liner: 63-year-old long-sighted woman with 2 hours of severe right eye pain, headache and vomiting that began in a dark cinema; no chemical, injury or lid cellulitis. Acuity 20/200 right and 20/25 left; right pupil 5 mm and sluggish, cornea steamy, chamber shallow, pressure 58 right and 16 left, fluorescein negative: acute angle closure. With no asthma and no sulfa allergy, she gets timolol 0.5% one drop, an alpha-2 agonist drop and acetazolamide 500 mg IV now, pilocarpine 1 to 2% only once the pressure falls, mannitol if it does not, an intensive topical steroid, and emergency ophthalmology for laser iridotomy in both eyes. No dilating drops.",
+    "presentRefs": ["case:aacg", "front_door", "presentation", "red_exam", "red_result", "aacg_tx"],
+    "pimp": [
+      {
+        "q": "Why not pilocarpine first in angle closure?",
+        "a": "It works only once the pressure has come down and the iris is no longer ischemic, so it follows the aqueous suppressants, at 1 to 2%; intensive or stronger pilocarpine is avoided.",
+        "refs": [
+          "aacg_tx"
+        ]
+      },
+      {
+        "q": "Why no patch for a contact lens abrasion or ulcer?",
+        "a": "Patching is not recommended for most abrasions, least of all when a contact lens caused the injury. Lens keratitis is most often Pseudomonas, so the patient needs a fluoroquinolone and ophthalmology.",
+        "refs": [
+          "abrasion_tx",
+          "kerat_tx"
+        ]
+      },
+      {
+        "q": "Why not start a steroid drop for a red eye in the ED?",
+        "a": "A steroid before the exam can worsen herpes keratitis and mask an infection. It is contraindicated in untreated purulent keratitis, and in uveitis it is started only with ophthalmology.",
+        "refs": [
+          "red_exam",
+          "kerat_tx",
+          "uveitis_tx"
+        ]
+      },
+      {
+        "q": "How does phenylephrine separate episcleritis from scleritis?",
+        "a": "Episcleritis redness blanches with phenylephrine and brings only a mild ache; scleritis is deep violet, does not blanch and causes severe boring pain, and needs emergent ophthalmology. The drop goes in only once the pressure is known to be normal.",
+        "refs": [
+          "red_exam",
+          "red_result"
+        ]
+      },
+      {
+        "q": "A child with lid cellulitis: how do you tell preseptal from orbital?",
+        "a": "By the eye, not the lids: pain on eye movement, restricted movement, proptosis, falling acuity, poor color vision or an afferent pupil defect mean orbital cellulitis. When the eye cannot be examined, treat it as orbital.",
+        "refs": [
+          "lid_exam",
+          "lid_result"
+        ]
+      },
+      {
+        "q": "Why ESR and CRP before anything else in a retinal artery occlusion?",
+        "a": "To catch giant cell arteritis, which needs high-dose steroids at once. A non-arteritic occlusion then gets the stroke workup.",
+        "refs": [
+          "crao_first",
+          "crao_esr"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "Measuring acuity before irrigating a chemical splash. Irrigation comes before every diagnostic step.",
+      "refs": [
+        "triage",
+        "chem_irrigate"
+      ]
+    },
+    {
+      "text": "Tonometry on a possible open globe. It can push the contents out; shield the eye instead.",
+      "refs": [
+        "globe",
+        "triage"
+      ]
+    },
+    {
+      "text": "A CT before canthotomy when vision is falling in a tense orbit. Decompress first; image afterwards.",
+      "refs": [
+        "ocs"
+      ]
+    },
+    {
+      "text": "Dilating drops in angle closure. Phenylephrine can worsen the attack.",
+      "refs": [
+        "aacg_tx"
+      ]
+    },
+    {
+      "text": "A pressure patch for a corneal abrasion. Not recommended for most, least of all after a contact lens injury.",
+      "refs": [
+        "abrasion_tx"
+      ]
+    },
+    {
+      "text": "Tetracaine to use at home after an abrasion. The usual US exam answer is no take-home anesthetic, though ACEP 2024 supports a small supply in selected patients.",
+      "refs": [
+        "abrasion_tx"
+      ]
+    },
+    {
+      "text": "Ocular massage and an eye clinic visit next week for a cherry-red spot. It is a stroke of the eye and gets a stroke workup.",
+      "refs": [
+        "crao_first"
+      ]
+    },
+    {
+      "text": "Holding steroids until the temporal artery biopsy in giant cell arteritis with vision loss. Treat now; the biopsy can still show arteritis within 2 weeks.",
+      "refs": [
+        "gca_steroid"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "How do you treat acute angle-closure glaucoma in the ED?",
+      "a": "Lower the pressure with aqueous suppressants: timolol 0.5%, an alpha-2 agonist drop and acetazolamide 500 mg IV when the patient is vomiting or speed matters. Add pilocarpine 1 to 2% only once the pressure falls (below 40 in StatPearls, below 50 on the label), IV mannitol if the response is poor, and an intensive topical steroid. Laser iridotomy in both eyes is definitive. No dilating drops, no timolol in asthma or high-grade heart block, no acetazolamide with a sulfa allergy.",
+      "refs": [
+        "aacg_tx"
+      ]
+    },
+    {
+      "q": "How do you manage a chemical burn to the eye?",
+      "a": "Irrigate at once, after a topical anesthetic drop, with lactated Ringer, saline or a balanced salt solution for at least 30 minutes, until the ocular surface pH is 7.0 to 7.4 on litmus; a severe burn may need up to 10 L. Evert both lids and sweep the fornices, recheck the pH, and only then examine. Identifying the chemical never delays the rinse.",
+      "refs": [
+        "chem_irrigate",
+        "end_chem"
+      ]
+    },
+    {
+      "q": "Should a corneal abrasion be patched?",
+      "a": "No. Patching is not recommended for most patients, especially after a contact lens injury. Evert the lids for a foreign body, give a topical antibiotic, erythromycin ointment 4 times a day for 5 days or a fluoroquinolone for a lens wearer, and oral acetaminophen or an NSAID. The labels say topical anesthetics are not for self-administration, though ACEP 2024 supports a small supply in selected patients.",
+      "refs": [
+        "abrasion_tx"
+      ]
+    },
+    {
+      "q": "What is the treatment for orbital cellulitis?",
+      "a": "Admission, IV vancomycin plus ceftriaxone, with metronidazole when anaerobes are likely, a contrast CT of the orbits and sinuses, and early ophthalmology and ENT, with serial checks of vision, pupils, color vision and motility. Worsening vision, an abscess, intracranial spread or no improvement after 24 to 48 hours goes to surgery. Preseptal cellulitis in a well child aged 1 year or more can take oral antibiotics.",
+      "refs": [
+        "orbit_tx",
+        "lid_result"
+      ]
+    },
+    {
+      "q": "What do you do for a central retinal artery occlusion?",
+      "a": "Treat it as a stroke. ESR and CRP now, with high-dose steroids at once if they are raised with features of giant cell arteritis; then a stroke-team review, brain MRI, carotid duplex, echocardiogram, rhythm monitoring and vascular risk factors. Ocular massage, paracentesis and pressure-lowering drops do not change outcomes. Whether to give IV thrombolysis is a decision for the stroke team.",
+      "refs": [
+        "crao_first",
+        "crao_esr"
+      ]
+    },
+    {
+      "q": "How is gonococcal conjunctivitis treated?",
+      "a": "In an adult with hyperacute copious pus: ceftriaxone 1 g IM once, a one-time saline lavage, doxycycline 100 mg twice daily for 7 days unless chlamydia is excluded, prompt ophthalmology because the cornea can perforate, and partners referred. In a newborn: ceftriaxone 25 to 50 mg/kg IV or IM once, maximum 250 mg, with a search for sepsis, arthritis and meningitis.",
+      "refs": [
+        "gc_tx",
+        "neo_tx",
+        "neo_result"
+      ]
+    }
+  ],
+  "related": [
+    "headache",
+    "stroke",
+    "burns",
+    "trauma"
+  ]
+}

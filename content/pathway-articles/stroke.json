@@ -1,0 +1,85 @@
+{
+  "id": "stroke",
+  "slug": "stroke",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Acute Stroke Management Algorithm: tPA, Thrombectomy, BP",
+  "metaDescription": "Code stroke, fork by fork: glucose and last known well, alteplase and tenecteplase doses, BP under 185/110, thrombectomy to 24 hours, ICH reversal and TIA.",
+  "h1": "Acute stroke management: the ED algorithm, fork by fork",
+  "dek": "For the student on an EM or neurology rotation with a code stroke and a resident about to ask what is next: the first moves, the lytic screen and dose, the blood pressure lines, thrombectomy windows, TIA, hemorrhage reversal, what to say on rounds, and the traps.",
+  "jumpLinks": [
+    {"label": "First moves", "stage": "Stabilize"},
+    {"label": "Reading CT and CTA", "stage": "Result"},
+    {"label": "What to scan", "stage": "Imaging"},
+    {"label": "TIA, aspirin, ICH", "stage": "Manage"},
+    {"label": "Lytics and thrombectomy", "stage": "Reperfuse"},
+    {"label": "Anticoagulant check", "stage": "Labs"},
+    {"label": "Subarachnoid blood", "stage": "Diagnose"},
+    {"label": "Endpoints", "stage": "Outcome"}
+  ],
+  "shortAnswer": [
+    {"lead": "Glucose and the clock first.", "text": "Airway and breathing, a fingerstick glucose and the time last known well, then immediate imaging. Every reperfusion window is counted from last known well.", "refs": ["triage"]},
+    {"lead": "Non-contrast CT now, CT angiography if thrombectomy is possible.", "text": "CT perfusion or diffusion MRI beyond 6 hours. With no recent oral anticoagulant or heparin, the lytic does not wait for clotting results.", "refs": ["ct", "lysis_check"]},
+    {"lead": "Lytic within 4.5 hours, pressure below 185/110.", "text": "Alteplase 0.9 mg/kg, max 90 mg, 10% over 1 minute and the rest over 60; or tenecteplase by weight, max 25 mg, as one bolus. Then below 180/105 for 24 hours. 4.5 hours is the window to know for the exam; the US drug labels are written for 3.", "refs": ["lytic_dose", "bp_lower"]},
+    {"lead": "Thrombectomy for a proximal anterior occlusion.", "text": "As soon as possible within 6 hours, with a lytic if eligible; from 6 to 24 hours when perfusion or diffusion imaging shows a limited core. Pre-stroke modified Rankin under 3, NIHSS over 5.", "refs": ["mt_early", "mt_late", "cta_late"]},
+    {"lead": "TIA: aspirin 300 mg now.", "text": "Specialist assessment within 24 hours. ABCD2 4 or more, or a minor stroke with NIHSS 3 or less, within 24 hours and after brain imaging: aspirin plus clopidogrel (300 mg load) for 21 days, then one agent.", "refs": ["tia_step", "dapt"]},
+    {"lead": "Outside every window: aspirin 300 mg within 24 hours.", "text": "Once imaging has excluded a bleed and after a swallow screen; daily for 2 weeks, then long-term antithrombotic treatment. No routine anticoagulation.", "refs": ["aspirin"]},
+    {"lead": "Hemorrhage: reverse by the drug.", "text": "Warfarin: 4-factor PCC by INR and weight with IV vitamin K. Dabigatran: idarucizumab 5 g. Apixaban or rivaroxaban: PCC off-label, since andexanet is no longer sold in the US.", "refs": ["ich_coag", "vka_rev", "dabi_rev", "fxa_rev"]},
+    {"lead": "ICH pressure: systolic 140 or below.", "text": "Within 6 hours for a systolic of 150 to 220, dropping no more than 60 mmHg in the first hour; AHA/ACC 2025 aims for 130 to under 140. Over 220 or past 6 hours, case by case. No rapid lowering for GCS below 6, a structural cause, planned early evacuation or a massive bleed with a poor prognosis.", "refs": ["ich_bp", "ich_bp_case"]}
+  ],
+  "sections": [
+    {"stage": "Stabilize", "heading": "What do you do first for a suspected stroke?", "intro": "Airway, a fingerstick glucose and the time last known well. A low glucose is corrected, and the deficit reassessed, before the scan; a GCS below 13 gets the airway protected and an immediate non-contrast CT.", "refs": ["triage", "hypo_tx", "unstable"]},
+    {"stage": "Result", "heading": "How do the glucose, CT and CT angiography results route a stroke?", "intro": "The forks read the first look, the non-contrast CT, the contraindication screen, the pressure before the bolus, the CT angiogram, perfusion imaging and the hematoma.", "refs": ["first_look", "ct_result", "lysis_ci", "bp_check", "cta_early", "late_result", "ich_site"]},
+    {"stage": "Imaging", "heading": "Which imaging for acute stroke: CT, CT angiography or perfusion?", "intro": "Non-contrast CT at once, CT angiography when thrombectomy is possible, and CT perfusion or diffusion MRI beyond 6 hours. A seizure at onset does not change the scan.", "refs": ["ct", "cta_late", "seizure_img"]},
+    {"stage": "Manage", "heading": "How are TIA, minor stroke and intracerebral hemorrhage treated?", "intro": "Antiplatelets for TIA, minor stroke and stroke outside every window; reversal and blood pressure targets for hemorrhage; neurosurgery for a cerebellar bleed with hydrocephalus.", "refs": ["tia_step", "dapt", "aspirin", "vka_rev", "ich_bp", "ich_surg"]},
+    {"stage": "Reperfuse", "heading": "Who gets tPA or thrombectomy, and what rules a lytic out?", "intro": "Screen the contraindications, get the pressure below 185/110, dose by weight, then send a proximal occlusion for thrombectomy.", "refs": ["lysis_check", "bp_lower", "lytic_dose", "mt_early", "mt_nolytic", "basilar_mt", "basilar_late", "mt_late"]},
+    {"stage": "Labs", "heading": "Intracerebral hemorrhage: which anticoagulant is on board?", "intro": "The drug, the time of the last dose and the INR decide the reversal agent.", "refs": ["ich_coag"]},
+    {"stage": "Diagnose", "heading": "Subarachnoid blood on the CT: what is next?", "intro": "CT angiography now and a call to neurosurgery; the CT has made the diagnosis, so no lumbar puncture.", "refs": ["sah_cta"]},
+    {"stage": "Outcome", "heading": "Where does each stroke patient end up?", "intro": "Every branch ends on a diagnosis and its plan. Routes the sources do not settle, such as a lytic after a seizure at onset or imaging-selected lysis for a wake-up stroke with no occlusion, stop and say so.", "refs": ["end_ivt", "end_mt", "end_aspirin", "end_ich_med", "end_scope_ischemic", "end_seizure_scope"]}
+  ],
+  "checklist": {
+    "heading": "Before the lytic: the bedside check",
+    "items": [
+      {"text": "Fingerstick glucose done; a low glucose corrected and the deficit reassessed.", "refs": ["triage", "hypo_tx"]},
+      {"text": "Time last known well fixed: under 4.5 hours (the US labels are written for 3), with a disabling deficit.", "refs": ["triage", "ct_result"]},
+      {"text": "Non-contrast CT with no bleed.", "refs": ["ct", "ct_result"]},
+      {"text": "Contraindications screened: intracranial or intraspinal surgery or serious head trauma within 3 months (2 months on the tenecteplase label), active internal bleeding, a bleeding diathesis, an intracranial neoplasm, AVM or aneurysm.", "refs": ["lysis_check"]},
+      {"text": "Recent oral anticoagulant or heparin: clotting results first; alteplase stops for an INR over 1.7 or a raised aPTT (the tenecteplase label says monitor closely instead).", "refs": ["lysis_check"]},
+      {"text": "Pressure below 185/110 before the bolus.", "refs": ["bp_check", "bp_lower"]},
+      {"text": "Weight for the dose: alteplase 0.9 mg/kg, max 90 mg; tenecteplase from 15 mg under 60 kg to 25 mg at 90 kg or more.", "refs": ["lytic_dose"]},
+      {"text": "CT angiography read for a proximal occlusion.", "refs": ["cta_early"]}
+    ]
+  },
+  "rounds": {
+    "present": "62-year-old man, independent before, with a left M1 occlusion: sudden right hemiparesis and aphasia, NIHSS 18, last known well 1 hour before arrival. Glucose normal, airway clear. Non-contrast CT showed no bleed at 1 hour 15 minutes; nothing on the contraindication lists, INR 1.0. BP 198/112 on repeat, so it was brought below 185/110 before the lytic: alteplase 0.9 mg/kg, or tenecteplase 25 mg at his 90 kg. CT angiography then showed the M1 occlusion, so thrombectomy as soon as possible alongside the lytic. Plan: BP below 180/105 for 24 hours, without driving the systolic below 140 after successful reperfusion.",
+    "presentRefs": ["case:mca_bp_high", "bp_lower", "lytic_dose", "cta_early", "mt_early"],
+    "pimp": [
+      {"q": "Why the glucose before the CT?", "a": "Hypoglycemia has to be excluded as the cause of sudden neurological symptoms. Corrected, the deficit can clear and leave nothing for a lytic.", "refs": ["triage", "hypo_tx", "end_hypo"]},
+      {"q": "Is an 84-year-old on daily aspirin a lytic candidate?", "a": "Age is a bleeding risk to weigh, not a contraindication, and aspirin is not on the list. A craniotomy 6 weeks ago would rule it out.", "refs": ["lysis_check"]},
+      {"q": "Why 0.9 mg/kg and not 100 mg over 2 hours?", "a": "The 100 mg two-hour infusion is the pulmonary embolism dose and the 15 mg bolus regimen is the accelerated MI dose. For stroke, tenecteplase also stops at 25 mg, not the 50 mg STEMI ceiling.", "refs": ["lytic_dose"]},
+      {"q": "Can a patient on warfarin with an M1 occlusion still get thrombectomy?", "a": "Yes, within 6 hours, with NIHSS over 5 and a pre-stroke modified Rankin under 3. A contraindicated lytic, such as warfarin with an INR over 1.7, does not take thrombectomy away.", "refs": ["mt_nolytic", "lysis_ci"]},
+      {"q": "Why stop dual antiplatelets at 21 days?", "a": "The benefit was confined to the first 21 days; in the chronic phase, bleeding offsets it and there is no net benefit.", "refs": ["dapt"]},
+      {"q": "Subarachnoid blood on CT. Why no LP?", "a": "The CT has made the diagnosis. CT angiography follows without delay, because rebleeding risk is highest in the first 24 hours.", "refs": ["sah_cta"]}
+    ]
+  },
+  "traps": [
+    {"text": "CT before the fingerstick glucose. Hypoglycemia is the mimic to exclude first.", "refs": ["triage", "hypo_tx"]},
+    {"text": "Withholding the lytic for age, for daily aspirin, or for a pressure of 178/104. None of them is a contraindication, and the line is 185/110.", "refs": ["lysis_check"]},
+    {"text": "Giving the lytic over a pressure above 185/110, or abandoning it because the first reading was high. Lower it, then give the lytic.", "refs": ["bp_lower"]},
+    {"text": "The PE or MI alteplase regimen for a stroke. The stroke dose is 0.9 mg/kg, max 90 mg, 10% over 1 minute and the rest over 60.", "refs": ["lytic_dose"]},
+    {"text": "No thrombectomy after 6 hours. For a proximal anterior occlusion with a limited core on perfusion or diffusion imaging it is offered up to 24 hours, wake-up strokes included.", "refs": ["mt_late", "cta_late"]},
+    {"text": "A heparin infusion for acute ischemic stroke. Anticoagulation is not routine.", "refs": ["aspirin", "triage"]},
+    {"text": "Andexanet for an apixaban bleed. It is no longer sold in the US; PCC goes in off-label, and idarucizumab works only on dabigatran.", "refs": ["fxa_rev", "dabi_rev"]},
+    {"text": "185/110 as the target in intracerebral hemorrhage. That is the threshold before a lytic; in ICH the systolic aim is 140 or below.", "refs": ["ich_bp", "ich_bp_case"]}
+  ],
+  "faq": [
+    {"q": "What is the tPA window for stroke?", "a": "Within 4.5 hours of onset, counted from the time last known well, with intracranial hemorrhage excluded on CT. That is the window to know for the exam and the one NICE uses; the US labels for alteplase and tenecteplase are written for 3 hours. Beyond 4.5 hours the question is thrombectomy for a proximal occlusion, selected by CT angiography with CT perfusion or diffusion MRI, up to 24 hours.", "refs": ["lytic_dose", "triage", "cta_late"]},
+    {"q": "What is the alteplase dose for stroke?", "a": "0.9 mg/kg to a maximum of 90 mg: 10% as an IV bolus over 1 minute, the rest infused over 60 minutes. Tenecteplase is one bolus by weight, from 15 mg under 60 kg to 25 mg at 90 kg or more. The pressure must be below 185/110 before the bolus and below 180/105 for 24 hours after.", "refs": ["lytic_dose", "bp_lower"]},
+    {"q": "What blood pressure is needed before tPA?", "a": "Below 185/110 before the bolus. If it is higher on a repeat reading, lower it and then give the lytic; a pressure that comes down is no reason to withhold it. If it stays above 185/110 despite IV treatment, no lytic, but a proximal anterior occlusion under 6 hours still goes to thrombectomy. Keep it below 180/105 for 24 hours after.", "refs": ["bp_check", "bp_lower", "cta_nolytic"]},
+    {"q": "When is thrombectomy indicated in stroke?", "a": "For a proximal anterior occlusion on CT angiography: as soon as possible within 6 hours, with a lytic if eligible, and from 6 to 24 hours when perfusion or diffusion imaging shows a limited core, in people with a pre-stroke modified Rankin score under 3 and NIHSS over 5. A basilar occlusion with brain to save is considered up to 24 hours.", "refs": ["mt_early", "mt_late", "basilar_late"]},
+    {"q": "What is the treatment after a TIA?", "a": "Aspirin 300 mg at once and specialist assessment within 24 hours of onset. A high-risk TIA (ABCD2 4 or more) or a minor stroke (NIHSS 3 or less) within 24 hours gets aspirin plus clopidogrel after brain imaging, a single 300 mg load, for 21 days, then one agent. NICE does not use ABCD2 to set the urgency of referral.", "refs": ["tia_step", "dapt", "calc:abcd2"]},
+    {"q": "How do you reverse warfarin in an intracerebral hemorrhage?", "a": "As soon as possible with 4-factor prothrombin complex concentrate plus IV vitamin K. The PCC dose follows the INR: 25 units/kg for INR 2 to under 4, 35 for 4 to 6, 50 above 6, with weight counted up to 100 kg. An 80 kg patient at INR 5.0 gets 2,800 units. Repeat PCC is not recommended.", "refs": ["vka_rev"]}
+  ],
+  "related": ["htn", "headache", "ams", "vertigo"]
+}

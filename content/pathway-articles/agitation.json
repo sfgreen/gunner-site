@@ -1,0 +1,369 @@
+{
+  "id": "agitation",
+  "slug": "agitation",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Agitation in the ED: De-escalation, IM Meds, Withdrawal",
+  "metaDescription": "The agitated patient in the ED: medical checks first, de-escalation, IM olanzapine, haloperidol or lorazepam by cause, restraint rules, CIWA-Ar and COWS.",
+  "h1": "Agitation, withdrawal and psychiatric emergencies: the ED pathway",
+  "dek": "For the student on an EM or psychiatry rotation when a patient is shouting in triage and a resident asks what is next. The medical checks that come first, de-escalation, which IM drug fits which cause, restraint rules, alcohol and opioid withdrawal, and the suicide screen.",
+  "jumpLinks": [
+    {
+      "label": "First moves",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Which route",
+      "stage": "Result"
+    },
+    {
+      "label": "IM drugs and withdrawal",
+      "stage": "Manage"
+    },
+    {
+      "label": "CIWA-Ar, COWS, ASQ",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Disposition",
+      "stage": "Outcome"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Medical first.",
+      "text": "Vital signs with temperature, oxygen and a fingerstick glucose before any psychiatric label; new agitation is presumed medical until proven otherwise.",
+      "refs": [
+        "triage",
+        "front",
+        "end_medical"
+      ]
+    },
+    {
+      "lead": "Talk before you medicate.",
+      "text": "One clinician, at least 2 arm's lengths away, in short sentences; offer oral medicine with the patient choosing the agent and route. Verbal de-escalation often works in under 5 minutes.",
+      "refs": [
+        "deesc"
+      ]
+    },
+    {
+      "lead": "Match the IM drug to the cause.",
+      "text": "Psychosis: an antipsychotic, such as olanzapine 10 mg IM or haloperidol 5 mg IM with lorazepam 2 mg IM (guidelines differ on the first choice). Drunk: haloperidol if medication is unavoidable, no benzodiazepine. No psychosis, or withdrawal: lorazepam 2 mg IM. IM olanzapine with a parenteral benzodiazepine is not recommended.",
+      "refs": [
+        "im_psych",
+        "im_etoh",
+        "im_bzd"
+      ]
+    },
+    {
+      "lead": "Restraint is time limited.",
+      "text": "Supine rather than prone, constant observation, a face-to-face evaluation within 1 hour, a 4-hour order in adults, and off as soon as the danger has passed.",
+      "refs": [
+        "restraint"
+      ]
+    },
+    {
+      "lead": "Alcohol withdrawal: benzodiazepines by CIWA-Ar.",
+      "text": "Symptom-triggered in hospital, diazepam first line, lorazepam if the liver is impaired. After a withdrawal seizure, lorazepam 2 mg IV, never phenytoin.",
+      "refs": [
+        "aws_tx",
+        "aws_seizure"
+      ]
+    },
+    {
+      "lead": "Thiamine with glucose, not instead of it.",
+      "text": "High-dose IV thiamine for suspected Wernicke, before or with any glucose, but a low glucose is never held back for it.",
+      "refs": [
+        "wernicke_step",
+        "end_first"
+      ]
+    },
+    {
+      "lead": "Buprenorphine waits for objective withdrawal.",
+      "text": "COWS 12 or more, not sedated, and at least 12 hours after a short-acting opioid or 24 after methadone (TIP 63; the label allows 4 hours after a short-acting opioid with clear moderate withdrawal), then 2 to 4 mg under the tongue, repeated about 2 hours later if needed.",
+      "refs": [
+        "cows_step",
+        "bup_step"
+      ]
+    },
+    {
+      "lead": "Ask about suicide directly.",
+      "text": "The ASQ's four questions, then thoughts of suicide right now if any is yes. An acute positive stays in sight for a STAT mental health evaluation.",
+      "refs": [
+        "asq_step",
+        "acute_step"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do first with an agitated patient in the ED?",
+      "intro": "A safe room, enough staff, and vital signs with temperature, oxygen and a fingerstick glucose. A high temperature with a fast pulse on a drug or in withdrawal gets cooling, fluids and an IV benzodiazepine.",
+      "refs": [
+        "triage",
+        "hot_step"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "Which findings decide the route: medical, toxic, withdrawal or psychiatric?",
+      "intro": "Vital signs and the first look separate a medical emergency, a hot patient and plain agitation. If de-escalation fails, psychosis, alcohol or delirium picks the drug.",
+      "refs": [
+        "front",
+        "hot_cause",
+        "deesc_result",
+        "cause"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "Which drug for which agitated patient, and how is withdrawal treated?",
+      "intro": "An antipsychotic for psychosis, haloperidol rather than a benzodiazepine on top of alcohol, a benzodiazepine when there is no psychosis or there is withdrawal, and restraint only when less restrictive measures fail.",
+      "refs": [
+        "im_psych",
+        "im_etoh",
+        "im_bzd",
+        "restraint",
+        "aws_tx",
+        "dt_step"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "How do you assess withdrawal, psychosis and suicide risk?",
+      "intro": "CIWA-Ar for alcohol, COWS and the last opioid for opioid withdrawal, vitals, exam and cognition before calling psychosis primary, and the ASQ asked directly.",
+      "refs": [
+        "assess",
+        "aws_assess",
+        "cows_step",
+        "psych_step",
+        "asq_step"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "When does the patient go home, get admitted or need a hold?",
+      "intro": "Imminent suicide risk with refusal of care means an involuntary hold under local law. Mild withdrawal without risk factors can go home with a support person, and buprenorphine started in the ED goes home with follow-up within 72 hours.",
+      "refs": [
+        "end_hold",
+        "end_aws_mild",
+        "end_bup",
+        "end_safety"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "After an IM dose or restraint: what to monitor",
+    "items": [
+      {
+        "text": "Constant observation with vital signs while restrained; check oxygen and glucose at once if they could not be obtained before the restraint.",
+        "refs": [
+          "restraint"
+        ]
+      },
+      {
+        "text": "Face-to-face evaluation within 1 hour of starting restraint or seclusion (CMS).",
+        "refs": [
+          "restraint"
+        ]
+      },
+      {
+        "text": "Order length: 4 hours for adults, 2 hours for ages 9 to 17, 1 hour under 9; a new order to continue.",
+        "refs": [
+          "restraint"
+        ]
+      },
+      {
+        "text": "Supine where possible, nothing pressing on the chest, neck or abdomen; manual holding not routinely beyond 10 minutes.",
+        "refs": [
+          "restraint"
+        ]
+      },
+      {
+        "text": "After rapid tranquilization: pulse, blood pressure, respiratory rate, temperature, hydration and consciousness at least hourly; every 15 minutes if sedated, after alcohol or drugs, or with a physical illness.",
+        "refs": [
+          "restraint",
+          "im_etoh"
+        ]
+      },
+      {
+        "text": "Before a repeat IM olanzapine: check for orthostatic hypotension, and no repeat sooner than 2 hours after the first dose.",
+        "refs": [
+          "im_psych"
+        ]
+      },
+      {
+        "text": "Alcohol withdrawal: CIWA-Ar every 1 to 2 hours in hospital; delirium, or over 40 mg of diazepam needed in an hour, means ICU-level care.",
+        "refs": [
+          "aws_tx",
+          "aws_resp",
+          "dt_step"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "Give the medical screen first, then the route you took, so your resident hears why you chose the drug. One-liner: 47-year-old man in alcohol withdrawal, last drink 30 hours ago, with a withdrawal seizure 2 years ago, who struck out at a nurse in triage. Glucose 112, no injury and no rigidity, so no medical emergency at the door. One calm voice did not work and he refused oral medicine; with no hallucinations or delusions and not drunk, he took the benzodiazepine route, lorazepam IM, and calmed. CIWA-Ar 18 with a past seizure makes him moderate to severe and high risk: admitted to a monitored bed on symptom-triggered benzodiazepine by CIWA-Ar, diazepam first line since his liver tests are near normal, with thiamine, and magnesium, phosphate and potassium replaced as needed. At 4 hours his CIWA-Ar is 9 and his pulse 96. Watching for escalation: delirium, or over 40 mg of diazepam needed in an hour, means ICU-level care.",
+    "presentRefs": ["case:withdrawal_violent", "front", "deesc", "deesc_result", "im_bzd", "aws_sev", "aws_tx", "aws_resp"],
+    "pimp": [
+      {
+        "q": "Why not a benzodiazepine for the violent drunk patient?",
+        "a": "Benzodiazepines compound the respiratory depression of alcohol. When medication is unavoidable, an antipsychotic is preferred, haloperidol having the longest record with minimal effect on breathing.",
+        "refs": [
+          "im_etoh"
+        ]
+      },
+      {
+        "q": "Why not give IM olanzapine with IM lorazepam?",
+        "a": "Together they cause excessive sedation and cardiorespiratory depression, so IM olanzapine with a parenteral benzodiazepine is not recommended.",
+        "refs": [
+          "im_psych"
+        ]
+      },
+      {
+        "q": "Why is phenytoin wrong after an alcohol withdrawal seizure?",
+        "a": "NICE does not offer it, and anticonvulsants did no better than placebo for withdrawal seizures in a Cochrane review. A single 2 mg dose of IV lorazepam cut recurrence within 6 hours from 24.4% to 3% in an ED trial.",
+        "refs": [
+          "aws_seizure"
+        ]
+      },
+      {
+        "q": "Why can't buprenorphine go in as soon as the patient asks for it?",
+        "a": "It is a partial agonist with strong receptor affinity that can displace a full agonist and precipitate withdrawal, so the first dose waits for objective withdrawal: a COWS of 12 or more, at least 12 hours after a short-acting opioid and at least 24 hours after methadone (TIP 63).",
+        "refs": [
+          "cows_step"
+        ]
+      },
+      {
+        "q": "How do you tell akathisia from worsening psychosis?",
+        "a": "Akathisia is inner restlessness with a drive to move, usually within the first 2 weeks of an antipsychotic or a dose increase. More antipsychotic is wrong: lower the dose or switch, add propranolol or a benzodiazepine, and ask about suicidal thoughts.",
+        "refs": [
+          "akathisia_step"
+        ]
+      },
+      {
+        "q": "Fever, lead-pipe rigidity and confusion days after haloperidol. What do you stop?",
+        "a": "Every dopamine blocker. Atypical agents cause neuroleptic malignant syndrome too, so switching keeps the trigger going. Then ICU, aggressive cooling, fluids and electrolyte correction; anticholinergics treat dystonia, not this.",
+        "refs": [
+          "nms_step"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "A urine drug screen before the exam. It seldom changes the ED disposition; the history and examination find most medical illness.",
+      "refs": [
+        "triage",
+        "assess"
+      ]
+    },
+    {
+      "text": "Restraints before talking. Unless the patient is actively violent, restraint does not come before de-escalation.",
+      "refs": [
+        "triage",
+        "deesc"
+      ]
+    },
+    {
+      "text": "A benzodiazepine on top of alcohol intoxication. It compounds respiratory depression; haloperidol is the choice when medication is unavoidable.",
+      "refs": [
+        "im_etoh"
+      ]
+    },
+    {
+      "text": "Haloperidol alone for delirium tremens. A benzodiazepine is the treatment, with phenobarbital as rescue, and antipsychotic monotherapy raises the risk of complicated withdrawal.",
+      "refs": [
+        "dt_step",
+        "aws_tx"
+      ]
+    },
+    {
+      "text": "Clonidine or a beta blocker to treat withdrawal. They mask the signs and prevent neither seizures nor delirium tremens.",
+      "refs": [
+        "aws_assess",
+        "dt_step"
+      ]
+    },
+    {
+      "text": "IV dextrose first, thiamine once the bloods return, in a confused drinker with nystagmus. Thiamine goes in before or with glucose at treatment doses, never delaying treatment of a low glucose, and brain imaging cannot exclude Wernicke.",
+      "refs": [
+        "wernicke_step"
+      ]
+    },
+    {
+      "text": "Flumazenil in benzodiazepine withdrawal. It risks refractory seizures and arrhythmias; restart a benzodiazepine and taper slowly.",
+      "refs": [
+        "benzo_step"
+      ]
+    },
+    {
+      "text": "Not asking about suicide directly, or letting a risk scale decide who goes home. Ask the ASQ questions; screening never replaces the clinical assessment.",
+      "refs": [
+        "asq_step"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the first-line medication for an agitated patient in the ED?",
+      "a": "It depends on the cause, and oral medicine comes first if the patient will take it. For psychosis, an antipsychotic such as olanzapine 10 mg IM, or haloperidol 5 mg IM with lorazepam 2 mg IM. In alcohol intoxication, haloperidol without a benzodiazepine. With no psychosis, or in withdrawal or stimulant intoxication, a benzodiazepine such as lorazepam 2 mg IM. Guidelines differ on the preferred IM regimen.",
+      "refs": [
+        "deesc",
+        "im_psych",
+        "im_etoh",
+        "im_bzd"
+      ]
+    },
+    {
+      "q": "How do you treat alcohol withdrawal in the ED?",
+      "a": "Score it with CIWA-Ar in an awake, alert patient and ask about past seizures or delirium tremens. Mild withdrawal without risk factors can be treated as an outpatient with a support person. Moderate to severe or high-risk withdrawal gets symptom-triggered benzodiazepine dosing in a monitored bed, diazepam first line or lorazepam with liver impairment, plus thiamine and electrolyte replacement; sources differ on admitting moderate withdrawal without risk factors.",
+      "refs": [
+        "aws_assess",
+        "aws_sev",
+        "aws_tx",
+        "end_aws_mild"
+      ]
+    },
+    {
+      "q": "What CIWA-Ar score needs treatment?",
+      "a": "StatPearls grades 8 or less as mild, 8 to 15 as moderate and over 15 as severe, so its bands meet at 8. This pathway treats a score of 8 or more, or a past seizure or delirium tremens, age over 65, illness, benzodiazepine use or no support, as moderate to severe or high risk, with symptom-triggered dosing in a monitored bed; sources differ on admitting moderate withdrawal without risk factors. It is valid only in an awake, alert patient.",
+      "refs": [
+        "aws_assess",
+        "aws_sev"
+      ]
+    },
+    {
+      "q": "When can you start buprenorphine in the ED?",
+      "a": "Once withdrawal is objective and the patient is not sedated or intoxicated: a COWS of 12 or more, at least 12 hours after a short-acting opioid and at least 24 hours after methadone (TIP 63). The label allows 4 hours after a short-acting opioid with clear moderate withdrawal. Start 2 to 4 mg under the tongue and repeat about 2 hours later if needed, typically up to 8 mg on day 1.",
+      "refs": [
+        "cows_step",
+        "bup_step"
+      ]
+    },
+    {
+      "q": "How long can a patient stay in restraints?",
+      "a": "Only until the danger has passed. A face-to-face evaluation is due within 1 hour (CMS), and Joint Commission orders last 4 hours for adults, 2 hours for ages 9 to 17 and 1 hour under 9, with a new order to continue. The patient is held supine, watched constantly and given medication to calm them; restraint beyond 4 hours raises the risk of deep vein thrombosis.",
+      "refs": [
+        "restraint"
+      ]
+    },
+    {
+      "q": "What do you do with a positive suicide screen in the ED?",
+      "a": "It depends on the acuity question. Thoughts of killing themselves right now is an acute positive: keep the patient in sight, remove dangerous objects and get a STAT mental health evaluation; they cannot leave until evaluated. A non-acute positive gets a brief safety assessment of plan, means, past attempts and supports. A positive screen alone does not justify involuntary care.",
+      "refs": [
+        "asq_result",
+        "acute_step",
+        "bssa_step"
+      ]
+    }
+  ],
+  "related": [
+    "ams",
+    "seizure",
+    "tox",
+    "environmental"
+  ]
+}

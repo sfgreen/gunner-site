@@ -1,0 +1,2769 @@
+{
+ "id": "pw_gi_bleed",
+ "title": "GI bleeding",
+ "world": "gi",
+ "synonyms": [
+  "GI bleed",
+  "gastrointestinal bleeding",
+  "upper GI bleed",
+  "UGIB",
+  "lower GI bleed",
+  "LGIB",
+  "hematemesis",
+  "coffee-ground emesis",
+  "melena",
+  "hematochezia",
+  "rectal bleeding",
+  "bleeding ulcer",
+  "peptic ulcer bleeding",
+  "variceal bleeding",
+  "esophageal varices",
+  "gastric varices",
+  "diverticular bleeding",
+  "Glasgow-Blatchford",
+  "Blatchford",
+  "TIPS",
+  "band ligation",
+  "anticoagulant reversal"
+ ],
+ "reviewBy": "2029-06-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:31634917",
+   "label": "International Consensus 2019",
+   "title": "Management of Nonvariceal Upper Gastrointestinal Bleeding: Guideline Recommendations From the International Consensus Group",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31634917/"
+  },
+  {
+   "docId": "pmid:31921329",
+   "label": "WSES peptic ulcer 2020",
+   "title": "WSES guidelines for perforated and bleeding peptic ulcer",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31921329/"
+  },
+  {
+   "docId": "pmid:29691276",
+   "label": "Asia-Pacific 2018",
+   "title": "Asia-Pacific working group consensus on non-variceal upper gastrointestinal bleeding: an update 2018",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29691276/"
+  },
+  {
+   "docId": "url:011638868e82",
+   "label": "NICE CG141",
+   "title": "Acute upper gastrointestinal bleeding in over 16s: management (NICE CG141, last updated 2016)",
+   "url": "https://www.nice.org.uk/guidance/cg141"
+  },
+  {
+   "docId": "pmid:35120736",
+   "label": "Baveno VII 2022",
+   "title": "Baveno VII: renewing consensus in portal hypertension",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35120736/"
+  },
+  {
+   "docId": "pmid:25887380",
+   "label": "BSG varices 2015",
+   "title": "U.K. guidelines on the management of variceal haemorrhage in cirrhotic patients",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25887380/"
+  },
+  {
+   "docId": "pmid:33958109",
+   "label": "ACR lower GI 2021",
+   "title": "ACR Appropriateness Criteria: Radiologic Management of Lower Gastrointestinal Tract Bleeding, 2021 update",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33958109/"
+  },
+  {
+   "docId": "pmid:39488353",
+   "label": "ACR upper GI 2024",
+   "title": "ACR Appropriateness Criteria: Nonvariceal Upper Gastrointestinal Bleeding, 2024 update",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39488353/"
+  },
+  {
+   "docId": "url:20b209257bcc",
+   "label": "FDA Andexxa 2025",
+   "title": "Update on the Safety of Andexxa (andexanet alfa), U.S. Food and Drug Administration",
+   "url": "https://www.fda.gov/vaccines-blood-biologics/safety-availability-biologics/update-safety-andexxa"
+  },
+  {
+   "docId": "pmid:35368325",
+   "label": "ACG-CAG 2022",
+   "title": "American College of Gastroenterology-Canadian Association of Gastroenterology Clinical Practice Guideline: Management of Anticoagulants and Antiplatelets During Acute Gastrointestinal Bleeding and the Periendoscopic Period",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35368325/"
+  },
+  {
+   "docId": "url:2a9fe9c19e10",
+   "label": "Kcentra label",
+   "title": "KCENTRA (Prothrombin Complex Concentrate, Human) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eee1afb8-324c-42e4-8bf0-f0c9da5e6d42"
+  },
+  {
+   "docId": "pmid:30233807",
+   "label": "Extended Blatchford 2018",
+   "title": "Discharge of patients with an acute upper gastrointestinal bleed from the emergency department using an extended Glasgow-Blatchford Score (BMJ Open Gastroenterol 2018)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30233807/"
+  },
+  {
+   "docId": "pmid:26714636",
+   "label": "ED bleeding scores 2015",
+   "title": "Validity of modified early warning, Glasgow Blatchford, and pre-endoscopic Rockall scores in predicting prognosis of patients presenting to emergency department with upper gastrointestinal bleeding (Scand J Trauma Resusc Emerg Med 2015)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26714636/"
+  }
+ ],
+ "differential": [
+  "Peptic ulcer",
+  "Varices",
+  "Mallory-Weiss tear",
+  "Diverticular bleed",
+  "Angiodysplasia",
+  "Small bowel source"
+ ],
+ "calculators": [
+  {
+   "id": "gbs",
+   "title": "Glasgow-Blatchford score",
+   "kind": "points",
+   "items": [
+    {
+     "id": "bun",
+     "label": "BUN (mg/dL)",
+     "options": [
+      {
+       "label": "Under 18.2",
+       "points": 0
+      },
+      {
+       "label": "18.2 to under 22.4",
+       "points": 2
+      },
+      {
+       "label": "22.4 to under 28",
+       "points": 3
+      },
+      {
+       "label": "28 to under 70",
+       "points": 4
+      },
+      {
+       "label": "70 or more",
+       "points": 6
+      }
+     ]
+    },
+    {
+     "id": "hb",
+     "label": "Hemoglobin (g/dL)",
+     "options": [
+      {
+       "label": "Not low: man 13 or more, woman 12 or more",
+       "points": 0
+      },
+      {
+       "label": "Man, 12 to under 13",
+       "points": 1
+      },
+      {
+       "label": "Man, 10 to under 12",
+       "points": 3
+      },
+      {
+       "label": "Man, under 10",
+       "points": 6
+      },
+      {
+       "label": "Woman, 10 to under 12",
+       "points": 1
+      },
+      {
+       "label": "Woman, under 10",
+       "points": 6
+      }
+     ]
+    },
+    {
+     "id": "sbp",
+     "label": "Systolic BP (mm Hg)",
+     "options": [
+      {
+       "label": "110 or more",
+       "points": 0
+      },
+      {
+       "label": "100 to 109",
+       "points": 1
+      },
+      {
+       "label": "90 to 99",
+       "points": 2
+      },
+      {
+       "label": "Under 90",
+       "points": 3
+      }
+     ]
+    },
+    {
+     "id": "pulse",
+     "label": "Pulse 100 or more",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "melena",
+     "label": "Presentation with melena",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "syncope",
+     "label": "Presentation with syncope",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "hepatic",
+     "label": "Hepatic disease",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "cardiac",
+     "label": "Cardiac failure",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 2
+      }
+     ]
+    }
+   ],
+   "bands": [
+    {
+     "lte": 1,
+     "text": "0 or 1: very low risk; outpatient care can be considered"
+    },
+    {
+     "gte": 2,
+     "text": "2 or more: not very low risk; admit"
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:26714636",
+     "where": "Table 1"
+    },
+    {
+     "docId": "pmid:30233807",
+     "where": "Table 1"
+    },
+    {
+     "docId": "pmid:31634917",
+     "where": "Statement A2a"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.1.1; 1.1.2"
+    }
+   ],
+   "note": "BUN and hemoglobin in US units (Scand J Trauma 2015); Blatchford's own cuts are urea 6.5, 8, 10 and 25 mmol/L and hemoglobin 130, 120 and 100 g/L in men, 120 and 100 in women (BMJ Open Gastroenterol 2018), whose systolic bands are used here. The International Consensus sends 1 or less home; NICE considers early discharge at 0.",
+   "tests": [
+    {
+     "picks": {},
+     "expect": 0
+    },
+    {
+     "picks": {
+      "bun": 1,
+      "hb": 1,
+      "melena": 1
+     },
+     "expect": 4
+    },
+    {
+     "picks": {
+      "bun": 3,
+      "hb": 4,
+      "melena": 1
+     },
+     "expect": 6
+    },
+    {
+     "picks": {
+      "bun": 2,
+      "hb": 2,
+      "melena": 1
+     },
+     "expect": 7
+    },
+    {
+     "picks": {
+      "bun": 2,
+      "hb": 4,
+      "melena": 1
+     },
+     "expect": 5
+    },
+    {
+     "picks": {
+      "bun": 4,
+      "hb": 3,
+      "sbp": 3,
+      "pulse": 1,
+      "melena": 1,
+      "syncope": 1,
+      "hepatic": 1,
+      "cardiac": 1
+     },
+     "expect": 23
+    }
+   ]
+  }
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "GI bleeding. First moves?",
+   "options": [
+    "Two large-bore IVs, crossmatch, blood count and clotting; ask about antithrombotics and liver disease",
+    "Endoscopy first, before any fluids or blood, to find the source quickly",
+    "Hold fluids in a hypotensive patient until the first hemoglobin is back",
+    "Colloid boluses as the first fluid; labs once the pressure recovers"
+   ],
+   "answer": 0,
+   "chainStep": "Hemodynamics first; two large-bore IVs; blood count, crossmatch, electrolytes, coagulation; ask about anticoagulants, antiplatelets and liver disease",
+   "why": "Resuscitation starts as soon as the patient is unstable, with crystalloid: colloids add cost without a survival benefit. Blood typing, hemoglobin, electrolytes and coagulation go off at once, and the history asks about antiplatelets, anticoagulants and liver disease, because each one changes the next step. Endoscopy comes once resuscitation is under way, never before it.",
+   "next": "meds",
+   "sources": [
+    {
+     "docId": "pmid:31634917",
+     "where": "Statement A1; Statement A1 discussion"
+    },
+    {
+     "docId": "pmid:35120736",
+     "where": "6.1"
+    },
+    {
+     "docId": "pmid:31921329",
+     "where": "Bleeding peptic ulcer, diagnosis (1D); Bleeding peptic ulcer, resuscitation: history"
+    },
+    {
+     "docId": "pmid:25887380",
+     "where": "Volume resuscitation and blood products"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.3.1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "IV access",
+     "dose": "Two 16 to 18G cannulae on admission",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25887380",
+       "where": "Volume resuscitation and blood products"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "meds",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Medication history",
+   "outcomes": [
+    {
+     "id": "none",
+     "if": "No antithrombotic drugs",
+     "next": "transfuse"
+    },
+    {
+     "id": "warfarin",
+     "if": "Warfarin, still bleeding; INR raised",
+     "next": "warfarin_rev"
+    },
+    {
+     "id": "warfarin_stopped",
+     "if": "Warfarin, bleeding has stopped; no ongoing hematemesis or melena",
+     "orders": [
+      {
+       "item": "Warfarin when the bleeding has stopped",
+       "dose": "Manage by the local warfarin protocol",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:011638868e82",
+         "where": "1.2.6"
+        }
+       ]
+      }
+     ],
+     "next": "transfuse"
+    },
+    {
+     "id": "xa",
+     "if": "Apixaban or rivaroxaban, life-threatening bleed; shock or ongoing heavy bleeding",
+     "next": "xa_rev"
+    },
+    {
+     "id": "xa_minor",
+     "if": "Apixaban or rivaroxaban, not life-threatening; stable, modest bleeding",
+     "orders": [
+      {
+       "item": "The DOAC",
+       "dose": "Withhold while the bleed is ongoing",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29691276",
+         "where": "Statement 14 discussion"
+        }
+       ]
+      },
+      {
+       "item": "Andexanet alfa",
+       "dose": "Not available in the US since 22 December 2025 (FDA: risks outweigh benefits); ACG-CAG 2022 suggests against it in GI bleeding; NICE 1.2.8 still allows it in the UK",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "url:20b209257bcc",
+         "where": "Update on the Safety of Andexxa"
+        },
+        {
+         "docId": "pmid:35368325",
+         "where": "Abstract, acute GI bleeding recommendations"
+        },
+        {
+         "docId": "url:011638868e82",
+         "where": "1.2.8"
+        }
+       ],
+       "note": "NICE (UK) differs"
+      },
+      {
+       "item": "Restarting the DOAC",
+       "dose": "Once bleeding is controlled it can restart within 1 to 2 days; anticoagulation returns within hours",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29691276",
+         "where": "Statement 14 discussion"
+        }
+       ]
+      }
+     ],
+     "next": "transfuse"
+    },
+    {
+     "id": "aspirin",
+     "if": "Low-dose aspirin alone; secondary prevention",
+     "orders": [
+      {
+       "item": "Aspirin",
+       "dose": "Continue once hemostasis is achieved",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:011638868e82",
+         "where": "1.6.1"
+        }
+       ]
+      },
+      {
+       "item": "Platelet transfusion for antiplatelet use",
+       "dose": "No benefit with a normal platelet count",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "pmid:29691276",
+         "where": "Statement 4; Statement 4 discussion"
+        }
+       ]
+      }
+     ],
+     "next": "transfuse"
+    },
+    {
+     "id": "antiplatelet",
+     "if": "Aspirin plus clopidogrel; a recent coronary stent",
+     "next": "antiplatelet"
+    }
+   ]
+  },
+  {
+   "id": "warfarin_rev",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "On warfarin, INR 3.6, still bleeding. Reversal?",
+   "options": [
+    "Prothrombin complex concentrate with vitamin K, without delaying endoscopy",
+    "Fresh frozen plasma alone until the INR is below 1.5",
+    "IV vitamin K alone, then repeat the INR in 6 hours",
+    "Prothrombin complex concentrate, and delay endoscopy until the INR is normal"
+   ],
+   "answer": 0,
+   "chainStep": "Prothrombin complex concentrate with vitamin K for active bleeding; endoscopy is not delayed for the INR",
+   "why": "Active bleeding on warfarin calls for prothrombin complex concentrate with vitamin K, the preferred combination for urgent reversal: PCC acts faster than plasma with little risk of fluid overload. Plasma is the fallback only when PCC is unavailable. Coagulopathy is treated as needed, but endoscopy is not delayed for the INR. The North American GI guideline is more cautious: it suggests against vitamin K and plasma and gives PCC only if needed.",
+   "next": "transfuse",
+   "sources": [
+    {
+     "docId": "url:011638868e82",
+     "where": "1.2.5"
+    },
+    {
+     "docId": "pmid:29691276",
+     "where": "Statement 14 discussion"
+    },
+    {
+     "docId": "pmid:31634917",
+     "where": "Statement A6 discussion; Statement A6"
+    },
+    {
+     "docId": "pmid:35368325",
+     "where": "Abstract, acute GI bleeding recommendations"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Prothrombin complex concentrate",
+     "dose": "Kcentra, for acute major bleeding: INR 2 to under 4, 25 units/kg (not over 2,500 units); INR 4 to 6, 35 units/kg (3,500); over 6, 50 units/kg (5,000); weight counted up to 100 kg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2a9fe9c19e10",
+       "where": "1; 2.1 Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Vitamin K",
+     "dose": "Given concurrently with the PCC; dose not stated in the sources read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:2a9fe9c19e10",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "Fresh frozen plasma",
+     "dose": "Only if PCC is unavailable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31634917",
+       "where": "Statement A6 discussion"
+      }
+     ]
+    },
+    {
+     "item": "Restarting warfarin",
+     "dose": "Early, once hemostasis is achieved, above all with a high thromboembolic risk",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29691276",
+       "where": "Statement 14 discussion"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "xa_rev",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "On apixaban, vomiting blood, BP 84/50. Anticoagulant?",
+   "options": [
+    "Stop apixaban; resuscitate and scope without waiting for the drug to clear",
+    "Idarucizumab 5 g IV",
+    "Wait until apixaban clears before endoscopy",
+    "Four-factor PCC, and hold endoscopy until it has run"
+   ],
+   "answer": 0,
+   "chainStep": "Stop apixaban; resuscitate and scope without waiting for the drug to clear",
+   "why": "The anticoagulant is withheld while the bleed goes on, and endoscopy is not delayed for it: a DOAC's half-life is 8 to 12 hours and its effect should be gone 1 to 2 days after the last dose. The North American GI guideline suggests against both andexanet and PCC in GI bleeding, and andexanet left the US market in December 2025 after the FDA judged its thrombotic risk to outweigh its benefit; NICE still allows it for life-threatening GI bleeding in the UK. Idarucizumab reverses dabigatran, not the factor Xa inhibitors.",
+   "next": "transfuse",
+   "sources": [
+    {
+     "docId": "pmid:29691276",
+     "where": "Statement 14 discussion"
+    },
+    {
+     "docId": "pmid:31634917",
+     "where": "Statement A6; Statement A6 discussion"
+    },
+    {
+     "docId": "pmid:35368325",
+     "where": "Abstract, acute GI bleeding recommendations"
+    },
+    {
+     "docId": "url:20b209257bcc",
+     "where": "Update on the Safety of Andexxa"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.2.8"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Andexanet alfa",
+     "dose": "Not available in the US since 22 December 2025 (FDA: risks outweigh benefits); ACG-CAG 2022 suggests against it in GI bleeding; NICE 1.2.8 still allows it in the UK",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:20b209257bcc",
+       "where": "Update on the Safety of Andexxa"
+      },
+      {
+       "docId": "pmid:35368325",
+       "where": "Abstract, acute GI bleeding recommendations"
+      },
+      {
+       "docId": "url:011638868e82",
+       "where": "1.2.8"
+      }
+     ],
+     "note": "NICE (UK) differs"
+    },
+    {
+     "item": "Restarting the DOAC",
+     "dose": "Once bleeding is controlled it can restart within 1 to 2 days; anticoagulation returns within hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29691276",
+       "where": "Statement 14 discussion"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "antiplatelet",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Aspirin and clopidogrel, a drug-eluting stent 4 months ago. Antiplatelets?",
+   "options": [
+    "Continue aspirin; hold clopidogrel briefly and restart it with cardiology",
+    "Stop both until a repeat endoscopy shows the ulcer has healed",
+    "Platelet transfusion to reverse both drugs before endoscopy",
+    "Stop aspirin, which harms the mucosa, and keep clopidogrel alone"
+   ],
+   "answer": 0,
+   "chainStep": "Continue aspirin; hold clopidogrel briefly and restart it with cardiology (not off more than 5 days with a drug-eluting stent); no platelet transfusion",
+   "why": "Stopping both risks stent thrombosis within days, so aspirin, which causes less rebleeding, continues, and clopidogrel is paused only briefly: with a drug-eluting stent it should not be off for more than 5 days. Low-dose aspirin for secondary prevention continues once hemostasis is achieved; clopidogrel is discussed with the cardiologist. Platelet transfusion has no benefit in a patient with a normal count.",
+   "next": "transfuse",
+   "sources": [
+    {
+     "docId": "pmid:29691276",
+     "where": "Statement 13; Statement 13 discussion; Statement 4; Statement 4 discussion"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.6.1; 1.6.3"
+    },
+    {
+     "docId": "pmid:35368325",
+     "where": "Abstract, acute GI bleeding recommendations"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Platelet transfusion for antiplatelet use",
+     "dose": "No benefit with a normal platelet count",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:29691276",
+       "where": "Statement 4; Statement 4 discussion"
+      },
+      {
+       "docId": "pmid:35368325",
+       "where": "Abstract, acute GI bleeding recommendations"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "transfuse",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Red cell transfusion strategy?",
+   "options": [
+    "Restrictive: transfuse below 7 to 8 g/dL, higher with heart disease; massive bleeding follows its protocol",
+    "Liberal: transfuse to keep the hemoglobin above 10 g/dL and protect the heart",
+    "No red cells until the hemoglobin is below 6 g/dL",
+    "Plasma and platelets routinely with the red cells to prevent a coagulopathy"
+   ],
+   "answer": 0,
+   "chainStep": "Restrictive red cells: transfuse below 7 to 8 g/dL (higher with heart disease); massive bleeding follows the massive transfusion protocol",
+   "why": "A restrictive strategy lowers mortality and rebleeding. The International Consensus transfuses below 8 g/dL without cardiovascular disease and at a higher threshold with it; WSES keeps the hemoglobin above 7; Baveno VII targets 7 to 8 in variceal bleeding. In massive bleeding the hemoglobin lags behind the loss, so blood, platelets and clotting factors follow the local massive bleeding protocol and the clinical picture. Platelets and plasma are not routine.",
+   "next": "first_look",
+   "sources": [
+    {
+     "docId": "pmid:31634917",
+     "where": "Statement A4; Statement A5; Statement A4 key evidence; Statement A4 discussion"
+    },
+    {
+     "docId": "pmid:31921329",
+     "where": "Bleeding peptic ulcer, resuscitation (1B)"
+    },
+    {
+     "docId": "pmid:29691276",
+     "where": "Statement 3 discussion"
+    },
+    {
+     "docId": "pmid:35120736",
+     "where": "6.2"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.2.1; 1.2.2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Platelets",
+     "dose": "Actively bleeding with a count under 50 x 10^9/L; not for stable patients who are not bleeding. In variceal bleeding, Baveno VII corrects case by case only when bleeding is not controlled (6.37)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:011638868e82",
+       "where": "1.2.3; 1.2.4"
+      },
+      {
+       "docId": "pmid:35120736",
+       "where": "6.37"
+      }
+     ]
+    },
+    {
+     "item": "Fresh frozen plasma",
+     "dose": "Actively bleeding with a PT (INR) or aPTT over 1.5 times normal; cryoprecipitate if fibrinogen stays under 1.5 g/L. Not in variceal bleeding (Baveno VII)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:011638868e82",
+       "where": "1.2.4"
+      },
+      {
+       "docId": "pmid:35120736",
+       "where": "6.36"
+      }
+     ]
+    },
+    {
+     "item": "Recombinant factor VIIa",
+     "dose": "Not unless every other method has failed",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:011638868e82",
+       "where": "1.2.7"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "first_look",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Presentation and vitals after the first fluids",
+   "outcomes": [
+    {
+     "id": "upper",
+     "if": "Upper, stable; hematemesis or melena, stable after fluids, no sign of cirrhosis",
+     "ddx": {
+      "lead": [
+       "Peptic ulcer"
+      ],
+      "out": []
+     },
+     "next": "gbs"
+    },
+    {
+     "id": "upper_shock",
+     "if": "Upper, in shock; hematemesis or melena, still hypotensive after fluids, no sign of cirrhosis",
+     "ddx": {
+      "lead": [
+       "Peptic ulcer"
+      ],
+      "out": []
+     },
+     "next": "shock_scope"
+    },
+    {
+     "id": "cirrhosis",
+     "if": "Suspected variceal; hematemesis or melena with known cirrhosis or its stigmata",
+     "ddx": {
+      "lead": [
+       "Varices"
+      ],
+      "out": []
+     },
+     "next": "vasoactive"
+    },
+    {
+     "id": "lower",
+     "if": "Lower, stable; hematochezia, stable after fluids",
+     "ddx": {
+      "lead": [
+       "Diverticular bleed"
+      ],
+      "out": []
+     },
+     "next": "lower_sev"
+    },
+    {
+     "id": "lower_shock",
+     "if": "Hematochezia with shock; still hypotensive after fluids or blood",
+     "ddx": {
+      "lead": [
+       "Diverticular bleed",
+       "Peptic ulcer"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Upper endoscopy first",
+       "dose": "When an upper source is likely: a minority of upper bleeds present with hematochezia, and endoscopy is the usual first test for an upper bleed",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39488353",
+         "where": "Introduction/Background; Variant 1 discussion"
+        }
+       ]
+      }
+     ],
+     "next": "lower_shock"
+    }
+   ]
+  },
+  {
+   "id": "gbs",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Upper GI bleed, stable. Risk score before deciding on admission?",
+   "options": [
+    "Glasgow-Blatchford score",
+    "AIMS65 to select patients for discharge",
+    "The full Rockall score before endoscopy",
+    "No score; clinical judgment alone"
+   ],
+   "answer": 0,
+   "chainStep": "Glasgow-Blatchford score at first assessment; 0 or 1 is very low risk",
+   "why": "The Glasgow-Blatchford score is the pre-endoscopy tool: it misclassifies 1% or fewer of high-risk patients as low risk. AIMS65 can miss about 20% of high-risk patients at low cut-offs, and the full Rockall score belongs after endoscopy. A score gives the consistency that clinical judgment cannot.",
+   "next": "gbs_result",
+   "sources": [
+    {
+     "docId": "pmid:31634917",
+     "where": "Statement A2a; Statement A2b; Statements A2a and A2b discussion"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.1.1"
+    },
+    {
+     "docId": "pmid:29691276",
+     "where": "Statement 1"
+    }
+   ],
+   "calcs": [
+    "gbs"
+   ]
+  },
+  {
+   "id": "gbs_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Glasgow-Blatchford score",
+   "outcomes": [
+    {
+     "id": "gbs_low",
+     "if": "Blatchford 0 or 1; very low risk",
+     "next": "outpatient"
+    },
+    {
+     "id": "gbs_admit",
+     "if": "Blatchford 2 or more; admit",
+     "next": "egd_timing"
+    }
+   ]
+  },
+  {
+   "id": "outpatient",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Blatchford 0. Disposition?",
+   "options": [
+    "Discharge with outpatient endoscopy",
+    "Admit for endoscopy within 12 hours",
+    "Admit for an IV PPI infusion and observation",
+    "CT angiography before discharge"
+   ],
+   "answer": 0,
+   "chainStep": "Blatchford 0 or 1: discharge with outpatient endoscopy",
+   "why": "A Glasgow-Blatchford score of 0 or 1 marks very low risk of rebleeding or death: no admission and no inpatient endoscopy, with endoscopy as an outpatient. NICE considers early discharge at a score of 0. Urgent endoscopy within 12 hours is for the high-risk group, and CT is for when endoscopy is not available.",
+   "next": "end_outpatient",
+   "sources": [
+    {
+     "docId": "pmid:31634917",
+     "where": "Statement A2a"
+    },
+    {
+     "docId": "pmid:31921329",
+     "where": "Endoscopic treatment, risk groups (2C); Endoscopic treatment, discussion; Endoscopic treatment, risk groups (1C); Bleeding peptic ulcer, diagnosis (2D)"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.1.2"
+    }
+   ]
+  },
+  {
+   "id": "egd_timing",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Admitted, Blatchford 2 or more, stable after fluids. Endoscopy when?",
+   "options": [
+    "Within 24 hours of presentation (WSES: within 12 in its high-risk group)",
+    "Only if the hemoglobin keeps falling on serial checks",
+    "Elective, as an outpatient after discharge",
+    "CT angiography first; endoscopy only if it is positive"
+   ],
+   "answer": 0,
+   "chainStep": "Upper endoscopy within 24 hours of presentation (within 12 hours in the WSES high-risk group)",
+   "why": "Admitted patients get endoscopy within 24 hours of presentation. WSES asks for 12 hours in its high-risk group; the International Consensus could not recommend for or against 12 hours. Endoscopy diagnoses, treats and grades the risk of rebleeding, so a steady hemoglobin is no reason to skip it. Angiography before endoscopy gives unacceptable rates of negative studies, and CT is for when endoscopy is not available.",
+   "next": "egd_result",
+   "sources": [
+    {
+     "docId": "pmid:31634917",
+     "where": "Statement B3; No Recommendation B"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.3.2"
+    },
+    {
+     "docId": "pmid:31921329",
+     "where": "Endoscopic treatment, risk groups (1C); Angiography (2C) discussion; Bleeding peptic ulcer, diagnosis (2D)"
+    }
+   ],
+   "orders": [
+    {
+     "item": "IV PPI before endoscopy",
+     "dose": "Sources differ: WSES suggests starting a PPI as soon as possible; NICE does not offer acid suppression before endoscopy, and the Asia-Pacific group rejects routine IV PPI. It never replaces or delays endoscopy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31921329",
+       "where": "Pharmacological regimen (2B); Pharmacological regimen, discussion"
+      },
+      {
+       "docId": "url:011638868e82",
+       "where": "1.4.3"
+      },
+      {
+       "docId": "pmid:29691276",
+       "where": "Rejected statement 2 discussion"
+      }
+     ],
+     "note": "The open sources disagree on starting a PPI before endoscopy."
+    },
+    {
+     "item": "Erythromycin before endoscopy",
+     "dose": "Suggested by WSES; no dose given there",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:31921329",
+       "where": "Pharmacological regimen (2B)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "egd_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Upper endoscopy",
+   "outcomes": [
+    {
+     "id": "high_risk",
+     "if": "High-risk stigmata; a spurting or oozing ulcer, or a non-bleeding visible vessel",
+     "ddx": {
+      "lead": [
+       "Peptic ulcer"
+      ],
+      "out": []
+     },
+     "next": "endo_therapy"
+    },
+    {
+     "id": "clot",
+     "if": "Adherent clot on the ulcer; no active bleeding under it seen",
+     "ddx": {
+      "lead": [
+       "Peptic ulcer"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Adherent clot",
+       "dose": "Endoscopic therapy may be considered, or PPI therapy alone",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31634917",
+         "where": "Statement C3 discussion (statement B6)"
+        }
+       ]
+      },
+      {
+       "item": "Handling the clot",
+       "dose": "WSES: non-aggressive irrigation rather than mechanical dislodgment",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31921329",
+         "where": "Endoscopic treatment, discussion"
+        }
+       ]
+      }
+     ],
+     "next": "end_clot"
+    },
+    {
+     "id": "low_risk",
+     "if": "Clean-based ulcer; no stigmata of recent bleeding",
+     "ddx": {
+      "lead": [
+       "Peptic ulcer"
+      ],
+      "out": []
+     },
+     "next": "low_risk_ulcer"
+    },
+    {
+     "id": "mallory_weiss",
+     "if": "Mallory-Weiss tear; no active bleeding",
+     "ddx": {
+      "lead": [
+       "Mallory-Weiss tear"
+      ],
+      "out": []
+     },
+     "next": "end_mallory_weiss"
+    },
+    {
+     "id": "no_source",
+     "if": "No upper source; normal upper endoscopy",
+     "ddx": {
+      "lead": [
+       "Small bowel source"
+      ],
+      "out": []
+     },
+     "next": "neg_egd"
+    }
+   ]
+  },
+  {
+   "id": "endo_therapy",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "High-risk stigmata on the ulcer. Endoscopic treatment?",
+   "options": [
+    "Hemostasis with clips or thermal coagulation, usually combined with epinephrine injection",
+    "Epinephrine injection alone, repeated until the bleeding stops",
+    "Hemostatic powder sprayed on the ulcer as the only treatment",
+    "No endoscopic treatment; a high-dose PPI infusion alone"
+   ],
+   "answer": 0,
+   "chainStep": "Endoscopic hemostasis: clips or thermal coagulation, usually with epinephrine; never epinephrine alone",
+   "why": "Spurting, oozing and visible-vessel ulcers get endoscopic hemostasis. Clips, thermocoagulation or sclerosant all work, and WSES prefers two modalities. Epinephrine alone is not enough: clips beat it for rebleeding, and NICE rules it out as monotherapy. Hemostatic powder is a temporizing measure, not the sole treatment, and drugs alone rebleed more than endoscopic therapy.",
+   "next": "post_hemostasis",
+   "sources": [
+    {
+     "docId": "pmid:31921329",
+     "where": "Endoscopic treatment (1C); Endoscopic treatment (2B); Non-operative management, discussion"
+    },
+    {
+     "docId": "pmid:31634917",
+     "where": "Statement B10a; Statement B10b; Statements B10a and B10b key evidence; Statement B11a; Statement B11b; Statements B10a and B10b discussion"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.4.1; 1.4.2"
+    }
+   ]
+  },
+  {
+   "id": "post_hemostasis",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Hemostasis achieved. Acid suppression?",
+   "options": [
+    "High-dose PPI: 80 mg IV bolus, then 8 mg/h for 72 hours; then oral twice daily to day 14",
+    "IV H2 blocker infusion for 72 hours, then oral H2 blocker",
+    "No acid suppression once the vessel has been treated",
+    "Oral PPI once daily, started at discharge for 8 weeks"
+   ],
+   "answer": 0,
+   "chainStep": "High-dose PPI: 80 mg IV bolus, then 8 mg/h for 72 hours; oral twice daily to day 14; test for H. pylori",
+   "why": "After successful endoscopic therapy of high-risk stigmata, a high-dose IV PPI (80 mg bolus, then 8 mg per hour for 72 hours) reduces rebleeding and mortality, and it is recommended over H2 blockers or no treatment. Twice-daily oral PPI follows through day 14, then once daily.",
+   "next": "rebleed_check",
+   "sources": [
+    {
+     "docId": "pmid:31634917",
+     "where": "Statement C3; Statement C3 discussion; Statement C4"
+    },
+    {
+     "docId": "pmid:31921329",
+     "where": "Pharmacological regimen (2B)"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.4.4"
+    }
+   ],
+   "orders": [
+    {
+     "item": "High-dose PPI",
+     "dose": "80 mg IV bolus, then 8 mg/h continuous infusion for 72 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31634917",
+       "where": "Statement C3 discussion"
+      },
+      {
+       "docId": "pmid:31921329",
+       "where": "Pharmacological regimen (2B)"
+      }
+     ]
+    },
+    {
+     "item": "Then",
+     "dose": "Oral PPI twice daily through day 14, then once daily; 6 to 8 weeks in all",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31634917",
+       "where": "Statement C4"
+      },
+      {
+       "docId": "pmid:31921329",
+       "where": "Pharmacological regimen (1B)"
+      }
+     ]
+    },
+    {
+     "item": "H. pylori",
+     "dose": "Test every bleeding ulcer; eradicate if positive and confirm the eradication",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31921329",
+       "where": "Pharmacological regimen, discussion"
+      }
+     ]
+    },
+    {
+     "item": "Aspirin for secondary prevention",
+     "dose": "Continue once hemostasis is achieved; if it was stopped, the North American guideline restarts it the day endoscopy confirms hemostasis. The Asia-Pacific group restarts other antiplatelets about 72 hours after endoscopic therapy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:011638868e82",
+       "where": "1.6.1"
+      },
+      {
+       "docId": "pmid:35368325",
+       "where": "Abstract, acute GI bleeding recommendations"
+      },
+      {
+       "docId": "pmid:29691276",
+       "where": "Statement 12 discussion"
+      }
+     ]
+    },
+    {
+     "item": "NSAIDs, COX-2 inhibitors included",
+     "dose": "Stop during the acute phase",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:011638868e82",
+       "where": "1.6.2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rebleed_check",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The next 72 hours",
+   "outcomes": [
+    {
+     "id": "settled",
+     "if": "No rebleeding; stable, hemoglobin steady",
+     "next": "end_ulcer"
+    },
+    {
+     "id": "rebleed",
+     "if": "Rebleeds, stable; fresh melena, ulcer under 2 cm, blood pressure holding",
+     "next": "repeat_egd"
+    },
+    {
+     "id": "rebleed_unstable",
+     "if": "Rebleeds, unstable; hypotension or an ulcer 2 cm or more",
+     "orders": [
+      {
+       "item": "Rebleeding with hypotension or an ulcer over 2 cm",
+       "dose": "WSES: surgery without another endoscopy. NICE: interventional radiology for unstable patients who rebleed, urgent surgery if it is not promptly available",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31921329",
+         "where": "Surgery (1D)"
+        },
+        {
+         "docId": "url:011638868e82",
+         "where": "1.4.7"
+        }
+       ],
+       "note": "The two sources differ on surgery versus radiology first."
+      }
+     ],
+     "next": "end_rebleed_unstable"
+    }
+   ]
+  },
+  {
+   "id": "repeat_egd",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Fresh melena after endoscopic treatment; ulcer under 2 cm; pressure holding. Next?",
+   "options": [
+    "Repeat endoscopy with further endoscopic treatment",
+    "Emergency surgery",
+    "Increase the PPI infusion and observe",
+    "Transfuse to a hemoglobin of 10 and observe"
+   ],
+   "answer": 0,
+   "chainStep": "Repeat endoscopy with further endoscopic treatment for a stable rebleed",
+   "why": "Endoscopy is the first-line treatment for a rebleeding ulcer, at the earliest opportunity. In the randomized trial, endoscopic retreatment gave lasting control in 35 of 48 patients with fewer complications than surgery; hypotension and an ulcer of 2 cm or more predicted its failure.",
+   "next": "repeat_result",
+   "sources": [
+    {
+     "docId": "pmid:31921329",
+     "where": "Recurrent bleeding (1C); Recurrent bleeding, discussion; Surgery (1D) discussion"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.4.6"
+    }
+   ]
+  },
+  {
+   "id": "repeat_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Repeat endoscopy",
+   "outcomes": [
+    {
+     "id": "held",
+     "if": "Hemostasis holds",
+     "next": "end_ulcer"
+    },
+    {
+     "id": "failed",
+     "if": "Bleeds again after the second endoscopic treatment; still stable",
+     "next": "tae"
+    }
+   ]
+  },
+  {
+   "id": "tae",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Two endoscopic treatments have failed; still bleeding. Next?",
+   "options": [
+    "Angiographic embolization where available; surgery if it is not, or if it fails",
+    "A third endoscopic attempt with clips and thermal therapy",
+    "Hemostatic powder spray as the definitive treatment",
+    "Transfuse and continue the high-dose PPI infusion, then reassess"
+   ],
+   "answer": 0,
+   "chainStep": "Angiographic embolization after two failed endoscopic treatments; surgery if it is unavailable or fails",
+   "why": "When endoscopic hemostasis fails twice in a stable patient, WSES suggests angioembolization where the skills and equipment exist, and surgical hemostasis when it is not available. ACR rates visceral arteriography usually appropriate for bleeding that continues after endoscopic treatment; NICE offers patients who rebleed a repeat endoscopy with further treatment or emergency surgery. Powder only temporizes.",
+   "next": "end_tae",
+   "sources": [
+    {
+     "docId": "pmid:31921329",
+     "where": "Angioembolization (2D); Surgery (1D); Recurrent bleeding (2D)"
+    },
+    {
+     "docId": "pmid:39488353",
+     "where": "Variant 2 rating table"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.4.6"
+    },
+    {
+     "docId": "pmid:31634917",
+     "where": "Statement B11a"
+    }
+   ]
+  },
+  {
+   "id": "low_risk_ulcer",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Clean-based ulcer, no stigmata of bleeding. Next?",
+   "options": [
+    "No endoscopic hemostasis; an H. pylori test and early discharge",
+    "Clips and epinephrine on the ulcer base to prevent rebleeding",
+    "High-dose IV PPI infusion for 72 hours",
+    "CT angiography to look for a second source"
+   ],
+   "answer": 0,
+   "chainStep": "Clean-based ulcer: no endoscopic hemostasis; H. pylori test; early discharge",
+   "why": "Endoscopic hemostasis is for spurting, oozing and visible-vessel ulcers; a clean base needs none, and endoscopy is what identifies the low-risk patient for early discharge. Every bleeding ulcer gets an H. pylori test. The 72-hour high-dose infusion is for high-risk stigmata after endoscopic therapy.",
+   "next": "end_lowrisk",
+   "sources": [
+    {
+     "docId": "pmid:31921329",
+     "where": "Endoscopic treatment (1C); Diagnosis, endoscopic findings (1C) discussion; Pharmacological regimen, discussion"
+    },
+    {
+     "docId": "pmid:31634917",
+     "where": "Statements B10a and B10b discussion; Statement C3"
+    }
+   ],
+   "orders": [
+    {
+     "item": "PPI for a clean-based ulcer",
+     "dose": "Agent, dose and duration not stated in these sources",
+     "status": "pending"
+    },
+    {
+     "item": "Antiplatelets",
+     "dose": "Can restart on day 1 when endoscopy shows a clean-based ulcer",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29691276",
+       "where": "Statement 12 discussion"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "neg_egd",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Melena, upper endoscopy normal, stable. Next?",
+   "options": [
+    "Colonoscopy; then the small bowel (CT enterography or capsule) if both are negative",
+    "Push enteroscopy before a colonoscopy",
+    "Exploratory laparotomy to find the source",
+    "Empiric PPI for 8 weeks and no further tests"
+   ],
+   "answer": 0,
+   "chainStep": "Normal upper endoscopy: colonoscopy next; CT enterography or capsule endoscopy if both are negative",
+   "why": "Melena can come from the lower tract. When an adequate colonoscopy and upper endoscopy are both negative, the small bowel is the usual source, and capsule endoscopy and CT enterography are usually appropriate. Surgery is not a tool to localize bleeding in a stable patient.",
+   "next": "end_neg_egd",
+   "sources": [
+    {
+     "docId": "pmid:33958109",
+     "where": "Introduction/Background; Variant 5 rating table; Variant 1, E (surgery)"
+    },
+    {
+     "docId": "pmid:39488353",
+     "where": "Variant 4 rating table; Variant 4 discussion"
+    }
+   ]
+  },
+  {
+   "id": "shock_scope",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Hematemesis, BP 84/50 after 1 L of crystalloid. Next?",
+   "options": [
+    "Blood under the massive transfusion protocol, then endoscopy as soon as resuscitated",
+    "Wait for the hemoglobin before giving any blood",
+    "Endoscopy within 24 hours, as for a stable bleed",
+    "Endoscopy now, before any resuscitation, to stop the source"
+   ],
+   "answer": 0,
+   "chainStep": "Blood under the massive transfusion protocol; endoscopy immediately after resuscitation",
+   "why": "In shock the hemoglobin lags behind the loss, so transfusion follows the clinical picture and the massive bleeding protocol, not the number. Unstable patients with severe upper bleeding get endoscopy immediately after resuscitation and stabilization, and in an actively bleeding ulcer endoscopy is part of the resuscitation.",
+   "next": "egd_result",
+   "sources": [
+    {
+     "docId": "url:011638868e82",
+     "where": "1.2.1; 1.3.1"
+    },
+    {
+     "docId": "pmid:31634917",
+     "where": "Statement A4 discussion"
+    },
+    {
+     "docId": "pmid:29691276",
+     "where": "Statement 5"
+    },
+    {
+     "docId": "pmid:31921329",
+     "where": "Bleeding peptic ulcer, non-operative management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Endoscopy not possible because of instability",
+     "dose": "CT angiography of the abdomen and pelvis is usually appropriate",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39488353",
+       "where": "Variant 1 discussion; Variant 1 rating table"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vasoactive",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Cirrhosis with an upper GI bleed. Before endoscopy?",
+   "options": [
+    "Vasoactive drug and antibiotic prophylaxis now, before endoscopy",
+    "Wait for endoscopy to confirm varices before any drug",
+    "Fresh frozen plasma to correct the INR before endoscopy",
+    "Tranexamic acid infusion to stabilize the clot"
+   ],
+   "answer": 0,
+   "chainStep": "Octreotide 50 micrograms IV, then 25 to 50 micrograms per hour (or terlipressin 2 mg IV every 4 hours), and antibiotic prophylaxis from admission, before endoscopy; restrictive transfusion to 7 to 8 g/dL",
+   "why": "In suspected variceal bleeding a vasoactive drug (terlipressin, somatostatin or octreotide) starts as soon as possible and runs for 2 to 5 days, and antibiotic prophylaxis is part of the treatment from admission. Plasma does not correct the coagulopathy of cirrhosis and can worsen portal hypertension; tranexamic acid and factor VIIa are not recommended.",
+   "next": "varix_scope",
+   "sources": [
+    {
+     "docId": "pmid:35120736",
+     "where": "6.5; 6.7; 6.36; 6.38"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.5.1; 1.5.2"
+    },
+    {
+     "docId": "pmid:25887380",
+     "where": "Recommendations, control of bleeding"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Terlipressin",
+     "dose": "2 mg IV every 4 hours, until hemostasis or up to 5 days; monitor sodium",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25887380",
+       "where": "Pharmacological treatment, terlipressin"
+      },
+      {
+       "docId": "url:011638868e82",
+       "where": "1.5.1"
+      },
+      {
+       "docId": "pmid:35120736",
+       "where": "6.6"
+      }
+     ]
+    },
+    {
+     "item": "Octreotide",
+     "dose": "50 micrograms IV bolus, then 25 to 50 micrograms per hour",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25887380",
+       "where": "Pharmacological treatment, somatostatin and octreotide"
+      }
+     ]
+    },
+    {
+     "item": "Somatostatin",
+     "dose": "Dose not taken: the BSG 2015 text prints it in milligrams, an apparent misprint",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:25887380",
+       "where": "Pharmacological treatment, somatostatin and octreotide (dose printed in mg; not used)"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotic",
+     "dose": "Ceftriaxone 1 g IV every 24 hours: more effective than oral norfloxacin against Gram-negative sepsis (BSG); Baveno VII names it for advanced cirrhosis, settings with common quinolone resistance, and patients on quinolone prophylaxis; follow local resistance patterns",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "6.9"
+      },
+      {
+       "docId": "pmid:25887380",
+       "where": "Pharmacological treatment, antibiotics"
+      }
+     ]
+    },
+    {
+     "item": "Red cells",
+     "dose": "Restrictive: target hemoglobin 7 to 8 g/dL",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "6.2"
+      }
+     ]
+    },
+    {
+     "item": "Fresh frozen plasma",
+     "dose": "Not recommended in acute variceal bleeding",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "6.36"
+      }
+     ]
+    },
+    {
+     "item": "Tranexamic acid, recombinant factor VIIa",
+     "dose": "Not recommended in acute variceal bleeding",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "6.38"
+      }
+     ]
+    },
+    {
+     "item": "Anticoagulants",
+     "dose": "Stop until the bleeding is controlled",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "6.39"
+      }
+     ]
+    },
+    {
+     "item": "Airway",
+     "dose": "Intubate before endoscopy with altered consciousness or active hematemesis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "6.3"
+      }
+     ]
+    },
+    {
+     "item": "Erythromycin",
+     "dose": "250 mg IV 30 to 120 minutes before endoscopy, unless the QT is prolonged",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "6.19"
+      }
+     ]
+    },
+    {
+     "item": "Lactulose",
+     "dose": "Oral or by enema, to clear blood from the gut and prevent encephalopathy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "6.33"
+      }
+     ]
+    },
+    {
+     "item": "PPI started before endoscopy",
+     "dose": "Stop right after the procedure unless there is a strict indication",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "6.12"
+      }
+     ]
+    },
+    {
+     "item": "Where",
+     "dose": "Intensive or intermediate care",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "6.20"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "varix_scope",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Vasoactive drug and antibiotics running. Endoscopy when?",
+   "options": [
+    "Within 12 hours of presentation, once resuscitated; sooner if unstable",
+    "Only if bleeding continues after 48 hours of drugs",
+    "After 5 days of vasoactive therapy",
+    "Within 72 hours, once the INR has been corrected"
+   ],
+   "answer": 0,
+   "chainStep": "Upper endoscopy within 12 hours of presentation after resuscitation; as soon as safely possible if unstable",
+   "why": "Baveno VII sets endoscopy within 12 hours of presentation after resuscitation, and as soon as safely possible in an unstable patient; NICE and BSG 2015 set 24 hours, earlier with heavy bleeding, so 12 hours meets both. The drugs start first and do not wait for the scope, and treatment aims at portal pressure, not at correcting the clotting tests.",
+   "next": "varix_result",
+   "sources": [
+    {
+     "docId": "pmid:35120736",
+     "where": "6.17; 6.5; 6.34"
+    },
+    {
+     "docId": "pmid:25887380",
+     "where": "Endoscopic therapy"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.3.1; 1.3.2"
+    }
+   ]
+  },
+  {
+   "id": "varix_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Upper endoscopy",
+   "outcomes": [
+    {
+     "id": "esoph",
+     "if": "Esophageal varices; the bleeding source",
+     "ddx": {
+      "lead": [
+       "Varices"
+      ],
+      "out": []
+     },
+     "next": "evl"
+    },
+    {
+     "id": "gastric",
+     "if": "Gastric varices; isolated, or extending beyond the cardia",
+     "ddx": {
+      "lead": [
+       "Varices"
+      ],
+      "out": []
+     },
+     "next": "glue"
+    },
+    {
+     "id": "ulcer",
+     "if": "Not variceal; an ulcer with high-risk stigmata, varices not bleeding",
+     "ddx": {
+      "lead": [
+       "Peptic ulcer"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Vasoactive drug once a non-variceal source is found",
+       "dose": "Not stated in these sources",
+       "status": "pending"
+      }
+     ],
+     "next": "endo_therapy"
+    }
+   ]
+  },
+  {
+   "id": "evl",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Esophageal varices are the source. Endoscopic treatment?",
+   "options": [
+    "Band ligation",
+    "Sclerotherapy",
+    "Cyanoacrylate glue injection",
+    "Hemostatic powder alone"
+   ],
+   "answer": 0,
+   "chainStep": "Band ligation of the bleeding esophageal varices",
+   "why": "Ligation is the recommended endoscopic therapy for bleeding esophageal varices. Tissue adhesive is for isolated gastric varices and those extending beyond the cardia, and hemostatic powder is not first-line therapy for variceal bleeding.",
+   "next": "tips_risk",
+   "sources": [
+    {
+     "docId": "pmid:35120736",
+     "where": "6.21; 6.22; 6.24"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.5.3"
+    },
+    {
+     "docId": "pmid:25887380",
+     "where": "Recommendations, control of bleeding"
+    }
+   ]
+  },
+  {
+   "id": "tips_risk",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Liver function and the bleed at endoscopy",
+   "outcomes": [
+    {
+     "id": "high",
+     "if": "High risk; Child-Pugh C under 14, or B over 7 with active bleeding at endoscopy",
+     "next": "ptips"
+    },
+    {
+     "id": "standard",
+     "if": "Not high risk; Child-Pugh A, B 7, or B without active bleeding at endoscopy; bleeding controlled",
+     "next": "secondary"
+    },
+    {
+     "id": "refractory",
+     "if": "Bleeding not controlled; despite the vasoactive drug and ligation",
+     "next": "rescue"
+    }
+   ]
+  },
+  {
+   "id": "ptips",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Child-Pugh C 11; ligation has stopped the bleeding. Next?",
+   "options": [
+    "Pre-emptive covered TIPS within 72 hours, ideally within 24",
+    "Covered TIPS only if he rebleeds after discharge",
+    "Balloon tamponade for 24 hours, then decide",
+    "A beta blocker and repeat ligation, no TIPS for now"
+   ],
+   "answer": 0,
+   "chainStep": "Pre-emptive covered TIPS within 72 hours (ideally under 24) for Child-Pugh C under 14, or B over 7 with active bleeding at endoscopy",
+   "why": "Child-Pugh C under 14, or B over 7 with active bleeding at the first endoscopy, meets the criteria for pre-emptive PTFE-covered TIPS within 72 hours, ideally under 24. In the trial behind it, treatment failure fell from 50% to 3%. Balloon tamponade is a bridge for bleeding that will not stop, and TIPS after a rebleed is for patients who rebleed despite a beta blocker and ligation.",
+   "next": "end_ptips",
+   "sources": [
+    {
+     "docId": "pmid:35120736",
+     "where": "6.27; 6.29; 7.9"
+    },
+    {
+     "docId": "pmid:25887380",
+     "where": "Transjugular intrahepatic portosystemic stent-shunt, early TIPSS trial"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Encephalopathy, ACLF or a high bilirubin at admission",
+     "dose": "Not contraindications to pre-emptive TIPS",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "6.28"
+      }
+     ]
+    },
+    {
+     "item": "When TIPS may be futile",
+     "dose": "Child-Pugh 14 or more, or MELD over 30 with lactate over 12 mmol/L, unless transplant is near",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "6.31"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "secondary",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Child-Pugh B 8, varices not bleeding at endoscopy, banded. Before discharge?",
+   "options": [
+    "Vasoactive drug 2 to 5 days, then a beta blocker or carvedilol plus repeat banding",
+    "Pre-emptive covered TIPS within 72 hours, before discharge",
+    "A beta blocker alone, with no further ligation sessions",
+    "Repeat ligation alone; a beta blocker only after a second bleed"
+   ],
+   "answer": 0,
+   "chainStep": "Vasoactive drug for 2 to 5 days; then a non-selective beta blocker or carvedilol plus repeat band ligation",
+   "why": "The vasoactive drug runs 2 to 5 days. First-line prevention of a rebleed combines a traditional non-selective beta blocker (propranolol or nadolol) or carvedilol with band ligation; either alone is for patients who cannot have the other. She does not meet the pre-emptive TIPS criteria, and TIPS is the choice for those who rebleed despite the combination.",
+   "next": "end_varix",
+   "sources": [
+    {
+     "docId": "pmid:35120736",
+     "where": "6.5; 6.27; 7.3; 7.8; 7.9; 7.10"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Beta blocker dose (BSG 2015 primary prophylaxis dosing)",
+     "dose": "Propranolol 40 mg twice daily, titrated to the maximum tolerated or a heart rate of 50 to 55, to a maximum of 320 mg; nadolol 40 mg daily, to a maximum of 240 mg; carvedilol 6.25 mg once daily, rising to 12.5 mg after a week if tolerated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25887380",
+       "where": "Summary of recommendations, primary prophylaxis: dose"
+      }
+     ],
+     "note": "BSG 2015 states these doses under primary prophylaxis; it gives no separate dosing for prevention of a rebleed."
+    },
+    {
+     "item": "Liver transplant",
+     "dose": "Decompensated cirrhosis: consider for transplantation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "7.2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rescue",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Still bleeding despite a vasoactive drug and band ligation. Next?",
+   "options": [
+    "Balloon tamponade or an esophageal stent as a bridge, then rescue covered TIPS",
+    "Fresh frozen plasma and platelets to correct the clotting first",
+    "Pre-emptive TIPS within 72 hours, once the bleeding settles",
+    "Tranexamic acid infusion and a third banding session"
+   ],
+   "answer": 0,
+   "chainStep": "Balloon tamponade or esophageal stent as a bridge; salvage covered TIPS",
+   "why": "Bleeding that defeats combined drug and endoscopic therapy is best managed by salvage PTFE-covered TIPS; balloon tamponade or a self-expanding metal stent bridges to it, and the stent works as well and is safer. Variceal bleeding is driven by portal pressure, not the clotting tests, so plasma does not help, and tranexamic acid is not recommended.",
+   "next": "end_rescue",
+   "sources": [
+    {
+     "docId": "pmid:35120736",
+     "where": "6.29; 6.30; 6.34; 6.36; 6.38"
+    },
+    {
+     "docId": "pmid:25887380",
+     "where": "Recommendations, failure to control active bleeding"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.5.4"
+    }
+   ]
+  },
+  {
+   "id": "glue",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Bleeding from an isolated gastric varix. Endoscopic treatment?",
+   "options": [
+    "Cyanoacrylate glue injection; TIPS if it fails",
+    "Band ligation, as for esophageal varices",
+    "Sclerotherapy of the gastric varix",
+    "Hemostatic powder spray alone"
+   ],
+   "answer": 0,
+   "chainStep": "Cyanoacrylate injection for isolated or cardia-crossing gastric varices; TIPS if it fails",
+   "why": "Tissue adhesive is the recommended endoscopic therapy for isolated gastric varices and for gastro-oesophageal varices that extend beyond the cardia; ligation or adhesive can be used for the type that continues from the esophagus (type 1). TIPS follows when the glue does not control the bleeding.",
+   "next": "end_gastric",
+   "sources": [
+    {
+     "docId": "pmid:35120736",
+     "where": "6.22; 6.23; 6.24"
+    },
+    {
+     "docId": "url:011638868e82",
+     "where": "1.5.5; 1.5.6"
+    },
+    {
+     "docId": "pmid:25887380",
+     "where": "Recommendations, gastro-oesophageal varices"
+    }
+   ],
+   "orders": [
+    {
+     "item": "BRTO",
+     "dose": "Could be considered instead of endoscopic therapy or TIPS for GOV2, type 1 isolated gastric varices and ectopic varices, where the shunt allows it and local expertise exists",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35120736",
+       "where": "6.23; 6.40"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lower_sev",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The bleed so far",
+   "outcomes": [
+    {
+     "id": "minor",
+     "if": "Minor and stopped; small volume, normal vital signs and hemoglobin",
+     "orders": [
+      {
+       "item": "Oakland score",
+       "dose": "BSG 2019 uses it to choose who goes home; its threshold is not yet read (source blocked)",
+       "status": "pending"
+      }
+     ],
+     "next": "lower_minor"
+    },
+    {
+     "id": "major",
+     "if": "Ongoing or major, stable; still passing blood or the hemoglobin is falling",
+     "ddx": {
+      "lead": [
+       "Diverticular bleed"
+      ],
+      "out": []
+     },
+     "next": "lower_colo"
+    }
+   ]
+  },
+  {
+   "id": "lower_minor",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "A small bleed that has stopped; vitals and hemoglobin normal. Next?",
+   "options": [
+    "No urgent intervention; colonoscopy arranged electively",
+    "Emergency colonoscopy tonight after a rapid preparation",
+    "Mesenteric angiography",
+    "Surgery to remove the bleeding segment"
+   ],
+   "answer": 0,
+   "chainStep": "Minor bleed that has stopped: no urgent intervention; colonoscopy arranged electively",
+   "why": "About 75% of diverticular bleeds stop on their own, especially when fewer than 4 units have been needed; conservative management is enough and the source can be found electively. Urgent colonoscopy has not improved outcomes over elective colonoscopy, angiography is negative in most stable patients, and surgery is not a way to find the source.",
+   "next": "end_lower_minor",
+   "sources": [
+    {
+     "docId": "pmid:33958109",
+     "where": "Introduction/Background; Variant 1, B (colonoscopy); Special treatment considerations, transcatheter embolization; Variant 1, E (surgery)"
+    }
+   ]
+  },
+  {
+   "id": "lower_colo",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Hematochezia, stable now. Next?",
+   "options": [
+    "Colonoscopy after bowel preparation",
+    "Emergency subtotal colectomy",
+    "Mesenteric angiography first",
+    "Empiric embolization of the colonic arteries"
+   ],
+   "answer": 0,
+   "chainStep": "Colonoscopy after bowel preparation; CT angiography if bleeding stays active",
+   "why": "In a stable patient colonoscopy finds and treats the source, and urgent colonoscopy has not beaten a planned one. CT angiography is also usually appropriate while bleeding is active. Embolization needs a bleeding point seen at angiography, and surgery is not used to find the source in a stable patient.",
+   "next": "colo_result",
+   "sources": [
+    {
+     "docId": "pmid:33958109",
+     "where": "Variant 1 rating table; Variant 1, B (colonoscopy); Special treatment considerations, transcatheter embolization; Variant 1, E (surgery)"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Timing",
+     "dose": "Urgent colonoscopy has not improved outcomes over elective colonoscopy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33958109",
+       "where": "Variant 1, B (colonoscopy)"
+      }
+     ]
+    },
+    {
+     "item": "Timing in UK practice",
+     "dose": "BSG 2019 timing advice not yet read (source blocked)",
+     "status": "pending"
+    },
+    {
+     "item": "CT angiography",
+     "dose": "Usually appropriate as well while a stable patient is still actively bleeding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33958109",
+       "where": "Variant 1 rating table"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "colo_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Colonoscopy",
+   "outcomes": [
+    {
+     "id": "found",
+     "if": "Source found; a diverticular bleed, treated at colonoscopy",
+     "ddx": {
+      "lead": [
+       "Diverticular bleed"
+      ],
+      "out": []
+     },
+     "next": "end_colo"
+    },
+    {
+     "id": "normal",
+     "if": "No colonic source; adequate colonoscopy, blood coming from above",
+     "ddx": {
+      "lead": [
+       "Small bowel source",
+       "Peptic ulcer"
+      ],
+      "out": []
+     },
+     "next": "neg_colo"
+    }
+   ]
+  },
+  {
+   "id": "neg_colo",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Adequate colonoscopy, no colonic source. Next?",
+   "options": [
+    "Upper endoscopy; then the small bowel if it is also normal",
+    "Capsule endoscopy before any upper endoscopy",
+    "Exploratory laparotomy to find the source",
+    "Repeat the same colonoscopy tomorrow"
+   ],
+   "answer": 0,
+   "chainStep": "Normal adequate colonoscopy: upper endoscopy; then capsule endoscopy or CT enterography",
+   "why": "Up to 15% of suspected lower bleeds have an upper source, so upper endoscopy follows an adequate negative colonoscopy; only a suboptimal study is repeated first. If both are normal, the small bowel is next, by capsule endoscopy or CT enterography.",
+   "next": "end_neg_colo",
+   "sources": [
+    {
+     "docId": "pmid:33958109",
+     "where": "Variant 5 discussion; Variant 5 rating table; Variant 1, E (surgery)"
+    }
+   ]
+  },
+  {
+   "id": "lower_shock",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Brisk hematochezia, still hypotensive despite blood. Next?",
+   "options": [
+    "CT angiography now, or upper endoscopy first if an upper source is likely; embolize any bleeding point",
+    "Tagged red cell scan to localize the bleeding first",
+    "Colonoscopy after a rapid 4-liter bowel preparation",
+    "Subtotal colectomy now, without localizing the source"
+   ],
+   "answer": 0,
+   "chainStep": "CT angiography now (upper endoscopy first if an upper source is likely); catheter angiography and embolization of any bleeding point",
+   "why": "CT angiography is feasible even in an unstable patient and locates the bleeding for targeted embolization or surgery; a red cell scan takes an hour or more and has no role here. Colonoscopy needs a rapid preparation, which limits it when unstable, and surgery without localization is kept for bleeding that cannot be controlled. A brisk upper bleed can also present as hematochezia.",
+   "next": "cta_result",
+   "sources": [
+    {
+     "docId": "pmid:33958109",
+     "where": "Variant 2 rating table; Variant 2, A (CTA); Variant 2, D (RBC scan); Variant 2, B (colonoscopy); Variant 2, E (surgery)"
+    },
+    {
+     "docId": "pmid:39488353",
+     "where": "Introduction/Background"
+    }
+   ]
+  },
+  {
+   "id": "cta_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT angiography",
+   "outcomes": [
+    {
+     "id": "colon",
+     "if": "Colonic bleeding point; contrast extravasation in the colon",
+     "ddx": {
+      "lead": [
+       "Diverticular bleed"
+      ],
+      "out": []
+     },
+     "next": "embolize"
+    },
+    {
+     "id": "duodenum",
+     "if": "Upper source; extravasation in the duodenum",
+     "ddx": {
+      "lead": [
+       "Peptic ulcer"
+      ],
+      "out": []
+     },
+     "next": "cta_upper_scope"
+    },
+    {
+     "id": "negative",
+     "if": "No extravasation; now stable after blood",
+     "ddx": {
+      "lead": [
+       "Diverticular bleed"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Catheter angiography after a negative CT",
+       "dose": "Avoid in a stable patient; conservative management can start",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33958109",
+         "where": "Variant 1, A (CTA)"
+        }
+       ]
+      }
+     ],
+     "next": "lower_colo"
+    },
+    {
+     "id": "negative_unstable",
+     "if": "No extravasation, still unstable; case by case",
+     "next": "end_cta_neg_unstable"
+    }
+   ]
+  },
+  {
+   "id": "embolize",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "CT angiography: active extravasation in the sigmoid colon. Next?",
+   "options": [
+    "Catheter angiography and embolization as soon as possible",
+    "Repeat CT angiography in 6 hours",
+    "Tagged red cell scan to confirm",
+    "Colonoscopy after bowel preparation tomorrow"
+   ],
+   "answer": 0,
+   "chainStep": "Catheter angiography and embolization as soon as possible after a positive CT angiogram",
+   "why": "Lower bleeding is intermittent, so arteriography follows a positive CT as soon as possible, and embolization follows at once when extravasation is seen. Major ischemia after embolization is uncommon, about 3% or less, and stopping the bleed buys time to stabilize and prepare the bowel if surgery is needed.",
+   "next": "end_embolize",
+   "sources": [
+    {
+     "docId": "pmid:33958109",
+     "where": "Variant 1, F (transcatheter arteriography); Special treatment considerations, transcatheter embolization; Variant 2, E (surgery); Variant 2 rating table; Variant 2, D (RBC scan)"
+    }
+   ]
+  },
+  {
+   "id": "cta_upper_scope",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "CT angiography: contrast pooling in the duodenum. Next?",
+   "options": [
+    "Upper endoscopy now, to treat the source",
+    "Colonoscopy after bowel preparation",
+    "Repeat CT angiography in 6 hours",
+    "Catheter angiography of the gastroduodenal artery first"
+   ],
+   "answer": 0,
+   "chainStep": "Upper endoscopy now for a duodenal source on CT angiography",
+   "why": "A minority of upper bleeds present with hematochezia. Once the CT points to the duodenum, endoscopy is the usual first test and treatment for an upper source, and angiography is second line.",
+   "next": "egd_result",
+   "sources": [
+    {
+     "docId": "pmid:39488353",
+     "where": "Introduction/Background; Variant 1 discussion"
+    },
+    {
+     "docId": "pmid:31921329",
+     "where": "Angiography (2C); Angiography (2C) discussion"
+    }
+   ]
+  },
+  {
+   "id": "end_outpatient",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Very low-risk upper bleed (Blatchford 0 or 1): home, with an outpatient endoscopy."
+  },
+  {
+   "id": "end_ulcer",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bleeding ulcer with high-risk stigmata: endoscopic hemostasis, a high-dose PPI for 72 hours, oral PPI for 6 to 8 weeks, H. pylori testing and treatment, and low-dose aspirin, when taken for secondary prevention, continued once hemostasis is secure."
+  },
+  {
+   "id": "end_rebleed_unstable",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Unstable rebleed after endoscopic treatment: NICE offers interventional radiology, with urgent surgery if it is not promptly available; WSES operates without another endoscopy. Not walked further in this version."
+  },
+  {
+   "id": "end_cta_neg_unstable",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Negative CT angiography in a patient who stays unstable: managed case by case (ACR). Not walked further in this version."
+  },
+  {
+   "id": "end_mallory_weiss",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Mallory-Weiss tear: not walked further in this version."
+  },
+  {
+   "id": "end_tae",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ulcer still bleeding after two endoscopic treatments: angiographic embolization, or surgery when it is unavailable or fails."
+  },
+  {
+   "id": "end_clot",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ulcer with an adherent clot: the sources allow endoscopic therapy or a PPI alone, and WSES irrigates rather than pulls the clot off. The choice between them is not walked further in this version."
+  },
+  {
+   "id": "end_lowrisk",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Clean-based ulcer: no endoscopic therapy, H. pylori testing, early discharge. The PPI regimen for a clean base is not yet in this pathway."
+  },
+  {
+   "id": "end_neg_egd",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Melena with a normal upper endoscopy: colonoscopy, then the small bowel."
+  },
+  {
+   "id": "end_ptips",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "High-risk variceal bleed: vasoactive drug, antibiotics, band ligation and pre-emptive covered TIPS within 72 hours."
+  },
+  {
+   "id": "end_varix",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Controlled esophageal variceal bleed: vasoactive drug for 2 to 5 days, antibiotics, then a beta blocker or carvedilol plus repeat ligation."
+  },
+  {
+   "id": "end_rescue",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Refractory variceal bleed: balloon tamponade or a stent as a bridge to salvage covered TIPS."
+  },
+  {
+   "id": "end_gastric",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Gastric variceal bleed: cyanoacrylate injection, TIPS if it fails."
+  },
+  {
+   "id": "end_lower_minor",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Minor lower bleed that has stopped: no urgent intervention, colonoscopy arranged electively. The Oakland discharge threshold is not yet in this pathway."
+  },
+  {
+   "id": "end_colo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Diverticular bleed found and treated at colonoscopy."
+  },
+  {
+   "id": "end_neg_colo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No colonic source: upper endoscopy, then the small bowel."
+  },
+  {
+   "id": "end_embolize",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Unstable lower bleed: CT angiography, then embolization of the bleeding point."
+  }
+ ],
+ "cases": [
+  {
+   "id": "blatchford_zero",
+   "label": "Very low-risk upper bleed",
+   "vignette": "34-year-old man who vomited a small amount of coffee-ground material once after a night of retching. No melena, no fainting, no heart failure or liver disease. BP 132/80, HR 78.",
+   "picks": {
+    "meds": "none",
+    "first_look": "upper",
+    "gbs_result": "gbs_low"
+   },
+   "results": {
+    "meds": "No regular medicines; no NSAIDs, antiplatelets or anticoagulants.",
+    "first_look": "Stable; brown stool on rectal exam; no stigmata of liver disease.",
+    "gbs_result": "Hemoglobin 14.6 g/dL, BUN 14 mg/dL. Glasgow-Blatchford score 0."
+   }
+  },
+  {
+   "id": "dapt_visible_vessel",
+   "label": "Ulcer bleed on dual antiplatelets",
+   "vignette": "66-year-old man with a drug-eluting coronary stent placed 4 months ago, 2 days of black stools. No fainting, no heart failure. BP 124/76, HR 92.",
+   "picks": {
+    "meds": "antiplatelet",
+    "first_look": "upper",
+    "gbs_result": "gbs_admit",
+    "egd_result": "high_risk",
+    "rebleed_check": "settled"
+   },
+   "results": {
+    "meds": "Aspirin and clopidogrel daily since the stent.",
+    "first_look": "Stable after 1 L of crystalloid; black stool on rectal exam; no stigmata of liver disease.",
+    "gbs_result": "Hemoglobin 12.4 g/dL, BUN 21 mg/dL. Glasgow-Blatchford score 4.",
+    "egd_result": "A 1 cm duodenal ulcer with a non-bleeding visible vessel.",
+    "rebleed_check": "No further bleeding over 72 hours; hemoglobin steady at 11.8 g/dL."
+   }
+  },
+  {
+   "id": "ulcer_rebleed",
+   "label": "Ulcer that rebleeds once",
+   "vignette": "58-year-old woman taking naproxen for knee pain, black stools since yesterday. No fainting. BP 118/72, HR 96.",
+   "picks": {
+    "meds": "none",
+    "first_look": "upper",
+    "gbs_result": "gbs_admit",
+    "egd_result": "high_risk",
+    "rebleed_check": "rebleed",
+    "repeat_result": "held"
+   },
+   "results": {
+    "meds": "Naproxen twice daily; no antiplatelets or anticoagulants.",
+    "first_look": "Stable after 1 L of crystalloid; black stool on rectal exam; no stigmata of liver disease.",
+    "gbs_result": "Hemoglobin 10.8 g/dL, BUN 30 mg/dL. Glasgow-Blatchford score 6.",
+    "egd_result": "A 1 cm gastric ulcer, oozing.",
+    "rebleed_check": "Day 2: fresh melena, HR 104, BP 118/70. The ulcer measured 1 cm.",
+    "repeat_result": "Repeat endoscopy: clips and thermal therapy; no further bleeding."
+   }
+  },
+  {
+   "id": "ulcer_refractory",
+   "label": "Ulcer that fails two endoscopic treatments",
+   "vignette": "71-year-old man on low-dose aspirin since a myocardial infarction, a day of black stools. No fainting, no heart failure or liver disease. BP 122/74, HR 98.",
+   "picks": {
+    "meds": "aspirin",
+    "first_look": "upper",
+    "gbs_result": "gbs_admit",
+    "egd_result": "high_risk",
+    "rebleed_check": "rebleed",
+    "repeat_result": "failed"
+   },
+   "results": {
+    "meds": "Aspirin 81 mg daily for secondary prevention; no other antithrombotic drug.",
+    "first_look": "Stable after 1 L of crystalloid; black stool on rectal exam; no stigmata of liver disease.",
+    "gbs_result": "Hemoglobin 11.6 g/dL, BUN 26 mg/dL. Glasgow-Blatchford score 7.",
+    "egd_result": "A 1.5 cm duodenal bulb ulcer with a non-bleeding visible vessel.",
+    "rebleed_check": "Day 1: fresh melena, BP 116/70, HR 102. The ulcer measured 1.5 cm.",
+    "repeat_result": "Retreated with clips; 6 hours later fresh melena again, hemoglobin down 2 g/dL, BP 110/68."
+   }
+  },
+  {
+   "id": "clean_base",
+   "label": "Clean-based ulcer",
+   "vignette": "62-year-old man on rivaroxaban for atrial fibrillation, 2 days of black stools after a week of ibuprofen for back pain. No fainting, no heart failure. BP 128/80, HR 88.",
+   "picks": {
+    "meds": "xa_minor",
+    "first_look": "upper",
+    "gbs_result": "gbs_admit",
+    "egd_result": "low_risk"
+   },
+   "results": {
+    "meds": "Rivaroxaban daily, last dose last night; ibuprofen for a week. No vomiting of blood; vital signs steady.",
+    "first_look": "Stable after 1 L of crystalloid; black stool on rectal exam; no stigmata of liver disease.",
+    "gbs_result": "Hemoglobin 12.8 g/dL, BUN 19 mg/dL. Glasgow-Blatchford score 4.",
+    "egd_result": "A 7 mm clean-based duodenal ulcer; no stigmata of recent bleeding."
+   }
+  },
+  {
+   "id": "adherent_clot",
+   "label": "Ulcer with an adherent clot",
+   "vignette": "55-year-old woman, a day of black stools after two weeks of diclofenac for a sprained ankle. No fainting, no heart failure. BP 120/76, HR 94.",
+   "picks": {
+    "meds": "none",
+    "first_look": "upper",
+    "gbs_result": "gbs_admit",
+    "egd_result": "clot"
+   },
+   "results": {
+    "meds": "Diclofenac; no antiplatelets or anticoagulants.",
+    "first_look": "Stable after 1 L of crystalloid; black stool on rectal exam; no stigmata of liver disease.",
+    "gbs_result": "Hemoglobin 11.4 g/dL, BUN 23 mg/dL. Glasgow-Blatchford score 5.",
+    "egd_result": "A 1 cm gastric ulcer covered by an adherent clot that stays on gentle irrigation; no active bleeding."
+   }
+  },
+  {
+   "id": "melena_normal_egd",
+   "label": "Melena with a normal upper endoscopy",
+   "vignette": "77-year-old woman on warfarin for atrial fibrillation, with aortic stenosis, 2 days of black tarry stools and fatigue; none since last night. No fainting, no heart failure. BP 126/70, HR 90.",
+   "picks": {
+    "meds": "warfarin_stopped",
+    "first_look": "upper",
+    "gbs_result": "gbs_admit",
+    "egd_result": "no_source"
+   },
+   "results": {
+    "meds": "Warfarin; INR 2.4. No melena or hematemesis since last night.",
+    "first_look": "Stable after 1 L of crystalloid; black stool on rectal exam; no stigmata of liver disease.",
+    "gbs_result": "Hemoglobin 10.4 g/dL, BUN 20 mg/dL. Glasgow-Blatchford score 4.",
+    "egd_result": "Normal to the second part of the duodenum; no blood in the stomach."
+   }
+  },
+  {
+   "id": "warfarin_ulcer",
+   "label": "Ulcer bleed on warfarin",
+   "vignette": "74-year-old woman on warfarin for atrial fibrillation, vomiting fresh blood and passing black stools since this morning. No fainting, no heart failure. BP 112/70, HR 96. Weight 70 kg.",
+   "picks": {
+    "meds": "warfarin",
+    "first_look": "upper",
+    "gbs_result": "gbs_admit",
+    "egd_result": "high_risk",
+    "rebleed_check": "settled"
+   },
+   "results": {
+    "meds": "Warfarin; INR 3.6. Still vomiting blood in the department.",
+    "first_look": "Stable after 1 L of crystalloid; black stool on rectal exam; no stigmata of liver disease.",
+    "gbs_result": "Hemoglobin 11.2 g/dL, BUN 25 mg/dL. Glasgow-Blatchford score 5.",
+    "egd_result": "A 1 cm gastric ulcer with a spurting vessel.",
+    "rebleed_check": "No further bleeding over 72 hours."
+   }
+  },
+  {
+   "id": "apixaban_shock",
+   "label": "Upper bleed in shock on apixaban",
+   "vignette": "69-year-old man on apixaban for atrial fibrillation, vomiting large amounts of bright red blood, pale and clammy. BP 84/50, HR 124.",
+   "picks": {
+    "meds": "xa",
+    "first_look": "upper_shock",
+    "egd_result": "high_risk",
+    "rebleed_check": "settled"
+   },
+   "results": {
+    "meds": "Apixaban twice daily, last dose this morning.",
+    "first_look": "BP 84/50 after 1 L of crystalloid; still vomiting blood; no stigmata of liver disease.",
+    "egd_result": "After resuscitation: a 1.5 cm duodenal ulcer, spurting.",
+    "rebleed_check": "No rebleeding; stable on the ward by day 3."
+   }
+  },
+  {
+   "id": "varix_preemptive_tips",
+   "label": "Variceal bleed, Child-Pugh C",
+   "vignette": "52-year-old man with alcohol-related cirrhosis, ascites and jaundice, vomiting blood. BP 98/60, HR 112, alert.",
+   "picks": {
+    "meds": "none",
+    "first_look": "cirrhosis",
+    "varix_result": "esoph",
+    "tips_risk": "high"
+   },
+   "results": {
+    "meds": "No antithrombotic drugs.",
+    "first_look": "Spider angiomas, ascites, jaundice; BP 104/64 after fluids.",
+    "varix_result": "Large esophageal varices, one spurting.",
+    "tips_risk": "Child-Pugh C, 11 points; bleeding actively at endoscopy, stopped by ligation."
+   }
+  },
+  {
+   "id": "varix_standard",
+   "label": "Variceal bleed, Child-Pugh B",
+   "vignette": "60-year-old woman with hepatitis C cirrhosis, vomited blood twice this morning. BP 118/72, HR 94.",
+   "picks": {
+    "meds": "none",
+    "first_look": "cirrhosis",
+    "varix_result": "esoph",
+    "tips_risk": "standard"
+   },
+   "results": {
+    "meds": "No antithrombotic drugs.",
+    "first_look": "Splenomegaly and spider angiomas; stable.",
+    "varix_result": "Large esophageal varices, not actively bleeding, with blood in the stomach and no other source.",
+    "tips_risk": "Child-Pugh B, 8 points; no active bleeding at endoscopy; varices banded."
+   }
+  },
+  {
+   "id": "varix_refractory",
+   "label": "Variceal bleed that will not stop",
+   "vignette": "48-year-old man with alcohol-related cirrhosis, massive hematemesis, intubated to protect his airway. BP 90/54, HR 118.",
+   "picks": {
+    "meds": "none",
+    "first_look": "cirrhosis",
+    "varix_result": "esoph",
+    "tips_risk": "refractory"
+   },
+   "results": {
+    "meds": "No antithrombotic drugs.",
+    "first_look": "Known cirrhosis; jaundice and ascites; BP 92/56 after blood.",
+    "varix_result": "A spurting esophageal varix.",
+    "tips_risk": "Still bleeding despite octreotide and two rounds of banding."
+   }
+  },
+  {
+   "id": "gastric_varix",
+   "label": "Gastric variceal bleed",
+   "vignette": "57-year-old woman with cirrhosis, vomiting blood and passing black stools. BP 112/68, HR 102.",
+   "picks": {
+    "meds": "none",
+    "first_look": "cirrhosis",
+    "varix_result": "gastric"
+   },
+   "results": {
+    "meds": "No antithrombotic drugs.",
+    "first_look": "Known cirrhosis; ascites; stable after fluids.",
+    "varix_result": "A large isolated gastric varix in the fundus with fresh clot; no esophageal varices."
+   }
+  },
+  {
+   "id": "cirrhosis_ulcer",
+   "label": "Cirrhosis, but the bleed is an ulcer",
+   "vignette": "63-year-old man with known cirrhosis who takes ibuprofen for gout, vomiting coffee-ground material and passing black stools. BP 116/70, HR 98.",
+   "picks": {
+    "meds": "none",
+    "first_look": "cirrhosis",
+    "varix_result": "ulcer",
+    "rebleed_check": "settled"
+   },
+   "results": {
+    "meds": "Ibuprofen; no antiplatelets or anticoagulants.",
+    "first_look": "Ascites and spider angiomas; stable after fluids.",
+    "varix_result": "Small esophageal varices without stigmata; a 1 cm duodenal ulcer with a visible vessel.",
+    "rebleed_check": "No further bleeding over 72 hours."
+   }
+  },
+  {
+   "id": "large_ulcer_rebleed",
+   "label": "Large ulcer that rebleeds into shock",
+   "vignette": "64-year-old man taking ibuprofen for back pain, 2 days of black stools. No fainting, no heart failure or liver disease. BP 120/78, HR 96.",
+   "picks": {
+    "meds": "none",
+    "first_look": "upper",
+    "gbs_result": "gbs_admit",
+    "egd_result": "high_risk",
+    "rebleed_check": "rebleed_unstable"
+   },
+   "results": {
+    "meds": "Ibuprofen; no antiplatelets or anticoagulants.",
+    "first_look": "Stable after 1 L of crystalloid; black stool on rectal exam; no stigmata of liver disease.",
+    "gbs_result": "Hemoglobin 11.8 g/dL, BUN 24 mg/dL. Glasgow-Blatchford score 7.",
+    "egd_result": "A 2.5 cm posterior duodenal ulcer with a non-bleeding visible vessel.",
+    "rebleed_check": "Day 1: hematemesis and fresh melena; BP 86/50, HR 124 despite 2 units of red cells."
+   }
+  },
+  {
+   "id": "mallory_weiss",
+   "label": "Mallory-Weiss tear",
+   "vignette": "28-year-old man who vomited bright red blood after retching through the night. No melena, no fainting, no heart failure or liver disease. BP 118/72, HR 104.",
+   "picks": {
+    "meds": "none",
+    "first_look": "upper",
+    "gbs_result": "gbs_admit",
+    "egd_result": "mallory_weiss"
+   },
+   "results": {
+    "meds": "No regular medicines.",
+    "first_look": "Stable after 1 L of crystalloid; brown stool on rectal exam; no stigmata of liver disease.",
+    "gbs_result": "Hemoglobin 13.6 g/dL, BUN 19 mg/dL. Glasgow-Blatchford score 3.",
+    "egd_result": "A 1 cm linear tear at the gastroesophageal junction, not bleeding; no ulcer, no varices."
+   }
+  },
+  {
+   "id": "lower_minor",
+   "label": "Minor lower bleed that has stopped",
+   "vignette": "64-year-old man, one episode of bright red blood mixed with stool this morning, none since. No abdominal pain. BP 128/78, HR 76.",
+   "picks": {
+    "meds": "none",
+    "first_look": "lower",
+    "lower_sev": "minor"
+   },
+   "results": {
+    "meds": "No antithrombotic drugs.",
+    "first_look": "Stable; a little red blood on rectal exam.",
+    "lower_sev": "Hemoglobin 14.0 g/dL; no further bleeding in the department."
+   }
+  },
+  {
+   "id": "diverticular",
+   "label": "Diverticular bleed, stable",
+   "vignette": "78-year-old man with known diverticulosis, three painless maroon stools since this morning. BP 132/78, HR 94.",
+   "picks": {
+    "meds": "none",
+    "first_look": "lower",
+    "lower_sev": "major",
+    "colo_result": "found"
+   },
+   "results": {
+    "meds": "No antithrombotic drugs.",
+    "first_look": "Stable after fluids; maroon blood on rectal exam.",
+    "lower_sev": "Hemoglobin 10.9 g/dL, 13.0 last month; another bloody stool in the department.",
+    "colo_result": "Colonoscopy after preparation: a sigmoid diverticulum with a visible vessel, clipped."
+   }
+  },
+  {
+   "id": "colonoscopy_negative",
+   "label": "Normal colonoscopy",
+   "vignette": "70-year-old woman, two large painless dark red stools overnight. BP 124/76, HR 90.",
+   "picks": {
+    "meds": "none",
+    "first_look": "lower",
+    "lower_sev": "major",
+    "colo_result": "normal"
+   },
+   "results": {
+    "meds": "No antithrombotic drugs.",
+    "first_look": "Stable after fluids; dark red blood on rectal exam.",
+    "lower_sev": "Hemoglobin 10.2 g/dL, 12.6 last year; one more bloody stool in the department.",
+    "colo_result": "Good preparation, scope to the terminal ileum: no colonic source; dark blood coming from the ileum."
+   }
+  },
+  {
+   "id": "lower_shock_embolize",
+   "label": "Unstable lower bleed, colonic blush",
+   "vignette": "81-year-old man with diverticulosis, large volumes of bright red blood per rectum, light-headed. BP 82/50, HR 120.",
+   "picks": {
+    "meds": "none",
+    "first_look": "lower_shock",
+    "cta_result": "colon"
+   },
+   "results": {
+    "meds": "No antithrombotic drugs.",
+    "first_look": "BP 86/52 after 2 units of red cells; still passing red blood; no hematemesis.",
+    "cta_result": "Active contrast extravasation in the sigmoid colon."
+   }
+  },
+  {
+   "id": "hematochezia_upper",
+   "label": "Hematochezia from a duodenal ulcer",
+   "vignette": "67-year-old woman, sudden passage of large amounts of maroon and red blood per rectum. No hematemesis, no abdominal pain. BP 80/48, HR 126.",
+   "picks": {
+    "meds": "none",
+    "first_look": "lower_shock",
+    "cta_result": "duodenum",
+    "egd_result": "high_risk",
+    "rebleed_check": "settled"
+   },
+   "results": {
+    "meds": "No antithrombotic drugs.",
+    "first_look": "Still hypotensive after 2 units of red cells; brisk hematochezia; no hematemesis.",
+    "cta_result": "Contrast pooling in the second part of the duodenum; the colon is clear.",
+    "egd_result": "A 1.5 cm duodenal ulcer, oozing.",
+    "rebleed_check": "No rebleeding over 72 hours."
+   }
+  },
+  {
+   "id": "lower_shock_cta_negative",
+   "label": "Unstable lower bleed, CT angiography negative",
+   "vignette": "75-year-old man, sudden heavy bright red rectal bleeding, light-headed. BP 84/52, HR 118.",
+   "picks": {
+    "meds": "none",
+    "first_look": "lower_shock",
+    "cta_result": "negative",
+    "colo_result": "found"
+   },
+   "results": {
+    "meds": "No antithrombotic drugs.",
+    "first_look": "BP 88/56 after 2 units of red cells; still passing red blood; no hematemesis.",
+    "cta_result": "Diverticula throughout the colon, no extravasation. After a third unit: BP 118/70, HR 92, bleeding slowing.",
+    "colo_result": "Colonoscopy after preparation: an ascending colon diverticulum with an adherent clot, treated with clips."
+   }
+  },
+  {
+   "id": "cta_negative_unstable",
+   "label": "Unstable lower bleed, CT angiography negative, still unstable",
+   "vignette": "79-year-old woman, heavy maroon rectal bleeding since this morning, now confused. BP 78/44, HR 130.",
+   "picks": {
+    "meds": "none",
+    "first_look": "lower_shock",
+    "cta_result": "negative_unstable"
+   },
+   "results": {
+    "meds": "No antithrombotic drugs.",
+    "first_look": "BP 82/48 after 2 units of red cells; still passing maroon blood; no hematemesis.",
+    "cta_result": "No extravasation. After 4 units: BP 84/50, HR 124, still passing blood."
+   }
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "pregnancy_bleeding",
+  "slug": "pregnancy-bleeding",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Bleeding in Pregnancy and Postpartum Hemorrhage Algorithm",
+  "metaDescription": "Bleeding in pregnancy for OB and EM rotations: ectopic and miscarriage, previa and abruption, anti-D, postpartum hemorrhage drug by drug, maternal arrest.",
+  "h1": "Bleeding in pregnancy and obstetric emergencies: the algorithm, fork by fork",
+  "dek": "For the student on an OB or EM rotation with a bleeding pregnant or newly delivered patient and a resident about to ask what is next: the first moves and the gestation, ectopic and miscarriage, bleeding after 20 weeks, anti-D, postpartum hemorrhage drug by drug, inversion, maternal arrest, and what you will be pimped on.",
+  "jumpLinks": [
+    {"label": "First moves", "stage": "Stabilize"},
+    {"label": "Which route", "stage": "Result"},
+    {"label": "Treatment", "stage": "Manage"},
+    {"label": "Ultrasound first", "stage": "Imaging"},
+    {"label": "Outcomes", "stage": "Outcome"}
+  ],
+  "shortAnswer": [
+    {"lead": "Vitals, Rh type and the gestation first.", "text": "Airway, breathing, pulse, IV access, a blood count, group and Rh type, and a pregnancy test if not known. The gestation picks the route; a pulse over 100 or a pressure under 100/60 is a warning sign of an ectopic.", "refs": ["triage", "front"]},
+    {"lead": "Early pregnancy in shock: find the source, then surgery.", "text": "Resuscitate and call gynecology; bedside ultrasound and a speculum exam. Free fluid with an empty uterus: emergency surgery, laparoscopic where her condition allows; never methotrexate when she is unstable.", "refs": ["early_shock", "ectopic_rupture"]},
+    {"lead": "Tissue in the os with hypotension: take it out.", "text": "Cervical shock settles once the tissue is removed at the bedside; then emergency uterine evacuation.", "refs": ["misc_shock"]},
+    {"lead": "Early pregnancy, stable: transvaginal scan.", "text": "It locates the pregnancy and finds a heartbeat; a serum hCG cannot. Threatened miscarriage is expectant care, with vaginal progesterone 400 mg twice daily only after a previous miscarriage.", "refs": ["tvus", "threatened"]},
+    {"lead": "After 20 weeks: the placenta before any finger.", "text": "Check earlier scans or ultrasound for the placental site before a digital exam, with continuous fetal monitoring. Shock, heavy ongoing bleeding or fetal compromise once viable: category 1 cesarean within 30 minutes.", "refs": ["late_us", "deliver_now", "late_result"]},
+    {"lead": "RhD-negative and not sensitized after 20 weeks: anti-D within 72 hours.", "text": "300 micrograms (1,500 IU) IM covers 30 mL of fetal whole blood; a rosette screen, then a Kleihauer-Betke test, sizes any extra dose. In the first trimester the sources disagree.", "refs": ["anti_d", "ectopic_rupture"]},
+    {"lead": "Postpartum hemorrhage: the bundle runs together.", "text": "Call for help, uterine massage, IV oxytocin, tranexamic acid 1 g IV over 10 minutes within 3 hours of birth and crystalloid, then the cause: tone, trauma, tissue, thrombin. No fundus felt: think inversion and hold the uterotonics.", "refs": ["pph_first", "pph_fundus", "inversion"]},
+    {"lead": "The second uterotonic follows BP and asthma.", "text": "Normal BP: methylergonovine 0.2 mg IM. Hypertensive: carboprost 250 micrograms IM. Hypertensive with asthma: misoprostol 800 micrograms sublingually. Still bleeding: balloon tamponade.", "refs": ["second_line", "methylerg", "carboprost", "miso", "refractory"]}
+  ],
+  "sections": [
+    {"stage": "Stabilize", "heading": "What are the first steps for bleeding in pregnancy?", "intro": "Airway, breathing, pulse and vitals, IV access, a blood count, group and Rh type, and the gestation. Arrest with the fundus at the umbilicus, early pregnancy in shock and heavy bleeding after birth each start their own first moves.", "refs": ["triage", "arrest_cpr", "early_shock", "pph_first"]},
+    {"stage": "Result", "heading": "Early, late or postpartum: which fork is this bleed on?", "intro": "The pregnancy test, the gestation and the vitals pick the route; then the scan and speculum, the placenta and the fetal tracing, or the four causes of postpartum bleeding decide the treatment.", "refs": ["front", "shock_source", "tvus_result", "late_result", "rh_late", "pph_fundus", "pph_cause", "second_line", "atony_response"]},
+    {"stage": "Manage", "heading": "How do you manage ectopic, miscarriage, previa, abruption and postpartum hemorrhage?", "intro": "Surgery for a ruptured ectopic; expectant, medical or surgical care for a stable miscarriage; cesarean timing for previa; monitoring or delivery for abruption; anti-D when RhD-negative after 20 weeks; uterotonics in order for atony.", "refs": ["ectopic_rupture", "misc_shock", "threatened", "missed", "incomplete", "molar", "deliver_now", "previa", "abr_stable", "anti_d", "miso", "carboprost", "methylerg", "refractory", "repair", "retained", "coag", "inversion"]},
+    {"stage": "Imaging", "heading": "Which ultrasound for bleeding in early and late pregnancy?", "intro": "Early: a transvaginal scan for location and heartbeat, with a speculum exam. After 20 weeks: earlier scans or ultrasound for the placental site before any digital exam; the transvaginal scan is safe when previa is suspected.", "refs": ["tvus", "late_us"]},
+    {"stage": "Outcome", "heading": "Where does each bleed end up?", "intro": "Some routes hand off: hypertension with a seizure or headache to the seizure and headache pathways, a stable ectopic to the abdominal pain pathway, a septic miscarriage to the sepsis pathway. The rest end in surgery, delivery, anti-D or a settled uterus.", "refs": ["end_arrest", "end_htn", "end_abdo", "end_septic", "end_ruptured", "end_deliver", "end_atony", "end_inversion", "end_scope"]}
+  ],
+  "checklist": {
+    "heading": "Postpartum hemorrhage: the first-response bundle and the next drug",
+    "items": [
+      {"text": "Call for help; uterine massage.", "refs": ["pph_first"]},
+      {"text": "IV oxytocin: 10 to 40 units in a running infusion, at most 40 units in 1,000 mL, or 10 units IM.", "refs": ["pph_first"]},
+      {"text": "Tranexamic acid 1 g IV over 10 minutes within 3 hours of birth; a second 1 g if bleeding continues after 30 minutes.", "refs": ["pph_first"]},
+      {"text": "Isotonic crystalloid; empty the bladder.", "refs": ["pph_first"]},
+      {"text": "Feel for the fundus: none felt, with a mass in the vagina, is inversion, and the uterotonics stop.", "refs": ["pph_fundus", "inversion"]},
+      {"text": "Find the cause: tone, trauma, tissue, thrombin.", "refs": ["pph_first", "pph_cause"]},
+      {"text": "Second uterotonic: methylergonovine 0.2 mg IM if normotensive; carboprost 250 micrograms IM if hypertensive; misoprostol 800 micrograms sublingually if hypertensive with asthma.", "refs": ["second_line", "methylerg", "carboprost", "miso"]},
+      {"text": "Still bleeding: bimanual compression and balloon tamponade; red cells, plasma and platelets 1:1:1 in massive hemorrhage.", "refs": ["refractory"]}
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the time since birth, the measured loss and the vitals, then the cause and each drug given. For example: 29-year-old with pre-eclampsia, 20 minutes after a vaginal birth, bleeding heavily: 900 mL on the calibrated drape, BP 158/104, pulse 108. The fundus is felt above the umbilicus, the uterus is soft and boggy, the placenta complete, there is no tear and the blood is clotting: atony. The first-response bundle is running: uterine massage, IV oxytocin, tranexamic acid 1 g IV over 10 minutes within 3 hours of birth, and crystalloid. Still bleeding on oxytocin and hypertensive, so no methylergonovine or ergometrine; no asthma, so carboprost 250 micrograms deep IM, repeatable every 15 to 90 minutes to 2 mg. The uterus was firm within 15 minutes and the bleeding has settled.",
+    "presentRefs": ["case:pph_htn", "pph_first", "pph_cause", "second_line", "carboprost", "atony_response"],
+    "pimp": [
+      {"q": "Why manual left uterine displacement and not a tilt in maternal arrest?", "a": "Above the umbilicus the uterus compresses the vena cava and aorta. Pushing it to the left by hand keeps her flat; tilting the board weakens compressions.", "refs": ["arrest_cpr"]},
+      {"q": "When is a resuscitative hysterotomy done?", "a": "From 20 weeks, with the fundus at or above the umbilicus, if circulation has not returned within 4 minutes: start where she lies and aim to deliver within 5. It is still worth doing after 5 minutes.", "refs": ["arrest_cpr"]},
+      {"q": "Why no digital exam in third-trimester bleeding until the placenta is located?", "a": "A digital exam can provoke massive bleeding from a previa. A speculum exam and a transvaginal scan are safe.", "refs": ["late_us"]},
+      {"q": "Does a Kleihauer-Betke test diagnose abruption?", "a": "No. It measures fetal blood in the mother's circulation and helps size the anti-D dose. Abruption is a clinical diagnosis, and ultrasound cannot confirm or exclude it.", "refs": ["late_us", "abr_stable"]},
+      {"q": "Why no methylergonovine in pre-eclampsia, and no carboprost in asthma?", "a": "Methylergonovine is contraindicated in hypertension and pre-eclampsia; carboprost risks bronchospasm, so NICE does not offer it with asthma. Hypertension plus asthma leaves misoprostol 800 micrograms sublingually.", "refs": ["carboprost", "miso"]},
+      {"q": "What is cervical shock?", "a": "A vagal fall in pressure and pulse from tissue lodged in the cervical canal. Fluids do not correct it, and it settles once the tissue is removed at the bedside.", "refs": ["misc_shock"]}
+    ]
+  },
+  "traps": [
+    {"text": "A digital cervical exam before the placenta is located after 20 weeks.", "refs": ["late_us", "triage"]},
+    {"text": "Methotrexate for an unstable or ruptured ectopic. Emergency surgery.", "refs": ["ectopic_rupture", "early_shock"]},
+    {"text": "Two hCG levels 48 hours apart in a woman in shock with a positive test.", "refs": ["early_shock"]},
+    {"text": "Bed rest for threatened miscarriage. It does not prevent miscarriage.", "refs": ["threatened"]},
+    {"text": "Mifepristone for an incomplete miscarriage. Misoprostol alone; mifepristone belongs to the missed miscarriage.", "refs": ["incomplete", "missed"]},
+    {"text": "Tilting the board in maternal arrest, or moving her to the operating room for the hysterotomy.", "refs": ["arrest_cpr"]},
+    {"text": "Methylergonovine as an IV push, or in a hypertensive patient.", "refs": ["methylerg", "carboprost"]},
+    {"text": "Peeling off the placenta or giving oxytocin before an inverted uterus is replaced.", "refs": ["inversion"]}
+  ],
+  "faq": [
+    {"q": "What is the first-line treatment for postpartum hemorrhage?", "a": "A bundle given together: call for help, uterine massage, IV oxytocin, tranexamic acid 1 g IV over 10 minutes within 3 hours of birth, and isotonic crystalloid, then an examination for the cause: tone, trauma, tissue or thrombin. A second gram of tranexamic acid follows if bleeding continues after 30 minutes; WHO does not support starting it after 3 hours.", "refs": ["pph_first"]},
+    {"q": "What is the order of uterotonics for uterine atony?", "a": "Oxytocin first. If bleeding continues: methylergonovine 0.2 mg IM, repeated every 2 to 4 hours, when the pressure is normal; carboprost 250 micrograms deep IM every 15 to 90 minutes, to 2 mg, when she is hypertensive; misoprostol 800 micrograms sublingually when she is hypertensive and asthmatic. Refractory atony goes to balloon tamponade, then surgery.", "refs": ["second_line", "methylerg", "carboprost", "miso", "refractory"]},
+    {"q": "How is a ruptured ectopic pregnancy managed?", "a": "Resuscitation and emergency surgery: laparoscopy where her condition allows, laparotomy if it does not, and usually salpingectomy for a ruptured tube. Hemodynamic instability and rupture are absolute contraindications to methotrexate, and waiting for serial hCG levels or more imaging only adds blood loss.", "refs": ["ectopic_rupture", "early_shock"]},
+    {"q": "When do you give RhoGAM for bleeding in pregnancy?", "a": "After 20 weeks, an RhD-negative woman who is not sensitized gets anti-D 300 micrograms (1,500 IU) IM within 72 hours, covering 30 mL of fetal whole blood, with extra doses sized by a rosette screen and Kleihauer-Betke test. In the first trimester the sources disagree: the US label covers ectopic pregnancy and pregnancy loss at any stage (300 micrograms up to and including 12 weeks); NICE gives none up to 11+6 weeks; FIGO gives it after an ectopic and after a miscarriage beyond 10 weeks.", "refs": ["anti_d", "ectopic_rupture"]},
+    {"q": "When is placenta previa delivered?", "a": "By cesarean. When the bleeding settles before 36 weeks: admission, corticosteroids if preterm birth may be needed, and a planned cesarean at 36 to 37 weeks. Heavy or continuing bleeding means cesarean at any gestation. No digital exam until a previa is excluded, though a transvaginal scan is safe.", "refs": ["previa", "late_us"]},
+    {"q": "What are the options for a missed miscarriage?", "a": "With a stable patient and no infection: expectant care (NICE first line, for 7 to 14 days), mifepristone 200 mg by mouth then misoprostol 800 micrograms 24 hours (US) or 48 hours (NICE) later, or uterine aspiration. US practice lets her preference choose. Oxytocin is not a first-trimester option.", "refs": ["missed"]}
+  ],
+  "related": ["abdominal_pain", "htn", "seizure", "syncope"]
+}

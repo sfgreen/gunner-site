@@ -16,7 +16,7 @@ import SiteShell, { Measure } from './SiteShell';
 // of its cards, which flattens hierarchy: if everything lifts, nothing does.
 
 export default function LabLayout({
-  title, eyebrow, lede, crumb, metaTitle, metaDesc, campaign, children, head,
+  title, eyebrow, lede, crumb, metaTitle, metaDesc, campaign, children, head, ogImage,
   measure = 'article',
 }: {
   title: string;
@@ -28,6 +28,9 @@ export default function LabLayout({
   campaign: string;
   children: ReactNode;
   head?: ReactNode;
+  /** A 1200x630 card under public/ (e.g. /og/research/<slug>.png, made by
+   *  scripts/og_cards.mjs): og:image and twitter:image, absolute. */
+  ogImage?: string;
   measure?: Measure;
   /** Accepted for source compatibility with older call sites; measure wins. */
   maxWidth?: number;
@@ -42,6 +45,11 @@ export default function LabLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        {ogImage && <meta property="og:image" content={`https://stepgunner.com${ogImage}`} />}
+        {ogImage && <meta property="og:image:width" content="1200" />}
+        {ogImage && <meta property="og:image:height" content="630" />}
+        {ogImage && <meta property="og:image:alt" content={title} />}
+        {ogImage && <meta name="twitter:image" content={`https://stepgunner.com${ogImage}`} />}
         {head}
       </Head>
 

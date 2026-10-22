@@ -1,0 +1,83 @@
+{
+  "id": "headache",
+  "slug": "headache",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Headache Red Flags and Workup: SAH, GCA, CVT and Migraine",
+  "metaDescription": "The ED headache workup for EM and neuro rotations: red flags, the SAH CT and lumbar puncture rules, GCA steroids, venous thrombosis, CO, migraine, cluster.",
+  "h1": "Headache in the ED: red flags, SAH and the workup, fork by fork",
+  "dek": "For the student on an EM or neuro rotation with a headache in the department and a resident about to ask what is next: the red flags that choose the route, the CT and LP rules for subarachnoid hemorrhage, GCA, venous thrombosis, carbon monoxide, the primary headaches, and what you will be pimped on.",
+  "jumpLinks": [
+    {"label": "First moves", "stage": "Stabilize"},
+    {"label": "Red flags", "stage": "Result"},
+    {"label": "Which scan", "stage": "Imaging"},
+    {"label": "CT clear, now what", "stage": "Diagnose"},
+    {"label": "Treatment by cause", "stage": "Manage"},
+    {"label": "GCA labs", "stage": "Labs"},
+    {"label": "Outcomes", "stage": "Outcome"}
+  ],
+  "shortAnswer": [
+    {"lead": "Exam before the scan.", "text": "Airway, vital signs, GCS and a neurologic exam with the fundi; time the onset and the time to peak, then screen the red flags. They choose the route and the scan.", "refs": ["triage", "front_door"]},
+    {"lead": "Thunderclap: CT first, fast.", "text": "Peak within 5 minutes with GCS 13 or more: urgent non-contrast CT with senior review, most accurate within 6 hours of onset. The LP comes only after a clear CT.", "refs": ["front_door", "sah_ct"]},
+    {"lead": "Clear CT: the 6-hour line.", "text": "After 6 hours: LP at least 12 hours after onset, spectrophotometry for xanthochromia. Within 6 hours and radiologist-reported: NICE does not routinely offer an LP, though many US question banks still expect one; both keep the LP, at 12 hours or more, for doubt that remains.", "refs": ["neg_early", "lp"]},
+    {"lead": "SAH confirmed: CTA and nimodipine.", "text": "CT angiography now and an urgent call to the neurosurgical center; enteral nimodipine 60 mg every 4 hours for 21 days, never IV; if intervention is an option, the aneurysm secured at the earliest opportunity, by coiling, or clipping if coiling is not suitable.", "refs": ["sah_cta", "sah_secure"]},
+    {"lead": "GCA: steroids before the biopsy.", "text": "ESR and CRP, and glucocorticoids without delay: pulse IV methylprednisolone with visual loss (ACR; EULAR: could be considered), high-dose oral prednisone without. Temporal artery biopsy within 2 weeks, or ultrasound where there is expertise.", "refs": ["gca_first", "gca_pulse", "gca_oral", "gca_confirm"]},
+    {"lead": "Papilledema: image the veins.", "text": "MRI with MR venography, or CT with CT venography, now. Venous thrombosis gets therapeutic LMWH even with blood on the scan; clear imaging with papilledema gets an LP, and an opening pressure over 25 cm CSF with normal contents fits IIH.", "refs": ["venous_img", "cvt_tx", "iih_lp", "iih_result"]},
+    {"lead": "A household with headaches: carbon monoxide.", "text": "100% oxygen by tight-fitting mask with a reservoir, whatever the SpO2; COHb on a blood gas, ECG and troponin. Severe signs or pregnancy: hyperbaric oxygen within 6 hours (German S2k; some of its societies decide case by case).", "refs": ["co_first", "co_severe"]},
+    {"lead": "Migraine in the ED: no opioids.", "text": "IV metoclopramide or prochlorperazine with an IV NSAID such as ketorolac; sumatriptan 6 mg SC if the pain persists and nothing rules it out. No imaging for reassurance.", "refs": ["mig_tx"]}
+  ],
+  "sections": [
+    {"stage": "Stabilize", "heading": "What are the first steps for a headache in the ED?", "intro": "Stability, then the history that picks the scan. Depressed consciousness gets the airway, a capillary glucose and an immediate non-contrast CT; suspected carbon monoxide gets 100% oxygen at once.", "refs": ["triage", "unstable", "co_first"]},
+    {"stage": "Result", "heading": "Which headache red flags change the workup?", "intro": "Onset, consciousness, fever and the neurologic exam sort the patient at the door; the named red flag (GCA features, papilledema, a household cluster, a pressure over 180/120, pregnancy) then picks the branch.", "refs": ["front_door", "flags", "preg_bp", "primary", "sah_ct_result", "unstable_ct"]},
+    {"stage": "Imaging", "heading": "Which scan for which headache: CT, CT angiography or venography?", "intro": "Thunderclap: urgent non-contrast CT. Papilledema or a suspected venous clot: venography. BP over 180/120 with confusion: non-contrast CT before the BP plan. Another secondary-cause flag: CT or MRI now.", "refs": ["sah_ct", "venous_img", "htn_ct", "flag_img"]},
+    {"stage": "Diagnose", "heading": "CT negative for subarachnoid hemorrhage: do you still need a lumbar puncture?", "intro": "It depends on the clock: after a radiologist-reported CT within 6 hours NICE does not routinely offer an LP, while after a later CT the next test is an LP at 12 hours or more after onset. The same stage confirms GCA by biopsy and measures the opening pressure in papilledema.", "refs": ["neg_early", "lp", "sah_cta", "gca_confirm", "iih_lp"]},
+    {"stage": "Manage", "heading": "How is each cause of headache treated in the ED?", "intro": "Nimodipine and early coiling or clipping for SAH, steroids for GCA, LMWH for venous thrombosis, a slow IV drop for hypertensive encephalopathy, oxygen for carbon monoxide and cluster, and no opioids for the primary headaches.", "refs": ["sah_secure", "gca_pulse", "gca_oral", "cvt_tx", "iih_tx", "co_severe", "htn", "mig_tx", "tth_tx", "cluster_tx", "moh_tx"]},
+    {"stage": "Labs", "heading": "Which labs for suspected giant cell arteritis?", "intro": "ESR and CRP, both normal in under 3% of GCA, drawn with the first glucocorticoid dose: they support the diagnosis but do not gate the steroid.", "refs": ["gca_first"]},
+    {"stage": "Outcome", "heading": "Where does each headache end up?", "intro": "Some routes hand off: fever to the sepsis and fever pathway, a focal deficit or an intracerebral bleed to the stroke pathway, a mass or subdural to neurosurgery, pre-eclampsia to the obstetric team.", "refs": ["end_mening", "end_stroke", "end_lesion", "end_pe", "end_sah", "end_sah_out"]}
+  ],
+  "checklist": {
+    "heading": "The red flags to screen in every headache",
+    "items": [
+      {"text": "Sudden onset reaching maximum intensity within 5 minutes.", "refs": ["triage", "front_door"]},
+      {"text": "Worsening headache with fever.", "refs": ["triage"]},
+      {"text": "A new neurological deficit or impaired consciousness.", "refs": ["triage", "front_door"]},
+      {"text": "Head trauma in the past 3 months, or an anticoagulant.", "refs": ["triage", "flags", "flag_img"]},
+      {"text": "Over 50 with jaw claudication, scalp tenderness or visual symptoms.", "refs": ["triage", "flags"]},
+      {"text": "Compromised immunity, or a cancer that can spread to the brain.", "refs": ["triage", "flag_img"]},
+      {"text": "Papilledema on fundoscopy, and a BP of 180 systolic or 120 diastolic or more.", "refs": ["triage", "venous_img"]},
+      {"text": "Pregnant or postpartum with a new headache unlike her usual; others at home ill too.", "refs": ["flags"]}
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the onset and the exam, then what the scans showed and what is running. For example: 52-year-old woman with a sudden severe headache that peaked within a minute while lifting a box 2 hours ago, then vomiting and neck pain; GCS 15, no focal deficit, afebrile, BP 168/94. Non-contrast CT at 2.5 hours shows blood in the basal cisterns and both sylvian fissures, and CT angiography a 7 mm posterior communicating artery aneurysm whose pattern fits the bleed. The neurosurgical center has been called; she has analgesia including opioids, recorded because they change the pupils, and enteral nimodipine 60 mg every 4 hours for 21 days, with no tranexamic acid. The plan is to coil, or clip if coiling is not suitable, at the earliest opportunity, since the rebleeding risk is highest in the first 24 hours.",
+    "presentRefs": ["case:sah_classic", "front_door", "sah_ct", "sah_ct_result", "sah_cta", "cta_result", "sah_secure"],
+    "pimp": [
+      {"q": "Why not a lumbar puncture first in a thunderclap headache?", "a": "The CT diagnoses SAH and the LP comes only after a clear CT. With depressed consciousness the CT goes before any LP, because a mass lesion can herniate after a tap.", "refs": ["sah_ct", "unstable"]},
+      {"q": "Why wait 12 hours after onset for the LP?", "a": "That is when enough bilirubin has formed to be detected reliably. Xanthochromia on spectrophotometry diagnoses SAH.", "refs": ["lp"]},
+      {"q": "Why never give nimodipine IV?", "a": "Injecting the capsule contents has been followed by deaths, cardiac arrest and cardiovascular collapse. A patient who cannot swallow gets the contents drawn into an oral syringe and given down a nasogastric tube.", "refs": ["sah_secure"]},
+      {"q": "Why start steroids before the GCA biopsy?", "a": "Delaying glucocorticoids when vision is affected is the strongest risk factor for permanent blindness, and imaging and biopsy can still show GCA weeks into treatment. The ACR asks for the biopsy within 2 weeks.", "refs": ["gca_first", "gca_pulse", "gca_confirm"]},
+      {"q": "Why ignore a pulse oximeter reading 99% in suspected carbon monoxide?", "a": "Ordinary pulse oximeters cannot tell carboxyhemoglobin from oxyhemoglobin, so 100% oxygen starts whatever the saturation and COHb is measured on a blood gas.", "refs": ["co_first"]},
+      {"q": "Why not bring the pressure to normal in hypertensive encephalopathy?", "a": "Rapid correction can cause organ hypoperfusion through lost autoregulation. Systolic comes down no more than 25% in the first hour, then to under 160/100 over 2 to 6 hours.", "refs": ["htn"]}
+    ]
+  },
+  "traps": [
+    {"text": "An LP before the CT in a thunderclap headache or a drowsy patient. CT first; the LP only after a clear scan.", "refs": ["sah_ct", "unstable"]},
+    {"text": "Calling SAH ruled out on a clear CT done more than 6 hours after onset. The next test is an LP at 12 hours or more, not a repeat scan.", "refs": ["lp", "sah_ct_result"]},
+    {"text": "Nimodipine IV, or the capsule contents injected. Enteral only, 60 mg every 4 hours.", "refs": ["sah_secure"]},
+    {"text": "Holding steroids for the temporal artery biopsy, or starting prednisone 10 mg. High-dose glucocorticoids start now.", "refs": ["gca_first", "gca_oral"]},
+    {"text": "No anticoagulation in venous sinus thrombosis because there is blood on the scan. Intracranial blood is not a contraindication to therapeutic LMWH.", "refs": ["cvt_tx"]},
+    {"text": "Reassurance from a pulse oximeter of 99% when the whole household has headaches. It cannot see carboxyhemoglobin: 100% oxygen now, COHb on a blood gas.", "refs": ["co_first"]},
+    {"text": "Opioids for migraine, or a CT for reassurance with a normal exam. IV metoclopramide or prochlorperazine with an IV NSAID instead.", "refs": ["mig_tx"]},
+    {"text": "Oral sumatriptan for a cluster attack. Oxygen at 12 L/min or more by non-rebreather, and/or sumatriptan 6 mg SC.", "refs": ["cluster_tx"]}
+  ],
+  "faq": [
+    {"q": "Do you need an LP after a negative CT for subarachnoid hemorrhage?", "a": "It depends on timing. After a radiologist-reported CT within 6 hours of onset, NICE does not routinely offer an LP; it asks for senior review, with an LP at 12 hours or more only if SAH is still suspected. Many US question banks still expect an LP after any negative CT. After 6 hours the CT misses more, so an LP at least 12 hours after onset is next.", "refs": ["neg_early", "lp"]},
+    {"q": "What are the red flags for a headache?", "a": "NICE CG150 lists a sudden onset reaching maximum intensity within 5 minutes, worsening headache with fever, a new neurological deficit, impaired consciousness, head trauma in the past 3 months, symptoms of giant cell arteritis, compromised immunity and a cancer that can spread to the brain. Fundoscopy for papilledema and a blood pressure of 180 systolic or 120 diastolic or more complete the screen.", "refs": ["triage"]},
+    {"q": "How is giant cell arteritis treated in the ED?", "a": "Draw ESR and CRP and start glucocorticoids without waiting for the biopsy. With visual loss: pulse IV methylprednisolone (ACR: 500 to 1000 mg daily for 3 to 5 days; EULAR: could be considered), then high-dose oral prednisone. Without it: high-dose oral prednisone, 40 to 60 mg a day (EULAR) or 1 mg/kg up to 80 mg (ACR). Temporal artery biopsy within 2 weeks of starting.", "refs": ["gca_first", "gca_pulse", "gca_oral", "gca_confirm"]},
+    {"q": "What is the ED treatment for migraine?", "a": "When treatment at home has failed: IV metoclopramide or prochlorperazine with an IV NSAID such as ketorolac; an antiemetic is worth giving even without nausea. Sumatriptan 6 mg SC if the pain persists and nothing rules it out, a second 6 mg only after at least 1 hour and some response, maximum 12 mg in 24 hours. No opioids or ergots, and no imaging for reassurance.", "refs": ["mig_tx"]},
+    {"q": "What is the acute treatment for cluster headache?", "a": "100% oxygen at 12 L/min or more through a non-rebreathing mask with a reservoir bag, and/or sumatriptan 6 mg SC. Oral triptans, acetaminophen (paracetamol), NSAIDs, opioids and ergots are not offered for an acute attack. Verapamil is considered for prevention during the bout with specialist advice, home oxygen is arranged, and a first bout gets neuroimaging discussed with a specialist.", "refs": ["cluster_tx"]},
+    {"q": "When is hyperbaric oxygen given for carbon monoxide poisoning?", "a": "The German S2k guideline gives it for severe poisoning, such as continued impaired consciousness, metabolic acidosis, respiratory insufficiency or cardiac ischemia, and in pregnancy: within 6 hours, not after 24, with 100% oxygen until then. Not every society agreed; some give hyperbaric or high-flow normobaric oxygen case by case. Oxygen continues until COHb is below 3% and symptoms are gone.", "refs": ["co_severe", "co_result"]}
+  ],
+  "related": ["htn", "stroke", "sepsis_fever", "eye"]
+}

@@ -1,0 +1,3464 @@
+{
+ "id": "pw_ams",
+ "title": "Altered mental status",
+ "world": "neuro",
+ "synonyms": [
+  "altered mental status",
+  "AMS",
+  "acute confusion",
+  "confusion",
+  "delirium",
+  "encephalopathy",
+  "coma",
+  "unresponsive",
+  "obtunded",
+  "drowsy",
+  "lethargy",
+  "4AT",
+  "hypoglycemia",
+  "thiamine",
+  "Wernicke encephalopathy",
+  "naloxone",
+  "opioid overdose",
+  "CO2 narcosis",
+  "hypercapnia",
+  "hyponatremia",
+  "hypercalcemia",
+  "uremia",
+  "hepatic encephalopathy",
+  "lactulose",
+  "rifaximin",
+  "thyroid storm",
+  "myxedema coma",
+  "hypothermia",
+  "hypertensive encephalopathy",
+  "delirium tremens",
+  "haloperidol"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:2a6f5eb6d567",
+   "label": "NICE CG103",
+   "title": "Delirium: prevention, diagnosis and management in hospital and long-term care (2010, updated 2023)",
+   "url": "https://www.nice.org.uk/guidance/cg103"
+  },
+  {
+   "docId": "pmid:37139824",
+   "label": "AGS Beers 2023",
+   "title": "American Geriatrics Society 2023 updated AGS Beers Criteria for potentially inappropriate medication use in older adults",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37139824/"
+  },
+  {
+   "docId": "pmid:25495432",
+   "label": "AGS postoperative delirium 2015",
+   "title": "American Geriatrics Society abstracted clinical practice guideline for postoperative delirium in older adults",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25495432/"
+  },
+  {
+   "docId": "url:ed1c1f5fb274",
+   "label": "NICE NG232",
+   "title": "Head injury: assessment and early management (2023)",
+   "url": "https://www.nice.org.uk/guidance/ng232"
+  },
+  {
+   "docId": "url:053089e98c8e",
+   "label": "NICE CG100",
+   "title": "Alcohol-use disorders: diagnosis and management of physical complications (2010, updated 2017)",
+   "url": "https://www.nice.org.uk/guidance/cg100"
+  },
+  {
+   "docId": "url:8b91b4e8a488",
+   "label": "FDA label: thiamine",
+   "title": "Thiamine Hydrochloride Injection USP prescribing information (Meitheal), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bfe8ac7-9294-4980-9635-90f8e6f6dd8e"
+  },
+  {
+   "docId": "url:ddbf6bf0c79c",
+   "label": "JBDS hypoglycaemia 2023",
+   "title": "The Hospital Management of Hypoglycaemia in Adults with Diabetes Mellitus (JBDS 01), revised January 2023",
+   "url": "https://abcd.care/sites/default/files/site_uploads/JBDS_Guidelines_Current/JBDS_01_Hypo_Guideline_with_QR_code_January_2023.pdf"
+  },
+  {
+   "docId": "url:8773a743d6dc",
+   "label": "FDA label: 50% dextrose",
+   "title": "50% Dextrose Injection USP prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=763b1cb8-1151-5f59-e053-2991aa0a4e01"
+  },
+  {
+   "docId": "pmid:26900382",
+   "label": "AES 2016",
+   "title": "Evidence-Based Guideline: Treatment of Convulsive Status Epilepticus in Children and Adults (American Epilepsy Society)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26900382/"
+  },
+  {
+   "docId": "url:755cffc56816",
+   "label": "FDA label: naloxone",
+   "title": "Naloxone Hydrochloride Injection USP prescribing information (Hospira), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8535cc84-ad4a-4d67-8480-fb5a2e3406f8"
+  },
+  {
+   "docId": "url:3006383969b7",
+   "label": "FDA label: haloperidol injection",
+   "title": "Haloperidol Injection USP (haloperidol lactate) prescribing information (Fresenius Kabi), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b1ad2abd-a9d6-44e3-957b-36a73260f4f5"
+  },
+  {
+   "docId": "pmid:28883921",
+   "label": "BTS oxygen 2017",
+   "title": "British Thoracic Society Guideline for oxygen use in adults in healthcare and emergency settings",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28883921/"
+  },
+  {
+   "docId": "pmid:27026806",
+   "label": "BTS/ICS 2016",
+   "title": "BTS/ICS Guideline for the ventilatory management of acute hypercapnic respiratory failure in adults",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27026806/"
+  },
+  {
+   "docId": "url:64e48d5d8ef3",
+   "label": "NICE NG128",
+   "title": "Stroke and transient ischaemic attack in over 16s: diagnosis and initial management (2019, updated 2022)",
+   "url": "https://www.nice.org.uk/guidance/ng128"
+  },
+  {
+   "docId": "url:4a5f477fcfcd",
+   "label": "NICE NG240",
+   "title": "Meningitis (bacterial) and meningococcal disease: recognition, diagnosis and management (2024)",
+   "url": "https://www.nice.org.uk/guidance/ng240"
+  },
+  {
+   "docId": "pmid:15494903",
+   "label": "IDSA meningitis 2004",
+   "title": "Practice guidelines for the management of bacterial meningitis (2004)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/15494903/"
+  },
+  {
+   "docId": "pmid:34599691",
+   "label": "SSC 2021",
+   "title": "Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34599691/"
+  },
+  {
+   "docId": "pmid:39052901",
+   "label": "ADA/EASD 2024",
+   "title": "Hyperglycemic Crises in Adults With Diabetes: A Consensus Report (ADA, EASD, JBDS, AACE, DTS), Diabetes Care 2024",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39052901/"
+  },
+  {
+   "docId": "pmid:27935814",
+   "label": "SfE hyponatraemia 2016",
+   "title": "Society for Endocrinology emergency guidance: emergency management of severe symptomatic hyponatraemia in adult patients",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27935814/"
+  },
+  {
+   "docId": "pmid:27935816",
+   "label": "SfE hypercalcaemia 2016",
+   "title": "Society for Endocrinology emergency guidance: emergency management of acute hypercalcaemia in adult patients",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27935816/"
+  },
+  {
+   "docId": "url:bc9f91df25ce",
+   "label": "FDA label: zoledronic acid",
+   "title": "Zoledronic acid injection 4 mg/5 mL prescribing information (Mylan), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20cd29cc-cef5-48c4-adfe-6b3dfee0ab61"
+  },
+  {
+   "docId": "url:6e7c4637c934",
+   "label": "NICE NG148",
+   "title": "Acute kidney injury: prevention, detection and management (2019)",
+   "url": "https://www.nice.org.uk/guidance/ng148"
+  },
+  {
+   "docId": "url:7346c314a558",
+   "label": "FDA label: lactulose",
+   "title": "Lactulose Solution USP prescribing information (Rising), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e75c335b-f19e-42e2-a24f-d891a52d3d34"
+  },
+  {
+   "docId": "url:9288706e9cb6",
+   "label": "FDA label: Xifaxan",
+   "title": "Xifaxan (rifaximin) tablets prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c5e8e2fd-7087-4b78-9181-cc259c0be2f1"
+  },
+  {
+   "docId": "url:69413ce24f66",
+   "label": "NICE TA337",
+   "title": "Rifaximin for preventing episodes of overt hepatic encephalopathy (2015)",
+   "url": "https://www.nice.org.uk/guidance/ta337"
+  },
+  {
+   "docId": "pmid:25266247",
+   "label": "ATA hypothyroidism 2014",
+   "title": "Guidelines for the Treatment of Hypothyroidism (American Thyroid Association), 2014",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25266247/"
+  },
+  {
+   "docId": "url:05cd46747b7a",
+   "label": "FDA label: levothyroxine injection",
+   "title": "Levothyroxine Sodium for Injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4e9adc35-3aba-4a0d-9c4e-7e7ee2ffdabd"
+  },
+  {
+   "docId": "pmid:27746415",
+   "label": "JTA/JES thyroid storm 2016",
+   "title": "2016 Guidelines for the management of thyroid storm from The Japan Thyroid Association and Japan Endocrine Society",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27746415/"
+  },
+  {
+   "docId": "pmid:35010760",
+   "label": "Hypothermia review 2022",
+   "title": "Accidental Hypothermia: 2021 Update (narrative review, Int J Environ Res Public Health 2022)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35010760/"
+  },
+  {
+   "docId": "pmid:40815242",
+   "label": "AHA/ACC BP 2025",
+   "title": "2025 AHA/ACC High Blood Pressure Guideline",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40815242/"
+  },
+  {
+   "docId": "pmid:30895288",
+   "label": "IDSA bacteriuria 2019",
+   "title": "Clinical Practice Guideline for the Management of Asymptomatic Bacteriuria: 2019 Update (IDSA)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30895288/"
+  },
+  {
+   "docId": "pmid:28613465",
+   "label": "StatPearls hypercalcemia (review)",
+   "title": "StatPearls: Hypercalcemia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613465/"
+  },
+  {
+   "docId": "pmid:29262111",
+   "label": "StatPearls hyponatremia (review)",
+   "title": "StatPearls: Hyponatremia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29262111/"
+  },
+  {
+   "docId": "pmid:29939554",
+   "label": "StatPearls SIADH (review)",
+   "title": "StatPearls: Syndrome of Inappropriate Antidiuretic Hormone Secretion",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29939554/"
+  },
+  {
+   "docId": "url:8233b86358b0",
+   "label": "FDA calcitonin",
+   "title": "FDA label: Miacalcin (calcitonin salmon) injection",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26caf31f-7f7c-48a8-a1ac-35d2ceefda2b"
+  },
+  {
+   "docId": "pmid:29261914",
+   "label": "StatPearls: Wernicke-Korsakoff",
+   "title": "Wernicke-Korsakoff Syndrome (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29261914/"
+  },
+  {
+   "docId": "pmid:28722912",
+   "label": "StatPearls: alcohol withdrawal",
+   "title": "Alcohol Withdrawal Syndrome (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722912/"
+  },
+  {
+   "docId": "pmid:26381473",
+   "label": "NATA 2015 (exertional heat illness)",
+   "title": "National Athletic Trainers' Association Position Statement: Exertional Heat Illnesses (J Athl Train 2015)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26381473/"
+  },
+  {
+   "docId": "pmid:28722939",
+   "label": "StatPearls: Naloxone",
+   "title": "Naloxone (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722939/"
+  }
+ ],
+ "differential": [
+  "Hypoglycemia",
+  "Opioid toxicity",
+  "Poisoning",
+  "Intracranial hemorrhage",
+  "Ischemic stroke",
+  "Meningitis",
+  "Sepsis",
+  "Traumatic brain injury",
+  "Seizure",
+  "Wernicke encephalopathy",
+  "Alcohol withdrawal",
+  "Hyperglycemic crisis",
+  "Hypercapnia",
+  "Hyponatremia",
+  "Hypercalcemia",
+  "Uremia",
+  "Hepatic encephalopathy",
+  "Thyroid storm",
+  "Myxedema coma",
+  "Hypothermia",
+  "Heat illness",
+  "Hypertensive encephalopathy",
+  "Delirium"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Acute confusion or drowsiness. First moves?",
+   "options": [
+    "ABC, oxygen saturation, capillary glucose, vitals and temperature",
+    "Non-contrast CT head first; the glucose can wait for the lab panel",
+    "Sedate with haloperidol first, then examine and check the glucose",
+    "Assume intoxication and observe until the patient sobers up"
+   ],
+   "answer": 0,
+   "chainStep": "Airway and breathing; SpO2 to a target range, with a blood gas if hypoxia or CO2 retention is possible; capillary glucose; full vitals with temperature; GCS",
+   "why": "A capillary glucose belongs in the ABCDE of every acutely ill adult, and hypoglycemia must be excluded in anyone with diabetes who is drowsy, unconscious, unable to cooperate, aggressive or seizing; exposure includes the temperature. Unexplained confusion can be the presenting feature of hypoxemia or hypercapnia, so the saturation goes with a blood gas when that is possible. A depressed conscious level is put down to intoxication only after an important brain injury has been excluded. In delirium the first job is the cause; haloperidol comes only for distress or danger, once de-escalation has failed.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "url:ddbf6bf0c79c",
+     "where": "Hypoglycaemia in adults with diabetes; Section C, step 1"
+    },
+    {
+     "docId": "pmid:28883921",
+     "where": "B, good practice point; A2; A3"
+    },
+    {
+     "docId": "url:ed1c1f5fb274",
+     "where": "1.4.2"
+    },
+    {
+     "docId": "url:2a6f5eb6d567",
+     "where": "1.7.1; 1.7.3; 1.7.4"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Oxygen target",
+     "dose": "94 to 98% for most; 88 to 92% if at risk of hypercapnic respiratory failure, pending a blood gas",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28883921",
+       "where": "A2; A3"
+      }
+     ]
+    },
+    {
+     "item": "Blood gas",
+     "dose": "Consider it in unexplained confusion or agitation, which can be how hypoxemia or hypercapnia presents",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28883921",
+       "where": "B, good practice point"
+      }
+     ]
+    },
+    {
+     "item": "Capillary glucose",
+     "dose": "Part of the ABCDE assessment, with the GCS; exposure includes the temperature",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ddbf6bf0c79c",
+       "where": "Hypoglycaemia in adults with diabetes; Section C, step 1"
+      }
+     ]
+    },
+    {
+     "item": "Airway",
+     "dose": "Protect it when consciousness is depressed; outside head injury the intubation threshold is not in the sources read",
+     "status": "pending"
+    }
+   ],
+   "note": "Adults only. Not in this version: children, pregnancy, shock without an infection clue, a mass or abscess on CT, and primary psychiatric presentations."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Glucose, breathing, pressure and consciousness",
+   "outcomes": [
+    {
+     "id": "hypo",
+     "if": "Glucose low; under 72 mg/dL (4 mmol/L), the JBDS threshold",
+     "ddx": {
+      "lead": [
+       "Hypoglycemia"
+      ],
+      "out": []
+     },
+     "next": "hypo_tx"
+    },
+    {
+     "id": "opioid",
+     "if": "Opioid picture; slow, shallow breathing and pinpoint pupils",
+     "ddx": {
+      "lead": [
+       "Opioid toxicity"
+      ],
+      "out": []
+     },
+     "next": "nalox"
+    },
+    {
+     "id": "coma",
+     "if": "Unresponsive, airway at risk; GCS 8 or less, glucose normal, no opioid picture",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Hypoglycemia"
+      ]
+     },
+     "next": "coma"
+    },
+    {
+     "id": "shock",
+     "if": "Shock with possible infection; low pressure or poor perfusion, with a fever or a source",
+     "ddx": {
+      "lead": [
+       "Sepsis"
+      ],
+      "out": []
+     },
+     "next": "end_sepsis",
+     "orders": [
+      {
+       "item": "Antimicrobials",
+       "dose": "Immediately, ideally within 1 hour of recognition, for possible septic shock",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34599691",
+         "where": "Recommendation 12"
+        }
+       ]
+      },
+      {
+       "item": "Crystalloid",
+       "dose": "At least 30 mL/kg IV within the first 3 hours for sepsis-induced hypoperfusion or septic shock (a weak recommendation)",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34599691",
+         "where": "Recommendation 5"
+        }
+       ]
+      },
+      {
+       "item": "MAP target",
+       "dose": "65 mm Hg initially if vasopressors are needed",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:34599691",
+         "where": "Recommendation 9"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "shock_other",
+     "if": "Shock, no infection clue; low pressure or poor perfusion",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_shock_scope"
+    },
+    {
+     "id": "hypox",
+     "if": "Hypoxemic; saturation below target, PCO2 not raised",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_hypox"
+    },
+    {
+     "id": "dka",
+     "if": "Glucose high; 200 mg/dL (11.1 mmol/L) or more in a possible crisis",
+     "ddx": {
+      "lead": [
+       "Hyperglycemic crisis"
+      ],
+      "out": []
+     },
+     "next": "end_dka",
+     "orders": [
+      {
+       "item": "First samples",
+       "dose": "Glucose, electrolytes, venous blood gas, blood count, and blood or urine ketones",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:39052901",
+         "where": "Section 3, Clinical Presentation of DKA and HHS"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "co2",
+     "if": "CO2 retention; known COPD, pH under 7.35 with a raised PaCO2",
+     "ddx": {
+      "lead": [
+       "Hypercapnia"
+      ],
+      "out": []
+     },
+     "next": "co2"
+    },
+    {
+     "id": "stable",
+     "if": "Airway safe, glucose normal; breathing adequate, no shock",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Hypoglycemia"
+      ]
+     },
+     "next": "look"
+    }
+   ]
+  },
+  {
+   "id": "hypo_tx",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Capillary glucose under 72 mg/dL (4 mmol/L), IV line in. Next?",
+   "options": [
+    "Treat the glucose now; IV thiamine with it in a drinker",
+    "Wait for the laboratory glucose to confirm it before treating",
+    "Give thiamine, then hold the glucose for 30 minutes after it",
+    "Glucagon 1 mg IM first, then IV glucose if it fails"
+   ],
+   "answer": 0,
+   "chainStep": "Correct the glucose now: IV if not safe to swallow (JBDS 100 mL of 20% or 200 mL of 10% over 15 minutes; US label 20 to 50 mL of 50% dextrose); thiamine 100 mg IV with it when thiamine status is marginal; recheck at 10 minutes",
+   "why": "Hypoglycemia is treated without delay, and the dextrose label says not to wait for the laboratory result in an emergency. Thiamine is indicated when IV dextrose goes to someone with marginal thiamine status, such as a heavy drinker or a malnourished patient; AES, in its seizure algorithm, gives thiamine 100 mg IV and then the dextrose, and neither source holds the glucose back for it. With a line in, IV glucose comes first: glucagon works through liver glycogen and is less effective after heavy drinking, malnutrition or liver disease.",
+   "next": "hypo_result",
+   "sources": [
+    {
+     "docId": "url:ddbf6bf0c79c",
+     "where": "Management of hypoglycaemia, Introduction; Section C, steps 5 to 7"
+    },
+    {
+     "docId": "url:8773a743d6dc",
+     "where": "Dosage and Administration"
+    },
+    {
+     "docId": "url:8b91b4e8a488",
+     "where": "Indications; Dosage and Administration"
+    },
+    {
+     "docId": "pmid:26900382",
+     "where": "Figure 1, stabilization phase, item 5"
+    },
+    {
+     "docId": "url:053089e98c8e",
+     "where": "1.2.1.3"
+    }
+   ],
+   "orders": [
+    {
+     "item": "IV glucose, not safe to swallow (JBDS)",
+     "dose": "100 mL of 20% or 200 mL of 10% over 15 minutes; recheck at 10 minutes and repeat if still under 4.0 mmol/L",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ddbf6bf0c79c",
+       "where": "Section C, steps 5 and 7"
+      }
+     ]
+    },
+    {
+     "item": "IV dextrose (US label)",
+     "dose": "10 to 25 g (20 to 50 mL of 50% dextrose), injected slowly",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8773a743d6dc",
+       "where": "Dosage and Administration"
+      }
+     ],
+     "note": "JBDS prefers 10% or 20% solutions, citing extravasation injuries with 50%."
+    },
+    {
+     "item": "Confused but able to swallow (JBDS)",
+     "dose": "2 tubes of 40% glucose gel between the teeth and gums",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ddbf6bf0c79c",
+       "where": "Section B, step 4"
+      }
+     ]
+    },
+    {
+     "item": "No IV access (JBDS)",
+     "dose": "Glucagon 1 mg IM; less effective in malnutrition, heavy drinking or liver disease",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ddbf6bf0c79c",
+       "where": "Section C, step 6"
+      }
+     ]
+    },
+    {
+     "item": "Thiamine",
+     "dose": "With IV dextrose when thiamine status is marginal; AES gives 100 mg IV before 50 mL of 50% dextrose in its seizure algorithm",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8b91b4e8a488",
+       "where": "Indications"
+      },
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, stabilization phase, item 5"
+      }
+     ]
+    },
+    {
+     "item": "After a sulfonylurea or long-acting insulin",
+     "dose": "The risk can persist 24 to 36 hours after the last dose; keep checking",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ddbf6bf0c79c",
+       "where": "Section C, step 13"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hypo_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After the glucose",
+   "outcomes": [
+    {
+     "id": "woke",
+     "if": "Back to normal; glucose above 4 mmol/L (72 mg/dL), confusion gone",
+     "ddx": {
+      "lead": [
+       "Hypoglycemia"
+      ],
+      "out": []
+     },
+     "next": "end_hypo"
+    },
+    {
+     "id": "still",
+     "if": "Still confused or a deficit persists; glucose now normal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "look"
+    }
+   ]
+  },
+  {
+   "id": "end_hypo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypoglycemia: treated at once, and the confusion cleared. Find out why the glucose fell; after a sulfonylurea or long-acting insulin the risk can last 24 to 36 hours, so the checks continue."
+  },
+  {
+   "id": "nalox",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Pinpoint pupils and slow, shallow breathing. Next?",
+   "options": [
+    "Ventilate, then naloxone 0.4 to 2 mg IV, repeated",
+    "Naloxone 10 mg IV as a single push",
+    "Intubate first, and hold the naloxone until the CT is back",
+    "Wait for the urine drug screen before giving naloxone"
+   ],
+   "answer": 0,
+   "chainStep": "Support the airway and ventilate; naloxone 0.4 to 2 mg IV, repeated every 2 to 3 minutes to adequate breathing (IM or SC if there is no vein); watch for re-sedation",
+   "why": "For known or suspected opioid overdose the label gives 0.4 to 2 mg IV, repeated every 2 to 3 minutes, IM or subcutaneously when there is no vein, alongside airway support and ventilation; if 10 mg brings no response, the diagnosis is questioned. In someone dependent on opioids an abrupt, complete reversal can precipitate acute withdrawal, so one large push is wrong, and treatment of a suspected overdose does not wait for a drug screen. Some opioids outlast naloxone, so the patient stays under observation for repeat doses, and BTS checks a blood gas for hypercapnia after a respiratory depressant.",
+   "next": "end_tox",
+   "sources": [
+    {
+     "docId": "url:755cffc56816",
+     "where": "Dosage and Administration, Opioid Overdose; Warnings; Precautions"
+    },
+    {
+     "docId": "pmid:28883921",
+     "where": "Table 1, poisoning row"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Naloxone",
+     "dose": "0.4 to 2 mg IV; repeat every 2 to 3 minutes if needed; IM or SC if there is no IV route",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:755cffc56816",
+       "where": "Dosage and Administration, Opioid Overdose"
+      }
+     ]
+    },
+    {
+     "item": "Starting dose when opioid-dependent",
+     "dose": "StatPearls: a small first IV dose, usually 0.04 to 0.1 mg, in an opioid-dependent patient; 0.4 mg without known dependence; 1 to 2 mg IV for apnea or near-apnea with cyanosis; then 0.1 to 0.4 mg IV until breathing is adequate. The label starts at 0.4 to 2 mg",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:28722939",
+       "where": "Administration: \"A small initial IV dose (usually 0.04 mg to 0.1 mg) is recommended in patients who are opioid-dependent with symptoms of opioid overdose to avoid opioid withdrawal symptoms. Larger initial doses (such as 0.4 mg) are recommended in patients without a known history of opioid dependency.\""
+      },
+      {
+       "docId": "url:755cffc56816",
+       "where": "Dosage and Administration, Opioid Overdose"
+      }
+     ],
+     "note": "The label gives 0.4 to 2 mg for any known or suspected overdose and warns that an abrupt, complete reversal precipitates withdrawal in dependence; StatPearls titrates to breathing, not full reversal, and starts lower in dependence."
+    },
+    {
+     "item": "No response after 10 mg",
+     "dose": "Question the diagnosis of opioid toxicity",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:755cffc56816",
+       "where": "Dosage and Administration, Opioid Overdose"
+      }
+     ]
+    },
+    {
+     "item": "Observation",
+     "dose": "Continued surveillance with repeat doses as needed: some opioids outlast naloxone",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:755cffc56816",
+       "where": "Warnings, Repeat Administration"
+      }
+     ]
+    },
+    {
+     "item": "Opioid dependence",
+     "dose": "An abrupt, complete reversal may precipitate acute withdrawal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:755cffc56816",
+       "where": "Warnings"
+      }
+     ]
+    },
+    {
+     "item": "Blood gas",
+     "dose": "Check for hypercapnia after a respiratory depressant drug",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28883921",
+       "where": "Table 1, poisoning row"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_tox",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Poisoning or a toxidrome: the toxicology pathway (pw_tox) takes it from here. After naloxone, keep watching and repeat it as needed, because some opioids outlast it, and check a blood gas for CO2 retention after any respiratory depressant."
+  },
+  {
+   "id": "coma",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "GCS 8 or less, glucose normal, no opioid picture. First?",
+   "options": [
+    "Secure the airway, then CT now (cultures and antibiotics first if febrile)",
+    "Lumbar puncture first, to look for meningitis or blood in the CSF",
+    "Admit to the ward and scan once the GCS has been reassessed",
+    "Wait for the toxicology screen, then decide on imaging"
+   ],
+   "answer": 0,
+   "chainStep": "Secure the airway (intubate if it is not protected); oxygen to target; blood cultures and antibiotics first if there is any fever, stiff neck or rash; immediate non-contrast CT head",
+   "why": "A GCS of 8 or less is coma: NICE intubates at that level before transfer after a head injury, and BTS/ICS lists a GCS under 8 among the indications for invasive ventilation in a COPD exacerbation. A GCS below 13 calls for an immediate non-contrast CT in suspected stroke. A GCS of 9 or less, or a falling level, puts imaging before any lumbar puncture in NICE's meningitis guidance, and IDSA links an abnormal level of consciousness to an abnormal CT, so the tap waits for the scan, and neither a ward bed nor a drug screen delays it. If meningitis is possible, cultures and antibiotics come before the patient goes to CT.",
+   "next": "coma_ct",
+   "sources": [
+    {
+     "docId": "url:ed1c1f5fb274",
+     "where": "1.8.7; 1.8.8"
+    },
+    {
+     "docId": "pmid:27026806",
+     "where": "Box 1"
+    },
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.3.2"
+    },
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "1.4.6 to 1.4.8"
+    },
+    {
+     "docId": "pmid:15494903",
+     "where": "CT before lumbar puncture"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Intubation before transfer after a head injury (NICE)",
+     "dose": "GCS 8 or less, or lost protective laryngeal reflexes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed1c1f5fb274",
+       "where": "1.8.7; 1.8.8"
+      }
+     ]
+    },
+    {
+     "item": "Intubation, other causes",
+     "dose": "COPD exacerbation: depressed consciousness (GCS under 8) is an indication for invasive ventilation (BTS/ICS); no general coma threshold in the sources read",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27026806",
+       "where": "Box 1"
+      }
+     ]
+    },
+    {
+     "item": "Fever, stiff neck or rash",
+     "dose": "Blood cultures, then antibiotics and dexamethasone before the CT; the LP waits for the scan",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:15494903",
+       "where": "CT before lumbar puncture"
+      },
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.4.8; 1.8.5"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen",
+     "dose": "94 to 98% unless at risk of hypercapnic respiratory failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28883921",
+       "where": "A2; A3"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "coma_ct",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Non-contrast CT head",
+   "outcomes": [
+    {
+     "id": "bleed",
+     "if": "Intracranial bleed; blood in the brain or subarachnoid space",
+     "ddx": {
+      "lead": [
+       "Intracranial hemorrhage"
+      ],
+      "out": []
+     },
+     "next": "end_stroke"
+    },
+    {
+     "id": "lesion",
+     "if": "Another lesion; mass, abscess, infarct or swelling",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_ct_scope"
+    },
+    {
+     "id": "clear",
+     "if": "No bleed or mass; CT clear",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "coma_clues"
+    }
+   ]
+  },
+  {
+   "id": "coma_clues",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Temperature, history and examination in coma",
+   "outcomes": [
+    {
+     "id": "fever",
+     "if": "Possible meningitis; fever with a stiff neck, rash or no other source",
+     "ddx": {
+      "lead": [
+       "Meningitis",
+       "Sepsis"
+      ],
+      "out": []
+     },
+     "next": "mening"
+    },
+    {
+     "id": "tox",
+     "if": "Toxidrome or ingestion; pills found, or toxidrome signs",
+     "ddx": {
+      "lead": [
+       "Poisoning"
+      ],
+      "out": []
+     },
+     "next": "end_tox"
+    },
+    {
+     "id": "seizure",
+     "if": "Seizure; witnessed, ongoing twitching, or not waking after one",
+     "ddx": {
+      "lead": [
+       "Seizure"
+      ],
+      "out": []
+     },
+     "next": "end_seizure"
+    },
+    {
+     "id": "alcohol",
+     "if": "Wernicke picture; heavy drinking with malnutrition or eye signs",
+     "ddx": {
+      "lead": [
+       "Wernicke encephalopathy"
+      ],
+      "out": []
+     },
+     "next": "etoh"
+    },
+    {
+     "id": "myx",
+     "if": "Hypothyroid picture; cold, slow pulse, hypothyroid history",
+     "ddx": {
+      "lead": [
+       "Myxedema coma"
+      ],
+      "out": []
+     },
+     "next": "myx"
+    },
+    {
+     "id": "temp",
+     "if": "Cold or heat exposure; core under 35 °C (95 °F), or hot after heat",
+     "ddx": {
+      "lead": [
+       "Hypothermia",
+       "Heat illness"
+      ],
+      "out": []
+     },
+     "next": "end_temp",
+     "orders": [
+      {
+       "item": "Hypothermia: rewarming",
+       "dose": "Stable circulation: passive and active external rewarming; moderate or severe hypothermia needs active rewarming, internal if external fails",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:35010760",
+         "where": "5.2 In-Hospital Treatment"
+        }
+       ]
+      },
+      {
+       "item": "Hypothermia: ECLS",
+       "dose": "Direct transfer criteria: cardiac arrest, core under 30 °C (86 °F), systolic under 90 or a ventricular dysrhythmia",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:35010760",
+         "where": "5.1 Out of Hospital"
+        }
+       ]
+      },
+      {
+       "item": "Hypothermia: handling",
+       "dose": "Move gently and horizontally to avoid rescue collapse",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:35010760",
+         "where": "5.1 Out of Hospital"
+        }
+       ]
+      },
+      {
+       "item": "Heat stroke: cooling",
+       "dose": "Up to the neck in 1.7 to 15 °C (35.1 to 59 °F) water, stirred; about 1 °C (1.8 °F) every 5 minutes; the most effective method for exertional heat stroke; the stop point and the rest are in pw_environmental",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:26381473",
+         "where": "Recommendations 38, 39"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "none",
+     "if": "None of these; no fever, toxin, seizure, alcohol, thyroid or exposure clue",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "labs"
+    }
+   ]
+  },
+  {
+   "id": "end_ct_scope",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A lesion other than a bleed on CT is not covered in this version."
+  },
+  {
+   "id": "end_stroke",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Suspected stroke or a bleed on CT: the stroke pathway (pw_stroke) takes the route from here, with lysis and thrombectomy timed from when the patient was last known well, and reversal and blood pressure targets for a hemorrhage; subarachnoid blood goes on to CT angiography and the neurosurgical team."
+  },
+  {
+   "id": "end_sepsis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Possible sepsis or meningitis with confusion: the sepsis and fever pathway (pw_sepsis_fever) takes the route from here, with its own branches for septic shock and suspected meningitis, the source, the regimen and the CSF."
+  },
+  {
+   "id": "end_shock_scope",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Shock without an infection clue is not covered in this version of the pathway."
+  },
+  {
+   "id": "end_hypox",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Low oxygen with confusion: the dyspnea pathway (pw_dyspnea) takes it from here."
+  },
+  {
+   "id": "end_dka",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Possible hyperglycemic crisis: the DKA and HHS pathway (pw_dka_hhs) takes it from here, with fluids and the first samples (glucose, electrolytes, venous gas, blood count, ketones), then the diagnosis of DKA, HHS or both. Changes in cognitive state are usually present in severe DKA and in HHS."
+  },
+  {
+   "id": "co2",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Known COPD, drowsy, with a respiratory acidosis on the gas. Next?",
+   "options": [
+    "Oxygen to 88 to 92%; NIV if the acidosis persists",
+    "Reservoir mask at 15 L/min to push the saturation to 98%",
+    "Stop the oxygen until the drowsiness clears",
+    "Naloxone IV for the drowsiness, then repeat the blood gas"
+   ],
+   "answer": 0,
+   "chainStep": "Controlled oxygen to 88 to 92%; optimal medical therapy for the exacerbation; repeat the gas; NIV if a pH under 7.35 with a PCO2 over 6.5 kPa persists; invasive ventilation when more appropriate",
+   "why": "In acute hypercapnic respiratory failure from a COPD exacerbation, controlled oxygen aims for a saturation of 88 to 92%, neither switched off nor pushed toward normal. NIV starts when a pH under 7.35 with a PCO2 over 6.5 kPa persists or develops despite optimal medical therapy, and must not delay invasive ventilation when that is more appropriate; a GCS under 8 is one of BTS/ICS's indications for invasive ventilation. Naloxone is the antidote for opiate poisoning, not for CO2 narcosis.",
+   "next": "end_co2",
+   "sources": [
+    {
+     "docId": "pmid:27026806",
+     "where": "Recommendations 23, 25 and 27; Box 1"
+    },
+    {
+     "docId": "pmid:28883921",
+     "where": "A1; A3; Table 1, poisoning row"
+    }
+   ]
+  },
+  {
+   "id": "end_co2",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypercapnic drowsiness in COPD: controlled oxygen to 88 to 92%, then NIV when a pH under 7.35 with a PCO2 over 6.5 kPa persists despite optimal medical therapy, and invasive ventilation when that is more appropriate. The rest of the exacerbation is in the dyspnea pathway (pw_dyspnea)."
+  },
+  {
+   "id": "look",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Glucose normal, airway and breathing safe. Next?",
+   "options": [
+    "Witness history, medicines, alcohol, and a focal neuro exam",
+    "A urine dipstick now, treating a positive result as the cause",
+    "Haloperidol first so the patient settles, then the history",
+    "Put the confusion down to alcohol if it is on the breath"
+   ],
+   "answer": 0,
+   "chainStep": "History from a witness (onset, course, medicines, alcohol, injury, seizure); temperature; focal neurologic exam; look for injury",
+   "why": "NICE manages delirium by identifying the underlying cause or combination of causes, and the history and examination decide the route here: what a witness saw, the medicines and alcohol, an injury, a seizure, a fever, and any focal sign. IDSA recommends looking for other causes and observing, not treating, when an older patient with functional or cognitive impairment and delirium has bacteriuria but no urinary symptoms or systemic signs of infection. Intoxication explains a depressed conscious level only after an important brain injury is excluded, and haloperidol is for distress or danger after de-escalation.",
+   "next": "clues",
+   "sources": [
+    {
+     "docId": "url:2a6f5eb6d567",
+     "where": "1.7.1; 1.7.3; 1.7.4"
+    },
+    {
+     "docId": "pmid:30895288",
+     "where": "Recommendation on delirium (read as quoted in PMC7323061)"
+    },
+    {
+     "docId": "url:ed1c1f5fb274",
+     "where": "1.4.2"
+    }
+   ]
+  },
+  {
+   "id": "clues",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Witness history, temperature and examination",
+   "outcomes": [
+    {
+     "id": "focal",
+     "if": "Focal deficit; new one-sided weakness, speech or field loss",
+     "ddx": {
+      "lead": [
+       "Ischemic stroke",
+       "Intracranial hemorrhage"
+      ],
+      "out": []
+     },
+     "next": "stroke_ct"
+    },
+    {
+     "id": "fever",
+     "if": "Possible meningitis; fever with headache, stiff neck, rash or no other source",
+     "ddx": {
+      "lead": [
+       "Meningitis",
+       "Sepsis"
+      ],
+      "out": []
+     },
+     "next": "mening"
+    },
+    {
+     "id": "fever_source",
+     "if": "Fever with a clear source; cough, urine or skin, no meningism",
+     "ddx": {
+      "lead": [
+       "Sepsis"
+      ],
+      "out": []
+     },
+     "next": "end_sepsis"
+    },
+    {
+     "id": "head",
+     "if": "Head injury; a fall or a blow to the head, or signs of one",
+     "ddx": {
+      "lead": [
+       "Traumatic brain injury"
+      ],
+      "out": []
+     },
+     "next": "head_ct"
+    },
+    {
+     "id": "seizure",
+     "if": "Seizure; witnessed, ongoing twitching, or slow to recover",
+     "ddx": {
+      "lead": [
+       "Seizure"
+      ],
+      "out": []
+     },
+     "next": "end_seizure"
+    },
+    {
+     "id": "tox",
+     "if": "Toxidrome or ingestion; pills found, or toxidrome signs",
+     "ddx": {
+      "lead": [
+       "Poisoning"
+      ],
+      "out": []
+     },
+     "next": "end_tox"
+    },
+    {
+     "id": "alcohol",
+     "if": "Wernicke picture; heavy drinking with malnutrition, ataxia or eye signs",
+     "ddx": {
+      "lead": [
+       "Wernicke encephalopathy"
+      ],
+      "out": []
+     },
+     "next": "etoh"
+    },
+    {
+     "id": "withdrawal",
+     "if": "Alcohol withdrawal; tremor, sweating, fast pulse or hallucinations",
+     "ddx": {
+      "lead": [
+       "Alcohol withdrawal"
+      ],
+      "out": []
+     },
+     "next": "end_withdrawal",
+     "orders": [
+      {
+       "item": "Delirium tremens (NICE CG100)",
+       "dose": "Oral lorazepam first line; parenteral lorazepam or haloperidol if symptoms persist or oral medication is declined; CG100 states no dose",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:053089e98c8e",
+         "where": "1.1.4.1"
+        }
+       ]
+      },
+      {
+       "item": "Acute withdrawal",
+       "dose": "Consider a benzodiazepine or carbamazepine, symptom-triggered in hospital",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:053089e98c8e",
+         "where": "1.1.3.1; 1.1.3.4"
+        }
+       ]
+      },
+      {
+       "item": "Admission",
+       "dose": "Withdrawal with, or at high risk of, seizures or delirium tremens: admit for medically assisted withdrawal",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:053089e98c8e",
+         "where": "1.1.1.1"
+        }
+       ]
+      },
+      {
+       "item": "Thiamine",
+       "dose": "Oral prophylaxis in acute withdrawal; parenteral, then oral, if malnourished and attending the emergency department",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:053089e98c8e",
+         "where": "1.2.1.2; 1.2.1.3"
+        }
+       ]
+      },
+      {
+       "item": "Phenytoin for withdrawal seizures",
+       "dose": "Do not offer",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "url:053089e98c8e",
+         "where": "1.1.5.3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "storm",
+     "if": "Thyrotoxic; hyperthyroid with fever 38 °C (100.4 °F) or more, pulse 130 or more, heart failure or GI upset",
+     "ddx": {
+      "lead": [
+       "Thyroid storm"
+      ],
+      "out": []
+     },
+     "next": "storm"
+    },
+    {
+     "id": "myx",
+     "if": "Hypothyroid picture; cold, slow pulse, hypothyroid history",
+     "ddx": {
+      "lead": [
+       "Myxedema coma"
+      ],
+      "out": []
+     },
+     "next": "myx"
+    },
+    {
+     "id": "temp",
+     "if": "Cold or heat exposure; core under 35 °C (95 °F), or hot after heat",
+     "ddx": {
+      "lead": [
+       "Hypothermia",
+       "Heat illness"
+      ],
+      "out": []
+     },
+     "next": "end_temp",
+     "orders": [
+      {
+       "item": "Hypothermia: rewarming",
+       "dose": "Stable circulation: passive and active external rewarming; moderate or severe hypothermia needs active rewarming, internal if external fails",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:35010760",
+         "where": "5.2 In-Hospital Treatment"
+        }
+       ]
+      },
+      {
+       "item": "Hypothermia: ECLS",
+       "dose": "Direct transfer criteria: cardiac arrest, core under 30 °C (86 °F), systolic under 90 or a ventricular dysrhythmia",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:35010760",
+         "where": "5.1 Out of Hospital"
+        }
+       ]
+      },
+      {
+       "item": "Hypothermia: handling",
+       "dose": "Move gently and horizontally to avoid rescue collapse",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:35010760",
+         "where": "5.1 Out of Hospital"
+        }
+       ]
+      },
+      {
+       "item": "Heat stroke: cooling",
+       "dose": "Up to the neck in 1.7 to 15 °C (35.1 to 59 °F) water, stirred; about 1 °C (1.8 °F) every 5 minutes; the most effective method for exertional heat stroke; the stop point and the rest are in pw_environmental",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:26381473",
+         "where": "Recommendations 38, 39"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "htn",
+     "if": "Hypertensive encephalopathy; BP over 180/120, no focal deficit",
+     "ddx": {
+      "lead": [
+       "Hypertensive encephalopathy"
+      ],
+      "out": []
+     },
+     "next": "end_htn",
+     "orders": [
+      {
+       "item": "Admission",
+       "dose": "ICU for continuous monitoring and parenteral therapy",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:40815242",
+         "where": "6.2, recommendation 1"
+        }
+       ]
+      },
+      {
+       "item": "Target",
+       "dose": "Systolic down by no more than 25% in the first hour, then to under 160/100 within 2 to 6 hours, then to 130 to 140 over 24 to 48 hours",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:40815242",
+         "where": "6.2, recommendation 3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "none",
+     "if": "None of these; no focal sign, fever, injury, toxin or exposure",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "labs"
+    }
+   ]
+  },
+  {
+   "id": "stroke_ct",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Confusion with a new focal deficit. Next?",
+   "options": [
+    "Fix the time last known well; non-contrast CT now",
+    "Aspirin 300 mg now, and the CT once a bed is found",
+    "CT angiography first, then the non-contrast CT",
+    "Lumbar puncture first, then imaging if the CSF is clear"
+   ],
+   "answer": 0,
+   "chainStep": "Fix the time last known well; immediate non-contrast CT, with CT angiography if thrombectomy might be indicated",
+   "why": "Brain imaging is immediate with a non-enhanced CT in suspected stroke when thrombolysis or thrombectomy might be indicated or consciousness is depressed, with CT angiography after it if thrombectomy is possible, and thrombectomy is timed from when the patient was last known to be well. Aspirin waits until imaging has excluded a hemorrhage, and in meningitis guidance new focal neurological features put imaging before any lumbar puncture.",
+   "next": "end_stroke",
+   "sources": [
+    {
+     "docId": "url:64e48d5d8ef3",
+     "where": "1.1.2; 1.3.2; 1.4.5; 1.4.6; 1.4.9"
+    },
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "1.4.7"
+    }
+   ]
+  },
+  {
+   "id": "mening",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Fever with confusion or coma. Next?",
+   "options": [
+    "Blood cultures, then IV antibiotics within the hour, not held for a scan",
+    "Lumbar puncture now; antibiotics once the CSF results are back from the lab",
+    "CT head first, then antibiotics after the radiology report",
+    "Acetaminophen (paracetamol) and fluids, then reassess the confusion in an hour"
+   ],
+   "answer": 0,
+   "chainStep": "Blood cultures, then antibiotics within 1 hour of arrival, with dexamethasone with or before the first dose when bacterial meningitis is suspected; image before the lumbar puncture when consciousness is low or falling, then the LP when safe",
+   "why": "Fever, headache, neck stiffness and an altered level of consciousness are NICE's red flag combination for bacterial meningitis, and antibiotics start within 1 hour of arrival; bloods and antibiotics come before any imaging, and dexamethasone goes with or before the first dose without delaying it. The guidelines differ on the scan: IDSA links an abnormal level of consciousness to an abnormal CT and images selected adults before the tap, with cultures and antibiotics given first, while NICE images only for a GCS of 9 or less or a falling level, new focal features, seizures or abnormal pupils, and otherwise does the LP before the antibiotics if that causes no clinically significant delay. Neither waits for the CSF or the scan report.",
+   "next": "end_sepsis",
+   "sources": [
+    {
+     "docId": "url:4a5f477fcfcd",
+     "where": "1.1.4; 1.4.1; 1.4.6 to 1.4.9; 1.8.5"
+    },
+    {
+     "docId": "pmid:15494903",
+     "where": "CT before lumbar puncture"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Antibiotics",
+     "dose": "Within 1 hour of arrival; the regimen is in the sepsis and fever pathway",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.4.1"
+      }
+     ]
+    },
+    {
+     "item": "Dexamethasone",
+     "dose": "With or before the first antibiotic dose if possible, never delaying the antibiotics",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.8.5"
+      }
+     ]
+    },
+    {
+     "item": "Imaging before the LP (NICE)",
+     "dose": "GCS 9 or less or a falling level, new focal features including seizures or posturing, abnormal pupils, or risk factors for a space-occupying lesion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:4a5f477fcfcd",
+       "where": "1.4.7"
+      }
+     ]
+    },
+    {
+     "item": "Imaging before the LP (IDSA)",
+     "dose": "In selected adults, an abnormal level of consciousness among the features; cultures and antimicrobials first",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:15494903",
+       "where": "CT before lumbar puncture"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "head_ct",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Confused after a fall or a blow to the head. Next?",
+   "options": [
+    "CT head within 1 hour, before any period of observation",
+    "Observe for 4 hours, and scan only if the GCS falls",
+    "Skull x-ray first, and a CT only if it shows a fracture",
+    "Assume intoxication and reassess once the patient is sober"
+   ],
+   "answer": 0,
+   "chainStep": "CT head within 1 hour for a GCS under 15 at 2 hours after the injury or another NICE risk factor; neurosurgical discussion for a significant finding",
+   "why": "In anyone 16 or over, a GCS of 12 or less on arrival, or under 15 two hours after the injury, calls for a CT head within 1 hour, as do focal signs, a post-traumatic seizure, more than one vomit and signs of a skull fracture. Plain skull x-rays are not used to diagnose brain injury without a neuroscience discussion, observation alone ignores a GCS that has not recovered, and intoxication is assumed only after an important brain injury is excluded.",
+   "next": "head_result",
+   "sources": [
+    {
+     "docId": "url:ed1c1f5fb274",
+     "where": "1.5.8; 1.5.4; 1.4.2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "On an anticoagulant, no other indication",
+     "dose": "Consider CT within 8 hours of the injury",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed1c1f5fb274",
+       "where": "1.5.13"
+      }
+     ]
+    },
+    {
+     "item": "Tranexamic acid",
+     "dose": "GCS 12 or less without active extracranial bleeding: consider 2 g IV within 2 hours of the injury, before imaging (off-label in the UK)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed1c1f5fb274",
+       "where": "1.3.17"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "head_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT head",
+   "outcomes": [
+    {
+     "id": "bleed",
+     "if": "Traumatic bleed; acute intracranial hemorrhage on CT",
+     "ddx": {
+      "lead": [
+       "Traumatic brain injury"
+      ],
+      "out": []
+     },
+     "next": "end_head_bleed"
+    },
+    {
+     "id": "fracture",
+     "if": "Fracture, no bleed; skull fracture on CT, no intracranial blood",
+     "ddx": {
+      "lead": [
+       "Traumatic brain injury"
+      ],
+      "out": []
+     },
+     "next": "end_head_fracture"
+    },
+    {
+     "id": "clear",
+     "if": "CT clear; no bleed or fracture, still confused",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "labs"
+    }
+   ]
+  },
+  {
+   "id": "end_head_bleed",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Traumatic intracranial bleed with confusion: discuss with a neurosurgeon, as NICE does for any new, surgically significant finding on imaging and for unexplained confusion lasting more than 4 hours. On apixaban or rivaroxaban, reversal follows the stroke pathway's factor Xa route (pw_stroke): stop the drug and give four-factor PCC off-label where reversal is needed; warfarin reversal is in the trauma pathway (pw_trauma)."
+  },
+  {
+   "id": "end_head_fracture",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A skull fracture without a bleed on CT is not covered in this version."
+  },
+  {
+   "id": "end_seizure",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Seizure, or a patient slow to recover from one: the seizure pathway (pw_seizure) takes it from here, with a benzodiazepine for a seizure still going at 5 minutes and its own route for the patient who is not waking, where non-convulsive status epilepticus is one cause to look for."
+  },
+  {
+   "id": "etoh",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "A malnourished heavy drinker, confused or comatose. First drug?",
+   "options": [
+    "Parenteral thiamine now, given before or with any glucose",
+    "Oral thiamine once the patient is eating and drinking again",
+    "Haloperidol IM first, then thiamine once the patient is calm",
+    "IV phenytoin load in case withdrawal seizures follow"
+   ],
+   "answer": 0,
+   "chainStep": "High-dose parenteral thiamine now, before or with any glucose, for at least 5 days unless Wernicke's is excluded, then oral (NICE: upper end of the BNF range)",
+   "why": "NICE offers parenteral thiamine to anyone with suspected Wernicke's encephalopathy, keeping a high level of suspicion when the person is intoxicated, for at least 5 days unless Wernicke's is excluded and then orally; a malnourished harmful or dependent drinker attending the emergency department gets parenteral thiamine too. The US label records 100 mg IV initially in Wernicke-Korsakoff syndrome, and thiamine is indicated when IV dextrose goes to someone with marginal thiamine status. Phenytoin is not offered for alcohol withdrawal seizures, and in delirium tremens NICE starts with oral lorazepam, keeping parenteral lorazepam or haloperidol for symptoms that persist.",
+   "next": "end_etoh",
+   "sources": [
+    {
+     "docId": "url:053089e98c8e",
+     "where": "1.2.1.1; 1.2.1.3; 1.2.1.4; 1.1.4.1; 1.1.5.3"
+    },
+    {
+     "docId": "url:8b91b4e8a488",
+     "where": "Indications; Dosage and Administration"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Thiamine (NICE)",
+     "dose": "Parenteral for at least 5 days unless Wernicke's is excluded, then oral; doses toward the upper end of the BNF range",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.2.1.1; 1.2.1.4"
+      }
+     ]
+    },
+    {
+     "item": "Thiamine (US label)",
+     "dose": "100 mg IV initially in Wernicke-Korsakoff syndrome, then 50 to 100 mg IM daily until eating a balanced diet",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8b91b4e8a488",
+       "where": "Dosage and Administration"
+      }
+     ],
+     "note": "Describes past use in Wernicke-Korsakoff syndrome, not a high-dose regimen"
+    },
+    {
+     "item": "High-dose regimen",
+     "dose": "Royal College and UK guidelines: 500 mg IV every 8 hours for 3 days, then 250 mg IV or IM daily until improvement plateaus; EFNS: 200 mg IV every 8 hours until no further improvement",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29261914",
+       "where": "Treatment / management"
+      }
+     ],
+     "note": "The guidelines differ on the dose; NICE CG100 asks for the upper end of the BNF range without a number, and the US label's 100 mg IV describes past use. pw_agitation shows the same conflict."
+    },
+    {
+     "item": "Delirium tremens (NICE CG100)",
+     "dose": "Oral lorazepam first line; parenteral lorazepam or haloperidol if symptoms persist or oral medication is declined; CG100 states no dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.1.4.1"
+      }
+     ]
+    },
+    {
+     "item": "Admission",
+     "dose": "Withdrawal with, or at high risk of, seizures or delirium tremens: admit for medically assisted withdrawal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.1.1.1"
+      }
+     ]
+    },
+    {
+     "item": "Phenytoin for withdrawal seizures",
+     "dose": "Do not offer",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.1.5.3"
+      }
+     ]
+    },
+    {
+     "item": "Thiamine hypersensitivity",
+     "dose": "Anaphylaxis can follow IV or IM thiamine, especially after repeated doses; be ready to treat it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8b91b4e8a488",
+       "where": "Warnings"
+      }
+     ]
+    },
+    {
+     "item": "Thiamine in withdrawal",
+     "dose": "Route and dose differ by source",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.2.1.2; 1.2.1.3"
+      },
+      {
+       "docId": "pmid:28722912",
+       "where": "Treatment / management; Pearls and other issues"
+      }
+     ],
+     "note": "NICE: oral prophylaxis in acute withdrawal, parenteral then oral if malnourished or with decompensated liver disease and attending the ED; StatPearls: IV or IM at Wernicke treatment doses. pw_agitation shows both."
+    }
+   ]
+  },
+  {
+   "id": "end_withdrawal",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Alcohol withdrawal: admission for medically assisted withdrawal when seizures or delirium tremens are present or likely, a benzodiazepine (or carbamazepine) on a symptom-triggered regimen, and for delirium tremens oral lorazepam first, then parenteral lorazepam or haloperidol if it persists; thiamine prophylaxis, parenteral when malnourished; phenytoin is not used for withdrawal seizures."
+  },
+  {
+   "id": "end_etoh",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Alcohol and confusion: parenteral thiamine for at least 5 days unless Wernicke's is excluded, then oral, given with or before any glucose. Delirium tremens adds oral lorazepam first, then parenteral lorazepam or haloperidol if it persists, with admission for medically assisted withdrawal; phenytoin is not used for withdrawal seizures."
+  },
+  {
+   "id": "storm",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Suspected thyroid storm with confusion. Treatment?",
+   "options": [
+    "Beta blocker, thionamide and iodide, with hydrocortisone",
+    "Iodide first, then the thionamide once the pulse has settled",
+    "Aspirin for the fever with a beta blocker; wait for the free T4",
+    "Radioactive iodine now, as the definitive treatment"
+   ],
+   "answer": 0,
+   "chainStep": "ICU; beta blocker; thionamide (PTU or methimazole); iodide (US: at least 1 hour after the thionamide); hydrocortisone 100 mg IV every 8 hours; acetaminophen and cooling; treat the trigger",
+   "why": "JTA/JES treat thyroid storm with several agents at once: a thionamide as soon as possible, inorganic iodide, a corticosteroid, a beta blocker, and acetaminophen with mechanical cooling, with the trigger looked for, infection especially. The ATA guideline, as JTA reports it, prefers PTU and gives the iodide at least 1 hour after the thionamide to prevent organification; JTA gives them together. Aspirin and NSAIDs are avoided because they can raise free thyroid hormone, and radioiodine, itself a precipitant of storm, is definitive treatment considered once the acute stage has been managed.",
+   "next": "end_storm",
+   "sources": [
+    {
+     "docId": "pmid:27746415",
+     "where": "Recommendations 1 to 5, 8, 11, 13 and 14; Background"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Thionamide",
+     "dose": "Methimazole 60 mg a day or PTU 600 mg a day by mouth (JTA); the ATA guideline, as JTA reports, prefers PTU",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27746415",
+       "where": "Recommendation 2, evidence and comments"
+      }
+     ]
+    },
+    {
+     "item": "Inorganic iodide",
+     "dose": "About 200 mg a day of potassium iodide with the thionamide (JTA); at least 1 hour after it in the ATA guideline, as JTA reports",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27746415",
+       "where": "Recommendation 3, evidence and comments"
+      }
+     ]
+    },
+    {
+     "item": "Hydrocortisone",
+     "dose": "300 mg a day: 100 mg IV every 8 hours (or dexamethasone 8 mg a day)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27746415",
+       "where": "Recommendation 4"
+      }
+     ]
+    },
+    {
+     "item": "Beta blocker",
+     "dose": "Beta-1 selective first (JTA): esmolol 1 mg/kg IV over 30 seconds, then titrated to about 150 µg/kg/min, aiming for a heart rate of 130 or less; propranolol is not contraindicated but is not JTA's choice",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27746415",
+       "where": "Recommendation 8"
+      }
+     ],
+     "note": "Propranolol is the usual US exam answer; the ATA 2016 guideline itself was not readable here."
+    },
+    {
+     "item": "Fever",
+     "dose": "Acetaminophen with cooling blankets or ice packs; no aspirin or NSAIDs",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27746415",
+       "where": "Recommendation 5"
+      }
+     ]
+    },
+    {
+     "item": "No improvement in 24 to 48 hours",
+     "dose": "Consider plasmapheresis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27746415",
+       "where": "Recommendation 6"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_storm",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Thyroid storm: a beta blocker, a thionamide, iodide (after the thionamide in US practice), hydrocortisone, and acetaminophen with cooling, in an ICU, with the trigger treated; plasmapheresis if there is no improvement in 24 to 48 hours, and definitive treatment of the thyroid once the acute stage is over."
+  },
+  {
+   "id": "myx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Suspected myxedema coma: drowsy or comatose, cold, bradycardic. Treatment?",
+   "options": [
+    "IV hydrocortisone first, then IV levothyroxine",
+    "Oral levothyroxine at the usual daily dose",
+    "IV levothyroxine now; steroids only if the cortisol is low",
+    "Active rewarming alone, and thyroid hormone once warm"
+   ],
+   "answer": 0,
+   "chainStep": "IV glucocorticoid at stress doses first, then IV levothyroxine (ATA load 200 to 400 µg; US label 300 to 500 µg) and daily IV doses; optional IV liothyronine",
+   "why": "ATA starts empiric IV glucocorticoid at doses for the stressed state before the levothyroxine, and the label gives glucocorticoids first until adrenal function has been assessed, because thyroid hormone can precipitate an adrenal crisis. Replacement is IV, not oral, and is started without waiting, because the disease has a high mortality. ATA loads 200 to 400 µg, less for smaller or older patients or coronary disease; the US label loads 300 to 500 µg and warns that boluses over 500 µg carry cardiac risk. Treatment is judged by mental status, cardiac and pulmonary function.",
+   "next": "end_myx",
+   "sources": [
+    {
+     "docId": "pmid:25266247",
+     "where": "21a to 21d and discussion"
+    },
+    {
+     "docId": "url:05cd46747b7a",
+     "where": "2.1; 5.1; 5.2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Glucocorticoid",
+     "dose": "IV, at stress doses, before the levothyroxine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25266247",
+       "where": "21b"
+      },
+      {
+       "docId": "url:05cd46747b7a",
+       "where": "5.2"
+      }
+     ]
+    },
+    {
+     "item": "Hydrocortisone dose",
+     "dose": "ATA gives none ('doses appropriate for the stressed state'); not in the other sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Levothyroxine IV (ATA)",
+     "dose": "Load 200 to 400 µg, lower for smaller or older patients or coronary disease or arrhythmia; then 1.6 µg/kg a day, reduced to 75% while IV",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25266247",
+       "where": "21a"
+      }
+     ]
+    },
+    {
+     "item": "Levothyroxine IV (US label)",
+     "dose": "Load 300 to 500 µg, then 50 to 100 µg IV daily until oral therapy is tolerated; boluses over 500 µg are linked to cardiac complications",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:05cd46747b7a",
+       "where": "2.1; 5.1"
+      }
+     ]
+    },
+    {
+     "item": "Liothyronine IV (optional)",
+     "dose": "5 to 20 µg load, then 2.5 to 10 µg every 8 hours; avoid high doses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25266247",
+       "where": "21c"
+      }
+     ]
+    },
+    {
+     "item": "Endpoints",
+     "dose": "Mental status, cardiac function and pulmonary function",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25266247",
+       "where": "21d"
+      }
+     ]
+    },
+    {
+     "item": "Before and around the steroid",
+     "dose": "Draw a serum cortisol; supportive care for hypothermia, hypoventilation, volume depletion, low glucose and low sodium; empiric broad-spectrum antibiotics if sepsis is possible",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25266247",
+       "where": "21a to 21d discussion"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_myx",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Myxedema coma: IV glucocorticoid first, then IV levothyroxine (ATA load 200 to 400 µg, US label 300 to 500 µg) and daily IV doses, with optional IV liothyronine, judged by mental status, cardiac and pulmonary function; oral therapy once the patient improves."
+  },
+  {
+   "id": "end_temp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cold or heat exposure. Hypothermia below 35 °C (95 °F): rewarm (passive and active external when the circulation is stable, active internal when that fails), handle gently, and involve an ECLS centre for cardiac arrest, a core under 30 °C (86 °F), a systolic under 90 or a ventricular dysrhythmia. Heat stroke is cooled at once (cold-water immersion for exertional heat stroke); heat illness and cold injury continue in the environmental pathway (pw_environmental)."
+  },
+  {
+   "id": "end_htn",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypertensive encephalopathy, a hypertensive emergency: the headache pathway (pw_headache) takes it from its hypertensive route, with ICU monitoring and a titratable IV agent, the systolic down by no more than 25% in the first hour, then to under 160/100 over the next 2 to 6 hours. A bleed or infarct on imaging goes to the stroke pathway instead."
+  },
+  {
+   "id": "labs",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "No cause found at the bedside yet. Next?",
+   "options": [
+    "Electrolytes with calcium, renal and liver tests; a delirium screen (4AT)",
+    "Haloperidol to settle the patient first, with the bloods sent in the morning",
+    "A urine culture, and antibiotics for the bacteriuria it shows"
+   ],
+   "answer": 0,
+   "chainStep": "Sodium, potassium, calcium adjusted for albumin, glucose, urea and creatinine, liver tests, blood count, urine, ECG; venous gas and ketones in anyone with diabetes; a 4AT if the patient is awake",
+   "why": "The bloods look for the metabolic causes: severe symptoms of hyponatremia are unlikely with a sodium over 130, a calcium over 3.5 mmol/L needs urgent correction because of the risk of dysrhythmia and coma, and uraemic encephalopathy that is not responding to medical management is an indication for renal replacement therapy. NICE assesses suspected delirium with the 4AT. Haloperidol is only for distress or danger after de-escalation, and IDSA does not treat bacteriuria in delirium without urinary symptoms or systemic signs of infection.",
+   "next": "lab_result",
+   "sources": [
+    {
+     "docId": "pmid:27935814",
+     "where": "Clinical assessment"
+    },
+    {
+     "docId": "pmid:27935816",
+     "where": "Severity; Clinical features; Investigation, Bloods"
+    },
+    {
+     "docId": "url:6e7c4637c934",
+     "where": "1.5.8; 1.5.9"
+    },
+    {
+     "docId": "url:2a6f5eb6d567",
+     "where": "1.6.1; 1.7.3; 1.7.4"
+    },
+    {
+     "docId": "pmid:30895288",
+     "where": "Recommendation on delirium (read as quoted in PMC7323061)"
+    },
+    {
+     "docId": "pmid:39052901",
+     "where": "Section 3, Diagnostic Criteria for DKA; Section 6, Table 4, SGLT2 inhibitor row"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Calcium",
+     "dose": "Adjusted for albumin, with phosphate and PTH",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935816",
+       "where": "Investigation, Bloods"
+      }
+     ]
+    },
+    {
+     "item": "Delirium assessment",
+     "dose": "The 4AT; CAM-ICU or ICDSC in critical care or recovery",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2a6f5eb6d567",
+       "where": "1.6.1"
+      }
+     ],
+     "note": "US exams use the Confusion Assessment Method; no US source in the sources read"
+    }
+   ]
+  },
+  {
+   "id": "lab_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Bloods and the 4AT",
+   "outcomes": [
+    {
+     "id": "na_sev",
+     "if": "Sodium low, severe symptoms; vomiting, seizure or GCS 8 or less",
+     "ddx": {
+      "lead": [
+       "Hyponatremia"
+      ],
+      "out": []
+     },
+     "next": "hypona"
+    },
+    {
+     "id": "na_mod",
+     "if": "Sodium low, moderate symptoms; confusion, nausea or headache",
+     "ddx": {
+      "lead": [
+       "Hyponatremia"
+      ],
+      "out": []
+     },
+     "next": "end_hypona_mod"
+    },
+    {
+     "id": "ca",
+     "if": "Calcium high, symptomatic; adjusted 12 mg/dL (3.0 mmol/L) or more",
+     "ddx": {
+      "lead": [
+       "Hypercalcemia"
+      ],
+      "out": []
+     },
+     "next": "calcium"
+    },
+    {
+     "id": "uremia",
+     "if": "Uremic encephalopathy, not responding; AKI, drowsy despite fluids and stopping the cause",
+     "ddx": {
+      "lead": [
+       "Uremia"
+      ],
+      "out": []
+     },
+     "next": "end_uremia",
+     "orders": [
+      {
+       "item": "Renal replacement therapy",
+       "dose": "Refer immediately when uraemic encephalopathy is not responding to medical management; decide on the whole patient, not one urea value",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:6e7c4637c934",
+         "where": "1.5.8; 1.5.9"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "he",
+     "if": "Liver disease; cirrhosis with asterixis, other labs unrevealing",
+     "ddx": {
+      "lead": [
+       "Hepatic encephalopathy"
+      ],
+      "out": []
+     },
+     "next": "he"
+    },
+    {
+     "id": "delirium",
+     "if": "Delirium, labs normal; the 4AT suggests delirium",
+     "ddx": {
+      "lead": [
+       "Delirium"
+      ],
+      "out": [
+       "Hyponatremia",
+       "Hypercalcemia",
+       "Uremia"
+      ]
+     },
+     "next": "delirium"
+    },
+    {
+     "id": "other_lab",
+     "if": "Another abnormal result; high sodium or another derangement",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_lab_scope"
+    },
+    {
+     "id": "normal",
+     "if": "Labs normal, no delirium; the 4AT does not suggest it",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Hyponatremia",
+       "Hypercalcemia",
+       "Uremia"
+      ]
+     },
+     "next": "end_labs_normal"
+    }
+   ]
+  },
+  {
+   "id": "hypona",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Low sodium with severe symptoms. Next?",
+   "options": [
+    "3% saline now, for a 5 mmol/L rise in the first hour",
+    "Fluid restriction; recheck the sodium tomorrow",
+    "Correct the sodium to 135 mmol/L within the first 24 hours",
+    "Urine osmolality and sodium first; treat once the cause is known"
+   ],
+   "answer": 0,
+   "chainStep": "150 mL of 3% saline IV over 20 minutes; check the sodium while a second 150 mL runs; repeat twice or until it has risen 5 mmol/L; close monitoring",
+   "why": "Severe symptoms (vomiting, seizures, cardiorespiratory arrest, reduced consciousness or coma) need immediate hypertonic saline whatever the cause, aiming for a 5 mmol/L rise in the first hour to reduce the danger from cerebral edema while limiting the risk of osmotic demyelination; management follows the symptoms, not the number. SfE gives 150 mL of 3% over 20 minutes, checks the sodium during a second 150 mL, and repeats twice or until the rise is reached. Urine osmolality and sodium define the cause after the emergency, and correcting to normal in a day overshoots the limits.",
+   "next": "hypona_resp",
+   "sources": [
+    {
+     "docId": "pmid:27935814",
+     "where": "Clinical assessment; Treatment; Figure 1; Differential diagnosis"
+    }
+   ],
+   "orders": [
+    {
+     "item": "3% hypertonic saline (SfE)",
+     "dose": "150 mL IV over 20 minutes; check the sodium while a second 150 mL runs; repeat twice or until a 5 mmol/L rise",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935814",
+       "where": "Figure 1, boxes 1 to 3"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "A close monitoring environment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935814",
+       "where": "Figure 1, box 1"
+      }
+     ]
+    },
+    {
+     "item": "3% hypertonic saline (US review)",
+     "dose": "100 mL IV boluses over 10 minutes as needed, aiming for 4 to 6 mEq/L in the first 4 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29262111",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:29939554",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "A review; the 2013 US expert panel itself was not readable. The SIADH chapter of the same review gives one 100 mL bolus over the first 3 to 4 hours."
+    }
+   ],
+   "note": "UK Society for Endocrinology regimen. The 2014 European guideline and the 2013 US expert panel were not readable here, so US bolus volumes are not shown."
+  },
+  {
+   "id": "hypona_resp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Sodium and symptoms after the first 5 mmol/L",
+   "outcomes": [
+    {
+     "id": "better",
+     "if": "Symptoms improving; sodium up 5 mmol/L in the first hour",
+     "ddx": {
+      "lead": [
+       "Hyponatremia"
+      ],
+      "out": []
+     },
+     "next": "hypona_limit"
+    },
+    {
+     "id": "not_better",
+     "if": "Sodium up 5 mmol/L, symptoms no better; still drowsy or vomiting",
+     "ddx": {
+      "lead": [
+       "Hyponatremia"
+      ],
+      "out": []
+     },
+     "next": "end_hypona_more"
+    }
+   ]
+  },
+  {
+   "id": "end_hypona_more",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "150 mL of 3% over 20 minutes aiming for an additional 1 mmol/L rise; stop when symptoms improve, the rise passes 10 mmol/L or the sodium reaches 130; explore other causes."
+  },
+  {
+   "id": "hypona_limit",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Sodium up 5 mmol/L and the symptoms improving. Now?",
+   "options": [
+    "Stop the 3%; no more than 10 mmol/L in the first 24 hours (SfE)",
+    "Continue the 3% saline until the sodium is back up to 135 mmol/L",
+    "0.9% saline at 250 mL an hour to keep the sodium rising",
+    "No further sodium checks until the morning ward round"
+   ],
+   "answer": 0,
+   "chainStep": "Stop the hypertonic saline; keep the line open with minimal 0.9% saline; treat the cause; a rise of no more than 10 mmol/L in 24 hours, then 8 a day until 130; sodium at 6 and 12 hours, then daily",
+   "why": "Once the sodium has risen 5 mmol/L, SfE stops the hypertonic saline, keeps the line open with a minimum volume of 0.9% saline, starts treatment for the cause, limits the rise to 10 mmol/L in the first 24 hours and 8 mmol/L a day after that until 130, and checks the sodium at 6 and 12 hours, then daily. A rise of more than 10 mmol/L in 24 hours or 18 mmol/L in 48 hours means stopping hypertonic fluid, because over-correction risks osmotic demyelination.",
+   "next": "end_hypona",
+   "sources": [
+    {
+     "docId": "pmid:27935814",
+     "where": "Figure 1, box 4; Managing over-correction; Treatment"
+    }
+   ],
+   "orders": [
+    {
+     "item": "High risk of osmotic demyelination (low potassium, alcohol, malnutrition, liver disease)",
+     "dose": "Slower correction is advised (the tolvaptan label names severe malnutrition, alcoholism and advanced liver disease), but no number for this group is stated in the sources read",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "end_hypona",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Severe symptomatic hyponatremia: 150 mL of 3% saline over 20 minutes, repeated until the sodium has risen 5 mmol/L, then stopped, with no more than 10 mmol/L in the first 24 hours and 8 a day after that until 130. If the symptoms do not improve after the first 5 mmol/L, SfE continues 150 mL of 3% over 20 minutes aiming for an additional 1 mmol/L rise, stopping when symptoms improve, the rise passes 10 mmol/L or the sodium reaches 130. Urine osmolality and sodium define the cause."
+  },
+  {
+   "id": "end_hypona_mod",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hyponatremia with moderately severe symptoms (confusion, nausea, headache, no vomiting): SfE's emergency hypertonic regimen is for severe symptoms, and the 2014 European guideline was not readable here. A US review gives 3% saline as a slow infusion for milder symptoms (fatigue, somnolence, nausea, weakness), its rate set from the sodium deficit and recalculated with frequent sodium checks. Management follows the symptoms rather than the number, urine osmolality and urine sodium define the cause, and the 24-hour limits differ by source (SfE 10 mmol/L; StatPearls 6 to 8 when the duration is 48 hours or more or unknown)."
+  },
+  {
+   "id": "calcium",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Symptomatic hypercalcemia, clinically dry. First treatment?",
+   "options": [
+    "IV 0.9% saline, 4 to 6 L over 24 hours, watching fluid balance",
+    "IV furosemide first, to drive the calcium out through the kidneys",
+    "Prednisolone 40 mg daily as the first-line treatment",
+    "Zoledronic acid now, before any IV fluid"
+   ],
+   "answer": 0,
+   "chainStep": "IV 0.9% saline 4 to 6 L over 24 hours, watching for fluid overload in renal impairment or older patients; adjusted calcium, phosphate, PTH, ECG",
+   "why": "Rehydration with IV 0.9% saline, 4 to 6 L in 24 hours, comes first, watching for fluid overload when the kidneys are impaired or the patient is old. Loop diuretics are rarely used, only for fluid overload, and do not lower the calcium; the zoledronic acid label adds that diuretics wait until hypovolemia is corrected. Glucocorticoids are second line, for lymphoma, other granulomatous disease or vitamin D excess, and a calcium over 3.5 mmol/L needs urgent correction, not a clinic review.",
+   "next": "ca_resp",
+   "sources": [
+    {
+     "docId": "pmid:27935816",
+     "where": "Severity; Management, Rehydration; Second-line treatments"
+    },
+    {
+     "docId": "url:bc9f91df25ce",
+     "where": "2.1 Hypercalcemia of Malignancy"
+    }
+   ],
+   "orders": [
+    {
+     "item": "ECG",
+     "dose": "Look for a short QT interval or another conduction abnormality",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935816",
+       "where": "Investigation, ECG"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ca_resp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Calcium after IV saline",
+   "outcomes": [
+    {
+     "id": "normalized",
+     "if": "Back to normal; calcium normal after rehydration",
+     "ddx": {
+      "lead": [
+       "Hypercalcemia"
+      ],
+      "out": []
+     },
+     "next": "end_ca"
+    },
+    {
+     "id": "still_high",
+     "if": "Still high; calcium above normal despite saline",
+     "ddx": {
+      "lead": [
+       "Hypercalcemia"
+      ],
+      "out": []
+     },
+     "next": "ca_bisph"
+    }
+   ]
+  },
+  {
+   "id": "ca_bisph",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "After IV saline, the calcium is still high. Next?",
+   "options": [
+    "Zoledronic acid 4 mg IV over at least 15 minutes",
+    "Zoledronic acid 4 mg as a rapid IV push over 1 minute",
+    "A second 4 mg zoledronic acid dose tomorrow if still high",
+    "IV furosemide 80 mg to push the calcium out"
+   ],
+   "answer": 0,
+   "chainStep": "Zoledronic acid 4 mg IV over no less than 15 minutes once rehydrated, with a serum creatinine first; the calcium nadir comes at 2 to 4 days; no retreatment for at least 7 days",
+   "why": "If more is needed after IV saline, SfE gives an IV bisphosphonate: zoledronic acid 4 mg over 15 minutes, pamidronate 30 to 90 mg at 20 mg an hour, or ibandronic acid 2 to 4 mg, more slowly and at a reduced dose in renal impairment. The label requires an infusion over no less than 15 minutes, adequate rehydration first and at least 7 days before any retreatment. SfE adds that the calcium reaches its nadir at 2 to 4 days. SfE keeps calcitonin, denosumab and calcimimetics second line under specialist supervision; the Endocrine Society (2023) suggests calcitonin with the bisphosphonate or denosumab as initial treatment for severe hypercalcemia of malignancy.",
+   "next": "end_ca",
+   "sources": [
+    {
+     "docId": "pmid:27935816",
+     "where": "Management, bisphosphonates; Second-line treatments"
+    },
+    {
+     "docId": "url:bc9f91df25ce",
+     "where": "2.1 Hypercalcemia of Malignancy"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Zoledronic acid",
+     "dose": "4 mg IV over no less than 15 minutes; serum creatinine before each dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:bc9f91df25ce",
+       "where": "2.1 Hypercalcemia of Malignancy"
+      }
+     ]
+    },
+    {
+     "item": "Pamidronate (SfE)",
+     "dose": "30 to 90 mg, depending on severity, at 20 mg an hour",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935816",
+       "where": "Management, bisphosphonates"
+      }
+     ]
+    },
+    {
+     "item": "Retreatment",
+     "dose": "At least 7 days after the first dose, if the calcium does not return to normal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:bc9f91df25ce",
+       "where": "2.1 Hypercalcemia of Malignancy"
+      }
+     ]
+    },
+    {
+     "item": "Hypocalcemia risk",
+     "dose": "With vitamin D deficiency or a suppressed PTH",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935816",
+       "where": "Management, bisphosphonates"
+      }
+     ]
+    },
+    {
+     "item": "Calcitonin",
+     "dose": "4 USP Units/kg SC or IM every 12 hours; 8 every 12 hours if no response in 1 to 2 days; at most 8 every 6 hours (FDA); serious hypersensitivity, consider skin testing if suspected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8233b86358b0",
+       "where": "1.2 Treatment of Hypercalcemia; 2.2 Hypercalcemia; 5.1 Hypersensitivity Reactions"
+      },
+      {
+       "docId": "pmid:28613465",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:27935816",
+       "where": "Second-line treatments"
+      }
+     ],
+     "note": "The label indicates it for the early treatment of hypercalcemic emergencies, with other agents, when a rapid fall is needed. StatPearls gives calcitonin with hydration and the bisphosphonate to lower calcium while the bisphosphonate acts; SfE keeps it second line under specialist supervision. The Endocrine Society 2023 guideline (abstract only here) suggests calcitonin with a bisphosphonate or denosumab for severe hypercalcemia of malignancy."
+    }
+   ]
+  },
+  {
+   "id": "end_ca",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Symptomatic hypercalcemia: IV 0.9% saline 4 to 6 L over 24 hours, then IV zoledronic acid 4 mg over at least 15 minutes if the calcium is still high, with its nadir at 2 to 4 days. A high calcium with a high PTH points to hyperparathyroidism, a low PTH to malignancy or a rarer cause."
+  },
+  {
+   "id": "end_lab_scope",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Not covered in this version; the electrolyte pathway will take it."
+  },
+  {
+   "id": "end_uremia",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Uraemic encephalopathy: refer immediately for renal replacement therapy when it is not responding to medical management, deciding on the patient as a whole rather than an isolated urea or creatinine value; the rest of the acute kidney injury workup is outside this pathway."
+  },
+  {
+   "id": "he",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Cirrhosis, confused with asterixis; other labs unrevealing. Treatment?",
+   "options": [
+    "Lactulose, titrated to 2 or 3 soft stools a day",
+    "Rifaximin alone, as the first treatment for this episode",
+    "Lorazepam IV to settle the confusion while the workup runs",
+    "Oral neomycin as standard first-line therapy"
+   ],
+   "answer": 0,
+   "chainStep": "Lactulose 30 to 45 mL hourly until it works, then 30 to 45 mL three or four times a day to 2 or 3 soft stools; an enema if coma brings an aspiration risk; treat the trigger; rifaximin 550 mg twice daily to prevent recurrence",
+   "why": "Lactulose, or another laxative, is standard practice, partly because episodes are often triggered by constipation. The US label gives hourly 30 to 45 mL doses for rapid laxation at the start, then 30 to 45 mL three or four times a day adjusted to 2 or 3 soft stools, and a retention enema when impending coma brings a risk of aspiration. Rifaximin is licensed to reduce the risk of recurrence, and nearly all patients in its trial also took lactulose. Neomycin is not used routinely because of its toxicity, and benzodiazepines raise the risk of delirium.",
+   "next": "end_he",
+   "sources": [
+    {
+     "docId": "url:7346c314a558",
+     "where": "Dosage and Administration"
+    },
+    {
+     "docId": "url:9288706e9cb6",
+     "where": "1.2; 2.2; 6.1; 14.2"
+    },
+    {
+     "docId": "url:69413ce24f66",
+     "where": "1.1; 4.2"
+    },
+    {
+     "docId": "pmid:37139824",
+     "where": "Table 2, Benzodiazepines row"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Lactulose (US label)",
+     "dose": "30 to 45 mL hourly for rapid laxation at the start; then 30 to 45 mL (20 to 30 g) three or four times daily, adjusted to 2 or 3 soft stools a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7346c314a558",
+       "where": "Dosage and Administration, Oral"
+      }
+     ]
+    },
+    {
+     "item": "Lactulose enema",
+     "dose": "Impending coma or coma with an aspiration risk: 300 mL in 700 mL water or saline, retained 30 to 60 minutes, every 4 to 6 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7346c314a558",
+       "where": "Dosage and Administration, Rectal"
+      }
+     ]
+    },
+    {
+     "item": "Rifaximin",
+     "dose": "550 mg twice daily, added to reduce the risk of recurrence (trial: 2 or more episodes in 6 months, 91% on lactulose)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:9288706e9cb6",
+       "where": "1.2; 2.2; 14.2"
+      },
+      {
+       "docId": "url:69413ce24f66",
+       "where": "1.1"
+      }
+     ]
+    },
+    {
+     "item": "Constipation",
+     "dose": "A common trigger: treat it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:69413ce24f66",
+       "where": "4.2"
+      }
+     ]
+    },
+    {
+     "item": "Precipitant search",
+     "dose": "With ascites, a diagnostic paracentesis for SBP; also GI bleeding, infection, electrolytes and sedatives; pending, EASL 2022 not readable here",
+     "status": "pending"
+    }
+   ],
+   "note": "EASL 2022 recommends lactulose and rifaximin, but its full text was not openly accessible; the doses here are from the US labels."
+  },
+  {
+   "id": "end_he",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hepatic encephalopathy: lactulose (hourly at first, then to 2 or 3 soft stools a day, or as an enema when coma brings an aspiration risk), the trigger treated, constipation being a common one, and rifaximin 550 mg twice daily added to reduce the risk of recurrence."
+  },
+  {
+   "id": "delirium",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Delirium on the 4AT; labs normal. Next?",
+   "options": [
+    "Look for the cause: drugs, bladder, bowel, pain, infection",
+    "Haloperidol now, before the confusion and agitation get worse",
+    "Treat it as dementia and refer on to a memory clinic",
+    "Lorazepam at night to restore a normal sleep pattern"
+   ],
+   "answer": 0,
+   "chainStep": "Medication review; bladder and bowel; pain; hydration; oxygen; look for infection (no antibiotics for bacteriuria alone); reorientation and family",
+   "why": "In delirium, identify and manage the possible cause or combination of causes, and when delirium and dementia are hard to tell apart, manage the delirium first. NICE's list includes infection (without unnecessary catheters), dehydration and constipation, hypoxia, pain and a review of the type and number of medicines; Beers lists anticholinergics, benzodiazepines, corticosteroids, H2 blockers, Z-drugs and opioids as drugs that can induce or worsen it. A benzodiazepine for sleep is one of them, and an antipsychotic is for distress or danger, not prevention.",
+   "next": "cause",
+   "sources": [
+    {
+     "docId": "url:2a6f5eb6d567",
+     "where": "1.7.1; 1.6.3; 1.4.5 to 1.4.10; 1.7.4"
+    },
+    {
+     "docId": "pmid:37139824",
+     "where": "Table 3, Delirium row; Table 2, Benzodiazepines row"
+    },
+    {
+     "docId": "pmid:30895288",
+     "where": "Recommendation on delirium (read as quoted in PMC7323061)"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Medication review",
+     "dose": "Type and number of medicines; anticholinergics, antipsychotics, benzodiazepines, corticosteroids, H2 blockers, Z-drugs and opioids can induce or worsen delirium",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2a6f5eb6d567",
+       "where": "1.4.10"
+      },
+      {
+       "docId": "pmid:37139824",
+       "where": "Table 3, Delirium row"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotics for bacteriuria alone",
+     "dose": "Not without urinary symptoms or systemic signs of infection; look for other causes and observe",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30895288",
+       "where": "Recommendation on delirium (read as quoted in PMC7323061)"
+      }
+     ]
+    },
+    {
+     "item": "Infection",
+     "dose": "Look for it and treat it; avoid unnecessary catheterisation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2a6f5eb6d567",
+       "where": "1.4.7"
+      }
+     ]
+    },
+    {
+     "item": "Constipation and dehydration",
+     "dose": "Address both",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2a6f5eb6d567",
+       "where": "1.4.5"
+      }
+     ]
+    },
+    {
+     "item": "Pain",
+     "dose": "Assess it, including non-verbal signs, and treat it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2a6f5eb6d567",
+       "where": "1.4.9"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cause",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The cause search",
+   "outcomes": [
+    {
+     "id": "drug",
+     "if": "Deliriogenic drug; a new anticholinergic, sedative or opioid",
+     "ddx": {
+      "lead": [
+       "Delirium"
+      ],
+      "out": []
+     },
+     "next": "drug_step"
+    },
+    {
+     "id": "other",
+     "if": "Another cause, or none yet; constipation, retention or pain",
+     "ddx": {
+      "lead": [
+       "Delirium"
+      ],
+      "out": []
+     },
+     "next": "behave"
+    }
+   ]
+  },
+  {
+   "id": "drug_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Delirium after a new deliriogenic drug. Next?",
+   "options": [
+    "Review all the medicines and stop the offending drug",
+    "Keep the drug and add haloperidol to calm the confusion",
+    "Swap the sleeping tablet for a benzodiazepine at night",
+    "Switch the diphenhydramine to doxylamine for sleep"
+   ],
+   "answer": 0,
+   "chainStep": "Review the type and number of medicines; stop the deliriogenic drug; keep the number of anticholinergic drugs to a minimum",
+   "why": "Beers says to avoid anticholinergics, benzodiazepines, Z-drugs, opioids and the other listed drugs in older adults with or at high risk of delirium because they can induce or worsen it, and more than one anticholinergic raises the risk further; first-generation antihistamines such as diphenhydramine are highly anticholinergic, and strongly anticholinergic drugs can cause urinary retention in men with prostate symptoms. NICE reviews the type and number of medicines. Adding haloperidol, a benzodiazepine or another anticholinergic puts a second drug from the same lists on top.",
+   "next": "behave",
+   "sources": [
+    {
+     "docId": "pmid:37139824",
+     "where": "Table 3, Delirium and Lower urinary tract symptoms rows; Table 2, First-generation antihistamines and Benzodiazepines rows; Table 5, Anticholinergic row"
+    },
+    {
+     "docId": "url:2a6f5eb6d567",
+     "where": "1.4.10"
+    },
+    {
+     "docId": "url:ed1c1f5fb274",
+     "where": "1.4.11"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Full bladder after a head injury",
+     "dose": "Catheterise it when needed (NICE head injury guideline)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ed1c1f5fb274",
+       "where": "1.4.11"
+      }
+     ]
+    },
+    {
+     "item": "Urinary retention, no head injury",
+     "dose": "How to relieve it (bladder scan, catheter) is not stated in the sources read",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "behave",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Behavior once assessed",
+   "outcomes": [
+    {
+     "id": "calm",
+     "if": "Calm or withdrawn; not distressed, no risk to self or others",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "calm_step"
+    },
+    {
+     "id": "distressed",
+     "if": "Distressed or a danger; despite calm reassurance",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "agit"
+    }
+   ]
+  },
+  {
+   "id": "calm_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Delirium, the cause in hand, the patient calm. Ongoing care?",
+   "options": [
+    "Reorient, involve family, protect sleep, get moving",
+    "Low-dose haloperidol at night to prevent agitation",
+    "Wrist restraints overnight to stop the patient wandering",
+    "Move to a quieter ward each night for better rest"
+   ],
+   "answer": 0,
+   "chainStep": "Reorientation and reassurance; family and friends involved; the same staff and room; sleep protected; mobilize; hearing and visual aids; no antipsychotic or benzodiazepine",
+   "why": "NICE treats delirium with communication, reorientation and reassurance, family and friends involved, and a suitable environment with familiar staff, avoiding moves between wards or rooms; good sleep, mobility, hydration and sensory aids come from its prevention package. Antipsychotics and benzodiazepines are not used for a delirious patient who is not agitated and threatening substantial harm (AGS, postoperative delirium), Beers avoids antipsychotics unless non-drug measures have failed and the patient threatens substantial harm, and AGS recommends avoiding physical restraints.",
+   "next": "end_delirium",
+   "sources": [
+    {
+     "docId": "url:2a6f5eb6d567",
+     "where": "1.7.2; 1.4.1; 1.4.4; 1.4.8; 1.4.12; 1.4.13"
+    },
+    {
+     "docId": "pmid:25495432",
+     "where": "IV, Potential Harms; XIV"
+    },
+    {
+     "docId": "pmid:37139824",
+     "where": "Table 3, Delirium row"
+    }
+   ]
+  },
+  {
+   "id": "end_delirium",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Delirium: treat the cause found, review the medicines, and care without drugs (reorientation, family, sleep, mobility, the same staff and room); no antipsychotic or benzodiazepine for a calm patient. If the delirium does not resolve, re-evaluate the causes and assess for dementia."
+  },
+  {
+   "id": "agit",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Delirium; distressed or a danger despite reassurance. Next?",
+   "options": [
+    "De-escalate first; then short-term, low-dose haloperidol",
+    "Lorazepam IV now, to sedate the patient before anything else",
+    "Wrist restraints and bed rails overnight",
+    "Haloperidol 5 mg IV every hour until the patient is asleep"
+   ],
+   "answer": 0,
+   "chainStep": "Verbal and non-verbal de-escalation; if it fails, haloperidol short term (usually 1 week or less) at the lowest dose, titrated, not in Parkinson's disease or Lewy body dementia; ECG; no restraints; treat the cause",
+   "why": "NICE de-escalates with verbal and non-verbal techniques first, then, if that fails, considers short-term haloperidol (usually a week or less) from the lowest clinically appropriate dose, titrated cautiously, mindful of cardiac and neurological risks, especially in Parkinson's disease or Lewy body dementia, where the label contraindicates it. The label warns of QT prolongation and torsades, more with IV use, for which it is not approved, and of a higher death rate in older people with dementia-related psychosis. Benzodiazepines are not first line for agitated delirium unless it is alcohol or benzodiazepine withdrawal, and AGS avoids physical restraints.",
+   "next": "end_agit",
+   "sources": [
+    {
+     "docId": "url:2a6f5eb6d567",
+     "where": "1.7.3; 1.7.4"
+    },
+    {
+     "docId": "url:3006383969b7",
+     "where": "Boxed warning; Warnings; Dosage and Administration"
+    },
+    {
+     "docId": "pmid:25495432",
+     "where": "XIII; IV, Potential Harms"
+    },
+    {
+     "docId": "pmid:37139824",
+     "where": "Table 2, Benzodiazepines row"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Haloperidol",
+     "dose": "Short term (usually 1 week or less) from the lowest clinically appropriate dose, titrated cautiously; no delirium dose in the sources read (the label's 2 to 5 mg IM is for acutely agitated schizophrenia, and older patients may need less)",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:2a6f5eb6d567",
+       "where": "1.7.4"
+      },
+      {
+       "docId": "url:3006383969b7",
+       "where": "Dosage and Administration"
+      }
+     ]
+    },
+    {
+     "item": "Parkinson's disease or Lewy body dementia",
+     "dose": "Haloperidol is contraindicated",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:3006383969b7",
+       "where": "Contraindications; Warnings"
+      },
+      {
+       "docId": "url:2a6f5eb6d567",
+       "where": "1.7.4"
+      }
+     ]
+    },
+    {
+     "item": "ECG",
+     "dose": "QTc prolongation and torsades are reported, more with IV use (not approved) and high doses; monitor the ECG if it is given IV",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3006383969b7",
+       "where": "Warnings, Cardiovascular Effects"
+      }
+     ]
+    },
+    {
+     "item": "Benzodiazepine",
+     "dose": "Not first line for agitated delirium, except for alcohol or benzodiazepine withdrawal",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:25495432",
+       "where": "XIII"
+      },
+      {
+       "docId": "pmid:37139824",
+       "where": "Table 2, Benzodiazepines row"
+      }
+     ]
+    },
+    {
+     "item": "Physical restraints",
+     "dose": "Avoid them",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:25495432",
+       "where": "IV, Potential Harms"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_agit",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Distressed delirium: verbal and non-verbal de-escalation first, then short-term haloperidol at the lowest dose if that fails (not in Parkinson's disease or Lewy body dementia), no benzodiazepine unless this is alcohol or benzodiazepine withdrawal, no physical restraints, and the cause still treated."
+  },
+  {
+   "id": "end_labs_normal",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Normal labs and no delirium on the 4AT: the confusion is still unexplained. Go back to the history for a toxin, a seizure or a transient event and repeat the assessment; in a patient who does not wake, non-convulsive status and CNS infection remain, with the EEG and lumbar puncture in the seizure and sepsis pathways."
+  }
+ ],
+ "cases": [
+  {
+   "id": "hypo_woke",
+   "label": "Hypoglycemia that clears",
+   "vignette": "68-year-old man with type 2 diabetes, found by his wife sweaty and confused at home.",
+   "picks": {
+    "front": "hypo",
+    "hypo_result": "woke"
+   },
+   "results": {
+    "front": "Capillary glucose 43 mg/dL (2.4 mmol/L). Drowsy, GCS 13, cannot swallow safely; SpO2 97% on air, BP 146/84, HR 104, temperature 36.6 °C (97.9 °F).",
+    "hypo_result": "Ten minutes after 200 mL of 10% glucose: glucose 7.8 mmol/L (140 mg/dL), talking normally and fully oriented. He takes insulin glargine and a sulfonylurea."
+   }
+  },
+  {
+   "id": "hypo_stroke",
+   "label": "Low glucose, then a stroke after all",
+   "vignette": "79-year-old woman with type 2 diabetes, brought in by her daughter: confused, with slurred speech, since this morning.",
+   "picks": {
+    "front": "hypo",
+    "hypo_result": "still",
+    "clues": "focal"
+   },
+   "results": {
+    "front": "Capillary glucose 56 mg/dL (3.1 mmol/L). Drowsy, GCS 13, not safe to swallow; BP 172/94, HR 88, SpO2 96%, temperature 36.9 °C (98.4 °F).",
+    "hypo_result": "Glucose now 7.2 mmol/L (130 mg/dL), but she is still confused and her speech is still slurred.",
+    "clues": "Her daughter last saw her well at 7 a.m., 90 minutes ago. Right facial droop and right arm weakness; no fever, injury or seizure."
+   }
+  },
+  {
+   "id": "opioid",
+   "label": "Opioid toxicity",
+   "vignette": "34-year-old man found slumped in a restaurant bathroom; a friend says he took something.",
+   "picks": {
+    "front": "opioid"
+   },
+   "results": {
+    "front": "Respiratory rate 6 and shallow, pinpoint pupils, SpO2 84% on air; GCS 7; capillary glucose 5.6 mmol/L (101 mg/dL); BP 108/64, HR 58, temperature 36.2 °C (97.2 °F)."
+   }
+  },
+  {
+   "id": "coma_bleed",
+   "label": "Coma from a brain hemorrhage",
+   "vignette": "62-year-old man with untreated hypertension, found collapsed and unrousable at home by his wife.",
+   "picks": {
+    "front": "coma",
+    "coma_ct": "bleed"
+   },
+   "results": {
+    "front": "GCS 6, snoring respirations; pupils equal, not pinpoint; capillary glucose 6.8 mmol/L (122 mg/dL); BP 214/118, HR 62, SpO2 93%, temperature 37.0 °C (98.6 °F).",
+    "coma_ct": "Non-contrast CT: a large left basal ganglia hemorrhage with intraventricular extension."
+   }
+  },
+  {
+   "id": "coma_hypona",
+   "label": "Coma from hyponatremia",
+   "vignette": "71-year-old woman found on the floor by a neighbor, unrousable, after two days of vomiting.",
+   "picks": {
+    "front": "coma",
+    "coma_ct": "clear",
+    "coma_clues": "none",
+    "lab_result": "na_sev",
+    "hypona_resp": "better"
+   },
+   "results": {
+    "front": "GCS 7, not protecting the airway; pupils equal and reactive, not pinpoint; capillary glucose 6.1 mmol/L (110 mg/dL); BP 128/70, HR 96, SpO2 95%, temperature 36.5 °C (97.7 °F).",
+    "coma_ct": "Non-contrast CT: no bleed, no mass, no fracture.",
+    "coma_clues": "No fever, stiff neck, injury, seizure, toxin, alcohol, thyroid history or cold exposure.",
+    "hypona_resp": "After two 150 mL infusions the sodium is 114 mmol/L and she is opening her eyes to voice and moving all four limbs.",
+    "lab_result": "Sodium 109 mmol/L, potassium 3.1 mmol/L; calcium, glucose, urea, liver tests and blood count normal. Her daughter says the thiazide dose was doubled last month."
+   }
+  },
+  {
+   "id": "septic_shock",
+   "label": "Septic shock with confusion",
+   "vignette": "79-year-old man from a care home with a day of cough and fever, now drowsy and mottled.",
+   "picks": {
+    "front": "shock"
+   },
+   "results": {
+    "front": "BP 78/44, HR 124, SpO2 89% on air, temperature 38.6 °C (101.5 °F), lactate 5.1 mmol/L; GCS 13, protecting the airway; capillary glucose 7.4 mmol/L (133 mg/dL)."
+   }
+  },
+  {
+   "id": "dka",
+   "label": "Hyperglycemic crisis",
+   "vignette": "24-year-old woman with type 1 diabetes, 2 days of vomiting, now drowsy and breathing deeply.",
+   "picks": {
+    "front": "dka"
+   },
+   "results": {
+    "front": "Capillary glucose 576 mg/dL (32 mmol/L), blood ketones 5.8 mmol/L; GCS 14, protecting the airway; BP 98/60, HR 122, SpO2 99%, temperature 37.1 °C (98.8 °F)."
+   }
+  },
+  {
+   "id": "copd_co2",
+   "label": "CO2 retention in COPD",
+   "vignette": "70-year-old man with severe COPD, 3 days of worse breathlessness; he became more drowsy on high-flow oxygen in the ambulance.",
+   "picks": {
+    "front": "co2"
+   },
+   "results": {
+    "front": "SpO2 99% on a 15 L reservoir mask; arterial gas pH 7.26, PaCO2 74 mm Hg (9.8 kPa); GCS 12, protecting the airway; capillary glucose 7.0 mmol/L (126 mg/dL); BP 150/90, HR 104, temperature 37.2 °C (99 °F)."
+   }
+  },
+  {
+   "id": "meningitis",
+   "label": "Fever and confusion",
+   "vignette": "19-year-old student brought in by her roommates after a day of headache and vomiting, now confused.",
+   "picks": {
+    "front": "stable",
+    "clues": "fever"
+   },
+   "results": {
+    "front": "Capillary glucose 5.9 mmol/L (106 mg/dL); GCS 13, protecting the airway; BP 112/68, HR 118, SpO2 98%, temperature 39.4 °C (102.9 °F).",
+    "clues": "Neck stiffness; no rash; no focal deficit, injury or seizure; pupils equal and reactive."
+   }
+  },
+  {
+   "id": "subdural",
+   "label": "Confused after a fall on apixaban",
+   "vignette": "81-year-old man on apixaban who fell at home this morning and hit his head; his wife says he has been muddled since.",
+   "picks": {
+    "front": "stable",
+    "clues": "head",
+    "head_result": "bleed"
+   },
+   "results": {
+    "front": "Capillary glucose 6.4 mmol/L (115 mg/dL); GCS 14 (confused), protecting the airway; BP 158/84, HR 80, SpO2 96%, temperature 36.7 °C (98.1 °F).",
+    "clues": "Bruise over the right temple; the fall was 3 hours ago and he is still GCS 14; no fever, no focal weakness, no seizure.",
+    "head_result": "CT head: a right acute subdural hematoma with 6 mm of midline shift."
+   }
+  },
+  {
+   "id": "drug_delirium",
+   "label": "A fall, a clear CT, and a drug-induced delirium",
+   "vignette": "84-year-old man with mild memory problems, brought from his nursing home after falling out of bed overnight; staff say he has been more confused for 2 days.",
+   "picks": {
+    "front": "stable",
+    "clues": "head",
+    "head_result": "clear",
+    "lab_result": "delirium",
+    "cause": "drug",
+    "behave": "calm"
+   },
+   "results": {
+    "front": "Capillary glucose 6.0 mmol/L (108 mg/dL); GCS 14, protecting the airway; BP 136/78, HR 84, SpO2 95%, temperature 36.8 °C (98.2 °F).",
+    "clues": "A small graze on the forehead; the fall was 4 hours ago and he is still GCS 14; no focal deficit, fever or seizure.",
+    "head_result": "CT head: no bleed, no fracture.",
+    "lab_result": "Sodium, calcium, glucose, urea, creatinine, liver tests and blood count normal. 4AT: inattentive and fluctuating, consistent with delirium.",
+    "cause": "Medication chart: diphenhydramine started for sleep 3 days ago, on top of oxybutynin for his bladder; bladder scan 650 mL.",
+    "behave": "Calm, drowsy by day and muddled at night; not distressed, no risk to himself or others."
+   }
+  },
+  {
+   "id": "seizure",
+   "label": "Ongoing seizure activity",
+   "vignette": "45-year-old woman with epilepsy, found confused at work; colleagues say she has been staring and not answering for 10 minutes.",
+   "picks": {
+    "front": "stable",
+    "clues": "seizure"
+   },
+   "results": {
+    "front": "Capillary glucose 5.4 mmol/L (97 mg/dL); GCS 13, protecting the airway; BP 138/82, HR 96, SpO2 97%, temperature 37.0 °C (98.6 °F).",
+    "clues": "Rhythmic eyelid twitching continues; she has missed her levetiracetam for 3 days; no injury, fever or focal weakness."
+   }
+  },
+  {
+   "id": "anticholinergic_od",
+   "label": "Tricyclic overdose (anticholinergic picture)",
+   "vignette": "52-year-old woman with depression, found confused at home, picking at the air.",
+   "picks": {
+    "front": "stable",
+    "clues": "tox"
+   },
+   "results": {
+    "front": "Capillary glucose 5.8 mmol/L (104 mg/dL); GCS 13, protecting the airway; BP 104/62, HR 128, SpO2 96%, temperature 37.6 °C (99.7 °F).",
+    "clues": "Dilated pupils, hot dry skin, a distended bladder and absent bowel sounds; an empty bottle of amitriptyline by the bed; no injury, no focal deficit."
+   }
+  },
+  {
+   "id": "wernicke",
+   "label": "Wernicke encephalopathy",
+   "vignette": "56-year-old man who drinks heavily, brought in by police after being found wandering, confused and unsteady.",
+   "picks": {
+    "front": "stable",
+    "clues": "alcohol"
+   },
+   "results": {
+    "front": "Capillary glucose 5.2 mmol/L (94 mg/dL); GCS 14, protecting the airway; BP 128/76, HR 92, SpO2 96%, temperature 36.4 °C (97.5 °F).",
+    "clues": "Thin and unkempt; nystagmus and a bilateral lateral gaze palsy; a wide-based, ataxic gait; last drink this morning, no tremor or sweating; no sign of a head injury, no focal weakness, no fever."
+   }
+  },
+  {
+   "id": "thyroid_storm",
+   "label": "Thyroid storm",
+   "vignette": "38-year-old woman with a week of diarrhea and palpitations, now agitated and confused.",
+   "picks": {
+    "front": "stable",
+    "clues": "storm"
+   },
+   "results": {
+    "front": "Capillary glucose 6.6 mmol/L (119 mg/dL); GCS 14, protecting the airway; BP 152/64, HR 148 and irregular, SpO2 96%, temperature 39.1 °C (102.4 °F).",
+    "clues": "Known Graves' disease; she stopped methimazole 2 months ago. Goiter with a bruit, tremor and lid lag; no neck stiffness or rash; chest and urine clear."
+   }
+  },
+  {
+   "id": "myxedema",
+   "label": "Myxedema coma",
+   "vignette": "77-year-old woman found by her son drowsy and slow at home; she ran out of her tablets some months ago.",
+   "picks": {
+    "front": "stable",
+    "clues": "myx"
+   },
+   "results": {
+    "front": "Capillary glucose 4.6 mmol/L (83 mg/dL); GCS 12, protecting the airway; BP 98/60, HR 46, respiratory rate 12, SpO2 95%, core temperature 33.8 °C (92.8 °F).",
+    "clues": "A thyroidectomy scar; puffy face, dry skin and slow-relaxing reflexes; the missing tablets were levothyroxine; no cold exposure, injury or focal deficit."
+   }
+  },
+  {
+   "id": "hypothermia",
+   "label": "Accidental hypothermia",
+   "vignette": "66-year-old man who sleeps rough, brought in on a freezing night, confused and clumsy.",
+   "picks": {
+    "front": "stable",
+    "clues": "temp"
+   },
+   "results": {
+    "front": "Capillary glucose 5.0 mmol/L (90 mg/dL); GCS 13, protecting the airway; BP 104/66, HR 52, SpO2 94%; bladder temperature 31.2 °C (88.2 °F).",
+    "clues": "Found outdoors in wet clothing overnight; not shivering; no thyroid history or scar, normal reflexes; no alcohol on his breath, no injury, no focal deficit."
+   }
+  },
+  {
+   "id": "htn_enceph",
+   "label": "Hypertensive encephalopathy",
+   "vignette": "49-year-old man with untreated hypertension, 2 days of worsening headache and vomiting, now confused.",
+   "picks": {
+    "front": "stable",
+    "clues": "htn"
+   },
+   "results": {
+    "front": "Capillary glucose 6.2 mmol/L (112 mg/dL); GCS 14, protecting the airway; BP 232/134 on repeat, HR 88, SpO2 98%, temperature 36.9 °C (98.4 °F).",
+    "clues": "Papilledema and retinal hemorrhages; no focal deficit, neck stiffness, injury or seizure."
+   }
+  },
+  {
+   "id": "hyponatremia_moderate",
+   "label": "Hyponatremia with confusion",
+   "vignette": "74-year-old woman, increasingly muddled and unsteady over 3 days, with nausea.",
+   "picks": {
+    "front": "stable",
+    "clues": "none",
+    "lab_result": "na_mod"
+   },
+   "results": {
+    "front": "Capillary glucose 6.0 mmol/L (108 mg/dL); GCS 14, protecting the airway; BP 132/78, HR 82, SpO2 97%, temperature 36.8 °C (98.2 °F).",
+    "clues": "No focal deficit, injury, fever, seizure or toxidrome; no alcohol; she started sertraline 2 weeks ago.",
+    "lab_result": "Sodium 121 mmol/L with a low serum osmolality; calcium, glucose, urea, liver tests and blood count normal. Confused and nauseated, but no vomiting."
+   }
+  },
+  {
+   "id": "hypercalcemia",
+   "label": "Hypercalcemia of malignancy",
+   "vignette": "68-year-old man with lung cancer, increasingly confused over a week.",
+   "picks": {
+    "front": "stable",
+    "clues": "none",
+    "lab_result": "ca",
+    "ca_resp": "still_high"
+   },
+   "results": {
+    "front": "Capillary glucose 6.3 mmol/L (113 mg/dL); GCS 14, protecting the airway; BP 108/66, HR 104, SpO2 95%, temperature 36.9 °C (98.4 °F); dry mucous membranes.",
+    "clues": "Thirsty and constipated; no focal deficit, injury, fever, seizure or toxidrome; no alcohol.",
+    "lab_result": "Albumin-adjusted calcium 15.6 mg/dL (3.9 mmol/L), PTH suppressed; creatinine 1.8 mg/dL, up from 1.0; sodium normal.",
+    "ca_resp": "After 24 hours of IV saline the adjusted calcium is 14 mg/dL (3.5 mmol/L)."
+   }
+  },
+  {
+   "id": "uremia",
+   "label": "Uremic encephalopathy",
+   "vignette": "63-year-old man with a week of vomiting and diarrhea and little urine for 3 days, now drowsy and confused.",
+   "picks": {
+    "front": "stable",
+    "clues": "none",
+    "lab_result": "uremia"
+   },
+   "results": {
+    "front": "Capillary glucose 5.9 mmol/L (106 mg/dL); GCS 13, protecting the airway; BP 104/64, HR 102, SpO2 96%, temperature 36.8 °C (98.2 °F).",
+    "clues": "No focal deficit, injury, fever, seizure or toxidrome; no liver disease; he has been taking ibuprofen for back pain.",
+    "lab_result": "BUN 162 mg/dL (urea 58 mmol/L), creatinine 9.6 mg/dL (850 µmol/L), potassium 5.4 mmol/L; drowsiness unchanged after fluids and stopping the ibuprofen; sodium, calcium and glucose normal."
+   }
+  },
+  {
+   "id": "hepatic_enceph",
+   "label": "Hepatic encephalopathy",
+   "vignette": "61-year-old man with cirrhosis, 2 days of sleepiness and confusion.",
+   "picks": {
+    "front": "stable",
+    "clues": "none",
+    "lab_result": "he"
+   },
+   "results": {
+    "front": "Capillary glucose 5.6 mmol/L (101 mg/dL); GCS 13, protecting the airway; BP 112/70, HR 90, SpO2 96%, temperature 36.9 °C (98.4 °F).",
+    "clues": "Jaundice and ascites; no bowel movement for 4 days; no focal deficit, injury, fever, seizure or toxidrome; no alcohol for 2 years.",
+    "lab_result": "Asterixis; sodium 134 mmol/L; calcium, urea, creatinine and glucose normal; no other cause on the first labs."
+   }
+  },
+  {
+   "id": "agitated_delirium",
+   "label": "Agitated delirium in dementia",
+   "vignette": "86-year-old woman with Alzheimer's dementia, brought from her care home with 2 days of new agitation and confusion.",
+   "picks": {
+    "front": "stable",
+    "clues": "none",
+    "lab_result": "delirium",
+    "cause": "other",
+    "behave": "distressed"
+   },
+   "results": {
+    "front": "Capillary glucose 6.8 mmol/L (122 mg/dL); GCS 14, protecting the airway; BP 148/80, HR 92, SpO2 95%, temperature 37.2 °C (99 °F).",
+    "clues": "No focal deficit, injury, fever, seizure or toxidrome; no alcohol; no new medicines.",
+    "lab_result": "Sodium, calcium, glucose, renal and liver tests and blood count normal; urine dipstick positive for leukocytes and nitrites, with no urinary symptoms. 4AT consistent with delirium.",
+    "cause": "No new drug; a loaded rectum, last bowel movement 6 days ago; bladder scan 120 mL.",
+    "behave": "Pulling out her cannula and hitting staff despite calm reassurance from the nurse and her daughter."
+   }
+  },
+  {
+   "id": "cleared",
+   "label": "Confusion that has cleared",
+   "vignette": "58-year-old woman brought in by her husband after 3 hours of repeating the same questions and not remembering the morning.",
+   "picks": {
+    "front": "stable",
+    "clues": "none",
+    "lab_result": "normal"
+   },
+   "results": {
+    "front": "Capillary glucose 5.6 mmol/L (101 mg/dL); GCS 15, protecting the airway; BP 142/86, HR 78, SpO2 98%, temperature 36.7 °C (98.1 °F).",
+    "clues": "No focal deficit, injury, fever, seizure or toxidrome; no alcohol or new medicines; she is asking fewer repeated questions now.",
+    "lab_result": "Sodium, calcium, glucose, renal and liver tests and blood count normal. 4AT 0: alert, oriented, attention normal."
+   }
+  },
+  {
+   "id": "coma_meningitis",
+   "label": "Coma with fever and a stiff neck",
+   "vignette": "44-year-old man found unrousable in his flat by a friend; he had complained of a headache the day before.",
+   "picks": {
+    "front": "coma",
+    "coma_ct": "clear",
+    "coma_clues": "fever"
+   },
+   "results": {
+    "front": "GCS 7, not protecting the airway; pupils equal and reactive, not pinpoint; capillary glucose 6.4 mmol/L (115 mg/dL); BP 118/72, HR 122, SpO2 95%, temperature 39.6 °C (103.3 °F).",
+    "coma_ct": "Non-contrast CT: no bleed, no mass, no swelling.",
+    "coma_clues": "Neck stiffness and a few petechiae on the legs; no injury, no seizure seen, no pills found."
+   }
+  },
+  {
+   "id": "coma_tca",
+   "label": "Coma after a tricyclic overdose",
+   "vignette": "37-year-old woman with depression found unresponsive at home by her partner.",
+   "picks": {
+    "front": "coma",
+    "coma_ct": "clear",
+    "coma_clues": "tox"
+   },
+   "results": {
+    "front": "GCS 6, not protecting the airway; pupils dilated, not pinpoint; capillary glucose 6.0 mmol/L (108 mg/dL); BP 96/60, HR 132, SpO2 94%, temperature 37.4 °C (99.3 °F).",
+    "coma_ct": "Non-contrast CT: no bleed, no mass.",
+    "coma_clues": "Empty blister packs of amitriptyline by the bed; warm, dry skin; the ECG shows a wide QRS; no fever, injury or seizure."
+   }
+  },
+  {
+   "id": "coma_postictal",
+   "label": "Not waking after a seizure",
+   "vignette": "29-year-old man with epilepsy, brought in by ambulance after a seizure at home; he has not woken in the hour since.",
+   "picks": {
+    "front": "coma",
+    "coma_ct": "clear",
+    "coma_clues": "seizure"
+   },
+   "results": {
+    "front": "GCS 6, not protecting the airway; pupils equal and reactive, not pinpoint; capillary glucose 5.8 mmol/L (104 mg/dL); BP 146/88, HR 110, SpO2 93%, temperature 37.3 °C (99.1 °F).",
+    "coma_ct": "Non-contrast CT: no bleed, no mass, no fracture.",
+    "coma_clues": "A witnessed tonic-clonic seizure an hour ago; subtle rhythmic twitching of the right hand, eyes deviated to the left; no fever, injury or pills."
+   }
+  },
+  {
+   "id": "coma_wernicke",
+   "label": "Coma in a malnourished drinker",
+   "vignette": "52-year-old man who drinks heavily, found unrousable in a hostel.",
+   "picks": {
+    "front": "coma",
+    "coma_ct": "clear",
+    "coma_clues": "alcohol"
+   },
+   "results": {
+    "front": "GCS 7, not protecting the airway; pupils equal, not pinpoint; capillary glucose 4.4 mmol/L (79 mg/dL); BP 104/66, HR 98, SpO2 95%, temperature 35.9 °C (96.6 °F).",
+    "coma_ct": "Non-contrast CT: no bleed, no fracture.",
+    "coma_clues": "Very thin; on doll's-eye testing neither eye moves outward; blood alcohol low; no fever, seizure, pills or cold exposure."
+   }
+  },
+  {
+   "id": "coma_myxedema",
+   "label": "Myxedema coma, unresponsive",
+   "vignette": "81-year-old woman found unrousable in her chair by a carer.",
+   "picks": {
+    "front": "coma",
+    "coma_ct": "clear",
+    "coma_clues": "myx"
+   },
+   "results": {
+    "front": "GCS 7, not protecting the airway; pupils equal, not pinpoint; capillary glucose 4.2 mmol/L (76 mg/dL); BP 92/58, HR 40, respiratory rate 10, SpO2 94%, core temperature 32.4 °C (90.3 °F).",
+    "coma_ct": "Non-contrast CT: no bleed, no mass.",
+    "coma_clues": "A thyroidectomy scar, a puffy face and dry skin; her levothyroxine has not been collected for 4 months; no cold exposure, fever, seizure or pills."
+   }
+  },
+  {
+   "id": "coma_hypothermia",
+   "label": "Coma from accidental hypothermia",
+   "vignette": "71-year-old man found unresponsive in his garden after a night below freezing.",
+   "picks": {
+    "front": "coma",
+    "coma_ct": "clear",
+    "coma_clues": "temp"
+   },
+   "results": {
+    "front": "GCS 6, not protecting the airway; pupils sluggish, not pinpoint; capillary glucose 5.4 mmol/L (97 mg/dL); BP 92/54, HR 38, SpO2 92%; esophageal temperature 27.8 °C (82 °F).",
+    "coma_ct": "Non-contrast CT: no bleed, no fracture.",
+    "coma_clues": "Found outdoors in thin clothing; not shivering; no thyroid history or scar; no alcohol, pills, fever or seizure."
+   }
+  },
+  {
+   "id": "withdrawal",
+   "label": "Alcohol withdrawal with hallucinations",
+   "vignette": "47-year-old man who drinks a bottle of vodka a day, brought in confused and frightened 2 days after he stopped.",
+   "picks": {
+    "front": "stable",
+    "clues": "withdrawal"
+   },
+   "results": {
+    "front": "Capillary glucose 6.2 mmol/L (112 mg/dL); GCS 14, protecting the airway; BP 168/98, HR 124, SpO2 97%, temperature 37.6 °C (99.7 °F).",
+    "clues": "Coarse tremor and drenching sweats; he is picking at insects he sees on the wall; last drink 2 days ago; no ataxia or eye signs, no injury, no focal deficit."
+   }
+  },
+  {
+   "id": "shock_bleed",
+   "label": "Shock without infection",
+   "vignette": "74-year-old man on apixaban with 2 days of black stools, now confused and pale.",
+   "picks": {
+    "front": "shock_other"
+   },
+   "results": {
+    "front": "BP 76/44, HR 128, cool and clammy; temperature 36.2 °C (97.2 °F), no cough, urinary symptoms or other infection clue; GCS 14, protecting the airway; capillary glucose 6.8 mmol/L (122 mg/dL); SpO2 96%."
+   }
+  },
+  {
+   "id": "hypoxemia",
+   "label": "Hypoxemic confusion",
+   "vignette": "66-year-old woman, breathless since getting off a long flight yesterday, now confused.",
+   "picks": {
+    "front": "hypox"
+   },
+   "results": {
+    "front": "SpO2 84% on air; arterial gas PaO2 52 mm Hg (6.9 kPa), PaCO2 31 mm Hg (4.1 kPa); GCS 14, protecting the airway; capillary glucose 6.1 mmol/L (110 mg/dL); BP 112/70, HR 118, temperature 37.0 °C (98.6 °F)."
+   }
+  },
+  {
+   "id": "coma_mass",
+   "label": "Coma from a brain mass",
+   "vignette": "58-year-old woman with lung cancer, increasingly drowsy over a week, now unrousable.",
+   "picks": {
+    "front": "coma",
+    "coma_ct": "lesion"
+   },
+   "results": {
+    "front": "GCS 7, not protecting the airway; left pupil larger than the right, not pinpoint; capillary glucose 6.6 mmol/L (119 mg/dL); BP 158/90, HR 58, SpO2 95%, temperature 36.8 °C (98.2 °F).",
+    "coma_ct": "Non-contrast CT: a large right frontal mass with surrounding edema and 9 mm of midline shift; no blood."
+   }
+  },
+  {
+   "id": "hypernatremia",
+   "label": "High sodium",
+   "vignette": "89-year-old woman from a nursing home, 3 days of poor intake, now drowsy.",
+   "picks": {
+    "front": "stable",
+    "clues": "none",
+    "lab_result": "other_lab"
+   },
+   "results": {
+    "front": "Capillary glucose 7.1 mmol/L (128 mg/dL); GCS 13, protecting the airway; BP 104/62, HR 104, SpO2 95%, temperature 37.4 °C (99.3 °F); dry mucous membranes.",
+    "clues": "No focal deficit, injury, fever, seizure or toxidrome; no alcohol; no new medicines.",
+    "lab_result": "Sodium 162 mmol/L; urea raised; calcium, glucose, creatinine and liver tests normal."
+   }
+  },
+  {
+   "id": "hypona_refractory",
+   "label": "Severe hyponatremia, slow to respond",
+   "vignette": "62-year-old man with small cell lung cancer, 2 days of vomiting, now increasingly drowsy.",
+   "picks": {
+    "front": "stable",
+    "clues": "none",
+    "lab_result": "na_sev",
+    "hypona_resp": "not_better"
+   },
+   "results": {
+    "front": "Capillary glucose 6.0 mmol/L (108 mg/dL); GCS 12, protecting the airway; BP 128/76, HR 90, SpO2 96%, temperature 36.8 °C (98.2 °F).",
+    "clues": "Vomiting twice in the department; no focal deficit, injury, fever, seizure or toxidrome; no alcohol.",
+    "lab_result": "Sodium 111 mmol/L with a low serum osmolality; calcium, glucose, urea, liver tests and blood count normal.",
+    "hypona_resp": "After two 150 mL infusions the sodium is 116 mmol/L, but he is still drowsy and vomiting."
+   }
+  },
+  {
+   "id": "skull_fracture",
+   "label": "Skull fracture without a bleed",
+   "vignette": "39-year-old man hit on the head by a falling scaffold pole at work 3 hours ago, now confused.",
+   "picks": {
+    "front": "stable",
+    "clues": "head",
+    "head_result": "fracture"
+   },
+   "results": {
+    "front": "Capillary glucose 5.9 mmol/L (106 mg/dL); GCS 14, protecting the airway; BP 136/82, HR 88, SpO2 98%, temperature 36.7 °C (98.1 °F).",
+    "clues": "Boggy swelling over the left parietal scalp; GCS still 14 three hours after the injury; no focal weakness, seizure or fever.",
+    "head_result": "CT head: a linear left parietal skull fracture; no intracranial blood."
+   }
+  },
+  {
+   "id": "ca_rehydrated",
+   "label": "Hypercalcemia that settles with fluid",
+   "vignette": "72-year-old woman on a thiazide, a week of vomiting and poor intake, now muddled.",
+   "picks": {
+    "front": "stable",
+    "clues": "none",
+    "lab_result": "ca",
+    "ca_resp": "normalized"
+   },
+   "results": {
+    "front": "Capillary glucose 6.1 mmol/L (110 mg/dL); GCS 14, protecting the airway; BP 104/60, HR 102, SpO2 97%, temperature 36.9 °C (98.4 °F); dry mucous membranes.",
+    "clues": "Thirsty; no focal deficit, injury, fever, seizure or toxidrome; no alcohol.",
+    "lab_result": "Albumin-adjusted calcium 12.8 mg/dL (3.2 mmol/L), PTH high-normal; sodium normal; creatinine 1.4 mg/dL, up from 0.9.",
+    "ca_resp": "After 24 hours of IV saline the adjusted calcium is 10.0 mg/dL (2.5 mmol/L) and she is clearer."
+   }
+  },
+  {
+   "id": "fever_source",
+   "label": "Fever, a cough and confusion",
+   "vignette": "82-year-old woman from home, two days of cough and a fever, more confused since this morning.",
+   "picks": {
+    "front": "stable",
+    "clues": "fever_source"
+   },
+   "results": {
+    "front": "Capillary glucose 7.1 mmol/L (128 mg/dL); GCS 14, protecting the airway; BP 108/64, HR 104, RR 24, SpO2 95% on air, temperature 38.6 °C (101.5 °F).",
+    "clues": "Crackles at the right base; no neck stiffness, rash, focal deficit, injury or seizure; pupils equal and reactive."
+   }
+  }
+ ]
+}

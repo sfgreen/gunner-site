@@ -1,0 +1,3079 @@
+{
+ "id": "pw_peds_vomiting",
+ "title": "The vomiting child",
+ "world": "peds",
+ "synonyms": [
+  "vomiting child",
+  "pediatric vomiting",
+  "paediatric vomiting",
+  "vomiting infant",
+  "bilious vomiting",
+  "green vomit",
+  "projectile vomiting",
+  "gastroenteritis in children",
+  "dehydration in children",
+  "oral rehydration",
+  "ORS",
+  "ondansetron",
+  "fluid bolus child",
+  "pyloric stenosis",
+  "hypertrophic pyloric stenosis",
+  "pyloromyotomy",
+  "hypochloremic metabolic alkalosis",
+  "malrotation",
+  "midgut volvulus",
+  "Ladd procedure",
+  "intussusception",
+  "target sign",
+  "air enema",
+  "currant jelly stool",
+  "pediatric appendicitis",
+  "PAS",
+  "Pediatric Appendicitis Score",
+  "pARC",
+  "HUS",
+  "hemolytic uremic syndrome",
+  "STEC",
+  "E. coli O157",
+  "cyclic vomiting syndrome",
+  "button battery",
+  "head injury vomiting",
+  "testicular torsion",
+  "ovarian torsion",
+  "hypoglycemia child",
+  "pediatric DKA"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:efee680ebca2",
+   "label": "NICE CG84",
+   "title": "Diarrhoea and vomiting caused by gastroenteritis in under 5s: diagnosis and management (NICE CG84, 2009, last reviewed 2018)",
+   "url": "https://www.nice.org.uk/guidance/cg84"
+  },
+  {
+   "docId": "url:5d956ff2431d",
+   "label": "NICE NG29",
+   "title": "Intravenous fluid therapy in children and young people in hospital (NICE NG29, 2015, updated 2020)",
+   "url": "https://www.nice.org.uk/guidance/ng29"
+  },
+  {
+   "docId": "url:8f646c6d578f",
+   "label": "WHO pocket book 2013",
+   "title": "Pocket book of hospital care for children, second edition (WHO 2013)",
+   "url": "https://iris.who.int/server/api/core/bitstreams/8f110da0-22e6-4ef1-90e4-c9f1b7daa363/content"
+  },
+  {
+   "docId": "url:ed1c1f5fb274",
+   "label": "NICE NG232",
+   "title": "Head injury: assessment and early management (NICE NG232, 2023)",
+   "url": "https://www.nice.org.uk/guidance/ng232"
+  },
+  {
+   "docId": "pmid:36250645",
+   "label": "ISPAD 2022",
+   "title": "ISPAD Clinical Practice Consensus Guidelines 2022: diabetic ketoacidosis and hyperglycemic hyperosmolar state (Pediatr Diabetes 2022)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36250645/"
+  },
+  {
+   "docId": "pmid:32295644",
+   "label": "WSES 2020",
+   "title": "Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines (World J Emerg Surg 2020)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32295644/"
+  },
+  {
+   "docId": "pmid:33153561",
+   "label": "ACR: vomiting in infants",
+   "title": "ACR Appropriateness Criteria: Vomiting in Infants (2020)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33153561/"
+  },
+  {
+   "docId": "pmid:41701130",
+   "label": "ACR: abdominal pain, child",
+   "title": "ACR Appropriateness Criteria: Abdominal Pain-Child (2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41701130/"
+  },
+  {
+   "docId": "pmid:31054752",
+   "label": "ACR: appendicitis, child",
+   "title": "ACR Appropriateness Criteria: Suspected Appendicitis-Child (2018)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31054752/"
+  },
+  {
+   "docId": "pmid:28613793",
+   "label": "StatPearls: pediatric dehydration",
+   "title": "Pediatric Dehydration (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613793/"
+  },
+  {
+   "docId": "pmid:32310391",
+   "label": "StatPearls: pyloric stenosis",
+   "title": "Pyloric Stenosis (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32310391/"
+  },
+  {
+   "docId": "pmid:28722991",
+   "label": "StatPearls: midgut volvulus",
+   "title": "Midgut Volvulus (StatPearls, updated 2022), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722991/"
+  },
+  {
+   "docId": "pmid:32809723",
+   "label": "StatPearls: midgut malrotation",
+   "title": "Midgut Malrotation (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32809723/"
+  },
+  {
+   "docId": "pmid:28613732",
+   "label": "StatPearls: intussusception",
+   "title": "Child Intussusception (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613732/"
+  },
+  {
+   "docId": "pmid:28722894",
+   "label": "StatPearls: pediatric appendicitis",
+   "title": "Pediatric Appendicitis (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722894/"
+  },
+  {
+   "docId": "pmid:32310498",
+   "label": "StatPearls: HUS",
+   "title": "Hemolytic Uremic Syndrome (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32310498/"
+  },
+  {
+   "docId": "pmid:30137794",
+   "label": "StatPearls: EHEC",
+   "title": "Enterohemorrhagic Escherichia coli (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30137794/"
+  },
+  {
+   "docId": "pmid:29763014",
+   "label": "StatPearls: ondansetron",
+   "title": "Ondansetron (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29763014/"
+  },
+  {
+   "docId": "pmid:29763194",
+   "label": "StatPearls: cyclic vomiting",
+   "title": "Cyclic Vomiting Syndrome (StatPearls, updated 2026, citing NASPGHAN 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29763194/"
+  },
+  {
+   "docId": "pmid:29489250",
+   "label": "StatPearls: raised ICP",
+   "title": "Increased Intracranial Pressure (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29489250/"
+  },
+  {
+   "docId": "pmid:29262219",
+   "label": "StatPearls: button battery",
+   "title": "Disk Battery Ingestion (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29262219/"
+  },
+  {
+   "docId": "pmid:28846325",
+   "label": "StatPearls: testicular torsion",
+   "title": "Testicular Torsion (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846325/"
+  },
+  {
+   "docId": "pmid:32809510",
+   "label": "StatPearls: ovarian torsion",
+   "title": "Ovarian Torsion (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32809510/"
+  },
+  {
+   "docId": "pmid:33828604",
+   "label": "Drugs Context 2021 (review)",
+   "title": "Paediatrics: how to manage viral gastroenteritis (Drugs Context 2021), a narrative review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33828604/"
+  },
+  {
+   "docId": "pmid:34426397",
+   "label": "BJGP 2021 ondansetron trial",
+   "title": "Oral ondansetron for paediatric gastroenteritis in primary care: a randomised controlled trial (Br J Gen Pract 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34426397/"
+  },
+  {
+   "docId": "pmid:33158508",
+   "label": "APSA 2021 intussusception review",
+   "title": "Management of intussusception in children: a systematic review (APSA Outcomes and Evidence-Based Practice Committee, J Pediatr Surg 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33158508/"
+  },
+  {
+   "docId": "pmid:35798026",
+   "label": "Clin Exp Pediatr 2023 (review)",
+   "title": "Current diagnosis and image-guided reduction for intussusception in children (Clin Exp Pediatr 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35798026/"
+  },
+  {
+   "docId": "pmid:30374814",
+   "label": "J Gastrointest Surg 2019 (PAS)",
+   "title": "Ruling out appendicitis in children: can we use clinical prediction rules? (J Gastrointest Surg 2019)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30374814/"
+  },
+  {
+   "docId": "pmid:31229394",
+   "label": "pARC validation 2019",
+   "title": "Validation of the pediatric Appendicitis Risk Calculator (pARC) in a community emergency department setting (Ann Emerg Med 2019)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31229394/"
+  },
+  {
+   "docId": "pmid:41556213",
+   "label": "IHPS fluid trial 2026",
+   "title": "Chloride-guided bolus vs conventional fluid therapy for preoperative optimisation in infantile hypertrophic pyloric stenosis (Ann R Coll Surg Engl 2026), a randomised trial",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41556213/"
+  },
+  {
+   "docId": "pmid:32298502",
+   "label": "IHPS apnea review 2020",
+   "title": "Perioperative apnea in infants with hypertrophic pyloric stenosis: a systematic review (Paediatr Anaesth 2020)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32298502/"
+  },
+  {
+   "docId": "pmid:26900382",
+   "label": "AES 2016",
+   "title": "Evidence-based guideline: treatment of convulsive status epilepticus in children and adults (American Epilepsy Society, Epilepsy Curr 2016), Figure 1",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26900382/"
+  },
+  {
+   "docId": "url:d16b4747bc35",
+   "label": "WHO 2024",
+   "title": "Guideline on management of pneumonia and diarrhoea in children up to 10 years of age (WHO 2024)",
+   "url": "https://iris.who.int/server/api/core/bitstreams/bddcc725-8ffd-4d38-bec4-d6ead2904911/content"
+  },
+  {
+   "docId": "pmid:30725714",
+   "label": "StatPearls: pediatric head trauma",
+   "title": "Pediatric Head Trauma (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30725714/"
+  }
+ ],
+ "differential": [
+  "Viral gastroenteritis",
+  "Pyloric stenosis",
+  "Malrotation with midgut volvulus",
+  "Intussusception",
+  "Appendicitis",
+  "DKA",
+  "Hypoglycemia",
+  "Testicular torsion",
+  "Ovarian torsion",
+  "Head injury or raised intracranial pressure",
+  "Toxic ingestion",
+  "Sepsis or meningitis",
+  "STEC infection",
+  "HUS",
+  "Cyclic vomiting syndrome",
+  "Reflux or pylorospasm"
+ ],
+ "calculators": [
+  {
+   "id": "pas",
+   "title": "Pediatric Appendicitis Score",
+   "kind": "points",
+   "items": [
+    {
+     "id": "hop",
+     "label": "Cough, percussion or hopping tenderness",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "anorexia",
+     "label": "Anorexia",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "fever",
+     "label": "Fever over 38 C",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "nausea",
+     "label": "Nausea or vomiting",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "rlq",
+     "label": "Right lower quadrant tenderness",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "wbc",
+     "label": "White count over 10,000",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "pmn",
+     "label": "Neutrophils over 7,500",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "migration",
+     "label": "Migration of pain",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    }
+   ],
+   "bands": [
+    {
+     "lte": 3,
+     "text": "3 or less: below ACR's equivocal band"
+    },
+    {
+     "gte": 4,
+     "lte": 7,
+     "text": "4 to 7: equivocal; ultrasound (ACR, staged pathway)"
+    },
+    {
+     "gte": 8,
+     "text": "8 or more: above the equivocal band; ultrasound first in a child"
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:30374814",
+     "where": "Appendix 3: PAS"
+    },
+    {
+     "docId": "pmid:28722894",
+     "where": "Clinical Decision Tools for Pediatric Appendicitis"
+    },
+    {
+     "docId": "pmid:31054752",
+     "where": "Variant 2 B"
+    },
+    {
+     "docId": "pmid:32295644",
+     "where": "Statement and Recommendation 1.5"
+    }
+   ],
+   "note": "Cut points differ: ACR's staged pathway (citing Saucier) images an equivocal 4 to 7, the Dutch review rules appendicitis out at 5 or less, and StatPearls reads 6 or more as suggestive. WSES advises against making the diagnosis on a score alone.",
+   "tests": [
+    {
+     "picks": {
+      "nausea": 1,
+      "rlq": 1
+     },
+     "expect": 3
+    },
+    {
+     "picks": {
+      "hop": 1,
+      "anorexia": 1,
+      "fever": 1,
+      "nausea": 1,
+      "rlq": 1,
+      "wbc": 1,
+      "pmn": 1,
+      "migration": 1
+     },
+     "expect": 10
+    },
+    {
+     "picks": {
+      "anorexia": 1,
+      "nausea": 1,
+      "rlq": 1,
+      "wbc": 1
+     },
+     "expect": 5
+    }
+   ]
+  }
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Vomiting child in the ED. First moves?",
+   "options": [
+    "Weigh the child; check the airway, perfusion and a fingerstick glucose",
+    "Blood count, electrolytes and a venous gas to grade the dehydration",
+    "Oral ondansetron first, then a full assessment once the vomiting settles",
+    "Abdominal x-ray to exclude obstruction before fluid is started"
+   ],
+   "answer": 0,
+   "chainStep": "Weigh the child (every fluid and dose is per kg); airway and breathing; perfusion: level of consciousness, skin color, warmth of the hands and feet, pulses, capillary refill, heart rate, blood pressure; fingerstick glucose, with blood ketones and a venous gas if it is high",
+   "why": "Fluids and drugs in a child are calculated from body weight, so the weight comes first. Shock is a bedside diagnosis: decreased consciousness, pale or mottled skin, cold extremities, weak pulses, prolonged capillary refill, tachycardia and, late, hypotension. A stick glucose under 60 mg/dL is treated at once (AES; WHO's chart uses 45 mg/dL, 2.5 mmol/L, in a well-nourished child), and a high one is checked for ketoacidosis. Blood tests are not routine in gastroenteritis; they are for the child who needs IV fluid or may be hypernatremic. A film comes only once obstruction is suspected, and an antiemetic is a question for later, once shock and the red flags are excluded.",
+   "orders": [
+    {
+     "item": "Weight",
+     "dose": "Body weight is used to calculate IV fluid and electrolyte needs",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5d956ff2431d",
+       "where": "1.2.1"
+      }
+     ]
+    },
+    {
+     "item": "Shock",
+     "dose": "One or more expected: decreased consciousness, pale or mottled skin, cold extremities, tachycardia, tachypnea, weak peripheral pulses, prolonged capillary refill; hypotension means decompensated shock",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "Low glucose",
+     "dose": "AES 2016: under 60 mg/dL in a child; 25% dextrose 2 mL/kg from 2 years, 12.5% dextrose 4 mL/kg under 2. WHO: under 45 mg/dL (2.5 mmol/L) if well nourished, under 54 mg/dL (3 mmol/L) if severely malnourished",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, stabilization phase"
+      },
+      {
+       "docId": "url:8f646c6d578f",
+       "where": "Chart 10"
+      }
+     ],
+     "note": "WHO's triage chart treats at a lower glucose; this pathway treats under 60 mg/dL, as pw_peds_fever and pw_seizure do."
+    },
+    {
+     "item": "High glucose",
+     "dose": "DKA needs all three: glucose over 200 mg/dL (11 mmol/L), venous pH under 7.3 or bicarbonate under 18 mmol/L, and ketonemia (beta-hydroxybutyrate 3 mmol/L or more) or moderate or large ketonuria",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36250645",
+       "where": "Executive summary: biochemical criteria"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: the newborn in the first 2 days of life (ACR images with a radiograph first), necrotizing enterocolitis, reflux disease beyond the well infant, metabolic and endocrine causes such as congenital adrenal hyperplasia, eosinophilic disease, pregnancy, and the adolescent with cannabis hyperemesis.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "url:5d956ff2431d",
+     "where": "1.2.1"
+    },
+    {
+     "docId": "url:efee680ebca2",
+     "where": "Table 1; 1.2.2.1; 1.2.2.2"
+    },
+    {
+     "docId": "pmid:26900382",
+     "where": "Figure 1, stabilization phase"
+    },
+    {
+     "docId": "url:8f646c6d578f",
+     "where": "Chart 10"
+    },
+    {
+     "docId": "pmid:36250645",
+     "where": "Executive summary: biochemical criteria"
+    }
+   ]
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Perfusion, the fingerstick glucose and ketones",
+   "outcomes": [
+    {
+     "id": "dka",
+     "if": "Diabetic ketoacidosis picture; high glucose with ketones and acidosis, shocked or not",
+     "ddx": {
+      "lead": [
+       "DKA"
+      ],
+      "out": []
+     },
+     "next": "end_dka"
+    },
+    {
+     "id": "shock",
+     "if": "Shocked, no ketoacidosis; cold or mottled, weak pulses, slow refill",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "shock_bolus"
+    },
+    {
+     "id": "hypo",
+     "if": "Low glucose, perfused; under 60 mg/dL on the stick test",
+     "ddx": {
+      "lead": [
+       "Hypoglycemia"
+      ],
+      "out": []
+     },
+     "next": "hypo_tx"
+    },
+    {
+     "id": "ok",
+     "if": "Perfused, glucose 60 mg/dL or more; no shock sign, no ketoacidosis",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Hypoglycemia"
+      ]
+     },
+     "next": "flags"
+    }
+   ]
+  },
+  {
+   "id": "end_dka",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Diabetic ketoacidosis in a child: pw_dka_hhs walks the crisis for adults, and a child follows ISPAD 2022 instead. Fluid comes before insulin: 0.9% saline 10 to 20 mL/kg over 20 to 30 minutes to restore the circulation, or 20 mL/kg boluses as quickly as possible in the rare child in shock, then the deficit replaced over 24 to 48 hours. Insulin runs at 0.05 to 0.1 U/kg/h, started at least 1 hour after the fluid, with no IV insulin bolus. Headache or vomiting after treatment starts, a slowing heart rate or a change in neurological state are warning signs of cerebral injury."
+  },
+  {
+   "id": "shock_bolus",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Shocked child, no ketoacidosis. Next?",
+   "options": [
+    "Glucose-free isotonic crystalloid bolus by weight, then reassess",
+    "5% dextrose bolus by weight, treating the shock and glucose together",
+    "Hydroxyethyl starch bolus by weight, as it stays in the vessels",
+    "IV ondansetron and an oral fluid trial before starting IV fluid"
+   ],
+   "answer": 0,
+   "chainStep": "0.9% saline, or another glucose-free crystalloid with sodium 131 to 154 mmol/L, as a rapid bolus by weight (NICE 10 mL/kg over less than 10 minutes; WHO and StatPearls 20 mL/kg); reassess after each; if still shocked a second bolus and a search for other causes; PICU advice if still shocked after the second, and expert advice at 40 to 60 mL/kg; venous gas with chloride, and sodium, potassium, urea, creatinine and glucose",
+   "why": "Shock gets a rapid IV bolus of a glucose-free isotonic crystalloid, with a reassessment after each one. NICE gives 10 mL/kg of 0.9% saline over less than 10 minutes, repeats it once, considers other causes of shock, and calls the paediatric intensive care team if the child stays shocked; WHO and StatPearls give 20 mL/kg. Glucose solutions are not resuscitation fluids: 5% glucose risks hyponatremia and cerebral edema, and a low glucose is treated on its own with 10% glucose. Tetrastarch is not used. An antiemetic and an oral trial belong to the child who is not shocked.",
+   "orders": [
+    {
+     "item": "Bolus volume",
+     "dose": "NICE: 10 mL/kg of 0.9% saline over less than 10 minutes, repeated once if still shocked. WHO: 20 mL/kg of Ringer's lactate or saline as rapidly as possible, then 10 to 20 mL/kg if no improvement. StatPearls: 20 mL/kg of saline within 20 minutes, repeated on reassessment",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.3.3.2; 1.3.3.3"
+      },
+      {
+       "docId": "url:5d956ff2431d",
+       "where": "1.3.1"
+      },
+      {
+       "docId": "url:8f646c6d578f",
+       "where": "Chart 7"
+      },
+      {
+       "docId": "pmid:28613793",
+       "where": "Treatment: severe dehydration"
+      }
+     ],
+     "note": "NICE CG84 and NG29 give half the 20 mL/kg bolus that WHO, StatPearls and ISPAD (for DKA in shock) use; US practice uses 20 mL/kg."
+    },
+    {
+     "item": "Still shocked",
+     "dose": "A second rapid bolus and other causes of shock considered; paediatric intensive care advice if still shocked after the second; expert advice if 40 to 60 mL/kg or more is needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.3.3.3; 1.3.3.4"
+      },
+      {
+       "docId": "url:5d956ff2431d",
+       "where": "1.3.6"
+      }
+     ]
+    },
+    {
+     "item": "Tetrastarch",
+     "dose": "Not for fluid resuscitation",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:5d956ff2431d",
+       "where": "1.3.3"
+      }
+     ]
+    },
+    {
+     "item": "5% glucose, or 0.18% saline with 5% dextrose",
+     "dose": "Not for rehydration: they raise the risk of hyponatremia and cerebral edema",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:8f646c6d578f",
+       "where": "5.2.1 Severe dehydration: note"
+      }
+     ]
+    },
+    {
+     "item": "Low glucose with shock (under 60 mg/dL)",
+     "dose": "10% glucose 5 mL/kg IV, rechecked at 30 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8f646c6d578f",
+       "where": "Chart 10"
+      }
+     ]
+    },
+    {
+     "item": "Bloods in shock",
+     "dose": "Venous acid-base status and chloride; sodium, potassium, urea, creatinine and glucose once IV fluid is needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.2.2.2; 1.2.2.3"
+      }
+     ]
+    }
+   ],
+   "next": "shock_after",
+   "sources": [
+    {
+     "docId": "url:efee680ebca2",
+     "where": "1.3.3.1; 1.3.3.2; 1.3.3.3; 1.3.3.4"
+    },
+    {
+     "docId": "url:5d956ff2431d",
+     "where": "1.3.1; 1.3.3; 1.3.5; 1.3.6"
+    },
+    {
+     "docId": "url:8f646c6d578f",
+     "where": "Chart 7; 5.2.1 note"
+    },
+    {
+     "docId": "pmid:28613793",
+     "where": "Treatment: severe dehydration"
+    }
+   ]
+  },
+  {
+   "id": "shock_after",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Perfusion after the boluses",
+   "outcomes": [
+    {
+     "id": "responds",
+     "if": "Shock resolves; alert, warm, pulses and refill back",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "flags"
+    },
+    {
+     "id": "surgical",
+     "if": "Still shocked, surgical abdomen; green vomit, distension, peritonitis or rectal blood",
+     "ddx": {
+      "lead": [
+       "Malrotation with midgut volvulus",
+       "Intussusception"
+      ],
+      "out": []
+     },
+     "next": "end_shock_surgical"
+    },
+    {
+     "id": "refractory",
+     "if": "Still shocked, abdomen soft; after two boluses, no surgical sign",
+     "ddx": {
+      "lead": [
+       "Sepsis or meningitis"
+      ],
+      "out": []
+     },
+     "next": "end_picu"
+    }
+   ]
+  },
+  {
+   "id": "end_shock_surgical",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Shock with a surgical abdomen: resuscitation continues on the way to the operating room. In an infant with bilious vomiting, peritonitis, sepsis or instability means the operating room without waiting for complete imaging, with the airway protected, nasogastric or orogastric decompression, IV fluid and broad-spectrum antibiotics, because midgut volvulus can progress to transmural necrosis within hours. Peritonitis, free air or shock also rule out enema reduction of an intussusception, which is treated surgically."
+  },
+  {
+   "id": "end_picu",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Still shocked after two boluses with a soft abdomen: NICE consults the paediatric intensive care team, considers causes of shock other than dehydration and gives antibiotics to any child with suspected or confirmed septicaemia (CG84 1.5.1.2); WHO repeats 20 mL/kg when profuse diarrhea is the cause. Septic shock in a child continues in pw_peds_fever."
+  },
+  {
+   "id": "hypo_tx",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Perfused child, glucose under 60 mg/dL, IV line in. Next?",
+   "options": [
+    "10% glucose 5 mL/kg IV now, recheck in 30 minutes, then feed",
+    "50% dextrose 1 mL/kg pushed through the hand vein, then recheck",
+    "5% dextrose at the maintenance rate, with a recheck in 4 hours",
+    "0.9% saline 20 mL/kg first, then glucose once rehydrated"
+   ],
+   "answer": 0,
+   "chainStep": "10% glucose 5 mL/kg IV (0.5 g/kg); recheck in 30 minutes and repeat 5 mL/kg if still low; feed once awake, or run IV fluid containing 5 to 10% glucose; then look for the cause",
+   "why": "With a line in, a low glucose is corrected at once with IV glucose. WHO gives 5 mL/kg of 10% glucose rapidly, rechecks at 30 minutes and repeats it if still low, then feeds the child or runs fluid containing 5 to 10% glucose. StatPearls gives 0.5 to 1 g/kg, as 5 to 10 mL/kg of 10% dextrose or 2 to 4 mL/kg of 25%, and keeps 50% dextrose for an adolescent with a large-bore line. A maintenance drip is too slow, and a saline bolus first leaves the low glucose untreated.",
+   "orders": [
+    {
+     "item": "IV glucose (WHO)",
+     "dose": "10% glucose 5 mL/kg rapidly IV; recheck at 30 minutes and repeat 5 mL/kg if still low; feed once conscious, or IV fluid containing 5 to 10% glucose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8f646c6d578f",
+       "where": "Chart 10"
+      }
+     ]
+    },
+    {
+     "item": "Dose range (StatPearls)",
+     "dose": "0.5 to 1 g/kg: 5 to 10 mL/kg of 10% dextrose or 2 to 4 mL/kg of 25%; 1 to 2 mL/kg of 50% only in an adolescent with a large-bore line",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613793",
+       "where": "Treatment: severe dehydration"
+      }
+     ]
+    },
+    {
+     "item": "Critical blood sample",
+     "dose": "Which samples to draw before the glucose (insulin, cortisol, ketones) is not in the sources read",
+     "status": "pending"
+    }
+   ],
+   "next": "flags",
+   "sources": [
+    {
+     "docId": "url:8f646c6d578f",
+     "where": "Chart 10"
+    },
+    {
+     "docId": "pmid:28613793",
+     "where": "Treatment: severe dehydration"
+    }
+   ]
+  },
+  {
+   "id": "flags",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Perfused, glucose safe. What decides the route?",
+   "options": [
+    "Red flags: bile, blood, head injury, pain site, testes, rash, toxins",
+    "A blood count and CRP, to separate a viral cause from a bacterial one",
+    "A plain abdominal film first, then the history and examination",
+    "An oral fluid challenge first, examining if it comes back up"
+   ],
+   "answer": 0,
+   "chainStep": "History and examination for features of another diagnosis (NICE): green vomit, blood or mucus in the stool, severe or localized pain, distension or rebound, head injury or raised pressure signs, altered consciousness, neck stiffness, a bulging fontanelle, a non-blanching rash, fever (38 or more under 3 months, 39 or more from 3 months); testes and groin; possible ingestions; then the age, the vomit and the stools",
+   "why": "NICE lists the features that point away from gastroenteritis: fever of 38 or more under 3 months or 39 or more from 3 months, breathlessness, altered consciousness, neck stiffness, a bulging fontanelle, a non-blanching rash, blood or mucus in the stool, bilious (green) vomit, severe or localized pain, and distension or rebound. ACR evaluates bilious or repeated forceful vomiting for obstruction. Testicular and ovarian torsion can both present with vomiting. A blood count does not sort the causes, and a film or an oral trial before the examination delays the surgical diagnoses.",
+   "next": "flags_result",
+   "sources": [
+    {
+     "docId": "url:efee680ebca2",
+     "where": "1.1.1.4"
+    },
+    {
+     "docId": "pmid:33153561",
+     "where": "Introduction/Background"
+    },
+    {
+     "docId": "pmid:28846325",
+     "where": "History and physical"
+    },
+    {
+     "docId": "pmid:32809510",
+     "where": "History and physical"
+    }
+   ]
+  },
+  {
+   "id": "flags_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Red flags on history and examination",
+   "outcomes": [
+    {
+     "id": "bile",
+     "if": "Green vomit, no colicky attacks; bilious, most often an infant",
+     "ddx": {
+      "lead": [
+       "Malrotation with midgut volvulus"
+      ],
+      "out": []
+     },
+     "next": "bile"
+    },
+    {
+     "id": "colic",
+     "if": "Colicky attacks with pallor; legs drawn up, quiet between, under 3 years",
+     "ddx": {
+      "lead": [
+       "Intussusception"
+      ],
+      "out": []
+     },
+     "next": "intuss_us"
+    },
+    {
+     "id": "rlq",
+     "if": "Right lower quadrant pain, not sudden; pain came before the vomiting",
+     "ddx": {
+      "lead": [
+       "Appendicitis"
+      ],
+      "out": []
+     },
+     "next": "appy_score"
+    },
+    {
+     "id": "torsion",
+     "if": "Testis pain, or sudden pelvic pain; a painful testis or groin, or a girl with sudden one-sided pelvic pain",
+     "ddx": {
+      "lead": [
+       "Testicular torsion",
+       "Ovarian torsion"
+      ],
+      "out": []
+     },
+     "next": "end_torsion"
+    },
+    {
+     "id": "head",
+     "if": "Head injury or raised pressure, no fever; after a knock, or morning headache",
+     "ddx": {
+      "lead": [
+       "Head injury or raised intracranial pressure"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "PECARN (US)",
+       "dose": "GCS 14 to 15 after injury. Aged 2 or younger: CT for a GCS of 14 or less, a palpable skull fracture or altered mental status; CT or observation for loss of consciousness of 5 seconds or more, a severe mechanism, an occipital, parietal or temporal scalp hematoma, or not acting normally. Aged 2 or older: CT for a GCS of 14 or less, basilar skull fracture signs or altered mental status; CT or observation for loss of consciousness, severe headache, vomiting or a severe mechanism. Otherwise no CT",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:30725714",
+         "where": "Evaluation"
+        },
+        {
+         "docId": "url:ed1c1f5fb274",
+         "where": "1.5.10; 1.5.11; 1.5.12; Rationale: criteria for doing a CT head scan"
+        }
+       ],
+       "note": "NICE counts 3 or more vomits as one of two risk factors needed for CT and observes for one; PECARN puts any vomiting in CT or observation. NICE NG232 found the rules not very different, PECARN vaguer and without timings. StatPearls words the PECARN age bands as 2 or younger and 2 or older."
+      }
+     ],
+     "next": "end_head"
+    },
+    {
+     "id": "ingestion",
+     "if": "Possible ingestion; tablets, a button battery or a household product",
+     "ddx": {
+      "lead": [
+       "Toxic ingestion"
+      ],
+      "out": []
+     },
+     "next": "end_tox"
+    },
+    {
+     "id": "fever",
+     "if": "Fever red flag, no surgical sign; 38 or more under 3 months, 39 or more from 3 months, a non-blanching rash, stiff neck or bulging fontanelle",
+     "ddx": {
+      "lead": [
+       "Sepsis or meningitis"
+      ],
+      "out": []
+     },
+     "next": "end_fever"
+    },
+    {
+     "id": "bloody",
+     "if": "Bloody diarrhea, vomit not green; loose stools with blood, no colicky attacks",
+     "ddx": {
+      "lead": [
+       "STEC infection",
+       "HUS"
+      ],
+      "out": []
+     },
+     "next": "hus_labs"
+    },
+    {
+     "id": "none",
+     "if": "No red flag; non-bilious vomit, soft abdomen, no blood",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "pattern"
+    }
+   ]
+  },
+  {
+   "id": "end_torsion",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Torsion is a surgical emergency, and vomiting is part of both. A painful testis or groin: pw_scrotal_pain takes it from here (its TWIST score gives a point for nausea or vomiting). A girl with sudden one-sided pelvic pain: pelvic ultrasound with Doppler, the imaging study of choice, and pw_abdominal_pain takes it from there with emergency surgery whatever the Doppler flow shows."
+  },
+  {
+   "id": "end_head",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Head injury or raised pressure. After a head injury in a child, NICE does a CT head within 1 hour for suspected non-accidental injury, a post-traumatic seizure, a GCS under 14 in the ED (under 15 in a baby under 1), a GCS under 15 at 2 hours, a suspected open or depressed fracture or tense fontanelle, a sign of basal skull fracture, a focal deficit, or in a baby under 1 a head bruise, swelling or cut over 5 cm; and for more than one of: witnessed loss of consciousness over 5 minutes, abnormal drowsiness, 3 or more discrete vomits, a dangerous mechanism, amnesia over 5 minutes, a bleeding or clotting disorder. With only one of those the child is observed for at least 4 hours from the injury, and a GCS under 15, further vomiting or more drowsiness means CT within 1 hour. Without an injury, vomiting with headache, altered mental status, papilledema or a bulging fontanelle raises intracranial hypertension: CT or MRI, the head of the bed at about 30 degrees, and osmotherapy with mannitol or hypertonic saline (StatPearls: mannitol 0.25 to 1 g/kg; its pediatric head trauma chapter calls mannitol potentially detrimental after pediatric TBI). pw_trauma and pw_headache are written for adults."
+  },
+  {
+   "id": "end_tox",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Possible ingestion: pw_tox takes the poisoning workup from here, though it is written for adults and leaves out caustics. A suspected button battery gets AP and lateral films of the head, neck, chest and abdomen at once. A low-risk child without symptoms whose battery has passed the esophagus is followed with films at 10 to 14 days (at 4 days if under 6 or the battery is 15 mm or more), with early endoscopy considered under 5 years or for a battery over 20 mm; every other child has emergent endoscopic removal."
+  },
+  {
+   "id": "end_fever",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Fever with a red flag (38 or more under 3 months, 39 or more from 3 months, a non-blanching rash, neck stiffness, a bulging fontanelle, altered consciousness) points away from gastroenteritis (NICE) and toward sepsis or meningitis: pw_peds_fever takes it from here, and pw_rash carries the non-blanching rash workup."
+  },
+  {
+   "id": "pattern",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Age, the vomiting and the stools",
+   "outcomes": [
+    {
+     "id": "pyloric",
+     "if": "Projectile, 2 weeks to 3 months; non-bilious, hungry after, no diarrhea",
+     "ddx": {
+      "lead": [
+       "Pyloric stenosis"
+      ],
+      "out": []
+     },
+     "next": "pyl_us"
+    },
+    {
+     "id": "gastro",
+     "if": "Acute vomiting or diarrhea; not a projectile young infant, no past attacks",
+     "ddx": {
+      "lead": [
+       "Viral gastroenteritis"
+      ],
+      "out": []
+     },
+     "next": "dehyd_assess"
+    },
+    {
+     "id": "cyclic",
+     "if": "Stereotyped attacks, well between; 4 or more in a year, a week apart",
+     "ddx": {
+      "lead": [
+       "Cyclic vomiting syndrome"
+      ],
+      "out": []
+     },
+     "next": "end_cyclic"
+    },
+    {
+     "id": "reflux",
+     "if": "Well infant, effortless spit-ups; gaining weight, not projectile",
+     "ddx": {
+      "lead": [
+       "Reflux or pylorospasm"
+      ],
+      "out": []
+     },
+     "next": "end_reflux"
+    }
+   ]
+  },
+  {
+   "id": "end_cyclic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cyclic vomiting syndrome in a child (Rome V and NASPGHAN 2025, as summarized in StatPearls): stereotyped episodes of vomiting several times an hour, at least 4 in 12 months, each lasting 2 hours to 7 days, at least a week apart, a return to baseline between, and other causes excluded; screening bloods, urinalysis and an upper GI series to exclude malrotation. An attack is treated with IV fluid containing dextrose, IV antiemetics (ondansetron 0.15 mg/kg, at most 8 mg a dose) and a quiet, dark room. Prophylaxis is for episodes more than 4 times a year, longer than 2 days, or needing the ED."
+  },
+  {
+   "id": "end_reflux",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Not pyloric stenosis. A well infant with effortless spit-ups who is otherwise healthy has reflux, and imaging is usually not necessary (ACR). A normal pyloric ultrasound in an infant who keeps vomiting may be pylorospasm, treated conservatively, but its measurements overlap with evolving pyloric stenosis, so ACR advises careful follow-up and repeat imaging over time. Green vomit or poor weight gain sends the infant back to the red flags."
+  },
+  {
+   "id": "dehyd_assess",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Gastroenteritis picture, perfused. How dry is the child?",
+   "options": [
+    "Grade it from the clinical signs; bloods only if IV fluid is needed",
+    "Grade it from a serum bicarbonate and urea sent at triage",
+    "Grade it from the urine specific gravity and urine ketones",
+    "Grade it from the number of stools and vomits over the past 24 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Grade dehydration at the bedside (NICE table 1, or the WHO signs): responsiveness, eyes, mucous membranes, heart and breathing rate, pulses, capillary refill, skin turgor, urine output; no routine bloods; sodium, potassium, urea, creatinine and glucose if IV fluid is needed or hypernatremia is suspected; stool culture for blood or mucus, septicemia or immunocompromise",
+   "why": "Dehydration is graded from the clinical signs. NICE separates no clinically detectable dehydration, clinical dehydration (its red flags: appears unwell, altered responsiveness, sunken eyes, tachycardia, tachypnea, reduced skin turgor) and shock; WHO calls it some or severe dehydration on two or more signs. NICE does not routinely send blood tests: they are for a child who needs IV fluid or may be hypernatremic. StatPearls notes that no proven tool determines the degree of dehydration in children; urine ketones only suggest it is more severe, and the stool and vomit counts are NICE risk factors, not a grade.",
+   "orders": [
+    {
+     "item": "Clinical dehydration, NICE red flags",
+     "dose": "Appears unwell or deteriorating, altered responsiveness, sunken eyes, tachycardia, tachypnea, reduced skin turgor",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "Table 1"
+      }
+     ]
+    },
+    {
+     "item": "WHO grades",
+     "dose": "Some dehydration: two or more of restless or irritable, sunken eyes, drinks eagerly, skin pinch goes back slowly. Severe: two or more of lethargy, sunken eyes, drinks poorly, skin pinch goes back very slowly (2 seconds or more)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8f646c6d578f",
+       "where": "Table 12"
+      }
+     ]
+    },
+    {
+     "item": "Bloods",
+     "dose": "Not routine; sodium, potassium, urea, creatinine and glucose if IV fluid is needed or hypernatremia is suggested (jittery movements, increased tone, hyperreflexia, convulsions, drowsiness)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.2.2.1; 1.2.2.2; 1.2.1.4"
+      }
+     ]
+    },
+    {
+     "item": "Higher risk of dehydration",
+     "dose": "Under 1 year (above all under 6 months), low birth weight, more than 5 stools or more than 2 vomits in 24 hours, stopped breastfeeding, signs of malnutrition",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.2.1.2"
+      }
+     ]
+    },
+    {
+     "item": "Stool culture",
+     "dose": "With blood or mucus, suspected septicemia or immunocompromise; consider after travel, diarrhea past day 7 or an uncertain diagnosis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.1.2.1; 1.1.2.2"
+      }
+     ]
+    }
+   ],
+   "next": "dehyd_result",
+   "sources": [
+    {
+     "docId": "url:efee680ebca2",
+     "where": "Table 1; 1.2.1.2; 1.2.1.4; 1.2.2.1; 1.2.2.2"
+    },
+    {
+     "docId": "url:8f646c6d578f",
+     "where": "Table 12"
+    },
+    {
+     "docId": "pmid:28613793",
+     "where": "Evaluation"
+    }
+   ]
+  },
+  {
+   "id": "dehyd_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Clinical dehydration grade",
+   "outcomes": [
+    {
+     "id": "none",
+     "if": "No clinical dehydration; alert, moist mouth, eyes normal, passing urine",
+     "ddx": {
+      "lead": [
+       "Viral gastroenteritis"
+      ],
+      "out": []
+     },
+     "next": "end_home"
+    },
+    {
+     "id": "clinical",
+     "if": "Clinical dehydration, not lethargic; dry mouth, less urine, perfused",
+     "ddx": {
+      "lead": [
+       "Viral gastroenteritis"
+      ],
+      "out": []
+     },
+     "next": "ors"
+    },
+    {
+     "id": "severe",
+     "if": "Severe dehydration, not shocked; lethargic, drinks poorly, skin pinch 2 seconds or more",
+     "ddx": {
+      "lead": [
+       "Viral gastroenteritis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Route",
+       "dose": "NICE: ORS unless shock, deterioration despite ORS or persistent vomiting. WHO plan C: 100 mL/kg IV",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "url:efee680ebca2",
+         "where": "1.3.2.1; 1.3.3.1"
+        },
+        {
+         "docId": "url:8f646c6d578f",
+         "where": "5.2.1; Table 12"
+        }
+       ],
+       "note": "NICE has no severe grade short of shock; WHO rehydrates severe dehydration IV."
+      }
+     ],
+     "next": "iv_rehyd"
+    },
+    {
+     "id": "after_shock",
+     "if": "Shock treated with boluses; perfusion now restored",
+     "ddx": {
+      "lead": [
+       "Viral gastroenteritis"
+      ],
+      "out": []
+     },
+     "next": "iv_rehyd"
+    }
+   ]
+  },
+  {
+   "id": "ors",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Clinical dehydration, never shocked. Rehydrate how?",
+   "options": [
+    "Low-osmolarity ORS by weight over 4 hours, in small, frequent sips",
+    "IV 0.9% saline over 4 hours, since the child is still vomiting",
+    "Diluted apple juice or a sports drink, whichever the child prefers",
+    "Loperamide to cut the losses, then ORS in small frequent sips"
+   ],
+   "answer": 0,
+   "chainStep": "Low-osmolarity ORS (240 to 250 mOsm/L) in small amounts often (5 mL every 1 to 2 minutes): NICE 50 mL/kg over 4 hours plus maintenance, WHO 75 mL/kg over 4 hours; breastfeeding continues; nasogastric ORS if the child cannot drink it or vomits persistently; regular reassessment",
+   "why": "Oral rehydration solution treats clinical dehydration, hypernatremic dehydration included, unless IV fluid is indicated: shock, deterioration with red flags despite oral rehydration, or persistent vomiting of the ORS by mouth or tube (NICE). It is given frequently in small amounts; StatPearls notes 5 mL every 1 to 2 minutes is usually tolerated. Juice and fizzy drinks are discouraged, high-sugar drinks may worsen diarrhea, and antidiarrheal drugs are not used.",
+   "orders": [
+    {
+     "item": "ORS volume",
+     "dose": "NICE: 50 mL/kg over 4 hours plus maintenance. WHO plan B: about 75 mL/kg over 4 hours. StatPearls: 50 to 100 mL/kg over 3 to 4 hours",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.3.2.2"
+      },
+      {
+       "docId": "url:8f646c6d578f",
+       "where": "Chart 14: plan B"
+      },
+      {
+       "docId": "pmid:28613793",
+       "where": "Treatment: mild to moderate dehydration"
+      }
+     ],
+     "note": "The same oral route with different deficit volumes; NICE adds maintenance on top."
+    },
+    {
+     "item": "Solution",
+     "dose": "Low-osmolarity ORS, 240 to 250 mOsm/L, given frequently in small amounts",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.3.2.2"
+      }
+     ]
+    },
+    {
+     "item": "Nasogastric ORS",
+     "dose": "If the child cannot drink it or vomits persistently",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.3.2.2"
+      }
+     ]
+    },
+    {
+     "item": "Fruit juice, fizzy drinks, sports drinks",
+     "dose": "Discouraged; high-sugar drinks may worsen diarrhea",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.3.1.1"
+      },
+      {
+       "docId": "pmid:28613793",
+       "where": "Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Antidiarrheal drugs",
+     "dose": "Not used",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.6.1.1"
+      },
+      {
+       "docId": "url:8f646c6d578f",
+       "where": "5. Diarrhoea, introduction"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotics",
+     "dose": "Not routine in gastroenteritis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.5.1.1"
+      }
+     ]
+    }
+   ],
+   "next": "ors_result",
+   "sources": [
+    {
+     "docId": "url:efee680ebca2",
+     "where": "1.3.2.1; 1.3.2.2; 1.3.3.1; 1.6.1.1"
+    },
+    {
+     "docId": "url:8f646c6d578f",
+     "where": "Chart 14"
+    },
+    {
+     "docId": "pmid:28613793",
+     "where": "Treatment: mild to moderate dehydration"
+    }
+   ]
+  },
+  {
+   "id": "ors_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After the ORS trial",
+   "outcomes": [
+    {
+     "id": "takes",
+     "if": "Taking the ORS; vomiting settles, passing urine",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_home"
+    },
+    {
+     "id": "vomits",
+     "if": "Vomits the ORS, 8 kg or more; most sips come back, no worse",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ondans"
+    },
+    {
+     "id": "vomits_small",
+     "if": "Vomits the ORS, under 8 kg; most sips come back, no worse",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_ng_ors"
+    },
+    {
+     "id": "worse",
+     "if": "Deteriorating despite ORS; more lethargic, faster pulse, red flags",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "iv_rehyd"
+    }
+   ]
+  },
+  {
+   "id": "ondans",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Vomiting stops the ORS; 8 kg or more, perfused. Next?",
+   "options": [
+    "One oral ondansetron dose by weight, then ORS again in small sips",
+    "Oral metoclopramide dose by weight, then ORS again in small sips",
+    "A 4 hour pause in drinking to settle the gut, then clear fluids",
+    "A rectal promethazine dose by weight, then ORS again in small sips"
+   ],
+   "answer": 0,
+   "chainStep": "Ondansetron by mouth once (Drugs Context review: 2 mg at 8 to 15 kg, 4 mg over 15 to 30 kg, 8 mg over 30 kg; may be repeated if vomited within 15 minutes), then ORS again in small amounts; nasogastric ORS if it still fails (NICE); not with a prolonged QT",
+   "why": "A single oral ondansetron dose makes oral rehydration more likely to work and cuts IV fluid and admission (Drugs Context review); in a primary care trial in children 6 months to 6 years, 0.1 mg/kg cut continued vomiting at 4 hours from 42.9% to 19.5%. Metoclopramide, promethazine, domperidone and the other antiemetics are not recommended in children, for lack of efficacy data or for adverse events. Withholding fluid does not rehydrate; after a vomit the WHO plan waits 10 minutes, then gives ORS more slowly. The sources disagree on antiemetics: WHO advises against them in young children with diarrhea, and NICE CG84 does not address them.",
+   "orders": [
+    {
+     "item": "Ondansetron",
+     "dose": "One oral dose by weight band: 2 mg at 8 to 15 kg, 4 mg over 15 to 30 kg, 8 mg over 30 kg, may be repeated if vomited within 15 minutes (Drugs Context review); the primary care trial gave 0.1 mg/kg to children 6 months to 6 years",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:33828604",
+       "where": "Key points"
+      },
+      {
+       "docId": "pmid:34426397",
+       "where": "Method: the intervention"
+      }
+     ],
+     "note": "WHO says anti-emetics should not be given to young children with diarrhea; NICE CG84 is silent; the review, StatPearls and the trial support a single dose, as US practice does."
+    },
+    {
+     "item": "Lowest age for ondansetron",
+     "dose": "The IDSA 2017 age limit could not be read (its copy is blocked); the open trial enrolled from 6 months",
+     "status": "pending"
+    },
+    {
+     "item": "Prolonged QT",
+     "dose": "Avoid ondansetron with a prolonged QT interval; ECG and electrolytes when there are arrhythmia risk factors",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:33828604",
+       "where": "Antiemetics"
+      },
+      {
+       "docId": "pmid:29763014",
+       "where": "Specific populations"
+      }
+     ]
+    },
+    {
+     "item": "Other antiemetics",
+     "dose": "Metoclopramide, promethazine, domperidone, prochlorperazine and the rest: not recommended in children",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:33828604",
+       "where": "Antiemetics"
+      }
+     ]
+    },
+    {
+     "item": "If the ORS still comes back",
+     "dose": "Nasogastric ORS; IV fluid if it is vomited by mouth or by tube",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.3.2.2; 1.3.3.1"
+      }
+     ]
+    }
+   ],
+   "next": "ondans_result",
+   "sources": [
+    {
+     "docId": "pmid:33828604",
+     "where": "Key points; Antiemetics"
+    },
+    {
+     "docId": "pmid:34426397",
+     "where": "Abstract: results; Method"
+    },
+    {
+     "docId": "url:8f646c6d578f",
+     "where": "5. Diarrhoea, introduction; Chart 14"
+    },
+    {
+     "docId": "pmid:28613793",
+     "where": "Pearls"
+    },
+    {
+     "docId": "url:efee680ebca2",
+     "where": "1.3.2.2; 1.3.3.1"
+    }
+   ]
+  },
+  {
+   "id": "ondans_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After ondansetron and more ORS",
+   "outcomes": [
+    {
+     "id": "takes",
+     "if": "Keeps the ORS down; rehydrating, passing urine",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_home"
+    },
+    {
+     "id": "still",
+     "if": "Still vomiting the ORS; by mouth or by nasogastric tube",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "iv_rehyd"
+    }
+   ]
+  },
+  {
+   "id": "iv_rehyd",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "IV rehydration is now needed. Fluid and volume?",
+   "options": [
+    "Isotonic fluid for the deficit plus maintenance, electrolytes checked",
+    "0.45% saline with 5% glucose for both the deficit and the maintenance",
+    "Maintenance fluid without a deficit, so it is not over-corrected",
+    "5% glucose in water to replace the whole deficit over 24 hours"
+   ],
+   "answer": 0,
+   "chainStep": "0.9% saline, or 0.9% saline with 5% glucose: deficit 100 mL/kg after shock boluses or 50 mL/kg without, added to maintenance (Holliday-Segar: 100 mL/kg/day for the first 10 kg, 50 for the next 10, 20 above 20 kg); sodium, potassium, urea, creatinine and glucose at the start and regularly; potassium once the level is known and the child is passing urine; ORS reintroduced early and IV stopped once tolerated",
+   "why": "NICE rehydrates IV with an isotonic solution, 0.9% saline or 0.9% saline with 5% glucose, adding a deficit of 100 mL/kg after shock boluses, or 50 mL/kg without shock, to maintenance, with electrolytes and glucose measured at the outset and potassium considered once the level is known. NG29 also uses isotonic fluid for maintenance. Hypotonic and glucose-only fluids risk hyponatremia, and WHO does not use 5% glucose or 0.18% saline with 5% dextrose to rehydrate. Maintenance alone leaves the deficit in place. Oral rehydration comes back as soon as it is tolerated.",
+   "orders": [
+    {
+     "item": "Deficit (NICE)",
+     "dose": "Add 100 mL/kg after shock boluses, or 50 mL/kg if not shocked, to maintenance, and monitor the response",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.3.3.5"
+      }
+     ]
+    },
+    {
+     "item": "Maintenance (Holliday-Segar)",
+     "dose": "100 mL/kg/day for the first 10 kg, 50 mL/kg/day for the next 10 kg, 20 mL/kg/day above 20 kg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5d956ff2431d",
+       "where": "1.4.1"
+      }
+     ]
+    },
+    {
+     "item": "Fluid",
+     "dose": "0.9% saline, or 0.9% saline with 5% glucose; isotonic crystalloid with sodium 131 to 154 mmol/L for maintenance",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.3.3.5"
+      },
+      {
+       "docId": "url:5d956ff2431d",
+       "where": "1.4.3"
+      }
+     ]
+    },
+    {
+     "item": "WHO plan C, severe dehydration",
+     "dose": "100 mL/kg of Ringer's lactate or saline: under 12 months 30 mL/kg in 1 hour then 70 mL/kg in 5 hours; 12 months and older 30 mL/kg in 30 minutes then 70 mL/kg in 2.5 hours",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:8f646c6d578f",
+       "where": "5.2.1; Table 13"
+      }
+     ],
+     "note": "WHO gives the 100 mL/kg in 3 to 6 hours; NICE adds the same deficit to maintenance and sets no time."
+    },
+    {
+     "item": "Potassium",
+     "dose": "Consider IV potassium once the plasma level is known; confirm the child is passing urine first",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.3.3.5"
+      },
+      {
+       "docId": "pmid:28613793",
+       "where": "Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Hypernatremic dehydration",
+     "dose": "Urgent expert advice; isotonic fluid; the deficit replaced over about 48 hours with sodium falling less than 0.5 mmol/L an hour (NG29: no more than 12 mmol/L in 24 hours)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.3.3.6"
+      },
+      {
+       "docId": "url:5d956ff2431d",
+       "where": "1.6.2"
+      }
+     ]
+    },
+    {
+     "item": "Back to ORS",
+     "dose": "Early and gradual during IV fluid; IV stopped once the ORS is tolerated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.3.3.7"
+      }
+     ]
+    }
+   ],
+   "next": "end_iv",
+   "sources": [
+    {
+     "docId": "url:efee680ebca2",
+     "where": "1.3.3.5; 1.3.3.6; 1.3.3.7"
+    },
+    {
+     "docId": "url:5d956ff2431d",
+     "where": "1.4.1; 1.4.3; 1.6.2"
+    },
+    {
+     "docId": "url:8f646c6d578f",
+     "where": "5.2.1 note; Table 13"
+    },
+    {
+     "docId": "pmid:28613793",
+     "where": "Treatment"
+    }
+   ]
+  },
+  {
+   "id": "end_ng_ors",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Under 8 kg and vomiting the ORS: nasogastric ORS (NICE), and IV fluid if it is vomited by mouth or by tube. The review's ondansetron bands start at 8 kg and the trial enrolled from 6 months, so no dose is given here."
+  },
+  {
+   "id": "end_home",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Home care: breastfeeding and milk feeds continue, full-strength milk and the usual food return once rehydrated, juice and fizzy drinks wait until the diarrhea stops, and a child at higher risk gets 5 mL/kg of ORS after each large watery stool. No antidiarrheal drugs and no routine antibiotics. Vomiting usually lasts 1 or 2 days and stops within 3 days in most; diarrhea usually lasts 5 to 7 days and stops within 2 weeks. Parents come back if the child looks more unwell, becomes irritable or lethargic, passes less urine, or has pale or mottled skin or cold hands and feet."
+  },
+  {
+   "id": "end_iv",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "IV rehydration: isotonic fluid for the deficit plus maintenance, electrolytes and glucose checked at the start and regularly, potassium added once the level is known, ORS restarted early, and the IV stopped once ORS is tolerated. Hypernatremic dehydration is corrected slowly, over about 48 hours, with expert advice."
+  },
+  {
+   "id": "pyl_us",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Projectile non-bilious vomiting at 2 weeks to 3 months. Imaging?",
+   "options": [
+    "Ultrasound of the pylorus, with electrolytes and a venous gas",
+    "Upper GI contrast series as the first study, for the string sign",
+    "A plain film to look for a caterpillar-shaped stomach",
+    "CT of the abdomen with oral contrast to show the pyloric channel"
+   ],
+   "answer": 0,
+   "chainStep": "Abdominal ultrasound of the pylorus (muscle thickness, channel length, and whether gastric contents pass); electrolytes with chloride and potassium, a venous gas and glucose; the surgeon told once it is confirmed",
+   "why": "Ultrasound is usually appropriate as the first study for new non-bilious vomiting from 2 weeks to 3 months (ACR) and is highly accurate: it shows a constant, thick-walled, elongated pylorus with no passage of gastric content. The upper GI series can show the beak or string sign but is less ideal first when pyloric stenosis is likely, and radiographs are most often not helpful. CT is not among the studies ACR rates for it. The classic chemistry is a hypochloremic, hypokalemic metabolic alkalosis, now present in under half because the diagnosis comes earlier.",
+   "orders": [
+    {
+     "item": "Positive measurements",
+     "dose": "StatPearls: wall 3 mm or more and channel 15 mm or more. ACR: muscle 4 mm or more with length over 18 mm, though 3 to 4 mm may be positive in a premature or younger neonate",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:32310391",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:33153561",
+       "where": "Variant 7 E"
+      }
+     ],
+     "note": "The two sources set different cut points; ACR adds that pylorospasm and evolving pyloric stenosis overlap."
+    },
+    {
+     "item": "Chemistry",
+     "dose": "Hypochloremic, hypokalemic metabolic alkalosis; now found in less than half",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32310391",
+       "where": "History and physical"
+      }
+     ]
+    }
+   ],
+   "next": "pyl_result",
+   "sources": [
+    {
+     "docId": "pmid:33153561",
+     "where": "Variant 7"
+    },
+    {
+     "docId": "pmid:32310391",
+     "where": "Introduction; History and physical; Evaluation"
+    }
+   ]
+  },
+  {
+   "id": "pyl_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Pyloric ultrasound",
+   "outcomes": [
+    {
+     "id": "hps",
+     "if": "Pyloric stenosis; thick, long pylorus, no gastric emptying",
+     "ddx": {
+      "lead": [
+       "Pyloric stenosis"
+      ],
+      "out": []
+     },
+     "next": "pyl_fluids"
+    },
+    {
+     "id": "normal",
+     "if": "Pylorus normal; measurements normal, contents pass",
+     "ddx": {
+      "lead": [
+       "Reflux or pylorospasm"
+      ],
+      "out": []
+     },
+     "next": "end_reflux"
+    }
+   ]
+  },
+  {
+   "id": "pyl_fluids",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pyloric stenosis on ultrasound, alkalosis on the gas. Next?",
+   "options": [
+    "IV fluid with saline, dextrose and potassium; operate once corrected",
+    "Pyloromyotomy tonight, with the electrolytes corrected under anesthesia",
+    "Smaller, thickened feeds by mouth; surgery if the vomiting persists",
+    "IV 0.9% saline, holding the potassium until after the surgery"
+   ],
+   "answer": 0,
+   "chainStep": "Consider a nasogastric tube; IV rehydration with potassium chloride (StatPearls: 5% dextrose with 0.25% saline and 2 mEq KCl per 100 mL if mildly dry, more saline if moderately or severely dry); electrolytes and gas rechecked; pyloromyotomy once the alkalosis is corrected (a 2026 trial: chloride over 100 and bicarbonate under 30 mmol/L)",
+   "why": "Pyloric stenosis is not truly urgent: the infant is rehydrated and the electrolytes corrected first, and then the pyloromyotomy follows. StatPearls corrects and follows the bicarbonate because of the risk of hypoventilation, and it is generally assumed that the alkalosis should be corrected before surgery to prevent apnea. Potassium goes in with the fluid. Feeds do not relieve an obstruction whose treatment is surgical, and saline alone leaves the hypokalemia.",
+   "orders": [
+    {
+     "item": "Fluid",
+     "dose": "StatPearls: 5% dextrose with 0.25% saline and 2 mEq KCl per 100 mL if no or mild dehydration, higher saline concentrations if moderate or severe. 2026 trial: 20 mL/kg 0.9% saline boluses set by the chloride and bicarbonate, plus 1.5 times maintenance; its control arm, 5% dextrose in 0.45% saline at 1.25 to 2 times maintenance, potassium by urine output. NICE NG29: isotonic maintenance fluid, and 0.9% saline with potassium for ongoing losses",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:32310391",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "pmid:41556213",
+       "where": "Abstract: methods; Methods"
+      },
+      {
+       "docId": "url:5d956ff2431d",
+       "where": "1.4.3; 1.5.3"
+      }
+     ],
+     "note": "Hypotonic or isotonic, steady or bolus correction: the sources share no regimen."
+    },
+    {
+     "item": "Ready for surgery",
+     "dose": "Chloride over 100 mmol/L, bicarbonate under 30 mmol/L and base excess near normal (2026 trial)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:41556213",
+       "where": "Introduction"
+      },
+      {
+       "docId": "pmid:32298502",
+       "where": "Results: postoperative apnea"
+      }
+     ],
+     "note": "A 2020 systematic review found the concentrations needed before pyloromyotomy unknown; one series aimed at chloride 90 or more."
+    },
+    {
+     "item": "Nasogastric tube",
+     "dose": "Consider one",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32310391",
+       "where": "Treatment / management"
+      }
+     ]
+    }
+   ],
+   "next": "end_pyl",
+   "sources": [
+    {
+     "docId": "pmid:32310391",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:41556213",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:32298502",
+     "where": "Abstract: background"
+    }
+   ]
+  },
+  {
+   "id": "end_pyl",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pyloric stenosis: rehydration and electrolyte correction first, then a pyloromyotomy, open or laparoscopic, which is curative with very low morbidity. Feeding starts 4 to 8 hours after recovery from anesthesia; up to 80% have some milder vomiting afterwards, and vomiting that persists 5 days after surgery earns an upper GI series."
+  },
+  {
+   "id": "bile",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Green vomit, perfused. Next?",
+   "options": [
+    "Surgeon now; nasogastric tube, IV fluid and an upper GI series",
+    "Contrast enema first, to find out where the cecum lies",
+    "Ultrasound, with malrotation excluded if the SMA and SMV look normal",
+    "An ORS trial with ondansetron, imaging if the vomiting goes on"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent surgical review; nasogastric or orogastric decompression, IV fluid, broad-spectrum antibiotics; upper GI contrast series in a stable infant (ultrasound may show the whirlpool sign of volvulus); peritonitis, sepsis or instability goes to the operating room without waiting for imaging",
+   "why": "Green vomit is malrotation with volvulus until proven otherwise, and volvulus can progress to necrosis within hours, so the surgeon is involved at once and the stomach decompressed. For bilious vomiting after the first 2 days of life ACR rates the upper GI series usually appropriate; it is the reference standard, although false negatives occur. Ultrasound may be appropriate, and its whirlpool sign is specific for volvulus, but a normal SMA and SMV relationship does not preclude malrotation. A contrast enema is not a first study (up to 15% have a normal mobile cecum), and treating green vomit as gastroenteritis misses the emergency.",
+   "orders": [
+    {
+     "item": "First moves",
+     "dose": "Airway protection, nasogastric or orogastric decompression, IV fluid, broad-spectrum antibiotics, urgent surgical consultation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32809723",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Unstable",
+     "dose": "Peritonitis, sepsis or instability: the operating room, often without waiting for complete imaging",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32809723",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "First imaging",
+     "dose": "ACR 2020: upper GI series usually appropriate, ultrasound may be appropriate. StatPearls 2026: ultrasound has become the preferred first study for bilious vomiting in neonates",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:33153561",
+       "where": "Variant 5 rating table"
+      },
+      {
+       "docId": "pmid:32809723",
+       "where": "Evaluation: ultrasonography; Evaluation: upper GI series"
+      }
+     ],
+     "note": "The sources disagree on the first test; both keep the upper GI series as the reference standard in a stable infant."
+    },
+    {
+     "item": "Antibiotic agent and dose",
+     "dose": "Not stated in the sources read",
+     "status": "pending"
+    }
+   ],
+   "next": "bile_result",
+   "sources": [
+    {
+     "docId": "pmid:33153561",
+     "where": "Variant 5"
+    },
+    {
+     "docId": "pmid:32809723",
+     "where": "Treatment / management; Evaluation"
+    },
+    {
+     "docId": "pmid:28722991",
+     "where": "History and physical; Evaluation"
+    },
+    {
+     "docId": "url:efee680ebca2",
+     "where": "1.1.1.4"
+    }
+   ]
+  },
+  {
+   "id": "bile_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Upper GI series",
+   "outcomes": [
+    {
+     "id": "malrot",
+     "if": "Malrotation, with or without volvulus; DJ flexure right of the spine, corkscrew",
+     "ddx": {
+      "lead": [
+       "Malrotation with midgut volvulus"
+      ],
+      "out": []
+     },
+     "next": "end_ladd"
+    },
+    {
+     "id": "normal",
+     "if": "Normal rotation; DJ flexure left of the spine at the pylorus",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_bile_neg"
+    }
+   ]
+  },
+  {
+   "id": "end_ladd",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Malrotation: surgery. With volvulus it is an emergency: the bowel is untwisted counterclockwise and a Ladd procedure done, with an appendectomy; with advanced ischemia the volvulus is simply reduced and a second-look laparotomy follows 24 to 36 hours later, and necrotic bowel is resected conservatively. In a stable child, a high index of suspicion still prompts early operation when volvulus is likely."
+  },
+  {
+   "id": "end_bile_neg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Normal rotation on the upper GI series. The study is the reference standard but not perfect (96% sensitive in one review), so a high suspicion still keeps the surgeon involved; an equivocal series goes on to a small bowel follow-through to the cecum. Other causes of bilious vomiting, such as atresia, Hirschsprung disease and lower obstruction, are not covered in this version."
+  },
+  {
+   "id": "intuss_us",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Colicky attacks with pallor in a child under 3. Next?",
+   "options": [
+    "Abdominal ultrasound, bedside or formal; a film only for free air",
+    "Plain abdominal films to make the diagnosis before ultrasound",
+    "CT of the abdomen and pelvis with IV contrast to confirm it",
+    "A diagnostic contrast enema as the first study, before ultrasound"
+   ],
+   "answer": 0,
+   "chainStep": "Abdominal ultrasound (point-of-care or radiology) for the target sign; IV access and fluid; an abdominal film only to look for free air or obstruction; the surgeon aware",
+   "why": "Ultrasound is the first-line test, with pooled sensitivity and specificity of 94 to 97%, and point-of-care and radiology scans perform alike (ACR); it shows the target sign and can find a lead point or another diagnosis. A 2-view film is only 62% sensitive and serves to exclude perforation or obstruction. CT is not first-line given the performance of ultrasound, and a contrast enema is now kept for a nondiagnostic ultrasound or for treatment. The classic picture of pain, vomiting, bloody stool and a mass is seen in only about 20%, so the diagnosis rests on the scan.",
+   "orders": [
+    {
+     "item": "Typical age",
+     "dose": "3 to 36 months; the classic pain, vomiting, bloody stool and mass in only about 20%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35798026",
+       "where": "Introduction"
+      }
+     ]
+    },
+    {
+     "item": "Ultrasound signs",
+     "dose": "Target or doughnut sign on the transverse view, pseudokidney on the longitudinal; high negative predictive value",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35798026",
+       "where": "Diagnosis: ultrasonography"
+      },
+      {
+       "docId": "pmid:28613732",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ],
+   "next": "intuss_result",
+   "sources": [
+    {
+     "docId": "pmid:41701130",
+     "where": "Variant 2"
+    },
+    {
+     "docId": "pmid:35798026",
+     "where": "Introduction; Diagnosis: ultrasonography"
+    },
+    {
+     "docId": "pmid:28613732",
+     "where": "Evaluation"
+    }
+   ]
+  },
+  {
+   "id": "intuss_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Ultrasound, with a film if needed",
+   "outcomes": [
+    {
+     "id": "ileocolic",
+     "if": "Ileocolic intussusception, stable; target sign, no peritonitis or free air",
+     "ddx": {
+      "lead": [
+       "Intussusception"
+      ],
+      "out": []
+     },
+     "next": "enema"
+    },
+    {
+     "id": "perforated",
+     "if": "Intussusception with peritonitis, free air or shock; on scan and film",
+     "ddx": {
+      "lead": [
+       "Intussusception"
+      ],
+      "out": []
+     },
+     "next": "end_intuss_surgery"
+    },
+    {
+     "id": "normal",
+     "if": "No ileocolic intussusception; none seen, or a short small bowel one",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_intuss_neg"
+    }
+   ]
+  },
+  {
+   "id": "enema",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Ileocolic intussusception, stable, no peritonitis. Next?",
+   "options": [
+    "Image-guided air or contrast enema reduction, with the surgeon aware",
+    "Laparotomy and manual reduction as the first-line treatment here",
+    "IV antibiotics first, then the enema reduction once they have run in",
+    "Admit and repeat the ultrasound in 6 hours, as many reduce by themselves"
+   ],
+   "answer": 0,
+   "chainStep": "Fluoroscopic or ultrasound-guided air or liquid enema reduction (air pressure up to 120 mmHg); IV access; surgeon available; no pre-reduction antibiotics",
+   "why": "Nonoperative enema reduction is the treatment of choice unless there are signs of perforation or peritonitis, with a pooled success of 82%; pneumatic reduction under fluoroscopy is the most widely used. APSA found prophylactic antibiotics do not decrease complications and are unnecessary. Spontaneous reduction belongs to transient small bowel intussusception, not the ileocolic kind, and surgery is for failure, perforation, peritonitis or shock.",
+   "orders": [
+    {
+     "item": "Air enema pressure",
+     "dose": "Upper limit 120 mmHg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35798026",
+       "where": "Enema reduction"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotics before reduction",
+     "dose": "Unnecessary: they do not decrease post-reduction complications",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33158508",
+       "where": "Prophylactic antibiotics: recommendation"
+      }
+     ]
+    },
+    {
+     "item": "Contraindications",
+     "dose": "Pneumoperitoneum, peritonitis or shock: surgery instead",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35798026",
+       "where": "Conclusion"
+      }
+     ]
+    },
+    {
+     "item": "Perforation",
+     "dose": "About 0.4% of enemas; tension pneumoperitoneum gets emergent midline supraumbilical paracentesis, then immediate surgery",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35798026",
+       "where": "Complications"
+      }
+     ]
+    },
+    {
+     "item": "Recurrence",
+     "dose": "Multiple recurrences are not a contraindication to enema reduction",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35798026",
+       "where": "Recurrence"
+      }
+     ]
+    }
+   ],
+   "next": "enema_result",
+   "sources": [
+    {
+     "docId": "pmid:35798026",
+     "where": "Enema reduction; Outcomes; Small bowel intussusception; Conclusion"
+    },
+    {
+     "docId": "pmid:33158508",
+     "where": "Prophylactic antibiotics: recommendation"
+    }
+   ]
+  },
+  {
+   "id": "enema_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Enema reduction",
+   "outcomes": [
+    {
+     "id": "reduced",
+     "if": "Reduced; mass gone, air or contrast floods the small bowel",
+     "ddx": {
+      "lead": [
+       "Intussusception"
+      ],
+      "out": []
+     },
+     "next": "end_reduced"
+    },
+    {
+     "id": "partial",
+     "if": "Partly reduced, stable; mass moved back, no peritonitis",
+     "ddx": {
+      "lead": [
+       "Intussusception"
+      ],
+      "out": []
+     },
+     "next": "end_not_reduced"
+    },
+    {
+     "id": "failed",
+     "if": "Not reducible, or perforated; no progress, or free air",
+     "ddx": {
+      "lead": [
+       "Intussusception"
+      ],
+      "out": []
+     },
+     "next": "end_intuss_surgery"
+    }
+   ]
+  },
+  {
+   "id": "end_reduced",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Reduced intussusception: the child can be observed in the ED and discharged (APSA), with parents taught to return if the symptoms come back. It recurs in about 9 to 15% after enema reduction, half within the first few days, more often after age 1; APSA counsels the parents of children over 2 about a slightly higher risk. A recurrence is reduced by enema again, and repeated recurrences raise the chance of a pathological lead point."
+  },
+  {
+   "id": "end_not_reduced",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Partly reduced and stable: a delayed repeat enema, for a medically stable child without peritonitis. About half of those whose first enema fails then reduce and avoid surgery; the interval is not standardized, commonly 15 minutes to a few hours. If it still fails, surgery follows, with a laparoscopic approach considered first."
+  },
+  {
+   "id": "end_intuss_surgery",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Surgery: peritonitis, free air or shock rule out an enema, and an irreducible intussusception or a perforation during the enema goes to the operating room. APSA considers a laparoscopic approach first, for a shorter stay with similar complications; if the surgeon cannot reduce it, the segment is removed."
+  },
+  {
+   "id": "end_intuss_neg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No ileocolic intussusception on a good ultrasound. When none is seen, its negative predictive value of 99.7% rules intussusception out at this visit, and the scan may show another diagnosis. A short small bowel intussusception found on ultrasound is usually transient and reduces on its own."
+  },
+  {
+   "id": "appy_score",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Right lower quadrant pain, then vomiting. Next?",
+   "options": [
+    "Score it (PAS or pARC) with a blood count and CRP; image if not low",
+    "CT of the abdomen and pelvis with IV contrast as the first imaging test",
+    "Make the diagnosis from the PAS and book the appendectomy",
+    "Rule it out if the white count and neutrophils are both normal"
+   ],
+   "answer": 0,
+   "chainStep": "Pediatric Appendicitis Score (cough, percussion or hopping tenderness 2; right lower quadrant tenderness 2; anorexia, fever, nausea or vomiting, leukocytosis, neutrophilia, migration of pain 1 each) or the pARC; blood count with neutrophils and CRP; early surgical consultation",
+   "why": "WSES recommends routine blood tests and inflammatory markers in a child with suspected appendicitis, combining them with scores to decide on imaging, but advises against diagnosing it on scores alone; the PAS and Alvarado score are useful for excluding it. A normal white count does not exclude appendicitis. CT is not routine first-line imaging in children, where ultrasound comes first.",
+   "orders": [
+    {
+     "item": "PAS items",
+     "dose": "10 points: cough, percussion or hopping tenderness 2; right lower quadrant tenderness 2; anorexia, pyrexia, nausea or emesis, leukocytosis, neutrophilia, migration of pain 1 each",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30374814",
+       "where": "Appendix 3: PAS"
+      }
+     ]
+    },
+    {
+     "item": "PAS bands",
+     "dose": "Staged pathway (ACR, citing Saucier): 4 to 7 is the equivocal band sent to ultrasound. Dutch review: 5 or less rules it out. StatPearls: 6 or more suggests appendicitis",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:31054752",
+       "where": "Variant 2 C"
+      },
+      {
+       "docId": "pmid:30374814",
+       "where": "Appendix 3: PAS"
+      },
+      {
+       "docId": "pmid:28722894",
+       "where": "Clinical decision tools"
+      }
+     ],
+     "note": "Each source draws the PAS cut points differently; this pathway images every PAS of 4 or more, as ACR's intermediate band does."
+    },
+    {
+     "item": "pARC strata",
+     "dose": "Under 5% very low, 5 to 14% low, 15 to 84% intermediate, 85% or more high; validated at 5 to 20.9 years",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31229394",
+       "where": "Methods; Abstract: methods"
+      }
+     ]
+    },
+    {
+     "item": "pARC equation",
+     "dose": "In the derivation paper, not read (its copy is blocked), so it is not computed here",
+     "status": "pending"
+    },
+    {
+     "item": "Markers",
+     "dose": "CRP 10 mg/L or more and a white count of 16,000 or more are strong predictors in children",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32295644",
+       "where": "Statement 1.7"
+      }
+     ]
+    }
+   ],
+   "next": "appy_risk",
+   "sources": [
+    {
+     "docId": "pmid:32295644",
+     "where": "Statement 1.5; Recommendation 1.5; Recommendations 1.6.1 and 1.6.2; Recommendation 1.14.2"
+    },
+    {
+     "docId": "pmid:30374814",
+     "where": "Appendix 3: PAS"
+    },
+    {
+     "docId": "pmid:28722894",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:31054752",
+     "where": "Variant 2 C"
+    }
+   ],
+   "calcs": [
+    "pas"
+   ]
+  },
+  {
+   "id": "appy_risk",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Pediatric Appendicitis Score",
+   "outcomes": [
+    {
+     "id": "low",
+     "if": "Below the equivocal band; PAS 3 or less",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_appy_not"
+    },
+    {
+     "id": "higher",
+     "if": "Equivocal or higher; PAS 4 or more",
+     "ddx": {
+      "lead": [
+       "Appendicitis"
+      ],
+      "out": []
+     },
+     "next": "appy_us"
+    }
+   ]
+  },
+  {
+   "id": "appy_us",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "PAS 4 or more. Imaging?",
+   "options": [
+    "Right lower quadrant ultrasound, with the surgeon involved early",
+    "CT with and without IV contrast, to stage it before ultrasound",
+    "Pelvic ultrasound instead, since a low appendix lies in the pelvis",
+    "A plain abdominal film to look for an appendicolith"
+   ],
+   "answer": 0,
+   "chainStep": "Graded ultrasound of the right lower quadrant (point-of-care first where expert); a noncompressible appendix over 6 mm with wall thickening is diagnostic; if equivocal or nondiagnostic with suspicion persisting, MRI (preferred over CT in children) or CT with IV contrast",
+   "why": "Ultrasound is the preferred first imaging in children (StatPearls, WSES) and usually appropriate at intermediate risk (ACR); WSES rates point-of-care ultrasound first-line in adults and children. At high clinical risk, ACR notes that some go straight to surgery and others image first, rating right lower quadrant ultrasound, MRI without contrast or CT with IV contrast as may be appropriate. ACR rates pelvic ultrasound and CT without and with IV contrast usually not appropriate at both intermediate and high risk; it rates the plain film usually not appropriate at high risk, and its panel disagreed on it at intermediate risk.",
+   "orders": [
+    {
+     "item": "Diagnostic ultrasound",
+     "dose": "A noncompressible, enlarged appendix over 6 mm with wall thickening",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722894",
+       "where": "Evaluation: ultrasound"
+      }
+     ]
+    },
+    {
+     "item": "Equivocal ultrasound",
+     "dose": "CT with IV contrast, MRI without contrast, or MRI without and with contrast are each usually appropriate (ACR); WSES prefers MRI over CT as second line in children",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31054752",
+       "where": "Summary of highlights, variant 4"
+      },
+      {
+       "docId": "pmid:32295644",
+       "where": "Statement 1.14"
+      }
+     ]
+    }
+   ],
+   "next": "appy_us_result",
+   "sources": [
+    {
+     "docId": "pmid:28722894",
+     "where": "Evaluation: ultrasound"
+    },
+    {
+     "docId": "pmid:32295644",
+     "where": "Recommendations 1.10, 1.14.1 and 1.14.2"
+    },
+    {
+     "docId": "pmid:31054752",
+     "where": "Summary of highlights; Variant 2 and 3 rating tables"
+    }
+   ]
+  },
+  {
+   "id": "appy_us_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Right lower quadrant ultrasound",
+   "outcomes": [
+    {
+     "id": "appy",
+     "if": "Appendicitis; noncompressible appendix over 6 mm",
+     "ddx": {
+      "lead": [
+       "Appendicitis"
+      ],
+      "out": []
+     },
+     "next": "end_appy"
+    },
+    {
+     "id": "not_shown",
+     "if": "No appendicitis seen; normal appendix, or not seen",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_appy_not"
+    }
+   ]
+  },
+  {
+   "id": "end_appy",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Appendicitis in a child: surgery. pw_abdominal_pain carries the adult management; its antibiotic doses are adult doses, and a child's agent and dose are not in this pathway's sources. WSES does not delay surgery beyond 24 hours for uncomplicated appendicitis in a child and operates within 8 hours for complicated appendicitis. Nonoperative treatment is for carefully selected children only (StatPearls criteria include age over 7, symptoms under 48 hours, no appendicolith and an appendix under 1.1 cm)."
+  },
+  {
+   "id": "end_appy_not",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Appendicitis not shown. A low-risk child is not imaged (ACR), and a negative or inconclusive ultrasound does not reliably exclude appendicitis (StatPearls). With suspicion persisting, ACR goes on to MRI or CT with IV contrast; watchful waiting can be considered when the appendix was not seen."
+  },
+  {
+   "id": "hus_labs",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Bloody diarrhea in a vomiting child. Next?",
+   "options": [
+    "Stool toxin and culture now, with a blood count, film and creatinine",
+    "CT of the abdomen with contrast for colitis before the stool tests",
+    "Loperamide with the ORS to slow the losses until the culture is back",
+    "No stool tests, as diarrhea in children rarely needs a culture"
+   ],
+   "answer": 0,
+   "chainStep": "Stool for Shiga toxin and culture; blood count with film for schistocytes, metabolic panel with creatinine, LDH and haptoglobin; no antimotility drugs; antibiotics are a source conflict (WHO 2024 gives them for blood in the stool, the STEC sources avoid them); specialist advice on monitoring for HUS if STEC is found",
+   "why": "Blood or mucus in the stool is an indication for stool microbiology (NICE), and a stool for Shiga toxin goes with any diarrhea in a possible HUS. Antibiotics, above all beta-lactams, and antimotility drugs are avoided in STEC because they are linked to HUS and worse outcomes; NICE keeps antibiotics for specific infections such as dysenteric shigellosis. WHO 2024 recommends antibiotics for every child up to 10 with blood in the stool, so the sources conflict. The stool tests come first (NICE), and none of the sources read images the bowel for bloody diarrhea. Skipping the culture is right only for non-bloody diarrhea.",
+   "orders": [
+    {
+     "item": "Stool",
+     "dose": "Microbiology with blood or mucus in the stool; Shiga toxin whenever diarrhea is present in a possible HUS",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.1.2.2"
+      },
+      {
+       "docId": "pmid:32310498",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "STEC found",
+     "dose": "Specialist advice on monitoring for HUS",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:efee680ebca2",
+       "where": "1.1.2.6"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotics for blood in the stool",
+     "dose": "WHO 2024: antibiotics for every child up to 10 years with blood in the stool, first line ciprofloxacin 15 mg/kg twice daily for 3 days. StatPearls: generally avoided while STEC is possible; beta-lactams relatively contraindicated",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:d16b4747bc35",
+       "where": "Diarrhoea, recommendation 2"
+      },
+      {
+       "docId": "pmid:30137794",
+       "where": "Treatment / management; Continuing education summary"
+      },
+      {
+       "docId": "pmid:32310498",
+       "where": "Treatment / management"
+      }
+     ],
+     "note": "WHO treats bloody diarrhea as shigellosis; the STEC sources withhold antibiotics because they are linked to HUS; NICE gives them for specific infections such as dysenteric shigellosis."
+    },
+    {
+     "item": "Antimotility drugs",
+     "dose": "Loperamide and similar agents raise the risk of systemic complications",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30137794",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Timing",
+     "dose": "HUS begins 5 to 13 days after the diarrhea starts (median 6.5 to 7 days), most often under 5 years",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32310498",
+       "where": "History and physical"
+      }
+     ]
+    },
+    {
+     "item": "HUS tests",
+     "dose": "Blood count with differential, metabolic panel, LDH, indirect bilirubin, haptoglobin and a smear for schistocytes; ADAMTS13 to rule out TTP",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32310498",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ],
+   "next": "hus_result",
+   "sources": [
+    {
+     "docId": "url:efee680ebca2",
+     "where": "1.1.2.2; 1.1.2.6; 1.5.1.2"
+    },
+    {
+     "docId": "url:8f646c6d578f",
+     "where": "5.1 Child presenting with diarrhoea"
+    },
+    {
+     "docId": "url:d16b4747bc35",
+     "where": "Diarrhoea, recommendation 2"
+    },
+    {
+     "docId": "pmid:32310498",
+     "where": "Evaluation; Treatment / management"
+    },
+    {
+     "docId": "pmid:30137794",
+     "where": "Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "hus_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Blood count, film and creatinine",
+   "outcomes": [
+    {
+     "id": "hus",
+     "if": "HUS; anemia with schistocytes, low platelets, kidney injury",
+     "ddx": {
+      "lead": [
+       "HUS"
+      ],
+      "out": []
+     },
+     "next": "end_hus"
+    },
+    {
+     "id": "no_hus",
+     "if": "No HUS yet; count, film and creatinine normal",
+     "ddx": {
+      "lead": [
+       "STEC infection"
+      ],
+      "out": []
+     },
+     "next": "end_stec"
+    }
+   ]
+  },
+  {
+   "id": "end_hus",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "STEC-associated HUS: supportive care with careful volume repletion (too little volume is linked to more renal replacement therapy, which half need), red cells as needed, platelets sparingly, and no antibiotics or antimotility drugs; nephrology early. ADAMTS13 is sent to rule out TTP, and the rash pathway (pw_rash) carries the same HUS route."
+  },
+  {
+   "id": "end_stec",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bloody diarrhea, no HUS yet: rehydration as for gastroenteritis, no antimotility drugs, and antibiotics withheld once STEC is found (StatPearls; WHO 2024 gives them for any blood in the stool), and specialist advice on monitoring for HUS when STEC is found, since HUS begins 5 to 13 days after the diarrhea starts. If the stool grows another pathogen, NICE gives antibiotics for specific infections such as dysenteric shigellosis."
+  }
+ ],
+ "cases": [
+  {
+   "id": "dka_new",
+   "label": "New diabetes in ketoacidosis",
+   "vignette": "9-year-old girl, 2 days of vomiting and abdominal pain; drinking and passing urine a lot for 3 weeks, weight down. Deep, fast breathing. HR 128, BP 104/66, weight 28 kg.",
+   "picks": {
+    "front": "dka"
+   },
+   "results": {
+    "front": "Cap refill 3 seconds, alert. Glucose 468 mg/dL (26 mmol/L); blood ketones 5.8 mmol/L; venous pH 7.12, bicarbonate 8 mmol/L."
+   }
+  },
+  {
+   "id": "shock_ge",
+   "label": "Gastroenteritis in shock",
+   "vignette": "14-month-old boy, 2 days of profuse watery diarrhea and vomiting, a sick sibling. Drowsy, mottled legs. HR 182, BP 78/40, weight 10 kg.",
+   "picks": {
+    "front": "shock",
+    "shock_after": "responds",
+    "flags_result": "none",
+    "pattern": "gastro",
+    "dehyd_result": "after_shock"
+   },
+   "results": {
+    "front": "Cold hands and feet, weak pulses, capillary refill 5 seconds; glucose 83 mg/dL (4.6 mmol/L).",
+    "shock_after": "After two 10 mL/kg boluses (100 mL each): alert, warm, pulses strong, refill 2 seconds, HR 140.",
+    "flags_result": "No bile, stools watery without blood, abdomen soft and non-tender, fontanelle normal, no rash, no injury or ingestion; testes normal.",
+    "pattern": "Watery stools 10 times a day and vomiting for 2 days; no earlier attacks.",
+    "dehyd_result": "Perfusion restored by the boluses; mouth still dry."
+   }
+  },
+  {
+   "id": "shock_volvulus",
+   "label": "Shock with green vomit",
+   "vignette": "5-week-old boy, well until this morning, now vomiting green. Grey and floppy. HR 196, BP 58/30, weight 4 kg.",
+   "picks": {
+    "front": "shock",
+    "shock_after": "surgical"
+   },
+   "results": {
+    "front": "Cold, mottled, capillary refill 5 seconds; glucose 74 mg/dL (4.1 mmol/L).",
+    "shock_after": "Still shocked after two 10 mL/kg boluses (40 mL each); abdomen distended and tender, blood per rectum, bile in the nasogastric tube."
+   }
+  },
+  {
+   "id": "shock_refractory",
+   "label": "Shock that does not lift",
+   "vignette": "2-year-old girl, a day of vomiting and a few loose stools, then floppy. HR 176, BP 70/38, temperature 38.9 C (102 F), weight 12 kg.",
+   "picks": {
+    "front": "shock",
+    "shock_after": "refractory"
+   },
+   "results": {
+    "front": "Mottled, cold feet, capillary refill 4 seconds; glucose 92 mg/dL (5.1 mmol/L).",
+    "shock_after": "Still shocked after two 10 mL/kg boluses (120 mL each); abdomen soft, no bile, no rash yet."
+   }
+  },
+  {
+   "id": "hypo_ge",
+   "label": "Low glucose with gastroenteritis",
+   "vignette": "2-year-old boy, 24 hours of vomiting, now loose stools, not eaten since yesterday; sleepy but rousable. HR 140, BP 96/58, weight 12 kg.",
+   "picks": {
+    "front": "hypo",
+    "flags_result": "none",
+    "pattern": "gastro",
+    "dehyd_result": "clinical",
+    "ors_result": "takes"
+   },
+   "results": {
+    "front": "Warm, pulses good, capillary refill 2 seconds; glucose 38 mg/dL (2.1 mmol/L); urine ketones large.",
+    "flags_result": "After 60 mL of 10% glucose (5 mL/kg) he is awake and chatty, glucose 6.2 mmol/L (112 mg/dL) at 30 minutes. No bile or blood, soft abdomen, no rash, no injury, testes normal.",
+    "pattern": "Vomiting then watery stools after a nursery outbreak; no past episodes.",
+    "dehyd_result": "Dry mouth, fewer wet nappies, eyes normal; perfused.",
+    "ors_result": "Took 600 mL of ORS (50 mL/kg) over 4 hours in small sips; one small vomit, now passing urine."
+   }
+  },
+  {
+   "id": "ge_mild",
+   "label": "Gastroenteritis without dehydration",
+   "vignette": "3-year-old girl, 1 day of vomiting and 3 loose stools, drinking. HR 112, BP 98/60, weight 15 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "none",
+    "pattern": "gastro",
+    "dehyd_result": "none"
+   },
+   "results": {
+    "front": "HR 112, capillary refill 2 seconds, warm hands and feet, alert; glucose 97 mg/dL (5.4 mmol/L).",
+    "flags_result": "No bile, no blood, abdomen soft, no rash, no injury or ingestion.",
+    "pattern": "Vomiting with diarrhea since yesterday, a classmate ill; no earlier attacks.",
+    "dehyd_result": "Alert and playful, moist mouth, eyes normal, wet nappy an hour ago."
+   }
+  },
+  {
+   "id": "ge_ondans",
+   "label": "Vomiting blocks the ORS",
+   "vignette": "4-year-old boy, 12 hours of vomiting and watery stools. HR 132, BP 100/62, weight 16 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "none",
+    "pattern": "gastro",
+    "dehyd_result": "clinical",
+    "ors_result": "vomits",
+    "ondans_result": "takes"
+   },
+   "results": {
+    "front": "Warm, alert, capillary refill 2 seconds; glucose 88 mg/dL (4.9 mmol/L).",
+    "flags_result": "No bile or blood, soft abdomen, testes normal, no rash, no injury.",
+    "pattern": "Vomiting and watery diarrhea since this morning; no past attacks.",
+    "dehyd_result": "Dry lips, less urine, eyes normal, alert; perfused.",
+    "ors_result": "Vomits most sips of ORS over an hour; still alert, HR 130.",
+    "ondans_result": "Given 4 mg of oral ondansetron (over 15 to 30 kg band); keeps the ORS down over the next 4 hours and passes urine."
+   }
+  },
+  {
+   "id": "ge_ondans_fail",
+   "label": "ORS fails despite ondansetron",
+   "vignette": "18-month-old girl, 2 days of vomiting and watery diarrhea. HR 150, BP 92/56, weight 11 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "none",
+    "pattern": "gastro",
+    "dehyd_result": "clinical",
+    "ors_result": "vomits",
+    "ondans_result": "still"
+   },
+   "results": {
+    "front": "Warm, alert, capillary refill 2 seconds; glucose 79 mg/dL (4.4 mmol/L).",
+    "flags_result": "No bile or blood, soft abdomen, fontanelle closed, no rash, no injury.",
+    "pattern": "Watery stools and vomiting for 2 days, both parents now unwell; no past attacks.",
+    "dehyd_result": "Dry mouth, few wet nappies, eyes normal; perfused.",
+    "ors_result": "Vomits most of the ORS; alert, no worse.",
+    "ondans_result": "After 2 mg of oral ondansetron (8 to 15 kg band) she still vomits the ORS, and then the ORS given by nasogastric tube."
+   }
+  },
+  {
+   "id": "ge_worse",
+   "label": "Deteriorating on ORS",
+   "vignette": "10-month-old boy, 2 days of diarrhea and vomiting, born at 34 weeks. HR 168, BP 88/50, weight 8 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "none",
+    "pattern": "gastro",
+    "dehyd_result": "clinical",
+    "ors_result": "worse"
+   },
+   "results": {
+    "front": "Warm, capillary refill 2 seconds, irritable; glucose 85 mg/dL (4.7 mmol/L).",
+    "flags_result": "No bile, stools watery without blood, soft abdomen, fontanelle soft and flat, no rash.",
+    "pattern": "Profuse watery stools 8 times a day for 2 days; no past attacks.",
+    "dehyd_result": "Dry mouth, sunken eyes, irritable, tachycardic; perfused.",
+    "ors_result": "After 2 hours of ORS he is more lethargic, HR 180, skin turgor reduced, two large watery stools."
+   }
+  },
+  {
+   "id": "ge_severe",
+   "label": "Severe dehydration, not shocked",
+   "vignette": "20-month-old boy, 3 days of watery diarrhea and vomiting, lethargic, drinking poorly. HR 160, BP 90/56, weight 11 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "none",
+    "pattern": "gastro",
+    "dehyd_result": "severe"
+   },
+   "results": {
+    "front": "Warm, pulses normal, capillary refill 2 seconds; glucose 86 mg/dL.",
+    "flags_result": "No bile, stools watery without blood, abdomen soft and non-tender, no rash, no injury or ingestion; testes normal.",
+    "pattern": "Profuse watery stools and vomiting for 3 days, a cousin ill; no earlier attacks.",
+    "dehyd_result": "Lethargic, sunken eyes, drinks poorly, skin pinch back in 2 seconds; warm, pulses normal. WHO plan C for 11 kg: 330 mL over 30 minutes, then 770 mL over 2.5 hours."
+   }
+  },
+  {
+   "id": "ge_infant_ng",
+   "label": "Small infant vomiting the ORS",
+   "vignette": "4-month-old girl, a day of watery stools and vomiting, breastfed, a sibling ill. HR 158, weight 6.5 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "none",
+    "pattern": "gastro",
+    "dehyd_result": "clinical",
+    "ors_result": "vomits_small"
+   },
+   "results": {
+    "front": "Warm, alert, capillary refill 2 seconds; glucose 84 mg/dL.",
+    "flags_result": "No bile, no blood in the stool, fontanelle soft and flat, abdomen soft, no rash, no injury.",
+    "pattern": "Watery stools 7 times since yesterday with vomiting; not projectile; no past attacks.",
+    "dehyd_result": "Dry mouth, fewer wet nappies, eyes normal, alert; perfused.",
+    "ors_result": "Offered 325 mL of ORS (50 mL/kg) over 4 hours in small sips; most sips come back in the first 2 hours; still alert, no worse."
+   }
+  },
+  {
+   "id": "pyloric",
+   "label": "Projectile vomiting at 5 weeks",
+   "vignette": "5-week-old firstborn boy, 4 days of forceful milky vomiting after every feed, hungry straight after. No diarrhea. HR 150, weight 3.8 kg (birth 3.6 kg).",
+   "picks": {
+    "front": "ok",
+    "flags_result": "none",
+    "pattern": "pyloric",
+    "pyl_result": "hps"
+   },
+   "results": {
+    "front": "Warm, capillary refill 2 seconds; glucose 77 mg/dL (4.3 mmol/L).",
+    "flags_result": "Vomit is milk, never green; abdomen soft, no blood in stool, fontanelle normal.",
+    "pattern": "Projectile non-bilious vomiting at 5 weeks, feeds eagerly afterwards, no diarrhea.",
+    "pyl_result": "Pyloric muscle 4.5 mm thick, channel 19 mm long, no gastric contents pass during the scan. Chloride 88, potassium 3.0, bicarbonate 34 mmol/L."
+   }
+  },
+  {
+   "id": "pylorospasm",
+   "label": "Projectile vomiting, normal pylorus",
+   "vignette": "4-week-old girl, 2 days of forceful vomiting after some feeds. No diarrhea. HR 144, weight 3.9 kg (birth 3.4 kg).",
+   "picks": {
+    "front": "ok",
+    "flags_result": "none",
+    "pattern": "pyloric",
+    "pyl_result": "normal"
+   },
+   "results": {
+    "front": "Warm, alert, capillary refill 2 seconds; glucose 86 mg/dL (4.8 mmol/L).",
+    "flags_result": "Milky vomit, no bile, soft abdomen, no blood, fontanelle normal.",
+    "pattern": "Projectile non-bilious vomits, hungry after feeds, no diarrhea.",
+    "pyl_result": "Muscle 2.1 mm, channel 12 mm, contents pass through the pylorus during the scan. Electrolytes normal."
+   }
+  },
+  {
+   "id": "reflux",
+   "label": "Happy spitter",
+   "vignette": "3-month-old boy, brings up small amounts of milk after most feeds since birth, smiling and feeding well. HR 136, weight 6.2 kg, on the 50th centile.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "none",
+    "pattern": "reflux"
+   },
+   "results": {
+    "front": "Warm, alert, capillary refill under 2 seconds; glucose 90 mg/dL (5.0 mmol/L).",
+    "flags_result": "No bile, soft abdomen, normal stools, fontanelle normal.",
+    "pattern": "Effortless spit-ups since birth, gaining weight along the 50th centile; not projectile."
+   }
+  },
+  {
+   "id": "cyclic",
+   "label": "Another stereotyped attack",
+   "vignette": "8-year-old girl, vomiting 6 times an hour since waking at 5 am, pale and listless; her fifth identical attack this year, each about 2 days, well between. Mother has migraine. HR 124, weight 26 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "none",
+    "pattern": "cyclic"
+   },
+   "results": {
+    "front": "Warm, capillary refill 2 seconds; glucose 83 mg/dL (4.6 mmol/L).",
+    "flags_result": "No bile, no blood, abdomen soft, no head injury, no headache, no ingestion, no rash.",
+    "pattern": "Five stereotyped episodes in 12 months, each 2 days, 6 to 10 weeks apart, normal between; an upper GI series last year was normal."
+   }
+  },
+  {
+   "id": "volvulus",
+   "label": "Green vomit at 10 days",
+   "vignette": "10-day-old boy, three green vomits in the last 3 hours, previously feeding well. Pink and alert. HR 160, weight 3.5 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "bile",
+    "bile_result": "malrot"
+   },
+   "results": {
+    "front": "Warm, capillary refill 2 seconds; glucose 76 mg/dL (4.2 mmol/L).",
+    "flags_result": "Vomit dark green; abdomen soft, not distended; no colicky crying.",
+    "bile_result": "Duodenojejunal flexure right of the spine, with a corkscrew of the proximal jejunum."
+   }
+  },
+  {
+   "id": "bile_normal",
+   "label": "Green vomit, normal rotation",
+   "vignette": "6-week-old girl, two green vomits this morning, feeding a little less. HR 150, weight 4.4 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "bile",
+    "bile_result": "normal"
+   },
+   "results": {
+    "front": "Warm, alert, capillary refill 2 seconds; glucose 88 mg/dL (4.9 mmol/L).",
+    "flags_result": "Green vomit twice; abdomen soft, no distension, stools normal, no colicky attacks.",
+    "bile_result": "Duodenojejunal flexure left of the spine at the level of the pylorus; normal C-loop; contrast passes freely."
+   }
+  },
+  {
+   "id": "intuss_reduced",
+   "label": "Second intussusception, reduced",
+   "vignette": "11-month-old boy, 8 hours of screaming attacks every 15 minutes, drawing up his legs and going pale, quiet between; vomited twice. An intussusception was reduced by air enema 3 months ago. HR 150, weight 9 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "colic",
+    "intuss_result": "ileocolic",
+    "enema_result": "reduced"
+   },
+   "results": {
+    "front": "Warm between attacks, capillary refill 2 seconds; glucose 90 mg/dL (5.0 mmol/L).",
+    "flags_result": "Colicky attacks with pallor; a sausage-shaped mass in the right upper quadrant; no fever, no rash.",
+    "intuss_result": "Target sign in the right upper quadrant, ileocolic; abdomen soft, no free air.",
+    "enema_result": "Air enema: the mass is pushed back and air floods the small bowel; reduced."
+   }
+  },
+  {
+   "id": "intuss_partial",
+   "label": "Partial reduction",
+   "vignette": "2-year-old girl, a day of colicky attacks with pallor and vomiting, a red jelly-like stool this morning. HR 140, weight 12 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "colic",
+    "intuss_result": "ileocolic",
+    "enema_result": "partial"
+   },
+   "results": {
+    "front": "Warm, capillary refill 2 seconds; glucose 95 mg/dL (5.3 mmol/L).",
+    "flags_result": "Attacks of crying with pallor, quiet between; red jelly-like stool; no fever.",
+    "intuss_result": "Ileocolic target sign; no free fluid between the layers, no peritonitis, no free air.",
+    "enema_result": "The head of the intussusception moves back to the cecum and stops at the ileocecal valve; she stays stable, abdomen soft."
+   }
+  },
+  {
+   "id": "intuss_failed",
+   "label": "Enema fails",
+   "vignette": "7-month-old boy, 2 days of vomiting and colicky attacks, now listless between them. HR 158, weight 8 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "colic",
+    "intuss_result": "ileocolic",
+    "enema_result": "failed"
+   },
+   "results": {
+    "front": "Perfused, capillary refill 2 seconds; glucose 83 mg/dL (4.6 mmol/L).",
+    "flags_result": "Colicky attacks with pallor, legs drawn up; currant jelly stool; no rash.",
+    "intuss_result": "Ileocolic target sign; abdomen soft, no free air on the film.",
+    "enema_result": "Three air enema attempts move nothing; the mass stays in the transverse colon."
+   }
+  },
+  {
+   "id": "intuss_perf",
+   "label": "Intussusception with peritonitis",
+   "vignette": "9-month-old girl, 3 days of vomiting, now green, with colicky attacks; irritable between. HR 164, temperature 38.4 C (101.1 F), weight 8.5 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "colic",
+    "intuss_result": "perforated"
+   },
+   "results": {
+    "front": "Warm, capillary refill 2 seconds, pulses good; glucose 99 mg/dL (5.5 mmol/L).",
+    "flags_result": "Colicky attacks with pallor for 3 days; the vomit is now green; bloody stool.",
+    "intuss_result": "Target sign; abdomen rigid and tender; free air under the diaphragm on the film."
+   }
+  },
+  {
+   "id": "intuss_neg",
+   "label": "Colic, no intussusception",
+   "vignette": "10-month-old boy, a day of crying spells and two vomits. HR 136, weight 9.5 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "colic",
+    "intuss_result": "normal"
+   },
+   "results": {
+    "front": "Warm, alert, capillary refill 2 seconds; glucose 94 mg/dL (5.2 mmol/L).",
+    "flags_result": "Spells of crying with pallor and legs drawn up, playful between; no blood in the stool.",
+    "intuss_result": "Good views of the whole colon: no target sign, no intussusception."
+   }
+  },
+  {
+   "id": "appy_low",
+   "label": "Low PAS",
+   "vignette": "10-year-old boy, since this morning a mild ache low on the right and one vomit after it, still eating. Temperature 37.2 C (99 F), HR 96, weight 32 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "rlq",
+    "appy_risk": "low"
+   },
+   "results": {
+    "front": "Warm, alert; glucose 101 mg/dL (5.6 mmol/L).",
+    "flags_result": "Mild tenderness low on the right; the ache came on gradually, before the vomit; testes normal, no blood.",
+    "appy_risk": "Nausea and vomiting 1, right lower quadrant tenderness 2; no migration, no anorexia, no fever, no cough or hop tenderness; white count 8,100, neutrophils 4,900: PAS 3."
+   }
+  },
+  {
+   "id": "appy_pos",
+   "label": "Appendicitis on ultrasound",
+   "vignette": "8-year-old girl, pain around the umbilicus since yesterday, now low on the right, worse on hopping; off food; vomited twice after the pain began. Temperature 38.3 C (100.9 F), HR 118, weight 26 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "rlq",
+    "appy_risk": "higher",
+    "appy_us_result": "appy"
+   },
+   "results": {
+    "front": "Warm, capillary refill 2 seconds; glucose 104 mg/dL (5.8 mmol/L).",
+    "flags_result": "Pain moved to the right lower quadrant over a day, before the vomiting; tender there; nothing sudden, no blood.",
+    "appy_risk": "Migration 1, anorexia 1, nausea or vomiting 1, fever 1, hop tenderness 2, right lower quadrant tenderness 2, white count 15,800 1, neutrophils 12,900 1: PAS 10.",
+    "appy_us_result": "Noncompressible appendix 9 mm across with a thick wall and fluid around it."
+   }
+  },
+  {
+   "id": "appy_neg",
+   "label": "Appendix not seen",
+   "vignette": "12-year-old boy, 18 hours of right lower abdominal pain and nausea, one vomit. Temperature 37.9 C (100.2 F), HR 104, weight 40 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "rlq",
+    "appy_risk": "higher",
+    "appy_us_result": "not_shown"
+   },
+   "results": {
+    "front": "Warm, alert; glucose 97 mg/dL (5.4 mmol/L).",
+    "flags_result": "Tender in the right lower quadrant, the pain came on gradually, before the vomit; testes normal.",
+    "appy_risk": "Anorexia 1, nausea 1, right lower quadrant tenderness 2, white count 11,200 1; no migration, no fever over 38, no cough or hop pain, neutrophils 6,800: PAS 5.",
+    "appy_us_result": "The appendix is not seen; no free fluid, no mass."
+   }
+  },
+  {
+   "id": "ovary",
+   "label": "Sudden pelvic pain and vomiting",
+   "vignette": "13-year-old girl, sudden severe right-sided pelvic pain an hour after netball, vomited 4 times. Periods started a year ago; pregnancy test negative. HR 112, weight 46 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "torsion"
+   },
+   "results": {
+    "front": "Warm, alert; glucose 106 mg/dL (5.9 mmol/L).",
+    "flags_result": "Sudden one-sided pelvic pain with vomiting, tender low on the right; no diarrhea, no fever."
+   }
+  },
+  {
+   "id": "head",
+   "label": "Vomiting after a fall",
+   "vignette": "4-year-old boy fell from a sofa onto a wooden floor 3 hours ago, cried at once, has vomited 3 times since. GCS 15, HR 104, weight 17 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "head"
+   },
+   "results": {
+    "front": "Warm, alert, capillary refill under 2 seconds; glucose 99 mg/dL (5.5 mmol/L).",
+    "flags_result": "Three separate vomits after the fall; no loss of consciousness, not drowsy, no skull or basal fracture signs, no focal deficit; the story fits the injury."
+   }
+  },
+  {
+   "id": "button",
+   "label": "Possible button battery",
+   "vignette": "2-year-old girl, drooling and vomiting since her brother's remote control was found open an hour ago. HR 130, weight 12 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "ingestion"
+   },
+   "results": {
+    "front": "Warm, alert; glucose 90 mg/dL (5.0 mmol/L).",
+    "flags_result": "The battery cover is off and one battery is missing; she refuses to swallow and drools."
+   }
+  },
+  {
+   "id": "fever_rash",
+   "label": "Fever, vomiting and a rash",
+   "vignette": "15-month-old boy, 12 hours of fever and vomiting, now irritable and crying when moved. Temperature 39.6 C (103.3 F), HR 168, BP 92/56, weight 11 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "fever"
+   },
+   "results": {
+    "front": "Capillary refill 2 seconds, warm; glucose 92 mg/dL (5.1 mmol/L).",
+    "flags_result": "A non-blanching purple rash on the legs; fontanelle bulging; neck stiff."
+   }
+  },
+  {
+   "id": "hus",
+   "label": "Bloody diarrhea, then pale and puffy",
+   "vignette": "3-year-old boy, bloody diarrhea a week ago after a farm visit, now vomiting, pale, puffy eyes, little urine for a day. HR 132, BP 118/76, weight 14 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "bloody",
+    "hus_result": "hus"
+   },
+   "results": {
+    "front": "Warm, capillary refill 2 seconds; glucose 101 mg/dL (5.6 mmol/L).",
+    "flags_result": "Bloody diarrhea for 4 days last week, no colicky attacks, no mass; now pallor.",
+    "hus_result": "Hemoglobin 72 g/L with schistocytes, platelets 38 x 10^9/L, creatinine 210 micromol/L, LDH high, Coombs negative; stool Shiga toxin positive."
+   }
+  },
+  {
+   "id": "stec",
+   "label": "Bloody diarrhea, no HUS yet",
+   "vignette": "4-year-old girl, 2 days of crampy bloody diarrhea and vomiting after a barbecue, no fever. HR 120, BP 100/62, weight 16 kg.",
+   "picks": {
+    "front": "ok",
+    "flags_result": "bloody",
+    "hus_result": "no_hus"
+   },
+   "results": {
+    "front": "Warm, alert, capillary refill 2 seconds; glucose 90 mg/dL (5.0 mmol/L).",
+    "flags_result": "Loose stools with blood, crampy pain but no colicky attacks with pallor, no mass.",
+    "hus_result": "Hemoglobin 124 g/L, platelets 260 x 10^9/L, no schistocytes, creatinine 32 micromol/L; stool Shiga toxin positive."
+   }
+  }
+ ]
+}

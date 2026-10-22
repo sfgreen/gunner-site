@@ -1,0 +1,3657 @@
+{
+ "id": "pw_agitation",
+ "title": "Agitation, withdrawal and psychiatric emergencies",
+ "world": "psych",
+ "synonyms": [
+  "agitation",
+  "agitated patient",
+  "violent patient",
+  "aggression",
+  "combative",
+  "de-escalation",
+  "rapid tranquillisation",
+  "chemical restraint",
+  "physical restraint",
+  "seclusion",
+  "capacity",
+  "alcohol withdrawal",
+  "CIWA-Ar",
+  "delirium tremens",
+  "DTs",
+  "withdrawal seizure",
+  "Wernicke encephalopathy",
+  "thiamine",
+  "phenobarbital",
+  "benzodiazepine withdrawal",
+  "opioid withdrawal",
+  "COWS",
+  "buprenorphine",
+  "naloxone kit",
+  "precipitated withdrawal",
+  "GHB withdrawal",
+  "neuroleptic malignant syndrome",
+  "NMS",
+  "acute dystonia",
+  "oculogyric crisis",
+  "akathisia",
+  "droperidol",
+  "olanzapine",
+  "haloperidol",
+  "ketamine",
+  "psychosis",
+  "first-episode psychosis",
+  "mania",
+  "medical clearance",
+  "suicide",
+  "suicidal ideation",
+  "ASQ",
+  "safety plan",
+  "lethal means",
+  "involuntary hold"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:22461918",
+   "label": "Project BETA psychopharmacology 2012",
+   "title": "The Psychopharmacology of Agitation: consensus statement of the American Association for Emergency Psychiatry Project BETA Psychopharmacology Workgroup (West J Emerg Med 2012)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22461918/"
+  },
+  {
+   "docId": "pmid:22461917",
+   "label": "Project BETA de-escalation 2012",
+   "title": "Verbal De-escalation of the Agitated Patient: consensus statement of the AAEP Project BETA De-escalation Workgroup (West J Emerg Med 2012)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22461917/"
+  },
+  {
+   "docId": "pmid:22461915",
+   "label": "Project BETA medical evaluation 2012",
+   "title": "Medical Evaluation and Triage of the Agitated Patient: consensus statement of the AAEP Project BETA Medical Evaluation Workgroup (West J Emerg Med 2012)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22461915/"
+  },
+  {
+   "docId": "pmid:22461919",
+   "label": "Project BETA seclusion and restraint 2012",
+   "title": "Use and Avoidance of Seclusion and Restraint: consensus statement of the AAEP Project BETA Seclusion and Restraint Workgroup (West J Emerg Med 2012)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22461919/"
+  },
+  {
+   "docId": "pmid:28611885",
+   "label": "AAEP medical clearance 2017",
+   "title": "American Association for Emergency Psychiatry Task Force on Medical Clearance of Adult Psychiatric Patients, Part II: consensus recommendations (West J Emerg Med 2017)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28611885/"
+  },
+  {
+   "docId": "url:adb4cebbce8e",
+   "label": "NICE NG10",
+   "title": "Violence and aggression: short-term management in mental health, health and community settings (NICE NG10, 2015)",
+   "url": "https://www.nice.org.uk/guidance/ng10"
+  },
+  {
+   "docId": "url:053089e98c8e",
+   "label": "NICE CG100",
+   "title": "Alcohol-use disorders: diagnosis and management of physical complications (NICE CG100, 2010, updated 2017)",
+   "url": "https://www.nice.org.uk/guidance/cg100"
+  },
+  {
+   "docId": "url:9ecc1eb10935",
+   "label": "NICE CG115",
+   "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking and alcohol dependence (NICE CG115, 2011, updated 2014)",
+   "url": "https://www.nice.org.uk/guidance/cg115"
+  },
+  {
+   "docId": "url:5ff273cd9778",
+   "label": "NICE NG225",
+   "title": "Self-harm: assessment, management and preventing recurrence (NICE NG225, 2022)",
+   "url": "https://www.nice.org.uk/guidance/ng225"
+  },
+  {
+   "docId": "pmid:32256131",
+   "label": "ED alcohol withdrawal review 2020",
+   "title": "Management of Alcohol Withdrawal in the Emergency Department: Current Perspectives (Open Access Emerg Med 2020), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32256131/"
+  },
+  {
+   "docId": "pmid:34742248",
+   "label": "BMC Emerg Med 2021 review",
+   "title": "Prevention of alcohol withdrawal seizure recurrence and treatment of other alcohol withdrawal symptoms in the emergency department: a rapid review (BMC Emerg Med 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34742248/"
+  },
+  {
+   "docId": "pmid:40526204",
+   "label": "Joint benzodiazepine tapering guideline 2025",
+   "title": "Joint Clinical Practice Guideline on Benzodiazepine Tapering: Considerations When Risks Outweigh Benefits (J Gen Intern Med 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40526204/"
+  },
+  {
+   "docId": "url:f777a19890c2",
+   "label": "SAMHSA TIP 63",
+   "title": "Medications for Opioid Use Disorder, Treatment Improvement Protocol 63 (SAMHSA, updated 2021)",
+   "url": "https://library.samhsa.gov/sites/default/files/pep21-02-01-002.pdf"
+  },
+  {
+   "docId": "url:a1d46d9465d5",
+   "label": "NIMH ASQ screening tool",
+   "title": "Ask Suicide-Screening Questions (ASQ) screening tool for youth and adults (NIMH toolkit, 2025)",
+   "url": "https://www.nimh.nih.gov/sites/default/files/documents/research/research-conducted-at-nimh/asq-toolkit-materials/asq-tool/screening-tool-asq-nimh-toolkit.pdf"
+  },
+  {
+   "docId": "url:08f2f90caa9d",
+   "label": "NIMH ASQ adult ED safety assessment",
+   "title": "Brief Suicide Safety Assessment, adult emergency department (NIMH ASQ toolkit, 2020)",
+   "url": "https://www.nimh.nih.gov/sites/default/files/documents/research/research-conducted-at-nimh/asq-toolkit-materials/adult-ed/bssa_ed_adult_asq_nimh_toolkit.pdf"
+  },
+  {
+   "docId": "pmid:29630205",
+   "label": "StatPearls: agitation",
+   "title": "Agitation (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29630205/"
+  },
+  {
+   "docId": "pmid:30137828",
+   "label": "StatPearls: akathisia",
+   "title": "Akathisia (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30137828/"
+  },
+  {
+   "docId": "pmid:28722912",
+   "label": "StatPearls: alcohol withdrawal",
+   "title": "Alcohol Withdrawal Syndrome (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722912/"
+  },
+  {
+   "docId": "pmid:29261973",
+   "label": "StatPearls: benzodiazepines",
+   "title": "Benzodiazepines (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29261973/"
+  },
+  {
+   "docId": "pmid:30422485",
+   "label": "StatPearls: lorazepam",
+   "title": "Lorazepam (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30422485/"
+  },
+  {
+   "docId": "pmid:29083570",
+   "label": "StatPearls: buprenorphine",
+   "title": "Buprenorphine (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29083570/"
+  },
+  {
+   "docId": "pmid:30252268",
+   "label": "StatPearls: opioid withdrawal",
+   "title": "Opioid Withdrawal (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30252268/"
+  },
+  {
+   "docId": "pmid:30422457",
+   "label": "StatPearls: capacity",
+   "title": "Competency and Capacity (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30422457/"
+  },
+  {
+   "docId": "pmid:30285361",
+   "label": "StatPearls: dystonic reactions",
+   "title": "Dystonic Reactions (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30285361/"
+  },
+  {
+   "docId": "pmid:29763179",
+   "label": "StatPearls: hypomagnesemia",
+   "title": "Hypomagnesemia (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29763179/"
+  },
+  {
+   "docId": "pmid:32491309",
+   "label": "StatPearls: involuntary commitment",
+   "title": "Involuntary Commitment (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32491309/"
+  },
+  {
+   "docId": "pmid:29489248",
+   "label": "StatPearls: NMS",
+   "title": "Neuroleptic Malignant Syndrome (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29489248/"
+  },
+  {
+   "docId": "pmid:33351431",
+   "label": "StatPearls: restraint and seclusion",
+   "title": "Patient Restraint and Seclusion (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33351431/"
+  },
+  {
+   "docId": "pmid:31536188",
+   "label": "StatPearls: psychosis",
+   "title": "Psychosis (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31536188/"
+  },
+  {
+   "docId": "pmid:29630220",
+   "label": "StatPearls: mania",
+   "title": "Mania (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29630220/"
+  },
+  {
+   "docId": "pmid:40811601",
+   "label": "StatPearls: suicide",
+   "title": "Suicide: Assessment and Management (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40811601/"
+  },
+  {
+   "docId": "pmid:28613508",
+   "label": "StatPearls: sympathomimetic toxicity",
+   "title": "Sympathomimetic Toxicity (StatPearls), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613508/"
+  },
+  {
+   "docId": "pmid:30521219",
+   "label": "StatPearls: anticholinergic toxicity",
+   "title": "Anticholinergic Toxicity (StatPearls), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30521219/"
+  },
+  {
+   "docId": "pmid:29261914",
+   "label": "StatPearls: Wernicke-Korsakoff",
+   "title": "Wernicke-Korsakoff Syndrome (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29261914/"
+  },
+  {
+   "docId": "pmid:28613532",
+   "label": "StatPearls: GHB toxicity",
+   "title": "Gamma-Hydroxybutyrate Toxicity (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613532/"
+  },
+  {
+   "docId": "pmid:29262083",
+   "label": "StatPearls: ketamine",
+   "title": "Ketamine (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29262083/"
+  },
+  {
+   "docId": "url:3006383969b7",
+   "label": "FDA label: haloperidol injection",
+   "title": "Haloperidol injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b1ad2abd-a9d6-44e3-957b-36a73260f4f5"
+  },
+  {
+   "docId": "url:16bf38b744fe",
+   "label": "FDA label: droperidol",
+   "title": "Droperidol injection prescribing information (American Regent), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=147e033d-d997-4ef6-8bb5-a9ba372590b2"
+  },
+  {
+   "docId": "url:6ee9f78b2d3b",
+   "label": "FDA label: Zyprexa",
+   "title": "Zyprexa, Zyprexa Zydis and Zyprexa IntraMuscular (olanzapine) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b418946a-1ab4-4d89-a012-d94fc361a3c4"
+  },
+  {
+   "docId": "url:50158536db73",
+   "label": "FDA label: buprenorphine SL",
+   "title": "Buprenorphine sublingual tablets prescribing information (PAI), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=442831cf-9636-433a-9a12-e9a8cd31f72a"
+  },
+  {
+   "docId": "url:c6ee0944651f",
+   "label": "FDA label: benztropine injection",
+   "title": "Benztropine mesylate injection prescribing information (Fresenius Kabi), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b03bd28e-3b44-41e4-9a7e-28b9d7975245"
+  },
+  {
+   "docId": "url:e6e8a2b620bf",
+   "label": "FDA label: chlordiazepoxide",
+   "title": "Chlordiazepoxide hydrochloride capsules prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1eb5eb7a-8c5f-43a3-9b9f-6321cdb6f6c7"
+  },
+  {
+   "docId": "url:0ea2cefd9415",
+   "label": "FDA label: diazepam injection",
+   "title": "Diazepam injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7e7dd743-a87b-4ab3-b6ae-f116cd0c8b0f"
+  },
+  {
+   "docId": "url:eb9f6f90d411",
+   "label": "FDA label: Narcan nasal spray",
+   "title": "Narcan (naloxone HCl) nasal spray 4 mg Drug Facts, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a0ebc83d-2892-40de-bc0a-775ce90b30db"
+  },
+  {
+   "docId": "url:dec2e5ef31d7",
+   "label": "FDA label: Lucemyra",
+   "title": "Lucemyra (lofexidine) tablets prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b748f308-ba71-4fd9-84ec-ec7e0f210885"
+  }
+ ],
+ "differential": [
+  "Alcohol withdrawal",
+  "Delirium tremens",
+  "Wernicke encephalopathy",
+  "Alcohol intoxication",
+  "Benzodiazepine withdrawal",
+  "Opioid withdrawal",
+  "Stimulant or anticholinergic toxicity",
+  "Serotonin syndrome",
+  "Neuroleptic malignant syndrome",
+  "Acute dystonia",
+  "Akathisia",
+  "Primary psychotic disorder",
+  "Mania",
+  "Medical cause of psychosis",
+  "Suicidal crisis",
+  "Delirium",
+  "Hypoglycemia",
+  "Head injury or CNS infection",
+  "Heat stroke"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Agitated, withdrawing or in a mental health crisis in the ED. First moves?",
+   "options": [
+    "A safe room and enough staff; vitals with temperature, oxygen and glucose",
+    "IM haloperidol and lorazepam at once, before anyone takes the vital signs",
+    "A urine drug screen and alcohol level before anyone examines the patient",
+    "Four-point restraints first, then vital signs once the patient is still"
+   ],
+   "answer": 0,
+   "chainStep": "Enough trained staff and a room with dangerous objects removed and a clear exit; approach at 2 arm's lengths; vital signs with temperature, oxygen saturation and fingerstick glucose as safety allows; a brief history from police, EMS and family; mental health triage alongside physical triage",
+   "why": "Agitation can come from a medical illness, so a brief history and vital signs come first where it is safe, with the oxygen level and the blood sugar; abnormal vital signs or glucose call for immediate evaluation by a clinician (BETA). The clinician keeps at least 2 arm's lengths away with a clear exit, and staff stay close. Routine labs and drug screens do not come first: the history and examination find most medical illness, and a urine drug screen seldom changes the ED disposition (AAEP 2017; ACEP rated routine screening unnecessary, Level C). Unless the patient is actively violent, restraint does not come before de-escalation. Medicine is chosen once a likely cause is known, and NICE asks for mental health triage alongside physical triage.",
+   "orders": [
+    {
+     "item": "First checks",
+     "dose": "Brief history and vital signs, with oxygen level and fingerstick glucose; abnormal vital signs or glucose need immediate clinician evaluation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:22461915",
+       "where": "Triage of the agitated patient: medical setting"
+      }
+     ]
+    },
+    {
+     "item": "Approach",
+     "dose": "At least 2 arm's lengths away; both patient and clinician able to leave the room; staff nearby",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:22461917",
+       "where": "Domain I: respect personal space"
+      },
+      {
+       "docId": "pmid:29630205",
+       "where": "History and physical"
+      }
+     ]
+    },
+    {
+     "item": "The room",
+     "dose": "No potential weapons in the interview room; dangerous objects removed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:adb4cebbce8e",
+       "where": "1.5.8"
+      },
+      {
+       "docId": "url:a1d46d9465d5",
+       "where": "Acute positive screen"
+      }
+     ]
+    },
+    {
+     "item": "Mental health triage",
+     "dose": "For every patient on arrival, alongside physical triage",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:adb4cebbce8e",
+       "where": "1.5.7"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: children and adolescents beyond the suicide screen, catatonia, eating disorders, and lithium toxicity (the toxicology pathway, pw_tox). Restraint and hold rules here are federal and general; state law varies.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "pmid:22461915",
+     "where": "Triage of the agitated patient: medical setting; Conclusion"
+    },
+    {
+     "docId": "pmid:22461917",
+     "where": "Domain I: respect personal space"
+    },
+    {
+     "docId": "pmid:28611885",
+     "where": "The role of routine laboratory testing; Recommendation 4"
+    },
+    {
+     "docId": "url:adb4cebbce8e",
+     "where": "1.5.7; 1.5.8"
+    },
+    {
+     "docId": "pmid:29630205",
+     "where": "History and physical"
+    },
+    {
+     "docId": "pmid:22461919",
+     "where": "Guidelines for the use of seclusion and restraint"
+    }
+   ]
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Vital signs, glucose, oxygen and the first look",
+   "outcomes": [
+    {
+     "id": "first",
+     "if": "Medical emergency first; low glucose, low oxygen, shock or an unstable rhythm",
+     "ddx": {
+      "lead": [
+       "Hypoglycemia"
+      ],
+      "out": []
+     },
+     "next": "end_first"
+    },
+    {
+     "id": "medical",
+     "if": "Medical clue; head injury, a focal deficit, or fever with a stiff neck or a source; glucose normal",
+     "ddx": {
+      "lead": [
+       "Head injury or CNS infection"
+      ],
+      "out": []
+     },
+     "next": "end_medical"
+    },
+    {
+     "id": "hot",
+     "if": "Hot on a drug or in withdrawal; rigid, clonus, drenched or dry and flushed, no infection source, glucose normal",
+     "ddx": {
+      "lead": [
+       "Neuroleptic malignant syndrome",
+       "Serotonin syndrome",
+       "Stimulant or anticholinergic toxicity",
+       "Delirium tremens"
+      ],
+      "out": []
+     },
+     "next": "hot_step"
+    },
+    {
+     "id": "env_hot",
+     "if": "Hot after heat or exertion; no drug or withdrawal, glucose normal",
+     "ddx": {
+      "lead": [
+       "Heat stroke"
+      ],
+      "out": []
+     },
+     "next": "end_env_hot"
+    },
+    {
+     "id": "agitated",
+     "if": "Agitated, no emergency; glucose and oxygen normal, no head injury or fever",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "deesc"
+    },
+    {
+     "id": "calm",
+     "if": "Calm, no emergency; cooperative, glucose and oxygen normal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "assess"
+    }
+   ]
+  },
+  {
+   "id": "end_first",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A medical emergency comes first: correct a low glucose now (the altered mental status pathway, pw_ams, has the doses; in a drinker, IV thiamine goes with it, but the glucose is never held back for it), give oxygen and follow the dyspnea pathway (pw_dyspnea) for hypoxemia, and resuscitate shock or an unstable rhythm (pw_palpitations for an unstable rhythm, pw_sepsis_fever when infection is possible). Agitation that persists once these are corrected starts this pathway again."
+  },
+  {
+   "id": "end_medical",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A medical cause leads: head injury goes to the trauma pathway (pw_trauma), a new focal deficit to the stroke pathway (pw_stroke), and fever with a stiff neck or a source to the sepsis and fever pathway (pw_sepsis_fever). New agitation is presumed medical until proven otherwise; sedate only as safety demands while the cause is treated, checking oxygen and glucose at once if restraint is needed."
+  },
+  {
+   "id": "hot_step",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "High temperature and a fast pulse, on a drug or in withdrawal. Next?",
+   "options": [
+    "Active cooling, IV fluids, and an IV benzodiazepine for agitation",
+    "IM haloperidol to settle them, then cooling once they are still",
+    "Restraints while they fight, then the history and a urine drug screen",
+    "IV dantrolene first, as for malignant hyperthermia"
+   ],
+   "answer": 0,
+   "chainStep": "Continuous monitoring; active external cooling; IV fluids; IV benzodiazepine titrated until agitation and autonomic signs settle; CK, creatinine and electrolytes; stop any dopamine blocker or serotonergic drug; intubation if cooling and sedation fail",
+   "why": "Benzodiazepines are first line for stimulant agitation and, in StatPearls, for anticholinergic agitation (pw_tox gives physostigmine first when the QRS is narrow), titrated until the agitation and autonomic instability settle, and they lower heart rate, muscle tone, temperature and seizure risk; hyperthermia predicts deterioration, so external cooling starts at once. Fighting against restraints drives rhabdomyolysis, which calming with a benzodiazepine helps prevent. An antipsychotic can be the cause: neuroleptic malignant syndrome follows dopamine blockers, haloperidol most often, and its first treatment is stopping them. Dantrolene is kept for severe neuroleptic malignant syndrome, and its benefit there is uncertain.",
+   "orders": [
+    {
+     "item": "Benzodiazepine",
+     "dose": "IV, titrated until autonomic instability and psychomotor agitation resolve",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613508",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Benzodiazepine for stimulant agitation (BETA figure)",
+     "dose": "Lorazepam 1 to 2 mg IM or IV; by mouth, lorazepam 1 to 2 mg, chlordiazepoxide 50 mg or diazepam 5 to 10 mg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:22461918",
+       "where": "Figure: agitation due to intoxication, CNS stimulant"
+      }
+     ]
+    },
+    {
+     "item": "Cooling",
+     "dose": "External cooling; hyperthermia is a very poor prognostic sign",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613508",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Fluids",
+     "dose": "IV fluids for hypotension or suspected rhabdomyolysis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30521219",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Dopamine blockers",
+     "dose": "Stop the offending antipsychotic when neuroleptic malignant syndrome is possible",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:29489248",
+       "where": "Treatment / management"
+      }
+     ]
+    }
+   ],
+   "next": "hot_cause",
+   "sources": [
+    {
+     "docId": "pmid:28613508",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:30521219",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:29489248",
+     "where": "Introduction; Treatment / management; Enhancing healthcare team outcomes"
+    },
+    {
+     "docId": "pmid:29630205",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:22461918",
+     "where": "Figure: agitation due to intoxication, CNS stimulant"
+    }
+   ]
+  },
+  {
+   "id": "hot_cause",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Drug history, tone, reflexes and skin",
+   "outcomes": [
+    {
+     "id": "nms",
+     "if": "Rigid on a dopamine blocker; lead-pipe rigidity over days, CK high",
+     "ddx": {
+      "lead": [
+       "Neuroleptic malignant syndrome"
+      ],
+      "out": []
+     },
+     "next": "nms_step"
+    },
+    {
+     "id": "tox",
+     "if": "A toxidrome; clonus on serotonergic drugs, or stimulant or anticholinergic signs",
+     "ddx": {
+      "lead": [
+       "Serotonin syndrome",
+       "Stimulant or anticholinergic toxicity"
+      ],
+      "out": []
+     },
+     "next": "end_tox_hot"
+    },
+    {
+     "id": "dt",
+     "if": "Withdrawal delirium; disoriented and tremulous days after heavy drinking stopped",
+     "ddx": {
+      "lead": [
+       "Delirium tremens"
+      ],
+      "out": []
+     },
+     "next": "dt_step"
+    }
+   ]
+  },
+  {
+   "id": "nms_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Fever, lead-pipe rigidity and confusion days after a dopamine blocker. Next?",
+   "options": [
+    "Stop the antipsychotic; ICU, cooling, fluids, CK and kidney checks",
+    "Switch to an atypical antipsychotic and keep treating the psychosis",
+    "Benztropine IV for the rigidity, then restart the haloperidol",
+    "Physostigmine IV, as for anticholinergic delirium"
+   ],
+   "answer": 0,
+   "chainStep": "Stop every dopamine blocker (restart a dopaminergic drug that was withdrawn); ICU; aggressive cooling; IV fluids; electrolytes, creatinine, CK, urine for myoglobin and a blood gas; benzodiazepine for agitation; bromocriptine or dantrolene in severe cases (doses not in the sources read); imaging and lumbar puncture if infection is possible",
+   "why": "Neuroleptic malignant syndrome is fever, severe rigidity and altered mental status after a dopamine blocker, developing over 1 to 3 days, and atypical agents cause it too, so switching keeps the trigger going. Discontinuing the offending agent is paramount, then aggressive cooling, fluids and electrolyte correction in an ICU; bromocriptine or dantrolene are empiric options in severe cases, and benzodiazepines help the agitation. Anticholinergics treat dystonia, not this. Serotonin toxicity is told apart by the drug and by hyperreflexia and myoclonus, and physostigmine is for severe anticholinergic delirium. Baclofen withdrawal can mimic it and is best managed by restarting the baclofen or with benzodiazepines.",
+   "orders": [
+    {
+     "item": "Offending drug",
+     "dose": "Discontinue it; if a dopaminergic drug was withdrawn, restarting it may help",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489248",
+       "where": "Introduction; Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Tests",
+     "dose": "Metabolic panel with electrolytes and creatinine, CK, urinalysis for myoglobinuria, arterial or venous gas; imaging and lumbar puncture when the diagnosis is unclear",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489248",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Supportive care",
+     "dose": "Aggressive cooling, volume and electrolyte correction, ICU admission",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489248",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Bromocriptine or dantrolene",
+     "dose": "Empiric therapy for severe cases; some case studies question dantrolene's efficacy and safety",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489248",
+       "where": "Treatment / management; Enhancing healthcare team outcomes"
+      }
+     ]
+    },
+    {
+     "item": "Bromocriptine and dantrolene doses",
+     "dose": "Not in the sources read for neuroleptic malignant syndrome",
+     "status": "pending"
+    },
+    {
+     "item": "Restarting an antipsychotic",
+     "dose": "At least 2 weeks after resolution; a lower-potency agent at a low dose, titrated slowly; no lithium with it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29489248",
+       "where": "Prognosis"
+      }
+     ]
+    }
+   ],
+   "next": "end_nms",
+   "sources": [
+    {
+     "docId": "pmid:29489248",
+     "where": "Introduction; Etiology; History and physical; Evaluation; Treatment / management; Differential diagnosis"
+    },
+    {
+     "docId": "pmid:22461918",
+     "where": "The use of first-generation antipsychotics"
+    },
+    {
+     "docId": "pmid:30521219",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:30285361",
+     "where": "Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_nms",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Neuroleptic malignant syndrome: every dopamine blocker stopped, ICU care with aggressive cooling, fluids and electrolyte correction, benzodiazepines for agitation, and bromocriptine or dantrolene for severe cases (doses not in the sources read). Most recover in 2 to 14 days; an antipsychotic is restarted no sooner than 2 weeks after recovery, as a lower-potency agent at a low dose, without lithium."
+  },
+  {
+   "id": "end_tox_hot",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "A toxidrome with hyperthermia: serotonin toxicity, stimulant toxicity or anticholinergic delirium. The toxicology pathway (pw_tox) takes it from here, with its own doses. Stimulant agitation gets IV benzodiazepines titrated to effect with external cooling. For anticholinergic delirium the sources differ: StatPearls gives IV benzodiazepines first and physostigmine for cases refractory to them, while pw_tox gives physostigmine first (label) when the QRS is narrow. Lithium toxicity also belongs to pw_tox."
+  },
+  {
+   "id": "deesc",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Agitated, with no medical emergency at the door. Next?",
+   "options": [
+    "One clinician talks calmly at 2 arm's lengths; oral medicine if needed",
+    "Several staff talk to the patient at once, each giving instructions",
+    "IM medication now, since talking rarely calms anyone in the ED",
+    "Restraints first, then the conversation, to keep the staff members safe"
+   ],
+   "answer": 0,
+   "chainStep": "Quiet room with low stimulation; one designated person talks, introduces themselves, keeps it short and repeats; listens for wants and feelings, sets clear limits, offers choices; offers oral medication if needed, with the patient choosing the agent and route (no benzodiazepine in alcohol intoxication or in delirium not from withdrawal); collateral history while it works",
+   "why": "Verbal de-escalation is tried first and often works in under 5 minutes. One designated person speaks, from at least 2 arm's lengths, in short sentences, repeating the message; other staff stand by, because several voices confuse the patient and escalate things. If medication is needed, the patient helps choose it, and oral medication is preferred when the patient will take it; a benzodiazepine is avoided in alcohol intoxication and in delirium not caused by withdrawal. Unless the patient is actively violent, restraint does not come before talking.",
+   "orders": [
+    {
+     "item": "Oral options (BETA table)",
+     "dose": "Lorazepam 2 mg; olanzapine 5 to 10 mg; risperidone 2 mg; haloperidol 5 mg (more extrapyramidal effects); no benzodiazepine in alcohol intoxication or in delirium not from withdrawal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:22461918",
+       "where": "Table: oral medication; Figure"
+      }
+     ]
+    },
+    {
+     "item": "Choice and route",
+     "dose": "Involve the patient in choosing the medicine and route; oral is preferred if the patient will take it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:22461918",
+       "where": "General recommendations 4 and 5"
+      }
+     ]
+    },
+    {
+     "item": "Goal",
+     "dose": "Calm, not sleep",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:22461918",
+       "where": "General recommendation 3"
+      }
+     ]
+    }
+   ],
+   "next": "deesc_result",
+   "sources": [
+    {
+     "docId": "pmid:22461917",
+     "where": "De-escalation of agitated patients; Domains I, III, IV and IX"
+    },
+    {
+     "docId": "pmid:22461918",
+     "where": "General recommendations; Agitation associated with delirium 7; Figure"
+    },
+    {
+     "docId": "pmid:22461919",
+     "where": "Guidelines for the use of seclusion and restraint"
+    },
+    {
+     "docId": "pmid:29630205",
+     "where": "History and physical"
+    }
+   ]
+  },
+  {
+   "id": "deesc_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After de-escalation and the offer of oral medicine",
+   "outcomes": [
+    {
+     "id": "settled",
+     "if": "Settles; talking, or takes oral medicine and calms",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "assess"
+    },
+    {
+     "id": "psych",
+     "if": "Still violent and psychotic; not drunk or withdrawing, refuses oral medicine, held",
+     "ddx": {
+      "lead": [
+       "Primary psychotic disorder",
+       "Medical cause of psychosis"
+      ],
+      "out": []
+     },
+     "next": "im_psych"
+    },
+    {
+     "id": "etoh",
+     "if": "Still violent and drunk; alcohol on the breath, no withdrawal signs, held",
+     "ddx": {
+      "lead": [
+       "Alcohol intoxication"
+      ],
+      "out": []
+     },
+     "next": "im_etoh"
+    },
+    {
+     "id": "nopsych",
+     "if": "Still violent, no psychosis or delirium; not drunk, cause unclear or withdrawing, held",
+     "ddx": {
+      "lead": [
+       "Alcohol withdrawal",
+       "Benzodiazepine withdrawal"
+      ],
+      "out": []
+     },
+     "next": "im_bzd"
+    },
+    {
+     "id": "delirium",
+     "if": "Still violent and delirious; inattentive, fluctuating, not withdrawing",
+     "ddx": {
+      "lead": [
+       "Delirium"
+      ],
+      "out": []
+     },
+     "next": "end_delirium"
+    }
+   ]
+  },
+  {
+   "id": "im_psych",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Violent despite de-escalation; psychotic, not drunk; refuses oral medicine. Next?",
+   "options": [
+    "An IM antipsychotic: olanzapine, or haloperidol with a benzodiazepine",
+    "IM olanzapine and IM lorazepam given together, for the quickest calm",
+    "Repeated IV haloperidol until they are fully asleep, then the assessment",
+    "Restraints with no medicine, and a recheck in 4 hours' time"
+   ],
+   "answer": 0,
+   "chainStep": "IM antipsychotic for psychosis-driven agitation: olanzapine 10 mg IM (5 mg in older patients), or haloperidol 5 mg IM with lorazepam 2 mg IM; aim for calm, not sleep; no parenteral benzodiazepine with IM olanzapine; check capacity and document",
+   "why": "For agitation driven by psychosis, an antipsychotic is preferred because it treats the psychosis; BETA treats undifferentiated agitation with evident psychosis the same way. BETA prefers a second-generation agent such as IM olanzapine or ziprasidone and gives haloperidol with a benzodiazepine to cut extrapyramidal effects; ACEP 2024 rates droperidol or an atypical antipsychotic with midazolam, and haloperidol alone or with lorazepam, as Level B; NICE uses IM lorazepam alone or IM haloperidol with IM promethazine. IM olanzapine with a parenteral benzodiazepine is not recommended because of excessive sedation and cardiorespiratory depression. The goal is calm, not sleep, and a restrained patient still gets medication to calm them.",
+   "orders": [
+    {
+     "item": "Olanzapine IM (label)",
+     "dose": "10 mg (5 or 7.5 mg when clinical factors warrant; 5 mg in geriatric patients); repeat doses up to 10 mg, not sooner than 2 hours after the first and 4 hours after the second; over 30 mg a day not studied; check for orthostatic hypotension before each repeat",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:6ee9f78b2d3b",
+       "where": "2.4 ZYPREXA IntraMuscular"
+      }
+     ]
+    },
+    {
+     "item": "IM olanzapine with a parenteral benzodiazepine",
+     "dose": "Not recommended: excessive sedation and cardiorespiratory depression",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:6ee9f78b2d3b",
+       "where": "5.7"
+      },
+      {
+       "docId": "pmid:22461918",
+       "where": "The use of second-generation antipsychotics"
+      },
+      {
+       "docId": "pmid:29630205",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Haloperidol with a benzodiazepine (BETA)",
+     "dose": "Haloperidol 5 mg IM with lorazepam 2 mg IM; the benzodiazepine lowers extrapyramidal effects",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:22461918",
+       "where": "Conclusions 5; Table; Figure"
+      }
+     ]
+    },
+    {
+     "item": "If one antipsychotic dose is not enough",
+     "dose": "Lorazepam 1 to 2 mg rather than more antipsychotic (BETA); after IM olanzapine, no parenteral benzodiazepine (label)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:22461918",
+       "where": "Agitation due to a psychiatric illness 3; The use of second-generation antipsychotics; Figure"
+      },
+      {
+       "docId": "url:6ee9f78b2d3b",
+       "where": "5.7"
+      }
+     ],
+     "note": "BETA's figure attaches the add-lorazepam step to IM olanzapine, while its own text and the Zyprexa label advise against olanzapine with a parenteral benzodiazepine."
+    },
+    {
+     "item": "First-choice IM regimen",
+     "dose": "Differs by guideline",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:22461918",
+       "where": "Conclusions 4"
+      },
+      {
+       "docId": "pmid:29630205",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "url:adb4cebbce8e",
+       "where": "1.4.37; 1.4.38"
+      }
+     ],
+     "note": "BETA prefers a second-generation antipsychotic over haloperidol; ACEP 2024 (as reported in StatPearls) rates droperidol with midazolam, an atypical with midazolam, and haloperidol alone or with lorazepam at Level B; NICE NG10 uses IM lorazepam alone or IM haloperidol with IM promethazine, and lorazepam when the patient has never taken an antipsychotic."
+    },
+    {
+     "item": "Droperidol",
+     "dose": "Boxed warning: 12-lead ECG first, not given if QTc is over 440 ms in men or 450 ms in women, ECG monitoring for 2 to 3 hours afterwards; labelled only for perioperative nausea, maximum initial dose 2.5 mg IM or slow IV",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:16bf38b744fe",
+       "where": "Boxed warning; Indications; Dosage and administration"
+      },
+      {
+       "docId": "pmid:22461918",
+       "where": "The use of first-generation antipsychotics"
+      },
+      {
+       "docId": "pmid:29630205",
+       "where": "Treatment / management"
+      }
+     ],
+     "note": "BETA (2012) advised avoiding droperidol for agitation until the FDA revisited the warning, while citing ED data on doses up to 10 mg; ACEP 2024 found an overall favorable safety profile for ED sedation and rates droperidol with midazolam Level B."
+    },
+    {
+     "item": "Droperidol and midazolam doses for agitation",
+     "dose": "Not stated in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Ketamine",
+     "dose": "ACEP 2024 (Level C): consider IV or IM ketamine when safety is at stake; laryngospasm and hypersalivation; dose not in the sources read",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29630205",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "pmid:29262083",
+       "where": "Contraindications"
+      }
+     ],
+     "note": "StatPearls advises avoiding ketamine in schizophrenia because it can worsen the illness."
+    },
+    {
+     "item": "Capacity",
+     "dose": "Shown by understanding the decision, weighing risks and options, communicating a choice and consistent reasoning; without capacity a patient can neither consent nor refuse, and sedation or restraint may follow as appropriate",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30422457",
+       "where": "Clinical significance"
+      }
+     ]
+    },
+    {
+     "item": "Haloperidol IM (label)",
+     "dose": "2 to 5 mg IM for prompt control of acute agitation in schizophrenia; repeat as often as hourly (4 to 8 hours may be enough); maximum 20 mg a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3006383969b7",
+       "where": "Dosage and administration"
+      }
+     ]
+    },
+    {
+     "item": "QT",
+     "dose": "QT prolongation and torsades rise with higher doses and IV use; if IV is unavoidable, limit it to 5 to 10 mg a day with continuous ECG monitoring",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3006383969b7",
+       "where": "Warnings: cardiovascular effects"
+      },
+      {
+       "docId": "pmid:22461918",
+       "where": "The use of first-generation antipsychotics"
+      }
+     ]
+    },
+    {
+     "item": "Older patients with dementia",
+     "dose": "Boxed warning: antipsychotics raise the risk of death in elderly patients with dementia-related psychosis; ACEP 2024 made no agent recommendation for patients 65 or older",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3006383969b7",
+       "where": "Boxed warning"
+      },
+      {
+       "docId": "pmid:29630205",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Parkinson disease or dementia with Lewy bodies",
+     "dose": "Haloperidol injection is contraindicated",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:3006383969b7",
+       "where": "Contraindications; Warnings"
+      }
+     ]
+    }
+   ],
+   "next": "restraint",
+   "sources": [
+    {
+     "docId": "pmid:22461918",
+     "where": "Agitation due to a psychiatric illness; The use of second-generation antipsychotics; Agitation from unknown or complex reasons; Conclusions; Table; Figure"
+    },
+    {
+     "docId": "pmid:29630205",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "url:adb4cebbce8e",
+     "where": "1.4.37; 1.4.39"
+    },
+    {
+     "docId": "url:6ee9f78b2d3b",
+     "where": "2.4; 5.7"
+    },
+    {
+     "docId": "url:3006383969b7",
+     "where": "Dosage and administration"
+    },
+    {
+     "docId": "pmid:22461919",
+     "where": "Guidelines for the use of seclusion and restraint"
+    }
+   ]
+  },
+  {
+   "id": "im_etoh",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Violent despite de-escalation; drunk, with no withdrawal signs. Next?",
+   "options": [
+    "Haloperidol IM; avoid adding a benzodiazepine to the alcohol",
+    "Lorazepam IM every 30 minutes until they are asleep and quiet",
+    "IM olanzapine with IM lorazepam, for a faster combined effect",
+    "Restraints without medicine until the alcohol level falls"
+   ],
+   "answer": 0,
+   "chainStep": "Low stimulation; if medication is unavoidable, haloperidol 5 mg IM (BETA; label 2 to 5 mg); no benzodiazepine on top of the alcohol; breathing and consciousness checked every 15 minutes; look for injury, hypoglycemia and early withdrawal",
+   "why": "Medication for alcohol intoxication is used sparingly, if at all; when it is needed, benzodiazepines are avoided because they compound respiratory depression, and an antipsychotic is preferred, haloperidol having the longest record with minimal effect on breathing. Intoxication must be told from withdrawal, where benzodiazepines are preferred: tachycardia, sweating, tremor and a low or undetectable alcohol level point to withdrawal. IM olanzapine with a benzodiazepine lowered oxygen saturations in patients who had been drinking. A restrained patient is still given medication to calm them.",
+   "orders": [
+    {
+     "item": "Haloperidol",
+     "dose": "5 mg IM (BETA table; the BETA figure gives 2 to 10 mg IM)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:22461918",
+       "where": "Table; Figure"
+      }
+     ]
+    },
+    {
+     "item": "Benzodiazepines in alcohol intoxication",
+     "dose": "Avoid: they compound respiratory depression",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:22461918",
+       "where": "Agitation due to intoxication 2"
+      },
+      {
+       "docId": "pmid:29630205",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring after alcohol",
+     "dose": "Pulse, blood pressure, respiratory rate, temperature, hydration and consciousness every 15 minutes after rapid tranquillisation in someone who has taken alcohol or drugs",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:adb4cebbce8e",
+       "where": "1.4.45"
+      }
+     ]
+    },
+    {
+     "item": "QT",
+     "dose": "QT prolongation and torsades rise with higher doses and IV use; if IV is unavoidable, limit it to 5 to 10 mg a day with continuous ECG monitoring",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3006383969b7",
+       "where": "Warnings: cardiovascular effects"
+      },
+      {
+       "docId": "pmid:22461918",
+       "where": "The use of first-generation antipsychotics"
+      }
+     ]
+    },
+    {
+     "item": "Older patients with dementia",
+     "dose": "Boxed warning: antipsychotics raise the risk of death in elderly patients with dementia-related psychosis; ACEP 2024 made no agent recommendation for patients 65 or older",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3006383969b7",
+       "where": "Boxed warning"
+      },
+      {
+       "docId": "pmid:29630205",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Parkinson disease or dementia with Lewy bodies",
+     "dose": "Haloperidol injection is contraindicated",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:3006383969b7",
+       "where": "Contraindications; Warnings"
+      }
+     ]
+    }
+   ],
+   "next": "restraint",
+   "sources": [
+    {
+     "docId": "pmid:22461918",
+     "where": "Agitation due to intoxication 2; The use of second-generation antipsychotics; Table; Figure"
+    },
+    {
+     "docId": "pmid:29630205",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "url:adb4cebbce8e",
+     "where": "1.4.45"
+    },
+    {
+     "docId": "url:3006383969b7",
+     "where": "Dosage and administration"
+    },
+    {
+     "docId": "pmid:22461919",
+     "where": "Guidelines for the use of seclusion and restraint"
+    }
+   ]
+  },
+  {
+   "id": "im_bzd",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Violent despite de-escalation; no psychosis or delirium, not drunk. Next?",
+   "options": [
+    "A benzodiazepine, such as lorazepam IM, while the cause is sought",
+    "IM haloperidol with IM promethazine, before an ECG has been recorded",
+    "Restraints now, and medicine once the drug screen result is back",
+    "IV haloperidol every 15 minutes until they fall asleep"
+   ],
+   "answer": 0,
+   "chainStep": "Benzodiazepine first when there is no psychosis: lorazepam 2 mg IM, a single dose reviewed before any repeat (maximum 12 mg in 24 hours, BETA table); the cause search continues (withdrawal, stimulants, medical illness)",
+   "why": "When the cause is unclear and there are no psychotic features, BETA recommends a benzodiazepine first; it is also the agent of choice in alcohol or benzodiazepine withdrawal and in stimulant intoxication. NICE likewise uses IM lorazepam when information is insufficient or the patient has never taken an antipsychotic, and avoids IM haloperidol with promethazine when no ECG has been done. The first dose is written as a single dose and its effect reviewed before another, and medication is meant to calm, not to induce sleep.",
+   "orders": [
+    {
+     "item": "Lorazepam",
+     "dose": "2 mg IM; may repeat after 2 hours; maximum 12 mg in 24 hours (BETA table)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:22461918",
+       "where": "Table: intramuscular medication"
+      }
+     ]
+    },
+    {
+     "item": "Single dose first",
+     "dose": "Write the first dose as a single dose and do not repeat it until its effect has been reviewed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:adb4cebbce8e",
+       "where": "1.4.44"
+      }
+     ]
+    },
+    {
+     "item": "No ECG yet",
+     "dose": "Avoid IM haloperidol with promethazine; use IM lorazepam",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:adb4cebbce8e",
+       "where": "1.4.39"
+      }
+     ]
+    }
+   ],
+   "next": "restraint",
+   "sources": [
+    {
+     "docId": "pmid:22461918",
+     "where": "Agitation from unknown or complex reasons; Agitation associated with delirium 3; Agitation due to intoxication 1; Table"
+    },
+    {
+     "docId": "url:adb4cebbce8e",
+     "where": "1.4.38; 1.4.39; 1.4.44"
+    },
+    {
+     "docId": "pmid:22461919",
+     "where": "Guidelines for the use of seclusion and restraint"
+    }
+   ]
+  },
+  {
+   "id": "restraint",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Held by staff for the injection; now in restraints. Next?",
+   "options": [
+    "Watch constantly, face-to-face review within 1 hour, release when safe",
+    "Prone restraint until the medicine takes effect, to keep staff safe",
+    "A 24-hour restraint order, to be reviewed at the next morning's round",
+    "Restraints stay on overnight so the patient can sleep it off"
+   ],
+   "answer": 0,
+   "chainStep": "Supine rather than prone; nothing pressing on the chest, neck or abdomen; one lead protects the head and neck; constant observation with vital signs; oxygen and glucose if not yet done; face-to-face evaluation within 1 hour; time-limited order (4 hours in adults); medicate to calm; remove as soon as the patient is no longer a danger; after rapid tranquillisation, observations at least hourly, every 15 minutes if sedated or after alcohol or drugs",
+   "why": "Restraint is used only when less restrictive measures have failed, to keep people physically safe, and never as coercion, discipline, convenience or retaliation. The patient is evaluated face to face within 1 hour; orders are time limited (4 hours for adults, 2 hours from 9 to 17, 1 hour under 9) and restraints come off as soon as the danger has passed. Prone restraint risks suffocation, so the patient is held supine where possible, with nothing pressing on the chest, neck or abdomen; restraint beyond 4 hours raises the risk of deep vein thrombosis, and fighting restraints causes rhabdomyolysis. All restrained patients are monitored, and medication is given to calm them.",
+   "orders": [
+    {
+     "item": "Face-to-face evaluation",
+     "dose": "Within 1 hour of starting restraint or seclusion, by a physician or other licensed practitioner, or a specially trained nurse or physician assistant (CMS)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:22461919",
+       "where": "Introduction: CMS conditions"
+      },
+      {
+       "docId": "pmid:33351431",
+       "where": "Introduction"
+      }
+     ]
+    },
+    {
+     "item": "Order length (Joint Commission)",
+     "dose": "4 hours for adults, 2 hours for ages 9 to 17, 1 hour under 9; a new order to continue",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33351431",
+       "where": "Clinical significance: time limits"
+      }
+     ]
+    },
+    {
+     "item": "Prone restraint",
+     "dose": "Risk of positional suffocation; supine if possible, prone only as briefly as possible",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:adb4cebbce8e",
+       "where": "1.4.24"
+      },
+      {
+       "docId": "pmid:33351431",
+       "where": "Key clinical considerations"
+      }
+     ]
+    },
+    {
+     "item": "Manual holding",
+     "dose": "Not routinely beyond 10 minutes; consider rapid tranquillisation instead",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:adb4cebbce8e",
+       "where": "1.4.29; 1.4.30"
+      }
+     ]
+    },
+    {
+     "item": "Observations after rapid tranquillisation",
+     "dose": "Pulse, blood pressure, respiratory rate, temperature, hydration and consciousness at least hourly; every 15 minutes if asleep or sedated, after alcohol or drugs, with a physical illness, or above the BNF maximum dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:adb4cebbce8e",
+       "where": "1.4.45"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen and glucose",
+     "dose": "Check at once if they could not be obtained before the restraint",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:22461915",
+       "where": "Triage of the agitated patient: medical setting"
+      }
+     ]
+    }
+   ],
+   "note": "Restraint and seclusion rules can be stricter under state law; the sources give federal and Joint Commission standards only.",
+   "next": "assess",
+   "sources": [
+    {
+     "docId": "pmid:22461919",
+     "where": "Introduction: CMS conditions; Guidelines for the use of seclusion and restraint"
+    },
+    {
+     "docId": "pmid:33351431",
+     "where": "Introduction; Key clinical considerations; Clinical significance"
+    },
+    {
+     "docId": "url:adb4cebbce8e",
+     "where": "1.4.24; 1.4.25; 1.4.29; 1.4.32; 1.4.45"
+    },
+    {
+     "docId": "pmid:22461915",
+     "where": "Triage of the agitated patient: medical setting"
+    },
+    {
+     "docId": "pmid:29630205",
+     "where": "Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "assess",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Calmer, or calm on arrival, with no emergency at the door. Next?",
+   "options": [
+    "History, collateral, substances and medicines; exam and cognitive check",
+    "CT head and a full blood panel first, before the history is taken",
+    "A urine drug screen first, and let its result decide psychiatric or medical",
+    "Psychiatric admission now; the medical history can follow on the ward"
+   ],
+   "answer": 0,
+   "chainStep": "History from the patient and collateral (onset, past episodes, substances and last use, medicines and recent changes, suicidal thoughts); vital signs; examination with neurologic and mental status exam and a brief cognitive screen; tests directed by the findings",
+   "why": "Vital signs, history, physical examination and an assessment of mentation are the minimum for every patient; the history finds most medical illness, and routine laboratory testing is not indicated, with testing directed by the most likely diagnosis (BETA; AAEP 2017). A urine drug screen rarely changes the ED disposition, and ACEP rated routine screening unnecessary (Level C). New symptoms after 45, age 65 or more, cognitive deficits, focal signs, intoxication or withdrawal, reduced awareness or abnormal vital signs call for a fuller medical evaluation.",
+   "orders": [
+    {
+     "item": "Fuller medical evaluation",
+     "dose": "New psychiatric symptoms after 45, age 65 or older, cognitive deficits or delirium, physical symptoms, focal signs or head injury, intoxication or withdrawal, reduced awareness, abnormal vital signs",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28611885",
+       "where": "Recommendation 2"
+      }
+     ]
+    },
+    {
+     "item": "Urine drug screen",
+     "dose": "Rarely changes ED disposition; ACEP rated routine testing unnecessary (Level C); a receiving unit may still ask for it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28611885",
+       "where": "The role of routine laboratory testing; Recommendation 5"
+      }
+     ]
+    }
+   ],
+   "next": "cause",
+   "sources": [
+    {
+     "docId": "pmid:28611885",
+     "where": "Recommendations 2 and 4; The role of routine laboratory testing"
+    },
+    {
+     "docId": "pmid:22461915",
+     "where": "Overview of medical evaluation; Conclusion"
+    }
+   ]
+  },
+  {
+   "id": "cause",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "History, collateral and examination",
+   "outcomes": [
+    {
+     "id": "aws",
+     "if": "Alcohol withdrawal; tremor, sweats, fast pulse after stopping drinking, clear sensorium",
+     "ddx": {
+      "lead": [
+       "Alcohol withdrawal"
+      ],
+      "out": []
+     },
+     "next": "aws_assess"
+    },
+    {
+     "id": "dt",
+     "if": "Withdrawal delirium; disoriented and hallucinating days after the last drink",
+     "ddx": {
+      "lead": [
+       "Delirium tremens"
+      ],
+      "out": []
+     },
+     "next": "dt_step"
+    },
+    {
+     "id": "wernicke",
+     "if": "Wernicke picture; confusion with eye signs or ataxia in a drinker, no hallucinations",
+     "ddx": {
+      "lead": [
+       "Wernicke encephalopathy"
+      ],
+      "out": []
+     },
+     "next": "wernicke_step"
+    },
+    {
+     "id": "benzo",
+     "if": "Sedative withdrawal; stopped a daily benzodiazepine, tremor, anxiety",
+     "ddx": {
+      "lead": [
+       "Benzodiazepine withdrawal"
+      ],
+      "out": []
+     },
+     "next": "benzo_step"
+    },
+    {
+     "id": "opioid",
+     "if": "Opioid use disorder; withdrawal signs or asking for treatment",
+     "ddx": {
+      "lead": [
+       "Opioid withdrawal"
+      ],
+      "out": []
+     },
+     "next": "cows_step"
+    },
+    {
+     "id": "dystonia",
+     "if": "Acute dystonia; neck or eyes forced after a dopamine blocker",
+     "ddx": {
+      "lead": [
+       "Acute dystonia"
+      ],
+      "out": []
+     },
+     "next": "dystonia_step"
+    },
+    {
+     "id": "akathisia",
+     "if": "Akathisia; cannot sit still after starting an antipsychotic",
+     "ddx": {
+      "lead": [
+       "Akathisia"
+      ],
+      "out": []
+     },
+     "next": "akathisia_step"
+    },
+    {
+     "id": "psychosis",
+     "if": "Psychosis or mania; delusions, voices or pressured speech, attentive, no suicidal talk",
+     "ddx": {
+      "lead": [
+       "Primary psychotic disorder",
+       "Mania",
+       "Medical cause of psychosis"
+      ],
+      "out": []
+     },
+     "next": "psych_step"
+    },
+    {
+     "id": "suicidal",
+     "if": "Suicide risk to screen; low mood, self-harm talk or a crisis",
+     "ddx": {
+      "lead": [
+       "Suicidal crisis"
+      ],
+      "out": []
+     },
+     "next": "asq_step"
+    },
+    {
+     "id": "delirium",
+     "if": "Delirium or dementia; inattentive and fluctuating, often older, not in withdrawal",
+     "ddx": {
+      "lead": [
+       "Delirium"
+      ],
+      "out": []
+     },
+     "next": "end_delirium"
+    },
+    {
+     "id": "intox",
+     "if": "Intoxicated and settling; alcohol or a drug, no withdrawal signs",
+     "ddx": {
+      "lead": [
+       "Alcohol intoxication"
+      ],
+      "out": []
+     },
+     "next": "end_intox"
+    },
+    {
+     "id": "none",
+     "if": "No acute cause found; settled, oriented, no risk to self or others",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_none"
+    }
+   ]
+  },
+  {
+   "id": "end_delirium",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Delirium or dementia with agitation: the altered mental status pathway (pw_ams) takes it from here, with the cause search, the 4AT, and short-term low-dose haloperidol only when de-escalation fails. Antipsychotics carry a boxed warning for increased death in older people with dementia-related psychosis, haloperidol is contraindicated in Parkinson disease and dementia with Lewy bodies, and benzodiazepines can worsen delirium unless it comes from alcohol or benzodiazepine withdrawal (BETA)."
+  },
+  {
+   "id": "end_none",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No acute medical or psychiatric cause found: home once settled and sober, with follow-up for any mental health or substance need, and the 988 Suicide and Crisis Lifeline."
+  },
+  {
+   "id": "end_intox",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Intoxication settling: observe until sober, with breathing and consciousness checked every 15 minutes if rapid tranquillisation was needed, look for injury, hypoglycemia and co-ingestion, and reassess mental state, suicidal thoughts and capacity when sober; after self-harm, a breath or blood alcohol level does not delay the psychosocial assessment (NICE). An overdose or a toxidrome goes to the toxicology pathway (pw_tox), and withdrawal signs bring the patient back to this pathway's withdrawal route."
+  },
+  {
+   "id": "aws_assess",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Tremor, sweats and a fast pulse after stopping heavy drinking; oriented. Next?",
+   "options": [
+    "Score it with CIWA-Ar; ask about past seizures or DTs; check electrolytes",
+    "Confirm a breath alcohol of zero first, since withdrawal needs it to be gone",
+    "A head CT before the withdrawal is scored or treated",
+    "Clonidine to bring the pulse and pressure down, then score the tremor"
+   ],
+   "answer": 0,
+   "chainStep": "CIWA-Ar (awake, alert patients) with vital signs, repeated; history of withdrawal seizures or delirium tremens, age, medical illness, other sedative use; glucose, electrolytes with magnesium and phosphate, kidney and liver tests; thiamine",
+   "why": "Alcohol withdrawal is a clinical diagnosis, and CIWA-Ar scores its severity in an awake, alert patient (8 or less mild, 8 to 15 moderate, over 15 severe in StatPearls); NICE uses such a tool as an adjunct to clinical judgement. Past seizures or delirium, medical illness, age over 65 and benzodiazepine dependence predict severe withdrawal. Withdrawal follows a relative fall in alcohol: the ED review notes symptoms while the blood level is still raised, and BETA describes a low or undetectable level. Tests are directed by the likely diagnosis rather than done routinely, and other neurologic causes come into play with seizures or delirium. Electrolytes including magnesium and phosphate are checked and replaced. Clonidine and beta blockers only mask the signs and prevent neither seizures nor delirium tremens.",
+   "orders": [
+    {
+     "item": "CIWA-Ar",
+     "dose": "8 or less mild, 8 to 15 moderate, over 15 severe (StatPearls; the bands meet at 8); only in awake, alert patients",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722912",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Risk of severe withdrawal",
+     "dose": "Past withdrawal seizures or delirium, medical comorbidity, age over 65, benzodiazepine dependence",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722912",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Electrolytes",
+     "dose": "Magnesium and phosphorus checked and replaced; thiamine and folate given",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722912",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Timing",
+     "dose": "Uncomplicated symptoms from 6 hours; hallucinations with a clear sensorium from 8 to 12 hours; seizures mostly at 12 to 24 hours, up to 48; delirium tremens: the sources differ",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:32256131",
+       "where": "Stages of AWS"
+      },
+      {
+       "docId": "pmid:28722912",
+       "where": "Introduction; Complications"
+      }
+     ],
+     "note": "ED review: delirium tremens typically begins after 1 to 3 days; StatPearls: from 3 to 8 days, or up to 3 to 5 days."
+    }
+   ],
+   "next": "aws_sev",
+   "sources": [
+    {
+     "docId": "pmid:28722912",
+     "where": "Evaluation; History and physical; Treatment / management; Differential diagnosis"
+    },
+    {
+     "docId": "url:9ecc1eb10935",
+     "where": "1.3.5.8"
+    },
+    {
+     "docId": "pmid:32256131",
+     "where": "Diagnostic criteria; Adjunctive medications"
+    },
+    {
+     "docId": "pmid:22461915",
+     "where": "Conclusion 1"
+    },
+    {
+     "docId": "pmid:22461918",
+     "where": "Agitation due to intoxication 2"
+    }
+   ]
+  },
+  {
+   "id": "aws_sev",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CIWA-Ar, history and the next hour",
+   "outcomes": [
+    {
+     "id": "mild",
+     "if": "Mild and low risk; CIWA-Ar under 8, no seizure now or in the past, no DTs, support at home",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_aws_mild"
+    },
+    {
+     "id": "modsev",
+     "if": "Moderate or severe, or high risk; CIWA-Ar 8 or more, past seizures or DTs, over 65, ill, on benzodiazepines or no support, no seizure now",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "aws_tx"
+    },
+    {
+     "id": "seizure",
+     "if": "Withdrawal seizure; a generalized seizure in the ED, now awake",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "aws_seizure"
+    }
+   ]
+  },
+  {
+   "id": "end_aws_mild",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Mild withdrawal without risk factors: outpatient treatment with a support person, a tapering benzodiazepine or gabapentin regimen (NICE uses fixed-dose regimens in the community, with no more than 2 days of medication supplied at a time), oral thiamine, return advice if symptoms worsen, and contact details for alcohol services. Treat the alcohol use disorder too: naltrexone, acamprosate or disulfiram."
+  },
+  {
+   "id": "aws_seizure",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "A generalized seizure in alcohol withdrawal; now awake. Next?",
+   "options": [
+    "Lorazepam 2 mg IV now, then admission for the withdrawal",
+    "Load with phenytoin to stop a second seizure",
+    "Levetiracetam load and an outpatient EEG for the seizure",
+    "Watch for 6 hours and treat a second seizure if one comes"
+   ],
+   "answer": 0,
+   "chainStep": "Lorazepam 2 mg IV; no phenytoin; admit for medically assisted withdrawal; symptom-triggered benzodiazepine; glucose, electrolytes and magnesium; a first-ever seizure, focal features, head injury or slow recovery go to the seizure pathway (pw_seizure)",
+   "why": "After a witnessed alcohol withdrawal seizure, a single 2 mg dose of IV lorazepam cut recurrence within 6 hours from 24.4% with placebo to 3% in an ED trial, and NICE considers a quick-acting benzodiazepine such as lorazepam. Untreated, about two thirds go on to more seizures, and after a withdrawal seizure delirium tremens is also a risk, so the patient is admitted. NICE does not offer phenytoin for withdrawal seizures, and anticonvulsants did no better than placebo for them in a Cochrane review.",
+   "orders": [
+    {
+     "item": "Lorazepam",
+     "dose": "2 mg IV once after the seizure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34742248",
+       "where": "Results: benzodiazepines; Table 2"
+      }
+     ]
+    },
+    {
+     "item": "NICE",
+     "dose": "A quick-acting benzodiazepine such as lorazepam to reduce further seizures; no dose stated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.1.5.1"
+      }
+     ]
+    },
+    {
+     "item": "Phenytoin",
+     "dose": "Do not offer for alcohol withdrawal seizures",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.1.5.3"
+      }
+     ]
+    },
+    {
+     "item": "Admission",
+     "dose": "For withdrawal with, or at high risk of, seizures or delirium tremens",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.1.1.1"
+      }
+     ]
+    }
+   ],
+   "next": "aws_tx",
+   "sources": [
+    {
+     "docId": "pmid:34742248",
+     "where": "Results: benzodiazepines; Table 2"
+    },
+    {
+     "docId": "url:053089e98c8e",
+     "where": "1.1.5.1; 1.1.5.3; 1.1.1.1"
+    },
+    {
+     "docId": "pmid:32256131",
+     "where": "Stages of AWS; Other anti-epileptic drugs"
+    },
+    {
+     "docId": "pmid:28722912",
+     "where": "Prognosis"
+    }
+   ]
+  },
+  {
+   "id": "aws_tx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Moderate to severe alcohol withdrawal, or after a withdrawal seizure. Treatment?",
+   "options": [
+    "A benzodiazepine by CIWA-Ar triggers; lorazepam if the liver is impaired",
+    "Haloperidol for the tremor and the agitation, holding the benzodiazepine",
+    "A fixed 7-day chlordiazepoxide taper, all 7 days dispensed tonight",
+    "Gabapentin by itself, as used for mild withdrawal in outpatients"
+   ],
+   "answer": 0,
+   "chainStep": "Admit to a monitored bed; symptom-triggered benzodiazepine by CIWA-Ar every 1 to 2 hours (diazepam first line; lorazepam at a reduced dose with liver impairment; lower doses in older people); front-load in severe withdrawal; thiamine (route and dose differ by source); magnesium, phosphate and potassium replaced; no antipsychotic monotherapy",
+   "why": "In hospital, NICE follows a symptom-triggered regimen, and moderate to severe withdrawal needs inpatient care with frequent reassessment. Diazepam is first line for its rapid onset and long action unless the liver is a concern, when lorazepam is used, started at a reduced dose with liver function watched; doses may also need reducing in older people. Antipsychotic monotherapy raises the risk of complicated withdrawal, gabapentin suits mild rather than severe withdrawal, and even a community taper is dispensed no more than 2 days at a time.",
+   "orders": [
+    {
+     "item": "Regimen",
+     "dose": "NICE CG100: symptom-triggered in hospital or wherever 24-hour assessment is available; CG115: fixed-dose in community programmes, fixed-dose or symptom-triggered in inpatient settings; in a meta-analysis, symptom-triggered dosing used less benzodiazepine over a shorter course",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.1.3.4"
+      },
+      {
+       "docId": "url:9ecc1eb10935",
+       "where": "1.3.5.1; 1.3.5.2"
+      },
+      {
+       "docId": "pmid:32256131",
+       "where": "Benzodiazepines"
+      }
+     ]
+    },
+    {
+     "item": "Symptom-triggered (sample protocol)",
+     "dose": "Lorazepam 2 mg every 2 hours as needed for CIWA-Ar over 15 and every 6 hours for 8 to 15, stopping when under 8 for 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32256131",
+       "where": "Table 2"
+      }
+     ]
+    },
+    {
+     "item": "Diazepam (US label)",
+     "dose": "10 mg IM or IV initially, then 5 to 10 mg in 3 to 4 hours if needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0ea2cefd9415",
+       "where": "Dosage and administration"
+      }
+     ]
+    },
+    {
+     "item": "Chlordiazepoxide (US label)",
+     "dose": "50 to 100 mg by mouth, repeated as needed until agitation is controlled, up to 300 mg a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:e6e8a2b620bf",
+       "where": "Dosage and administration"
+      }
+     ]
+    },
+    {
+     "item": "Front-loading (ASAM, as reported)",
+     "dose": "Severe withdrawal (for example CIWA-Ar 19 or more): diazepam 10 mg by mouth every hour while CIWA-Ar is 10 or more, or 20 mg every 2 hours for 3 doses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261973",
+       "where": "Administration: dosage"
+      }
+     ]
+    },
+    {
+     "item": "Liver impairment",
+     "dose": "Lorazepam, started at a reduced dose, with liver function monitored",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:9ecc1eb10935",
+       "where": "1.3.5.10"
+      },
+      {
+       "docId": "pmid:29261973",
+       "where": "Administration: specific patient populations"
+      }
+     ]
+    },
+    {
+     "item": "Severe or decompensated liver disease",
+     "dose": "The sources differ",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:30422485",
+       "where": "Administration"
+      },
+      {
+       "docId": "url:9ecc1eb10935",
+       "where": "1.3.5.10"
+      },
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.1.3.2"
+      }
+     ],
+     "note": "StatPearls prefers lorazepam in advanced liver disease; NICE CG115 (planned withdrawal) avoids benzodiazepines in severe liver impairment; NICE CG100 asks for a liver specialist's advice in decompensated disease."
+    },
+    {
+     "item": "Moderate withdrawal without risk factors",
+     "dose": "Setting differs by source",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:28722912",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:32256131",
+       "where": "Table 3"
+      }
+     ],
+     "note": "StatPearls gives moderate to severe withdrawal inpatient-level care; the ED review's ASAM table allows home with family or outpatient support, or residential monitoring."
+    },
+    {
+     "item": "Thiamine in withdrawal",
+     "dose": "Route and dose differ by source",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.2.1.2; 1.2.1.3"
+      },
+      {
+       "docId": "pmid:28722912",
+       "where": "Treatment / management; Pearls and other issues"
+      }
+     ],
+     "note": "NICE: oral prophylaxis in acute withdrawal, parenteral then oral if malnourished or with decompensated liver disease and attending the ED; StatPearls: IV or IM at Wernicke treatment doses. pw_ams follows NICE."
+    },
+    {
+     "item": "Older people",
+     "dose": "Benzodiazepine doses may need to be reduced",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:9ecc1eb10935",
+       "where": "1.3.5.9"
+      }
+     ]
+    },
+    {
+     "item": "Antipsychotic monotherapy",
+     "dose": "Avoid in alcohol withdrawal (ASAM, as reported): it may lead to delirium tremens and complicated withdrawal",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:29630205",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "High-dose IV lorazepam or diazepam",
+     "dose": "Watch for hyponatremia and metabolic acidosis from the propylene glycol vehicle",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261973",
+       "where": "Monitoring"
+      }
+     ]
+    },
+    {
+     "item": "Magnesium sulfate",
+     "dose": "Symptomatic severe low magnesium: 1 to 2 g IV over 1 hour (over about 15 minutes if unstable); non-emergent repletion 4 to 8 g over 12 to 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29763179",
+       "where": "Treatment / management"
+      }
+     ]
+    }
+   ],
+   "next": "aws_resp",
+   "sources": [
+    {
+     "docId": "url:053089e98c8e",
+     "where": "1.1.3.1; 1.1.3.4"
+    },
+    {
+     "docId": "url:9ecc1eb10935",
+     "where": "1.3.5.9; 1.3.5.10"
+    },
+    {
+     "docId": "pmid:28722912",
+     "where": "Evaluation; Treatment / management"
+    },
+    {
+     "docId": "pmid:29261973",
+     "where": "Administration; Monitoring"
+    },
+    {
+     "docId": "pmid:29630205",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:32256131",
+     "where": "Benzodiazepines; Gabapentin; Table 2"
+    },
+    {
+     "docId": "url:9ecc1eb10935",
+     "where": "1.3.5.5"
+    }
+   ]
+  },
+  {
+   "id": "aws_resp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Response over the next hours",
+   "outcomes": [
+    {
+     "id": "settles",
+     "if": "Settling; CIWA-Ar falling, vital signs improving",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_aws_admit"
+    },
+    {
+     "id": "resistant",
+     "if": "Escalating; delirium, or over 40 mg of diazepam needed in an hour",
+     "ddx": {
+      "lead": [
+       "Delirium tremens"
+      ],
+      "out": []
+     },
+     "next": "dt_step"
+    }
+   ]
+  },
+  {
+   "id": "end_aws_admit",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Moderate to severe withdrawal settling: symptom-triggered benzodiazepine in a monitored bed, thiamine, magnesium and phosphate repletion with an eye on refeeding, and treatment of the alcohol use disorder before discharge (naltrexone, acamprosate or disulfiram) with follow-up. Worsening despite standard doses brings in the critical care team."
+  },
+  {
+   "id": "dt_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Withdrawal delirium, or benzodiazepine needs climbing fast. Next?",
+   "options": [
+    "ICU-level care; a benzodiazepine titrated up, phenobarbital if it fails",
+    "Haloperidol as the first drug, with no benzodiazepine, for the hallucinations",
+    "A phenytoin load to prevent withdrawal seizures",
+    "Clonidine or a beta blocker to bring the pulse and pressure down"
+   ],
+   "answer": 0,
+   "chainStep": "ICU or high-dependency care; benzodiazepine titrated to a calm, drowsy but rousable state (StatPearls: lorazepam 1 to 4 mg IV every 5 to 15 minutes; NICE: oral lorazepam first, then parenteral lorazepam or haloperidol); phenobarbital as rescue; IV thiamine; fluids and electrolytes with magnesium and phosphate; look for infection and head injury",
+   "why": "Delirium tremens brings confusion, hallucinations, fever, tachycardia and hypertension, 1 to 3 days after the last drink in the ED review, later in StatPearls, and it often needs intensive care, especially after high doses of benzodiazepines or phenobarbital; needing more than 40 mg of diazepam in an hour marks benzodiazepine-resistant withdrawal. A benzodiazepine is the treatment, with phenobarbital as monotherapy or rescue; NICE starts with oral lorazepam and adds parenteral lorazepam or haloperidol if symptoms persist, so haloperidol does not come first or alone. NICE does not offer phenytoin for withdrawal seizures, and beta blockers or clonidine mask the signs without preventing seizures or delirium tremens.",
+   "orders": [
+    {
+     "item": "Lorazepam (StatPearls)",
+     "dose": "Withdrawal delirium: 1 to 4 mg IV every 5 to 15 minutes until calm, or 1 to 4 mg IM every 30 to 60 minutes, then repeated hourly as needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30422485",
+       "where": "Administration"
+      }
+     ]
+    },
+    {
+     "item": "NICE CG100",
+     "dose": "Oral lorazepam first line; parenteral lorazepam or haloperidol if symptoms persist or oral medication is declined; no dose stated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.1.4.1"
+      }
+     ]
+    },
+    {
+     "item": "Target",
+     "dose": "Drowsy but rousable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32256131",
+       "where": "Benzodiazepines"
+      }
+     ]
+    },
+    {
+     "item": "Benzodiazepine-resistant withdrawal",
+     "dose": "More than 40 mg of diazepam, or its equivalent, within 1 hour",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32256131",
+       "where": "Adjunctive medications"
+      }
+     ]
+    },
+    {
+     "item": "Phenobarbital",
+     "dose": "Monotherapy in place of benzodiazepines, or rescue",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722912",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Phenobarbital regimens in ED studies",
+     "dose": "10 mg/kg IV over 30 minutes once, followed by symptom-triggered lorazepam (one trial); or 260 mg IV, then 130 mg IV repeated at the physician's discretion (another)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32256131",
+       "where": "Table 2"
+      },
+      {
+       "docId": "pmid:34742248",
+       "where": "Results: phenobarbital"
+      }
+     ],
+     "note": "The 10 mg/kg trial cut ICU admissions but was judged at high risk of bias."
+    },
+    {
+     "item": "Intensive care",
+     "dose": "In severe, unstable withdrawal: older patients, active delirium tremens, or severe agitation needing sedation for safety",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32256131",
+       "where": "Table 3"
+      }
+     ]
+    },
+    {
+     "item": "Phenytoin",
+     "dose": "Do not offer for alcohol withdrawal seizures",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.1.5.3"
+      }
+     ]
+    },
+    {
+     "item": "Beta blockers and clonidine",
+     "dose": "Adjuncts only: they neither treat nor prevent delirium tremens or seizures and can mask severity",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32256131",
+       "where": "Adjunctive medications"
+      }
+     ]
+    }
+   ],
+   "next": "end_dt",
+   "sources": [
+    {
+     "docId": "pmid:28722912",
+     "where": "Introduction; Treatment / management; Complications"
+    },
+    {
+     "docId": "pmid:32256131",
+     "where": "Stages of AWS; Benzodiazepines; Adjunctive medications; Table 3"
+    },
+    {
+     "docId": "url:053089e98c8e",
+     "where": "1.1.4.1; 1.1.5.3"
+    },
+    {
+     "docId": "pmid:30422485",
+     "where": "Administration"
+    },
+    {
+     "docId": "pmid:29630205",
+     "where": "Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_dt",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Delirium tremens or benzodiazepine-resistant withdrawal: intensive care, a benzodiazepine titrated to a drowsy but rousable state with phenobarbital as rescue, IV thiamine at treatment doses, fluids and electrolytes with magnesium and phosphate, and a search for infection, head injury and other causes. Mortality was as high as 20% historically and is now about 1%. Treat the alcohol use disorder once it settles."
+  },
+  {
+   "id": "wernicke_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "A malnourished drinker: confused, nystagmus, wide-based gait. Next?",
+   "options": [
+    "High-dose IV thiamine now, given before or with any glucose",
+    "Oral thiamine 100 mg a day once they are eating again",
+    "MRI of the brain first, to confirm the diagnosis before treating",
+    "IV dextrose now, with thiamine once the morning bloods return"
+   ],
+   "answer": 0,
+   "chainStep": "IV thiamine at treatment doses now (Royal College and UK guidelines: 500 mg every 8 hours for 3 days, then 250 mg daily; EFNS: 200 mg every 8 hours), before or with any glucose, never delaying treatment of hypoglycemia; parenteral for at least 5 days unless Wernicke's is excluded, then oral; magnesium checked and replaced; admit",
+   "why": "Wernicke encephalopathy is suspected on confusion, eye signs or ataxia in someone at risk: only about 16% have all three and 19% none at first, and brain imaging cannot exclude it. NICE gives parenteral thiamine for at least 5 days unless it is excluded, then oral; oral dosing is unreliable, and 100 mg a day is likely too little. Glucose raises thiamine needs, so thiamine goes in before or with glucose when feasible, but treatment of significant hypoglycemia is never delayed for it. Low magnesium blunts recovery, so it is replaced.",
+   "orders": [
+    {
+     "item": "Thiamine dose",
+     "dose": "Royal College and UK guidelines: 500 mg IV every 8 hours for 3 days, then 250 mg IV or IM daily until improvement plateaus; EFNS: 200 mg IV every 8 hours until no further improvement",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29261914",
+       "where": "Treatment / management"
+      }
+     ],
+     "note": "The guidelines differ on the dose; NICE CG100 asks for doses toward the upper end of the BNF range without a number; pw_ams and pw_seizure show the US label's 100 mg IV initially, which pw_ams notes describes past use, not a high-dose regimen."
+    },
+    {
+     "item": "Duration (NICE)",
+     "dose": "Parenteral for at least 5 days unless Wernicke's encephalopathy is excluded, then oral",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.2.1.4"
+      }
+     ]
+    },
+    {
+     "item": "Glucose",
+     "dose": "Thiamine before or with glucose when feasible; never delay treatment of significant hypoglycemia for it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261914",
+       "where": "Etiology"
+      }
+     ]
+    },
+    {
+     "item": "Magnesium",
+     "dose": "Replace a deficiency: it reduces recovery",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261914",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Prophylaxis (NICE)",
+     "dose": "Malnourished harmful or dependent drinkers who attend the ED: parenteral thiamine, then oral",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:053089e98c8e",
+       "where": "1.2.1.3"
+      }
+     ]
+    },
+    {
+     "item": "Infusion",
+     "dose": "Diluted in 100 mL of saline or 5% glucose over 30 minutes; anaphylaxis is rare, mostly after repeated IV doses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261914",
+       "where": "Treatment / management"
+      }
+     ]
+    }
+   ],
+   "next": "end_wernicke",
+   "sources": [
+    {
+     "docId": "pmid:29261914",
+     "where": "Etiology; Epidemiology; Evaluation; Treatment / management"
+    },
+    {
+     "docId": "url:053089e98c8e",
+     "where": "1.2.1.1; 1.2.1.3; 1.2.1.4"
+    },
+    {
+     "docId": "pmid:28722912",
+     "where": "Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_wernicke",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Wernicke encephalopathy: high-dose parenteral thiamine for at least 5 days unless it is excluded, then oral; glucose given with or after it but never held back in hypoglycemia; magnesium replaced; admission. Eye signs improve first, gait and memory more slowly, and persisting amnesia suggests Korsakoff syndrome. Any withdrawal is treated in parallel on this pathway's alcohol route."
+  },
+  {
+   "id": "benzo_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Stopped a daily benzodiazepine days ago; tremor, anxiety, fast pulse. Next?",
+   "options": [
+    "Restart a benzodiazepine, ideally longer-acting, and taper it slowly",
+    "Flumazenil to confirm benzodiazepine dependence before treating",
+    "Haloperidol in place of a benzodiazepine, for the anxiety and agitation",
+    "Reassure them that the withdrawal is unpleasant but not dangerous"
+   ],
+   "answer": 0,
+   "chainStep": "Restart a benzodiazepine at a dose that controls the withdrawal, or switch to a comparable dose of a longer-acting one; taper slowly (5 to 10% steps, no faster than 25% every 2 weeks); inpatient care for seizures, delirium or severe withdrawal, where phenobarbital can be considered by experienced clinicians; no flumazenil",
+   "why": "Abrupt or rapid discontinuation in a physically dependent patient can cause life-threatening withdrawal, ranging from anxiety and insomnia to seizures and delirium, so the drug is not simply stopped. The 2025 joint guideline tapers slowly, can move the patient to a longer-acting benzodiazepine, and manages severe or complicated withdrawal as an inpatient; flumazenil risks refractory seizures and arrhythmias. In benzodiazepine withdrawal delirium a benzodiazepine is the agent of choice (BETA), and antipsychotics lower the seizure threshold.",
+   "orders": [
+    {
+     "item": "Taper",
+     "dose": "Initial reductions of 5 to 10%, typically no faster than 25% every 2 weeks; a comparable dose of a longer-acting benzodiazepine can be used",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40526204",
+       "where": "Recommendations 6 and 7"
+      }
+     ]
+    },
+    {
+     "item": "Severe or complicated withdrawal",
+     "dose": "Inpatient or residential medically managed care with vital signs, structured assessment and seizure-risk management",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40526204",
+       "where": "Recommendation 12"
+      }
+     ]
+    },
+    {
+     "item": "Phenobarbital",
+     "dose": "Can be considered for withdrawal management in inpatient settings, by or with experienced clinicians",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40526204",
+       "where": "Recommendation 13"
+      }
+     ]
+    },
+    {
+     "item": "Flumazenil",
+     "dose": "Avoid: refractory seizures and arrhythmias",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:40526204",
+       "where": "Recommendation 14"
+      }
+     ]
+    },
+    {
+     "item": "Starting dose to control acute withdrawal",
+     "dose": "Not stated in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "GHB withdrawal",
+     "dose": "Can progress within 24 hours to severe, refractory agitation with autonomic instability and last up to 15 days: benzodiazepines and intensive care",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613532",
+       "where": "Pearls and other issues"
+      }
+     ]
+    }
+   ],
+   "next": "end_benzo",
+   "sources": [
+    {
+     "docId": "pmid:40526204",
+     "where": "Recommendations 2, 6, 7, 12, 13 and 14; Withdrawal symptoms"
+    },
+    {
+     "docId": "pmid:22461918",
+     "where": "Agitation associated with delirium 3"
+    },
+    {
+     "docId": "pmid:22461915",
+     "where": "Agitation from alcohol and/or recreational substance intoxication or withdrawal"
+    },
+    {
+     "docId": "pmid:29630205",
+     "where": "Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_benzo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Benzodiazepine withdrawal: restart a benzodiazepine, ideally a comparable dose of a longer-acting one, and taper over weeks to months, no faster than 25% every 2 weeks; inpatient care with vital signs, structured assessment and seizure precautions for severe or complicated withdrawal; no flumazenil. GHB withdrawal can also progress within 24 hours to severe agitation with autonomic instability, lasting up to 15 days: benzodiazepines and the ICU."
+  },
+  {
+   "id": "cows_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Opioid use disorder, asking for treatment, with some withdrawal signs. Next?",
+   "options": [
+    "Score it with COWS and find the time and type of the last opioid",
+    "IV naloxone first, to confirm that they are physically dependent",
+    "Naltrexone today, so that their relapse prevention starts straight away",
+    "Clonidine by itself, holding buprenorphine until they are detoxed"
+   ],
+   "answer": 0,
+   "chainStep": "COWS score; time and type of the last opioid (short-acting, fentanyl, methadone or extended-release); other sedatives and alcohol (no first dose if sedated or intoxicated); pregnancy test; offer buprenorphine",
+   "why": "The COWS rates 11 signs and symptoms (0 to 47). Buprenorphine, a partial agonist with strong receptor affinity, can displace a full agonist and precipitate withdrawal, so the first dose waits for objective withdrawal: TIP 63 cites a COWS of 12 or more as typically adequate, at least 12 hours after a short-acting opioid and at least 24 hours after methadone, and no first dose is given to a sedated or intoxicated patient. Naloxone and naltrexone are antagonists that precipitate withdrawal; naltrexone needs 7 to 10 days off short-acting opioids. Clonidine eases symptoms, while long-term treatment of the use disorder is buprenorphine or methadone.",
+   "orders": [
+    {
+     "item": "COWS",
+     "dose": "11 items scored 0 to 47: mild 5 to 12, moderate 13 to 24, moderately severe 25 to 36, severe greater than 37",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30252268",
+       "where": "Evaluation"
+      }
+     ],
+     "note": "As written in StatPearls, a score of 37 falls in no band."
+    },
+    {
+     "item": "Ready for a first dose",
+     "dose": "A COWS of 12 or more is typically adequate (buprenorphine REMS, as cited in TIP 63); not sedated or intoxicated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f777a19890c2",
+       "where": "Part 3: before prescribing"
+      }
+     ]
+    },
+    {
+     "item": "Naltrexone",
+     "dose": "Wait 7 to 10 days after short-acting and 10 to 14 days after long-acting opioids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f777a19890c2",
+       "where": "Part 3: naltrexone"
+      }
+     ]
+    },
+    {
+     "item": "Symptom relief",
+     "dose": "Loperamide for diarrhea, promethazine for nausea, ibuprofen for myalgia, clonidine for blood pressure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30252268",
+       "where": "Treatment / management"
+      }
+     ]
+    }
+   ],
+   "next": "cows_result",
+   "sources": [
+    {
+     "docId": "url:f777a19890c2",
+     "where": "Part 3: Initiating buprenorphine treatment; Induction; Precipitated withdrawal; Naltrexone"
+    },
+    {
+     "docId": "pmid:30252268",
+     "where": "Etiology; Evaluation; Treatment / management"
+    },
+    {
+     "docId": "url:50158536db73",
+     "where": "2.3 Induction"
+    }
+   ]
+  },
+  {
+   "id": "cows_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "COWS and the last opioid",
+   "outcomes": [
+    {
+     "id": "ready",
+     "if": "Objective withdrawal; COWS 12 or more, past the wait for that opioid",
+     "ddx": {
+      "lead": [
+       "Opioid withdrawal"
+      ],
+      "out": []
+     },
+     "next": "bup_step"
+    },
+    {
+     "id": "early",
+     "if": "Too early; COWS under 12, or methadone or a fentanyl patch too recent",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_early"
+    }
+   ]
+  },
+  {
+   "id": "bup_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "COWS 12 or more, past the wait after the last opioid, not sedated. Next?",
+   "options": [
+    "Buprenorphine under the tongue now; repeat in about 2 hours if needed",
+    "Naltrexone now, since it needs no gap after the last opioid",
+    "Clonidine for now, and buprenorphine once they have been abstinent a week",
+    "Lofexidine for a week to ease withdrawal, then a referral to a clinic"
+   ],
+   "answer": 0,
+   "chainStep": "Buprenorphine (or buprenorphine with naloxone) 2 to 4 mg under the tongue, repeated every 2 hours for continuing withdrawal without sedation, typically up to 8 mg on day 1 (ED trial: 8 mg); enough to continue about 16 mg a day until follow-up within 72 hours; a naloxone kit with overdose education; HIV and hepatitis C testing",
+   "why": "Starting buprenorphine in the ED linked more patients to community treatment than two approaches without medication; in that trial patients in withdrawal got 8 mg in the ED and enough to take 16 mg a day at home until an outpatient visit within 72 hours. TIP 63 starts with 2 to 4 mg and repeats every 2 hours while withdrawal continues without sedation, typically up to 8 mg on day 1. Naltrexone precipitates withdrawal unless the patient has been off short-acting opioids for 7 to 10 days, and buprenorphine is started during withdrawal, not after a week of abstinence. Lofexidine and clonidine ease withdrawal symptoms but do not treat the use disorder, and every patient with opioid use disorder should be told about buprenorphine and where to get it.",
+   "orders": [
+    {
+     "item": "First dose (TIP 63)",
+     "dose": "2 to 4 mg of buprenorphine, or 2 mg/0.5 mg to 4 mg/1 mg with naloxone",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f777a19890c2",
+       "where": "Part 3: Induction"
+      }
+     ]
+    },
+    {
+     "item": "Repeat (TIP 63)",
+     "dose": "About 2 hours later for continued withdrawal without sedation, typically up to 8 mg on day 1; the FDA label's maximum is 8 mg on day 1 and 16 mg on day 2",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f777a19890c2",
+       "where": "Part 3: Induction"
+      }
+     ]
+    },
+    {
+     "item": "ED initiation trial",
+     "dose": "8 mg in the ED for patients in withdrawal, and enough to take 16 mg a day until seen within 72 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f777a19890c2",
+       "where": "Part 3: ED initiation"
+      }
+     ]
+    },
+    {
+     "item": "Waiting time",
+     "dose": "Short-acting opioids: at least 12 hours (TIP 63), 12 to 18 hours (StatPearls), or at least 4 hours with clear moderate withdrawal (label); methadone: at least 24 hours, 36 or more lowering the risk (TIP 63); fentanyl patch: 48 to 72 hours (StatPearls)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:f777a19890c2",
+       "where": "Part 3: Induction; Patients who are currently taking methadone"
+      },
+      {
+       "docId": "pmid:30252268",
+       "where": "Treatment / management"
+      },
+      {
+       "docId": "url:50158536db73",
+       "where": "2.3 Induction"
+      },
+      {
+       "docId": "pmid:29083570",
+       "where": "Administration: induction therapy"
+      }
+     ],
+     "note": "The label's 4-hour minimum after a short-acting opioid is shorter than the 12 hours in TIP 63 and StatPearls; all require objective withdrawal before the first dose. StatPearls also gives a 4 to 12 mg first dose."
+    },
+    {
+     "item": "Naloxone kit",
+     "dose": "Every patient who misuses opioids or has opioid use disorder: overdose prevention education and a naloxone prescription",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f777a19890c2",
+       "where": "Part 2: Preventing opioid-related overdose"
+      }
+     ]
+    },
+    {
+     "item": "Nasal naloxone (OTC label)",
+     "dose": "One spray in a nostril, call 911, and repeat every 2 to 3 minutes until the person wakes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:eb9f6f90d411",
+       "where": "Directions: steps 2 to 4"
+      }
+     ]
+    }
+   ],
+   "next": "bup_result",
+   "sources": [
+    {
+     "docId": "url:f777a19890c2",
+     "where": "Part 3: Induction; ED initiation; Patient selection; Part 2: Preventing opioid-related overdose"
+    },
+    {
+     "docId": "url:50158536db73",
+     "where": "2.3 Induction"
+    },
+    {
+     "docId": "pmid:30252268",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:29083570",
+     "where": "Administration: induction therapy"
+    },
+    {
+     "docId": "url:dec2e5ef31d7",
+     "where": "Indications and usage"
+    }
+   ]
+  },
+  {
+   "id": "bup_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After the first doses",
+   "outcomes": [
+    {
+     "id": "relief",
+     "if": "Relief; COWS falling, comfortable and not sedated",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_bup"
+    },
+    {
+     "id": "precip",
+     "if": "Worse within the hour; vomiting, sweating, COWS higher",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_precip"
+    }
+   ]
+  },
+  {
+   "id": "end_bup",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Buprenorphine started in the ED: home with enough to continue (16 mg a day in the ED trial) until follow-up within 72 hours, a naloxone kit with overdose education, and HIV and hepatitis C testing. Typical maintenance doses run from 4 mg to 24 mg a day, and there is no suggested time limit on treatment."
+  },
+  {
+   "id": "end_precip",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Worse within the hour of the first dose: precipitated withdrawal, from buprenorphine displacing a full agonist still on the receptors. It is more likely the higher the dependence, the shorter the gap since the last full agonist and the larger the first dose. How to treat it once it happens is not in the sources read (pending); TIP 63 mentions nonopioid symptom relief for unrelieved withdrawal during a switch from methadone. A naloxone kit and a plan for the next start go with the patient."
+  },
+  {
+   "id": "end_early",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Too early for buprenorphine: a first dose now risks precipitated withdrawal. Re-score once withdrawal is objective (COWS 12 or more; at least 12 hours after a short-acting opioid, at least 24 hours after methadone, 48 to 72 hours after a fentanyl patch). After a short-acting opioid, the ED trial sent patients home with a written guide and buprenorphine for an unobserved start; a methadone switch happens in the office, not at home, after a taper to 30 to 40 mg a day for at least a week (TIP 63). Lofexidine (three 0.18 mg tablets 4 times a day, up to 14 days) or clonidine eases symptoms meanwhile, and a naloxone kit goes home either way."
+  },
+  {
+   "id": "dystonia_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Neck twisted and eyes forced upward, hours after a dopamine blocker. Next?",
+   "options": [
+    "Diphenhydramine 50 mg IV, or benztropine 1 to 2 mg IV or IM",
+    "IV dantrolene to relax the sustained spasm in the neck and eyes",
+    "IM haloperidol to calm them, since the spasm is so distressing",
+    "Oral propranolol, one of the options used for akathisia"
+   ],
+   "answer": 0,
+   "chainStep": "Check for laryngeal dystonia (stridor) first; diphenhydramine 50 mg IV (1 mg/kg up to 50 mg in children) or benztropine 1 to 2 mg IV or IM; stop the offending drug; then oral diphenhydramine every 6 hours for 1 to 2 days, or benztropine 1 to 2 mg twice daily for up to 7 days; lorazepam if anticholinergics fail",
+   "why": "Acute dystonic reactions follow a new or increased dose of a dopamine blocker, usually within 96 hours: antipsychotics, and in the ED antiemetics such as metoclopramide and prochlorperazine; young men are at higher risk. Parenteral diphenhydramine or benztropine usually brings relief within 10 to 30 minutes, and because the trigger outlasts them, an oral course follows. Benzodiazepines are second line. Haloperidol is itself a dopamine blocker that causes dystonia, dantrolene belongs to severe neuroleptic malignant syndrome, and propranolol is for akathisia. Laryngeal dystonia with stridor is the rare airway emergency.",
+   "orders": [
+    {
+     "item": "Diphenhydramine",
+     "dose": "50 mg IV in adults (1 mg/kg up to 50 mg IV in children), then by mouth every 6 hours for 1 to 2 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30285361",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Benztropine",
+     "dose": "1 to 2 mg IV, then 1 to 2 mg by mouth; 1 to 2 mg twice daily for up to 7 days to prevent recurrence",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30285361",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Benztropine (US label)",
+     "dose": "In acute dystonic reactions, 1 to 2 mL of the 1 mg per mL injection",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c6ee0944651f",
+       "where": "Description; Dosage and administration"
+      }
+     ]
+    },
+    {
+     "item": "Second line",
+     "dose": "Lorazepam 0.05 to 0.1 mg/kg IV or IM, or diazepam 0.1 mg/kg IV",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30285361",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Observation",
+     "dose": "12 to 24 hours after resolution if there were respiratory symptoms or oxygen was needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30285361",
+       "where": "Treatment / management"
+      }
+     ]
+    }
+   ],
+   "next": "end_dystonia",
+   "sources": [
+    {
+     "docId": "pmid:30285361",
+     "where": "Introduction; Etiology; Epidemiology; Treatment / management; Deterrence and patient education"
+    },
+    {
+     "docId": "url:c6ee0944651f",
+     "where": "Indications and usage; Dosage and administration"
+    },
+    {
+     "docId": "pmid:22461918",
+     "where": "The use of first-generation antipsychotics"
+    },
+    {
+     "docId": "pmid:29489248",
+     "where": "Treatment / management"
+    },
+    {
+     "docId": "pmid:30137828",
+     "where": "Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "end_dystonia",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute dystonia: diphenhydramine or benztropine, an oral course for 1 to 2 days (diphenhydramine) or up to 7 days (benztropine), the offending drug stopped or replaced, and the reaction recorded as an adverse drug reaction. No response after anticholinergic and benzodiazepine doses means reconsidering the diagnosis: seizure, catatonia, a functional disorder or a structural lesion."
+  },
+  {
+   "id": "akathisia_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pacing and unable to sit still, a week after starting haloperidol. Next?",
+   "options": [
+    "Lower the dose or switch agents; propranolol or a benzodiazepine",
+    "More haloperidol, as the restlessness is the psychosis worsening",
+    "Benztropine, as the usual first-line treatment for akathisia",
+    "Add a second antipsychotic to calm the restlessness"
+   ],
+   "answer": 0,
+   "chainStep": "Recognize it (inner restlessness, pacing, rocking; Barnes scale); reduce the antipsychotic dose or switch agents; propranolol or a benzodiazepine (low-dose mirtazapine an option); benztropine only with coexisting parkinsonism; ask about suicidal thoughts",
+   "why": "Akathisia is inner restlessness with a drive to move, usually within the first 2 weeks of an antipsychotic or a dose increase, most often with high-potency first-generation drugs such as haloperidol. It is easily mistaken for psychosis or agitation, and it is linked to self-harm and suicidal thoughts. It is managed by lowering the dose or switching, with propranolol or a benzodiazepine (limited data) or low-dose mirtazapine; it generally does not respond to anticholinergics, which are kept for coexisting parkinsonism.",
+   "orders": [
+    {
+     "item": "First moves",
+     "dose": "Reduce the dose of the offending antipsychotic or switch to another",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30137828",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Propranolol or a benzodiazepine",
+     "dose": "Historical options with limited data; watch for bradycardia and hypotension with a beta blocker",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30137828",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Mirtazapine",
+     "dose": "Low dose as effective as beta blockers in studies; high doses may worsen akathisia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30137828",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Doses of propranolol and mirtazapine",
+     "dose": "Not in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Benztropine",
+     "dose": "Only if pseudoparkinsonism coexists; akathisia generally does not respond to anticholinergics",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30137828",
+       "where": "Pathophysiology; Treatment / management"
+      }
+     ]
+    }
+   ],
+   "next": "end_akathisia",
+   "sources": [
+    {
+     "docId": "pmid:30137828",
+     "where": "Epidemiology; Pathophysiology; History and physical; Treatment / management; Differential diagnosis"
+    }
+   ]
+  },
+  {
+   "id": "end_akathisia",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Akathisia: lower the dose or switch the antipsychotic, add propranolol or a benzodiazepine (or low-dose mirtazapine), watch for bradycardia and hypotension with a beta blocker, ask about suicidal thoughts, and arrange psychiatric follow-up for the antipsychotic plan."
+  },
+  {
+   "id": "psych_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Delusions, voices or mania on the history and examination. Next?",
+   "options": [
+    "Vitals, exam and cognition; tests guided by them, fuller if it is new",
+    "CT head and a full set of labs, whatever the history and exam show",
+    "Psychiatric admission straight away, as medical causes of psychosis are rare",
+    "A lumbar puncture and an EEG before the psychiatric assessment"
+   ],
+   "answer": 0,
+   "chainStep": "Known illness, usual relapse, normal vital signs and cognition: little or no testing. New psychosis or mania, onset after 45, abnormal vital signs or cognition: blood count, metabolic panel, glucose, thyroid tests, liver tests, urinalysis, drug screen, pregnancy test; B12, HIV, CT or MRI, EEG and lumbar puncture as the findings direct",
+   "why": "A patient with a known psychotic illness who presents as before, with normal vital signs and mentation, may need little or no testing, while new-onset psychosis or agitation is presumed medical until proven otherwise, especially after 45 or outside the usual age range. Only once substance, medication and medical causes are excluded is a primary psychotic disorder diagnosed; mania has mimics such as hyperthyroidism and stimulants, and some drugs that cause psychosis (bath salts, synthetic cannabinoids, psychedelics) are missed by standard screens. Routine tests without an indication are low yield.",
+   "orders": [
+    {
+     "item": "Workup for new psychosis",
+     "dose": "Urine toxicology plus blood count and metabolic panel, urinalysis, thyroid tests, liver tests, B12, HIV; CT or MRI, EEG, lumbar puncture and rheumatologic tests as suspicion directs",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31536188",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Mania",
+     "dose": "Blood count, metabolic panel, thyroid panel and urine drug screen; CT or MRI especially over 60 or under 13",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29630220",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Pregnancy test",
+     "dose": "For all women of reproductive age",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29630205",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ],
+   "next": "psych_result",
+   "sources": [
+    {
+     "docId": "pmid:22461915",
+     "where": "Agitation from psychiatric disease; Medical workup; Conclusion"
+    },
+    {
+     "docId": "pmid:28611885",
+     "where": "Recommendation 2"
+    },
+    {
+     "docId": "pmid:31536188",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:29630220",
+     "where": "Evaluation; Differential diagnosis"
+    },
+    {
+     "docId": "pmid:29630205",
+     "where": "Evaluation"
+    }
+   ]
+  },
+  {
+   "id": "psych_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Workup",
+   "outcomes": [
+    {
+     "id": "medical",
+     "if": "A medical or drug cause found; abnormal labs, imaging or exam",
+     "ddx": {
+      "lead": [
+       "Medical cause of psychosis"
+      ],
+      "out": []
+     },
+     "next": "end_fep_medical"
+    },
+    {
+     "id": "psych",
+     "if": "No medical cause; normal workup, or a typical relapse",
+     "ddx": {
+      "lead": [
+       "Primary psychotic disorder",
+       "Mania"
+      ],
+      "out": []
+     },
+     "next": "end_psych"
+    }
+   ]
+  },
+  {
+   "id": "end_fep_medical",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Psychosis or mania with a medical or drug cause: treat the cause (thyrotoxicosis, a CNS lesion or infection, a substance or medication), with an antipsychotic only for dangerous agitation while it is corrected. The altered mental status pathway (pw_ams) takes metabolic and endocrine causes, the toxicology pathway (pw_tox) drugs, and the sepsis and fever pathway (pw_sepsis_fever) CNS infection."
+  },
+  {
+   "id": "end_psych",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Primary psychosis or mania: an urgent psychiatric assessment (NICE expects a full mental health assessment within 1 hour of an ED alert), an antipsychotic for psychosis-driven agitation, and admission or follow-up as that assessment decides, voluntary where possible; involuntary treatment needs a severe mental illness, a significant risk of harm to self or others and no less restrictive option, under local law. Involve family and outpatient care."
+  },
+  {
+   "id": "asq_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Low mood or a crisis; suicide risk to screen. Next?",
+   "options": [
+    "Ask the ASQ questions directly, including thoughts of suicide right now",
+    "A risk scale score to decide whether the patient can safely go out tonight",
+    "Avoid asking about suicide directly, so that the idea is not suggested",
+    "Give the 988 number and let the patient leave, as there is no stated plan"
+   ],
+   "answer": 0,
+   "chainStep": "ASQ questions 1 to 4 (wished dead, family better off, thoughts of killing yourself in the past week, ever tried); if any is yes, question 5 (thoughts right now); ask about any ingestion (pw_tox); resources such as the 988 Suicide and Crisis Lifeline for every patient",
+   "why": "The ASQ asks 4 direct questions and, if any is positive, an acuity question about thoughts of killing yourself right now; a yes to that question is an acute positive screen. Screening tools such as the ASQ or the Columbia scale identify who needs further evaluation, but they do not replace clinical judgement or a full risk assessment, and NICE warns against using risk scales or low, medium or high stratification to decide who gets treatment or who goes home. A plan is assessed regardless of other answers, and many who die by suicide deny suicidal thoughts close to the time.",
+   "next": "asq_result",
+   "sources": [
+    {
+     "docId": "url:a1d46d9465d5",
+     "where": "Questions 1 to 5; Screening result and next steps"
+    },
+    {
+     "docId": "pmid:40811601",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "url:5ff273cd9778",
+     "where": "1.6.1 to 1.6.4"
+    },
+    {
+     "docId": "url:08f2f90caa9d",
+     "where": "Suicide plan"
+    }
+   ]
+  },
+  {
+   "id": "asq_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "ASQ result",
+   "outcomes": [
+    {
+     "id": "acute",
+     "if": "Acute positive; thoughts of killing themselves right now",
+     "ddx": {
+      "lead": [
+       "Suicidal crisis"
+      ],
+      "out": []
+     },
+     "next": "acute_step"
+    },
+    {
+     "id": "nonacute",
+     "if": "Non-acute positive; yes to questions 1 to 4, not right now",
+     "ddx": {
+      "lead": [
+       "Suicidal crisis"
+      ],
+      "out": []
+     },
+     "next": "bssa_step"
+    },
+    {
+     "id": "negative",
+     "if": "Negative screen; no to all four questions",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_asq_neg"
+    }
+   ]
+  },
+  {
+   "id": "end_asq_neg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Negative screen: no intervention is needed now, but clinical judgement can always override a negative screen, and the 988 Suicide and Crisis Lifeline and the Crisis Text Line go to every patient."
+  },
+  {
+   "id": "acute_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Acute positive ASQ: thinking of killing themselves right now. Next?",
+   "options": [
+    "Keep in sight, remove dangerous objects; a STAT mental health evaluation",
+    "A brief safety check, then let the patient leave once a safety plan is agreed",
+    "A seat in the waiting room until the psychiatry team is free",
+    "IM lorazepam so that the patient cannot leave before assessment"
+   ],
+   "answer": 0,
+   "chainStep": "The patient cannot leave until evaluated; constant observation; dangerous objects removed; the responsible clinician alerted; urgent full mental health evaluation (NICE: within 1 hour of an ED alert) not delayed by medical treatment; ask about means at home",
+   "why": "An acute positive screen means imminent risk: the patient needs a STAT, full mental health evaluation, cannot leave until evaluated for safety, is kept in sight with dangerous objects removed, and the responsible clinician is alerted. NICE does not delay the psychosocial assessment until medical treatment is complete and expects a full mental health assessment within 1 hour of an ED alert. Sedating someone to stop them leaving uses medication as a restraint, which BETA discourages.",
+   "next": "eval_result",
+   "sources": [
+    {
+     "docId": "url:a1d46d9465d5",
+     "where": "Acute positive screen"
+    },
+    {
+     "docId": "url:08f2f90caa9d",
+     "where": "Determine disposition"
+    },
+    {
+     "docId": "url:5ff273cd9778",
+     "where": "1.5.2; 1.7.12"
+    },
+    {
+     "docId": "url:adb4cebbce8e",
+     "where": "1.5.2"
+    },
+    {
+     "docId": "pmid:22461918",
+     "where": "General recommendations 1"
+    }
+   ]
+  },
+  {
+   "id": "bssa_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Non-acute positive ASQ: suicidal thoughts in recent weeks, none now. Next?",
+   "options": [
+    "A brief safety assessment: plan, means, past attempts and supports",
+    "One-to-one observation in a locked room until psychiatry can see the patient",
+    "Involuntary admission, because the screening result is positive",
+    "Sent out with a crisis line number, without a further assessment"
+   ],
+   "answer": 0,
+   "chainStep": "Interview alone: how often suicidal thoughts come and when last; depression, anxiety, hopelessness, impulsivity, alcohol and drugs; plan, method and access to means (firearms, pills); past attempts and intent; supports and reasons for living; then decide the disposition",
+   "why": "A non-acute positive screen needs a brief suicide safety assessment to decide whether, and when, a full mental health evaluation is needed; it does not require 1-to-1 observation while waiting unless there are other safety concerns. The assessment asks about a plan regardless of other answers, since a detailed, feasible plan with access to the means is more concerning, and past behavior is the strongest predictor of future attempts. Involuntary care needs significant risk and no less restrictive option, not just a positive screen.",
+   "next": "eval_result",
+   "sources": [
+    {
+     "docId": "url:a1d46d9465d5",
+     "where": "Non-acute positive screen"
+    },
+    {
+     "docId": "url:08f2f90caa9d",
+     "where": "Assess the patient; Suicide plan; Past behavior; Determine disposition"
+    },
+    {
+     "docId": "pmid:32491309",
+     "where": "Definition/introduction"
+    },
+    {
+     "docId": "pmid:40811601",
+     "where": "Treatment / management"
+    }
+   ]
+  },
+  {
+   "id": "eval_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Mental health evaluation and disposition",
+   "outcomes": [
+    {
+     "id": "admit",
+     "if": "Imminent risk, accepts admission; a plan or intent, agrees to stay",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_admit"
+    },
+    {
+     "id": "hold",
+     "if": "Imminent risk, refuses care; a plan and the means, wants to leave",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_hold"
+    },
+    {
+     "id": "home",
+     "if": "No imminent risk; no plan or intent, supports, means secured",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_safety"
+    }
+   ]
+  },
+  {
+   "id": "end_admit",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Imminent suicide risk with voluntary admission: psychiatric admission with observation, lethal means removed, and the specific risk factors the stay can change addressed. Risk rises sharply in the 3 months after discharge from a psychiatric unit and the year after an ED visit, so follow-up contact is arranged."
+  },
+  {
+   "id": "end_hold",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Imminent risk and refusing care: an involuntary hold for evaluation under the local law, which generally requires a severe mental illness, a significant risk of harm to self or others and no less restrictive option. Keep the patient in sight meanwhile. Patients keep their rights, including the least restrictive treatment and the ability to appeal; details vary by state and are not in this pathway."
+  },
+  {
+   "id": "end_safety",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No imminent risk: a collaborative safety plan (warning signs, coping strategies, people and services to contact, lethal means restriction), firearms stored safely or transferred and medicines secured with family, follow-up contact after the visit, a mental health referral, and the 988 Suicide and Crisis Lifeline. In a VA ED cohort, safety planning with telephone follow-up lowered suicidal behavior at 6 months (3.03% against 5.29%)."
+  },
+  {
+   "id": "end_env_hot",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Agitation or confusion with a high temperature after heat exposure or exertion, no drug or withdrawal: heat stroke until proven otherwise. The environmental pathway (pw_environmental) takes it, with cooling first."
+  }
+ ],
+ "cases": [
+  {
+   "id": "hypo_drinker",
+   "label": "Agitated drinker with a low glucose",
+   "vignette": "51-year-old man, a heavy drinker, brought by police shouting and swinging at staff; sweaty and tremulous. HR 112, BP 138/84, RR 18, SpO2 97% on air, T 36.8 °C (98.2 °F).",
+   "picks": {
+    "front": "first"
+   },
+   "results": {
+    "front": "Fingerstick glucose 42 mg/dL (2.3 mmol/L); no injury seen; pupils equal and reactive."
+   }
+  },
+  {
+   "id": "head_injury",
+   "label": "Combative after a fall on apixaban",
+   "vignette": "68-year-old woman on apixaban, confused and combative after a fall at home. HR 92, BP 162/90, SpO2 96%, T 36.9 °C (98.4 °F).",
+   "picks": {
+    "front": "medical"
+   },
+   "results": {
+    "front": "Glucose 118 mg/dL; scalp hematoma; GCS 14 with a new left arm drift."
+   }
+  },
+  {
+   "id": "nms",
+   "label": "Rigid and febrile after a haloperidol increase",
+   "vignette": "34-year-old man with schizophrenia; haloperidol increased 4 days ago; now confused, agitated, sweating and stiff. HR 128, BP 172/104, RR 24, SpO2 96%, T 40.1 °C (104.2 °F).",
+   "picks": {
+    "front": "hot",
+    "hot_cause": "nms"
+   },
+   "results": {
+    "front": "Glucose 102 mg/dL; drenched in sweat; lead-pipe rigidity in all limbs; no injury.",
+    "hot_cause": "Rigidity without clonus or hyperreflexia; no serotonergic drugs or stimulants; CK 18,400 U/L, WBC 16,000/µL, creatinine 1.6 mg/dL."
+   }
+  },
+  {
+   "id": "cocaine_hot",
+   "label": "Hot and agitated after cocaine",
+   "vignette": "26-year-old man, shouting and pacing after a night out; says he used cocaine. HR 146, BP 188/110, RR 26, SpO2 98%, T 39.6 °C (103.3 °F).",
+   "picks": {
+    "front": "hot",
+    "hot_cause": "tox"
+   },
+   "results": {
+    "front": "Glucose 132 mg/dL; drenched in sweat, pupils 7 mm, tremulous; no rigidity; no injury.",
+    "hot_cause": "Sweating with big pupils after cocaine; brisk reflexes without clonus; no antipsychotic or serotonergic drug."
+   }
+  },
+  {
+   "id": "dt_hot",
+   "label": "Febrile withdrawal delirium",
+   "vignette": "58-year-old man; stopped drinking 3 days ago; now confused, picking at the air. HR 138, BP 176/102, RR 24, SpO2 95%, T 38.9 °C (102 °F), weight 78 kg.",
+   "picks": {
+    "front": "hot",
+    "hot_cause": "dt"
+   },
+   "results": {
+    "front": "Glucose 96 mg/dL; drenched in sweat, coarse tremor, disoriented; neck supple; no cough, urinary symptoms or wound; no focal signs.",
+    "hot_cause": "Visual hallucinations, disoriented to place and date; last drink 3 days ago; no antipsychotic, serotonergic drug or stimulant; no clonus or rigidity."
+   }
+  },
+  {
+   "id": "schizo_violent",
+   "label": "Violent relapse of schizophrenia",
+   "vignette": "29-year-old man with schizophrenia, off risperidone for a month; shouting that staff are poisoning him and throwing a chair. HR 104, BP 142/88, SpO2 98%, T 37.0 °C (98.6 °F).",
+   "picks": {
+    "front": "agitated",
+    "deesc_result": "psych",
+    "cause": "psychosis",
+    "psych_result": "psych"
+   },
+   "results": {
+    "front": "Glucose 96 mg/dL; no injury, focal signs or rigidity; no smell of alcohol.",
+    "deesc_result": "Keeps advancing on staff despite one calm voice; refuses oral olanzapine; security staff hold him.",
+    "cause": "Calm 30 minutes after the injection; persecutory delusions and voices as in his past relapses; attentive and oriented; denies suicidal thoughts; normal neurologic exam.",
+    "psych_result": "Vital signs and cognition normal; glucose and electrolytes normal; the same picture as his past relapses."
+   }
+  },
+  {
+   "id": "drunk_violent",
+   "label": "Violent and intoxicated",
+   "vignette": "38-year-old man from a bar fight, punching the walls and threatening staff; smells of alcohol. HR 98, BP 136/82, SpO2 97%, T 36.7 °C (98.1 °F).",
+   "picks": {
+    "front": "agitated",
+    "deesc_result": "etoh",
+    "cause": "intox"
+   },
+   "results": {
+    "front": "Glucose 108 mg/dL; knuckle abrasions, no head injury; no focal signs.",
+    "deesc_result": "Slurred and ataxic, spitting at staff despite de-escalation; no tremor or sweating; breath alcohol high; security staff hold him.",
+    "cause": "Settling and drowsy but rousable; no tremor or sweating; denies suicidal thoughts; no other injury."
+   }
+  },
+  {
+   "id": "withdrawal_violent",
+   "label": "Violent in early alcohol withdrawal",
+   "vignette": "47-year-old man who stopped drinking 30 hours ago when his money ran out; pacing, sweating, swinging at a nurse. HR 122, BP 168/98, SpO2 97%, T 37.5 °C (99.5 °F).",
+   "picks": {
+    "front": "agitated",
+    "deesc_result": "nopsych",
+    "cause": "aws",
+    "aws_sev": "modsev",
+    "aws_resp": "settles"
+   },
+   "results": {
+    "front": "Glucose 112 mg/dL; tremor and sweating; no injury, no rigidity.",
+    "deesc_result": "Strikes out again despite one calm voice; no hallucinations or delusions; not drunk; refuses oral medicine; security staff hold him.",
+    "cause": "Calmer after lorazepam; oriented; coarse tremor and sweats; last drink 30 hours ago; no hallucinations.",
+    "aws_sev": "CIWA-Ar 18; a withdrawal seizure 2 years ago; liver tests near normal.",
+    "aws_resp": "CIWA-Ar 9 at 4 hours; pulse 96; calm and talking."
+   }
+  },
+  {
+   "id": "mania_thyroid",
+   "label": "New mania that is thyrotoxicosis",
+   "vignette": "52-year-old woman with no psychiatric history; 5 days without sleep, talking fast, spending her savings, shouting in triage. HR 124, BP 148/78, SpO2 99%, T 37.4 °C (99.3 °F).",
+   "picks": {
+    "front": "agitated",
+    "deesc_result": "settled",
+    "cause": "psychosis",
+    "psych_result": "medical"
+   },
+   "results": {
+    "front": "Glucose 104 mg/dL; fine tremor, warm moist skin; no rigidity or clonus; no injury.",
+    "deesc_result": "Settles with one calm voice in a quiet room and agrees to stay.",
+    "cause": "Pressured speech and grandiosity; first episode at 52; attentive and oriented; no suicidal thoughts; lid lag and a goiter.",
+    "psych_result": "TSH under 0.01 mIU/L with a high free T4; urine drug screen negative; pregnancy test negative."
+   }
+  },
+  {
+   "id": "aws_mild",
+   "label": "Mild withdrawal, wants to stop",
+   "vignette": "36-year-old man who wants to stop drinking; last drink 14 hours ago; anxious and shaky. HR 98, BP 138/86, SpO2 99%, T 36.9 °C (98.4 °F).",
+   "picks": {
+    "front": "calm",
+    "cause": "aws",
+    "aws_sev": "mild"
+   },
+   "results": {
+    "front": "Glucose 98 mg/dL; mild tremor; calm and cooperative.",
+    "cause": "Oriented; mild tremor; drinks 8 beers a day; no hallucinations.",
+    "aws_sev": "CIWA-Ar 6; no past seizures or delirium tremens; no other sedatives; his sister will stay with him; electrolytes and magnesium normal."
+   }
+  },
+  {
+   "id": "aws_cirrhosis",
+   "label": "Withdrawal in cirrhosis that escalates",
+   "vignette": "61-year-old man with compensated cirrhosis, no ascites; last drink 36 hours ago; sweating and tremulous. HR 118, BP 158/92, SpO2 96%, T 37.4 °C (99.3 °F), weight 70 kg.",
+   "picks": {
+    "front": "calm",
+    "cause": "aws",
+    "aws_sev": "modsev",
+    "aws_resp": "resistant"
+   },
+   "results": {
+    "front": "Glucose 88 mg/dL; tremor; cooperative; no injury.",
+    "cause": "Oriented; coarse tremor and sweats; spider naevi, no jaundice; no hallucinations.",
+    "aws_sev": "CIWA-Ar 21; no past seizures; bilirubin 1.8 mg/dL, albumin 3.2 g/dL, INR 1.4.",
+    "aws_resp": "Two hours later: disoriented and hallucinating despite repeated lorazepam; HR 134."
+   }
+  },
+  {
+   "id": "aws_seizure",
+   "label": "Withdrawal seizure in the ED",
+   "vignette": "42-year-old woman; last drink 20 hours ago; tremulous and anxious in triage. HR 112, BP 150/94, SpO2 98%, T 37.2 °C (99 °F).",
+   "picks": {
+    "front": "calm",
+    "cause": "aws",
+    "aws_sev": "seizure",
+    "aws_resp": "settles"
+   },
+   "results": {
+    "front": "Glucose 104 mg/dL; tremor; cooperative.",
+    "cause": "Oriented; tremor and sweats; drinks a bottle of vodka a day; no hallucinations.",
+    "aws_sev": "While being scored: a generalized tonic-clonic seizure for 1 minute; awake and oriented 15 minutes later; glucose 104 mg/dL; no head injury; her seizures have only ever come with withdrawal.",
+    "aws_resp": "CIWA-Ar 7 by the evening; no further seizures."
+   }
+  },
+  {
+   "id": "dt_cause",
+   "label": "Withdrawal delirium found on the history",
+   "vignette": "55-year-old man brought by family; stopped drinking 3 days ago; now confused and seeing insects. HR 124, BP 164/98, SpO2 97%, T 37.6 °C (99.7 °F), weight 82 kg.",
+   "picks": {
+    "front": "agitated",
+    "deesc_result": "settled",
+    "cause": "dt"
+   },
+   "results": {
+    "front": "Glucose 110 mg/dL; tremulous and sweating; neck supple; no injury.",
+    "deesc_result": "Calmer with one calm voice and oral lorazepam 2 mg; still picking at the sheets.",
+    "cause": "Disoriented to place and date, inattentive, visual hallucinations; last drink 3 days ago; tremor."
+   }
+  },
+  {
+   "id": "wernicke",
+   "label": "Wernicke encephalopathy",
+   "vignette": "49-year-old woman, a heavy drinker, thin, vomiting for a week; confused and unsteady. HR 102, BP 112/70, SpO2 98%, T 36.6 °C (97.9 °F).",
+   "picks": {
+    "front": "calm",
+    "cause": "wernicke"
+   },
+   "results": {
+    "front": "Glucose 84 mg/dL; calm and cooperative but confused.",
+    "cause": "Horizontal nystagmus and weak abduction of both eyes; wide-based gait; inattentive; little tremor; last drink yesterday."
+   }
+  },
+  {
+   "id": "benzo",
+   "label": "Benzodiazepine withdrawal",
+   "vignette": "33-year-old woman who ran out of alprazolam 2 mg three times daily 3 days ago; shaking and panicky. HR 116, BP 150/92, SpO2 99%, T 37.3 °C (99.1 °F).",
+   "picks": {
+    "front": "agitated",
+    "deesc_result": "settled",
+    "cause": "benzo"
+   },
+   "results": {
+    "front": "Glucose 92 mg/dL; tremor; no injury or fever.",
+    "deesc_result": "Settles with one calm voice; sits and talks.",
+    "cause": "Daily alprazolam for 2 years, stopped abruptly; tremor, anxiety, insomnia; no alcohol; oriented."
+   }
+  },
+  {
+   "id": "opioid_ready",
+   "label": "Heroin withdrawal, buprenorphine works",
+   "vignette": "27-year-old man using heroin daily, last use 16 hours ago; wants treatment. HR 104, BP 142/88, SpO2 99%, T 37.1 °C (98.8 °F).",
+   "picks": {
+    "front": "calm",
+    "cause": "opioid",
+    "cows_result": "ready",
+    "bup_result": "relief"
+   },
+   "results": {
+    "front": "Glucose 96 mg/dL; restless but cooperative.",
+    "cause": "Yawning, runny nose, gooseflesh, pupils 6 mm, cramps; not sedated; breath alcohol zero.",
+    "cows_result": "COWS 14; last heroin 16 hours ago; no methadone.",
+    "bup_result": "COWS 9 two hours after 4 mg, so another 4 mg; an hour later COWS 3, alert and comfortable."
+   }
+  },
+  {
+   "id": "opioid_precip",
+   "label": "Precipitated withdrawal after the first dose",
+   "vignette": "31-year-old woman who smokes fentanyl daily, last use 13 hours ago; wants treatment. HR 110, BP 136/84, SpO2 99%, T 37.0 °C (98.6 °F).",
+   "picks": {
+    "front": "calm",
+    "cause": "opioid",
+    "cows_result": "ready",
+    "bup_result": "precip"
+   },
+   "results": {
+    "front": "Glucose 90 mg/dL; uncomfortable but cooperative.",
+    "cause": "Gooseflesh, yawning, runny nose, big pupils; not sedated.",
+    "cows_result": "COWS 13; last fentanyl 13 hours ago; no methadone.",
+    "bup_result": "Forty minutes after 4 mg: vomiting, drenched in sweat, gooseflesh; COWS 24."
+   }
+  },
+  {
+   "id": "opioid_early",
+   "label": "On methadone, too early to switch",
+   "vignette": "40-year-old man on methadone 60 mg daily who wants to switch to buprenorphine; last methadone dose 10 hours ago. HR 84, BP 128/80, SpO2 99%, T 36.8 °C (98.2 °F).",
+   "picks": {
+    "front": "calm",
+    "cause": "opioid",
+    "cows_result": "early"
+   },
+   "results": {
+    "front": "Glucose 94 mg/dL; calm.",
+    "cause": "Mild yawning only; pupils 4 mm; not sedated.",
+    "cows_result": "COWS 4; methadone taken 10 hours ago."
+   }
+  },
+  {
+   "id": "dystonia",
+   "label": "Acute dystonia after an antiemetic",
+   "vignette": "19-year-old man given IV prochlorperazine for vomiting at another ED yesterday; now his neck twists to the right and his eyes are forced upward. HR 96, BP 128/76, SpO2 99%, T 36.8 °C (98.2 °F), weight 68 kg.",
+   "picks": {
+    "front": "calm",
+    "cause": "dystonia"
+   },
+   "results": {
+    "front": "Glucose 100 mg/dL; distressed but cooperative; speaking clearly, no stridor.",
+    "cause": "Sustained neck twisting and upward eye deviation; alert and oriented; no fever or rigidity."
+   }
+  },
+  {
+   "id": "akathisia",
+   "label": "Akathisia mistaken for agitation",
+   "vignette": "24-year-old woman who started haloperidol 5 mg twice daily a week ago; pacing triage, says she feels she could jump out of her skin. HR 98, BP 124/78, SpO2 99%, T 36.8 °C (98.2 °F).",
+   "picks": {
+    "front": "agitated",
+    "deesc_result": "settled",
+    "cause": "akathisia"
+   },
+   "results": {
+    "front": "Glucose 96 mg/dL; pacing, shifting her feet; no rigidity, fever or injury.",
+    "deesc_result": "Talks calmly with one clinician but keeps standing up and shifting her feet.",
+    "cause": "Inner restlessness since haloperidol started; no new voices or delusions; no dystonia."
+   }
+  },
+  {
+   "id": "suicide_hold",
+   "label": "Acute risk, wants to leave",
+   "vignette": "45-year-old man brought by his wife after she found a goodbye note; quiet and withdrawn. HR 88, BP 132/80, SpO2 99%, T 36.7 °C (98.1 °F).",
+   "picks": {
+    "front": "calm",
+    "cause": "suicidal",
+    "asq_result": "acute",
+    "eval_result": "hold"
+   },
+   "results": {
+    "front": "Glucose 102 mg/dL; calm and cooperative.",
+    "cause": "Low mood for 2 months; the note; denies any ingestion; sober.",
+    "asq_result": "Yes to questions 1 to 3; question 5: yes, he is thinking of killing himself right now.",
+    "eval_result": "Plans to shoot himself with the handgun at home; demands to leave and refuses admission."
+   }
+  },
+  {
+   "id": "suicide_admit",
+   "label": "Acute risk, agrees to admission",
+   "vignette": "22-year-old woman who cut her forearm superficially tonight after a breakup; tearful. HR 90, BP 118/72, SpO2 99%, T 36.8 °C (98.2 °F).",
+   "picks": {
+    "front": "calm",
+    "cause": "suicidal",
+    "asq_result": "acute",
+    "eval_result": "admit"
+   },
+   "results": {
+    "front": "Glucose 94 mg/dL; superficial cuts only; cooperative.",
+    "cause": "Self-harm tonight; denies any ingestion; sober.",
+    "asq_result": "Yes to questions 1 to 4 (an overdose at 17); question 5: yes, right now.",
+    "eval_result": "Intends to take her mother's pills tonight; agrees to stay."
+   }
+  },
+  {
+   "id": "suicide_home",
+   "label": "Non-acute risk, safety plan",
+   "vignette": "35-year-old man laid off last month, sleeping badly; says things feel pointless. HR 76, BP 124/78, SpO2 99%, T 36.7 °C (98.1 °F).",
+   "picks": {
+    "front": "calm",
+    "cause": "suicidal",
+    "asq_result": "nonacute",
+    "eval_result": "home"
+   },
+   "results": {
+    "front": "Glucose 99 mg/dL; calm.",
+    "cause": "Low mood for a month; no self-harm; sober.",
+    "asq_result": "Yes to question 1 (wished he were dead in recent weeks); no to questions 2 to 4; no to question 5.",
+    "eval_result": "No plan, intent or past attempts; lives with his brother, who will keep his hunting rifles at his own house; wants outpatient help."
+   }
+  },
+  {
+   "id": "suicide_negative",
+   "label": "Low mood, negative screen",
+   "vignette": "40-year-old woman brought by her sister after a divorce; low mood. HR 80, BP 122/76, SpO2 99%, T 36.8 °C (98.2 °F).",
+   "picks": {
+    "front": "calm",
+    "cause": "suicidal",
+    "asq_result": "negative"
+   },
+   "results": {
+    "front": "Glucose 92 mg/dL; calm.",
+    "cause": "Sad and tearful for a week; no self-harm; sober.",
+    "asq_result": "No to questions 1 to 4."
+   }
+  },
+  {
+   "id": "delirium_violent",
+   "label": "Violent delirium in dementia",
+   "vignette": "79-year-old woman with dementia, pulling at her IV and striking a nurse since this morning. HR 104, BP 150/84, SpO2 95%, T 37.6 °C (99.7 °F).",
+   "picks": {
+    "front": "agitated",
+    "deesc_result": "delirium"
+   },
+   "results": {
+    "front": "Glucose 140 mg/dL; no injury, focal signs or rigidity.",
+    "deesc_result": "Keeps striking out despite one quiet voice; inattentive and fluctuating; no alcohol or sedatives; new dysuria."
+   }
+  },
+  {
+   "id": "no_cause",
+   "label": "Shouting after an argument, no acute cause",
+   "vignette": "27-year-old man shouting and pacing in triage after an argument with his partner; no drugs or alcohol today. HR 102, BP 138/84, SpO2 99%, T 36.8 °C (98.2 °F).",
+   "picks": {
+    "front": "agitated",
+    "deesc_result": "settled",
+    "cause": "none"
+   },
+   "results": {
+    "front": "Glucose 98 mg/dL; no injury, focal signs or rigidity; breath alcohol zero.",
+    "deesc_result": "Calms within minutes with one calm voice and a drink of water; declines medicine.",
+    "cause": "Oriented and attentive; no psychosis, withdrawal or intoxication; denies thoughts of harming himself or anyone else; ASQ negative; normal exam."
+   }
+  },
+  {
+   "id": "delirium_elderly",
+   "label": "Agitated delirium in dementia",
+   "vignette": "84-year-old man with dementia, hitting staff at his care home since yesterday; on donepezil. HR 96, BP 146/82, SpO2 95%, T 37.4 °C (99.3 °F).",
+   "picks": {
+    "front": "agitated",
+    "deesc_result": "settled",
+    "cause": "delirium"
+   },
+   "results": {
+    "front": "Glucose 132 mg/dL; no injury or focal signs; no rigidity.",
+    "deesc_result": "Calmer with his daughter at the bedside and one quiet voice.",
+    "cause": "Inattentive and fluctuating since yesterday; positive 4AT; care staff report new dysuria."
+   }
+  },
+  {
+   "id": "heat_confused",
+   "label": "Confused after a long run in the heat",
+   "vignette": "24-year-old man brought in from a summer half marathon, combative and confused at the finish line; no drugs, no medications, no alcohol. Weight 72 kg.",
+   "picks": {
+    "front": "env_hot"
+   },
+   "results": {
+    "front": "HR 138, BP 104/62, SpO2 97%, rectal temperature 41.2 °C (106.2 °F); glucose 108 mg/dL; skin hot; no rigidity or clonus; pupils normal."
+   }
+  }
+ ]
+}

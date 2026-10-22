@@ -1,0 +1,3759 @@
+{
+ "id": "pw_electrolytes",
+ "title": "Electrolyte emergencies",
+ "world": "renal",
+ "synonyms": [
+  "electrolyte emergency",
+  "electrolytes",
+  "hyperkalemia",
+  "high potassium",
+  "hypokalemia",
+  "low potassium",
+  "hyponatremia",
+  "low sodium",
+  "SIADH",
+  "beer potomania",
+  "primary polydipsia",
+  "osmotic demyelination",
+  "over-correction",
+  "hypertonic saline",
+  "3% saline",
+  "hypernatremia",
+  "high sodium",
+  "free water deficit",
+  "hypercalcemia",
+  "high calcium",
+  "hypocalcemia",
+  "low calcium",
+  "tetany",
+  "hypomagnesemia",
+  "low magnesium",
+  "hypophosphatemia",
+  "refeeding syndrome",
+  "pseudohyperkalemia",
+  "calcium gluconate",
+  "insulin and glucose",
+  "albuterol",
+  "sodium zirconium cyclosilicate",
+  "Lokelma",
+  "patiromer",
+  "sodium polystyrene sulfonate",
+  "Kayexalate",
+  "zoledronic acid",
+  "calcitonin",
+  "tolvaptan",
+  "desmopressin",
+  "magnesium sulfate",
+  "potassium chloride",
+  "potassium phosphate",
+  "diabetes insipidus",
+  "hypokalemic periodic paralysis",
+  "thyrotoxic periodic paralysis",
+  "sodium loading",
+  "renal replacement therapy"
+ ],
+ "reviewBy": "2027-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:27935814",
+   "label": "SfE hyponatraemia 2016",
+   "title": "Society for Endocrinology emergency guidance: severe symptomatic hyponatraemia in adults (Endocr Connect 2016)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27935814/"
+  },
+  {
+   "docId": "pmid:27935816",
+   "label": "SfE hypercalcaemia 2016",
+   "title": "Society for Endocrinology emergency guidance: acute hypercalcaemia in adults (Endocr Connect 2016)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27935816/"
+  },
+  {
+   "docId": "pmid:27935815",
+   "label": "SfE hypocalcaemia 2016",
+   "title": "Society for Endocrinology emergency guidance: acute hypocalcaemia in adults (Endocr Connect 2016)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27935815/"
+  },
+  {
+   "docId": "url:f16b34a1e288",
+   "label": "UKKA 2020",
+   "title": "UK Kidney Association clinical practice guideline: treatment of acute hyperkalaemia in adults (2020)",
+   "url": "https://www.ukkidney.org/sites/default/files/RENAL%20ASSOCIATION%20HYPERKALAEMIA%20GUIDELINE%20-%20JULY%202022%20V2_0.pdf"
+  },
+  {
+   "docId": "pmid:34632453",
+   "label": "JACEP Open 2021",
+   "title": "Hyperkalemia management in the emergency department: an expert panel consensus (JACEP Open 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34632453/"
+  },
+  {
+   "docId": "url:dff7e5c8a4a6",
+   "label": "FDA calcium gluconate",
+   "title": "FDA label: calcium gluconate injection",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b77c3d2-992d-4261-8421-9cfd07328fbf"
+  },
+  {
+   "docId": "url:1d4b714d9283",
+   "label": "FDA magnesium sulfate",
+   "title": "FDA label: magnesium sulfate injection 50%",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6a5d362b-7aa7-40d3-898d-09407cce0713"
+  },
+  {
+   "docId": "url:bc9f91df25ce",
+   "label": "FDA zoledronic acid",
+   "title": "FDA label: zoledronic acid injection",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=20cd29cc-cef5-48c4-adfe-6b3dfee0ab61"
+  },
+  {
+   "docId": "url:75d4481ea69e",
+   "label": "FDA potassium chloride concentrate",
+   "title": "FDA label: potassium chloride for injection concentrate (Hospira)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=559a0a8c-a8fe-40a5-b196-21f9308780ab"
+  },
+  {
+   "docId": "url:e78e13867e1b",
+   "label": "FDA potassium chloride premixed",
+   "title": "FDA label: highly concentrated potassium chloride injection, ready to use (Baxter)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=092ddee4-572d-4771-8d95-880cea01097e"
+  },
+  {
+   "docId": "url:cdac6fd1f58a",
+   "label": "FDA oral potassium chloride",
+   "title": "FDA label: Klor-Con (potassium chloride) extended-release tablets",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4340c3f2-ecf8-44cd-9b69-217f543e24e2"
+  },
+  {
+   "docId": "url:234670fb0a2a",
+   "label": "FDA Lokelma",
+   "title": "FDA label: Lokelma (sodium zirconium cyclosilicate)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=90bf8e28-748d-4e4b-a19f-9cf483370eff"
+  },
+  {
+   "docId": "url:597c2bb8acc1",
+   "label": "FDA Veltassa",
+   "title": "FDA label: Veltassa (patiromer)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bf002984-d6c9-46df-aecb-a07733f763c1"
+  },
+  {
+   "docId": "url:60588372fd69",
+   "label": "FDA sodium polystyrene sulfonate",
+   "title": "FDA label: Kionex (sodium polystyrene sulfonate) suspension",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=676c3d81-d575-43f6-8748-e04b7c0cafeb"
+  },
+  {
+   "docId": "url:8233b86358b0",
+   "label": "FDA calcitonin",
+   "title": "FDA label: Miacalcin (calcitonin salmon) injection",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=26caf31f-7f7c-48a8-a1ac-35d2ceefda2b"
+  },
+  {
+   "docId": "url:0d1d8dbd9530",
+   "label": "FDA tolvaptan",
+   "title": "FDA label: Samsca (tolvaptan) tablets",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5526617c-c7b9-4556-886d-729bbabbc566"
+  },
+  {
+   "docId": "url:7a339d51c094",
+   "label": "FDA potassium phosphates",
+   "title": "FDA label: potassium phosphates injection (Hospira)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2fcbc814-c7a4-469a-8b1d-6819b961bfb9"
+  },
+  {
+   "docId": "url:9bec8a1d849b",
+   "label": "NICE CG32",
+   "title": "NICE CG32: Nutrition support for adults (refeeding)",
+   "url": "https://www.nice.org.uk/guidance/cg32"
+  },
+  {
+   "docId": "url:c7c0a27934a1",
+   "label": "NICE CG174",
+   "title": "NICE CG174: Intravenous fluid therapy in adults in hospital",
+   "url": "https://www.nice.org.uk/guidance/cg174"
+  },
+  {
+   "docId": "pmid:36578134",
+   "label": "KJIM hypernatremia 2023 (review)",
+   "title": "Evaluation and management of hypernatremia in adults: clinical perspectives (Korean J Intern Med 2023, a review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36578134/"
+  },
+  {
+   "docId": "pmid:29261936",
+   "label": "StatPearls hyperkalemia (review)",
+   "title": "StatPearls: Hyperkalemia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29261936/"
+  },
+  {
+   "docId": "pmid:29494072",
+   "label": "StatPearls hypokalemia (review)",
+   "title": "StatPearls: Hypokalemia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29494072/"
+  },
+  {
+   "docId": "pmid:29262111",
+   "label": "StatPearls hyponatremia (review)",
+   "title": "StatPearls: Hyponatremia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29262111/"
+  },
+  {
+   "docId": "pmid:29939554",
+   "label": "StatPearls SIADH (review)",
+   "title": "StatPearls: Syndrome of Inappropriate Antidiuretic Hormone Secretion",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29939554/"
+  },
+  {
+   "docId": "pmid:28722989",
+   "label": "StatPearls hypernatremia (review)",
+   "title": "StatPearls: Hypernatremia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722989/"
+  },
+  {
+   "docId": "pmid:28613465",
+   "label": "StatPearls hypercalcemia (review)",
+   "title": "StatPearls: Hypercalcemia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613465/"
+  },
+  {
+   "docId": "pmid:28613662",
+   "label": "StatPearls hypocalcemia (review)",
+   "title": "StatPearls: Hypocalcemia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613662/"
+  },
+  {
+   "docId": "pmid:29763179",
+   "label": "StatPearls hypomagnesemia (review)",
+   "title": "StatPearls: Hypomagnesemia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29763179/"
+  },
+  {
+   "docId": "pmid:29630224",
+   "label": "StatPearls hypophosphatemia (review)",
+   "title": "StatPearls: Hypophosphatemia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29630224/"
+  },
+  {
+   "docId": "pmid:33232094",
+   "label": "StatPearls refeeding (review)",
+   "title": "StatPearls: Refeeding Syndrome",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33232094/"
+  },
+  {
+   "docId": "pmid:31869161",
+   "label": "StatPearls osmotic demyelination (review)",
+   "title": "StatPearls: Central Pontine Myelinolysis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31869161/"
+  },
+  {
+   "docId": "pmid:32119469",
+   "label": "StatPearls desmopressin (review)",
+   "title": "StatPearls: Desmopressin",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32119469/"
+  },
+  {
+   "docId": "pmid:32644604",
+   "label": "StatPearls periodic paralysis (review)",
+   "title": "StatPearls: Hypokalemic Periodic Paralysis",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32644604/"
+  }
+ ],
+ "differential": [
+  "Hyperkalemia",
+  "Pseudohyperkalemia",
+  "Hypokalemia",
+  "Hypokalemic periodic paralysis",
+  "Hyponatremia",
+  "SIADH",
+  "Hypovolemic hyponatremia",
+  "Thiazide-induced hyponatremia",
+  "Low solute intake or polydipsia",
+  "Heart failure or cirrhosis",
+  "Adrenal insufficiency or hypothyroidism",
+  "Hypernatremia",
+  "Diabetes insipidus",
+  "Hypercalcemia",
+  "Primary hyperparathyroidism",
+  "Hypercalcemia of malignancy",
+  "Granulomatous disease or vitamin D excess",
+  "Hypocalcemia",
+  "Hypomagnesemia",
+  "Torsades de pointes",
+  "Refeeding syndrome"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "An abnormal electrolyte result, or symptoms that suggest one. First move?",
+   "options": [
+    "ABC, cardiac monitor and a 12-lead ECG; blood gas for potassium",
+    "IV calcium gluconate for the reported potassium, before an ECG",
+    "Non-contrast CT head for the confusion first, then the ECG",
+    "A liter of 0.9% saline over an hour while the repeat bloods run"
+   ],
+   "answer": 0,
+   "chainStep": "ABC; cardiac monitor and a 12-lead ECG; blood gas potassium while the laboratory electrolytes, calcium, magnesium, phosphate and renal function run",
+   "why": "The ECG shows what potassium, calcium and magnesium are doing to the heart: UKKA wants an urgent 12-lead for a potassium of 6.0 or more and continuous monitoring at 6.5 or with ECG features, and a blood gas analyser gives the potassium while the laboratory result is awaited. A high calcium shortens the QT and a low calcium prolongs it. Urine osmolality and sodium define the cause of hyponatremia after the emergency treatment, not before it, because severe symptoms need hypertonic saline whatever the cause. Saline before the electrolyte is known can harm: in SIADH isotonic saline may not correct the sodium and can worsen it.",
+   "sources": [
+    {
+     "docId": "url:f16b34a1e288",
+     "where": "Guidelines 14.1, 14.2, 15.2"
+    },
+    {
+     "docId": "pmid:34632453",
+     "where": "ECG manifestations"
+    },
+    {
+     "docId": "pmid:27935816",
+     "where": "Investigation, ECG"
+    },
+    {
+     "docId": "pmid:27935815",
+     "where": "Clinical presentation"
+    },
+    {
+     "docId": "pmid:27935814",
+     "where": "Treatment; Differential diagnosis following emergency treatment"
+    },
+    {
+     "docId": "pmid:29939554",
+     "where": "Treatment / Management"
+    }
+   ],
+   "next": "front",
+   "orders": [
+    {
+     "item": "Blood gas potassium",
+     "dose": "In emergencies, measured on a point-of-care blood gas analyser while the formal laboratory result is awaited",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guideline 15.2"
+      }
+     ]
+    },
+    {
+     "item": "12-lead ECG",
+     "dose": "Urgent for every hospitalized patient with a potassium of 6.0 or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guideline 14.1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Monitor, ECG and the first results",
+   "outcomes": [
+    {
+     "id": "k_ecg",
+     "if": "High potassium with ECG changes; peaked T waves, wide QRS or a slow rhythm",
+     "ddx": {
+      "lead": [
+       "Hyperkalemia"
+      ],
+      "out": []
+     },
+     "next": "hk_calcium"
+    },
+    {
+     "id": "unstable",
+     "if": "Arrest or shock; no pulse, VF or asystole, or hypotension with poor perfusion",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_unstable",
+     "orders": [
+      {
+       "item": "Cardiac arrest with known or suspected hyperkalemia",
+       "dose": "IV calcium chloride; 10 units soluble insulin with 25 g glucose; sodium bicarbonate; renal replacement with ongoing CPR considered if resistant to medical therapy and staff and facilities allow",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:f16b34a1e288",
+         "where": "Guidelines 25.1, 25.2.1, 25.3, 25.4"
+        }
+       ]
+      },
+      {
+       "item": "Shock with a high sodium",
+       "dose": "0.9% saline or balanced crystalloid to restore volume, whatever the sodium",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:36578134",
+         "where": "Treatment, step 4"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "k_shift",
+     "if": "Low-potassium paralysis from a shift; periodic paralysis, often thyrotoxic, no losses",
+     "ddx": {
+      "lead": [
+       "Hypokalemic periodic paralysis"
+      ],
+      "out": []
+     },
+     "next": "hypok_pp"
+    },
+    {
+     "id": "k_low",
+     "if": "Potassium under 2.5, or low with ECG changes; losses or a drug, arrhythmia or weakness",
+     "ddx": {
+      "lead": [
+       "Hypokalemia"
+      ],
+      "out": []
+     },
+     "next": "hypok_iv"
+    },
+    {
+     "id": "na_sev",
+     "if": "Low sodium with severe symptoms; seizure, vomiting, coma (GCS 8 or less)",
+     "ddx": {
+      "lead": [
+       "Hyponatremia"
+      ],
+      "out": []
+     },
+     "next": "hypona_3"
+    },
+    {
+     "id": "ca_low",
+     "if": "Low calcium with tetany, seizure or a long QT; carpopedal spasm, laryngospasm",
+     "ddx": {
+      "lead": [
+       "Hypocalcemia"
+      ],
+      "out": []
+     },
+     "next": "hypoca_iv"
+    },
+    {
+     "id": "tdp",
+     "if": "Torsades; polymorphic VT with a long QT",
+     "ddx": {
+      "lead": [
+       "Torsades de pointes",
+       "Hypomagnesemia"
+      ],
+      "out": []
+     },
+     "next": "end_tdp"
+    },
+    {
+     "id": "stable",
+     "if": "Stable; no shock, hyperkalemic ECG, torsades, low-potassium paralysis, tetany or severe low-sodium symptoms",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "which"
+    }
+   ]
+  },
+  {
+   "id": "end_unstable",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Arrest or shock: resuscitation first. When hyperkalemia is known or suspected, UKKA gives IV calcium chloride, 10 units soluble insulin with 25 g glucose and sodium bicarbonate, and considers dialysis during CPR if it is resistant to medical therapy. Shock with a high sodium gets 0.9% saline or a balanced crystalloid first, whatever the sodium (KJIM). Torsades goes to pw_palpitations."
+  },
+  {
+   "id": "end_tdp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Torsades: the palpitations pathway (pw_palpitations) takes it from here: magnesium sulfate 2 g IV whatever the serum magnesium, repeated if runs persist, every QT-prolonging drug stopped, potassium to 4.5 to 5, and an immediate shock if a run does not stop. The low magnesium and potassium are then replaced as in this pathway."
+  },
+  {
+   "id": "which",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Which electrolyte is off",
+   "outcomes": [
+    {
+     "id": "k_high",
+     "if": "High potassium, ECG normal; no peaked T waves or wide QRS",
+     "ddx": {
+      "lead": [
+       "Hyperkalemia",
+       "Pseudohyperkalemia"
+      ],
+      "out": []
+     },
+     "next": "hk_repeat"
+    },
+    {
+     "id": "k_mild_low",
+     "if": "Potassium 2.5 to 3.4, ECG normal; able to swallow",
+     "ddx": {
+      "lead": [
+       "Hypokalemia"
+      ],
+      "out": []
+     },
+     "next": "hypok_oral"
+    },
+    {
+     "id": "na_low",
+     "if": "Low sodium, mild or moderate symptoms; nausea, confusion, no seizure or vomiting",
+     "ddx": {
+      "lead": [
+       "Hyponatremia"
+      ],
+      "out": []
+     },
+     "next": "na_workup"
+    },
+    {
+     "id": "na_high",
+     "if": "High sodium for days or of unknown duration; thirst, dry, drowsy or confused",
+     "ddx": {
+      "lead": [
+       "Hypernatremia"
+      ],
+      "out": []
+     },
+     "next": "hn_water"
+    },
+    {
+     "id": "na_high_acute",
+     "if": "High sodium from sodium loading within 48 hours; hypertonic saline or bicarbonate given or taken",
+     "ddx": {
+      "lead": [
+       "Hypernatremia"
+      ],
+      "out": []
+     },
+     "next": "end_na_acute"
+    },
+    {
+     "id": "ca_high",
+     "if": "Calcium 12 mg/dL (3.0 mmol/L) or more, or symptomatic; thirst, vomiting, confusion",
+     "ddx": {
+      "lead": [
+       "Hypercalcemia"
+      ],
+      "out": []
+     },
+     "next": "hc_fluids"
+    },
+    {
+     "id": "mild",
+     "if": "Mild calcium or magnesium change, or normal; no symptoms, calcium high under 3.0 or low over 1.9",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_mild"
+    },
+    {
+     "id": "mg_low",
+     "if": "Low magnesium, symptomatic; tremor, twitching or tetany, calcium normal",
+     "ddx": {
+      "lead": [
+       "Hypomagnesemia"
+      ],
+      "out": []
+     },
+     "next": "mg_iv"
+    },
+    {
+     "id": "phos_low",
+     "if": "Low phosphate after feeding restarts; malnourished, weak or breathless",
+     "ddx": {
+      "lead": [
+       "Refeeding syndrome"
+      ],
+      "out": []
+     },
+     "next": "refeed"
+    }
+   ]
+  },
+  {
+   "id": "end_mild",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Mild, symptom-free change: SfE says a calcium under 3.0 mmol/L is often asymptomatic and does not usually need urgent correction, so the PTH and cause are worked up (high PTH for hyperparathyroidism, low for malignancy or a rarer cause). A calcium above 1.9 mmol/L without symptoms is treated with oral calcium and its cause (vitamin D deficiency, low magnesium, recent neck surgery). An asymptomatic low magnesium is replaced by mouth (StatPearls). If every value is normal on repeat, there is no electrolyte emergency and the symptoms need another explanation."
+  },
+  {
+   "id": "hk_calcium",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "High potassium with ECG changes of hyperkalemia. First drug?",
+   "options": [
+    "IV calcium gluconate now, repeated if the ECG has not improved",
+    "Insulin with glucose first; IV calcium if the QRS widens further",
+    "Sodium polystyrene sulfonate 30 g by mouth, then a repeat ECG",
+    "IV sodium bicarbonate as the first and main treatment"
+   ],
+   "answer": 0,
+   "chainStep": "Calcium gluconate 1 g IV (US consensus; UK: an equivalent 6.8 mmol), repeated if the ECG has not improved in 5 to 10 minutes; continuous cardiac monitoring; then shift and remove potassium",
+   "why": "ECG changes mean the heart is at risk, so IV calcium comes first: it improves the ECG within about 3 minutes but does not lower the potassium, lasts only 30 to 60 minutes, and is repeated if there is no effect in 5 to 10 minutes. Calcium gluconate is preferred because calcium chloride can cause tissue necrosis if it extravasates. Insulin with glucose and albuterol follow at once to shift potassium into cells. Bicarbonate is not routine, and sodium polystyrene sulfonate is not recommended in the acute setting.",
+   "sources": [
+    {
+     "docId": "url:f16b34a1e288",
+     "where": "Guideline 16.2; rationale for 16.2; Table 11"
+    },
+    {
+     "docId": "pmid:34632453",
+     "where": "Stabilization, calcium; management algorithm, step 2"
+    },
+    {
+     "docId": "pmid:29261936",
+     "where": "Treatment / Management"
+    }
+   ],
+   "next": "hk_shift",
+   "orders": [
+    {
+     "item": "IV calcium",
+     "dose": "US consensus: calcium gluconate 1 g IV, repeated as needed; UK: an equivalent 6.8 mmol, the calcium in 10 mL of 10% calcium chloride (10 mL of 10% gluconate holds 2.26 mmol, so gluconate often needs sequential 10 mL doses); repeat if no effect in 5 to 10 minutes; gluconate no faster than 2 mL of 10% a minute (UKKA; FDA 200 mg a minute); JACEP may prefer chloride in the hemodynamically unstable patient",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34632453",
+       "where": "Management algorithm, step 2; stabilization, calcium"
+      },
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guideline 16.2; Table 11; rationale; Appendix 3A"
+      },
+      {
+       "docId": "url:dff7e5c8a4a6",
+       "where": "2.1 Important Administration Instructions"
+      }
+     ],
+     "note": "Gluconate is preferred peripherally, since chloride causes tissue necrosis if it extravasates. The US and UK first doses differ about threefold. Same orders as the palpitations pathway."
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Continuous ECG monitoring with ECG features of hyperkalemia or a potassium of 6.5 or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guideline 14.2"
+      }
+     ]
+    },
+    {
+     "item": "Cardiac arrest from hyperkalemia",
+     "dose": "IV calcium chloride; 10 units soluble insulin with 25 g glucose; sodium bicarbonate suggested (UKKA)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guidelines 25.1, 25.2.1, 25.3"
+      }
+     ],
+     "note": "Arrest care itself is outside this pathway."
+    }
+   ]
+  },
+  {
+   "id": "hk_repeat",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "High potassium on the laboratory sample, ECG normal. Next?",
+   "options": [
+    "Confirm it on a blood gas now, or a fresh free-flowing sample",
+    "IV calcium gluconate for the number, before a repeat",
+    "Sodium polystyrene sulfonate by mouth, then home",
+    "Sodium bicarbonate infusion while the repeat sample is running"
+   ],
+   "answer": 0,
+   "chainStep": "Repeat the potassium on a blood gas or a fresh sample from a large vein with gentle traction, analysed promptly; paired clotted and lithium heparin samples and a blood count if pseudohyperkalemia is suspected",
+   "why": "Pseudohyperkalemia is common and treating a false value can harm, so a value that lacks a clear explanation (StatPearls) or does not fit the history (JACEP) is confirmed before aggressive treatment; a blood gas gives the potassium while the laboratory result is awaited (UKKA), so it is checked first and treatment starts as soon as it confirms. Long transit or storage, a difficult draw, hemolysis, a high platelet or white cell count, EDTA contamination or a sample from the arm with a potassium drip all raise the measured value. IV calcium is for ECG evidence of hyperkalemia, bicarbonate is not routine, and sodium polystyrene sulfonate is not recommended in the acute setting.",
+   "sources": [
+    {
+     "docId": "pmid:29261936",
+     "where": "Introduction; Evaluation"
+    },
+    {
+     "docId": "pmid:34632453",
+     "where": "Diagnostic pitfalls; management algorithm, step 1"
+    },
+    {
+     "docId": "url:f16b34a1e288",
+     "where": "Guidelines 15.2, 15.3; rationale for 15.3; Guideline 16.2"
+    }
+   ],
+   "next": "hk_confirm",
+   "orders": [
+    {
+     "item": "Pseudohyperkalemia suspected",
+     "dose": "Paired clotted (serum) and lithium heparin (plasma) samples from a large vein with gentle traction, analysed promptly; a full blood count",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guideline 15.3; rationale for 15.3"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hk_confirm",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The repeat potassium",
+   "outcomes": [
+    {
+     "id": "pseudo",
+     "if": "Normal on the blood gas or plasma sample; first sample hemolyzed or clotted",
+     "ddx": {
+      "lead": [
+       "Pseudohyperkalemia"
+      ],
+      "out": [
+       "Hyperkalemia"
+      ]
+     },
+     "next": "end_pseudo"
+    },
+    {
+     "id": "real_high",
+     "if": "Confirmed 6.0 or more on blood gas or plasma; blood count normal, ECG still normal",
+     "ddx": {
+      "lead": [
+       "Hyperkalemia"
+      ],
+      "out": [
+       "Pseudohyperkalemia"
+      ]
+     },
+     "next": "hk_shift"
+    },
+    {
+     "id": "real_mild",
+     "if": "Confirmed 5.5 to 5.9 on blood gas or plasma; ECG normal",
+     "ddx": {
+      "lead": [
+       "Hyperkalemia"
+      ],
+      "out": [
+       "Pseudohyperkalemia"
+      ]
+     },
+     "next": "hk_drugs"
+    }
+   ]
+  },
+  {
+   "id": "end_pseudo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pseudohyperkalemia or a sampling error: no potassium-lowering treatment, which could only cause harm. UKKA confirms it with paired clotted and lithium heparin samples (a serum value more than 0.4 mmol/L above the plasma) and a blood count for a high platelet or white cell count; JACEP adds that when blood cells are the cause, a repeat serum value stays falsely high."
+  },
+  {
+   "id": "hk_shift",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Potassium 6.0 or more on the gas or the laboratory. Next, to bring it down?",
+   "options": [
+    "Insulin 10 units IV with glucose, plus nebulized albuterol",
+    "Nebulized albuterol alone, keeping the insulin in reserve for later",
+    "IV sodium bicarbonate, with no acidosis on the gas",
+    "IV furosemide 40 mg alone to bring it down"
+   ],
+   "answer": 0,
+   "chainStep": "Insulin 10 units IV with glucose (UK: 10 units soluble insulin in 25 g glucose; US review: 10 units regular insulin with 50 mL of 50% dextrose); nebulized albuterol 10 to 20 mg as an adjunct; glucose checks up to 12 hours; potassium at 1, 2, 4, 6 and 24 hours",
+   "why": "Insulin shifts potassium into cells within about 15 minutes and its effect lasts hours; glucose goes with it, and the glucose is checked for up to 12 hours because hypoglycemia is the main risk. UKKA recommends insulin-glucose at 6.5 or more and suggests it at 6.0 to 6.4. Nebulized albuterol, 10 to 20 mg, is an adjunct and is not used alone in severe hyperkalemia. Bicarbonate is not routine and has a place in metabolic acidosis, and a loop diuretic is not recommended as the sole agent. Shifting is temporary, so potassium is rechecked and removed.",
+   "sources": [
+    {
+     "docId": "url:f16b34a1e288",
+     "where": "Guidelines 16.3.1, 16.3.2, 16.3.3, 16.4.1, 16.4.3, 16.5, 17.1.2, 17.2"
+    },
+    {
+     "docId": "pmid:34632453",
+     "where": "Redistribution, insulin/dextrose; management algorithm, step 3"
+    },
+    {
+     "docId": "pmid:29261936",
+     "where": "Treatment / Management"
+    }
+   ],
+   "next": "hk_after",
+   "orders": [
+    {
+     "item": "Insulin with glucose",
+     "dose": "UK: 10 units soluble insulin in 25 g glucose IV; US review: 10 units regular insulin with 50 mL of 50% dextrose; if pre-treatment glucose is under 7.0 mmol/L (126 mg/dL), 10% glucose at 50 mL/h for 5 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guidelines 16.3.1, 16.3.3"
+      },
+      {
+       "docId": "pmid:29261936",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Albuterol",
+     "dose": "Nebulized albuterol (salbutamol) 10 to 20 mg as an adjunct; not alone in severe hyperkalemia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guidelines 16.4.1, 16.4.3"
+      }
+     ]
+    },
+    {
+     "item": "Sodium bicarbonate",
+     "dose": "Not routine; it can still be used with acidosis",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guideline 16.5"
+      },
+      {
+       "docId": "pmid:34632453",
+       "where": "Management algorithm, step 3"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Potassium at least at 1, 2, 4, 6 and 24 hours; blood glucose at intervals up to 12 hours after insulin-glucose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guidelines 17.1.2, 17.2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hk_after",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Potassium after the shift, and the kidneys",
+   "outcomes": [
+    {
+     "id": "rrt",
+     "if": "On hemodialysis; potassium 6.5 or more, or toxic ECG changes",
+     "ddx": {
+      "lead": [
+       "Hyperkalemia"
+      ],
+      "out": []
+     },
+     "next": "hk_dialysis"
+    },
+    {
+     "id": "resistant",
+     "if": "Not on dialysis, still 6.5 or more or oliguric; after the shift",
+     "ddx": {
+      "lead": [
+       "Hyperkalemia"
+      ],
+      "out": []
+     },
+     "next": "hk_rrt"
+    },
+    {
+     "id": "falling",
+     "if": "Under 6.5 and falling, not on dialysis; passing urine",
+     "ddx": {
+      "lead": [
+       "Hyperkalemia"
+      ],
+      "out": []
+     },
+     "next": "hk_drugs"
+    }
+   ]
+  },
+  {
+   "id": "hk_dialysis",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "On hemodialysis with severe hyperkalemia, the shift given. Next?",
+   "options": [
+    "Urgent hemodialysis with nephrology; repeat the shift meanwhile",
+    "Sodium polystyrene sulfonate enema as the main removal",
+    "Repeat insulin and albuterol, then discharge once it is under 6.0",
+    "Sodium zirconium cyclosilicate instead of dialysis"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent hemodialysis (nephrology; critical care if no renal service on site); repeat insulin with glucose and albuterol while it is arranged; IV calcium again for toxic ECG changes; continuous monitoring; potassium rechecked after dialysis for rebound",
+   "why": "Hemodialysis removes potassium most effectively and is the definitive treatment in end-stage kidney disease, so a dialysis patient with severe hyperkalemia is dialyzed urgently, with standard medical treatment while it is arranged and IV calcium for toxic ECG changes even when dialysis is close. Insulin and albuterol only shift potassium, peak within 30 to 90 minutes and last up to 4 to 6 hours, so discharge after a shift alone invites the rebound, which can also follow dialysis. The US binder labels rule them out as emergency treatment because of their delayed onset, and sodium polystyrene sulfonate is not recommended acutely.",
+   "sources": [
+    {
+     "docId": "url:f16b34a1e288",
+     "where": "Guidelines 18.1, 18.2, 18.3, 19.2; rationale for 17.1"
+    },
+    {
+     "docId": "pmid:34632453",
+     "where": "Elimination, hemodialysis; management algorithm, step 4; disposition"
+    },
+    {
+     "docId": "pmid:29261936",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:234670fb0a2a",
+     "where": "1 Indications and Usage, limitation of use"
+    }
+   ],
+   "next": "end_hk",
+   "orders": [
+    {
+     "item": "Hemodialysis",
+     "dose": "Urgent for a hemodialysis patient with severe hyperkalemia; the most effective removal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guideline 18.1"
+      },
+      {
+       "docId": "pmid:34632453",
+       "where": "Elimination, hemodialysis"
+      }
+     ]
+    },
+    {
+     "item": "While dialysis is arranged",
+     "dose": "Standard medical therapy to lower potassium; IV calcium for toxic ECG changes even when dialysis is immediately available",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guidelines 18.2, 18.3"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hk_rrt",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Not on dialysis; still 6.5 or more, or oliguric, after the shift. Next?",
+   "options": [
+    "Nephrology or critical care review for RRT; shift again",
+    "Discharge once a second insulin dose brings it under 6.0",
+    "Sodium polystyrene sulfonate enema as the definitive removal",
+    "IV furosemide alone in the oliguric patient"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent nephrology or critical care decision on renal replacement; repeat insulin with glucose and albuterol; SZC 10 g three times daily as an option; continuous monitoring",
+   "why": "Hyperkalemia that stays life-threatening after insulin and albuterol, or comes with oliguric kidney failure, needs an urgent decision on renal replacement by a nephrologist or critical care specialist, with critical care first where there is no renal service on site and transfer to renal services considered when it cannot be controlled medically; JACEP redoses the shifting drugs and arranges hemodialysis above 6. UKKA lists SZC as an option at 6.5 or more, although the US label says it is not emergency treatment. A second shift only redistributes potassium, so discharge on a lower number invites the rebound; sodium polystyrene sulfonate is not recommended acutely, and loop diuretics belong to a patient who passes urine and are not sole agents.",
+   "sources": [
+    {
+     "docId": "url:f16b34a1e288",
+     "where": "Guidelines 16.6.1, 19.2, 19.6, 20.1; rationale for 17.1"
+    },
+    {
+     "docId": "pmid:34632453",
+     "where": "Management algorithm, steps 3 and 4; elimination, oral binders; disposition"
+    },
+    {
+     "docId": "pmid:29261936",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:234670fb0a2a",
+     "where": "1 Indications and Usage, limitation of use"
+    }
+   ],
+   "next": "end_hk",
+   "orders": [
+    {
+     "item": "Renal replacement",
+     "dose": "Decided urgently by a nephrologist or critical care specialist when life-threatening hyperkalemia resists initial medical therapy; critical care first if there is no renal service on site; transfer to renal services considered when it cannot be controlled medically, especially with oliguric kidney failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guidelines 19.2, 19.6, 20.1"
+      }
+     ]
+    },
+    {
+     "item": "Shift again",
+     "dose": "Redose insulin with glucose and albuterol while dialysis is arranged if potassium stays above 6",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34632453",
+       "where": "Management algorithm, step 4"
+      }
+     ]
+    },
+    {
+     "item": "Sodium zirconium cyclosilicate",
+     "dose": "10 g three times daily as an option at 6.5 or more (UKKA)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guideline 16.6.1; Appendix 3E"
+      },
+      {
+       "docId": "url:234670fb0a2a",
+       "where": "1 Indications and Usage, limitation of use"
+      }
+     ],
+     "note": "The US label says it should not be used as emergency treatment for life-threatening hyperkalemia because of its delayed onset."
+    }
+   ]
+  },
+  {
+   "id": "hk_drugs",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Potassium under 6.5; no dialysis needed now. Next?",
+   "options": [
+    "Stop culprit drugs and potassium; a binder if it stays high",
+    "Sodium polystyrene sulfonate with sorbitol tonight, then home",
+    "IV furosemide alone, keeping the usual medicines going",
+    "Restart the ACE inhibitor at the full dose before discharge"
+   ],
+   "answer": 0,
+   "chainStep": "Stop potassium supplements; review and withhold culprit drugs (ACE inhibitor, ARB, spironolactone, trimethoprim, NSAIDs, heparin and others), withholding RAAS inhibitors in acute illness; low-potassium diet; a binder if it stays high; furosemide only if volume overloaded; potassium rechecked; community blood tests after discharge",
+   "why": "Exogenous potassium is stopped at once, and every medicine that raises potassium is reviewed against the illness and kidney function: RAAS inhibitors are withheld during acute illness at any level of hyperkalemia, and their risk is weighed before they are restarted. Binders act over hours, not minutes (UKKA: calcium resonium over 4 hours, patiromer 4 to 7 hours, SZC about 1 hour; the US sodium polystyrene sulfonate label says hours to days), and the newer binders are preferred over sodium polystyrene sulfonate, which is not given with sorbitol because of intestinal necrosis. Loop diuretics are adjuncts for a volume-overloaded patient who passes urine, not sole agents. Every treated episode gets community potassium checks after discharge.",
+   "sources": [
+    {
+     "docId": "pmid:29261936",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:f16b34a1e288",
+     "where": "Guidelines 2.6, 21.1, 21.2, 21.3, 21.4; Appendix 1"
+    },
+    {
+     "docId": "pmid:34632453",
+     "where": "Table 1; management algorithm, step 3; elimination, loop diuretics"
+    },
+    {
+     "docId": "url:60588372fd69",
+     "where": "Warnings, intestinal necrosis; alternative therapy in severe hyperkalemia"
+    }
+   ],
+   "next": "end_hk",
+   "orders": [
+    {
+     "item": "Culprit drugs",
+     "dose": "Stop potassium supplements; review ACE inhibitors, ARBs, spironolactone and other potassium-sparing diuretics, trimethoprim, NSAIDs, heparin, beta-blockers, cyclosporine, tacrolimus and digoxin; withhold RAAS inhibitors during acute illness",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34632453",
+       "where": "Table 1"
+      },
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guidelines 2.6, 21.1"
+      },
+      {
+       "docId": "pmid:29261936",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Sodium zirconium cyclosilicate",
+     "dose": "10 g three times daily for up to 48 hours, then 10 g daily (FDA); UKKA: 10 g three times daily until potassium is 4.0 to 5.0, for at most 72 hours",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:234670fb0a2a",
+       "where": "2.1 Recommended Dosage"
+      },
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Appendix 3E"
+      }
+     ],
+     "note": "The US labels say binders are not emergency treatment for life-threatening hyperkalemia because of their delayed onset; UKKA uses SZC (1B) and patiromer (1C) as options at 6.5 or more."
+    },
+    {
+     "item": "Patiromer",
+     "dose": "8.4 g once daily (FDA), at least 3 hours apart from other oral medicines",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:597c2bb8acc1",
+       "where": "2.1 General Information; 2.2 Recommended Dosing"
+      }
+     ]
+    },
+    {
+     "item": "Sodium polystyrene sulfonate",
+     "dose": "Not in the acute setting; never with sorbitol; only with normal bowel function",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:34632453",
+       "where": "Elimination, oral binders"
+      },
+      {
+       "docId": "url:60588372fd69",
+       "where": "Warnings, intestinal necrosis"
+      },
+      {
+       "docId": "pmid:29261936",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Furosemide",
+     "dose": "40 mg IV every 12 hours (or an infusion) in a volume-overloaded patient with preserved kidney function; not as the sole agent",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261936",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:34632453",
+       "where": "Management algorithm, step 3"
+      }
+     ]
+    },
+    {
+     "item": "Diet and follow-up",
+     "dose": "Low-potassium diet in hospital; community potassium checks after discharge; recurrence risk weighed before restarting the drug",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guidelines 21.2, 21.3, 21.4"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_hk",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hyperkalemia: IV calcium first for ECG changes; insulin with glucose and nebulized albuterol to shift potassium at 6.0 or more; then removal: urgent hemodialysis for a dialysis patient, and an urgent nephrology or critical care decision on renal replacement when the level stays at 6.5 or more, otherwise the culprit drugs stopped and a binder if it stays high. Potassium at 1, 2, 4, 6 and 24 hours and glucose for up to 12 hours after insulin. JACEP admits new-onset hyperkalemia and considers discharge only for chronic hyperkalemia whose cause is found and fixed, with stable vitals and follow-up within 24 to 48 hours."
+  },
+  {
+   "id": "hypok_pp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Low potassium with paralysis from a shift, no losses. Replacement?",
+   "options": [
+    "Oral potassium chloride; IV in mannitol only for arrhythmia, swallow or breathing",
+    "IV potassium chloride in saline at 40 mEq an hour by central line, on a cardiac monitor",
+    "IV potassium chloride in 5% dextrose at 20 mEq an hour, on continuous ECG",
+    "Acetazolamide now, to end the attack and the paralysis"
+   ],
+   "answer": 0,
+   "chainStep": "Oral potassium chloride first; IV only for an arrhythmia, a failed swallow or respiratory muscle weakness, as 40 mEq/L in 5% mannitol at no more than 20 mEq/h, at most 200 mEq in 24 hours, on continuous ECG; potassium followed for 24 hours for rebound hyperkalemia; ECG and thyroid tests at a first attack",
+   "why": "In periodic paralysis the potassium has shifted into cells and total body potassium is not depleted, so aggressive repletion can cause rebound hyperkalemia. Oral potassium chloride comes first; IV potassium is kept for arrhythmias, swallowing difficulty or respiratory muscle paralysis, and is given in mannitol rather than dextrose or saline, because carbohydrate and sodium can trigger paralysis, with continuous ECG monitoring. The potassium is followed for 24 hours, since it can keep rising as potassium leaves the cells. In thyrotoxic periodic paralysis, treatment of the hyperthyroidism is the mainstay; carbonic anhydrase inhibitors prevent familial attacks but may worsen the thyrotoxic form.",
+   "sources": [
+    {
+     "docId": "pmid:32644604",
+     "where": "Evaluation; Treatment / Management; Differential Diagnosis, thyrotoxic periodic paralysis"
+    }
+   ],
+   "next": "end_hypok_pp",
+   "orders": [
+    {
+     "item": "Oral potassium chloride",
+     "dose": "0.5 to 1 mEq/kg to start; if no response, a repeat dose of 0.3 mEq/kg every 30 minutes; some clinicians give 10 mEq/h to limit rebound; no more than 200 mEq in 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644604",
+       "where": "Treatment / Management, acute treatment"
+      }
+     ]
+    },
+    {
+     "item": "IV potassium",
+     "dose": "Only for arrhythmia from hypokalemia, swallowing difficulty or respiratory muscle paralysis: 40 mEq/L in 5% mannitol at no more than 20 mEq/h, no more than 200 mEq in 24 hours, on continuous ECG",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644604",
+       "where": "Treatment / Management, acute treatment"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "ECG and muscle strength during treatment; potassium for 24 hours after treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644604",
+       "where": "Treatment / Management, acute treatment"
+      }
+     ]
+    },
+    {
+     "item": "First attack",
+     "dose": "Thyroid function tests and an ECG",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644604",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "kcl_periodic"
+   ]
+  },
+  {
+   "id": "end_hypok_pp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypokalemic periodic paralysis (familial or thyrotoxic): oral potassium chloride first; IV potassium only for arrhythmia, a failed swallow or respiratory muscle weakness, as 40 mEq/L in 5% mannitol at no more than 20 mEq/h and no more than 200 mEq in 24 hours, on continuous ECG; potassium followed for 24 hours, because total body potassium is not depleted and aggressive repletion risks rebound hyperkalemia; ECG and thyroid tests at a first attack. In thyrotoxic periodic paralysis, treatment of the hyperthyroidism is the mainstay."
+  },
+  {
+   "id": "hypok_iv",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Potassium under 2.5, or low with ECG changes or paralysis. Replacement?",
+   "options": [
+    "IV potassium chloride in saline by pump, on a monitor",
+    "Oral potassium chloride alone, 40 mEq now by mouth",
+    "Potassium chloride in 5% dextrose, run through an infusion pump",
+    "A 20 mEq potassium chloride IV push over 2 minutes"
+   ],
+   "answer": 0,
+   "chainStep": "IV potassium chloride, premixed in saline, by infusion pump: up to 10 mEq/h at up to 40 mEq/L when potassium is above 2.5; up to 40 mEq/h with continuous ECG monitoring and frequent levels, preferably by central line, when under 2.0 with ECG changes or paralysis; potassium every 2 to 4 hours; magnesium checked",
+   "why": "Under 2.5 the oral label switches to IV potassium, and IV is preferred with arrhythmias, digoxin toxicity or ischemia. Concentrated potassium chloride must be diluted and given at a slow, controlled rate, in saline rather than dextrose because dextrose lowers potassium, and a central route is preferred whenever possible. Above 2.5 the rate stays at or under 10 mEq/h; up to 40 mEq/h is for a potassium under 2.0 with ECG changes or paralysis, with continuous cardiac monitoring, because rapid infusion can cause arrhythmias and cardiac arrest. Peripheral infusions above 10 mmol/h cause pain and phlebitis.",
+   "sources": [
+    {
+     "docId": "url:75d4481ea69e",
+     "where": "Dosage and Administration"
+    },
+    {
+     "docId": "url:e78e13867e1b",
+     "where": "Warnings, tissue damage; Dosage and Administration"
+    },
+    {
+     "docId": "url:cdac6fd1f58a",
+     "where": "2.1 Administration and Monitoring"
+    },
+    {
+     "docId": "pmid:29494072",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:c7c0a27934a1",
+     "where": "1.4.1"
+    }
+   ],
+   "next": "hypok_mg",
+   "orders": [
+    {
+     "item": "IV potassium chloride, potassium above 2.5",
+     "dose": "Up to 10 mEq/h at up to 40 mEq/L; no more than 200 mEq in 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:75d4481ea69e",
+       "where": "Dosage and Administration"
+      }
+     ]
+    },
+    {
+     "item": "IV potassium chloride, under 2.0 with ECG changes or paralysis",
+     "dose": "Up to 40 mEq/h, very cautiously, with continuous cardiac monitoring; up to 400 mEq in 24 hours; in saline rather than dextrose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:75d4481ea69e",
+       "where": "Dosage and Administration"
+      },
+      {
+       "docId": "url:e78e13867e1b",
+       "where": "Dosage and Administration"
+      }
+     ]
+    },
+    {
+     "item": "Rate for 2.0 to 2.5 without ECG changes",
+     "dose": "StatPearls (review): severe hypokalemia is replaced rapidly, 40 mmol every 3 to 4 hours for 3 doses, by mouth, IV or both; peripheral infusion above 10 mmol/h causes pain and phlebitis, and above 20 mmol/h risks rebound hyperkalemia",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29494072",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "url:75d4481ea69e",
+       "where": "Dosage and Administration"
+      }
+     ],
+     "note": "The labels read give IV rates only above 2.5 and for under 2.0 with ECG changes or paralysis; StatPearls gives a severe-hypokalemia regimen that is not tied to that band."
+    },
+    {
+     "item": "Route",
+     "dose": "Central whenever possible; 400 mEq/L only centrally; peripheral infusion above 10 mmol/h causes pain and phlebitis, and above 20 mmol/h risks rebound hyperkalemia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:e78e13867e1b",
+       "where": "Warnings, tissue damage and thrombophlebitis"
+      },
+      {
+       "docId": "pmid:29494072",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Premixed fluid",
+     "dose": "Potassium is not added to IV fluid bags on the ward; use premixed fluids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:c7c0a27934a1",
+       "where": "1.4.1"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Potassium every 2 to 4 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29494072",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hypok_oral",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Potassium 2.5 to 3.4, ECG normal, swallowing. Replacement?",
+   "options": [
+    "Oral potassium chloride, 40 to 100 mEq a day in divided doses",
+    "IV potassium chloride 40 mEq over 1 hour through a hand vein",
+    "A high-potassium diet alone in place of a supplement",
+    "Oral potassium chloride, 100 mEq taken as one single dose today"
+   ],
+   "answer": 0,
+   "chainStep": "Potassium chloride by mouth, 40 to 100 mEq a day (StatPearls: 60 to 80 mmol a day), no more than 40 mEq per dose, with meals and a full glass of water; treat the cause (diuretic, vomiting, diarrhea); magnesium checked; potassium rechecked",
+   "why": "Mild to moderate hypokalemia is usually treated by mouth, which carries less risk of rebound hyperkalemia. The label treats with 40 to 100 mEq a day, divided so that no single dose exceeds 40 mEq, and switches to IV only under 2.5. Extra dietary potassium is usually inadequate, because most food potassium comes with phosphate rather than chloride. A peripheral infusion faster than 10 mmol/h causes pain and phlebitis.",
+   "sources": [
+    {
+     "docId": "url:cdac6fd1f58a",
+     "where": "2.1 Administration and Monitoring; 2.2 Dosing"
+    },
+    {
+     "docId": "pmid:29494072",
+     "where": "Treatment / Management"
+    }
+   ],
+   "next": "hypok_mg",
+   "orders": [
+    {
+     "item": "Oral potassium chloride",
+     "dose": "40 to 100 mEq a day in divided doses, no more than 40 mEq per dose (FDA); StatPearls: 60 to 80 mmol a day over days to weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cdac6fd1f58a",
+       "where": "2.2 Dosing"
+      },
+      {
+       "docId": "pmid:29494072",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hypok_mg",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Replacement under way. Which deficiency keeps potassium from correcting?",
+   "options": [
+    "Low magnesium; check it and replace it",
+    "Low calcium; check it and replace it",
+    "Low phosphate; check it and replace it",
+    "Low sodium; check it and replace it"
+   ],
+   "answer": 0,
+   "chainStep": "Serum magnesium with the potassium; magnesium replaced if low; potassium rechecked every 2 to 4 hours",
+   "why": "Low magnesium often coexists with low potassium (diarrhea, alcohol, diuretics, chemotherapy), increases urinary potassium loss and hinders replacement, so potassium alone may not correct until magnesium is replaced; the pair also raises the risk of torsades. The oral label likewise asks for attention to magnesium. Calcium, phosphate and sodium are worth measuring, but none of them is named as a block to potassium replacement.",
+   "sources": [
+    {
+     "docId": "pmid:29494072",
+     "where": "Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "url:cdac6fd1f58a",
+     "where": "2.1 Administration and Monitoring"
+    }
+   ],
+   "next": "end_hypok",
+   "orders": [
+    {
+     "item": "Magnesium",
+     "dose": "Check it with the potassium and correct it if low; potassium replacement alone may be ineffective",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29494072",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_hypok",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypokalemia: oral potassium chloride for 2.5 to 3.4 with a normal ECG; IV potassium chloride in saline for under 2.5, ECG changes, arrhythmia or paralysis, at up to 10 mEq/h above 2.5 and up to 40 mEq/h only for under 2.0 with ECG changes or paralysis on continuous monitoring; magnesium replaced; the cause treated (diuretics, vomiting, diarrhea, insulin, hyperaldosteronism); potassium every 2 to 4 hours. Hypokalemic periodic paralysis carries a high risk of rebound hyperkalemia during replacement."
+  },
+  {
+   "id": "hypona_3",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Low sodium with severe symptoms: seizure, vomiting or coma. Next?",
+   "options": [
+    "3% hypertonic saline now, for a rise of about 5 mmol/L",
+    "Fluid restriction under 1 L a day as the first treatment",
+    "Correct the sodium back to 135 mmol/L within 24 hours",
+    "0.9% saline, 1 L over an hour, to raise the sodium"
+   ],
+   "answer": 0,
+   "chainStep": "3% saline: SfE 150 mL IV over 20 minutes, sodium checked while a second 150 mL runs, repeated twice or until a 5 mmol/L rise (US review: 100 mL boluses over 10 minutes as needed, for 4 to 6 mEq/L); then stop, keep the line open with minimal 0.9% saline and treat the cause; sodium at 6 and 12 hours, then daily",
+   "why": "Severe symptoms (vomiting, seizures, cardiorespiratory arrest, reduced consciousness or coma) need hypertonic saline at once whatever the cause: the aim is a rise of about 5 mmol/L (4 to 6 in the US review), enough to reverse the danger from cerebral edema while limiting the risk of osmotic demyelination; management follows the symptoms, not the number. Urine osmolality and sodium define the cause after the emergency treatment, severe symptoms need immediate hypertonic saline rather than fluid restriction, and correcting to normal within a day breaks every 24-hour limit in the sources.",
+   "sources": [
+    {
+     "docId": "pmid:27935814",
+     "where": "Clinical assessment; Treatment; Figure 1; Differential diagnosis following emergency treatment"
+    },
+    {
+     "docId": "pmid:29262111",
+     "where": "Treatment / Management"
+    }
+   ],
+   "next": "na_check",
+   "orders": [
+    {
+     "item": "3% hypertonic saline (SfE)",
+     "dose": "150 mL IV over 20 minutes; check the sodium while a second 150 mL runs; repeat twice or until a 5 mmol/L rise; a close monitoring environment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935814",
+       "where": "Figure 1, boxes 1 to 3"
+      }
+     ]
+    },
+    {
+     "item": "3% hypertonic saline (US review)",
+     "dose": "100 mL IV boluses over 10 minutes as needed, aiming for 4 to 6 mEq/L in the first 4 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29262111",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:29939554",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "A review; the 2013 US expert panel itself was not readable. The SIADH chapter of the same review gives one 100 mL bolus over the first 3 to 4 hours."
+    },
+    {
+     "item": "After the 5 mmol/L rise",
+     "dose": "Stop the hypertonic saline; keep the line open with a minimum volume of 0.9% saline; start cause-specific treatment; sodium at 6 and 12 hours, then daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935814",
+       "where": "Figure 1, box 4"
+      }
+     ]
+    }
+   ],
+   "note": "UK Society for Endocrinology regimen, as in the seizure and altered mental status pathways. The 2014 European guideline and the 2013 US expert panel were not readable here."
+  },
+  {
+   "id": "na_check",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Symptoms after the first hour, then the sodium at 6 and 12 hours",
+   "outcomes": [
+    {
+     "id": "better",
+     "if": "Symptoms better; the rise within the 24-hour limit",
+     "ddx": {
+      "lead": [
+       "Hyponatremia"
+      ],
+      "out": []
+     },
+     "next": "na_workup"
+    },
+    {
+     "id": "not_better",
+     "if": "Up 5 mmol/L, symptoms no better; still drowsy or vomiting",
+     "ddx": {
+      "lead": [
+       "Hyponatremia"
+      ],
+      "out": []
+     },
+     "next": "end_na_more"
+    },
+    {
+     "id": "over",
+     "if": "Rising too fast; past 8 to 10 mmol/L in 24 hours (SfE stops at 10, or 18 in 48), often a large dilute urine output",
+     "ddx": {
+      "lead": [
+       "Hyponatremia"
+      ],
+      "out": []
+     },
+     "next": "na_over"
+    }
+   ]
+  },
+  {
+   "id": "end_na_more",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Sodium up 5 mmol/L but no better: SfE gives a further 150 mL of 3% over 20 minutes aiming for an additional 1 mmol/L rise, stops when the symptoms improve, the rise passes 10 mmol/L or the sodium reaches 130, and explores other causes of the symptoms. The cause of the hyponatremia is then worked up with urine osmolality and urine sodium."
+  },
+  {
+   "id": "na_over",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "After hypertonic saline, the sodium has risen past the 24-hour limit. Next?",
+   "options": [
+    "Stop the hypertonic fluid; expert help with D5W and desmopressin",
+    "Continue the 3% saline; a fast rise is safe once symptoms settle",
+    "Restrict fluid to under 800 mL a day to hold the sodium steady",
+    "Tolvaptan 15 mg to steady the sodium overnight"
+   ],
+   "answer": 0,
+   "chainStep": "Stop hypertonic fluid; senior help experienced in over-correction; consider hypotonic fluid (5% dextrose, 6 mL/kg lean body weight over 1 to 2 hours, lowering sodium about 2 mmol/L) with or without desmopressin 2 to 4 mcg IV or SC; sodium checked closely",
+   "why": "Over-correction risks osmotic demyelination, and low potassium, alcohol, malnutrition and liver disease add to the risk. SfE stops hypertonic fluid once the rise passes 10 mmol/L in 24 hours or 18 in 48, and asks a clinician experienced in over-correction to consider hypotonic fluid with or without anti-diuresis; StatPearls uses 5% dextrose with desmopressin to bring the rise back within the limit. Fluid restriction and tolvaptan both push the sodium higher, and tolvaptan's own label warns that a rise over 12 mEq/L in 24 hours can cause osmotic demyelination.",
+   "sources": [
+    {
+     "docId": "pmid:27935814",
+     "where": "Managing over-correction"
+    },
+    {
+     "docId": "pmid:29262111",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:31869161",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:32119469",
+     "where": "Indications"
+    },
+    {
+     "docId": "url:0d1d8dbd9530",
+     "where": "Boxed warning"
+    }
+   ],
+   "next": "end_na_over",
+   "orders": [
+    {
+     "item": "Hypertonic fluid",
+     "dose": "Stop it once the rise passes 10 mmol/L in the first 24 hours or 18 mmol/L in the first 48",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935814",
+       "where": "Managing over-correction"
+      }
+     ]
+    },
+    {
+     "item": "5% dextrose",
+     "dose": "6 mL/kg of lean body weight over 1 to 2 hours lowers the sodium by about 2 mEq/L; continued until the goal is reached",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31869161",
+       "where": "Treatment / Management, reintroduction of hyponatremia"
+      }
+     ]
+    },
+    {
+     "item": "Desmopressin",
+     "dose": "2 to 4 mcg IV or SC",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31869161",
+       "where": "Treatment / Management, reintroduction of hyponatremia"
+      },
+      {
+       "docId": "pmid:32119469",
+       "where": "Indications"
+      }
+     ],
+     "note": "Off-label: StatPearls lists preventing rapid sodium correction among desmopressin's off-label uses."
+    },
+    {
+     "item": "24-hour correction limit",
+     "dose": "SfE: 10 mmol/L in the first 24 hours, 18 in 48, then 8 a day to 130; StatPearls: 8 to 12 a day, and 6 to 8 when hyponatremia has lasted 48 hours or more or its duration is unknown; StatPearls SIADH: no more than 8 a day; tolvaptan label: over 12 in 24 hours can cause osmotic demyelination",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:27935814",
+       "where": "Managing over-correction; Figure 1, box 4"
+      },
+      {
+       "docId": "pmid:31869161",
+       "where": "Treatment / Management, prevention"
+      },
+      {
+       "docId": "pmid:29939554",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "url:0d1d8dbd9530",
+       "where": "Boxed warning"
+      }
+     ],
+     "note": "The sources set different 24-hour limits; the tolvaptan label advises slower correction in severe malnutrition, alcoholism or advanced liver disease."
+    }
+   ],
+   "calcs": [
+    "d5w_relower"
+   ]
+  },
+  {
+   "id": "end_na_over",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Over-correction: hypertonic fluid stopped and, with expert help, 5% dextrose with or without desmopressin to bring the rise back within the 24-hour limit, with close sodium checks. Low potassium, alcohol, malnutrition and liver disease are the risk factors for osmotic demyelination."
+  },
+  {
+   "id": "na_workup",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Low sodium, no severe symptoms now. Which tests define the cause?",
+   "options": [
+    "Serum and urine osmolality, urine sodium, and a volume exam",
+    "Tolvaptan 15 mg today while the tests are running",
+    "CT head first, then the blood and urine tests if it is normal",
+    "Correct to 135 with 3% saline, then look for the cause"
+   ],
+   "answer": 0,
+   "chainStep": "Serum osmolality, glucose and lipids (to exclude pseudohyponatremia and a high glucose); urine osmolality and urine sodium; clinical volume status; TSH and cortisol; drug history (thiazides, SSRIs, carbamazepine and others)",
+   "why": "Urine osmolality and urine sodium are central to the cause, read with the volume status: under 100 mOsm/kg points to primary polydipsia, low solute intake or inappropriate IV fluid; at 100 or more, a urine sodium under 30 points to a low effective volume and over 30 to SIADH, drugs, salt wasting, vomiting or adrenal insufficiency, while diuretics make the urine sodium unreliable. Serum osmolality, glucose and lipids exclude pseudohyponatremia, and hypothyroidism and adrenal insufficiency are excluded before SIADH is called. A head CT comes later, in the search for a central nervous system cause. Tolvaptan is contraindicated in hypovolemic hyponatremia, and fast correction to normal breaks the 24-hour limit.",
+   "sources": [
+    {
+     "docId": "pmid:27935814",
+     "where": "Differential diagnosis following emergency treatment; Figure 3"
+    },
+    {
+     "docId": "pmid:29262111",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:29939554",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "url:0d1d8dbd9530",
+     "where": "4 Contraindications"
+    }
+   ],
+   "next": "na_type"
+  },
+  {
+   "id": "na_type",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Urine osmolality, urine sodium and volume",
+   "outcomes": [
+    {
+     "id": "low_uosm",
+     "if": "Urine osmolality under 100; heavy beer, little food, or drinking large volumes of water",
+     "ddx": {
+      "lead": [
+       "Low solute intake or polydipsia"
+      ],
+      "out": [
+       "SIADH"
+      ]
+     },
+     "next": "end_na_potomania"
+    },
+    {
+     "id": "dry",
+     "if": "Dry, no edema, urine osmolality 100 or more; vomiting, diarrhea or a thiazide",
+     "ddx": {
+      "lead": [
+       "Hypovolemic hyponatremia"
+      ],
+      "out": []
+     },
+     "next": "na_hypo"
+    },
+    {
+     "id": "edema",
+     "if": "Edema; heart failure, cirrhosis or nephrotic syndrome, urine sodium under 30 off diuretics",
+     "ddx": {
+      "lead": [
+       "Heart failure or cirrhosis"
+      ],
+      "out": []
+     },
+     "next": "end_na_hyper"
+    },
+    {
+     "id": "siadh",
+     "if": "Euvolemic, concentrated urine, urine sodium over 30; no diuretic",
+     "ddx": {
+      "lead": [
+       "SIADH",
+       "Adrenal insufficiency or hypothyroidism"
+      ],
+      "out": []
+     },
+     "next": "na_siadh"
+    },
+    {
+     "id": "diuretic",
+     "if": "On a diuretic, not dry; urine sodium over 30, no edema",
+     "ddx": {
+      "lead": [
+       "Thiazide-induced hyponatremia",
+       "SIADH"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Urine sodium on a diuretic",
+       "dose": "Unreliable: SfE considers every other cause when the urine sodium is over 30 on a diuretic; StatPearls uses the fractional excretion of urea (over 55%) or uric acid (over 10%) instead",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:27935814",
+         "where": "Figure 3"
+        },
+        {
+         "docId": "pmid:29262111",
+         "where": "Evaluation"
+        }
+       ]
+      },
+      {
+       "item": "Euvolemic hyponatremia",
+       "dose": "Fluid restriction to under 1 L a day",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29262111",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ],
+     "next": "end_na_diuretic"
+    }
+   ]
+  },
+  {
+   "id": "end_na_potomania",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Urine osmolality under 100: primary polydipsia, inappropriate IV fluid or low solute intake (beer potomania, the tea-and-toast diet). These patients are at very high risk of an overly rapid rise, so StatPearls monitors them in an intensive care setting with frequent sodium checks and neurologic review; the 24-hour limits above apply, and alcohol and malnutrition add to the risk of osmotic demyelination. Low potassium is a risk factor for osmotic demyelination and for a poorer outcome when it occurs."
+  },
+  {
+   "id": "na_hypo",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Dry, no edema, concentrated urine; losses or a thiazide. Next?",
+   "options": [
+    "Isotonic saline, stop the thiazide, and check the sodium often",
+    "Fluid restriction to under 1 L a day, the same as for SIADH",
+    "Tolvaptan 15 mg once daily, started in hospital with sodium checks",
+    "3% saline boluses to bring the sodium up quickly"
+   ],
+   "answer": 0,
+   "chainStep": "Isotonic (0.9%) saline for the volume deficit; stop the thiazide or other diuretic; treat vomiting or diarrhea; sodium every 4 to 6 hours during IV fluid (hourly if severely deranged), watching for a fast rise once volume returns; other causes still considered",
+   "why": "Hypovolemic hyponatremia is treated with isotonic fluid, treatment of nausea and vomiting, and withholding diuretics; thiazides impair urinary dilution and are a common drug cause. Once volume is restored a water diuresis can make the sodium rise unpredictably, so it is checked often against the 24-hour limit. With a diuretic on board the urine sodium cannot separate the causes, so SfE still considers every other cause. Fluid restriction is for euvolemic hyponatremia, tolvaptan is contraindicated in hypovolemic hyponatremia, and hypertonic saline is for severe symptoms.",
+   "sources": [
+    {
+     "docId": "pmid:29262111",
+     "where": "Etiology; Treatment / Management"
+    },
+    {
+     "docId": "url:0d1d8dbd9530",
+     "where": "4 Contraindications"
+    },
+    {
+     "docId": "pmid:31869161",
+     "where": "Treatment / Management, prevention"
+    },
+    {
+     "docId": "pmid:27935814",
+     "where": "Figure 3"
+    }
+   ],
+   "next": "end_na_vol",
+   "orders": [
+    {
+     "item": "0.9% saline",
+     "dose": "Volume and rate for hypovolemic hyponatremia are not stated in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Diuretic",
+     "dose": "Withhold it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29262111",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Sodium checks",
+     "dose": "Every 4 to 6 hours during IV fluid; hourly with severe derangement",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31869161",
+       "where": "Treatment / Management, prevention"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_na_vol",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypovolemic or diuretic hyponatremia: isotonic saline, the thiazide or other diuretic stopped, vomiting or diarrhea treated, and frequent sodium checks, because the rise can be fast once volume returns; the 24-hour limit applies."
+  },
+  {
+   "id": "end_na_hyper",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hyponatremia with edema (heart failure, cirrhosis, nephrotic syndrome): StatPearls treats the underlying condition, restricts salt and fluid, and gives loop diuretics. Tolvaptan is labeled for clinically significant hypervolemic hyponatremia, including heart failure, started only in hospital and limited to 30 days; its label says to avoid it in liver disease, including cirrhosis, so it is not used in cirrhosis."
+  },
+  {
+   "id": "end_na_diuretic",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hyponatremia on a diuretic, not dry, urine sodium over 30: the diuretic makes the urine sodium unreliable, so SfE considers every other cause, SIADH included, and StatPearls turns to the fractional excretion of urea (over 55%) or uric acid (over 10%). Thiazides impair urinary dilution and are a common drug cause. Euvolemic hyponatremia is treated with fluid restriction under 1 L a day; severe symptoms still get 3% saline."
+  },
+  {
+   "id": "na_siadh",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Euvolemic, concentrated urine, urine sodium over 30, no diuretic. Next?",
+   "options": [
+    "Fluid restriction, once TSH and cortisol are normal",
+    "0.9% saline 2 L to replace the sodium lost in the urine",
+    "Tolvaptan 15 mg started in clinic, then continued at home",
+    "Demeclocycline as the first treatment for SIADH"
+   ],
+   "answer": 0,
+   "chainStep": "TSH and cortisol to exclude hypothyroidism and adrenal insufficiency; fluid restriction; the cause found and treated (drugs such as SSRIs and carbamazepine, lung or CNS disease; chest x-ray and CT for small cell cancer in a smoker with weight loss); salt tablets with or without a loop diuretic if it persists; tolvaptan started only in hospital",
+   "why": "In SIADH with mild to moderate symptoms, restricting water intake is the mainstay, and the cause is treated; hypothyroidism and adrenal insufficiency are ruled out first. Isotonic saline may not correct SIADH and can make it worse, because the urine is more concentrated than the saline. If restriction fails, salt tablets with a loop diuretic or a vaptan come next, and tolvaptan is started and restarted only in hospital with close sodium monitoring. Demeclocycline and lithium are for when other therapies fail.",
+   "sources": [
+    {
+     "docId": "pmid:29939554",
+     "where": "Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "pmid:29262111",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:0d1d8dbd9530",
+     "where": "Boxed warning; 2.1 Recommended Dosage"
+    }
+   ],
+   "next": "end_siadh",
+   "orders": [
+    {
+     "item": "Fluid restriction",
+     "dose": "StatPearls SIADH: under 800 mL a day; StatPearls hyponatremia: under 1 L a day for euvolemic hyponatremia",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29939554",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:29262111",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "Two chapters of the same review give different limits."
+    },
+    {
+     "item": "Tolvaptan",
+     "dose": "15 mg once daily, started and restarted only in hospital with close sodium monitoring; no fluid restriction in the first 24 hours; not for urgent neurological symptoms; contraindicated in hypovolemic hyponatremia; no more than 30 days; avoid in liver disease, including cirrhosis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0d1d8dbd9530",
+       "where": "Boxed warning; 1 Indications and Usage; 2.1 Recommended Dosage; 4 Contraindications; 5.2 Liver Injury"
+      }
+     ]
+    },
+    {
+     "item": "Small cell lung cancer",
+     "dose": "Chest x-ray and CT in a smoker with weight loss or chest symptoms",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29939554",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_siadh",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "SIADH: hypothyroidism and adrenal insufficiency excluded, fluid restricted, and the cause found and treated; salt tablets with a loop diuretic, or tolvaptan started in hospital, if restriction fails, always within the 24-hour correction limit. A low cortisol or thyroid level makes that the diagnosis, and it is treated instead."
+  },
+  {
+   "id": "hn_water",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "High sodium, present for days or of unknown duration. Correction?",
+   "options": [
+    "Free water deficit over 48 to 72 hours, under 0.5 mmol/L an hour",
+    "D5W to bring the sodium back down to 140 within 6 hours",
+    "Hypotonic fluid to lower it 1 to 2 mmol/L an hour from the start",
+    "IV furosemide to remove the extra sodium in the urine"
+   ],
+   "answer": 0,
+   "chainStep": "Free water deficit = total body water (0.6 x kg in men, 0.5 in women and older men, 0.45 in an older woman; 50% and 40% of lean weight when water-depleted) x (sodium / 140 - 1), plus ongoing losses; water by mouth or tube where possible, else 5% dextrose or 0.45% saline, over 48 to 72 hours; sodium falling no faster than 0.5 mmol/L an hour (12 a day); sodium every 2 to 4 hours; isotonic fluid first in shock",
+   "why": "Hypernatremia is a water deficit: total body water times (sodium/140 minus 1), plus ongoing losses, replaced by mouth or tube where possible or with hypotonic fluid over 48 to 72 hours. When it has lasted more than 48 hours or its duration is unknown, the sodium falls no faster than 0.5 mmol/L an hour (12 a day), with checks every 2 to 4 hours, because rapid correction risks cerebral edema; a fall of 1 to 2 mmol/L an hour is reserved for acute hypernatremia from sodium loading within 48 hours. Isotonic saline is for shock or hypotension first, and diuretics belong to sodium overload, given with 5% dextrose.",
+   "sources": [
+    {
+     "docId": "pmid:28722989",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:36578134",
+     "where": "Treatment of hypernatremia, steps 2 to 4"
+    }
+   ],
+   "next": "end_hn",
+   "orders": [
+    {
+     "item": "Free water deficit",
+     "dose": "Total body water (0.6 x kg in men, 0.5 in women and older men, 0.45 in an older woman; 50% and 40% of lean weight when water-depleted) x (Na/140 - 1); add insensible and ongoing losses",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:36578134",
+       "where": "Treatment, step 3, Eq. 5 and Eq. 7"
+      },
+      {
+       "docId": "pmid:28722989",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:29262111",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "KJIM gives 60% in men and 50% in women and deducts 5% in older adults (read literally, 55% in an older man); StatPearls gives 50% for women and older adults, the figure used here for an older man."
+    },
+    {
+     "item": "Rate",
+     "dose": "Over 48 hours or unknown duration: under 0.5 mmol/L an hour (12 a day), deficit over 48 to 72 hours; acute sodium loading within 48 hours: 1 to 2 mmol/L an hour for 6 to 8 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36578134",
+       "where": "Treatment, steps 2 and 3"
+      },
+      {
+       "docId": "pmid:28722989",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "KJIM adds that adult studies have not linked faster correction to harm, while correction slower than 0.25 mmol/L an hour carries higher mortality."
+    },
+    {
+     "item": "Fluid",
+     "dose": "Water by mouth or tube where possible; else 5% dextrose, 0.2% or 0.45% saline; 0.9% saline or balanced crystalloid first in shock or hypotension, whatever the sodium",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36578134",
+       "where": "Treatment, step 4"
+      },
+      {
+       "docId": "pmid:28722989",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Central diabetes insipidus",
+     "dose": "Desmopressin, intranasal 10 to 20 mcg every 12 to 24 hours or 0.1 to 0.8 mg by mouth every 12 hours; nephrogenic: stop the drug (lithium), and a thiazide or amiloride on occasion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36578134",
+       "where": "Treatment, step 5 and after"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Sodium every 2 to 4 hours in the acute phase; a seizure during correction means cerebral edema: stop the hypotonic fluid",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722989",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "free_water_deficit"
+   ]
+  },
+  {
+   "id": "end_na_acute",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute symptomatic sodium loading within 48 hours: KJIM lowers the sodium 1 to 2 mmol/L an hour for the first 6 to 8 hours, back to 145 within 24 hours; with volume overload, 5% dextrose for the deficit and a diuretic to remove sodium."
+  },
+  {
+   "id": "end_hn",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypernatremia: the cause stopped (losses, lactulose, diuretics, no access to water), shock treated with isotonic fluid first, then the free water deficit replaced over 48 to 72 hours with the sodium falling no faster than 0.5 mmol/L an hour when it is chronic or of unknown duration. An inappropriately dilute urine points to diabetes insipidus: desmopressin for central, the drug stopped for nephrogenic."
+  },
+  {
+   "id": "hc_fluids",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Calcium 3.0 or more, or symptomatic, and clinically dry. First treatment?",
+   "options": [
+    "IV 0.9% saline, 4 to 6 L over 24 hours, watching fluid balance",
+    "IV furosemide first, to drive the calcium out through the urine",
+    "Prednisolone 40 mg daily as the first-line treatment",
+    "Zoledronic acid now, ahead of the IV fluid"
+   ],
+   "answer": 0,
+   "chainStep": "IV 0.9% saline 4 to 6 L over 24 hours, watching for fluid overload in renal impairment or older patients; adjusted calcium, phosphate, PTH, renal function; ECG; dialysis considered in severe renal failure",
+   "why": "Rehydration with IV 0.9% saline, 4 to 6 L in 24 hours, comes first, watching for fluid overload when the kidneys are impaired or the patient is old, and dialysis may be needed in severe renal failure. Loop diuretics are rarely used, only for fluid overload, and do not lower the calcium; the zoledronic acid label adds that diuretics wait until hypovolemia is corrected and that rehydration comes before the bisphosphonate. Glucocorticoids are second line, for lymphoma, other granulomatous disease or vitamin D excess. Above 3.5 mmol/L the risk of arrhythmia and coma makes correction urgent.",
+   "sources": [
+    {
+     "docId": "pmid:27935816",
+     "where": "Severity; Management, rehydration; Second-line treatments"
+    },
+    {
+     "docId": "url:bc9f91df25ce",
+     "where": "2.1 Hypercalcemia of Malignancy"
+    }
+   ],
+   "next": "hc_after",
+   "orders": [
+    {
+     "item": "ECG",
+     "dose": "Look for a short QT interval or another conduction abnormality",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935816",
+       "where": "Investigation, ECG"
+      }
+     ]
+    },
+    {
+     "item": "Dialysis",
+     "dose": "May need to be considered in severe renal failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935816",
+       "where": "Management, rehydration"
+      }
+     ]
+    }
+   ],
+   "note": "Same first step as the altered mental status pathway."
+  },
+  {
+   "id": "hc_after",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Calcium after IV saline, and the PTH",
+   "outcomes": [
+    {
+     "id": "normal",
+     "if": "Back to normal after rehydration; the PTH sent",
+     "ddx": {
+      "lead": [
+       "Hypercalcemia"
+      ],
+      "out": []
+     },
+     "next": "end_hc_fluid"
+    },
+    {
+     "id": "malig",
+     "if": "Still high, PTH low; solid cancer or myeloma",
+     "ddx": {
+      "lead": [
+       "Hypercalcemia of malignancy"
+      ],
+      "out": []
+     },
+     "next": "hc_bisph"
+    },
+    {
+     "id": "pth",
+     "if": "Still high, PTH high; hyperparathyroidism",
+     "ddx": {
+      "lead": [
+       "Primary hyperparathyroidism"
+      ],
+      "out": []
+     },
+     "next": "end_hc_pth",
+     "orders": [
+      {
+       "item": "IV bisphosphonate",
+       "dose": "If further treatment is needed after IV saline (SfE); zoledronic acid 4 mg over 15 minutes, or pamidronate 30 to 90 mg at 20 mg an hour",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:27935816",
+         "where": "Management, bisphosphonates"
+        }
+       ]
+      },
+      {
+       "item": "Parathyroidectomy",
+       "dose": "Can be considered in an acute presentation of primary hyperparathyroidism with severe hypercalcemia and a poor response to other measures",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:27935816",
+         "where": "Second-line treatments"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "granul",
+     "if": "Still high, PTH low; lymphoma, sarcoidosis or vitamin D excess",
+     "ddx": {
+      "lead": [
+       "Granulomatous disease or vitamin D excess"
+      ],
+      "out": []
+     },
+     "next": "end_hc_granul",
+     "orders": [
+      {
+       "item": "Glucocorticoids",
+       "dose": "SfE: prednisolone 40 mg daily, usually effective in 2 to 4 days; StatPearls: prednisone 20 to 40 mg daily",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:27935816",
+         "where": "Second-line treatments"
+        },
+        {
+         "docId": "pmid:28613465",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hc_bisph",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Calcium still high after IV saline; PTH low with a cancer. Next?",
+   "options": [
+    "Zoledronic acid 4 mg IV over at least 15 minutes",
+    "Zoledronic acid 4 mg as a rapid IV push over 1 minute",
+    "A second zoledronic acid dose tomorrow if still high",
+    "IV furosemide 80 mg to push the calcium out"
+   ],
+   "answer": 0,
+   "chainStep": "Zoledronic acid 4 mg IV over no less than 15 minutes once rehydrated, with a serum creatinine first; calcitonin 4 units/kg SC or IM every 12 hours alongside where used; calcium nadir at 2 to 4 days; no retreatment for at least 7 days",
+   "why": "If more is needed after IV saline, an IV bisphosphonate follows: zoledronic acid 4 mg over 15 minutes (the label requires no less than 15 minutes, adequate rehydration first and at least 7 days before any retreatment), or pamidronate 30 to 90 mg at 20 mg an hour, more slowly and at a reduced dose in renal impairment. The calcium reaches its nadir at 2 to 4 days. Calcitonin works within about 2 hours, so StatPearls gives it with hydration while the bisphosphonate takes effect; SfE keeps calcitonin, denosumab and calcimimetics second line under specialist supervision, while StatPearls names denosumab first line with the bisphosphonates and a good option in renal impairment.",
+   "sources": [
+    {
+     "docId": "pmid:27935816",
+     "where": "Management, bisphosphonates; Second-line treatments"
+    },
+    {
+     "docId": "url:bc9f91df25ce",
+     "where": "2.1 Hypercalcemia of Malignancy"
+    },
+    {
+     "docId": "pmid:28613465",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:8233b86358b0",
+     "where": "2.2 Hypercalcemia"
+    }
+   ],
+   "next": "end_hc_malig",
+   "orders": [
+    {
+     "item": "Zoledronic acid",
+     "dose": "4 mg IV over no less than 15 minutes; serum creatinine before each dose; patients rehydrated first",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:bc9f91df25ce",
+       "where": "2.1 Hypercalcemia of Malignancy"
+      }
+     ]
+    },
+    {
+     "item": "Pamidronate (SfE)",
+     "dose": "30 to 90 mg, depending on severity, at 20 mg an hour",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935816",
+       "where": "Management, bisphosphonates"
+      }
+     ]
+    },
+    {
+     "item": "Retreatment",
+     "dose": "At least 7 days after the first dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:bc9f91df25ce",
+       "where": "2.1 Hypercalcemia of Malignancy"
+      }
+     ]
+    },
+    {
+     "item": "Hypocalcemia risk",
+     "dose": "With vitamin D deficiency or a suppressed PTH",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935816",
+       "where": "Management, bisphosphonates"
+      }
+     ]
+    },
+    {
+     "item": "Denosumab",
+     "dose": "An option with the bisphosphonates, notably in renal impairment (StatPearls); dose not in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Calcitonin",
+     "dose": "4 USP Units/kg SC or IM every 12 hours; 8 every 12 hours if no response in 1 to 2 days; at most 8 every 6 hours (FDA); serious hypersensitivity, consider skin testing if suspected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8233b86358b0",
+       "where": "1.2 Treatment of Hypercalcemia; 2.2 Hypercalcemia; 5.1 Hypersensitivity Reactions"
+      },
+      {
+       "docId": "pmid:28613465",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:27935816",
+       "where": "Second-line treatments"
+      }
+     ],
+     "note": "The label indicates it for the early treatment of hypercalcemic emergencies, with other agents, when a rapid fall is needed. StatPearls gives calcitonin with hydration and the bisphosphonate to lower calcium while the bisphosphonate acts; SfE keeps it second line under specialist supervision. The Endocrine Society 2023 guideline (abstract only here) suggests calcitonin with a bisphosphonate or denosumab for severe hypercalcemia of malignancy."
+    }
+   ],
+   "calcs": [
+    "calcitonin"
+   ]
+  },
+  {
+   "id": "end_hc_malig",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypercalcemia of malignancy: IV saline 4 to 6 L over 24 hours, then zoledronic acid 4 mg over at least 15 minutes, with calcitonin alongside where it is used for a faster fall; the nadir comes at 2 to 4 days, no retreatment before 7 days, and the cancer is treated. Denosumab is the alternative StatPearls names, notably in renal impairment; its dose is not in the sources read."
+  },
+  {
+   "id": "end_hc_pth",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypercalcemia with a high PTH: primary or tertiary hyperparathyroidism. After IV saline, an IV bisphosphonate if more treatment is needed, and parathyroidectomy can be considered in an acute presentation with severe hypercalcemia and a poor response to other measures. Familial hypocalciuric hypercalcemia can mimic it but is rarely severe or an emergency."
+  },
+  {
+   "id": "end_hc_granul",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypercalcemia from lymphoma, granulomatous disease or vitamin D excess: glucocorticoids (SfE: prednisolone 40 mg daily, usually effective in 2 to 4 days) after IV saline, with an IV bisphosphonate if more treatment is needed."
+  },
+  {
+   "id": "end_hc_fluid",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Calcium normal after rehydration: the cause is still sought (a high PTH for hyperparathyroidism, a low PTH for malignancy or a rarer cause such as thiazides, lithium, vitamin D, immobilization or thyrotoxicosis), and drugs and supplements that raise calcium are reviewed."
+  },
+  {
+   "id": "hypoca_iv",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Low calcium with tetany, seizure or a long QT. First?",
+   "options": [
+    "10 to 20 mL of 10% calcium gluconate IV over 10 minutes, on ECG",
+    "Oral calcium carbonate tablets now, as the first-line treatment",
+    "10% calcium chloride through a small hand vein",
+    "Calcium gluconate 2 g as an IV push over 1 minute"
+   ],
+   "answer": 0,
+   "chainStep": "10 to 20 mL of 10% calcium gluconate (1 to 2 g) in 50 to 100 mL of 5% dextrose IV over 10 minutes with ECG monitoring, repeated until the symptoms resolve, then an infusion titrated to normocalcemia; magnesium, phosphate, PTH, vitamin D and renal function",
+   "why": "Severe hypocalcemia, under 1.9 mmol/L or symptomatic at any level, is a medical emergency: IV calcium gluconate, 10 to 20 mL of 10% over 10 minutes with ECG monitoring, repeated until the symptoms settle, then an infusion until the cause is treated. The label caps a bolus at 200 mg a minute, so 2 g over a minute is far too fast. Calcium chloride irritates veins and belongs in a central line. Oral calcium is for mild, asymptomatic hypocalcemia. Magnesium is measured because a low magnesium causes hypocalcemia and is treated with it.",
+   "sources": [
+    {
+     "docId": "pmid:27935815",
+     "where": "Management, severe hypocalcaemia; mild hypocalcaemia; hazards of IV calcium; investigations"
+    },
+    {
+     "docId": "url:dff7e5c8a4a6",
+     "where": "2.1 Important Administration Instructions; 2.2 Recommended Dosage, Table 1"
+    },
+    {
+     "docId": "pmid:28613662",
+     "where": "Treatment / Management"
+    }
+   ],
+   "next": "hypoca_mg",
+   "orders": [
+    {
+     "item": "Calcium gluconate bolus",
+     "dose": "SfE: 10 to 20 mL of 10% in 50 to 100 mL of 5% dextrose over 10 minutes, repeated until asymptomatic; FDA: 1,000 to 2,000 mg diluted to 10 to 50 mg/mL, no faster than 200 mg a minute, repeated every 6 hours if needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935815",
+       "where": "Management, severe hypocalcaemia"
+      },
+      {
+       "docId": "url:dff7e5c8a4a6",
+       "where": "2.1; 2.2, Table 1"
+      }
+     ]
+    },
+    {
+     "item": "ECG monitoring",
+     "dose": "During the bolus; continuous with arrhythmias or digoxin therapy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935815",
+       "where": "Management, severe hypocalcaemia; hazards of IV calcium"
+      }
+     ]
+    },
+    {
+     "item": "Calcium chloride",
+     "dose": "An alternative only through a central line",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935815",
+       "where": "Management, severe hypocalcaemia"
+      }
+     ]
+    },
+    {
+     "item": "Incompatibilities",
+     "dose": "Not mixed with bicarbonate or phosphate; not given with ceftriaxone through the same Y-site",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:dff7e5c8a4a6",
+       "where": "2.5 Drug Incompatibilities"
+      }
+     ]
+    },
+    {
+     "item": "End-stage kidney failure or dialysis",
+     "dose": "Large-volume calcium infusions are not used; KDOQI guidance applies, which is not in this pathway",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935815",
+       "where": "Management, severe hypocalcaemia"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hypoca_mg",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Magnesium and the cause",
+   "outcomes": [
+    {
+     "id": "mg_low",
+     "if": "Magnesium low; PPI, alcohol, diarrhea or diuretics",
+     "ddx": {
+      "lead": [
+       "Hypomagnesemia"
+      ],
+      "out": []
+     },
+     "next": "mg_iv"
+    },
+    {
+     "id": "mg_ok",
+     "if": "Magnesium normal; after neck surgery or another cause",
+     "ddx": {
+      "lead": [
+       "Hypocalcemia"
+      ],
+      "out": []
+     },
+     "next": "hypoca_after"
+    }
+   ]
+  },
+  {
+   "id": "hypoca_after",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Symptoms settled after the bolus; magnesium normal. Next?",
+   "options": [
+    "Calcium gluconate infusion, titrated, and the cause treated",
+    "Stop the IV calcium; oral calcium tablets alone from tonight",
+    "Calcium chloride infusion through the peripheral line",
+    "Potassium phosphate added to the calcium infusion bag"
+   ],
+   "answer": 0,
+   "chainStep": "Calcium gluconate infusion (SfE: 100 mL of 10% in 1 L of 0.9% saline or 5% dextrose at 50 to 100 mL/h) titrated to normocalcemia, calcium every 1 to 4 hours; treat the cause: alfacalcidol or calcitriol 0.25 to 0.5 micrograms a day for hypoparathyroidism after neck surgery, vitamin D for deficiency",
+   "why": "SfE follows the bolus with a calcium gluconate infusion titrated to normocalcemia and continued until treatment of the cause has taken effect; for hypoparathyroidism after surgery that means alfacalcidol or calcitriol, with frequent blood tests because they can cause hypercalcemia. The label checks calcium every 1 to 4 hours during an infusion. Calcium chloride is for central lines only, and calcium gluconate is not mixed with phosphate or bicarbonate because they precipitate.",
+   "sources": [
+    {
+     "docId": "pmid:27935815",
+     "where": "Management, severe hypocalcaemia; long-term follow-up"
+    },
+    {
+     "docId": "url:dff7e5c8a4a6",
+     "where": "2.3 Serum Calcium Monitoring; 2.5 Drug Incompatibilities"
+    }
+   ],
+   "next": "end_hypoca",
+   "orders": [
+    {
+     "item": "Calcium gluconate infusion",
+     "dose": "SfE: 100 mL of 10% (10 vials) in 1 L of 0.9% saline or 5% dextrose at 50 to 100 mL/h, titrated; FDA: start at 5.4 to 21.5 mg/kg/hour; calcium every 1 to 4 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935815",
+       "where": "Management, severe hypocalcaemia"
+      },
+      {
+       "docId": "url:dff7e5c8a4a6",
+       "where": "2.2, Table 1; 2.3"
+      }
+     ]
+    },
+    {
+     "item": "Alfacalcidol or calcitriol",
+     "dose": "About 0.25 to 0.5 micrograms a day for postoperative hypocalcemia or hypoparathyroidism; frequent calcium checks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935815",
+       "where": "Management, severe hypocalcaemia"
+      }
+     ]
+    },
+    {
+     "item": "Vitamin D deficiency",
+     "dose": "Load with about 300,000 units of colecalciferol or ergocalciferol over about 6 to 10 weeks",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935815",
+       "where": "Management, mild hypocalcaemia"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "ca_gluconate_infusion"
+   ]
+  },
+  {
+   "id": "end_hypoca",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Symptomatic hypocalcemia: an IV calcium gluconate bolus with ECG monitoring, then an infusion titrated to normocalcemia, with magnesium checked and the cause treated (alfacalcidol or calcitriol for hypoparathyroidism after neck surgery, vitamin D for deficiency); calcium checked often, and follow-up by a calcium specialist after discharge."
+  },
+  {
+   "id": "mg_iv",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Low magnesium with symptoms or with a low calcium. Replacement?",
+   "options": [
+    "IV magnesium sulfate, slowly, with levels rechecked",
+    "Oral magnesium oxide alone for this symptomatic patient",
+    "Magnesium sulfate 4 g as an undiluted IV push",
+    "Calcium and potassium alone; the magnesium follows"
+   ],
+   "answer": 0,
+   "chainStep": "IV magnesium sulfate (SfE with hypocalcemia: 6 g, 24 mmol, in 500 mL over 24 hours; FDA severe deficiency: 5 g in 1 L over 3 hours), no faster than 150 mg a minute, the 50% solution diluted to 20% or less; half the dose with creatinine clearance under 30; levels rechecked; the cause stopped (PPI, diuretic, alcohol)",
+   "why": "Symptomatic hypomagnesemia is replaced IV and slowly: the label limits IV injection to 150 mg a minute, requires the 50% solution to be diluted to 20% or less, and warns against exceeding the kidneys' excretory capacity; StatPearls halves the dose under a creatinine clearance of 30. Oral sustained-release magnesium is for patients without symptoms. Low magnesium is often followed by low calcium and low potassium and hinders potassium replacement, so those are not replaced alone. StatPearls hypocalcemia corrects magnesium first, while its hypomagnesemia chapter replaces calcium first when both are low; SfE gives IV calcium for severe symptoms and IV magnesium for a hypomagnesemia-related low calcium.",
+   "sources": [
+    {
+     "docId": "url:1d4b714d9283",
+     "where": "Indications and Usage; Dosage and Administration, magnesium deficiency; Warnings"
+    },
+    {
+     "docId": "pmid:27935815",
+     "where": "Management, mild hypocalcaemia"
+    },
+    {
+     "docId": "pmid:29763179",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:28613662",
+     "where": "Treatment / Management, disease-specific"
+    },
+    {
+     "docId": "pmid:29494072",
+     "where": "Treatment / Management"
+    }
+   ],
+   "next": "end_mg",
+   "orders": [
+    {
+     "item": "Magnesium with hypocalcemia (SfE)",
+     "dose": "24 mmol over 24 hours, as 6 g of magnesium sulfate (30 mL of 20%) in 500 mL of 0.9% saline or 5% dextrose; stop the precipitating drug; aim for a normal level",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:27935815",
+       "where": "Management, mild hypocalcaemia"
+      }
+     ]
+    },
+    {
+     "item": "Magnesium sulfate (FDA)",
+     "dose": "Severe: 5 g (about 40 mEq) in 1 L of 5% dextrose or 0.9% saline over 3 hours, or up to 250 mg/kg IM within 4 hours; mild: 1 g IM every 6 hours for 4 doses; IV no faster than 150 mg a minute",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1d4b714d9283",
+       "where": "Dosage and Administration, magnesium deficiency"
+      }
+     ]
+    },
+    {
+     "item": "Magnesium sulfate (StatPearls)",
+     "dose": "Unstable: 1 to 2 g over about 15 minutes; symptomatic and stable: 1 to 2 g over 1 hour; non-emergent: 4 to 8 g over 12 to 24 hours; halve the dose with creatinine clearance under 30; continue for 2 days after the level normalizes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29763179",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Calcium first or magnesium first",
+     "dose": "Both are replaced when both are low",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:28613662",
+       "where": "Treatment / Management, disease-specific"
+      },
+      {
+       "docId": "pmid:29763179",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:27935815",
+       "where": "Management, severe hypocalcaemia"
+      }
+     ],
+     "note": "StatPearls hypocalcemia corrects magnesium before calcium; StatPearls hypomagnesemia replaces calcium before magnesium; SfE gives IV calcium first for severe symptomatic hypocalcemia."
+    }
+   ]
+  },
+  {
+   "id": "end_mg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypomagnesemia: IV magnesium sulfate for symptoms or a low calcium, given slowly with levels rechecked and the dose reduced in kidney failure, continued for about 2 days after the level normalizes, and the cause stopped (PPIs, diuretics, alcohol, diarrhea); the calcium and potassium that follow a low magnesium are rechecked. Torsades goes to the palpitations pathway."
+  },
+  {
+   "id": "refeed",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Low phosphate after feeding restarts in a malnourished patient. Next?",
+   "options": [
+    "Replace phosphate, potassium and magnesium; slow the feed; thiamine",
+    "Increase the feed to full needs to correct the phosphate",
+    "IV dextrose first, with thiamine once the phosphate is back to normal",
+    "A rapid IV phosphate bolus over 15 minutes"
+   ],
+   "answer": 0,
+   "chainStep": "Phosphate replaced (IV potassium phosphate for severe, symptomatic hypophosphatemia under 1 mg/dL, or when oral replacement is not possible, within the label's dose and rate limits); potassium and magnesium supplemented; feeding at no more than 10 kcal/kg/day in high risk (5 in extreme cases), built up over 4 to 7 days; oral thiamine 200 to 300 mg daily with B vitamins for the first 10 days; daily electrolytes; continuous cardiac monitoring in extreme cases or with arrhythmias",
+   "why": "With refeeding, rising insulin drives potassium and phosphate into cells (StatPearls). NICE starts high-risk patients at no more than 10 kcal/kg/day (5 in extreme cases), builds up over 4 to 7 days, gives thiamine and B vitamins immediately before and during the first 10 days of feeding, and supplements potassium, phosphate and magnesium; StatPearls gives thiamine before dextrose-based solutions. Severe, symptomatic hypophosphatemia under 1 mg/dL, or a patient who cannot take oral replacement, gets IV phosphate within the label's dose and rate limits, not as a rapid bolus.",
+   "sources": [
+    {
+     "docId": "url:9bec8a1d849b",
+     "where": "1.4.6, Box 1; 1.4.8"
+    },
+    {
+     "docId": "pmid:33232094",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:29630224",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:7a339d51c094",
+     "where": "2.1 Preparation and Administration; 2.2 Dosage, Tables 2 and 3"
+    }
+   ],
+   "next": "end_refeed",
+   "orders": [
+    {
+     "item": "Potassium phosphate IV",
+     "dose": "Phosphorus under 1 mg/dL: 0.44 to 0.64 mmol/kg; 1 to 1.7 mg/dL: 0.32 to 0.43 mmol/kg; at most 45 mmol per dose; no faster than 6.8 mmol/h peripherally (15 centrally); only with potassium under 4; calcium normalized first; not with calcium-containing fluids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7a339d51c094",
+       "where": "2.1; 2.2, Tables 2 and 3"
+      }
+     ]
+    },
+    {
+     "item": "Oral phosphate (StatPearls)",
+     "dose": "Phosphorus over 1.5 mg/dL: 1 mmol/kg a day (at most 80 mmol); under 1.5: 1.3 mmol/kg (at most 100 mmol), in 3 to 4 doses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29630224",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Feeding",
+     "dose": "No more than 10 kcal/kg/day in high risk, 5 in extreme cases (BMI under 14 or negligible intake over 15 days), building to full needs over 4 to 7 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:9bec8a1d849b",
+       "where": "1.4.8"
+      }
+     ]
+    },
+    {
+     "item": "Thiamine",
+     "dose": "NICE: oral thiamine 200 to 300 mg daily with vitamin B co strong, immediately before and during the first 10 days of feeding; StatPearls: 100 mg at least 30 minutes before feeding, then twice daily for 7 to 10 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:9bec8a1d849b",
+       "where": "1.4.8"
+      },
+      {
+       "docId": "pmid:33232094",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Electrolyte supplements",
+     "dose": "Potassium about 2 to 4 mmol/kg/day, phosphate 0.3 to 0.6 mmol/kg/day, magnesium 0.2 mmol/kg/day IV or 0.4 by mouth, unless pre-feeding levels are high",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:9bec8a1d849b",
+       "where": "1.4.8"
+      }
+     ]
+    },
+    {
+     "item": "Feeding with severely low levels",
+     "dose": "NICE: correcting low levels before feeding is unnecessary; ASPEN, as reported in StatPearls: consider delaying feeding with severely low potassium, phosphate or magnesium",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:9bec8a1d849b",
+       "where": "1.4.8"
+      },
+      {
+       "docId": "pmid:33232094",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "The two guidelines disagree; ASPEN's own text was not readable (Wiley, abstract only)."
+    }
+   ],
+   "calcs": [
+    "kphos_iv",
+    "phos_oral",
+    "refeed_nice"
+   ]
+  },
+  {
+   "id": "end_refeed",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Refeeding syndrome: feeding slowed to 10 kcal/kg/day (5 in extreme cases) and built up over 4 to 7 days, thiamine and B vitamins for the first 10 days, phosphate, potassium and magnesium replaced (IV potassium phosphate for severe, symptomatic hypophosphatemia under 1 mg/dL, or when oral replacement is not possible, within the label limits), daily electrolytes, and cardiac monitoring for arrhythmias or extreme risk."
+  }
+ ],
+ "cases": [
+  {
+   "id": "dialysis_arrest",
+   "label": "Missed dialysis, then no pulse",
+   "vignette": "57-year-old woman on hemodialysis who missed two sessions, brought in weak and drowsy.",
+   "picks": {
+    "front": "unstable"
+   },
+   "results": {
+    "front": "As the monitor goes on: wide sine-wave complexes, then no pulse. Blood gas during CPR: potassium 8.4 mmol/L."
+   }
+  },
+  {
+   "id": "aki_resistant",
+   "label": "Vomiting, little urine, ACE inhibitor and spironolactone",
+   "vignette": "66-year-old man on lisinopril and spironolactone with 3 days of vomiting and very little urine. BP 108/70, HR 58.",
+   "picks": {
+    "front": "k_ecg",
+    "hk_after": "resistant"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm at 58 with peaked T waves, QRS 130 ms. Blood gas potassium 7.4 mmol/L; creatinine 6.8 mg/dL, up from 1.2.",
+    "hk_after": "Potassium 6.9 mmol/L at 2 hours; 40 mL of urine since a catheter went in; not on dialysis."
+   }
+  },
+  {
+   "id": "thyrotoxic_pp",
+   "label": "Woke unable to move his legs",
+   "vignette": "22-year-old man with months of weight loss, tremor and palpitations, who woke unable to move his legs after a large carbohydrate meal last night; no vomiting, diarrhea or diuretic.",
+   "picks": {
+    "front": "k_shift"
+   },
+   "results": {
+    "front": "Sinus tachycardia at 112, no arrhythmia; flat T waves and U waves. Potassium 1.9 mmol/L. Proximal leg weakness; swallowing and breathing normal."
+   }
+  },
+  {
+   "id": "baking_soda",
+   "label": "Baking soda for heartburn",
+   "vignette": "48-year-old man who took large amounts of baking soda for heartburn over the last 2 days, now confused.",
+   "picks": {
+    "front": "stable",
+    "which": "na_high_acute"
+   },
+   "results": {
+    "front": "Sinus rhythm at 96. Confused, no seizure.",
+    "which": "Sodium 166 mmol/L, normal 2 days ago; bicarbonate 44 mmol/L; lungs clear, no edema."
+   }
+  },
+  {
+   "id": "dialysis_hk",
+   "label": "Missed dialysis, slow wide rhythm",
+   "vignette": "62-year-old man on hemodialysis who missed his Friday session, weak and lightheaded. BP 128/76, HR 46.",
+   "picks": {
+    "front": "k_ecg",
+    "hk_after": "rrt"
+   },
+   "results": {
+    "front": "Monitor: slow regular rhythm at 46, no P waves, QRS 160 ms, tall peaked T waves. Blood gas potassium 7.8 mmol/L.",
+    "hk_after": "After calcium, insulin with glucose and albuterol the QRS narrows; potassium 6.9 at 1 hour. Anuric, with a fistula in the left arm."
+   }
+  },
+  {
+   "id": "hemolyzed",
+   "label": "Hemolyzed sample in a well patient",
+   "vignette": "34-year-old woman sent in after the lab called a potassium of 6.9 on her clinic bloods. She feels well and takes no medicines. BP 118/72, HR 76.",
+   "picks": {
+    "front": "stable",
+    "which": "k_high",
+    "hk_confirm": "pseudo"
+   },
+   "results": {
+    "front": "Sinus rhythm at 76, normal intervals. Alert and well.",
+    "which": "12-lead ECG normal: no peaked T waves, normal QRS. Laboratory potassium 6.9 mmol/L, sample marked hemolyzed; creatinine normal.",
+    "hk_confirm": "Blood gas potassium 4.2 mmol/L; a fresh free-flowing sample reads 4.3. Platelets and white cells normal."
+   }
+  },
+  {
+   "id": "spiro_tmp",
+   "label": "Spironolactone plus trimethoprim",
+   "vignette": "74-year-old man with heart failure on lisinopril and spironolactone, started on trimethoprim for a urine infection 5 days ago, now tired. BP 132/70, HR 72.",
+   "picks": {
+    "front": "stable",
+    "which": "k_high",
+    "hk_confirm": "real_high",
+    "hk_after": "falling"
+   },
+   "results": {
+    "front": "Sinus rhythm at 72. Alert.",
+    "which": "12-lead ECG: sinus rhythm, normal T waves and QRS. Laboratory potassium 6.8 mmol/L, not hemolyzed; creatinine up from 1.3 to 1.8 mg/dL.",
+    "hk_confirm": "Blood gas potassium 6.7 mmol/L; platelet and white cell counts normal.",
+    "hk_after": "Potassium 5.6 mmol/L at 2 hours; passing urine at 80 mL an hour."
+   }
+  },
+  {
+   "id": "nsaid_arb",
+   "label": "Losartan, ibuprofen and diarrhea",
+   "vignette": "58-year-old woman with type 2 diabetes and chronic kidney disease, on losartan and taking ibuprofen for knee pain, with 3 days of diarrhea. BP 124/78, HR 88.",
+   "picks": {
+    "front": "stable",
+    "which": "k_high",
+    "hk_confirm": "real_mild"
+   },
+   "results": {
+    "front": "Sinus rhythm at 88. Alert.",
+    "which": "12-lead ECG normal. Laboratory potassium 5.8 mmol/L, not hemolyzed; creatinine 1.9 mg/dL, up from 1.4.",
+    "hk_confirm": "Blood gas potassium 5.7 mmol/L."
+   }
+  },
+  {
+   "id": "diarrhea_hypok",
+   "label": "Profuse diarrhea, too weak to stand",
+   "vignette": "45-year-old woman with a week of profuse watery diarrhea, now too weak to stand. BP 104/66, HR 96.",
+   "picks": {
+    "front": "k_low"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm with frequent ectopic beats. 12-lead: flat T waves, prominent U waves, long QT. Blood gas potassium 1.9 mmol/L; proximal weakness, cannot lift her arms."
+   }
+  },
+  {
+   "id": "thiazide_hypok",
+   "label": "Cramps on a thiazide",
+   "vignette": "68-year-old man on hydrochlorothiazide for blood pressure, a week of muscle cramps. BP 142/84, HR 78.",
+   "picks": {
+    "front": "stable",
+    "which": "k_mild_low"
+   },
+   "results": {
+    "front": "Sinus rhythm at 78.",
+    "which": "12-lead ECG normal. Potassium 3.1 mmol/L, sodium 138, creatinine normal; eating and drinking normally."
+   }
+  },
+  {
+   "id": "polydipsia_over",
+   "label": "Seizure from water drinking, then a fast rise",
+   "vignette": "39-year-old woman with schizophrenia who drinks water constantly, brought in after a generalized seizure; drowsy. Weight 60 kg.",
+   "picks": {
+    "front": "na_sev",
+    "na_check": "over"
+   },
+   "results": {
+    "front": "Sinus rhythm at 98. Post-ictal, GCS 9, vomited once. Blood gas sodium 110 mmol/L.",
+    "na_check": "Awake after two 150 mL boluses (sodium 115). Then 5 L of dilute urine in 6 hours; sodium 124 at 6 hours."
+   }
+  },
+  {
+   "id": "sclc_seizure",
+   "label": "Seizure in a smoker with a lung mass",
+   "vignette": "66-year-old man, a heavy smoker with weight loss and a cough, brought in after a generalized seizure.",
+   "picks": {
+    "front": "na_sev",
+    "na_check": "better",
+    "na_type": "siadh"
+   },
+   "results": {
+    "front": "Sinus rhythm at 92; post-ictal and drowsy. Sodium 114 mmol/L, glucose normal.",
+    "na_check": "Awake and talking after two 150 mL boluses: sodium 119 at 1 hour, 121 at 12 hours.",
+    "na_type": "Euvolemic, no edema; serum osmolality 248, urine osmolality 520, urine sodium 62. TSH and cortisol normal, no diuretics. Chest x-ray: right hilar mass."
+   }
+  },
+  {
+   "id": "thiazide_vomit",
+   "label": "Vomiting on a thiazide, no better after 5",
+   "vignette": "79-year-old woman on hydrochlorothiazide, vomiting since yesterday, now very drowsy.",
+   "picks": {
+    "front": "na_sev",
+    "na_check": "not_better"
+   },
+   "results": {
+    "front": "Sinus rhythm at 88. GCS 8; vomited twice in the department. Sodium 112 mmol/L.",
+    "na_check": "After three 150 mL boluses the sodium is 117, up 5, but she is no more awake and is still vomiting."
+   }
+  },
+  {
+   "id": "beer",
+   "label": "A dozen beers a day and little food",
+   "vignette": "48-year-old man who drinks about 12 cans of beer a day and eats little, with a week of unsteadiness and nausea; no vomiting.",
+   "picks": {
+    "front": "stable",
+    "which": "na_low",
+    "na_type": "low_uosm"
+   },
+   "results": {
+    "front": "Sinus rhythm at 90. Alert, a little slow.",
+    "which": "Sodium 119 mmol/L, potassium 3.2; nauseated and slow, no seizure or vomiting.",
+    "na_type": "Urine osmolality 72 mOsm/kg, urine sodium under 10; serum osmolality 250, glucose normal; no edema."
+   }
+  },
+  {
+   "id": "thiazide_dry",
+   "label": "New thiazide and poor intake",
+   "vignette": "80-year-old woman started on hydrochlorothiazide 3 weeks ago, a week of poor intake and nausea, dizzy on standing; no vomiting.",
+   "picks": {
+    "front": "stable",
+    "which": "na_low",
+    "na_type": "dry"
+   },
+   "results": {
+    "front": "Sinus rhythm at 104. Alert, a little slow.",
+    "which": "Sodium 121 mmol/L; nausea and fatigue, no confusion, seizure or vomiting.",
+    "na_type": "Dry mucosa, postural drop of 24 mmHg; serum osmolality 254, urine osmolality 380, urine sodium 45 on the thiazide."
+   }
+  },
+  {
+   "id": "thiazide_euv",
+   "label": "On a thiazide, not dry",
+   "vignette": "74-year-old man on chlorthalidone for hypertension for 2 months, a week of mild unsteadiness; eating and drinking normally, no vomiting or diarrhea.",
+   "picks": {
+    "front": "stable",
+    "which": "na_low",
+    "na_type": "diuretic"
+   },
+   "results": {
+    "front": "Sinus rhythm at 78. Alert and oriented.",
+    "which": "Sodium 126 mmol/L; mild unsteadiness, no confusion, seizure or vomiting.",
+    "na_type": "Moist mucosa, no postural drop, no edema; serum osmolality 262, urine osmolality 420, urine sodium 58 on the thiazide."
+   }
+  },
+  {
+   "id": "cirrhosis_na",
+   "label": "Cirrhosis with ascites",
+   "vignette": "69-year-old man with alcohol-related cirrhosis and tense ascites, more tired over 2 weeks.",
+   "picks": {
+    "front": "stable",
+    "which": "na_low",
+    "na_type": "edema"
+   },
+   "results": {
+    "front": "Sinus rhythm at 86. Alert, no asterixis.",
+    "which": "Sodium 124 mmol/L; tired, no confusion or vomiting.",
+    "na_type": "Tense ascites and leg edema; serum osmolality 262, urine osmolality 410, urine sodium 8."
+   }
+  },
+  {
+   "id": "nursing_home_na",
+   "label": "Drowsy from a nursing home",
+   "vignette": "86-year-old woman from a nursing home, a week of diarrhea and poor intake, drowsy. Weight 50 kg. BP 112/64, HR 98.",
+   "picks": {
+    "front": "stable",
+    "which": "na_high"
+   },
+   "results": {
+    "front": "Sinus rhythm at 98. Drowsy, responds to voice.",
+    "which": "Sodium 162 mmol/L, urea high; dry mucosa; scanty concentrated urine (osmolality 720)."
+   }
+  },
+  {
+   "id": "ca_dry",
+   "label": "Vomiting on a thiazide and calcium tablets",
+   "vignette": "63-year-old woman on hydrochlorothiazide and calcium with vitamin D tablets, with 3 days of vomiting and constipation.",
+   "picks": {
+    "front": "stable",
+    "which": "ca_high",
+    "hc_after": "normal"
+   },
+   "results": {
+    "front": "Sinus rhythm at 92, short QT.",
+    "which": "Adjusted calcium 12.4 mg/dL (3.1 mmol/L); dry mucosa; creatinine raised.",
+    "hc_after": "After 4 L of saline the adjusted calcium is 10.2 mg/dL (2.55 mmol/L); PTH sent."
+   }
+  },
+  {
+   "id": "ca_cancer",
+   "label": "Confusion with lung cancer",
+   "vignette": "67-year-old man with known squamous cell lung cancer, a week of confusion, thirst and constipation. Weight 70 kg.",
+   "picks": {
+    "front": "stable",
+    "which": "ca_high",
+    "hc_after": "malig"
+   },
+   "results": {
+    "front": "Sinus rhythm at 96, short QT. Confused but rousable.",
+    "which": "Adjusted calcium 14.8 mg/dL (3.7 mmol/L); dry; creatinine mildly raised.",
+    "hc_after": "After 3 L of saline the calcium is 14.0 mg/dL (3.5 mmol/L); PTH low, phosphate normal."
+   }
+  },
+  {
+   "id": "ca_pth",
+   "label": "Kidney stones and a high calcium never followed up",
+   "vignette": "55-year-old woman with kidney stones and a high calcium she never followed up, now vomiting and confused.",
+   "picks": {
+    "front": "stable",
+    "which": "ca_high",
+    "hc_after": "pth"
+   },
+   "results": {
+    "front": "Sinus rhythm at 90, short QT.",
+    "which": "Adjusted calcium 14.4 mg/dL (3.6 mmol/L); dry.",
+    "hc_after": "After saline the calcium is 13.2 mg/dL (3.3 mmol/L); PTH high, phosphate low."
+   }
+  },
+  {
+   "id": "ca_sarcoid",
+   "label": "Hilar nodes, thirst and confusion",
+   "vignette": "41-year-old man with bilateral hilar lymphadenopathy under investigation, a week of thirst, passing a lot of urine, and confusion.",
+   "picks": {
+    "front": "stable",
+    "which": "ca_high",
+    "hc_after": "granul"
+   },
+   "results": {
+    "front": "Sinus rhythm at 84.",
+    "which": "Adjusted calcium 13.6 mg/dL (3.4 mmol/L); dry.",
+    "hc_after": "After saline the calcium is 12.8 mg/dL (3.2 mmol/L); PTH suppressed. Node biopsy from last week: non-caseating granulomas."
+   }
+  },
+  {
+   "id": "mild_ca",
+   "label": "A mildly high calcium on routine bloods",
+   "vignette": "50-year-old woman sent in after routine bloods showed a high calcium; she feels well.",
+   "picks": {
+    "front": "stable",
+    "which": "mild"
+   },
+   "results": {
+    "front": "Sinus rhythm at 70, normal intervals.",
+    "which": "Adjusted calcium 11.0 mg/dL (2.75 mmol/L), no symptoms; magnesium and potassium normal."
+   }
+  },
+  {
+   "id": "ppi_tetany",
+   "label": "Hand spasms on a PPI with heavy drinking",
+   "vignette": "60-year-old man with alcohol use disorder who takes omeprazole, with tingling around the mouth and painful hand spasms.",
+   "picks": {
+    "front": "ca_low",
+    "hypoca_mg": "mg_low"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm, QTc 520 ms. Carpopedal spasm; Chvostek sign positive. Adjusted calcium 1.7 mmol/L.",
+    "hypoca_mg": "Magnesium 0.7 mg/dL (0.3 mmol/L); creatinine normal."
+   }
+  },
+  {
+   "id": "thyroidectomy",
+   "label": "Tingling 2 days after a thyroidectomy",
+   "vignette": "44-year-old woman, total thyroidectomy 2 days ago, now tingling fingers and lips and a cramping hand.",
+   "picks": {
+    "front": "ca_low",
+    "hypoca_mg": "mg_ok"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm, QTc 500 ms. Carpopedal spasm. Adjusted calcium 1.65 mmol/L.",
+    "hypoca_mg": "Magnesium normal; PTH low; vitamin D normal."
+   }
+  },
+  {
+   "id": "torsades",
+   "label": "Faints on methadone with diarrhea",
+   "vignette": "70-year-old woman on methadone and ondansetron, with diarrhea and two faints today.",
+   "picks": {
+    "front": "tdp"
+   },
+   "results": {
+    "front": "Monitor: runs of polymorphic VT twisting around the baseline that stop on their own; QTc 610 ms between runs. Potassium 3.0, magnesium 0.5 mmol/L."
+   }
+  },
+  {
+   "id": "ppi_mg",
+   "label": "Tremor on a PPI and furosemide",
+   "vignette": "57-year-old man on a proton pump inhibitor for years and furosemide for heart failure, with tremor and muscle twitching.",
+   "picks": {
+    "front": "stable",
+    "which": "mg_low"
+   },
+   "results": {
+    "front": "Sinus rhythm at 84, QTc 470 ms; no arrhythmia.",
+    "which": "Magnesium 1.0 mg/dL (0.4 mmol/L); calcium and potassium normal; tremor and twitching, no tetany. Creatinine normal."
+   }
+  },
+  {
+   "id": "anorexia_refeed",
+   "label": "Breathless on day 2 of tube feeding",
+   "vignette": "24-year-old woman with anorexia nervosa, BMI 14.5, weight 40 kg, admitted 2 days ago and started on nasogastric feeding; now weak and short of breath.",
+   "picks": {
+    "front": "stable",
+    "which": "phos_low"
+   },
+   "results": {
+    "front": "Sinus rhythm at 58.",
+    "which": "Phosphate 0.8 mg/dL (0.25 mmol/L), potassium 3.2, magnesium 0.6 mmol/L; the feed is running at the full target."
+   }
+  }
+ ],
+ "calculators": [
+  {
+   "id": "free_water_deficit",
+   "title": "Free water deficit",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "wt",
+     "label": "Weight",
+     "unit": "kg",
+     "default": 70,
+     "min": 20,
+     "max": 250,
+     "step": 1
+    },
+    {
+     "id": "na",
+     "label": "Sodium",
+     "unit": "mmol/L",
+     "default": 160,
+     "min": 140,
+     "max": 200,
+     "step": 1
+    },
+    {
+     "id": "tbw",
+     "label": "Patient",
+     "choices": [
+      {
+       "label": "Man",
+       "value": 0.6
+      },
+      {
+       "label": "Woman, or older man",
+       "value": 0.5
+      },
+      {
+       "label": "Older woman",
+       "value": 0.45
+      }
+     ],
+     "default": 0.6
+    }
+   ],
+   "outputs": [
+    {
+     "label": "Water deficit",
+     "expr": "tbw * wt * (na / 140 - 1)",
+     "unit": "L",
+     "decimals": 1
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:36578134",
+     "where": "Treatment, step 3, Eq. 5 and Eq. 7"
+    },
+    {
+     "docId": "pmid:28722989",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:29262111",
+     "where": "Treatment / Management"
+    }
+   ],
+   "note": "Total body water is 60% of weight in men and 50% in women and older men (StatPearls); KJIM deducts 5% in older adults, giving 45% in an older woman. In water-depleted patients KJIM uses 50% and 40% of lean weight. Add insensible and ongoing losses, and replace over 48 to 72 hours.",
+   "tests": [
+    {
+     "inputs": {
+      "wt": 60,
+      "na": 166,
+      "tbw": 0.5
+     },
+     "expect": [
+      5.571428571428571
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 50,
+      "na": 162,
+      "tbw": 0.45
+     },
+     "expect": [
+      3.5357142857142856
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 70,
+      "na": 154,
+      "tbw": 0.6
+     },
+     "expect": [
+      4.2
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 70,
+      "na": 160,
+      "tbw": 0.5
+     },
+     "expect": [
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kcl_periodic",
+   "title": "Oral potassium chloride, periodic paralysis",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "wt",
+     "label": "Weight",
+     "unit": "kg",
+     "default": 70,
+     "min": 20,
+     "max": 200,
+     "step": 1
+    }
+   ],
+   "outputs": [
+    {
+     "label": "First dose, low end",
+     "expr": "0.5 * wt",
+     "unit": "mEq",
+     "decimals": 0
+    },
+    {
+     "label": "First dose, high end",
+     "expr": "1 * wt",
+     "unit": "mEq",
+     "decimals": 0
+    },
+    {
+     "label": "Repeat dose if no response",
+     "expr": "0.3 * wt",
+     "unit": "mEq",
+     "decimals": 0
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:32644604",
+     "where": "Treatment / Management, acute treatment"
+    }
+   ],
+   "note": "The repeat dose can follow every 30 minutes; no more than 200 mEq by mouth in 24 hours. Body stores are not depleted, so rebound hyperkalemia is the risk; some give 10 mEq an hour instead.",
+   "tests": [
+    {
+     "inputs": {
+      "wt": 70
+     },
+     "expect": [
+      35,
+      70,
+      21
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 60
+     },
+     "expect": [
+      30,
+      60,
+      18
+     ]
+    }
+   ]
+  },
+  {
+   "id": "calcitonin",
+   "title": "Calcitonin for hypercalcemia (label)",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "wt",
+     "label": "Weight",
+     "unit": "kg",
+     "default": 70,
+     "min": 30,
+     "max": 200,
+     "step": 1
+    }
+   ],
+   "outputs": [
+    {
+     "label": "Start: every 12 hours",
+     "expr": "4 * wt",
+     "unit": "USP Units",
+     "decimals": 0
+    },
+    {
+     "label": "No response in 1 to 2 days: every 12 hours",
+     "expr": "8 * wt",
+     "unit": "USP Units",
+     "decimals": 0
+    }
+   ],
+   "sources": [
+    {
+     "docId": "url:8233b86358b0",
+     "where": "2.2 Hypercalcemia"
+    }
+   ],
+   "note": "SC or IM. If the response is still unsatisfactory after 2 more days, the maximum is 8 USP Units/kg every 6 hours.",
+   "tests": [
+    {
+     "inputs": {
+      "wt": 70
+     },
+     "expect": [
+      280,
+      560
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 50
+     },
+     "expect": [
+      200,
+      400
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ca_gluconate_infusion",
+   "title": "Calcium gluconate infusion (label start)",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "wt",
+     "label": "Weight",
+     "unit": "kg",
+     "default": 70,
+     "min": 30,
+     "max": 200,
+     "step": 1
+    }
+   ],
+   "outputs": [
+    {
+     "label": "Starting rate, low end",
+     "expr": "5.4 * wt",
+     "unit": "mg/h",
+     "decimals": 0
+    },
+    {
+     "label": "Starting rate, high end",
+     "expr": "21.5 * wt",
+     "unit": "mg/h",
+     "decimals": 0
+    }
+   ],
+   "sources": [
+    {
+     "docId": "url:dff7e5c8a4a6",
+     "where": "2.2 Recommended Dosage, Table 1; 2.3; 2.4"
+    },
+    {
+     "docId": "pmid:27935815",
+     "where": "Management, severe hypocalcaemia"
+    }
+   ],
+   "note": "Adults, after the bolus; titrated to serum calcium every 1 to 4 hours, starting at the low end in renal impairment. SfE instead dilutes 100 mL of 10% in 1 L and runs it at 50 to 100 mL/h.",
+   "tests": [
+    {
+     "inputs": {
+      "wt": 70
+     },
+     "expect": [
+      378,
+      1505
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 60
+     },
+     "expect": [
+      324,
+      1290
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d5w_relower",
+   "title": "5% dextrose to re-lower the sodium",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "lbw",
+     "label": "Lean body weight",
+     "unit": "kg",
+     "default": 50,
+     "min": 30,
+     "max": 150,
+     "step": 1
+    }
+   ],
+   "outputs": [
+    {
+     "label": "5% dextrose over 1 to 2 hours",
+     "expr": "6 * lbw",
+     "unit": "mL",
+     "decimals": 0
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:31869161",
+     "where": "Treatment / Management, reintroduction of hyponatremia"
+    }
+   ],
+   "note": "Should lower the sodium by about 2 mEq/L; continued until the goal is reached, with or without desmopressin 2 to 4 mcg IV or SC.",
+   "tests": [
+    {
+     "inputs": {
+      "lbw": 50
+     },
+     "expect": [
+      300
+     ]
+    },
+    {
+     "inputs": {
+      "lbw": 45
+     },
+     "expect": [
+      270
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kphos_iv",
+   "title": "IV potassium phosphate (label)",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "wt",
+     "label": "Actual body weight",
+     "unit": "kg",
+     "default": 60,
+     "min": 20,
+     "max": 200,
+     "step": 1
+    }
+   ],
+   "outputs": [
+    {
+     "label": "Under 1 mg/dL, low end",
+     "expr": "min(0.44 * wt, 45)",
+     "unit": "mmol",
+     "decimals": 1
+    },
+    {
+     "label": "Under 1 mg/dL, high end",
+     "expr": "min(0.64 * wt, 45)",
+     "unit": "mmol",
+     "decimals": 1
+    },
+    {
+     "label": "1 to 1.7 mg/dL, low end",
+     "expr": "min(0.32 * wt, 45)",
+     "unit": "mmol",
+     "decimals": 1
+    },
+    {
+     "label": "1 to 1.7 mg/dL, high end",
+     "expr": "min(0.43 * wt, 45)",
+     "unit": "mmol",
+     "decimals": 1
+    }
+   ],
+   "sources": [
+    {
+     "docId": "url:7a339d51c094",
+     "where": "2.1; 2.2 Dosage, Tables 2 and 3"
+    }
+   ],
+   "note": "Phosphorus, at most 45 mmol a dose, and only with potassium under 4. No faster than 6.8 mmol/h peripherally or 15 centrally. Low end with eGFR 30 to 59; consider an adjusted weight well above ideal.",
+   "tests": [
+    {
+     "inputs": {
+      "wt": 40
+     },
+     "expect": [
+      17.6,
+      25.6,
+      12.8,
+      17.2
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 80
+     },
+     "expect": [
+      35.2,
+      45,
+      25.6,
+      34.4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phos_oral",
+   "title": "Oral phosphate replacement (review)",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "wt",
+     "label": "Weight",
+     "unit": "kg",
+     "default": 60,
+     "min": 20,
+     "max": 200,
+     "step": 1
+    }
+   ],
+   "outputs": [
+    {
+     "label": "Phosphorus over 1.5 mg/dL, per day",
+     "expr": "min(1 * wt, 80)",
+     "unit": "mmol",
+     "decimals": 0
+    },
+    {
+     "label": "Phosphorus under 1.5 mg/dL, per day",
+     "expr": "min(1.3 * wt, 100)",
+     "unit": "mmol",
+     "decimals": 0
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:29630224",
+     "where": "Treatment / Management"
+    }
+   ],
+   "note": "Total for 24 hours, in 3 to 4 divided doses. IV instead when under 1 mg/dL with symptoms, or when oral replacement cannot be taken.",
+   "tests": [
+    {
+     "inputs": {
+      "wt": 40
+     },
+     "expect": [
+      40,
+      52
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 70
+     },
+     "expect": [
+      70,
+      91
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 90
+     },
+     "expect": [
+      80,
+      100
+     ]
+    }
+   ]
+  },
+  {
+   "id": "refeed_nice",
+   "title": "Refeeding: first days (NICE)",
+   "kind": "formula",
+   "inputs": [
+    {
+     "id": "wt",
+     "label": "Weight",
+     "unit": "kg",
+     "default": 40,
+     "min": 20,
+     "max": 200,
+     "step": 1
+    },
+    {
+     "id": "risk",
+     "label": "Risk",
+     "choices": [
+      {
+       "label": "High risk: 10 kcal/kg/day",
+       "value": 10
+      },
+      {
+       "label": "Extreme: 5 kcal/kg/day",
+       "value": 5
+      }
+     ],
+     "default": 10
+    }
+   ],
+   "outputs": [
+    {
+     "label": "Starting feed, at most",
+     "expr": "risk * wt",
+     "unit": "kcal/day",
+     "decimals": 0
+    },
+    {
+     "label": "Potassium, likely need, low",
+     "expr": "2 * wt",
+     "unit": "mmol/day",
+     "decimals": 0
+    },
+    {
+     "label": "Potassium, likely need, high",
+     "expr": "4 * wt",
+     "unit": "mmol/day",
+     "decimals": 0
+    },
+    {
+     "label": "Phosphate, likely need, low",
+     "expr": "0.3 * wt",
+     "unit": "mmol/day",
+     "decimals": 1
+    },
+    {
+     "label": "Phosphate, likely need, high",
+     "expr": "0.6 * wt",
+     "unit": "mmol/day",
+     "decimals": 1
+    },
+    {
+     "label": "Magnesium IV, likely need",
+     "expr": "0.2 * wt",
+     "unit": "mmol/day",
+     "decimals": 1
+    },
+    {
+     "label": "Magnesium by mouth, likely need",
+     "expr": "0.4 * wt",
+     "unit": "mmol/day",
+     "decimals": 1
+    }
+   ],
+   "sources": [
+    {
+     "docId": "url:9bec8a1d849b",
+     "where": "1.4.8"
+    }
+   ],
+   "note": "Extreme means, for example, BMI under 14 or negligible intake for more than 15 days, with continuous cardiac monitoring. Build up to full needs over 4 to 7 days. Supplements unless pre-feeding levels are high.",
+   "tests": [
+    {
+     "inputs": {
+      "wt": 40,
+      "risk": 10
+     },
+     "expect": [
+      400,
+      80,
+      160,
+      12,
+      24,
+      8,
+      16
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 40,
+      "risk": 5
+     },
+     "expect": [
+      200,
+      80,
+      160,
+      12,
+      24,
+      8,
+      16
+     ]
+    },
+    {
+     "inputs": {
+      "wt": 55,
+      "risk": 10
+     },
+     "expect": [
+      550,
+      110,
+      220,
+      16.5,
+      33,
+      11,
+      22
+     ]
+    }
+   ]
+  }
+ ]
+}

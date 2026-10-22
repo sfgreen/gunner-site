@@ -1,0 +1,70 @@
+{
+  "id": "abdominal_pain",
+  "slug": "abdominal-pain",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Acute Abdominal Pain Workup: ED Algorithm by Quadrant",
+  "metaDescription": "Abdominal pain in the ED, for your surgery or EM rotation: the first labs, the pregnancy test, imaging by quadrant, and first-line care for each diagnosis.",
+  "h1": "Acute abdominal pain: the ED workup, quadrant by quadrant",
+  "dek": "For the student on an EM or surgery rotation with an undifferentiated belly and a resident about to ask what is next. The dangerous causes to exclude first, the test each quadrant earns, and the first-line plan for each diagnosis.",
+  "jumpLinks": [
+    {"label": "First moves", "stage": "Stabilize"},
+    {"label": "Treatment", "stage": "Manage"},
+    {"label": "Imaging by quadrant", "stage": "Imaging"},
+    {"label": "Lipase and hCG", "stage": "Labs"},
+    {"label": "Appendicitis and duct stones", "stage": "Diagnose"},
+    {"label": "Negative workup", "stage": "Outcome"}
+  ],
+  "shortAnswer": [
+    {"lead": "Pregnancy test early.", "text": "Any woman who could be pregnant gets one with the first bloods, even when the symptoms are non-specific. Positive with pain or bleeding: transvaginal ultrasound to locate the pregnancy, never the hCG level alone.", "refs": ["triage", "first_look", "ectopic_us"]},
+    {"lead": "ECG for upper abdominal pain.", "text": "Within 10 minutes when it could be cardiac, and a troponin when ACS is suspected.", "refs": ["triage"]},
+    {"lead": "Shock with peritonitis: antibiotics now.", "text": "Resuscitate to a MAP of 65 or more, urine 0.5 mL/kg/h and a falling lactate, give broad-spectrum antibiotics and get an emergency surgical opinion. The antibiotics do not wait for a CT.", "refs": ["unstable_mgmt"]},
+    {"lead": "Ruptured AAA: permissive hypotension.", "text": "A systolic typically 60 to 90, enough to keep mentation, and straight to repair; CT only if stable enough, to plan an endovascular repair.", "refs": ["aaa"]},
+    {"lead": "Location picks the test.", "text": "RUQ: ultrasound with liver tests. Epigastric: lipase, with CT if a perforation is possible. LLQ: contrast CT. Pelvic, pregnancy test negative: exam and ultrasound with color Doppler. Diffuse with distension or pain out of proportion: lactate and CT, CT angiography without delay if mesenteric ischemia is possible.", "refs": ["location", "ruq_us", "epi_workup", "llq_ct", "pelvic_us", "diffuse_workup"]},
+    {"lead": "Appendicitis: score, then ultrasound.", "text": "AIR or AAS, ultrasound first, then low-dose CT if it is negative or unclear in non-pregnant adults; no routine CT in a child; MRI after an inconclusive ultrasound in pregnancy.", "refs": ["rlq_workup"]},
+    {"lead": "Much of it is early surgery.", "text": "Laparoscopic cholecystectomy within 7 days of admission and 10 days of symptoms, appendectomy within 24 hours, surgery as soon as possible for a perforated ulcer, and emergency surgery for torsion whatever the Doppler shows.", "refs": ["chole_mgmt", "appy_choice", "perf_mgmt", "torsion_mgmt"]},
+    {"lead": "Some of it is not.", "text": "Mild uncomplicated diverticulitis in an immunocompetent patient gets antibiotics selectively, adhesive obstruction without strangulation, peritonitis or ischemia gets decompression and a contrast trial for up to 72 hours, and pancreatitis gets isotonic fluid without prophylactic antibiotics.", "refs": ["div_uncomp", "sbo_mgmt", "panc_mgmt"]}
+  ],
+  "sections": [
+    {"stage": "Stabilize", "heading": "What do you do first for undifferentiated abdominal pain?", "intro": "Vitals, IV access, a blood count, lactate, electrolytes, creatinine and a pregnancy test in any woman who could be pregnant, with an ECG when upper abdominal pain could be cardiac. Shock with peritonitis gets antibiotics and a surgeon now.", "refs": ["triage", "unstable_mgmt"]},
+    {"stage": "Result", "heading": "Which findings decide where the abdominal pain workup goes?", "intro": "The dangerous forks come first: shock, a ruptured or painful aneurysm, ACS and a positive pregnancy test. In a stable patient, the location of the pain and tenderness picks the test.", "refs": ["first_look", "location"]},
+    {"stage": "Manage", "heading": "How is each acute abdomen treated once it is found?", "intro": "Each diagnosis has a first-line plan: permissive hypotension for a ruptured aneurysm, early surgery for cholecystitis, appendicitis, perforation and torsion, and a non-operative start for pancreatitis, mild diverticulitis and adhesive obstruction.", "refs": ["aaa", "chole_mgmt", "appy_choice", "perf_mgmt", "torsion_mgmt", "panc_mgmt", "div_uncomp", "sbo_mgmt", "ami_mgmt", "pid_mgmt"]},
+    {"stage": "Imaging", "heading": "Which imaging test first for RUQ, LLQ, pelvic or diffuse pain?", "intro": "Ultrasound for the right upper quadrant and the pelvis, contrast CT for the left lower quadrant, CT or CT angiography for diffuse pain, transvaginal ultrasound for a positive pregnancy test, and CT angiography for a painful aneurysm with a normal pressure.", "refs": ["ruq_us", "llq_ct", "pelvic_us", "diffuse_workup", "ectopic_us", "aaa_stable"]},
+    {"stage": "Labs", "heading": "When do lipase or a repeat hCG decide the next step?", "intro": "Typical pain with a lipase over 3 times normal makes pancreatitis. A pregnancy of unknown location is followed with two serum hCG levels 48 hours apart.", "refs": ["epi_workup", "epi_result", "pul_hcg"]},
+    {"stage": "Diagnose", "heading": "How do you work up RLQ pain or a possible duct stone?", "intro": "Score appendicitis risk with AIR or AAS before imaging. An intermediate risk of a duct stone earns EUS or MRCP before any ERCP.", "refs": ["rlq_workup", "mrcp"]},
+    {"stage": "Outcome", "heading": "What if the workup is negative or the pain is cardiac?", "intro": "Upper abdominal pain with an ischemic ECG or a raised troponin continues in the chest pain pathway. Negative RLQ imaging with pain that does not settle gets cross-sectional imaging before any surgery.", "refs": ["end_acs", "end_rlq_negative", "end_epi_other"]}
+  ],
+  "checklist": null,
+  "rounds": {
+    "present": "Say what you excluded before you name the diagnosis, because that is the order the pathway runs: stable, not in shock, no aneurysm, no cardiac story, pregnancy test negative or not applicable. Then the one-liner: 24-year-old man with pain that moved from the umbilicus to the right lower quadrant, anorexia and a temperature of 38.0, with rebound tenderness in the right lower quadrant; ultrasound shows a 9 mm non-compressible appendix with no appendicolith and no free fluid, so uncomplicated appendicitis. Risk scored with AIR or AAS and ultrasound first; it was diagnostic, so no CT. Plan: laparoscopic appendectomy within 24 hours with one preoperative dose of broad-spectrum antibiotics; with no appendicolith, antibiotics first is an alternative after discussing the chance of recurrence.",
+    "presentRefs": ["case:appendicitis", "first_look", "location", "rlq_workup", "rlq_result", "appy_choice"],
+    "pimp": [
+      {"q": "Why a pregnancy test in every woman who could be pregnant?", "a": "It belongs early even when the symptoms are non-specific: a positive test with pain or bleeding sends her to transvaginal ultrasound to locate the pregnancy and find an ectopic.", "refs": ["triage", "first_look", "ectopic_us"]},
+      {"q": "Why can't the hCG level locate the pregnancy?", "a": "A transvaginal scan locates the pregnancy; serum hCG does not. With an empty uterus and no adnexal mass, two levels 48 hours apart guide the next step: a rise over 63% suggests an ongoing pregnancy, a fall over 50% suggests failure, and anything between needs review within 24 hours.", "refs": ["ectopic_us", "pul_hcg"]},
+      {"q": "Can you confirm appendicitis with the Alvarado score?", "a": "No. AIR and AAS predict appendicitis; Alvarado should not be used to confirm it, though a score under 5 does rule it out.", "refs": ["rlq_workup"]},
+      {"q": "Doppler shows arterial flow to an enlarged ovary with a whirlpool sign. Torsion excluded?", "a": "No. The whirlpool sign with an enlarged ovary is diagnostic, and preserved arterial or venous flow does not exclude torsion. It is a surgical emergency.", "refs": ["torsion_mgmt"]},
+      {"q": "Who gets antibiotics for uncomplicated diverticulitis?", "a": "Not everyone: in immunocompetent patients with mild disease they are selective. They are advised with comorbidity or frailty, refractory symptoms or vomiting, a CRP over 140, a white count over 15, or a fluid collection or long inflamed segment on CT; immunocompromised patients get a low threshold.", "refs": ["div_uncomp"]},
+      {"q": "When does an adhesive small bowel obstruction go to surgery?", "a": "With peritonitis, strangulation or ischemia, or when a non-operative trial of up to 72 hours fails. Contrast in the colon at 24 hours means it is resolving; contrast short of the colon predicts failure.", "refs": ["sbo_mgmt"]}
+    ]
+  },
+  "traps": [
+    {"text": "A plain abdominal x-ray for everyone. Plain films add little; the location of the pain picks ultrasound or CT.", "refs": ["triage", "diffuse_workup", "location"]},
+    {"text": "CT before antibiotics in shock with peritonitis. Antibiotics start as soon as possible and the source is controlled in the operating room.", "refs": ["unstable_mgmt"]},
+    {"text": "Two liters of saline to a normal pressure in a ruptured AAA. Permissive hypotension, a systolic typically 60 to 90 that keeps mentation, slows the bleeding.", "refs": ["aaa"]},
+    {"text": "Methotrexate with a fetal heartbeat. A heartbeat, significant pain, a mass of 35 mm or more or an hCG of 5,000 or more means surgery.", "refs": ["ectopic_mtx", "ectopic_result"]},
+    {"text": "Antibiotics first for appendicitis with an appendicolith, or in pregnancy. Neither qualifies; in pregnancy it is appendectomy, laparoscopic where expertise allows.", "refs": ["appy_choice", "appy_preg"]},
+    {"text": "Reassurance because Doppler shows flow to the ovary. Flow does not exclude torsion.", "refs": ["torsion_mgmt"]},
+    {"text": "Waiting for the chlamydia and gonorrhea results, or for all three minimum criteria, before treating PID. One criterion is enough.", "refs": ["pid_mgmt"]},
+    {"text": "Prophylactic antibiotics in acute pancreatitis. They are not recommended; isotonic crystalloid, reassessed often, is the treatment.", "refs": ["panc_mgmt"]}
+  ],
+  "faq": [
+    {"q": "What is the first step for abdominal pain in the ED?", "a": "Vitals and IV access, then a blood count, lactate, electrolytes and creatinine, plus a pregnancy test in any woman who could be pregnant. Upper abdominal pain that could be cardiac gets an ECG within 10 minutes and a troponin when ACS is suspected. Shock or generalized peritonitis means resuscitation, broad-spectrum antibiotics and an emergency surgical opinion while the cause is found.", "refs": ["triage", "first_look", "unstable_mgmt"]},
+    {"q": "What is the best first imaging test for right upper quadrant pain?", "a": "Abdominal ultrasound, with liver tests. It is cheap, available and accurate; HIDA is the most accurate test but not first, and CT is weaker for cholecystitis. The ultrasound and liver tests also grade the risk of a common duct stone: high risk goes to ERCP, intermediate risk to EUS or MRCP first.", "refs": ["ruq_us", "ruq_result", "mrcp", "ercp"]},
+    {"q": "Is ultrasound or CT first for suspected appendicitis?", "a": "Ultrasound first, after scoring the risk with AIR or AAS. In a child, ultrasound and no routine CT; in pregnancy, ultrasound then MRI if it is inconclusive; in other adults, low-dose CT if the ultrasound is negative or unclear. Uncomplicated appendicitis then gets a laparoscopic appendectomy within 24 hours, or antibiotics first in selected patients.", "refs": ["rlq_workup", "appy_choice"]},
+    {"q": "When is methotrexate an option for ectopic pregnancy?", "a": "Under NICE NG126: no significant pain, an unruptured tubal mass under 35 mm with no heartbeat, no intrauterine pregnancy, hCG under 1,500 and the ability to return for follow-up. From 1,500 to under 5,000 she may choose methotrexate or surgery; at 5,000 or more, or with a heartbeat, surgery comes first. hCG is checked on days 4 and 7, then weekly.", "refs": ["ectopic_mtx", "ectopic_result", "ectopic_choice", "source:url:b1149372731c"]},
+    {"q": "When should acute cholecystitis be operated on?", "a": "As soon as possible: laparoscopic cholecystectomy within 7 days of admission and 10 days of symptoms. Past that window, wait beyond 6 weeks rather than operate in between. Patients unfit for or refusing surgery get antibiotics and observation, with gallbladder drainage as the alternative, and uncomplicated cases need no routine postoperative antibiotics.", "refs": ["chole_mgmt"]},
+    {"q": "How is acute mesenteric ischemia diagnosed and treated?", "a": "When diffuse pain out of proportion makes mesenteric ischemia possible, CT angiography goes ahead without delay, even with acute kidney injury. For an arterial occlusion without peritonitis: correct electrolytes, decompress, heparin, broad-spectrum antibiotics at once and revascularization, endovascular first line where expertise is available. Overt peritonitis means prompt laparoscopy or laparotomy.", "refs": ["diffuse_workup", "ami_mgmt"]}
+  ],
+  "related": ["flank_pain", "peds_vomiting", "syncope", "chest_pain"]
+}

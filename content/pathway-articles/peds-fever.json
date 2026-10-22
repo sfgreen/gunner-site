@@ -1,0 +1,83 @@
+{
+  "id": "peds_fever",
+  "slug": "peds-fever",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Febrile Infant Workup by Age, Febrile Seizures and Kawasaki",
+  "metaDescription": "The febrile infant and child for peds and EM rotations: the AAP 2021 workup by age in days, markers and LP rules, antibiotics, febrile seizures, Kawasaki.",
+  "h1": "The febrile infant and child: the workup by age, fork by fork",
+  "dek": "For the student on a peds or EM rotation with a febrile infant and a resident about to ask what is next: shock and seizures first, the workup at 8 to 21, 22 to 28 and 29 to 60 days, when the LP is needed, the antibiotics, the older child without a source, UTI, Kawasaki, febrile seizures, and what you will be pimped on.",
+  "jumpLinks": [
+    {"label": "First moves", "stage": "Stabilize"},
+    {"label": "Age and appearance", "stage": "Result"},
+    {"label": "The workup by age", "stage": "Labs"},
+    {"label": "Antibiotics", "stage": "Manage"},
+    {"label": "Home or admit", "stage": "Disposition"},
+    {"label": "No source, seizure, Kawasaki", "stage": "Diagnose"},
+    {"label": "After a first UTI", "stage": "Imaging"}
+  ],
+  "shortAnswer": [
+    {"lead": "Shock and seizures first.", "text": "Airway, breathing, circulation and consciousness, then the vitals, a weight and the age in days. Shock gets crystalloid boluses and antibiotics within 1 hour; a seizure lasting 5 minutes is treated as status epilepticus.", "refs": ["triage", "front", "resus", "end_seizing"]},
+    {"lead": "Age in days sets the workup.", "text": "7 days or younger, or ill-appearing up to 60 days: blood culture, catheter urine, LP, count and CRP, then admission and parenteral antibiotics.", "refs": ["age", "ill_workup"]},
+    {"lead": "8 to 21 days, well: the full workup.", "text": "Catheter urinalysis, blood culture and CSF for every infant, admitted on parenteral antibiotics: ampicillin plus ceftazidime or gentamicin (AAP 2021).", "refs": ["d8_step", "abx_young"]},
+    {"lead": "22 to 28 days: the markers decide the LP.", "text": "Urinalysis, blood culture and procalcitonin with the ANC or CRP; an LP whenever a marker is raised. NICE still does an LP and treats every febrile infant under 1 month.", "refs": ["d22_step", "im22"]},
+    {"lead": "29 to 60 days: no LP with normal markers.", "text": "Normal markers and a negative urinalysis: home without antibiotics, reevaluated in 24 hours (24 to 36 in the AAP algorithm). A positive urinalysis alone is not a reason for an LP.", "refs": ["d29_step", "d29_home", "d29_uti"]},
+    {"lead": "Know the cutoffs.", "text": "Abnormal in AAP 2021: procalcitonin over 0.5 ng/mL, CRP over 20 mg/L, ANC over 4,000 to 5,200 per mm3, temperature over 38.5 C (101.3 F).", "refs": ["d22_step", "d29_step"]},
+    {"lead": "Older than 60 days: vaccines and the traffic light.", "text": "No source and no amber or red features in a vaccinated child: a urine test, not routine bloods, a chest film or oral antibiotics. NICE still tests every febrile infant under 3 months with a count, blood culture, CRP and urine.", "refs": ["older_step", "end_older_viral", "older_result"]},
+    {"lead": "Fever 5 days or more: think Kawasaki.", "text": "Four of five features: echocardiogram, and IVIG 2 g/kg with aspirin, ideally within 7 to 10 days of fever onset. Two or 3 features with a CRP over 30 mg/L or an ESR over 40: the supplementary labs and an echocardiogram.", "refs": ["kd_step", "kd_result", "end_kd"]}
+  ],
+  "sections": [
+    {"stage": "Stabilize", "heading": "What do you do first with a febrile infant or child?", "intro": "Airway, breathing, circulation and consciousness, then the full set of vitals, a weight and the age in days. Shock gets oxygen, access, crystalloid boluses and antibiotics within the hour; the LP waits until the child is stable.", "refs": ["triage", "resus"]},
+    {"stage": "Result", "heading": "Shock, seizure, purpura or age in days: which fork is this child on?", "intro": "Perfusion, convulsions and the skin come first; then the age in days and the appearance pick the infant workup, and past 60 days the length of the fever and its source decide.", "refs": ["front", "age", "ill_age", "im22", "im29", "young_result", "older_result", "kd_result", "fs_type", "uti_result"]},
+    {"stage": "Labs", "heading": "What workup does a febrile infant need at each age?", "intro": "Every infant 60 days or younger gets a urinalysis and a blood culture. The full workup with an LP is for 7 days or younger, any ill-appearing infant, and every well infant of 8 to 21 days; from 22 days the inflammatory markers decide the LP.", "refs": ["ill_workup", "d8_step", "d22_step", "d29_step"]},
+    {"stage": "Manage", "heading": "Which antibiotics for a febrile infant, and when is acyclovir added?", "intro": "Ampicillin with ceftazidime or gentamicin up to 21 days, ceftriaxone from 22 days for a UTI or no focus (NICE adds ampicillin or amoxicillin under 3 months), meningitic doses for an abnormal CSF, an IV cephalosporin plus ampicillin or amoxicillin for the ill-appearing infant of 29 to 60 days (NICE), and IV acyclovir for any HSV warning sign.", "refs": ["abx_young", "abx_22", "abx_ill29", "hsv_tx", "d29_uti", "d29_raised", "uti_step"]},
+    {"stage": "Disposition", "heading": "Which febrile infants can go home?", "intro": "A well 29- to 60-day-old with normal markers and a negative urinalysis goes home without antibiotics, with a safety net and reevaluation in 24 hours.", "refs": ["d29_home"]},
+    {"stage": "Diagnose", "heading": "Fever without a source, a febrile seizure or 5 days of fever: what next?", "intro": "Past 60 days: the vaccine record and the traffic-light features. After a febrile seizure: simple or complex, and signs of meningitis. After 5 days of fever: the Kawasaki and MIS-C features.", "refs": ["older_step", "fs_look", "kd_step"]},
+    {"stage": "Imaging", "heading": "Does a child need imaging after a first febrile UTI?", "intro": "The AAP advises a renal and bladder ultrasound after a first febrile UTI in young children; NICE images under 6 months, and later only for an atypical or recurrent UTI. A VCUG is only for an abnormal ultrasound or a recurrence.", "refs": ["us_step"]},
+    {"stage": "Outcome", "heading": "Where does each febrile child end up?", "intro": "Every branch ends on a diagnosis and its plan. Infants in the full workup are admitted on parenteral antibiotics while the cultures run; a low-risk 29- to 60-day-old goes home with reevaluation in 24 hours; a simple febrile seizure goes home after observation; a clear source over 60 days hands on, pneumonia to the breathing pathway and a septic hip to the hot joint pathway.", "refs": ["end_young", "end_d29_home", "end_fs_simple", "end_source"]}
+  ],
+  "checklist": {
+    "heading": "The well febrile infant of 8 to 60 days: what to send",
+    "items": [
+      {"text": "In the AAP group: a rectal temperature of 100.4 F (38.0 C) or more, at home in the past 24 hours or in a clinical setting, born at 37 to under 42 weeks.", "refs": ["triage", "d8_step"]},
+      {"text": "Urinalysis: a catheter or suprapubic sample at 8 to 21 days; from 22 days a bag or voided screen is allowed, with a catheter culture if positive.", "refs": ["d8_step", "d22_step"]},
+      {"text": "A blood culture for every infant.", "refs": ["d8_step", "d22_step", "d29_step"]},
+      {"text": "From 22 days: procalcitonin with the ANC or CRP; without procalcitonin, both the ANC and CRP.", "refs": ["d22_step"]},
+      {"text": "CSF: every infant of 8 to 21 days; at 22 to 28 days if any marker is raised (NICE: every infant under 1 month); at 29 to 60 days optional with a raised marker.", "refs": ["d8_step", "im22", "d29_step"]},
+      {"text": "HSV studies and IV acyclovir for vesicles, seizures, hypothermia, maternal HSV, CSF pleocytosis with a negative Gram stain, leukopenia, thrombocytopenia or a raised ALT.", "refs": ["hsv_tx"]},
+      {"text": "Outside the AAP group: preterm, vaccinated in the last 48 hours, a focal bacterial infection, bronchiolitis or immune compromise.", "refs": ["age", "end_excluded"]}
+    ]
+  },
+  "rounds": {
+    "present": "Lead with the age in days, the appearance and the risk group, then the markers and the plan. For example: 35-day-old girl, born at term and healthy, with 6 hours of fever to 38.3 C (100.9 F), feeding well, a sibling with a cold; well-appearing and well perfused, no exclusions and no recent vaccines. Procalcitonin 0.2 ng/mL, ANC 3,000 per mm3, CRP 6 mg/L, catheter urinalysis negative, blood culture sent. Low risk for a 29- to 60-day-old under AAP 2021, so no LP and no antibiotics: home with warning signs, a way back and reevaluation in 24 hours while the cultures incubate. NICE would also test her with a count, blood culture, CRP and urine, keeping the LP for an unwell infant or a white count under 5 or over 15.",
+    "presentRefs": ["case:low_risk_35d", "d29_step", "im29", "d29_home", "end_excluded"],
+    "pimp": [
+      {"q": "Why does a well 2-week-old get an LP?", "a": "Every guideline treats an infant under three weeks as at high risk of invasive bacterial infection. The AAP sends CSF in every well infant of 8 to 21 days, and NICE does an LP in every febrile infant under 1 month.", "refs": ["d8_step"]},
+      {"q": "Why ampicillin in a febrile neonate?", "a": "It covers group B streptococcus and listeria, and cephalosporins do not cover listeria or enterococci, so ampicillin is part of every regimen at this age.", "refs": ["abx_young"]},
+      {"q": "Why not ceftriaxone for a 2-week-old on IV fluids?", "a": "In a newborn of 28 days or younger it is contraindicated with calcium-containing IV fluids, and the label also bars it in hyperbilirubinemic neonates. NICE uses it only in term newborns over 40 weeks corrected and not on IV calcium.", "refs": ["abx_young", "abx_22"]},
+      {"q": "Does a positive urinalysis at 6 weeks mean an LP?", "a": "Not with normal markers. In 25,374 infants of 29 to 60 days, meningitis was 0.25% to 0.44% with a positive urinalysis, no higher than with a negative one.", "refs": ["d29_uti"]},
+      {"q": "What makes a febrile seizure complex?", "a": "Focal features, 15 minutes or longer or stopped by medicine, recurrence within 24 hours, or a neurologic abnormality before or after. Simple is generalized, under 15 minutes and not repeated within 24 hours.", "refs": ["fs_look"]},
+      {"q": "What are the Kawasaki criteria?", "a": "Fever for 5 days or more with 4 of 5: bilateral non-exudative conjunctival injection; a red mouth, strawberry tongue or cracked lips; a polymorphous rash; red, swollen hands and feet; a cervical node over 1.5 cm.", "refs": ["kd_step"]}
+    ]
+  },
+  "traps": [
+    {"text": "Judging serious infection by the response to an antipyretic, or by the height of the fever after 6 months.", "refs": ["triage"]},
+    {"text": "An LP before antibiotics in a shocked child. The LP waits; the antibiotics go in within the hour.", "refs": ["resus"]},
+    {"text": "Letting the markers decide the LP at 8 to 21 days. Every well infant that age gets CSF.", "refs": ["d8_step"]},
+    {"text": "Ceftriaxone with calcium-containing IV fluids in a newborn, or a cephalosporin without ampicillin when listeria is a concern.", "refs": ["abx_young", "abx_22"]},
+    {"text": "An LP for a positive urinalysis alone in a 29- to 60-day-old with normal markers.", "refs": ["d29_uti"]},
+    {"text": "Oral amoxicillin for fever without a source, to cover a bacteremia the markers may have missed.", "refs": ["d29_home", "older_step"]},
+    {"text": "Waiting for vesicles before acyclovir in a febrile infant with an HSV warning sign.", "refs": ["hsv_tx"]},
+    {"text": "An EEG, a head CT or routine bloods after a simple febrile seizure.", "refs": ["fs_look"]}
+  ],
+  "faq": [
+    {"q": "Does a febrile infant under 28 days need a lumbar puncture?", "a": "At 8 to 21 days, yes: the AAP sends CSF in every well-appearing infant, and NICE does an LP in every febrile infant under 1 month. At 22 to 28 days the AAP lets the markers decide, an LP if any is raised and optional if all are normal, while NICE still does one. Ill-appearing infants and those 7 days or younger get the full workup.", "refs": ["d8_step", "d22_step", "ill_workup"]},
+    {"q": "What are the AAP 2021 inflammatory marker cutoffs?", "a": "Abnormal: procalcitonin over 0.5 ng/mL, CRP over 20 mg/L, ANC over 4,000 to 5,200 per mm3 (the AAP gives both cutoffs), and a temperature over 38.5 C (101.3 F). Procalcitonin goes with the ANC or CRP when it is available; without it, both the ANC and CRP, with the temperature counted too. A raised marker puts the bacteremia risk over 5%.", "refs": ["d22_step", "im22"]},
+    {"q": "What antibiotics for a febrile neonate?", "a": "At 8 to 21 days the AAP gives ampicillin 150 mg/kg a day with ceftazidime 150 mg/kg a day, both divided every 8 hours, or gentamicin 4 mg/kg every 24 hours; the US labels dose ceftazidime and gentamicin lower. For meningitis the AAP doubles the ampicillin to 300 mg/kg a day, where the US label keeps 150. From 22 days, a UTI or no focus gets ceftriaxone 50 mg/kg every 24 hours, with NICE adding ampicillin under 3 months.", "refs": ["abx_young", "abx_22", "end_mening_young", "young_result"]},
+    {"q": "Can a febrile infant aged 29 to 60 days go home?", "a": "Yes, when well-appearing with a negative urinalysis and normal markers: no LP and no antibiotics, with warning signs, a way back and reevaluation in 24 hours (24 to 36 in the AAP algorithm) while the cultures run. Hospital observation is the option when follow-up is hard. NICE leaves admission to the clinician and advises against oral antibiotics for fever without a source.", "refs": ["d29_home", "end_d29_home"]},
+    {"q": "Does a simple febrile seizure need a workup?", "a": "No routine bloods, EEG or neuroimaging; check a glucose and find the fever's source. An LP is for meningitis signs, and an option at 6 to 12 months with incomplete or unknown Hib or pneumococcal vaccines, or after antibiotics; an Italian review recommends one under 1 year. About a third recur, 1% to 2% later develop epilepsy, and antipyretics do not prevent them.", "refs": ["fs_look", "fs_type", "end_fs_simple"]},
+    {"q": "How is Kawasaki disease treated?", "a": "An echocardiogram at diagnosis, and IVIG 2 g/kg over 10 to 12 hours with aspirin 80 to 100 mg/kg a day in 4 doses until afebrile for over 48 hours, then 3 to 5 mg/kg a day, ideally within 7 to 10 days of fever onset. A child still febrile 36 to 48 hours after IVIG gets a second dose. Incomplete Kawasaki is worked up with the CRP, ESR and an echocardiogram.", "refs": ["kd_result", "end_kd"]}
+  ],
+  "related": ["rash", "sepsis_fever", "peds_breathing", "peds_vomiting"]
+}

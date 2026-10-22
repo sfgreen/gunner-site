@@ -1,0 +1,403 @@
+{
+  "id": "vertigo",
+  "slug": "vertigo",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Vertigo Workup in the ED: HINTS Exam, BPPV, Stroke",
+  "metaDescription": "Dizziness in the ED, fork by fork: timing and triggers, HINTS plus hearing, when MRI beats CT, Dix-Hallpike and Epley, vestibular neuritis, Meniere, TIA.",
+  "h1": "Dizziness and vertigo: the ED algorithm, fork by fork",
+  "dek": "For the student on an EM or neurology rotation with a dizzy patient and a resident about to ask what is next: the first moves, timing and triggers, HINTS plus hearing, the gait, MRI versus CT, the BPPV maneuvers, neuritis, Meniere, vestibular migraine and TIA, and the traps.",
+  "jumpLinks": [
+    {
+      "label": "First moves",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "What the findings mean",
+      "stage": "Result"
+    },
+    {
+      "label": "Endpoints and handoffs",
+      "stage": "Outcome"
+    },
+    {
+      "label": "Timing, HINTS, gait",
+      "stage": "Diagnose"
+    },
+    {
+      "label": "Neuritis, Epley, Meniere",
+      "stage": "Manage"
+    },
+    {
+      "label": "MRI or CT",
+      "stage": "Imaging"
+    },
+    {
+      "label": "Normal MRI, central exam",
+      "stage": "Disposition"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Glucose, ECG, drugs and a neurological exam first.",
+      "text": "A focal deficit goes straight to the stroke pathway and a thunderclap headache to the headache pathway. No CT first, and no meclizine before the eye exam.",
+      "refs": [
+        "triage",
+        "front"
+      ]
+    },
+    {
+      "lead": "Sort by timing and triggers, not by the patient's word.",
+      "text": "Continuous since onset, triggered attacks, or spontaneous attacks. More than half of patients change their description when asked again minutes later.",
+      "refs": [
+        "timing_step",
+        "triage"
+      ]
+    },
+    {
+      "lead": "Continuous, with nystagmus: HINTS plus hearing, by a trained examiner.",
+      "text": "Peripheral is a corrective saccade on the head impulse, one-way nystagmus and no skew. Any central component, or new one-sided hearing loss, makes it central.",
+      "refs": [
+        "hints"
+      ]
+    },
+    {
+      "lead": "The gait counts.",
+      "text": "Cannot stand unaided means MRI even with a peripheral HINTS. No nystagmus: grade the gait and test pursuit and saccades; grade 2 or 3, or a central eye sign, means MRI. Walking unaided with normal eye movements: the sources differ on imaging.",
+      "refs": [
+        "hints",
+        "ais",
+        "end_ais_low"
+      ]
+    },
+    {
+      "lead": "MRI with diffusion, not CT.",
+      "text": "Non-contrast CT finds 7 to 28.5% of ischemic strokes in dizzy patients. CT and CTA come first in a reperfusion window, with signs of a bleed or when MRI cannot be done promptly, and a normal early MRI does not exclude a posterior stroke.",
+      "refs": [
+        "mri",
+        "mri_neg"
+      ]
+    },
+    {
+      "lead": "Vestibular neuritis: a few days of suppressant, then rehabilitation.",
+      "text": "No longer than 3 to 5 days, a shared decision on steroids within 3 days of onset, no antivirals, and no imaging when the exam confirms a peripheral disorder.",
+      "refs": [
+        "neuritis"
+      ]
+    },
+    {
+      "lead": "Triggered attacks: screen for brainstem symptoms, then Dix-Hallpike and Epley.",
+      "text": "Posterior canal BPPV gets an Epley toward the positive side at diagnosis, with no imaging and no outpatient suppressants; the horizontal canal gets a barbecue roll or Gufoni maneuver.",
+      "refs": [
+        "trig_step",
+        "epley",
+        "hc_step"
+      ]
+    },
+    {
+      "lead": "Spontaneous attacks: Meniere, vestibular migraine or TIA.",
+      "text": "Ear symptoms point to Meniere, migraine features to vestibular migraine. Vascular risk or a deadly D is a possible posterior TIA: aspirin 300 mg unless contraindicated, MRI, vessel imaging and stroke review within 24 hours.",
+      "refs": [
+        "spont_step",
+        "spont",
+        "tia_step"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What do you do first for a dizzy patient in the ED?",
+      "intro": "Vitals, a fingerstick glucose, a 12-lead ECG, the drug list with a level for phenytoin or carbamazepine, and a neurological exam.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "What do the timing, the HINTS, the gait and the MRI tell you?",
+      "intro": "The forks read the first look, the timing, nystagmus, HINTS plus hearing and gait, the positional tests, the MRI and the audiogram, and the history of spontaneous attacks.",
+      "refs": [
+        "front",
+        "timing",
+        "avs_nyst",
+        "hints_result",
+        "ais_result",
+        "positional",
+        "mri_result",
+        "audio",
+        "spont"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "How do you tell peripheral from central vertigo at the bedside?",
+      "intro": "Timing and triggers first; then nystagmus and HINTS plus hearing, or gait and eye movements when there is no nystagmus; positional tests for triggered attacks; the ear, migraine and vascular history for spontaneous ones.",
+      "refs": [
+        "timing_step",
+        "avs_exam",
+        "hints",
+        "ais",
+        "trig_step",
+        "spont_step"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "How are vestibular neuritis, BPPV, Meniere and vestibular migraine treated?",
+      "intro": "Short-term symptom relief and rehabilitation for neuritis, repositioning maneuvers for BPPV, diet and drugs for Meniere, attack treatment and prevention for vestibular migraine, and a TIA workup for vascular attacks.",
+      "refs": [
+        "neuritis",
+        "epley",
+        "hc_step",
+        "meniere_step",
+        "vm_step",
+        "tia_step",
+        "oh_step",
+        "hearing"
+      ]
+    },
+    {
+      "stage": "Imaging",
+      "heading": "When does a dizzy patient need an MRI, and when is CT enough?",
+      "intro": "MRI with diffusion and vessel imaging whenever the bedside exam cannot call it peripheral; CT first in a reperfusion window, with signs of a bleed, or when MRI cannot be done promptly.",
+      "refs": [
+        "mri"
+      ]
+    },
+    {
+      "stage": "Disposition",
+      "heading": "What if the MRI is normal but the exam looks central?",
+      "intro": "Admit or observe high-risk patients, and repeat the MRI after 3 to 14 days if suspicion persists.",
+      "refs": [
+        "mri_neg"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Where does each dizzy patient end up?",
+      "intro": "Many branches hand on: a focal deficit, a posterior stroke or a cerebellar bleed to the stroke pathway, a cardiac clue to palpitations, chest pain or syncope, a thunderclap headache to the headache pathway.",
+      "refs": [
+        "end_stroke",
+        "end_cardiac",
+        "end_headache",
+        "end_pcs",
+        "end_neuritis",
+        "end_bppv"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "HINTS plus at the bedside",
+    "items": [
+      {
+        "text": "Only for continuous dizziness with nystagmus, examined by a clinician trained in HINTS.",
+        "refs": [
+          "hints"
+        ]
+      },
+      {
+        "text": "Head impulse: a corrective saccade is the peripheral finding; a normal head impulse is central.",
+        "refs": [
+          "hints"
+        ]
+      },
+      {
+        "text": "Nystagmus: beating one way is peripheral; changing direction with gaze is central.",
+        "refs": [
+          "hints"
+        ]
+      },
+      {
+        "text": "Test of skew: any skew on the alternate cover test is central.",
+        "refs": [
+          "hints"
+        ]
+      },
+      {
+        "text": "Hearing: a finger rub for new one-sided loss, a fourth central sign, confirmed by audiometry.",
+        "refs": [
+          "hints"
+        ]
+      },
+      {
+        "text": "One central component makes the whole result central.",
+        "refs": [
+          "hints"
+        ]
+      },
+      {
+        "text": "Gait: cannot stand unaided means MRI with DWI, even with a peripheral HINTS.",
+        "refs": [
+          "hints"
+        ]
+      },
+      {
+        "text": "No trained examiner: a trained specialist or MRI with DWI; CT with or without CTA is insufficient to rule out stroke.",
+        "refs": [
+          "hints"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "42-year-old woman with vestibular neuritis: woke yesterday with constant spinning and vomiting, worse with any head movement, after a cold last week. Glucose 101 mg/dL, normal ECG, no focal deficit, no anticonvulsant or aminoglycoside. Constant for 30 hours, so an acute vestibular syndrome. Horizontal-torsional nystagmus beating left at rest, stronger on left gaze and still left-beating on right gaze. HINTS peripheral: corrective saccade on the head impulse to the right, normal to the left, no skew; finger rub heard equally; walks unaided, veering right. Plan: no imaging; an antiemetic or meclizine for no longer than 3 to 5 days; a shared decision on short-term steroids, since she is within 3 days of onset; vestibular rehabilitation; referral to a specialist and her primary care physician; return at once for weakness, numbness, double vision, slurred speech or a worse gait.",
+    "presentRefs": [
+      "case:neuritis",
+      "timing",
+      "hints",
+      "neuritis"
+    ],
+    "pimp": [
+      {
+        "q": "Why not just ask whether the room spins?",
+        "a": "The description is unreliable: more than half change it when asked again minutes later. Timing and triggers sort dizziness.",
+        "refs": [
+          "triage",
+          "timing_step"
+        ]
+      },
+      {
+        "q": "Corrective saccade on the head impulse. Stroke?",
+        "a": "No, that is the peripheral finding. A normal head impulse in a patient with continuous vertigo and nystagmus is the central one.",
+        "refs": [
+          "hints"
+        ]
+      },
+      {
+        "q": "Why add a hearing check to HINTS?",
+        "a": "AICA strokes can cause an abnormal head impulse. Adding new one-sided hearing loss raised sensitivity for AICA strokes from 73.3% to 91.1%.",
+        "refs": [
+          "hints"
+        ]
+      },
+      {
+        "q": "Why not a CT to rule out a stroke?",
+        "a": "It finds only 7 to 28.5% of ischemic strokes in dizzy patients, and a clear CT can falsely reassure. GRACE-3 recommends against routine CT or CTA to tell central from peripheral.",
+        "refs": [
+          "mri"
+        ]
+      },
+      {
+        "q": "Why not meclizine until the vertigo is gone?",
+        "a": "Longer use inhibits central compensation. Suppressants are for no longer than 3 to 5 days, then rehabilitation.",
+        "refs": [
+          "neuritis"
+        ]
+      },
+      {
+        "q": "Why no collar or sleeping upright after the Epley?",
+        "a": "Postmaneuver restrictions are not needed.",
+        "refs": [
+          "epley"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "CT first, then the exam. CT finds only 7 to 28.5% of ischemic strokes in dizzy patients.",
+      "refs": [
+        "triage",
+        "mri"
+      ]
+    },
+    {
+      "text": "Meclizine before the eye exam. A vestibular suppressant can take away the nystagmus the exam depends on.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "text": "Vomiting means it is not a stroke. With dizziness, nausea and vomiting are the commonest symptoms of a posterior circulation stroke.",
+      "refs": [
+        "timing_step"
+      ]
+    },
+    {
+      "text": "Reading the head impulse backwards. The corrective saccade is the peripheral finding.",
+      "refs": [
+        "hints"
+      ]
+    },
+    {
+      "text": "HINTS without nystagmus. A normal head impulse then falsely suggests a stroke; grade the gait and the eye movements instead.",
+      "refs": [
+        "hints",
+        "ais"
+      ]
+    },
+    {
+      "text": "A normal MRI, so call it neuritis. Early diffusion is falsely negative in about 1 in 5 posterior strokes in the first 24 to 48 hours.",
+      "refs": [
+        "mri_neg"
+      ]
+    },
+    {
+      "text": "An Epley for horizontal canal BPPV. The horizontal canal needs a barbecue roll or a Gufoni maneuver.",
+      "refs": [
+        "hc_step"
+      ]
+    },
+    {
+      "text": "Calling vertigo with new one-sided deafness labyrinthitis before a stroke is excluded. AICA strokes cause exactly this.",
+      "refs": [
+        "hearing",
+        "hints_result"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the HINTS exam?",
+      "a": "A three-part bedside exam for continuous vertigo with nystagmus: the head impulse, the direction of nystagmus on gaze, and the test of skew. A corrective saccade, one-way nystagmus and no skew is peripheral; a normal head impulse, direction-changing nystagmus or a skew is central. HINTS plus adds new one-sided hearing loss as a fourth central sign, and it needs a trained examiner.",
+      "refs": [
+        "hints"
+      ]
+    },
+    {
+      "q": "How accurate is HINTS for stroke?",
+      "a": "In the systematic review this pathway cites, HINTS had a sensitivity of 92.7% and a specificity of 91.1%; adding new hearing loss (HINTS plus) gave 95.7% and 80.7%. Done well, it may outperform an early MRI. Untrained emergency physicians do not apply or interpret it reliably, so without a trained examiner a specialist or MRI with DWI stands in.",
+      "refs": [
+        "hints"
+      ]
+    },
+    {
+      "q": "Should a dizzy patient get a CT or an MRI?",
+      "a": "MRI with diffusion and angiography of the posterior circulation whenever the bedside exam cannot call it peripheral. Non-contrast CT finds only 7 to 28.5% of ischemic strokes in dizzy patients and comes first in a reperfusion window, with signs of a bleed, or when MRI cannot be done promptly; a normal CT excludes nothing. A normal MRI in the first 24 to 48 hours does not exclude a posterior stroke.",
+      "refs": [
+        "mri",
+        "mri_neg"
+      ]
+    },
+    {
+      "q": "How do you do the Epley maneuver?",
+      "a": "Turn the head 45 degrees toward the affected ear and lay the patient back to head-hanging 20 to 30 degrees for 20 to 30 seconds; turn the head 90 degrees to the other side for about 20 seconds; turn a further 90 degrees with the body on its side, nearly face down, for 20 to 30 seconds; then sit up. Repeat the Dix-Hallpike afterward.",
+      "refs": [
+        "epley"
+      ]
+    },
+    {
+      "q": "How is vestibular neuritis treated?",
+      "a": "With a peripheral HINTS, normal hearing and the patient able to stand unaided: no imaging, an antiemetic or vestibular suppressant for no longer than 3 to 5 days (meclizine 25 to 100 mg a day), a shared decision on short-term steroids within 3 days of onset, no antivirals, vestibular rehabilitation for everyone, and explicit return advice for new neurological symptoms.",
+      "refs": [
+        "neuritis"
+      ]
+    },
+    {
+      "q": "How do you tell Meniere disease from vestibular migraine?",
+      "a": "Meniere disease is two or more attacks of 20 minutes to 12 hours with a low-frequency hearing loss in one ear tied to the attacks and fluctuating tinnitus or fullness in that ear; audiometry makes it. Vestibular migraine is at least 5 episodes of 5 minutes to 72 hours with a migraine history and migraine features in at least half, and has no diagnostic test.",
+      "refs": [
+        "meniere_step",
+        "vm_step"
+      ]
+    }
+  ],
+  "related": [
+    "stroke",
+    "syncope",
+    "headache",
+    "palpitations"
+  ]
+}

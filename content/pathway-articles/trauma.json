@@ -1,0 +1,408 @@
+{
+  "id": "trauma",
+  "slug": "trauma",
+  "published": true,
+  "signedOff": false,
+  "updated": "2026-10-22",
+  "seoTitle": "Major Trauma Algorithm: Primary Survey, FAST, Transfusion",
+  "metaDescription": "Major trauma, fork by fork: the primary survey, tension pneumothorax, massive transfusion and TXA, FAST, the pelvic binder, head CT rules and reversal.",
+  "h1": "Major trauma management: the primary survey, fork by fork",
+  "dek": "For the student on an EM or surgery rotation in the trauma bay with a resident about to ask what is next: the primary survey in order, the chest, massive transfusion, FAST and the pelvis, head CT and reversal, the secondary survey, what to say on rounds, and the traps.",
+  "jumpLinks": [
+    {
+      "label": "Primary survey",
+      "stage": "Stabilize"
+    },
+    {
+      "label": "Findings and forks",
+      "stage": "Result"
+    },
+    {
+      "label": "Endpoints",
+      "stage": "Outcome"
+    },
+    {
+      "label": "Operating room or angiography",
+      "stage": "Manage"
+    },
+    {
+      "label": "FAST and CT",
+      "stage": "Imaging"
+    },
+    {
+      "label": "Stab wounds and the neck",
+      "stage": "Diagnose"
+    }
+  ],
+  "shortAnswer": [
+    {
+      "lead": "Catastrophic bleeding first, then ABCDE.",
+      "text": "Direct pressure, and a tourniquet on a limb if pressure fails; then airway with the neck held in line, breathing, circulation, disability, exposure. CT waits for a patient who is stable or responding.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "lead": "GCS 8 or less: rapid sequence intubation.",
+      "text": "With manual in-line stabilization. A supraglottic device or a surgical airway is the fallback, not the first move.",
+      "refs": [
+        "airway",
+        "rsi"
+      ]
+    },
+    {
+      "lead": "Tension pneumothorax: decompress before any film.",
+      "text": "Open thoracostomy where skilled, otherwise a needle, then a chest drain. ATLS and the European Trauma Course disagree on the needle site.",
+      "refs": [
+        "decompress"
+      ]
+    },
+    {
+      "lead": "Large hemothorax: a 28 to 40 Fr drain first.",
+      "text": "Operate for instability from chest bleeding, more than 1,500 mL (a rapid loss in the WSES-AAST text, over 24 hours in its recommendation box), or more than 200 mL an hour over 3 hours.",
+      "refs": [
+        "chest_drain",
+        "drain_output"
+      ]
+    },
+    {
+      "lead": "Hemorrhagic shock: blood, not crystalloid.",
+      "text": "Plasma to red cells 1:1 to 1:2 with platelets (NICE: 1:1), TXA 1 g over 10 minutes then 1 g over 8 hours within 3 hours, and a systolic of 80 to 90 until the bleeding stops, unless the brain is injured; in older adults, permissive hypotension only in selected patients.",
+      "refs": [
+        "resus"
+      ]
+    },
+    {
+      "lead": "Find the source in the bay.",
+      "text": "eFAST with chest and pelvic films. Unstable with a positive FAST: laparotomy. Pelvic ring disrupted: a binder on the greater trochanters, then angioembolization or preperitoneal packing if it keeps bleeding. A negative FAST does not exclude bleeding.",
+      "refs": [
+        "fast",
+        "lap",
+        "binder",
+        "pelvic_pack",
+        "fast_neg_step",
+        "binder_result"
+      ]
+    },
+    {
+      "lead": "Head injury: CT within 1 hour for high-risk features.",
+      "text": "At 16 or over: GCS 12 or less, under 15 at 2 hours, a focal deficit, a skull fracture sign, a seizure or more than one vomit. On warfarin with a bleed: 4-factor PCC by INR and weight, with IV vitamin K.",
+      "refs": [
+        "head_ct",
+        "disability",
+        "reverse"
+      ]
+    },
+    {
+      "lead": "Stable after blunt trauma: contrast CT.",
+      "text": "Whole-body, vertex to mid-thigh, in an adult with multiple injuries. A stable splenic laceration gets non-operative management; an arterial blush in a stable adult gets angioembolization.",
+      "refs": [
+        "ct_body",
+        "nom_step",
+        "ae_step"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "stage": "Stabilize",
+      "heading": "What is the order of the trauma primary survey?",
+      "intro": "Catastrophic bleeding, airway with the neck held, breathing, circulation, disability, exposure. Each life threat is treated where it is found: the airway, the tension pneumothorax, the sucking wound, the bleeding.",
+      "refs": [
+        "triage",
+        "rsi",
+        "decompress",
+        "open_dressing",
+        "chest_drain",
+        "flail_step",
+        "preg_step",
+        "resus",
+        "binder",
+        "exposure"
+      ]
+    },
+    {
+      "stage": "Result",
+      "heading": "What do the airway, chest, circulation and FAST findings mean?",
+      "intro": "Each fork reads one finding: the airway and GCS, the chest exam and eFAST, the drain output, the pressure and pulse, the FAST and films, the head, the secondary survey and the CT.",
+      "refs": [
+        "airway",
+        "breathing",
+        "drain_output",
+        "circulation",
+        "source",
+        "disability",
+        "secondary",
+        "ct_result"
+      ]
+    },
+    {
+      "stage": "Manage",
+      "heading": "When does a trauma patient go to the operating room or angiography?",
+      "intro": "Unstable with a positive FAST: laparotomy. A pelvis still bleeding through the binder: angioembolization or packing. A stable blush: embolization. A stable splenic laceration: non-operative management.",
+      "refs": [
+        "lap",
+        "pelvic_pack",
+        "ae_step",
+        "nom_step",
+        "tamponade_step",
+        "reverse"
+      ]
+    },
+    {
+      "stage": "Imaging",
+      "heading": "FAST, CT or head CT: what imaging does a trauma patient get?",
+      "intro": "eFAST with chest and pelvic films for the unstable patient, contrast CT once stable or responding, and a head CT by the NICE risk factors.",
+      "refs": [
+        "fast",
+        "ct_body",
+        "head_ct",
+        "anticoag_ct"
+      ]
+    },
+    {
+      "stage": "Diagnose",
+      "heading": "How do you work up a penetrating abdominal wound or neck pain after trauma?",
+      "intro": "Hard signs and the wound track first for a penetrating abdomen, local wound exploration for an anterior stab, and a decision rule for the neck.",
+      "refs": [
+        "pen_look",
+        "lwe",
+        "cspine",
+        "fast_neg_step"
+      ]
+    },
+    {
+      "stage": "Outcome",
+      "heading": "Where does each trauma patient end up?",
+      "intro": "Every branch ends on a named injury and its plan, and every bleeding patient ends with the primary survey finished and, if the head is hurt, a CT head once bleeding is controlled.",
+      "refs": [
+        "end_thoracotomy",
+        "end_lap",
+        "end_pelvic_pack",
+        "end_neuro",
+        "end_nom",
+        "end_serial"
+      ]
+    }
+  ],
+  "checklist": {
+    "heading": "Massive transfusion: the bay checklist",
+    "items": [
+      {
+        "text": "Activate for any of (ACS TQIP): ABC score 2 or more (pulse over 120, systolic under 90, positive FAST, penetrating torso injury), persistent instability, active bleeding needing an operation or embolization, or transfusion in the bay. NICE activates on physiology and the response to volume, not a score.",
+        "refs": [
+          "resus"
+        ]
+      },
+      {
+        "text": "Plasma to red cells 1:1 to 1:2 (NICE: 1:1 in adults); one platelet unit for each 6 units of red cells.",
+        "refs": [
+          "resus"
+        ]
+      },
+      {
+        "text": "Blood products rather than crystalloid once the triggers are met; the European guideline still starts 0.9% saline or a balanced crystalloid in the hypotensive bleeding patient.",
+        "refs": [
+          "resus"
+        ]
+      },
+      {
+        "text": "TXA 1 g IV over 10 minutes, then 1 g over 8 hours, within 3 hours of injury.",
+        "refs": [
+          "resus"
+        ]
+      },
+      {
+        "text": "Systolic 80 to 90 (MAP 50 to 60) until major bleeding stops; MAP 80 or more with severe TBI.",
+        "refs": [
+          "resus"
+        ]
+      },
+      {
+        "text": "Fibrinogen 1.5 g/L or less: fibrinogen concentrate 3 to 4 g, or 15 to 20 single-donor units of cryoprecipitate.",
+        "refs": [
+          "resus"
+        ]
+      },
+      {
+        "text": "Ionized calcium monitored; calcium chloride is the preferred agent.",
+        "refs": [
+          "resus"
+        ]
+      },
+      {
+        "text": "Uncrossmatched red cells for a woman of child-bearing potential: group O RhD-negative.",
+        "refs": [
+          "preg_step"
+        ]
+      },
+      {
+        "text": "Norepinephrine only when restricted volume replacement misses the target.",
+        "refs": [
+          "resus"
+        ]
+      }
+    ]
+  },
+  "rounds": {
+    "present": "28-year-old motorcyclist thrown at speed, in hemorrhagic shock with a positive FAST. Airway: talking, GCS 14. Breathing: equal air entry, no pneumothorax or hemothorax on the film or eFAST, chest wall stable. Circulation: BP 78/50, HR 132, cool peripheries, no external bleeding; pulse over 120, systolic under 90 and a positive FAST meet the ABC score trigger, so the massive transfusion protocol is running, plasma to red cells 1:1 to 1:2 with platelets, and TXA 1 g over 10 minutes then 1 g over 8 hours. FAST: free fluid in Morison's pouch and around the spleen; chest and pelvic films normal. Plan: laparotomy now with blood running, damage control if he does not respond, and the primary survey finished before he leaves the bay.",
+    "presentRefs": [
+      "case:fast_pos",
+      "resus",
+      "fast",
+      "lap",
+      "end_lap"
+    ],
+    "pimp": [
+      {
+        "q": "Why not CT first in the unstable patient?",
+        "a": "CT is for the patient who responds to resuscitation or is stable. The unstable patient gets eFAST and chest and pelvic films in the bay.",
+        "refs": [
+          "fast",
+          "triage"
+        ]
+      },
+      {
+        "q": "Why not 2 L of warm crystalloid?",
+        "a": "Once massive transfusion triggers are met, blood products replace crystalloid, and NICE gives no crystalloid in hospital for active bleeding.",
+        "refs": [
+          "resus"
+        ]
+      },
+      {
+        "q": "When is it too late for TXA?",
+        "a": "It goes in as soon as possible and within 3 hours of injury; not after 3 hours unless there is hyperfibrinolysis.",
+        "refs": [
+          "resus"
+        ]
+      },
+      {
+        "q": "Why not spring the pelvis again?",
+        "a": "Repeated springing can increase the bleeding. The binder goes on around the greater trochanters and the symphysis.",
+        "refs": [
+          "binder"
+        ]
+      },
+      {
+        "q": "FAST negative, still hypotensive on blood. Done?",
+        "a": "No. A negative FAST does not exclude intraperitoneal or retroperitoneal bleeding: keep transfusing, repeat the FAST and look for other losses.",
+        "refs": [
+          "fast_neg_step"
+        ]
+      },
+      {
+        "q": "Why a retrograde urethrogram before the catheter?",
+        "a": "Blood at the meatus, a perineal hematoma or a high-riding prostate means a possible urethral injury; a positive urethrogram means a suprapubic catheter.",
+        "refs": [
+          "exposure",
+          "binder"
+        ]
+      }
+    ]
+  },
+  "traps": [
+    {
+      "text": "Circulation before the airway, or whole-body CT before the primary survey. Catastrophic bleeding, then ABCDE.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "text": "A chest film before decompressing a tension pneumothorax with low pressure. Decompress first.",
+      "refs": [
+        "decompress"
+      ]
+    },
+    {
+      "text": "Needle aspiration of a large hemothorax. It gets a 28 to 40 Fr chest drain; smaller tubes leave retained blood.",
+      "refs": [
+        "chest_drain"
+      ]
+    },
+    {
+      "text": "Norepinephrine to a systolic of 120 before blood. Blood first; norepinephrine only when restricted volume misses the target.",
+      "refs": [
+        "resus"
+      ]
+    },
+    {
+      "text": "CT before laparotomy in an unstable patient with a positive FAST. They go straight to the operating room.",
+      "refs": [
+        "lap"
+      ]
+    },
+    {
+      "text": "Letting the FAST decide a penetrating abdomen. The bedside exam for hard signs and the track comes first; free fluid is non-specific for bowel injury.",
+      "refs": [
+        "pen_look"
+      ]
+    },
+    {
+      "text": "Taking the collar off to test the neck. Rotation is tested only with a low-risk factor and no high-risk factor, and imaging, when indicated, is CT rather than plain films.",
+      "refs": [
+        "cspine"
+      ]
+    },
+    {
+      "text": "Sending home a GCS 15 patient on an anticoagulant without a scan. Scan first; reverse only if a bleed is found.",
+      "refs": [
+        "anticoag_ct"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the order of the primary survey in trauma?",
+      "a": "Catastrophic external bleeding first, then airway with in-line neck protection, breathing, circulation, disability and exposure. External bleeding gets direct pressure, and a tourniquet on a limb when pressure fails. CT comes once the patient is stable or responding, and the history and secondary survey follow the primary survey, not the other way round.",
+      "refs": [
+        "triage"
+      ]
+    },
+    {
+      "q": "What is the ratio for massive transfusion in trauma?",
+      "a": "Plasma to red cells between 1:1 and 1:2 with platelets, one platelet unit for each 6 units of red cells (ACS TQIP); NICE gives 1:1 in adults. Activate for an ABC score of 2 or more, persistent instability, active bleeding needing an operation or embolization, or transfusion in the bay; NICE activates on physiology and the response to fluid instead. Switch to laboratory-guided transfusion once bleeding is controlled.",
+      "refs": [
+        "resus"
+      ]
+    },
+    {
+      "q": "What is the TXA dose in trauma?",
+      "a": "1 g IV over 10 minutes, then 1 g over 8 hours, as soon as possible and within 3 hours of injury; not after 3 hours unless there is hyperfibrinolysis. For an isolated head injury with a GCS of 12 or less and no active extracranial bleeding, NICE considers a 2 g IV bolus at 16 and over, within 2 hours of injury.",
+      "refs": [
+        "resus",
+        "head_ct"
+      ]
+    },
+    {
+      "q": "Where do you decompress a tension pneumothorax?",
+      "a": "The sources disagree. ATLS uses the 4th or 5th intercostal space in the anterior midaxillary line; the European Trauma Course and WSES-AAST use the 2nd space in the midclavicular line, WSES-AAST also accepting the 5th, midaxillary. NICE uses open thoracostomy in hospital. Whatever the site, decompression comes before imaging, and a chest drain follows.",
+      "refs": [
+        "decompress"
+      ]
+    },
+    {
+      "q": "Which head injuries need a CT within 1 hour?",
+      "a": "In anyone 16 or over: a GCS of 12 or less on arrival or under 15 at 2 hours, a suspected open, depressed or basal skull fracture, a post-traumatic seizure, a focal deficit or more than one vomit. Lesser-risk features, such as loss of consciousness or amnesia at 65 or over, or a dangerous mechanism, get a CT within 8 hours.",
+      "refs": [
+        "head_ct",
+        "disability",
+        "end_ct_lesser"
+      ]
+    },
+    {
+      "q": "How do you manage a stable splenic laceration?",
+      "a": "Non-operative management whatever the grade, when the patient is hemodynamically stable with no other abdominal injury needing surgery: admission, monitoring, serial examination and hemoglobin, with angiography and an operating room on hand. A blush in a stable adult goes to angioembolization; in a stable child a blush alone is not an absolute indication, and splenectomy is avoided.",
+      "refs": [
+        "nom_step",
+        "ae_step",
+        "ct_result"
+      ]
+    }
+  ],
+  "related": [
+    "chest_pain",
+    "ams",
+    "limb_injury",
+    "environmental"
+  ]
+}

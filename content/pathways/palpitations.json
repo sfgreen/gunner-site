@@ -1,0 +1,3042 @@
+{
+ "id": "pw_palpitations",
+ "title": "Palpitations and arrhythmia",
+ "world": "cardio",
+ "synonyms": [
+  "palpitations",
+  "arrhythmia",
+  "tachycardia",
+  "racing heart",
+  "heart pounding",
+  "SVT",
+  "PSVT",
+  "AVNRT",
+  "AVRT",
+  "atrial fibrillation",
+  "AF",
+  "AFib",
+  "rapid ventricular response",
+  "atrial flutter",
+  "WPW",
+  "pre-excited AF",
+  "wide complex tachycardia",
+  "ventricular tachycardia",
+  "VT",
+  "torsades de pointes",
+  "long QT",
+  "hyperkalemia",
+  "sinus tachycardia",
+  "inappropriate sinus tachycardia",
+  "adenosine",
+  "modified Valsalva",
+  "synchronized cardioversion",
+  "CHA2DS2-VASc",
+  "CHA2DS2-VA",
+  "rate control",
+  "rhythm control"
+ ],
+ "reviewBy": "2027-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:38043043",
+   "label": "AF 2023",
+   "title": "2023 ACC/AHA/ACCP/HRS Guideline for the Diagnosis and Management of Atrial Fibrillation (JACC copy)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38043043/"
+  },
+  {
+   "docId": "pmid:31504425",
+   "label": "ESC SVT 2019",
+   "title": "2019 ESC Guidelines for the management of patients with supraventricular tachycardia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31504425/"
+  },
+  {
+   "docId": "pmid:36017572",
+   "label": "ESC VA 2022",
+   "title": "2022 ESC Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36017572/"
+  },
+  {
+   "docId": "pmid:39210723",
+   "label": "ESC AF 2024",
+   "title": "2024 ESC Guidelines for the management of atrial fibrillation",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39210723/"
+  },
+  {
+   "docId": "pmid:34383280",
+   "label": "CAEP 2021",
+   "title": "2021 CAEP Acute Atrial Fibrillation/Flutter Best Practices Checklist (CJEM)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34383280/"
+  },
+  {
+   "docId": "pmid:20185054",
+   "label": "AHA/ACCF TdP 2010",
+   "title": "Prevention of torsade de pointes in hospital settings: AHA/ACCF scientific statement (JACC copy)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/20185054/"
+  },
+  {
+   "docId": "pmid:28480632",
+   "label": "ISHNE-HRS 2017",
+   "title": "2017 ISHNE-HRS expert consensus statement on ambulatory ECG and external cardiac monitoring/telemetry",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28480632/"
+  },
+  {
+   "docId": "pmid:35186966",
+   "label": "Vagal maneuver NMA 2021",
+   "title": "Comparison of various vagal maneuvers for supraventricular tachycardia by network meta-analysis (Front Med 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35186966/"
+  },
+  {
+   "docId": "url:f16b34a1e288",
+   "label": "UKKA 2020",
+   "title": "UK Kidney Association clinical practice guideline: treatment of acute hyperkalaemia in adults (2020)",
+   "url": "https://www.ukkidney.org/sites/default/files/RENAL%20ASSOCIATION%20HYPERKALAEMIA%20GUIDELINE%20-%20JULY%202022%20V2_0.pdf"
+  },
+  {
+   "docId": "pmid:34632453",
+   "label": "JACEP Open 2021",
+   "title": "Hyperkalemia management in the emergency department: an expert panel consensus (JACEP Open 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34632453/"
+  },
+  {
+   "docId": "url:ca7b7f338e06",
+   "label": "FDA adenosine",
+   "title": "FDA label: adenosine injection for rapid bolus intravenous use",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=546642f2-662f-46cf-9d82-5bb3bdcc7677"
+  },
+  {
+   "docId": "url:2ecf153f5b85",
+   "label": "FDA diltiazem",
+   "title": "FDA label: diltiazem hydrochloride injection",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=bba03666-ff4f-4bf6-fa92-78e1ec2d9073"
+  },
+  {
+   "docId": "url:7c07f84e04d6",
+   "label": "FDA verapamil",
+   "title": "FDA label: verapamil hydrochloride injection",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1c993365-1b62-4524-e781-d307f28f63bc"
+  },
+  {
+   "docId": "url:3f250f95cd74",
+   "label": "FDA esmolol",
+   "title": "FDA label: Brevibloc (esmolol hydrochloride) injection",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=220a07b8-5c68-41a3-8705-fd91f14c50b4"
+  },
+  {
+   "docId": "url:5fa831290c92",
+   "label": "FDA metoprolol",
+   "title": "FDA label: metoprolol tartrate injection",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=7c1f998a-233d-4feb-6ea2-457702abd0d2"
+  },
+  {
+   "docId": "url:9e8b5a59026f",
+   "label": "FDA amiodarone",
+   "title": "FDA label: Nexterone (amiodarone) premixed injection",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e9108958-b8d7-4fba-87c3-9a32990de551"
+  },
+  {
+   "docId": "url:1fee0ef74eaa",
+   "label": "FDA procainamide",
+   "title": "FDA label: procainamide hydrochloride injection",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=17e47845-daad-434c-a784-6d3875b0d704"
+  },
+  {
+   "docId": "url:5cda2e4449fb",
+   "label": "FDA ibutilide",
+   "title": "FDA label: Corvert (ibutilide fumarate) injection",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2428969a-7431-4e94-9503-ad5c680e2ea4"
+  },
+  {
+   "docId": "pmid:29261936",
+   "label": "StatPearls hyperkalemia (review)",
+   "title": "StatPearls: Hyperkalemia",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29261936/"
+  },
+  {
+   "docId": "pmid:40839563",
+   "label": "CHA2DS2-VASc study 2025",
+   "title": "Improvement in risk prediction for patients with atrial fibrillation and intermediate-risk CHA2DS2-VASc score utilizing highly sensitive cardiac troponin T (PLoS One 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40839563/"
+  }
+ ],
+ "differential": [
+  "SVT (AVNRT or AVRT)",
+  "Atrial tachycardia",
+  "Atrial fibrillation",
+  "Atrial flutter",
+  "Pre-excited AF (WPW)",
+  "Ventricular tachycardia",
+  "Torsades de pointes",
+  "Hyperkalemia",
+  "High-grade AV block",
+  "Pulmonary embolism",
+  "Sepsis",
+  "Hemorrhage",
+  "Thyrotoxicosis",
+  "Inappropriate sinus tachycardia",
+  "Ectopic beats or anxiety"
+ ],
+ "calculators": [
+  {
+   "id": "cha2ds2_vasc",
+   "title": "CHA2DS2-VASc score",
+   "kind": "points",
+   "items": [
+    {
+     "id": "chf",
+     "label": "Congestive heart failure",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "htn",
+     "label": "Hypertension",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "age",
+     "label": "Age",
+     "options": [
+      {
+       "label": "Under 65",
+       "points": 0
+      },
+      {
+       "label": "65 to 74",
+       "points": 1
+      },
+      {
+       "label": "75 or older",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "diabetes",
+     "label": "Diabetes",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "stroke",
+     "label": "Prior stroke, TIA or thromboembolism",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "vascular",
+     "label": "Vascular disease (MI, PAD, aortic plaque)",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "sex",
+     "label": "Sex",
+     "options": [
+      {
+       "label": "Male",
+       "points": 0
+      },
+      {
+       "label": "Female",
+       "points": 1
+      }
+     ]
+    }
+   ],
+   "bands": [
+    {
+     "lte": 0,
+     "text": "0: low risk (a man)"
+    },
+    {
+     "gte": 1,
+     "lte": 1,
+     "text": "1: a man, anticoagulation reasonable; a woman, low risk"
+    },
+    {
+     "gte": 2,
+     "lte": 2,
+     "text": "2: a man, anticoagulation recommended; a woman, reasonable"
+    },
+    {
+     "gte": 3,
+     "text": "3 or more: anticoagulation recommended"
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:38043043",
+     "where": "Abbreviations; Antithrombotic therapy, recommendations 1 and 3; Valvular heart disease, recommendation 1"
+    },
+    {
+     "docId": "pmid:39210723",
+     "where": "Table 10; 6.1"
+    },
+    {
+     "docId": "pmid:40839563",
+     "where": "Materials and methods, Definitions"
+    }
+   ],
+   "note": "ESC 2024 drops sex (CHA2DS2-VA): anticoagulation recommended at 2 or more, considered at 1. Moderate or worse mitral stenosis: warfarin whatever the score.",
+   "tests": [
+    {
+     "picks": {},
+     "expect": 0
+    },
+    {
+     "picks": {
+      "chf": 1,
+      "htn": 1,
+      "age": 1,
+      "sex": 1
+     },
+     "expect": 4
+    },
+    {
+     "picks": {
+      "htn": 1
+     },
+     "expect": 1
+    },
+    {
+     "picks": {
+      "htn": 1,
+      "age": 1
+     },
+     "expect": 2
+    },
+    {
+     "picks": {
+      "chf": 1,
+      "htn": 1,
+      "age": 2,
+      "diabetes": 1,
+      "stroke": 1,
+      "vascular": 1,
+      "sex": 1
+     },
+     "expect": 9
+    }
+   ]
+  }
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Palpitations, now on a cardiac monitor. First moves?",
+   "options": [
+    "Monitor, vitals, 12-lead ECG; look for shock or ischemia",
+    "Adenosine 6 mg IV push first, then the ECG once it settles",
+    "Troponin and a chest x-ray first; the ECG once they return",
+    "Home with a 24-hour Holter and a cardiology letter today"
+   ],
+   "answer": 0,
+   "chainStep": "Cardiac monitor and vitals; look for hypotension or shock, altered mental status, chest pain or acute heart failure; a 12-lead ECG during the tachycardia before any drug, never delaying a shock for instability",
+   "why": "A 12-lead ECG during the tachycardia is recommended for every stable patient, and documenting the rhythm on it is the step everything else depends on; with the history and examination it names the cause in up to a third of patients with palpitations. Instability is checked at the same time: hypotension, altered mental status, chest pain, acute heart failure or signs of shock. A drug comes after the rhythm is recorded, a troponin and an x-ray do not name it, and ambulatory monitoring is for palpitations the 12-lead did not catch.",
+   "sources": [
+    {
+     "docId": "pmid:31504425",
+     "where": "Recommendations for acute management of narrow and wide QRS tachycardia, Class I C; 10.1.2.1"
+    },
+    {
+     "docId": "pmid:36017572",
+     "where": "6.1.2 Acute management of sustained monomorphic VT"
+    },
+    {
+     "docId": "pmid:28480632",
+     "where": "4.2 Palpitations"
+    },
+    {
+     "docId": "pmid:34383280",
+     "where": "A2"
+    }
+   ],
+   "next": "front",
+   "orders": [
+    {
+     "item": "12-lead ECG",
+     "dose": "During the tachycardia, in every stable patient, before any drug",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504425",
+       "where": "Recommendations for acute management, Class I C"
+      },
+      {
+       "docId": "pmid:36017572",
+       "where": "6.1.2"
+      }
+     ]
+    },
+    {
+     "item": "Instability check",
+     "dose": "Hypotension, acutely altered mental status, chest pain, acute heart failure symptoms or signs of shock (ESC); for AF, CAEP adds systolic under 90, ongoing ischemic pain or ST depression over 2 mm, and pulmonary edema",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504425",
+       "where": "10.1.2.1 Haemodynamically unstable patients"
+      },
+      {
+       "docId": "pmid:34383280",
+       "where": "A2"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: children, pregnancy, pacemaker or ICD problems, digoxin toxicity, poisoning (a wide QRS after an overdose continues in the toxic ingestion pathway), and cardiac arrest care."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Monitor, pulse and vitals",
+   "outcomes": [
+    {
+     "id": "arrest",
+     "if": "No pulse, or polymorphic VT that will not stop; VF, pulseless VT or asystole",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_arrest"
+    },
+    {
+     "id": "unstable",
+     "if": "Unstable tachyarrhythmia; not sinus, causing shock, ischemia, confusion or heart failure",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "sync_cv"
+    },
+    {
+     "id": "sinus_shock",
+     "if": "Sinus tachycardia with shock; sinus P waves, low pressure",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "sinus_step"
+    },
+    {
+     "id": "brady",
+     "if": "Bradycardia with shock; a slow rate with low pressure or confusion",
+     "ddx": {
+      "lead": [
+       "High-grade AV block"
+      ],
+      "out": []
+     },
+     "next": "end_brady"
+    },
+    {
+     "id": "hyperk_unstable",
+     "if": "Suspected hyperkalemia with shock; wide or slow QRS, renal failure or dialysis",
+     "ddx": {
+      "lead": [
+       "Hyperkalemia"
+      ],
+      "out": []
+     },
+     "next": "hyperk"
+    },
+    {
+     "id": "stable",
+     "if": "Stable; a pulse, no shock, ischemia, confusion or heart failure",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "ecg"
+    }
+   ]
+  },
+  {
+   "id": "end_arrest",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No pulse, or polymorphic VT that will not stop: defibrillate and run cardiac arrest care, which is outside this pathway. Sustained torsades that does not stop gets an immediate shock, then magnesium as in the torsades route."
+  },
+  {
+   "id": "end_brady",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bradycardia with shock: IV atropine, then temporary pacing if it fails, transcutaneous as the emergency bridge and transvenous when available, with labs for a reversible cause (potassium, calcium, pH, digoxin level, thyroid function, Lyme titer). This pathway hands off here; the syncope pathway's unstable bradycardia route carries the sources, and the atropine dose is still pending there."
+  },
+  {
+   "id": "sync_cv",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "A tachyarrhythmia, not sinus, is causing shock or ischemia. Next?",
+   "options": [
+    "Synchronized cardioversion now, with sedation if awake",
+    "IV diltiazem first, and cardiovert if the rate stays high",
+    "Anticoagulate, then cardiovert once a TEE shows no clot",
+    "Amiodarone 150 mg IV over 10 minutes, then reassess"
+   ],
+   "answer": 0,
+   "chainStep": "Synchronized DC cardioversion now, with sedation if conscious; an unsynchronized shock if synchronization is not possible; in AF, start anticoagulation as soon as possible without delaying the shock",
+   "why": "A tachyarrhythmia that is causing hemodynamic instability is cardioverted at once. Synchronized cardioversion is recommended for unstable narrow and wide QRS tachycardias, DC cardioversion is first-line for monomorphic VT that is not tolerated, and immediate electrical cardioversion is recommended when AF, pre-excited AF included, is the cause. The shock is synchronized to the QRS to avoid inducing VF, or unsynchronized if synchronization is not possible. In AF, anticoagulation starts as soon as possible around an unscheduled cardioversion, without holding up an immediate shock. Rate control or an antiarrhythmic infusion first is for the stable patient.",
+   "sources": [
+    {
+     "docId": "pmid:31504425",
+     "where": "Recommendations for acute management of narrow and wide QRS tachycardia, Class I B; 10.1.1.1; 10.1.2.1"
+    },
+    {
+     "docId": "pmid:36017572",
+     "where": "6.1.2; Recommendation Table 9, Class I B"
+    },
+    {
+     "docId": "pmid:38043043",
+     "where": "Electrical cardioversion, recommendations 1 and 3; WPW and preexcitation, recommendation 1"
+    },
+    {
+     "docId": "pmid:39210723",
+     "where": "7.2.1; Recommendation Table 15, Class IIa B"
+    },
+    {
+     "docId": "pmid:34383280",
+     "where": "A2"
+    }
+   ],
+   "next": "end_cv",
+   "orders": [
+    {
+     "item": "Synchronized cardioversion",
+     "dose": "Synchronized to the QRS; sedation if conscious (ESC names IV midazolam, propofol or etomidate); unsynchronized if synchronization is not possible",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Electrical cardioversion, recommendation 3, Class 1"
+      },
+      {
+       "docId": "pmid:39210723",
+       "where": "7.2.2 Electrical cardioversion"
+      },
+      {
+       "docId": "pmid:36017572",
+       "where": "6.1.2"
+      }
+     ]
+    },
+    {
+     "item": "Energy for AF",
+     "dose": "Start at 150 to 200 J synchronized, not low (CAEP); biphasic at least 200 J for elective AF cardioversion (US, 2a)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34383280",
+       "where": "B5 electrical cardioversion"
+      },
+      {
+       "docId": "pmid:38043043",
+       "where": "Electrical cardioversion, recommendation 4, Class 2a"
+      }
+     ]
+    },
+    {
+     "item": "Energy for atrial flutter",
+     "dose": "Low energy, 100 J biphasic or less",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504425",
+       "where": "Recommendations for macro-re-entrant atrial arrhythmias, haemodynamically stable patients, Class I B"
+      }
+     ],
+     "note": "Stated for stable flutter."
+    },
+    {
+     "item": "Energy for SVT or VT",
+     "dose": "Not stated in the open sources read",
+     "status": "pending",
+     "note": "ERC 2021 gives 70 to 120 J for flutter and SVT and 120 to 150 J for VT with a pulse, but its open German copy is not usable; the US ACLS energies are in the barred Circulation text."
+    },
+    {
+     "item": "Anticoagulation, AF or flutter",
+     "dose": "Start as soon as possible around an unscheduled cardioversion; continue at least 4 weeks after, then by stroke risk",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39210723",
+       "where": "Recommendation Table 15, Class IIa B"
+      },
+      {
+       "docId": "pmid:38043043",
+       "where": "Prevention of thromboembolism at cardioversion, recommendation 2; anticoagulation of typical AFL, recommendation 2"
+      }
+     ]
+    },
+    {
+     "item": "Unstable AF of more than 48 hours",
+     "dose": "CAEP: consider a trial of rate control first",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34383280",
+       "where": "A2"
+      }
+     ],
+     "note": "CAEP adds that instability from primary AF is uncommon except with pre-excitation, so ask whether the AF is the cause; the US and ESC guidelines cardiovert when it is."
+    }
+   ],
+   "note": "Syncope is a life-threatening feature in the ERC 2021 periarrest list, whose open copy is not usable here; the usable sources list hypotension or shock, altered mental status, chest pain and acute heart failure, so the front door uses those."
+  },
+  {
+   "id": "end_cv",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Unstable tachyarrhythmia: synchronized cardioversion now, sedated if awake. Then treat the rhythm behind it: AF or flutter gets anticoagulation for at least 4 weeks after the shock and long term by stroke risk; pre-excited AF goes on to accessory pathway ablation; VT is admitted to find the cause."
+  },
+  {
+   "id": "ecg",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "12-lead ECG",
+   "outcomes": [
+    {
+     "id": "narrow",
+     "if": "Regular narrow-complex tachycardia; QRS under 120 ms, no clear P waves",
+     "ddx": {
+      "lead": [
+       "SVT (AVNRT or AVRT)"
+      ],
+      "out": []
+     },
+     "next": "vagal"
+    },
+    {
+     "id": "af",
+     "if": "AF or atrial flutter; irregularly irregular, or sawtooth flutter waves",
+     "ddx": {
+      "lead": [
+       "Atrial fibrillation",
+       "Atrial flutter"
+      ],
+      "out": []
+     },
+     "next": "af_first"
+    },
+    {
+     "id": "preexcited",
+     "if": "Pre-excited AF; fast, broad, irregular, the QRS changing beat to beat",
+     "ddx": {
+      "lead": [
+       "Pre-excited AF (WPW)"
+      ],
+      "out": []
+     },
+     "next": "wpw"
+    },
+    {
+     "id": "wct",
+     "if": "Regular wide-complex tachycardia; QRS 120 ms or more, mechanism unclear",
+     "ddx": {
+      "lead": [
+       "Ventricular tachycardia"
+      ],
+      "out": []
+     },
+     "next": "wct"
+    },
+    {
+     "id": "tdp",
+     "if": "Torsades de pointes; twisting polymorphic runs with a long QT",
+     "ddx": {
+      "lead": [
+       "Torsades de pointes"
+      ],
+      "out": []
+     },
+     "next": "tdp"
+    },
+    {
+     "id": "hyperk",
+     "if": "Hyperkalemia pattern; peaked T waves, flat P waves, a widening QRS",
+     "ddx": {
+      "lead": [
+       "Hyperkalemia"
+      ],
+      "out": []
+     },
+     "next": "hyperk"
+    },
+    {
+     "id": "sinus",
+     "if": "Sinus tachycardia; an upright P wave before every QRS",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "sinus_step"
+    },
+    {
+     "id": "risky_sinus",
+     "if": "Sinus rhythm, pre-excitation, long QT or Brugada; symptoms settled",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_risky_sinus"
+    },
+    {
+     "id": "normal",
+     "if": "Normal ECG; sinus rhythm at a normal rate, symptoms settled",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "normal_step"
+    }
+   ]
+  },
+  {
+   "id": "end_risky_sinus",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Palpitations with pre-excitation, a long QT or a Brugada pattern on the resting ECG: cardiology referral; symptomatic pre-excitation goes to electrophysiology study and accessory pathway ablation; a long QT means stopping QT-prolonging drugs and correcting potassium and magnesium; with syncope, the syncope pathway's urgent route."
+  },
+  {
+   "id": "vagal",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Stable, regular narrow-complex tachycardia. First treatment?",
+   "options": [
+    "Modified Valsalva: strain, then lie flat with legs raised",
+    "Adenosine 6 mg IV as the first treatment, ahead of a maneuver",
+    "Carotid sinus massage on both sides at once for 10 seconds",
+    "IV verapamil now, with IV metoprolol if it is slow to work"
+   ],
+   "answer": 0,
+   "chainStep": "Modified Valsalva: strain semi-recumbent for about 15 seconds (blow into a 10 mL syringe hard enough to move the plunger), then straight to supine with the legs raised; carotid sinus massage only on one side, for no more than 5 seconds",
+   "why": "Vagal maneuvers come first in a stable regular narrow-complex tachycardia, preferably supine with the legs raised, and the adenosine and diltiazem labels ask for them before the drug. The modified Valsalva, a semi-recumbent strain followed at once by lying flat with a passive leg raise, converted 43% against 17% for the standard strain, and a network meta-analysis ranked it the most effective vagal maneuver, ahead of carotid sinus massage. Carotid massage is only ever one side, for at most 5 seconds, and avoided after a TIA or stroke or with a carotid bruit. An IV calcium channel blocker and an IV beta blocker are not given within a few hours of each other.",
+   "sources": [
+    {
+     "docId": "pmid:31504425",
+     "where": "Recommendations for acute management of narrow QRS tachycardia, Class I B; 10.1.1.2"
+    },
+    {
+     "docId": "pmid:35186966",
+     "where": "Abstract, results and conclusion; Introduction"
+    },
+    {
+     "docId": "url:ca7b7f338e06",
+     "where": "Indications and Usage"
+    },
+    {
+     "docId": "url:2ecf153f5b85",
+     "where": "Indications and Usage, PSVT"
+    },
+    {
+     "docId": "url:7c07f84e04d6",
+     "where": "Contraindications 5"
+    }
+   ],
+   "next": "vagal_result",
+   "orders": [
+    {
+     "item": "Modified Valsalva",
+     "dose": "Strain semi-recumbent at 30 to 40 mm Hg for about 15 seconds (blowing into a 10 mL syringe hard enough to move the plunger), then lie supine at once with a passive leg raise",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504425",
+       "where": "10.1.1.2 Haemodynamically stable patients"
+      },
+      {
+       "docId": "pmid:35186966",
+       "where": "Introduction"
+      }
+     ]
+    },
+    {
+     "item": "Carotid sinus massage",
+     "dose": "One side only, for no more than 5 seconds, monitored; not after a TIA or stroke or with a carotid bruit; thromboembolic risk in older patients",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504425",
+       "where": "10.1.1.2 Carotid sinus massage"
+      },
+      {
+       "docId": "pmid:35186966",
+       "where": "Introduction"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "vagal_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Rhythm after the maneuver",
+   "outcomes": [
+    {
+     "id": "converted",
+     "if": "Converted; sinus rhythm after the maneuver",
+     "ddx": {
+      "lead": [
+       "SVT (AVNRT or AVRT)"
+      ],
+      "out": []
+     },
+     "next": "end_svt_home"
+    },
+    {
+     "id": "persists",
+     "if": "No change; still in the same tachycardia",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "adenosine"
+    }
+   ]
+  },
+  {
+   "id": "adenosine",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Vagal maneuver failed; still regular, narrow and stable. Next?",
+   "options": [
+    "Adenosine 6 mg rapid push with a flush; then 12 mg",
+    "Adenosine 6 mg as a slow IV infusion over 2 minutes",
+    "Synchronized cardioversion now, ahead of a drug",
+    "Amiodarone 150 mg IV over 10 minutes as the next step"
+   ],
+   "answer": 0,
+   "chainStep": "Adenosine 6 mg rapid IV bolus over 1 to 2 seconds, close to the patient, with a rapid saline flush; 12 mg if no conversion in 1 to 2 minutes, repeated once; record the ECG during the push",
+   "why": "Adenosine is the drug once a vagal maneuver fails. It works only as a rapid bolus, given over 1 to 2 seconds as close to the patient as possible and chased with a rapid saline flush; 12 mg follows if 6 mg has not stopped it within 1 to 2 minutes, and the US label allows that 12 mg once more. It does not convert flutter, AF or VT, though the brief AV block can show flutter waves. In a stable patient the sequence after adenosine is a calcium channel blocker or beta blocker, and cardioversion when drugs fail.",
+   "sources": [
+    {
+     "docId": "url:ca7b7f338e06",
+     "where": "Dosage and Administration; Indications and Usage"
+    },
+    {
+     "docId": "pmid:31504425",
+     "where": "Recommendations for acute management of narrow QRS tachycardia, Class I B; 10.1.1.2; 11.1.4.1.3"
+    }
+   ],
+   "next": "adenosine_result",
+   "orders": [
+    {
+     "item": "Adenosine",
+     "dose": "6 mg rapid IV bolus over 1 to 2 seconds with a rapid saline flush; if no conversion within 1 to 2 minutes, 12 mg rapid bolus, which may be repeated once",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ca7b7f338e06",
+       "where": "Dosage and Administration, adult patients"
+      }
+     ],
+     "note": "ESC 2019 adds an 18 mg dose after 12 mg, weighing tolerability; the US label stops at a second 12 mg."
+    },
+    {
+     "item": "Adenosine in asthma",
+     "dose": "Avoid with bronchoconstriction or bronchospasm",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:ca7b7f338e06",
+       "where": "Warnings, bronchoconstriction"
+      }
+     ]
+    },
+    {
+     "item": "Adenosine in AV block",
+     "dose": "Contraindicated in second- or third-degree AV block or sinus node disease without a functioning pacemaker",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:ca7b7f338e06",
+       "where": "Contraindications"
+      }
+     ]
+    },
+    {
+     "item": "Adenosine interactions",
+     "dose": "Caffeine or theophylline may need a larger dose or block it; dipyridamole means a smaller dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ca7b7f338e06",
+       "where": "Precautions, drug interactions"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "adenosine_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Rhythm after adenosine",
+   "outcomes": [
+    {
+     "id": "converted",
+     "if": "Converted; sinus rhythm after adenosine",
+     "ddx": {
+      "lead": [
+       "SVT (AVNRT or AVRT)"
+      ],
+      "out": []
+     },
+     "next": "end_svt_home"
+    },
+    {
+     "id": "flutter",
+     "if": "Flutter waves unmasked; sawtooth waves while conduction pauses",
+     "ddx": {
+      "lead": [
+       "Atrial flutter"
+      ],
+      "out": []
+     },
+     "next": "af_first"
+    },
+    {
+     "id": "persists",
+     "if": "No lasting response; it slows or stops, then restarts",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "nodal"
+    }
+   ]
+  },
+  {
+   "id": "nodal",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Adenosine has not held it; regular, narrow, stable, no heart failure. Next?",
+   "options": [
+    "IV diltiazem or verapamil, or an IV beta blocker",
+    "IV diltiazem and IV esmolol together for a faster effect",
+    "IV digoxin 0.5 mg, then wait 6 hours for it to work",
+    "IV amiodarone 300 mg over 1 hour as the next drug"
+   ],
+   "answer": 0,
+   "chainStep": "IV diltiazem 0.25 mg/kg over 2 minutes (0.35 mg/kg after 15 minutes) or IV verapamil 5 to 10 mg over at least 2 minutes (10 mg at 30 minutes), or an IV beta blocker such as esmolol; not a calcium channel blocker and a beta blocker within hours of each other; synchronized cardioversion under sedation if drugs fail",
+   "why": "After vagal maneuvers and adenosine, IV verapamil or diltiazem, or an IV beta blocker (esmolol or metoprolol), is the next step for a stable regular narrow tachycardia, whether AVNRT, orthodromic AVRT or a focal atrial tachycardia. The calcium channel blockers are avoided with hypotension or a reduced EF, and IV beta blockers with decompensated heart failure. An IV calcium channel blocker and an IV beta blocker are not given within a few hours of each other: fatal cardiac arrests have followed esmolol with IV verapamil. Synchronized cardioversion follows when drug therapy fails.",
+   "sources": [
+    {
+     "docId": "pmid:31504425",
+     "where": "Recommendations for AVRT and focal AT, acute therapy, Class IIa; narrow QRS table footnote; Class I B"
+    },
+    {
+     "docId": "url:2ecf153f5b85",
+     "where": "Dosage and Administration; Contraindications 5"
+    },
+    {
+     "docId": "url:7c07f84e04d6",
+     "where": "Dosage and Administration; Contraindications 5"
+    },
+    {
+     "docId": "url:3f250f95cd74",
+     "where": "4 Contraindications"
+    },
+    {
+     "docId": "pmid:31504425",
+     "where": "10.1.1.2 Haemodynamically stable patients"
+    }
+   ],
+   "next": "end_svt_nodal",
+   "orders": [
+    {
+     "item": "Diltiazem",
+     "dose": "0.25 mg/kg actual body weight IV over 2 minutes (20 mg for an average adult); 0.35 mg/kg (25 mg) after 15 minutes if needed; infusion 10 mg/h, 5 to 15 mg/h, for up to 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2ecf153f5b85",
+       "where": "Dosage and Administration, bolus and continuous infusion"
+      }
+     ],
+     "note": "CAEP gives the bolus over 10 minutes, repeated every 15 to 20 minutes up to 3 doses."
+    },
+    {
+     "item": "Verapamil",
+     "dose": "5 to 10 mg (0.075 to 0.15 mg/kg) IV over at least 2 minutes; 10 mg (0.15 mg/kg) 30 minutes later if needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:7c07f84e04d6",
+       "where": "Dosage and Administration, adult"
+      }
+     ]
+    },
+    {
+     "item": "Esmolol",
+     "dose": "Optional 500 mcg/kg IV over 1 minute, then 50 mcg/kg/min for 4 minutes, stepped up every 4 minutes; maintenance 50 to 200 mcg/kg/min",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3f250f95cd74",
+       "where": "2.1 Table 1, step-wise dosing; 2.1 maintenance"
+      },
+      {
+       "docId": "pmid:31504425",
+       "where": "10.1.1.2 Haemodynamically stable patients"
+      }
+     ],
+     "note": "Contraindicated in decompensated heart failure and cardiogenic shock. ESC SVT dose: 0.5 mg/kg IV bolus or 0.05 to 0.3 mg/kg/min."
+    },
+    {
+     "item": "IV metoprolol for SVT",
+     "dose": "2.5 to 15 mg IV in 2.5 mg boluses (ESC); not in decompensated heart failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504425",
+       "where": "10.1.1.2 Haemodynamically stable patients"
+      },
+      {
+       "docId": "url:5fa831290c92",
+       "where": "4 Contraindications"
+      }
+     ],
+     "note": "ESC: beta blockers reduce the tachycardia rate more often than they terminate it. The US IV metoprolol label covers acute MI only."
+    },
+    {
+     "item": "Calcium channel blocker with a beta blocker",
+     "dose": "Not IV together, or within a few hours of each other",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:2ecf153f5b85",
+       "where": "Contraindications 5"
+      },
+      {
+       "docId": "url:7c07f84e04d6",
+       "where": "Contraindications 5"
+      },
+      {
+       "docId": "url:3f250f95cd74",
+       "where": "4 Contraindications"
+      }
+     ]
+    },
+    {
+     "item": "Calcium channel blocker",
+     "dose": "Not with hypotension, cardiogenic shock or a reduced EF",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:31504425",
+       "where": "Narrow QRS table footnote"
+      },
+      {
+       "docId": "url:2ecf153f5b85",
+       "where": "Contraindications 3"
+      }
+     ]
+    },
+    {
+     "item": "Synchronized cardioversion",
+     "dose": "When drug therapy fails to convert or control the tachycardia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31504425",
+       "where": "Recommendations for acute management of narrow QRS tachycardia, Class I B"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_svt_nodal",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Regular SVT that adenosine did not hold: IV diltiazem or verapamil, or an IV beta blocker, then synchronized cardioversion under sedation if drugs fail. Once in sinus rhythm, a 12-lead looks for pre-excitation, and recurrent symptomatic re-entrant SVT goes to catheter ablation."
+  },
+  {
+   "id": "end_svt_home",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Converted SVT: a 12-lead in sinus rhythm to look for pre-excitation, home with return advice, and cardiology follow-up; catheter ablation is recommended for recurrent symptomatic AVNRT or AVRT."
+  },
+  {
+   "id": "af_first",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Stable AF or atrial flutter with a fast rate. Next?",
+   "options": [
+    "Look for a driver (sepsis, bleeding, PE) and check the EF",
+    "Cardiovert now; when it started does not matter if stable",
+    "IV amiodarone to convert it first, then look for a cause",
+    "Routine stress test and CT pulmonary angiogram for the cause"
+   ],
+   "answer": 0,
+   "chainStep": "Look for a medical driver (sepsis, bleeding, PE, heart failure, ACS) and treat it first; echo or a known LVEF; CBC, metabolic panel and thyroid function; pin down the time of onset",
+   "why": "First decide whether the AF is primary or a response to illness. Sepsis, bleeding, PE, heart failure or ACS can drive a fast rate; then the cause is treated aggressively, cardioversion may be harmful and aggressive rate control is avoided. New AF gets an echo, a CBC, metabolic panel and thyroid function, but not protocolized testing for ischemia, ACS or PE unless something points to them. The LVEF chooses the rate-control drug, and the time of onset decides whether early cardioversion is safe.",
+   "sources": [
+    {
+     "docId": "pmid:34383280",
+     "where": "A1; A3"
+    },
+    {
+     "docId": "pmid:38043043",
+     "where": "Basic clinical evaluation, recommendations 1 and 2; acute medical illness, synopsis"
+    },
+    {
+     "docId": "pmid:39210723",
+     "where": "7.1.2 Heart rate control in the acute setting"
+    }
+   ],
+   "next": "af_type",
+   "orders": [
+    {
+     "item": "Labs and echo",
+     "dose": "CBC, metabolic panel and thyroid function; transthoracic echo",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Basic clinical evaluation, recommendation 1, Class 1"
+      }
+     ]
+    },
+    {
+     "item": "Protocolized ischemia, ACS or PE testing",
+     "dose": "Not routinely, unless signs or symptoms point to them",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Basic clinical evaluation, recommendation 2, Class 3: No benefit"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "af_type",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Driver, EF and history",
+   "outcomes": [
+    {
+     "id": "secondary",
+     "if": "Driven by illness; sepsis, bleeding, PE or thyrotoxicosis",
+     "ddx": {
+      "lead": [
+       "Sepsis",
+       "Hemorrhage",
+       "Pulmonary embolism",
+       "Thyrotoxicosis"
+      ],
+      "out": []
+     },
+     "next": "end_af_secondary"
+    },
+    {
+     "id": "low_ef",
+     "if": "Known low EF; 40% or less, no pulmonary edema now",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "af_lowef"
+    },
+    {
+     "id": "primary",
+     "if": "Primary AF or flutter; no driver found, EF over 40%",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "af_rate"
+    }
+   ]
+  },
+  {
+   "id": "end_af_secondary",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "AF driven by sepsis, bleeding or PE: treat the cause first; cardioversion may be harmful and aggressive rate control is avoided. Continue in the sepsis and fever, GI bleed or dyspnea pathway. With thyrotoxicosis, a beta blocker eases the symptoms and the rate while antithyroid treatment restores a euthyroid state, after which the AF usually resolves; anticoagulation follows the stroke risk score until thyroid function is normal and sinus rhythm holds. In sepsis the benefit of anticoagulation during the critical illness is uncertain; stroke prevention is decided afterwards by the risk score."
+  },
+  {
+   "id": "af_lowef",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "AF with a fast rate and a known EF of 40% or less. Rate control?",
+   "options": [
+    "IV beta blocker or digoxin; no IV diltiazem or verapamil",
+    "IV diltiazem 0.25 mg/kg over 2 minutes, then a 10 mg/h infusion",
+    "Ibutilide 1 mg IV over 10 minutes to convert it today",
+    "Flecainide 300 mg by mouth as a pill in the pocket"
+   ],
+   "answer": 0,
+   "chainStep": "Rate control with an IV beta blocker and/or digoxin (0.25 to 0.5 mg IV, then 0.25 mg every 4 to 6 hours to 1.5 mg in 24 hours); no IV diltiazem or verapamil; IV amiodarone if these fail or cannot be used",
+   "why": "With moderate or severe LV systolic dysfunction, IV diltiazem and verapamil are Class 3: Harm, so the calcium channel blockers are kept for an EF over 40%; beta blockers and/or digoxin are the rate-control drugs at an EF of 40% or less, and IV amiodarone is the option when they fail or cannot be used. Ibutilide is best avoided at an EF of 40% or less because torsades is more frequent, and flecainide is not given with structural heart disease, HFrEF included. With a reduced EF and persistent AF, a trial of rhythm control is recommended to see whether the AF is contributing, once anticoagulation allows it.",
+   "sources": [
+    {
+     "docId": "pmid:38043043",
+     "where": "Acute rate control, recommendations 1, 2, 4 and 5; goals of rhythm control, recommendation 1; management of AF in HF, recommendation 4; pharmacological cardioversion text; maintenance of sinus rhythm, recommendation 7"
+    },
+    {
+     "docId": "pmid:39210723",
+     "where": "Recommendation Table 14, Class I B; 7.1.2"
+    },
+    {
+     "docId": "pmid:34383280",
+     "where": "B4"
+    }
+   ],
+   "next": "af_onset",
+   "orders": [
+    {
+     "item": "IV diltiazem or verapamil",
+     "dose": "Not with moderate or severe LV systolic dysfunction, with or without decompensated heart failure",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Acute rate control, recommendation 5, Class 3: Harm"
+      },
+      {
+       "docId": "pmid:34383280",
+       "where": "B4 calcium channel blocker"
+      }
+     ]
+    },
+    {
+     "item": "Digoxin",
+     "dose": "Second line, slow in onset: 0.25 to 0.5 mg IV load, then 0.25 mg IV every 4 to 6 hours to a maximum of 1.5 mg in 24 hours; caution in renal failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34383280",
+       "where": "B4 digoxin"
+      },
+      {
+       "docId": "pmid:38043043",
+       "where": "Acute rate control, recommendation 2, Class 2a"
+      }
+     ]
+    },
+    {
+     "item": "Beta blocker",
+     "dose": "Metoprolol 2.5 to 5 mg IV over 2 minutes, every 15 to 20 minutes up to 3 doses (CAEP), or esmolol by its label; not in decompensated heart failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34383280",
+       "where": "B4 beta blocker"
+      },
+      {
+       "docId": "url:3f250f95cd74",
+       "where": "4 Contraindications"
+      },
+      {
+       "docId": "url:5fa831290c92",
+       "where": "4 Contraindications"
+      },
+      {
+       "docId": "pmid:39210723",
+       "where": "Recommendation Table 14, Class I B"
+      }
+     ],
+     "note": "The US IV metoprolol label covers acute MI only; the AF dose here is the Canadian checklist's."
+    },
+    {
+     "item": "IV amiodarone",
+     "dose": "When beta blockers and calcium channel blockers are ineffective or contraindicated, in decompensated heart failure or critical illness; weigh the chance that it cardioverts, and the stroke risk",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Acute rate control, recommendation 4, Class 2b, and footnote"
+      },
+      {
+       "docId": "pmid:39210723",
+       "where": "7.1.2"
+      }
+     ],
+     "note": "No rate-control dose in the open sources read; the US label's loading regimen is written for VF and unstable VT."
+    }
+   ]
+  },
+  {
+   "id": "af_rate",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Primary AF or flutter, stable, EF over 40%. Rate control?",
+   "options": [
+    "IV diltiazem or an IV beta blocker such as metoprolol",
+    "IV digoxin first; it acts within a few minutes",
+    "IV amiodarone 150 mg over 10 minutes as first line",
+    "IV diltiazem and IV metoprolol together for a faster effect"
+   ],
+   "answer": 0,
+   "chainStep": "IV diltiazem 0.25 mg/kg over 2 minutes, 0.35 mg/kg after 15 minutes if needed, then 5 to 15 mg/h; or an IV beta blocker (metoprolol 2.5 to 5 mg IV over 2 minutes, every 15 to 20 minutes up to 3 doses, or esmolol); aim for a resting rate under 100 to 110",
+   "why": "In stable AF or flutter with an EF over 40%, a beta blocker or a non-dihydropyridine calcium channel blocker (diltiazem or verapamil) is the first-line rate-control drug; both act faster than digoxin, which is second line because its onset is slow. IV amiodarone is kept for critically ill or decompensated patients when these fail or cannot be used. The US labels bar an IV calcium channel blocker and an IV beta blocker together or within a few hours of each other; ESC 2024 allows the combination only in closely monitored situations. The resting target is under 100 to 110 in the US guideline, and under 110 as ESC's lenient start.",
+   "sources": [
+    {
+     "docId": "pmid:38043043",
+     "where": "Acute rate control, recommendations 1 and 4; broad considerations, recommendation 2"
+    },
+    {
+     "docId": "pmid:39210723",
+     "where": "7.1.2; Recommendation Table 14"
+    },
+    {
+     "docId": "pmid:34383280",
+     "where": "B4"
+    },
+    {
+     "docId": "url:2ecf153f5b85",
+     "where": "Dosage and Administration; Contraindications 5"
+    },
+    {
+     "docId": "pmid:31504425",
+     "where": "Recommendations for macro-re-entrant atrial arrhythmias, Class IIa B"
+    }
+   ],
+   "next": "af_onset",
+   "orders": [
+    {
+     "item": "Diltiazem",
+     "dose": "0.25 mg/kg actual body weight IV over 2 minutes (20 mg for an average adult); 0.35 mg/kg (25 mg) after 15 minutes if needed; infusion 10 mg/h, 5 to 15 mg/h, for up to 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:2ecf153f5b85",
+       "where": "Dosage and Administration, bolus and continuous infusion"
+      }
+     ],
+     "note": "CAEP gives the bolus over 10 minutes, repeated every 15 to 20 minutes up to 3 doses."
+    },
+    {
+     "item": "Metoprolol",
+     "dose": "2.5 to 5 mg IV over 2 minutes, repeated every 15 to 20 minutes up to 3 doses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34383280",
+       "where": "B4 beta blocker"
+      },
+      {
+       "docId": "url:5fa831290c92",
+       "where": "5.3 Bronchospastic disease"
+      }
+     ],
+     "note": "This is the Canadian checklist's dose; the US IV metoprolol label covers acute MI only. Avoid in bronchospastic disease; diltiazem if EF over 40%."
+    },
+    {
+     "item": "Esmolol",
+     "dose": "Optional 500 mcg/kg IV over 1 minute, then 50 mcg/kg/min for 4 minutes, stepped up every 4 minutes; maintenance 50 to 200 mcg/kg/min",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3f250f95cd74",
+       "where": "2.1 Table 1, step-wise dosing; 2.1 maintenance"
+      },
+      {
+       "docId": "url:3f250f95cd74",
+       "where": "1.1 Indications"
+      }
+     ],
+     "note": "Contraindicated in decompensated heart failure and cardiogenic shock."
+    },
+    {
+     "item": "Digoxin",
+     "dose": "Second line, slow in onset: 0.25 to 0.5 mg IV load, then 0.25 mg IV every 4 to 6 hours to a maximum of 1.5 mg in 24 hours; caution in renal failure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34383280",
+       "where": "B4 digoxin"
+      },
+      {
+       "docId": "pmid:38043043",
+       "where": "Acute rate control, recommendation 2, Class 2a"
+      }
+     ]
+    },
+    {
+     "item": "IV calcium channel blocker with an IV beta blocker",
+     "dose": "Not together or within a few hours of each other",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:2ecf153f5b85",
+       "where": "Contraindications 5"
+      },
+      {
+       "docId": "url:3f250f95cd74",
+       "where": "4 Contraindications"
+      }
+     ],
+     "note": "ESC 2024 7.1.2 allows it only in closely monitored situations."
+    },
+    {
+     "item": "IV magnesium",
+     "dose": "Reasonable as an add-on to standard rate control; no dose in the open sources read",
+     "status": "pending",
+     "note": "AF 2023 acute rate control recommendation 3 (Class 2a) names it without a dose."
+    },
+    {
+     "item": "Rate target",
+     "dose": "Resting under 100 to 110 (US); under 110 as the lenient start (ESC); under 100 at rest and 110 walking (CAEP)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Broad considerations for rate control, recommendation 2, Class 2a"
+      },
+      {
+       "docId": "pmid:39210723",
+       "where": "Recommendation Table 14, Class IIa B"
+      },
+      {
+       "docId": "pmid:34383280",
+       "where": "B4"
+      }
+     ]
+    }
+   ],
+   "note": "CAEP: when cardioverting, pre-treatment with rate control is not recommended."
+  },
+  {
+   "id": "af_onset",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Time since onset and anticoagulation",
+   "outcomes": [
+    {
+     "id": "lt12",
+     "if": "Under 12 hours; a clear start time, no recent anticoagulant",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "early_cv",
+     "orders": [
+      {
+       "item": "Anticoagulation around cardioversion",
+       "dose": "At CHA2DS2-VASc 0 to 1 the benefit of anticoagulation or imaging around a cardioversion under 12 hours is uncertain (US, 2b); CAEP calls it safe to cardiovert with no stroke or TIA and no valve disease; otherwise anticoagulate before and for 4 weeks after",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:38043043",
+         "where": "Prevention of thromboembolism at cardioversion, recommendations 2 and 7"
+        },
+        {
+         "docId": "pmid:34383280",
+         "where": "A3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "h12_48",
+     "if": "12 to 48 hours; a clear start time, no recent anticoagulant",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "early_cv",
+     "orders": [
+      {
+       "item": "Anticoagulation around cardioversion",
+       "dose": "Start before cardioversion and continue at least 4 weeks after (US Class 1); imaging first may be considered at CHA2DS2-VASc 2 or more (US, 2b); CAEP: safe only with fewer than 2 CHADS-65 criteria; ESC 2024: over 24 hours needs anticoagulation or a TOE before early cardioversion",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:38043043",
+         "where": "Prevention of thromboembolism at cardioversion, recommendations 2 and 6"
+        },
+        {
+         "docId": "pmid:34383280",
+         "where": "A3"
+        },
+        {
+         "docId": "pmid:39210723",
+         "where": "Recommendation Table 15, Class III C"
+        }
+       ],
+       "note": "The thresholds differ: 48 hours in the US guideline and CAEP, 24 hours in ESC 2024."
+      }
+     ]
+    },
+    {
+     "id": "gt48",
+     "if": "Over 48 hours, or unknown; no recent anticoagulant",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "late_af"
+    },
+    {
+     "id": "anticoag",
+     "if": "Anticoagulated 3 weeks or more; uninterrupted, therapeutic, any duration",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "early_cv"
+    }
+   ]
+  },
+  {
+   "id": "early_cv",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Stable AF or flutter, safe to cardiovert now (onset under 48 hours, or 3 weeks anticoagulated). Plan?",
+   "options": [
+    "Rate or rhythm control; early cardioversion is an option",
+    "IV diltiazem to convert it to sinus rhythm, then home",
+    "Flecainide 300 mg as a first dose at home",
+    "Ibutilide, then home as soon as the rhythm converts to sinus"
+   ],
+   "answer": 0,
+   "chainStep": "Rate control, or rhythm control now: synchronized electrical cardioversion under sedation (150 to 200 J for AF, 100 J or less for flutter), or IV ibutilide (EF over 40%, ECG monitoring for 4 hours), procainamide or amiodarone; anticoagulation around it by onset and stroke risk; waiting up to 48 hours for spontaneous conversion is also acceptable",
+   "why": "With a clear onset under 48 hours, the US guideline does not require 3 weeks of anticoagulation first, so rate control and early cardioversion are both open; ESC adds that waiting up to 48 hours for spontaneous conversion is reasonable. Whatever the duration, 3 weeks of uninterrupted therapeutic anticoagulation meets the US requirement before an elective cardioversion. Electrical cardioversion is the more effective, when sedation is acceptable. Ibutilide usually works within 30 to 90 minutes and converts flutter more often than AF, but needs ECG monitoring for 4 hours after the infusion because of torsades; IV amiodarone is reasonable but slow, 8 to 12 hours, and procainamide is an alternative. A single-dose flecainide pill in the pocket is reasonable only after it has been tested in a monitored setting, and IV diltiazem rarely converts AF or flutter.",
+   "sources": [
+    {
+     "docId": "pmid:38043043",
+     "where": "Prevention of thromboembolism at cardioversion, recommendations 1 and 2; electrical cardioversion, synopsis; pharmacological cardioversion, recommendations 3 to 5 and text; antiarrhythmic drug follow-up, ibutilide"
+    },
+    {
+     "docId": "pmid:39210723",
+     "where": "Recommendation Table 15, Class IIa B"
+    },
+    {
+     "docId": "pmid:34383280",
+     "where": "A3; B5"
+    },
+    {
+     "docId": "pmid:31504425",
+     "where": "Recommendations for macro-re-entrant atrial arrhythmias, Class I B"
+    },
+    {
+     "docId": "url:5cda2e4449fb",
+     "where": "Dosage and Administration"
+    },
+    {
+     "docId": "url:2ecf153f5b85",
+     "where": "Indications and Usage"
+    }
+   ],
+   "next": "af_stroke",
+   "orders": [
+    {
+     "item": "Electrical cardioversion",
+     "dose": "Synchronized, under sedation; AF: start at 150 to 200 J, not low (CAEP), or biphasic at least 200 J (US, 2a); flutter: 100 J biphasic or less",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34383280",
+       "where": "B5 electrical cardioversion"
+      },
+      {
+       "docId": "pmid:38043043",
+       "where": "Electrical cardioversion, recommendation 4, Class 2a"
+      },
+      {
+       "docId": "pmid:31504425",
+       "where": "Recommendations for macro-re-entrant atrial arrhythmias, Class I B"
+      }
+     ]
+    },
+    {
+     "item": "Ibutilide",
+     "dose": "60 kg or more: 1 mg IV over 10 minutes; under 60 kg: 0.01 mg/kg; a second equal dose 10 minutes after the first ends if it has not converted; continuous ECG monitoring for at least 4 hours after, or until the QTc is back to baseline",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5cda2e4449fb",
+       "where": "Dosage and Administration, dose table"
+      },
+      {
+       "docId": "pmid:38043043",
+       "where": "Antiarrhythmic drug follow-up, ibutilide"
+      }
+     ],
+     "note": "Best avoided at an EF of 40% or less, where torsades is more frequent; not after a previous polymorphic VT."
+    },
+    {
+     "item": "Procainamide",
+     "dose": "15 mg/kg in 500 mL saline over 60 minutes, maximum 1500 mg; not with a systolic under 100 or a QTc over 500 ms; stop if the pressure drops or the QRS widens over 30%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34383280",
+       "where": "B5 pharmacological cardioversion"
+      },
+      {
+       "docId": "pmid:38043043",
+       "where": "Pharmacological cardioversion, recommendation 5, Class 2b"
+      }
+     ],
+     "note": "This is CAEP's AF dose. The US guideline gives it 2b, when other IV agents are contraindicated or not preferred: less effective than ibutilide, and it causes hypotension."
+    },
+    {
+     "item": "IV amiodarone",
+     "dose": "Reasonable for conversion; usually takes 8 to 12 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Pharmacological cardioversion, recommendation 3, Class 2a"
+      }
+     ],
+     "note": "CAEP B5: IV amiodarone not recommended for cardioversion (slow, low efficacy); US 2a."
+    },
+    {
+     "item": "Pill in the pocket",
+     "dose": "A single oral dose of flecainide or propafenone with an AV nodal blocker, only once it has been tested in a monitored setting; not with structural heart disease",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Pharmacological cardioversion, recommendation 4, Class 2a; maintenance of sinus rhythm, recommendation 7"
+      }
+     ]
+    },
+    {
+     "item": "Wait and see",
+     "dose": "Up to 48 hours from onset for spontaneous conversion, without hemodynamic compromise, as an alternative to immediate cardioversion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39210723",
+       "where": "Recommendation Table 15, Class IIa B"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "late_af",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Stable AF, onset over 48 hours ago or unknown. Plan?",
+   "options": [
+    "Rate control, then 3 weeks of anticoagulation or a TEE first",
+    "Cardiovert today, as the rate and pressure are stable",
+    "Ibutilide now, to restore sinus rhythm before she is discharged",
+    "Aspirin until cardiology review, then decide on anticoagulation"
+   ],
+   "answer": 0,
+   "chainStep": "Rate control; therapeutic anticoagulation (a DOAC unless a mechanical valve or moderate to severe mitral stenosis) for 3 uninterrupted weeks before elective cardioversion, or imaging to exclude intracardiac thrombus; continue at least 4 weeks after",
+   "why": "When AF has lasted 48 hours or more, or the onset is unknown, elective cardioversion needs 3 weeks of uninterrupted therapeutic anticoagulation, or imaging to exclude intracardiac thrombus, first, and anticoagulation continues at least 4 weeks after; CAEP agrees, and ESC draws the line at 24 hours. Rate control carries the patient meanwhile. Aspirin is not an alternative to anticoagulation.",
+   "sources": [
+    {
+     "docId": "pmid:38043043",
+     "where": "Prevention of thromboembolism at cardioversion, recommendations 1 and 2; antithrombotic therapy, recommendation 4"
+    },
+    {
+     "docId": "pmid:34383280",
+     "where": "A3"
+    },
+    {
+     "docId": "pmid:39210723",
+     "where": "Recommendation Table 15, Class III C"
+    },
+    {
+     "docId": "url:5cda2e4449fb",
+     "where": "Indications and Usage, treatment environment"
+    }
+   ],
+   "next": "af_stroke",
+   "orders": [
+    {
+     "item": "Anticoagulation before cardioversion",
+     "dose": "3 weeks uninterrupted and therapeutic, or imaging to exclude intracardiac thrombus; then at least 4 weeks after",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Prevention of thromboembolism at cardioversion, recommendations 1 and 2, Class 1"
+      }
+     ]
+    },
+    {
+     "item": "Ibutilide after 2 to 3 days of AF",
+     "dose": "The label requires adequate anticoagulation, generally for at least 2 weeks, before ibutilide",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5cda2e4449fb",
+       "where": "Indications and Usage, treatment environment"
+      }
+     ],
+     "note": "The guideline standard before elective cardioversion after 48 hours is 3 weeks."
+    },
+    {
+     "item": "Aspirin instead of anticoagulation",
+     "dose": "Not recommended",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Antithrombotic therapy, recommendation 4, Class 3: Harm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "af_stroke",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "The rate has settled. Long-term stroke prevention?",
+   "options": [
+    "Score stroke risk (CHA2DS2-VASc) and anticoagulate by it",
+    "Aspirin in place of an anticoagulant when the score is high",
+    "Stop anticoagulation once sinus rhythm has come back",
+    "Let the bleeding score decide who gets anticoagulated"
+   ],
+   "answer": 0,
+   "chainStep": "Score CHA2DS2-VASc: anticoagulate at 2 or more in men, 3 or more in women (a DOAC over warfarin unless moderate to severe mitral stenosis or a mechanical valve); reasonable at 1 in men, 2 in women; none at 0 in men, 1 in women; find and modify bleeding risk factors",
+   "why": "Long-term anticoagulation follows the stroke risk score, whatever the pattern of AF and whether or not sinus rhythm has returned. A CHA2DS2-VASc of 2 or more in men or 3 or more in women means anticoagulation, a DOAC in preference to warfarin; 1 in men or 2 in women makes it reasonable. Flutter is scored the same way. Aspirin is not an alternative, and a bleeding score identifies risks to modify, not who is denied anticoagulation. ESC 2024 uses CHA2DS2-VA, dropping sex: 2 or more recommends anticoagulation, and 1 means consider it.",
+   "sources": [
+    {
+     "docId": "pmid:38043043",
+     "where": "Antithrombotic therapy, recommendations 1 to 5; risk stratification, recommendation 4; risk-based selection, recommendation 1; anticoagulation of typical AFL, recommendation 1"
+    },
+    {
+     "docId": "pmid:39210723",
+     "where": "Recommendation Table 6; 6.1 Initiating oral anticoagulation"
+    }
+   ],
+   "next": "af_score",
+   "orders": [
+    {
+     "item": "DOAC over warfarin",
+     "dose": "Unless moderate to severe rheumatic mitral stenosis or a mechanical valve",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Antithrombotic therapy, recommendation 2, Class 1"
+      }
+     ]
+    },
+    {
+     "item": "Aspirin for stroke prevention",
+     "dose": "Not an alternative to anticoagulation; no benefit without stroke risk factors",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Antithrombotic therapy, recommendations 4 and 5"
+      }
+     ]
+    },
+    {
+     "item": "Bleeding risk score",
+     "dose": "Not to decide eligibility in a high-risk patient; use it to find and modify bleeding risk factors",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Risk stratification schemes, recommendation 4, Class 3: No benefit"
+      }
+     ]
+    },
+    {
+     "item": "CHA2DS2-VA (ESC 2024)",
+     "dose": "Sex removed: anticoagulation recommended at 2 or more, considered at 1",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:39210723",
+       "where": "Recommendation Table 6, Class I C and IIa C; 6.1"
+      }
+     ]
+    },
+    {
+     "item": "Flutter without AF",
+     "dose": "Scored the same as AF (US, Class 1); ESC: consider anticoagulation, threshold not established",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "Anticoagulation of typical AFL, recommendation 1"
+      },
+      {
+       "docId": "pmid:31504425",
+       "where": "Recommendations for macro-re-entrant atrial arrhythmias, Class IIa C"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "cha2ds2_vasc"
+   ]
+  },
+  {
+   "id": "af_score",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CHA2DS2-VASc",
+   "outcomes": [
+    {
+     "id": "high",
+     "if": "High; 2 or more in a man, 3 or more in a woman",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_af_high"
+    },
+    {
+     "id": "mid",
+     "if": "Intermediate; 1 in a man, 2 in a woman",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_af_mid"
+    },
+    {
+     "id": "low",
+     "if": "Low; 0 in a man, 1 in a woman",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_af_low"
+    }
+   ]
+  },
+  {
+   "id": "end_af_high",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "High stroke risk: long-term anticoagulation, a DOAC over warfarin unless there is a mechanical valve or moderate to severe mitral stenosis; aspirin is not a substitute. Rate or rhythm control continues, with cardiology follow-up."
+  },
+  {
+   "id": "end_af_mid",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Intermediate stroke risk: anticoagulation is reasonable (US) and should be considered at a CHA2DS2-VA of 1 (ESC), decided with the patient; after any cardioversion it continues at least 4 weeks regardless."
+  },
+  {
+   "id": "end_af_low",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Low stroke risk: no long-term anticoagulation, and aspirin adds nothing. After a cardioversion the US rule is still at least 4 weeks of anticoagulation, though its benefit is uncertain under 12 hours at this score. ESC 2024 makes it optional only with no risk factors and sinus rhythm within 24 hours of onset."
+  },
+  {
+   "id": "wpw",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pre-excited AF, hemodynamically stable. Next?",
+   "options": [
+    "IV procainamide or ibutilide; no AV nodal blocker",
+    "IV diltiazem 0.25 mg/kg over 2 minutes to slow the rate",
+    "IV amiodarone 150 mg over 10 minutes, then an infusion",
+    "Adenosine 6 mg rapid push to show the underlying rhythm"
+   ],
+   "answer": 0,
+   "chainStep": "IV procainamide or IV ibutilide, or elective synchronized cardioversion; no adenosine, verapamil, diltiazem, beta blocker, digoxin or amiodarone; electrical cardioversion if it becomes unstable; refer for accessory pathway ablation",
+   "why": "In pre-excited AF the accessory pathway, not the AV node, carries the fast ventricular rate, so drugs that block the AV node (verapamil, diltiazem, amiodarone, digoxin, adenosine, beta blockers) are contraindicated: they can precipitate VF or hemodynamic collapse. A stable patient gets IV ibutilide or IV procainamide as the alternative to elective cardioversion, an unstable one electrical cardioversion, and catheter ablation of the pathway follows.",
+   "sources": [
+    {
+     "docId": "pmid:38043043",
+     "where": "WPW and preexcitation syndromes, recommendations 1 to 4"
+    },
+    {
+     "docId": "pmid:34383280",
+     "where": "B6 pre-excitation (WPW)"
+    },
+    {
+     "docId": "pmid:36017572",
+     "where": "6.1.2 Acute management of sustained monomorphic VT (pre-excited AF)"
+    },
+    {
+     "docId": "url:2ecf153f5b85",
+     "where": "Contraindications 6"
+    },
+    {
+     "docId": "url:7c07f84e04d6",
+     "where": "Contraindications 6"
+    }
+   ],
+   "next": "end_wpw",
+   "orders": [
+    {
+     "item": "Procainamide",
+     "dose": "100 mg IV every 5 minutes, no faster than 50 mg/min, until it stops or 500 mg is in, then wait 10 minutes; or a loading infusion of 500 to 600 mg over 25 to 30 minutes; maximum 1 g; maintenance 2 to 6 mg/min. Pause if the systolic falls 15 mm Hg or more; stop if the QRS widens by 50%",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1fee0ef74eaa",
+       "where": "Dosage and Administration, intravenous a) and b); infusion table; Precautions"
+      },
+      {
+       "docId": "url:1fee0ef74eaa",
+       "where": "Indications and Usage"
+      }
+     ],
+     "note": "The label's indication is life-threatening ventricular arrhythmia such as sustained VT. CAEP gives procainamide for pre-excited AF at its AF dose, 15 mg/kg over 60 minutes, maximum 1500 mg."
+    },
+    {
+     "item": "Ibutilide",
+     "dose": "60 kg or more: 1 mg IV over 10 minutes; under 60 kg: 0.01 mg/kg; a second equal dose 10 minutes after the first ends if it has not converted; continuous ECG monitoring for at least 4 hours after, or until the QTc is back to baseline",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5cda2e4449fb",
+       "where": "Dosage and Administration, dose table"
+      },
+      {
+       "docId": "pmid:38043043",
+       "where": "Antiarrhythmic drug follow-up, ibutilide"
+      }
+     ],
+     "note": "Best avoided at an EF of 40% or less, where torsades is more frequent; not after a previous polymorphic VT."
+    },
+    {
+     "item": "AV nodal blockers",
+     "dose": "Contraindicated in pre-excited AF: verapamil, diltiazem, amiodarone, digoxin, adenosine, beta blockers",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "WPW and preexcitation syndromes, recommendation 4, Class 3: Harm"
+      },
+      {
+       "docId": "pmid:34383280",
+       "where": "B6 pre-excitation (WPW)"
+      },
+      {
+       "docId": "url:2ecf153f5b85",
+       "where": "Contraindications 6"
+      },
+      {
+       "docId": "url:7c07f84e04d6",
+       "where": "Contraindications 6"
+      }
+     ]
+    },
+    {
+     "item": "Accessory pathway ablation",
+     "dose": "Recommended after pre-excited AF",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38043043",
+       "where": "WPW and preexcitation syndromes, recommendation 2, Class 1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_wpw",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pre-excited AF: IV procainamide or ibutilide if stable, electrical cardioversion if unstable, and no AV nodal blocker at any point; then catheter ablation of the accessory pathway."
+  },
+  {
+   "id": "wct",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Stable regular wide-complex tachycardia, mechanism uncertain. Next?",
+   "options": [
+    "Treat as VT: procainamide, amiodarone or cardioversion",
+    "Treat as SVT with aberrancy: IV verapamil 5 to 10 mg",
+    "Watch on the monitor, and treat it if the pressure falls",
+    "IV diltiazem 0.25 mg/kg, then cardiovert if it fails"
+   ],
+   "answer": 0,
+   "chainStep": "Treat as VT: 12-lead during the tachycardia; IV procainamide (structural heart disease, not severe heart failure, acute MI or end-stage renal disease) or IV amiodarone, or synchronized cardioversion under sedation; adenosine or vagal maneuvers only if SVT is likely and the resting ECG shows no pre-excitation; no verapamil or diltiazem; cardioversion if drugs fail",
+   "why": "When the mechanism of a wide QRS tachycardia is not fully understood, it is treated as VT, and prompt termination is recommended even when it is tolerated, because deterioration can be sudden. ESC makes synchronized cardioversion first-line for tolerated monomorphic VT when the sedation risk is low, with IV procainamide (IIa, structural heart disease included) or IV amiodarone (IIb) as the drugs; the US procainamide label covers sustained VT. Verapamil and diltiazem are contraindicated: given in VT, they have caused hemodynamic deterioration and VF. Adenosine or vagal maneuvers are considered only when SVT is likely and there is no pre-excitation.",
+   "sources": [
+    {
+     "docId": "pmid:31504425",
+     "where": "Recommendations for acute management of wide QRS tachycardia; 10.1.2.2"
+    },
+    {
+     "docId": "pmid:36017572",
+     "where": "6.1.2; Recommendation Table 9"
+    },
+    {
+     "docId": "url:2ecf153f5b85",
+     "where": "Contraindications 7"
+    },
+    {
+     "docId": "url:7c07f84e04d6",
+     "where": "Contraindications 7"
+    },
+    {
+     "docId": "url:1fee0ef74eaa",
+     "where": "Indications and Usage"
+    },
+    {
+     "docId": "url:9e8b5a59026f",
+     "where": "1 Indications and Usage"
+    }
+   ],
+   "next": "end_vt",
+   "orders": [
+    {
+     "item": "Procainamide",
+     "dose": "100 mg IV every 5 minutes, no faster than 50 mg/min, until it stops or 500 mg is in, then wait 10 minutes; or a loading infusion of 500 to 600 mg over 25 to 30 minutes; maximum 1 g; maintenance 2 to 6 mg/min. Pause if the systolic falls 15 mm Hg or more; stop if the QRS widens by 50%; not in severe heart failure, acute MI or end-stage renal disease (ESC); caution in heart failure or cardiomyopathy (label)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:1fee0ef74eaa",
+       "where": "Dosage and Administration, intravenous a) and b); infusion table; Precautions"
+      },
+      {
+       "docId": "url:1fee0ef74eaa",
+       "where": "Indications and Usage"
+      },
+      {
+       "docId": "pmid:36017572",
+       "where": "6.1.2 Acute management of sustained monomorphic VT"
+      },
+      {
+       "docId": "url:1fee0ef74eaa",
+       "where": "Precautions, congestive heart failure"
+      }
+     ],
+     "note": "The label's indication is life-threatening ventricular arrhythmia such as sustained VT."
+    },
+    {
+     "item": "Amiodarone",
+     "dose": "150 mg IV over the first 10 minutes (15 mg/min), then 360 mg over 6 hours (1 mg/min), then 540 mg over 18 hours (0.5 mg/min); hypotension is related to the infusion rate",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:9e8b5a59026f",
+       "where": "2.2 Table 1; 5.2 Hypotension"
+      },
+      {
+       "docId": "pmid:36017572",
+       "where": "Recommendation Table 9, Class IIb B"
+      }
+     ],
+     "note": "The US label's indication is VF and hemodynamically unstable VT refractory to other therapy; ESC lists amiodarone at IIb for tolerated VT."
+    },
+    {
+     "item": "Synchronized cardioversion",
+     "dose": "First-line for tolerated monomorphic VT when the sedation risk is low (ESC); and whenever drugs fail",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36017572",
+       "where": "Recommendation Table 9, Class I C"
+      },
+      {
+       "docId": "pmid:31504425",
+       "where": "Recommendations for acute management of wide QRS tachycardia, Class I B"
+      }
+     ]
+    },
+    {
+     "item": "Sotalol",
+     "dose": "May be considered (IIb) for tolerated monomorphic VT without significant structural heart disease: 0.5 to 1.5 mg/kg IV over 10 minutes, repeated after 6 hours if necessary; not with severe HFrEF, significant LVH, CrCl under 30 mL/min or long QT",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36017572",
+       "where": "Recommendation Table 9, Class IIb C; Table 8, sotalol row"
+      }
+     ]
+    },
+    {
+     "item": "Verapamil or diltiazem",
+     "dose": "Not in a wide-complex tachycardia of unknown mechanism",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:2ecf153f5b85",
+       "where": "Contraindications 7"
+      },
+      {
+       "docId": "url:7c07f84e04d6",
+       "where": "Contraindications 7"
+      },
+      {
+       "docId": "pmid:36017572",
+       "where": "Recommendation Table 9, Class III B"
+      }
+     ]
+    },
+    {
+     "item": "Adenosine",
+     "dose": "Only if SVT is likely and the resting ECG shows no pre-excitation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36017572",
+       "where": "Recommendation Table 9, Class IIa C"
+      },
+      {
+       "docId": "pmid:31504425",
+       "where": "10.1.2.2 Haemodynamically stable patients"
+      }
+     ]
+    }
+   ],
+   "note": "US exam answers usually pick an IV antiarrhythmic first for stable VT, with cardioversion as the alternative; ESC puts cardioversion first when sedation is safe. The key allows both. The 2017 US VA guideline was not reachable to check."
+  },
+  {
+   "id": "end_vt",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Stable VT: terminated with IV procainamide or amiodarone, or synchronized cardioversion under sedation, which ESC makes first-line when sedation is safe; cardioversion whenever drugs fail; no verapamil or diltiazem. Then admission to find the cause, structural heart disease first, and to decide on long-term treatment."
+  },
+  {
+   "id": "tdp",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Torsades in runs that stop on their own; QTc prolonged. Next?",
+   "options": [
+    "Magnesium sulfate 2 g IV; stop QT drugs; replete potassium",
+    "IV procainamide 100 mg at 5-minute intervals to suppress the runs",
+    "IV amiodarone 150 mg over 10 minutes, then an infusion",
+    "Hold magnesium unless the serum level comes back low"
+   ],
+   "answer": 0,
+   "chainStep": "Magnesium sulfate 2 g IV whatever the serum magnesium, repeated if runs persist; stop every QT-prolonging drug; potassium to 4.5 to 5 mmol/L; isoproterenol or transvenous pacing above 70 per minute if it recurs despite magnesium; immediate DC shock if a run does not stop",
+   "why": "Magnesium sulfate 2 g IV is the first-line drug for torsades whatever the serum magnesium, repeated if episodes persist, together with removal of the offending drug and potassium supplementation (to 4.5 to 5 mmol/L, IIb in the US statement). If torsades recurs despite that, raising the heart rate with isoproterenol or transvenous pacing above 70 per minute suppresses it. Procainamide, a class 1A drug, is contraindicated in torsades; amiodarone prolongs the QT and can itself cause torsades, and QT-prolonging drugs such as sotalol are avoided. A run that does not stop, or degenerates into VF, gets an immediate shock.",
+   "sources": [
+    {
+     "docId": "pmid:20185054",
+     "where": "Management: nonsustained and sustained TdP; drug-induced prolonged QT"
+    },
+    {
+     "docId": "pmid:36017572",
+     "where": "Recommendation Table 9, Class I C; 6.1.1"
+    },
+    {
+     "docId": "url:1fee0ef74eaa",
+     "where": "Contraindications, torsades de pointes"
+    },
+    {
+     "docId": "url:9e8b5a59026f",
+     "where": "5.5 Proarrhythmia"
+    }
+   ],
+   "next": "end_tdp",
+   "orders": [
+    {
+     "item": "Magnesium sulfate",
+     "dose": "2 g IV, whatever the serum magnesium; repeat 2 g if episodes persist",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:20185054",
+       "where": "Management: nonsustained and sustained TdP"
+      },
+      {
+       "docId": "pmid:36017572",
+       "where": "6.1.1"
+      }
+     ],
+     "note": "The infusion time is not stated in the US statement, and the FDA magnesium label has no torsades dose."
+    },
+    {
+     "item": "Potassium",
+     "dose": "Replete to 4.5 to 5 mmol/L",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:20185054",
+       "where": "Management, Class IIb"
+      },
+      {
+       "docId": "pmid:36017572",
+       "where": "Recommendation Table 9, Class I C"
+      }
+     ]
+    },
+    {
+     "item": "QT-prolonging drugs",
+     "dose": "Stop the offending drug; avoid others that prolong the QT",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:20185054",
+       "where": "Management: drug-induced prolonged QT; TdP risk factors"
+      },
+      {
+       "docId": "pmid:36017572",
+       "where": "6.1.1"
+      }
+     ]
+    },
+    {
+     "item": "Rate support",
+     "dose": "Isoproterenol 0.5 to 10 µg/min IV (ESC), or transvenous pacing above 70 per minute, when torsades recurs despite magnesium and correction",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:20185054",
+       "where": "Management: nonsustained and sustained TdP"
+      },
+      {
+       "docId": "pmid:36017572",
+       "where": "Recommendation Table 9, Class I C; Table 8, isoproterenol row"
+      }
+     ]
+    },
+    {
+     "item": "Procainamide",
+     "dose": "Contraindicated in torsades de pointes",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:1fee0ef74eaa",
+       "where": "Contraindications, torsades de pointes"
+      }
+     ]
+    },
+    {
+     "item": "Shock",
+     "dose": "Immediate DC cardioversion if torsades does not stop or degenerates into VF",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:20185054",
+       "where": "Management: nonsustained and sustained TdP"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_tdp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Torsades: magnesium 2 g IV, repeated if needed; the QT-prolonging drugs stopped; potassium to 4.5 to 5; isoproterenol or pacing if it keeps recurring; a shock if a run does not stop. At discharge, the culprit drug list, and 12-lead ECGs for first-degree relatives if there is unexplained syncope or early sudden death in the family."
+  },
+  {
+   "id": "hyperk",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "ECG changes of hyperkalemia, potassium confirmed high, stable or not. First drug?",
+   "options": [
+    "IV calcium now, then insulin with glucose and albuterol",
+    "Sodium polystyrene sulfonate 30 g by mouth, then recheck",
+    "Insulin and glucose first; calcium if the QRS widens further",
+    "IV sodium bicarbonate as the first and main treatment"
+   ],
+   "answer": 0,
+   "chainStep": "IV calcium first for ECG changes (calcium gluconate 1 g in the US consensus; 6.8 mmol in the UK guideline), repeated if no effect in 5 to 10 minutes; then insulin with glucose (UK: 10 units soluble insulin with 25 g glucose) and nebulized albuterol (UK: 10 to 20 mg); remove potassium (dialysis or a binder); cardiac monitoring; glucose checks for up to 12 hours",
+   "why": "ECG changes mean the heart is at risk, so IV calcium comes first: it improves the ECG within about 3 minutes but does not lower the potassium, and the dose is repeated if there is no effect in 5 to 10 minutes. Then potassium is shifted into cells with insulin and glucose plus nebulized albuterol (not albuterol alone in severe hyperkalemia), and removed, by dialysis in a patient on hemodialysis. Bicarbonate is not routine, and sodium polystyrene sulfonate is not recommended in the acute setting.",
+   "sources": [
+    {
+     "docId": "url:f16b34a1e288",
+     "where": "Guidelines 14.2, 16.2 to 16.5, 17.2, 18.1; rationale for 16.2; Table 11"
+    },
+    {
+     "docId": "pmid:34632453",
+     "where": "ECG manifestations; treatment; management algorithm, step 2"
+    }
+   ],
+   "next": "end_hyperk",
+   "orders": [
+    {
+     "item": "IV calcium",
+     "dose": "US consensus: calcium gluconate 1 g IV, repeated as needed; UK: an equivalent 6.8 mmol, the calcium in 10 mL of 10% calcium chloride (10 mL of 10% gluconate holds 2.26 mmol, so gluconate often needs sequential 10 mL doses); repeat if no effect in 5 to 10 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34632453",
+       "where": "Management algorithm, step 2; treatment, calcium"
+      },
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guideline 16.2; Table 11; rationale"
+      }
+     ],
+     "note": "Gluconate is preferred peripherally, since chloride causes tissue necrosis if it extravasates. The US and UK first doses differ about threefold."
+    },
+    {
+     "item": "Insulin with glucose",
+     "dose": "UK: 10 units soluble insulin in 25 g glucose IV; US review: 10 units regular insulin with 50 mL of 50% dextrose; blood glucose checks for up to 12 hours; if pre-treatment glucose is under 7.0 mmol/L (126 mg/dL), 10% glucose at 50 mL/h for 5 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guidelines 16.3.1, 16.3.3 and 17.2"
+      },
+      {
+       "docId": "pmid:29261936",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "The US consensus (JACEP) names insulin with dextrose, but its doses are in a figure that was not readable; the US regimen here is from a review."
+    },
+    {
+     "item": "Albuterol",
+     "dose": "UK: nebulized albuterol (salbutamol) 10 to 20 mg as an adjunct; not alone in severe hyperkalemia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guidelines 16.4.1 and 16.4.3"
+      },
+      {
+       "docId": "pmid:34632453",
+       "where": "Management algorithm, step 3"
+      }
+     ]
+    },
+    {
+     "item": "Sodium bicarbonate",
+     "dose": "Not routine; for acidosis",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guideline 16.5"
+      },
+      {
+       "docId": "pmid:34632453",
+       "where": "Management algorithm, step 3"
+      }
+     ]
+    },
+    {
+     "item": "Sodium polystyrene sulfonate",
+     "dose": "Not in the acute setting",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:34632453",
+       "where": "Elimination: oral binders"
+      }
+     ]
+    },
+    {
+     "item": "Dialysis",
+     "dose": "Urgent for a hemodialysis patient with severe hyperkalemia; the most effective removal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guideline 18.1"
+      },
+      {
+       "docId": "pmid:34632453",
+       "where": "Elimination: hemodialysis"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Continuous ECG monitoring with ECG features of hyperkalemia or a potassium of 6.5 or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:f16b34a1e288",
+       "where": "Guideline 14.2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_hyperk",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hyperkalemia with ECG changes: IV calcium now and again if the ECG does not improve, then insulin with glucose and nebulized albuterol, glucose checks, and removal of potassium, by dialysis here. Removal, the cause and follow-up continue in the electrolyte pathway (pw_electrolytes)."
+  },
+  {
+   "id": "sinus_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "The rhythm is sinus tachycardia. Next?",
+   "options": [
+    "Find and treat the cause: bleeding, sepsis, PE, thyroid, drugs",
+    "Synchronized cardioversion to bring the heart rate back down",
+    "IV metoprolol to bring the rate under 100 first",
+    "Adenosine 6 mg IV first, to prove that the rhythm really is sinus"
+   ],
+   "answer": 0,
+   "chainStep": "Find and treat the cause: bleeding or dehydration, infection or fever, PE, anemia, hyperthyroidism, hypoglycemia, pain or anxiety, and drugs (beta-agonists, methylxanthines, beta-blocker withdrawal); the rate itself is not the target",
+   "why": "Sinus tachycardia is a response, treated by finding and removing its cause: anxiety, anemia, fever, dehydration, infection, hyperthyroidism, hypoglycemia, PE, myocardial infarction, heart failure or shock, and drugs such as beta-agonists, methylxanthines, cocaine or amphetamines, or beta-blocker withdrawal. Slowing the rate is not the aim; the short-acting beta blocker esmolol is labeled only for a noncompensatory sinus tachycardia that needs specific treatment. Inappropriate sinus tachycardia is diagnosed only after these causes are excluded.",
+   "sources": [
+    {
+     "docId": "pmid:31504425",
+     "where": "11.1.1.1 Physiological sinus tachycardia; Table 10; 11.1.1.2.1"
+    },
+    {
+     "docId": "url:3f250f95cd74",
+     "where": "1.1 Indications"
+    }
+   ],
+   "next": "sinus_cause",
+   "orders": [
+    {
+     "item": "Esmolol",
+     "dose": "Labeled only for noncompensatory sinus tachycardia that, in the physician's judgment, needs specific treatment",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3f250f95cd74",
+       "where": "1.1 Indications"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sinus_cause",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "History, exam and targeted tests",
+   "outcomes": [
+    {
+     "id": "pe",
+     "if": "Pulmonary embolism likely; pleuritic pain, hypoxia, a swollen leg",
+     "ddx": {
+      "lead": [
+       "Pulmonary embolism"
+      ],
+      "out": []
+     },
+     "next": "end_pe"
+    },
+    {
+     "id": "sepsis",
+     "if": "Sepsis; fever with a source, or a high lactate",
+     "ddx": {
+      "lead": [
+       "Sepsis"
+      ],
+      "out": []
+     },
+     "next": "end_sepsis"
+    },
+    {
+     "id": "bleed",
+     "if": "Bleeding; melena, hematemesis or a falling hemoglobin",
+     "ddx": {
+      "lead": [
+       "Hemorrhage"
+      ],
+      "out": []
+     },
+     "next": "end_gi_bleed"
+    },
+    {
+     "id": "thyroid",
+     "if": "Thyrotoxicosis; suppressed TSH, high free T4, tremor",
+     "ddx": {
+      "lead": [
+       "Thyrotoxicosis"
+      ],
+      "out": []
+     },
+     "next": "end_thyroid"
+    },
+    {
+     "id": "drug",
+     "if": "Drug or stimulant; cocaine, amphetamine, beta agonist, or withdrawal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_sinus_drug"
+    },
+    {
+     "id": "none",
+     "if": "No cause found; normal tests, no drug or stimulant",
+     "ddx": {
+      "lead": [
+       "Inappropriate sinus tachycardia"
+      ],
+      "out": []
+     },
+     "next": "end_sinus_none"
+    }
+   ]
+  },
+  {
+   "id": "end_pe",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Sinus tachycardia with features of PE: continue in the dyspnea pathway, where PE is weighed by clinical probability. The tachycardia is a response, not the target."
+  },
+  {
+   "id": "end_sepsis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Sinus tachycardia from sepsis: continue in the sepsis and fever pathway. The rate settles as the infection and the circulation are treated; it is not slowed with drugs."
+  },
+  {
+   "id": "end_gi_bleed",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Sinus tachycardia from bleeding: resuscitate and continue in the GI bleed pathway. The tachycardia is compensation; the treatment is the bleeding."
+  },
+  {
+   "id": "end_sinus_drug",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Sinus tachycardia from a drug or stimulant: remove or treat the cause; poisoning continues in the toxic ingestion pathway, alcohol withdrawal in the altered mental status pathway."
+  },
+  {
+   "id": "end_thyroid",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Thyrotoxicosis: a beta blocker for the symptoms and the tachycardia (propranolol also slows T4 to T3 conversion), and antithyroid treatment with endocrinology; if AF develops, anticoagulate by stroke risk until thyroid function is normal and sinus rhythm holds. Thyroid storm continues in the altered mental status pathway."
+  },
+  {
+   "id": "end_sinus_none",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Sinus tachycardia with no cause found: home with follow-up. Inappropriate sinus tachycardia is a diagnosis of exclusion; a 24-hour Holter mean over 90 with waking rates over 100 supports it, and reassurance, exercise training, volume expansion and avoiding stimulants come before any drug."
+  },
+  {
+   "id": "normal_step",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Palpitations have settled; the 12-lead ECG is normal. Next?",
+   "options": [
+    "Screen for red flags; ambulatory ECG if they stay unexplained",
+    "Reassure and discharge; a normal ECG rules out an arrhythmia",
+    "Admit to telemetry overnight and book an electrophysiology study",
+    "A 24-hour Holter whatever the frequency of episodes"
+   ],
+   "answer": 0,
+   "chainStep": "Red flags: structural heart disease, a family history of sudden cardiac death or an inherited channelopathy, syncope with the palpitations; if they persist or stay unexplained, an ambulatory ECG by frequency: a 24 to 48 hour Holter for daily palpitations, a patient-activated loop or event recorder (about 2 weeks) for infrequent ones; a symptom diary",
+   "why": "A normal 12-lead between episodes does not exclude an arrhythmia: history, examination and the ECG make the diagnosis in up to a third, and ambulatory monitoring is the tool for the rest. Most palpitations are benign; monitoring is indicated when the story suggests an arrhythmia, when the patient needs reassurance and an explanation, and specifically with structural heart disease, a family history of sudden cardiac death or an inherited channelopathy. After an unexplained sudden death under 50 in the family, the evaluation includes ECG, echocardiography and exercise testing. The device follows the frequency: a 24 to 48 hour Holter for daily palpitations, a loop or event recorder for infrequent, unpredictable ones, where about 2 weeks gives the best yield for the cost, with a diary of the episodes.",
+   "sources": [
+    {
+     "docId": "pmid:28480632",
+     "where": "4.2 Palpitations"
+    },
+    {
+     "docId": "pmid:36017572",
+     "where": "Recommendation Table 7"
+    }
+   ],
+   "next": "normal_result",
+   "orders": [
+    {
+     "item": "Holter",
+     "dose": "24 to 48 hours, for palpitations every day or ones that can be reproduced",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28480632",
+       "where": "4.2 Palpitations"
+      }
+     ]
+    },
+    {
+     "item": "Loop or event recorder",
+     "dose": "For infrequent, unpredictable palpitations; about 2 weeks of monitoring balances yield and cost",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28480632",
+       "where": "4.2 Palpitations"
+      }
+     ]
+    },
+    {
+     "item": "Symptom diary",
+     "dose": "Record the time of each episode",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28480632",
+       "where": "4.2 Palpitations"
+      }
+     ]
+    },
+    {
+     "item": "Family history of unexplained sudden death",
+     "dose": "Familial evaluation when the death was under 50 or the relative has symptoms: history, examination, standard and high precordial lead ECG, echocardiography and exercise testing; ambulatory monitoring and CMR may be considered",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:36017572",
+       "where": "Recommendation Table 7"
+      }
+     ]
+    }
+   ],
+   "note": "Palpitations with syncope continue in the syncope pathway, whose red flags and urgency follow NICE CG109."
+  },
+  {
+   "id": "normal_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Red flags",
+   "outcomes": [
+    {
+     "id": "red_flag",
+     "if": "Red flag; syncope with it, structural heart disease, family sudden death",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_redflag"
+    },
+    {
+     "id": "none",
+     "if": "No red flags; a benign history and a normal exam",
+     "ddx": {
+      "lead": [
+       "Ectopic beats or anxiety"
+      ],
+      "out": []
+     },
+     "next": "end_ambulatory"
+    }
+   ]
+  },
+  {
+   "id": "end_redflag",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Palpitations with a red flag: cardiology assessment with an echocardiogram, an exercise test and ambulatory monitoring; after an unexplained sudden death under 50 in the family, the evaluation includes ECG, echocardiography and exercise testing. With syncope, continue in the syncope pathway."
+  },
+  {
+   "id": "end_ambulatory",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Normal ECG and no red flags: reassurance; if the palpitations persist, stay unexplained or the patient needs an explanation, an ambulatory ECG by frequency (a 24 to 48 hour Holter for daily ones, a loop or event recorder for infrequent ones) with a symptom diary."
+  }
+ ],
+ "cases": [
+  {
+   "id": "arrest",
+   "label": "Pulseless VT in triage",
+   "vignette": "58-year-old man in triage with an hour of palpitations; the nurse is attaching the monitor.",
+   "picks": {
+    "front": "arrest"
+   },
+   "results": {
+    "front": "As the monitor goes on he slumps in his chair: regular broad complexes at 210, no carotid pulse, unresponsive."
+   }
+  },
+  {
+   "id": "unstable_vt",
+   "label": "VT with shock",
+   "vignette": "67-year-old man with a heart attack 4 years ago, an hour of palpitations, now chest pain and confusion. BP 76/48, HR 184.",
+   "picks": {
+    "front": "unstable"
+   },
+   "results": {
+    "front": "Monitor: regular wide-complex tachycardia at 184. BP 76/48, cool and confused, ongoing chest pain."
+   }
+  },
+  {
+   "id": "unstable_af",
+   "label": "AF with shock and ischemia",
+   "vignette": "74-year-old woman, palpitations since she woke 3 hours ago, now lightheaded with chest tightness. BP 78/50, HR 172.",
+   "picks": {
+    "front": "unstable"
+   },
+   "results": {
+    "front": "Monitor: irregularly irregular narrow-complex rhythm at 172, no P waves. BP 78/50, clammy; 3 mm ST depression in V4 to V6 during the tachycardia. No fever, no bleeding."
+   }
+  },
+  {
+   "id": "bleed_shock",
+   "label": "Sinus tachycardia from a GI bleed",
+   "vignette": "64-year-old man taking naproxen for back pain, palpitations and dizziness, black stools for 2 days. BP 84/52, HR 128.",
+   "picks": {
+    "front": "sinus_shock",
+    "sinus_cause": "bleed"
+   },
+   "results": {
+    "front": "Monitor: sinus tachycardia at 128, an upright P wave before every QRS. BP 84/52, pale and cool.",
+    "sinus_cause": "Black tarry stool on rectal exam. Hemoglobin 7.1 g/dL, 13.8 a year ago. No fever."
+   }
+  },
+  {
+   "id": "brady_shock",
+   "label": "Complete heart block with shock",
+   "vignette": "81-year-old woman, felt slow, heavy heartbeats and nearly fainted; now drowsy. BP 74/40, HR 34.",
+   "picks": {
+    "front": "brady"
+   },
+   "results": {
+    "front": "Monitor: complete heart block, ventricular rate 34, wide escape complexes. BP 74/40, confused."
+   }
+  },
+  {
+   "id": "svt_vagal",
+   "label": "SVT that stops with a modified Valsalva",
+   "vignette": "26-year-old woman, sudden pounding palpitations for 40 minutes, otherwise well. BP 118/74, HR 188.",
+   "picks": {
+    "front": "stable",
+    "ecg": "narrow",
+    "vagal_result": "converted"
+   },
+   "results": {
+    "front": "Monitor: regular narrow-complex tachycardia at 188. BP 118/74, alert, no chest pain or breathlessness.",
+    "ecg": "12-lead: regular narrow-complex tachycardia at 188, QRS 90 ms, no visible P waves.",
+    "vagal_result": "Modified Valsalva: converts to sinus rhythm at 78 as her legs are raised."
+   }
+  },
+  {
+   "id": "svt_adenosine",
+   "label": "SVT that stops with adenosine",
+   "vignette": "45-year-old man, palpitations for 2 hours that started abruptly while lifting a box. BP 126/80, HR 196.",
+   "picks": {
+    "front": "stable",
+    "ecg": "narrow",
+    "vagal_result": "persists",
+    "adenosine_result": "converted"
+   },
+   "results": {
+    "front": "Monitor: regular narrow-complex tachycardia at 196. BP 126/80, alert.",
+    "ecg": "12-lead: regular narrow-complex tachycardia at 196, QRS 88 ms, no visible P waves.",
+    "vagal_result": "Modified Valsalva done well, twice; no change, still 196.",
+    "adenosine_result": "6 mg: a brief slowing, then 196 again. 12 mg: a pause, then sinus rhythm at 82."
+   }
+  },
+  {
+   "id": "flutter",
+   "label": "Flutter unmasked by adenosine, under 12 hours",
+   "vignette": "41-year-old man, palpitations that began abruptly at 6 a.m. while he was shaving, 8 hours ago; no past medical history, takes no medicines. BP 128/80, HR 150.",
+   "picks": {
+    "front": "stable",
+    "ecg": "narrow",
+    "vagal_result": "persists",
+    "adenosine_result": "flutter",
+    "af_type": "primary",
+    "af_onset": "lt12",
+    "af_score": "low"
+   },
+   "results": {
+    "front": "Monitor: regular narrow-complex tachycardia at exactly 150. BP 128/80.",
+    "ecg": "12-lead: regular narrow tachycardia at 150, QRS 90 ms; P waves hard to see.",
+    "vagal_result": "Modified Valsalva: no change, still 150.",
+    "adenosine_result": "6 mg: conduction pauses for 4 seconds and sawtooth flutter waves at 300 show in II, III and aVF; then 2:1 conduction at 150 again.",
+    "af_type": "No fever, bleeding or breathlessness. Bedside echo: normal LV function. Hemoglobin, electrolytes and TSH normal.",
+    "af_onset": "Began abruptly at 6 a.m. while shaving, 8 hours ago, after a normal night. No anticoagulant, no stroke or TIA, no valve disease.",
+    "af_score": "CHA2DS2-VASc 0: a man of 41 with no heart failure, hypertension, diabetes, stroke or vascular disease."
+   }
+  },
+  {
+   "id": "svt_nodal",
+   "label": "SVT that keeps restarting after adenosine",
+   "vignette": "52-year-old woman, palpitations for 3 hours, no heart disease, otherwise well. BP 132/84, HR 172.",
+   "picks": {
+    "front": "stable",
+    "ecg": "narrow",
+    "vagal_result": "persists",
+    "adenosine_result": "persists"
+   },
+   "results": {
+    "front": "Monitor: regular narrow-complex tachycardia at 172. BP 132/84.",
+    "ecg": "12-lead: regular narrow tachycardia at 172, QRS 86 ms, no clear P waves.",
+    "vagal_result": "Modified Valsalva: no change.",
+    "adenosine_result": "6 mg, then 12 mg twice: each stops it for a few beats of sinus rhythm, then it restarts at 172; no flutter waves."
+   }
+  },
+  {
+   "id": "af_sepsis",
+   "label": "AF driven by urosepsis",
+   "vignette": "78-year-old man with known AF on apixaban, 2 days of fever and burning on urination, now palpitations. BP 106/66, HR 142, temperature 39.2.",
+   "picks": {
+    "front": "stable",
+    "ecg": "af",
+    "af_type": "secondary"
+   },
+   "results": {
+    "front": "Monitor: irregularly irregular rhythm at 142. BP 106/66, warm and alert.",
+    "ecg": "12-lead: atrial fibrillation at 142, no ST elevation.",
+    "af_type": "Fever 39.2, right flank tenderness, cloudy urine positive for nitrites; lactate 2.8 mmol/L. Echo: normal LV function."
+   }
+  },
+  {
+   "id": "af_lowef",
+   "label": "AF with a known low EF, onset unknown",
+   "vignette": "71-year-old woman with heart failure (EF 30% last year) and hypertension, palpitations on and off for at least 3 days. BP 124/78, HR 138.",
+   "picks": {
+    "front": "stable",
+    "ecg": "af",
+    "af_type": "low_ef",
+    "af_onset": "gt48",
+    "af_score": "high"
+   },
+   "results": {
+    "front": "Monitor: irregularly irregular rhythm at 138. BP 124/78, SpO2 96% on air.",
+    "ecg": "12-lead: atrial fibrillation at 138, no ischemic changes.",
+    "af_type": "Clear chest, no edema, no fever or bleeding. Echo: EF 30%, unchanged. TSH and hemoglobin normal.",
+    "af_onset": "She cannot say when it started; at least 3 days. Not on an anticoagulant.",
+    "af_score": "CHA2DS2-VASc 4: heart failure 1, hypertension 1, age 71 (65 to 74) 1, female 1."
+   }
+  },
+  {
+   "id": "af_18h",
+   "label": "Primary AF, 18 hours old",
+   "vignette": "58-year-old man with hypertension, palpitations that began abruptly at 6 p.m. yesterday. BP 142/88, HR 134.",
+   "picks": {
+    "front": "stable",
+    "ecg": "af",
+    "af_type": "primary",
+    "af_onset": "h12_48",
+    "af_score": "mid"
+   },
+   "results": {
+    "front": "Monitor: irregularly irregular rhythm at 134. BP 142/88.",
+    "ecg": "12-lead: atrial fibrillation at 134, narrow QRS, no pre-excitation.",
+    "af_type": "No fever, bleeding, breathlessness or chest pain. Echo: EF 60%, no valve disease. TSH, hemoglobin and electrolytes normal.",
+    "af_onset": "Began at 6 p.m. yesterday, 18 hours ago. No anticoagulant, no stroke or TIA, no valve disease.",
+    "af_score": "CHA2DS2-VASc 1: hypertension. Age 58, no heart failure, diabetes, stroke or vascular disease."
+   }
+  },
+  {
+   "id": "wpw",
+   "label": "Pre-excited AF in a young athlete",
+   "vignette": "24-year-old man, a sudden racing heart during a soccer game an hour ago. BP 112/70, HR about 240.",
+   "picks": {
+    "front": "stable",
+    "ecg": "preexcited"
+   },
+   "results": {
+    "front": "Monitor: fast, irregular broad-complex rhythm around 240. BP 112/70, alert, no chest pain.",
+    "ecg": "12-lead: irregular broad-complex tachycardia, rate up to 280, the QRS width changing beat to beat. An ECG from 2 years ago shows a short PR and a delta wave."
+   }
+  },
+  {
+   "id": "vt_stable",
+   "label": "Stable wide-complex tachycardia after an MI",
+   "vignette": "66-year-old man with a heart attack 5 years ago and an EF of 35%, an hour of palpitations, no chest pain. BP 118/76, HR 168.",
+   "picks": {
+    "front": "stable",
+    "ecg": "wct"
+   },
+   "results": {
+    "front": "Monitor: regular wide-complex tachycardia at 168. BP 118/76, alert, not breathless.",
+    "ecg": "12-lead: regular wide-complex tachycardia at 168, QRS 160 ms, no clear P waves; no old ECG to compare."
+   }
+  },
+  {
+   "id": "tdp",
+   "label": "Torsades on methadone and azithromycin",
+   "vignette": "62-year-old woman on methadone, started azithromycin 3 days ago and has been vomiting since; palpitations and brief dizzy spells. BP 118/72 between spells, HR 64.",
+   "picks": {
+    "front": "stable",
+    "ecg": "tdp"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 64 with runs of a fast, twisting broad-complex rhythm lasting 5 to 15 seconds, each stopping on its own. BP 118/72 between runs, awake.",
+    "ecg": "12-lead between runs: QTc 590 ms; runs of polymorphic VT twisting around the baseline. Potassium 2.9 mmol/L, magnesium 1.4 mg/dL."
+   }
+  },
+  {
+   "id": "hyperk",
+   "label": "Hyperkalemia after missed dialysis",
+   "vignette": "59-year-old man on hemodialysis who missed his last two sessions, palpitations and weakness. BP 136/80, HR 58.",
+   "picks": {
+    "front": "stable",
+    "ecg": "hyperk"
+   },
+   "results": {
+    "front": "Monitor: regular rhythm at 58 with broad complexes. BP 136/80, alert.",
+    "ecg": "12-lead: tall peaked T waves, flattened P waves, QRS 150 ms. Blood gas potassium 7.6 mmol/L."
+   }
+  },
+  {
+   "id": "pe",
+   "label": "Sinus tachycardia from a PE",
+   "vignette": "38-year-old woman on the combined pill, 2 days after a long-haul flight, palpitations and sharp chest pain on breathing in. BP 122/78, HR 122, SpO2 92%.",
+   "picks": {
+    "front": "stable",
+    "ecg": "sinus",
+    "sinus_cause": "pe"
+   },
+   "results": {
+    "front": "Monitor: sinus tachycardia at 122. BP 122/78.",
+    "ecg": "12-lead: sinus tachycardia at 122, an upright P wave before every QRS, no ST elevation.",
+    "sinus_cause": "Pleuritic pain, SpO2 92% on air, left calf swollen and tender. No fever. Hemoglobin and TSH normal."
+   }
+  },
+  {
+   "id": "sepsis",
+   "label": "Sinus tachycardia from pyelonephritis",
+   "vignette": "72-year-old woman, a day of fever, chills and burning on urination, now palpitations. BP 116/70, HR 118, temperature 39.1.",
+   "picks": {
+    "front": "stable",
+    "ecg": "sinus",
+    "sinus_cause": "sepsis"
+   },
+   "results": {
+    "front": "Monitor: sinus tachycardia at 118. BP 116/70, warm.",
+    "ecg": "12-lead: sinus tachycardia at 118.",
+    "sinus_cause": "Temperature 39.1, right flank tenderness, urine positive for nitrites and leukocytes; lactate 2.6 mmol/L. Hemoglobin normal."
+   }
+  },
+  {
+   "id": "thyroid",
+   "label": "Sinus tachycardia from thyrotoxicosis",
+   "vignette": "31-year-old woman, 2 months of palpitations, weight loss despite a good appetite, and feeling hot all the time. BP 134/70, HR 124.",
+   "picks": {
+    "front": "stable",
+    "ecg": "sinus",
+    "sinus_cause": "thyroid"
+   },
+   "results": {
+    "front": "Monitor: sinus tachycardia at 124. BP 134/70.",
+    "ecg": "12-lead: sinus tachycardia at 124.",
+    "sinus_cause": "Fine tremor, a smooth goiter, warm moist skin. TSH under 0.01 mU/L, free T4 high. Hemoglobin normal, no fever."
+   }
+  },
+  {
+   "id": "sinus_none",
+   "label": "Sinus tachycardia, no cause found",
+   "vignette": "24-year-old woman, months of a fast heartbeat at rest, otherwise well; no medicines, little caffeine. BP 112/70, HR 112.",
+   "picks": {
+    "front": "stable",
+    "ecg": "sinus",
+    "sinus_cause": "none"
+   },
+   "results": {
+    "front": "Monitor: sinus tachycardia at 112. BP 112/70.",
+    "ecg": "12-lead: sinus tachycardia at 112, normal P wave axis.",
+    "sinus_cause": "Afebrile, normal exam. Hemoglobin, glucose, electrolytes and TSH normal; no stimulants, drugs or alcohol; pregnancy test negative; nothing to suggest a PE."
+   }
+  },
+  {
+   "id": "red_flag",
+   "label": "Palpitations with a family history of sudden death",
+   "vignette": "19-year-old college basketball player, two episodes of a racing heart this month, the second during a game. Well now. BP 120/70, HR 68.",
+   "picks": {
+    "front": "stable",
+    "ecg": "normal",
+    "normal_result": "red_flag"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 68. BP 120/70.",
+    "ecg": "12-lead: sinus rhythm 68, normal intervals, no pre-excitation, no Brugada pattern, no LVH.",
+    "normal_result": "His uncle died suddenly at 32 with no cause found. No murmur."
+   }
+  },
+  {
+   "id": "benign",
+   "label": "Benign palpitations, normal ECG",
+   "vignette": "29-year-old woman, a few seconds of skipped or thumping beats most evenings for a month, worse after coffee; she feels well. BP 118/74, HR 76.",
+   "picks": {
+    "front": "stable",
+    "ecg": "normal",
+    "normal_result": "none"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 76, an occasional early beat. BP 118/74.",
+    "ecg": "12-lead: sinus rhythm 76, normal intervals, no pre-excitation.",
+    "normal_result": "No fainting, no heart disease, no family history of sudden death; normal heart sounds, no murmur."
+   }
+  },
+  {
+   "id": "hyperk_shock",
+   "label": "Hyperkalemia with shock",
+   "vignette": "63-year-old woman on hemodialysis, missed two sessions, weak and drowsy. BP 78/44, HR 112.",
+   "picks": {
+    "front": "hyperk_unstable"
+   },
+   "results": {
+    "front": "Monitor: wide, bizarre regular complexes at 112, no clear P waves. BP 78/44. Blood gas potassium 8.1 mmol/L."
+   }
+  },
+  {
+   "id": "af_anticoag",
+   "label": "Persistent AF, 8 weeks anticoagulated",
+   "vignette": "67-year-old man with hypertension and persistent AF found 2 months ago, on apixaban since then without a missed dose; palpitations and breathlessness on the stairs. BP 136/84, HR 128.",
+   "picks": {
+    "front": "stable",
+    "ecg": "af",
+    "af_type": "primary",
+    "af_onset": "anticoag",
+    "af_score": "high"
+   },
+   "results": {
+    "front": "Monitor: irregularly irregular rhythm at 128. BP 136/84, SpO2 97% on air.",
+    "ecg": "12-lead: atrial fibrillation at 128, narrow QRS, no pre-excitation.",
+    "af_type": "No fever, bleeding or chest pain; clear chest. Echo: EF 55%, no valve disease. TSH, hemoglobin and electrolytes normal.",
+    "af_onset": "In AF for at least 2 months; on apixaban for 8 weeks with no missed doses.",
+    "af_score": "CHA2DS2-VASc 2: hypertension 1, age 67 (65 to 74) 1."
+   }
+  },
+  {
+   "id": "preexcitation",
+   "label": "Pre-excitation on the resting ECG",
+   "vignette": "22-year-old woman, three episodes this year of a sudden racing heartbeat that stopped as suddenly; well now. BP 116/72, HR 74.",
+   "picks": {
+    "front": "stable",
+    "ecg": "risky_sinus"
+   },
+   "results": {
+    "front": "Monitor: sinus rhythm 74. BP 116/72.",
+    "ecg": "12-lead: sinus rhythm 74, short PR interval, a slurred upstroke to the QRS (delta wave), QRS 120 ms; QTc 420 ms."
+   }
+  },
+  {
+   "id": "cocaine",
+   "label": "Sinus tachycardia after cocaine",
+   "vignette": "27-year-old man, palpitations and jitteriness at 2 a.m. after a night out; he used cocaine 2 hours ago. BP 152/94, HR 126, no chest pain.",
+   "picks": {
+    "front": "stable",
+    "ecg": "sinus",
+    "sinus_cause": "drug"
+   },
+   "results": {
+    "front": "Monitor: sinus tachycardia at 126. BP 152/94, alert, agitated.",
+    "ecg": "12-lead: sinus tachycardia at 126, no ST changes.",
+    "sinus_cause": "Dilated pupils, sweaty, no chest pain. Temperature 37.6. Hemoglobin and TSH normal."
+   }
+  }
+ ]
+}

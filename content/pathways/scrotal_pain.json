@@ -1,0 +1,2309 @@
+{
+ "id": "pw_scrotal_pain",
+ "title": "Scrotal pain",
+ "world": "surgery",
+ "synonyms": [
+  "acute scrotum",
+  "testicular pain",
+  "testicular torsion",
+  "torsion",
+  "TWIST score",
+  "manual detorsion",
+  "orchiopexy",
+  "torsion of the appendix testis",
+  "blue dot sign",
+  "epididymitis",
+  "epididymo-orchitis",
+  "orchitis",
+  "mumps orchitis",
+  "Fournier gangrene",
+  "necrotizing fasciitis of the perineum",
+  "scrotal trauma",
+  "testicular rupture",
+  "incarcerated inguinal hernia",
+  "testicular mass",
+  "testicular cancer"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:34292926",
+   "label": "CDC STI 2021",
+   "title": "Sexually Transmitted Infections Treatment Guidelines, 2021 (CDC, MMWR Recommendations and Reports)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34292926/"
+  },
+  {
+   "docId": "pmid:26626757",
+   "label": "ESPR 2015",
+   "title": "ESPR Uroradiology Taskforce and ESUR Paediatric Working Group imaging recommendations, part VIII: imaging childhood testicular torsion (consensus, Pediatr Radiol)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26626757/"
+  },
+  {
+   "docId": "pmid:33116959",
+   "label": "Torsion ED review 2020",
+   "title": "Testicular torsion in the emergency room: a review of detection and management strategies (review, Open Access Emerg Med)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33116959/"
+  },
+  {
+   "docId": "pmid:37863980",
+   "label": "Detorsion POCUS review 2024",
+   "title": "Point-of-care ultrasonography for the diagnosis and manual detorsion of testicular torsion (review, J Med Ultrason)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37863980/"
+  },
+  {
+   "docId": "pmid:41111774",
+   "label": "Torsion delays review 2025",
+   "title": "Trends in the management of testicular torsion: a scoping review of delays and outcomes (review, Cureus)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41111774/"
+  },
+  {
+   "docId": "pmid:35689399",
+   "label": "FIX-IT 2022",
+   "title": "BURST and BAUS consensus for best practice in scrotal exploration for suspected testicular torsion: the FIX-IT study (Delphi consensus, BJU Int)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35689399/"
+  },
+  {
+   "docId": "pmid:28920055",
+   "label": "Appendix testis study 2017",
+   "title": "Distinguishing testicular torsion from torsion of the appendix testis by clinical features and signs (cohort with background review, Res Rep Urol)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28920055/"
+  },
+  {
+   "docId": "pmid:25598931",
+   "label": "Scrotal pain review 2015",
+   "title": "Scrotal pain: evaluation and management (review, Korean J Urol)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25598931/"
+  },
+  {
+   "docId": "pmid:40102331",
+   "label": "Scrotal US review 2025",
+   "title": "Testicular ultrasound: an emergency medicine perspective (review, Intern Emerg Med)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40102331/"
+  },
+  {
+   "docId": "pmid:40088254",
+   "label": "Scrotal trauma review 2025",
+   "title": "A scoping review of historical and contemporary management strategies for paediatric scrotal trauma (review, Ir J Med Sci)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40088254/"
+  },
+  {
+   "docId": "pmid:30564282",
+   "label": "WSES/SIS-E 2018",
+   "title": "2018 WSES/SIS-E consensus conference: recommendations for the management of skin and soft-tissue infections",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30564282/"
+  },
+  {
+   "docId": "pmid:35033131",
+   "label": "WSES 2022 SSTI pathways",
+   "title": "WSES/GAIS/WSIS/SIS-E/AAST global clinical pathways for patients with skin and soft tissue infections",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35033131/"
+  },
+  {
+   "docId": "pmid:33815357",
+   "label": "Mumps orchitis review 2021",
+   "title": "Mumps orchitis: clinical aspects and mechanisms (review, Front Immunol)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33815357/"
+  },
+  {
+   "docId": "pmid:41926533",
+   "label": "Testicular cancer review 2026",
+   "title": "Testicular cancer: diagnosis, treatment, and biomarker advances (review, Res Rep Urol)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41926533/"
+  },
+  {
+   "docId": "pmid:41437827",
+   "label": "Small testicular mass review 2026",
+   "title": "Guideline of guidelines: management of small testicular masses (systematic review, BJU Int)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41437827/"
+  },
+  {
+   "docId": "url:77f97cf05d18",
+   "label": "NICE NG12",
+   "title": "Suspected cancer: recognition and referral",
+   "url": "https://www.nice.org.uk/guidance/ng12"
+  },
+  {
+   "docId": "pmid:28804507",
+   "label": "WSES hernia 2017",
+   "title": "2017 update of the WSES guidelines for emergency repair of complicated abdominal wall hernias",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28804507/"
+  },
+  {
+   "docId": "pmid:37862616",
+   "label": "HerniaSurge 2023",
+   "title": "Update of the international HerniaSurge guidelines for groin hernia management (BJS Open)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/37862616/"
+  },
+  {
+   "docId": "url:0ab6c49010b1",
+   "label": "Ibuprofen label",
+   "title": "Ibuprofen tablets USP, FDA prescribing information (DailyMed)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e080f7da-a506-4c04-a227-c1be77234f01"
+  }
+ ],
+ "differential": [
+  "Testicular torsion",
+  "Torsion of the appendix testis",
+  "Epididymitis",
+  "Orchitis",
+  "Fournier gangrene",
+  "Testicular rupture",
+  "Incarcerated hernia",
+  "Testicular cancer",
+  "Sepsis"
+ ],
+ "calculators": [
+  {
+   "id": "twist",
+   "title": "TWIST score",
+   "kind": "points",
+   "items": [
+    {
+     "id": "swelling",
+     "label": "Testicular swelling",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "hard",
+     "label": "Hard testis",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "cremaster",
+     "label": "Absent cremasteric reflex",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "nausea",
+     "label": "Nausea or vomiting",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "high",
+     "label": "High-riding testis",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    }
+   ],
+   "bands": [
+    {
+     "lte": 2,
+     "text": "0 to 2: low risk; 100% negative predictive value for torsion"
+    },
+    {
+     "gte": 3,
+     "lte": 4,
+     "text": "3 to 4: intermediate risk; ultrasound"
+    },
+    {
+     "gte": 5,
+     "text": "5 or more: high risk; urgent urology and surgery"
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:33116959",
+     "where": "Clinical Decision Scoring"
+    }
+   ],
+   "note": "Cut-offs vary: a validation by non-urologists used 0, 1 to 5 and more than 6, found the score less accurate before puberty (Tanner 1 to 2), and advised ultrasound there even at a high score.",
+   "tests": [
+    {
+     "picks": {
+      "swelling": 1,
+      "hard": 1,
+      "cremaster": 1,
+      "nausea": 1,
+      "high": 1
+     },
+     "expect": 7
+    },
+    {
+     "picks": {
+      "swelling": 1,
+      "hard": 1
+     },
+     "expect": 4
+    },
+    {
+     "picks": {
+      "swelling": 1,
+      "nausea": 1
+     },
+     "expect": 3
+    },
+    {
+     "picks": {
+      "swelling": 1
+     },
+     "expect": 2
+    }
+   ]
+  }
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Scrotal pain or a scrotal lump in the ED. First move?",
+   "options": [
+    "Vitals and a full exam of testes, groin and perineum now",
+    "Scrotal ultrasound first, then examine once the report is back",
+    "Urinalysis first; examine and decide once the dipstick is read",
+    "Analgesia now and a urology clinic review in the morning"
+   ],
+   "answer": 0,
+   "chainStep": "Vital signs; examine both testes (lie, swelling, cremasteric reflex), the groin for a hernia and the perineum for necrosis; call urology at once if torsion is possible",
+   "why": "Acute scrotal pain is an emergency until torsion is ruled out, so urology is called as soon as torsion is possible, not after tests. The exam takes in the abdomen and groin for a hernia and the perineum for necrotizing infection (edema, crepitus, pain out of proportion). Age helps but cannot decide: torsion is commonest at 12 to 18, a twisted appendage is the commonest cause before puberty, and epididymo-orchitis the commonest in adults. Hematuria or pyuria favors epididymo-orchitis without excluding torsion.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "pmid:25598931",
+     "where": "Introduction; Testicular torsion, 1. Diagnosis"
+    },
+    {
+     "docId": "pmid:34292926",
+     "where": "Epididymitis; Diagnostic Considerations"
+    },
+    {
+     "docId": "pmid:35033131",
+     "where": "Fournier's gangrene"
+    },
+    {
+     "docId": "pmid:40102331",
+     "where": "Orchiepididymitis; Torsion of testicular appendages; Scrotal infection"
+    },
+    {
+     "docId": "pmid:33116959",
+     "where": "Introduction"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Urinalysis",
+     "dose": "Hematuria or pyuria is more typical of epididymo-orchitis, but a positive urinalysis does not exclude torsion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25598931",
+       "where": "Testicular torsion, 1. Diagnosis; Epididymitis, 1. Diagnosis"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: the newborn with a scrotal swelling (ESPR gives a separate neonatal algorithm), penetrating scrotal injury, scrotal injury within major trauma (pw_trauma covers the primary survey only), chronic scrotal pain, hydrocele, varicocele and Henoch-Schonlein purpura."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Vitals, history and exam",
+   "outcomes": [
+    {
+     "id": "septic",
+     "if": "Septic shock; fever with hypotension or mottled skin",
+     "ddx": {
+      "lead": [
+       "Sepsis"
+      ],
+      "out": []
+     },
+     "next": "end_sepsis"
+    },
+    {
+     "id": "fournier",
+     "if": "Necrotizing perineal signs, no shock; crepitus, dusky skin or pain out of proportion",
+     "ddx": {
+      "lead": [
+       "Fournier gangrene"
+      ],
+      "out": []
+     },
+     "next": "fg_surgery"
+    },
+    {
+     "id": "trauma",
+     "if": "Isolated blunt scrotal injury; a kick, a fall astride, a ball strike",
+     "ddx": {
+      "lead": [
+       "Testicular rupture"
+      ],
+      "out": []
+     },
+     "next": "trauma_us"
+    },
+    {
+     "id": "hernia",
+     "if": "Irreducible groin hernia in the scrotum; tender, cannot get above it",
+     "ddx": {
+      "lead": [
+       "Incarcerated hernia"
+      ],
+      "out": []
+     },
+     "next": "hernia_assess"
+    },
+    {
+     "id": "mass",
+     "if": "Painless testicular lump; firm, felt in the testis, no acute pain",
+     "ddx": {
+      "lead": [
+       "Testicular cancer"
+      ],
+      "out": []
+     },
+     "next": "mass_step"
+    },
+    {
+     "id": "acute",
+     "if": "Acute testicular pain, none of the above; testis or epididymis tender",
+     "ddx": {
+      "lead": [
+       "Testicular torsion"
+      ],
+      "out": []
+     },
+     "next": "twist"
+    }
+   ]
+  },
+  {
+   "id": "end_sepsis",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Septic shock with scrotal pain: resuscitate and treat in the sepsis pathway (pw_sepsis_fever): cultures, antibiotics within 1 hour, at least 30 mL/kg of crystalloid. Necrotizing perineal signs there go to emergency debridement within 6 hours of admission (WSES 2022) with broad cover including MRSA, the same plan as this pathway's Fournier route."
+  },
+  {
+   "id": "fg_surgery",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Necrotizing infection of the perineum and scrotum. Next?",
+   "options": [
+    "Emergency debridement now, by 6 hours; no imaging delay",
+    "CT to confirm gas in the tissues before calling surgery",
+    "Plain film first; no gas means no necrotizing infection",
+    "IV antibiotics now; operate if worse in 24 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Emergency surgical debridement as soon as possible, at least within 6 hours of admission (WSES 2022), radical into healthy-looking tissue, with tissue cultures; hemodynamic support; re-explore at least every 12 to 24 hours; consider fecal diversion if feces soil the wound; urology involved",
+   "why": "Fournier gangrene is a necrotizing infection of the genitals and perineum, and debridement is the most important determinant of outcome: as soon as possible and at least within 6 hours of admission (WSES 2022; the 2018 guideline said 12). Imaging can map the spread but must not delay surgical consultation or surgery, a plain film cannot rule it out, and soft-tissue gas is present in only a few cases. Antibiotics with a wait-and-see plan delay the source control that decides the outcome.",
+   "next": "fg_abx",
+   "sources": [
+    {
+     "docId": "pmid:35033131",
+     "where": "NSTI treatment and source control; Fournier's gangrene"
+    },
+    {
+     "docId": "pmid:30564282",
+     "where": "NSTI diagnosis (1B, 1A); timing of source control (1B); Fournier's gangrene (1C, 2C) and imaging text"
+    },
+    {
+     "docId": "pmid:34292926",
+     "where": "Epididymitis"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Debridement",
+     "dose": "Radical, continuing into healthy-looking tissue; cultures of infected fluid and tissue at the first operation to tailor the antibiotics",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Fournier's gangrene, treatment"
+      }
+     ]
+    },
+    {
+     "item": "Re-exploration",
+     "dose": "At least every 12 to 24 hours after the first operation, sooner if local or systemic signs worsen",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "Source control"
+      }
+     ]
+    },
+    {
+     "item": "Fecal diversion",
+     "dose": "Consider with fecal contamination: a fecal diversion tube, which can be combined with negative pressure wound therapy, or a colostomy; WSES 2022 avoids a colostomy where another method keeps the wound clean",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30564282",
+       "where": "Fournier's gangrene (2C)"
+      },
+      {
+       "docId": "pmid:35033131",
+       "where": "Fournier's gangrene, treatment"
+      }
+     ]
+    },
+    {
+     "item": "Supportive care",
+     "dose": "Hemodynamic support alongside antibiotics and early debridement",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30564282",
+       "where": "Fournier's gangrene (1C)"
+      }
+     ]
+    },
+    {
+     "item": "Urology",
+     "dose": "Fournier gangrene is managed in consultation with a urologist",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Epididymitis"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fg_abx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Debridement is booked. Empiric antibiotics?",
+   "options": [
+    "Broad MRSA and gram-negative cover plus clindamycin or linezolid",
+    "Penicillin G plus clindamycin, narrowed when the cultures return",
+    "Vancomycin alone, adding gram-negative cover if the cultures grow it",
+    "Cefazolin plus clindamycin, narrowed when the tissue cultures return"
+   ],
+   "answer": 0,
+   "chainStep": "Anti-MRSA agent (linezolid, or vancomycin with normal renal function) plus piperacillin-tazobactam (a carbapenem where ESBL producers are common), with clindamycin or linezolid; tailor to the operative cultures",
+   "why": "Most Fournier infections are polymicrobial, so empiric cover is broad: gram-positive with MRSA, gram-negative and anaerobic, plus an antitoxin agent (clindamycin or linezolid, which can inhibit exotoxin production), until the operative cultures return. Penicillin or cefazolin with clindamycin is not the broad anti-MRSA and anti-gram-negative regimen asked for, and vancomycin alone has no gram-negative cover. Antibiotics support debridement and never replace it.",
+   "next": "end_fg",
+   "sources": [
+    {
+     "docId": "pmid:35033131",
+     "where": "Fournier's gangrene, antibiotics; NSTI empiric regimens"
+    },
+    {
+     "docId": "pmid:30564282",
+     "where": "Empiric antibiotics for NSTI (1C, 1B); antitoxin agent (1C) and text; duration (1C)"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Vancomycin",
+     "dose": "25 to 30 mg/kg loading dose, then 15 to 20 mg/kg every 8 hours (normal renal function); avoid with renal impairment or a vancomycin MIC of 1.5 or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI, unstable patients"
+      },
+      {
+       "docId": "pmid:30564282",
+       "where": "Empiric antibiotics for NSTI (1B)"
+      }
+     ]
+    },
+    {
+     "item": "Linezolid",
+     "dose": "600 mg every 12 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI, unstable patients"
+      }
+     ]
+    },
+    {
+     "item": "Gram-negative cover",
+     "dose": "Piperacillin-tazobactam 4.5 g every 6 hours, or meropenem 1 g every 8 hours (normal renal function); a carbapenem where ESBL-producing Enterobacteriaceae are common",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI, unstable patients; Fournier's gangrene, antibiotics"
+      }
+     ]
+    },
+    {
+     "item": "Clindamycin",
+     "dose": "600 to 900 mg every 8 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI, stable and unstable patients"
+      }
+     ]
+    },
+    {
+     "item": "Stable patients (WSES 2022)",
+     "dose": "Amoxicillin-clavulanate 1.2/2.2 g every 8 hours, or ceftriaxone 2 g every 24 hours with metronidazole 500 mg every 8 hours; plus clindamycin",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:35033131",
+       "where": "NSTI, stable patients"
+      }
+     ],
+     "note": "WSES 2022 says a Fournier regimen should always cover MRSA, but its stable-patient NSTI list carries no anti-MRSA agent beyond clindamycin."
+    },
+    {
+     "item": "Duration",
+     "dose": "Until no further debridement is needed, the patient has improved, and fever has resolved for 48 to 72 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30564282",
+       "where": "Duration (1C)"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_fg",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Fournier gangrene: emergency debridement within 6 hours of admission, broad cover including MRSA with clindamycin or linezolid, re-exploration every 12 to 24 hours, and fecal diversion when feces soil the wound."
+  },
+  {
+   "id": "trauma_us",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Blunt scrotal injury, swollen and tender. Next?",
+   "options": [
+    "Scrotal ultrasound with Doppler; check the tunica albuginea",
+    "Ice, support and NSAIDs; scan if it is still swollen in a week",
+    "Exam alone; a testis that feels intact needs no scan",
+    "MRI of the scrotum before any decision on surgery"
+   ],
+   "answer": 0,
+   "chainStep": "Scrotal ultrasound with colour Doppler: integrity of the tunica albuginea, testicular contour, parenchyma and flow, hematocele",
+   "why": "Ultrasound is the first-line imaging after scrotal trauma, and the tunica albuginea decides surgery: a disrupted tunica with a lost oval contour and heterogeneous parenchyma means rupture. Examination alone is unreliable for rupture, and waiting costs testes: repair within 72 hours saves close to 90%, later only 45%.",
+   "next": "trauma_result",
+   "sources": [
+    {
+     "docId": "pmid:40102331",
+     "where": "Testicular trauma"
+    },
+    {
+     "docId": "pmid:40088254",
+     "where": "Introduction; Discussion"
+    }
+   ],
+   "note": "The 2020 ED torsion review calls CT the investigation of choice in acute scrotal trauma; the 2025 emergency ultrasound review puts ultrasound first, which is the usual US exam answer for an isolated scrotal injury."
+  },
+  {
+   "id": "trauma_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Scrotal ultrasound",
+   "outcomes": [
+    {
+     "id": "explore",
+     "if": "Rupture or a hidden tunica; tunica broken, or a large hematocele",
+     "ddx": {
+      "lead": [
+       "Testicular rupture"
+      ],
+      "out": []
+     },
+     "next": "trauma_explore"
+    },
+    {
+     "id": "intact",
+     "if": "Tunica intact, flow preserved; contusion or a small hematoma",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_trauma_cons"
+    },
+    {
+     "id": "ischemic",
+     "if": "Tunica intact, flow absent or reduced; or a twisted cord",
+     "ddx": {
+      "lead": [
+       "Testicular torsion"
+      ],
+      "out": []
+     },
+     "next": "or_access"
+    }
+   ]
+  },
+  {
+   "id": "trauma_explore",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Tunica broken, or hidden by a large hematocele. Next?",
+   "options": [
+    "Scrotal exploration now: close the tunica, or remove a dead testis",
+    "Ice, scrotal support and NSAIDs, with a repeat ultrasound in 72 hours",
+    "Admit for bed rest and observe until the hematocele resolves",
+    "Repeat the ultrasound in 24 hours, then decide on surgery"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent scrotal exploration: close the tunica albuginea, or orchiectomy if the testis cannot be saved",
+   "why": "Suspected testicular rupture goes to urgent exploration with closure of the tunica albuginea, or orchiectomy when the testis cannot be saved; early repair preserves fertility and lowers the risk of later orchiectomy and atrophy. A tear lies behind about half of traumatic hematoceles, and a large one can compress the testis and mimic torsion, so it is explored for a tunica injury. Waiting costs testes: orchiectomy rose from 9% to 45% when surgery waited 72 hours.",
+   "next": "end_rupture",
+   "sources": [
+    {
+     "docId": "pmid:40088254",
+     "where": "Introduction; Discussion"
+    },
+    {
+     "docId": "pmid:40102331",
+     "where": "Testicular trauma"
+    }
+   ]
+  },
+  {
+   "id": "end_rupture",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Testicular rupture, or a large hematocele after blunt injury: urgent exploration, closure of the tunica albuginea or orchiectomy; surgery within 72 hours saves close to 90% of testes."
+  },
+  {
+   "id": "end_trauma_cons",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Blunt injury with an intact tunica and preserved flow: conservative care with ultrasound follow-up. A small tear can hide on the first scan, so rescan if the pain or swelling grows."
+  },
+  {
+   "id": "hernia_assess",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Tender irreducible groin hernia down into the scrotum. Next?",
+   "options": [
+    "Look for strangulation: SIRS, peritonism, lactate; CT if unsure",
+    "Firm manual reduction at once, before any other assessment is made",
+    "Elective repair on the next list; home with analgesia",
+    "Analgesia and observe; reassess the hernia in 6 hours"
+   ],
+   "answer": 0,
+   "chainStep": "Assess for strangulation: SIRS, peritonism, red painful skin over the hernia, lactate, CPK and D-dimer; contrast CT when unsure; surgical review now",
+   "why": "An acutely irreducible groin hernia is an emergency, and the first question is strangulation: SIRS, contrast CT findings and lactate, CPK and D-dimer predict it, read with the clinical signs because the blood tests alone are not specific. Red, painful skin over the hernia is a contraindication to reduction. The risk of strangulation doubles with every 24 hours of symptoms, so elective repair or a period of observation loses time.",
+   "next": "hernia_result",
+   "sources": [
+    {
+     "docId": "pmid:28804507",
+     "where": "Timing of intervention (1C)"
+    },
+    {
+     "docId": "pmid:37862616",
+     "where": "Acute groin hernia, KQ 1 statements; manual reduction"
+    }
+   ]
+  },
+  {
+   "id": "hernia_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Signs of strangulation",
+   "outcomes": [
+    {
+     "id": "strangulated",
+     "if": "Strangulation suspected; SIRS, peritonism, red skin or ischemic bowel on CT",
+     "ddx": {
+      "lead": [
+       "Incarcerated hernia"
+      ],
+      "out": []
+     },
+     "next": "hernia_strang"
+    },
+    {
+     "id": "none",
+     "if": "No sign of strangulation; soft abdomen, normal skin and lactate",
+     "ddx": {
+      "lead": [
+       "Incarcerated hernia"
+      ],
+      "out": []
+     },
+     "next": "hernia_reduce"
+    }
+   ]
+  },
+  {
+   "id": "hernia_strang",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Strangulation suspected. Next?",
+   "options": [
+    "Emergency hernia repair now, without trying to reduce it",
+    "Manual reduction under sedation, then elective repair",
+    "Nasogastric tube and a contrast trial for 72 hours",
+    "IV antibiotics overnight, then repair on the next elective list"
+   ],
+   "answer": 0,
+   "chainStep": "Emergency hernia repair immediately; flat mesh repair even with strangulation (macroporous mesh may be used with a bowel resection); diagnostic laparoscopy to check the bowel if the hernia reduces on its own",
+   "why": "Suspected strangulation means emergency repair at once; manual reduction is for hernias without suspicion of ischemic bowel. A contrast trial or an overnight wait only delays the repair, and mortality is higher when treatment of a complicated hernia waits more than 24 hours. If the hernia reduces spontaneously, diagnostic laparoscopy can check the bowel.",
+   "next": "end_hernia_strang",
+   "sources": [
+    {
+     "docId": "pmid:28804507",
+     "where": "Timing of intervention (1C) and text; laparoscopic approach (2B)"
+    },
+    {
+     "docId": "pmid:37862616",
+     "where": "Acute groin hernia, recommendations"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Mesh",
+     "dose": "A flat mesh repair is recommended whether or not the bowel is strangulated; with strangulation or a bowel resection a mesh can be used, favoring macroporous meshes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37862616",
+       "where": "Acute groin hernia, recommendations"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hernia_reduce",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Irreducible hernia, no sign of strangulation. Next?",
+   "options": [
+    "Manual reduction with analgesia; emergency surgery if it fails",
+    "Discharge it unreduced, with elective repair booked in a few weeks",
+    "Admit unreduced and observe overnight before trying reduction",
+    "Antibiotics and a surgical clinic review next week"
+   ],
+   "answer": 0,
+   "chainStep": "Manual reduction with analgesia or sedation; observe until the drugs wear off; emergency surgery if reduction fails; elective mesh repair after a successful reduction",
+   "why": "Without suspicion of ischemic bowel, manual reduction is suggested, and it succeeds in up to 70%. After success, observe until the analgesic or sedative has worn off; mesh repair follows electively, on the first elective list or within weeks. If reduction fails, emergency surgery. Leaving it unreduced, at home or on the ward overnight, lets the risk of strangulation keep doubling every 24 hours, and antibiotics do not reduce a hernia.",
+   "next": "end_hernia_reduce",
+   "sources": [
+    {
+     "docId": "pmid:37862616",
+     "where": "Acute groin hernia, recommendations; manual reduction"
+    }
+   ]
+  },
+  {
+   "id": "end_hernia_strang",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Strangulated groin hernia: emergency repair without a reduction attempt; mesh is still used, and laparoscopy checks the bowel if the hernia reduces on its own."
+  },
+  {
+   "id": "end_hernia_reduce",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acutely irreducible groin hernia without strangulation: manual reduction with analgesia, observation, then elective mesh repair; emergency surgery if reduction fails."
+  },
+  {
+   "id": "mass_step",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Painless firm lump felt in the testis. Next?",
+   "options": [
+    "Scrotal ultrasound, then AFP, beta-hCG and LDH; urology",
+    "Needle biopsy through the scrotum to get tissue first",
+    "Two weeks of antibiotics, then re-examine the lump",
+    "CT of the abdomen and pelvis before any scrotal imaging"
+   ],
+   "answer": 0,
+   "chainStep": "Scrotal ultrasound of both testes; AFP, beta-hCG and LDH before surgery; urgent urology referral for radical inguinal orchiectomy; staging CT of chest, abdomen and pelvis if metastases are suspected",
+   "why": "A painless testicular mass is testicular cancer until proven otherwise. Ultrasound is the first-line imaging and examines both testes; AFP, beta-hCG and LDH are drawn before orchiectomy, though many tumours present with normal markers. Radical inguinal orchiectomy gives the diagnosis and treats the primary, and a scrotal approach risks local tumour seeding. A trial of antibiotics treats a presumed cancer as an infection.",
+   "next": "mass_us",
+   "sources": [
+    {
+     "docId": "pmid:25598931",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:41926533",
+     "where": "Clinical examination and initial imaging; Staging; Tumor markers; Orchiectomy"
+    },
+    {
+     "docId": "pmid:41437827",
+     "where": "Surgical approach"
+    },
+    {
+     "docId": "url:77f97cf05d18",
+     "where": "1.6.7"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Tumour markers",
+     "dose": "AFP, beta-hCG and LDH before orchiectomy, rechecked 1 to 3 weeks after; raised in only about 15% of pure seminomas and 50% of non-seminomas at presentation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41926533",
+       "where": "Tumor markers"
+      }
+     ]
+    },
+    {
+     "item": "Staging CT",
+     "dose": "Chest, abdomen and pelvis before orchiectomy when metastatic disease is suspected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41926533",
+       "where": "Staging"
+      }
+     ]
+    },
+    {
+     "item": "Trans-scrotal approach or trans-scrotal biopsy",
+     "dose": "Avoid: risk of local tumour seeding",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:41437827",
+       "where": "Surgical approach"
+      }
+     ]
+    },
+    {
+     "item": "Referral",
+     "dose": "Consider a suspected cancer pathway referral for a non-painful enlargement or change in shape or texture of the testis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:77f97cf05d18",
+       "where": "1.6.7"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mass_us",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Scrotal ultrasound",
+   "outcomes": [
+    {
+     "id": "solid",
+     "if": "Solid intratesticular lesion; hypoechoic and vascular",
+     "ddx": {
+      "lead": [
+       "Testicular cancer"
+      ],
+      "out": []
+     },
+     "next": "end_mass"
+    },
+    {
+     "id": "not_solid",
+     "if": "No solid intratesticular lesion; cystic or outside the testis",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_mass_other"
+    }
+   ]
+  },
+  {
+   "id": "end_mass_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ultrasound shows no solid intratesticular lesion: not managed as testicular cancer; out of scope in this version, urology review."
+  },
+  {
+   "id": "end_mass",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Painless testicular mass: ultrasound of both testes, AFP, beta-hCG and LDH, then radical inguinal orchiectomy; never a scrotal approach."
+  },
+  {
+   "id": "twist",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Acute testicular pain, no trauma, hernia or mass. Next?",
+   "options": [
+    "Score TWIST: swelling, hardness, reflex, nausea, high testis",
+    "Urine NAAT first, then a torsion work-up if it comes back negative",
+    "Testicular nuclear scan to separate torsion from epididymitis",
+    "Admit for analgesia and reassess the testis in the morning"
+   ],
+   "answer": 0,
+   "chainStep": "TWIST score: testicular swelling 2, hard testis 2, absent cremasteric reflex 1, nausea or vomiting 1, high-riding testis 1; 5 or more to the operating room, 3 to 4 ultrasound now, 0 to 2 low risk",
+   "why": "Torsion cannot always be excluded on history and exam, so a score sorts who goes to the operating room: TWIST gives 2 points each for testicular swelling and a hard testis, and 1 each for an absent cremasteric reflex, nausea or vomiting and a high-riding testis. Waiting for a urine NAAT or reassessing in the morning spends the testis's time, and infection on the urine favors epididymitis without excluding torsion; a nuclear scan is not readily available and delays the decision. Single signs fail too: a normal cremasteric reflex or pain past 24 hours does not exclude torsion. No relief when the testis is lifted (a negative Prehn sign) fits torsion; relief (a positive Prehn sign) fits epididymo-orchitis.",
+   "next": "twist_result",
+   "sources": [
+    {
+     "docId": "pmid:33116959",
+     "where": "Clinical Presentation; Table 1; Clinical Decision Scoring; Nuclear Imaging"
+    },
+    {
+     "docId": "pmid:25598931",
+     "where": "Epididymitis, 1. Diagnosis"
+    },
+    {
+     "docId": "pmid:26626757",
+     "where": "Imaging in childhood testicular torsion"
+    },
+    {
+     "docId": "pmid:40102331",
+     "where": "Testicular torsion"
+    }
+   ],
+   "note": "TWIST cut-offs vary: the original 0 to 2, 3 to 4 and 5 or more; a validation by non-urologists used 0, 1 to 5 and more than 6. That study found the score less accurate before puberty (Tanner 1 to 2) and advised ultrasound there even at a high score.",
+   "calcs": [
+    "twist"
+   ]
+  },
+  {
+   "id": "twist_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "TWIST score",
+   "outcomes": [
+    {
+     "id": "high",
+     "if": "High risk, TWIST 5 or more; surgery without waiting for imaging",
+     "ddx": {
+      "lead": [
+       "Testicular torsion"
+      ],
+      "out": []
+     },
+     "next": "high_go"
+    },
+    {
+     "id": "intermediate",
+     "if": "Intermediate risk, TWIST 3 to 4; ultrasound now",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "doppler"
+    },
+    {
+     "id": "low_inflam",
+     "if": "Low risk, inflammatory picture; gradual onset with urethritis, pyuria or recent parotitis",
+     "ddx": {
+      "lead": [
+       "Epididymitis"
+      ],
+      "out": []
+     },
+     "next": "epid_who"
+    },
+    {
+     "id": "low",
+     "if": "Low risk, cause unclear; ultrasound to find it",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "doppler"
+    }
+   ]
+  },
+  {
+   "id": "high_go",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "TWIST 5 or more in an adolescent. Next?",
+   "options": [
+    "Urology for emergency exploration; no ultrasound first",
+    "Colour Doppler first to confirm absent flow, then the operating room",
+    "Urinalysis and urine NAAT first, then decide on surgery",
+    "Manual detorsion, then discharge if the pain settles"
+   ],
+   "answer": 0,
+   "chainStep": "Urgent urological consultation and emergency scrotal exploration without waiting for an ultrasound",
+   "why": "Torsion is a clinical diagnosis. A TWIST of 5 or more carried a 100% positive predictive value, and these patients need urgent urological consultation and surgery, not ultrasonography; a scan or urine test first spends the testis's time, and detorsion never replaces exploration. Before puberty (Tanner 1 to 2) the validation advised ultrasound even at a high score.",
+   "next": "or_access",
+   "sources": [
+    {
+     "docId": "pmid:33116959",
+     "where": "Clinical Decision Scoring"
+    },
+    {
+     "docId": "pmid:26626757",
+     "where": "Imaging in childhood testicular torsion; Fig. 3"
+    },
+    {
+     "docId": "pmid:40102331",
+     "where": "Testicular torsion"
+    }
+   ]
+  },
+  {
+   "id": "doppler",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Low or intermediate torsion risk; ultrasound is available now. Next?",
+   "options": [
+    "Colour Doppler ultrasound of both testes now; urology aware",
+    "A testicular nuclear scan before any decision about surgery",
+    "MRI of the scrotum with and without contrast as the first test",
+    "CT of the pelvis with IV contrast to assess testicular flow"
+   ],
+   "answer": 0,
+   "chainStep": "Colour Doppler and grey-scale ultrasound of both testes without delay, with urology aware; any doubt about flow means exploration",
+   "why": "With torsion possible but not likely enough to go straight to the operating room, ultrasound without delay, both sides for comparison, sorts torsion from its mimics. Torsion is excluded only by a normal straight cord with symmetrical normal testes, and doubt still means exploration. A nuclear scan or MRI is not readily available and delays the decision, and CT is not the modality for testicular perfusion.",
+   "next": "doppler_result",
+   "sources": [
+    {
+     "docId": "pmid:26626757",
+     "where": "Imaging in childhood testicular torsion; Fig. 3"
+    },
+    {
+     "docId": "pmid:33116959",
+     "where": "Clinical Decision Scoring; Ultrasonography; Computed Tomography; Nuclear Imaging; MRI"
+    },
+    {
+     "docId": "pmid:34292926",
+     "where": "Epididymitis, Diagnostic Considerations"
+    }
+   ],
+   "note": "The TWIST authors found no torsion at 0 to 2 and skip ultrasound there; this pathway images low scores too, because the scan costs no delay and finds the other cause. CDC 2021 finds ultrasound of little use when the picture is typical of epididymitis and reserves it for suspected torsion or an unclear diagnosis; those patients go straight to testing and treatment."
+  },
+  {
+   "id": "doppler_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Colour Doppler ultrasound",
+   "outcomes": [
+    {
+     "id": "torsion",
+     "if": "Torsion or doubt; reduced, absent or asymmetric flow, or a twisted cord",
+     "ddx": {
+      "lead": [
+       "Testicular torsion"
+      ],
+      "out": []
+     },
+     "next": "or_access"
+    },
+    {
+     "id": "inflamed",
+     "if": "Inflamed; hyperemic epididymis or testis, normal cord",
+     "ddx": {
+      "lead": [
+       "Epididymitis",
+       "Orchitis"
+      ],
+      "out": []
+     },
+     "next": "epid_who"
+    },
+    {
+     "id": "appendage",
+     "if": "Torsed appendage; avascular upper-pole nodule, testis flow normal",
+     "ddx": {
+      "lead": [
+       "Torsion of the appendix testis"
+      ],
+      "out": []
+     },
+     "next": "appendix_care"
+    },
+    {
+     "id": "normal",
+     "if": "Normal; straight cord, symmetrical normal testes",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Testicular torsion"
+      ]
+     },
+     "next": "end_us_normal"
+    }
+   ]
+  },
+  {
+   "id": "end_us_normal",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Normal ultrasound: a straight cord with symmetrical normal testes rules out torsion. Look for referred pain, such as a ureteric stone, and for a hernia; return at once if the pain recurs."
+  },
+  {
+   "id": "or_access",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Operating room and a surgeon",
+   "outcomes": [
+    {
+     "id": "now",
+     "if": "Operating room now; a urologist on site",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "explore_find"
+    },
+    {
+     "id": "transfer",
+     "if": "Hours to the operating room; transfer needed, no urologist here",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "detorsion"
+    }
+   ]
+  },
+  {
+   "id": "detorsion",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Torsion likely; the operating room is hours away. While transfer is arranged?",
+   "options": [
+    "Manual detorsion outward, then exploration as planned",
+    "Formal ultrasound first, and transfer once it confirms no flow",
+    "Manual detorsion inward, toward the midline, first",
+    "Manual detorsion; cancel surgery if the pain settles"
+   ],
+   "answer": 0,
+   "chainStep": "Manual detorsion while transfer is arranged: rotate outward (medial to lateral), repeat as needed, judge by sudden pain relief and returning Doppler flow; urgent exploration and fixation still follow",
+   "why": "Manual detorsion buys time: it can restore blood flow and relieve pain while surgery is arranged. Torsion usually twists medially, so the testis is turned outward first, possibly several times since twists run 180 to 720 degrees; instant pain relief and returning Doppler flow mark success. About 40% twist the other way, so pain that does not settle means the direction may be wrong. A formal scan before transfer only delays a high-risk testis, which needs surgery rather than imaging. Detorsion never replaces surgery: exploration and fixation follow whatever the result.",
+   "next": "explore_find",
+   "sources": [
+    {
+     "docId": "pmid:33116959",
+     "where": "The Role of Manual Detorsion; Clinical Decision Scoring"
+    },
+    {
+     "docId": "pmid:25598931",
+     "where": "Testicular torsion, 2. Treatment"
+    },
+    {
+     "docId": "pmid:37863980",
+     "where": "Abstract; manual detorsion; Discussion"
+    },
+    {
+     "docId": "pmid:26626757",
+     "where": "Imaging in childhood testicular torsion"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Direction",
+     "dose": "Outward (medial to lateral) first; the reviews describe this as clockwise for the left testis and counterclockwise for the right; repeat 2 to 4 times if needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37863980",
+       "where": "Manual detorsion; Discussion"
+      },
+      {
+       "docId": "pmid:33116959",
+       "where": "The Role of Manual Detorsion"
+      },
+      {
+       "docId": "pmid:25598931",
+       "where": "Testicular torsion, 2. Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Success",
+     "dose": "Instant pain relief and blood flow back on Doppler",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33116959",
+       "where": "The Role of Manual Detorsion"
+      }
+     ]
+    },
+    {
+     "item": "No relief",
+     "dose": "The twist may run outward (about 40% of torsions); consider the opposite direction, or go straight to the operating room",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37863980",
+       "where": "Discussion"
+      }
+     ]
+    },
+    {
+     "item": "Anesthesia",
+     "dose": "Usually done without, so pain can guide success or recurrence",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33116959",
+       "where": "The Role of Manual Detorsion"
+      }
+     ]
+    },
+    {
+     "item": "Contraindications",
+     "dose": "Scrotal wall thickening, inflammation, a reactive hydrocele",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:33116959",
+       "where": "The Role of Manual Detorsion"
+      }
+     ]
+    },
+    {
+     "item": "Surgery afterwards",
+     "dose": "Exploration in all cases, even after a successful detorsion",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:37863980",
+       "where": "Abstract"
+      },
+      {
+       "docId": "pmid:26626757",
+       "where": "Imaging in childhood testicular torsion"
+      }
+     ]
+    }
+   ],
+   "note": "ESPR calls manual detorsion controversial; it may raise salvage by shortening ischemia but does not replace emergency surgery."
+  },
+  {
+   "id": "explore_find",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Scrotal exploration",
+   "outcomes": [
+    {
+     "id": "twisted",
+     "if": "Torsion found; the cord is twisted",
+     "ddx": {
+      "lead": [
+       "Testicular torsion"
+      ],
+      "out": []
+     },
+     "next": "explore"
+    },
+    {
+     "id": "no_twist",
+     "if": "No torsion found; appendage, epididymo-orchitis or nothing",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Testicular torsion"
+      ]
+     },
+     "next": "end_no_torsion"
+    }
+   ]
+  },
+  {
+   "id": "end_no_torsion",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No torsion at exploration: fix neither testis when nothing else explains the pain; a torsed appendage or epididymo-orchitis is not routinely fixed; a bell clapper deformity is fixed, and the other side explored unless it is epididymo-orchitis."
+  },
+  {
+   "id": "explore",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Torsion found at surgery. Operation?",
+   "options": [
+    "Untwist; fix both, or remove a dead testis and fix the other",
+    "Untwist and fix the twisted testis; leave the other side alone",
+    "Remove the twisted testis without untwisting it first",
+    "Untwist, then fix both testes electively in six weeks"
+   ],
+   "answer": 0,
+   "chainStep": "Emergency scrotal exploration: untwist; fix a viable testis and explore and fix the other side (non-absorbable suture or a dartos pouch); warm gauze and time for an ischemic testis, keeping one of uncertain viability; orchiectomy for a dead testis, with the other side fixed",
+   "why": "Exploration untwists the cord, and a viable testis is fixed in the same operation with the other side explored and fixed too. A testis that looks ischemic is wrapped in warm saline gauze and given at least as long as fixing the other side takes; a dusky testis of uncertain viability is kept, and a dead one is removed with the opposite testis still fixed. Fixing one side, removing a testis by reflex, or deferring fixation falls short of that.",
+   "next": "explore_result",
+   "sources": [
+    {
+     "docId": "pmid:35689399",
+     "where": "Introduction; Intra-operative decision making; Fixation"
+    },
+    {
+     "docId": "pmid:33116959",
+     "where": "Surgical Exploration"
+    },
+    {
+     "docId": "pmid:26626757",
+     "where": "Imaging in childhood testicular torsion"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Timing",
+     "dose": "As soon as possible, ideally within 4 to 6 hours of onset; salvage about 90% within 6 hours, 50% by 12 hours, under 10% after 24 hours (scoping review quoting EAU figures)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35689399",
+       "where": "Introduction"
+      },
+      {
+       "docId": "pmid:41111774",
+       "where": "Introduction; Discussion"
+      }
+     ]
+    },
+    {
+     "item": "Uncertain viability",
+     "dose": "Untwist, wrap in warm saline-soaked gauze, wait at least as long as fixing the other side takes; keep a dusky testis that stays uncertain",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35689399",
+       "where": "Intra-operative decision making"
+      }
+     ]
+    },
+    {
+     "item": "Suture",
+     "dose": "Non-absorbable, for example polypropylene, preferred",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35689399",
+       "where": "Fixation"
+      }
+     ]
+    },
+    {
+     "item": "Prosthesis",
+     "dose": "Not at the emergency exploration: infection and erosion risk",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:35689399",
+       "where": "Consent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "explore_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The testis after untwisting",
+   "outcomes": [
+    {
+     "id": "viable",
+     "if": "Viable; pinks up after untwisting",
+     "ddx": {
+      "lead": [
+       "Testicular torsion"
+      ],
+      "out": []
+     },
+     "next": "end_viable",
+     "orders": [
+      {
+       "item": "Fixation",
+       "dose": "Fix the testis and explore and fix the contralateral side",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:35689399",
+         "where": "Intra-operative decision making"
+        },
+        {
+         "docId": "pmid:33116959",
+         "where": "Surgical Exploration"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "dead",
+     "if": "Nonviable; black, no change after warming",
+     "ddx": {
+      "lead": [
+       "Testicular torsion"
+      ],
+      "out": []
+     },
+     "next": "end_nonviable",
+     "orders": [
+      {
+       "item": "Orchiectomy",
+       "dose": "Remove the necrotic testis, with contralateral orchidopexy strongly recommended",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:26626757",
+         "where": "Imaging in childhood testicular torsion"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_viable",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Torsion with a viable testis: untwisted and both testes fixed in the same operation; exploration within about 6 hours of onset gives the best salvage."
+  },
+  {
+   "id": "end_nonviable",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Torsion with a dead testis: orchiectomy and fixation of the other testis. After 24 hours few testes survive, which is why a likely torsion goes to the operating room without waiting."
+  },
+  {
+   "id": "appendix_care",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Torsion of the appendix testis. Treatment?",
+   "options": [
+    "Analgesia, cooling and less activity; it settles on its own",
+    "Emergency exploration to remove the twisted appendage tonight",
+    "Ceftriaxone and doxycycline for presumed epididymitis",
+    "Bedside manual detorsion of the testis, then fixation later"
+   ],
+   "answer": 0,
+   "chainStep": "Analgesia, cooling and reduced activity; return at once if the pain changes; excision only for pain that does not settle",
+   "why": "A torsed appendage with normal testicular flow is self-limiting: analgesics, cooling and reduced activity treat almost every case, and only a few boys need it removed for pain. It is the commonest cause of an acute scrotum before puberty; the blue dot over the upper pole is its sign, though scrotal edema often hides it. Antibiotics have no target here, and the testis itself is not twisted.",
+   "next": "end_appendix",
+   "sources": [
+    {
+     "docId": "pmid:28920055",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:37863980",
+     "where": "Torsion of the appendages"
+    },
+    {
+     "docId": "pmid:40102331",
+     "where": "Torsion of testicular appendages"
+    },
+    {
+     "docId": "pmid:25598931",
+     "where": "Testicular torsion, 1. Diagnosis; 2. Treatment"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Analgesic dose in children",
+     "dose": "Weight-based; not stated in the sources read (the ibuprofen tablet label has no pediatric dose)",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "end_appendix",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Torsion of the appendix testis: normal testicular flow on Doppler; analgesia, cooling and less activity; surgery only for pain that will not settle."
+  },
+  {
+   "id": "epid_who",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Age, sexual history, recent illness",
+   "outcomes": [
+    {
+     "id": "adult",
+     "if": "Sexually active or older man; urethritis, pyuria or urinary risk",
+     "ddx": {
+      "lead": [
+       "Epididymitis"
+      ],
+      "out": []
+     },
+     "next": "epid_tests"
+    },
+    {
+     "id": "child",
+     "if": "Prepubertal boy; not sexually active",
+     "ddx": {
+      "lead": [
+       "Epididymitis"
+      ],
+      "out": []
+     },
+     "next": "peds_epid"
+    },
+    {
+     "id": "mumps",
+     "if": "Parotitis about a week before; mumps orchitis, vaccinated or not",
+     "ddx": {
+      "lead": [
+       "Orchitis"
+      ],
+      "out": []
+     },
+     "next": "mumps_care"
+    }
+   ]
+  },
+  {
+   "id": "epid_tests",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Epididymitis in a sexually active or older man. Tests?",
+   "options": [
+    "Urethral stain or urine WBCs, urine NAAT, urine culture, HIV, syphilis",
+    "Urine culture for gonorrhea and chlamydia, then treat by its result alone",
+    "Treat today and skip testing; the results would not change much",
+    "NAAT and culture, with antibiotics held until the results return"
+   ],
+   "answer": 0,
+   "chainStep": "Urethral Gram, methylene blue or gentian violet stain (2 or more WBCs per oil field), or first-void urine leukocyte esterase or 10 or more WBCs per HPF; first-void urine NAAT for gonorrhea and chlamydia; urine bacterial culture; HIV and syphilis tests; presumptive treatment today",
+   "why": "Every suspected case needs objective inflammation on a point-of-care test, a urine NAAT for gonorrhea and chlamydia, and a urine bacterial culture for genitourinary organisms and susceptibilities, with HIV and syphilis testing. Urine cultures for gonorrhea and chlamydia are insensitive. Treatment does not wait: presumptive therapy starts at the visit, before the results, to prevent complications and transmission.",
+   "next": "epid_cause",
+   "sources": [
+    {
+     "docId": "pmid:34292926",
+     "where": "Epididymitis, Diagnostic Considerations; Treatment; Other Management Considerations"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Admission",
+     "dose": "Consider specialist referral and admission when severe pain or fever suggests torsion, infarction, abscess or necrotizing fasciitis, or he cannot follow the regimen; age, diabetes, fever and a raised CRP point to more severe disease",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Epididymitis, Treatment"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "epid_cause",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Risk history and urethral stain",
+   "outcomes": [
+    {
+     "id": "sti",
+     "if": "Gonorrhea or chlamydia likely; sexually active, no insertive anal sex",
+     "ddx": {
+      "lead": [
+       "Epididymitis"
+      ],
+      "out": []
+     },
+     "next": "tx_sti"
+    },
+    {
+     "id": "anal",
+     "if": "Insertive anal sex; STI and enteric organisms both possible",
+     "ddx": {
+      "lead": [
+       "Epididymitis"
+      ],
+      "out": []
+     },
+     "next": "tx_anal"
+    },
+    {
+     "id": "enteric",
+     "if": "Enteric only; no STI risk, no diplococci on the stain",
+     "ddx": {
+      "lead": [
+       "Epididymitis"
+      ],
+      "out": []
+     },
+     "next": "tx_enteric"
+    }
+   ]
+  },
+  {
+   "id": "tx_sti",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Epididymitis, gonorrhea or chlamydia likely. Regimen?",
+   "options": [
+    "Ceftriaxone 500 mg IM once plus doxycycline 100 mg twice daily for 10 days",
+    "Ceftriaxone 500 mg IM once plus azithromycin 1 g orally in a single dose",
+    "Levofloxacin 500 mg orally once daily for 10 days, without ceftriaxone",
+    "Ceftriaxone 500 mg IM once, then doxycycline 100 mg twice daily for 7 days"
+   ],
+   "answer": 0,
+   "chainStep": "Ceftriaxone 500 mg IM once (1 g if 150 kg or more) plus doxycycline 100 mg orally twice daily for 10 days; bed rest, scrotal elevation, NSAIDs; sex partners from the last 60 days evaluated and treated; no sex until both are treated and symptoms resolve",
+   "why": "For epididymitis most likely from chlamydia or gonorrhea, CDC 2021 gives ceftriaxone 500 mg IM once plus doxycycline for 10 days, longer than the 7 days of uncomplicated chlamydia, and azithromycin is not part of the 2021 regimen. Levofloxacin alone is kept for enteric organisms once a stain has ruled out gonorrhea.",
+   "next": "end_epid",
+   "sources": [
+    {
+     "docId": "pmid:34292926",
+     "where": "Epididymitis, Recommended Regimens; Treatment; Other Management Considerations; Management of Sex Partners; Chlamydial Infections, Recommended Regimen"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Ceftriaxone",
+     "dose": "500 mg IM, single dose; 1 g if 150 kg or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Epididymitis, Recommended Regimens and footnote"
+      }
+     ]
+    },
+    {
+     "item": "Doxycycline",
+     "dose": "100 mg orally twice daily for 10 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Epididymitis, Recommended Regimens"
+      }
+     ]
+    },
+    {
+     "item": "Adjuncts",
+     "dose": "Bed rest, scrotal elevation and an NSAID until fever and local inflammation settle",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Epididymitis, Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Ibuprofen (adults)",
+     "dose": "400 mg every 4 to 6 hours as needed for pain; no more than 3,200 mg a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0ab6c49010b1",
+       "where": "Dosage and administration"
+      }
+     ]
+    },
+    {
+     "item": "Partners",
+     "dose": "Sex partners from the 60 days before symptoms evaluated, tested and treated presumptively; abstain until both are treated and symptoms resolve",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Epididymitis, Management of Sex Partners; Other Management Considerations"
+      }
+     ]
+    },
+    {
+     "item": "Follow-up",
+     "dose": "Return if not improving within 72 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Epididymitis, Follow-Up"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tx_anal",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Epididymitis after insertive anal sex. Regimen?",
+   "options": [
+    "Ceftriaxone 500 mg IM once plus levofloxacin 500 mg daily for 10 days",
+    "Ceftriaxone 500 mg IM once plus doxycycline 100 mg twice daily for 10 days",
+    "Levofloxacin 500 mg orally once daily for 10 days, without ceftriaxone",
+    "Ceftriaxone 500 mg IM once plus azithromycin 1 g orally once"
+   ],
+   "answer": 0,
+   "chainStep": "Ceftriaxone 500 mg IM once (1 g if 150 kg or more) plus levofloxacin 500 mg orally once daily for 10 days; bed rest, scrotal elevation, NSAIDs; partners evaluated and treated; HIV and syphilis tests",
+   "why": "Insertive anal sex adds sexually transmitted enteric organisms to chlamydia and gonorrhea, so CDC 2021 pairs ceftriaxone with levofloxacin for 10 days. The ceftriaxone and doxycycline regimen is the one for chlamydia or gonorrhea alone, levofloxacin alone needs gonorrhea ruled out, and azithromycin is not part of any 2021 epididymitis regimen.",
+   "next": "end_epid",
+   "sources": [
+    {
+     "docId": "pmid:34292926",
+     "where": "Epididymitis; Recommended Regimens; Treatment"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Ceftriaxone",
+     "dose": "500 mg IM, single dose; 1 g if 150 kg or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Epididymitis, Recommended Regimens and footnote"
+      }
+     ]
+    },
+    {
+     "item": "Levofloxacin",
+     "dose": "500 mg orally once daily for 10 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Epididymitis, Recommended Regimens"
+      }
+     ]
+    },
+    {
+     "item": "Ibuprofen (adults)",
+     "dose": "400 mg every 4 to 6 hours as needed for pain; no more than 3,200 mg a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0ab6c49010b1",
+       "where": "Dosage and administration"
+      }
+     ]
+    },
+    {
+     "item": "Partners",
+     "dose": "Sex partners from the 60 days before symptoms evaluated, tested and treated presumptively",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Epididymitis, Management of Sex Partners"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tx_enteric",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Enteric epididymitis, no diplococci on the stain. Regimen?",
+   "options": [
+    "Levofloxacin 500 mg orally once daily for 10 days",
+    "Ceftriaxone 500 mg IM once plus doxycycline for 10 days",
+    "Doxycycline 100 mg twice daily for 10 days alone",
+    "Ceftriaxone 500 mg IM once, with no oral antibiotic"
+   ],
+   "answer": 0,
+   "chainStep": "Levofloxacin 500 mg orally once daily for 10 days, adjusted to the urine culture and susceptibilities; bed rest, scrotal elevation, NSAIDs; reassess if not better within 72 hours",
+   "why": "When enteric organisms alone are likely, as after a prostate biopsy, vasectomy or other urinary instrumentation, and a stain has ruled out gonorrhea, levofloxacin alone for 10 days, guided by the urine culture. Ceftriaxone with doxycycline is the regimen aimed at chlamydia and gonorrhea.",
+   "next": "end_epid",
+   "sources": [
+    {
+     "docId": "pmid:34292926",
+     "where": "Epididymitis; Recommended Regimens; Treatment"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Levofloxacin",
+     "dose": "500 mg orally once daily for 10 days; only when gonorrhea has been ruled out by Gram, methylene blue or gentian violet stain",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Epididymitis, Recommended Regimens; Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Ibuprofen (adults)",
+     "dose": "400 mg every 4 to 6 hours as needed for pain; no more than 3,200 mg a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0ab6c49010b1",
+       "where": "Dosage and administration"
+      }
+     ]
+    },
+    {
+     "item": "Follow-up",
+     "dose": "Return if not improving within 72 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:34292926",
+       "where": "Epididymitis, Follow-Up"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_epid",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute epididymitis: stain or urine WBCs, urine NAAT and culture, HIV and syphilis tests; treat the same day by likely cause (ceftriaxone plus doxycycline; ceftriaxone plus levofloxacin after insertive anal sex; levofloxacin alone for enteric organisms), with NSAIDs and scrotal elevation; reassess if not better within 72 hours. Admit when severe pain or fever suggests another diagnosis or he cannot follow the regimen."
+  },
+  {
+   "id": "peds_epid",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Prepubertal boy, inflamed epididymis, testis flow normal. Next?",
+   "options": [
+    "Urinalysis and culture; antibiotics if they show bacteria",
+    "Ceftriaxone 500 mg IM once plus doxycycline 100 mg for 10 days",
+    "Scrotal exploration and fixation of both testes",
+    "Empiric levofloxacin 500 mg orally once daily for 10 days"
+   ],
+   "answer": 0,
+   "chainStep": "Urinalysis and urine culture; antibiotics if they suggest bacteria, otherwise rest and analgesia",
+   "why": "In children, epididymitis is rarely bacterial (6 to 10% of pediatric cases); other causes include reflux of urine into the ejaculatory ducts from an anatomic anomaly and the aftermath of a viral illness. Antibiotics are given when the urinalysis or culture suggests bacteria, and otherwise care is supportive. The adult regimens target sexually transmitted and enteric infection, and with no torsion there is nothing to fix.",
+   "next": "end_peds",
+   "sources": [
+    {
+     "docId": "pmid:25598931",
+     "where": "Epididymitis; Epididymitis, 2. Treatment"
+    },
+    {
+     "docId": "pmid:35689399",
+     "where": "Intra-operative decision making"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Analgesic dose in children",
+     "dose": "Weight-based; not stated in the sources read (the ibuprofen tablet label has no pediatric dose)",
+     "status": "pending"
+    },
+    {
+     "item": "Urinary tract imaging",
+     "dose": "Debated: one series of 49 boys found only one relevant urinary tract malformation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:25598931",
+       "where": "Epididymitis"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_peds",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Epididymitis before puberty: urinalysis and culture; antibiotics when they show bacteria, otherwise rest and analgesia; looking for a urinary tract anomaly is debated."
+  },
+  {
+   "id": "mumps_care",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Testicular swelling a week after parotitis, unvaccinated. Management?",
+   "options": [
+    "Rest, scrotal support, analgesia; confirm with RT-PCR",
+    "Oral prednisone for a week to prevent testicular atrophy",
+    "IV acyclovir for 7 days to treat the viral orchitis",
+    "Interferon now to protect his future fertility"
+   ],
+   "answer": 0,
+   "chainStep": "Supportive care: bed rest, scrotal support, analgesic and anti-inflammatory drugs; urinalysis to exclude bacterial infection; RT-PCR of saliva, or mumps IgM, to confirm",
+   "why": "Mumps orchitis follows parotitis by about a week in young men, usually on one side, and no specific antiviral exists: rest, scrotal support and analgesic or anti-inflammatory drugs, with symptoms easing in 4 to 10 days. Steroids ease pain and swelling but neither change the course nor prevent atrophy, and interferon has conflicting evidence. Atrophy can follow in about half. A urinalysis checks for a bacterial cause.",
+   "next": "end_mumps",
+   "sources": [
+    {
+     "docId": "pmid:33815357",
+     "where": "Vaccination and incidences; Clinical manifestations; Diagnostic and therapeutic approaches"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Ibuprofen (adults)",
+     "dose": "400 mg every 4 to 6 hours as needed for pain; no more than 3,200 mg a day",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0ab6c49010b1",
+       "where": "Dosage and administration"
+      }
+     ]
+    },
+    {
+     "item": "Steroids",
+     "dose": "Not routine: they ease pain and swelling but do not change the course or prevent atrophy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33815357",
+       "where": "Diagnostic and therapeutic approaches"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_mumps",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Mumps orchitis: supportive care with rest, scrotal support and analgesia; no antiviral, and steroids do not prevent atrophy; RT-PCR or mumps IgM confirms it."
+  }
+ ],
+ "cases": [
+  {
+   "id": "septic_shock",
+   "label": "Septic shock with scrotal pain",
+   "vignette": "64-year-old man with diabetes, 3 days of scrotal pain and fever, now confused. BP 78/44, HR 128, temperature 39.4, lactate 5.1.",
+   "picks": {
+    "front": "septic"
+   },
+   "results": {
+    "front": "Mottled knees, capillary refill 5 seconds; the scrotum is swollen, red and tense, with no crepitus, dusky skin or necrosis."
+   }
+  },
+  {
+   "id": "fournier",
+   "label": "Fournier gangrene",
+   "vignette": "58-year-old man with poorly controlled diabetes, 2 days of rapidly worsening scrotal and perineal pain and swelling. BP 112/70, HR 112, temperature 38.9, glucose 410.",
+   "picks": {
+    "front": "fournier"
+   },
+   "results": {
+    "front": "Pressure holding. Dusky scrotal skin with a black patch, crepitus spreading to the perineum, and pain far beyond what the skin shows."
+   }
+  },
+  {
+   "id": "rupture",
+   "label": "Testicular rupture after a kick",
+   "vignette": "22-year-old man kicked in the scrotum during a soccer match an hour ago, with severe pain and rapid swelling. BP 136/84, HR 96.",
+   "picks": {
+    "front": "trauma",
+    "trauma_result": "explore"
+   },
+   "results": {
+    "front": "No shock, hernia or perineal change. The right hemiscrotum is swollen and bruised; the testis is hard to feel.",
+    "trauma_result": "Ultrasound: the right tunica albuginea is interrupted with parenchyma bulging through the gap; the testis is heterogeneous and has lost its oval shape, with a hematocele and patchy flow."
+   }
+  },
+  {
+   "id": "contusion",
+   "label": "Scrotal contusion",
+   "vignette": "14-year-old struck in the scrotum by a baseball 2 hours ago; the pain is easing. BP 118/72, HR 88.",
+   "picks": {
+    "front": "trauma",
+    "trauma_result": "intact"
+   },
+   "results": {
+    "front": "No shock, hernia or perineal change. Mild left scrotal swelling and bruising.",
+    "trauma_result": "Ultrasound: tunica albuginea continuous, oval contour, symmetric flow; a small hematoma in the scrotal wall."
+   }
+  },
+  {
+   "id": "trauma_torsion",
+   "label": "Torsion after a kick",
+   "vignette": "15-year-old kicked in the scrotum at football 3 hours ago, with severe left testicular pain and vomiting since. BP 130/78, HR 102, temperature 36.9.",
+   "picks": {
+    "front": "trauma",
+    "trauma_result": "ischemic",
+    "or_access": "now",
+    "explore_find": "twisted",
+    "explore_result": "viable"
+   },
+   "results": {
+    "front": "No shock, hernia or perineal change. The left hemiscrotum is swollen and very tender; the testis lies high.",
+    "trauma_result": "Ultrasound: tunica albuginea continuous; no flow in the left testis; a whirlpool twist in the left cord.",
+    "or_access": "The urologist is in the hospital and an operating room is free.",
+    "explore_find": "The left cord is twisted 360 degrees; the tunica albuginea is intact.",
+    "explore_result": "The testis pinks up after untwisting."
+   }
+  },
+  {
+   "id": "hernia_strangulated",
+   "label": "Strangulated inguinoscrotal hernia",
+   "vignette": "72-year-old man, 10 hours of a painful lump in the right groin and scrotum that will not go back, with vomiting. BP 104/66, HR 118, temperature 38.1.",
+   "picks": {
+    "front": "hernia",
+    "hernia_result": "strangulated"
+   },
+   "results": {
+    "front": "A tender bulge runs from the right groin into the scrotum; the examiner cannot get above it; the testis is felt separately.",
+    "hernia_result": "Red, tender skin over the hernia; abdomen distended with guarding; WBC 17, lactate 4.2. CT: a thick-walled small bowel loop in the sac that enhances poorly."
+   }
+  },
+  {
+   "id": "hernia_reducible",
+   "label": "Irreducible hernia, no strangulation",
+   "vignette": "45-year-old man with a known right inguinal hernia that came down into the scrotum while he was lifting 3 hours ago and has stayed down. BP 132/80, HR 84, temperature 36.9.",
+   "picks": {
+    "front": "hernia",
+    "hernia_result": "none"
+   },
+   "results": {
+    "front": "A tender, irreducible swelling from the right groin into the scrotum; the examiner cannot get above it; the testis is felt separately.",
+    "hernia_result": "Skin normal, abdomen soft, no vomiting; WBC 8, lactate 1.1."
+   }
+  },
+  {
+   "id": "testis_mass",
+   "label": "Painless testicular mass",
+   "vignette": "29-year-old man who noticed a painless hard lump in his right testis in the shower 3 weeks ago. BP 122/76, HR 72, temperature 36.7.",
+   "picks": {
+    "front": "mass",
+    "mass_us": "solid"
+   },
+   "results": {
+    "front": "A firm, nontender nodule within the right testis, separate from the epididymis; no hernia, injury or perineal change.",
+    "mass_us": "Ultrasound: a 2 cm solid hypoechoic vascular lesion in the right testis; left testis normal."
+   }
+  },
+  {
+   "id": "testis_cyst",
+   "label": "Painless lump, no solid lesion",
+   "vignette": "34-year-old man with a painless pea-sized lump on his right testis for 2 months. BP 124/78, HR 70, temperature 36.6.",
+   "picks": {
+    "front": "mass",
+    "mass_us": "not_solid"
+   },
+   "results": {
+    "front": "A firm, nontender pea-sized nodule felt at the upper pole of the right testis; no hernia, injury or perineal change.",
+    "mass_us": "Ultrasound: a 4 mm simple anechoic cyst in the tunica albuginea; no solid intratesticular lesion; both testes otherwise normal."
+   }
+  },
+  {
+   "id": "torsion_classic",
+   "label": "Testicular torsion, operating room on site",
+   "vignette": "15-year-old boy woke at 5 am with sudden severe left testicular pain and has vomited twice; pain for 3 hours. BP 128/76, HR 104, temperature 37.1.",
+   "picks": {
+    "front": "acute",
+    "twist_result": "high",
+    "or_access": "now",
+    "explore_find": "twisted",
+    "explore_result": "viable"
+   },
+   "results": {
+    "front": "Not in shock; no injury, groin bulge, lump or perineal change. The left testis is exquisitely tender.",
+    "twist_result": "Left testis swollen, hard and high-riding with a horizontal lie; cremasteric reflex absent on the left; vomiting. TWIST 7.",
+    "or_access": "The on-call urologist is in the hospital and an operating room is free.",
+    "explore_find": "The left cord is twisted 540 degrees.",
+    "explore_result": "The testis pinks up within minutes of untwisting."
+   }
+  },
+  {
+   "id": "torsion_rural",
+   "label": "Testicular torsion, hours from the operating room",
+   "vignette": "16-year-old at a rural emergency department, 2 hours of sudden right testicular pain with nausea. BP 132/80, HR 98, temperature 36.9.",
+   "picks": {
+    "front": "acute",
+    "twist_result": "high",
+    "or_access": "transfer",
+    "explore_find": "twisted",
+    "explore_result": "viable"
+   },
+   "results": {
+    "front": "Not in shock; no injury, groin bulge, lump or perineal change. The right testis is very tender.",
+    "twist_result": "Right testis swollen, hard and high-riding; cremasteric reflex absent; nauseated. TWIST 7.",
+    "or_access": "No urologist on site; the nearest hospital with one is 3 hours away by road.",
+    "explore_find": "After transfer: a residual 180-degree twist of the right cord.",
+    "explore_result": "Once untwisted the testis is pink and viable."
+   }
+  },
+  {
+   "id": "torsion_late",
+   "label": "Late torsion, testis lost",
+   "vignette": "13-year-old boy brought in after 30 hours of left scrotal pain that began suddenly overnight and has eased to a dull ache; no nausea. BP 118/70, HR 92, temperature 37.6.",
+   "picks": {
+    "front": "acute",
+    "twist_result": "intermediate",
+    "doppler_result": "torsion",
+    "or_access": "now",
+    "explore_find": "twisted",
+    "explore_result": "dead"
+   },
+   "results": {
+    "front": "Not in shock; no injury, groin bulge, lump or perineal change. The left hemiscrotum is tender.",
+    "twist_result": "Left testis swollen and hard, normally placed; cremasteric reflex present; no nausea. TWIST 4.",
+    "doppler_result": "No flow in a heterogeneous left testis; a whirlpool twist in the left cord. The right side is normal.",
+    "or_access": "An operating room is free and the urologist is in the hospital.",
+    "explore_find": "The left cord is twisted 720 degrees.",
+    "explore_result": "The testis is black and unchanged after 15 minutes in warm saline gauze."
+   }
+  },
+  {
+   "id": "explored_appendage",
+   "label": "Explored for torsion, appendage found",
+   "vignette": "13-year-old boy, 8 hours of left testicular pain that began in class; nauseated once. BP 116/72, HR 98, temperature 37.2.",
+   "picks": {
+    "front": "acute",
+    "twist_result": "intermediate",
+    "doppler_result": "torsion",
+    "or_access": "now",
+    "explore_find": "no_twist"
+   },
+   "results": {
+    "front": "Not in shock; no injury, groin bulge, lump or perineal change. The left testis is tender.",
+    "twist_result": "Left testis swollen, soft and normally placed; cremasteric reflex present; nauseated. TWIST 3.",
+    "doppler_result": "Left testicular flow reduced compared with the right; the cord is not clearly seen; no avascular nodule identified.",
+    "or_access": "An operating room is free and the urologist is in the hospital.",
+    "explore_find": "No twist of the cord; a torsed, necrotic appendix testis at the upper pole; no bell clapper deformity."
+   }
+  },
+  {
+   "id": "appendix_testis",
+   "label": "Torsion of the appendix testis",
+   "vignette": "9-year-old boy, 1 day of right scrotal pain that came on gradually; no vomiting. BP 104/64, HR 96, temperature 37.0.",
+   "picks": {
+    "front": "acute",
+    "twist_result": "low",
+    "doppler_result": "appendage"
+   },
+   "results": {
+    "front": "Not in shock; no injury, groin bulge, lump or perineal change. Tenderness is greatest at the top of the right testis.",
+    "twist_result": "Right testis mildly swollen, soft and normally placed; cremasteric reflex present; no nausea. A tender pea-sized nodule at the upper pole with a bluish spot through the skin. TWIST 2.",
+    "doppler_result": "Normal, symmetric flow in both testes; an enlarged avascular nodule beside the right upper pole with a small reactive hydrocele."
+   }
+  },
+  {
+   "id": "epid_sti",
+   "label": "Epididymitis, gonorrhea or chlamydia",
+   "vignette": "24-year-old man, 3 days of gradually worsening left scrotal pain and burning on urination; two new female partners this month, condoms sometimes. BP 126/78, HR 88, temperature 37.8.",
+   "picks": {
+    "front": "acute",
+    "twist_result": "low_inflam",
+    "epid_who": "adult",
+    "epid_cause": "sti"
+   },
+   "results": {
+    "front": "Not in shock; no injury, groin bulge, lump or perineal change. The left epididymis is swollen and tender.",
+    "twist_result": "Left testis swollen; soft and normally placed; cremasteric reflex present; no nausea. TWIST 2. Gradual onset, dysuria and a urethral discharge.",
+    "epid_who": "Sexually active with women; no urinary problems before; mumps vaccine given; no recent parotid swelling.",
+    "epid_cause": "Urethral Gram stain: 8 WBCs per oil immersion field with intracellular gram-negative diplococci. Vaginal sex only."
+   }
+  },
+  {
+   "id": "epid_msm",
+   "label": "Epididymitis after insertive anal sex",
+   "vignette": "31-year-old man who has sex with men, 2 days of right scrotal pain and fever; nauseated. BP 130/80, HR 102, temperature 38.2.",
+   "picks": {
+    "front": "acute",
+    "twist_result": "intermediate",
+    "doppler_result": "inflamed",
+    "epid_who": "adult",
+    "epid_cause": "anal"
+   },
+   "results": {
+    "front": "Not in shock; no injury, groin bulge, lump or perineal change. The right epididymis is tender.",
+    "twist_result": "Right testis and epididymis swollen; testis soft and normally placed; cremasteric reflex present; nauseated. TWIST 3.",
+    "doppler_result": "Enlarged, hyperemic right epididymis and testis with increased flow; straight, normal cord.",
+    "epid_who": "Sexually active with men; no recent parotid swelling.",
+    "epid_cause": "He is the insertive partner in anal sex. First-void urine leukocyte esterase positive; urethral stain shows WBCs without diplococci."
+   }
+  },
+  {
+   "id": "epid_enteric",
+   "label": "Epididymitis after a prostate biopsy",
+   "vignette": "68-year-old man, 5 days after a transrectal prostate biopsy, with 2 days of gradually worsening left scrotal pain and dysuria. BP 138/84, HR 94, temperature 38.0.",
+   "picks": {
+    "front": "acute",
+    "twist_result": "low_inflam",
+    "epid_who": "adult",
+    "epid_cause": "enteric"
+   },
+   "results": {
+    "front": "Not in shock; no injury, groin bulge, lump or perineal change. The left epididymis is tender.",
+    "twist_result": "Left testis and epididymis swollen; testis soft and normally placed; cremasteric reflex present; no nausea. TWIST 2. Gradual onset, dysuria; dipstick positive for leukocytes.",
+    "epid_who": "Benign prostatic hyperplasia; one partner for 40 years; no recent parotid swelling.",
+    "epid_cause": "Urethral Gram stain: WBCs, no diplococci. First-void urine: 25 WBCs per HPF with gram-negative rods. No new partners."
+   }
+  },
+  {
+   "id": "epid_child",
+   "label": "Epididymitis before puberty",
+   "vignette": "7-year-old boy, 2 days of gradually increasing right scrotal pain; vomited once this morning. BP 100/62, HR 104, temperature 37.4.",
+   "picks": {
+    "front": "acute",
+    "twist_result": "intermediate",
+    "doppler_result": "inflamed",
+    "epid_who": "child"
+   },
+   "results": {
+    "front": "Not in shock; no injury, groin bulge, lump or perineal change. The right scrotum is tender.",
+    "twist_result": "Right testis and epididymis swollen; testis soft and normally placed; cremasteric reflex present; vomited once. TWIST 3.",
+    "doppler_result": "Enlarged, hyperemic right epididymis; both testes with normal, symmetric flow; straight cords.",
+    "epid_who": "Prepubertal and not sexually active; no parotid swelling; immunizations up to date."
+   }
+  },
+  {
+   "id": "mumps_orchitis",
+   "label": "Mumps orchitis",
+   "vignette": "19-year-old college student, 1 day of right testicular pain and swelling with fever and headache; not sexually active. BP 120/74, HR 100, temperature 38.6.",
+   "picks": {
+    "front": "acute",
+    "twist_result": "low_inflam",
+    "epid_who": "mumps"
+   },
+   "results": {
+    "front": "Not in shock; no injury, groin bulge, lump or perineal change. The right testis is tender.",
+    "twist_result": "Right testis swollen but soft and normally placed; cremasteric reflex present; no nausea. TWIST 2. Both parotid glands were swollen last week.",
+    "epid_who": "The parotid swelling began 8 days ago and is settling; never vaccinated against mumps; classmates have had the same."
+   }
+  },
+  {
+   "id": "normal_us",
+   "label": "Torsion ruled out on ultrasound",
+   "vignette": "17-year-old, 4 hours of a left groin and testicular ache that comes in waves. BP 134/82, HR 90, temperature 36.8.",
+   "picks": {
+    "front": "acute",
+    "twist_result": "low",
+    "doppler_result": "normal"
+   },
+   "results": {
+    "front": "Not in shock; no injury, groin bulge, lump or perineal change. Mild tenderness of the left testis.",
+    "twist_result": "No scrotal swelling; testis soft and normally placed; cremasteric reflex present; no nausea. TWIST 0.",
+    "doppler_result": "Straight, normal cords; both testes symmetrical in size, echotexture and flow; epididymides normal."
+   }
+  }
+ ]
+}

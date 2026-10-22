@@ -3,13 +3,14 @@ import SiteShell from '../../components/SiteShell';
 import type { GetStaticProps } from 'next';
 import { comingSoon, liveGuideCards } from '../../lib/guides';
 import type { ComingSoonGuide } from '../../lib/guides/types';
+import { publishedEntries } from '../../lib/pathways/data';
 
 type LiveCard = { slug: string; clerkship: string; teaser: string };
 
 // The /guides hub: a growing library of clerkship shelf guides. Live guides link
 // to their page; announced ones show as disabled cards so the section reads as a
 // library in progress, not a single orphan page.
-export default function GuidesHub({ live, soon }: { live: LiveCard[]; soon: ComingSoonGuide[] }) {
+export default function GuidesHub({ live, soon, pathways }: { live: LiveCard[]; soon: ComingSoonGuide[]; pathways: number }) {
   const canonical = 'https://stepgunner.com/guides';
 
   const collectionLd = {
@@ -110,6 +111,14 @@ h1 { font-size: 28px; }
               <p>26 emergency presentations: the first move, the fork that decides the next step, and the trap the exam sets, from audited pathways.</p>
               <span className="go">Read the guide &rarr;</span>
             </a>
+            {pathways > 0 && (
+              <a className="card live" href="/pathways">
+                <span className="ctag">ED pathways</span>
+                <h2>ED pathways, fork by fork</h2>
+                <p>{pathways} emergency presentations as branching algorithms: the first move, each fork and its threshold, and the orders with their doses, each quoted from its source.</p>
+                <span className="go">Open the pathways &rarr;</span>
+              </a>
+            )}
             {soon.map((g) => (
               <div key={g.slug} className="card soon" aria-disabled="true">
                 <span className="ctag">Coming soon</span>
@@ -125,6 +134,8 @@ h1 { font-size: 28px; }
   );
 }
 
+// The pathways card counts what this build publishes (lib/pathways/data's gate),
+// so it never links an empty hub.
 export const getStaticProps: GetStaticProps = async () => ({
-  props: { live: liveGuideCards(), soon: comingSoon },
+  props: { live: liveGuideCards(), soon: comingSoon, pathways: publishedEntries().length },
 });

@@ -1,0 +1,3498 @@
+{
+ "id": "pw_throat_airway",
+ "title": "Sore throat, stridor and epistaxis",
+ "world": "em",
+ "synonyms": [
+  "sore throat",
+  "pharyngitis",
+  "strep throat",
+  "group A strep",
+  "tonsillitis",
+  "Centor",
+  "McIsaac",
+  "rapid strep test",
+  "infectious mononucleosis",
+  "mono",
+  "glandular fever",
+  "EBV",
+  "epiglottitis",
+  "supraglottitis",
+  "stridor",
+  "drooling",
+  "peritonsillar abscess",
+  "quinsy",
+  "retropharyngeal abscess",
+  "deep neck infection",
+  "Ludwig angina",
+  "Lemierre syndrome",
+  "croup",
+  "barking cough",
+  "angioedema",
+  "ACE inhibitor angioedema",
+  "choking",
+  "foreign body aspiration",
+  "Heimlich",
+  "epistaxis",
+  "nosebleed",
+  "nasal packing",
+  "posterior epistaxis"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:957ef49000ba",
+   "label": "NICE NG84",
+   "title": "Sore throat (acute): antimicrobial prescribing (NICE guideline NG84, 2018)",
+   "url": "https://www.nice.org.uk/guidance/ng84"
+  },
+  {
+   "docId": "pmid:30252253",
+   "label": "StatPearls strep pharyngitis",
+   "title": "Streptococcal Pharyngitis (StatPearls, review, updated 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30252253/"
+  },
+  {
+   "docId": "pmid:32644433",
+   "label": "StatPearls acute pharyngitis",
+   "title": "Acute Pharyngitis (StatPearls, review, updated 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32644433/"
+  },
+  {
+   "docId": "pmid:29261868",
+   "label": "StatPearls mononucleosis",
+   "title": "Mononucleosis (StatPearls, review, updated 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29261868/"
+  },
+  {
+   "docId": "pmid:32644711",
+   "label": "StatPearls EBV",
+   "title": "Epstein-Barr Virus (StatPearls, review, updated 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32644711/"
+  },
+  {
+   "docId": "pmid:28613691",
+   "label": "StatPearls epiglottitis",
+   "title": "Epiglottitis (StatPearls, review, updated 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613691/"
+  },
+  {
+   "docId": "pmid:38230383",
+   "label": "Adult epiglottitis airway review 2024",
+   "title": "Airway management of adult epiglottitis: a systematic review and meta-analysis (BJA Open 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38230383/"
+  },
+  {
+   "docId": "pmid:30137805",
+   "label": "StatPearls peritonsillar abscess",
+   "title": "Peritonsillar Abscess (StatPearls, review, updated 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30137805/"
+  },
+  {
+   "docId": "pmid:28722903",
+   "label": "StatPearls retropharyngeal abscess",
+   "title": "Retropharyngeal Abscess (StatPearls, review, updated 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722903/"
+  },
+  {
+   "docId": "pmid:30020634",
+   "label": "StatPearls deep neck infections",
+   "title": "Deep Neck Infections (StatPearls, review, updated 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30020634/"
+  },
+  {
+   "docId": "pmid:29493976",
+   "label": "StatPearls Ludwig angina",
+   "title": "Ludwig Angina (StatPearls, review, updated 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29493976/"
+  },
+  {
+   "docId": "pmid:29763021",
+   "label": "StatPearls Lemierre",
+   "title": "Lemierre Syndrome (StatPearls, review, updated 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29763021/"
+  },
+  {
+   "docId": "pmid:28613724",
+   "label": "StatPearls croup",
+   "title": "Croup (StatPearls, review, updated 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613724/"
+  },
+  {
+   "docId": "pmid:30252251",
+   "label": "StatPearls stridor in children",
+   "title": "Stridor in Children (StatPearls, review, updated 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30252251/"
+  },
+  {
+   "docId": "pmid:30860724",
+   "label": "StatPearls angioedema",
+   "title": "Angioedema (StatPearls, review, updated 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30860724/"
+  },
+  {
+   "docId": "pmid:28613639",
+   "label": "StatPearls acquired angioedema",
+   "title": "Acquired Angioedema (StatPearls, review, updated 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613639/"
+  },
+  {
+   "docId": "pmid:28613705",
+   "label": "StatPearls ACE inhibitors",
+   "title": "Angiotensin-Converting Enzyme Inhibitors (ACEI) (StatPearls, review, updated 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613705/"
+  },
+  {
+   "docId": "pmid:29489196",
+   "label": "StatPearls lisinopril",
+   "title": "Lisinopril (StatPearls, review, updated 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29489196/"
+  },
+  {
+   "docId": "url:8e47de0d9872",
+   "label": "Zestril label",
+   "title": "ZESTRIL (lisinopril) prescribing information, FDA label via DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=838c2d78-d2d8-4981-9ec9-e50ef9e1a5d8"
+  },
+  {
+   "docId": "pmid:31985979",
+   "label": "StatPearls foreign body airway obstruction",
+   "title": "Foreign Body Airway Obstruction (StatPearls, review, updated 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31985979/"
+  },
+  {
+   "docId": "pmid:33204386",
+   "label": "WAO 2020",
+   "title": "World Allergy Organization anaphylaxis guidance 2020",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33204386/"
+  },
+  {
+   "docId": "pmid:42507342",
+   "label": "Singapore BCLS 2026",
+   "title": "Singapore Basic Cardiac Life Support and Automated External Defibrillation Guidelines 2026",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42507342/"
+  },
+  {
+   "docId": "pmid:42507345",
+   "label": "Singapore PLS 2026",
+   "title": "Singapore Paediatric Life Support Guidelines 2026",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42507345/"
+  },
+  {
+   "docId": "pmid:29261859",
+   "label": "StatPearls difficult airway",
+   "title": "Difficult Airway (StatPearls, review, updated 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29261859/"
+  },
+  {
+   "docId": "pmid:28613768",
+   "label": "StatPearls epistaxis",
+   "title": "Epistaxis (StatPearls, review, updated 2022)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613768/"
+  },
+  {
+   "docId": "pmid:30855888",
+   "label": "StatPearls anterior nasal pack",
+   "title": "Anterior Epistaxis Nasal Pack (StatPearls, review, updated 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30855888/"
+  },
+  {
+   "docId": "pmid:35015461",
+   "label": "StatPearls posterior nasal pack",
+   "title": "Posterior Epistaxis Nasal Pack (StatPearls, review, updated 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35015461/"
+  },
+  {
+   "docId": "pmid:38032485",
+   "label": "Posterior epistaxis review 2024",
+   "title": "Posterior epistaxis management: review of the literature and proposed guidelines of the Hellenic Rhinological-Facial Plastic Surgery Society (Eur Arch Otorhinolaryngol 2024)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/38032485/"
+  },
+  {
+   "docId": "pmid:42787724",
+   "label": "Anterior epistaxis review 2026",
+   "title": "Comparative effectiveness of nonoperative treatments for acute anterior epistaxis: a systematic review and meta-analysis (Cureus 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42787724/"
+  },
+  {
+   "docId": "pmid:35221303",
+   "label": "Epistaxis review 2022",
+   "title": "Epistaxis in dental and maxillofacial practice: a comprehensive review (J Korean Assoc Oral Maxillofac Surg 2022)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35221303/"
+  },
+  {
+   "docId": "pmid:25263284",
+   "label": "BMJ Clin Evid 2014 croup",
+   "title": "Croup (BMJ Clinical Evidence 2014), a systematic overview",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/25263284/"
+  },
+  {
+   "docId": "pmid:29939678",
+   "label": "StatPearls: Orbital Cellulitis",
+   "title": "Orbital Cellulitis (StatPearls, updated 2026; review)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29939678/"
+  },
+  {
+   "docId": "url:9115c6d54fdb",
+   "label": "FDA label: vancomycin",
+   "title": "Vancomycin Injection (Baxter) prescribing information, FDA label via DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=99e523d8-9bde-43cb-8434-497015e5dcbd"
+  }
+ ],
+ "differential": [
+  "Epiglottitis",
+  "Peritonsillar abscess",
+  "Retropharyngeal abscess",
+  "Ludwig angina",
+  "Lemierre syndrome",
+  "Strep pharyngitis",
+  "Viral pharyngitis",
+  "Infectious mononucleosis",
+  "Croup",
+  "Anaphylaxis",
+  "ACE inhibitor angioedema",
+  "Hereditary angioedema",
+  "Airway foreign body",
+  "Anterior epistaxis",
+  "Posterior epistaxis"
+ ],
+ "calculators": [
+  {
+   "id": "centor",
+   "title": "Centor score",
+   "kind": "points",
+   "items": [
+    {
+     "id": "exudate",
+     "label": "Tonsillar exudates",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "nodes",
+     "label": "Swollen, tender anterior cervical nodes",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "cough",
+     "label": "Cough absent",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "fever",
+     "label": "Temperature over 38 C",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    }
+   ],
+   "bands": [
+    {
+     "lte": 1,
+     "text": "0 or 1: low risk; no test needed"
+    },
+    {
+     "gte": 2,
+     "lte": 3,
+     "text": "2 or 3: intermediate risk; rapid strep test"
+    },
+    {
+     "gte": 4,
+     "text": "4: high risk; rapid strep test"
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:30252253",
+     "where": "Evaluation; Table, Clinical Decision Rules"
+    },
+    {
+     "docId": "pmid:32644433",
+     "where": "Evaluation; Enhancing Healthcare Team Outcomes"
+    },
+    {
+     "docId": "url:957ef49000ba",
+     "where": "1.1.3; 1.1.5; 1.1.10"
+    }
+   ],
+   "note": "The adult threshold differs: Acute Pharyngitis tests adults at 3 or more, and NICE prescribes by score without a routine test (Centor 3 or 4: most likely to benefit from an antibiotic). Clinical decision rules are not reliable in children. At 3 to 14 and at 45 or older the scores differ; McIsaac's age adjustment decides.",
+   "tests": [
+    {
+     "picks": {},
+     "expect": 0
+    },
+    {
+     "picks": {
+      "exudate": 1,
+      "nodes": 1,
+      "cough": 1,
+      "fever": 1
+     },
+     "expect": 4
+    },
+    {
+     "picks": {
+      "nodes": 1,
+      "cough": 1
+     },
+     "expect": 2
+    }
+   ]
+  },
+  {
+   "id": "mcisaac",
+   "title": "McIsaac score (modified Centor)",
+   "kind": "points",
+   "items": [
+    {
+     "id": "exudate",
+     "label": "Tonsillar exudates",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "nodes",
+     "label": "Swollen, tender anterior cervical nodes",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "cough",
+     "label": "Cough absent",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "fever",
+     "label": "Temperature over 38 C",
+     "options": [
+      {
+       "label": "No",
+       "points": 0
+      },
+      {
+       "label": "Yes",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "age",
+     "label": "Age",
+     "options": [
+      {
+       "label": "15 to 44",
+       "points": 0
+      },
+      {
+       "label": "3 to 14",
+       "points": 1
+      },
+      {
+       "label": "45 or older",
+       "points": -1
+      }
+     ]
+    }
+   ],
+   "bands": [
+    {
+     "lte": 1,
+     "text": "1 or less: low risk; no test needed"
+    },
+    {
+     "gte": 2,
+     "text": "2 or more: intermediate or high risk; rapid strep test"
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:32644433",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:30252253",
+     "where": "Evaluation; Table, Clinical Decision Rules"
+    }
+   ],
+   "note": "The Centor criteria plus a point at 3 to 14 and minus a point at 45 or older (Acute Pharyngitis). Streptococcal Pharyngitis's table lists no exudate item and subtracts the point only over 45. Testing may be omitted under 3 unless a sibling has confirmed strep.",
+   "tests": [
+    {
+     "picks": {
+      "nodes": 1,
+      "cough": 1,
+      "fever": 1,
+      "age": 1
+     },
+     "expect": 4
+    },
+    {
+     "picks": {
+      "exudate": 1,
+      "nodes": 1,
+      "cough": 1,
+      "fever": 1,
+      "age": 0
+     },
+     "expect": 4
+    },
+    {
+     "picks": {
+      "exudate": 1,
+      "cough": 1,
+      "age": 2
+     },
+     "expect": 1
+    },
+    {
+     "picks": {
+      "age": 2
+     },
+     "expect": -1
+    },
+    {
+     "picks": {
+      "exudate": 1,
+      "nodes": 1,
+      "cough": 1,
+      "fever": 1,
+      "age": 1
+     },
+     "expect": 5
+    }
+   ]
+  },
+  {
+   "id": "westley",
+   "title": "Westley croup score",
+   "kind": "points",
+   "items": [
+    {
+     "id": "air",
+     "label": "Air entry",
+     "options": [
+      {
+       "label": "Normal",
+       "points": 0
+      },
+      {
+       "label": "Decreased",
+       "points": 1
+      },
+      {
+       "label": "Markedly decreased",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "stridor",
+     "label": "Inspiratory stridor",
+     "options": [
+      {
+       "label": "None",
+       "points": 0
+      },
+      {
+       "label": "With agitation",
+       "points": 1
+      },
+      {
+       "label": "At rest",
+       "points": 2
+      }
+     ]
+    },
+    {
+     "id": "retractions",
+     "label": "Retractions",
+     "options": [
+      {
+       "label": "None",
+       "points": 0
+      },
+      {
+       "label": "Mild",
+       "points": 1
+      },
+      {
+       "label": "Moderate",
+       "points": 2
+      },
+      {
+       "label": "Severe",
+       "points": 3
+      }
+     ]
+    },
+    {
+     "id": "cyanosis",
+     "label": "Cyanosis",
+     "options": [
+      {
+       "label": "None",
+       "points": 0
+      },
+      {
+       "label": "When crying",
+       "points": 4
+      },
+      {
+       "label": "At rest",
+       "points": 5
+      }
+     ]
+    },
+    {
+     "id": "consciousness",
+     "label": "Level of consciousness",
+     "options": [
+      {
+       "label": "Alert",
+       "points": 0
+      },
+      {
+       "label": "Disoriented",
+       "points": 5
+      }
+     ]
+    }
+   ],
+   "bands": [
+    {
+     "lte": 2,
+     "text": "2 or less: mild, unless the stridor is at rest"
+    },
+    {
+     "gte": 3,
+     "lte": 5,
+     "text": "3 to 5: moderate"
+    },
+    {
+     "gte": 6,
+     "lte": 11,
+     "text": "6 to 11: severe"
+    },
+    {
+     "gte": 12,
+     "text": "12 or more: impending respiratory failure"
+    }
+   ],
+   "sources": [
+    {
+     "docId": "pmid:28613724",
+     "where": "Evaluation, Tables 1 and 2 (\"6-11 | Severe\"; Table 2 prints \">12\" for impending respiratory failure); Treatment / Management"
+    },
+    {
+     "docId": "pmid:25263284",
+     "where": "Definitions of severity: severe croup at a Westley Croup Score of 6 to 11; impending respiratory failure \"corresponding to a Westley Croup Score greater than 11\""
+    }
+   ],
+   "note": "This pathway treats stridor at rest as moderate to severe at any total, and a child goes home only with no stridor at rest.",
+   "tests": [
+    {
+     "picks": {
+      "stridor": 1
+     },
+     "expect": 1
+    },
+    {
+     "picks": {
+      "air": 1,
+      "stridor": 2,
+      "retractions": 2
+     },
+     "expect": 5
+    },
+    {
+     "picks": {
+      "stridor": 2
+     },
+     "expect": 2
+    },
+    {
+     "picks": {
+      "air": 2,
+      "stridor": 2,
+      "retractions": 3,
+      "cyanosis": 2,
+      "consciousness": 1
+     },
+     "expect": 17
+    },
+    {
+     "picks": {
+      "air": 2,
+      "stridor": 2,
+      "retractions": 3,
+      "consciousness": 1
+     },
+     "expect": 12
+    }
+   ]
+  }
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Throat, airway, facial swelling or nosebleed complaint in the ED. First move?",
+   "options": [
+    "Airway first: look for drooling, stridor, distress or swelling; keep the patient calm",
+    "Examine the throat with a tongue depressor first, then decide how worried to be",
+    "Lie the patient flat on the trolley so that the mouth, neck and nose can be examined fully",
+    "Throat swab for a rapid strep test while the patient waits to be seen by a doctor"
+   ],
+   "answer": 0,
+   "chainStep": "Airway first: drooling, stridor, a tripod posture, a muffled voice, trismus or swelling; keep the patient calm, and let a patient in respiratory distress sit up; then vitals and circulation",
+   "why": "Life-threatening causes come first: an abscess or epiglottitis shows itself with a muffled voice, drooling, stridor, a tripod posture, trismus or a stiff neck. Agitation is avoided in a child with stridor, and in suspected epiglottitis nobody lays the patient flat or examines or manipulates the pharynx before the airway is secured. In anaphylaxis most patients lie supine, but respiratory distress calls for sitting up. For a nosebleed the primary survey starts the same way: airway, then the circulation.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "pmid:32644433",
+     "where": "Evaluation, General Evaluation"
+    },
+    {
+     "docId": "pmid:30252251",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:28613691",
+     "where": "History and Physical"
+    },
+    {
+     "docId": "pmid:28613768",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:33204386",
+     "where": "Acute treatment of anaphylaxis"
+    }
+   ]
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Airway, history and first look",
+   "outcomes": [
+    {
+     "id": "airway",
+     "if": "Threatened airway; drooling, a tripod posture, stridor without a barking cough, or swelling under the jaw",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "airway_first"
+    },
+    {
+     "id": "croup",
+     "if": "Croup picture; barking cough and a hoarse voice in a young child, with or without stridor",
+     "ddx": {
+      "lead": [
+       "Croup"
+      ],
+      "out": []
+     },
+     "next": "croup_sev"
+    },
+    {
+     "id": "swelling",
+     "if": "Lip, tongue or face swelling; no stridor or drooling, with or without hives or wheeze",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "swell"
+    },
+    {
+     "id": "choke",
+     "if": "Choking; a sudden cough, gag or silence while eating or playing",
+     "ddx": {
+      "lead": [
+       "Airway foreign body"
+      ],
+      "out": []
+     },
+     "next": "choke"
+    },
+    {
+     "id": "nose",
+     "if": "Nosebleed; blood from the nose, with or without blood in the throat",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "nose_vitals"
+    },
+    {
+     "id": "throat",
+     "if": "Sore throat, airway safe; no drooling, stridor or distress",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "throat_look"
+    }
+   ]
+  },
+  {
+   "id": "airway_first",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Drooling, stridor or swelling under the jaw. First move?",
+   "options": [
+    "Upright and calm; most skilled airway team now; plan for failure; no throat exam in a child",
+    "Lie them flat and look at the throat with a tongue depressor to see how swollen it really is",
+    "Send them to radiology for a lateral neck film before the airway team is called",
+    "Rapid sequence intubation in the ED now, before anesthesia or ENT arrives"
+   ],
+   "answer": 0,
+   "chainStep": "Upright and undisturbed, gentle oxygen, the most skilled airway clinicians (anesthesia and ENT) called, a plan for failure including front-of-neck access; no throat exam, IV line or film in a child with suspected epiglottitis",
+   "why": "Examining the throat, lying flat, an IV line, imaging or agitation can turn a narrowed airway into a blocked one, so a child with suspected epiglottitis is left upright with gentle oxygen and no tongue blade. Intubating without the expertise of anesthesia and ENT backup is a recognized error. Imaging waits for the airway: in a child with suspected epiglottitis no lateral neck film is taken before the airway is controlled, and in Ludwig angina imaging has no part in the first assessment. Plan for failure from the start: in a cannot intubate, cannot oxygenate crisis, scalpel front-of-neck access follows without delay.",
+   "next": "airway_look",
+   "sources": [
+    {
+     "docId": "pmid:28613691",
+     "where": "History and Physical; Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "pmid:29261859",
+     "where": "Technique or Treatment: Tracheal Intubation; Emergency or Failed Airway"
+    },
+    {
+     "docId": "pmid:30252251",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:29493976",
+     "where": "Evaluation"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Oxygen",
+     "dose": "Offer gently, without force; blow-by in a child while the airway is prepared",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613691",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Suspected epiglottitis in a child",
+     "dose": "Avoid examination, monitoring manipulation, lying flat, IV placement and imaging until the airway is secure",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28613691",
+       "where": "History and Physical"
+      }
+     ]
+    },
+    {
+     "item": "Anticipated difficult airway, cooperative adult",
+     "dose": "Awake fiberoptic or videolaryngoscopic intubation with topical anesthesia and minimal sedation when mask ventilation is unreliable; never in extremis; a child with epiglottitis goes to the operating room instead",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261859",
+       "where": "Technique or Treatment, Tracheal Intubation"
+      },
+      {
+       "docId": "pmid:28613691",
+       "where": "Management of Epiglottitis in the Adult Patient"
+      }
+     ]
+    },
+    {
+     "item": "Swelling with hives after a trigger",
+     "dose": "Anaphylaxis: IM epinephrine 0.01 mg/kg (maximum 0.5 mg) into the anterolateral thigh at once, alongside the airway team",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:33204386",
+       "where": "Acute treatment of anaphylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Cannot intubate, cannot oxygenate",
+     "dose": "Scalpel-bougie-tube front-of-neck access, without delay",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261859",
+       "where": "Technique or Treatment, Emergency or Failed Airway"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "airway_look",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Picture with the airway team at the bedside",
+   "outcomes": [
+    {
+     "id": "epig_child",
+     "if": "Child, epiglottitis picture; sudden fever, drooling, tripod posture, no barking cough",
+     "ddx": {
+      "lead": [
+       "Epiglottitis"
+      ],
+      "out": []
+     },
+     "next": "epig_or"
+    },
+    {
+     "id": "epig_adult",
+     "if": "Adult, supraglottitis picture; severe pain on swallowing, muffled voice, mouth near normal",
+     "ddx": {
+      "lead": [
+       "Epiglottitis"
+      ],
+      "out": []
+     },
+     "next": "scope"
+    },
+    {
+     "id": "ludwig",
+     "if": "Floor of mouth; tense swelling under the jaw, tongue pushed up, a bad lower molar",
+     "ddx": {
+      "lead": [
+       "Ludwig angina"
+      ],
+      "out": []
+     },
+     "next": "ludwig"
+    },
+    {
+     "id": "rpa",
+     "if": "Retropharyngeal picture; fever, stiff neck held flexed, refuses to extend it",
+     "ddx": {
+      "lead": [
+       "Retropharyngeal abscess"
+      ],
+      "out": []
+     },
+     "next": "rpa_ct",
+     "orders": [
+      {
+       "item": "Antibiotics",
+       "dose": "Ampicillin-sulbactam 50 mg/kg every 6 hours or clindamycin 15 mg/kg every 8 hours; add vancomycin or linezolid with sepsis or no response",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28722903",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "pta",
+     "if": "Peritonsillar picture; one tonsil pushed in, uvula deviated, trismus, drooling",
+     "ddx": {
+      "lead": [
+       "Peritonsillar abscess"
+      ],
+      "out": []
+     },
+     "next": "pta"
+    },
+    {
+     "id": "swelling",
+     "if": "Tongue or lip swelling with stridor; hives after a trigger, or on an ACE inhibitor",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "swell"
+    }
+   ]
+  },
+  {
+   "id": "epig_or",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Child with sudden fever, drooling and a tripod posture. Airway plan?",
+   "options": [
+    "Controlled intubation in the operating room by anesthesia and ENT, tracheostomy ready",
+    "Lateral neck x-ray in radiology first, to look for a thumb sign before calling the team",
+    "Nebulized racemic epinephrine and dexamethasone in the ED, then reassess the stridor",
+    "IV line and blood cultures in the ED first, then intubation once the results return"
+   ],
+   "answer": 0,
+   "chainStep": "Controlled intubation in the operating room by anesthesia and ENT with a tracheostomy ready; blood and epiglottic cultures once the tube is in; ICU",
+   "why": "Pediatric epiglottitis is a clinical diagnosis: no exam, laryngoscopy, lab test or film comes before the airway, and about 20% of lateral neck films miss it. The airway is ideally secured in the operating room, with a tracheostomy if intubation fails. Cultures and a blood count wait for a secured tube, and racemic epinephrine is among the things to avoid.",
+   "next": "epig_abx",
+   "sources": [
+    {
+     "docId": "pmid:28613691",
+     "where": "Evaluation; Treatment / Management, Management of Epiglottitis in the Pediatric Patient"
+    }
+   ],
+   "orders": [
+    {
+     "item": "After the tube is in",
+     "dose": "Blood count, blood culture and epiglottic culture; ICU",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613691",
+       "where": "Evaluation; Management of Epiglottitis in the Pediatric Patient"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "scope",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Adult, severe pain on swallowing and a muffled voice; the mouth looks near normal. Next?",
+   "options": [
+    "Flexible nasolaryngoscopy by ENT with the patient sitting up and anesthesia on hand",
+    "Rapid strep test, and oral penicillin V for 10 days if the result comes back positive",
+    "A normal-looking oropharynx excludes it; treat as a viral sore throat with analgesia",
+    "Nebulized racemic epinephrine, then reassess the voice and swallowing in an hour"
+   ],
+   "answer": 0,
+   "chainStep": "Close monitoring and flexible nasolaryngoscopy by ENT, sitting up, with an anesthesiologist available; a lateral neck film, if taken, fits epiglottitis at 7 mm or more",
+   "why": "An adult who is not in extremis is monitored closely and examined with a flexible nasolaryngoscope by ENT, an anesthesiologist available; this has largely replaced the lateral neck film, which fits epiglottitis at a thickness of 7 mm. Adults often have fever without obvious signs in the mouth and can decompensate suddenly, even after antibiotics for a sore throat. Racemic epinephrine and agitation are avoided.",
+   "next": "scope_result",
+   "sources": [
+    {
+     "docId": "pmid:28613691",
+     "where": "History and Physical; Evaluation; Treatment / Management"
+    }
+   ]
+  },
+  {
+   "id": "scope_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Nasolaryngoscopy",
+   "outcomes": [
+    {
+     "id": "epig",
+     "if": "Supraglottitis; swollen red epiglottis and supraglottis",
+     "ddx": {
+      "lead": [
+       "Epiglottitis"
+      ],
+      "out": []
+     },
+     "next": "epig_abx"
+    },
+    {
+     "id": "normal",
+     "if": "Epiglottis normal; supraglottis not swollen",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Epiglottitis"
+      ]
+     },
+     "next": "rpa_ct"
+    }
+   ]
+  },
+  {
+   "id": "epig_abx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Epiglottitis; airway secured or judged safe. Antibiotic?",
+   "options": [
+    "IV ceftriaxone or another third-generation cephalosporin",
+    "Oral penicillin V for 10 days, as for a strep throat",
+    "IV metronidazole alone, to cover the mouth anaerobes",
+    "IV dexamethasone alone, with antibiotics if the cultures grow"
+   ],
+   "answer": 0,
+   "chainStep": "IV ceftriaxone (or cefotaxime or cefuroxime) once the airway is stable, covering H influenzae, still the commonest cause in adults and children, vaccinated or not; ICU; adjust to cultures",
+   "why": "Antibiotics follow airway stabilization: ceftriaxone or an equivalent, with cefuroxime, ceftriaxone or cefotaxime named for children. H influenzae is still the single most common cause in adults and children, and vaccinated children can still get it. Every patient goes to intensive care, intubated or not, with a tracheostomy tray at hand. Corticosteroids may reduce edema and shorten the intensive care stay.",
+   "next": "end_epig",
+   "sources": [
+    {
+     "docId": "pmid:28613691",
+     "where": "Treatment / Management; Differential Diagnosis; Etiology; Epidemiology; Management of Epiglottitis in the Pediatric Patient"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Ceftriaxone dose",
+     "dose": "Not stated in this pathway's epiglottitis sources",
+     "status": "pending"
+    },
+    {
+     "item": "MRSA cover (vancomycin)",
+     "dose": "Not stated in this pathway's epiglottitis sources",
+     "status": "pending"
+    },
+    {
+     "item": "Disposition",
+     "dose": "ICU, intubated or not, with a tracheostomy tray readily available",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613691",
+       "where": "Management of Epiglottitis in the Pediatric Patient"
+      }
+     ]
+    },
+    {
+     "item": "Adults, mild to moderate swelling",
+     "dose": "Without high-risk factors such as diabetes or an epiglottic abscess: ICU observation, antibiotics and steroids. Airway intervention is now about 10%, and intubation fails about 1 in 25 times",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613691",
+       "where": "Management of Epiglottitis in the Adult Patient"
+      },
+      {
+       "docId": "pmid:38230383",
+       "where": "Abstract: Results; Conclusion"
+      }
+     ]
+    },
+    {
+     "item": "Close contacts",
+     "dose": "When type b H influenzae is isolated: rifampin 20 mg/kg (maximum 600 mg) daily for 4 days; the chapter's prevention section names close contacts who are not immunized",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613691",
+       "where": "Prognosis; Deterrence and Patient Education"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_epig",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Epiglottitis: airway first (the operating room in a child; nasolaryngoscopy and ICU observation in most adults, with a surgical airway plan), then IV ceftriaxone or another third-generation cephalosporin, cultures and ICU care."
+  },
+  {
+   "id": "ludwig",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Tense swelling under the jaw, raised floor of mouth, trismus, drooling. Airway?",
+   "options": [
+    "Awake flexible fiberoptic nasotracheal intubation, surgical airway ready",
+    "Blind nasotracheal intubation to get past the swollen mouth quickly",
+    "A supraglottic airway device first, then a CT scan of the neck",
+    "IV antibiotics first, with intubation if stridor or cyanosis develops later"
+   ],
+   "answer": 0,
+   "chainStep": "Awake flexible fiberoptic nasotracheal intubation by an experienced clinician, cricothyrotomy or tracheostomy prepared first; then contrast CT, IV ampicillin-sulbactam or clindamycin, and drainage of any abscess",
+   "why": "Asphyxiation is the leading cause of death in Ludwig angina, so the airway comes first. Awake flexible fiberoptic nasotracheal intubation is preferred, with a surgical airway prepared before any attempt. Blind nasal intubation can provoke bleeding, rupture an abscess and trigger laryngospasm, and a supraglottic device may not seat past the trismus. Stridor and cyanosis are late, ominous signs, not the trigger to act.",
+   "next": "rpa_ct",
+   "sources": [
+    {
+     "docId": "pmid:29493976",
+     "where": "Treatment / Management, Airway Management"
+    },
+    {
+     "docId": "pmid:30020634",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Antibiotics, once the airway is secure",
+     "dose": "IV ampicillin-sulbactam or clindamycin; immunocompromised: cefepime, meropenem or piperacillin-tazobactam; add vancomycin or linezolid with MRSA risk",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29493976",
+       "where": "Intravenous Antibiotics"
+      }
+     ]
+    },
+    {
+     "item": "Dexamethasone",
+     "dose": "10 mg IV is the usual agent when used; not yet a standard of care",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29493976",
+       "where": "Intravenous Corticosteroids"
+      }
+     ]
+    },
+    {
+     "item": "Surgical decompression",
+     "dose": "When imaging shows an abscess, there is fluctuance, or antibiotics alone fail",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29493976",
+       "where": "Surgical Drainage"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rpa_ct",
+   "kind": "step",
+   "stage": "Imaging",
+   "ask": "Deep neck infection suspected; the airway is safe or secured. Imaging?",
+   "options": [
+    "CT neck with IV contrast, an airway clinician alongside if at risk",
+    "CT neck without IV contrast, to spare the kidneys the dye load",
+    "Bedside needle aspiration of the back of the throat to find pus",
+    "Plain lateral neck film alone; a normal film settles the question for now"
+   ],
+   "answer": 0,
+   "chainStep": "CT neck with IV contrast (the gold standard), with a clinician trained in emergency airway management present if the airway is at risk; blood cultures; chest x-ray if chest pain or septic emboli are suspected",
+   "why": "Contrast-enhanced CT is the gold standard for the source and extent of a deep neck infection; without contrast it separates cellulitis from abscess much less well. If the airway may be compromised, a clinician trained in emergency airway management stays with the patient in the scanner. In young children a lateral neck film or ultrasound often comes first, but the plain film misses about 1 in 5 (sensitivity 80%). The posterior pharynx is examined cautiously by airway-experienced clinicians, because an abscess can rupture and be aspirated.",
+   "next": "ct_result",
+   "sources": [
+    {
+     "docId": "pmid:30020634",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:28722903",
+     "where": "History and Physical; Evaluation"
+    },
+    {
+     "docId": "pmid:29493976",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:29763021",
+     "where": "Evaluation"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Blood cultures",
+     "dose": "Aerobic and anaerobic when a retropharyngeal abscess is suspected; with any sign of sepsis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722903",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:30020634",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Chest x-ray",
+     "dose": "Chest pain (mediastinal spread) or suspected septic emboli",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722903",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:29763021",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ct_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "CT neck with IV contrast",
+   "outcomes": [
+    {
+     "id": "collection",
+     "if": "Abscess; a rim-enhancing collection",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_deep_neck",
+     "orders": [
+      {
+       "item": "Drainage",
+       "dose": "Airway compromise: immediate incision and drainage. Otherwise all but the smallest abscesses usually need drainage, above all if not better after 24 to 48 hours of IV antibiotics or larger than 2 to 2.5 cm",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28722903",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:30020634",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "phlegmon",
+     "if": "Phlegmon; cellulitis, no drainable collection",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_deep_neck",
+     "orders": [
+      {
+       "item": "Medical treatment",
+       "dose": "IV antibiotics; drain if no improvement after 48 hours or a collection forms",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30020634",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:29493976",
+         "where": "Surgical Drainage"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ij",
+     "if": "Internal jugular thrombosis; septic thrombophlebitis in the neck",
+     "ddx": {
+      "lead": [
+       "Lemierre syndrome"
+      ],
+      "out": []
+     },
+     "next": "end_lemierre",
+     "orders": [
+      {
+       "item": "Antibiotic",
+       "dose": "A beta-lactamase-resistant beta-lactam; clindamycin or metronidazole with a significant beta-lactam allergy. Lemierre chapter: about 6 weeks for most; Deep Neck Infections: 3 to 6 weeks",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29763021",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:30020634",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Anticoagulation",
+       "dose": "Not for uncomplicated disease; usually for cerebral sinus extension, large or bilateral clot, or no improvement in 72 hours",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29763021",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "normal",
+     "if": "No deep neck infection; no collection, phlegmon or clot",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Retropharyngeal abscess"
+      ]
+     },
+     "next": "end_ct_normal"
+    }
+   ]
+  },
+  {
+   "id": "end_deep_neck",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Deep neck infection: airway first, then admission, IV ampicillin-sulbactam or clindamycin (MRSA cover when at risk) and ENT; drain a discrete abscess, at once if the airway is compromised, while a phlegmon often settles on antibiotics alone. In Ludwig angina, decompress when imaging shows an abscess or antibiotics fail."
+  },
+  {
+   "id": "end_lemierre",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Lemierre syndrome: blood cultures, a chest film for septic emboli, and IV antibiotics that resist beta-lactamase for 3 to 6 weeks; drain any abscess; anticoagulate only for extensive or spreading clot or no improvement by 72 hours."
+  },
+  {
+   "id": "end_ct_normal",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No collection, phlegmon or clot on contrast CT: a deep neck infection is unlikely; look for another cause of the pain and fever."
+  },
+  {
+   "id": "throat_look",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Throat, neck and history",
+   "outcomes": [
+    {
+     "id": "pta",
+     "if": "Peritonsillar abscess; one tonsil pushed in, uvula deviated, trismus, hot potato voice",
+     "ddx": {
+      "lead": [
+       "Peritonsillar abscess"
+      ],
+      "out": []
+     },
+     "next": "pta"
+    },
+    {
+     "id": "neck",
+     "if": "Neck swelling after a sore throat; fever, rigors, tender swelling at the jaw angle",
+     "ddx": {
+      "lead": [
+       "Lemierre syndrome"
+      ],
+      "out": []
+     },
+     "next": "rpa_ct"
+    },
+    {
+     "id": "mono",
+     "if": "Mono picture; teen or young adult, fatigue, cervical nodes, enlarged spleen",
+     "ddx": {
+      "lead": [
+       "Infectious mononucleosis"
+      ],
+      "out": []
+     },
+     "next": "mono"
+    },
+    {
+     "id": "phar",
+     "if": "Pharyngitis; none of the abscess, neck or mono signs",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "score"
+    }
+   ]
+  },
+  {
+   "id": "pta",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "One tonsil pushed in, uvula deviated, trismus; airway safe or secured. Next?",
+   "options": [
+    "Needle aspiration or incision and drainage, plus antibiotics",
+    "Rapid strep test, with antibiotics if the result comes back positive",
+    "Drain it, with no antibiotic needed once the pus is out",
+    "IV dexamethasone alone, with antibiotics if the fever persists"
+   ],
+   "answer": 0,
+   "chainStep": "Drainage by needle aspiration or incision and drainage (upright, topical anesthetic), plus antibiotics such as clindamycin, ampicillin-sulbactam or amoxicillin-clavulanate; analgesia, IV fluids; consider a steroid",
+   "why": "With drooling, tripoding or labored breathing, the airway is stabilized before anything else. Once the abscess is diagnosed, clinically or on imaging, prompt antibiotics are essential, alongside drainage and supportive care. Needle aspiration and incision and drainage are both used; incision may bring fewer recurrences. Ultrasound can confirm the abscess and guide the needle, and contrast CT is for an unclear picture or a suspected deeper infection. Corticosteroids reduce pain and shorten recovery alongside the antibiotic, which remains essential.",
+   "next": "end_pta",
+   "sources": [
+    {
+     "docId": "pmid:30137805",
+     "where": "History and Physical; Evaluation; Treatment / Management, Airway Stabilization"
+    },
+    {
+     "docId": "pmid:32644433",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:30252251",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Antibiotics",
+     "dose": "Clindamycin 450 mg PO three times daily or 600 to 900 mg IV three times daily; ampicillin-sulbactam 3 g IV four times daily; amoxicillin-clavulanate 875 mg PO twice daily; or metronidazole 400 to 500 mg four times daily with ceftriaxone 1 g IV twice daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30137805",
+       "where": "Treatment / Management, Medical Management"
+      }
+     ]
+    },
+    {
+     "item": "MRSA suspected",
+     "dose": "Metronidazole with vancomycin 1 g IV twice daily, or linezolid 600 mg PO twice daily",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30137805",
+       "where": "Treatment / Management, Medical Management"
+      }
+     ]
+    },
+    {
+     "item": "Vancomycin, weight-based",
+     "dose": "15 to 20 mg/kg IV every 8 to 12 hours, usual maximum 2 g a dose, adjusted to renal function and drug levels (StatPearls orbital cellulitis review); the US label and the StatPearls vancomycin review give 2 g a day, with a first daily dose of at least 15 mg/kg",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29939678",
+       "where": "Treatment / Management: \"adults may receive 15 to 20 mg/kg intravenously every 8 to 12 hours, with a usual maximum of 2 g per dose\""
+      },
+      {
+       "docId": "url:9115c6d54fdb",
+       "where": "2.2: \"The usual daily intravenous dosage of Vancomycin Injection is 2 grams (g) divided either as 500 mg every 6 hours or 1 g every 12 hours\"; \"The initial daily dose should be no less than 15 mg/kg\""
+      }
+     ],
+     "note": "The fixed 1 g twice daily is the label's usual adult dose (and the StatPearls peritonsillar abscess regimen); a StatPearls review gives the weight-based dose. The 2020 US vancomycin consensus was not openly readable."
+    },
+    {
+     "item": "Corticosteroid",
+     "dose": "Dexamethasone 8 to 10 mg IV three times daily or methylprednisolone 2 to 3 mg/kg IV; eases pain and shortens recovery",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30137805",
+       "where": "Treatment / Management, Medical Management"
+      }
+     ]
+    },
+    {
+     "item": "Imaging",
+     "dose": "Point-of-care ultrasound first; contrast CT if ultrasound is nondiagnostic, the picture is unclear or another deep space infection is suspected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30137805",
+       "where": "Evaluation, Radiological Imaging"
+      }
+     ]
+    },
+    {
+     "item": "Drainage or medicine alone",
+     "dose": "Acute Pharyngitis and Stridor in Children: drainage is necessary. Peritonsillar Abscess: the choice is individualized; no significant outcome difference between medical and surgical management, and abscesses over 2 cm resolve less often on medicine alone",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:30137805",
+       "where": "Treatment / Management, Surgical Management"
+      },
+      {
+       "docId": "pmid:32644433",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:30252251",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "The StatPearls chapters disagree on whether every peritonsillar abscess needs drainage."
+    }
+   ]
+  },
+  {
+   "id": "end_pta",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Peritonsillar abscess: needle aspiration or incision and drainage, antibiotics covering strep and the mouth anaerobes, analgesia and fluids; airway first if there is distress."
+  },
+  {
+   "id": "mono",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Exudative sore throat, fatigue, cervical nodes and an enlarged spleen. Next?",
+   "options": [
+    "EBV testing (heterophile or EBV-specific antibody); no amoxicillin",
+    "Amoxicillin for 10 days in case this is strep, then review in the clinic",
+    "A routine oral corticosteroid course to shorten the illness",
+    "Oral acyclovir to clear the virus and shorten the illness"
+   ],
+   "answer": 0,
+   "chainStep": "EBV testing (EBV-specific antibodies, or a heterophile test), HIV testing; supportive care with acetaminophen or an NSAID; no amoxicillin; no contact sports until cleared",
+   "why": "Laboratory confirmation is advised for everyone with suspected mononucleosis, because the diagnosis shapes counseling on the course and the risk of splenic rupture. EBV-specific antibodies are the more accurate test; the heterophile (Monospot) test is cheaper and faster but less sensitive, and often negative in young children. Treatment is supportive: antivirals have no established role, routine corticosteroids are not recommended, antibiotics are not indicated, and amoxicillin brings a maculopapular rash in up to 30%.",
+   "next": "end_mono",
+   "sources": [
+    {
+     "docId": "pmid:29261868",
+     "where": "Evaluation; Treatment / Management; Deterrence and Patient Education"
+    },
+    {
+     "docId": "pmid:32644711",
+     "where": "Evaluation"
+    }
+   ],
+   "orders": [
+    {
+     "item": "HIV test",
+     "dose": "For everyone with a mononucleosis picture; HIV RNA if EBV and HIV antibody/antigen tests are negative",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261868",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Heterophile test negative",
+     "dose": "Confirm with EBV-specific antibodies; test for group A strep and HIV",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261868",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Amoxicillin or ampicillin",
+     "dose": "Not indicated; a maculopapular rash in up to 30%",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:29261868",
+       "where": "Deterrence and Patient Education"
+      }
+     ]
+    },
+    {
+     "item": "Contact sports",
+     "dose": "Mononucleosis chapter: back after 4 weeks from symptom onset, strenuous activity after 3 weeks. EBV chapter: a minimum of 3 weeks and full resolution of splenomegaly",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29261868",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:32644711",
+       "where": "Deterrence and Patient Education"
+      }
+     ],
+     "note": "The two StatPearls chapters give 4 weeks and 3 weeks."
+    },
+    {
+     "item": "Airway obstruction from the tonsils",
+     "dose": "Emergency airway management and surgical consultation; high-dose corticosteroid may help",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29261868",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_mono",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Infectious mononucleosis: EBV testing and an HIV test, supportive care with acetaminophen or an NSAID, no antibiotics (amoxicillin brings a rash), and no contact sports for at least 3 to 4 weeks because of the rare splenic rupture."
+  },
+  {
+   "id": "score",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Sore throat with no abscess, neck or mono signs. Who needs a strep test?",
+   "options": [
+    "Score it (McIsaac, or Centor at 15 to 44); test if 2 or more",
+    "Antistreptolysin O titers to confirm a recent streptococcal infection",
+    "Start penicillin on tonsillar exudate alone, without a test",
+    "A cough or a runny nose rules strep out; no score is needed"
+   ],
+   "answer": 0,
+   "chainStep": "McIsaac score (the Centor criteria with the age adjustment, equal to Centor at 15 to 44): 1 or less, no test and no antibiotic; 2 or more, a rapid strep test",
+   "why": "History and examination alone cannot diagnose group A strep, and cough, runny nose or hoarseness make it less likely without ruling it out. A Centor or McIsaac score sorts risk: 0 or 1 is low and needs no test; intermediate (2 to 3) or high (4) risk gets a rapid antigen test. Antistreptococcal antibody titers reflect past infection and are not recommended.",
+   "next": "score_result",
+   "sources": [
+    {
+     "docId": "pmid:30252253",
+     "where": "History and Physical; Evaluation; Table, Clinical Decision Rules"
+    },
+    {
+     "docId": "pmid:32644433",
+     "where": "Evaluation"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Centor",
+     "dose": "1 point each: tonsillar exudates, tender anterior cervical nodes, fever (temperature over 38 C, 100.4 F), absence of cough",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30252253",
+       "where": "Table, Clinical Decision Rules"
+      },
+      {
+       "docId": "pmid:32644433",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "McIsaac",
+     "dose": "Centor plus 1 point for age 3 to 14, minus 1 point for age 45 or older",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644433",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Who to test",
+     "dose": "Streptococcal Pharyngitis: test at a Centor or McIsaac of 2 or more. Acute Pharyngitis: test adults at a Centor of 3 or more. NICE NG84: rapid tests not recommended for routine use; Centor 0 to 2, no antibiotic; Centor 3 or 4, consider an immediate or back-up antibiotic",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:30252253",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:32644433",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "url:957ef49000ba",
+       "where": "1.1.3; 1.1.5; 1.1.6; 1.1.10"
+      }
+     ],
+     "note": "The sources disagree on the adult testing threshold, and NICE prescribes by score without testing. Acute Pharyngitis adds that scores cannot replace testing in children and adolescents."
+    },
+    {
+     "item": "Children under 3",
+     "dose": "Testing may be omitted (low risk of strep and rheumatic fever), unless a sibling has confirmed strep",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30252253",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "centor",
+    "mcisaac"
+   ]
+  },
+  {
+   "id": "score_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Centor or McIsaac score",
+   "outcomes": [
+    {
+     "id": "low",
+     "if": "Low risk; McIsaac 1 or less (equal to Centor at 15 to 44)",
+     "ddx": {
+      "lead": [
+       "Viral pharyngitis"
+      ],
+      "out": []
+     },
+     "next": "end_viral"
+    },
+    {
+     "id": "test",
+     "if": "Intermediate or high risk; McIsaac 2 or more (equal to Centor at 15 to 44)",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "rst"
+    }
+   ]
+  },
+  {
+   "id": "rst",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "McIsaac 2 or more. Next?",
+   "options": [
+    "Rapid strep test; a throat culture if negative in a child",
+    "CT of the neck with IV contrast first, to look for a deep abscess",
+    "Heterophile (Monospot) test in place of a strep test",
+    "Blood count and CRP to sort bacterial from viral"
+   ],
+   "answer": 0,
+   "chainStep": "Swab both tonsils and the posterior pharynx for a rapid antigen test or NAAT before any antibiotic; a backup throat culture in a child with a negative rapid antigen test",
+   "why": "The rapid antigen test is the primary diagnostic test whichever score is used, and it is highly specific; a NAAT is an alternative. The swab takes both tonsils and the posterior pharynx before any antibiotic. Adults and older adolescents have less strep and an extremely low risk of rheumatic fever, so a negative result needs no culture, while a child with a negative rapid test gets a confirmatory culture. Imaging is kept for instability, trouble swallowing or a stiff neck.",
+   "next": "rst_result",
+   "sources": [
+    {
+     "docId": "pmid:30252253",
+     "where": "Evaluation; Pearls and Other Issues"
+    },
+    {
+     "docId": "pmid:32644433",
+     "where": "Evaluation"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Backup culture",
+     "dose": "Acute Pharyngitis: a confirmatory throat culture is necessary in a child with a negative rapid test; adults and older adolescents do not need one. Streptococcal Pharyngitis: a culture may be performed in a child with a negative rapid test (AAP Red Book 2025), though earlier papers found it not cost-effective for preventing rheumatic fever",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:32644433",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:30252253",
+       "where": "Evaluation"
+      }
+     ],
+     "note": "Acute Pharyngitis calls the backup culture necessary; Streptococcal Pharyngitis says it may be performed."
+    }
+   ]
+  },
+  {
+   "id": "rst_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Rapid strep test",
+   "outcomes": [
+    {
+     "id": "pos",
+     "if": "Positive; group A strep",
+     "ddx": {
+      "lead": [
+       "Strep pharyngitis"
+      ],
+      "out": []
+     },
+     "next": "abx"
+    },
+    {
+     "id": "neg",
+     "if": "Negative; a child also gets a backup culture",
+     "ddx": {
+      "lead": [
+       "Viral pharyngitis"
+      ],
+      "out": []
+     },
+     "next": "end_viral"
+    }
+   ]
+  },
+  {
+   "id": "abx",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Group A strep confirmed; no penicillin allergy. Antibiotic?",
+   "options": [
+    "Penicillin V or amoxicillin, by mouth for 10 days",
+    "Azithromycin by mouth, once a day for 5 days",
+    "Amoxicillin-clavulanate by mouth, twice a day for 10 days",
+    "Clindamycin by mouth, three times a day for 10 days"
+   ],
+   "answer": 0,
+   "chainStep": "Penicillin V or amoxicillin for 10 days, or a single IM dose of benzathine penicillin G; acetaminophen or an NSAID; back to school or work after 24 hours of antibiotic",
+   "why": "Penicillin or amoxicillin is first line: penicillin is the only antibiotic shown to cut rheumatic fever, and no penicillin resistance has been documented. A 10-day course clears the throat better than 5 to 7 days. Broad-spectrum antibiotics do not reduce treatment failure, and macrolides and clindamycin are for penicillin allergy, with resistance widely documented.",
+   "next": "end_strep",
+   "sources": [
+    {
+     "docId": "pmid:30252253",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:32644433",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "url:957ef49000ba",
+     "where": "1.3.1, Tables 1 and 2"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Penicillin V, child",
+     "dose": "NICE NG84 by age: 1 to 11 months 62.5 mg four times a day or 125 mg twice a day; 1 to 5 years 125 mg four times a day or 250 mg twice a day; 6 to 11 years 250 mg four times a day or 500 mg twice a day; 12 to 17 years 500 mg four times a day or 1,000 mg twice a day; 5 to 10 days. Streptococcal Pharyngitis: 250 mg 2 to 3 times a day for 10 days. Acute Pharyngitis: 27 kg or less 250 mg 2 to 3 times a day, over 27 kg 500 mg 2 to 3 times a day, for 10 days",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:957ef49000ba",
+       "where": "Table 2"
+      },
+      {
+       "docId": "pmid:30252253",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:32644433",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "Three sources print three child regimens: by age band (NICE), one dose for all children (Streptococcal Pharyngitis), and by weight (Acute Pharyngitis)."
+    },
+    {
+     "item": "Penicillin V, adolescent and adult",
+     "dose": "Streptococcal Pharyngitis: 250 mg 4 times daily or 500 mg twice daily for 10 days. Acute Pharyngitis: 500 mg 2 to 3 times a day for 10 days. NICE (adults): 500 mg four times a day or 1,000 mg twice a day for 5 to 10 days",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:30252253",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:32644433",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "url:957ef49000ba",
+       "where": "Table 1"
+      }
+     ],
+     "note": "Three sources print three adult doses; NICE adds that 5 days may be enough for symptoms but 10 days may clear the throat better."
+    },
+    {
+     "item": "Amoxicillin, child",
+     "dose": "Acute Pharyngitis: 50 mg/kg/day (maximum 1,000 mg/day) once daily or in 2 divided doses, for 10 days. Streptococcal Pharyngitis: 50 mg/kg/day (maximum 1,000 mg/day) for 10 days, or 50 mg/kg (maximum 500 mg) twice daily",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:32644433",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:30252253",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "Both chapters give 50 mg/kg/day once daily; Acute Pharyngitis splits that total into 2 doses, while the Streptococcal Pharyngitis twice-daily line gives 50 mg/kg a dose, double the daily total."
+    },
+    {
+     "item": "Amoxicillin, adult",
+     "dose": "500 mg twice a day for 10 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644433",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Benzathine penicillin G",
+     "dose": "One IM dose: 600,000 units under 27 kg; 1.2 million units over 27 kg and in adults (the chapters differ at exactly 27 kg)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:32644433",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:30252253",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "At exactly 27 kg the chapters differ: Acute Pharyngitis gives 600,000 units at 27 kg or less; Streptococcal Pharyngitis gives 1.2 million units at 27 kg or more."
+    },
+    {
+     "item": "Penicillin allergy, not immediate type",
+     "dose": "Cephalexin 20 mg/kg twice daily (maximum 500 mg a dose) or cefadroxil 30 mg/kg once daily (maximum 1 g a day), for 10 days",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30252253",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Penicillin allergy, immediate type",
+     "dose": "No cephalexin or cefadroxil; clindamycin (child 7 mg/kg a dose 3 times a day, maximum 300 mg a dose; adult 300 mg 3 times a day) for 10 days, or a macrolide",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30252253",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:32644433",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Azithromycin",
+     "dose": "Streptococcal Pharyngitis: 12 mg/kg on day 1 (maximum 500 mg), then 6 mg/kg (maximum 250 mg) on days 2 to 5. Acute Pharyngitis: 12 mg/kg a day (maximum 500 mg) for 3 days; adults 500 mg a day for 3 days. NICE prefers clarithromycin 250 to 500 mg twice a day for 5 days (adults)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:30252253",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:32644433",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "url:957ef49000ba",
+       "where": "Table 1"
+      }
+     ],
+     "note": "The two StatPearls chapters print different azithromycin courses (5 days and 3 days)."
+    },
+    {
+     "item": "Pain and fever",
+     "dose": "Acetaminophen or an NSAID; no routine corticosteroid",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30252253",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_strep",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Strep pharyngitis: penicillin V or amoxicillin for 10 days (cephalexin for a mild allergy; a macrolide or clindamycin after an immediate reaction), analgesia, back to school or work after 24 hours of treatment; reassess if not better within 5 days."
+  },
+  {
+   "id": "end_viral",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Low score or a negative test: no antibiotic; acetaminophen or an NSAID and fluids, with the usual course of about a week; seek help if it worsens or has not started to improve after a week. A child with a negative rapid test is treated only if the backup culture grows group A strep."
+  },
+  {
+   "id": "croup_sev",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Westley croup score",
+   "outcomes": [
+    {
+     "id": "mild",
+     "if": "Mild; no stridor at rest, Westley 2 or less",
+     "ddx": {
+      "lead": [
+       "Croup"
+      ],
+      "out": []
+     },
+     "next": "croup_dex"
+    },
+    {
+     "id": "modsev",
+     "if": "Moderate to severe; stridor at rest, or Westley 3 or more",
+     "ddx": {
+      "lead": [
+       "Croup"
+      ],
+      "out": []
+     },
+     "next": "croup_epi",
+     "orders": [
+      {
+       "item": "Impending respiratory failure",
+       "dose": "Intubation with a tube 0.5 size smaller than usual for age and size",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613724",
+         "where": "Treatment / Management, Intubation"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "croup_dex",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Croup, no stridor at rest (Westley 2 or less). Treatment?",
+   "options": [
+    "Oral dexamethasone as a single dose, then home",
+    "Nebulized albuterol (salbutamol), repeated until the stridor settles",
+    "Nebulized epinephrine, then home right after the dose",
+    "A cough syrup with dextromethorphan at bedtime"
+   ],
+   "answer": 0,
+   "chainStep": "Oral dexamethasone once (0.6 mg/kg is the usual dose; 0.15 and 0.3 mg/kg appear as effective); supportive care; home",
+   "why": "Mild croup gets a single dose of dexamethasone and supportive care, by mouth unless the child cannot swallow, is vomiting or is in severe distress. Doses of 0.15, 0.3 and 0.6 mg/kg appear equally effective, 0.6 mg/kg being the usual one. Nebulized epinephrine is not necessary for mild croup, beta-agonists can worsen upper airway obstruction, and cough medicines are discouraged.",
+   "next": "end_croup",
+   "sources": [
+    {
+     "docId": "pmid:28613724",
+     "where": "Treatment / Management, Steroids; Cough Medicine; Pearls and Other Issues"
+    },
+    {
+     "docId": "pmid:30252251",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Dexamethasone",
+     "dose": "One dose by mouth; 0.6 mg/kg most common; 0.15, 0.3 and 0.6 mg/kg appear equally effective; maximum not stated in this pathway's sources",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613724",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "calcs": [
+    "westley"
+   ]
+  },
+  {
+   "id": "croup_epi",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Croup with stridor at rest or a Westley score of 3 or more. Treatment?",
+   "options": [
+    "Nebulized epinephrine plus dexamethasone, then observe",
+    "Nebulized albuterol plus dexamethasone, then observe",
+    "Heliox first, holding epinephrine and steroids for later",
+    "Intubation now, with a tube a half size smaller"
+   ],
+   "answer": 0,
+   "chainStep": "Nebulized epinephrine (racemic, or L-epinephrine 1:1000) plus dexamethasone; blow-by oxygen if the saturation is low; observe 3 to 4 hours after the last epinephrine; admit if not improving",
+   "why": "Moderate to severe croup gets nebulized epinephrine as well as dexamethasone, and stridor at rest is a warning sign: going home needs no stridor at rest. Epinephrine improves symptoms within 30 minutes, but the effect may fade after 2 hours, so the child is observed for 3 to 4 hours after the last dose before going home. Beta-agonists can worsen the obstruction, heliox is a bridge only when distress persists despite treatment, and intubation is rare (about 0.2%).",
+   "next": "end_croup",
+   "sources": [
+    {
+     "docId": "pmid:28613724",
+     "where": "Treatment / Management; Pearls and Other Issues"
+    },
+    {
+     "docId": "pmid:30252251",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "L-epinephrine 1:1000, nebulized",
+     "dose": "Approximately 0.5 mL/kg; more effective than racemic epinephrine at 2 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613724",
+       "where": "Treatment / Management, Epinephrine"
+      }
+     ]
+    },
+    {
+     "item": "Epinephrine maximum volume and racemic dose",
+     "dose": "Not stated in this pathway's sources",
+     "status": "pending"
+    },
+    {
+     "item": "Dexamethasone route",
+     "dose": "By mouth; IM or IV if the child cannot swallow, is vomiting or is in severe distress",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613724",
+       "where": "Treatment / Management, Steroids"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen",
+     "dose": "For low saturation, by blow-by rather than mask or cannula",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613724",
+       "where": "Treatment / Management, Oxygen"
+      }
+     ]
+    },
+    {
+     "item": "Observation",
+     "dose": "Treatment / Management: home after 4 hours if improved. Pearls: home if improved 3 hours after the last racemic epinephrine, normal oximetry, drinking, no stridor at rest. Admit if not improving",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:28613724",
+       "where": "Treatment / Management; Pearls and Other Issues"
+      }
+     ],
+     "note": "The croup chapter gives 4 hours in one section and 3 hours in another."
+    }
+   ],
+   "calcs": [
+    "westley"
+   ]
+  },
+  {
+   "id": "end_croup",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Croup: dexamethasone at every grade; nebulized epinephrine for stridor at rest or moderate to severe croup, with 3 to 4 hours of observation after the last dose before home; no beta-agonists or cough medicine."
+  },
+  {
+   "id": "swell",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Skin, history and medicines",
+   "outcomes": [
+    {
+     "id": "anaph",
+     "if": "Anaphylaxis; hives, wheeze, stridor, vomiting or low pressure after a trigger",
+     "ddx": {
+      "lead": [
+       "Anaphylaxis"
+      ],
+      "out": []
+     },
+     "next": "end_anaph",
+     "orders": [
+      {
+       "item": "Epinephrine IM",
+       "dose": "0.01 mg/kg to a maximum of 0.5 mg into the anterolateral thigh; repeat every 5 to 15 minutes if refractory",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33204386",
+         "where": "Acute treatment of anaphylaxis"
+        }
+       ]
+      },
+      {
+       "item": "Position",
+       "dose": "Supine; sitting up with respiratory distress; pregnant, semi-recumbent on the left side",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:33204386",
+         "where": "Acute treatment of anaphylaxis"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "acei",
+     "if": "ACE inhibitor angioedema, airway safe; on an ACE inhibitor, no hives or itch",
+     "ddx": {
+      "lead": [
+       "ACE inhibitor angioedema"
+      ],
+      "out": []
+     },
+     "next": "acei"
+    },
+    {
+     "id": "acei_airway",
+     "if": "ACE inhibitor angioedema, airway threatened; stridor, drooling or floor-of-mouth swelling",
+     "ddx": {
+      "lead": [
+       "ACE inhibitor angioedema"
+      ],
+      "out": []
+     },
+     "next": "acei_tube"
+    },
+    {
+     "id": "other",
+     "if": "Neither; no hives, no ACE inhibitor, recurrent swelling",
+     "ddx": {
+      "lead": [
+       "Hereditary angioedema"
+      ],
+      "out": []
+     },
+     "next": "end_other"
+    }
+   ]
+  },
+  {
+   "id": "end_anaph",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Anaphylaxis: IM epinephrine into the outer thigh now; lie flat, or sit up if breathing is the problem; then continue in the dyspnea pathway (pw_dyspnea)."
+  },
+  {
+   "id": "acei",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Tongue swelling on lisinopril; no hives; voice and breathing normal. Next?",
+   "options": [
+    "Stop the ACE inhibitor for good; watch the airway until it settles",
+    "Switch to enalapril once the swelling has fully settled",
+    "Keep the lisinopril, and add a daily antihistamine to prevent a recurrence",
+    "Icatibant now, then restart lisinopril at a lower dose"
+   ],
+   "answer": 0,
+   "chainStep": "Stop the ACE inhibitor and record the class as an allergy; monitor the airway (flexible laryngoscopy for tongue or larynx involvement) and secure it if it is threatened; ICU for persistent tongue, mouth or throat swelling; 4 to 6 hours of observation when it is limited to the face and lips, or a local part of the tongue with the soft palate fully visible, in a reliable patient",
+   "why": "The most important step is to stop the ACE inhibitor and record it as an allergy: ACE inhibitors are contraindicated after ACE inhibitor angioedema, so switching to another or restarting at a lower dose invites a recurrence. Bradykinin-mediated swelling often resists epinephrine, steroids and antihistamines, and nothing shows bradykinin blockers do better, so the airway is watched closely and secured with an endotracheal tube if it is compromised.",
+   "next": "end_acei",
+   "sources": [
+    {
+     "docId": "pmid:29489196",
+     "where": "Adverse Effects; Contraindications"
+    },
+    {
+     "docId": "pmid:28613705",
+     "where": "Adverse Effects; Contraindications"
+    },
+    {
+     "docId": "pmid:30860724",
+     "where": "Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "url:8e47de0d9872",
+     "where": "4 Contraindications; 5.2 Angioedema"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Any ACE inhibitor again",
+     "dose": "Contraindicated after ACE inhibitor angioedema",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:8e47de0d9872",
+       "where": "4 Contraindications"
+      },
+      {
+       "docId": "pmid:28613705",
+       "where": "Contraindications"
+      }
+     ]
+    },
+    {
+     "item": "Airway",
+     "dose": "Compromised airway: secure with an endotracheal tube until the edema resolves; flexible fiberoptic laryngoscopy shows tongue and larynx involvement",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613705",
+       "where": "Adverse Effects"
+      },
+      {
+       "docId": "pmid:30860724",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Drugs",
+     "dose": "Antihistamines, epinephrine and glucocorticoids are tried, but bradykinin-mediated swelling often resists them; fresh frozen plasma and bradykinin blockers have been tried, without proof they are better",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30860724",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:28613705",
+       "where": "Adverse Effects"
+      }
+     ]
+    },
+    {
+     "item": "Disposition",
+     "dose": "Persistent tongue, mouth or throat swelling: ICU. Face and lips only, or local tongue swelling with the soft palate fully visible: observe 4 to 6 hours, then home if reliable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613639",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "acei_tube",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "ACE inhibitor angioedema with stridor and drooling. Next?",
+   "options": [
+    "Secure the airway early: awake fiberoptic intubation, surgical airway ready; then stop the ACE inhibitor",
+    "IM epinephrine, an IV antihistamine and a steroid first, then watch for improvement before intubating him",
+    "Rapid sequence induction and direct laryngoscopy by the first doctor free, with no backup plan",
+    "Icatibant and fresh frozen plasma first, then intubation if the saturation starts to fall"
+   ],
+   "answer": 0,
+   "chainStep": "Secure the airway early: awake fiberoptic or videolaryngoscopic intubation with topical anesthesia, a surgical airway ready; then stop the ACE inhibitor and record the class as an allergy; ICU",
+   "why": "When airway compromise is present, the airway is secured with an endotracheal tube that allows ventilation until the edema resolves. With an anticipated difficult airway an awake technique (fiberoptic or videolaryngoscopic, topical anesthesia, minimal sedation) is recommended, with backup strategies planned before the first attempt. Bradykinin-mediated swelling often resists epinephrine, antihistamines and steroids, and nothing shows bradykinin blockers or plasma do better, so drugs do not replace the tube. The ACE inhibitor is stopped for good.",
+   "next": "end_acei",
+   "sources": [
+    {
+     "docId": "pmid:28613705",
+     "where": "Adverse Effects"
+    },
+    {
+     "docId": "pmid:29261859",
+     "where": "Technique or Treatment, Tracheal Intubation"
+    },
+    {
+     "docId": "pmid:30860724",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:29489196",
+     "where": "Adverse Effects"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Disposition",
+     "dose": "Intensive care while the tongue, mouth or throat stays swollen",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613639",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Any ACE inhibitor again",
+     "dose": "Contraindicated after ACE inhibitor angioedema",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:8e47de0d9872",
+       "where": "4 Contraindications"
+      },
+      {
+       "docId": "pmid:28613705",
+       "where": "Contraindications"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_acei",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "ACE inhibitor angioedema: stop the drug for good and record the class as an allergy, watch or secure the airway; ICU for persistent tongue or throat swelling, 4 to 6 hours of observation when only the face and lips, or a local part of the tongue with the soft palate fully visible, are involved in a reliable patient; standard allergy drugs often fail."
+  },
+  {
+   "id": "end_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Angioedema with no hives and no ACE inhibitor, recurrent or familial: think of hereditary or acquired C1 inhibitor deficiency (C4, C1 inhibitor level and function); airway first; attacks are treated with C1 inhibitor concentrate, ecallantide or icatibant, as standard allergy drugs often fail."
+  },
+  {
+   "id": "choke",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Can the patient cough, speak and breathe?",
+   "outcomes": [
+    {
+     "id": "complete",
+     "if": "Complete obstruction; cannot speak, cough or breathe",
+     "ddx": {
+      "lead": [
+       "Airway foreign body"
+      ],
+      "out": []
+     },
+     "next": "choke_act"
+    },
+    {
+     "id": "partial",
+     "if": "Partial obstruction; breathing and coughing, with wheeze",
+     "ddx": {
+      "lead": [
+       "Airway foreign body"
+      ],
+      "out": []
+     },
+     "next": "fb"
+    }
+   ]
+  },
+  {
+   "id": "choke_act",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Choking, still conscious, cannot speak, cough or breathe. Next?",
+   "options": [
+    "Back blows and abdominal thrusts until it clears; CPR if unresponsive",
+    "A blind finger sweep of the mouth to hook the object out",
+    "Encourage her to cough as hard as she can, standing behind her for support",
+    "Chest x-ray first, to find where the object has lodged"
+   ],
+   "answer": 0,
+   "chainStep": "Back blows, then abdominal thrusts (chest thrusts in pregnancy or obesity; back blows and chest thrusts in an infant), repeated until it clears; chest compressions if unresponsive; no blind finger sweeps",
+   "why": "An ineffective cough means act at once. The Singapore 2026 adult and paediatric guidelines start with five back blows and move to five abdominal thrusts if they fail; StatPearls describes abdominal thrusts (the Heimlich maneuver). Infants get back blows and chest thrusts, not abdominal thrusts, and chest thrusts replace abdominal ones in pregnancy or obesity. If the patient becomes unresponsive, start chest compressions. Blind finger sweeps can push the object down toward the larynx.",
+   "next": "end_fb",
+   "sources": [
+    {
+     "docId": "pmid:42507342",
+     "where": "Relief of adult/child FBAO; summary table by age"
+    },
+    {
+     "docId": "pmid:42507345",
+     "where": "Management of foreign body airway obstruction"
+    },
+    {
+     "docId": "pmid:31985979",
+     "where": "Treatment / Management"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Sequence",
+     "dose": "Singapore 2026 (adult and paediatric): 5 back blows, then 5 abdominal thrusts if they fail. StatPearls: abdominal thrusts (the Heimlich maneuver) for adults and children over 1",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:42507342",
+       "where": "Relief of adult/child FBAO; summary table by age"
+      },
+      {
+       "docId": "pmid:42507345",
+       "where": "Management of foreign body airway obstruction"
+      },
+      {
+       "docId": "pmid:31985979",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "The sources differ on whether back blows come first."
+    },
+    {
+     "item": "Infant under 1",
+     "dose": "Back blows and chest thrusts, alternating; no abdominal thrusts",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31985979",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:42507345",
+       "where": "Management of foreign body airway obstruction"
+      }
+     ]
+    },
+    {
+     "item": "Pregnancy or obesity",
+     "dose": "Chest thrusts in place of abdominal thrusts",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42507342",
+       "where": "Summary table by age; Relief of adult/child FBAO"
+      }
+     ]
+    },
+    {
+     "item": "Unresponsive",
+     "dose": "CPR at once; look for the object before giving breaths, and remove it if you can see it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31985979",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:42507342",
+       "where": "Summary table by age"
+      }
+     ]
+    },
+    {
+     "item": "In hospital, still obstructed",
+     "dose": "Magill forceps or suction under direct laryngoscopy; cricothyrotomy if the object is above the cords and still obstructing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31985979",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fb",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Breathing, coughing and wheezing after choking on a peanut. Next?",
+   "options": [
+    "Chest films, then rigid bronchoscopy even if normal",
+    "Abdominal thrusts now, to clear the airway completely",
+    "Inhaled albuterol for the wheeze, then reassess her in the department",
+    "A blind finger sweep of the mouth for the peanut"
+   ],
+   "answer": 0,
+   "chainStep": "Let the child cough; chest films (inspiratory and expiratory views); rigid bronchoscopy for a suspected partial obstruction, even with normal films",
+   "why": "A child who can still cough and breathe is left to clear the airway by coughing; thrusts are for the child who cannot cough, speak or breathe. Chest films help but are often normal, so a normal film does not exclude an airway foreign body; with a suggestive history, diagnostic bronchoscopy is strongly considered even without radiologic findings. Blind finger sweeps can push an object down toward the larynx.",
+   "next": "end_fb",
+   "sources": [
+    {
+     "docId": "pmid:31985979",
+     "where": "Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "pmid:30252251",
+     "where": "Treatment / Management"
+    }
+   ]
+  },
+  {
+   "id": "end_fb",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Airway foreign body: complete obstruction gets back blows and abdominal thrusts (back blows and chest thrusts in an infant) and chest compressions if unresponsive; a suspected partial obstruction gets bronchoscopy even when the chest films are normal."
+  },
+  {
+   "id": "nose_vitals",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Vitals and how heavy the bleeding is",
+   "outcomes": [
+    {
+     "id": "unstable",
+     "if": "Unstable; low pressure, fast pulse, or heavy bleeding into the throat",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "nose_resus"
+    },
+    {
+     "id": "stable",
+     "if": "Stable; airway clear, no signs of shock",
+     "ddx": {
+      "lead": [
+       "Anterior epistaxis"
+      ],
+      "out": []
+     },
+     "next": "compress"
+    }
+   ]
+  },
+  {
+   "id": "nose_resus",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Heavy nosebleed, pressure low, pulse fast. Next?",
+   "options": [
+    "Airway, two large-bore IVs, crystalloid, crossmatch; pack the nose; ENT",
+    "Lie him flat, with his head tilted back, so that the bleeding slows down",
+    "CT of the head and sinuses first, to find the bleeding source",
+    "Silver nitrate cautery to both sides of the septum straight away"
+   ],
+   "answer": 0,
+   "chainStep": "Airway first; two large-bore IV lines with crystalloid; blood count, type and crossmatch, coagulation studies; reverse anticoagulation when clinically appropriate; nasal packing (posterior if needed); ENT; admit",
+   "why": "Airway first, then the circulation: moderate to severe bleeding gets 2 large-bore lines and crystalloid, with a blood count, crossmatch and clotting studies that never delay treatment. In a life-threatening bleed the priority is stopping it with packing, posterior if needed, and transfusion may be needed. Lying flat with the head back sends blood into the throat, where it is swallowed or aspirated. Imaging has no role in the emergency control of active epistaxis, and cauterizing both sides of the septum risks a perforation.",
+   "next": "pack_result",
+   "sources": [
+    {
+     "docId": "pmid:28613768",
+     "where": "Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "pmid:35015461",
+     "where": "Preparation"
+    },
+    {
+     "docId": "pmid:38032485",
+     "where": "Initial assessment"
+    },
+    {
+     "docId": "pmid:35221303",
+     "where": "Results, Therapeutic approaches"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Anticoagulation",
+     "dose": "Reverse when clinically appropriate; decide with cardiology or hematology",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35015461",
+       "where": "Preparation"
+      },
+      {
+       "docId": "pmid:38032485",
+       "where": "The role of antithrombotic therapy"
+      }
+     ]
+    },
+    {
+     "item": "Transfusion",
+     "dose": "May be needed urgently in hemorrhagic shock; crossmatch early",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:38032485",
+       "where": "Initial assessment"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "compress",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Stable, bleeding from one nostril. First treatment?",
+   "options": [
+    "Lean forward and pinch the soft nose for 10 to 15 minutes",
+    "Tilt the head back and pinch over the bony bridge of the nose",
+    "Anterior nasal packing straight away, before trying pressure",
+    "Silver nitrate cautery to both sides of the septum now"
+   ],
+   "answer": 0,
+   "chainStep": "Sit up, lean forward, pinch the soft (cartilaginous) nose for 10 to 15 minutes; suction clots; a topical vasoconstrictor such as oxymetazoline if it keeps bleeding; on an anticoagulant, check the INR",
+   "why": "Most anterior nosebleeds stop with pressure. The patient leans forward, so blood is not swallowed or aspirated, and pinches the cartilaginous nose, not the bony bridge, for 10 to 15 minutes. If that fails, clots are suctioned and a topical vasoconstrictor such as oxymetazoline goes on, with more pressure. Packing is for bleeding that pressure, vasoconstrictors or cautery have not stopped, and silver nitrate goes on one side of the septum only.",
+   "next": "compress_result",
+   "sources": [
+    {
+     "docId": "pmid:42787724",
+     "where": "Introduction and background"
+    },
+    {
+     "docId": "pmid:35221303",
+     "where": "Results, Therapeutic approaches"
+    },
+    {
+     "docId": "pmid:28613768",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:30855888",
+     "where": "Indications; Preparation"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Pressure time",
+     "dose": "At least 10 minutes (StatPearls); 10 to 15 minutes (review); 15 to 20 minutes after a vasoconstrictor (StatPearls nasal pack)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613768",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:42787724",
+       "where": "Introduction and background"
+      },
+      {
+       "docId": "pmid:30855888",
+       "where": "Preparation"
+      }
+     ]
+    },
+    {
+     "item": "Topical vasoconstrictor",
+     "dose": "0.05% oxymetazoline, or 1% to 4% lidocaine with 1:100,000 epinephrine, after clots are cleared",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30855888",
+       "where": "Preparation"
+      },
+      {
+       "docId": "pmid:28613768",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Topical tranexamic acid",
+     "dose": "An adjunct to consider if available",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35015461",
+       "where": "Preparation"
+      }
+     ]
+    },
+    {
+     "item": "On an anticoagulant",
+     "dose": "Ask about it and check clotting (the INR on warfarin, often raised); drug-induced bleeds may need INR reversal and admission; decide on stopping or reversing with cardiology or hematology",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613768",
+       "where": "History and Physical; Enhancing Healthcare Team Outcomes"
+      },
+      {
+       "docId": "pmid:38032485",
+       "where": "The role of antithrombotic therapy"
+      },
+      {
+       "docId": "pmid:35015461",
+       "where": "Preparation"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "compress_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After pressure, and a vasoconstrictor if needed",
+   "outcomes": [
+    {
+     "id": "site",
+     "if": "Stopped or slowed; a bleeding point on the anterior septum",
+     "ddx": {
+      "lead": [
+       "Anterior epistaxis"
+      ],
+      "out": []
+     },
+     "next": "cautery"
+    },
+    {
+     "id": "none",
+     "if": "Stopped; no bleeding point seen",
+     "ddx": {
+      "lead": [
+       "Anterior epistaxis"
+      ],
+      "out": []
+     },
+     "next": "end_settled",
+     "orders": [
+      {
+       "item": "Discharge",
+       "dose": "After at least 1 hour of stable observation in the ED; follow-up within 1 week; nasal saline",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613768",
+         "where": "Pearls and Other Issues; Postoperative and Rehabilitation Care"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ongoing",
+     "if": "Still bleeding; no point can be seen through the blood",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "pack"
+    }
+   ]
+  },
+  {
+   "id": "cautery",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "A bleeding point on the anterior septum. Treatment?",
+   "options": [
+    "Silver nitrate cautery to that point, after topical anesthetic",
+    "Silver nitrate to both sides of the septum at the same visit",
+    "CT of the sinuses to look for a tumor before treating the vessel",
+    "A posterior balloon pack and admission for monitoring"
+   ],
+   "answer": 0,
+   "chainStep": "Topical anesthetic and vasoconstrictor, then silver nitrate cautery to the bleeding point on one side of the septum only; nasal saline afterward; follow-up within a week",
+   "why": "A visible anterior vessel is cauterized with silver nitrate after topical anesthetic, on one side of the septum only, because cauterizing both sides risks a perforation. Imaging has no role in managing active bleeding, and posterior packing is for bleeding that anterior measures cannot control.",
+   "next": "end_settled",
+   "sources": [
+    {
+     "docId": "pmid:28613768",
+     "where": "Treatment / Management; Evaluation"
+    },
+    {
+     "docId": "pmid:38032485",
+     "where": "Initial assessment"
+    },
+    {
+     "docId": "pmid:30855888",
+     "where": "Preparation"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Discharge",
+     "dose": "After at least 1 hour of stable observation in the ED; follow-up within 1 week; nasal saline; address causes such as high blood pressure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613768",
+       "where": "Postoperative and Rehabilitation Care; Pearls and Other Issues"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pack",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Still bleeding after pressure and a vasoconstrictor; no point visible. Next?",
+   "options": [
+    "Anterior nasal packing: tampon, balloon or resorbable material",
+    "A posterior balloon pack first, ahead of an anterior pack",
+    "CT angiography to find the bleeding vessel before packing it",
+    "Embolization by interventional radiology now, then packing if needed"
+   ],
+   "answer": 0,
+   "chainStep": "Anterior nasal packing (tampon, inflatable balloon, or resorbable material, preferred on anticoagulants or with a coagulopathy); watch 10 to 60 minutes; ENT review in 24 to 48 hours",
+   "why": "Packing is indicated when pressure, vasoconstrictors or cautery fail, or no source can be seen. Resorbable materials suit patients on antithrombotic drugs or with a coagulopathy, since they spare the mucosa and need no removal. A pack that turns bright red, blood past it, or swallowing blood after 30 to 60 minutes means it has failed. Posterior packing, embolization and surgery are for bleeding anterior packing cannot control, and imaging has no role in the emergency.",
+   "next": "pack_result",
+   "sources": [
+    {
+     "docId": "pmid:30855888",
+     "where": "Indications; Technique or Treatment; Patients With Underlying Coagulopathy"
+    },
+    {
+     "docId": "pmid:42787724",
+     "where": "Introduction and background"
+    },
+    {
+     "docId": "pmid:38032485",
+     "where": "Initial assessment"
+    },
+    {
+     "docId": "pmid:28613768",
+     "where": "Evaluation"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Pack time",
+     "dose": "Anterior pack: at least 24 hours; early removal raises rebleeding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30855888",
+       "where": "Technique or Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Prophylactic antibiotics with packing",
+     "dose": "Epistaxis chapter: start an antistaphylococcal antibiotic. Nasal pack chapters: not standard practice, no strong evidence. Hellenic review: consider for packs over 48 hours, immune deficiency or prosthetic valves",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:28613768",
+       "where": "Postoperative and Rehabilitation Care"
+      },
+      {
+       "docId": "pmid:30855888",
+       "where": "Technique or Treatment"
+      },
+      {
+       "docId": "pmid:38032485",
+       "where": "Antibiotic prophylaxis"
+      }
+     ],
+     "note": "The sources disagree on routine antibiotics with a nasal pack."
+    }
+   ]
+  },
+  {
+   "id": "pack_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Bleeding after the anterior pack",
+   "outcomes": [
+    {
+     "id": "held",
+     "if": "Controlled; the pack stays pink, no blood in the throat",
+     "ddx": {
+      "lead": [
+       "Anterior epistaxis"
+      ],
+      "out": []
+     },
+     "next": "end_pack",
+     "orders": [
+      {
+       "item": "Disposition",
+       "dose": "Stable before packing: home with ENT review in 24 to 48 hours. After shock or transfusion: admit",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30855888",
+         "where": "Technique or Treatment"
+        },
+        {
+         "docId": "pmid:38032485",
+         "where": "Initial assessment"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "failed",
+     "if": "Still bleeding; pack bright red, or blood down the throat",
+     "ddx": {
+      "lead": [
+       "Posterior epistaxis"
+      ],
+      "out": []
+     },
+     "next": "posterior"
+    }
+   ]
+  },
+  {
+   "id": "posterior",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Bleeding past the anterior pack and down the throat. Next?",
+   "options": [
+    "Posterior pack or double balloon; admit with monitoring; ENT",
+    "Remove the pack and cauterize again with silver nitrate",
+    "External carotid artery ligation in the operating room, straight away",
+    "CT of the sinuses first, to find the source before repacking"
+   ],
+   "answer": 0,
+   "chainStep": "Posterior packing (Foley catheter or double-balloon) with an anterior pack, by experienced clinicians; admit with cardiac monitoring and oximetry; ENT; embolization or sphenopalatine ligation if it fails",
+   "why": "When bleeding continues behind an anterior pack, a posterior pack (Foley or double-balloon catheter) with an anterior pack is next, placed by experienced clinicians. The patient is admitted with cardiac monitoring and oximetry because of the risk to the airway and the nasal-cardiac reflex, a sudden bradycardia after packing. If posterior packing fails, sphenopalatine embolization or endoscopic ligation follows; external carotid ligation is a last resort. Repeatedly removing and reinserting packs only worsens the bleeding.",
+   "next": "end_posterior",
+   "sources": [
+    {
+     "docId": "pmid:35015461",
+     "where": "Personnel; Preparation; Technique or Treatment"
+    },
+    {
+     "docId": "pmid:28613768",
+     "where": "Treatment / Management; Enhancing Healthcare Team Outcomes"
+    },
+    {
+     "docId": "pmid:38032485",
+     "where": "Initial assessment; Definitive treatment"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Foley balloon",
+     "dose": "5 to 7 mL of sterile water or saline, then 5 to 7 mL more if needed; 15 mL at most",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35015461",
+       "where": "Technique or Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Admission, cardiac monitoring and continuous oximetry while the pack is in",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35015461",
+       "where": "Preparation"
+      },
+      {
+       "docId": "pmid:28613768",
+       "where": "Pearls and Other Issues"
+      }
+     ]
+    },
+    {
+     "item": "Pack time",
+     "dose": "48 to 72 hours, some up to 5 days; removal before 48 hours raises rebleeding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35015461",
+       "where": "Technique or Treatment"
+      }
+     ]
+    },
+    {
+     "item": "If posterior packing fails",
+     "dose": "Endovascular sphenopalatine embolization or endoscopic sphenopalatine ligation; intubate for airway protection if all else fails",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35015461",
+       "where": "Technique or Treatment"
+      },
+      {
+       "docId": "pmid:28613768",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_settled",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bleeding controlled without packing (pressure, a vasoconstrictor, or cautery to one point): home after an hour of stable observation in the ED, with nasal saline, attention to causes such as blood pressure, and follow-up within a week."
+  },
+  {
+   "id": "end_pack",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Anterior pack holding: if the patient was stable, home with ENT review in 24 to 48 hours; after shock or transfusion, admit. The pack stays at least 24 hours; resorbable material suits patients on anticoagulants; routine antibiotics with the pack are debated."
+  },
+  {
+   "id": "end_posterior",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Posterior bleed: posterior or double-balloon pack with an anterior pack, admission with monitoring, ENT; embolization or sphenopalatine ligation when packing fails."
+  }
+ ],
+ "cases": [
+  {
+   "id": "epig_child",
+   "label": "Epiglottitis in a child",
+   "vignette": "4-year-old girl, never vaccinated, 5 hours of high fever and a sore throat, now refusing to swallow. HR 150, RR 34, temperature 39.6, SpO2 94%.",
+   "picks": {
+    "front": "airway",
+    "airway_look": "epig_child"
+   },
+   "results": {
+    "front": "Sitting bolt upright, leaning forward on her hands, drooling, soft inspiratory stridor, muffled voice. No barking cough.",
+    "airway_look": "Anxious and still; no cough; anesthesia and ENT agree this is epiglottitis until proven otherwise."
+   }
+  },
+  {
+   "id": "epig_adult",
+   "label": "Adult supraglottitis",
+   "vignette": "48-year-old man with no medical history, 1 day of worsening sore throat and pain on swallowing, now spitting saliva into a cup. BP 138/84, HR 112, temperature 38.6, SpO2 97%.",
+   "picks": {
+    "front": "airway",
+    "airway_look": "epig_adult",
+    "scope_result": "epig"
+   },
+   "results": {
+    "front": "Sitting forward, drooling, muffled voice, no stridor; prefers not to lie down.",
+    "airway_look": "Tender over the hyoid; the oropharynx looks almost normal for the pain he describes.",
+    "scope_result": "Flexible nasolaryngoscopy: a swollen, cherry-red epiglottis and swollen arytenoids; the airway is narrowed but open."
+   }
+  },
+  {
+   "id": "scope_normal",
+   "label": "Severe sore throat, normal scope and CT",
+   "vignette": "31-year-old woman, 2 days of severe sore throat with a cough and runny nose; swallowing hurts so much she lets saliva pool. BP 122/76, HR 96, temperature 38.4, SpO2 99%.",
+   "picks": {
+    "front": "airway",
+    "airway_look": "epig_adult",
+    "scope_result": "normal",
+    "ct_result": "normal"
+   },
+   "results": {
+    "front": "Upright, drooling a little, muffled voice, no stridor.",
+    "airway_look": "Mildly red pharynx, tonsils small; the pain seems out of proportion to the throat.",
+    "scope_result": "Flexible nasolaryngoscopy: normal epiglottis and supraglottis; mild pharyngeal redness.",
+    "ct_result": "CT neck with contrast: no collection, no phlegmon, jugular veins patent."
+   }
+  },
+  {
+   "id": "ludwig",
+   "label": "Ludwig angina",
+   "vignette": "52-year-old man with a painful lower left molar for a week, now 2 days of swelling under the jaw and difficulty opening his mouth. BP 136/82, HR 118, temperature 38.9, SpO2 95%.",
+   "picks": {
+    "front": "airway",
+    "airway_look": "ludwig",
+    "ct_result": "phlegmon"
+   },
+   "results": {
+    "front": "Drooling, muffled voice, cannot open his mouth more than a finger's width, firm swelling under the jaw on both sides.",
+    "airway_look": "Board-like swelling of the floor of the mouth and both submandibular spaces, tongue pushed up and back; no fluctuance.",
+    "ct_result": "After awake fiberoptic intubation, CT neck with contrast: diffuse submandibular and sublingual soft tissue stranding, no rim-enhancing collection."
+   }
+  },
+  {
+   "id": "rpa_child",
+   "label": "Retropharyngeal abscess in a child",
+   "vignette": "3-year-old boy, 4 days of a cold, now 2 days of fever, refusing to eat and holding his neck still. Weight 14 kg. HR 148, RR 30, temperature 39.2, SpO2 97%.",
+   "picks": {
+    "front": "airway",
+    "airway_look": "rpa",
+    "ct_result": "collection"
+   },
+   "results": {
+    "front": "Drooling, muffled cry, no stridor at rest, no barking cough.",
+    "airway_look": "Neck held flexed and cries when it is extended; tender neck nodes; the airway team judges him stable enough to scan with them present.",
+    "ct_result": "CT neck with contrast: a 2.8 cm rim-enhancing retropharyngeal collection; airway narrowed but patent."
+   }
+  },
+  {
+   "id": "lemierre",
+   "label": "Lemierre syndrome",
+   "vignette": "19-year-old woman, a sore throat 6 days ago that eased, now 2 days of high fevers with shaking chills and a painful right neck. BP 104/66, HR 120, temperature 39.8, SpO2 95%.",
+   "picks": {
+    "front": "throat",
+    "throat_look": "neck",
+    "ct_result": "ij"
+   },
+   "results": {
+    "front": "Talking normally, swallowing her saliva, no stridor.",
+    "throat_look": "Tender swelling along the right jaw angle and the front of the sternocleidomastoid; tonsils mildly red, no bulge, uvula midline.",
+    "ct_result": "CT neck with contrast: a filling defect in the right internal jugular vein with surrounding inflammation; no drainable collection."
+   }
+  },
+  {
+   "id": "pta",
+   "label": "Peritonsillar abscess",
+   "vignette": "24-year-old man, 5 days of sore throat, now much worse on the left with pain into the left ear. BP 128/78, HR 104, temperature 38.5, SpO2 99%.",
+   "picks": {
+    "front": "throat",
+    "throat_look": "pta"
+   },
+   "results": {
+    "front": "Muffled hot potato voice, swallowing his own saliva, no stridor or distress.",
+    "throat_look": "Opens his mouth two fingers wide; the left tonsil is pushed toward the midline by a bulging, red soft palate; uvula deviated to the right."
+   }
+  },
+  {
+   "id": "mono",
+   "label": "Infectious mononucleosis",
+   "vignette": "19-year-old college student, 10 days of tiredness, then a sore throat and fever. She plays rugby. BP 116/72, HR 92, temperature 38.3.",
+   "picks": {
+    "front": "throat",
+    "throat_look": "mono"
+   },
+   "results": {
+    "front": "Voice normal, swallowing fine, no stridor.",
+    "throat_look": "Enlarged tonsils with white exudate, tender cervical nodes on both sides, spleen tip palpable below the left costal margin; no tonsillar bulge."
+   }
+  },
+  {
+   "id": "strep_pos",
+   "label": "Strep throat in a child",
+   "vignette": "8-year-old boy, 1 day of sore throat, fever and a stomachache; no cough, no runny nose. Weight 26 kg. HR 110, temperature 38.9.",
+   "picks": {
+    "front": "throat",
+    "throat_look": "phar",
+    "score_result": "test",
+    "rst_result": "pos"
+   },
+   "results": {
+    "front": "Voice normal, no drooling or stridor.",
+    "throat_look": "Red tonsils, not swollen, no exudate, palatal petechiae, tender anterior cervical nodes; no tonsillar bulge, neck supple, spleen not felt.",
+    "score_result": "McIsaac 4: tender anterior nodes, fever, no cough, age 3 to 14; no exudate.",
+    "rst_result": "Rapid antigen test: positive for group A strep."
+   }
+  },
+  {
+   "id": "strep_neg",
+   "label": "Exudative sore throat, negative test",
+   "vignette": "34-year-old woman, 2 days of sore throat and fever; no cough. BP 118/74, HR 98, temperature 38.4.",
+   "picks": {
+    "front": "throat",
+    "throat_look": "phar",
+    "score_result": "test",
+    "rst_result": "neg"
+   },
+   "results": {
+    "front": "Voice normal, no drooling or stridor.",
+    "throat_look": "Tonsils red with patchy exudate, tender anterior cervical nodes; no bulge, neck supple, spleen not felt.",
+    "score_result": "Centor 4: exudate, tender anterior nodes, fever, no cough.",
+    "rst_result": "Rapid antigen test: negative."
+   }
+  },
+  {
+   "id": "viral",
+   "label": "Viral sore throat",
+   "vignette": "27-year-old man, 2 days of scratchy throat, runny nose, cough and a hoarse voice. HR 84, temperature 37.4.",
+   "picks": {
+    "front": "throat",
+    "throat_look": "phar",
+    "score_result": "low"
+   },
+   "results": {
+    "front": "Voice hoarse, swallowing fine, no stridor.",
+    "throat_look": "Mildly red pharynx, no exudate, no tender nodes; neck supple.",
+    "score_result": "Centor 0: no exudate, no tender anterior nodes, no fever, and a cough."
+   }
+  },
+  {
+   "id": "croup_mild",
+   "label": "Mild croup",
+   "vignette": "2-year-old boy, 1 day of a runny nose, woke tonight with a barking cough and a hoarse voice. HR 120, RR 28, temperature 38.0, SpO2 98%.",
+   "picks": {
+    "front": "croup",
+    "croup_sev": "mild"
+   },
+   "results": {
+    "front": "Barking cough, hoarse cry, stridor only when he cries; playful on his mother's lap, no drooling.",
+    "croup_sev": "Air entry normal, stridor with agitation only, no retractions, no cyanosis, alert: Westley 1."
+   }
+  },
+  {
+   "id": "croup_mod",
+   "label": "Moderate croup",
+   "vignette": "18-month-old girl, 2 days of a cold, now a barking cough and noisy breathing at rest. HR 150, RR 44, temperature 38.4, SpO2 95%.",
+   "picks": {
+    "front": "croup",
+    "croup_sev": "modsev"
+   },
+   "results": {
+    "front": "Barking cough, hoarse cry, stridor heard at rest; no drooling, not toxic.",
+    "croup_sev": "Air entry decreased, stridor at rest, moderate retractions, no cyanosis, alert: Westley 5."
+   }
+  },
+  {
+   "id": "anaph",
+   "label": "Anaphylaxis with lip swelling",
+   "vignette": "23-year-old man, 10 minutes after a cookie with peanuts: lips swelling, itchy rash, wheeze. BP 84/50, HR 128, SpO2 93%.",
+   "picks": {
+    "front": "swelling",
+    "swell": "anaph"
+   },
+   "results": {
+    "front": "Swollen lips, voice slightly hoarse, wheeze on both sides.",
+    "swell": "Hives over the chest and arms, vomited once, known peanut allergy."
+   }
+  },
+  {
+   "id": "acei",
+   "label": "ACE inhibitor angioedema",
+   "vignette": "66-year-old woman on lisinopril for 3 years, woke with a swollen tongue and lower lip. BP 150/88, HR 88, SpO2 98%.",
+   "picks": {
+    "front": "swelling",
+    "swell": "acei"
+   },
+   "results": {
+    "front": "Tongue and lower lip swollen, voice normal, no stridor, soft palate fully visible.",
+    "swell": "No hives, no itch, no wheeze; no new food or drug; takes lisinopril daily."
+   }
+  },
+  {
+   "id": "hae",
+   "label": "Recurrent angioedema without hives",
+   "vignette": "19-year-old woman, third episode this year of a swollen face without itch, this time with some throat tightness; her father has the same problem. BP 118/72, HR 90, SpO2 99%.",
+   "picks": {
+    "front": "swelling",
+    "swell": "other"
+   },
+   "results": {
+    "front": "Swollen left cheek and upper lip, voice normal, no stridor.",
+    "swell": "No hives, no wheeze, no ACE inhibitor or other new drug; the swelling has never responded to antihistamines."
+   }
+  },
+  {
+   "id": "choke_adult",
+   "label": "Choking adult",
+   "vignette": "58-year-old woman in the ED waiting room, clutching her throat after a bite of a sandwich.",
+   "picks": {
+    "front": "choke",
+    "choke": "complete"
+   },
+   "results": {
+    "front": "Sudden silence mid-bite, hands at her throat, standing, frightened.",
+    "choke": "Cannot speak or cough, no air movement, nods when asked if she is choking; still conscious."
+   }
+  },
+  {
+   "id": "fb_child",
+   "label": "Inhaled peanut",
+   "vignette": "2-year-old girl, choked and coughed hard while eating peanuts an hour ago; still coughing. HR 128, RR 34, SpO2 96%.",
+   "picks": {
+    "front": "choke",
+    "choke": "partial"
+   },
+   "results": {
+    "front": "Coughing and crying, pink, no drooling.",
+    "choke": "Breathing and coughing; wheeze and reduced air entry over the right lung."
+   }
+  },
+  {
+   "id": "nose_unstable",
+   "label": "Heavy posterior nosebleed with shock",
+   "vignette": "74-year-old man, an hour of heavy bleeding from both nostrils, vomited blood twice. BP 88/52, HR 124, SpO2 95%.",
+   "picks": {
+    "front": "nose",
+    "nose_vitals": "unstable",
+    "pack_result": "failed"
+   },
+   "results": {
+    "front": "Blood pouring from both nostrils and running down the back of the throat.",
+    "nose_vitals": "Pale and sweaty, pressure 88/52, pulse 124; airway clear while sitting up.",
+    "pack_result": "Bright red blood soaks through the anterior pack and keeps running down the throat."
+   }
+  },
+  {
+   "id": "nose_site",
+   "label": "Anterior nosebleed, cautery",
+   "vignette": "15-year-old boy, 30 minutes of bleeding from the right nostril after nose picking. BP 124/72, HR 96.",
+   "picks": {
+    "front": "nose",
+    "nose_vitals": "stable",
+    "compress_result": "site"
+   },
+   "results": {
+    "front": "Steady bleeding from the right nostril only, no blood in the throat.",
+    "nose_vitals": "Alert, airway clear, vitals normal.",
+    "compress_result": "After pressure and oxymetazoline the bleeding slows; a prominent oozing vessel on the right anterior septum."
+   }
+  },
+  {
+   "id": "nose_none",
+   "label": "Anterior nosebleed that stops",
+   "vignette": "40-year-old woman, a nosebleed on a dry winter morning that has not stopped after 20 minutes at home. BP 132/80, HR 84.",
+   "picks": {
+    "front": "nose",
+    "nose_vitals": "stable",
+    "compress_result": "none"
+   },
+   "results": {
+    "front": "Bleeding from the left nostril, no blood in the throat.",
+    "nose_vitals": "Alert, airway clear, vitals normal.",
+    "compress_result": "Bleeding stops after 15 minutes of firm pressure leaning forward; dry, crusted septum, no active point seen."
+   }
+  },
+  {
+   "id": "nose_warfarin",
+   "label": "Nosebleed on warfarin, anterior pack",
+   "vignette": "79-year-old man on warfarin for atrial fibrillation, 2 hours of bleeding from the left nostril. BP 146/86, HR 82 irregular.",
+   "picks": {
+    "front": "nose",
+    "nose_vitals": "stable",
+    "compress_result": "ongoing",
+    "pack_result": "held"
+   },
+   "results": {
+    "front": "Brisk bleeding from the left nostril, a little blood in the throat.",
+    "nose_vitals": "Alert, airway clear, no signs of shock. INR 3.4.",
+    "compress_result": "Still bleeding after 15 minutes of pressure and oxymetazoline; no point can be seen through the blood.",
+    "pack_result": "After a resorbable anterior pack, the bleeding stops; no blood in the throat after an hour."
+   }
+  },
+  {
+   "id": "croup_rest",
+   "label": "Croup with stridor at rest, low score",
+   "vignette": "3-year-old girl, 1 day of a cold, now a barking cough and noisy breathing even when she is settled. HR 128, RR 30, temperature 38.1, SpO2 97%.",
+   "picks": {
+    "front": "croup",
+    "croup_sev": "modsev"
+   },
+   "results": {
+    "front": "Barking cough, hoarse voice, stridor while calm on her father's lap; no drooling, not toxic.",
+    "croup_sev": "Air entry normal, stridor at rest, no retractions, no cyanosis, alert: Westley 2."
+   }
+  },
+  {
+   "id": "acei_airway",
+   "label": "ACE inhibitor angioedema with airway threat",
+   "vignette": "58-year-old man, 1 hour of rapidly worsening lip and tongue swelling; started lisinopril 5 days ago. BP 154/92, HR 104, SpO2 95%.",
+   "picks": {
+    "front": "airway",
+    "airway_look": "swelling",
+    "swell": "acei_airway"
+   },
+   "results": {
+    "front": "Marked tongue swelling, audible inspiratory stridor, pooling secretions and drooling.",
+    "airway_look": "Tongue and floor of mouth swollen; lips swollen; no hives.",
+    "swell": "No urticaria, no itch, no wheeze, no known allergies; on lisinopril for 5 days."
+   }
+  },
+  {
+   "id": "anaph_stridor",
+   "label": "Anaphylaxis with stridor",
+   "vignette": "34-year-old woman stung by a wasp 10 minutes ago while gardening, now with throat tightness and a hoarse voice. BP 86/50, HR 130, SpO2 92%.",
+   "picks": {
+    "front": "airway",
+    "airway_look": "swelling",
+    "swell": "anaph"
+   },
+   "results": {
+    "front": "Swollen lips and tongue, inspiratory stridor, sitting forward.",
+    "airway_look": "Lips and tongue swollen; widespread hives; wheeze on both sides.",
+    "swell": "Hives over the trunk and arms, wheeze, pressure 86/50, minutes after the sting."
+   }
+  },
+  {
+   "id": "pta_airway",
+   "label": "Peritonsillar abscess with drooling",
+   "vignette": "27-year-old man, 4 days of sore throat, now worse on the right and unable to swallow his saliva. BP 132/80, HR 112, temperature 38.8, SpO2 98%.",
+   "picks": {
+    "front": "airway",
+    "airway_look": "pta"
+   },
+   "results": {
+    "front": "Drooling into a towel, muffled voice, no stridor, breathing comfortably.",
+    "airway_look": "Opens his mouth a finger's width; the right tonsil is pushed toward the midline under a bulging soft palate; uvula deviated to the left."
+   }
+  }
+ ]
+}

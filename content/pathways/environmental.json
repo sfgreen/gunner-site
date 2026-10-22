@@ -1,0 +1,5193 @@
+{
+ "id": "pw_environmental",
+ "title": "Environmental emergencies",
+ "world": "em",
+ "synonyms": [
+  "environmental emergency",
+  "environmental injury",
+  "heat illness",
+  "heat exhaustion",
+  "heat stroke",
+  "heatstroke",
+  "exertional heat stroke",
+  "classic heat stroke",
+  "cold-water immersion",
+  "ice-water immersion",
+  "evaporative cooling",
+  "hyperthermia",
+  "hypothermia",
+  "accidental hypothermia",
+  "Osborn wave",
+  "J wave",
+  "rewarming",
+  "ECMO rewarming",
+  "HOPE score",
+  "not dead until warm",
+  "frostbite",
+  "iloprost",
+  "Aurlumyn",
+  "drowning",
+  "near drowning",
+  "submersion",
+  "rescue breaths",
+  "electrical injury",
+  "electrocution",
+  "lightning",
+  "reverse triage",
+  "keraunoparalysis",
+  "Lichtenberg figures",
+  "snakebite",
+  "rattlesnake",
+  "pit viper",
+  "copperhead",
+  "cottonmouth",
+  "CroFab",
+  "Anavip",
+  "antivenom",
+  "coral snake",
+  "black widow",
+  "latrodectism",
+  "brown recluse",
+  "loxoscelism",
+  "scorpion",
+  "Anascorp",
+  "dog bite",
+  "cat bite",
+  "animal bite",
+  "amoxicillin-clavulanate",
+  "rabies",
+  "rabies PEP",
+  "HRIG",
+  "rabies immune globulin",
+  "tetanus prophylaxis",
+  "altitude sickness",
+  "acute mountain sickness",
+  "AMS",
+  "HACE",
+  "HAPE",
+  "acetazolamide",
+  "dexamethasone",
+  "nifedipine",
+  "decompression sickness",
+  "the bends",
+  "arterial gas embolism",
+  "hyperbaric oxygen",
+  "diving injury",
+  "neuroleptic malignant syndrome",
+  "malignant hyperthermia",
+  "dantrolene"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "pmid:35010760",
+   "label": "Paal 2022 (accidental hypothermia)",
+   "title": "Accidental Hypothermia: 2021 Update (Int J Environ Res Public Health 2022), a narrative review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35010760/"
+  },
+  {
+   "docId": "pmid:31424823",
+   "label": "StatPearls: hypothermia",
+   "title": "Hypothermia (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31424823/"
+  },
+  {
+   "docId": "pmid:42297408",
+   "label": "Korean CPR guideline 2025, part 5",
+   "title": "2025 Korean Guidelines for Cardiopulmonary Resuscitation, Part 5: cardiac arrest in special circumstances (Clin Exp Emerg Med 2026)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42297408/"
+  },
+  {
+   "docId": "pmid:26381473",
+   "label": "NATA 2015 (exertional heat illness)",
+   "title": "National Athletic Trainers' Association Position Statement: Exertional Heat Illnesses (J Athl Train 2015)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26381473/"
+  },
+  {
+   "docId": "pmid:30725820",
+   "label": "StatPearls: heat stroke",
+   "title": "Heat Stroke (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30725820/"
+  },
+  {
+   "docId": "pmid:31971756",
+   "label": "StatPearls: heat illness",
+   "title": "Heat Illness (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31971756/"
+  },
+  {
+   "docId": "pmid:29083764",
+   "label": "StatPearls: cooling techniques",
+   "title": "Cooling Techniques for Hyperthermia (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29083764/"
+  },
+  {
+   "docId": "pmid:29850022",
+   "label": "Hifumi 2018 (heat stroke)",
+   "title": "Heat stroke (J Intensive Care 2018), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29850022/"
+  },
+  {
+   "docId": "pmid:28846335",
+   "label": "StatPearls: rhabdomyolysis",
+   "title": "Rhabdomyolysis (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846335/"
+  },
+  {
+   "docId": "pmid:29489248",
+   "label": "StatPearls: NMS",
+   "title": "Neuroleptic Malignant Syndrome (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29489248/"
+  },
+  {
+   "docId": "pmid:28613578",
+   "label": "StatPearls: malignant hyperthermia",
+   "title": "Malignant Hyperthermia (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613578/"
+  },
+  {
+   "docId": "url:1ab9cf6dbbd0",
+   "label": "FDA label: Dantrium IV",
+   "title": "Dantrium Intravenous (dantrolene sodium) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=4df35098-8702-46be-ac67-30cfdf1aa570"
+  },
+  {
+   "docId": "pmid:40003509",
+   "label": "WMS 2024 summary (altitude, frostbite)",
+   "title": "What Is New in Altitude- and Cold-Related Illnesses of Travel: Appraisal and Summary of the Updated Guidelines from the Wilderness Medical Society (Int J Environ Res Public Health 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40003509/"
+  },
+  {
+   "docId": "pmid:30725599",
+   "label": "StatPearls: frostbite",
+   "title": "Frostbite (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30725599/"
+  },
+  {
+   "docId": "url:6fb35f37a28b",
+   "label": "FDA label: Aurlumyn",
+   "title": "Aurlumyn (iloprost) injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=34036fc0-6832-d066-e063-6394a90a18a4"
+  },
+  {
+   "docId": "pmid:28613583",
+   "label": "StatPearls: drowning",
+   "title": "Drowning: Prevention, Evaluation, and Management (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613583/"
+  },
+  {
+   "docId": "pmid:28846317",
+   "label": "StatPearls: electrical injuries",
+   "title": "Electrical Injuries (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846317/"
+  },
+  {
+   "docId": "pmid:28722949",
+   "label": "StatPearls: lightning injuries",
+   "title": "Lightning Injuries (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722949/"
+  },
+  {
+   "docId": "pmid:21291549",
+   "label": "Lavonas 2011 (crotaline algorithm)",
+   "title": "Unified treatment algorithm for the management of crotaline snakebite in the United States (BMC Emerg Med 2011), consensus",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21291549/"
+  },
+  {
+   "docId": "url:eee37ee07a7c",
+   "label": "FDA label: CroFab",
+   "title": "CroFab (crotalidae polyvalent immune fab, ovine) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=77abd784-3387-420d-abdc-4fe97215d233"
+  },
+  {
+   "docId": "url:e7966e0097e3",
+   "label": "FDA label: Anavip",
+   "title": "Anavip (crotalidae immune F(ab')2, equine) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a16596a5-e87e-40c2-8e34-cea5839849c3"
+  },
+  {
+   "docId": "pmid:31985944",
+   "label": "StatPearls: snake envenomation",
+   "title": "Evaluation and Treatment of Snake Envenomations (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31985944/"
+  },
+  {
+   "docId": "pmid:30085573",
+   "label": "StatPearls: coral snake",
+   "title": "Coral Snake Toxicity (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30085573/"
+  },
+  {
+   "docId": "url:04a0c170e535",
+   "label": "FDA label: coral snake antivenin",
+   "title": "North American Coral Snake Antivenin (Equine) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6d0f94b4-82ca-37c7-edb0-4f0702cf6c8d"
+  },
+  {
+   "docId": "pmid:29763163",
+   "label": "StatPearls: black widow",
+   "title": "Black Widow Spider Toxicity (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29763163/"
+  },
+  {
+   "docId": "url:cb21b1501004",
+   "label": "FDA label: black widow antivenin",
+   "title": "Antivenin (Latrodectus mactans), equine, prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=600e54ad-af13-462f-8a2d-2c3f7d91a8cd"
+  },
+  {
+   "docId": "pmid:30725730",
+   "label": "StatPearls: brown recluse",
+   "title": "Brown Recluse Spider Toxicity (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30725730/"
+  },
+  {
+   "docId": "pmid:28613678",
+   "label": "StatPearls: scorpion",
+   "title": "Scorpion Toxicity (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613678/"
+  },
+  {
+   "docId": "url:1d599c9a0873",
+   "label": "FDA label: Anascorp",
+   "title": "Anascorp (centruroides (scorpion) immune F(ab')2, equine) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5cb65048-a30c-48e5-8bc8-897983d08068"
+  },
+  {
+   "docId": "pmid:30085514",
+   "label": "StatPearls: Hymenoptera",
+   "title": "Hymenoptera Envenomation (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30085514/"
+  },
+  {
+   "docId": "pmid:28613602",
+   "label": "StatPearls: animal bites",
+   "title": "Animal Bites (StatPearls, updated 2026), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613602/"
+  },
+  {
+   "docId": "pmid:28846292",
+   "label": "StatPearls: rabies",
+   "title": "Rabies (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28846292/"
+  },
+  {
+   "docId": "url:ea4590d4ffa5",
+   "label": "FDA label: HyperRAB",
+   "title": "HyperRAB (rabies immune globulin, human) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f82880b8-998c-4659-8f20-6dcc81f258e9"
+  },
+  {
+   "docId": "url:c514879f0a1e",
+   "label": "FDA label: Imovax Rabies",
+   "title": "Imovax Rabies (human diploid cell vaccine) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=ba8d4e72-f452-4859-ae6f-3644b4b0a78c"
+  },
+  {
+   "docId": "url:56e5b9263b87",
+   "label": "FDA label: RabAvert",
+   "title": "RabAvert (purified chick embryo cell rabies vaccine) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=84b7a672-eeb1-4527-84ac-68196b156be2"
+  },
+  {
+   "docId": "pmid:35511716",
+   "label": "ACIP 2022 (rabies, MMWR)",
+   "title": "Use of a Modified Preexposure Prophylaxis Vaccination Schedule to Prevent Human Rabies: Recommendations of the ACIP, United States, 2022 (MMWR)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35511716/"
+  },
+  {
+   "docId": "pmid:30844191",
+   "label": "StatPearls: amoxicillin-clavulanate",
+   "title": "Amoxicillin Clavulanate (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30844191/"
+  },
+  {
+   "docId": "pmid:32644434",
+   "label": "StatPearls: tetanus prophylaxis",
+   "title": "Tetanus Prophylaxis (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32644434/"
+  },
+  {
+   "docId": "url:31e161088a7b",
+   "label": "FDA label: HyperTET",
+   "title": "HyperTET (tetanus immune globulin, human) prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=393fa198-7e07-4162-bd0a-9d873f1544a9"
+  },
+  {
+   "docId": "pmid:28613467",
+   "label": "StatPearls: AMS",
+   "title": "Acute Mountain Sickness (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613467/"
+  },
+  {
+   "docId": "pmid:28613666",
+   "label": "StatPearls: HACE",
+   "title": "High Altitude Cerebral Edema (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613666/"
+  },
+  {
+   "docId": "pmid:28613569",
+   "label": "StatPearls: HAPE (archived)",
+   "title": "High Altitude Pulmonary Edema (StatPearls, archived 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613569/"
+  },
+  {
+   "docId": "pmid:30725949",
+   "label": "StatPearls: decompression sickness",
+   "title": "Decompression Sickness (StatPearls, updated 2023), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30725949/"
+  },
+  {
+   "docId": "pmid:29493946",
+   "label": "StatPearls: diving gas embolism",
+   "title": "Diving Gas Embolism (StatPearls, updated 2025), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29493946/"
+  },
+  {
+   "docId": "pmid:29557102",
+   "label": "DAN consensus 2018 (pre-hospital DCI)",
+   "title": "Pre-hospital management of decompression illness: expert review of key principles and controversies (Diving Hyperb Med 2018)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29557102/"
+  },
+  {
+   "docId": "url:f16b34a1e288",
+   "label": "UKKA 2020",
+   "title": "UK Kidney Association clinical practice guideline: treatment of acute hyperkalaemia in adults (2020)",
+   "url": "https://www.ukkidney.org/sites/default/files/RENAL%20ASSOCIATION%20HYPERKALAEMIA%20GUIDELINE%20-%20JULY%202022%20V2_0.pdf"
+  }
+ ],
+ "differential": [
+  "Accidental hypothermia",
+  "Drowning",
+  "Trauma",
+  "Anaphylaxis",
+  "Heat exhaustion",
+  "Exertional heat stroke",
+  "Classic heat stroke",
+  "Neuroleptic malignant syndrome",
+  "Serotonin toxicity",
+  "Sympathomimetic toxicity",
+  "Malignant hyperthermia",
+  "Rhabdomyolysis",
+  "Frostbite",
+  "Electrical injury",
+  "Lightning injury",
+  "Pit viper envenomation",
+  "Coral snake envenomation",
+  "Black widow envenomation",
+  "Brown recluse envenomation",
+  "Scorpion envenomation",
+  "Mammal bite",
+  "Rabies exposure",
+  "Acute mountain sickness",
+  "High-altitude cerebral edema",
+  "High-altitude pulmonary edema",
+  "Decompression sickness",
+  "Arterial gas embolism"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Heat, cold, water, a current, an animal, altitude or a dive. First moves?",
+   "options": [
+    "Airway, breathing and a central pulse; core temperature on a low-reading probe; glucose, ECG",
+    "Airway, breathing and pulse; a tympanic or temporal reading, which is fast and accurate enough here",
+    "Airway, breathing and pulse; acetaminophen for a high reading while the bloods are being sent",
+    "Airway, breathing and pulse; an oral thermometer reading, then warm or cool to that number"
+   ],
+   "answer": 0,
+   "chainStep": "Check airway, breathing and a central pulse (feel for 30 to 60 seconds in a cold patient); core temperature by esophageal, bladder or rectal probe, or a thermistor epitympanic probe, on a thermometer that reads below 35 °C (95 °F); fingerstick glucose; cardiac monitor and 12-lead ECG; what happened: heat, cold, water, a current, an animal, altitude or a dive",
+   "why": "Management turns on the core temperature, so it is measured close to the core with a thermometer that reads below 35 °C (95 °F). Oral, axillary, temporal and infrared tympanic readings are not accurate in hypothermia, and after exercise in the heat only a rectal temperature is valid; most oral thermometers cannot read under 35 °C (95 °F) at all. In a cold patient the pulse is felt for longer (60 seconds in Paal 2022, 30 seconds in StatPearls), because it can be slow and faint. Antipyretics have no role in heat illness and may harm the liver and clotting. Glucose comes early, because hypoglycemia is common in heat illness and can cause or accompany hypothermia, and every hypothermic or electrically injured adult gets an ECG.",
+   "orders": [
+    {
+     "item": "Core temperature, cold patient",
+     "dose": "Esophageal, bladder or rectal probe, or a thermistor epitympanic probe; skin, temporal, oral, axillary and infrared tympanic readings are not accurate in hypothermia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "4. Diagnosis"
+      },
+      {
+       "docId": "pmid:31424823",
+       "where": "History and Physical"
+      }
+     ]
+    },
+    {
+     "item": "Core temperature, after exertion in the heat",
+     "dose": "Rectal temperature is the gold standard; oral, axillary, tympanic, forehead and temporal readings are not valid",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26381473",
+       "where": "Recommendation 8"
+      }
+     ]
+    },
+    {
+     "item": "Pulse check, cold patient",
+     "dose": "Paal 2022: feel for vital signs for 60 seconds",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.1 Diagnosis of cardiac arrest"
+      },
+      {
+       "docId": "pmid:28613583",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "StatPearls Drowning extends the pulse check to 30 seconds in hypothermic patients."
+    },
+    {
+     "item": "ECG",
+     "dose": "Every patient with hypothermia and every adult after an electrical injury, with cardiac monitoring",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31424823",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:28846317",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Glucose",
+     "dose": "Fingerstick early: hypoglycemia is frequent in heat illness and is on the list of causes behind hypothermia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31971756",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:31424823",
+       "where": "History and Physical; Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Antipyretics for heat illness",
+     "dose": "No role; they may cause hepatic toxicity and worsen coagulopathy",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30725820",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:29083764",
+       "where": "Introduction"
+      }
+     ]
+    }
+   ],
+   "note": "Not in this version: thermal burns (the burns pathway, pw_burns, once it ships; smoke and cyanide are in pw_tox), carbon monoxide (pw_headache), avalanche burial, marine envenomation, bee and wasp stings beyond anaphylaxis, tick paralysis (pw_weakness), and children beyond the cases shown.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "pmid:35010760",
+     "where": "4. Diagnosis; 5.1 Diagnosis of cardiac arrest"
+    },
+    {
+     "docId": "pmid:31424823",
+     "where": "History and Physical; Evaluation"
+    },
+    {
+     "docId": "pmid:26381473",
+     "where": "Recommendations 8, 22"
+    },
+    {
+     "docId": "pmid:30725820",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:29083764",
+     "where": "Introduction"
+    },
+    {
+     "docId": "pmid:31971756",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:28846317",
+     "where": "Evaluation"
+    }
+   ]
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Pulse, breathing, core temperature and what happened",
+   "outcomes": [
+    {
+     "id": "arrest_cold",
+     "if": "Hypothermic arrest; no pulse on a full pulse check, core under 30 °C (86 °F)",
+     "ddx": {
+      "lead": [
+       "Accidental hypothermia"
+      ],
+      "out": []
+     },
+     "next": "ca_result"
+    },
+    {
+     "id": "arrest_water",
+     "if": "Arrest after submersion; no pulse, core 30 °C (86 °F) or more",
+     "ddx": {
+      "lead": [
+       "Drowning"
+      ],
+      "out": []
+     },
+     "next": "drown_arrest"
+    },
+    {
+     "id": "arrest_other",
+     "if": "Other arrest; core 30 °C (86 °F) or more, not after submersion",
+     "ddx": {
+      "lead": [
+       "Lightning injury",
+       "Electrical injury"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Cold with a core of 30 °C (86 °F) or more",
+       "dose": "Look for another cause: no arrest above 30 °C (86 °F) has been attributed to hypothermia alone, and ECPR is not used above 30 °C (86 °F)",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:35010760",
+         "where": "3. Pathophysiology; Extracorporeal cardiopulmonary resuscitation"
+        }
+       ]
+      },
+      {
+       "item": "Electrical injury",
+       "dose": "Rescuer safety first: rescue only once the scene is safe from the current",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:42297408",
+         "where": "Electricity and lightning"
+        }
+       ]
+      },
+      {
+       "item": "Several lightning victims",
+       "dose": "Reverse triage: those in cardiac or respiratory arrest first, as survivors of the strike rarely die later",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28722949",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:42297408",
+         "where": "Electricity and lightning"
+        }
+       ]
+      },
+      {
+       "item": "After lightning",
+       "dose": "Support ventilation as soon as possible: the pulse often returns before breathing does",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28722949",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Pulse check after lightning",
+       "dose": "Feel carefully for a central pulse; vasospasm can make it hard to palpate, and fixed dilated pupils do not mean death",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28722949",
+         "where": "History and Physical"
+        }
+       ]
+      },
+      {
+       "item": "Lightning: spine",
+       "dose": "Keep the cervical spine immobilized",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:42297408",
+         "where": "Electricity and lightning"
+        }
+       ]
+      }
+     ],
+     "next": "end_arrest_other"
+    },
+    {
+     "id": "anaph",
+     "if": "Anaphylaxis, pulse present; a sting or bite, then hives, wheeze or low pressure",
+     "ddx": {
+      "lead": [
+       "Anaphylaxis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Epinephrine",
+       "dose": "Adults: 0.3 to 0.5 mg IM into the anterolateral thigh, repeated every 5 to 15 minutes; intubate early, as the airway can be lost within minutes",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30085514",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Honeybee stinger",
+       "dose": "Scrape it off rather than squeezing or tweezing it",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30085514",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ],
+     "next": "end_anaph"
+    },
+    {
+     "id": "trauma",
+     "if": "Injured, pulse present; a fall, a blow or a dive into shallow water",
+     "ddx": {
+      "lead": [
+       "Trauma"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Spine",
+       "dose": "Immobilization for a history or signs of trauma, such as a dive or a fall",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613583",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ],
+     "next": "end_trauma"
+    },
+    {
+     "id": "unstable",
+     "if": "Unstable with a pulse, no fall or blow; shock, failing airway, GCS 8 or less, or SpO2 under 90% on oxygen, no hives or wheeze",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Airway",
+       "dose": "Oxygen and airway support; in a cold patient, rapid-sequence intubation once in a warm room carries little arrhythmia risk",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:35010760",
+         "where": "5.1 Out of Hospital"
+        }
+       ]
+      },
+      {
+       "item": "Access and fluids",
+       "dose": "IV, or IO if IV fails; fluid boluses guided by the vital signs, warmed to 38 to 42 °C (100.4 to 107.6 °F) in a cold patient",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:35010760",
+         "where": "5.1 Out of Hospital"
+        }
+       ]
+      },
+      {
+       "item": "Monitoring",
+       "dose": "Defibrillation pads rather than monitor leads in a shivering patient",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:35010760",
+         "where": "5.1 Out of Hospital"
+        }
+       ]
+      }
+     ],
+     "next": "exposure"
+    },
+    {
+     "id": "stable",
+     "if": "Stable with a pulse; airway, breathing and pressure holding, no fall, blow or anaphylaxis",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "exposure"
+    }
+   ]
+  },
+  {
+   "id": "end_anaph",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Anaphylaxis after a sting or bite: IM epinephrine into the anterolateral thigh now, repeated every 5 to 15 minutes as needed, with early intubation if the airway is threatened, because it can be lost within minutes. The dyspnea pathway (pw_dyspnea) carries the anaphylaxis route, its weight-based dose and the observation afterwards."
+  },
+  {
+   "id": "end_trauma",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Injured as well as exposed: the major trauma pathway (pw_trauma) takes it from here, with spinal immobilization for a dive into shallow water or a fall. Keep stripping wet clothing and insulating, because hypothermia worsens trauma coagulopathy, and return to this pathway for the exposure once the primary survey is done."
+  },
+  {
+   "id": "cold_arrest",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Cold, pulseless on a full pulse check, core under 30 °C (86 °F), no sign of death. Next?",
+   "options": [
+    "Continuous CPR, shocks for VF, and ECLS rewarming; resuscitation goes on until warm",
+    "Standard ALS, stopping after 30 minutes without ROSC, as for any normothermic arrest",
+    "No CPR, as fixed dilated pupils and stiff limbs mean the patient has died",
+    "Rewarm with forced air first, and start CPR once the core is back over 30 °C (86 °F)"
+   ],
+   "answer": 0,
+   "chainStep": "Continuous CPR (mechanical device for prolonged CPR or transport); defibrillate VF (Paal 2022: if 3 shocks fail below 30 °C (86 °F), wait until the core is over 30 °C (86 °F), and hold epinephrine and amiodarone below 30 °C (86 °F); the Korean 2025 guideline uses standard ALS); transfer for ECLS (VA ECMO) rewarming; HOPE score to guide ECLS; warmed IV fluids; check potassium",
+   "why": "Hypothermic arrest is treated differently from normothermic arrest, and good neurological recovery is possible after long resuscitations when the cold came first. Compressions and ventilation are standard and run continuously until ROSC, and the guidelines keep resuscitating until the patient is warm, judging termination at the target temperature rather than after a fixed time. VF is shocked; how many shocks and whether to give epinephrine below 30 °C (86 °F) differs between the sources (see the orders). Rewarming is by ECLS, preferably VA ECMO. Asystole, an unwitnessed arrest, a very low core temperature, fixed dilated pupils and apparent rigor mortis are not, in Paal 2022, reasons to withhold rewarming, and rewarming before CPR would leave the patient without compressions.",
+   "orders": [
+    {
+     "item": "CPR",
+     "dose": "As for a normothermic arrest, continuous until ROSC; mechanical CPR for prolonged rescue or transport",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.1 CPR; 5.1 Patient referral; 5.2"
+      }
+     ]
+    },
+    {
+     "item": "How long",
+     "dose": "Continue BLS and ALS until the temperature is back to normal; consider stopping ECPR if there is no ROSC at the target temperature",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42297408",
+       "where": "Severe hypothermia"
+      },
+      {
+       "docId": "pmid:35010760",
+       "where": "Extracorporeal cardiopulmonary resuscitation"
+      }
+     ]
+    },
+    {
+     "item": "Intermittent CPR, only if continuous CPR is impossible",
+     "dose": "Core under 28 °C (82.4 °F) or unknown: at least 5 minutes of CPR, then at most 5 minutes without; under 20 °C (68 °F), at most 10 minutes without",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.1 Patient referral and transport"
+      }
+     ]
+    },
+    {
+     "item": "Defibrillation",
+     "dose": "Paal 2022: if VF persists after 3 shocks with the core under 30 °C (86 °F), delay further shocks until it is over 30 °C (86 °F)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.1 CPR"
+      },
+      {
+       "docId": "pmid:42297408",
+       "where": "Severe hypothermia"
+      }
+     ],
+     "note": "The Korean 2025 guideline performs BLS and ALS by the standard guidelines in hypothermic arrest, and states no shock limit."
+    },
+    {
+     "item": "Epinephrine and amiodarone",
+     "dose": "Paal 2022: neither under 30 °C (86 °F); epinephrine interval doubled to every 6 to 10 minutes; standard protocols from 35 °C (95 °F)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.1 CPR"
+      },
+      {
+       "docId": "pmid:42297408",
+       "where": "Severe hypothermia"
+      }
+     ],
+     "note": "Paal 2022 says epinephrine and amiodarone should not be given under 30 °C (86 °F), then in the next sentence doubles the epinephrine interval 'if core temperature is <30 °C'; the two sentences contradict each other as printed. The Korean 2025 guideline says hypothermic arrest gets BLS and ALS by the standard guidelines."
+    },
+    {
+     "item": "Reasons to withhold or stop",
+     "dose": "Paal 2022: a valid DNR order, fixed dependent lividity or other clear signs of irreversible death, danger to rescuers, or avalanche burial over 60 minutes with asystole and an obstructed airway; apparent rigor mortis is not reliable",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.1 Pre-hospital triage"
+      },
+      {
+       "docId": "pmid:42297408",
+       "where": "Severe hypothermia"
+      }
+     ],
+     "note": "The Korean 2025 guideline continues BLS and ALS until the temperature is normal 'unless there is rigor mortis or injury incompatible with life'; Paal 2022 says rigidity is not a reliable sign of death in hypothermia."
+    },
+    {
+     "item": "Not reasons to stop",
+     "dose": "Asystole, an unwitnessed arrest, low core temperature, long no-flow or low-flow time, fixed dilated pupils, ETCO2 under 10 mm Hg, old age, or trauma",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.1 Pre-hospital triage"
+      }
+     ]
+    },
+    {
+     "item": "ECLS",
+     "dose": "VA ECMO preferred; ECPR not used with a core over 30 °C (86 °F), major trauma, or comorbidities incompatible with acceptable quality of life",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "Extracorporeal cardiopulmonary resuscitation"
+      }
+     ]
+    },
+    {
+     "item": "HOPE score",
+     "dose": "Age, sex, mechanism, core temperature, potassium and CPR duration; ECLS recommended if 10% or more",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31424823",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "next": "end_ca_ecls",
+   "sources": [
+    {
+     "docId": "pmid:35010760",
+     "where": "5.1 CPR; 5.1 Pre-hospital triage; 5.2; Extracorporeal cardiopulmonary resuscitation"
+    },
+    {
+     "docId": "pmid:31424823",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:42297408",
+     "where": "Severe hypothermia"
+    }
+   ]
+  },
+  {
+   "id": "ca_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Signs of irreversible death, then the ECLS decision",
+   "outcomes": [
+    {
+     "id": "ecls",
+     "if": "Rewarm on ECLS; no sign of death, HOPE 10% or more",
+     "ddx": {
+      "lead": [
+       "Accidental hypothermia"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Potassium",
+       "dose": "Over 12 mEq/L generally means a poor outcome, but is never the sole reason to stop; it enters the HOPE score",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31424823",
+         "where": "Prognosis"
+        }
+       ]
+      }
+     ],
+     "next": "cold_arrest"
+    },
+    {
+     "id": "stop",
+     "if": "Withhold or stop; lividity, lethal injury, DNR or HOPE under 10%",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_ca_stop"
+    }
+   ]
+  },
+  {
+   "id": "end_ca_ecls",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypothermic cardiac arrest with no sign of irreversible death: continuous CPR to an ECLS centre for VA ECMO rewarming, with the HOPE score (10% or more favors ECLS) and clinical judgment guiding the decision. Rewarm at 5 °C/h (9 °F/h) or less; after ROSC, targeted temperature management by local protocol and no post-resuscitation hyperthermia. ECPR is stopped if there is no ROSC at the target temperature, or for uncontrollable bleeding or severe anoxic brain injury."
+  },
+  {
+   "id": "end_ca_stop",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypothermic arrest with fixed dependent lividity, an injury incompatible with life or a valid DNR order: resuscitation is withheld or stopped. Stiff limbs alone are not one of these signs in Paal 2022, because apparent rigor mortis is unreliable in hypothermia; the Korean 2025 guideline still lists rigor mortis as a reason to stop. A HOPE estimate under 10% argues against ECLS rewarming."
+  },
+  {
+   "id": "drown_arrest",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Pulled from the water: not breathing, no pulse, core 30 °C (86 °F) or more. Next?",
+   "options": [
+    "Open the airway, give 5 rescue breaths, then CPR with ventilations and oxygen",
+    "Compression-only CPR at once, since breaths only delay the chest compressions",
+    "Abdominal thrusts first to drain water from the lungs, then start the CPR",
+    "A collar and spinal board before any breaths, then CPR in line with the spine"
+   ],
+   "answer": 0,
+   "chainStep": "Open the airway and give 5 rescue breaths, then chest compressions with ventilations and oxygen as soon as available; attach the AED once CPR is under way, without interrupting breaths and compressions; intubate if airway protection is inadequate (no supraglottic airway); spinal immobilization only for a dive, a fall or signs of trauma; remove wet clothing; ECMO as salvage for refractory hypoxemia or severe hypothermia",
+   "why": "Hypoxia causes the arrest in drowning and drives the brain injury, so airway and breathing come before compressions: 5 initial rescue breaths rather than the usual 2. Compression-only CPR leaves out the treatment the patient needs, and the Heimlich maneuver is no longer recommended. Shockable rhythms are uncommon (2 to 12%), so the AED must not delay breaths and compressions. Spinal immobilization is only for a history or signs of trauma, such as a dive or a fall, so that it does not hold up the airway.",
+   "orders": [
+    {
+     "item": "Rescue breaths",
+     "dose": "5 initial breaths before compressions",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613583",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Heimlich maneuver",
+     "dose": "No longer recommended in drowning",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28613583",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "AED",
+     "dose": "Shockable rhythms in only 2 to 12%; use it once CPR is under way, without delaying breaths or compressions",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613583",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Supraglottic airway",
+     "dose": "Not recommended in drowning: less reliable protection, more aspiration",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28613583",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Intubation",
+     "dose": "When airway protection is inadequate or SpO2 stays under 90% despite high-flow oxygen",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613583",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Spine",
+     "dose": "Immobilize only with a history or signs of trauma, such as a dive or a fall",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613583",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "next": "end_drown_arrest",
+   "sources": [
+    {
+     "docId": "pmid:28613583",
+     "where": "Treatment / Management"
+    },
+    {
+     "docId": "pmid:42297408",
+     "where": "Drowning"
+    }
+   ]
+  },
+  {
+   "id": "end_drown_arrest",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Drowning arrest: ventilation first (5 rescue breaths), then CPR with oxygen, intubation when airway protection is inadequate, and ECMO as salvage for refractory hypoxemia or severe hypothermia. Submersion time is the strongest predictor of survival, with mortality rising steeply beyond 5 minutes. A core under 30 °C (86 °F) makes this a hypothermic arrest (this pathway's hypothermic arrest route)."
+  },
+  {
+   "id": "end_arrest_other",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cardiac arrest with a core of 30 °C (86 °F) or more, not after submersion (heat, an electrical injury, lightning, a bite, a dive, or cold that does not explain it): standard BLS and ALS, once the scene is safe from any current, with a search for the cause, since hypothermia alone does not explain an arrest above 30 °C (86 °F). After lightning the pulse often returns before breathing does, so ventilation is supported early, the cervical spine is protected, and with several victims those in cardiac or respiratory arrest are treated first (reverse triage), because survivors of the strike rarely die later."
+  },
+  {
+   "id": "exposure",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "What the patient was exposed to",
+   "outcomes": [
+    {
+     "id": "heat",
+     "if": "Heat or exertion; hot, or collapsed in the heat or a hot room",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "heat_assess"
+    },
+    {
+     "id": "cold",
+     "if": "Core under 35 °C (95 °F); cold exposure or immersion",
+     "ddx": {
+      "lead": [
+       "Accidental hypothermia"
+      ],
+      "out": []
+     },
+     "next": "hypo_stage"
+    },
+    {
+     "id": "frost",
+     "if": "Frostbite, core 35 °C (95 °F) or more; frozen, or thawed with blisters or dusky skin",
+     "ddx": {
+      "lead": [
+       "Frostbite"
+      ],
+      "out": []
+     },
+     "next": "frost"
+    },
+    {
+     "id": "water",
+     "if": "Submersion, core 35 °C (95 °F) or more; breathing, pulse present",
+     "ddx": {
+      "lead": [
+       "Drowning"
+      ],
+      "out": []
+     },
+     "next": "drown"
+    },
+    {
+     "id": "current",
+     "if": "Electrical or lightning injury; pulse present",
+     "ddx": {
+      "lead": [
+       "Electrical injury",
+       "Lightning injury"
+      ],
+      "out": []
+     },
+     "next": "current"
+    },
+    {
+     "id": "bite",
+     "if": "Bite or sting; snake, spider, scorpion or mammal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "bite_kind"
+    },
+    {
+     "id": "alt",
+     "if": "Altitude; new symptoms after an ascent above 2,500 m",
+     "ddx": {
+      "lead": [
+       "Acute mountain sickness",
+       "High-altitude cerebral edema",
+       "High-altitude pulmonary edema"
+      ],
+      "out": []
+     },
+     "next": "alt"
+    },
+    {
+     "id": "dive",
+     "if": "Diving; new symptoms after surfacing from a dive",
+     "ddx": {
+      "lead": [
+       "Decompression sickness",
+       "Arterial gas embolism"
+      ],
+      "out": []
+     },
+     "next": "dive"
+    }
+   ]
+  },
+  {
+   "id": "heat_assess",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Hot, unwell or collapsed after heat or exertion. Next?",
+   "options": [
+    "Rectal temperature and mental status now, cooling as you measure; labs and drug history",
+    "Tympanic temperature, oral fluids, and a recheck in an hour once rested quietly in the shade",
+    "Acetaminophen and IV fluids, then a repeat temperature once the drug has had time to act",
+    "Head CT before any cooling, as confusion in the heat needs imaging before treatment"
+   ],
+   "answer": 0,
+   "chainStep": "Rectal (or esophageal) temperature and a mental status check at once; out of the heat, excess clothing off, cooling started; fingerstick glucose; CBC, PT and aPTT, metabolic panel with creatinine and liver tests, blood gas, CK, urine myoglobin, ECG; medication and drug review (diuretics, beta blockers, anticholinergics, antipsychotics, serotonergic drugs, stimulants, recent anesthesia)",
+   "why": "Two findings sort heat illness: the core temperature and the brain. Heat stroke is central nervous system dysfunction (delirium, ataxia, seizures) with a core temperature typically, but not always, over 40 °C (104 °F), and only a rectal or esophageal reading is valid; a falsely low tympanic reading delays the one treatment shown to cut mortality, rapid cooling. Antipyretics have no role. CT is for a presentation that does not fit, not a reason to hold cooling. The drug list matters: diuretics, beta blockers and anticholinergics predispose to classic heat stroke, and rigidity or clonus points to a drug-induced syndrome instead.",
+   "orders": [
+    {
+     "item": "Core temperature",
+     "dose": "Rectal, the gold standard after exertion; continuous rectal or esophageal probe once cooling starts",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26381473",
+       "where": "Recommendation 8"
+      },
+      {
+       "docId": "pmid:30725820",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Labs",
+     "dose": "CBC, metabolic panel, PT and aPTT, blood gas, CK and urine myoglobin; glucose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725820",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:31971756",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Drug history",
+     "dose": "Diuretics, beta blockers and anticholinergics in suspected classic heat stroke",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725820",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Head CT or LP",
+     "dose": "Only if another cause is suspected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31971756",
+       "where": "Evaluation"
+      }
+     ]
+    }
+   ],
+   "next": "heat_result",
+   "sources": [
+    {
+     "docId": "pmid:26381473",
+     "where": "Recommendations 8, 22"
+    },
+    {
+     "docId": "pmid:30725820",
+     "where": "Introduction; Evaluation; Treatment / Management; Differential Diagnosis; Enhancing Healthcare Team Outcomes"
+    },
+    {
+     "docId": "pmid:31971756",
+     "where": "Evaluation; Treatment / Management"
+    }
+   ]
+  },
+  {
+   "id": "heat_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Core temperature, mental status, tone and the drug history",
+   "outcomes": [
+    {
+     "id": "exhaustion",
+     "if": "Heat exhaustion; alert and oriented, core usually under 40 °C (104 °F)",
+     "ddx": {
+      "lead": [
+       "Heat exhaustion"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Cooling",
+       "dose": "A cool or shaded area, excess clothing off, fans or ice towels, supine with the legs raised",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:26381473",
+         "where": "Recommendations 33, 34"
+        },
+        {
+         "docId": "pmid:31971756",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Fluids",
+       "dose": "Oral water or an electrolyte drink; IV if oral is not tolerated; oral and IV rehydration are equivalent",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:31971756",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Not recovering within 30 minutes",
+       "dose": "Fluids and physician care; recheck the rectal temperature, and treat as heat stroke if over 40.5 °C (104.9 °F)",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:26381473",
+         "where": "Recommendation 35"
+        }
+       ]
+      },
+      {
+       "item": "Return to activity",
+       "dose": "Not the same day",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:26381473",
+         "where": "Recommendation 44"
+        }
+       ]
+      },
+      {
+       "item": "Antipyretics or dantrolene",
+       "dose": "No role in heat illness",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "pmid:31971756",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ],
+     "next": "end_exh"
+    },
+    {
+     "id": "ehs",
+     "if": "Exertional heat stroke; confused after exertion, core usually over 40 °C (104 °F), no rigidity",
+     "ddx": {
+      "lead": [
+       "Exertional heat stroke"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Defining temperature",
+       "dose": "NATA: CNS dysfunction with a rectal temperature over 40.5 °C (104.9 °F), treated as heat stroke from about 40 °C (104 °F) if the brain is affected",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:26381473",
+         "where": "Recommendation 22"
+        },
+        {
+         "docId": "pmid:30725820",
+         "where": "Introduction"
+        },
+        {
+         "docId": "pmid:29850022",
+         "where": "Definition and classification"
+        }
+       ],
+       "note": "NATA 2015 uses over 40.5 °C (104.9 °F); StatPearls says typically but not always over 40 °C (104 °F); Bouchama's definition, as reported by Hifumi 2018, uses over 40 °C (104 °F). All three make CNS dysfunction the deciding finding."
+      }
+     ],
+     "next": "hs_cool"
+    },
+    {
+     "id": "classic",
+     "if": "Classic heat stroke; confused at rest in hot weather, core usually over 40 °C (104 °F), no rigidity",
+     "ddx": {
+      "lead": [
+       "Classic heat stroke"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Skin",
+       "dose": "Often hot and dry in classic heat stroke; sweating usually continues in exertional",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30725820",
+         "where": "History and Physical"
+        }
+       ]
+      }
+     ],
+     "next": "hs_cool"
+    },
+    {
+     "id": "drug",
+     "if": "Drug-induced; rigid or clonic on an antipsychotic, serotonergic drug, stimulant or anesthetic",
+     "ddx": {
+      "lead": [
+       "Neuroleptic malignant syndrome",
+       "Serotonin toxicity",
+       "Sympathomimetic toxicity",
+       "Malignant hyperthermia"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Telling them apart",
+       "dose": "Muscle rigidity and clonus are not features of heat stroke",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30725820",
+         "where": "Differential Diagnosis"
+        }
+       ]
+      },
+      {
+       "item": "Cooling",
+       "dose": "Directly treats only environmental heat illness; an adjunct in drug-induced hyperthermia",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29083764",
+         "where": "Introduction; Clinical Significance"
+        }
+       ]
+      },
+      {
+       "item": "Neuroleptic malignant syndrome",
+       "dose": "Stop the drug; aggressive cooling, fluids and electrolytes; ICU; bromocriptine or dantrolene as empiric therapy in severe cases (pw_agitation)",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29489248",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Bromocriptine dose",
+       "dose": "Not stated in the source read",
+       "status": "pending"
+      },
+      {
+       "item": "Malignant hyperthermia: dantrolene",
+       "dose": "StatPearls: 2.5 mg/kg IV, repeated until the reaction subsides to a maximum of 10 mg/kg, then 1 mg/kg every 4 hours for 24 to 48 hours",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:28613578",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "url:1ab9cf6dbbd0",
+         "where": "Dosage and administration"
+        }
+       ],
+       "note": "The Dantrium IV label starts at a minimum of 1 mg/kg by rapid IV push, continued to a cumulative 10 mg/kg; StatPearls gives 2.5 mg/kg as the dose."
+      },
+      {
+       "item": "Malignant hyperthermia: the rest",
+       "dose": "Stop the volatile anesthetic or succinylcholine, 100% oxygen, active cooling, ICU for at least 24 hours",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613578",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ],
+     "next": "end_drug_heat"
+    }
+   ]
+  },
+  {
+   "id": "end_exh",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Heat exhaustion: out of the heat, excess clothing off, lying flat with the legs raised, fans or ice towels, and oral (or IV) fluids with electrolytes. If recovery is not rapid within 30 minutes, or the mental status changes, recheck the rectal temperature and treat as heat stroke if it is over 40.5 °C (104.9 °F). No same-day return to activity, and no antipyretics or dantrolene."
+  },
+  {
+   "id": "hs_cool",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Heat stroke: confused and hot after heat or exertion. Next?",
+   "options": [
+    "Cool now: cold-water immersion if feasible, else mist, fans and ice packs; stop near 39 °C (102.2 °F)",
+    "IV acetaminophen and cooled saline, moving on to immersion only if the temperature holds up",
+    "IV dantrolene to switch off muscle heat production, then passive cooling in a cool side room",
+    "Transfer to the ICU first, and start cooling once a core probe is placed up there"
+   ],
+   "answer": 0,
+   "chainStep": "Cold-water immersion (stirred ice water, trunk and limbs up to the neck) where feasible; otherwise evaporative cooling (cool water mist and fans) with ice packs to groin, axillae and neck; continuous rectal or esophageal temperature; stop active cooling at 38 to 39 °C (100.4 to 102.2 °F); aim to get under 38.9 °C (102 °F) within 30 minutes of collapse; IV access and rehydration, avoiding rapid sodium correction; benzodiazepine only for agitation or shivering; no antipyretics, no dantrolene; repeat CK, potassium, creatinine, liver tests, platelets and coagulation",
+   "why": "Rapid cooling is the intervention that lowers mortality, and the time above the critical temperature drives the damage, so cooling starts at once and transport comes second. Cold-water immersion cools fastest and is the standard for exertional heat stroke; in older patients with classic heat stroke it can be impractical because monitoring is hard and agitation interferes, and evaporative cooling with mist and fans plus ice packs is the next option. Cooling stops near 39 °C (102.2 °F) to avoid overcooling. Antipyretics have no role in heat stroke and may harm the liver, and dantrolene has not improved outcomes.",
+   "orders": [
+    {
+     "item": "Cold-water immersion",
+     "dose": "Up to the neck in 1.7 to 15 °C (35.1 to 59 °F) water, stirred; about 1 °C (1.8 °F) every 5 minutes; the most effective method for exertional heat stroke",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26381473",
+       "where": "Recommendations 38, 39"
+      }
+     ]
+    },
+    {
+     "item": "Speed",
+     "dose": "Core under 38.9 °C (102 °F) within 30 minutes of collapse; with medical staff on site, cool first and transport second",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:26381473",
+       "where": "Recommendations 36, 41"
+      }
+     ]
+    },
+    {
+     "item": "Older adults, classic heat stroke",
+     "dose": "Immersion may be impractical (monitoring, agitation): evaporative cooling with mist and fans, plus ice packs to groin and axillae",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725820",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:29083764",
+       "where": "Introduction"
+      }
+     ]
+    },
+    {
+     "item": "Where to stop",
+     "dose": "NATA 2015: remove from the water at 38.9 °C (102 °F)",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:26381473",
+       "where": "Recommendation 38"
+      },
+      {
+       "docId": "pmid:30725820",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:29083764",
+       "where": "Indications"
+      },
+      {
+       "docId": "pmid:29850022",
+       "where": "Target temperature of initial cooling"
+      }
+     ],
+     "note": "NATA stops at 38.9 °C (102 °F); StatPearls Heat Stroke at 38 to 39 °C (100.4 to 102.2 °F); StatPearls Cooling Techniques aims below 39 °C (102.2 °F); Hifumi 2018 reports 39.4 °C (102.9 °F) used safely in large series and no evidence for a specific end point."
+    },
+    {
+     "item": "Antipyretics",
+     "dose": "No role in heat stroke; may cause hepatic toxicity",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30725820",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Dantrolene",
+     "dose": "Does not improve outcomes in heat stroke",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30725820",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:29083764",
+       "where": "Introduction"
+      }
+     ]
+    },
+    {
+     "item": "Benzodiazepines",
+     "dose": "Not routine; may be considered for agitation or shivering",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725820",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Airway",
+     "dose": "Intubation for unconsciousness is rarely needed, as rapid cooling often restores the GCS",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725820",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Fluids",
+     "dose": "Rehydrate, avoiding rapid correction of sodium",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725820",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "IV fluid volume and type",
+     "dose": "Not stated in the sources read",
+     "status": "pending"
+    }
+   ],
+   "next": "cool_labs",
+   "sources": [
+    {
+     "docId": "pmid:26381473",
+     "where": "Recommendations 36 to 41"
+    },
+    {
+     "docId": "pmid:30725820",
+     "where": "Treatment / Management; Enhancing Healthcare Team Outcomes"
+    },
+    {
+     "docId": "pmid:29083764",
+     "where": "Introduction; Indications"
+    },
+    {
+     "docId": "pmid:29850022",
+     "where": "Initial cooling"
+    }
+   ]
+  },
+  {
+   "id": "cool_labs",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Mental status and labs after cooling",
+   "outcomes": [
+    {
+     "id": "recovering",
+     "if": "Recovering; oriented again, CK under 5,000, kidney, liver, potassium and clotting normal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_hs_ok"
+    },
+    {
+     "id": "organ",
+     "if": "Not recovering; still confused, or CK 5,000 or more, or kidney, liver, potassium or clotting abnormal",
+     "ddx": {
+      "lead": [
+       "Rhabdomyolysis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Rhabdomyolysis",
+       "dose": "IV fluids titrated to a urine output of 200 to 300 mL/h, with daily CK; aggressive fluids are discouraged when CK is under 5,000 U/L",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:28846335",
+         "where": "Nontraumatic rhabdomyolysis"
+        },
+        {
+         "docId": "pmid:28846317",
+         "where": "Treatment / Management"
+        }
+       ],
+       "note": "StatPearls Electrical Injuries targets 1 to 2 mL/kg/h for myoglobinuria."
+      },
+      {
+       "item": "Potassium",
+       "dose": "UKKA bands: mild 5.5 to 5.9, moderate 6.0 to 6.4, severe 6.5 or more mmol/L; an urgent 12-lead ECG at 6.0 or more; continuous ECG monitoring at 6.5 or more, with ECG changes, or at 6.0 to 6.4 when a rapid rise is expected; treat by band (pw_electrolytes); in rhabdomyolysis use calcium with caution, as hypercalcemia can follow",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:f16b34a1e288",
+         "where": "Introduction: \"mild (5.5-5.9 mmol/l), moderate (6.0-6.4 mmol/l) or severe (≥ 6.5 mmol/l)\"; Guideline 14.1: an urgent 12-lead ECG at \"a serum K + level ≥ 6.0 mmol/L\"; Guideline 14.2: monitoring \"in patients with a serum K+ 6.0-6.4 mmol/L who are clinically unwell or in whom a rapid rise in serum K+ is anticipated\""
+        },
+        {
+         "docId": "pmid:28846335",
+         "where": "Electrolyte abnormalities"
+        }
+       ]
+      },
+      {
+       "item": "DIC",
+       "dose": "Fresh frozen plasma, cryoprecipitate and platelets by bleeding and labs",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846335",
+         "where": "Other supportive care"
+        }
+       ]
+      },
+      {
+       "item": "Prognosis",
+       "dose": "Low systolic pressure, low GCS, raised creatinine and DIC on admission predict hospital death",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29850022",
+         "where": "Prognostic factors"
+        }
+       ]
+      }
+     ],
+     "next": "end_hs_organ"
+    }
+   ]
+  },
+  {
+   "id": "end_hs_ok",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Heat stroke cooled quickly and recovering. Exertional: many cooled within 30 minutes go home the same day; return to activity only after a 7 to 21 day rest, normal blood work and physician clearance, then a graded progression. Classic heat stroke in an older patient: review the drugs that impair heat loss (diuretics, beta blockers, anticholinergics) and the home conditions before discharge; air conditioning, fluids and limiting daytime exposure prevent the next episode."
+  },
+  {
+   "id": "end_hs_organ",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Heat stroke with organ injury: intensive care, fluids for rhabdomyolysis titrated to urine output, potassium treated by its UKKA band with an ECG from 6.0 (pw_electrolytes), and blood products for DIC by bleeding and labs. Hypotension, a low GCS, a raised creatinine and DIC on admission carry the highest mortality; intravascular cooling, anticoagulation and blood purification are unproven."
+  },
+  {
+   "id": "end_drug_heat",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hyperthermia driven by a drug rather than the environment: rigidity and clonus are not features of heat stroke, and cooling is only an adjunct here. Serotonin toxicity and sympathomimetic toxicity follow the toxicology pathway (pw_tox), with benzodiazepines, supportive care and active cooling. Neuroleptic malignant syndrome continues in the agitation pathway (pw_agitation): every dopamine blocker stopped, ICU, aggressive cooling, fluids and electrolytes, and bromocriptine or dantrolene in severe cases. Malignant hyperthermia after a volatile anesthetic or succinylcholine: stop the trigger, 100% oxygen, IV dantrolene, active cooling and at least 24 hours of ICU care. No other pathway covers malignant hyperthermia yet."
+  },
+  {
+   "id": "hypo_stage",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Core temperature under 35 °C (95 °F). Next?",
+   "options": [
+    "Handle gently and keep flat; stage by core and consciousness; ECG; look for a cause",
+    "Sit them up and get them walking now, and stage the cold by whether they shiver",
+    "Warm IV fluids alone, since they rewarm the core faster than any of the external methods",
+    "Stage it by a tympanic infrared reading, repeated hourly as rewarming goes on"
+   ],
+   "answer": 0,
+   "chainStep": "Keep horizontal and handle gently; remove wet clothing and insulate; continuous core temperature on a low-reading probe; defibrillation pads and 12-lead ECG; fingerstick glucose, CBC, metabolic panel, fibrinogen, CK, lactate, TSH, cortisol and toxicology as indicated; stage: mild 32 to 35 °C (89.6 to 95 °F), moderate 28 to 32 °C (82.4 to 89.6 °F), severe under 28 °C (82.4 °F) (the Revised Swiss System uses consciousness when no core reading is available); look for sepsis, hypothyroidism, adrenal insufficiency, hypoglycemia, intoxication, trauma or stroke",
+   "why": "Rough handling can trigger fatal dysrhythmias in moderate or severe hypothermia (rescue collapse), and a patient found lying down is not walked until fed and allowed to shiver for about 30 minutes. Shivering is not a consistent sign and is not used to stage hypothermia: staging comes from the core temperature and the level of consciousness. Warmed IV fluids stop further heat loss and treat volume depletion but rewarm only modestly. The ECG shows Osborn (J) waves, slowed conduction and often atrial fibrillation. Hypothermia out of proportion to the exposure points to another cause, such as sepsis, hypothyroidism, adrenal insufficiency, hypoglycemia or a drug.",
+   "orders": [
+    {
+     "item": "Stages",
+     "dose": "Mild 32 to 35 °C (89.6 to 95 °F), moderate 28 to 32 °C (82.4 to 89.6 °F), severe under 28 °C (82.4 °F)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31424823",
+       "where": "History and Physical"
+      }
+     ]
+    },
+    {
+     "item": "Revised Swiss System",
+     "dose": "Uses consciousness to estimate the risk of arrest when the core temperature is unknown",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31424823",
+       "where": "Pearls 6"
+      }
+     ]
+    },
+    {
+     "item": "Handling",
+     "dose": "Gentle and horizontal; sudden movement or exercise can trigger arrest; a patient found horizontal walks only after calories and about 30 minutes of shivering",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "3. Pathophysiology; 5.1 Out of Hospital"
+      },
+      {
+       "docId": "pmid:31424823",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Shivering",
+     "dose": "Not consistent, and not used to stage hypothermia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "4. Diagnosis"
+      }
+     ]
+    },
+    {
+     "item": "ECG",
+     "dose": "Osborn (J) waves; atrial fibrillation is the commonest dysrhythmia; VF risk rises in severe hypothermia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31424823",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Bradycardia and low pressure",
+     "dose": "In moderate or severe hypothermia, no specific treatment beyond rewarming",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.1 Out of Hospital"
+      }
+     ]
+    },
+    {
+     "item": "Labs",
+     "dose": "Glucose, CBC, metabolic panel; lactate, CK, troponin, TSH, cortisol, toxicology, fibrinogen, lipase and magnesium for other causes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31424823",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Coagulation tests",
+     "dose": "Can look normal despite coagulopathy, because they are run at 37 °C (98.6 °F)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31424823",
+       "where": "Pearls 7"
+      }
+     ]
+    },
+    {
+     "item": "Rectal probe",
+     "dose": "Lags behind the core during rewarming, by up to an hour",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31424823",
+       "where": "Pearls 5"
+      }
+     ]
+    }
+   ],
+   "next": "hypo_result",
+   "sources": [
+    {
+     "docId": "pmid:35010760",
+     "where": "3. Pathophysiology; 5.1 Out of Hospital"
+    },
+    {
+     "docId": "pmid:31424823",
+     "where": "History and Physical; Evaluation; Treatment / Management; Pearls"
+    }
+   ]
+  },
+  {
+   "id": "hypo_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Core temperature, pressure and rhythm",
+   "outcomes": [
+    {
+     "id": "stable",
+     "if": "Stable circulation; core 30 °C (86 °F) or more (32 °C (89.6 °F) if elderly or comorbid), systolic 90 or more, no VT",
+     "ddx": {
+      "lead": [
+       "Accidental hypothermia"
+      ],
+      "out": []
+     },
+     "next": "rewarm"
+    },
+    {
+     "id": "high",
+     "if": "High risk of arrest; core under 30 °C (86 °F) (32 °C (89.6 °F) if elderly or comorbid), systolic under 90, or VT",
+     "ddx": {
+      "lead": [
+       "Accidental hypothermia"
+      ],
+      "out": []
+     },
+     "next": "ecls"
+    }
+   ]
+  },
+  {
+   "id": "rewarm",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Hypothermia with a stable circulation. How do you rewarm?",
+   "options": [
+    "Insulate; forced air and heat packs to the trunk; warmed IV fluids; warm drinks if alert",
+    "VA ECMO now, since it rewarms fastest and protects against an arrest later on in the stay",
+    "Warm pleural and peritoneal lavage as the first rewarming method to reach for here",
+    "Heat packs placed straight onto the bare skin of the chest, groin and armpits"
+   ],
+   "answer": 0,
+   "chainStep": "Remove wet clothing and insulate; forced-air warming and heat packs to the trunk, axillae, chest and back, not touching the skin; warmed IV fluids 38 to 42 °C (100.4 to 107.6 °F) in boluses guided by the vital signs; warm drinks if alert and swallowing; let a mild patient shiver; continuous core temperature and monitoring, rewarming toward 37 °C (98.6 °F); active internal rewarming (intravascular catheter, CRRT) if the core stays the same or falls",
+   "why": "With a stable circulation, passive and active external rewarming is enough for most patients: insulation, forced air and heat packs on the trunk, with warmed fluids to stop further loss and warm drinks for a mild, alert patient. Failure to rewarm (a static or falling core, rising lactate, falling consciousness or pressure, or a ventricular dysrhythmia) moves to active internal rewarming. In ICE-CRASH, ECMO helped hypothermic patients in arrest but not those with a pulse, in whom it added bleeding. Lavage is for severe cases when less invasive methods fail, and heat packs must not touch the skin, to prevent burns.",
+   "orders": [
+    {
+     "item": "Rewarming, stable circulation",
+     "dose": "Passive and active external rewarming",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.2 In-Hospital Treatment"
+      },
+      {
+       "docId": "pmid:31424823",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Mild (HT I)",
+     "dose": "Passive and active external rewarming plus warm fluids by mouth; allow shivering unless there is a reason not to",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.2 In-Hospital Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Warmed IV fluids",
+     "dose": "38 to 42 °C (100.4 to 107.6 °F) in boluses guided by the vital signs; they limit further cooling but rewarm little",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.1 Out of Hospital"
+      },
+      {
+       "docId": "pmid:31424823",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Heat packs",
+     "dose": "To the trunk (chest and back), not touching the skin",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.1 Out of Hospital"
+      }
+     ]
+    },
+    {
+     "item": "Failure to rewarm",
+     "dose": "Core static or falling, lactate rising, consciousness or pressure falling, or a ventricular dysrhythmia: intravascular rewarming catheter or CRRT",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.2 In-Hospital Treatment"
+      }
+     ]
+    },
+    {
+     "item": "If it fails: look for a cause",
+     "dose": "Hypoglycemia, infection, hypothyroidism, adrenal insufficiency, intoxication or ongoing exposure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31424823",
+       "where": "Pearls 12"
+      }
+     ]
+    },
+    {
+     "item": "ECMO with a pulse",
+     "dose": "No survival benefit in ICE-CRASH, and more bleeding",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:31424823",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "next": "end_rewarm",
+   "sources": [
+    {
+     "docId": "pmid:35010760",
+     "where": "5.1 Out of Hospital; 5.2 In-Hospital Treatment"
+    },
+    {
+     "docId": "pmid:31424823",
+     "where": "Treatment / Management; Pearls 12"
+    }
+   ]
+  },
+  {
+   "id": "end_rewarm",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypothermia with a stable circulation: passive and active external rewarming toward 37 °C (98.6 °F), warmed fluids and gentle handling, with active internal rewarming if the core stalls or falls. A patient who fails to rewarm is searched for another cause: hypoglycemia, infection, hypothyroidism (myxedema coma is in pw_ams), adrenal insufficiency, intoxication or ongoing exposure. Rewarming itself can bring hyperkalemia and other electrolyte shifts, so they are rechecked."
+  },
+  {
+   "id": "ecls",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pulse present, high risk: core under 30 °C (86 °F) (32 if old or ill), low pressure or VT. Next?",
+   "options": [
+    "To an ECLS centre, handled gently; active rewarming, warmed fluids, ECLS ready to start",
+    "Atropine and transcutaneous pacing for the slow pulse, then the active external rewarming",
+    "Immerse the arms and legs in warm water, the fastest way to rewarm before transfer",
+    "Defer intubation even if the airway is failing, as laryngoscopy will trigger VF"
+   ],
+   "answer": 0,
+   "chainStep": "Keep horizontal and handle gently; direct transfer to an ECLS-capable centre; active rewarming with warmed IV fluids (38 to 42 °C, 100.4 to 107.6 °F) in boluses; defibrillation pads on; ECLS on standby and started rapidly if needed (Paal 2022 favors it for hemodynamic instability); no specific treatment for the bradycardia or low pressure beyond rewarming; rapid-sequence intubation in a warm room if the airway needs it; blood gases read at 37 °C (98.6 °F) (alpha-stat)",
+   "why": "A core under 30 °C (86 °F) (32 °C (89.6 °F) in the elderly or comorbid), a systolic under 90 or a ventricular dysrhythmia marks a high risk of arrest, and these patients go directly to a centre that can provide ECLS, kept on standby and started rapidly if needed. The slow pulse and low pressure are responses to the cold and need nothing beyond rewarming, not atropine or pacing. Whether ECLS should start while the heart still beats is disputed: Paal 2022 calls it the best support for hemodynamic instability, while in ICE-CRASH it did not help patients without arrest and added bleeding (see the orders). Warming the limbs in a severe case can drop the pressure through peripheral vasodilation. When the airway needs it, rapid-sequence intubation in a warm room is used: the arrhythmia risk is small next to the benefit.",
+   "orders": [
+    {
+     "item": "Transfer",
+     "dose": "Directly to an ECLS centre for cardiac arrest, a core under 30 °C (86 °F), a systolic under 90 mm Hg or a ventricular dysrhythmia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.1 Patient referral and transport"
+      }
+     ]
+    },
+    {
+     "item": "ECLS",
+     "dose": "On standby when the patient is at risk of arrest or the circulation is unstable; start rapidly if needed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.2 In-Hospital Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Bradycardia and hypotension",
+     "dose": "No specific treatment beyond rewarming",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.1 Out of Hospital"
+      }
+     ]
+    },
+    {
+     "item": "Volume",
+     "dose": "Replace carefully to avoid overload, ideally with central venous pressure monitoring",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.2 In-Hospital Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Airway",
+     "dose": "Rapid-sequence intubation once in a warm environment; ETCO2 unreliable in severe hypothermia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.1 Out of Hospital"
+      }
+     ]
+    },
+    {
+     "item": "Blood gas",
+     "dose": "Alpha-stat: interpret at 37 °C (98.6 °F)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.2 In-Hospital Treatment"
+      }
+     ]
+    },
+    {
+     "item": "ECLS with a pulse",
+     "dose": "Paal 2022: hemodynamic instability needs cardiocirculatory support with active internal rewarming, best achieved with ECLS",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:35010760",
+       "where": "5.2 In-Hospital Treatment"
+      },
+      {
+       "docId": "pmid:31424823",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "StatPearls reports that in ICE-CRASH (2023) ECMO improved outcomes only in patients in cardiac arrest, and in those without arrest increased bleeding; the same chapter reserves bypass and VA ECMO for arrest, hemodynamic instability or failure of less invasive rewarming."
+    },
+    {
+     "item": "Limb warming",
+     "dose": "In more severe hypothermia, rapid peripheral vasodilation can cause hemodynamic instability",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:31424823",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "next": "end_ecls",
+   "sources": [
+    {
+     "docId": "pmid:35010760",
+     "where": "Abstract; 5.1 Out of Hospital; 5.1 Patient referral and transport; 5.2 In-Hospital Treatment"
+    },
+    {
+     "docId": "pmid:31424823",
+     "where": "Treatment / Management"
+    }
+   ]
+  },
+  {
+   "id": "end_ecls",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "High-risk hypothermia with a pulse: gentle handling, direct transfer to an ECLS centre, active rewarming with warmed fluids, and ECLS ready to start; when to start it while the heart still beats is disputed between Paal 2022 and ICE-CRASH. If the patient arrests, continuous CPR and ECLS rewarming follow (this pathway's hypothermic arrest route). Any frozen frostbite is thawed once the circulation and core temperature are stable."
+  },
+  {
+   "id": "frost",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Frostbite of the fingers or toes, frozen or already thawed; core 35 °C (95 °F) or more. Next?",
+   "options": [
+    "If still frozen, rapid rewarming in 37 to 39 °C (98.6 to 102.2 °F) water until pliable; analgesia, ibuprofen, tetanus",
+    "Rub the fingers briskly with snow or a towel, then warm them slowly beside a heater or an open fire",
+    "Thaw slowly at room temperature, since rapid rewarming worsens the reperfusion injury",
+    "Early debridement of the pale digits, since frozen tissue will not recover anyway"
+   ],
+   "answer": 0,
+   "chainStep": "Correct moderate or severe hypothermia first; if still frozen, rapid rewarming in circulating water at 37 to 39 °C (98.6 to 102.2 °F) for about 30 minutes, until the tissue is soft and pliable, with analgesia; no rubbing and no refreezing; dry without rubbing, dry dressing, elevate; ibuprofen 12 mg/kg/day in 2 doses (maximum 2,400 mg/day in 4 doses); tetanus updated; drain clear or cloudy blisters, leave hemorrhagic blisters intact; aloe vera with dressing changes every 6 hours; no prophylactic antibiotics; oxygen if SpO2 under 88% or above 4,000 m",
+   "why": "Once refreezing can be prevented, rapid rewarming in warm water until the tissue is soft and pliable is the standard; repeated thawing and refreezing does more harm. Passive thawing is the fallback only when active rewarming cannot be done, and vigorous rubbing adds tissue damage. Ibuprofen is given for its antiprostaglandin effect. The first appearance underestimates the injury, so debridement and amputation wait for demarcation, 1 to 3 months later, unless wet gangrene or sepsis forces it.",
+   "orders": [
+    {
+     "item": "Rewarming bath",
+     "dose": "WMS 2024 (as summarized): 37 to 39 °C (98.6 to 102.2 °F) for about 30 minutes, or until red and pliable",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.8 Frostbite treatment"
+      },
+      {
+       "docId": "pmid:30725599",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "The AHA and American Red Cross 2024 first aid guideline, as reported in StatPearls, uses 37 to 40 °C (98.6 to 104 °F) for 20 to 30 minutes."
+    },
+    {
+     "item": "Refreezing",
+     "dose": "Do not thaw if the tissue could refreeze",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.8 Frostbite treatment"
+      },
+      {
+       "docId": "pmid:30725599",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Rubbing",
+     "dose": "Avoid vigorous rubbing",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:30725599",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Hypothermia",
+     "dose": "Mild hypothermia can be treated at the same time; moderate or severe hypothermia is corrected first",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.8 Frostbite treatment"
+      },
+      {
+       "docId": "pmid:30725599",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Ibuprofen",
+     "dose": "12 mg/kg/day in 2 doses, to a maximum of 2,400 mg/day in 4 doses",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.8 Frostbite treatment"
+      }
+     ]
+    },
+    {
+     "item": "Tetanus",
+     "dose": "Status checked and updated",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725599",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Blisters and dressings",
+     "dose": "Drain clear, cloudy or tense blisters, leave hemorrhagic ones; aloe vera every 6 hours with dressing changes; dry dressing and elevation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725599",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Antibiotics",
+     "dose": "Prophylaxis not needed; treat infection if it appears",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725599",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Oxygen",
+     "dose": "If SpO2 is under 88% or above 4,000 m",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.8 Frostbite treatment"
+      }
+     ]
+    }
+   ],
+   "next": "frost_result",
+   "sources": [
+    {
+     "docId": "pmid:40003509",
+     "where": "1.8 Frostbite treatment"
+    },
+    {
+     "docId": "pmid:30725599",
+     "where": "Treatment / Management; Pearls"
+    }
+   ]
+  },
+  {
+   "id": "frost_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The tissue after rewarming",
+   "outcomes": [
+    {
+     "id": "superficial",
+     "if": "Superficial; pink with clear or milky blisters, capillary refill brisk",
+     "ddx": {
+      "lead": [
+       "Frostbite"
+      ],
+      "out": []
+     },
+     "next": "end_frost_sup"
+    },
+    {
+     "id": "deep",
+     "if": "Deep, within 72 hours; hemorrhagic blisters or blue-grey skin, no refill",
+     "ddx": {
+      "lead": [
+       "Frostbite"
+      ],
+      "out": []
+     },
+     "next": "frost_lysis"
+    },
+    {
+     "id": "deep_late",
+     "if": "Deep, after 72 hours; hemorrhagic blisters, no capillary refill",
+     "ddx": {
+      "lead": [
+       "Frostbite"
+      ],
+      "out": []
+     },
+     "next": "end_frost_late"
+    }
+   ]
+  },
+  {
+   "id": "end_frost_sup",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Superficial frostbite (no or minimal expected tissue loss): dry dressings, elevation, ibuprofen, aloe vera, tetanus and selective drainage of clear blisters; it resolves over days to weeks. Review again, because the first look can underestimate the depth."
+  },
+  {
+   "id": "frost_lysis",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Deep frostbite, no perfusion after rewarming, within 72 hours. Next?",
+   "options": [
+    "Iloprost IV within 72 hours, or tPA within 24 if bleeding risk allows; no early amputation",
+    "Amputate the nonperfused digits within 48 hours, before an infection has the chance to set in",
+    "A heparin infusion on its own, to stop the thrombosis extending further into the digits",
+    "Surgical sympathectomy to open the vessels and restore blood flow to the digits"
+   ],
+   "answer": 0,
+   "chainStep": "Admit; technetium-99m bone scan, SPECT/CT, MR angiography or angiography to map perfusion; iloprost (Aurlumyn) IV 0.5 ng/kg/min, raised by 0.5 ng/kg/min every 30 minutes as tolerated to 2 ng/kg/min, 6 hours a day for up to 8 days, within 72 hours; or IV tPA 0.15 mg/kg bolus then 0.15 mg/kg/h for 6 hours with heparin for 3 to 5 days, within 24 hours, if the bleeding risk is acceptable; debridement or amputation after demarcation (1 to 3 months) unless wet gangrene, sepsis or compartment syndrome",
+   "why": "Deep frostbite with persistent ischemia after rewarming is where drug treatment helps. WMS 2024 gives strong recommendations to tPA for deep injury (Cauchy 3 to 4) within 24 hours, and to iloprost for deep injury at or proximal to the DIP joint within 72 hours, as early as possible; iloprost has been FDA approved since 2024 and avoids tPA's bleeding risk. Imaging shows the perfusion deficit and guides later surgery, which waits for demarcation. Heparin alone is not recommended, and WMS 2024 advises against sympathectomy.",
+   "orders": [
+    {
+     "item": "Iloprost (Aurlumyn)",
+     "dose": "0.5 ng/kg/min IV, raised by 0.5 ng/kg/min every 30 minutes as tolerated to a maximum of 2 ng/kg/min, as a 6-hour infusion daily for up to 8 days; Child-Pugh B or C: start at 0.25 ng/kg/min",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:6fb35f37a28b",
+       "where": "2 Dosage"
+      }
+     ]
+    },
+    {
+     "item": "Iloprost window",
+     "dose": "Within 72 hours, as soon as possible; for deep injury to or beyond the DIP joint",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.8 Frostbite treatment; Table 2"
+      },
+      {
+       "docId": "pmid:30725599",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "The 2025 summary's text says within 72 h of injury; its Table 2 and StatPearls say within 72 hours after rewarming."
+    },
+    {
+     "item": "tPA",
+     "dose": "IV 0.15 mg/kg bolus, then 0.15 mg/kg/h for 6 hours, with heparin for 3 to 5 days; intra-arterial typically 2 to 4 mg bolus, then 1 mg/h for 24 to 48 hours with heparin or LMWH",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.8 Frostbite treatment"
+      }
+     ]
+    },
+    {
+     "item": "tPA window",
+     "dose": "Within 24 hours, for deep injury (Cauchy 3 or 4), especially if iloprost is unavailable",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.8 Frostbite treatment"
+      },
+      {
+       "docId": "pmid:30725599",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "The 2025 summary says within 24 h of injury; StatPearls says within 24 hours of thawing, for injury to the PIP joint or beyond."
+    },
+    {
+     "item": "tPA bleeding risk",
+     "dose": "Only if the bleeding risk is acceptable; each hour of delay lowers digit salvage",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725599",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Imaging",
+     "dose": "Technetium-99m bone scan, MR angiography, SPECT/CT or angiography for extent and candidacy",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725599",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Heparin alone",
+     "dose": "Not recommended as monotherapy",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.8 Frostbite treatment"
+      },
+      {
+       "docId": "pmid:30725599",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Sympathectomy",
+     "dose": "WMS 2024 recommends against it",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.8 Frostbite treatment"
+      }
+     ]
+    },
+    {
+     "item": "Low-molecular-weight dextran",
+     "dose": "When thrombolytics and iloprost are unavailable or not feasible",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.8 Frostbite treatment"
+      }
+     ]
+    },
+    {
+     "item": "LMW dextran dose",
+     "dose": "Not stated in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Surgery",
+     "dose": "After demarcation, 1 to 3 months or longer; earlier for wet gangrene with sepsis; fasciotomy for compartment syndrome",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725599",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:40003509",
+       "where": "1.8 Frostbite treatment"
+      }
+     ]
+    },
+    {
+     "item": "Hyperbaric oxygen",
+     "dose": "Cannot be recommended: insufficient evidence",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.8 Frostbite treatment"
+      }
+     ]
+    }
+   ],
+   "next": "end_frost_deep",
+   "sources": [
+    {
+     "docId": "pmid:40003509",
+     "where": "1.8 Frostbite treatment; Table 2"
+    },
+    {
+     "docId": "pmid:30725599",
+     "where": "Evaluation; Treatment / Management; Pearls"
+    },
+    {
+     "docId": "url:6fb35f37a28b",
+     "where": "1; 2"
+    }
+   ]
+  },
+  {
+   "id": "end_frost_late",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Deep frostbite seen after the drug windows: admit, image perfusion, ibuprofen, tetanus and wound care; surgery waits for demarcation at 1 to 3 months unless wet gangrene, sepsis or compartment syndrome."
+  },
+  {
+   "id": "end_frost_deep",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Deep frostbite: admitted, perfusion imaged, and iloprost or thrombolysis started inside its window, with tetanus, ibuprofen and wound care. The digits demarcate over 1 to 3 months or more, and amputation waits for that unless wet gangrene, sepsis or compartment syndrome forces it earlier."
+  },
+  {
+   "id": "drown",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "Pulled from the water, breathing, pulse present, core 35 °C (95 °F) or more. Next?",
+   "options": [
+    "Oxygen to SpO2 92 to 96%, chest exam, then observe or escalate; spinal care only with trauma",
+    "A collar and spinal board first, since a neck injury cannot be excluded after any submersion",
+    "Prophylactic antibiotics and a steroid for the aspirated water, then a chest x-ray to follow",
+    "Discharge once the SpO2 is normal on arrival, as later deterioration in the department is uncommon"
+   ],
+   "answer": 0,
+   "chainStep": "Oxygen titrated to SpO2 92 to 96%; chest exam; remove wet clothing; chest x-ray and blood gas for persistent hypoxemia or worsening breathing; head CT, glucose, blood gas, toxicology and ethanol for altered mental status; spinal immobilization only for a dive, a fall or signs of trauma; observe 4 to 8 hours if symptoms are mild or absent",
+   "why": "Hypoxia drives the harm in drowning, so oxygen is titrated to saturation and the chest is examined; tests are not routine in a well-appearing patient with normal oxygenation. Spinal immobilization is only for a history or signs of trauma, such as a dive or a fall. Glucocorticoids, diuretics and empiric antibiotics are not recommended. Patients with mild or no symptoms are observed for 4 to 8 hours before discharge, and anyone who needed even rescue breaths is assessed and monitored in hospital.",
+   "orders": [
+    {
+     "item": "Oxygen target",
+     "dose": "StatPearls: arterial saturation 92 to 96%",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:28613583",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:42297408",
+       "where": "Drowning"
+      }
+     ],
+     "note": "The Korean 2025 guideline keeps the saturation at least 94% in a hypoxic patient during transport."
+    },
+    {
+     "item": "Escalation",
+     "dose": "NIV, or intubation if airway protection is inadequate or SpO2 stays under 90% despite high-flow oxygen",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613583",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Spine",
+     "dose": "Immobilize only with a history or signs of trauma, such as a dive or a fall",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613583",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Tests",
+     "dose": "Not routine if well with normal oxygenation; chest x-ray and blood gas for persistent hypoxemia; head CT, glucose, toxicology and ethanol for altered mental status",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613583",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Glucocorticoids, diuretics, empiric antibiotics",
+     "dose": "Not recommended for routine use",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:28613583",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Observation",
+     "dose": "4 to 8 hours if symptoms are mild or absent",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613583",
+       "where": "Pearls and Other Issues"
+      }
+     ]
+    },
+    {
+     "item": "Anyone resuscitated",
+     "dose": "Even rescue breaths alone: hospital assessment and monitoring",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:42297408",
+       "where": "Drowning"
+      }
+     ]
+    }
+   ],
+   "next": "drown_result",
+   "sources": [
+    {
+     "docId": "pmid:28613583",
+     "where": "Evaluation; Treatment / Management; Pearls and Other Issues"
+    },
+    {
+     "docId": "pmid:42297408",
+     "where": "Drowning"
+    }
+   ]
+  },
+  {
+   "id": "drown_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Breathing and saturation over the observation period",
+   "outcomes": [
+    {
+     "id": "well",
+     "if": "Well; SpO2 normal on air, chest clear, no cough over 4 to 8 hours",
+     "ddx": {
+      "lead": [
+       "Drowning"
+      ],
+      "out": []
+     },
+     "next": "end_drown_well"
+    },
+    {
+     "id": "hypoxic",
+     "if": "Hypoxic or obtunded; low SpO2, crackles, rising work of breathing, or GCS 8 or less",
+     "ddx": {
+      "lead": [
+       "Drowning"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Noninvasive ventilation",
+       "dose": "An alternative to intubation in moderate or severe lung injury, studied only with GCS 12 or more or a stable circulation",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:42297408",
+         "where": "Drowning"
+        },
+        {
+         "docId": "pmid:28613583",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Intubation",
+       "dose": "If airway protection is inadequate or SpO2 stays under 90% despite high-flow oxygen",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613583",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Bronchospasm",
+       "dose": "Nebulized bronchodilators",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613583",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Antibiotics",
+       "dose": "Only if clinical evidence of infection emerges",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613583",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "ECMO",
+       "dose": "Salvage for refractory hypoxemia or severe hypothermia",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613583",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ],
+     "next": "end_drown_resp"
+    }
+   ]
+  },
+  {
+   "id": "end_drown_well",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Well after submersion: discharged after 4 to 8 hours of observation with return advice, once the saturation, chest and mental status have stayed normal."
+  },
+  {
+   "id": "end_drown_resp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Drowning with hypoxemia: high-flow oxygen, then noninvasive ventilation if alert and stable, or intubation if airway protection fails or the saturation stays under 90%; supportive care for ARDS, bronchodilators for bronchospasm, antibiotics only for infection, and ECMO as salvage. Admission to the ward or ICU by severity."
+  },
+  {
+   "id": "current",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "After an electrical or lightning injury, pulse present. Next?",
+   "options": [
+    "12-lead ECG and monitoring, a full skin and neurovascular exam, CK and urinalysis",
+    "Judge the injury by the size of the skin burns, discharging if they are small and dry",
+    "Troponin as the test that decides admission, whatever the ECG and the history show",
+    "Head CT before the ECG, since brain injury decides the outcome"
+   ],
+   "answer": 0,
+   "chainStep": "12-lead ECG and cardiac monitoring; full exam for contact wounds, burns, compartment signs, tympanic membranes, eyes and neurology; CBC, metabolic panel with creatinine, CK, urinalysis for myoglobin; troponin and CK-MB for a current across the chest, chest pain or an abnormal ECG; head CT for altered mental status, loss of consciousness, seizures, head trauma or burns, or focal signs; tetanus; fetal screening from 20 weeks after lightning",
+   "why": "Every adult after an electrical injury gets an ECG and monitoring, and is treated as both a trauma and a cardiac patient. The burns do not measure the injury: current can destroy deep tissue under small or absent burns, so compartments, CK and the urine are checked. Troponin is for a current across the chest, chest pain or an abnormal ECG; after lightning, raised cardiac markers are common and not prognostic. Head CT is for loss of consciousness, head burns or abnormal neurology. Lightning adds ruptured eardrums, eye injury and transient limb paralysis (keraunoparalysis).",
+   "orders": [
+    {
+     "item": "ECG and monitoring",
+     "dose": "Every adult after an electrical injury",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846317",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Labs",
+     "dose": "CBC, metabolic panel with creatinine, urinalysis (serum myoglobin if myoglobinuria), CK",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846317",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Troponin and CK-MB",
+     "dose": "Current across the chest, chest pain or an abnormal ECG; after lightning, often raised and not prognostic",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846317",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:28722949",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Head CT",
+     "dose": "Altered mental status, head trauma, loss of consciousness, seizures or focal deficits; after lightning also head burns",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846317",
+       "where": "Evaluation"
+      },
+      {
+       "docId": "pmid:28722949",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Lightning exam",
+     "dose": "Hearing and tympanic membranes, visual acuity and fundi; fixed dilated pupils can be autonomic, not death",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722949",
+       "where": "History and Physical"
+      }
+     ]
+    },
+    {
+     "item": "Pregnancy",
+     "dose": "Fetal screening at or beyond 20 weeks after a lightning strike",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28722949",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "next": "current_result",
+   "sources": [
+    {
+     "docId": "pmid:28846317",
+     "where": "History and Physical; Evaluation; Treatment / Management"
+    },
+    {
+     "docId": "pmid:28722949",
+     "where": "History and Physical; Evaluation; Treatment / Management"
+    }
+   ]
+  },
+  {
+   "id": "current_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Voltage, symptoms, ECG and examination",
+   "outcomes": [
+    {
+     "id": "low",
+     "if": "Low risk; low voltage or no direct strike, normal ECG and exam, no LOC, chest pain, burns or neuro signs",
+     "ddx": {
+      "lead": [
+       "Electrical injury"
+      ],
+      "out": []
+     },
+     "next": "end_current_low"
+    },
+    {
+     "id": "high",
+     "if": "High risk; high voltage, direct strike, LOC, abnormal ECG, burns, chest pain or neuro signs",
+     "ddx": {
+      "lead": [
+       "Electrical injury",
+       "Rhabdomyolysis"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Admission",
+       "dose": "Arrest, loss of consciousness, chest pain, hypoxia, arrhythmia, significant trauma or burns, or an abnormal ECG",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846317",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Fluids",
+       "dose": "For significant burns or myoglobinuria, to a urine output of 1 to 2 mL/kg/h",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:28846317",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:28846335",
+         "where": "Nontraumatic rhabdomyolysis"
+        }
+       ],
+       "note": "StatPearls Rhabdomyolysis targets 200 to 300 mL/h; 1 to 2 mL/kg/h is 90 to 180 mL/h in a 90 kg patient."
+      },
+      {
+       "item": "Compartments",
+       "dose": "High voltage brings more compartment syndrome; early surgical consultation and prompt fasciotomy",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846317",
+         "where": "History and Physical; Evaluation"
+        }
+       ]
+      },
+      {
+       "item": "Direct lightning strike, chest pain or dyspnea",
+       "dose": "ECG, echocardiogram and 24 hours of telemetry",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28722949",
+         "where": "Evaluation"
+        }
+       ]
+      },
+      {
+       "item": "Tetanus and burns",
+       "dose": "Tetanus vaccine if needed, with standard burn care",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846317",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ],
+     "next": "end_current_admit"
+    }
+   ]
+  },
+  {
+   "id": "end_current_low",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Low-risk electrical or lightning injury: after a low-voltage injury with a normal ECG, no cardiac symptoms or history and a normal examination, discharge is safe, and children after household current without significant injury likewise. A lightning survivor who looks well without a direct strike, loss of consciousness, focal symptoms, chest pain, dyspnea, major trauma or significant burns can also go home, with eye and hearing follow-up as needed."
+  },
+  {
+   "id": "end_current_admit",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "High-risk electrical or lightning injury: admit with cardiac monitoring (24 hours of telemetry and an echocardiogram after a direct lightning strike), fluids for burns or myoglobinuria to a urine output of 1 to 2 mL/kg/h, serial compartment checks with early surgical consultation and fasciotomy if needed, tetanus and burn care, and transfer to a burn unit when required. Neurological deficits after lightning need repeat review. Burn wound care and burn fluids continue in the burns pathway (pw_burns) once it ships."
+  },
+  {
+   "id": "bite_kind",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "What bit or stung",
+   "outcomes": [
+    {
+     "id": "pit",
+     "if": "Pit viper; rattlesnake, copperhead or cottonmouth",
+     "ddx": {
+      "lead": [
+       "Pit viper envenomation"
+      ],
+      "out": []
+     },
+     "next": "snake"
+    },
+    {
+     "id": "coral",
+     "if": "Coral snake, no neuro signs; an eastern or Texas coral snake",
+     "ddx": {
+      "lead": [
+       "Coral snake envenomation"
+      ],
+      "out": []
+     },
+     "next": "coral"
+    },
+    {
+     "id": "coral_neuro",
+     "if": "Coral snake, neurotoxic; ptosis, diplopia, dysphagia or weakness",
+     "ddx": {
+      "lead": [
+       "Coral snake envenomation"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "North American Coral Snake Antivenin",
+       "dose": "3 to 5 vials IV now in adults and adolescents; the first 1 to 2 mL over 3 to 5 minutes",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:04a0c170e535",
+         "where": "2.1 Dose; 2.2 Administration"
+        },
+        {
+         "docId": "pmid:30085573",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "ICU and airway",
+       "dose": "ICU; intubate at the first bulbar deficit",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30085573",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "If antivenin is delayed",
+       "dose": "A trial of an acetylcholinesterase inhibitor such as neostigmine may be reasonable",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30085573",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ],
+     "next": "end_coral_neuro"
+    },
+    {
+     "id": "widow",
+     "if": "Black widow; spreading pain, cramps or sweating",
+     "ddx": {
+      "lead": [
+       "Black widow envenomation"
+      ],
+      "out": []
+     },
+     "next": "widow"
+    },
+    {
+     "id": "widow_local",
+     "if": "Black widow, local pain only; no cramps or sweating",
+     "ddx": {
+      "lead": [
+       "Black widow envenomation"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Mild envenomation",
+       "dose": "Oral analgesics as needed, with wound care and tetanus prophylaxis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:29763163",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ],
+     "next": "end_widow_local"
+    },
+    {
+     "id": "recluse",
+     "if": "Brown recluse; a pale center, a red ring, then a blister",
+     "ddx": {
+      "lead": [
+       "Brown recluse envenomation"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Wound",
+       "dose": "Clean with soap and water, elevate, ice pack; NSAIDs or opioids; tetanus; antibiotics only for cellulitis",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30725730",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Early surgical debridement",
+       "dose": "Not advisable",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "pmid:30725730",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Dapsone or antivenom",
+       "dose": "Scant evidence",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30725730",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Children and systemic signs",
+       "dose": "Hemolysis can appear up to 7 days later; urinalysis at the first visit if discharged; admit for hemolysis, rhabdomyolysis, DIC or organ failure",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:30725730",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ],
+     "next": "end_recluse"
+    },
+    {
+     "id": "scorpion",
+     "if": "Bark scorpion; local pain, or roving eyes, drooling, thrashing",
+     "ddx": {
+      "lead": [
+       "Scorpion envenomation"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Anascorp",
+       "dose": "3 vials, each in 5 mL saline, combined and diluted to 50 mL, IV over 10 minutes; then 1 vial at a time every 30 to 60 minutes as needed",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:1d599c9a0873",
+         "where": "2 Dosage"
+        }
+       ]
+      },
+      {
+       "item": "Who gets it",
+       "dose": "Clinically important signs: loss of muscle control, roving or abnormal eye movements, slurred speech, respiratory distress, hypersalivation, frothing, vomiting",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:1d599c9a0873",
+         "where": "2 Dosage"
+        }
+       ]
+      },
+      {
+       "item": "Dose as reported in the review",
+       "dose": "StatPearls: 3 vials in 20 to 50 mL over 30 minutes, then 2 more if symptoms continue",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:28613678",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "url:1d599c9a0873",
+         "where": "2 Dosage"
+        }
+       ],
+       "note": "The Anascorp label infuses 3 vials over 10 minutes and adds 1 vial at a time every 30 to 60 minutes; StatPearls gives 30 minutes and 2 further vials."
+      },
+      {
+       "item": "Local sting only",
+       "dose": "Ibuprofen, cleaning, tetanus; observe at least 4 hours; discharge if mild, eating and pain controlled",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613678",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Severe",
+       "dose": "Ready to intubate for pulmonary edema; IV benzodiazepine for spasticity; dobutamine for cardiogenic shock; fluids, epinephrine and airway kit at hand before antivenom",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613678",
+         "where": "Treatment / Management"
+        }
+       ]
+      }
+     ],
+     "next": "end_scorpion"
+    },
+    {
+     "id": "mammal",
+     "if": "Mammal; a dog, cat, bat, raccoon, skunk or fox",
+     "ddx": {
+      "lead": [
+       "Mammal bite"
+      ],
+      "out": []
+     },
+     "next": "mammal"
+    }
+   ]
+  },
+  {
+   "id": "end_widow_local",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Black widow bite with local pain only: wound care, tetanus and oral analgesics; return for spreading pain, cramps or sweating."
+  },
+  {
+   "id": "end_recluse",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Brown recluse bite: wound care, elevation, ice, analgesia and tetanus; the necrotic center heals over weeks, and early excision is avoided. Dapsone and antivenom have scant evidence. Hemolysis can follow up to 7 days later, so a urinalysis before discharge and clear return advice, especially for children; admit for hemolysis, rhabdomyolysis, DIC or organ failure."
+  },
+  {
+   "id": "end_scorpion",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Bark scorpion sting: local pain alone needs ibuprofen, cleaning, tetanus and at least 4 hours of observation. Neurotoxicity (roving eyes, drooling, thrashing, slurred speech, respiratory distress) gets Anascorp as soon as possible with the airway ready, because severe signs can arrive within minutes in small children."
+  },
+  {
+   "id": "snake",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pit viper bite to a limb. Next?",
+   "options": [
+    "Remove rings, immobilize and elevate; mark the swelling edge every 15 to 30 minutes; labs",
+    "A venous tourniquet and ice packs on the bitten limb, to slow the spread of the venom inward",
+    "Antivenom at once on arrival, before any swelling or laboratory change has had time to appear",
+    "Prophylactic antibiotics and an early fasciotomy to decompress the swelling limb"
+   ],
+   "answer": 0,
+   "chainStep": "Remove rings and tight clothing; immobilize and elevate the limb, joints in relative extension; mark the leading edge of swelling and tenderness every 15 to 30 minutes; prothrombin time, fibrinogen, platelet count and hemoglobin, repeated; opioids rather than NSAIDs; tetanus as standard; poison center or toxicology consult",
+   "why": "About 20 to 25% of pit viper bites are dry, so antivenom waits for venom effects: progressive swelling, abnormal coagulation or platelets, or systemic signs. Marking the leading edge every 15 to 30 minutes shows whether local effects are spreading, and serial PT, fibrinogen, platelets and hemoglobin catch hematologic toxicity. Tourniquets, incision and suction, ice and pressure immobilization do not help, and prophylactic antibiotics and fasciotomy are avoided; antivenom is what lowers compartment pressures. Opioids are preferred to NSAIDs because the patient may become thrombocytopenic.",
+   "orders": [
+    {
+     "item": "Swelling",
+     "dose": "Mark the leading edge every 15 to 30 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:21291549",
+       "where": "Initial approach"
+      }
+     ]
+    },
+    {
+     "item": "Labs",
+     "dose": "Serial prothrombin time, fibrinogen, platelets and hemoglobin",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:21291549",
+       "where": "Assessment for venom effects"
+      }
+     ]
+    },
+    {
+     "item": "Analgesia",
+     "dose": "Opioids rather than NSAIDs",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:21291549",
+       "where": "Initial approach"
+      }
+     ]
+    },
+    {
+     "item": "Tourniquet",
+     "dose": "Higher morbidity without benefit",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:31985944",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:21291549",
+       "where": "Treatments to avoid"
+      }
+     ]
+    },
+    {
+     "item": "Incision, suction, ice, pressure immobilization",
+     "dose": "Ineffective or harmful; not recommended",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:21291549",
+       "where": "Treatments to avoid"
+      }
+     ]
+    },
+    {
+     "item": "Prophylactic antibiotics, prophylactic fasciotomy, routine blood products",
+     "dose": "Avoid",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:21291549",
+       "where": "Treatments to avoid"
+      }
+     ]
+    }
+   ],
+   "next": "snake_result",
+   "sources": [
+    {
+     "docId": "pmid:21291549",
+     "where": "Initial approach; Assessment for venom effects; Dry bites; Compartment syndrome; Treatments to avoid"
+    },
+    {
+     "docId": "pmid:31985944",
+     "where": "Treatment / Management"
+    }
+   ]
+  },
+  {
+   "id": "snake_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Swelling, labs and systemic signs over the observation",
+   "outcomes": [
+    {
+     "id": "quiet",
+     "if": "No progression; no swelling, or local swelling not spreading, labs normal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_dry"
+    },
+    {
+     "id": "env",
+     "if": "Envenomation; spreading swelling, abnormal coagulation or platelets, or systemic signs",
+     "ddx": {
+      "lead": [
+       "Pit viper envenomation"
+      ],
+      "out": []
+     },
+     "next": "antivenom"
+    }
+   ]
+  },
+  {
+   "id": "end_dry",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No progression after a pit viper bite: an apparently dry bite is observed for at least 8 hours (longer in children and leg bites), and minor non-progressing local effects for 12 to 24 hours, with platelets, PT, fibrinogen and hemoglobin repeated before discharge; antivenom is given promptly if effects progress. Return for spreading swelling or any bleeding."
+  },
+  {
+   "id": "antivenom",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pit viper envenomation: swelling spreading or labs abnormal. Next?",
+   "options": [
+    "CroFab 4 to 6 vials IV (or Anavip 10 vials), repeated until initial control is reached",
+    "Fresh frozen plasma and platelets first, to correct the coagulopathy before the antivenom",
+    "A skin test for sheep or horse protein first, with antivenom only if the test is negative",
+    "Fasciotomy for the tense swollen limb first, with the antivenom given after surgery"
+   ],
+   "answer": 0,
+   "chainStep": "CroFab 4 to 6 vials (8 to 12 for shock or serious active bleeding) in 250 mL saline IV over 60 minutes, 25 to 50 mL/h for the first 10 minutes; recheck coagulation and platelets within 1 hour and repeat 4 to 6 vials until initial control; or Anavip 10 vials over 60 minutes, repeated hourly until control, then 4 vials for recurrence; the same dose in children; IV crystalloid; observe 18 to 24 hours after control",
+   "why": "Antivenom halts the spread of local injury and reverses hematologic and systemic effects, titrated to initial control: the leading edge stops advancing, systemic signs resolve, and coagulation is normal or trending there. Children get the adult dose, because it neutralizes venom rather than matching weight. Skin testing is not needed with the current antivenoms; transfusion alone gives only a transient improvement; and antivenom itself lowers compartment pressures, so pressures are measured and an expert consulted before any fasciotomy.",
+   "orders": [
+    {
+     "item": "CroFab",
+     "dose": "4 to 6 vials in 250 mL saline over 60 minutes (25 to 50 mL/h for 10 minutes); repeat 4 to 6 vials until initial control; label range 4 to 12 vials to start",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:eee37ee07a7c",
+       "where": "2.1 Dose; 2.2 Administration"
+      }
+     ]
+    },
+    {
+     "item": "Severe envenomation",
+     "dose": "8 to 12 vials for shock or serious active bleeding",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:21291549",
+       "where": "Antivenom dosing"
+      },
+      {
+       "docId": "pmid:31985944",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Anavip",
+     "dose": "10 vials over 60 minutes, repeated hourly until control; 4 vials for re-emerging effects",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:e7966e0097e3",
+       "where": "2 Dosage"
+      }
+     ]
+    },
+    {
+     "item": "Children",
+     "dose": "Same dose as adults",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:21291549",
+       "where": "Antivenom dosing"
+      },
+      {
+       "docId": "pmid:31985944",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Reassess",
+     "dose": "Coagulation and platelets within 1 hour of each dose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:21291549",
+       "where": "Assessment for initial control"
+      }
+     ]
+    },
+    {
+     "item": "Maintenance doses",
+     "dose": "CroFab label: 2 vials every 6 hours for 18 hours (3 doses) after initial control",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:eee37ee07a7c",
+       "where": "2.1 Dose"
+      },
+      {
+       "docId": "pmid:21291549",
+       "where": "Maintenance therapy"
+      }
+     ],
+     "note": "The 2011 unified algorithm calls maintenance therapy controversial and leaves it to expert consultation."
+    },
+    {
+     "item": "Skin test",
+     "dose": "Not necessary or recommended",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:21291549",
+       "where": "Antivenom dosing"
+      }
+     ]
+    },
+    {
+     "item": "Blood products",
+     "dose": "No routine use; transfusion alone gives only a transient rise",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:21291549",
+       "where": "Treatments to avoid; Coagulopathy"
+      }
+     ]
+    },
+    {
+     "item": "Crystalloid",
+     "dose": "Routine IV crystalloid with antivenom",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:21291549",
+       "where": "Antivenom dosing"
+      }
+     ]
+    },
+    {
+     "item": "Hypersensitivity",
+     "dose": "Stop the infusion; antihistamines, corticosteroids and fluids",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:21291549",
+       "where": "Hypersensitivity"
+      }
+     ]
+    },
+    {
+     "item": "Observation",
+     "dose": "18 to 24 hours after initial control (algorithm), at least 18 hours (Anavip label)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:21291549",
+       "where": "Post-stabilization monitoring"
+      },
+      {
+       "docId": "url:e7966e0097e3",
+       "where": "2 Dosage"
+      }
+     ]
+    }
+   ],
+   "next": "end_av",
+   "sources": [
+    {
+     "docId": "pmid:21291549",
+     "where": "Indications for antivenom; Antivenom dosing; Assessment for initial control; Coagulopathy; Compartment syndrome"
+    },
+    {
+     "docId": "url:eee37ee07a7c",
+     "where": "2.1; 2.2"
+    },
+    {
+     "docId": "url:e7966e0097e3",
+     "where": "2 Dosage"
+    },
+    {
+     "docId": "pmid:31985944",
+     "where": "Treatment / Management"
+    }
+   ]
+  },
+  {
+   "id": "end_av",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Pit viper envenomation treated: antivenom to initial control, observation for 18 to 24 hours with labs 6 to 12 hours after control and before discharge, and follow-up for recurrent swelling or coagulopathy, which can return for a week or more, with care over any anticoagulant or antiplatelet drug in that time. Serum sickness follows in about 5 to 10% after Fab antivenom."
+  },
+  {
+   "id": "coral",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Coral snake bite, no neurological signs and little at the bite. Next?",
+   "options": [
+    "ICU observation for at least 24 hours; coral snake antivenin at the first neurological sign",
+    "Coral snake antivenin now, before symptoms, since paralysis may not reverse once it has started",
+    "CroFab 4 to 6 vials IV, the antivenom used for North American snakebite, repeated as needed",
+    "Discharge after 4 hours of observation if the bite site stays quiet and there are no symptoms"
+   ],
+   "answer": 0,
+   "chainStep": "Immobilize the limb; ICU observation for at least 24 hours with serial neurological checks and pulmonary function; North American Coral Snake Antivenin (Equine) 3 to 5 vials IV at the first neurological sign, the first 1 to 2 mL over 3 to 5 minutes while watching for anaphylaxis; intubate at the first bulbar deficit; toxicology or poison center consult",
+   "why": "Coral snake neurotoxicity can be delayed up to 13 hours with little to see at the bite, and death comes from respiratory failure, so observation is in an ICU for at least 24 hours. The antivenin is now given at the first neurological abnormality, not before: empiric treatment of asymptomatic patients brought more moderate-to-severe adverse events, expert consensus now advises against it, and the label contraindicates prophylactic use. CroFab is a crotalid antivenom, and 4 hours is far too short an observation.",
+   "orders": [
+    {
+     "item": "Antivenin before symptoms",
+     "dose": "Do not give prophylactically to asymptomatic patients",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:04a0c170e535",
+       "where": "4 Contraindications"
+      },
+      {
+       "docId": "pmid:30085573",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "North American Coral Snake Antivenin",
+     "dose": "3 to 5 vials IV in adults and adolescents, less in small children; the first 1 to 2 mL over 3 to 5 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:04a0c170e535",
+       "where": "2.1 Dose; 2.2 Administration"
+      }
+     ]
+    },
+    {
+     "item": "Observation",
+     "dose": "ICU, at least 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30085573",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Airway",
+     "dose": "Intubate at the first sign of a bulbar deficit",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30085573",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Arizona (Sonoran) coral snake",
+     "dose": "The antivenin does not neutralize its venom",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:04a0c170e535",
+       "where": "12 Pharmacology"
+      }
+     ]
+    },
+    {
+     "item": "If antivenin is delayed",
+     "dose": "A trial of an acetylcholinesterase inhibitor such as neostigmine may be reasonable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30085573",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "next": "end_coral",
+   "sources": [
+    {
+     "docId": "pmid:30085573",
+     "where": "History and Physical; Treatment / Management; Pearls"
+    },
+    {
+     "docId": "url:04a0c170e535",
+     "where": "2.1; 2.2; 4; 12"
+    }
+   ]
+  },
+  {
+   "id": "end_coral_neuro",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Coral snake bite with neurological signs: North American Coral Snake Antivenin 3 to 5 vials IV now, the first 1 to 2 mL over 3 to 5 minutes, ICU, and intubation at the first bulbar deficit; a trial of neostigmine may be reasonable if antivenin is delayed."
+  },
+  {
+   "id": "end_coral",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Coral snake bite: ICU observation for at least 24 hours, antivenin at the first neurological sign, and intubation at the first bulbar deficit; timely airway care and antivenin usually bring full recovery. Older teaching gave antivenin to every suspected bite; the current label and expert consensus do not."
+  },
+  {
+   "id": "widow",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Black widow bite; pain spreading from the bite, cramps and sweating. Next?",
+   "options": [
+    "Opioid analgesia and a benzodiazepine for the spasms; antivenom if they fail",
+    "Laparotomy for the rigid abdomen once a CT scan has excluded free air under the diaphragm",
+    "Dapsone and early excision of the bite site to stop the venom from spreading",
+    "Prednisone and an antihistamine, holding the opioids until the cramps settle"
+   ],
+   "answer": 0,
+   "chainStep": "Wound care and tetanus; oral analgesics for local pain alone; for spreading pain and cramps, opioids plus a benzodiazepine with monitoring (not both prescribed at discharge); ECG for chest pain; Antivenin (Latrodectus mactans) 1 vial IM, or IV in 10 to 50 mL saline over 15 minutes (preferred if severe, under 12 or in shock), if symptoms are not controlled and there is no asthma or atopy, after a skin or conjunctival test, with epinephrine at hand",
+   "why": "Latrodectism is neurotoxic: pain spreading from the bite, cramps, a rigid abdomen with little tenderness, sweating, and a raised pulse and pressure. Opioids and benzodiazepines treat pain and spasm first; antivenom is safe and effective in most and, in the review, is given when analgesics do not control the symptoms (the label emphasizes early use), avoiding patients with asthma or atopy, in whom severe reactions and deaths have occurred. Holding the opioids for a steroid and an antihistamine leaves the pain and spasm untreated. The rigid abdomen is muscle spasm, not a surgical abdomen, and dapsone and excision play no part.",
+   "orders": [
+    {
+     "item": "Analgesia",
+     "dose": "Opioids for pain and benzodiazepines for spasm in moderate to severe envenomation; oral analgesics if mild",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29763163",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Opioid and benzodiazepine doses",
+     "dose": "Not stated in the sources read",
+     "status": "pending"
+    },
+    {
+     "item": "Antivenin (Latrodectus mactans)",
+     "dose": "1 vial (2.5 mL) IM in the anterolateral thigh, or IV in 10 to 50 mL saline over 15 minutes (preferred if severe, under 12 or in shock)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cb21b1501004",
+       "where": "Dosage and administration"
+      }
+     ]
+    },
+    {
+     "item": "Who gets it",
+     "dose": "Symptoms not controlled by analgesics, with no asthma or atopy",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29763163",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "url:cb21b1501004",
+       "where": "Indications and usage; Precautions"
+      }
+     ],
+     "note": "The antivenin label emphasizes early use for prompt relief."
+    },
+    {
+     "item": "Skin or conjunctival test",
+     "dose": "Per the label, before horse serum; anaphylaxis can still follow a negative test",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cb21b1501004",
+       "where": "Warnings"
+      }
+     ]
+    },
+    {
+     "item": "Calcium gluconate",
+     "dose": "StatPearls: ineffective and no longer recommended, like methocarbamol",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29763163",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "url:cb21b1501004",
+       "where": "Indications and usage"
+      }
+     ],
+     "note": "The Merck antivenin label still lists 10 mL of 10% calcium gluconate IV, repeated, among the measures giving greatest relief."
+    },
+    {
+     "item": "Serum sickness",
+     "dose": "Watch for it about 8 to 12 days after antivenin",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cb21b1501004",
+       "where": "Warnings"
+      }
+     ]
+    }
+   ],
+   "next": "end_widow",
+   "sources": [
+    {
+     "docId": "pmid:29763163",
+     "where": "Treatment / Management; Pearls"
+    },
+    {
+     "docId": "url:cb21b1501004",
+     "where": "Indications and usage; Warnings; Precautions; Dosage and administration"
+    }
+   ]
+  },
+  {
+   "id": "end_widow",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Black widow envenomation: usually self-limited; opioids and benzodiazepines for pain and spasm, antivenin for symptoms that analgesia cannot control, and a watch for serum sickness about 8 to 12 days after antivenin. Toxicology consultation is recommended."
+  },
+  {
+   "id": "mammal",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Mammal bite or scratch through the skin. Next?",
+   "options": [
+    "Irrigate and debride; amoxicillin-clavulanate; tetanus by history; rabies risk assessment",
+    "Close the wound primarily and give antibiotics only if an infection develops later on",
+    "No antibiotics, since most dog bites never become infected; tetanus according to the history",
+    "Rabies vaccine alone for any bite, keeping the immune globulin for an animal that looks unwell"
+   ],
+   "answer": 0,
+   "chainStep": "Irrigate thoroughly (povidone-iodine 1 to 5% in saline), debride devitalized tissue; leave cat bites, deep punctures and wounds into joints open, close facial wounds for cosmesis; x-ray for fracture or retained teeth; amoxicillin-clavulanate prophylaxis for any bite through the epidermis (extended-spectrum cephalosporin, or doxycycline or TMP-SMX with metronidazole or clindamycin, if penicillin-allergic); tetanus by wound and vaccine history; rabies risk by animal, behavior and local rabies; report to public health",
+   "why": "Bites inoculate oral flora, so prophylaxis is warranted for every bite through the epidermis, and amoxicillin-clavulanate is the preferred agent; hands, feet, face, genitals and punctures are high risk, and cat bites (58% infected in one series, against 14% of dog bites) are left open. Closure is limited to clean, uncomplicated wounds within 8 hours, chiefly on the face. Bites are tetanus-prone wounds. Rabies prophylaxis depends on the animal and on the patient's vaccine history; a never-vaccinated patient exposed to a high-risk animal needs both immune globulin and vaccine.",
+   "orders": [
+    {
+     "item": "Irrigation",
+     "dose": "Syringe or high-pressure irrigation with 1 to 5% povidone-iodine in saline; debride devitalized tissue",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613602",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Prophylactic antibiotic",
+     "dose": "Amoxicillin-clavulanate for any bite through the epidermis; extended-spectrum cephalosporin if penicillin-allergic, or doxycycline or TMP-SMX plus metronidazole or clindamycin",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613602",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Amoxicillin-clavulanate dose and duration",
+     "dose": "Bite dose and duration not in the open sources read; a general adult dose is 875 mg every 12 hours (StatPearls, not bite-specific); IDSA 2014 was not openly accessible",
+     "status": "pending"
+    },
+    {
+     "item": "Closure",
+     "dose": "Leave open unless cosmetic (face); close uncomplicated wounds within 8 hours after cleaning; never deep punctures or joint wounds",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613602",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "X-ray",
+     "dose": "For fracture or retained teeth",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613602",
+       "where": "Radiographic Studies"
+      }
+     ]
+    },
+    {
+     "item": "Tetanus",
+     "dose": "Bites are high-risk wounds: fewer than 3 doses or unknown, vaccine plus tetanus immune globulin; 3 or more doses, vaccine if over 5 years since the last",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:32644434",
+       "where": "Clinical significance"
+      }
+     ]
+    },
+    {
+     "item": "Tetanus immune globulin",
+     "dose": "HyperTET 250 units deep IM, with Td in a different limb and syringe (age 7 and over)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:31e161088a7b",
+       "where": "Dosage"
+      }
+     ]
+    }
+   ],
+   "next": "rabies_risk",
+   "sources": [
+    {
+     "docId": "pmid:28613602",
+     "where": "Radiographic Studies; Treatment / Management"
+    },
+    {
+     "docId": "pmid:32644434",
+     "where": "Clinical significance"
+    },
+    {
+     "docId": "url:31e161088a7b",
+     "where": "Dosage"
+    },
+    {
+     "docId": "pmid:28846292",
+     "where": "Previously unvaccinated"
+    }
+   ]
+  },
+  {
+   "id": "rabies_risk",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The animal, its health, and the patient's rabies vaccine history",
+   "outcomes": [
+    {
+     "id": "high",
+     "if": "High risk, never vaccinated; bat, raccoon, skunk, fox, or a sick or unavailable dog or cat",
+     "ddx": {
+      "lead": [
+       "Rabies exposure"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "High-risk animals",
+       "dose": "Bats, raccoons, skunks and foxes are the commonest US carriers; ask whether the animal appeared unhealthy",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846292",
+         "where": "Animal exposure"
+        }
+       ]
+      },
+      {
+       "item": "Uncertain exposure",
+       "dose": "PEP for uncertain exposure, especially where rabies is common; public health advises",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613602",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:28846292",
+         "where": "Postexposure prophylaxis"
+        }
+       ]
+      }
+     ],
+     "next": "pep"
+    },
+    {
+     "id": "low",
+     "if": "Low risk for now; a healthy dog, cat or ferret to observe 10 days, or a small rodent or rabbit",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Observation",
+       "dose": "A 10-day observation period for cats, dogs and ferrets; an animal that shows signs is euthanized and tested",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846292",
+         "where": "Animal observation"
+        }
+       ]
+      },
+      {
+       "item": "Rodents and rabbits",
+       "dose": "Healthy-appearing small rodents, rabbits and hares rarely require PEP",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846292",
+         "where": "Animal exposure"
+        }
+       ]
+      }
+     ],
+     "next": "end_observe"
+    },
+    {
+     "id": "prior",
+     "if": "High risk, previously vaccinated; a complete rabies PrEP or PEP series, immunocompetent",
+     "ddx": {
+      "lead": [
+       "Rabies exposure"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Vaccine",
+       "dose": "1 mL IM on days 0 and 3",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:35511716",
+         "where": "Recommendations"
+        },
+        {
+         "docId": "pmid:28846292",
+         "where": "Previously immunized"
+        },
+        {
+         "docId": "url:c514879f0a1e",
+         "where": "2.2 Post-exposure"
+        }
+       ]
+      },
+      {
+       "item": "HRIG",
+       "dose": "Not given: it may blunt the antibody response",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "pmid:28846292",
+         "where": "Previously immunized"
+        }
+       ]
+      },
+      {
+       "item": "Immunocompromised",
+       "dose": "Vaccine and immune globulin as for the unvaccinated, even with prior vaccination",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28846292",
+         "where": "Previously immunized"
+        },
+        {
+         "docId": "url:c514879f0a1e",
+         "where": "2.2 Post-exposure"
+        }
+       ]
+      }
+     ],
+     "next": "end_prior"
+    }
+   ]
+  },
+  {
+   "id": "pep",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "High-risk exposure, never vaccinated against rabies. Next?",
+   "options": [
+    "HRIG 20 IU/kg into and around the wound, and vaccine on days 0, 3, 7 and 14",
+    "Vaccine on days 0, 3, 7 and 14, with no immune globulin as the wound is small",
+    "HRIG 20 IU/kg alone, starting the vaccine only if the animal tests positive",
+    "HRIG and vaccine drawn into one syringe and given together into the buttock"
+   ],
+   "answer": 0,
+   "chainStep": "Wash the wound with soap and water for at least 15 minutes, then povidone-iodine; HRIG 20 IU/kg, the full dose infiltrated into and around the wound if anatomically feasible, any remainder IM away from the vaccine site; rabies vaccine 1 mL IM in the deltoid (anterolateral thigh in small children) on days 0, 3, 7 and 14, plus day 28 if immunocompromised; separate syringes and sites, never the gluteal area; HRIG no later than day 7 of the series; notify the health department",
+   "why": "A never-vaccinated person exposed to a likely rabid animal needs passive and active immunity together: HRIG, infiltrated into the wound, covers the days before the vaccine's own antibody response, and the CDC schedule is 4 vaccine doses on days 0, 3, 7 and 14 (5 if immunocompromised). HRIG is recommended for bite and nonbite exposures whatever the time since exposure. Delaying PEP for animal testing is reasonable only when results come quickly. HRIG and vaccine never share a syringe or site, and the gluteal area is not used.",
+   "orders": [
+    {
+     "item": "HRIG (HyperRAB 300 IU/mL)",
+     "dose": "20 IU/kg (0.0665 mL/kg), the full dose infiltrated in and around the wound if feasible, the rest IM away from the vaccine; do not exceed the dose; not beyond day 7 after the first vaccine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:ea4590d4ffa5",
+       "where": "1 Limitations of use; 2 Dosage; 2.1 Schedule table"
+      }
+     ]
+    },
+    {
+     "item": "Vaccine schedule",
+     "dose": "CDC/ACIP: 1 mL IM on days 0, 3, 7 and 14",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:35511716",
+       "where": "Recommendations"
+      },
+      {
+       "docId": "pmid:28846292",
+       "where": "Previously unvaccinated"
+      },
+      {
+       "docId": "url:c514879f0a1e",
+       "where": "2.2 Post-exposure"
+      },
+      {
+       "docId": "url:56e5b9263b87",
+       "where": "Postexposure dosage"
+      }
+     ],
+     "note": "ACIP (MMWR 2022, StatPearls) gives 4 doses; the Imovax and RabAvert labels still give 5 doses on days 0, 3, 7, 14 and 28."
+    },
+    {
+     "item": "Immunocompromised",
+     "dose": "A fifth dose on day 28",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846292",
+       "where": "Previously unvaccinated"
+      },
+      {
+       "docId": "url:c514879f0a1e",
+       "where": "2.2 Post-exposure"
+      }
+     ]
+    },
+    {
+     "item": "Site",
+     "dose": "Deltoid in adults, deltoid or anterolateral thigh in children; never gluteal; separate syringes and sites for HRIG and vaccine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:35511716",
+       "where": "Background"
+      },
+      {
+       "docId": "url:c514879f0a1e",
+       "where": "2.3 Administration"
+      },
+      {
+       "docId": "url:ea4590d4ffa5",
+       "where": "2.1 Schedule table"
+      },
+      {
+       "docId": "pmid:28846292",
+       "where": "Avoiding common errors"
+      }
+     ]
+    },
+    {
+     "item": "Wound care",
+     "dose": "Soap and water for at least 15 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846292",
+       "where": "Wound care"
+      }
+     ]
+    },
+    {
+     "item": "Late presentation",
+     "dose": "PEP still given, even years after exposure",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846292",
+       "where": "Postexposure prophylaxis"
+      }
+     ]
+    },
+    {
+     "item": "Animal testing",
+     "dose": "PEP can stop if the animal tests negative",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28846292",
+       "where": "Postexposure prophylaxis"
+      }
+     ]
+    }
+   ],
+   "next": "end_pep",
+   "sources": [
+    {
+     "docId": "url:ea4590d4ffa5",
+     "where": "1; 2; 2.1"
+    },
+    {
+     "docId": "pmid:28846292",
+     "where": "Wound care; Previously unvaccinated; Avoiding common errors; Postexposure prophylaxis"
+    },
+    {
+     "docId": "pmid:35511716",
+     "where": "Background; Recommendations"
+    },
+    {
+     "docId": "url:c514879f0a1e",
+     "where": "2.2; 2.3"
+    }
+   ]
+  },
+  {
+   "id": "end_pep",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Rabies PEP in a never-vaccinated patient: wound washed, HRIG 20 IU/kg infiltrated into the wound, and vaccine on days 0, 3, 7 and 14, with a fifth dose on day 28 if immunocompromised; the case is reported to public health. Once the course is complete the patient counts as previously vaccinated for any later exposure."
+  },
+  {
+   "id": "end_observe",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No rabies PEP for now: a healthy dog, cat or ferret is confined and observed for 10 days, and if it falls ill it is tested and PEP is started; healthy-looking small rodents, rabbits and hares rarely need PEP. Wound care, amoxicillin-clavulanate and tetanus still apply, and public health is consulted when in doubt."
+  },
+  {
+   "id": "end_prior",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Previously vaccinated and immunocompetent: rabies vaccine on days 0 and 3 only, and no HRIG, which could blunt the booster response. Immunocompromised patients are the exception and get vaccine with immune globulin."
+  },
+  {
+   "id": "alt",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "New symptoms after a recent ascent above 2,500 m. Next?",
+   "options": [
+    "Stop the ascent; check heel-to-toe gait, mental status, breathing at rest, chest and SpO2",
+    "Head CT before any treatment, to rule out a bleed as the cause of the new symptoms at altitude",
+    "Ibuprofen and keep climbing, as a headache in the first days at altitude is expected and benign",
+    "Furosemide for the breathlessness and fluid shifts that come with altitude"
+   ],
+   "answer": 0,
+   "chainStep": "Stop the ascent; look for ataxia on a heel-to-toe walk and clouded consciousness (HACE), and for breathlessness at rest, cough, crackles, cyanosis and tachypnea (HAPE); headache with gastrointestinal upset, fatigue or dizziness alone is AMS (Lake Louise criteria); glucose; do not delay treatment for imaging",
+   "why": "Altitude illness is diagnosed at the bedside: AMS is headache plus gastrointestinal upset, fatigue or dizziness after ascent; truncal ataxia and clouded consciousness mark HACE, which can kill within 24 hours; HAPE is dyspnea at rest, cough and crackles, usually 1 to 5 days after arrival. Neuroimaging is not needed for the diagnosis and treatment is not delayed for it. Ascent stops whenever AMS appears, and analgesics relieve the headache without treating the illness. Diuretics are advised against in HAPE because of intravascular depletion.",
+   "orders": [
+    {
+     "item": "AMS (Lake Louise)",
+     "dose": "Altitude headache plus gastrointestinal symptoms, fatigue or weakness, or dizziness",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.3 Altitude illness"
+      }
+     ]
+    },
+    {
+     "item": "HAPE",
+     "dose": "Two of chest tightness, dyspnea at rest, cough, reduced exercise tolerance, and two of crackles or wheeze, cyanosis, tachypnea, tachycardia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.3 Altitude illness"
+      }
+     ]
+    },
+    {
+     "item": "Imaging",
+     "dose": "Not required; MRI preferred if done, as CT is often normal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613666",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Ascent",
+     "dose": "Halt until symptoms resolve; descend for persistent or progressive symptoms",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:28613467",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Diuretics in HAPE",
+     "dose": "Advised against: intravascular volume depletion",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:40003509",
+       "where": "1.5 HAPE treatment"
+      }
+     ]
+    }
+   ],
+   "next": "alt_result",
+   "sources": [
+    {
+     "docId": "pmid:40003509",
+     "where": "1.3 Altitude illness; 1.5"
+    },
+    {
+     "docId": "pmid:28613666",
+     "where": "Evaluation"
+    },
+    {
+     "docId": "pmid:28613467",
+     "where": "Treatment / Management"
+    }
+   ]
+  },
+  {
+   "id": "alt_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Gait, mental status, breathing and the chest",
+   "outcomes": [
+    {
+     "id": "ams",
+     "if": "AMS; headache with nausea, fatigue or dizziness, gait, mind and lungs normal",
+     "ddx": {
+      "lead": [
+       "Acute mountain sickness"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Acetazolamide",
+       "dose": "250 mg every 12 hours",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:40003509",
+         "where": "1.5 Treatment of AMS and HACE"
+        },
+        {
+         "docId": "pmid:28613467",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Dexamethasone for AMS",
+       "dose": "StatPearls: 4 mg every 6 hours with no further ascent",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:28613467",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:40003509",
+         "where": "1.5 Treatment of AMS and HACE"
+        }
+       ],
+       "note": "The WMS 2024 summary lists 8 mg then 4 mg every 6 hours for AMS and HACE together; StatPearls gives 4 mg every 6 hours for AMS."
+      },
+      {
+       "item": "Oxygen",
+       "dose": "Relieves symptoms, especially when moderate to severe or descent is delayed",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613467",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Ibuprofen or acetaminophen",
+       "dose": "Relieve the headache but do not treat AMS",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:40003509",
+         "where": "1.5 Treatment of AMS and HACE"
+        }
+       ]
+      }
+     ],
+     "next": "end_ams"
+    },
+    {
+     "id": "hace",
+     "if": "HACE; ataxia or confusion after ascent, with or without HAPE",
+     "ddx": {
+      "lead": [
+       "High-altitude cerebral edema"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Descent",
+       "dose": "Mandatory and immediate; 300 to 1,000 m often brings marked improvement",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613666",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Oxygen",
+       "dose": "To SpO2 over 90%, with or in place of descent",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613666",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:40003509",
+         "where": "1.5 Treatment of AMS and HACE"
+        }
+       ]
+      },
+      {
+       "item": "Dexamethasone",
+       "dose": "8 mg, then 4 mg every 6 hours, IV, oral or IM; children 0.15 mg/kg every 6 hours",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:28613666",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:40003509",
+         "where": "1.5 Treatment of AMS and HACE; concurrent HAPE and HACE"
+        }
+       ],
+       "note": "With HAPE as well, the WMS 2024 summary adds dexamethasone 2 mg every 6 hours or 4 mg every 12 hours."
+      },
+      {
+       "item": "Portable hyperbaric chamber",
+       "dose": "While descent is awaited or impossible",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:28613666",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:40003509",
+         "where": "1.5 Treatment of AMS and HACE"
+        }
+       ]
+      },
+      {
+       "item": "Acetazolamide",
+       "dose": "StatPearls HACE: no therapeutic role",
+       "status": "conflict",
+       "sources": [
+        {
+         "docId": "pmid:28613666",
+         "where": "Treatment / Management"
+        },
+        {
+         "docId": "pmid:40003509",
+         "where": "1.5 Treatment of AMS and HACE"
+        }
+       ],
+       "note": "The WMS 2024 summary lists acetazolamide 250 mg every 12 hours for AMS and HACE together."
+      }
+     ],
+     "next": "end_hace"
+    },
+    {
+     "id": "hape",
+     "if": "HAPE alone; breathless at rest, cough, crackles, gait and mind normal",
+     "ddx": {
+      "lead": [
+       "High-altitude pulmonary edema"
+      ],
+      "out": []
+     },
+     "orders": [
+      {
+       "item": "Oxygen and descent",
+       "dose": "The highest-rated treatments; oxygen first in the 2024 sequence",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:40003509",
+         "where": "1.5 HAPE treatment"
+        }
+       ]
+      },
+      {
+       "item": "Portable hyperbaric chamber",
+       "dose": "When descent is not feasible or delayed, or oxygen is unavailable",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:40003509",
+         "where": "1.5 HAPE treatment"
+        }
+       ]
+      },
+      {
+       "item": "Nifedipine",
+       "dose": "Only when descent is impossible or delayed and oxygen or a hyperbaric chamber is unavailable",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:40003509",
+         "where": "1.5 HAPE treatment; Table 2"
+        },
+        {
+         "docId": "pmid:28613569",
+         "where": "Treatment / Management"
+        }
+       ]
+      },
+      {
+       "item": "Nifedipine treatment dose",
+       "dose": "Not stated in the open sources read (the 30 mg extended-release every 12 hours in the summary is the prevention dose)",
+       "status": "pending"
+      },
+      {
+       "item": "Acetazolamide",
+       "dose": "Recommended against for HAPE treatment",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "pmid:40003509",
+         "where": "1.5 HAPE treatment"
+        }
+       ]
+      },
+      {
+       "item": "Dexamethasone or beta-agonists",
+       "dose": "No recommendation possible (insufficient evidence)",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:40003509",
+         "where": "1.5 HAPE treatment"
+        }
+       ]
+      },
+      {
+       "item": "PDE5 inhibitors",
+       "dose": "Only if no other intervention is available",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:40003509",
+         "where": "1.5 HAPE treatment"
+        }
+       ]
+      }
+     ],
+     "next": "end_hape"
+    }
+   ]
+  },
+  {
+   "id": "end_ams",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "AMS: no further ascent until symptoms resolve, acetazolamide 250 mg every 12 hours or dexamethasone, oxygen if available, and descent if symptoms persist or progress. Analgesics ease the headache but do not treat AMS."
+  },
+  {
+   "id": "end_hace",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "HACE: descend now (300 to 1,000 m often brings marked improvement), oxygen to SpO2 over 90%, dexamethasone 8 mg then 4 mg every 6 hours (children 0.15 mg/kg every 6 hours), and a portable hyperbaric chamber while descent is awaited; acetazolamide's role is disputed. Untreated HACE can kill within 24 hours."
+  },
+  {
+   "id": "end_hape",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "HAPE: oxygen and descent, a portable hyperbaric chamber if descent is delayed and oxygen is unavailable, and nifedipine only when neither is possible. Acetazolamide and diuretics are not used for treatment. Nifedipine 30 mg extended-release every 12 hours is the prevention dose for a later ascent."
+  },
+  {
+   "id": "dive",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "New symptoms within hours of surfacing from a scuba dive. Next?",
+   "options": [
+    "100% oxygen, lying flat, isotonic fluids and a chest x-ray; call hyperbaric medicine now",
+    "Head-down left lateral position, to keep any bubbles out of the brain until the transfer",
+    "Aspirin and a steroid, with recompression only if there is no improvement after 24 hours",
+    "Helicopter transfer at normal flying height, to reach the chamber as fast as possible"
+   ],
+   "answer": 0,
+   "chainStep": "Oxygen as close to 100% as possible until recompression; horizontal (recovery position if unconscious); IV or IO non-glucose isotonic crystalloid, or oral non-carbonated fluids if fully conscious; cardiac monitor; chest x-ray for pneumothorax before recompression; urgent hyperbaric consultation for recompression (US Navy Treatment Table 6); air transport pressurized, or under 1,000 ft (300 m)",
+   "why": "Decompression illness, whether decompression sickness or arterial gas embolism, is treated with recompression, and until then with oxygen as close to 100% as possible. A horizontal position is encouraged; head-down and left lateral positions are no longer recommended because they raise the risk of cerebral edema. Fluids should not contain glucose. An untreated pneumothorax is an absolute contraindication to hyperbaric treatment, so the chest film comes first. Aspirin and steroids lack supporting evidence, waiting a day loses the window in which recompression works best, and an unpressurized aircraft must stay under 300 m.",
+   "orders": [
+    {
+     "item": "Oxygen",
+     "dose": "As close to 100% as possible, as soon as possible, until recompression",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29557102",
+       "where": "Statement 2A"
+      },
+      {
+       "docId": "pmid:30725949",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Position",
+     "dose": "Horizontal; recovery position if unconscious; not Trendelenburg, head-down or left lateral",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29557102",
+       "where": "Statement 2D"
+      },
+      {
+       "docId": "pmid:30725949",
+       "where": "Treatment / Management"
+      },
+      {
+       "docId": "pmid:29493946",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Fluids",
+     "dose": "IV or IO non-glucose isotonic crystalloid; oral non-carbonated fluids only if fully conscious",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29557102",
+       "where": "Statements 2E, 2F"
+      },
+      {
+       "docId": "pmid:29493946",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Chest x-ray",
+     "dose": "Before recompression: an untreated pneumothorax is an absolute contraindication",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725949",
+       "where": "Evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Recompression",
+     "dose": "US Navy Treatment Table 6; best within 2 hours of onset for gas embolism; often 3 to 5 or more sessions; delayed symptoms can still benefit",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725949",
+       "where": "Treatment / Management; Treatment Planning"
+      },
+      {
+       "docId": "pmid:29493946",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Normobaric oxygen alone",
+     "dose": "Not definitive for gas embolism: symptoms recur without recompression",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29493946",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "NSAIDs",
+     "dose": "DHM 2018 consensus: appropriate if there are no contraindications",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:29557102",
+       "where": "Statement 2G"
+      },
+      {
+       "docId": "pmid:30725949",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "StatPearls (Decompression Sickness) says NSAIDs, steroids and other anticoagulants are no longer recommended, and aspirin can mask symptoms."
+    },
+    {
+     "item": "Aspirin, steroids, lidocaine",
+     "dose": "Insufficient evidence",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:29557102",
+       "where": "Statement 2H"
+      },
+      {
+       "docId": "pmid:29493946",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "Air transport",
+     "dose": "Pressurized aircraft, or unpressurized under 1,000 ft (300 m)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725949",
+       "where": "Treatment / Management"
+      }
+     ]
+    },
+    {
+     "item": "DVT prevention",
+     "dose": "Low-molecular-weight heparin in nonambulatory patients",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:30725949",
+       "where": "Treatment / Management"
+      }
+     ]
+    }
+   ],
+   "next": "end_dive",
+   "sources": [
+    {
+     "docId": "pmid:29557102",
+     "where": "Statements 2A to 2H; 3C"
+    },
+    {
+     "docId": "pmid:30725949",
+     "where": "History and Physical; Evaluation; Treatment / Management; Treatment Planning"
+    },
+    {
+     "docId": "pmid:29493946",
+     "where": "History and Physical; Treatment / Management"
+    }
+   ]
+  },
+  {
+   "id": "end_dive",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Decompression illness: decompression sickness (joint pain, rash, numbness or neurological signs, three quarters within an hour of surfacing) and arterial gas embolism (collapse or sudden, often crossed deficits within 10 minutes of surfacing) both go to recompression, with oxygen, a horizontal position and fluids until then. Symptoms that come late can still benefit from hyperbaric treatment."
+  }
+ ],
+ "cases": [
+  {
+   "id": "snowbank_arrest",
+   "label": "Found in a snowbank",
+   "vignette": "46-year-old man found unresponsive in a snowbank after a night of drinking; EMS found no pulse and started CPR 20 minutes ago. Weight 80 kg.",
+   "picks": {
+    "front": "arrest_cold",
+    "ca_result": "ecls"
+   },
+   "results": {
+    "front": "No pulse or breathing over a 60-second check; ventricular fibrillation on the pads; esophageal core 23.8 °C (74.8 °F); no injury seen.",
+    "ca_result": "No dependent lividity, no injury, no DNR order; potassium 4.6 mmol/L. HOPE estimate over 10%."
+   }
+  },
+  {
+   "id": "cold_house_lividity",
+   "label": "Lividity in a cold house",
+   "vignette": "88-year-old woman found on the floor of her unheated house, last seen 3 days ago; EMS began CPR on arrival.",
+   "picks": {
+    "front": "arrest_cold",
+    "ca_result": "stop"
+   },
+   "results": {
+    "front": "No pulse or breathing over 60 seconds; asystole; bladder core 21 °C (69.8 °F).",
+    "ca_result": "Fixed dependent lividity over the back and buttocks; no DNR order on file."
+   }
+  },
+  {
+   "id": "pool_arrest",
+   "label": "Pulled from a pool",
+   "vignette": "6-year-old boy pulled from a backyard pool after an unknown time underwater; not breathing. Weight 22 kg.",
+   "picks": {
+    "front": "arrest_water"
+   },
+   "results": {
+    "front": "No breathing, no central pulse; asystole on the pads; core 35.4 °C (95.7 °F); no sign of injury."
+   }
+  },
+  {
+   "id": "lightning_arrest",
+   "label": "Struck on the golf course",
+   "vignette": "28-year-old man struck by lightning on a golf course; two friends beside him were knocked down and are moaning.",
+   "picks": {
+    "front": "arrest_other"
+   },
+   "results": {
+    "front": "No pulse or breathing; ventricular fibrillation on the AED; core 36.9 °C (98.4 °F); fern-like marks across the chest."
+   }
+  },
+  {
+   "id": "wasp_anaphylaxis",
+   "label": "A wasp sting, then wheeze",
+   "vignette": "34-year-old landscaper stung on the neck by a wasp 10 minutes ago; now itchy all over and short of breath.",
+   "picks": {
+    "front": "anaph"
+   },
+   "results": {
+    "front": "Pulse 124, BP 82/50; hives everywhere, wheeze, swelling lips; no injury."
+   }
+  },
+  {
+   "id": "shallow_dive",
+   "label": "A dive into a shallow lake",
+   "vignette": "19-year-old dove into a shallow lake and did not come up; friends pulled him out within a minute.",
+   "picks": {
+    "front": "trauma"
+   },
+   "results": {
+    "front": "Breathing, pulse 64, BP 118/72, SpO2 96%; midline neck tenderness; weak hands and legs."
+   }
+  },
+  {
+   "id": "heat_exhaustion",
+   "label": "Collapsed on a summer march",
+   "vignette": "22-year-old soldier collapsed near the end of a summer march; dizzy, nauseated and soaked in sweat.",
+   "picks": {
+    "front": "stable",
+    "exposure": "heat",
+    "heat_result": "exhaustion"
+   },
+   "results": {
+    "front": "Pulse 118, BP 106/64, SpO2 99%; airway clear; alert; no fall or blow.",
+    "exposure": "Marching in full kit at 34 °C (93.2 °F).",
+    "heat_result": "Rectal 39.1 °C (102.4 °F); alert and oriented, answers normally; no rigidity or clonus; takes no medicines."
+   }
+  },
+  {
+   "id": "exertional_heat_stroke",
+   "label": "Linebacker down at practice",
+   "vignette": "19-year-old linebacker collapsed at a preseason practice on a humid 35 °C (95 °F) afternoon; combative and confused.",
+   "picks": {
+    "front": "stable",
+    "exposure": "heat",
+    "heat_result": "ehs",
+    "cool_labs": "organ"
+   },
+   "results": {
+    "front": "Pulse 146, BP 104/58, SpO2 97%; airway open; GCS 12; no fall or blow.",
+    "exposure": "Collapsed during practice in the heat.",
+    "heat_result": "Rectal 41.6 °C (106.9 °F); disoriented and combative; skin wet with sweat; no rigidity or clonus; no medicines or supplements.",
+    "cool_labs": "Cooled in an ice-water tub to 38.9 °C (102 °F) in 24 minutes and waking; CK 52,000 U/L, creatinine 2.3 mg/dL, potassium 5.7 mmol/L, platelets 88,000, INR 1.6."
+   }
+  },
+  {
+   "id": "classic_heat_stroke",
+   "label": "Day four of a heat wave",
+   "vignette": "81-year-old woman found confused in her apartment on the fourth day of a heat wave; no air conditioning; takes furosemide and metoprolol.",
+   "picks": {
+    "front": "stable",
+    "exposure": "heat",
+    "heat_result": "classic",
+    "cool_labs": "recovering"
+   },
+   "results": {
+    "front": "Pulse 112, BP 118/64, SpO2 95%; airway open; GCS 13; no fall or blow.",
+    "exposure": "Found at home in a heat wave.",
+    "heat_result": "Rectal 40.8 °C (105.4 °F); disoriented; skin hot and dry; no rigidity or clonus; no new medicines.",
+    "cool_labs": "Cooled to 39.0 °C (102.2 °F) with misting, fans and ice packs; oriented again; CK 1,100 U/L, creatinine 1.0 mg/dL, potassium 4.1 mmol/L, ALT normal, INR 1.1, platelets 196,000."
+   }
+  },
+  {
+   "id": "nms_hot_day",
+   "label": "Rigid on a hot afternoon",
+   "vignette": "52-year-old man with schizophrenia found confused in his apartment on a hot afternoon; his haloperidol dose was doubled 5 days ago. Weight 85 kg.",
+   "picks": {
+    "front": "stable",
+    "exposure": "heat",
+    "heat_result": "drug"
+   },
+   "results": {
+    "front": "Pulse 124, BP 158/96, SpO2 96%; airway open; GCS 13; no fall or blow.",
+    "exposure": "Found indoors on a hot day.",
+    "heat_result": "Rectal 40.4 °C (104.7 °F); confused; lead-pipe rigidity in all four limbs, no clonus; sweating heavily; CK 14,000 U/L."
+   }
+  },
+  {
+   "id": "mild_hypothermia",
+   "label": "Shivering at a bus stop",
+   "vignette": "68-year-old man found shivering at a bus stop on a winter night; slurred speech, smells of alcohol.",
+   "picks": {
+    "front": "stable",
+    "exposure": "cold",
+    "hypo_result": "stable"
+   },
+   "results": {
+    "front": "Pulse 104, BP 136/82, SpO2 96%; airway clear; GCS 14; no fall or blow.",
+    "exposure": "Rectal core 33.2 °C (91.8 °F) on a low-reading probe; outside in the cold for hours.",
+    "hypo_result": "Shivering and talking; BP 136/82; sinus tachycardia, no ventricular ectopy; glucose 96 mg/dL."
+   }
+  },
+  {
+   "id": "severe_hypothermia",
+   "label": "Cold, slow and hypotensive",
+   "vignette": "54-year-old woman found unresponsive in an unheated apartment in January; empty vodka bottles nearby.",
+   "picks": {
+    "front": "unstable",
+    "exposure": "cold",
+    "hypo_result": "high"
+   },
+   "results": {
+    "front": "Pulse 32, BP 74/40, GCS 7; airway open with a jaw thrust; no fall, blow, hives or wheeze.",
+    "exposure": "Bladder core 26.6 °C (79.9 °F); found in a cold room.",
+    "hypo_result": "Junctional bradycardia at 30 with Osborn waves; BP 74/40; no VT or VF."
+   }
+  },
+  {
+   "id": "frostbite_superficial",
+   "label": "White fingertips on a ski lift",
+   "vignette": "30-year-old skier with numb, white fingertips after 4 hours on a chairlift in a -20 °C (-4 °F) wind. Weight 75 kg.",
+   "picks": {
+    "front": "stable",
+    "exposure": "frost",
+    "frost_result": "superficial"
+   },
+   "results": {
+    "front": "Pulse 88, BP 124/78; airway clear; alert; no fall or blow.",
+    "exposure": "Fingertips hard, white and numb on both hands; core 36.6 °C (97.9 °F).",
+    "frost_result": "After 30 minutes in 38 °C (100.4 °F) water: pink fingertips, clear blisters on two of them, capillary refill brisk."
+   }
+  },
+  {
+   "id": "frostbite_deep",
+   "label": "Wooden hands after a night outside",
+   "vignette": "45-year-old man found sleeping outside overnight at -15 °C (5 °F); both hands numb and wooden. No head injury, no bleeding history, no anticoagulants. Weight 70 kg.",
+   "picks": {
+    "front": "stable",
+    "exposure": "frost",
+    "frost_result": "deep"
+   },
+   "results": {
+    "front": "Pulse 92, BP 132/80; airway clear; alert; no fall or blow.",
+    "exposure": "Fingers hard, grey and numb to the knuckles; core 35.8 °C (96.4 °F).",
+    "frost_result": "After rewarming: hemorrhagic blisters, blue-grey fingers to the PIP joints, no capillary refill; 3 hours since thawing; bone scan shows no uptake beyond the PIP joints."
+   }
+  },
+  {
+   "id": "frostbite_late",
+   "label": "Toes that thawed days ago",
+   "vignette": "58-year-old man who slept in his car through a blizzard 5 days ago; his toes thawed on their own the next day and are now dark and blistered. Weight 82 kg.",
+   "picks": {
+    "front": "stable",
+    "exposure": "frost",
+    "frost_result": "deep_late"
+   },
+   "results": {
+    "front": "Pulse 88, BP 138/84; alert; no fall or blow.",
+    "exposure": "Thawed frostbite of both forefeet; core 36.4 °C (97.5 °F).",
+    "frost_result": "Hemorrhagic blisters and blue-black toes, no capillary refill; frozen 5 days ago, thawed 4 days ago."
+   }
+  },
+  {
+   "id": "drowning_well",
+   "label": "Coughing at the lakeside",
+   "vignette": "9-year-old pulled from a lake after a short struggle; coughed and vomited, now talking.",
+   "picks": {
+    "front": "stable",
+    "exposure": "water",
+    "drown_result": "well"
+   },
+   "results": {
+    "front": "Pulse 104, BP 108/66, SpO2 98% on air; alert; no fall or blow.",
+    "exposure": "Pulled from a lake; core 36.2 °C (97.2 °F); breathing, pulse present.",
+    "drown_result": "Over 6 hours: no cough, chest clear, SpO2 97 to 99% on air, alert throughout."
+   }
+  },
+  {
+   "id": "drowning_hypoxic",
+   "label": "Pink froth after a rescue",
+   "vignette": "24-year-old swimmer pulled unconscious from the sea; a lifeguard gave rescue breaths and she began breathing. Now coughing pink froth.",
+   "picks": {
+    "front": "stable",
+    "exposure": "water",
+    "drown_result": "hypoxic"
+   },
+   "results": {
+    "front": "Pulse 118, BP 124/76, SpO2 86% on air, 94% on a non-rebreather; GCS 14; no fall or blow.",
+    "exposure": "Pulled from the sea; core 35.7 °C (96.3 °F); breathing, pulse present.",
+    "drown_result": "Crackles at both bases; SpO2 86% on air; respiratory rate 32 and rising."
+   }
+  },
+  {
+   "id": "outlet_shock",
+   "label": "A shock from a wall outlet",
+   "vignette": "26-year-old apprentice shocked by a 120 V wall outlet; tingling in the right hand, now gone.",
+   "picks": {
+    "front": "stable",
+    "exposure": "current",
+    "current_result": "low"
+   },
+   "results": {
+    "front": "Pulse 80, BP 122/76; alert; no fall or blow.",
+    "exposure": "Household current, hand to outlet.",
+    "current_result": "Normal ECG; no loss of consciousness, chest pain or burns; neurovascular exam normal; urinalysis normal."
+   }
+  },
+  {
+   "id": "lineman",
+   "label": "A 7,200 V line",
+   "vignette": "35-year-old lineman touched a 7,200 V line with his right hand and briefly lost consciousness; his harness held him, so he did not fall. Weight 90 kg.",
+   "picks": {
+    "front": "stable",
+    "exposure": "current",
+    "current_result": "high"
+   },
+   "results": {
+    "front": "Pulse 118, BP 132/84, SpO2 97%; GCS 15 now; no fall or blow.",
+    "exposure": "High-voltage contact at work.",
+    "current_result": "Charred right palm, exit wound on the left heel; sinus tachycardia with PVCs; tense, tender right forearm; dark urine, dipstick heme positive, CK 9,800 U/L."
+   }
+  },
+  {
+   "id": "rattlesnake_dry",
+   "label": "Fang marks on the ankle",
+   "vignette": "52-year-old hiker bitten on the ankle by a rattlesnake 1 hour ago; two puncture marks, mild pain.",
+   "picks": {
+    "front": "stable",
+    "exposure": "bite",
+    "bite_kind": "pit",
+    "snake_result": "quiet"
+   },
+   "results": {
+    "front": "Pulse 84, BP 138/84; alert; no fall, blow, hives or wheeze.",
+    "exposure": "Bitten on a desert trail.",
+    "bite_kind": "A rattlesnake, seen clearly; two fang marks on the ankle.",
+    "snake_result": "Over 12 hours: no swelling beyond the punctures; PT, fibrinogen, platelets and hemoglobin normal on two draws."
+   }
+  },
+  {
+   "id": "rattlesnake_child",
+   "label": "A hand under the woodpile",
+   "vignette": "8-year-old boy bitten on the hand by a rattlesnake 45 minutes ago while reaching under a woodpile. Weight 26 kg.",
+   "picks": {
+    "front": "stable",
+    "exposure": "bite",
+    "bite_kind": "pit",
+    "snake_result": "env"
+   },
+   "results": {
+    "front": "Pulse 120, BP 104/66; alert; no hives or wheeze.",
+    "exposure": "Bitten in the backyard.",
+    "bite_kind": "A rattlesnake, seen by his father; fang marks on the hand.",
+    "snake_result": "Swelling past the wrist and spreading over 30 minutes; platelets 64,000, fibrinogen 85 mg/dL; BP 104/66."
+   }
+  },
+  {
+   "id": "coral_snake",
+   "label": "A banded snake on the porch",
+   "vignette": "30-year-old man in Florida picked up a banded snake to move it off his porch and was bitten on the finger 1 hour ago; he feels well.",
+   "picks": {
+    "front": "stable",
+    "exposure": "bite",
+    "bite_kind": "coral"
+   },
+   "results": {
+    "front": "Pulse 76, BP 128/80; alert; no hives.",
+    "exposure": "Snakebite at home.",
+    "bite_kind": "The snake, brought in a container, is identified as an eastern coral snake; no ptosis, double vision or weakness."
+   }
+  },
+  {
+   "id": "black_widow",
+   "label": "Cramps after moving firewood",
+   "vignette": "38-year-old woman bitten on the thigh while moving firewood; within an hour, cramping pain in her thigh, abdomen and back, and sweating. No asthma or allergies.",
+   "picks": {
+    "front": "stable",
+    "exposure": "bite",
+    "bite_kind": "widow"
+   },
+   "results": {
+    "front": "Pulse 112, BP 168/98; alert; no hives or wheeze.",
+    "exposure": "Bitten in the woodshed.",
+    "bite_kind": "A shiny black spider with a red hourglass found in her glove; rigid abdomen with little tenderness; sweating around the bite."
+   }
+  },
+  {
+   "id": "widow_local",
+   "label": "A sting of pain in the shed",
+   "vignette": "26-year-old man bitten on the hand while reaching into a garden shed 2 hours ago; sharp pain at the bite, nothing else.",
+   "picks": {
+    "front": "stable",
+    "exposure": "bite",
+    "bite_kind": "widow_local"
+   },
+   "results": {
+    "front": "Pulse 82, BP 124/78; alert; no fall, blow, hives or wheeze.",
+    "exposure": "Bitten in the garden shed.",
+    "bite_kind": "A black spider with a red hourglass found in the shed; redness and pain at the bite only; no cramps, sweating or abdominal rigidity."
+   }
+  },
+  {
+   "id": "coral_neuro",
+   "label": "Drooping eyelids after a coral snake",
+   "vignette": "41-year-old man in Texas bitten on the hand 3 hours ago by a coral snake he was handling; now his eyelids droop and he sees double.",
+   "picks": {
+    "front": "stable",
+    "exposure": "bite",
+    "bite_kind": "coral_neuro"
+   },
+   "results": {
+    "front": "Pulse 92, BP 134/82, SpO2 97%; alert; no fall, blow, hives or wheeze.",
+    "exposure": "A snakebite while handling a snake.",
+    "bite_kind": "A Texas coral snake, identified from a photo; bilateral ptosis, double vision and trouble swallowing; no stridor."
+   }
+  },
+  {
+   "id": "brown_recluse",
+   "label": "A patch from the attic",
+   "vignette": "44-year-old woman with a painful patch on her thigh 2 days after unpacking boxes in a Missouri attic.",
+   "picks": {
+    "front": "stable",
+    "exposure": "bite",
+    "bite_kind": "recluse"
+   },
+   "results": {
+    "front": "Pulse 84, BP 126/78; alert; no hives.",
+    "exposure": "A bite while handling stored boxes.",
+    "bite_kind": "A pale violet center ringed by red, with a central blister; afebrile; urinalysis shows no blood."
+   }
+  },
+  {
+   "id": "bark_scorpion",
+   "label": "Something in her shoe",
+   "vignette": "2-year-old girl in Phoenix screaming after something in her shoe stung her foot 20 minutes ago.",
+   "picks": {
+    "front": "stable",
+    "exposure": "bite",
+    "bite_kind": "scorpion"
+   },
+   "results": {
+    "front": "Pulse 160, SpO2 95%; airway clear but drooling; no hives.",
+    "exposure": "A sting at home.",
+    "bite_kind": "A bark scorpion found in the shoe; roving eye movements, drooling, restless thrashing."
+   }
+  },
+  {
+   "id": "raccoon_bite",
+   "label": "A raccoon in daylight",
+   "vignette": "31-year-old man bitten on the calf by a raccoon that walked up to him in daylight; never had rabies vaccine; takes no medicines. Weight 80 kg.",
+   "picks": {
+    "front": "stable",
+    "exposure": "bite",
+    "bite_kind": "mammal",
+    "rabies_risk": "high"
+   },
+   "results": {
+    "front": "Pulse 90, BP 130/80; alert; no hives.",
+    "exposure": "An animal bite in his yard.",
+    "bite_kind": "A raccoon; a deep bite to the calf.",
+    "rabies_risk": "The raccoon ran off and cannot be tested; never vaccinated against rabies; immunocompetent."
+   }
+  },
+  {
+   "id": "neighbor_dog",
+   "label": "The neighbor's dog",
+   "vignette": "12-year-old girl bitten on the back of the hand by her neighbor's dog after stepping on its tail.",
+   "picks": {
+    "front": "stable",
+    "exposure": "bite",
+    "bite_kind": "mammal",
+    "rabies_risk": "low"
+   },
+   "results": {
+    "front": "Pulse 92, BP 108/68; alert.",
+    "exposure": "A dog bite next door.",
+    "bite_kind": "A dog bite with two punctures on the back of the hand.",
+    "rabies_risk": "The dog is healthy and up to date on rabies vaccine, and the owner will confine it for 10 days."
+   }
+  },
+  {
+   "id": "vet_fox",
+   "label": "A fox at the clinic",
+   "vignette": "40-year-old veterinarian bitten on the forearm by a fox brought into her clinic acting strangely; she completed rabies pre-exposure vaccination 2 years ago.",
+   "picks": {
+    "front": "stable",
+    "exposure": "bite",
+    "bite_kind": "mammal",
+    "rabies_risk": "prior"
+   },
+   "results": {
+    "front": "Pulse 86, BP 122/74; alert.",
+    "exposure": "An animal bite at work.",
+    "bite_kind": "A fox bite to the forearm.",
+    "rabies_risk": "The fox will be tested; she completed a pre-exposure series and is immunocompetent."
+   }
+  },
+  {
+   "id": "ams",
+   "label": "Headache in Cusco",
+   "vignette": "29-year-old woman flew to 3,400 m yesterday; headache, nausea and poor sleep.",
+   "picks": {
+    "front": "stable",
+    "exposure": "alt",
+    "alt_result": "ams"
+   },
+   "results": {
+    "front": "Pulse 96, BP 118/74, SpO2 89% on air; alert.",
+    "exposure": "Arrived at 3,400 m by air yesterday.",
+    "alt_result": "Walks heel to toe normally; alert and oriented; no breathlessness at rest; lungs clear."
+   }
+  },
+  {
+   "id": "hace",
+   "label": "Stumbling at 4,700 m",
+   "vignette": "45-year-old trekker at 4,700 m on day 6 of a climb; 2 days of headache, now stumbling and confused.",
+   "picks": {
+    "front": "stable",
+    "exposure": "alt",
+    "alt_result": "hace"
+   },
+   "results": {
+    "front": "Pulse 110, BP 132/84, SpO2 76% on air, 91% on 4 L; GCS 13; airway clear.",
+    "exposure": "Climbing above 2,500 m; symptoms after ascent.",
+    "alt_result": "Cannot walk heel to toe; disoriented to date and place; no crackles."
+   }
+  },
+  {
+   "id": "hape",
+   "label": "Breathless at the ski resort",
+   "vignette": "33-year-old skier 2 days after arriving at a 3,000 m resort; breathless at rest and coughing.",
+   "picks": {
+    "front": "stable",
+    "exposure": "alt",
+    "alt_result": "hape"
+   },
+   "results": {
+    "front": "Pulse 118, BP 126/80, SpO2 74% on air, 90% on 4 L of oxygen; alert.",
+    "exposure": "Two days at 3,000 m.",
+    "alt_result": "Crackles at both bases, cyanotic lips; walks heel to toe normally; alert and oriented."
+   }
+  },
+  {
+   "id": "dive_dcs",
+   "label": "Aching shoulders after two dives",
+   "vignette": "38-year-old diver with aching shoulders, a blotchy rash and tingling in one hand 2 hours after his second dive to 30 m.",
+   "picks": {
+    "front": "stable",
+    "exposure": "dive"
+   },
+   "results": {
+    "front": "Pulse 88, BP 128/80, SpO2 97%; alert; no fall or blow.",
+    "exposure": "Two dives to 30 m this morning; symptoms began after surfacing."
+   }
+  }
+ ]
+}

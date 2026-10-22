@@ -1,0 +1,3615 @@
+{
+ "id": "pw_tox",
+ "title": "Toxic ingestion and overdose",
+ "world": "pharm",
+ "synonyms": [
+  "overdose",
+  "poisoning",
+  "toxic ingestion",
+  "intentional overdose",
+  "toxidrome",
+  "acetaminophen overdose",
+  "paracetamol overdose",
+  "Rumack-Matthew nomogram",
+  "N-acetylcysteine",
+  "NAC",
+  "salicylate toxicity",
+  "aspirin overdose",
+  "tricyclic overdose",
+  "TCA overdose",
+  "wide QRS",
+  "sodium bicarbonate",
+  "opioid overdose",
+  "naloxone",
+  "benzodiazepine overdose",
+  "flumazenil",
+  "toxic alcohol",
+  "ethylene glycol",
+  "methanol",
+  "antifreeze",
+  "fomepizole",
+  "osmolal gap",
+  "digoxin toxicity",
+  "digoxin immune fab",
+  "DigiFab",
+  "beta blocker overdose",
+  "calcium channel blocker overdose",
+  "high-dose insulin",
+  "glucagon",
+  "organophosphate",
+  "cholinergic crisis",
+  "atropine",
+  "pralidoxime",
+  "anticholinergic toxicity",
+  "physostigmine",
+  "sympathomimetic",
+  "cocaine",
+  "serotonin syndrome",
+  "cyproheptadine",
+  "iron overdose",
+  "deferoxamine",
+  "lithium toxicity",
+  "cyanide",
+  "hydroxocobalamin",
+  "activated charcoal",
+  "whole-bowel irrigation",
+  "sulfonylurea overdose",
+  "suicide attempt",
+  "self-harm"
+ ],
+ "reviewBy": "2028-10-01",
+ "status": "approved",
+ "sources": [
+  {
+   "docId": "url:44fa5ce2280e",
+   "label": "FDA label: Acetadote",
+   "title": "Acetadote (acetylcysteine) injection prescribing information, Cumberland, DailyMed (2025)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=472f158a-5ab9-4308-8e49-1116e6ea3d39"
+  },
+  {
+   "docId": "url:3e7d043c9fad",
+   "label": "FDA label: acetylcysteine solution",
+   "title": "Acetylcysteine Solution USP prescribing information (Hospira), DailyMed: oral acetaminophen antidote",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=5558a5f5-e821-473b-7d8a-5d33d09f0586"
+  },
+  {
+   "docId": "url:6f0a7a55e1f7",
+   "label": "MHRA 2012",
+   "title": "MHRA Drug Safety Update: Treating paracetamol overdose with intravenous acetylcysteine, new guidance (September 2012)",
+   "url": "https://www.gov.uk/drug-safety-update/treating-paracetamol-overdose-with-intravenous-acetylcysteine-new-guidance"
+  },
+  {
+   "docId": "url:6b61f293a866",
+   "label": "FDA label: naloxone",
+   "title": "Naloxone Hydrochloride Injection USP prescribing information (Civica), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=21d20dff-6efe-481e-a5a0-9c80ded73ca9"
+  },
+  {
+   "docId": "url:8c3e7abee1b8",
+   "label": "FDA label: flumazenil",
+   "title": "Flumazenil Injection USP prescribing information (Fresenius Kabi), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a72d9fc1-121c-455d-93a9-002378c9968f"
+  },
+  {
+   "docId": "url:8b3d4830c214",
+   "label": "FDA label: fomepizole",
+   "title": "Fomepizole Injection prescribing information (Zydus), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=256910fe-91f2-48f6-b0b4-55edc52dacd4"
+  },
+  {
+   "docId": "pmid:36765419",
+   "label": "EXTRIP ethylene glycol 2023",
+   "title": "Extracorporeal treatment for ethylene glycol poisoning: systematic review and recommendations from the EXTRIP workgroup (Crit Care 2023)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/36765419/"
+  },
+  {
+   "docId": "url:aca89fc18998",
+   "label": "FDA label: DigiFab",
+   "title": "DigiFab (digoxin immune fab, ovine) prescribing information, BTG, DailyMed (2026)",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c05ee6a5-c98b-45f4-83fd-40781639d653"
+  },
+  {
+   "docId": "url:d237f19a744b",
+   "label": "FDA label: Lanoxin",
+   "title": "Lanoxin (digoxin) injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9ec84cac-6ecc-43dc-8006-6ccc029e2707"
+  },
+  {
+   "docId": "url:dff7e5c8a4a6",
+   "label": "FDA label: calcium gluconate",
+   "title": "Calcium Gluconate Injection prescribing information (Fresenius Kabi), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8b77c3d2-992d-4261-8421-9cfd07328fbf"
+  },
+  {
+   "docId": "url:cfdb9cea889a",
+   "label": "FDA label: amitriptyline",
+   "title": "Amitriptyline Hydrochloride Tablets USP prescribing information, DailyMed: overdosage",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=130d2f0a-b6d5-4f5b-9f97-63a3a470a658"
+  },
+  {
+   "docId": "url:9ad3c4814bd7",
+   "label": "FDA label: sodium bicarbonate",
+   "title": "Sodium Bicarbonate Injection USP prescribing information (Civica), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3737e5e5-2296-4a3d-b8f1-dfea1eff1927"
+  },
+  {
+   "docId": "url:7c07f84e04d6",
+   "label": "FDA label: verapamil injection",
+   "title": "Verapamil Hydrochloride Injection USP prescribing information (Hospira), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=1c993365-1b62-4524-e781-d307f28f63bc"
+  },
+  {
+   "docId": "url:6bbbb9308aa0",
+   "label": "FDA label: atropine sulfate",
+   "title": "Atropine Sulfate Injection USP prescribing information (Medefil), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=fbfdf718-befe-ad22-e053-6294a90a3715"
+  },
+  {
+   "docId": "url:d7f5ea663cd5",
+   "label": "FDA label: Protopam",
+   "title": "Protopam (pralidoxime chloride) for injection prescribing information, Baxter, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=2741d8fd-51c2-46be-880b-99f2b20a6137"
+  },
+  {
+   "docId": "url:de6aae620900",
+   "label": "FDA label: physostigmine",
+   "title": "Physostigmine Salicylate Injection prescribing information (Akorn), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a7d04b2c-fe34-480d-8f7c-7cbcf447a70b"
+  },
+  {
+   "docId": "url:96be09ea589c",
+   "label": "FDA label: Desferal",
+   "title": "Desferal (deferoxamine mesylate) for injection prescribing information, Novartis, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=a7174843-5965-49fc-b842-f7eff7b48bbc"
+  },
+  {
+   "docId": "url:70603bd16fd0",
+   "label": "FDA label: Cyanokit",
+   "title": "Cyanokit (hydroxocobalamin) for injection prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d56fcc8d-bd64-46ab-b0c0-2124bd745a6b"
+  },
+  {
+   "docId": "url:0d0a6b4fea47",
+   "label": "FDA label: lithium carbonate",
+   "title": "Lithium Carbonate tablets and capsules prescribing information (Hikma), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b839ff4b-f62d-41ab-a823-550a756d58ec"
+  },
+  {
+   "docId": "url:362ef72cb965",
+   "label": "FDA label: Actidose-Aqua",
+   "title": "Actidose-Aqua activated charcoal suspension, Drug Facts, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=c85dc235-3f42-4361-9bd2-1aaff798ad75"
+  },
+  {
+   "docId": "url:8773a743d6dc",
+   "label": "FDA label: 50% dextrose",
+   "title": "50% Dextrose Injection USP prescribing information, DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=763b1cb8-1151-5f59-e053-2991aa0a4e01"
+  },
+  {
+   "docId": "url:5ff273cd9778",
+   "label": "NICE NG225",
+   "title": "Self-harm: assessment, management and preventing recurrence (NICE, 2022)",
+   "url": "https://www.nice.org.uk/guidance/ng225"
+  },
+  {
+   "docId": "pmid:19563673",
+   "label": "Critically poisoned patient 2009",
+   "title": "Management of the critically poisoned patient (Scand J Trauma Resusc Emerg Med 2009)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/19563673/"
+  },
+  {
+   "docId": "pmid:21992527",
+   "label": "GI decontamination 2011",
+   "title": "Gastrointestinal decontamination in the acutely poisoned patient (Int J Emerg Med 2011)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/21992527/"
+  },
+  {
+   "docId": "pmid:41049912",
+   "label": "Salicylate review 2025",
+   "title": "Acute Salicylate Toxicity: A Narrative Review for Emergency Clinicians (Cureus 2025)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/41049912/"
+  },
+  {
+   "docId": "pmid:24713415",
+   "label": "High-dose insulin review 2014",
+   "title": "High dose insulin therapy, an evidence based approach to beta blocker/calcium channel blocker toxicity (DARU 2014)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24713415/"
+  },
+  {
+   "docId": "pmid:31075831",
+   "label": "Serotonin syndrome review 2019",
+   "title": "The Serotonin Syndrome: From Molecular Mechanisms to Clinical Practice (Int J Mol Sci 2019)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/31075831/"
+  },
+  {
+   "docId": "pmid:27900734",
+   "label": "Lithium toxicity review 2016",
+   "title": "Lithium side effects and toxicity: prevalence and management strategies (Int J Bipolar Disord 2016)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/27900734/"
+  },
+  {
+   "docId": "pmid:30521219",
+   "label": "StatPearls: anticholinergic toxicity",
+   "title": "Anticholinergic Toxicity (StatPearls), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/30521219/"
+  },
+  {
+   "docId": "pmid:22461918",
+   "label": "Project BETA psychopharmacology 2012",
+   "title": "The Psychopharmacology of Agitation: consensus statement of the American Association for Emergency Psychiatry Project BETA Psychopharmacology Workgroup (West J Emerg Med 2012)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/22461918/"
+  },
+  {
+   "docId": "pmid:28613508",
+   "label": "StatPearls: sympathomimetic toxicity",
+   "title": "Sympathomimetic Toxicity (StatPearls), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28613508/"
+  },
+  {
+   "docId": "pmid:35118322",
+   "label": "Mediastinum 2021 review",
+   "title": "Smoke inhalation injury: a narrative review (Mediastinum 2021)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/35118322/"
+  },
+  {
+   "docId": "pmid:28722939",
+   "label": "StatPearls: Naloxone",
+   "title": "Naloxone (StatPearls, updated 2024), a review",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28722939/"
+  },
+  {
+   "docId": "url:8b91b4e8a488",
+   "label": "FDA label: thiamine",
+   "title": "Thiamine Hydrochloride Injection USP prescribing information (Meitheal), DailyMed",
+   "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=3bfe8ac7-9294-4980-9635-90f8e6f6dd8e"
+  },
+  {
+   "docId": "pmid:26900382",
+   "label": "AES 2016",
+   "title": "Evidence-Based Guideline: Treatment of Convulsive Status Epilepticus in Children and Adults (American Epilepsy Society)",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/26900382/"
+  }
+ ],
+ "differential": [
+  "Opioid toxicity",
+  "Sedative-hypnotic toxicity",
+  "Sympathomimetic toxicity",
+  "Anticholinergic toxicity",
+  "Cholinergic toxicity",
+  "Serotonin syndrome",
+  "Acetaminophen toxicity",
+  "Salicylate toxicity",
+  "Sodium channel blocker toxicity",
+  "Toxic alcohol",
+  "Digoxin toxicity",
+  "Beta blocker toxicity",
+  "Calcium channel blocker toxicity",
+  "Lithium toxicity",
+  "Iron toxicity",
+  "Cyanide poisoning",
+  "Carbon monoxide poisoning",
+  "Hypoglycemia"
+ ],
+ "start": "triage",
+ "nodes": [
+  {
+   "id": "triage",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Possible overdose or poisoning. First moves?",
+   "options": [
+    "ABCs, fingerstick glucose, ECG, and the poison center",
+    "A urine drug screen first, to name the drug before treating",
+    "Activated charcoal first, ahead of the ECG and the glucose",
+    "Flumazenil and naloxone together, to wake the patient for a history"
+   ],
+   "answer": 0,
+   "chainStep": "Airway, breathing, circulation; fingerstick glucose; 12-lead ECG for QRS and QTc; IV access and a metabolic panel; call the poison center (1-800-222-1222)",
+   "why": "Stabilize first: airway, breathing and circulation, with intubation when coma leaves the airway unprotected. A glucose finds hypoglycemia, a correctable cause of seizures and altered mental status. Every seriously poisoned patient needs at least an initial ECG: a wide QRS points to a sodium channel blocker, a long QT to the risk of torsades. A routine urine drug screen is of questionable benefit, and most screens miss fentanyl, ketamine and GHB. Charcoal waits until the airway is judged safe, and flumazenil is not a nonspecific coma-reversal drug.",
+   "next": "front",
+   "sources": [
+    {
+     "docId": "pmid:19563673",
+     "where": "Resuscitation/Initial management; Electrocardiogram; Laboratory analysis; Seizures; Antidotes"
+    },
+    {
+     "docId": "url:cfdb9cea889a",
+     "where": "Overdosage, opening paragraph"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Airway",
+     "dose": "Intubate for CNS depression or coma that leaves the airway unprotected; on high-flow oxygen a normal saturation can hide failing ventilation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:19563673",
+       "where": "Resuscitation/Initial management"
+      }
+     ]
+    },
+    {
+     "item": "Glucose",
+     "dose": "Check it now: hypoglycemia is a correctable cause of seizures and altered mental status (sulfonylureas, salicylate)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:19563673",
+       "where": "Seizures; Table 5"
+      },
+      {
+       "docId": "pmid:41049912",
+       "where": "ED management"
+      }
+     ]
+    },
+    {
+     "item": "ECG",
+     "dose": "QRS of 0.10 s or more marks tricyclic (sodium channel) toxicity; QTc prolonged above 440 ms in men and 460 ms in women",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cfdb9cea889a",
+       "where": "Overdosage, Management, Cardiovascular"
+      },
+      {
+       "docId": "pmid:19563673",
+       "where": "Electrocardiogram; Table 2"
+      }
+     ]
+    },
+    {
+     "item": "Access and chemistry",
+     "dose": "At least one large-bore IV line, two if hypotensive; a basic metabolic panel with the anion gap",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:19563673",
+       "where": "Resuscitation/Initial management; Laboratory analysis"
+      }
+     ]
+    },
+    {
+     "item": "Poison center",
+     "dose": "1-800-222-1222 for current management advice",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cfdb9cea889a",
+       "where": "Overdosage"
+      },
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "2.2, Continued Therapy"
+      },
+      {
+       "docId": "url:0d0a6b4fea47",
+       "where": "10 Overdosage, Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Urine drug screen",
+     "dose": "Of questionable benefit routinely; most screens miss fentanyl, ketamine and GHB",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:19563673",
+       "where": "Laboratory analysis"
+      }
+     ]
+    }
+   ],
+   "note": "Adults, mostly oral ingestions. Not in this version: children; caustics and hydrocarbons; body packers; methemoglobinemia; isopropanol; envenomation; valproate, carbamazepine, theophylline, metformin and local anesthetic toxicity; poisoning-specific cardiac arrest care (the 2023 AHA update is in a barred journal); repeated supratherapeutic acetaminophen dosing, where the nomogram does not apply and the label says to call the poison center."
+  },
+  {
+   "id": "front",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Airway, vitals, glucose, ECG and the scene",
+   "outcomes": [
+    {
+     "id": "seizing",
+     "if": "Seizing on arrival; convulsing, glucose normal",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Hypoglycemia"
+      ]
+     },
+     "next": "end_seizure"
+    },
+    {
+     "id": "hypo",
+     "if": "Hypoglycemia; low fingerstick glucose",
+     "ddx": {
+      "lead": [
+       "Hypoglycemia"
+      ],
+      "out": []
+     },
+     "next": "hypo_tx"
+    },
+    {
+     "id": "resp",
+     "if": "Slow, shallow breathing; drowsy, lungs dry",
+     "ddx": {
+      "lead": [
+       "Opioid toxicity",
+       "Sedative-hypnotic toxicity"
+      ],
+      "out": []
+     },
+     "next": "naloxone"
+    },
+    {
+     "id": "wide_qrs",
+     "if": "Wide QRS; 0.10 seconds or more",
+     "ddx": {
+      "lead": [
+       "Sodium channel blocker toxicity"
+      ],
+      "out": []
+     },
+     "next": "bicarb"
+    },
+    {
+     "id": "brady",
+     "if": "Slow pulse and low pressure; narrow QRS, dry lungs, no cholinergic signs",
+     "ddx": {
+      "lead": [
+       "Digoxin toxicity",
+       "Beta blocker toxicity",
+       "Calcium channel blocker toxicity"
+      ],
+      "out": []
+     },
+     "next": "brady_cause",
+     "orders": [
+      {
+       "item": "First measures",
+       "dose": "IV crystalloid bolus and atropine; pacing if needed. Beta blocker and calcium channel blocker poisoning often do not respond to atropine or pacing",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:24713415",
+         "where": "Management of PCIS"
+        }
+       ]
+      },
+      {
+       "item": "Digoxin bradycardia",
+       "dose": "Parasympathetically mediated: responds to atropine; temporary pacing is an option",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:d237f19a744b",
+         "where": "10.2 Treatment, Acute Overdose"
+        }
+       ]
+      },
+      {
+       "item": "Digoxin level",
+       "dose": "Send it before any digoxin immune fab: afterward the immunoassay reads misleadingly",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:aca89fc18998",
+         "where": "5.4 Laboratory Tests"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cholinergic",
+     "if": "Cholinergic crisis; small pupils, wet lungs, secretions, sweating",
+     "ddx": {
+      "lead": [
+       "Cholinergic toxicity"
+      ],
+      "out": []
+     },
+     "next": "atropine"
+    },
+    {
+     "id": "fire",
+     "if": "Closed-space fire smoke; soot in the mouth or nose, altered mental status",
+     "ddx": {
+      "lead": [
+       "Cyanide poisoning",
+       "Carbon monoxide poisoning"
+      ],
+      "out": []
+     },
+     "next": "cyanokit"
+    },
+    {
+     "id": "exhaust",
+     "if": "Engine exhaust or a heater in a closed space; no fire",
+     "ddx": {
+      "lead": [
+       "Carbon monoxide poisoning"
+      ],
+      "out": []
+     },
+     "next": "end_co"
+    },
+    {
+     "id": "arrest",
+     "if": "Arrest or unexplained shock; pulseless, peri-arrest, or shock fitting no pattern",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_arrest"
+    },
+    {
+     "id": "stable",
+     "if": "Airway and circulation holding; breathing adequate, no shock, glucose and ECG acceptable",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "tox_exam"
+    }
+   ]
+  },
+  {
+   "id": "end_arrest",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Cardiac arrest or unexplained shock after an overdose: standard resuscitation and the poison center (1-800-222-1222); poisoning-specific arrest care is not in this version."
+  },
+  {
+   "id": "end_seizure",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Seizing after an overdose: airway, oxygen and a glucose, then a benzodiazepine first. Continue in the seizure pathway (pw_seizure) for benzodiazepine doses and its isoniazid route (pyridoxine). In a toxin-induced seizure that outlasts the benzodiazepine, a barbiturate may be the second-line agent; phenytoin is generally not recommended in the severely poisoned. Then the ECG for a wide QRS, acetaminophen and salicylate levels for an intentional ingestion, and a psychiatric assessment."
+  },
+  {
+   "id": "hypo_tx",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Low fingerstick glucose after a possible overdose. Next?",
+   "options": [
+    "50% dextrose IV now, 20 to 50 mL",
+    "Wait for the laboratory glucose to confirm it",
+    "Octreotide first, then dextrose if it stays low"
+   ],
+   "answer": 0,
+   "chainStep": "50% dextrose IV, 20 to 50 mL (10 to 25 g), without waiting for the laboratory glucose; repeat as needed and follow a concentrated infusion with 5 or 10% dextrose",
+   "why": "For insulin hypoglycemia the label gives 10 to 25 g of dextrose (20 to 50 mL of 50%) IV, promptly and without awaiting the laboratory result, with repeat doses in severe cases. When a concentrated dextrose infusion stops abruptly, 5 or 10% dextrose follows to avoid rebound hypoglycemia. Octreotide is listed with glucose as an antidote for sulfonylureas, but no open source read gives its dose, and the dextrose is not delayed for it.",
+   "next": "end_hypo",
+   "sources": [
+    {
+     "docId": "url:8773a743d6dc",
+     "where": "Dosage and Administration; Precautions"
+    },
+    {
+     "docId": "pmid:19563673",
+     "where": "Table 5"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Dextrose",
+     "dose": "10 to 25 g IV (20 to 50 mL of 50%); repeat in severe cases; draw a glucose specimen first but do not wait for the result",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8773a743d6dc",
+       "where": "Dosage and Administration"
+      }
+     ]
+    },
+    {
+     "item": "After a concentrated infusion",
+     "dose": "Follow with 5% or 10% dextrose to avoid rebound hypoglycemia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8773a743d6dc",
+       "where": "Precautions"
+      }
+     ]
+    },
+    {
+     "item": "Thiamine",
+     "dose": "With IV dextrose when thiamine status is marginal; AES gives 100 mg IV before 50 mL of 50% dextrose in its seizure algorithm",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8b91b4e8a488",
+       "where": "Indications"
+      },
+      {
+       "docId": "pmid:26900382",
+       "where": "Figure 1, stabilization phase, item 5"
+      }
+     ]
+    },
+    {
+     "item": "Octreotide",
+     "dose": "Listed sulfonylurea antidote alongside glucose; dose not in the open sources read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:19563673",
+       "where": "Table 5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_hypo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Hypoglycemia after an overdose (here a sulfonylurea): 50% dextrose at once, then 5 or 10% dextrose so the glucose does not rebound low. Octreotide is the listed antidote; its dose, and how long to watch the glucose, are not in the open sources read. An intentional ingestion also needs acetaminophen and salicylate levels and a psychiatric assessment."
+  },
+  {
+   "id": "naloxone",
+   "kind": "step",
+   "stage": "Stabilize",
+   "ask": "Slow, shallow breathing; drowsy after a possible overdose. First drug?",
+   "options": [
+    "Naloxone 0.4 to 2 mg IV; repeat every 2 to 3 minutes",
+    "Flumazenil 0.2 mg IV, then 0.3 mg, then 0.5 mg each minute",
+    "Naloxone 10 mg IV at once, as a single large push"
+   ],
+   "answer": 0,
+   "chainStep": "Support breathing; naloxone 0.4 to 2 mg IV, repeated every 2 to 3 minutes until breathing is adequate (IM or subcutaneous without IV access); question the diagnosis if 10 mg brings no response",
+   "why": "For a known or suspected opioid overdose the label gives 0.4 to 2 mg IV, repeated at 2 to 3 minute intervals until breathing improves, IM or subcutaneously if there is no IV route. If 10 mg brings no response, the diagnosis should be questioned, so 10 mg is a ceiling for doubt, not a starting push. In someone physically dependent on opioids an abrupt, complete reversal precipitates withdrawal; small increments may reduce that risk. Flumazenil is not a nonspecific coma-reversal drug.",
+   "next": "nalox_resp",
+   "sources": [
+    {
+     "docId": "url:6b61f293a866",
+     "where": "Dosage and Administration, Usage in Adults, Opioid Overdose; Warnings, Drug Dependence"
+    },
+    {
+     "docId": "pmid:19563673",
+     "where": "Antidotes"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Naloxone",
+     "dose": "0.4 to 2 mg IV; repeat every 2 to 3 minutes if breathing does not improve; IM or subcutaneous if no IV route; after 10 mg without response, question the diagnosis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:6b61f293a866",
+       "where": "Dosage and Administration, Usage in Adults, Opioid Overdose, Known or Suspected"
+      }
+     ]
+    },
+    {
+     "item": "Starting dose when opioid-dependent",
+     "dose": "StatPearls: a small first IV dose, usually 0.04 to 0.1 mg, in an opioid-dependent patient; 0.4 mg without known dependence; 1 to 2 mg IV for apnea or near-apnea with cyanosis; then 0.1 to 0.4 mg IV until breathing is adequate. The label starts at 0.4 to 2 mg",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:28722939",
+       "where": "Administration: \"A small initial IV dose (usually 0.04 mg to 0.1 mg) is recommended in patients who are opioid-dependent with symptoms of opioid overdose to avoid opioid withdrawal symptoms. Larger initial doses (such as 0.4 mg) are recommended in patients without a known history of opioid dependency.\""
+      },
+      {
+       "docId": "url:6b61f293a866",
+       "where": "Dosage and Administration, Opioid Overdose"
+      }
+     ],
+     "note": "The label gives 0.4 to 2 mg for any known or suspected overdose and warns that an abrupt, complete reversal precipitates withdrawal in dependence; StatPearls titrates to breathing, not full reversal, and starts lower in dependence."
+    },
+    {
+     "item": "Opioid dependence",
+     "dose": "Titrate: abrupt complete reversal precipitates withdrawal; 0.1 mg increments may reduce it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:6b61f293a866",
+       "where": "Warnings, Drug Dependence"
+      },
+      {
+       "docId": "pmid:19563673",
+       "where": "Antidotes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nalox_resp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Response to naloxone",
+   "outcomes": [
+    {
+     "id": "woke",
+     "if": "Breathing and waking; rate and depth recover",
+     "ddx": {
+      "lead": [
+       "Opioid toxicity"
+      ],
+      "out": []
+     },
+     "next": "end_opioid",
+     "orders": [
+      {
+       "item": "Observation",
+       "dose": "At least 4 hours after reversal: naloxone can wear off in as little as 45 minutes, so methadone and sustained-release opioids can resedate",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:19563673",
+         "where": "Antidotes"
+        }
+       ]
+      },
+      {
+       "item": "Resedation",
+       "dose": "Repeat doses, or an infusion at two-thirds of the effective bolus per hour; the label's mix is 2 mg in 500 mL (0.004 mg/mL), rate titrated to response",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:19563673",
+         "where": "Antidotes"
+        },
+        {
+         "docId": "url:6b61f293a866",
+         "where": "Dosage and Administration, Intravenous Infusion"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "none",
+     "if": "No response to naloxone; an empty benzodiazepine bottle is found",
+     "ddx": {
+      "lead": [
+       "Sedative-hypnotic toxicity"
+      ],
+      "out": []
+     },
+     "next": "sed_step"
+    },
+    {
+     "id": "none_unknown",
+     "if": "No response to naloxone; no drug found",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_unknown_coma"
+    }
+   ]
+  },
+  {
+   "id": "end_unknown_coma",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "No response to naloxone and no drug identified: airway and ventilatory support, acetaminophen and salicylate levels and chemistry, and a search for a non-toxic cause such as intracranial bleeding."
+  },
+  {
+   "id": "end_opioid",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Opioid overdose reversed: naloxone titrated to breathing, then at least 4 hours of observation for resedation, with repeat doses or an infusion at two-thirds of the effective bolus per hour for methadone or sustained-release opioids. If the overdose was intentional: acetaminophen and salicylate levels and a psychiatric assessment."
+  },
+  {
+   "id": "sed_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "No response to naloxone; an empty bottle of her daily alprazolam. Next?",
+   "options": [
+    "Support breathing and the airway; no flumazenil",
+    "Flumazenil 0.2 mg IV, then 0.3 mg and 0.5 mg doses",
+    "More naloxone, past 10 mg, until she wakes",
+    "Activated charcoal now through a nasogastric tube"
+   ],
+   "answer": 0,
+   "chainStep": "Support breathing and protect the airway, intubating if needed; no flumazenil in a benzodiazepine-dependent or mixed overdose; observe for resedation",
+   "why": "A benzodiazepine overdose is managed with airway and breathing support: flumazenil does not replace establishing an airway and assisting ventilation. A boxed statement in its label links it to seizures, most often after long-term benzodiazepine sedation or with serious cyclic antidepressant overdose, and it should not be used where seizures are likely. She takes alprazolam daily, so physical dependence is likely. Naloxone beyond 10 mg without response means the diagnosis should be questioned, and charcoal is not given to someone who is not fully conscious.",
+   "next": "levels",
+   "sources": [
+    {
+     "docId": "url:8c3e7abee1b8",
+     "where": "Warnings: boxed statement; Risk of Seizures; Hypoventilation"
+    },
+    {
+     "docId": "url:6b61f293a866",
+     "where": "Dosage and Administration, Usage in Adults, Opioid Overdose"
+    },
+    {
+     "docId": "url:362ef72cb965",
+     "where": "Warnings"
+    },
+    {
+     "docId": "pmid:19563673",
+     "where": "Antidotes"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Airway and ventilation",
+     "dose": "Establish the airway and assist ventilation as needed; overdose cases are monitored for resedation until stable",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8c3e7abee1b8",
+       "where": "Warnings, Hypoventilation"
+      }
+     ]
+    },
+    {
+     "item": "Flumazenil",
+     "dose": "Not in benzodiazepine dependence or a mixed overdose with cyclic antidepressants: seizures",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:8c3e7abee1b8",
+       "where": "Warnings: boxed statement; Risk of Seizures"
+      },
+      {
+       "docId": "pmid:19563673",
+       "where": "Antidotes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bicarb",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "QRS 0.10 seconds or more after an overdose. Next?",
+   "options": [
+    "IV sodium bicarbonate, serum pH 7.45 to 7.55",
+    "IV procainamide for the wide-complex tachycardia",
+    "Physostigmine for the dry skin and dilated pupils",
+    "Flumazenil 0.2 mg IV for the drowsiness"
+   ],
+   "answer": 0,
+   "chainStep": "IV sodium bicarbonate to keep the serum pH at 7.45 to 7.55 (avoid a pH over 7.60); cardiac monitoring; early intubation for CNS depression; benzodiazepines for seizures",
+   "why": "In tricyclic overdose a limb-lead QRS of 0.10 seconds or more may be the best indication of severity, and IV sodium bicarbonate holds the serum pH at 7.45 to 7.55; hyperventilation can be added with extreme caution, but a pH over 7.60 or a PCO2 under 20 is undesirable. Class 1A and 1C antiarrhythmics such as procainamide are generally contraindicated. Physostigmine is not recommended except for life-threatening symptoms unresponsive to other therapy, and flumazenil is contraindicated with signs of serious cyclic antidepressant overdose.",
+   "next": "bicarb_resp",
+   "sources": [
+    {
+     "docId": "url:cfdb9cea889a",
+     "where": "Overdosage, Management: General; Cardiovascular; CNS"
+    },
+    {
+     "docId": "url:8c3e7abee1b8",
+     "where": "Contraindications"
+    },
+    {
+     "docId": "pmid:19563673",
+     "where": "Electrocardiogram"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Sodium bicarbonate, target",
+     "dose": "Serum pH 7.45 to 7.55; hyperventilation only with extreme caution; avoid a pH over 7.60 or a PCO2 under 20 mm Hg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cfdb9cea889a",
+       "where": "Overdosage, Management, Cardiovascular"
+      }
+     ]
+    },
+    {
+     "item": "Sodium bicarbonate, dose",
+     "dose": "Bolus dose for a wide QRS not stated in the open sources read (the bicarbonate label doses metabolic acidosis and cardiac arrest)",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:9ad3c4814bd7",
+       "where": "Dosage and Administration"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "ECG and cardiac monitoring at once; at least 6 hours of monitored observation, longer if any sign of toxicity appears",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cfdb9cea889a",
+       "where": "Overdosage, Management, General"
+      }
+     ]
+    },
+    {
+     "item": "CNS",
+     "dose": "Early intubation for CNS depression; benzodiazepines for seizures",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:cfdb9cea889a",
+       "where": "Overdosage, Management, CNS"
+      }
+     ]
+    },
+    {
+     "item": "Class 1A and 1C antiarrhythmics",
+     "dose": "Quinidine, disopyramide, procainamide: generally contraindicated",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:cfdb9cea889a",
+       "where": "Overdosage, Management, Cardiovascular"
+      }
+     ]
+    },
+    {
+     "item": "Flumazenil",
+     "dose": "Contraindicated with signs of serious cyclic antidepressant overdose",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:8c3e7abee1b8",
+       "where": "Contraindications; Warnings"
+      }
+     ]
+    },
+    {
+     "item": "Physostigmine",
+     "dose": "Not recommended, except for life-threatening symptoms unresponsive to other therapy, with the poison center",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:cfdb9cea889a",
+       "where": "Overdosage, Management, CNS"
+      }
+     ]
+    },
+    {
+     "item": "Gut decontamination",
+     "dose": "Charcoal only with the airway secured; gastric lavage is not recommended routinely (the label's older text still advises lavage, then charcoal, for every case)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:19563673",
+       "where": "Decontamination"
+      },
+      {
+       "docId": "url:cfdb9cea889a",
+       "where": "Overdosage, Gastrointestinal Decontamination"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bicarb_resp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After bicarbonate",
+   "outcomes": [
+    {
+     "id": "narrows",
+     "if": "QRS narrows; pressure holds, rhythm stable",
+     "ddx": {
+      "lead": [
+       "Sodium channel blocker toxicity"
+      ],
+      "out": []
+     },
+     "next": "end_tca"
+    },
+    {
+     "id": "dysrhythmia",
+     "if": "Dysrhythmia despite bicarbonate; ventricular tachycardia",
+     "ddx": {
+      "lead": [
+       "Sodium channel blocker toxicity"
+      ],
+      "out": []
+     },
+     "next": "end_tca_refractory"
+    }
+   ]
+  },
+  {
+   "id": "end_tca",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Tricyclic or other sodium channel blocker overdose with a wide QRS: IV sodium bicarbonate to a serum pH of 7.45 to 7.55, cardiac monitoring for at least 6 hours and longer while any toxicity persists, early intubation for CNS depression and benzodiazepines for seizures; no class 1A or 1C antiarrhythmics, no flumazenil, no physostigmine. Because the overdose is often deliberate, a psychiatric assessment follows. An intentional ingestion also needs acetaminophen and salicylate levels."
+  },
+  {
+   "id": "end_tca_refractory",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Ventricular dysrhythmia despite sodium bicarbonate (and cautious hyperventilation): the label lists lidocaine among the drugs that may help, with class 1A and 1C antiarrhythmics contraindicated; hemoperfusion is rarely beneficial for refractory instability, and hemodialysis is ineffective. Doses are not in the open sources read: call the poison center. Psychiatric assessment once stable. An intentional ingestion also needs acetaminophen and salicylate levels."
+  },
+  {
+   "id": "brady_cause",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "The drug, a digoxin level and potassium",
+   "outcomes": [
+    {
+     "id": "dig",
+     "if": "Digoxin; bottle found, potassium high, level pending",
+     "ddx": {
+      "lead": [
+       "Digoxin toxicity"
+      ],
+      "out": []
+     },
+     "next": "digifab"
+    },
+    {
+     "id": "bb",
+     "if": "Beta blocker; digoxin undetectable",
+     "ddx": {
+      "lead": [
+       "Beta blocker toxicity"
+      ],
+      "out": [
+       "Digoxin toxicity"
+      ]
+     },
+     "next": "bb_step"
+    },
+    {
+     "id": "ccb",
+     "if": "Calcium channel blocker; digoxin undetectable",
+     "ddx": {
+      "lead": [
+       "Calcium channel blocker toxicity"
+      ],
+      "out": [
+       "Digoxin toxicity"
+      ]
+     },
+     "next": "ccb_step"
+    }
+   ]
+  },
+  {
+   "id": "digifab",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Acute digoxin overdose, amount unknown; heart block and potassium 6.4. Next?",
+   "options": [
+    "Digoxin immune fab: 20 vials, given 10 at a time",
+    "IV calcium gluconate first, for the high potassium",
+    "Urgent hemodialysis to clear the digoxin",
+    "Digoxin immune fab: 6 vials over 30 minutes"
+   ],
+   "answer": 0,
+   "chainStep": "Digoxin immune fab IV over at least 30 minutes: 20 vials for an acute ingestion of unknown amount (10, then 10 more if needed); potassium checked often as it falls; no IV calcium",
+   "why": "Heart block not responsive to atropine, and a potassium over 5.5 mEq/L with rapidly progressive toxicity, are life-threatening manifestations that call for digoxin immune fab. With an acute ingestion of unknown amount and no level to dose from, the label gives 20 vials, starting with 10 and adding 10 if needed. Six vials is the dose for chronic toxicity without a level. Calcium is avoided in patients on cardiac glycosides because of arrhythmias, and digoxin is not effectively removed by dialysis.",
+   "next": "end_dig",
+   "sources": [
+    {
+     "docId": "url:aca89fc18998",
+     "where": "1 Indications; 2 Dosage table; 2.2"
+    },
+    {
+     "docId": "url:dff7e5c8a4a6",
+     "where": "5.1 Arrhythmias with Concomitant Cardiac Glycoside Use"
+    },
+    {
+     "docId": "url:d237f19a744b",
+     "where": "10.2 Treatment"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Digoxin immune fab",
+     "dose": "Acute ingestion, amount unknown, no level: 20 vials (10, then 10 more if needed). Chronic toxicity, no level: 6 vials. Known amount: body load in mg divided by 0.5 mg per vial (tablets: mg ingested times 0.8). IV over at least 30 minutes; by bolus if cardiac arrest is imminent",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:aca89fc18998",
+       "where": "2 Dosage and Administration table; 2.1 Dosage Calculation; 2.2 Preparation and Administration"
+      }
+     ]
+    },
+    {
+     "item": "Potassium",
+     "dose": "Check often, above all in the first hours: it can fall rapidly once the fab works",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:aca89fc18998",
+       "where": "5.1 General"
+      }
+     ]
+    },
+    {
+     "item": "Inadequate response",
+     "dose": "Toxicity not reversed after several hours, or recurring: give more, at a dose guided by clinical judgment; no response to an adequate dose questions the diagnosis",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:aca89fc18998",
+       "where": "2.1 Dosage, Dosage Calculation, General"
+      }
+     ]
+    },
+    {
+     "item": "Calcium salts",
+     "dose": "Avoid in patients on cardiac glycosides: arrhythmias; if unavoidable, slowly in small amounts with ECG monitoring",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:dff7e5c8a4a6",
+       "where": "5.1 Arrhythmias with Concomitant Cardiac Glycoside Use; 7.1 Cardiac Glycosides"
+      },
+      {
+       "docId": "url:d237f19a744b",
+       "where": "7.3 Potentially Significant Pharmacodynamic Drug Interactions, Calcium"
+      }
+     ]
+    },
+    {
+     "item": "Dialysis",
+     "dose": "Not effective for digoxin: large extravascular volume of distribution",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:d237f19a744b",
+       "where": "10.2 Treatment, Acute Overdose"
+      }
+     ]
+    },
+    {
+     "item": "Activated charcoal",
+     "dose": "Massive ingestion: charcoal regardless of the time since ingestion (enterohepatic recirculation), once the airway is safe",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:d237f19a744b",
+       "where": "10.2 Treatment, Acute Overdose"
+      },
+      {
+       "docId": "pmid:19563673",
+       "where": "Decontamination"
+      }
+     ]
+    },
+    {
+     "item": "Severe hyperkalemia",
+     "dose": "Glucose and insulin may be needed first if the hyperkalemia is life-threatening",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:d237f19a744b",
+       "where": "10.2 Treatment, Acute Overdose"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_dig",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acute digoxin overdose with hyperkalemia and heart block: digoxin immune fab, 20 vials for an unknown amount, over at least 30 minutes, more if toxicity persists or recurs; no response to an adequate dose puts the diagnosis in doubt. Potassium watched as it falls; a digoxin level drawn before the fab; no IV calcium and no dialysis; charcoal for a massive ingestion once the airway is safe; atropine or pacing for bradycardia. Psychiatric assessment for an intentional ingestion. An intentional ingestion also needs acetaminophen and salicylate levels."
+  },
+  {
+   "id": "bb_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Beta blocker overdose; still slow and hypotensive after fluids and atropine. Next?",
+   "options": [
+    "IV glucagon, then a vasopressor if pressure stays low",
+    "Digoxin immune fab, in case digoxin is also involved",
+    "More atropine, repeated until the heart rate comes up",
+    "Sodium bicarbonate, as for a sodium channel blocker"
+   ],
+   "answer": 0,
+   "chainStep": "IV glucagon (dose not in the open sources read); IV calcium; norepinephrine for persistent hypotension; high-dose insulin if shock persists",
+   "why": "Atropine and pacing often fail in beta blocker and calcium channel blocker poisoning. Glucagon is the listed beta blocker antidote, calcium and glucagon are often tried early in resuscitation, and norepinephrine is added as the pressure requires. The digoxin level is undetectable, so digoxin immune fab does not fit, and bicarbonate is for a QRS of 0.10 seconds or more, not this narrow one.",
+   "next": "bbccb_resp",
+   "sources": [
+    {
+     "docId": "pmid:24713415",
+     "where": "Management of PCIS"
+    },
+    {
+     "docId": "pmid:19563673",
+     "where": "Table 5"
+    },
+    {
+     "docId": "url:cfdb9cea889a",
+     "where": "Overdosage, Management, Cardiovascular"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Glucagon",
+     "dose": "Listed beta blocker antidote; dose not in the open sources read (the glucagon label does not cover overdose)",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:19563673",
+       "where": "Table 5"
+      },
+      {
+       "docId": "pmid:24713415",
+       "where": "Management of PCIS"
+      }
+     ]
+    },
+    {
+     "item": "Calcium",
+     "dose": "Often tried early in resuscitation; dose not in the open sources read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:24713415",
+       "where": "Management of PCIS"
+      }
+     ]
+    },
+    {
+     "item": "Norepinephrine",
+     "dose": "As the hemodynamic status warrants",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:24713415",
+       "where": "Management of PCIS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ccb_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Verapamil overdose; slow and hypotensive after fluids and atropine. Next?",
+   "options": [
+    "IV calcium, then a vasopressor if pressure stays low",
+    "Urgent hemodialysis to remove the circulating verapamil",
+    "Digoxin immune fab, in case digoxin is also involved",
+    "More atropine, repeated until the heart rate comes up"
+   ],
+   "answer": 0,
+   "chainStep": "IV calcium (dose not in the open sources read); norepinephrine for persistent hypotension; high-dose insulin with dextrose if shock persists; verapamil is not dialyzable",
+   "why": "The verapamil label says parenteral calcium and beta-adrenergic stimulation have been used effectively in deliberate overdose, and that verapamil cannot be removed by hemodialysis. Atropine and pacing often fail in calcium channel blocker poisoning; calcium and glucagon are often tried early, with norepinephrine as the pressure requires. The digoxin level is undetectable, so digoxin immune fab does not fit.",
+   "next": "bbccb_resp",
+   "sources": [
+    {
+     "docId": "url:7c07f84e04d6",
+     "where": "Overdosage"
+    },
+    {
+     "docId": "pmid:24713415",
+     "where": "Management of PCIS"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Calcium",
+     "dose": "Used effectively in deliberate verapamil overdose; dose not in the open sources read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:7c07f84e04d6",
+       "where": "Overdosage"
+      }
+     ]
+    },
+    {
+     "item": "Hemodialysis",
+     "dose": "Verapamil cannot be removed by hemodialysis",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:7c07f84e04d6",
+       "where": "Overdosage"
+      }
+     ]
+    },
+    {
+     "item": "Norepinephrine",
+     "dose": "As the hemodynamic status warrants",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:24713415",
+       "where": "Management of PCIS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bbccb_resp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "After the first antidote and a vasopressor",
+   "outcomes": [
+    {
+     "id": "recovers",
+     "if": "Pressure recovers; perfusing, rate improving",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "end_bbccb"
+    },
+    {
+     "id": "shock",
+     "if": "Still in shock; despite the antidote and norepinephrine",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "hdi"
+    }
+   ]
+  },
+  {
+   "id": "end_bbccb",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Beta blocker or calcium channel blocker overdose that responded: glucagon for the beta blocker or calcium for the calcium channel blocker, norepinephrine as needed, and high-dose insulin if shock returns. Glucagon and calcium doses are not in the open sources read. Psychiatric assessment for an intentional ingestion. An intentional ingestion also needs acetaminophen and salicylate levels."
+  },
+  {
+   "id": "hdi",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Still in shock after the first antidote and norepinephrine. Next?",
+   "options": [
+    "High-dose insulin, 1 unit/kg, then 0.5 to 1 unit/kg/h",
+    "Insulin at 0.1 unit/kg/h, a hyperglycemia-sized dose",
+    "Digoxin immune fab empirically, 10 vials to start",
+    "More atropine and a pacemaker, then reassess the pressure"
+   ],
+   "answer": 0,
+   "chainStep": "High-dose insulin: 1 unit/kg IV bolus, then 0.5 to 1 unit/kg/h titrated to response; dextrose 0.5 g/kg with the bolus if glucose is under 400 mg/dL, then 0.5 g/kg/h; glucose and potassium checked often",
+   "why": "For poison-induced cardiogenic shock that persists after conventional therapy, high-dose insulin is a second-line option: a common regimen is a 1 unit/kg bolus, then 0.5 to 1 unit/kg per hour titrated to response, doses about 10-fold those used for hyperglycemia. Dextrose and potassium are given and monitored alongside. There are no official dosing guidelines; the evidence is case series and animal models. Atropine and pacing have already failed, and digoxin was undetectable.",
+   "next": "end_hdi",
+   "sources": [
+    {
+     "docId": "pmid:24713415",
+     "where": "Abstract; Introduction; Management of PCIS; Dosing and administration; Adverse effects"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Insulin",
+     "dose": "1 unit/kg IV bolus, then 0.5 to 1 unit/kg/h, titrated to response",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:24713415",
+       "where": "Dosing and administration"
+      }
+     ]
+    },
+    {
+     "item": "Dextrose",
+     "dose": "0.5 g/kg bolus with the insulin if glucose is under 400 mg/dL, then 0.5 g/kg/h; concentrated dextrose preferably through a central line",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:24713415",
+       "where": "Dosing and administration"
+      }
+     ]
+    },
+    {
+     "item": "Potassium",
+     "dose": "Check hourly during titration; IV repletion below 2.8 mEq/L",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:24713415",
+       "where": "Adverse effects"
+      }
+     ]
+    },
+    {
+     "item": "Other second-line options",
+     "dose": "Lipid emulsion and mechanical support (balloon pump, bypass, ECMO)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:24713415",
+       "where": "Management of PCIS"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_hdi",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Calcium channel blocker or beta blocker shock refractory to the first antidote and norepinephrine: high-dose insulin, 1 unit/kg then 0.5 to 1 unit/kg/h, with dextrose and close glucose and potassium checks; lipid emulsion and mechanical support are other second-line options. The evidence is case series; calcium and glucagon doses are not in the open sources read. Psychiatric assessment for an intentional ingestion. An intentional ingestion also needs acetaminophen and salicylate levels."
+  },
+  {
+   "id": "atropine",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Small pupils, wet lungs, sweating and a slow pulse after a pesticide. Next?",
+   "options": [
+    "Atropine 2 to 4 mg IV, every 5 to 10 min until dry",
+    "Naloxone 0.4 to 2 mg IV, repeated, for the pinpoint pupils",
+    "Pralidoxime first, with atropine held unless it fails",
+    "Atropine, repeated until the pupils are no longer small"
+   ],
+   "answer": 0,
+   "chainStep": "Oxygen and airway first; atropine 2 to 4 mg IV, repeated every 5 to 10 minutes until secretions are dried; then pralidoxime 1 to 2 g IV over 15 to 30 minutes; clothing removed and skin washed",
+   "why": "The Protopam label gives adults atropine 2 to 4 mg IV, repeated every 5 to 10 minutes until full atropinization, meaning secretions are inhibited, or until signs of atropine toxicity appear: the endpoint is dry secretions, not the pupils. Atropine follows improvement of hypoxemia, since atropine in significant hypoxia risks ventricular fibrillation, and pralidoxime is given once the effects of atropine are apparent. The opioid toxidrome shares small pupils but not the sweating and bronchorrhea of the cholinergic one.",
+   "next": "end_op",
+   "sources": [
+    {
+     "docId": "url:d7f5ea663cd5",
+     "where": "Dosage and Administration, Organophosphate Poisoning; Adult Intravenous Dosing"
+    },
+    {
+     "docId": "pmid:19563673",
+     "where": "Table 1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Oxygen first",
+     "dose": "Give atropine as soon as hypoxemia is improved; not in significant hypoxia (ventricular fibrillation)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:d7f5ea663cd5",
+       "where": "Dosage and Administration, Organophosphate Poisoning"
+      }
+     ]
+    },
+    {
+     "item": "Atropine",
+     "dose": "2 to 4 mg IV, repeated every 5 to 10 minutes until secretions are inhibited or atropine toxicity appears; keep some atropinization for at least 48 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:d7f5ea663cd5",
+       "where": "Dosage and Administration, Organophosphate Poisoning"
+      }
+     ]
+    },
+    {
+     "item": "Atropine, generic injection label",
+     "dose": "Its table gives 2 to 3 mg, repeated every 20 to 30 minutes, for organophosphorus or muscarinic mushroom poisoning",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:6bbbb9308aa0",
+       "where": "Dosage and Administration table"
+      }
+     ]
+    },
+    {
+     "item": "Pralidoxime",
+     "dose": "1,000 to 2,000 mg IV in 100 mL saline over 15 to 30 minutes, after atropine effects appear; a second dose after about an hour if weakness persists, then every 10 to 12 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:d7f5ea663cd5",
+       "where": "Dosage and Administration, Adult Intravenous Dosing"
+      }
+     ]
+    },
+    {
+     "item": "Pralidoxime limits",
+     "dose": "Little is gained more than 36 hours after exposure ends; not for carbamate (carbaryl) poisoning",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:d7f5ea663cd5",
+       "where": "Dosage and Administration, Organophosphate Poisoning; Warnings"
+      }
+     ]
+    },
+    {
+     "item": "Decontamination",
+     "dose": "If skin or clothing is contaminated: remove clothing; wash hair and skin with sodium bicarbonate or alcohol",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:d7f5ea663cd5",
+       "where": "Dosage and Administration, Organophosphate Poisoning"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_op",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Organophosphate poisoning: oxygen and airway first, then atropine 2 to 4 mg IV every 5 to 10 minutes until secretions dry, then pralidoxime 1 to 2 g IV over 15 to 30 minutes, repeated after an hour if weakness persists and then every 10 to 12 hours; atropinization kept up for at least 48 hours; clothing removed and skin washed. Psychiatric assessment for an intentional ingestion. An intentional ingestion also needs acetaminophen and salicylate levels."
+  },
+  {
+   "id": "cyanokit",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Pulled from a house fire: soot, confused, pressure falling. Next?",
+   "options": [
+    "Hydroxocobalamin 5 g IV over 15 minutes, with oxygen",
+    "Oxygen alone, with an antidote if the lactate comes back high",
+    "A blood cyanide level first, then an antidote if positive"
+   ],
+   "answer": 0,
+   "chainStep": "Hydroxocobalamin 5 g IV over 15 minutes through its own line, with airway support and oxygen; a second 5 g if needed; carbon monoxide treated in parallel",
+   "why": "With a high clinical suspicion of cyanide poisoning, hydroxocobalamin is given without delay, alongside airway, ventilatory and circulatory support and oxygen. There is no widely available rapid cyanide blood test, and treatment is not delayed to obtain a lactate. Smoke-inhalation victims are assessed for enclosed-space exposure, soot around the mouth, nose or oropharynx, and altered mental status; hypotension is highly suggestive but uncommon, and a lactate of 10 mmol/L or more is also indicative.",
+   "next": "end_cyanide",
+   "sources": [
+    {
+     "docId": "url:70603bd16fd0",
+     "where": "2.1 Important Dosage and Administration Instructions, Smoke Inhalation; 2.2 Recommended Dosing"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Hydroxocobalamin",
+     "dose": "Adults 5 g IV over 15 minutes; a second 5 g (10 g in total) by severity and response, over 15 minutes to 2 hours; separate IV line",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:70603bd16fd0",
+       "where": "2.2 Recommended Dosing; 2.4 Incompatibility Information"
+      }
+     ]
+    },
+    {
+     "item": "Laboratory interference",
+     "dose": "Its deep red color interferes with colorimetric tests; red urine is expected",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:70603bd16fd0",
+       "where": "5.5; 6.1"
+      }
+     ]
+    },
+    {
+     "item": "Who gets it",
+     "dose": "Mediastinum review: soot with confusion, coma, agitation or seizures, slow breathing or arrest, shock or low pressure, a lactate of 7.5 mmol/L or more, or a metabolic acidosis; the label lists a lactate of 10 mmol/L or more among its indicators",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "pmid:35118322",
+       "where": "Treatment: systemic damage"
+      },
+      {
+       "docId": "url:70603bd16fd0",
+       "where": "2.1 Important Dosage and Administration Instructions, Smoke Inhalation; 2.2 Recommended Dosing"
+      }
+     ],
+     "note": "The two lactate cutoffs differ; pw_burns shows the same conflict. An alert patient with a raised COHb and none of these signs goes to pw_headache for oxygen."
+    }
+   ],
+   "note": "Fire smoke carries carbon monoxide too: the oxygen, COHb and hyperbaric route is in the headache pathway (pw_headache)."
+  },
+  {
+   "id": "end_cyanide",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Smoke inhalation with suspected cyanide poisoning: hydroxocobalamin 5 g IV over 15 minutes, a second 5 g if needed, with airway support and oxygen, not delayed for a cyanide level or a lactate. Carbon monoxide is treated in parallel: continue in the headache pathway (pw_headache) for oxygen, COHb and hyperbaric criteria."
+  },
+  {
+   "id": "end_co",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Engine exhaust or a heater in a closed space: carbon monoxide is the leading concern. Continue in the headache pathway (pw_headache), which starts 100% oxygen at once with a COHb on a blood gas and sends severe signs or pregnancy to hyperbaric oxygen. An intentional exposure also needs a psychiatric assessment."
+  },
+  {
+   "id": "tox_exam",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Exam: pupils, skin, temperature and tone",
+   "outcomes": [
+    {
+     "id": "symp",
+     "if": "Sympathomimetic; agitated, big pupils, sweating, hot, fast",
+     "ddx": {
+      "lead": [
+       "Sympathomimetic toxicity"
+      ],
+      "out": []
+     },
+     "next": "symp_step"
+    },
+    {
+     "id": "antichol",
+     "if": "Anticholinergic; delirious, big pupils, dry flushed skin",
+     "ddx": {
+      "lead": [
+       "Anticholinergic toxicity"
+      ],
+      "out": []
+     },
+     "next": "antichol_step"
+    },
+    {
+     "id": "sero",
+     "if": "Serotonin toxicity; clonus, hyperreflexia, sweating",
+     "ddx": {
+      "lead": [
+       "Serotonin syndrome"
+      ],
+      "out": []
+     },
+     "next": "sero_step"
+    },
+    {
+     "id": "none",
+     "if": "No toxidrome; pupils, skin and tone fit none of these",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "decon_time"
+    }
+   ]
+  },
+  {
+   "id": "symp_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Agitated, sweating, hot, big pupils and a fast pulse after cocaine. Next?",
+   "options": [
+    "IV benzodiazepine and active cooling",
+    "Physostigmine 2 mg IV for the delirium",
+    "Cyproheptadine by mouth for the hyperthermia"
+   ],
+   "answer": 0,
+   "chainStep": "IV benzodiazepine for agitation; active cooling for hyperthermia; monitoring",
+   "why": "Sympathomimetic hyperthermia from cocaine or amphetamines is treated mainly with supportive care, active cooling and benzodiazepines. Sweating separates it from anticholinergic poisoning, whose skin is warm, flushed and dry, so physostigmine does not fit; cyproheptadine is a serotonin syndrome treatment, and there is no clonus here.",
+   "next": "end_symp",
+   "sources": [
+    {
+     "docId": "pmid:19563673",
+     "where": "Toxidromes; Hyperthermic syndromes; Table 1"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Benzodiazepine",
+     "dose": "Lorazepam 1 to 2 mg IM or IV, titrated until the agitation and autonomic signs settle",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:22461918",
+       "where": "Figure: agitation due to intoxication, CNS stimulant"
+      },
+      {
+       "docId": "pmid:28613508",
+       "where": "Treatment / management"
+      }
+     ]
+    },
+    {
+     "item": "Cooling",
+     "dose": "Active cooling for hyperthermia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:19563673",
+       "where": "Hyperthermic syndromes"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_symp",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Sympathomimetic toxicity (cocaine, amphetamines): benzodiazepines for agitation and active cooling for hyperthermia, with supportive care; sweating separates it from the dry anticholinergic picture. The benzodiazepine agent and dose are not in the open sources read."
+  },
+  {
+   "id": "antichol_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Delirious, hot, dry flushed skin, big pupils, full bladder; QRS narrow. Next?",
+   "options": [
+    "Physostigmine 2 mg IV, at most 1 mg a minute",
+    "Sodium bicarbonate IV, as for a tricyclic overdose",
+    "Cyproheptadine by mouth, as for serotonin toxicity"
+   ],
+   "answer": 0,
+   "chainStep": "Physostigmine 2 mg IV at no more than 1 mg a minute (or IM), repeated if life-threatening signs recur; atropine at the bedside",
+   "why": "Physostigmine reverses the central effects of drugs that cause the anticholinergic syndrome: the US label gives 2 mg IM or slowly IV, no faster than 1 mg a minute, repeated if life-threatening signs such as arrhythmia, convulsions or coma recur. Rapid injection can cause bradycardia, hypersalivation and convulsions, so atropine is kept at hand. It is contraindicated with asthma and cardiovascular disease, and in tricyclic overdose it is not recommended except for life-threatening symptoms unresponsive to other therapy; here the QRS is narrow and the source is a plant. Bicarbonate is for a wide QRS, and cyproheptadine is a serotonin syndrome treatment.",
+   "next": "end_antichol",
+   "sources": [
+    {
+     "docId": "url:de6aae620900",
+     "where": "Indications; Contraindications; Warnings; Dosage and Administration"
+    },
+    {
+     "docId": "url:cfdb9cea889a",
+     "where": "Overdosage, Management, CNS"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Physostigmine",
+     "dose": "2 mg IM or IV at no more than 1 mg a minute; repeat if life-threatening signs (arrhythmia, convulsions, coma) recur",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:de6aae620900",
+       "where": "Overdosage of drugs that cause anticholinergic; Dosage and Administration"
+      }
+     ]
+    },
+    {
+     "item": "Contraindications",
+     "dose": "Asthma, gangrene, diabetes, cardiovascular disease, gut or urinary tract obstruction, vagotonic states; patients on choline esters or depolarizing blockers",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:de6aae620900",
+       "where": "Contraindications"
+      }
+     ]
+    },
+    {
+     "item": "Atropine",
+     "dose": "At hand as the antagonist and antidote for physostigmine",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:de6aae620900",
+       "where": "Precautions; Overdosage"
+      }
+     ]
+    },
+    {
+     "item": "Tricyclic overdose",
+     "dose": "Physostigmine not recommended except for life-threatening symptoms unresponsive to other therapies, with the poison center",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:cfdb9cea889a",
+       "where": "Overdosage, Management, CNS"
+      }
+     ]
+    },
+    {
+     "item": "Benzodiazepines or physostigmine first",
+     "dose": "The label and this pathway give physostigmine for delirium with a narrow QRS; StatPearls gives IV benzodiazepines first for the agitation and keeps physostigmine for severe cases that do not respond",
+     "status": "conflict",
+     "sources": [
+      {
+       "docId": "url:de6aae620900",
+       "where": "Overdosage of drugs that cause anticholinergic; Dosage and Administration"
+      },
+      {
+       "docId": "pmid:30521219",
+       "where": "Treatment / Management"
+      }
+     ],
+     "note": "pw_agitation shows the same disagreement on its hot, agitated patient."
+    }
+   ]
+  },
+  {
+   "id": "end_antichol",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Anticholinergic delirium with a narrow QRS (jimsonweed, belladonna alkaloids, some antihistamines): physostigmine 2 mg slowly IV, no faster than 1 mg a minute, with atropine at hand, repeated if life-threatening signs recur; not with asthma or cardiovascular disease, and not routinely in tricyclic overdose. Its effect lasts about 45 to 60 minutes."
+  },
+  {
+   "id": "sero_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Clonus, hyperreflexia, sweating and fever on two serotonergic drugs. Next?",
+   "options": [
+    "Stop the serotonergic drugs; benzodiazepines, cooling",
+    "Physostigmine 2 mg slowly IV, for the agitation",
+    "IV propranolol to control the heart rate and pressure"
+   ],
+   "answer": 0,
+   "chainStep": "Stop every serotonergic drug; benzodiazepines and supportive care, with active cooling for hyperthermia; cyproheptadine can be added (dose not in the open sources read)",
+   "why": "Serotonin toxicity is a clinical diagnosis; the Hunter criteria, built on altered mental status, neuromuscular excitation and autonomic dysfunction, are the reference standard. Treatment is stopping the serotonergic drugs and supportive care with benzodiazepines, and 70% recover fully within 24 hours. Cyproheptadine has been suggested, though outcomes have not clearly beaten supportive care. Propranolol is discouraged because of hypotension, and physostigmine belongs to the dry, quiet-bowel anticholinergic picture, not this sweating one.",
+   "next": "end_sero",
+   "sources": [
+    {
+     "docId": "pmid:31075831",
+     "where": "2.2 Manifestations and Diagnosis; 2.3 Differential Diagnosis; 4 Receptor-Targeted Therapy"
+    },
+    {
+     "docId": "pmid:19563673",
+     "where": "Hyperthermic syndromes"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Serotonergic drugs",
+     "dose": "Discontinue them",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:31075831",
+       "where": "4 Receptor-Targeted Therapy"
+      }
+     ]
+    },
+    {
+     "item": "Benzodiazepines",
+     "dose": "Supportive care with benzodiazepines; agent and dose not in the open sources read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:31075831",
+       "where": "4 Receptor-Targeted Therapy"
+      }
+     ]
+    },
+    {
+     "item": "Cooling",
+     "dose": "Active cooling for hyperthermia",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:19563673",
+       "where": "Hyperthermic syndromes"
+      }
+     ]
+    },
+    {
+     "item": "Cyproheptadine",
+     "dose": "Suggested, with some documented success; outcomes not clearly better than supportive care; oral only; dose not in the open sources read",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "pmid:31075831",
+       "where": "4 Receptor-Targeted Therapy"
+      },
+      {
+       "docId": "pmid:19563673",
+       "where": "Hyperthermic syndromes"
+      }
+     ]
+    },
+    {
+     "item": "Propranolol",
+     "dose": "Discouraged: drug-related hypotension",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:31075831",
+       "where": "4 Receptor-Targeted Therapy"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_sero",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Serotonin syndrome: stop the serotonergic drugs, give benzodiazepines and supportive care with active cooling; cyproheptadine is an oral option of uncertain benefit with no dose in the open sources read; no propranolol. Seventy percent recover fully within 24 hours."
+  },
+  {
+   "id": "decon_time",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Time since ingestion, the drug, and the airway",
+   "outcomes": [
+    {
+     "id": "early",
+     "if": "Within an hour; a drug charcoal binds, airway safe",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "charcoal"
+    },
+    {
+     "id": "early_unprotected",
+     "if": "Early, airway unprotected; within an hour but not fully conscious",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "levels",
+     "orders": [
+      {
+       "item": "Activated charcoal",
+       "dose": "Not in someone who is not fully conscious; only once the airway is protected",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "url:362ef72cb965",
+         "where": "Warnings"
+        },
+        {
+         "docId": "pmid:19563673",
+         "where": "Decontamination"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "wbi",
+     "if": "Whole-bowel irrigation; sustained-release drug, iron or packets, patient stable",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "levels",
+     "orders": [
+      {
+       "item": "Whole-bowel irrigation",
+       "dose": "Considered for substantial ingestions of iron, sustained-release or enteric-coated products and drug packets, and in moderate lithium toxicity; not with a compromised airway, hemodynamic instability, seizures, ileus or obstruction",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:19563673",
+         "where": "Decontamination"
+        },
+        {
+         "docId": "pmid:21992527",
+         "where": "Gastrointestinal decontamination: whole bowel irrigation"
+        },
+        {
+         "docId": "pmid:27900734",
+         "where": "Results, Lithium intoxication"
+        }
+       ]
+      },
+      {
+       "item": "Polyethylene glycol dose and rate",
+       "dose": "Not stated in the open sources read",
+       "status": "pending"
+      }
+     ]
+    },
+    {
+     "id": "late",
+     "if": "Over an hour, or a drug charcoal does not bind; no sustained-release drug, iron or packets",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "levels"
+    }
+   ]
+  },
+  {
+   "id": "charcoal",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Within an hour of a drug charcoal binds; alert, airway safe. Next?",
+   "options": [
+    "Activated charcoal by mouth now",
+    "Gastric lavage, then activated charcoal",
+    "Syrup of ipecac to empty the stomach",
+    "Whole-bowel irrigation with polyethylene glycol"
+   ],
+   "answer": 0,
+   "chainStep": "Activated charcoal by mouth within an hour of the ingestion, with the airway protected",
+   "why": "Charcoal's greatest benefit is within an hour of ingestion, and AACT/EAPCCT advise against giving it routinely to every poisoned patient; it is for early, potentially serious ingestions of drugs it adsorbs, once the airway is judged safe. It is contraindicated for caustics, and metals such as iron and lithium, and alcohols, do not bind. Gastric lavage is not recommended routinely, routine ipecac in the ED should be abandoned, and whole-bowel irrigation is considered for sustained-release or enteric-coated drugs, iron and drug packets.",
+   "next": "levels",
+   "sources": [
+    {
+     "docId": "pmid:21992527",
+     "where": "Gastrointestinal decontamination: ipecac; activated charcoal; whole bowel irrigation"
+    },
+    {
+     "docId": "pmid:19563673",
+     "where": "Decontamination"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Activated charcoal",
+     "dose": "Within about an hour; 1 g/kg by mouth up to 100 g in the salicylate review; the OTC suspension label gives 20 to 30 g",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41049912",
+       "where": "ED management"
+      },
+      {
+       "docId": "url:362ef72cb965",
+       "where": "Directions"
+      },
+      {
+       "docId": "pmid:21992527",
+       "where": "Gastrointestinal decontamination: activated charcoal"
+      }
+     ]
+    },
+    {
+     "item": "Contraindications",
+     "dose": "Not in someone who is not fully conscious unless the airway is protected; not for caustics or petroleum distillates",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:362ef72cb965",
+       "where": "Warnings"
+      },
+      {
+       "docId": "pmid:19563673",
+       "where": "Decontamination"
+      }
+     ]
+    },
+    {
+     "item": "Does not bind",
+     "dose": "Iron, lithium, lead, potassium and alcohols",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:21992527",
+       "where": "Gastrointestinal decontamination: activated charcoal"
+      },
+      {
+       "docId": "pmid:19563673",
+       "where": "Decontamination"
+      }
+     ]
+    },
+    {
+     "item": "Oral acetylcysteine",
+     "dose": "Charcoal adsorbs acetylcysteine and may reduce the effect of the oral regimen",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3e7d043c9fad",
+       "where": "Dosage and Administration, General"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "levels",
+   "kind": "step",
+   "stage": "Labs",
+   "ask": "Intentional ingestion. Which tests now?",
+   "options": [
+    "Acetaminophen and salicylate levels, and chemistry",
+    "A urine drug screen first; levels if it is positive",
+    "An acetaminophen level if its ingestion is reported",
+    "Liver tests now; acetaminophen level if they are high"
+   ],
+   "answer": 0,
+   "chainStep": "Acetaminophen and salicylate levels for every intentional overdose; chemistry with the anion gap; an osmolal gap if a toxic alcohol is possible; a level of any drug named or found; a pregnancy test when pregnancy is possible",
+   "why": "An acetaminophen level after a single acute ingestion is one of the few results that decides treatment on its own, so every intentional overdose is screened for it, and salicylate is sought with a low threshold because its effects are non-specific. The reported amount is often inaccurate, so the history does not decide the test. A routine urine drug screen is of questionable benefit, and a metabolic panel with the anion gap, plus the osmolal gap when a toxic alcohol is possible, completes the screen.",
+   "next": "levels_result",
+   "sources": [
+    {
+     "docId": "pmid:19563673",
+     "where": "Laboratory analysis"
+    },
+    {
+     "docId": "url:44fa5ce2280e",
+     "where": "2.1"
+    },
+    {
+     "docId": "pmid:41049912",
+     "where": "ED evaluation"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Acetaminophen",
+     "dose": "Drawn at least 4 hours after ingestion; earlier levels may not be the peak",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "Salicylate",
+     "dose": "Low threshold: effects are non-specific and no metabolic acidosis does not rule it out; serial levels after an early presentation",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:19563673",
+       "where": "Laboratory analysis"
+      },
+      {
+       "docId": "pmid:41049912",
+       "where": "ED evaluation"
+      }
+     ]
+    },
+    {
+     "item": "Chemistry",
+     "dose": "Metabolic panel with the anion gap (normal 8 to 16); osmolal gap (traditionally normal at 10 or less) when a toxic alcohol is possible",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:19563673",
+       "where": "Laboratory analysis"
+      }
+     ]
+    },
+    {
+     "item": "Specific levels",
+     "dose": "A level of any drug named or found (lithium, iron, digoxin)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:19563673",
+       "where": "Laboratory analysis"
+      }
+     ]
+    },
+    {
+     "item": "Pregnancy test",
+     "dose": "When pregnancy is possible; not stated for poisoning in the open sources read",
+     "status": "pending",
+     "note": "Pregnancy does not delay acetylcysteine (Acetadote 8.1) and may lower the threshold for dialysis in ethylene glycol poisoning (EXTRIP 2023)."
+    }
+   ]
+  },
+  {
+   "id": "levels_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Levels, chemistry and the drug",
+   "outcomes": [
+    {
+     "id": "apap_timed",
+     "if": "Acetaminophen detectable; one ingestion, known time",
+     "ddx": {
+      "lead": [
+       "Acetaminophen toxicity"
+      ],
+      "out": []
+     },
+     "next": "apap_plot"
+    },
+    {
+     "id": "apap_untimed",
+     "if": "Acetaminophen detectable; time unknown or staggered",
+     "ddx": {
+      "lead": [
+       "Acetaminophen toxicity"
+      ],
+      "out": []
+     },
+     "next": "apap_unk"
+    },
+    {
+     "id": "sal",
+     "if": "Salicylate toxicity; raised level, fast breathing, anion gap acidosis",
+     "ddx": {
+      "lead": [
+       "Salicylate toxicity"
+      ],
+      "out": []
+     },
+     "next": "sal_step"
+    },
+    {
+     "id": "alc",
+     "if": "Toxic alcohol; anion gap acidosis with a raised osmolal gap",
+     "ddx": {
+      "lead": [
+       "Toxic alcohol"
+      ],
+      "out": []
+     },
+     "next": "fomepizole"
+    },
+    {
+     "id": "li",
+     "if": "Severe lithium toxicity; altered consciousness or level over 4.0",
+     "ddx": {
+      "lead": [
+       "Lithium toxicity"
+      ],
+      "out": []
+     },
+     "next": "lithium_step"
+    },
+    {
+     "id": "li_mod",
+     "if": "Moderate lithium toxicity; IV saline",
+     "ddx": {
+      "lead": [
+       "Lithium toxicity"
+      ],
+      "out": []
+     },
+     "next": "end_li_mod",
+     "orders": [
+      {
+       "item": "Moderate lithium toxicity",
+       "dose": "Saline infusion and whole-bowel irrigation with polyethylene glycol, per the open review; dialysis if consciousness becomes altered or the level rises past 4.0 mmol/L",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "pmid:27900734",
+         "where": "Results, Lithium intoxication"
+        }
+       ]
+      },
+      {
+       "item": "Fluids and sodium",
+       "dose": "Correct volume depletion; watch for hypernatremia on saline; repeat levels for rebound",
+       "status": "ok",
+       "sources": [
+        {
+         "docId": "url:0d0a6b4fea47",
+         "where": "10 Overdosage, Treatment"
+        }
+       ]
+      },
+      {
+       "item": "Activated charcoal",
+       "dose": "Does not bind lithium",
+       "status": "avoid",
+       "sources": [
+        {
+         "docId": "url:0d0a6b4fea47",
+         "where": "10 Overdosage, Treatment"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "iron",
+     "if": "Iron toxicity; vomiting, then falling pressure and acidosis",
+     "ddx": {
+      "lead": [
+       "Iron toxicity"
+      ],
+      "out": []
+     },
+     "next": "iron_step"
+    },
+    {
+     "id": "neg",
+     "if": "Negative; both undetectable on a repeat level, ALT and chemistry normal",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Acetaminophen toxicity",
+       "Salicylate toxicity"
+      ]
+     },
+     "next": "dispo"
+    }
+   ]
+  },
+  {
+   "id": "apap_plot",
+   "kind": "step",
+   "stage": "Diagnose",
+   "ask": "One acetaminophen ingestion at a known time; a level at 4 hours or later. Next?",
+   "options": [
+    "Plot it; treat at or above the treatment line",
+    "Acetylcysteine for a detectable acetaminophen level",
+    "Repeat the level at 8 hours, then decide on treatment",
+    "Acetylcysteine once the ALT has started to rise"
+   ],
+   "answer": 0,
+   "chainStep": "Plot the level on the nomogram: acetylcysteine at or above the treatment line (150 mcg/mL at 4 hours in US practice; 100 mg/L in the UK); below it, with a known time and a level at 4 hours or later, no acetylcysteine; past 8 hours, load acetylcysteine before the level returns",
+   "why": "After an acute ingestion at a known time, a level at 4 hours or later is plotted on the revised Rumack-Matthew nomogram, whose US treatment line starts at 150 mcg/mL at 4 hours. At or above the line, acetylcysteine; below it, with a known time and a sample after 4 hours, the label says not to give it, because the risk of hepatotoxicity is minimal, though with chronic alcoholism, malnutrition or CYP2E1-inducing drugs it asks that treatment be considered even in the non-toxic range. Loading at once whatever the level is the rule for an unknown time, not this one; a second level at 8 to 10 hours is for an extended-release product whose 4-hour level is below the line; and the decision does not wait for the ALT. The UK draws its single line lower, at 100 mg/L at 4 hours.",
+   "next": "apap_line",
+   "sources": [
+    {
+     "docId": "url:44fa5ce2280e",
+     "where": "2.2; Figure 1"
+    },
+    {
+     "docId": "url:6f0a7a55e1f7",
+     "where": "Advice for healthcare professionals"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Nomogram, US",
+     "dose": "Treatment line from 150 mcg/mL at 4 hours; at or above it, acetylcysteine; below it, with a known time and a level after 4 hours, none",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "2.2; Figure 1"
+      }
+     ]
+    },
+    {
+     "item": "Nomogram, UK",
+     "dose": "One line from 100 mg/L at 4 hours to 15 mg/L at 15 hours, regardless of risk factors (mg/L and mcg/mL are the same unit)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:6f0a7a55e1f7",
+       "where": "Advice for healthcare professionals"
+      }
+     ]
+    },
+    {
+     "item": "Risk factors, US label",
+     "dose": "Chronic alcoholism, malnutrition or CYP2E1-inducing drugs such as isoniazid: consider treating even with a level in the non-toxic range (the UK dropped risk factors in 2012)",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "2.2"
+      },
+      {
+       "docId": "url:6f0a7a55e1f7",
+       "where": "Review findings"
+      }
+     ]
+    },
+    {
+     "item": "Extended-release product",
+     "dose": "4-hour level below the line: repeat at 8 to 10 hours; treat if that one is at or above it",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "2.2"
+      }
+     ]
+    },
+    {
+     "item": "High-risk line",
+     "dose": "The label's nomogram also draws a high-risk line from 300 mcg/mL at 4 hours; what changes above it is in the 2023 US consensus, which was not openly accessible",
+     "status": "pending",
+     "sources": [
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "Figure 1"
+      }
+     ],
+     "note": "The 2023 US consensus (JAMA Netw Open 2023;6(8):e2327739, PMID 37552484) is in an open-access journal but not in PMC and was not read here; its erratum (e2337926) was not checked."
+    },
+    {
+     "item": "Past 8 hours, or no level by 8 hours",
+     "dose": "Known time but more than 8 hours since the ingestion, or no level back within 8 hours: loading dose now; the level then decides continuing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "2.1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "apap_line",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "On the nomogram",
+   "outcomes": [
+    {
+     "id": "above",
+     "if": "At or above the treatment line; start acetylcysteine",
+     "ddx": {
+      "lead": [
+       "Acetaminophen toxicity"
+      ],
+      "out": []
+     },
+     "next": "nac"
+    },
+    {
+     "id": "below",
+     "if": "Below the treatment line; no risk factors",
+     "ddx": {
+      "lead": [],
+      "out": [
+       "Acetaminophen toxicity"
+      ]
+     },
+     "next": "dispo"
+    },
+    {
+     "id": "below_risk",
+     "if": "Below the line, with risk factors; consider treating",
+     "ddx": {
+      "lead": [
+       "Acetaminophen toxicity"
+      ],
+      "out": []
+     },
+     "next": "nac"
+    }
+   ]
+  },
+  {
+   "id": "apap_unk",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Acetaminophen detectable; the time is unknown or the ingestion was staggered. Next?",
+   "options": [
+    "Start acetylcysteine now, without the nomogram",
+    "Plot it on the nomogram from when she was found",
+    "Treat if the level is above 150 mcg/mL",
+    "Wait for a 4-hour repeat level, then decide"
+   ],
+   "answer": 0,
+   "chainStep": "Unknown time or staggered ingestion: load IV acetylcysteine now; the nomogram does not apply; complete the course when the level or the ALT is raised",
+   "why": "When the time of ingestion is unknown, the US label gives the acetylcysteine loading dose immediately and uses the level to decide on continuing; with any uncertainty about the risk, a complete course is recommended. UK guidance is the same for doubt over the timing, including an ingestion spread over an hour or more: acetylcysteine without delay, without the nomogram. Protection is greatest within 8 hours and falls after that, but late treatment is not withheld.",
+   "next": "nac",
+   "sources": [
+    {
+     "docId": "url:44fa5ce2280e",
+     "where": "2.1; 2.2"
+    },
+    {
+     "docId": "url:6f0a7a55e1f7",
+     "where": "Advice for healthcare professionals"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Acetylcysteine",
+     "dose": "Loading dose now; then a second level and the clinical status decide continuing; any uncertainty about the risk means a complete course",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "2.1; 2.2, Maintenance Dose"
+      }
+     ]
+    },
+    {
+     "item": "Late presentation",
+     "dose": "Most protective within 8 hours; limited efficacy at 15 to 24 hours, but not withheld",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "2.2"
+      }
+     ]
+    },
+    {
+     "item": "UK",
+     "dose": "Doubt over the timing or a staggered overdose: acetylcysteine without delay; the nomogram is not used",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:6f0a7a55e1f7",
+       "where": "Advice for healthcare professionals"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nac",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Acetylcysteine is indicated. Which IV regimen?",
+   "options": [
+    "150 mg/kg over 1 h, 50 over 4 h, 100 over 16 h",
+    "140 mg/kg IV, then 70 mg/kg every 4 hours",
+    "150 mg/kg over 1 h, then stop if ALT is normal",
+    "100 mg/kg over 16 hours, with no loading dose"
+   ],
+   "answer": 0,
+   "chainStep": "IV acetylcysteine, 300 mg/kg over 21 hours: 150 mg/kg over 1 hour, 50 mg/kg over 4 hours, 100 mg/kg over 16 hours (two-bag alternative at 41 kg or more: 200 mg/kg over 4 hours, then 100 mg/kg over 16 hours); oral alternative 140 mg/kg, then 70 mg/kg every 4 hours for 17 doses",
+   "why": "The label's IV total is 300 mg/kg: three bags over 21 hours (150 mg/kg over 1 hour, 50 mg/kg over 4 hours, 100 mg/kg over 16 hours) or, at 41 kg or more, two bags over 20 hours (200 mg/kg over 4 hours, then 100 mg/kg over 16 hours); the two-bag schedule may be associated with fewer hypersensitivity reactions. The three-bag schedule may be preferred after a large ingestion or with early signs of severe liver injury. 140 mg/kg, then 70 mg/kg every 4 hours is the oral regimen. Above the line the full course is given, and every regimen starts with a loading dose.",
+   "next": "nac_after",
+   "sources": [
+    {
+     "docId": "url:44fa5ce2280e",
+     "where": "2.2; 2.4; 2.5"
+    },
+    {
+     "docId": "url:3e7d043c9fad",
+     "where": "Dosage and Administration"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Three-bag regimen",
+     "dose": "150 mg/kg over 1 h, then 50 mg/kg over 4 h, then 100 mg/kg over 16 h; 100 kg or more: 15,000, then 5,000, then 10,000 mg",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "2.5, Table 2"
+      }
+     ]
+    },
+    {
+     "item": "Two-bag regimen (41 kg or more)",
+     "dose": "200 mg/kg over 4 h, then 100 mg/kg over 16 h; 100 kg or more: 20,000, then 10,000 mg; three bags at 40 kg or less",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "2.4; 2.5, Table 3"
+      }
+     ]
+    },
+    {
+     "item": "Oral regimen",
+     "dose": "140 mg/kg load, then 70 mg/kg every 4 hours for 17 doses (about 72 hours); repeat a dose vomited within an hour",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:3e7d043c9fad",
+       "where": "Dosage and Administration, General"
+      }
+     ]
+    },
+    {
+     "item": "Reactions",
+     "dose": "Seen soon after the infusion starts: stop for a severe reaction; for milder ones interrupt, give an antihistamine and restart carefully; flushing alone often settles",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "5.1"
+      }
+     ]
+    },
+    {
+     "item": "Previous reaction to acetylcysteine",
+     "dose": "US label: contraindicated after a previous hypersensitivity reaction; UK: no longer a contraindication, treat; MHRA gives every first dose over 60 minutes",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "4 Contraindications"
+      },
+      {
+       "docId": "url:6f0a7a55e1f7",
+       "where": "Review findings; Advice for healthcare professionals"
+      }
+     ]
+    },
+    {
+     "item": "After the last bag",
+     "dose": "Check acetaminophen, ALT/AST and INR; if acetaminophen is still detectable, ALT/AST rising or INR raised, continue dosing and call the poison center",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:44fa5ce2280e",
+       "where": "2.2, Continued Therapy"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nac_after",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Acetaminophen, ALT and INR after the last bag",
+   "outcomes": [
+    {
+     "id": "clear",
+     "if": "Clear; acetaminophen undetectable, ALT not rising, INR normal",
+     "ddx": {
+      "lead": [],
+      "out": []
+     },
+     "next": "dispo"
+    },
+    {
+     "id": "rising",
+     "if": "Not clear; acetaminophen detectable, or ALT or INR rising",
+     "ddx": {
+      "lead": [
+       "Acetaminophen toxicity"
+      ],
+      "out": []
+     },
+     "next": "end_nac_continue"
+    }
+   ]
+  },
+  {
+   "id": "end_nac_continue",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Acetaminophen still detectable, or ALT or INR rising, after the standard course: keep giving acetylcysteine beyond 300 mg/kg and call the poison center (1-800-222-1222) for dosing; a massive overdose, co-ingestants or liver disease can prolong absorption and half-life. Liver failure criteria and transplant referral are not in the open sources read. The psychiatric assessment does not wait for the course to end."
+  },
+  {
+   "id": "sal_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Salicylate toxicity: fast breathing, anion gap acidosis, alert. Next?",
+   "options": [
+    "Bicarbonate bolus and infusion, with potassium",
+    "Intubate early to protect the airway and breathing",
+    "Hold the bicarbonate until the pH falls below 7.20",
+    "Hemodialysis now for a level above 30 mg/dL"
+   ],
+   "answer": 0,
+   "chainStep": "Sodium bicarbonate 1 to 2 mEq/kg IV bolus, then 150 mEq in 1 L of 5% dextrose at 2 to 3 mL/kg/h, to a serum pH of 7.50 to 7.55 and a urine pH over 7.5; potassium to keep it normal; fluids; avoid intubation where possible; repeat levels and gases",
+   "why": "Bicarbonate starts for an acute level over 30 mg/dL, a pH under 7.4 or significant symptoms: a 1 to 2 mEq/kg bolus, then an infusion, to a serum pH of 7.50 to 7.55 so salicylate shifts out of the tissues, and a urine pH over 7.5 to speed its excretion. Urinary alkalinization fails while potassium is low, so potassium is replaced. Intubation and sedation are avoided where possible, because apnea lets the pH fall and drives salicylate into the tissues. 30 mg/dL is the threshold for bicarbonate, not for dialysis.",
+   "next": "sal_resp",
+   "sources": [
+    {
+     "docId": "pmid:41049912",
+     "where": "ED management"
+    },
+    {
+     "docId": "url:9ad3c4814bd7",
+     "where": "Indications and Usage"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Sodium bicarbonate",
+     "dose": "1 to 2 mEq/kg IV bolus, then 150 mEq in 1 L of 5% dextrose at 2 to 3 mL/kg/h; extra boluses if severe; no study supports specific dosing",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41049912",
+       "where": "ED management"
+      },
+      {
+       "docId": "url:9ad3c4814bd7",
+       "where": "Indications and Usage"
+      }
+     ]
+    },
+    {
+     "item": "Targets",
+     "dose": "Serum pH 7.50 to 7.55; urine pH over 7.5",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41049912",
+       "where": "ED management"
+      }
+     ]
+    },
+    {
+     "item": "Potassium",
+     "dose": "40 to 60 mEq at first and 40 to 60 mEq in the bicarbonate infusion; keep it normal",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41049912",
+       "where": "ED management"
+      }
+     ]
+    },
+    {
+     "item": "Fluids",
+     "dose": "Crystalloid for losses from vomiting and hyperventilation; the deficit can be 4 to 6 L",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41049912",
+       "where": "ED management"
+      }
+     ]
+    },
+    {
+     "item": "Activated charcoal",
+     "dose": "1 g/kg by mouth up to 100 g, even beyond 1 to 2 hours (delayed absorption, bezoars), unless the airway is unsafe or vomiting is refractory",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41049912",
+       "where": "ED management"
+      }
+     ]
+    },
+    {
+     "item": "Glucose",
+     "dose": "Correct hypoglycemia with IV dextrose; brain glucose can be low with a normal serum glucose",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41049912",
+       "where": "ED evaluation; ED management"
+      }
+     ]
+    },
+    {
+     "item": "Intubation",
+     "dose": "Avoid where possible; if unavoidable, bicarbonate 2 mEq/kg 5 to 10 minutes before induction and a high minute ventilation afterward",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:41049912",
+       "where": "ED management"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Serial salicylate levels and gases: absorption is erratic and toxicity can be delayed",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:41049912",
+       "where": "ED evaluation"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sal_resp",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Repeat level, gas and mental status",
+   "outcomes": [
+    {
+     "id": "improving",
+     "if": "Improving; level falling, alert, pH holding",
+     "ddx": {
+      "lead": [
+       "Salicylate toxicity"
+      ],
+      "out": []
+     },
+     "next": "end_sal"
+    },
+    {
+     "id": "hd",
+     "if": "Dialysis criteria; confusion, new hypoxia, a very high level, or failing therapy",
+     "ddx": {
+      "lead": [
+       "Salicylate toxicity"
+      ],
+      "out": []
+     },
+     "next": "end_sal_hd"
+    }
+   ]
+  },
+  {
+   "id": "end_sal",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Salicylate toxicity responding to treatment: bicarbonate to a serum pH of 7.50 to 7.55 and a urine pH over 7.5, potassium kept normal, fluids, and repeat levels and gases while the level falls; no intubation unless it cannot be avoided. Psychiatric assessment for an intentional ingestion."
+  },
+  {
+   "id": "end_sal_hd",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Salicylate toxicity meeting dialysis criteria. As reported in the open review, EXTRIP recommends dialysis for altered mental status, hypoxia needing oxygen (pulmonary edema), a level over 100 mg/dL (over 90 with impaired kidney function), or failure of standard therapy, and suggests it for a level over 90 (80 with impaired kidneys) or a pH under 7.20. Intermittent hemodialysis is preferred, continued until clinical improvement and, where levels are available, a level under 19 mg/dL. Psychiatric assessment for an intentional ingestion."
+  },
+  {
+   "id": "fomepizole",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Anion gap acidosis and a raised osmolal gap; toxic alcohol likely. Next?",
+   "options": [
+    "Fomepizole 15 mg/kg IV over 30 minutes, now",
+    "Wait for the methanol and ethylene glycol levels",
+    "Activated charcoal by mouth, then observe",
+    "Sodium bicarbonate alone, then repeat the gas"
+   ],
+   "answer": 0,
+   "chainStep": "Fomepizole now: 15 mg/kg IV over 30 minutes, then 10 mg/kg every 12 hours for 4 doses, then 15 mg/kg every 12 hours; every 4 hours during dialysis; bicarbonate, potassium and calcium as needed",
+   "why": "Fomepizole starts immediately on suspicion: the history, an anion gap acidosis, a raised osmolal gap, visual symptoms or urine oxalate crystals, or a documented level over 20 mg/dL. Ethylene glycol assays are seldom available in time, and both alcohols fall as they are metabolized, so waiting loses ground. Alcohols do not bind charcoal. Bicarbonate, fluids, potassium and calcium are supportive measures alongside the antidote, not instead of it.",
+   "next": "alc_result",
+   "sources": [
+    {
+     "docId": "url:8b3d4830c214",
+     "where": "Dosage and Administration, Treatment with fomepizole; Precautions, Laboratory Tests"
+    },
+    {
+     "docId": "pmid:36765419",
+     "where": "Clinical recommendations, osmol gap rationale"
+    },
+    {
+     "docId": "pmid:19563673",
+     "where": "Decontamination"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Fomepizole",
+     "dose": "15 mg/kg load, then 10 mg/kg every 12 hours for 4 doses, then 15 mg/kg every 12 hours, each IV over 30 minutes; until the level is undetectable or under 20 mg/dL and the patient is asymptomatic with a normal pH",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8b3d4830c214",
+       "where": "Dosing of fomepizole; Discontinuation"
+      }
+     ]
+    },
+    {
+     "item": "During hemodialysis",
+     "dose": "Dose every 4 hours, with the label's rules for the start and end of each session",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8b3d4830c214",
+       "where": "Fomepizole Dosing in Patients Requiring Hemodialysis"
+      }
+     ]
+    },
+    {
+     "item": "Supportive",
+     "dose": "Fluids and sodium bicarbonate for the acidosis; potassium, calcium and oxygen as needed; an ECG",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8b3d4830c214",
+       "where": "Precautions, Laboratory Tests"
+      }
+     ]
+    },
+    {
+     "item": "Monitoring",
+     "dose": "Gases, electrolytes, BUN, creatinine and urinalysis; ethylene glycol or methanol levels; urine oxalate crystals",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:8b3d4830c214",
+       "where": "Precautions, Laboratory Tests"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "alc_result",
+   "kind": "branch",
+   "stage": "Result",
+   "label": "Kidneys, acid-base, level and mental status",
+   "outcomes": [
+    {
+     "id": "hd",
+     "if": "Dialysis indicated; kidney injury, worsening acidosis, coma or seizures",
+     "ddx": {
+      "lead": [
+       "Toxic alcohol"
+      ],
+      "out": []
+     },
+     "next": "end_alc_hd"
+    },
+    {
+     "id": "no_hd",
+     "if": "No dialysis criteria; kidneys normal, mild acidosis, level under 50 mg/dL",
+     "ddx": {
+      "lead": [
+       "Toxic alcohol"
+      ],
+      "out": []
+     },
+     "next": "end_alc"
+    }
+   ]
+  },
+  {
+   "id": "end_alc",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Toxic alcohol without dialysis criteria: fomepizole until the level is undetectable or under 20 mg/dL and the patient is asymptomatic with a normal pH; repeat gases, electrolytes, kidney function and levels, with dialysis if the kidneys fail, the acidosis worsens or the level reaches 50 mg/dL. Psychiatric assessment for an intentional ingestion."
+  },
+  {
+   "id": "end_alc_hd",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Toxic alcohol with dialysis criteria: fomepizole plus intermittent hemodialysis (continuous kidney replacement if hemodialysis is not available), fomepizole every 4 hours during dialysis. The US label considers dialysis for renal failure, significant or worsening acidosis, or a level of 50 mg/dL or more; for ethylene glycol, EXTRIP 2023 recommends it for an anion gap (with potassium) over 27, coma, seizures, or AKI stage 2 or 3, and with fomepizole only suggests it on the level alone above 310 mg/dL. EXTRIP stops dialysis once the anion gap is under 18. Psychiatric assessment for an intentional ingestion."
+  },
+  {
+   "id": "lithium_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Lithium level 4.6 mEq/L; confused and tremulous after an overdose. Next?",
+   "options": [
+    "Hemodialysis, repeated if the level rebounds",
+    "Activated charcoal, then a repeat level",
+    "IV saline alone; recheck the level in 12 hours",
+    "Sodium polystyrene sulfonate by mouth"
+   ],
+   "answer": 0,
+   "chainStep": "Hemodialysis for severe lithium toxicity (extraordinarily high levels (over 4.0 mmol/L) or marked symptoms, especially altered consciousness); repeat sessions for rebound; correct volume depletion with saline, watching for hypernatremia; protect the airway if consciousness is impaired",
+   "why": "Lithium has no antidote; in severe poisoning the goal is elimination, and hemodialysis is the treatment of choice. Marked symptoms, especially altered consciousness, or a level over 4.0 mmol/L (equal to mEq/L for lithium) mark the most severe cases, and dialysis is often repeated because lithium rebounds from the tissues. Charcoal does not bind lithium. Saline is part of the care of moderate toxicity and corrects volume depletion, but does not replace dialysis here. Sodium polystyrene sulfonate rests on limited data and carries a risk of gut necrosis.",
+   "next": "end_li",
+   "sources": [
+    {
+     "docId": "url:0d0a6b4fea47",
+     "where": "10 Overdosage, Treatment"
+    },
+    {
+     "docId": "pmid:27900734",
+     "where": "Results, Lithium intoxication"
+    },
+    {
+     "docId": "pmid:21992527",
+     "where": "Sodium polystyrene sulfonate"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Hemodialysis",
+     "dose": "Treatment of choice in severe toxicity; usually repeated to avoid rebound",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0d0a6b4fea47",
+       "where": "10 Overdosage, Treatment"
+      },
+      {
+       "docId": "pmid:27900734",
+       "where": "Results, Lithium intoxication"
+      }
+     ]
+    },
+    {
+     "item": "Activated charcoal",
+     "dose": "Does not bind lithium",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:0d0a6b4fea47",
+       "where": "10 Overdosage, Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Fluids and electrolytes",
+     "dose": "Correct volume depletion and electrolyte imbalance; watch for hypernatremia on saline",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0d0a6b4fea47",
+       "where": "10 Overdosage, Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Airway",
+     "dose": "Protect it if consciousness is impaired",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0d0a6b4fea47",
+       "where": "10 Overdosage, Treatment"
+      }
+     ]
+    },
+    {
+     "item": "Rebound",
+     "dose": "Monitor levels closely after dialysis: delayed diffusion from the tissues",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:0d0a6b4fea47",
+       "where": "10 Overdosage, Treatment"
+      }
+     ]
+    },
+    {
+     "item": "EXTRIP lithium criteria",
+     "dose": "Published in CJASN, now a Wolters Kluwer journal; not read",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "end_li_mod",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Moderate lithium toxicity: IV saline, with sodium watched for hypernatremia and repeat levels for rebound, and whole-bowel irrigation with polyethylene glycol in the open review's care of moderate toxicity; no charcoal. Hemodialysis if consciousness becomes altered or the level rises past 4.0 mmol/L. Psychiatric assessment for an intentional ingestion."
+  },
+  {
+   "id": "end_li",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Severe lithium toxicity: hemodialysis, repeated for rebound, with saline for volume depletion and close sodium and level checks; no charcoal. Mild toxicity may need only a dose reduction or stopping the drug. Psychiatric assessment for an intentional ingestion."
+  },
+  {
+   "id": "iron_step",
+   "kind": "step",
+   "stage": "Manage",
+   "ask": "Iron overdose: vomiting, now hypotensive and acidotic. Next?",
+   "options": [
+    "IV deferoxamine at up to 15 mg/kg an hour",
+    "Deferoxamine 1,000 mg IM, then 500 mg every 4 hours",
+    "Whole-bowel irrigation first, then chelation",
+    "Activated charcoal by nasogastric tube"
+   ],
+   "answer": 0,
+   "chainStep": "Resuscitate; IV deferoxamine 1,000 mg at up to 15 mg/kg/h, then 500 mg over 4 to 12 hours at up to 125 mg/h if needed (maximum 6,000 mg in 24 hours); switch to IM once out of shock",
+   "why": "Deferoxamine is an adjunct to standard measures in acute iron intoxication. The label reserves IV use for cardiovascular collapse: 1,000 mg at no more than 15 mg/kg per hour, then 500 mg doses at up to 125 mg per hour if needed, to a maximum of 6,000 mg in 24 hours, switching to IM as soon as the patient's condition permits. IM dosing is for patients not in shock. Iron does not bind charcoal, and whole-bowel irrigation is contraindicated with hemodynamic instability.",
+   "next": "end_iron",
+   "sources": [
+    {
+     "docId": "url:96be09ea589c",
+     "where": "1.1; 2.1"
+    },
+    {
+     "docId": "pmid:21992527",
+     "where": "Gastrointestinal decontamination: activated charcoal; whole bowel irrigation"
+    },
+    {
+     "docId": "pmid:19563673",
+     "where": "Decontamination"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Deferoxamine IV (cardiovascular collapse)",
+     "dose": "1,000 mg at up to 15 mg/kg/h; then 500 mg over 4 to 12 hours at up to 125 mg/h if needed; maximum 6,000 mg in 24 hours; to IM as soon as possible",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96be09ea589c",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "Deferoxamine IM (not in shock)",
+     "dose": "1,000 mg once, then 500 mg every 4 to 12 hours if needed; maximum 6,000 mg in 24 hours",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96be09ea589c",
+       "where": "2.1"
+      }
+     ]
+    },
+    {
+     "item": "Rapid IV injection",
+     "dose": "Flushing, urticaria, hypotension and shock: give it by slow infusion",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:96be09ea589c",
+       "where": "5.1"
+      }
+     ]
+    },
+    {
+     "item": "High IV doses",
+     "dose": "Acute respiratory distress syndrome: do not exceed the daily maximum",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:96be09ea589c",
+       "where": "5.4"
+      }
+     ]
+    },
+    {
+     "item": "Activated charcoal",
+     "dose": "Does not bind iron",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "pmid:21992527",
+       "where": "Gastrointestinal decontamination: activated charcoal"
+      }
+     ]
+    },
+    {
+     "item": "Whole-bowel irrigation",
+     "dose": "Considered for substantial iron ingestions, but contraindicated with hemodynamic instability, ileus or obstruction, seizures or a compromised airway",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "pmid:19563673",
+       "where": "Decontamination"
+      },
+      {
+       "docId": "pmid:21992527",
+       "where": "Gastrointestinal decontamination: whole bowel irrigation"
+      }
+     ]
+    },
+    {
+     "item": "Serum iron thresholds",
+     "dose": "Thresholds for chelation are not in the open sources read",
+     "status": "pending"
+    }
+   ]
+  },
+  {
+   "id": "end_iron",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Iron overdose in shock: resuscitation and IV deferoxamine 1,000 mg at up to 15 mg/kg/h (maximum 6,000 mg in 24 hours), switched to IM once out of shock; no charcoal, and no whole-bowel irrigation while unstable. Psychiatric assessment for an intentional ingestion."
+  },
+  {
+   "id": "dispo",
+   "kind": "step",
+   "stage": "Disposition",
+   "ask": "Intentional ingestion; now medically clear. Before discharge?",
+   "options": [
+    "Psychiatric assessment of suicide risk and safety",
+    "Discharge home with a primary care appointment this week",
+    "A suicide risk scale; discharge if the score is low"
+   ],
+   "answer": 0,
+   "chainStep": "Psychiatric (psychosocial) assessment by a mental health professional, including suicide risk and safety, before discharge; a care plan and aftercare arranged; no risk scale decides discharge",
+   "why": "After a deliberate overdose, patients may attempt suicide by other means during recovery, so psychiatric referral follows. NICE asks for a psychosocial assessment by a mental health professional at the earliest opportunity, not delayed until medical treatment is complete, and for that assessment, a management plan and aftercare before discharge. Risk assessment tools and scales are not used to decide who is treated or discharged.",
+   "next": "end_dispo",
+   "sources": [
+    {
+     "docId": "url:cfdb9cea889a",
+     "where": "Overdosage, Psychiatric Follow-up"
+    },
+    {
+     "docId": "url:5ff273cd9778",
+     "where": "1.5.1; 1.5.2; 1.6.2; 1.9.6"
+    }
+   ],
+   "orders": [
+    {
+     "item": "Psychosocial assessment",
+     "dose": "By a mental health professional at the earliest opportunity, not delayed until medical treatment is complete; completed before discharge with a plan and aftercare",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5ff273cd9778",
+       "where": "1.5.1; 1.5.2; 1.9.6"
+      }
+     ]
+    },
+    {
+     "item": "Wanting to leave first",
+     "dose": "Assess safety and any mental health problems before the person leaves",
+     "status": "ok",
+     "sources": [
+      {
+       "docId": "url:5ff273cd9778",
+       "where": "1.5.14"
+      }
+     ]
+    },
+    {
+     "item": "Risk scales",
+     "dose": "Not used to decide who is offered treatment or who is discharged",
+     "status": "avoid",
+     "sources": [
+      {
+       "docId": "url:5ff273cd9778",
+       "where": "1.6.1; 1.6.2"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "end_dispo",
+   "kind": "end",
+   "stage": "Outcome",
+   "summary": "Medically clear after an intentional ingestion: a psychiatric assessment of suicide risk and safety by a mental health professional, started as early as the patient can take part, leads to psychiatric admission or to discharge with a care plan and aftercare. No risk scale decides it."
+  }
+ ],
+ "cases": [
+  {
+   "id": "seizing_od",
+   "label": "Seizing after an overdose",
+   "vignette": "34-year-old man brought in by EMS after his roommate found him beside several empty pill bottles; he began convulsing in the ambulance.",
+   "picks": {
+    "front": "seizing"
+   },
+   "results": {
+    "front": "Generalized tonic-clonic seizure still going on arrival. Glucose 104 mg/dL. Airway held open with a jaw thrust."
+   }
+  },
+  {
+   "id": "sulfonylurea",
+   "label": "Sulfonylurea overdose, hypoglycemia",
+   "vignette": "58-year-old woman with type 2 diabetes found drowsy and sweating 3 hours after telling her daughter she had taken all her pills. HR 104, BP 138/80, RR 16, SpO2 97%.",
+   "picks": {
+    "front": "hypo"
+   },
+   "results": {
+    "front": "Fingerstick glucose 34 mg/dL. The empty bottle is glipizide. ECG: sinus tachycardia, QRS 88 ms."
+   }
+  },
+  {
+   "id": "heroin",
+   "label": "Heroin overdose",
+   "vignette": "27-year-old man found slumped in a bathroom with a syringe nearby. RR 6 and shallow, SpO2 84% on air, HR 62, BP 108/70.",
+   "picks": {
+    "front": "resp",
+    "nalox_resp": "woke"
+   },
+   "results": {
+    "front": "Pinpoint pupils; snoring respirations; lungs clear and dry. Glucose 112 mg/dL. ECG: sinus rhythm, QRS 86 ms.",
+    "nalox_resp": "After 0.4 mg IV and a second 0.4 mg, he breathes at 14 and opens his eyes, irritable but not vomiting."
+   }
+  },
+  {
+   "id": "alprazolam",
+   "label": "Benzodiazepine overdose, naloxone fails",
+   "vignette": "41-year-old woman who takes alprazolam daily for panic disorder; her partner found her very drowsy beside a note; her partner saw her take the tablets 5 hours before arrival. RR 8, SpO2 91% on air, HR 76, BP 112/70.",
+   "picks": {
+    "front": "resp",
+    "nalox_resp": "none",
+    "levels_result": "neg"
+   },
+   "results": {
+    "front": "Pupils mid-size and reactive; lungs clear; glucose 118 mg/dL. ECG: sinus rhythm, QRS 84 ms, QTc 430 ms.",
+    "nalox_resp": "No change after repeated naloxone, 10 mg in total. Her partner finds her alprazolam bottle empty; it held about 60 tablets.",
+    "levels_result": "Acetaminophen and salicylate undetectable 5 hours after the ingestion and again 2 hours later; ALT, electrolytes, anion gap and creatinine normal. With breathing support she is awake and talking 8 hours later."
+   }
+  },
+  {
+   "id": "tca_narrows",
+   "label": "Tricyclic overdose, QRS narrows",
+   "vignette": "36-year-old woman brought in drowsy 2 hours after taking an unknown number of her amitriptyline tablets. HR 128, BP 92/58, RR 16, SpO2 96%.",
+   "picks": {
+    "front": "wide_qrs",
+    "bicarb_resp": "narrows"
+   },
+   "results": {
+    "front": "ECG: sinus tachycardia 128, QRS 132 ms with a rightward terminal QRS axis. Pupils dilated, skin dry. Glucose 126 mg/dL.",
+    "bicarb_resp": "On bicarbonate, serum pH 7.49; QRS 98 ms, BP 108/66, no ectopy."
+   }
+  },
+  {
+   "id": "tca_vt",
+   "label": "Tricyclic overdose, VT despite bicarbonate",
+   "vignette": "45-year-old man found confused by his wife beside an empty bottle of nortriptyline. HR 136, BP 84/50, RR 14, SpO2 95%.",
+   "picks": {
+    "front": "wide_qrs",
+    "bicarb_resp": "dysrhythmia"
+   },
+   "results": {
+    "front": "ECG: wide-complex tachycardia, QRS 168 ms with a rightward terminal axis. Glucose 140 mg/dL.",
+    "bicarb_resp": "Serum pH 7.50 on bicarbonate, but runs of ventricular tachycardia continue."
+   }
+  },
+  {
+   "id": "digoxin",
+   "label": "Acute digoxin overdose",
+   "vignette": "72-year-old woman who swallowed her husband's heart pills about 4 hours ago, meaning to end her life; vomiting. HR 38, BP 82/50, RR 16, SpO2 95%.",
+   "picks": {
+    "front": "brady",
+    "brady_cause": "dig"
+   },
+   "results": {
+    "front": "ECG: complete heart block, ventricular rate 38, QRS 92 ms. Lungs dry, no secretions, pupils normal. Glucose 132 mg/dL.",
+    "brady_cause": "The bottle is digoxin 0.25 mg; how many she took is unknown. Potassium 6.4 mEq/L; digoxin level sent. Two doses of atropine have not changed the rhythm."
+   }
+  },
+  {
+   "id": "beta_blocker",
+   "label": "Beta blocker overdose, responds",
+   "vignette": "52-year-old man who took a handful of his blood pressure tablets after an argument, 2 hours ago. HR 40, BP 78/46, RR 14, SpO2 97%.",
+   "picks": {
+    "front": "brady",
+    "brady_cause": "bb",
+    "bbccb_resp": "recovers"
+   },
+   "results": {
+    "front": "ECG: sinus bradycardia 40, QRS 90 ms. Lungs dry, no secretions. Glucose 98 mg/dL.",
+    "brady_cause": "The bottle is metoprolol. Digoxin undetectable; potassium 4.1 mEq/L. Fluids and atropine have not lifted the pressure.",
+    "bbccb_resp": "After glucagon and a low-dose norepinephrine infusion: HR 58, BP 102/64, warm hands, talking."
+   }
+  },
+  {
+   "id": "verapamil",
+   "label": "Verapamil overdose, high-dose insulin",
+   "vignette": "47-year-old woman who tells the nurse she took her sustained-release blood pressure tablets 3 hours ago. HR 44, BP 72/40, RR 18, SpO2 96%.",
+   "picks": {
+    "front": "brady",
+    "brady_cause": "ccb",
+    "bbccb_resp": "shock"
+   },
+   "results": {
+    "front": "ECG: junctional bradycardia 44, QRS 94 ms. Lungs dry. Glucose 248 mg/dL.",
+    "brady_cause": "The bottle is sustained-release verapamil. Digoxin undetectable; potassium 3.9 mEq/L. Fluids and atropine have not raised the pressure.",
+    "bbccb_resp": "After IV calcium and a rising norepinephrine dose: BP 70/38, cool peripheries, lactate climbing."
+   }
+  },
+  {
+   "id": "organophosphate",
+   "label": "Organophosphate pesticide",
+   "vignette": "38-year-old farmworker who drank from a bottle of pesticide after a family dispute 1 hour ago; vomiting, sweating and wheezing. HR 46, BP 96/60, RR 28, SpO2 86% on air.",
+   "picks": {
+    "front": "cholinergic"
+   },
+   "results": {
+    "front": "Pinpoint pupils, drooling, bronchorrhea with wheeze, fasciculations, diarrhea, soaked in sweat. On high-flow oxygen SpO2 rises to 93%. Glucose 150 mg/dL. ECG: sinus bradycardia 46, QRS 92 ms. The label names an organophosphate."
+   }
+  },
+  {
+   "id": "house_fire",
+   "label": "House fire smoke, cyanide",
+   "vignette": "60-year-old man carried out of a burning apartment by firefighters, confused and short of breath. HR 118, BP 84/50, RR 30, SpO2 94% on a non-rebreather mask.",
+   "picks": {
+    "front": "fire"
+   },
+   "results": {
+    "front": "Soot around the nose and mouth and in the oropharynx; no burns. Glucose 140 mg/dL. ECG: sinus tachycardia, QRS 90 ms. Lactate and COHb sent."
+   }
+  },
+  {
+   "id": "garage_exhaust",
+   "label": "Car exhaust in a closed garage",
+   "vignette": "29-year-old man found in his car in a closed garage with the engine running; drowsy, nauseated, with a headache. HR 110, BP 128/78, RR 20, SpO2 99%.",
+   "picks": {
+    "front": "exhaust"
+   },
+   "results": {
+    "front": "No soot, no burns. Glucose 108 mg/dL. ECG: sinus tachycardia 110, QRS 88 ms. A note was left on the dashboard."
+   }
+  },
+  {
+   "id": "cocaine",
+   "label": "Cocaine, sympathomimetic",
+   "vignette": "24-year-old man brought from a club, agitated and pacing, after using cocaine. HR 132, BP 176/104, RR 22, temperature 39.0 C (102.2 F), SpO2 98%.",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "symp"
+   },
+   "results": {
+    "front": "Talking in full sentences, airway safe; glucose 102 mg/dL. ECG: sinus tachycardia 132, QRS 92 ms, no ST elevation.",
+    "tox_exam": "Pupils dilated; skin drenched in sweat; normal tone, no clonus; bowel sounds present."
+   }
+  },
+  {
+   "id": "jimsonweed",
+   "label": "Jimsonweed, anticholinergic",
+   "vignette": "19-year-old man brought by friends after drinking a tea brewed from seeds at a party; he is picking at the air and mumbling. HR 126, BP 148/90, RR 18, temperature 38.4 C (101.1 F), SpO2 98%. Healthy, no medical history.",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "antichol"
+   },
+   "results": {
+    "front": "Airway safe; glucose 110 mg/dL. ECG: sinus tachycardia 126, QRS 88 ms.",
+    "tox_exam": "Pupils dilated and sluggish; skin hot, flushed and dry; dry mouth; bowel sounds absent; bladder palpable. A friend says the seeds were jimsonweed."
+   }
+  },
+  {
+   "id": "serotonin",
+   "label": "Serotonin toxicity",
+   "vignette": "55-year-old woman on sertraline who started tramadol for back pain 2 days ago; now agitated, shaking and sweating. HR 118, BP 158/92, RR 20, temperature 38.6 C (101.5 F).",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "sero"
+   },
+   "results": {
+    "front": "Airway safe; glucose 120 mg/dL. ECG: sinus tachycardia 118, QRS 90 ms.",
+    "tox_exam": "Pupils dilated; sweating; hyperactive bowel sounds; brisk reflexes with sustained ankle clonus."
+   }
+  },
+  {
+   "id": "apap_above_line",
+   "label": "Acetaminophen above the treatment line",
+   "vignette": "22-year-old woman who says she swallowed 40 extra-strength acetaminophen tablets 40 minutes ago, after a breakup; she feels well. HR 96, BP 118/74, RR 16, SpO2 99%. Weight 60 kg.",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "none",
+    "decon_time": "early",
+    "levels_result": "apap_timed",
+    "apap_line": "above",
+    "nac_after": "clear"
+   },
+   "results": {
+    "front": "Airway safe; glucose 96 mg/dL. ECG: sinus rhythm 96, QRS 84 ms, QTc 420 ms.",
+    "tox_exam": "Pupils, skin, tone and reflexes normal.",
+    "decon_time": "Forty minutes since one ingestion of 500 mg acetaminophen tablets; alert, protecting her airway, not vomiting.",
+    "levels_result": "4 hours after the ingestion: acetaminophen 180 mcg/mL; salicylate undetectable; ALT 22 U/L; chemistry normal.",
+    "apap_line": "180 mcg/mL at 4 hours lies above the treatment line.",
+    "nac_after": "After the last bag: acetaminophen undetectable, ALT 30 U/L, INR 1.0."
+   }
+  },
+  {
+   "id": "apap_below_line",
+   "label": "Acetaminophen below the treatment line",
+   "vignette": "31-year-old man who took a handful of acetaminophen tablets at 9 pm after losing his job and came in at 2 am, worried. He rarely drinks, eats normally and takes no medicines. HR 84, BP 124/78, SpO2 99%.",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "none",
+    "decon_time": "late",
+    "levels_result": "apap_timed",
+    "apap_line": "below"
+   },
+   "results": {
+    "front": "Airway safe; glucose 101 mg/dL. ECG: sinus rhythm 84, QRS 86 ms.",
+    "tox_exam": "Pupils, skin and tone normal.",
+    "decon_time": "Five hours since one ingestion at a known time.",
+    "levels_result": "5 hours after the ingestion: acetaminophen 60 mcg/mL; salicylate undetectable; ALT 25 U/L; chemistry normal.",
+    "apap_line": "60 mcg/mL at 5 hours lies below the treatment line."
+   }
+  },
+  {
+   "id": "apap_untimed",
+   "label": "Acetaminophen, time unknown",
+   "vignette": "44-year-old woman found by her sister, nauseated and tired, beside empty acetaminophen bottles and a note; she cannot say when she took them. HR 102, BP 112/70, RR 18, SpO2 98%. Weight 70 kg.",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "none",
+    "decon_time": "late",
+    "levels_result": "apap_untimed",
+    "nac_after": "rising"
+   },
+   "results": {
+    "front": "Airway safe; glucose 88 mg/dL. ECG: sinus tachycardia 102, QRS 86 ms.",
+    "tox_exam": "Pupils, skin and tone normal.",
+    "decon_time": "Time of ingestion unknown, probably spread over many hours.",
+    "levels_result": "Acetaminophen 38 mcg/mL; ALT 410 U/L; INR 1.4; salicylate undetectable; chemistry otherwise normal.",
+    "nac_after": "After the last bag: acetaminophen 8 mcg/mL, ALT 1,250 U/L, INR 1.9."
+   }
+  },
+  {
+   "id": "salicylate_improves",
+   "label": "Salicylate toxicity, alkalinization works",
+   "vignette": "39-year-old man who took most of a bottle of 325 mg aspirin tablets 3 hours ago, meaning to harm himself; ringing in his ears and vomiting. HR 108, BP 128/80, RR 28 and deep, SpO2 98%. Weight 80 kg.",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "none",
+    "decon_time": "late",
+    "levels_result": "sal",
+    "sal_resp": "improving"
+   },
+   "results": {
+    "front": "Alert, airway safe; glucose 132 mg/dL. ECG: sinus tachycardia 108, QRS 90 ms.",
+    "tox_exam": "Pupils normal; normal tone, no clonus; no toxidrome pattern.",
+    "decon_time": "Three hours since the ingestion; vomiting.",
+    "levels_result": "Salicylate 58 mg/dL; pH 7.42, PCO2 26, bicarbonate 16, anion gap 22; potassium 3.4 mEq/L; acetaminophen undetectable.",
+    "sal_resp": "Six hours later: salicylate 38 mg/dL and falling, urine pH 7.8, potassium 4.0 mEq/L, alert."
+   }
+  },
+  {
+   "id": "salicylate_dialysis",
+   "label": "Salicylate toxicity, dialysis",
+   "vignette": "67-year-old woman with chronic kidney disease (creatinine 1.8 mg/dL) who tells EMS she swallowed two bottles of aspirin 45 minutes ago to end her life; nausea and ringing in her ears. HR 112, BP 136/82, RR 26, SpO2 97%.",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "none",
+    "decon_time": "early",
+    "levels_result": "sal",
+    "sal_resp": "hd"
+   },
+   "results": {
+    "front": "Alert and oriented, airway safe; glucose 140 mg/dL. ECG: sinus tachycardia 112, QRS 92 ms.",
+    "tox_exam": "Pupils normal; no toxidrome pattern.",
+    "decon_time": "Forty-five minutes since the ingestion of plain aspirin; alert, airway safe, not vomiting.",
+    "levels_result": "Salicylate 72 mg/dL at 2 hours; pH 7.38, PCO2 24, bicarbonate 14, anion gap 24; acetaminophen undetectable.",
+    "sal_resp": "Four hours later on bicarbonate: salicylate 96 mg/dL and rising; she is now confused and needs oxygen for a falling saturation."
+   }
+  },
+  {
+   "id": "ethylene_glycol",
+   "label": "Ethylene glycol, dialysis",
+   "vignette": "50-year-old man brought in vomiting and drowsy after drinking from a bottle in his garage hours ago; his wife says it was on purpose. HR 112, BP 132/84, RR 30, SpO2 97%.",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "none",
+    "decon_time": "late",
+    "levels_result": "alc",
+    "alc_result": "hd"
+   },
+   "results": {
+    "front": "Drowsy but rousable, airway safe; glucose 104 mg/dL. ECG: sinus tachycardia 112, QRS 92 ms.",
+    "tox_exam": "Pupils normal; deep, fast breathing; no toxidrome pattern.",
+    "decon_time": "Several hours since the ingestion; the bottle is antifreeze.",
+    "levels_result": "pH 7.12, bicarbonate 6, anion gap 31, osmolal gap 38; creatinine 2.4 mg/dL (0.9 last year); calcium oxalate crystals in the urine; acetaminophen and salicylate undetectable.",
+    "alc_result": "Six hours later: creatinine 3.1 mg/dL, urine output falling, anion gap still 30."
+   }
+  },
+  {
+   "id": "methanol",
+   "label": "Methanol, fomepizole alone",
+   "vignette": "35-year-old woman who drank windshield washer fluid 3 hours ago after an argument and called 911 herself. HR 94, BP 122/76, RR 18, SpO2 99%.",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "none",
+    "decon_time": "late",
+    "levels_result": "alc",
+    "alc_result": "no_hd"
+   },
+   "results": {
+    "front": "Alert, airway safe; glucose 98 mg/dL. ECG: sinus rhythm 94, QRS 86 ms.",
+    "tox_exam": "Pupils normal, vision normal; no toxidrome pattern.",
+    "decon_time": "Three hours since she drank the washer fluid.",
+    "levels_result": "pH 7.33, bicarbonate 19, anion gap 19, osmolal gap 20; creatinine 0.8 mg/dL; acetaminophen and salicylate undetectable.",
+    "alc_result": "Methanol level 34 mg/dL; on fomepizole pH 7.35, creatinine 0.8 mg/dL, vision normal."
+   }
+  },
+  {
+   "id": "lithium",
+   "label": "Lithium overdose, dialysis",
+   "vignette": "46-year-old man with bipolar disorder who took a week of his lithium tablets at once last night, wanting to die; now confused, tremulous and unsteady. HR 92, BP 118/72, RR 16, SpO2 98%.",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "none",
+    "decon_time": "late",
+    "levels_result": "li"
+   },
+   "results": {
+    "front": "Confused but answering, airway safe; glucose 106 mg/dL. ECG: sinus rhythm 92, QRS 92 ms.",
+    "tox_exam": "Coarse tremor and ataxia; pupils normal; no sweating, no clonus.",
+    "decon_time": "About 14 hours since the ingestion of immediate-release tablets.",
+    "levels_result": "Lithium 4.6 mEq/L; sodium 141 mEq/L; creatinine 1.5 mg/dL; acetaminophen and salicylate undetectable."
+   }
+  },
+  {
+   "id": "iron",
+   "label": "Iron overdose in shock",
+   "vignette": "26-year-old woman who swallowed a bottle of her ferrous sulfate tablets 2 hours ago after an argument, to hurt herself; vomiting. HR 104, BP 112/70, RR 18, SpO2 99%.",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "none",
+    "decon_time": "wbi",
+    "levels_result": "iron"
+   },
+   "results": {
+    "front": "Airway safe; glucose 112 mg/dL. ECG: sinus tachycardia 104, QRS 88 ms. Pregnancy test negative.",
+    "tox_exam": "Pupils normal; abdominal tenderness; no toxidrome pattern.",
+    "decon_time": "Two hours since the ingestion of ferrous sulfate tablets; pressure normal, bowel sounds present, airway safe.",
+    "levels_result": "Now vomiting blood-streaked fluid; BP 82/50, HR 128; pH 7.21, lactate 6 mmol/L; serum iron markedly raised; acetaminophen and salicylate undetectable."
+   }
+  },
+  {
+   "id": "arrest",
+   "label": "Cardiac arrest after an overdose",
+   "vignette": "52-year-old woman found unresponsive at home beside empty pill bottles; EMS started CPR on the way in.",
+   "picks": {
+    "front": "arrest"
+   },
+   "results": {
+    "front": "No pulse; the monitor shows pulseless electrical activity. Fingerstick glucose 98 mg/dL."
+   }
+  },
+  {
+   "id": "unknown_coma",
+   "label": "Coma, naloxone fails, no drug found",
+   "vignette": "63-year-old man found unresponsive in his apartment by a neighbor; no pill bottles, syringes or notes. RR 7, SpO2 86% on air, HR 70, BP 172/98.",
+   "picks": {
+    "front": "resp",
+    "nalox_resp": "none_unknown"
+   },
+   "results": {
+    "front": "Pupils small but reactive; lungs clear and dry; glucose 128 mg/dL. ECG: sinus rhythm, QRS 90 ms.",
+    "nalox_resp": "No change after naloxone, 10 mg in total; a search of the apartment finds no drugs."
+   }
+  },
+  {
+   "id": "lithium_moderate",
+   "label": "Lithium overdose, moderate",
+   "vignette": "38-year-old woman with bipolar disorder who took 20 of her sustained-release lithium tablets 3 hours ago after an argument, to hurt herself; nauseated, with a fine tremor. HR 88, BP 124/76, RR 16, SpO2 99%.",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "none",
+    "decon_time": "wbi",
+    "levels_result": "li_mod"
+   },
+   "results": {
+    "front": "Alert and oriented, airway safe; glucose 104 mg/dL. ECG: sinus rhythm 88, QRS 90 ms.",
+    "tox_exam": "Fine tremor; pupils normal; no sweating, no clonus.",
+    "decon_time": "Three hours since the ingestion of sustained-release lithium; alert, pressure normal, bowel sounds present.",
+    "levels_result": "Lithium 2.6 mEq/L; alert and oriented; sodium 139 mEq/L; creatinine 0.9 mg/dL; acetaminophen and salicylate undetectable."
+   }
+  },
+  {
+   "id": "apap_alcohol",
+   "label": "Acetaminophen below the line, with risk factors",
+   "vignette": "45-year-old man who drinks most of a bottle of vodka every day took a handful of acetaminophen tablets 30 minutes ago after a fight, saying he wanted to die; he is drunk and drowsy, rousable to voice. HR 98, BP 132/80, RR 14, SpO2 96%. Weight 82 kg.",
+   "picks": {
+    "front": "stable",
+    "tox_exam": "none",
+    "decon_time": "early_unprotected",
+    "levels_result": "apap_timed",
+    "apap_line": "below_risk",
+    "nac_after": "clear"
+   },
+   "results": {
+    "front": "Rousable, maintaining his airway; glucose 92 mg/dL. ECG: sinus rhythm 98, QRS 88 ms.",
+    "tox_exam": "Pupils normal; smells of alcohol; no toxidrome pattern.",
+    "decon_time": "Thirty minutes since one ingestion of acetaminophen tablets; drowsy from alcohol, not fully conscious.",
+    "levels_result": "4 hours after the ingestion: acetaminophen 110 mcg/mL; salicylate undetectable; ALT 48 U/L; chemistry otherwise normal.",
+    "apap_line": "110 mcg/mL at 4 hours lies below the treatment line; he drinks heavily every day.",
+    "nac_after": "After the last bag: acetaminophen undetectable, ALT 50 U/L and not rising, INR 1.1."
+   }
+  }
+ ]
+}

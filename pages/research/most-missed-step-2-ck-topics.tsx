@@ -49,6 +49,7 @@ export default function MostMissedTopics() {
       crumb={[{ href: '/readiness', label: 'Readiness check' }, { href: PATH, label: 'Research' }]}
       metaTitle="The Most Missed Step 2 CK Topics, from 315,216 First Tries"
       metaDesc={desc}
+      ogImage="/og/research/most-missed-step-2-ck-topics.png"
       campaign={CAMPAIGN}
       head={<>
         <link rel="canonical" href={`https://stepgunner.com${PATH}`} />
@@ -85,6 +86,7 @@ export default function MostMissedTopics() {
         .fig img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--hair); background: var(--bg); display: block; }
         .fig figcaption { font-size: 13px; color: var(--ink-dim); line-height: 1.6; margin-top: 10px; } .fig figcaption b { color: var(--ink); }
         .tbl { width: 100%; border-collapse: collapse; margin: 8px 0 24px; font-size: 14.5px; background: var(--bg-2); border: 1px solid var(--hair); border-radius: 12px; overflow: hidden; }
+        .tblwrap { overflow-x: auto; }
         .tbl th { text-align: left; font-family: var(--mono); font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); padding: 9px 12px; border-bottom: 1px solid var(--hair-strong); background: var(--bg-3); }
         .tbl td { padding: 9px 12px; border-bottom: 1px solid var(--hair); color: var(--ink-dim); } .tbl tr:last-child td { border-bottom: 0; }
         .tbl td.n, .tbl th.n { text-align: right; font-family: var(--mono); } .tbl td.n b { color: var(--ink); }
@@ -139,16 +141,18 @@ export default function MostMissedTopics() {
       <h2>4. What the hard ones have in common</h2>
       <p>I grouped the remaining questions by topic and set the rule in advance: a topic counts if at least two of its questions are hard and the topic as a whole sits in the hardest quarter of the 310 topics with enough data. Four real topics pass, and all four are among the 15 hardest. They also stay there when I drop everything before a late-June rewrite of many answer choices.</p>
       <Fig n={2} src="/research/missed_fig2_topics.svg" alt="Strip plot of first-try rates for individual questions within four hard topics and one easy contrast topic; within each hard topic the questions range from below 35 percent to above 85 percent" caption="Blue dots are single questions with 50 or more first tries; gold is the whole topic. The dashed line is the bank as a whole. Within each hard topic the questions run from near the floor to near the ceiling. The lone dot near 5% failed the quality screen and is not taught." />
-      <table className="tbl">
-        <thead><tr><th>topic</th><th className="n">first try right</th><th className="n">95% interval</th><th className="n">people</th></tr></thead>
-        <tbody>
-          <tr><td>Health-system terms</td><td className="n"><b>59.0%</b></td><td className="n">56.1 to 61.8</td><td className="n">329</td></tr>
-          <tr><td>Bites, stings and cold</td><td className="n"><b>60.3%</b></td><td className="n">57.8 to 62.7</td><td className="n">382</td></tr>
-          <tr><td>Urine sediment</td><td className="n"><b>61.1%</b></td><td className="n">57.8 to 64.4</td><td className="n">320</td></tr>
-          <tr><td>Vitamins and trace minerals</td><td className="n"><b>62.4%</b></td><td className="n">59.8 to 65.0</td><td className="n">329</td></tr>
-          <tr className="hi"><td>Whole bank</td><td className="n"><b>74.8%</b></td><td className="n"></td><td className="n">998</td></tr>
-        </tbody>
-      </table>
+      <div className="tblwrap">
+        <table className="tbl">
+          <thead><tr><th>topic</th><th className="n">first try right</th><th className="n">95% interval</th><th className="n">people</th></tr></thead>
+          <tbody>
+            <tr><td>Health-system terms</td><td className="n"><b>59.0%</b></td><td className="n">56.1 to 61.8</td><td className="n">329</td></tr>
+            <tr><td>Bites, stings and cold</td><td className="n"><b>60.3%</b></td><td className="n">57.8 to 62.7</td><td className="n">382</td></tr>
+            <tr><td>Urine sediment</td><td className="n"><b>61.1%</b></td><td className="n">57.8 to 64.4</td><td className="n">320</td></tr>
+            <tr><td>Vitamins and trace minerals</td><td className="n"><b>62.4%</b></td><td className="n">59.8 to 65.0</td><td className="n">329</td></tr>
+            <tr className="hi"><td>Whole bank</td><td className="n"><b>74.8%</b></td><td className="n"></td><td className="n">998</td></tr>
+          </tbody>
+        </table>
+      </div>
       <p>None of these is a rare-disease topic. And look at what happens <strong>inside</strong> each one. The best-answered question in every hard topic sits at 89% or higher. The worst sits at 31% or lower. Wernicke encephalopathy was answered right by 99% of 77 people; the other thing thiamine deficiency does, a few rows down in the same topic, by 27% of 77. Red cell casts: 89%. The tubular epithelial cast: 29%. Malignant hyperthermia: 95%. A jellyfish sting: 31%.</p>
       <p>That is the pattern. The hard material is <strong>the less famous neighbour of a famous fact</strong>. My read, which the data cannot prove, is that these are topics you meet once as a list and rarely use on the wards, so the famous member of each list crowds out the rest.</p>
       <p>For contrast, the easy end. Cardiac and airway emergencies were answered right 91% of the time on the first try (249 people). Ethics questions about autonomy and refusing treatment: 97% (162 people), the easiest topic in the bank. By whole system the spread is small, from 68% in biostatistics to 79% in ethics. No system is a cliff. The cliffs are inside topics.</p>
