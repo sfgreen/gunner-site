@@ -27,8 +27,20 @@ const ED_ARTICLE_PAGE = path.join(ROOT, 'pages', 'step-2-ck-emergency-medicine.t
 export const BASE = 'https://stepgunner.com';
 export const AUTHOR = 'Danny Varghese';
 
-export const slugOf = (id: string): string => id.replace(/^pw_/, '').replace(/_/g, '-');
-const idOf = (ref: string): string => (ref.startsWith('pw_') ? ref : `pw_${ref.replace(/-/g, '_')}`);
+// Readable URLs where the pathway id is an abbreviation (Danny, 2026-10-22). The
+// editorial file is named by the slug; ids, related lists and ct= keep the id.
+const SLUG_OVERRIDES: Record<string, string> = {
+  pw_ams: 'altered-mental-status',
+  pw_tox: 'overdose',
+  pw_htn: 'hypertensive-emergency',
+};
+const ID_BY_SLUG: Record<string, string> = Object.fromEntries(
+  Object.entries(SLUG_OVERRIDES).map(([id, slug]) => [slug, id]),
+);
+export const slugOf = (id: string): string =>
+  SLUG_OVERRIDES[id.startsWith('pw_') ? id : `pw_${id}`] ?? id.replace(/^pw_/, '').replace(/_/g, '-');
+const idOf = (ref: string): string =>
+  ID_BY_SLUG[ref] ?? (ref.startsWith('pw_') ? ref : `pw_${ref.replace(/-/g, '_')}`);
 export const isProductionBuild = (): boolean => process.env.VERCEL_ENV === 'production';
 
 /** The short name a crumb or a sticky bar uses: "Hyperglycemic crisis: DKA and HHS" reads "DKA and HHS". */
@@ -674,7 +686,7 @@ export function sitemapPathways(): { path: string; lastmod: string | null }[] {
       continue;
     }
     if (!found || found.source !== 'file' || found.ed.signedOff !== true) continue;
-    const file = path.join(PW_DIR, `${slug.replace(/-/g, '_')}.json`);
+    const file = path.join(PW_DIR, `${idOf(slug).replace(/^pw_/, '')}.json`);
     if (!fs.existsSync(file)) continue;
     const p = JSON.parse(fs.readFileSync(file, 'utf8')) as Pathway;
     if (p.status !== 'approved' || slugOf(p.id) !== slug) continue;
