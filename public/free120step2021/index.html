@@ -78,45 +78,59 @@
     border:1px solid var(--border); border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.04); }
   .start-screen h2 { margin-top:0; font-size:22px; color:var(--nav-blue); }
   .start-screen p { color:var(--muted); margin:8px 0 22px; }
-  /* ── Step Gunner surfaces (start bar, intermission pitch, result band) ── */
-  .sg { margin:26px 0 0; border:1px solid var(--border); border-radius:8px; overflow:hidden;
-    background:linear-gradient(180deg, #f7fbff, #f2f7fc); }
-  body.dark .sg { background:linear-gradient(180deg, #16202b, #131b24); }
-  .sg-in { padding:20px 22px; }
-  .sg-k { font-size:11px; text-transform:uppercase; letter-spacing:.07em; font-weight:700;
-    color:var(--accent); margin:0 0 6px; }
-  .sg-h { font-size:19px; font-weight:750; color:var(--nav-blue); margin:0 0 8px; line-height:1.3; }
-  body.dark .sg-h { color:#7fb3e0; }
-  .sg-p { font-size:13.5px; color:var(--muted); margin:0 0 8px; max-width:66ch; }
-  .sg-p b { color:var(--text); font-weight:650; }
-  .sg-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; align-items:center; }
-  .sg-btn { display:inline-flex; flex-direction:column; justify-content:center; min-height:44px;
-    padding:10px 18px; border-radius:7px; background:var(--nav-blue); color:#fff; text-decoration:none;
-    font-weight:700; font-size:13.5px; border:1px solid var(--nav-blue); }
-  body.dark .sg-btn { background:var(--accent); border-color:var(--accent); color:#0b1218; }
-  .sg-btn:hover { background:var(--nav-blue-hi); }
-  .sg-btn small { display:block; font-size:11px; font-weight:500; opacity:.78; margin-top:2px; }
-  .sg-alt { display:inline-flex; align-items:center; min-height:44px; padding:10px 16px; border-radius:7px;
-    color:var(--accent); text-decoration:none; font-weight:650; font-size:13.5px; border:1px solid var(--border); }
-  .sg-alt:hover { border-color:var(--accent); }
-  .sg-fine { font-size:11.5px; color:var(--muted); margin:10px 0 0; }
-  .sg-bar { display:flex; gap:14px; align-items:center; flex-wrap:wrap;
-    margin:22px 0 0; padding:12px 16px; border:1px solid var(--border); border-radius:7px;
-    background:#f7fbff; font-size:13px; color:var(--muted); }
-  body.dark .sg-bar { background:#16202b; }
-  .sg-bar .dot { width:7px; height:7px; border-radius:50%; background:var(--accent); flex:none; }
-  .sg-bar .t { flex:1; min-width:260px; }
-  .sg-bar .t b { color:var(--text); font-weight:650; }
-  .sg-bar a { color:var(--accent); font-weight:650; text-decoration:none; white-space:nowrap; }
-  .sg-bar a:hover { text-decoration:underline; }
-  .sg-band { display:flex; margin:12px 0 4px; border:1px solid var(--border);
-    border-radius:7px; overflow:hidden; background:var(--panel); }
-  .sg-band > div { flex:1; padding:10px 12px; border-right:1px solid var(--border); }
-  .sg-band > div:last-child { border-right:0; }
-  .sg-band .bv { font-size:19px; font-weight:800; color:var(--accent);
-    font-variant-numeric:tabular-nums; line-height:1.2; }
-  .sg-band .bl { font-size:10.5px; text-transform:uppercase; letter-spacing:.05em;
-    color:var(--muted); margin-top:2px; }
+  /* Step Gunner surfaces (start bar, intermission pitch, result band), in the
+     stepgunner.com app look: the tokens of styles/globals.css, copied because this
+     static page loads none of the site CSS, and the site's Inter + JetBrains Mono.
+     Light by default, dark with this page's own Dark setting (body.dark). Scoped to
+     .sg and .sg-bar: the exam interface around them is untouched. */
+  .sg, .sg-bar {
+    --sg-card:#ffffff; --sg-card-2:#eef3f9; --sg-ink:#0b1220; --sg-ink-2:#3b4658; --sg-ink-3:#566173;
+    --sg-line:#dde6f1; --sg-line-2:#c5d1e0; --sg-act:#0060df; --sg-act-hov:#004fbf; --sg-on-act:#ffffff;
+    --sg-act-glow:rgba(10,132,255,0.38); --sg-green:#30d158; --sg-ring:rgba(48,209,88,0.18);
+    --sg-shadow-a:rgba(11,18,32,0.06); --sg-shadow-b:rgba(11,18,32,0.10); --sg-focus:#0a6cff;
+    --sg-sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --sg-mono:"JetBrains Mono", ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    font-family:var(--sg-sans); -webkit-font-smoothing:antialiased;
+  }
+  body.dark .sg, body.dark .sg-bar {
+    --sg-card:#0f1524; --sg-card-2:#141b2d; --sg-ink:#eef2f8; --sg-ink-2:#b3bdcc; --sg-ink-3:#8f9aad;
+    --sg-line:#1d2638; --sg-line-2:#2c3850; --sg-act:#0a6fe0; --sg-act-hov:#1a7ff0;
+    --sg-act-glow:rgba(10,132,255,0.45); --sg-shadow-a:rgba(0,0,0,0.30); --sg-shadow-b:rgba(0,0,0,0.45); --sg-focus:#4da3ff;
+  }
+  .sg { margin:24px 0 0; border-radius:20px; overflow:hidden; background:var(--sg-card); color:var(--sg-ink);
+    box-shadow:0 1px 2px var(--sg-shadow-a), 0 12px 32px -16px var(--sg-shadow-b), inset 0 0 0 1px var(--sg-line); }
+  .sg:empty { display:none; }
+  .sg-in { padding:20px 24px; }
+  .sg-k { font:600 13px/1.3 var(--sg-mono); letter-spacing:.08em; text-transform:uppercase; color:var(--sg-ink-3); margin:0 0 8px; }
+  .sg-h { font-size:21px; font-weight:800; letter-spacing:-.02em; line-height:1.25; color:var(--sg-ink); margin:0 0 8px; }
+  .sg-p { font-size:16px; line-height:1.55; color:var(--sg-ink-2); margin:0 0 8px; max-width:66ch; }
+  .sg-p b { color:var(--sg-ink); font-weight:600; }
+  .sg-row { display:flex; gap:8px 12px; flex-wrap:wrap; margin-top:16px; align-items:center; }
+  .sg-btn { display:inline-flex; flex-direction:column; justify-content:center; min-height:44px; padding:8px 20px;
+    border-radius:14px; background:var(--sg-act); color:var(--sg-on-act); text-decoration:none; font-weight:600;
+    font-size:16px; line-height:1.25; box-shadow:0 8px 24px -8px var(--sg-act-glow); transition:background-color 120ms cubic-bezier(.2,.8,.2,1); }
+  .sg-btn:hover { background:var(--sg-act-hov); }
+  .sg-btn small { display:block; font-size:13px; font-weight:500; opacity:.88; margin-top:2px; }
+  .sg-alt { display:inline-flex; align-items:center; min-height:44px; padding:0 16px; border-radius:14px; background:var(--sg-card);
+    color:var(--sg-ink); text-decoration:none; font-weight:600; font-size:16px; box-shadow:inset 0 0 0 1px var(--sg-line-2);
+    transition:box-shadow 120ms cubic-bezier(.2,.8,.2,1); }
+  .sg-alt:hover { box-shadow:inset 0 0 0 1px var(--sg-ink-3); }
+  .sg a:focus-visible, .sg-bar a:focus-visible { outline:2px solid var(--sg-focus); outline-offset:2px; }
+  .sg-fine { font-size:13px; line-height:1.5; color:var(--sg-ink-3); margin:12px 0 0; }
+  .sg-bar { display:flex; gap:8px 12px; align-items:center; flex-wrap:wrap; margin:24px 0 0; padding:8px 8px 8px 16px;
+    border-radius:16px; background:var(--sg-card); box-shadow:inset 0 0 0 1px var(--sg-line); font-size:15px; line-height:1.45; color:var(--sg-ink-2); }
+  .sg-bar .dot { width:8px; height:8px; border-radius:50%; background:var(--sg-green); box-shadow:0 0 0 3px var(--sg-ring); flex:none; }
+  .sg-bar .t { flex:1; min-width:200px; padding:4px 0; }
+  .sg-bar .t b { color:var(--sg-ink); font-weight:600; }
+  .sg-bar a { display:inline-flex; align-items:center; min-height:44px; padding:0 16px; border-radius:12px; background:var(--sg-card);
+    color:var(--sg-ink); text-decoration:none; font-weight:600; white-space:nowrap; box-shadow:inset 0 0 0 1px var(--sg-line-2); }
+  .sg-bar a:hover { box-shadow:inset 0 0 0 1px var(--sg-ink-3); }
+  .sg-band { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); margin:12px 0 8px; border-radius:12px; overflow:hidden;
+    background:var(--sg-card-2); box-shadow:inset 0 0 0 1px var(--sg-line); }
+  .sg-band > div { min-width:0; padding:12px; box-shadow:inset 1px 0 0 var(--sg-line); }
+  .sg-band > div:first-child { box-shadow:none; }
+  .sg-band .bv { font-size:19px; font-weight:800; letter-spacing:-.02em; color:var(--sg-ink); font-variant-numeric:tabular-nums; line-height:1.2; }
+  .sg-band .bl { font:600 13px/1.3 var(--sg-mono); letter-spacing:.04em; text-transform:uppercase; color:var(--sg-ink-3); margin-top:4px; }
   @media (prefers-reduced-motion: reduce) { .sg-btn, .sg-alt { transition:none; } }
   .blk-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin:18px 0 24px; }
   .blk-btn { padding:18px 12px; background:#fff; border:1.5px solid var(--border); border-radius:8px;
@@ -433,6 +447,11 @@
   .up-status.err { color:var(--bad); font-weight:600; }
   .up-note { margin-top:22px; padding-top:16px; border-top:1px solid var(--border); font-size:12px; color:var(--muted); line-height:1.55; }
 </style>
+<!-- The Step Gunner surfaces' type (Inter + JetBrains Mono, as on stepgunner.com),
+     loaded without blocking the first paint of the exam interface. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@500..700&display=swap" media="print" onload="this.media='all'">
 </head>
 <body>
 
@@ -2071,7 +2090,7 @@ window.addEventListener('DOMContentLoaded', () => {
     box.innerHTML = '<p class="sg-h">' + copy.h + '</p><p class="sg-p">' + copy.p + '</p>';
     var row = document.createElement('div');
     row.className = 'sg-row';
-    row.appendChild(storeBtn('intermission'));
+    row.appendChild(storeBtn('mid'));
     box.appendChild(row);
     host.appendChild(box);
   };
@@ -2133,7 +2152,7 @@ window.addEventListener('DOMContentLoaded', () => {
     if (!link) return;
     link.href = SG.storeUrl();
     link.addEventListener('click', function () {
-      SG.track('store_click', { source: SG.CT, location: 'start', ref: SG.referrerHost() });
+      SG.track('store_click', { source: SG.CT, location: 'top', ref: SG.referrerHost() });
     });
   });
 })();

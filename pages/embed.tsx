@@ -56,37 +56,37 @@ function Chart({ core }: { core: CardCore }) {
   const fail = core.fail;
   const actual = core.actual;
 
-  shapes.push(<line key={key()} x1={AX_L} y1={AY} x2={AX_R} y2={AY} stroke="#243040" strokeWidth={1} />);
+  shapes.push(<line key={key()} x1={AX_L} y1={AY} x2={AX_R} y2={AY} className="em-axis" />);
 
   if (actual == null && core.proj) {
     const { low, high, center } = core.proj;
-    shapes.push(<rect key={key()} x={sx(low)} y={34} width={Math.max(4, sx(high) - sx(low))} height={24} rx={6} fill="rgba(240,180,41,.16)" stroke="rgba(240,180,41,.5)" />);
-    shapes.push(<line key={key()} x1={sx(center)} y1={24} x2={sx(center)} y2={AY} stroke="#f0b429" strokeWidth={2} />);
-    shapes.push(<circle key={key()} cx={sx(center)} cy={46} r={4.5} fill="#e08e00" stroke="#ffffff" strokeWidth={1.5} />);
-    shapes.push(<text key={key()} x={sx(center)} y={18} fill="#f0b429" fontSize={12} fontWeight={800} fontFamily="ui-monospace, monospace" textAnchor="middle">{center}</text>);
+    shapes.push(<rect key={key()} x={sx(low)} y={34} width={Math.max(4, sx(high) - sx(low))} height={24} rx={6} className="em-band" />);
+    shapes.push(<line key={key()} x1={sx(center)} y1={24} x2={sx(center)} y2={AY} className="em-mid" />);
+    shapes.push(<circle key={key()} cx={sx(center)} cy={46} r={4.5} className="em-cdot" />);
+    shapes.push(<text key={key()} x={sx(center)} y={18} textAnchor="middle" className="em-val">{center}</text>);
   }
 
   if (actual != null) {
     if (core.proj) {
-      shapes.push(<rect key={key()} x={sx(core.proj.low)} y={40} width={Math.max(4, sx(core.proj.high) - sx(core.proj.low))} height={12} rx={4} fill="rgba(138,151,168,.12)" stroke="rgba(138,151,168,.28)" />);
+      shapes.push(<rect key={key()} x={sx(core.proj.low)} y={40} width={Math.max(4, sx(core.proj.high) - sx(core.proj.low))} height={12} rx={4} className="em-ghost" />);
     }
     const ax = sx(actual);
-    const mc = fail ? '#8a97a8' : '#f0b429';
-    shapes.push(<line key={key()} x1={ax} y1={24} x2={ax} y2={AY} stroke={mc} strokeWidth={2} />);
+    const mc = fail ? 'em-fail' : 'em-hit';
+    shapes.push(<line key={key()} x1={ax} y1={24} x2={ax} y2={AY} className={`em-mark ${mc}`} />);
     if (fail) {
-      shapes.push(<path key={key()} d={`M${ax},40 L${ax + 7},47 L${ax},54 L${ax - 7},47 Z`} fill="#ffffff" stroke={mc} strokeWidth={2} />);
+      shapes.push(<path key={key()} d={`M${ax},40 L${ax + 7},47 L${ax},54 L${ax - 7},47 Z`} className={`em-diamond ${mc}`} />);
     } else {
-      shapes.push(<path key={key()} d={starPath(ax, 46, 7.5)} fill={mc} />);
+      shapes.push(<path key={key()} d={starPath(ax, 46, 7.5)} className={`em-star ${mc}`} />);
     }
-    shapes.push(<text key={key()} x={ax} y={18} fill={mc} fontSize={12} fontWeight={800} fontFamily="ui-monospace, monospace" textAnchor="middle">{actual}</text>);
+    shapes.push(<text key={key()} x={ax} y={18} textAnchor="middle" className={`em-val ${mc}`}>{actual}</text>);
   }
 
   const px = sx(PASS);
-  shapes.push(<line key={key()} x1={px} y1={30} x2={px} y2={AY} stroke="#46d877" strokeWidth={1.2} strokeDasharray="3 3" />);
-  shapes.push(<text key={key()} x={px} y={26} fill="#46d877" fontSize={9} fontFamily="ui-monospace, monospace" textAnchor="middle">PASS {PASS}</text>);
+  shapes.push(<line key={key()} x1={px} y1={30} x2={px} y2={AY} className="em-pass" />);
+  shapes.push(<text key={key()} x={px} y={26} textAnchor="middle" className="em-passl">PASS {PASS}</text>);
 
   [200, 220, 240, 260, 280].forEach((t) => {
-    shapes.push(<text key={key()} x={sx(t)} y={80} fill="#5a6676" fontSize={9} fontFamily="ui-monospace, monospace" textAnchor="middle">{t}</text>);
+    shapes.push(<text key={key()} x={sx(t)} y={84} textAnchor="middle" className="em-tick">{t}</text>);
   });
 
   return <svg viewBox="0 0 480 96" aria-hidden="true">{shapes}</svg>;
@@ -103,17 +103,21 @@ function ScaleChart() {
   const mx = sx(MEAN);
   return (
     <svg viewBox="0 0 480 96" aria-hidden="true">
-      <line x1={AX_L} y1={AY} x2={AX_R} y2={AY} stroke="#243040" strokeWidth={1} />
-      <line x1={mx} y1={36} x2={mx} y2={AY} stroke="#8a97a8" strokeWidth={1.2} strokeDasharray="4 4" />
-      <text x={mx} y={30} fill="#8a97a8" fontSize={9} fontFamily="ui-monospace, monospace" textAnchor="middle">US AVG {MEAN}</text>
-      <line x1={px} y1={30} x2={px} y2={AY} stroke="#46d877" strokeWidth={1.2} strokeDasharray="3 3" />
-      <text x={px} y={26} fill="#46d877" fontSize={9} fontFamily="ui-monospace, monospace" textAnchor="middle">PASS {PASS}</text>
+      <line x1={AX_L} y1={AY} x2={AX_R} y2={AY} className="em-axis" />
+      <line x1={mx} y1={36} x2={mx} y2={AY} className="em-meanl" />
+      <text x={mx} y={30} textAnchor="middle" className="em-meant">US AVG {MEAN}</text>
+      <line x1={px} y1={30} x2={px} y2={AY} className="em-pass" />
+      <text x={px} y={26} textAnchor="middle" className="em-passl">PASS {PASS}</text>
       {[200, 220, 240, 260, 280].map((t) => (
-        <text key={t} x={sx(t)} y={80} fill="#5a6676" fontSize={9} fontFamily="ui-monospace, monospace" textAnchor="middle">{t}</text>
+        <text key={t} x={sx(t)} y={84} textAnchor="middle" className="em-tick">{t}</text>
       ))}
     </svg>
   );
 }
+
+// SF Symbols-style strokes, inline: the widget has no AppShell, so no sprite.
+const IcCheck = () => <svg className="em-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7" /></svg>;
+const IcOut = () => <svg className="em-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16L16 8M9 8h7v7" /></svg>;
 
 type ChipView = { label: string; value: string; kind: 'nbme' | 'uwsa' | 'gold' | 'more' };
 
@@ -174,33 +178,33 @@ function ResultCard({ core, pill, href }: { core: CardCore; pill: Pill; href: st
     : `Step 2 CK ${core.actual}, ${pctText}. Open the Step Gunner readiness predictor.`;
 
   return (
-    <a className="card" href={href} target="_blank" rel="noopener noreferrer" aria-label={aria}>
-      <div className="hd">
-        <div className="eyebrow">{core.heroKicker}</div>
-        <div className={'num' + (core.fail ? ' muted' : '')}>
+    <a className="em-card" href={href} target="_blank" rel="noopener noreferrer" aria-label={aria}>
+      <div className="em-hd">
+        <div className="em-k"><span className="em-dot" aria-hidden="true" />{core.heroKicker}</div>
+        <div className={'em-num' + (core.fail ? ' muted' : '')}>
           {heroBig}
           {heroSmall && <small> {heroSmall}</small>}
         </div>
-        <div className="sub">{subline}</div>
+        <div className="em-sub">{subline}</div>
         {pill && (
-          <div className={'verdict ' + pill.cls}>
-            {pill.cls === 'ok' && <span className="ck">{'✓'} </span>}
+          <div className={'em-verdict ' + pill.cls}>
+            {pill.cls === 'ok' && <IcCheck />}
             {pill.text}
           </div>
         )}
       </div>
 
-      <div className="chart">
-        <div className="tier">{tierLabel}</div>
+      <div className="em-chart">
+        <div className="em-tier">{tierLabel}</div>
         <Chart core={core} />
       </div>
 
       {showChips && (
-        <div className="scores">
-          <div className="slab">{projected ? 'Your practice tests (entered)' : 'Practice tests, tracked to exam day'}</div>
-          <div className="grid">
+        <div className="em-scores">
+          <div className="em-slab">{projected ? 'Your practice tests (entered)' : 'Practice tests, tracked to exam day'}</div>
+          <div className="em-grid">
             {chips.map((c, i) => (
-              <div key={i} className={'chip ' + c.kind}>
+              <div key={i} className={'em-chip ' + c.kind}>
                 {c.kind === 'more' ? (
                   <div className="s more">{c.value}</div>
                 ) : (
@@ -215,10 +219,10 @@ function ResultCard({ core, pill, href }: { core: CardCore; pill: Pill; href: st
         </div>
       )}
 
-      <div className="foot">
-        <div className="disc">A rough range, not a guarantee. It widens the farther your test is from exam day.</div>
-        <div className="brand">
-          <span className="dot" /> Powered by <b>Step Gunner</b> <span className="arr" aria-hidden="true">{'↗'}</span>
+      <div className="em-foot">
+        <div className="em-disc">A rough range, not a guarantee. It widens the farther your test is from exam day.</div>
+        <div className="em-brand">
+          <span className="em-wdot" aria-hidden="true" /><span>Powered by <b>Step Gunner</b></span><IcOut />
         </div>
       </div>
     </a>
@@ -228,20 +232,20 @@ function ResultCard({ core, pill, href }: { core: CardCore; pill: Pill; href: st
 // ---- no-payload / undecodable fallback ----
 function GenericCard({ href }: { href: string }) {
   return (
-    <a className="card" href={href} target="_blank" rel="noopener noreferrer" aria-label="Predict your Step 2 CK score, free. Open the Step Gunner readiness predictor.">
-      <div className="hd">
-        <div className="eyebrow">Free readiness check</div>
-        <div className="headline">Predict your Step 2 CK score, free</div>
-        <div className="sub">Drop in your NBME or UWSA scores and see your projected range, percentile, and trajectory. No sign-up.</div>
+    <a className="em-card" href={href} target="_blank" rel="noopener noreferrer" aria-label="Predict your Step 2 CK score, free. Open the Step Gunner readiness predictor.">
+      <div className="em-hd">
+        <div className="em-k"><span className="em-dot" aria-hidden="true" />Free readiness check</div>
+        <div className="em-headline">Predict your Step 2 CK score, free</div>
+        <div className="em-sub">Drop in your NBME or UWSA scores and see your projected range, percentile, and trajectory. No sign-up.</div>
       </div>
-      <div className="chart">
-        <div className="tier">Where {PASS} passing and the {MEAN} US average sit</div>
+      <div className="em-chart">
+        <div className="em-tier">Where {PASS} passing and the {MEAN} US average sit</div>
         <ScaleChart />
       </div>
-      <div className="foot">
-        <div className="cta">Open the predictor <span className="arr" aria-hidden="true">{'↗'}</span></div>
-        <div className="brand">
-          <span className="dot" /> Powered by <b>Step Gunner</b>
+      <div className="em-foot">
+        <div className="em-go">Open the predictor <IcOut /></div>
+        <div className="em-brand">
+          <span className="em-wdot" aria-hidden="true" /><span>Powered by <b>Step Gunner</b></span>
         </div>
       </div>
     </a>
@@ -255,112 +259,93 @@ export default function Embed({ core, pill, href }: EmbedProps) {
         <title>Step 2 CK readiness | Step Gunner</title>
         <meta name="description" content="A projected Step 2 CK range, percentile, and trajectory from your practice tests. Powered by Step Gunner." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#faf9f6" />
+        <meta key="theme-light" name="theme-color" content="#f4f8fc" media="(prefers-color-scheme: light)" />
+        <meta key="theme-dark" name="theme-color" content="#070a12" media="(prefers-color-scheme: dark)" />
         <meta name="robots" content="noindex, follow" />
       </Head>
 
       {core ? <ResultCard core={core} pill={pill} href={href} /> : <GenericCard href={href} />}
 
+      {/* The widget sits in someone else's page, so it brings the app-look tokens
+          (styles/globals.css, light and dark from the visitor's system) and nothing
+          else: no nav, no footer, no analytics (pages/_app.tsx). */}
       <style jsx global>{`
-        :root {
-          /* Score Report register (light) */
-          --bg: #faf9f6; --bg2: #ffffff; --bg3: #f3f2ee; --card: #ffffff;
-          --ink: #191c23; --dim: #5d6470; --faint: #9aa0ab; --hair: rgba(25,28,35,0.12);
-          --green: #0d9448; --gold: #e08e00; --blue: #2f6fed; --red: #d64545;
-          --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
-          --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
         html, body { overflow-x: hidden; }
         body {
-          background: var(--bg); color: var(--ink); font-family: var(--sans);
-          -webkit-font-smoothing: antialiased;
-          min-height: 100vh; display: flex; align-items: center; justify-content: center;
-          padding: 14px;
+          margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+          padding: 16px; background: var(--bg); color: var(--ink); font-family: var(--f-sans);
         }
-      `}</style>
+        /* The Next root is the flex item: let it shrink, so the card's max-width can hold it to the frame. */
+        #__next { display: flex; justify-content: center; width: 100%; min-width: 0; }
+        .em-card {
+          display: block; width: 480px; max-width: 100%; color: var(--ink); text-decoration: none;
+          background: var(--card); border-radius: var(--r-lg); overflow: hidden;
+          box-shadow: 0 1px 2px var(--shadow-a), 0 16px 40px -16px var(--shadow-b), inset 0 0 0 1px var(--line);
+          transition: box-shadow var(--d-micro) var(--ease);
+        }
+        .em-card:hover { text-decoration: none; box-shadow: 0 1px 2px var(--shadow-a), 0 24px 48px -16px var(--shadow-b), inset 0 0 0 1px var(--line-2); }
+        .em-card:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; }
 
-      <style jsx>{`
-        .card {
-          display: block; width: 480px; max-width: 100%; color: var(--ink);
-          background: linear-gradient(180deg, var(--bg2), var(--card));
-          border: 1px solid var(--hair); border-radius: 20px; overflow: hidden;
-          text-decoration: none; transition: border-color 160ms ease, box-shadow 160ms ease;
-        }
-        .card:hover { border-color: #2b3a4d; box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35); }
-        .card:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
+        .em-hd { padding: 24px 24px 8px; }
+        .em-k { display: flex; align-items: center; gap: 8px; font: 600 13px/1.3 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+        .em-dot { width: 8px; height: 8px; border-radius: 50%; flex: none; background: var(--st-gold); box-shadow: 0 0 0 3px var(--ring-gold); }
+        .em-num { margin: 12px 0 4px; font: 800 58px/1 var(--f-sans); letter-spacing: -.035em; font-variant-numeric: tabular-nums; color: var(--ink); }
+        .em-num.muted { color: var(--ink-3); }
+        .em-num small { font: 700 23px/1 var(--f-sans); letter-spacing: -.01em; color: var(--ink-2); }
+        .em-headline { margin: 12px 0 8px; font: 800 28px/1.15 var(--f-sans); letter-spacing: -.025em; max-width: 20ch; text-wrap: balance; }
+        .em-sub { font: 500 15px/1.5 var(--f-mono); color: var(--ink-2); }
 
-        .hd { padding: 22px 24px 6px; }
-        .eyebrow {
-          font: 600 11px var(--mono); letter-spacing: 0.16em; color: var(--green);
-          text-transform: uppercase;
-        }
-        .num { font: 800 64px/0.95 var(--sans); letter-spacing: -2px; margin: 8px 0 2px; }
-        .num.muted { color: var(--dim); }
-        .num small { font: 700 21px var(--sans); color: var(--dim); letter-spacing: -0.5px; }
-        .headline { font: 800 27px/1.12 var(--sans); letter-spacing: -0.8px; margin: 10px 0 8px; max-width: 20ch; }
-        .sub { font: 600 13px var(--mono); color: var(--dim); line-height: 1.5; }
-        .sub b { color: var(--ink); }
+        .em-verdict { display: inline-flex; align-items: center; gap: 4px; margin-top: 12px; padding: 4px 12px; border-radius: 8px; font: 700 13px/1.5 var(--f-mono); letter-spacing: .04em; }
+        .em-verdict.ok { color: var(--ok); background: var(--wards-tint); }
+        .em-verdict.warn { color: var(--step2); background: var(--step2-tint); }
+        .em-verdict.low { color: var(--bad); background: var(--bad-tint); }
+        .em-ic { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
-        .verdict {
-          display: inline-block; margin-top: 12px; font: 700 12px var(--mono);
-          letter-spacing: 0.04em; padding: 7px 12px; border-radius: 9px;
-        }
-        .verdict .ck { font-weight: 800; }
-        .verdict.ok { color: var(--green); border: 1px solid rgba(70, 216, 119, 0.35); background: rgba(70, 216, 119, 0.07); }
-        .verdict.warn { color: var(--gold); border: 1px solid rgba(240, 180, 41, 0.35); background: rgba(240, 180, 41, 0.07); }
-        .verdict.low { color: var(--red); border: 1px solid rgba(242, 99, 122, 0.35); background: rgba(242, 99, 122, 0.07); }
+        .em-chart { padding: 16px 24px 8px; }
+        .em-tier { margin-bottom: 8px; font: 600 13px/1.3 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+        .em-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+        .em-chart text { font-family: var(--f-mono); }
+        .em-axis { stroke: var(--line-2); stroke-width: 1; }
+        .em-band { fill: var(--step2-tint); stroke: var(--step2); stroke-width: 1; }
+        .em-mid { stroke: var(--step2); stroke-width: 2; }
+        .em-cdot { fill: var(--step2); stroke: var(--card); stroke-width: 1.5; }
+        .em-val { font-size: 15px; font-weight: 800; fill: var(--ink); }
+        .em-ghost { fill: var(--card-2); stroke: var(--line-2); }
+        .em-mark { stroke-width: 2; }
+        .em-mark.em-hit { stroke: var(--step2); }
+        .em-mark.em-fail { stroke: var(--ink-3); }
+        .em-star { fill: var(--step2); }
+        .em-diamond { fill: var(--card); stroke: var(--ink-3); stroke-width: 2; }
+        .em-val.em-fail { fill: var(--ink-3); }
+        .em-pass { stroke: var(--ok); stroke-width: 1.25; stroke-dasharray: 3 3; }
+        .em-passl { font-size: 13px; fill: var(--ok); }
+        .em-meanl { stroke: var(--ink-3); stroke-width: 1.25; stroke-dasharray: 4 4; }
+        .em-meant { font-size: 13px; fill: var(--ink-3); }
+        .em-tick { font-size: 13px; fill: var(--ink-3); }
 
-        .chart { padding: 14px 24px 6px; }
-        .tier {
-          font: 600 10.5px var(--mono); letter-spacing: 0.1em; color: var(--faint);
-          text-transform: uppercase; margin-bottom: 8px;
-        }
-        .chart :global(svg) { width: 100%; height: auto; display: block; }
+        .em-scores { padding: 12px 24px 20px; }
+        .em-slab { margin: 8px 0 12px; font: 600 13px/1.3 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+        .em-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+        .em-chip { display: flex; flex-direction: column; justify-content: center; min-height: 48px; padding: 8px 4px; border-radius: 12px; text-align: center; background: var(--card-2); box-shadow: inset 0 0 0 1px var(--line); }
+        .em-chip .f { font: 600 13px/1.2 var(--f-mono); color: var(--ink-3); }
+        .em-chip .s { margin-top: 4px; font: 800 16px/1.1 var(--f-sans); font-variant-numeric: tabular-nums; color: var(--ink); }
+        .em-chip.uwsa .s { color: var(--key); }
+        .em-chip.gold { background: var(--step2-tint); box-shadow: inset 0 0 0 1px var(--step2); }
+        .em-chip.gold .f, .em-chip.gold .s { color: var(--step2); }
+        .em-chip.more .s.more { font: 700 13px/1 var(--f-mono); color: var(--ink-2); }
 
-        .scores { padding: 12px 24px 18px; }
-        .slab {
-          font: 600 10.5px var(--mono); letter-spacing: 0.12em; color: var(--faint);
-          text-transform: uppercase; margin: 8px 0 10px;
-        }
-        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
-        .chip {
-          background: var(--bg3); border: 1px solid var(--hair); border-radius: 9px;
-          padding: 8px 6px; text-align: center; min-height: 40px;
-          display: flex; flex-direction: column; justify-content: center;
-        }
-        .chip .f { font: 600 9.5px var(--mono); color: var(--faint); letter-spacing: 0.04em; }
-        .chip .s { font: 800 16px var(--sans); margin-top: 2px; }
-        .chip.nbme .s { color: var(--ink); }
-        .chip.uwsa .s { color: var(--blue); }
-        .chip.gold { border-color: rgba(240, 180, 41, 0.4); }
-        .chip.gold .f { color: var(--gold); }
-        .chip.gold .s { color: var(--gold); }
-        .chip.more .s.more { color: var(--dim); font: 700 13px var(--mono); }
+        .em-foot { display: grid; gap: 8px; padding: 16px 24px; box-shadow: inset 0 1px 0 var(--line); }
+        .em-disc { font-size: 13px; line-height: 1.5; color: var(--ink-3); }
+        .em-brand { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); }
+        .em-brand b { color: var(--ink); font-weight: 700; }
+        .em-brand .em-ic { color: var(--ink-3); }
+        .em-wdot { width: 8px; height: 8px; border-radius: 50%; flex: none; background: var(--st-green); box-shadow: 0 0 0 3px var(--ring-green); }
+        .em-go { display: flex; align-items: center; gap: 4px; font: 700 16px/1.3 var(--f-sans); color: var(--key); }
 
-        .foot {
-          border-top: 1px solid var(--hair); padding: 14px 24px;
-          display: flex; flex-direction: column; gap: 8px;
-        }
-        .disc { font: 500 11.5px var(--sans); color: var(--faint); line-height: 1.5; }
-        .brand {
-          display: flex; align-items: center; gap: 7px;
-          font: 500 12px var(--sans); color: var(--dim);
-        }
-        .brand b { color: var(--ink); font-weight: 700; }
-        .brand .dot {
-          width: 8px; height: 8px; border-radius: 50%; background: var(--green);
-          box-shadow: 0 0 9px var(--green); flex: 0 0 auto;
-        }
-        .brand .arr { color: var(--faint); font-size: 12px; }
-        .cta {
-          font: 700 14px var(--sans); color: var(--green); letter-spacing: 0.1px;
-          display: flex; align-items: center; gap: 6px;
-        }
-        .cta .arr { font-size: 13px; }
-
-        @media (prefers-reduced-motion: reduce) {
-          .card { transition: none; }
+        @media (max-width: 400px) {
+          .em-hd { padding: 20px 16px 8px; }
+          .em-chart, .em-scores, .em-foot { padding-left: 16px; padding-right: 16px; }
+          .em-num { font-size: 46px; }
         }
       `}</style>
     </>

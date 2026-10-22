@@ -45,18 +45,23 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
     [link],
   );
 
-  // Ensure the two card faces (DM Sans display + system mono) are resident before
-  // the first paint, else the canvas falls back to a default face.
+  // The card is an image (the PNG export and the on-page preview are one canvas), drawn
+  // in the same face as its OG twin (/api/og): DM Sans from the bundled /og TTFs. The
+  // page itself is Inter, so the face is registered for the canvas only (FontFace),
+  // never as a page stylesheet, and the first paint waits for it.
   useEffect(() => {
     let cancelled = false;
     (async () => {
       try {
-        if ('fonts' in document) {
-          await (document as Document).fonts.ready;
-          await Promise.all(
-            ['800 36px "DM Sans"', '700 25px "DM Sans"', '500 23px "DM Sans"']
-              .map((f) => (document as Document).fonts.load(f).catch(() => undefined)),
-          );
+        if ('fonts' in document && typeof FontFace !== 'undefined') {
+          const fs = (document as Document).fonts;
+          const have = (w: string) => Array.from(fs as unknown as Iterable<FontFace>).some((f) => f.family.replace(/"/g, '') === 'DM Sans' && f.weight === w);
+          await Promise.all([['600', '/og/dmsans-600.ttf'], ['800', '/og/dmsans-800.ttf']].map(async ([w, url]) => {
+            if (have(w)) return;
+            const face = new FontFace('DM Sans', `url(${url})`, { weight: w });
+            fs.add(await face.load());
+          }));
+          await fs.ready;
         }
       } catch { /* fall back to system fonts */ }
       if (!cancelled) setFontsReady(true);
@@ -146,77 +151,76 @@ export default function ScoreShareCard({ entries, actual, status }: Props) {
   const aria = `Step Gunner ${model.kind} card. ${model.heroKicker} ${model.heroValue}. ${model.pctChip}.`;
 
   return (
-    <section className="share" aria-label="Shareable score card">
-      <div className="share-head">
-        <span className="stag">Your share card</span>
-        <span className="shint">Post it to r/step2 or share the link</span>
-      </div>
+    <div className="mk isl">
+      <section className="sheet dark-card tl-share" aria-labelledby="tl-share-h">
+        <div className="sheet-hd">
+          <h2 className="lbl" id="tl-share-h"><span className="dot gold" aria-hidden="true" />Your share card</h2>
+          <span className="lbl">Post it to r/step2 or share the link</span>
+        </div>
+        <div className="sheet-bd">
+          <div className="tl-canvas">
+            <canvas ref={canvasRef} role="img" aria-label={aria} style={{ aspectRatio: `${CARD_W} / ${cardHeight(model)}` }} />
+          </div>
 
-      <div className="canvas-wrap">
-        <canvas ref={canvasRef} role="img" aria-label={aria} style={{ aspectRatio: `${CARD_W} / ${cardHeight(model)}` }} />
-      </div>
+          <div className="tl-acts">
+            {nativeShare ? (
+              <>
+                <button type="button" className="btn btn-ink wide" onClick={shareCard}>
+                  {flash === 'img' ? 'Shared' : 'Share card'}
+                </button>
+                <button type="button" className="btn btn-q" onClick={copyWriteup}>
+                  <Ic n="copy" />{flash === 'text' ? 'Copied' : 'Copy write-up'}
+                </button>
+                <button type="button" className="btn btn-q" onClick={copyLink}>
+                  <Ic n="copy" />{flash === 'link' ? 'Link copied' : 'Copy link'}
+                </button>
+                <button type="button" className="btn btn-q wide" onClick={copyEmbed}>
+                  <Ic n="copy" />{flash === 'embed' ? 'Embed copied' : 'Copy embed'}
+                </button>
+              </>
+            ) : (
+              <>
+                <button type="button" className="btn btn-ink wide" onClick={postToReddit}>
+                  {flash === 'reddit' ? 'Opening r/step2' : 'Post to r/step2'}
+                </button>
+                <button type="button" className="btn btn-q" onClick={shareCard}>
+                  <Ic n="load" />{flash === 'img' ? 'Saved' : 'Download card'}
+                </button>
+                <button type="button" className="btn btn-q" onClick={copyWriteup}>
+                  <Ic n="copy" />{flash === 'text' ? 'Copied' : 'Copy write-up'}
+                </button>
+                <button type="button" className="btn btn-q" onClick={copyLink}>
+                  <Ic n="copy" />{flash === 'link' ? 'Link copied' : 'Copy link'}
+                </button>
+                <button type="button" className="btn btn-q" onClick={copyEmbed}>
+                  <Ic n="copy" />{flash === 'embed' ? 'Embed copied' : 'Copy embed'}
+                </button>
+              </>
+            )}
+          </div>
+          <p className="sr" aria-live="polite">{flash === 'img' && nativeShare ? 'Shared' : flash ? FLASH[flash] : ''}</p>
+          <p className="fine tl-share-fine">
+            {nativeShare
+              ? 'Share card opens your phone share sheet with the card attached. Pick Reddit for an image post, or send it anywhere.'
+              : 'Post to r/step2 downloads your card, copies your write-up, and opens the composer. Switch to Images, drag the card in, and paste your write-up as the first comment.'}
+          </p>
+        </div>
+      </section>
 
-      <div className="actions">
-        {nativeShare ? (
-          <>
-            <button className="act primary wide" onClick={shareCard}>
-              {flash === 'img' ? 'Shared' : 'Share card'}
-            </button>
-            <button className="act" onClick={copyWriteup}>
-              {flash === 'text' ? 'Copied' : 'Copy write-up'}
-            </button>
-            <button className="act ghost" onClick={copyLink}>
-              {flash === 'link' ? 'Link copied' : 'Copy link'}
-            </button>
-            <button className="act ghost wide" onClick={copyEmbed}>
-              {flash === 'embed' ? 'Embed copied' : 'Copy embed'}
-            </button>
-          </>
-        ) : (
-          <>
-            <button className="act primary wide" onClick={postToReddit}>
-              {flash === 'reddit' ? 'Opening r/step2' : 'Post to r/step2'}
-            </button>
-            <button className="act" onClick={shareCard}>
-              {flash === 'img' ? 'Saved' : 'Download card'}
-            </button>
-            <button className="act" onClick={copyWriteup}>
-              {flash === 'text' ? 'Copied' : 'Copy write-up'}
-            </button>
-            <button className="act ghost" onClick={copyLink}>
-              {flash === 'link' ? 'Link copied' : 'Copy link'}
-            </button>
-            <button className="act ghost" onClick={copyEmbed}>
-              {flash === 'embed' ? 'Embed copied' : 'Copy embed'}
-            </button>
-          </>
-        )}
-      </div>
-      <p className="share-fine">
-        {nativeShare
-          ? 'Share card opens your phone share sheet with the card attached. Pick Reddit for an image post, or send it anywhere.'
-          : 'Post to r/step2 downloads your card, copies your write-up, and opens the composer. Switch to Images, drag the card in, and paste your write-up as the first comment.'}
-      </p>
-
-      <style jsx>{`
-        .share { margin-top: 22px; border: 1px solid var(--hair-strong); background: var(--bg-2); border-radius: 16px; padding: 18px; }
-        .share-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
-        .stag { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
-        .shint { font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint); letter-spacing: 0.2px; }
-        .canvas-wrap { display: flex; justify-content: center; }
-        .canvas-wrap :global(canvas) { width: 100%; max-width: 360px; height: auto; display: block; border: 1px solid var(--hair); border-radius: 14px; }
-        .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
-        .act { height: 46px; border-radius: 11px; font-family: var(--mono); font-size: 12.5px; font-weight: 800; letter-spacing: 0.4px; cursor: pointer; border: 1px solid var(--hair-strong); background: var(--bg-3); color: var(--ink); transition: border-color 120ms ease, color 120ms ease; }
-        .act:hover { border-color: var(--ink-dim); }
-        .act:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
-        .act.primary { background: var(--green); color: #05130a; border-color: transparent; box-shadow: 0 6px 22px rgba(70,216,119,0.24); }
-        .act.primary:hover { border-color: transparent; transform: translateY(-1px); }
-        .act.wide { grid-column: 1 / -1; }
-        .act.ghost { background: transparent; color: var(--ink-dim); border-style: dashed; }
-        .act.ghost:hover { color: var(--green); border-color: var(--green); }
-        .share-fine { color: var(--ink-faint); font-size: 12px; line-height: 1.5; margin: 12px 2px 0; }
-        @media (max-width: 380px) { .actions { grid-template-columns: 1fr; } }
+      <style jsx global>{`
+        .mk .tl-share .sheet-hd h2.lbl { display: inline-flex; align-items: center; gap: 8px; color: var(--st-ink-2); }
+        .mk .tl-share .sheet-hd > span.lbl { text-transform: none; letter-spacing: 0; font-weight: 500; }
+        .mk .tl-canvas { display: flex; justify-content: center; }
+        .mk .tl-canvas canvas { display: block; width: 100%; max-width: 360px; height: auto; border-radius: 16px; box-shadow: 0 0 0 1px var(--st-line-2), 0 24px 48px -24px var(--st-shadow); }
+        .mk .tl-acts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 20px; }
+        .mk .tl-acts .btn { width: 100%; font-size: 16px; padding: 0 12px; }
+        .mk .tl-acts .btn.wide { grid-column: 1 / -1; }
+        .mk .tl-share p.tl-share-fine { margin-top: 12px; color: var(--st-ink-3); }
+        @media (max-width: 379px) { .mk .tl-acts { grid-template-columns: minmax(0, 1fr); } }
       `}</style>
-    </section>
+    </div>
   );
 }
+
+const FLASH = { text: 'Copied', link: 'Link copied', img: 'Saved', reddit: 'Opening r/step2', embed: 'Embed copied' } as const;
+const Ic = ({ n }: { n: 'copy' | 'load' }) => <svg className="ic sm" aria-hidden="true"><use href={`#i-${n}`} /></svg>;
