@@ -58,7 +58,7 @@ export default function ReadinessCheck({ surface, initial, title = 'Your practic
             <p className="lbl">Projected Step 2 CK</p>
             {proj ? (
               <>
-                <p className="range"><span className="num">{proj.low}</span><span className="to">to</span><span className="num">{proj.high}</span></p>
+                <p className="range"><span className="num">{proj.low}</span><span className="to"> to </span><span className="num">{proj.high}</span></p>
                 <ul className="rs-chips">
                   <li className="ok">most likely {proj.center}</li>
                   <li className="pc">{ordinal(percentile(proj.center))} percentile</li>

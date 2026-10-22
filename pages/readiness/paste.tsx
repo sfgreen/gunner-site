@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { AppShell, Icon } from '../../components/app';
 import { useMemo, useState } from 'react';
 import { parseScoreList } from '../../lib/parseScores';
 import {
@@ -89,226 +90,179 @@ export default function Paste() {
       <Head>
         <title>Paste to projection</title>
         <meta name="robots" content="noindex, nofollow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>
 
-      <div className="page">
-        <header>
-          <h1>Paste to projection</h1>
-          <p>
-            Paste a score list from a thread. The projection uses the same model as{' '}
-            <a href="/readiness">the calculator</a>, so the number matches.
-            <button type="button" className="lnk" onClick={() => setRaw(SAMPLE)}>load an example</button>
-          </p>
-        </header>
+      <AppShell campaign="readiness_paste" section={null}>
+        <div className="mk isl">
+          <div className="wrap ps-wrap">
+            <header className="art-hd ps-hd">
+              <h1 className="h-1 ps-h1">Paste to projection</h1>
+              <p className="stand">
+                Paste a score list from a thread. The projection uses the same model as{' '}
+                <a href="/readiness">the calculator</a>, so the number matches.
+                <button type="button" className="ps-ex" onClick={() => setRaw(SAMPLE)}>load an example</button>
+              </p>
+            </header>
 
-        <div className="cols">
-          <section>
-            <label className="lbl" htmlFor="in">Their scores</label>
-            <textarea
-              id="in"
-              value={raw}
-              onChange={(e) => setRaw(e.target.value)}
-              placeholder={'NBME 11: 220\nNBME 12: 224\nUWSA 2: 237'}
-              spellCheck={false}
-            />
+            <div className="ps-cols">
+              <section className="sheet ps-col" aria-label="Their scores">
+                <div className="sheet-bd">
+                  <label className="lbl ps-lab" htmlFor="in">Their scores</label>
+                  <textarea
+                    id="in"
+                    className="ps-ta"
+                    value={raw}
+                    onChange={(e) => setRaw(e.target.value)}
+                    placeholder={'NBME 11: 220\nNBME 12: 224\nUWSA 2: 237'}
+                    spellCheck={false}
+                  />
 
-            <div className="opts">
-              <label className="opt">
-                <span>Actual score, if they reported one</span>
-                <input
-                  inputMode="numeric"
-                  value={actual}
-                  placeholder="leave blank"
-                  onChange={(e) => setActual(e.target.value.replace(/[^0-9]/g, '').slice(0, 3))}
-                />
-              </label>
-              <label className="opt wide">
-                <span>Closing line</span>
-                <input value={footer} onChange={(e) => setFooter(e.target.value)} />
-              </label>
-            </div>
-          </section>
-
-          <section>
-            <label className="lbl" htmlFor="out">
-              Reply
-              {output && (
-                <button type="button" className={'copy' + (copied ? ' done' : '')} onClick={copy}>
-                  {copied ? 'Copied' : 'Copy'}
-                </button>
-              )}
-            </label>
-            <textarea id="out" readOnly value={output} placeholder="Output appears here." spellCheck={false} />
-
-            {shareLink && (
-              <div className="link">
-                <label className="tog">
-                  <input type="checkbox" checked={usePrefill} onChange={(e) => setUsePrefill(e.target.checked)} />
-                  <span>Close with a link that pre-fills their scores</span>
-                </label>
-                <div className="linkrow">
-                  <code>{shareLink.slice(0, 46)}...</code>
-                  <button type="button" className={'copy sm' + (copiedLink ? ' done' : '')} onClick={copyLink}>
-                    {copiedLink ? 'Copied' : 'Copy link'}
-                  </button>
-                  <a href={shareLink} target="_blank" rel="noreferrer" className="open">open</a>
+                  <div className="ps-opts">
+                    <label className="ps-opt">
+                      <span className="lbl">Actual score, if they reported one</span>
+                      <input
+                        className="inp"
+                        inputMode="numeric"
+                        value={actual}
+                        placeholder="leave blank"
+                        onChange={(e) => setActual(e.target.value.replace(/[^0-9]/g, '').slice(0, 3))}
+                      />
+                    </label>
+                    <label className="ps-opt wide">
+                      <span className="lbl">Closing line</span>
+                      <input className="inp txt" value={footer} onChange={(e) => setFooter(e.target.value)} />
+                    </label>
+                  </div>
                 </div>
+              </section>
+
+              <section className="sheet ps-col" aria-label="Reply">
+                <div className="sheet-bd">
+                  <div className="ps-lab">
+                    <label className="lbl" htmlFor="out">Reply</label>
+                    {output && (
+                      <button type="button" className="btn btn-q ps-copy" onClick={copy}>
+                        <Icon name={copied ? 'check' : 'copy'} sm />{copied ? 'Copied' : 'Copy'}
+                      </button>
+                    )}
+                  </div>
+                  <textarea id="out" className="ps-ta ps-out" readOnly value={output} placeholder="Output appears here." spellCheck={false} />
+
+                  {shareLink && (
+                    <div className="ps-link">
+                      <label className="ps-tog">
+                        <input type="checkbox" checked={usePrefill} onChange={(e) => setUsePrefill(e.target.checked)} />
+                        <span>Close with a link that pre-fills their scores</span>
+                      </label>
+                      <div className="ps-linkrow">
+                        <code>{shareLink.slice(0, 46)}...</code>
+                        <button type="button" className="btn btn-q ps-copy" onClick={copyLink}>
+                          <Icon name={copiedLink ? 'check' : 'copy'} sm />{copiedLink ? 'Copied' : 'Copy link'}
+                        </button>
+                        <a href={shareLink} target="_blank" rel="noreferrer" className="lnk">open</a>
+                      </div>
+                    </div>
+                  )}
+                  <p className="sr" aria-live="polite">{copied || copiedLink ? 'Copied' : ''}</p>
+
+                  {proj && (
+                    <ul className="ps-meta">
+                      <li><b>{proj.low} to {proj.high}</b></li>
+                      <li>midpoint {proj.center}</li>
+                      <li>{ordinal(percentile(proj.center))} %ile</li>
+                      <li>{shortTier(proj.tier)} band, {'±'}{proj.band}</li>
+                      {proj.lowAnchor && <li className="warn"><Icon name="warn" sm />low anchor, widened</li>}
+                      {proj.low < PASS && <li className="warn"><Icon name="warn" sm />straddles the {PASS} pass line</li>}
+                    </ul>
+                  )}
+                </div>
+              </section>
+            </div>
+
+            {/* A dropped form silently changes the anchor, so anything not
+                understood is shown loudly rather than swallowed. */}
+            {(parsed.unparsed.length > 0 || parsed.unsupported.length > 0) && (
+              <div className="ps-flags">
+                {parsed.unparsed.length > 0 && (
+                  <aside className="trap">
+                    <p className="lbl"><Icon name="warn" sm />Not understood, check before posting</p>
+                    <ul className="ps-fl">{parsed.unparsed.map((l) => <li key={l}>{l}</li>)}</ul>
+                  </aside>
+                )}
+                {parsed.unsupported.length > 0 && (
+                  <aside className="ps-skip">
+                    <p className="lbl">Skipped on purpose, the model does not carry these</p>
+                    <ul className="ps-fl">{parsed.unsupported.map((l) => <li key={l}>{l}</li>)}</ul>
+                  </aside>
+                )}
               </div>
             )}
 
-            {proj && (
-              <div className="meta">
-                <span><b>{proj.low} to {proj.high}</b></span>
-                <span>midpoint {proj.center}</span>
-                <span>{ordinal(percentile(proj.center))} %ile</span>
-                <span>{shortTier(proj.tier)} band, {'±'}{proj.band}</span>
-                {proj.lowAnchor && <span className="warn">low anchor, widened</span>}
-                {proj.low < PASS && <span className="warn">straddles the {PASS} pass line</span>}
-              </div>
-            )}
-          </section>
-        </div>
-
-        {/* A dropped form silently changes the anchor, so anything not
-            understood is shown loudly rather than swallowed. */}
-        {(parsed.unparsed.length > 0 || parsed.unsupported.length > 0) && (
-          <div className="flags">
-            {parsed.unparsed.length > 0 && (
-              <div className="flag bad">
-                <b>Not understood, check before posting</b>
-                <ul>{parsed.unparsed.map((l) => <li key={l}>{l}</li>)}</ul>
-              </div>
-            )}
-            {parsed.unsupported.length > 0 && (
-              <div className="flag">
-                <b>Skipped on purpose, the model does not carry these</b>
-                <ul>{parsed.unsupported.map((l) => <li key={l}>{l}</li>)}</ul>
-              </div>
+            {parsed.entries.length > 0 && (
+              <details className="otp ps-check">
+                <summary><span className="lbl">What it read ({parsed.entries.length} forms, order matters when undated)</span><Icon name="chev" sm /></summary>
+                <div className="tbl-w" role="region" aria-label="What it read" tabIndex={0}>
+                  <table className="tbl">
+                    <caption>What it read</caption>
+                    <thead><tr><th scope="col" className="n">#</th><th scope="col">Form</th><th scope="col" className="n">Score</th><th scope="col" className="n">Days out</th><th scope="col">From</th></tr></thead>
+                    <tbody>
+                      {parsed.entries.map((e, i) => (
+                        <tr key={e.raw + i}>
+                          <td className="n">{i + 1}</td>
+                          <th scope="row">{e.form}</th>
+                          <td className="n">{e.score}</td>
+                          <td className="n">{e.days || <span className="ps-dim">none</span>}</td>
+                          <td className="ps-dim">{e.raw}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="fine ps-fine">
+                  With no dates the model treats the order you pasted as oldest to newest, and pins a
+                  UWSA to the median NBME recency. If they listed newest first, reverse it.
+                </p>
+              </details>
             )}
           </div>
-        )}
-
-        {parsed.entries.length > 0 && (
-          <details className="check">
-            <summary>What it read ({parsed.entries.length} forms, order matters when undated)</summary>
-            <table>
-              <thead><tr><th>#</th><th>Form</th><th className="r">Score</th><th className="r">Days out</th><th>From</th></tr></thead>
-              <tbody>
-                {parsed.entries.map((e, i) => (
-                  <tr key={e.raw + i}>
-                    <td className="n">{i + 1}</td>
-                    <td>{e.form}</td>
-                    <td className="r n">{e.score}</td>
-                    <td className="r n">{e.days || <span className="dim">none</span>}</td>
-                    <td className="dim">{e.raw}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <p className="fine">
-              With no dates the model treats the order you pasted as oldest to newest, and pins a
-              UWSA to the median NBME recency. If they listed newest first, reverse it.
-            </p>
-          </details>
-        )}
-      </div>
+        </div>
+      </AppShell>
 
       <style jsx global>{`
-        :root {
-          --bg: #faf9f6; --bg-2: #ffffff; --bg-3: #f3f2ee;
-          --hair: rgba(25,28,35,0.10); --hair-strong: rgba(25,28,35,0.17);
-          --ink: #191c23; --ink-dim: #5d6470; --ink-faint: #9aa0ab;
-          --green: #0d9448; --gold: #b87400; --red: #c0392b;
-          --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-          --sans: 'DM Sans', -apple-system, system-ui, sans-serif;
-        }
-        * { box-sizing: border-box; }
-        body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); }
-      `}</style>
-      <style jsx>{`
-        .page { max-width: 1080px; margin: 0 auto; padding: 30px 20px 70px; }
-        header { margin-bottom: 20px; }
-        h1 { font-size: 26px; letter-spacing: -0.02em; margin: 0 0 5px; }
-        header p { color: var(--ink-dim); margin: 0; font-size: 15px; }
-        header a { color: #2f6fed; }
-        .lnk {
-          background: none; border: none; color: #2f6fed; font: inherit;
-          cursor: pointer; padding: 0 0 0 8px; text-decoration: underline;
-        }
-        .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-        .lbl {
-          display: flex; align-items: center; justify-content: space-between;
-          font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em;
-          text-transform: uppercase; color: var(--ink-faint); font-weight: 700;
-          margin-bottom: 6px; min-height: 26px;
-        }
-        textarea {
-          width: 100%; min-height: 260px; font-family: var(--mono); font-size: 14px;
-          line-height: 1.62; padding: 13px 15px; border-radius: 9px;
-          border: 1px solid var(--hair-strong); background: var(--bg-2); color: var(--ink);
-          resize: vertical;
-        }
-        textarea:focus { outline: 2px solid #2f6fed; outline-offset: 1px; }
-        #out { background: var(--bg-3); }
-        .copy {
-          font-family: var(--sans); font-size: 12px; font-weight: 700; letter-spacing: 0.02em;
-          text-transform: none; padding: 5px 13px; border-radius: 6px; cursor: pointer;
-          background: var(--ink); color: var(--bg); border: 1px solid var(--ink);
-        }
-        .copy.done { background: var(--green); border-color: var(--green); }
-        .opts { display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
-        .opt { display: flex; flex-direction: column; gap: 5px; flex: 0 0 auto; }
-        .opt.wide { flex: 1 1 260px; }
-        .opt span {
-          font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
-          text-transform: uppercase; color: var(--ink-faint); font-weight: 700;
-        }
-        .opt input {
-          font: inherit; font-size: 14px; padding: 8px 11px; border-radius: 7px;
-          border: 1px solid var(--hair-strong); background: var(--bg-2); color: var(--ink);
-        }
-        .link { margin-top: 12px; }
-        .tog { display: flex; align-items: center; gap: 7px; font-size: 13.5px; cursor: pointer; }
-        .tog input { width: 15px; height: 15px; accent-color: var(--green); }
-        .linkrow { display: flex; align-items: center; gap: 8px; margin-top: 7px; flex-wrap: wrap; }
-        .linkrow code {
-          font-family: var(--mono); font-size: 11.5px; color: var(--ink-dim);
-          background: var(--bg-3); border: 1px solid var(--hair); border-radius: 6px; padding: 4px 8px;
-        }
-        .copy.sm { font-size: 11.5px; padding: 4px 10px; }
-        .open { font-size: 12.5px; color: #2f6fed; }
-        .meta {
-          display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 10px;
-          font-family: var(--mono); font-size: 12px; color: var(--ink-dim);
-        }
-        .meta .warn { color: var(--gold); }
-        .flags { display: grid; gap: 10px; margin-top: 18px; }
-        .flag {
-          border-left: 3px solid var(--gold); background: rgba(224,142,0,0.08);
-          padding: 11px 15px; border-radius: 0 8px 8px 0; font-size: 14px;
-        }
-        .flag.bad { border-left-color: var(--red); background: rgba(192,57,43,0.08); }
-        .flag ul { margin: 6px 0 0; padding-left: 18px; font-family: var(--mono); font-size: 12.5px; }
-        .check { margin-top: 18px; }
-        .check summary {
-          cursor: pointer; font-family: var(--mono); font-size: 11.5px;
-          letter-spacing: 0.06em; color: var(--ink-dim);
-        }
-        table { border-collapse: collapse; width: 100%; margin-top: 10px; font-size: 14px; }
-        th {
-          text-align: left; font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
-          text-transform: uppercase; color: var(--ink-faint); padding: 8px 10px;
-          border-bottom: 1px solid var(--hair-strong);
-        }
-        td { padding: 7px 10px; border-bottom: 1px solid var(--hair); }
-        .r { text-align: right; }
-        .n { font-variant-numeric: tabular-nums; }
-        .dim { color: var(--ink-faint); }
-        .fine { font-size: 13px; color: var(--ink-dim); margin: 10px 0 0; }
-        @media (max-width: 760px) { .cols { grid-template-columns: 1fr; } textarea { min-height: 190px; } }
+        .mk .ps-wrap { padding-top: 24px; padding-bottom: 88px; }
+        .mk .ps-h1 { font-size: 38px; }
+        .mk .ps-hd .stand a { color: var(--key); text-decoration: underline; }
+        .mk .ps-ex { display: inline-flex; align-items: center; min-height: 44px; margin-left: 8px; padding: 0 4px; border: 0; background: none; cursor: pointer; color: var(--key); font: inherit; text-decoration: underline; text-underline-offset: .2em; }
+        .mk .ps-cols { display: grid; gap: 16px; margin-top: 32px; }
+        .mk .ps-col { min-width: 0; }
+        .mk .ps-lab { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 44px; margin-bottom: 8px; }
+        .mk .ps-ta { display: block; width: 100%; min-height: 240px; padding: 12px 16px; border: 0; border-radius: var(--r-sm); background: var(--card); color: var(--ink); box-shadow: inset 0 0 0 1px var(--ctl); font: 500 16px/1.6 var(--f-mono); font-feature-settings: "zero" 1; resize: vertical; }
+        .mk .ps-ta::placeholder { color: var(--ink-3); opacity: 1; }
+        .mk .ps-ta:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+        .mk .ps-out { background: var(--card-2); }
+        .mk .ps-copy { min-height: 44px; padding: 0 16px; font-size: 16px; }
+        .mk .ps-opts { display: grid; gap: 12px; margin-top: 16px; }
+        .mk .ps-opt { display: grid; gap: 8px; min-width: 0; }
+        .mk .ps-opt .inp { font-size: 16px; }
+        .mk .ps-link { margin-top: 16px; }
+        .mk .ps-tog { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 16px; cursor: pointer; }
+        .mk .ps-tog input { width: 20px; height: 20px; accent-color: var(--act); }
+        .mk .ps-linkrow { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 4px; }
+        .mk .ps-linkrow code { min-width: 0; padding: 4px 8px; border-radius: 8px; background: var(--card-2); box-shadow: inset 0 0 0 1px var(--line); font: 500 13px/1.5 var(--f-mono); color: var(--ink-2); overflow-wrap: anywhere; }
+        .mk .ps-meta { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 16px; font: 500 15px/1.5 var(--f-mono); color: var(--ink-2); }
+        .mk .ps-meta b { color: var(--ink); }
+        .mk .ps-meta .warn { display: inline-flex; align-items: center; gap: 4px; color: var(--step2); font-weight: 600; }
+        .mk .ps-flags { display: grid; gap: 12px; margin-top: 16px; }
+        .mk .ps-skip { padding: 16px 20px; border-radius: var(--r-md); background: var(--step2-tint); box-shadow: inset 4px 0 0 var(--step2); }
+        .mk .ps-skip .lbl { color: var(--step2); }
+        .mk .ps-fl { margin-top: 8px; display: grid; gap: 4px; font: 500 15px/1.5 var(--f-mono); color: var(--ink); overflow-wrap: anywhere; }
+        .mk .ps-check { margin-top: 16px; }
+        .mk .ps-check summary .lbl { text-transform: none; letter-spacing: .02em; }
+        .mk .ps-check .tbl-w { margin-bottom: 8px; }
+        .mk .ps-dim { color: var(--ink-3); }
+        .mk .ps-fine { padding-bottom: 16px; max-width: 70ch; }
+        @media (min-width: 600px) { .mk .ps-opts { grid-template-columns: minmax(0, 200px) minmax(0, 1fr); } }
+        @media (min-width: 960px) { .mk .ps-cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } .mk .ps-ta { min-height: 300px; } }
       `}</style>
     </>
   );

@@ -1,16 +1,30 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import SiteShell from '../components/SiteShell';
 import type { GetServerSideProps } from 'next';
 import { useState, useEffect, useRef } from 'react';
 import {
-  PASS, PASS_COMFORT, MEAN, GMIN, GMAX, FORMS,
-  percentile, ordinal, gpct, computeReadiness, decodeShare, buildCardCore, ogMeta, SHARE_BASE,
-  type Entry, type Proj, smartDays, examDaysUntil, TAKEN_OPTS, takenIsExact, takenSource, MODEL_VERSION, visitorIdentity } from '../lib/readiness';
+  PASS, PASS_COMFORT, FORMS,
+  percentile, ordinal, computeReadiness, decodeShare, buildCardCore, ogMeta, SHARE_BASE,
+  type Entry, smartDays, examDaysUntil, TAKEN_OPTS, takenIsExact, takenSource, MODEL_VERSION, visitorIdentity } from '../lib/readiness';
 import ScoreShareCard from '../components/ScoreShareCard';
-import { track, referrerHost, appStoreUrl } from '../lib/analytics';
+import { track, referrerHost } from '../lib/analytics';
+import { AppShell, ArticleHeader, Hero, Icon, Stage } from '../components/app';
+import { BeatPitch, ToolStickyBar } from '../components/app/tools/asks';
+import { RangeGauge, Trajectory } from '../components/app/tools/ReadinessViz';
 
-const APP = appStoreUrl('readiness_web');
+// /readiness, the site's main conversion surface, in the app look: the header on the
+// page, the tool in a dark Stage band like the home page's readiness block (the inputs,
+// then the answer under them), the share card and the ask after the result.
+//
+// Behavior is unchanged from the Score Report page: ?e= restores a shared run over
+// local storage, every settled check posts once to /api/readiness (debounced 2.5s,
+// de-duped), readiness_computed fires with it, the return-score nudge, the share card.
+// Store buttons keep their attribution: ct=readiness_web on the App Store URL and
+// source=readiness in GA4, as before; the old `pitch` slot reports as `result` and
+// the phone bar as `sticky` (lib/wards/site.json locs).
+
+const CT = 'readiness_web';
+const SRC = { source: 'readiness' };
 
 type OG = { title: string; desc: string; image: string; url: string };
 
@@ -98,6 +112,8 @@ export default function Readiness({ og }: { og: OG }) {
   const addEntry = () => setEntries((es) => (es.length < 12 ? [...es, { form: '', score: '', days: '' }] : es));
   const removeEntry = (i: number) => setEntries((es) => (es.length > 1 ? es.filter((_, j) => j !== i) : es));
   const onlyNum = (v: string, n: number) => v.replace(/[^0-9]/g, '').slice(0, n);
+  // Visible labels sit on the first row; every later row names its fields for screen readers.
+  const lab = (i: number, t: string) => (i === 0 ? <span className="lbl">{t}</span> : <span className="sr">{t}, test {i + 1}</span>);
 
   return (
     <>
@@ -117,307 +133,260 @@ export default function Readiness({ og }: { og: OG }) {
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={og.image} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#faf9f6" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </Head>
 
-      <SiteShell campaign="readiness" measure="tool">
-        <div className="wrap">
-          <span className="badge">Free readiness check</span>
-          <h1>How ready are you for Step 2 CK?</h1>
-          <p className="sub">Drop in your NBME or UWSA scores and see a projected Step 2 range, percentile, and trajectory. No sign-up.</p>
-
-          <div className="tool">
-            {entries.map((e, i) => (
-              <div className="entry" key={i}>
-                <label className="field">
-                  {i === 0 && <span>Form</span>}
-                  <select value={e.form} onChange={(ev) => setEntry(i, { form: ev.target.value })}>
-                    <option value="">Form</option>
-                    {FORMS.map((f) => <option key={f} value={f}>{f}</option>)}
-                  </select>
-                </label>
-                <label className="field">
-                  {i === 0 && <span>Score</span>}
-                  <input inputMode="numeric" placeholder="248" value={e.score} onChange={(ev) => setEntry(i, { score: onlyNum(ev.target.value, 3) })} />
-                </label>
-                <label className="field when">
-                  {i === 0 && <span>Taken</span>}
-                  {takenIsExact(e.days, e.exact) ? (
-                    <>
-                      <input autoFocus placeholder="Jun 20, or 21" value={e.days}
-                        onChange={(ev) => setEntry(i, { days: ev.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12) })}
-                        onBlur={(ev) => { if (!ev.target.value.trim()) setEntry(i, { exact: false, days: '' }); }} />
-                      {(() => { const d = smartDays(e.days);
-                        return d != null ? <i className="dhint">&asymp;{d}d ago</i> : null; })()}
-                    </>
-                  ) : (
-                    <select value={e.days} style={{ color: e.days === '' ? 'var(--ink-faint)' : undefined }}
-                      onChange={(ev) => { const v = ev.target.value; if (v === 'x') setEntry(i, { exact: true, days: '' }); else setEntry(i, { days: v, exact: false }); }}>
-                      {TAKEN_OPTS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
-                    </select>
-                  )}
-                </label>
-                <button className="rm" aria-label="remove" onClick={() => removeEntry(i)} style={{ visibility: i === 0 ? 'hidden' : 'visible' }}>✕</button>
-              </div>
-            ))}
-            <button className="add" onClick={addEntry}>+ Add another NBME / UWSA</button>
-            <p style={{ fontSize: '12px', color: 'var(--ink-faint)', marginTop: '10px', lineHeight: 1.5 }}>
-              Add roughly when you took each form. A rough pick is plenty; use exact date if you know it. The projection leans on your freshest scores, the ones that best predict test day. Skip it for a rough read.
-            </p>
-
-            <div className="examrow">
-              <label className="field exam">
-                <span>Exam date <em>(opt.)</em></span>
-                <input placeholder="Sep 20, or 32" value={examRaw}
-                  onChange={(ev) => setExamRaw(ev.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12))} />
-                {ed != null ? <i className="dhint">{ed >= 0 ? `\u2248${ed}d out` : `${-ed}d ago`}</i> : null}
-              </label>
-              <p className="examwhy">With an exam date the projection can say how much runway is left, and forms age against the right day.</p>
-            </div>
-
-            {nudge && (
-              <div className="nudge">
-                <b>Been tested since?</b> Add your real score below. It grades our projection in public and tightens the model for the next student.
-              </div>
-            )}
-            <div className="extra">
-              <label className="field">
-                <span>Actual Step 2 <em>(opt.)</em></span>
-                <input inputMode="numeric" placeholder="250" value={actual} onChange={(ev) => setActual(onlyNum(ev.target.value, 3))} />
-              </label>
-              <label className="field">
-                <span>Status line <em>(opt.)</em></span>
-                <input className="txt" type="text" maxLength={60} placeholder="US MD, targeting IM" value={status} onChange={(ev) => setStatus(ev.target.value)} />
-              </label>
-            </div>
-
-            {actualValid ? (
-              <div className="result">
-                {showTrajectory && proj ? <Trajectory dated={dated} proj={proj} /> : proj ? <Gauge proj={proj} /> : null}
-                <div className="rk">Your Step 2 CK</div>
-                <div className={'rv' + (actualNum < PASS ? ' muted' : '')}>{actualNum}</div>
-                <div className="chips">
-                  <span className="chip pctl">{ordinal(percentile(actualNum))} %ile</span>
-                  {actualNum < PASS
-                    ? <span className="chip low">Below {PASS}</span>
-                    : actualNum <= PASS_COMFORT
-                      ? <span className="chip ok">Clears {PASS}</span>
-                      : null}
-                </div>
-                <p className="fine">Your actual score, plotted against your practice trajectory. Percentile vs US first-takers.</p>
-              </div>
-            ) : proj ? (
-              <div className="result">
-                {showTrajectory ? <Trajectory dated={dated} proj={proj} /> : <Gauge proj={proj} />}
-                <div className="rk">Projected Step 2 CK</div>
-                <div className="rv">{proj.low}<span className="d"> to </span>{proj.high}</div>
-                <div className="chips">
-                  <span className="chip pctl">proj. {ordinal(percentile(proj.center))} %ile</span>
-                  <span className="chip">{proj.tier} range</span>
-                  {proj.verdict && <span className={'chip ' + proj.vclass}>{proj.verdict}</span>}
-                </div>
-                <p className="fine">
-                  {showTrajectory
-                    ? 'Green dots are your scores; the gold band is your projected range at exam day. Percentile vs US first-takers. A rough estimate, not a guarantee.'
-                    : 'A rough range, not a guarantee. It widens the farther your test is from exam day. Add another NBME to see your trajectory.'}
-                </p>
-              </div>
-            ) : (
-              <div className="result empty">
-                <div className="emptytitle">Your projection appears here</div>
-                <p className="emptysub">Add an NBME or UWSA score above to see your Step 2 range, percentile, and trajectory.</p>
-              </div>
-            )}
+      <AppShell
+        campaign="readiness"
+       
+        sticky={<ToolStickyBar title="Your forms are the floor." button="Get Step Gunner free" ct={CT} params={SRC} />}
+      >
+        <Hero>
+          {/* The phone bar appears once a range exists and the header has scrolled away. */}
+          <div {...(proj != null ? { 'data-sticky-start': '' } : {})}>
+            <ArticleHeader
+              category="step2"
+              byline={false}
+              eyebrow="Free readiness check"
+              title="How ready are you for Step 2 CK?"
+              accent="Step 2 CK?"
+              dek="Drop in your NBME or UWSA scores and see a projected Step 2 range, percentile, and trajectory. No sign-up."
+            />
           </div>
-          <p className="saved">Your entries stay on this device and are saved anonymously (no name or email) to sharpen these projections. <Link href="/readiness/methodology">How this projection works</Link> &middot; <Link href="/step-2-score-predictor">How it did on a blind test</Link></p>
+        </Hero>
 
-          {canShare && <ScoreShareCard entries={entries} actual={actual} status={status} />}
+        <Stage category="step2" id="check">
+          <div className="mk isl">
+            <section className="sheet dark-card ry-tool" aria-labelledby="ry-tool-h">
+              <div className="sheet-hd">
+                <h2 className="lbl" id="ry-tool-h"><span className="dot gold" aria-hidden="true" />Readiness check</h2>
+              </div>
+              <div className="ry-g">
+                <div className="ry-forms">
+                  <ol className="ry-rows">
+                    {entries.map((e, i) => (
+                      <li className="ry-row" key={i}>
+                        <label className="ry-f ry-form">
+                          {lab(i, 'Form')}
+                          <span className="sel">
+                            <select className={'inp' + (e.form === '' ? ' ry-empty' : '')} value={e.form} onChange={(ev) => setEntry(i, { form: ev.target.value })}>
+                              <option value="">Form</option>
+                              {FORMS.map((f) => <option key={f} value={f}>{f}</option>)}
+                            </select>
+                            <Icon name="chev" sm />
+                          </span>
+                        </label>
+                        <label className="ry-f ry-score">
+                          {lab(i, 'Score')}
+                          <input className="inp" inputMode="numeric" autoComplete="off" placeholder="248" value={e.score} onChange={(ev) => setEntry(i, { score: onlyNum(ev.target.value, 3) })} />
+                        </label>
+                        <label className="ry-f ry-taken">
+                          {lab(i, 'Taken')}
+                          {takenIsExact(e.days, e.exact) ? (
+                            <span className="ry-hintw">
+                              <input className="inp txt" autoFocus autoComplete="off" placeholder="Jun 20, or 21" value={e.days}
+                                onChange={(ev) => setEntry(i, { days: ev.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12) })}
+                                onBlur={(ev) => { if (!ev.target.value.trim()) setEntry(i, { exact: false, days: '' }); }} />
+                              {(() => { const d = smartDays(e.days);
+                                return d != null ? <i className="ry-hint num">&asymp;{d}d ago</i> : null; })()}
+                            </span>
+                          ) : (
+                            <span className="sel">
+                              <select className={'inp' + (e.days === '' ? ' ry-empty' : '')} value={e.days}
+                                onChange={(ev) => { const v = ev.target.value; if (v === 'x') setEntry(i, { exact: true, days: '' }); else setEntry(i, { days: v, exact: false }); }}>
+                                {TAKEN_OPTS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+                              </select>
+                              <Icon name="chev" sm />
+                            </span>
+                          )}
+                        </label>
+                        <button type="button" className="ry-rm" aria-label={`Remove test ${i + 1}`} onClick={() => removeEntry(i)} style={{ visibility: i === 0 ? 'hidden' : 'visible' }}>
+                          <Icon name="x" sm />
+                        </button>
+                      </li>
+                    ))}
+                  </ol>
+                  <button type="button" className="chip ry-add" onClick={addEntry}><Icon name="plus" sm />Add another NBME / UWSA</button>
+                  <p className="fine">
+                    Add roughly when you took each form. A rough pick is plenty; use exact date if you know it. The projection leans on your freshest scores, the ones that best predict test day. Skip it for a rough read.
+                  </p>
+                </div>
 
-          <section className="pitch">
-            <div className="pk">The part you control</div>
-            <h2>Your forms are the floor. The next weeks decide the beat.</h2>
-            <div className="pstat">
-              <div className="ps"><span className="pn">+9</span><span className="plb">median beat</span></div>
-              <div className="ps"><span className="pn">+10 to 11</span><span className="plb">with 3+ weeks of grind</span></div>
-            </div>
-            <p>
-              The gap between practice forms and the real thing is not luck. It is the reps you put in
-              after. Step Gunner runs those weeks: 7,000+ Step 2 CK questions, a projection that moves
-              with your accuracy, and a planner that says exactly what your next form needs.
+                <div className="ry-more">
+                  <div className="ry-exam">
+                    <label className="ry-f">
+                      <span className="lbl">Exam date <em>(opt.)</em></span>
+                      <span className="ry-hintw">
+                        <input className="inp txt" autoComplete="off" placeholder="Sep 20, or 32" value={examRaw}
+                          onChange={(ev) => setExamRaw(ev.target.value.replace(/[^0-9A-Za-z /,-]/g, '').slice(0, 12))} />
+                        {ed != null ? <i className="ry-hint num">{ed >= 0 ? `≈${ed}d out` : `${-ed}d ago`}</i> : null}
+                      </span>
+                    </label>
+                    <p className="fine">With an exam date the projection can say how much runway is left, and forms age against the right day.</p>
+                  </div>
+
+                  {nudge && (
+                    <p className="ry-nudge">
+                      <b>Been tested since?</b> Add your real score below. It grades our projection in public and tightens the model for the next student.
+                    </p>
+                  )}
+                  <div className="ry-extra">
+                    <label className="ry-f">
+                      <span className="lbl">Actual Step 2 <em>(opt.)</em></span>
+                      <input className="inp" inputMode="numeric" autoComplete="off" placeholder="250" value={actual} onChange={(ev) => setActual(onlyNum(ev.target.value, 3))} />
+                    </label>
+                    <label className="ry-f">
+                      <span className="lbl">Status line <em>(opt.)</em></span>
+                      <input className="inp txt" type="text" maxLength={60} placeholder="US MD, targeting IM" value={status} onChange={(ev) => setStatus(ev.target.value)} />
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="ry-res" aria-live="polite">
+                {actualValid ? (
+                  <div className="ry-res-g">
+                    <div className="ry-ans">
+                      <p className="lbl">Your Step 2 CK</p>
+                      <p className={'range' + (actualNum < PASS ? ' ry-muted' : '')}><span className="num">{actualNum}</span></p>
+                      <ul className="ry-tags">
+                        <li>{ordinal(percentile(actualNum))} %ile</li>
+                      </ul>
+                      {actualNum < PASS
+                        ? <p className="ry-verdict low"><Icon name="warn" sm />Below {PASS}</p>
+                        : actualNum <= PASS_COMFORT
+                          ? <p className="ry-verdict ok"><Icon name="checkc" sm />Clears {PASS}</p>
+                          : null}
+                      <p className="fine">Your actual score, plotted against your practice trajectory. Percentile vs US first-takers.</p>
+                    </div>
+                    {proj && (
+                      <div className="ry-viz">
+                        {showTrajectory ? <Trajectory dated={dated} proj={proj} /> : <RangeGauge low={proj.low} high={proj.high} center={proj.center} />}
+                      </div>
+                    )}
+                  </div>
+                ) : proj ? (
+                  <div className="ry-res-g">
+                    <div className="ry-ans">
+                      <p className="lbl">Projected Step 2 CK</p>
+                      <p className="range"><span className="num">{proj.low}</span><span className="to"> to </span><span className="num">{proj.high}</span></p>
+                      <ul className="ry-tags">
+                        <li>proj. {ordinal(percentile(proj.center))} %ile</li>
+                        <li>{proj.tier} range</li>
+                      </ul>
+                      {proj.verdict && (
+                        <p className={'ry-verdict ' + proj.vclass}><Icon name={proj.vclass === 'ok' ? 'checkc' : 'warn'} sm />{proj.verdict}</p>
+                      )}
+                      <p className="fine">
+                        {showTrajectory
+                          ? 'Green dots are your scores; the gold band is your projected range at exam day. Percentile vs US first-takers. A rough estimate, not a guarantee.'
+                          : 'A rough range, not a guarantee. It widens the farther your test is from exam day. Add another NBME to see your trajectory.'}
+                      </p>
+                    </div>
+                    <div className="ry-viz">
+                      {showTrajectory ? <Trajectory dated={dated} proj={proj} /> : <RangeGauge low={proj.low} high={proj.high} center={proj.center} />}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="rep-empty">
+                    <p className="verdict">Your projection appears here</p>
+                    <p>Add an NBME or UWSA score above to see your Step 2 range, percentile, and trajectory.</p>
+                  </div>
+                )}
+              </div>
+            </section>
+
+            <p className="fine ry-saved">
+              Your entries stay on this device and are saved anonymously (no name or email) to sharpen these projections.{' '}
+              <Link href="/readiness/methodology">How this projection works</Link> &middot; <Link href="/step-2-score-predictor">How it did on a blind test</Link>
             </p>
-            <a href={APP} className="btn-store" onClick={() => track('store_click', { source: 'readiness', location: 'pitch', ref: referrerHost() })}><svg className="apple" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg> Get Step Gunner free</a>
-            <div className="ptrust">Free to start. This calculator stays free either way.</div>
-            <div className="ptrust dim">146 tracked reports. The biggest beats belong to students who kept working.</div>
-          </section>
 
-          {proj != null && (
-            <a href={APP} className="msticky" onClick={() => track('store_click', { source: 'readiness', location: 'sticky', ref: referrerHost() })}>Get Step Gunner free</a>
-          )}
-        </div>
-      </SiteShell>
+            <div className={'ry-after' + (canShare ? ' two' : '')}>
+              {canShare && <ScoreShareCard entries={entries} actual={actual} status={status} />}
+              <BeatPitch
+                id="ry-pitch"
+                kicker="The part you control"
+                title="Your forms are the floor. The next weeks decide the beat."
+                stats={[{ v: '+9', l: 'median beat' }, { v: '+10 to 11', l: 'with 3+ weeks of grind' }]}
+                body="The gap between practice forms and the real thing is not luck. It is the reps you put in after. Step Gunner runs those weeks: 6,000+ Step 2 CK questions, a projection that moves with your accuracy, and a planner that says exactly what your next form needs."
+                fine="Free to start. This calculator stays free either way."
+                note="146 tracked reports. The biggest beats belong to students who kept working."
+                ct={CT}
+                params={SRC}
+                end
+              />
+            </div>
+          </div>
+        </Stage>
+      </AppShell>
 
       <style jsx global>{`
-`}</style>
-
-      <style jsx>{`
-        .page { min-height: 100vh; background:
-          radial-gradient(90% 55% at 50% -8%, rgba(13,148,72,0.08), transparent 60%),
-          radial-gradient(56% 22% at 50% 0%, rgba(240,180,41,0.13), transparent 62%), var(--bg); }
-
-        .wrap { padding: 4px 0 30px; }
-        .badge { display: inline-block; font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #b57400; border: 1px solid rgba(224,142,0,0.35); background: rgba(240,180,41,0.10); padding: 6px 15px; border-radius: 999px; }
-        h1 { font-size: 34px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1; margin: 20px 0 10px; }
-        .sub { color: var(--ink-dim); font-size: 16px; margin: 0 0 26px; max-width: 38ch; }
-
-        .tool { border: 1px solid var(--hair-strong); background: var(--bg-2); border-radius: 16px; padding: 18px; }
-        .entry { display: grid; grid-template-columns: 1.15fr 1fr 1fr 28px; gap: 10px; align-items: end; margin-bottom: 12px; }
-        .field span { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: 0.4px; text-transform: uppercase; color: var(--ink-dim); margin-bottom: 7px; white-space: nowrap; }
-        .field em { color: var(--ink-faint); font-style: normal; text-transform: none; letter-spacing: 0; }
-        .field input, .field select { width: 100%; background: var(--bg-3); border: 1px solid var(--hair-strong); border-radius: 10px; color: var(--ink); font-family: var(--mono); font-size: 16px; font-weight: 700; padding: 11px 12px; outline: none; height: 46px; }
-        .field select { appearance: none; -webkit-appearance: none; cursor: pointer; font-size: 13px; }
-        .field input:focus, .field select:focus { border-color: var(--green); }
-        .field input::placeholder { color: var(--ink-faint); font-weight: 500; }
-        .rm { height: 46px; background: transparent; border: 1px solid var(--hair); border-radius: 10px; color: var(--ink-faint); font-size: 12px; cursor: pointer; padding: 0; }
-        .rm:hover { color: var(--red); border-color: rgba(239,109,109,0.4); }
-        .add { width: 100%; margin-top: 2px; background: transparent; border: 1px dashed var(--hair-strong); border-radius: 10px; color: var(--ink-dim); font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: 0.4px; padding: 11px; cursor: pointer; }
-        .add:hover { border-color: var(--green); color: var(--green); }
-
-        .extra { display: grid; grid-template-columns: 150px 1fr; gap: 10px; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--hair); }
-        .extra .field span { white-space: normal; }
-        .field input.txt { font-family: var(--sans); font-weight: 500; font-size: 14px; }
-        @media (max-width: 480px) { .extra { grid-template-columns: 1fr; } }
-
-        .result { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--hair); text-align: center; }
-        .rk { font-family: var(--mono); font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-faint); }
-        .rv { font-family: var(--mono); font-size: 44px; font-weight: 800; letter-spacing: -1.5px; color: var(--gold); line-height: 1.05; margin-top: 4px; }
-        .rv.muted { color: var(--ink-faint); }
-        .rv .d { font-size: 20px; color: var(--ink-dim); font-weight: 600; }
-        .chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 12px 0 4px; }
-        .chip { font-family: var(--mono); font-size: 11px; font-weight: 700; padding: 5px 11px; border-radius: 999px; border: 1px solid var(--hair-strong); color: var(--ink-dim); }
-        .chip.pctl { color: var(--violet); border-color: rgba(175,82,255,0.4); }
-        .chip.ok { color: var(--green); border-color: rgba(13,148,72,0.4); }
-        .chip.warn { color: var(--gold); border-color: rgba(227,181,66,0.4); }
-        .chip.low { color: var(--red); border-color: rgba(239,109,109,0.4); }
-        .fine { color: var(--ink-faint); font-size: 12.5px; line-height: 1.5; margin: 12px auto 0; max-width: 46ch; }
-        .saved { text-align: center; color: var(--ink-faint); font-family: var(--mono); font-size: 10.5px; margin: 14px 0 0; letter-spacing: 0.2px; }
-        .saved :global(a) { color: var(--ink-dim); text-decoration: underline; text-underline-offset: 2px; }
-        .saved :global(a):hover { color: var(--green); }
-        .result.empty { padding: 24px 0 10px; }
-        .emptytitle { font-family: var(--mono); font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--ink-dim); }
-        .emptysub { color: var(--ink-faint); font-size: 13.5px; line-height: 1.55; margin: 9px auto 0; max-width: 40ch; }
-
-        .pitch { margin-top: 34px; background: var(--ink); border-radius: 18px; padding: 24px 22px 22px; color: #ffffff; position: relative; overflow: hidden; }
-        .pitch:before { content: ""; position: absolute; inset: 0; background: radial-gradient(60% 90% at 85% 0%, rgba(240,180,41,0.22), transparent 60%); }
-        .pitch > * { position: relative; }
-        .pk { font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: #f0b429; }
-        .pitch h2 { font-size: 23px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.2; margin: 8px 0 0; max-width: 26ch; color: #ffffff; }
-        .pstat { display: flex; margin-top: 14px; border-top: 1px solid rgba(255,255,255,0.14); padding-top: 12px; max-width: 400px; }
-        .ps { flex: 1; display: flex; flex-direction: column; gap: 3px; }
-        .ps + .ps { border-left: 1px solid rgba(255,255,255,0.14); padding-left: 16px; }
-        .pn { font-family: var(--mono); font-size: 20px; font-weight: 800; color: #f0b429; letter-spacing: -0.5px; }
-        .plb { font-family: var(--mono); font-size: 9px; letter-spacing: 1.2px; text-transform: uppercase; color: #8b94a3; }
-        .pitch p { color: #b7bdc9; font-size: 14px; line-height: 1.6; margin: 12px 0 16px; max-width: 54ch; }
-        .ptrust { font-size: 11.5px; color: #8b94a3; margin-top: 10px; }
-        .ptrust.dim { margin-top: 4px; }
-        .msticky { display: none; }
-        @media (max-width: 560px) {
-          .msticky { position: fixed; left: 16px; right: 16px; bottom: calc(14px + env(safe-area-inset-bottom)); display: flex; justify-content: center; background: var(--ink); color: #ffffff; padding: 15px; border-radius: 999px; font-size: 14px; font-weight: 800; box-shadow: 0 10px 30px rgba(25,28,35,0.35); z-index: 50; }
+        /* .mk .stage-band p (0,2,1) outranks the .mk vocabulary's p classes inside a Stage; restate them. */
+        .mk .ry-tool p.lbl { color: var(--st-ink-3); }
+        .mk .ry-tool p.fine, .mk .ry-tool .fine { color: var(--st-ink-3); }
+        .mk .ry-res p.range { color: var(--st-ink); }
+        .mk .ry-res p.range.ry-muted { color: var(--st-ink-3); }
+        .mk .ry-res p.verdict { color: var(--st-ink); }
+        .mk .ry-tool .sheet-hd h2.lbl { display: inline-flex; align-items: center; gap: 8px; color: var(--st-ink-2); }
+        .mk .ry-g { display: grid; gap: 24px; padding: 20px; }
+        .mk .ry-forms, .mk .ry-more { min-width: 0; display: grid; gap: 16px; align-content: start; }
+        .mk .ry-rows { display: grid; gap: 12px; }
+        .mk .ry-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 44px; grid-template-areas: "form form rm" "score taken taken"; gap: 8px; align-items: end; }
+        .mk .ry-row + .ry-row { padding-top: 12px; box-shadow: inset 0 1px 0 var(--st-line); }
+        .mk .ry-form { grid-area: form; }
+        .mk .ry-score { grid-area: score; }
+        .mk .ry-taken { grid-area: taken; }
+        .mk .ry-rm { grid-area: rm; display: inline-grid; place-items: center; width: 44px; height: 48px; border: 0; border-radius: 12px; background: none; color: var(--st-ink-2); cursor: pointer; }
+        .mk .ry-rm:hover { color: var(--st-ink); box-shadow: inset 0 0 0 1px var(--st-line-2); }
+        .mk .ry-f { display: grid; gap: 8px; min-width: 0; }
+        .mk .ry-f .lbl em { font-style: normal; text-transform: none; letter-spacing: 0; font-weight: 500; }
+        .mk .ry-f .inp { font-size: 18px; }
+        .mk .ry-f .sel select { font-size: 17px; }
+        .mk .dark-card .inp.ry-empty { color: var(--st-ink-3); }
+        .mk .dark-card .inp::placeholder { color: var(--st-ink-3); opacity: 1; }
+        .mk .ry-hintw { position: relative; display: block; }
+        .mk .ry-hintw .inp { padding-right: 88px; }
+        .mk .ry-hint { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-style: normal; font-size: 13px; font-weight: 700; color: var(--st-green); pointer-events: none; white-space: nowrap; }
+        .mk .ry-add { justify-self: start; }
+        .mk .ry-exam { display: grid; gap: 8px; }
+        .mk .ry-nudge { padding: 12px 16px; border-radius: var(--r-md); background: var(--st-ok-tint); box-shadow: inset 0 0 0 1px var(--st-line-2); color: var(--st-ink-2); font-size: 16px; line-height: 1.5; }
+        .mk .ry-nudge b { color: var(--st-green); }
+        .mk .ry-extra { display: grid; gap: 16px; padding-top: 16px; box-shadow: inset 0 1px 0 var(--st-line); }
+        .mk .ry-res { padding: 20px; box-shadow: inset 0 1px 0 var(--st-line); }
+        .mk .ry-res .rep-empty { margin-top: 0; }
+        .mk .ry-res-g { display: grid; gap: 24px; }
+        .mk .ry-ans { min-width: 0; }
+        .mk .ry-ans .range { margin-top: 8px; }
+        .mk .ry-muted { color: var(--st-ink-3); }
+        .mk .ry-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+        .mk .ry-tags li { padding: 4px 12px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--st-line-2); font: 600 15px/1.4 var(--f-mono); color: var(--st-ink); }
+        .mk .ry-verdict { display: flex; align-items: flex-start; gap: 8px; margin-top: 12px; font-weight: 600; font-size: 17px; line-height: 1.4; }
+        .mk .ry-verdict .ic { margin-top: 3px; }
+        .mk .ry-verdict.ok { color: var(--st-green); }
+        .mk .ry-verdict.warn { color: var(--st-gold); }
+        .mk .ry-verdict.low { color: var(--st-red); }
+        .mk .ry-ans .fine { margin-top: 12px; max-width: 46ch; }
+        .mk .ry-viz { min-width: 0; align-self: center; }
+        .mk .ry-saved { margin-top: 16px; color: var(--st-ink-3); max-width: 72ch; }
+        .mk .ry-saved a { color: var(--st-ink); text-decoration: underline; text-decoration-color: var(--st-line-2); text-underline-offset: .2em; }
+        .mk .ry-saved a:hover { text-decoration-color: currentColor; }
+        .mk .ry-after { display: grid; gap: 20px; margin-top: 24px; align-items: start; }
+        @media (min-width: 480px) { .mk .ry-extra { grid-template-columns: minmax(0, 160px) minmax(0, 1fr); } }
+        @media (min-width: 600px) {
+          .mk .ry-row { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr) minmax(0, 1.1fr) 44px; grid-template-areas: "form score taken rm"; }
+          .mk .ry-row + .ry-row { padding-top: 0; box-shadow: none; }
+          .mk .ry-rows { gap: 8px; }
         }
-        .btn-store { display: inline-flex; align-items: center; gap: 9px; background: var(--green); color: #05130a; font-family: var(--mono); font-weight: 800; font-size: 13px; letter-spacing: 0.4px; padding: 13px 20px; border-radius: 12px; box-shadow: 0 6px 26px rgba(13,148,72,0.28); }
-        .btn-store .apple { width: 14px; height: 17px; flex: 0 0 auto; }
-
-
-        .field { position: relative; }
-        .dhint { position: absolute; right: 8px; bottom: 14px; font-family: var(--mono); font-style: normal; font-size: 10px; font-weight: 700; color: var(--green); pointer-events: none; }
-        .examrow { display: flex; gap: 14px; align-items: flex-end; margin-top: 16px; border-top: 1px dashed var(--hair); padding-top: 14px; }
-        .field.exam { max-width: 200px; flex: 0 0 auto; }
-        .examwhy { font-size: 11.5px; color: var(--ink-faint); line-height: 1.5; margin: 0 0 4px; }
-        @media (max-width: 560px) { .examrow { flex-direction: column; align-items: stretch; gap: 8px; } .field.exam { max-width: none; } }
-        .nudge { margin-top: 18px; background: #ecfbf2; border: 1px dashed rgba(13,148,72,0.45); border-radius: 12px; padding: 12px 15px; font-size: 13.5px; color: var(--ink-dim); }
-        .nudge b { color: var(--green); }
-        @media (max-width: 480px) {
-          .entry { grid-template-columns: 1.25fr 0.75fr 1fr 20px; gap: 6px; margin-bottom: 8px; }
-          .field input, .field select { padding: 9px 8px; height: 42px; }
-          .field span { font-size: 8.5px; margin-bottom: 5px; }
-          .rm { width: 20px; }
+        @media (min-width: 760px) { .mk .ry-g, .mk .ry-res { padding: 24px 28px; } }
+        @media (min-width: 960px) {
+          .mk .ry-g { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: 40px; }
+          .mk .ry-more { padding-left: 40px; box-shadow: inset 1px 0 0 var(--st-line); }
+          .mk .ry-extra { grid-template-columns: minmax(0, 1fr); }
+          .mk .ry-res-g { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); column-gap: 40px; align-items: center; }
+          .mk .ry-after.two { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+          .mk .ry-after.two .tl-beat { grid-template-columns: minmax(0, 1fr); }
         }
       `}</style>
     </>
-  );
-}
-
-// Always-on range gauge: the projected band on a 205-275 scale with pass + mean markers.
-function Gauge({ proj }: { proj: Proj }) {
-  return (
-    <div className="gauge">
-      <div className="track">
-        <div className="band" style={{ left: gpct(proj.low) + '%', width: (gpct(proj.high) - gpct(proj.low)) + '%' }} />
-        <div className="mk pass" style={{ left: gpct(PASS) + '%' }} />
-        <div className="mk mean" style={{ left: gpct(MEAN) + '%' }} />
-        <div className="lbl pass" style={{ left: gpct(PASS) + '%' }}>{PASS} pass</div>
-        <div className="lbl mean" style={{ left: gpct(MEAN) + '%' }}>avg {MEAN}</div>
-      </div>
-      <div className="scale"><span>{GMIN}</span><span>{GMAX}</span></div>
-      <style jsx>{`
-        .gauge { margin: 0 auto 18px; max-width: 340px; }
-        .track { position: relative; height: 12px; background: var(--bg-3); border: 1px solid var(--hair); border-radius: 999px; margin-top: 30px; }
-        .band { position: absolute; top: -1px; bottom: -1px; background: linear-gradient(90deg, rgba(227,181,66,0.5), var(--gold)); border-radius: 999px; box-shadow: 0 0 14px rgba(227,181,66,0.4); }
-        .mk { position: absolute; top: -4px; width: 2px; height: 20px; transform: translateX(-1px); }
-        .mk.pass { background: var(--red); } .mk.mean { background: var(--ink-dim); }
-        .lbl { position: absolute; top: -26px; transform: translateX(-50%); font-family: var(--mono); font-size: 8.5px; letter-spacing: 0.4px; white-space: nowrap; }
-        .lbl.pass { color: var(--red); } .lbl.mean { color: var(--ink-dim); }
-        .scale { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 9px; color: var(--ink-faint); margin-top: 8px; }
-      `}</style>
-    </div>
-  );
-}
-
-// Trajectory chart: real scores over days-before-exam, projected to exam day, with band + refs.
-function Trajectory({ dated, proj }: { dated: { s: number; d: number; form: string }[]; proj: Proj }) {
-  const pts = [...dated].sort((a, b) => b.d - a.d);
-  const maxD = Math.max(pts[0].d, 1);
-  const W = 340, H = 182, L = 30, R = 322, T = 20, B = 142;
-  const allS = pts.map((p) => p.s).concat([proj.low, proj.high, PASS]);
-  const yMin = Math.min(...allS) - 4, yMax = Math.max(...allS) + 4;
-  const xForD = (d: number) => L + ((maxD - d) / maxD) * (R - L);
-  const yForS = (s: number) => B - ((s - yMin) / (yMax - yMin)) * (B - T);
-  const line = pts.map((p) => `${xForD(p.d)},${yForS(p.s)}`).join(' ');
-  const last = pts[pts.length - 1];
-  const refs = [PASS, MEAN].filter((v) => v > yMin && v < yMax);
-  const shortForm = (f: string) => f.replace('NBME ', 'N').replace('UWSA ', 'U') || '';
-
-  return (
-    <div className="chart">
-      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label="Your NBME scores over time, projected to exam day">
-        {refs.map((v) => (
-          <g key={v}>
-            <line x1={L} y1={yForS(v)} x2={R} y2={yForS(v)} stroke={v === PASS ? 'rgba(239,109,109,0.35)' : '#2a3038'} strokeWidth={1} strokeDasharray="4 3" />
-            <text x={R} y={yForS(v) - 3} fill={v === PASS ? '#ef6d6d' : '#5c636e'} fontFamily="ui-monospace, monospace" fontSize={7.5} textAnchor="end">{v === PASS ? `PASS ${PASS}` : `AVG ${MEAN}`}</text>
-          </g>
-        ))}
-        <path d={`M${xForD(last.d)},${yForS(last.s)} L${R},${yForS(proj.high)} L${R},${yForS(proj.low)} Z`} fill="rgba(227,181,66,0.13)" />
-        <polyline points={line} fill="none" stroke="#0d9448" strokeWidth={2.2} />
-        <line x1={xForD(last.d)} y1={yForS(last.s)} x2={R} y2={yForS(proj.center)} stroke="#e3b542" strokeWidth={2.2} strokeDasharray="5 4" opacity={0.85} />
-        {pts.map((p, i) => (
-          <g key={i}>
-            <circle cx={xForD(p.d)} cy={yForS(p.s)} r={4} fill="#0d9448" stroke="#ffffff" strokeWidth={1.5} />
-            <text x={xForD(p.d)} y={yForS(p.s) - 16} fill="#5c636e" fontFamily="ui-monospace, monospace" fontSize={6.5} textAnchor="middle">{shortForm(p.form)}</text>
-            <text x={xForD(p.d)} y={yForS(p.s) - 8} fill="#191c23" fontFamily="ui-monospace, monospace" fontSize={9} fontWeight={800} textAnchor="middle">{p.s}</text>
-            <text x={xForD(p.d)} y={B + 13} fill="#9aa1ab" fontFamily="ui-monospace, monospace" fontSize={7.5} textAnchor="middle">{p.d}d</text>
-          </g>
-        ))}
-        <circle cx={R} cy={yForS(proj.center)} r={4.5} fill="none" stroke="#e3b542" strokeWidth={2} />
-        <text x={R} y={B + 13} fill="#e3b542" fontFamily="ui-monospace, monospace" fontSize={7.5} fontWeight={700} textAnchor="middle">EXAM</text>
-        <text x={W / 2} y={H - 2} fill="#5c636e" fontFamily="ui-monospace, monospace" fontSize={7} letterSpacing={1} textAnchor="middle">DAYS BEFORE EXAM</text>
-      </svg>
-      <style jsx>{`
-        .chart { margin: 0 auto 16px; max-width: 360px; }
-        .chart svg { display: block; width: 100%; height: auto; }
-      `}</style>
-    </div>
   );
 }
 
