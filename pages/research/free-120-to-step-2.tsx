@@ -42,7 +42,7 @@ export default function FreeOneTwenty() {
       eyebrow="Research"
       title="What a Free 120 percentage is actually worth"
       lede={<>215 students who posted a current-form Free 120 percentage and then a real Step 2 score. The conversion table nobody publishes, and the reason most people get nothing out of it.</>}
-      crumb={[{ href: '/free120', label: 'Free 120' }, { href: '/research/free-120-to-step-2', label: 'Research' }]}
+      crumb={[{ href: '/free120', label: 'Free 120' }, { href: '/research', label: 'Research' }]}
       metaTitle="Free 120 to Step 2 CK Score: Conversion Table from 215 Real Reports"
       metaDesc={desc}
       campaign={CAMPAIGN}
@@ -120,7 +120,7 @@ export default function FreeOneTwenty() {
       </section>
 
       <h2>1. The table nobody publishes</h2>
-      <p>Every thread about the Free 120 ends the same way: it is not predictive, do not read into it. Nobody checks, because checking needs a set of people who posted a percentage and then came back with a real score. That set exists on r/step2, so I parsed it. 269 students, 3,737 practice scores, and 215 of them with a current-form Free 120 percentage plus a real three-digit result.</p>
+      <p>Every thread about the Free 120 ends the same way: it is not predictive, do not read into it. Nobody checks, because checking needs a set of people who posted a percentage and then came back with a real score. That set exists on r/step2, so I parsed it. 269 students, 2,042 reported practice scores, and 215 of them with a current-form Free 120 percentage plus a real three-digit result.</p>
       <p>Median real Step 2 score, by Free 120 band:</p>
 
       <Fig n={1} src="/research/f120_fig2_bands.svg" alt="Median real Step 2 score by Free 120 band, with the interquartile range of each band" caption="Gold dot is the median; the bar is the middle half of students in that band. The spread is the point: a band tells you the centre, not your score." />
@@ -183,7 +183,7 @@ export default function FreeOneTwenty() {
 
       <h2>5. What this cannot tell you</h2>
       <ul>
-        <li><strong>The sample posts.</strong> Mean real score 258 against a national mean near 251, and the lowest real score in the whole dataset is a 216. The low bands especially are built on students who recovered, because students who did not are less likely to write the thread.</li>
+        <li><strong>The sample posts.</strong> Mean real score 258 against a national mean of about 250, and the lowest real score in the whole dataset is a 216. The low bands especially are built on students who recovered, because students who did not are less likely to write the thread.</li>
         <li><strong>The edges are thin.</strong> Twelve students at 65 to 69 and six under 65. I would not plan anything around the bottom two rows.</li>
         <li><strong>Current form only.</strong> Older Free 120 versions are a different instrument and mixing them would misdescribe what the table shows.</li>
         <li><strong>Correlation is not a promise.</strong> A 0.55 correlation explains about 30% of the variance in real scores. Most of what decides your number is not in this table.</li>

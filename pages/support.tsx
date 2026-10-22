@@ -5,7 +5,7 @@ export default function Support() {
     <DocLayout
       title="Support"
       subtitle="We're here to help"
-      metaTitle="Support — Step Gunner | Rezumab LLC"
+      metaTitle="Support | Step Gunner | Rezumab LLC"
       metaDesc="Get help with Step Gunner. Contact our support team."
     >
       <div className="contact-box">
@@ -38,7 +38,7 @@ export default function Support() {
 
       <div className="faq-item">
         <h3>I found an incorrect question. How do I report it?</h3>
-        <p>During a quiz, tap the <strong>flag icon</strong> on any question to submit a report. Include the reason and any notes. We review all reports and update questions regularly &mdash; and you get a little celebration when a fix you reported goes live.</p>
+        <p>During a quiz, tap the <strong>flag icon</strong> on any question to submit a report. Include the reason and any notes. We review all reports and update questions regularly, and you get a little celebration when a fix you reported goes live.</p>
       </div>
 
       <div className="faq-item">

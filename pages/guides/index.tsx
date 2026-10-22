@@ -104,6 +104,12 @@ h1 { font-size: 28px; }
                 <span className="go">Read the guide &rarr;</span>
               </a>
             ))}
+            <a className="card live" href="/step-2-ck-emergency-medicine">
+              <span className="ctag">Study guide</span>
+              <h2>The ED next best step</h2>
+              <p>26 emergency presentations: the first move, the fork that decides the next step, and the trap the exam sets, from audited pathways.</p>
+              <span className="go">Read the guide &rarr;</span>
+            </a>
             {soon.map((g) => (
               <div key={g.slug} className="card soon" aria-disabled="true">
                 <span className="ctag">Coming soon</span>
