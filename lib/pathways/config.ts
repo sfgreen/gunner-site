@@ -7,7 +7,7 @@
  * Step drills, which are live today. Flip to true in the same commit that marks
  * the build LIVE; nothing else changes.
  */
-export const PATHWAYS_LIVE = false;
+export const PATHWAYS_LIVE = true; // 2.3 LIVE 2026-10-23
 
 /** Hub group order and labels. `guide` is the clerkship guide a pathway in that
  *  world links to (SITE_REDESIGN 2.3, "world to clerkship guide"). */
