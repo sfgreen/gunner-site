@@ -65,6 +65,7 @@ ROUTES = [
     "/step-2-score-predictor",
     "/research",                  # LabLayout, the research index
     "/research/nbme-to-step-2",   # LabLayout, a research post
+    "/data/nbme-step2",           # the published dataset: blocks + a Stage lookup
     "/step-2-ck-percentiles",
     "/step-2-ck-emergency-medicine",
     "/partner",

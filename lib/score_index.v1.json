@@ -1,0 +1,1154 @@
+{
+ "version": 1,
+ "generatedAt": "2026-10-28T00:07:33Z",
+ "generatedBy": "scripts/gen_score_index.py",
+ "license": "CC BY 4.0",
+ "citeAs": "Step Gunner NBME-to-Step-2 Outcome Index v1, stepgunner.com/data/nbme-step2",
+ "minCell": 5,
+ "national": {
+  "mean": 250,
+  "sd": 15,
+  "population": "US LCME first-takers",
+  "source": "USMLE Step 2 CK Score Interpretation Guidelines, 2024 to 2025"
+ },
+ "readThisFirst": {
+  "forum": "Self-reported r/step2 score-release posts. Posters skew toward good news: their real scores average 257.9 against a national mean of 250, and the lowest in the set is 216. Read every delta here as an optimistic ceiling, not a population average.",
+  "app": "First-party reports from Step Gunner users after exam day. Consented and anonymous, but a small sample and still a self-selected one: it is people who came back to type a score.",
+  "both": "A delta is real Step 2 minus that form's printed score, measured per student and then summarised, so a median delta is not the difference of the two medians beside it. Cells under 5 students are reported as a count only."
+ },
+ "cohorts": {
+  "forum": {
+   "pairs": 1601,
+   "students": 239,
+   "level": {
+    "n": 239,
+    "suppressed": false,
+    "medianActual": 259,
+    "meanActual": 257.9,
+    "sdActual": 10.5,
+    "minActual": 216,
+    "maxActual": 279,
+    "vsNationalMean": 7.9
+   },
+   "forms": {
+    "nbme-10": {
+     "n": 176,
+     "suppressed": false,
+     "medianPrinted": 241.5,
+     "medianActual": 259.0,
+     "medianDelta": 16.0,
+     "p25Actual": 252.0,
+     "p75Actual": 266.8,
+     "deltaP25": 8,
+     "deltaP75": 26,
+     "bands": {
+      "below 230": {
+       "n": 46,
+       "suppressed": false,
+       "medianPrinted": 220.0,
+       "medianActual": 251.5,
+       "medianDelta": 30.5,
+       "p25Actual": 246.0,
+       "p75Actual": 258.0,
+       "deltaP25": 24,
+       "deltaP75": 38
+      },
+      "230 to 239": {
+       "n": 29,
+       "suppressed": false,
+       "medianPrinted": 235,
+       "medianActual": 257,
+       "medianDelta": 23,
+       "p25Actual": 250.0,
+       "p75Actual": 263.5,
+       "deltaP25": 17,
+       "deltaP75": 28
+      },
+      "240 to 249": {
+       "n": 37,
+       "suppressed": false,
+       "medianPrinted": 244,
+       "medianActual": 258,
+       "medianDelta": 14,
+       "p25Actual": 253.0,
+       "p75Actual": 263.0,
+       "deltaP25": 9,
+       "deltaP75": 19
+      },
+      "250 to 259": {
+       "n": 39,
+       "suppressed": false,
+       "medianPrinted": 253,
+       "medianActual": 264,
+       "medianDelta": 10,
+       "p25Actual": 260.0,
+       "p75Actual": 270.0,
+       "deltaP25": 6,
+       "deltaP75": 15
+      },
+      "260 and up": {
+       "n": 25,
+       "suppressed": false,
+       "medianPrinted": 265,
+       "medianActual": 270,
+       "medianDelta": 3,
+       "p25Actual": 266.5,
+       "p75Actual": 274.0,
+       "deltaP25": -2,
+       "deltaP75": 6
+      }
+     }
+    },
+    "nbme-11": {
+     "n": 192,
+     "suppressed": false,
+     "medianPrinted": 244.0,
+     "medianActual": 259.0,
+     "medianDelta": 15.0,
+     "p25Actual": 252.0,
+     "p75Actual": 265.8,
+     "deltaP25": 9,
+     "deltaP75": 22,
+     "bands": {
+      "below 230": {
+       "n": 32,
+       "suppressed": false,
+       "medianPrinted": 224.0,
+       "medianActual": 249.0,
+       "medianDelta": 28.5,
+       "p25Actual": 243.2,
+       "p75Actual": 254.8,
+       "deltaP25": 18,
+       "deltaP75": 40
+      },
+      "230 to 239": {
+       "n": 37,
+       "suppressed": false,
+       "medianPrinted": 235,
+       "medianActual": 257,
+       "medianDelta": 20,
+       "p25Actual": 251.0,
+       "p75Actual": 260.0,
+       "deltaP25": 17,
+       "deltaP75": 26
+      },
+      "240 to 249": {
+       "n": 55,
+       "suppressed": false,
+       "medianPrinted": 244,
+       "medianActual": 259,
+       "medianDelta": 15,
+       "p25Actual": 253.0,
+       "p75Actual": 264.0,
+       "deltaP25": 9,
+       "deltaP75": 20
+      },
+      "250 to 259": {
+       "n": 42,
+       "suppressed": false,
+       "medianPrinted": 255.0,
+       "medianActual": 265.0,
+       "medianDelta": 10.0,
+       "p25Actual": 257.8,
+       "p75Actual": 270.0,
+       "deltaP25": 4,
+       "deltaP75": 15
+      },
+      "260 and up": {
+       "n": 26,
+       "suppressed": false,
+       "medianPrinted": 263.5,
+       "medianActual": 269.0,
+       "medianDelta": 5.0,
+       "p25Actual": 263.8,
+       "p75Actual": 273.0,
+       "deltaP25": 0,
+       "deltaP75": 9
+      }
+     }
+    },
+    "nbme-12": {
+     "n": 176,
+     "suppressed": false,
+     "medianPrinted": 244.0,
+     "medianActual": 259.0,
+     "medianDelta": 13.5,
+     "p25Actual": 252.0,
+     "p75Actual": 267.0,
+     "deltaP25": 7,
+     "deltaP75": 22,
+     "bands": {
+      "below 230": {
+       "n": 21,
+       "suppressed": false,
+       "medianPrinted": 222,
+       "medianActual": 248,
+       "medianDelta": 29,
+       "p25Actual": 244.5,
+       "p75Actual": 255.0,
+       "deltaP25": 24,
+       "deltaP75": 35
+      },
+      "230 to 239": {
+       "n": 45,
+       "suppressed": false,
+       "medianPrinted": 235,
+       "medianActual": 254,
+       "medianDelta": 22,
+       "p25Actual": 249.5,
+       "p75Actual": 259.5,
+       "deltaP25": 15,
+       "deltaP75": 25
+      },
+      "240 to 249": {
+       "n": 42,
+       "suppressed": false,
+       "medianPrinted": 244.0,
+       "medianActual": 258.0,
+       "medianDelta": 13.0,
+       "p25Actual": 253.0,
+       "p75Actual": 261.0,
+       "deltaP25": 9,
+       "deltaP75": 19
+      },
+      "250 to 259": {
+       "n": 39,
+       "suppressed": false,
+       "medianPrinted": 253,
+       "medianActual": 264,
+       "medianDelta": 11,
+       "p25Actual": 261.0,
+       "p75Actual": 270.0,
+       "deltaP25": 7,
+       "deltaP75": 15
+      },
+      "260 and up": {
+       "n": 29,
+       "suppressed": false,
+       "medianPrinted": 265,
+       "medianActual": 270,
+       "medianDelta": 4,
+       "p25Actual": 265.5,
+       "p75Actual": 273.0,
+       "deltaP25": -1,
+       "deltaP75": 9
+      }
+     }
+    },
+    "nbme-13": {
+     "n": 209,
+     "suppressed": false,
+     "medianPrinted": 247,
+     "medianActual": 259,
+     "medianDelta": 11,
+     "p25Actual": 252.0,
+     "p75Actual": 265.0,
+     "deltaP25": 5,
+     "deltaP75": 20,
+     "bands": {
+      "below 230": {
+       "n": 23,
+       "suppressed": false,
+       "medianPrinted": 220,
+       "medianActual": 248,
+       "medianDelta": 33,
+       "p25Actual": 245.0,
+       "p75Actual": 258.0,
+       "deltaP25": 26,
+       "deltaP75": 36
+      },
+      "230 to 239": {
+       "n": 42,
+       "suppressed": false,
+       "medianPrinted": 236.0,
+       "medianActual": 253.5,
+       "medianDelta": 20.0,
+       "p25Actual": 248.8,
+       "p75Actual": 259.0,
+       "deltaP25": 13,
+       "deltaP75": 23
+      },
+      "240 to 249": {
+       "n": 54,
+       "suppressed": false,
+       "medianPrinted": 245.0,
+       "medianActual": 257.0,
+       "medianDelta": 12.0,
+       "p25Actual": 251.8,
+       "p75Actual": 261.2,
+       "deltaP25": 7,
+       "deltaP75": 16
+      },
+      "250 to 259": {
+       "n": 44,
+       "suppressed": false,
+       "medianPrinted": 254.0,
+       "medianActual": 263.0,
+       "medianDelta": 8.5,
+       "p25Actual": 258.0,
+       "p75Actual": 268.0,
+       "deltaP25": 6,
+       "deltaP75": 14
+      },
+      "260 and up": {
+       "n": 46,
+       "suppressed": false,
+       "medianPrinted": 264.5,
+       "medianActual": 269.0,
+       "medianDelta": 1.5,
+       "p25Actual": 264.0,
+       "p75Actual": 273.0,
+       "deltaP25": 0,
+       "deltaP75": 9
+      }
+     }
+    },
+    "nbme-14": {
+     "n": 211,
+     "suppressed": false,
+     "medianPrinted": 250,
+     "medianActual": 259,
+     "medianDelta": 10,
+     "p25Actual": 252.0,
+     "p75Actual": 265.0,
+     "deltaP25": 3,
+     "deltaP75": 16,
+     "bands": {
+      "below 230": {
+       "n": 21,
+       "suppressed": false,
+       "medianPrinted": 226,
+       "medianActual": 246,
+       "medianDelta": 22,
+       "p25Actual": 242.5,
+       "p75Actual": 250.0,
+       "deltaP25": 18,
+       "deltaP75": 31
+      },
+      "230 to 239": {
+       "n": 30,
+       "suppressed": false,
+       "medianPrinted": 235.0,
+       "medianActual": 252.5,
+       "medianDelta": 17.5,
+       "p25Actual": 248.8,
+       "p75Actual": 256.8,
+       "deltaP25": 12,
+       "deltaP75": 22
+      },
+      "240 to 249": {
+       "n": 51,
+       "suppressed": false,
+       "medianPrinted": 245,
+       "medianActual": 258,
+       "medianDelta": 14,
+       "p25Actual": 252.0,
+       "p75Actual": 261.0,
+       "deltaP25": 6,
+       "deltaP75": 18
+      },
+      "250 to 259": {
+       "n": 62,
+       "suppressed": false,
+       "medianPrinted": 253.0,
+       "medianActual": 261.0,
+       "medianDelta": 8.0,
+       "p25Actual": 255.0,
+       "p75Actual": 267.0,
+       "deltaP25": 2,
+       "deltaP75": 12
+      },
+      "260 and up": {
+       "n": 47,
+       "suppressed": false,
+       "medianPrinted": 265,
+       "medianActual": 268,
+       "medianDelta": 2,
+       "p25Actual": 264.0,
+       "p75Actual": 273.0,
+       "deltaP25": -3,
+       "deltaP75": 6
+      }
+     }
+    },
+    "nbme-15": {
+     "n": 208,
+     "suppressed": false,
+     "medianPrinted": 250.0,
+     "medianActual": 259.0,
+     "medianDelta": 8.0,
+     "p25Actual": 251.2,
+     "p75Actual": 265.0,
+     "deltaP25": 2,
+     "deltaP75": 14,
+     "bands": {
+      "below 230": {
+       "n": 14,
+       "suppressed": false,
+       "medianPrinted": 223.0,
+       "medianActual": 244.5,
+       "medianDelta": 24.5,
+       "p25Actual": 241.0,
+       "p75Actual": 249.2,
+       "deltaP25": 16,
+       "deltaP75": 35
+      },
+      "230 to 239": {
+       "n": 32,
+       "suppressed": false,
+       "medianPrinted": 236.0,
+       "medianActual": 251.5,
+       "medianDelta": 16.0,
+       "p25Actual": 247.2,
+       "p75Actual": 257.8,
+       "deltaP25": 14,
+       "deltaP75": 21
+      },
+      "240 to 249": {
+       "n": 56,
+       "suppressed": false,
+       "medianPrinted": 245.0,
+       "medianActual": 255.0,
+       "medianDelta": 10.0,
+       "p25Actual": 251.2,
+       "p75Actual": 259.0,
+       "deltaP25": 6,
+       "deltaP75": 15
+      },
+      "250 to 259": {
+       "n": 52,
+       "suppressed": false,
+       "medianPrinted": 254.0,
+       "medianActual": 261.0,
+       "medianDelta": 7.0,
+       "p25Actual": 256.2,
+       "p75Actual": 264.8,
+       "deltaP25": 2,
+       "deltaP75": 11
+      },
+      "260 and up": {
+       "n": 54,
+       "suppressed": false,
+       "medianPrinted": 267.0,
+       "medianActual": 269.0,
+       "medianDelta": 1.0,
+       "p25Actual": 263.8,
+       "p75Actual": 271.2,
+       "deltaP25": -3,
+       "deltaP75": 5
+      }
+     }
+    },
+    "nbme-16": {
+     "n": 64,
+     "suppressed": false,
+     "medianPrinted": 253.0,
+     "medianActual": 257.0,
+     "medianDelta": 1.0,
+     "p25Actual": 250.2,
+     "p75Actual": 265.0,
+     "deltaP25": -2,
+     "deltaP75": 8,
+     "bands": {
+      "below 230": {
+       "n": 3,
+       "suppressed": true
+      },
+      "230 to 239": {
+       "n": 5,
+       "suppressed": false,
+       "medianPrinted": 237,
+       "medianActual": 246,
+       "medianDelta": 9,
+       "p25Actual": 239.5,
+       "p75Actual": 252.5,
+       "deltaP25": 8,
+       "deltaP75": 9
+      },
+      "240 to 249": {
+       "n": 12,
+       "suppressed": false,
+       "medianPrinted": 245.0,
+       "medianActual": 247.5,
+       "medianDelta": 3.0,
+       "p25Actual": 243.2,
+       "p75Actual": 254.0,
+       "deltaP25": 0,
+       "deltaP75": 8
+      },
+      "250 to 259": {
+       "n": 21,
+       "suppressed": false,
+       "medianPrinted": 253,
+       "medianActual": 257,
+       "medianDelta": 4,
+       "p25Actual": 252.0,
+       "p75Actual": 259.5,
+       "deltaP25": 0,
+       "deltaP75": 7
+      },
+      "260 and up": {
+       "n": 23,
+       "suppressed": false,
+       "medianPrinted": 267,
+       "medianActual": 265,
+       "medianDelta": -2,
+       "p25Actual": 259.0,
+       "p75Actual": 270.0,
+       "deltaP25": -6,
+       "deltaP75": 0
+      }
+     }
+    },
+    "nbme-9": {
+     "n": 105,
+     "suppressed": false,
+     "medianPrinted": 236,
+     "medianActual": 261,
+     "medianDelta": 23,
+     "p25Actual": 253.0,
+     "p75Actual": 267.5,
+     "deltaP25": 14,
+     "deltaP75": 35,
+     "bands": {
+      "below 230": {
+       "n": 39,
+       "suppressed": false,
+       "medianPrinted": 217,
+       "medianActual": 253,
+       "medianDelta": 38,
+       "p25Actual": 246.0,
+       "p75Actual": 261.0,
+       "deltaP25": 29,
+       "deltaP75": 47
+      },
+      "230 to 239": {
+       "n": 21,
+       "suppressed": false,
+       "medianPrinted": 236,
+       "medianActual": 257,
+       "medianDelta": 23,
+       "p25Actual": 253.5,
+       "p75Actual": 262.0,
+       "deltaP25": 17,
+       "deltaP75": 27
+      },
+      "240 to 249": {
+       "n": 15,
+       "suppressed": false,
+       "medianPrinted": 243,
+       "medianActual": 263,
+       "medianDelta": 19,
+       "p25Actual": 258.0,
+       "p75Actual": 268.0,
+       "deltaP25": 14,
+       "deltaP75": 25
+      },
+      "250 to 259": {
+       "n": 21,
+       "suppressed": false,
+       "medianPrinted": 253,
+       "medianActual": 268,
+       "medianDelta": 14,
+       "p25Actual": 263.0,
+       "p75Actual": 270.5,
+       "deltaP25": 11,
+       "deltaP75": 18
+      },
+      "260 and up": {
+       "n": 9,
+       "suppressed": false,
+       "medianPrinted": 266,
+       "medianActual": 270,
+       "medianDelta": 3,
+       "p25Actual": 267.5,
+       "p75Actual": 272.0,
+       "deltaP25": 1,
+       "deltaP75": 5
+      }
+     }
+    },
+    "uwsa-1": {
+     "n": 99,
+     "suppressed": false,
+     "medianPrinted": 248,
+     "medianActual": 260,
+     "medianDelta": 13,
+     "p25Actual": 253.0,
+     "p75Actual": 268.0,
+     "deltaP25": 3,
+     "deltaP75": 22,
+     "bands": {
+      "below 230": {
+       "n": 18,
+       "suppressed": false,
+       "medianPrinted": 212.0,
+       "medianActual": 248.0,
+       "medianDelta": 38.0,
+       "p25Actual": 242.8,
+       "p75Actual": 256.0,
+       "deltaP25": 24,
+       "deltaP75": 46
+      },
+      "230 to 239": {
+       "n": 10,
+       "suppressed": false,
+       "medianPrinted": 235.0,
+       "medianActual": 255.5,
+       "medianDelta": 20.0,
+       "p25Actual": 249.8,
+       "p75Actual": 260.0,
+       "deltaP25": 17,
+       "deltaP75": 24
+      },
+      "240 to 249": {
+       "n": 29,
+       "suppressed": false,
+       "medianPrinted": 246,
+       "medianActual": 261,
+       "medianDelta": 16,
+       "p25Actual": 256.0,
+       "p75Actual": 267.0,
+       "deltaP25": 11,
+       "deltaP75": 22
+      },
+      "250 to 259": {
+       "n": 18,
+       "suppressed": false,
+       "medianPrinted": 253.5,
+       "medianActual": 265.0,
+       "medianDelta": 9.0,
+       "p25Actual": 257.5,
+       "p75Actual": 269.0,
+       "deltaP25": 5,
+       "deltaP75": 13
+      },
+      "260 and up": {
+       "n": 24,
+       "suppressed": false,
+       "medianPrinted": 267.0,
+       "medianActual": 270.0,
+       "medianDelta": 1.5,
+       "p25Actual": 265.2,
+       "p75Actual": 271.8,
+       "deltaP25": -2,
+       "deltaP75": 4
+      }
+     }
+    },
+    "uwsa-2": {
+     "n": 128,
+     "suppressed": false,
+     "medianPrinted": 254.0,
+     "medianActual": 260.0,
+     "medianDelta": 4.0,
+     "p25Actual": 253.0,
+     "p75Actual": 268.0,
+     "deltaP25": 0,
+     "deltaP75": 12,
+     "bands": {
+      "below 230": {
+       "n": 8,
+       "suppressed": false,
+       "medianPrinted": 221.0,
+       "medianActual": 247.0,
+       "medianDelta": 28.0,
+       "p25Actual": 229.0,
+       "p75Actual": 252.5,
+       "deltaP25": 20,
+       "deltaP75": 37
+      },
+      "230 to 239": {
+       "n": 8,
+       "suppressed": false,
+       "medianPrinted": 237.0,
+       "medianActual": 251.5,
+       "medianDelta": 14.0,
+       "p25Actual": 236.5,
+       "p75Actual": 257.5,
+       "deltaP25": 5,
+       "deltaP75": 24
+      },
+      "240 to 249": {
+       "n": 30,
+       "suppressed": false,
+       "medianPrinted": 245.0,
+       "medianActual": 253.0,
+       "medianDelta": 10.5,
+       "p25Actual": 247.8,
+       "p75Actual": 258.0,
+       "deltaP25": 3,
+       "deltaP75": 13
+      },
+      "250 to 259": {
+       "n": 34,
+       "suppressed": false,
+       "medianPrinted": 254.0,
+       "medianActual": 259.5,
+       "medianDelta": 5.5,
+       "p25Actual": 252.8,
+       "p75Actual": 265.8,
+       "deltaP25": 0,
+       "deltaP75": 9
+      },
+      "260 and up": {
+       "n": 48,
+       "suppressed": false,
+       "medianPrinted": 265.0,
+       "medianActual": 269.0,
+       "medianDelta": 2.0,
+       "p25Actual": 264.0,
+       "p75Actual": 271.0,
+       "deltaP25": -2,
+       "deltaP75": 5
+      }
+     }
+    },
+    "uwsa-3": {
+     "n": 33,
+     "suppressed": false,
+     "medianPrinted": 248,
+     "medianActual": 263,
+     "medianDelta": 17,
+     "p25Actual": 254.5,
+     "p75Actual": 269.5,
+     "deltaP25": 10,
+     "deltaP75": 22,
+     "bands": {
+      "below 230": {
+       "n": 7,
+       "suppressed": false,
+       "medianPrinted": 214,
+       "medianActual": 257,
+       "medianDelta": 37,
+       "p25Actual": 242.0,
+       "p75Actual": 259.0,
+       "deltaP25": 30,
+       "deltaP75": 52
+      },
+      "230 to 239": {
+       "n": 4,
+       "suppressed": true
+      },
+      "240 to 249": {
+       "n": 6,
+       "suppressed": false,
+       "medianPrinted": 242.5,
+       "medianActual": 256.5,
+       "medianDelta": 13.5,
+       "p25Actual": 249.5,
+       "p75Actual": 264.2,
+       "deltaP25": 8,
+       "deltaP75": 21
+      },
+      "250 to 259": {
+       "n": 14,
+       "suppressed": false,
+       "medianPrinted": 253.0,
+       "medianActual": 269.5,
+       "medianDelta": 13.0,
+       "p25Actual": 264.5,
+       "p75Actual": 271.0,
+       "deltaP25": 11,
+       "deltaP75": 17
+      },
+      "260 and up": {
+       "n": 2,
+       "suppressed": true
+      }
+     }
+    }
+   }
+  },
+  "app": {
+   "pairs": 140,
+   "students": 44,
+   "level": {
+    "n": 44,
+    "suppressed": false,
+    "medianActual": 248.0,
+    "meanActual": 244.4,
+    "sdActual": 20.1,
+    "minActual": 193,
+    "maxActual": 275,
+    "vsNationalMean": -5.6
+   },
+   "forms": {
+    "nbme-10": {
+     "n": 15,
+     "suppressed": false,
+     "medianPrinted": 221,
+     "medianActual": 230,
+     "medianDelta": 8,
+     "p25Actual": 212.0,
+     "p75Actual": 250.0,
+     "deltaP25": -9,
+     "deltaP75": 22,
+     "bands": {
+      "below 230": {
+       "n": 10,
+       "suppressed": false,
+       "medianPrinted": 218.5,
+       "medianActual": 225.0,
+       "medianDelta": 9.0,
+       "p25Actual": 206.8,
+       "p75Actual": 239.8,
+       "deltaP25": 5,
+       "deltaP75": 23
+      },
+      "240 to 249": {
+       "n": 3,
+       "suppressed": true
+      },
+      "250 to 259": {
+       "n": 1,
+       "suppressed": true
+      },
+      "260 and up": {
+       "n": 1,
+       "suppressed": true
+      }
+     }
+    },
+    "nbme-11": {
+     "n": 17,
+     "suppressed": false,
+     "medianPrinted": 230,
+     "medianActual": 250,
+     "medianDelta": 7,
+     "p25Actual": 230.0,
+     "p75Actual": 256.0,
+     "deltaP25": 0,
+     "deltaP75": 24,
+     "bands": {
+      "below 230": {
+       "n": 7,
+       "suppressed": false,
+       "medianPrinted": 227,
+       "medianActual": 239,
+       "medianDelta": 24,
+       "p25Actual": 220.0,
+       "p75Actual": 255.0,
+       "deltaP25": 0,
+       "deltaP75": 29
+      },
+      "230 to 239": {
+       "n": 2,
+       "suppressed": true
+      },
+      "240 to 249": {
+       "n": 3,
+       "suppressed": true
+      },
+      "250 to 259": {
+       "n": 4,
+       "suppressed": true
+      },
+      "260 and up": {
+       "n": 1,
+       "suppressed": true
+      }
+     }
+    },
+    "nbme-12": {
+     "n": 11,
+     "suppressed": false,
+     "medianPrinted": 232,
+     "medianActual": 239,
+     "medianDelta": 19,
+     "p25Actual": 230.0,
+     "p75Actual": 260.0,
+     "deltaP25": -2,
+     "deltaP75": 23,
+     "bands": {
+      "below 230": {
+       "n": 5,
+       "suppressed": false,
+       "medianPrinted": 218,
+       "medianActual": 238,
+       "medianDelta": 23,
+       "p25Actual": 216.0,
+       "p75Actual": 240.5,
+       "deltaP25": 2,
+       "deltaP75": 27
+      },
+      "230 to 239": {
+       "n": 2,
+       "suppressed": true
+      },
+      "240 to 249": {
+       "n": 2,
+       "suppressed": true
+      },
+      "250 to 259": {
+       "n": 2,
+       "suppressed": true
+      }
+     }
+    },
+    "nbme-13": {
+     "n": 15,
+     "suppressed": false,
+     "medianPrinted": 235,
+     "medianActual": 253,
+     "medianDelta": 18,
+     "p25Actual": 238.0,
+     "p75Actual": 260.0,
+     "deltaP25": 6,
+     "deltaP75": 24,
+     "bands": {
+      "below 230": {
+       "n": 3,
+       "suppressed": true
+      },
+      "230 to 239": {
+       "n": 5,
+       "suppressed": false,
+       "medianPrinted": 233,
+       "medianActual": 255,
+       "medianDelta": 20,
+       "p25Actual": 239.0,
+       "p75Actual": 258.0,
+       "deltaP25": 18,
+       "deltaP75": 23
+      },
+      "240 to 249": {
+       "n": 7,
+       "suppressed": false,
+       "medianPrinted": 246,
+       "medianActual": 255,
+       "medianDelta": 13,
+       "p25Actual": 250.0,
+       "p75Actual": 269.0,
+       "deltaP25": 3,
+       "deltaP75": 24
+      }
+     }
+    },
+    "nbme-14": {
+     "n": 17,
+     "suppressed": false,
+     "medianPrinted": 240,
+     "medianActual": 250,
+     "medianDelta": 9,
+     "p25Actual": 237.0,
+     "p75Actual": 258.0,
+     "deltaP25": 4,
+     "deltaP75": 15,
+     "bands": {
+      "below 230": {
+       "n": 5,
+       "suppressed": false,
+       "medianPrinted": 222,
+       "medianActual": 238,
+       "medianDelta": 15,
+       "p25Actual": 223.5,
+       "p75Actual": 240.5,
+       "deltaP25": 11,
+       "deltaP75": 16
+      },
+      "230 to 239": {
+       "n": 3,
+       "suppressed": true
+      },
+      "240 to 249": {
+       "n": 4,
+       "suppressed": true
+      },
+      "250 to 259": {
+       "n": 4,
+       "suppressed": true
+      },
+      "260 and up": {
+       "n": 1,
+       "suppressed": true
+      }
+     }
+    },
+    "nbme-15": {
+     "n": 19,
+     "suppressed": false,
+     "medianPrinted": 253,
+     "medianActual": 255,
+     "medianDelta": 5,
+     "p25Actual": 242.0,
+     "p75Actual": 260.0,
+     "deltaP25": 0,
+     "deltaP75": 8,
+     "bands": {
+      "below 230": {
+       "n": 3,
+       "suppressed": true
+      },
+      "230 to 239": {
+       "n": 3,
+       "suppressed": true
+      },
+      "240 to 249": {
+       "n": 2,
+       "suppressed": true
+      },
+      "250 to 259": {
+       "n": 6,
+       "suppressed": false,
+       "medianPrinted": 254.0,
+       "medianActual": 256.0,
+       "medianDelta": 2.5,
+       "p25Actual": 251.8,
+       "p75Actual": 260.5,
+       "deltaP25": -5,
+       "deltaP75": 5
+      },
+      "260 and up": {
+       "n": 5,
+       "suppressed": false,
+       "medianPrinted": 263,
+       "medianActual": 265,
+       "medianDelta": 2,
+       "p25Actual": 256.5,
+       "p75Actual": 268.0,
+       "deltaP25": -5,
+       "deltaP75": 5
+      }
+     }
+    },
+    "nbme-16": {
+     "n": 27,
+     "suppressed": false,
+     "medianPrinted": 252,
+     "medianActual": 255,
+     "medianDelta": 2,
+     "p25Actual": 243.0,
+     "p75Actual": 262.0,
+     "deltaP25": -4,
+     "deltaP75": 7,
+     "bands": {
+      "below 230": {
+       "n": 2,
+       "suppressed": true
+      },
+      "230 to 239": {
+       "n": 2,
+       "suppressed": true
+      },
+      "240 to 249": {
+       "n": 5,
+       "suppressed": false,
+       "medianPrinted": 245,
+       "medianActual": 250,
+       "medianDelta": 8,
+       "p25Actual": 245.0,
+       "p75Actual": 264.0,
+       "deltaP25": 3,
+       "deltaP75": 8
+      },
+      "250 to 259": {
+       "n": 9,
+       "suppressed": false,
+       "medianPrinted": 252,
+       "medianActual": 255,
+       "medianDelta": 2,
+       "p25Actual": 250.5,
+       "p75Actual": 260.0,
+       "deltaP25": -1,
+       "deltaP75": 5
+      },
+      "260 and up": {
+       "n": 9,
+       "suppressed": false,
+       "medianPrinted": 262,
+       "medianActual": 261,
+       "medianDelta": -4,
+       "p25Actual": 251.0,
+       "p75Actual": 266.0,
+       "deltaP25": -5,
+       "deltaP75": 0
+      }
+     }
+    },
+    "nbme-9": {
+     "n": 6,
+     "suppressed": false,
+     "medianPrinted": 240.5,
+     "medianActual": 233.5,
+     "medianDelta": 5.5,
+     "p25Actual": 226.0,
+     "p75Actual": 256.0,
+     "deltaP25": 0,
+     "deltaP75": 10,
+     "bands": {
+      "below 230": {
+       "n": 2,
+       "suppressed": true
+      },
+      "230 to 239": {
+       "n": 1,
+       "suppressed": true
+      },
+      "240 to 249": {
+       "n": 2,
+       "suppressed": true
+      },
+      "260 and up": {
+       "n": 1,
+       "suppressed": true
+      }
+     }
+    },
+    "uwsa-1": {
+     "n": 4,
+     "suppressed": true,
+     "bands": {
+      "below 230": {
+       "n": 1,
+       "suppressed": true
+      },
+      "240 to 249": {
+       "n": 1,
+       "suppressed": true
+      },
+      "250 to 259": {
+       "n": 2,
+       "suppressed": true
+      }
+     }
+    },
+    "uwsa-2": {
+     "n": 8,
+     "suppressed": false,
+     "medianPrinted": 251.5,
+     "medianActual": 255.0,
+     "medianDelta": 2.5,
+     "p25Actual": 241.2,
+     "p75Actual": 266.5,
+     "deltaP25": -3,
+     "deltaP75": 21,
+     "bands": {
+      "below 230": {
+       "n": 3,
+       "suppressed": true
+      },
+      "250 to 259": {
+       "n": 4,
+       "suppressed": true
+      },
+      "260 and up": {
+       "n": 1,
+       "suppressed": true
+      }
+     }
+    },
+    "uwsa-3": {
+     "n": 1,
+     "suppressed": true,
+     "bands": {
+      "250 to 259": {
+       "n": 1,
+       "suppressed": true
+      }
+     }
+    }
+   }
+  }
+ }
+}

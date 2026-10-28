@@ -208,7 +208,7 @@ export default function Research({ record }: { record: Record }) {
           />
 
           <Section id="data" n="07" title="Data and code">
-            <p className="prs">The parsed, de-identified forum set (record id, form, printed score, days before exam, outcome) and the fitting scripts live in the Step Gunner repository; the out-of-sample record is served at a public endpoint and recomputed weekly. The model constants on this page are imported from the same module the calculator runs, so the text cannot drift from the code. If you post your own score after exam day, it goes into the next fit, and the next version of this page gets a bigger out-of-sample number.</p>
+            <p className="prs">The cell summary of this data is published and downloadable at <Link href="/data/nbme-step2">the NBME to Step 2 outcome index</Link>, under CC BY 4.0, beside the first-party app cohort for comparison. The parsed, de-identified forum set (record id, form, printed score, days before exam, outcome) and the fitting scripts live in the Step Gunner repository; the out-of-sample record is served at a public endpoint and recomputed weekly. The model constants on this page are imported from the same module the calculator runs, so the text cannot drift from the code. If you post your own score after exam day, it goes into the next fit, and the next version of this page gets a bigger out-of-sample number.</p>
           </Section>
 
           <Section id="refs" n="" title="References">
