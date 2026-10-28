@@ -13,6 +13,8 @@
 // rankings: NBME equates 10 to 16 onto a common scale, so there is nothing
 // honest to say about one being "harder" in scale terms.
 
+import { fmt, formCell, usable } from './scoreIndex';
+
 export type FormPage = {
   slug: string;
   form: string;            // must match a member of FORMS in lib/readiness.ts
@@ -52,7 +54,7 @@ const equatedFaq = (n: number): { q: string; a: string }[] => [
   },
 ];
 
-export const FORM_PAGES: FormPage[] = [
+const WRITTEN: FormPage[] = [
   {
     slug: 'nbme-9',
     form: 'NBME 9',
@@ -256,6 +258,23 @@ export const FORM_PAGES: FormPage[] = [
     ],
   },
 ];
+
+/** "an NBME 13", "a UWSA 2": UWSA opens on a consonant sound, NBME does not. */
+export const formArticle = (form: string): string => (form.startsWith('NBME') ? 'an' : 'a');
+
+// The meta description quotes the same three numbers the page's record table
+// renders, so they come from the same place: the published outcome index
+// (/data/nbme-step2). A form the index does not carry keeps its written
+// description. Nothing here restates a printed score as a lower number.
+export const FORM_PAGES: FormPage[] = WRITTEN.map((p) => {
+  const c = formCell('forum', p.slug);
+  if (!usable(c) || c.medianPrinted == null) return p;
+  return {
+    ...p,
+    description: `What ${c.n} students who posted ${formArticle(p.form)} ${p.form} score actually got on Step 2 CK: `
+      + `median ${fmt(c.medianPrinted)} became ${fmt(c.medianActual)}. Plus the full conversion table.`,
+  };
+});
 
 export const formPageBySlug = (slug: string): FormPage | null =>
   FORM_PAGES.find((f) => f.slug === slug) ?? null;
