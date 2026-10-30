@@ -68,8 +68,9 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
     founder: { '@type': 'Person', name: author.name, description: author.credential },
     sameAs: ['https://rezumab.app', 'https://apps.apple.com/us/app/step-gunner/id6761317357'],
   };
-  // Real 5-star App Store reviews (truthful, individually cited). No aggregateRating
-  // is asserted because we do not have a verified rating count to publish.
+  // No review or aggregateRating markup: the quotes on the page are App Store reviews,
+  // and Google's review-snippet rules forbid marking up reviews taken from another
+  // site (Search Console flagged "Multiple reviews without aggregateRating", 2026-10-30).
   const appLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -78,12 +79,6 @@ export default function GuideLayout({ guide }: { guide: GuideData }) {
     operatingSystem: 'iOS 17.0 or later',
     url: 'https://apps.apple.com/us/app/step-gunner/id6761317357',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    review: [trust.quote, fit.quote.text].map((reviewBody) => ({
-      '@type': 'Review',
-      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
-      author: { '@type': 'Person', name: 'App Store reviewer' },
-      reviewBody,
-    })),
   };
 
   return (
