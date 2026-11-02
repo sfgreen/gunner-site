@@ -17,7 +17,7 @@ export default function Terms() {
       <h2>Subscriptions</h2>
       <p>Step Gunner offers auto-renewable subscription plans:</p>
       <ul>
-        <li><strong>Step Gunner Pro Monthly</strong>: $9.99/month</li>
+        <li><strong>Step Gunner Pro Monthly</strong>: $14.99/month (from November 3, 2026; subscribers who joined earlier keep the price they signed up at)</li>
         <li><strong>Step Gunner Pro Yearly</strong>: $99.99/year</li>
       </ul>
       <p>Payment is charged to your Apple ID account at confirmation of purchase. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. Your account will be charged for renewal within 24 hours prior to the end of the current period at the same price.</p>
