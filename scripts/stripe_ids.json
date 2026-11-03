@@ -1,0 +1,18 @@
+{
+  "test": {
+    "account": "acct_1UXf4TLVuK5KkX7n",
+    "product": "step_gunner_pro",
+    "prices": {
+      "yearly": "price_1UXfDBLVuK5KkX7nOJDjXQcO",
+      "monthly": "price_1UXfDBLVuK5KkX7nl49jZSC4"
+    },
+    "coupons": {
+      "chief": "gunner_chief_40",
+      "friendYearly": "gunner_friend_40pct",
+      "friendMonthly": "gunner_friend_500c"
+    },
+    "portalConfig": "bpc_1UXfDCLVuK5KkX7nPcfph4fj",
+    "apiVersion": "2026-08-26.dahlia",
+    "updatedAt": "2026-11-03T11:44:41.935Z"
+  }
+}

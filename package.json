@@ -9,14 +9,19 @@
     "verify:seo": "python3 scripts/seo_verify.py",
     "sync:pathways": "node scripts/sync_pathways.mjs",
     "og:cards": "node scripts/og_cards.mjs",
-    "test:calcs": "node --test scripts/test_pathway_calcs.mjs"
+    "test:calcs": "node --test scripts/test_pathway_calcs.mjs",
+    "test:pro": "node --test scripts/test_pro_grant.mjs",
+    "stripe:setup": "node scripts/stripe_setup.mjs",
+    "stripe:dev": "node scripts/stripe_dev.mjs"
   },
   "dependencies": {
+    "firebase": "^12.19.0",
     "firebase-admin": "^13.8.0",
     "next": "14.0.0",
     "qrcode-generator": "^1.4.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "stripe": "^22.6.2"
   },
   "devDependencies": {
     "@types/node": "^18.19.0",

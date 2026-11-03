@@ -1,0 +1,428 @@
+import { initializeApp, getApps, cert } from 'firebase-admin/app';
+import { getAuth } from 'firebase-admin/auth';
+import { getFirestore, FieldValue, Timestamp, type DocumentData, type Firestore } from 'firebase-admin/firestore';
+import Stripe from 'stripe';
+import type { NextApiRequest } from 'next';
+import {
+  appStoreActive, chiefCodeForm, couponLabel, earnedInYearCents, FRIEND_HOLD_MS, friendPayoutCents, liveSub, manualMs,
+  mergedMs, normalizeCode, reversalStatus, studentCodeForm, webExpiresMs,
+  type GrantFields, type Plan, type RewardRow, type SubLite,
+} from './proGrant';
+
+// Pro on the web (gunner repo, decision 0051), server half. Imported only by
+// /api/pro/* and the reconcile cron, never by a component, so firebase-admin and
+// the Stripe key stay out of the browser bundle.
+//
+// Env (Vercel): FIREBASE_SERVICE_ACCOUNT_KEY (already set for /api/readiness),
+// STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, STRIPE_PRICE_YEARLY,
+// STRIPE_PRICE_MONTHLY, STRIPE_COUPON_FRIEND_YEARLY, STRIPE_COUPON_FRIEND_MONTHLY,
+// STRIPE_COUPON_CHIEF, STRIPE_PORTAL_CONFIG, STRIPE_MANAGED (1 = Managed Payments).
+// scripts/stripe_setup.mjs makes the Stripe side and sets them.
+
+if (!getApps().length && process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
+  try {
+    initializeApp({
+      credential: cert(JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY)),
+      projectId: 'stepgunner-79ae7',
+    });
+  } catch (err) {
+    console.error('pro: firebase admin init failed', err);
+  }
+}
+
+export class ProError extends Error {
+  constructor(public status: number, public code: string, message: string) {
+    super(message);
+  }
+}
+
+export function proDb(): Firestore {
+  if (!getApps().length) throw new ProError(503, 'not_configured', 'The server is not set up yet.');
+  return getFirestore();
+}
+
+let stripeSingleton: Stripe | null = null;
+export function stripe(): Stripe {
+  const key = process.env.STRIPE_SECRET_KEY;
+  if (!key) throw new ProError(503, 'not_configured', 'Payments are not set up yet.');
+  if (!stripeSingleton) stripeSingleton = new Stripe(key);
+  return stripeSingleton;
+}
+
+export function priceFor(plan: Plan): string {
+  const id = plan === 'yearly' ? process.env.STRIPE_PRICE_YEARLY : process.env.STRIPE_PRICE_MONTHLY;
+  if (!id) throw new ProError(503, 'not_configured', 'Payments are not set up yet.');
+  return id;
+}
+
+function planOfPrice(priceId: string | undefined): Plan | null {
+  if (priceId && priceId === process.env.STRIPE_PRICE_YEARLY) return 'yearly';
+  if (priceId && priceId === process.env.STRIPE_PRICE_MONTHLY) return 'monthly';
+  return null;
+}
+
+export function isPlan(v: unknown): v is Plan {
+  return v === 'yearly' || v === 'monthly';
+}
+
+// ---- who is calling ----
+
+export type Caller = { uid: string; email: string | null; provider: string };
+
+/** The Firebase ID token in `Authorization: Bearer`. Anonymous accounts are refused:
+ *  their progress lives on a phone the web cannot reach (decision 0051, item 1). */
+export async function caller(req: NextApiRequest): Promise<Caller> {
+  proDb();
+  const h = req.headers.authorization || '';
+  const token = h.startsWith('Bearer ') ? h.slice(7) : '';
+  if (!token) throw new ProError(401, 'signed_out', 'Sign in first.');
+  let decoded;
+  try {
+    decoded = await getAuth().verifyIdToken(token);
+  } catch {
+    throw new ProError(401, 'signed_out', 'Your sign-in expired. Sign in again.');
+  }
+  const provider = String(decoded.firebase?.sign_in_provider || '');
+  if (provider === 'anonymous') {
+    throw new ProError(403, 'anonymous', 'Add a sign-in in the app first (Settings, Account).');
+  }
+  return { uid: decoded.uid, email: decoded.email || null, provider };
+}
+
+// ---- reading a users doc ----
+
+export function toMs(v: unknown): number | null {
+  if (v == null) return null;
+  if (v instanceof Timestamp) return v.toMillis();
+  if (typeof v === 'object' && typeof (v as { toMillis?: unknown }).toMillis === 'function') {
+    return (v as { toMillis: () => number }).toMillis();
+  }
+  if (v instanceof Date) return v.getTime();
+  if (typeof v === 'number' && Number.isFinite(v)) return v < 1e12 ? v * 1000 : v;
+  return null;
+}
+
+function grantFields(d: DocumentData): GrantFields {
+  return {
+    hasManualField: 'proGrantManualExpiresAt' in d,
+    manualMs: toMs(d.proGrantManualExpiresAt),
+    hasWebField: 'webProExpiresAt' in d,
+    grantMs: toMs(d.proGrantExpiresAt),
+  };
+}
+
+export function payingOnAppStore(d: DocumentData, nowMs = Date.now()): boolean {
+  return appStoreActive(d.iapStatus, d.iapEnvironment, toMs(d.iapExpiration), nowMs);
+}
+
+/**
+ * Never paid anywhere: no App Store event ever, no web subscription ever. The
+ * users doc alone cannot say: the app writes iapStatus "none" for free students
+ * and clears iapOriginalTransactionId when a plan lapses. The App Store webhook's
+ * iapEvents rows carry the uid and outlive the lapse.
+ */
+export async function neverPaid(uid: string, d: DocumentData): Promise<boolean> {
+  if (d.iapStatus === 'active' || d.iapOriginalTransactionId || (d.webPro && d.webPro.subscriptionId)) return false;
+  const ev = await proDb().collection('iapEvents').where('uid', '==', uid).limit(10).get();
+  return !ev.docs.some((e) => (e.data() || {}).environment !== 'Sandbox');
+}
+
+const ts = (ms: number | null) => (ms == null ? null : Timestamp.fromMillis(ms));
+
+// ---- Stripe -> users/{uid} ----
+
+function subLite(s: Stripe.Subscription): SubLite {
+  const items = s.items?.data || [];
+  const end = items.reduce((m, it) => Math.max(m, it.current_period_end || 0), 0);
+  return {
+    id: s.id,
+    status: s.status,
+    periodEndMs: end * 1000,
+    cancelAtPeriodEnd: !!s.cancel_at_period_end,
+    plan: planOfPrice(items[0]?.price?.id) || (isPlan(s.metadata?.plan) ? s.metadata.plan : null),
+  };
+}
+
+export type SyncResult = { uid: string | null; webMs: number | null; grantMs: number | null; note: string };
+
+/**
+ * Re-read a customer's subscriptions from Stripe and write the grant. Every
+ * webhook and the daily reconcile call this, so it is idempotent and order-proof:
+ * it never trusts the event payload, only Stripe's current state.
+ */
+export async function syncCustomer(customerId: string, reason: string): Promise<SyncResult> {
+  const st = stripe();
+  const db = proDb();
+  const cust = await st.customers.retrieve(customerId);
+  if ((cust as Stripe.DeletedCustomer).deleted) return { uid: null, webMs: null, grantMs: null, note: 'customer deleted' };
+  const uid = (cust as Stripe.Customer).metadata?.uid;
+  if (!uid) return { uid: null, webMs: null, grantMs: null, note: 'customer has no uid' };
+
+  const list = await st.subscriptions.list({ customer: customerId, status: 'all', limit: 20 });
+  const subs = list.data.map(subLite);
+
+  // A deleted account keeps no subscription (the web side of BUGLOG 063).
+  let authGone = false;
+  try {
+    await getAuth().getUser(uid);
+  } catch (e) {
+    authGone = (e as { code?: string }).code === 'auth/user-not-found';
+  }
+  if (authGone) {
+    for (const s of subs.filter((x) => ['active', 'trialing', 'past_due', 'unpaid', 'paused', 'incomplete'].includes(x.status))) {
+      await st.subscriptions.cancel(s.id);
+    }
+    return { uid, webMs: null, grantMs: null, note: 'account deleted: subscriptions canceled' };
+  }
+
+  const web = webExpiresMs(subs);
+  const live = liveSub(subs);
+  const latest = live || subs.slice().sort((a, b) => b.periodEndMs - a.periodEndMs)[0] || null;
+  const ref = db.collection('users').doc(uid);
+  let grant: number | null = null;
+  await db.runTransaction(async (tx) => {
+    const snap = await tx.get(ref);
+    const d = snap.data() || {};
+    const manual = manualMs(grantFields(d));
+    grant = mergedMs(manual, web);
+    tx.set(ref, {
+      webPro: {
+        status: latest ? latest.status : 'none',
+        plan: latest?.plan || null,
+        periodEndAt: latest ? ts(latest.periodEndMs) : null,
+        cancelAtPeriodEnd: latest ? latest.cancelAtPeriodEnd : false,
+        customerId,
+        subscriptionId: latest?.id || null,
+        updatedAt: FieldValue.serverTimestamp(),
+        reason,
+      },
+      webProExpiresAt: ts(web),
+      proGrantManualExpiresAt: ts(manual),
+      proGrantExpiresAt: grant == null ? FieldValue.delete() : ts(grant),
+    }, { merge: true });
+  });
+  console.log(`[pro] sync ${reason} uid=${uid.slice(0, 6)} web=${web} grant=${grant}`);
+  return { uid, webMs: web, grantMs: grant, note: 'ok' };
+}
+
+/** The card fingerprint a subscription pays with, or null. */
+async function subscriptionCard(subscriptionId: string | null): Promise<string | null> {
+  if (!subscriptionId) return null;
+  try {
+    const s = await stripe().subscriptions.retrieve(subscriptionId, { expand: ['default_payment_method'] });
+    const pm = s.default_payment_method;
+    return pm && typeof pm === 'object' ? pm.card?.fingerprint || null : null;
+  } catch (e) {
+    console.warn('[pro] subscription card lookup failed', (e as Error).message);
+    return null;
+  }
+}
+
+/** Every card fingerprint saved on a customer. */
+async function customerCards(customerId: string): Promise<Set<string>> {
+  const list = await stripe().customers.listPaymentMethods(customerId, { type: 'card', limit: 20 });
+  return new Set(list.data.map((p) => p.card?.fingerprint).filter((f): f is string => !!f));
+}
+
+function rewardRow(d: DocumentData): RewardRow {
+  return { status: String(d.status || ''), cents: Number(d.cents) || 0, firstPaidMs: toMs(d.firstPaidAt) };
+}
+
+/** The PaymentIntent of a Checkout Session's first invoice, so a refund can be matched to it. */
+export async function firstPaymentIntent(s: Stripe.Checkout.Session): Promise<string | null> {
+  const inv = idOf(s.invoice as string | { id: string } | null);
+  if (!inv) return null;
+  try {
+    const i = await stripe().invoices.retrieve(inv, { expand: ['payments'] });
+    const pay = i.payments?.data?.[0]?.payment;
+    return idOf((pay?.payment_intent as string | { id: string } | undefined) || null);
+  } catch (e) {
+    console.warn('[pro] first payment lookup failed', (e as Error).message);
+    return null;
+  }
+}
+
+/**
+ * A friend code's reward (decision 0057): a row in referralRewards/{friendUid}, one per
+ * friend, ever. $15 for a yearly friend, $5 for a monthly one, under the yearly cap,
+ * payable 30 days after this first payment. Cash, paid by hand from the ledger; this
+ * never moves money. No reward when the friend paid with a card the sharer has saved.
+ */
+export async function rewardReferrer(r: {
+  sharerUid: string; friendUid: string; code: string | null; plan: Plan;
+  sessionId: string; subscriptionId: string | null; paymentIntent: string | null; paidCents: number | null;
+}): Promise<string> {
+  const db = proDb();
+  const mark = db.collection('referralRewards').doc(r.friendUid);
+  const [m0, u0] = await Promise.all([mark.get(), db.collection('users').doc(r.sharerUid).get()]);
+  if (m0.exists) return `already ${m0.data()?.status}`;
+  if (!u0.exists) return 'sharer has no account';
+  const d = u0.data() || {};
+  const now = Date.now();
+  const base = {
+    sharerUid: r.sharerUid, friendUid: r.friendUid, code: r.code, rail: 'web', plan: r.plan,
+    sessionId: r.sessionId, txnRef: r.subscriptionId, firstPaymentIntent: r.paymentIntent,
+    firstPaidCents: r.paidCents, firstPaidAt: Timestamp.fromMillis(now),
+    payableAt: Timestamp.fromMillis(now + FRIEND_HOLD_MS), at: FieldValue.serverTimestamp(),
+  };
+  const card = await subscriptionCard(r.subscriptionId);
+  if (card && d.webPro?.customerId && (await customerCards(d.webPro.customerId)).has(card)) {
+    await mark.create({ ...base, status: 'skipped', reason: 'same_card', cents: 0 });
+    return "skipped: the friend paid with the sharer's card";
+  }
+  const rows = await db.collection('referralRewards').where('sharerUid', '==', r.sharerUid).get();
+  const cents = friendPayoutCents(r.plan, earnedInYearCents(rows.docs.map((x) => rewardRow(x.data())), now));
+  try {
+    await mark.create({ ...base, status: cents > 0 ? 'pending' : 'capped', cents });
+  } catch (e) {
+    if ((e as { code?: number }).code === 6) return 'already handled'; // ALREADY_EXISTS: a parallel delivery won
+    throw e;
+  }
+  return cents > 0 ? `pending ${cents}` : 'capped';
+}
+
+/** A refund or dispute of the friend's first payment takes the reward back (0057). */
+export async function reverseReward(friendUid: string, why: string, paymentIntent: string | null): Promise<string> {
+  const mark = proDb().collection('referralRewards').doc(friendUid);
+  const r = (await mark.get()).data();
+  if (!r) return 'no reward';
+  const next = reversalStatus({ status: String(r.status || ''), firstPaymentIntent: r.firstPaymentIntent || null }, paymentIntent);
+  if (!next) return `kept (${r.status}; not the first payment or nothing to take back)`;
+  await mark.set({ status: next, reversedAt: FieldValue.serverTimestamp(), reversedWhy: why }, { merge: true });
+  return next;
+}
+
+// ---- codes ----
+
+export type CodeOk = { ok: true; kind: 'friend' | 'chief'; code: string; coupon: string; label: string; referrerUid?: string };
+export type CodeResult = CodeOk | { ok: false; reason: string };
+
+/** The refusal text, or null when the code works (the site builds with strict off,
+ *  which does not narrow a boolean discriminant). */
+export function codeRefusal(r: CodeResult): string | null {
+  return r.ok ? null : (r as { reason: string }).reason;
+}
+
+/** A Chief code (chiefs/{code}, decision 0041) or a student's referralCode. */
+export async function resolveCode(raw: unknown, plan: Plan, me: { uid: string; doc: DocumentData }): Promise<CodeResult> {
+  const code = normalizeCode(raw);
+  if (!code) return { ok: false, reason: "That isn't a code." };
+  const db = proDb();
+  if (!(await neverPaid(me.uid, me.doc))) return { ok: false, reason: 'Codes are for a first subscription.' };
+
+  const own = (me.doc.referralCode || '').toString().trim().toUpperCase();
+  const student = studentCodeForm(code);
+  if (own && (own === student || chiefCodeForm(own) === chiefCodeForm(code))) {
+    return { ok: false, reason: "That's your own code. Share it with a friend." };
+  }
+
+  const chiefId = chiefCodeForm(code);
+  const chief = await db.collection('chiefs').doc(chiefId).get();
+  if (chief.exists) {
+    const c = chief.data() || {};
+    if (c.status !== 'active') return { ok: false, reason: 'That code is no longer active.' };
+    if (plan === 'yearly') {
+      const coupon = process.env.STRIPE_COUPON_CHIEF;
+      if (!coupon) return { ok: false, reason: 'Codes are not set up yet.' };
+      return { ok: true, kind: 'chief', code: chiefId, coupon, label: await labelOf(coupon, plan) };
+    }
+    // A Chief promoted from a student (scripts/chief_add.py --promote) keeps the
+    // friend deal on monthly (0041 amendment); any other Chief code is yearly only.
+    if (!c.fromReferralCode) return { ok: false, reason: 'A Chief code works on the yearly plan.' };
+  }
+
+  const hits = await db.collection('users').where('referralCode', '==', student).limit(2).get();
+  if (hits.empty) return { ok: false, reason: "We couldn't find that code." };
+  const coupon = plan === 'yearly' ? process.env.STRIPE_COUPON_FRIEND_YEARLY : process.env.STRIPE_COUPON_FRIEND_MONTHLY;
+  if (!coupon) return { ok: false, reason: 'Codes are not set up yet.' };
+  // Two students with the same code (they are made on the phone): the discount
+  // still applies, but nobody can be credited with certainty, so no reward.
+  const referrerUid = hits.size === 1 && hits.docs[0].id !== me.uid ? hits.docs[0].id : undefined;
+  return { ok: true, kind: 'friend', code: student, coupon, label: await labelOf(coupon, plan), referrerUid };
+}
+
+async function labelOf(couponId: string, plan: Plan): Promise<string> {
+  try {
+    const c = await stripe().coupons.retrieve(couponId);
+    return couponLabel(c, plan) || 'Discount applied';
+  } catch {
+    return 'Discount applied';
+  }
+}
+
+// ---- what the page shows ----
+
+export type ProStatus = {
+  source: 'app_store' | 'web' | 'grant' | 'none';
+  plan: Plan | null;
+  periodEndMs: number | null;
+  cancelAtPeriodEnd: boolean;
+  grantEndMs: number | null;
+  answered: number | null;
+  streak: number | null;
+  /** A friend code this student saved in the app (redeem_referral), for the code box. */
+  savedCode: string | null;
+};
+
+export async function statusFor(uid: string): Promise<{ status: ProStatus; doc: DocumentData }> {
+  const db = proDb();
+  const [u, stats] = await Promise.all([
+    db.collection('users').doc(uid).get(),
+    db.collection('users').doc(uid).collection('stats').doc('current').get(),
+  ]);
+  const d = u.data() || {};
+  const s = stats.data() || {};
+  const now = Date.now();
+  const web = d.webPro || {};
+  const webMs = toMs(d.webProExpiresAt);
+  const grantMs = toMs(d.proGrantExpiresAt);
+  let source: ProStatus['source'] = 'none';
+  if (payingOnAppStore(d, now)) source = 'app_store';
+  else if (webMs && webMs > now) source = 'web';
+  else if (grantMs && grantMs > now) source = 'grant';
+  return {
+    doc: d,
+    status: {
+      source,
+      plan: isPlan(web.plan) ? web.plan : null,
+      periodEndMs: toMs(web.periodEndAt),
+      cancelAtPeriodEnd: !!web.cancelAtPeriodEnd,
+      grantEndMs: grantMs,
+      answered: typeof s.totalAnswered === 'number' ? s.totalAnswered : null,
+      streak: typeof s.dayStreak === 'number' ? s.dayStreak : null,
+      savedCode: typeof d.redeemedReferralCode === 'string' && d.redeemedReferralCode.trim() ? d.redeemedReferralCode.trim().toUpperCase() : null,
+    },
+  };
+}
+
+// ---- shared by the routes ----
+
+export const ORIGIN = process.env.PRO_ORIGIN || 'https://stepgunner.com';
+
+export function sendError(res: { status: (n: number) => { json: (b: unknown) => void } }, e: unknown): void {
+  if (e instanceof ProError) {
+    res.status(e.status).json({ ok: false, code: e.code, error: e.message });
+    return;
+  }
+  console.error('[pro] unexpected', e);
+  res.status(500).json({ ok: false, code: 'server', error: 'Something went wrong. Try again.' });
+}
+
+/** Cancel every live subscription a customer has, now (refunds and disputes). */
+export async function cancelLive(customerId: string): Promise<number> {
+  const st = stripe();
+  const list = await st.subscriptions.list({ customer: customerId, status: 'all', limit: 20 });
+  let n = 0;
+  for (const s of list.data) {
+    if (['active', 'trialing', 'past_due', 'unpaid', 'paused'].includes(s.status)) {
+      await st.subscriptions.cancel(s.id);
+      n += 1;
+    }
+  }
+  return n;
+}
+
+export function idOf(v: string | { id: string } | null | undefined): string | null {
+  if (!v) return null;
+  return typeof v === 'string' ? v : v.id;
+}

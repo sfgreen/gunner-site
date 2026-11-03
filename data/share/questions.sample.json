@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "ck-10081",
+    "key": "ck:10081",
+    "deck": "ck",
+    "deckLabel": "CK Gold",
+    "world": "Surgery",
+    "tint": "surgery",
+    "stem": "80-year-old thin woman with no prior surgical history presents with small bowel obstruction and pain along the inner right thigh that worsens with hip extension. No groin or abdominal wall bulge is palpable. CT shows dilated loops of small bowel with a transition point deep in the pelvis.",
+    "question": "What is the most likely cause?",
+    "choices": ["Inguinal hernia", "Femoral hernia", "Umbilical hernia", "Obturator hernia", "Spigelian hernia"],
+    "answer": "Obturator hernia",
+    "explanation": "No prior surgery means adhesions are unlikely, so think hernia. A pelvic transition point in a thin elderly woman is an obturator hernia; inguinal and femoral hernias sit at the groin.",
+    "tried": 141,
+    "right": 14,
+    "deckCount": 2530
+  }
+]

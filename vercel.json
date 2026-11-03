@@ -3,13 +3,20 @@
     {
       "path": "/api/cron/seed-bots",
       "schedule": "7 13 * * *"
+    },
+    {
+      "path": "/api/cron/pro-reconcile",
+      "schedule": "17 9 * * *"
     }
   ],
   "headers": [
     {
       "source": "/.well-known/apple-app-site-association",
       "headers": [
-        { "key": "Content-Type", "value": "application/json" }
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
       ]
     }
   ]
