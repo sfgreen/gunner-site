@@ -1,23 +1,100 @@
+// ---- Firestore schema: friend codes, payouts, handoffs (decisions 0051, 0057 + its
+// 2026-11-04 amendment), agreed with the backend (functions/main.py, the referral
+// section). Everything here is server-write-only; a signed-in sharer may read their own
+// referralRewards rows and payoutRecipients doc. Money is integer US cents, times are
+// Timestamps.
+//
+// Who writes what:
+//   site     referralRewards rows for web purchases and their refunds (the Stripe
+//            webhook), payoutRecipients, referralPayouts, and a run's execution
+//            (approved -> running -> done, rows paid, deductions netted)
+//   backend  App Store rows and refunds, the daily pending -> payable flip under the
+//            yearly cap and the monthly budget, the monthly run (lines + approval), emails
+//
+// referralRewards/{friendUid}: one row per friend, ever (0057 item 10)
+//   sharerUid, friendUid, code, rail ('web' | 'appstore'), plan ('yearly' | 'monthly'),
+//   firstPaidAt, firstPaidCents, txnRef (web: Stripe subscription id; App Store:
+//   originalTransactionId), cents (centsYearly or centsMonthly, trimmed to the yearly
+//   cap with centsBeforeCap), payableAt (firstPaidAt + holdDays; the flip resets it to
+//   the time it turned payable), reason, at. Web rows add sessionId and
+//   firstPaymentIntent (what a refund is matched against); App Store rows add
+//   firstTransactionId, currency, productId, offerType, offerIdentifier, environment.
+//   status:
+//     pending    in the hold (reason 'monthly_budget' when the budget pushed it a month)
+//     payable    the backend's daily job flipped it; the next run lists it
+//     paid       payoutId, paidAt
+//     reversed   the first payment was refunded or disputed: reason ('refund' | 'dispute'
+//                | 'revoke'), reversedAt, reversedFrom (the status it had). reversedFrom
+//                'paid' keeps paidAt; a later run nets it and stamps deductedInRun
+//     skipped    never qualified, cents 0: reason 'same_card', 'sandbox', 'self',
+//                'paid_before', 'other_offer', ...
+//     forfeited  cents 0 or never paid: reason 'year_cap' (the yearly cap left
+//                nothing, by the year of the friend's first payment) or 'sharer_deleted'
+//
+// referralPayoutRuns/{YYYY-MM}: written by the backend on the 1st, executed here
+//   month, asOf, status (awaiting_approval | approved | running | done), approvedBy,
+//   approvedAt, createdAt, minPayoutCents, cashEnabled,
+//   lines[]: {sharerUid, method ('stripe_global_payouts' | 'pro_months'), rowIds,
+//     deductRowIds, payableCents, deductCents, cents, months (Pro months),
+//     stripeRecipientId and country (cash)}
+//   waiting[]: the same with a reason, not paid this run
+//   totals {lines, cashLines, cashCents, proMonthLines, proMonths, deductCents, rows,
+//     waitingLines, waitingCents}
+//   the site adds startedAt, leaseUntil, finishedAt, lastError and
+//   result {sharers, rows, cashCents, proMonths, skipped {reason: n}, failed, errors}
+//
+// referralPayouts/{runId}_{sharerUid}: one per executed line (the site writes these)
+//   sharerUid, runId, method, cents (cash sent: rows less deductions; 0 for Pro
+//   months), grossCents, deductCents, months, rowIds, deductRowIds, recipientId,
+//   payoutMethodId, destination ('Chase ••6789'), stripeId (PayoutIntent poi_...),
+//   stripeStatus, error, createdAt, paidAt, settledAt
+//   status:
+//     sending | granting   written before the money or the grant moves, so a crash resumes
+//     sent                 Stripe accepted it (rows paid); posted: the money left our account
+//     failed               Stripe refused it; the rows stay payable for a later run
+//     returned             it bounced after sending; rows back to payable, deductions owed again
+//     granted              Pro months added to proGrantManualExpiresAt
+//
+// payoutRecipients/{uid}
+//   stripeRecipientId (v2 Account acct_...), onboardingStatus (pending | complete |
+//   restricted), country (ISO 3166 alpha-2), preference (cash | pro_months), updatedAt;
+//   the site also keeps capability (the ACH status), payoutMethodId, destination
+//
+// config/referral
+//   cashEnabled, autoPayout, holdDays, minPayoutCents, yearCapCents, monthlyBudgetCents,
+//   cashCountries, centsYearly, centsMonthly; defaults in lib/referral.ts REFERRAL_DEFAULTS
+//   (the same as functions/main.py REFERRAL_CONFIG_DEFAULTS)
+//
+// authHandoffs/{sha256 of the code}: uid, to ('earnings' | 'pro'), createdAt, expiresAt
+//   (2 minutes); deleted when used (lib/handoff.ts)
+
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
 import { getFirestore, FieldValue, Timestamp, type DocumentData, type Firestore } from 'firebase-admin/firestore';
 import Stripe from 'stripe';
 import type { NextApiRequest } from 'next';
 import {
-  appStoreActive, chiefCodeForm, couponLabel, earnedInYearCents, FRIEND_HOLD_MS, friendPayoutCents, liveSub, manualMs,
-  mergedMs, normalizeCode, reversalStatus, studentCodeForm, webExpiresMs,
-  type GrantFields, type Plan, type RewardRow, type SubLite,
+  appStoreActive, chiefCodeForm, couponLabel, liveSub, manualMs, mergedMs, normalizeCode, studentCodeForm, webExpiresMs,
+  type GrantFields, type Plan, type SubLite,
 } from './proGrant';
+import {
+  earnedInYearCents, friendPayoutCents, holdMs, referralConfig, reversalFields, type ReferralConfig, type RewardRow,
+} from './referral';
+import { HANDOFF_TTL_MS, handoffKey, handoffRefusal, newHandoffCode, type HandoffPage } from './handoff';
 
-// Pro on the web (gunner repo, decision 0051), server half. Imported only by
-// /api/pro/* and the reconcile cron, never by a component, so firebase-admin and
-// the Stripe key stay out of the browser bundle.
+// Pro on the web (gunner repo, decision 0051), server half. Imported only by API
+// routes and crons, never by a component, so firebase-admin and the Stripe key stay
+// out of the browser bundle.
 //
 // Env (Vercel): FIREBASE_SERVICE_ACCOUNT_KEY (already set for /api/readiness),
 // STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, STRIPE_PRICE_YEARLY,
 // STRIPE_PRICE_MONTHLY, STRIPE_COUPON_FRIEND_YEARLY, STRIPE_COUPON_FRIEND_MONTHLY,
 // STRIPE_COUPON_CHIEF, STRIPE_PORTAL_CONFIG, STRIPE_MANAGED (1 = Managed Payments).
 // scripts/stripe_setup.mjs makes the Stripe side and sets them.
+// Sharer payouts (lib/referralServer.ts): PAYOUTS_PROVIDER=global_payouts turns them on;
+// STRIPE_PAYOUTS_KEY (live needs a restricted key, Global Payouts refuses sk_live; the
+// test key works in a sandbox), STRIPE_FINANCIAL_ACCOUNT (optional, else the first open
+// one), PAYOUTS_DRY_RUN=1 (plan only), CRON_SECRET (the payout cron).
 
 if (!getApps().length && process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
   try {
@@ -89,6 +166,39 @@ export async function caller(req: NextApiRequest): Promise<Caller> {
   return { uid: decoded.uid, email: decoded.email || null, provider };
 }
 
+/** A one-time code for this account (lib/handoff.ts). The caller is already a named account. */
+export async function mintHandoff(uid: string, to: HandoffPage): Promise<{ code: string; expiresAtMs: number }> {
+  const code = newHandoffCode();
+  const expiresAtMs = Date.now() + HANDOFF_TTL_MS;
+  await proDb().collection('authHandoffs').doc(handoffKey(code)).create({
+    uid, to, createdAt: FieldValue.serverTimestamp(), expiresAt: Timestamp.fromMillis(expiresAtMs),
+  });
+  return { code, expiresAtMs };
+}
+
+/** Trade a handoff code for a custom token, once. The code is deleted whether or not it was still good. */
+export async function redeemHandoff(code: string): Promise<{ uid: string; token: string }> {
+  const db = proDb();
+  const ref = db.collection('authHandoffs').doc(handoffKey(code));
+  const out = await db.runTransaction(async (tx) => {
+    const snap = await tx.get(ref);
+    const d = snap.data();
+    const why = handoffRefusal(d ? { uid: d.uid, expiresAtMs: toMs(d.expiresAt) } : null, Date.now());
+    if (snap.exists) tx.delete(ref);
+    return why ? { why } : { uid: String(d.uid) };
+  });
+  if ('why' in out) throw new ProError(410, out.why, 'That link has expired. Open it from the app again.');
+  try {
+    await getAuth().getUser(out.uid);
+  } catch (e) {
+    // createCustomToken would mint a sign-in for a uid that no longer exists, and the
+    // web sign-in would create a blank account under it.
+    if ((e as { code?: string }).code === 'auth/user-not-found') throw new ProError(410, 'no_account', 'That account no longer exists.');
+    throw e;
+  }
+  return { uid: out.uid, token: await getAuth().createCustomToken(out.uid) };
+}
+
 // ---- reading a users doc ----
 
 export function toMs(v: unknown): number | null {
@@ -102,7 +212,7 @@ export function toMs(v: unknown): number | null {
   return null;
 }
 
-function grantFields(d: DocumentData): GrantFields {
+export function grantFields(d: DocumentData): GrantFields {
   return {
     hasManualField: 'proGrantManualExpiresAt' in d,
     manualMs: toMs(d.proGrantManualExpiresAt),
@@ -127,7 +237,7 @@ export async function neverPaid(uid: string, d: DocumentData): Promise<boolean> 
   return !ev.docs.some((e) => (e.data() || {}).environment !== 'Sandbox');
 }
 
-const ts = (ms: number | null) => (ms == null ? null : Timestamp.fromMillis(ms));
+export const ts = (ms: number | null) => (ms == null ? null : Timestamp.fromMillis(ms));
 
 // ---- Stripe -> users/{uid} ----
 
@@ -242,11 +352,15 @@ export async function firstPaymentIntent(s: Stripe.Checkout.Session): Promise<st
   }
 }
 
+export async function referralConfigFor(): Promise<ReferralConfig> {
+  return referralConfig((await proDb().collection('config').doc('referral').get()).data());
+}
+
 /**
  * A friend code's reward (decision 0057): a row in referralRewards/{friendUid}, one per
- * friend, ever. $15 for a yearly friend, $5 for a monthly one, under the yearly cap,
- * payable 30 days after this first payment. Cash, paid by hand from the ledger; this
- * never moves money. No reward when the friend paid with a card the sharer has saved.
+ * friend, ever. centsYearly or centsMonthly ($15 / $5) under the yearly cap, payable
+ * holdDays (30) after this first payment. This never moves money: the monthly run pays
+ * it (lib/referral.ts). No reward when the friend paid with a card the sharer has saved.
  */
 export async function rewardReferrer(r: {
   sharerUid: string; friendUid: string; code: string | null; plan: Plan;
@@ -254,7 +368,7 @@ export async function rewardReferrer(r: {
 }): Promise<string> {
   const db = proDb();
   const mark = db.collection('referralRewards').doc(r.friendUid);
-  const [m0, u0] = await Promise.all([mark.get(), db.collection('users').doc(r.sharerUid).get()]);
+  const [m0, u0, cfg] = await Promise.all([mark.get(), db.collection('users').doc(r.sharerUid).get(), referralConfigFor()]);
   if (m0.exists) return `already ${m0.data()?.status}`;
   if (!u0.exists) return 'sharer has no account';
   const d = u0.data() || {};
@@ -263,7 +377,7 @@ export async function rewardReferrer(r: {
     sharerUid: r.sharerUid, friendUid: r.friendUid, code: r.code, rail: 'web', plan: r.plan,
     sessionId: r.sessionId, txnRef: r.subscriptionId, firstPaymentIntent: r.paymentIntent,
     firstPaidCents: r.paidCents, firstPaidAt: Timestamp.fromMillis(now),
-    payableAt: Timestamp.fromMillis(now + FRIEND_HOLD_MS), at: FieldValue.serverTimestamp(),
+    payableAt: Timestamp.fromMillis(now + holdMs(cfg)), at: FieldValue.serverTimestamp(),
   };
   const card = await subscriptionCard(r.subscriptionId);
   if (card && d.webPro?.customerId && (await customerCards(d.webPro.customerId)).has(card)) {
@@ -271,25 +385,32 @@ export async function rewardReferrer(r: {
     return "skipped: the friend paid with the sharer's card";
   }
   const rows = await db.collection('referralRewards').where('sharerUid', '==', r.sharerUid).get();
-  const cents = friendPayoutCents(r.plan, earnedInYearCents(rows.docs.map((x) => rewardRow(x.data())), now));
+  const full = r.plan === 'yearly' ? cfg.centsYearly : cfg.centsMonthly;
+  const cents = friendPayoutCents(r.plan, earnedInYearCents(rows.docs.map((x) => rewardRow(x.data())), now), cfg);
+  // The same row the App Store writer makes (functions/main.py): no room under the
+  // yearly cap forfeits it, partial room trims it and keeps the full amount.
+  const row = cents > 0
+    ? { status: 'pending', cents, ...(cents < full ? { centsBeforeCap: full } : {}) }
+    : { status: 'forfeited', reason: 'year_cap', cents: 0 };
   try {
-    await mark.create({ ...base, status: cents > 0 ? 'pending' : 'capped', cents });
+    await mark.create({ ...base, ...row });
   } catch (e) {
     if ((e as { code?: number }).code === 6) return 'already handled'; // ALREADY_EXISTS: a parallel delivery won
     throw e;
   }
-  return cents > 0 ? `pending ${cents}` : 'capped';
+  return cents > 0 ? `pending ${cents}` : 'forfeited: year_cap';
 }
 
-/** A refund or dispute of the friend's first payment takes the reward back (0057). */
-export async function reverseReward(friendUid: string, why: string, paymentIntent: string | null): Promise<string> {
+/** A refund or dispute of the friend's first payment takes the reward back (0057).
+ *  A row already paid keeps its paidAt; the next payout run nets it. */
+export async function reverseReward(friendUid: string, why: 'refund' | 'dispute', paymentIntent: string | null): Promise<string> {
   const mark = proDb().collection('referralRewards').doc(friendUid);
   const r = (await mark.get()).data();
   if (!r) return 'no reward';
-  const next = reversalStatus({ status: String(r.status || ''), firstPaymentIntent: r.firstPaymentIntent || null }, paymentIntent);
-  if (!next) return `kept (${r.status}; not the first payment or nothing to take back)`;
-  await mark.set({ status: next, reversedAt: FieldValue.serverTimestamp(), reversedWhy: why }, { merge: true });
-  return next;
+  const fields = reversalFields({ status: String(r.status || ''), firstPaymentIntent: r.firstPaymentIntent || null }, paymentIntent);
+  if (!fields) return `kept (${r.status}; not the first payment or nothing to take back)`;
+  await mark.set({ ...fields, reason: why, reversedAt: FieldValue.serverTimestamp() }, { merge: true });
+  return `reversed from ${fields.reversedFrom}`;
 }
 
 // ---- codes ----

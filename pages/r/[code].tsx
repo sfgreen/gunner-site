@@ -18,6 +18,8 @@ import { normalizeInviteCode } from '../../lib/invite';
 //   steps tell the friend to allow it). Typing the code in Profile always works.
 // - A laptop: a QR code to finish on the phone. Android: Step Gunner is iPhone
 //   and iPad only, said plainly.
+// - Any device: "Claim 40% off on the web" goes to /pro?code=CODE, which takes the
+//   code at Stripe Checkout (decision 0057 amendment, F1 and F5).
 // Server-rendered so Messages, WhatsApp and the rest unfurl it with the invite
 // card (/api/og-invite). No em or en dashes in copy.
 
@@ -131,8 +133,15 @@ export default function Invite({ code }: Props) {
                 <p className="rs-note">Step Gunner is on iPhone and iPad. Keep the code: it works on any iPhone or iPad you sign in on.</p>
               ) : null}
 
-              {device !== 'desktop' ? (
-                <div className="rs-act"><StoreButton loc="top" lg>Get Step Gunner free</StoreButton></div>
+              {code || device !== 'desktop' ? (
+                <div className="rs-act">
+                  {device !== 'desktop' ? <StoreButton loc="top" lg>Get Step Gunner free</StoreButton> : null}
+                  {code ? (
+                    <a className="btn btn-q btn-lg" href={`/pro?code=${encodeURIComponent(code)}`} onClick={() => track('invite_claim_web', { code, device })}>
+                      Claim 40% off on the web
+                    </a>
+                  ) : null}
+                </div>
               ) : null}
 
               <NumberedSteps steps={[
@@ -161,7 +170,7 @@ export default function Invite({ code }: Props) {
         .mk .rs-qr-img { width: 180px; height: 180px; background: #fff; border-radius: 12px; padding: 6px; }
         .mk .rs-qr-img svg { width: 100%; height: 100%; display: block; }
         .mk .rs-note { margin-top: 16px; font-size: 16px; font-weight: 600; color: var(--ink-2); }
-        .mk .rs-pt-col .rs-act { margin-top: 20px; }
+        .mk .rs-pt-col .rs-act { margin-top: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
         .mk .rs-pt-col .steps { margin-top: 24px; }
         .mk .rs-fine { margin-top: 16px; font-size: 15px; color: var(--ink-2); }
         .mk .rs-fine a { color: var(--act, #3d8bff); font-weight: 700; }

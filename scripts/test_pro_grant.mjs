@@ -5,9 +5,11 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   DAY_MS, GRACE_MS, liveSub, webExpiresMs, manualMs, mergedMs, appStoreActive,
-  normalizeCode, couponLabel, FRIEND_PAYOUT_CENTS, FRIEND_YEAR_CAP_CENTS, FRIEND_HOLD_MS,
-  earnedInYearCents, friendPayoutCents, reversalStatus, studentCodeForm, chiefCodeForm,
+  normalizeCode, couponLabel, studentCodeForm, chiefCodeForm, extendManualMs, PRO_MONTH_DAYS, checkoutReturn,
 } from '../lib/proGrant.ts';
+import {
+  FRIEND_PAYOUT_CENTS, FRIEND_YEAR_CAP_CENTS, FRIEND_HOLD_MS, earnedInYearCents, friendPayoutCents, reversalFields,
+} from '../lib/referral.ts';
 
 const NOW = Date.UTC(2026, 9, 30, 15);
 const sub = (o) => ({ id: 's', status: 'active', periodEndMs: NOW + 30 * DAY_MS, cancelAtPeriodEnd: false, plan: 'monthly', ...o });
@@ -74,22 +76,24 @@ test('the cap counts this calendar year, and only rows still earning', () => {
   const row = (o) => ({ status: 'pending', cents: 1500, firstPaidMs: NOW - DAY_MS, ...o });
   assert.equal(earnedInYearCents([row(), row({ status: 'payable' }), row({ status: 'paid' })], NOW), 4500);
   assert.equal(earnedInYearCents([row({ firstPaidMs: Date.UTC(2025, 11, 31) })], NOW), 0, 'last year');
-  assert.equal(earnedInYearCents([row({ status: 'reversed' }), row({ status: 'reversed_after_paid' })], NOW), 0);
-  assert.equal(earnedInYearCents([row({ status: 'skipped', cents: 0 }), row({ status: 'capped', cents: 0 })], NOW), 0);
+  assert.equal(earnedInYearCents([row({ status: 'reversed' }), row({ status: 'reversed', paidAt: NOW })], NOW), 0);
+  assert.equal(earnedInYearCents([row({ status: 'skipped', cents: 0 }), row({ status: 'forfeited', cents: 0 })], NOW), 0);
   assert.equal(earnedInYearCents([row({ firstPaidMs: null })], NOW), 1500, 'a row without a time yet counts');
 });
 
 test('only a refund of the first payment takes a reward back', () => {
   const r = (status, first = 'pi_first') => ({ status, firstPaymentIntent: first });
-  assert.equal(reversalStatus(r('pending'), 'pi_first'), 'reversed');
-  assert.equal(reversalStatus(r('payable'), 'pi_first'), 'reversed');
-  assert.equal(reversalStatus(r('paid'), 'pi_first'), 'reversed_after_paid', 'comes out of the next earnings');
-  assert.equal(reversalStatus(r('pending'), 'pi_renewal'), null, 'a later renewal refunded: the reward stands');
-  assert.equal(reversalStatus(r('paid'), null), null);
-  assert.equal(reversalStatus(r('reversed'), 'pi_first'), null, 'already taken back');
-  assert.equal(reversalStatus(r('skipped'), 'pi_first'), null);
-  assert.equal(reversalStatus(r('pending', null), 'pi_any'), 'reversed', 'first payment unknown: a refund inside the hold counts');
-  assert.equal(reversalStatus(r('payable', null), 'pi_any'), null, 'first payment unknown and past the hold: kept');
+  const rev = (from) => ({ status: 'reversed', reversedFrom: from });
+  assert.deepEqual(reversalFields(r('pending'), 'pi_first'), rev('pending'));
+  assert.deepEqual(reversalFields(r('payable'), 'pi_first'), rev('payable'));
+  assert.deepEqual(reversalFields(r('paid'), 'pi_first'), rev('paid'), 'keeps paidAt; the next run nets it');
+  assert.equal(reversalFields(r('pending'), 'pi_renewal'), null, 'a later renewal refunded: the reward stands');
+  assert.equal(reversalFields(r('paid'), null), null);
+  assert.equal(reversalFields(r('reversed'), 'pi_first'), null, 'already taken back');
+  assert.equal(reversalFields(r('skipped'), 'pi_first'), null);
+  assert.equal(reversalFields(r('forfeited'), 'pi_first'), null);
+  assert.deepEqual(reversalFields(r('pending', null), 'pi_any'), rev('pending'), 'first payment unknown: a refund inside the hold counts');
+  assert.equal(reversalFields(r('payable', null), 'pi_any'), null, 'first payment unknown and past the hold: kept');
 });
 
 test('App Store paying matches the server rule', () => {
@@ -129,4 +133,21 @@ test('a code works with or without its hyphen', () => {
 test('a $5 friend coupon reads as $5 off the first payment', () => {
   assert.equal(couponLabel({ amount_off: 500, duration: 'once' }, 'monthly'), '$5.00 off your first month');
   assert.equal(couponLabel({ amount_off: 500, duration: 'once' }, 'yearly'), '$5.00 off your first year');
+});
+
+test('a Pro month extends a running grant from its end, a lapsed one from now', () => {
+  assert.equal(PRO_MONTH_DAYS, 30);
+  assert.equal(extendManualMs(NOW + 10 * DAY_MS, NOW, 30), NOW + 40 * DAY_MS, 'stacks on a running comp');
+  assert.equal(extendManualMs(NOW - 10 * DAY_MS, NOW, 30), NOW + 30 * DAY_MS, 'a lapsed comp restarts today');
+  assert.equal(extendManualMs(null, NOW, 60), NOW + 60 * DAY_MS, 'two friends, no comp');
+});
+
+test('checkout from the app returns to the universal link with the app-to-web page', () => {
+  const app = checkoutReturn('app', 'https://stepgunner.com');
+  assert.equal(app.success_url, 'https://stepgunner.com/pro/done?session={CHECKOUT_SESSION_ID}');
+  assert.equal(app.cancel_url, 'https://stepgunner.com/pro/done?canceled=1');
+  assert.equal(app.origin_context, 'mobile_app');
+  const web = checkoutReturn('web', 'https://stepgunner.com');
+  assert.deepEqual(web, { success_url: 'https://stepgunner.com/pro?paid={CHECKOUT_SESSION_ID}', cancel_url: 'https://stepgunner.com/pro?canceled=1' });
+  assert.equal('origin_context' in web, false, 'the web keeps the default Checkout page');
 });

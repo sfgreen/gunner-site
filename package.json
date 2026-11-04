@@ -10,7 +10,7 @@
     "sync:pathways": "node scripts/sync_pathways.mjs",
     "og:cards": "node scripts/og_cards.mjs",
     "test:calcs": "node --test scripts/test_pathway_calcs.mjs",
-    "test:pro": "node --test scripts/test_pro_grant.mjs",
+    "test:pro": "node --test scripts/test_pro_grant.mjs scripts/test_referral.mjs",
     "stripe:setup": "node scripts/stripe_setup.mjs",
     "stripe:dev": "node scripts/stripe_dev.mjs"
   },

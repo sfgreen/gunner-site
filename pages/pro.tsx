@@ -1,16 +1,17 @@
 import { useRouter } from 'next/router';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import type { Auth, User } from 'firebase/auth';
+import type { User } from 'firebase/auth';
 import { AppShell } from '../components/app';
+import ProSignIn, { APPLE_ON } from '../components/ProSignIn';
+import ProStyles from '../components/ProStyles';
 import { track } from '../lib/analytics';
+import { api, fmtDate, useWebAccount } from '../lib/webAccount';
 
 // stepgunner.com/pro: buy Pro on the web, unlock it on the phone (gunner repo,
 // decision 0051; the approved "Pro on the web" board of the Step Gunner Web mock).
-// Sign in with the app's own account (Apple or Google), pick a plan, pay on
-// Stripe's page; the webhook writes the server grant the app already reads.
-//
-// Apple on the web needs a Services ID in Firebase first, so its button shows only
-// with NEXT_PUBLIC_PRO_APPLE=1 (decision 0051, Open).
+// Sign in with the app's own account (Apple or Google, or the app's handoff link
+// /pro?h=CODE), pick a plan, pay on Stripe's page; the webhook writes the server
+// grant the app already reads.
 
 type Plan = 'yearly' | 'monthly';
 type Source = 'app_store' | 'web' | 'grant' | 'none';
@@ -26,8 +27,6 @@ type Status = {
 };
 type Code = { code: string; label: string; kind: 'friend' | 'chief'; rewards: boolean };
 
-const APPLE_ON = process.env.NEXT_PUBLIC_PRO_APPLE === '1';
-
 const PLANS: { id: Plan; name: string; sub: string; price: string }[] = [
   { id: 'yearly', name: 'Yearly', sub: 'BEST VALUE · $8.33 A MONTH', price: '$99.99' },
   { id: 'monthly', name: 'Monthly', sub: 'CANCEL ANYTIME', price: '$14.99' },
@@ -42,57 +41,24 @@ const FEATURES = [
   { t: 'UNLIMITED CRAM', d: 'No daily cap on drills.' },
 ];
 
-const fmtUsd = (cents: number) => `$${(cents / 100).toFixed(2).replace(/\.00$/, '')}`;
-
-const fmtDate = (ms: number | null) =>
-  ms ? new Intl.DateTimeFormat('en-US', { timeZone: 'America/Chicago', month: 'short', day: 'numeric', year: 'numeric' }).format(ms) : '';
-
-async function api<T>(user: User, path: string, body?: unknown): Promise<T & { ok: boolean; error?: string; code?: string }> {
-  const token = await user.getIdToken();
-  const r = await fetch(path, {
-    method: body === undefined ? 'GET' : 'POST',
-    headers: { Authorization: `Bearer ${token}`, ...(body === undefined ? {} : { 'Content-Type': 'application/json' }) },
-    body: body === undefined ? undefined : JSON.stringify(body),
-  });
-  try {
-    return await r.json();
-  } catch {
-    return { ok: false, error: 'Something went wrong. Try again.' } as T & { ok: boolean; error: string };
-  }
-}
-
-function signInError(code: string): string {
-  if (code === 'auth/popup-closed-by-user' || code === 'auth/cancelled-popup-request') return '';
-  if (code === 'auth/popup-blocked') return 'Your browser blocked the sign-in window. Allow pop-ups for stepgunner.com and try again.';
-  if (code === 'auth/account-exists-with-different-credential') return 'Your account signs in another way. Try the other button.';
-  return "Sign-in didn't finish. Try again.";
-}
-
 export default function ProPage() {
   const router = useRouter();
-  const authRef = useRef<Auth | null>(null);
-  const [user, setUser] = useState<User | null | undefined>(undefined); // undefined = still checking
+  const account = useWebAccount();
+  const { user } = account;
   const [status, setStatus] = useState<Status | null>(null);
   const [plan, setPlan] = useState<Plan>('yearly');
   const [codeText, setCodeText] = useState('');
   const [code, setCode] = useState<Code | null>(null);
   const [codeErr, setCodeErr] = useState('');
-  const [err, setErr] = useState('');
-  const [busy, setBusy] = useState<'' | 'signin' | 'code' | 'checkout' | 'portal'>('');
+  const [pageErr, setErr] = useState('');
+  const [busyOn, setBusy] = useState<'' | 'code' | 'checkout' | 'portal'>('');
   const [paid, setPaid] = useState<'' | 'confirming' | 'on' | 'slow'>('');
   const urlCode = useRef('');
+  const busy = busyOn || (account.busy ? 'signin' : '');
+  const err = pageErr || account.err;
 
-  // Firebase loads only here, after paint.
   useEffect(() => {
     track('pro_web_view', {});
-    let unsub = () => {};
-    (async () => {
-      const [{ webAuth }, { onAuthStateChanged }] = await Promise.all([import('../lib/firebaseWeb'), import('firebase/auth')]);
-      const auth = webAuth();
-      authRef.current = auth;
-      unsub = onAuthStateChanged(auth, (u) => setUser(u));
-    })();
-    return () => unsub();
   }, []);
 
   const loadStatus = useCallback(async (u: User) => {
@@ -134,31 +100,13 @@ export default function ProPage() {
     return () => { stop = true; };
   }, [user, router.isReady, router.query.paid, loadStatus]);
 
-  const signIn = async (provider: 'apple' | 'google') => {
-    const auth = authRef.current;
-    if (!auth) return;
-    setBusy('signin');
+  const signIn = (provider: 'apple' | 'google') => {
     setErr('');
-    track('pro_web_signin', { provider });
-    try {
-      const m = await import('firebase/auth');
-      const p = provider === 'google' ? new m.GoogleAuthProvider() : new m.OAuthProvider('apple.com');
-      if (provider === 'apple') {
-        (p as InstanceType<typeof m.OAuthProvider>).addScope('email');
-      }
-      await m.signInWithPopup(auth, p);
-    } catch (e) {
-      setErr(signInError((e as { code?: string }).code || ''));
-    } finally {
-      setBusy('');
-    }
+    account.signIn(provider, () => track('pro_web_signin', { provider }));
   };
 
   const signOut = async () => {
-    const auth = authRef.current;
-    if (!auth) return;
-    const m = await import('firebase/auth');
-    await m.signOut(auth);
+    await account.signOut();
     setCode(null);
     setCodeText('');
     setPaid('');
@@ -254,24 +202,17 @@ export default function ProPage() {
     panel = <p className="pro-muted">Checking your sign-in...</p>;
   } else if (!user || anonymous) {
     panel = (
-      <div className="pro-stack">
-        <h2>Sign in with your Step Gunner account</h2>
-        <p className="pro-muted">Use the same sign-in as the app, so Pro lands on the account that has your progress.</p>
-        {APPLE_ON && (
-          <button type="button" className="pro-btn pro-apple" disabled={!!busy} onClick={() => signIn('apple')}>
-            <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.53 2.66-.39 6.59 1.1 8.75.73 1.05 1.6 2.24 2.73 2.2 1.1-.05 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.46-.03-.01-2.3-.88-2.3-3.52zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.65-1.05 1.68-.92 2.67.97.08 1.96-.49 2.56-1.22z"/></svg>
-            Continue with Apple
-          </button>
-        )}
-        <button type="button" className="pro-btn pro-ghost" disabled={!!busy} onClick={() => signIn('google')}>
-          <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.27c0-.85-.08-1.67-.22-2.45H12v4.64h6.45a5.5 5.5 0 0 1-2.4 3.62v3h3.88c2.27-2.09 3.57-5.17 3.57-8.81z"/><path fill="#34A853" d="M12 24c3.24 0 5.96-1.07 7.94-2.91l-3.88-3.01c-1.08.72-2.45 1.15-4.06 1.15-3.12 0-5.77-2.11-6.71-4.95H1.28v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.29 14.28A7.2 7.2 0 0 1 4.91 12c0-.79.14-1.56.38-2.28v-3.1H1.28a12 12 0 0 0 0 10.76l4.01-3.1z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.34.61 4.59 1.8l3.44-3.44A11.5 11.5 0 0 0 12 0 12 12 0 0 0 1.28 6.62l4.01 3.1C6.23 6.88 8.88 4.77 12 4.77z"/></svg>
-          Continue with Google
-        </button>
+      <ProSignIn
+        title="Sign in with your Step Gunner account"
+        lede="Use the same sign-in as the app, so Pro lands on the account that has your progress."
+        busy={!!busy}
+        onSignIn={signIn}
+      >
         {!APPLE_ON && (
           <p className="pro-fine">Signed in to the app with Apple? Apple sign-in on the web is coming. Until then, buy Pro in the app.</p>
         )}
         <p className="pro-fine">No sign-in in the app yet? Add one first (Settings, Account), so your progress comes with you.</p>
-      </div>
+      </ProSignIn>
     );
   } else if (!status) {
     panel = <p className="pro-muted">{err || 'Finding your account...'}</p>;
@@ -416,90 +357,7 @@ export default function ProPage() {
       </div>
       <p className="pro-foot">Already pay through the App Store? You're set. Nothing to buy here.</p>
 
-      <style jsx global>{`
-        .pro-wrap { max-width: 1200px; margin: 0 auto; padding: 40px 16px 32px; /* the .ax-page gutters, so the column sits under the wordmark */ display: flex; flex-wrap: wrap; align-items: flex-start; gap: 48px; }
-        .pro-pitch { flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 24px; padding-top: 8px; }
-        .pro-eyebrow { font: 600 12px/1 var(--f-mono); letter-spacing: .18em; color: var(--key); }
-        .pro-pitch h1 { margin: 0; font-size: 46px; line-height: 1.04; font-weight: 700; letter-spacing: -1px; color: var(--ink); text-wrap: balance; }
-        .pro-lede { margin: 0; max-width: 46ch; font-size: 18px; line-height: 1.55; color: var(--ink-2); }
-        .pro-feats { list-style: none; margin: 0; padding: 0; max-width: 520px; }
-        .pro-feats li { display: flex; gap: 14px; padding: 14px 0; border-top: 1px solid var(--line); color: var(--wards); }
-        .pro-feats li > div { display: flex; flex-direction: column; gap: 4px; }
-        .pro-feat-t { font: 600 13px/1.3 var(--f-mono); letter-spacing: .12em; color: var(--ink); }
-        .pro-feat-d { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
-
-        .pro-card { flex: 1 1 400px; max-width: 480px; min-width: 0; display: flex; flex-direction: column; gap: 20px; padding: 28px;
-          border-radius: 20px; color: var(--st-ink);
-          background: radial-gradient(90% 60% at 100% 0%, var(--st-card-glow), transparent 60%), linear-gradient(180deg, var(--st-card), var(--st-card-2));
-          box-shadow: inset 0 0 0 1px var(--st-line-2), 0 40px 80px -24px var(--st-shadow); }
-        .pro-card h2 { margin: 0; font-size: 21px; line-height: 1.25; font-weight: 600; color: var(--st-white); }
-        .pro-card .pro-h2-lg { font-size: 28px; font-weight: 700; }
-        .pro-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
-        .pro-steps li { display: flex; flex-direction: column; gap: 8px; }
-        .pro-steps .bar { height: 3px; border-radius: 2px; background: var(--st-line-2); }
-        .pro-steps .lbl { font: 500 11px/1 var(--f-mono); letter-spacing: .14em; color: var(--st-ctl); }
-        .pro-steps li.done .bar { background: var(--st-green); }
-        .pro-steps li.now .bar { background: var(--st-blue); }
-        .pro-steps li.done .lbl, .pro-steps li.now .lbl { color: var(--st-ink); }
-        .pro-stack { display: flex; flex-direction: column; gap: 12px; }
-        .pro-muted { margin: 0; font-size: 15px; line-height: 1.55; color: var(--st-ink-2); }
-        .pro-fine { margin: 0; font-size: 13px; line-height: 1.55; color: var(--st-ink-3); }
-        .pro-fine a, .pro-link { color: var(--st-blue); }
-        .pro-link { background: none; border: 0; padding: 0; font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
-        .pro-ok { margin: 0; font-size: 13px; line-height: 1.5; color: var(--st-green); }
-        .pro-bad { margin: 0; font-size: 13px; line-height: 1.5; color: var(--st-red); }
-        .pro-mono { font-family: var(--f-mono); color: var(--st-ink); }
-
-        .pro-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 48px; padding: 0 18px; border-radius: 12px;
-          font: 600 15px/1 var(--f-sans); cursor: pointer; border: 0; }
-        .pro-btn:disabled { opacity: .55; cursor: default; }
-        .pro-apple { background: var(--st-white); color: var(--st-screen); }
-        .pro-ghost { background: transparent; color: var(--st-ink); box-shadow: inset 0 0 0 1px var(--st-line-2); }
-        .pro-ghost:hover:not(:disabled) { background: var(--st-line); }
-        .pro-primary { height: 52px; margin-top: 4px; background: var(--st-act); color: var(--st-on-act); font-size: 16px; box-shadow: 0 12px 30px -8px var(--st-glow-a); }
-        .pro-primary:hover:not(:disabled) { background: var(--st-act-hov); }
-        .pro-auto { align-self: flex-start; }
-
-        .pro-found { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 12px; font-size: 14px; line-height: 1.45;
-          color: var(--st-ink-2); background: var(--st-ok-tint); box-shadow: inset 0 0 0 1px var(--ring-green); }
-        .pro-dot { flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--st-green); }
-
-        .pro-plan { display: flex; align-items: center; gap: 14px; padding: 16px; border-radius: 14px; border: 0; text-align: left; cursor: pointer;
-          color: var(--st-ink); background: var(--st-card-2); box-shadow: inset 0 0 0 1px var(--st-line-2); font: inherit; }
-        .pro-plan.on { background: var(--focus-ring); box-shadow: inset 0 0 0 1px var(--st-blue); }
-        .pro-radio { flex: none; width: 20px; height: 20px; border-radius: 50%; box-shadow: inset 0 0 0 2px var(--st-ctl); display: inline-flex; align-items: center; justify-content: center; }
-        .pro-radio span { width: 10px; height: 10px; border-radius: 50%; }
-        .pro-plan.on .pro-radio { box-shadow: inset 0 0 0 2px var(--st-blue); }
-        .pro-plan.on .pro-radio span { background: var(--st-blue); }
-        .pro-plan-txt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
-        .pro-plan-name { font-size: 16px; font-weight: 600; }
-        .pro-plan-sub { font: 500 11.5px/1.2 var(--f-mono); letter-spacing: .06em; color: var(--st-ink-3); }
-        .pro-plan-price { font: 500 18px/1 var(--f-mono); color: var(--st-white); font-variant-numeric: tabular-nums; }
-
-        .pro-code { display: flex; gap: 8px; align-items: flex-end; margin: 0; }
-        .pro-code-field { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
-        .pro-code-field label { font-size: 13px; color: var(--st-ink-2); }
-        .pro-code-field input { height: 44px; padding: 0 14px; border-radius: 11px; border: 0; outline: none; color: var(--st-ink);
-          background: var(--st-bg); box-shadow: inset 0 0 0 1px var(--st-line-2); font: 500 15px/1 var(--f-mono); letter-spacing: .06em; }
-        .pro-code-field input:focus { box-shadow: inset 0 0 0 1px var(--st-blue), 0 0 0 3px var(--focus-ring); }
-        .pro-apply { height: 44px; font-size: 14px; }
-
-        .pro-done { align-items: flex-start; }
-        .pro-check { width: 56px; height: 56px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
-          color: var(--st-green); background: var(--st-ok-tint); box-shadow: inset 0 0 0 1px var(--glow-green), 0 0 30px var(--ring-green); }
-        .pro-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
-        .pro-who { padding-top: 12px; border-top: 1px solid var(--st-line); overflow-wrap: anywhere; }
-        .pro-foot { max-width: 1200px; margin: 0 auto; padding: 16px 16px 40px; font-size: 13px; color: var(--ink-3); }
-
-        @media (min-width: 760px) {
-          .pro-wrap, .pro-foot { padding-left: 40px; padding-right: 40px; }
-        }
-        @media (max-width: 600px) {
-          .pro-wrap { padding-top: 24px; gap: 32px; }
-          .pro-pitch h1 { font-size: 38px; }
-          .pro-card { padding: 20px; }
-        }
-      `}</style>
+      <ProStyles />
     </AppShell>
   );
 }

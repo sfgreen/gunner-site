@@ -19,6 +19,10 @@ const nextConfig = {
     // frame-ancestors * opts in; we deliberately do NOT set X-Frame-Options here,
     // since that legacy header would block cross-origin framing. Scoped to /embed
     // only so no other route loosens its framing policy.
+    // /pro and /earnings can open with the app's one-time sign-in code in ?h= (lib/handoff.ts).
+    // The page drops it from the URL during parse, but the chunks the preload scanner
+    // fetches first would carry it in their Referer; strict-origin sends only the origin.
+    const handoffPage = [{ key: 'Referrer-Policy', value: 'strict-origin' }];
     return [
       {
         source: '/embed',
@@ -26,6 +30,8 @@ const nextConfig = {
           { key: 'Content-Security-Policy', value: 'frame-ancestors *' },
         ],
       },
+      { source: '/pro', headers: handoffPage },
+      { source: '/earnings', headers: handoffPage },
     ];
   },
 };

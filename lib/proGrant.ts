@@ -11,61 +11,6 @@
 export const DAY_MS = 86_400_000;
 export const GRACE_MS = DAY_MS; // a renewal that is a few hours late keeps Pro
 
-// Friend codes (decision 0057, 2026-11-03; amends 0051). The friend's discount is a
-// Stripe coupon picked by plan: 40% off a first year (STRIPE_COUPON_FRIEND_YEARLY)
-// or $5 off a first month (STRIPE_COUPON_FRIEND_MONTHLY). The student who shared
-// earns cash, paid by hand (Managed Payments allows no Connect payouts): $15 for a
-// yearly friend, $5 for a monthly one. It is payable 30 days after the friend's
-// first payment if that payment is not refunded, and capped per calendar year
-// under the 1099 line. Rows live in referralRewards/{friendUid}, one per friend, ever.
-export const FRIEND_PAYOUT_CENTS: Record<'yearly' | 'monthly', number> = { yearly: 1500, monthly: 500 };
-export const FRIEND_YEAR_CAP_CENTS = 199_500;
-export const FRIEND_HOLD_MS = 30 * DAY_MS;
-
-/** A referralRewards row, read for the cap. */
-export type RewardRow = { status: string; cents: number; firstPaidMs: number | null };
-
-const EARNING = new Set(['pending', 'payable', 'paid']);
-
-/** Cents a sharer has earned from friends whose first payment fell in this calendar
- *  year (UTC). Reversed, skipped and capped rows do not count. */
-export function earnedInYearCents(rows: RewardRow[], nowMs: number): number {
-  const year = new Date(nowMs).getUTCFullYear();
-  let sum = 0;
-  for (const r of rows) {
-    if (!EARNING.has(r.status)) continue;
-    if (r.firstPaidMs != null && new Date(r.firstPaidMs).getUTCFullYear() !== year) continue;
-    sum += Math.max(0, r.cents || 0);
-  }
-  return sum;
-}
-
-/** Cents one more paying friend earns: the plan's amount, what is left under the cap, or 0. */
-export function friendPayoutCents(plan: 'yearly' | 'monthly', earnedCents: number, cap = FRIEND_YEAR_CAP_CENTS): number {
-  return Math.max(0, Math.min(FRIEND_PAYOUT_CENTS[plan], cap - Math.max(0, earnedCents)));
-}
-
-/**
- * What a refund or dispute does to a reward row. Only a refund of the friend's FIRST
- * payment takes the reward back (0057: a later renewal's refund leaves it). When the
- * first payment is unknown, a refund while the row is still in its hold counts.
- * Returns the new status, or null for no change.
- */
-export function reversalStatus(
-  row: { status: string; firstPaymentIntent?: string | null },
-  refundedPaymentIntent: string | null,
-): string | null {
-  const first = row.firstPaymentIntent || null;
-  if (first) {
-    if (!refundedPaymentIntent || refundedPaymentIntent !== first) return null;
-  } else if (row.status !== 'pending') {
-    return null;
-  }
-  if (row.status === 'pending' || row.status === 'payable') return 'reversed';
-  if (row.status === 'paid') return 'reversed_after_paid';
-  return null;
-}
-
 export type Plan = 'yearly' | 'monthly';
 
 /** The parts of a Stripe subscription the rule reads (built in proServer.ts). */
@@ -128,6 +73,34 @@ export function mergedMs(manual: number | null, web: number | null): number | nu
   if (manual == null) return web;
   if (web == null) return manual;
   return Math.max(manual, web);
+}
+
+/** A free month of Pro per paying friend (decision 0057 item 6) is this many days. */
+export const PRO_MONTH_DAYS = 30;
+
+/** The manual grant moved `days` later: from its end while it still runs, else from now. */
+export function extendManualMs(manual: number | null, nowMs: number, days: number): number {
+  return Math.max(manual ?? 0, nowMs) + days * DAY_MS;
+}
+
+export type CheckoutOrigin = 'app' | 'web';
+
+/**
+ * Where Stripe Checkout sends the buyer back. From the app (0057 amendment, F2) it is
+ * the universal link /pro/done, which reopens Step Gunner, with Stripe's page for
+ * app-to-web purchases; from the web it is /pro.
+ */
+export function checkoutReturn(origin: CheckoutOrigin, base: string): {
+  success_url: string; cancel_url: string; origin_context?: 'mobile_app';
+} {
+  if (origin === 'app') {
+    return {
+      success_url: `${base}/pro/done?session={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${base}/pro/done?canceled=1`,
+      origin_context: 'mobile_app',
+    };
+  }
+  return { success_url: `${base}/pro?paid={CHECKOUT_SESSION_ID}`, cancel_url: `${base}/pro?canceled=1` };
 }
 
 /** The same "paying through the App Store" rule as functions/main.py. */

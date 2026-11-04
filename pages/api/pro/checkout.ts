@@ -1,13 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type Stripe from 'stripe';
+import { checkoutReturn } from '../../../lib/proGrant';
 import {
   ORIGIN, ProError, caller, codeRefusal, isPlan, priceFor, proDb, resolveCode, sendError, statusFor, stripe, syncCustomer,
   type CodeOk,
 } from '../../../lib/proServer';
 
-// POST /api/pro/checkout {plan, code?} -> {url}: a Stripe Checkout session for
-// this account (decision 0051). Refuses an account that already pays, so no one
+// POST /api/pro/checkout {plan, code?, origin?} -> {url, id}: a Stripe Checkout session
+// for this account (decision 0051). Refuses an account that already pays, so no one
 // is billed twice. The webhook, not this route, turns Pro on.
+//
+// origin "app" (decision 0057 amendment, F2): the app calls this with its own Firebase
+// ID token and opens the url in Safari. Stripe shows its app-to-web page
+// (origin_context mobile_app) and returns to stepgunner.com/pro/done, a universal link
+// that reopens the app. Anything else is the web page (/pro).
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Cache-Control', 'private, no-store');
   if (req.method !== 'POST') {
@@ -18,6 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const me = await caller(req);
     const plan = req.body?.plan;
     if (!isPlan(plan)) throw new ProError(400, 'plan', 'Pick a plan.');
+    const origin = req.body?.origin === 'app' ? 'app' : 'web';
     const { status, doc } = await statusFor(me.uid);
     if (status.source === 'app_store') {
       throw new ProError(409, 'app_store', 'This account already has Pro through the App Store.');
@@ -26,7 +33,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       throw new ProError(409, 'web', 'This account already has Pro. Use Manage plan to change it.');
     }
 
-    const meta: Record<string, string> = { app: 'stepgunner', uid: me.uid, plan };
+    const meta: Record<string, string> = { app: 'stepgunner', uid: me.uid, plan, origin };
     let discounts: Stripe.Checkout.SessionCreateParams.Discount[] | undefined;
     if (typeof req.body?.code === 'string' && req.body.code.trim()) {
       const res0 = await resolveCode(req.body.code, plan, { uid: me.uid, doc });
@@ -72,11 +79,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       managed_payments: managed ? { enabled: true } : undefined,
       automatic_tax: tax ? { enabled: true } : undefined,
       customer_update: tax ? { address: 'auto', name: 'auto' } : undefined,
-      success_url: `${ORIGIN}/pro?paid={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${ORIGIN}/pro?canceled=1`,
+      ...checkoutReturn(origin, ORIGIN),
     });
     if (!session.url) throw new ProError(502, 'stripe', 'Checkout did not open. Try again.');
-    return res.status(200).json({ ok: true, url: session.url });
+    console.log(`[pro] checkout ${origin} uid=${me.uid.slice(0, 6)} plan=${plan} code=${meta.codeKind || 'none'} session=${session.id}`);
+    return res.status(200).json({ ok: true, url: session.url, id: session.id });
   } catch (e) {
     return sendError(res, e);
   }

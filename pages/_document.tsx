@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document';
+import { HANDOFF_STRIP } from '../lib/handoffStrip';
 
 // Loads the app look's two families, Inter and JetBrains Mono, once, site-wide, from
 // the correct place (the Document head), so pages and components never inject their
@@ -8,6 +9,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <script dangerouslySetInnerHTML={{ __html: HANDOFF_STRIP }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
