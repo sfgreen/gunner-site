@@ -4,7 +4,7 @@
 // asks for the app once in the hero. The out-of-sample "within 7" figure comes from
 // track_record_json (server-side, 1h cache), with the last published value as fallback.
 // ?ref=CODE keeps working: client.js switches every store button to ct=referral and
-// copies GUNNERREF:CODE on the tap. No em or en dashes in copy.
+// copies the invite link (stepgunner.com/?ref=CODE) on the tap. No em or en dashes in copy.
 import type { GetServerSideProps } from 'next';
 import WardsPage from '../components/WardsPage';
 import { homeHtml } from '../lib/wards/render';
