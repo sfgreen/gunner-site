@@ -14,5 +14,22 @@
     "portalConfig": "bpc_1UXfDCLVuK5KkX7nPcfph4fj",
     "apiVersion": "2026-08-26.dahlia",
     "updatedAt": "2026-11-03T11:44:41.935Z"
+  },
+  "live": {
+    "account": "acct_1UXf3lLO2wGrao9a",
+    "product": "step_gunner_pro",
+    "prices": {
+      "yearly": "price_1UYGLRLO2wGrao9aWJ6OjjdJ",
+      "monthly": "price_1UYGLSLO2wGrao9aCcqt98kT"
+    },
+    "coupons": {
+      "chief": "gunner_chief_40",
+      "friendYearly": "gunner_friend_40pct",
+      "friendMonthly": "gunner_friend_500c"
+    },
+    "portalConfig": "bpc_1UYGLTLO2wGrao9aG14isMm4",
+    "webhookEndpoint": "we_1UYGLTLO2wGrao9anvosCXtX",
+    "apiVersion": "2026-08-26.dahlia",
+    "updatedAt": "2026-11-05T02:24:07.866Z"
   }
 }
