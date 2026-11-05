@@ -77,6 +77,10 @@
 //
 // users/{uid}.webPro.openSessionId: the account's open Checkout session; a new checkout
 //   expires it, a completed one clears it.
+// users/{uid}.webPro.billingAlert and webSales/{session}.alert: {kind
+//   'duplicate_checkout_undo_failed', step ('cancel' | 'refund'), why, sessionId,
+//   subscriptionId, paymentIntent, error, at} when Stripe refused to undo a duplicate
+//   checkout; for Admin to settle by hand.
 //
 // authHandoffs/{sha256 of the code}: uid, to ('earnings' | 'pro'), createdAt, expiresAt
 //   (2 minutes); deleted when used. The code travels as /earnings#h=CODE (lib/handoff.ts).
@@ -88,7 +92,7 @@ import Stripe from 'stripe';
 import type { NextApiRequest } from 'next';
 import {
   appStoreActive, chiefCodeForm, couponLabel, DUPLICATE_REFUND_TAG, duplicateReason, liveSub, manualMs, mergedMs,
-  normalizeCode, studentCodeForm, webExpiresMs, type GrantFields, type Plan, type SubLite,
+  normalizeCode, refusedByStripe, studentCodeForm, webExpiresMs, type GrantFields, type Plan, type SubLite,
 } from './proGrant';
 import {
   holdMs, paymentTakenBack, referralConfig, reversalFields, rewardCents, sharedCardReason, type ReferralConfig,
@@ -571,29 +575,66 @@ export function sendError(res: { status: (n: number) => { json: (b: unknown) => 
 /**
  * A completed checkout for an account that already pays (App Store, or another live web
  * subscription): cancel the new subscription and refund its first payment in full, now.
- * Returns why, or null when the checkout stands. Idempotent: the refund is keyed by the
- * subscription, and a canceled subscription is not live.
+ * Returns why, or null when the checkout stands. Safe to run again on a webhook retry:
+ * a canceled subscription is left alone and an already-refunded charge is not refunded
+ * twice. A step Stripe refuses for good is recorded for Admin (users.webPro.billingAlert
+ * and webSales/{session}.alert) instead of failing the webhook, so Stripe does not retry
+ * it for 3 days (review N6); the money question is Danny's.
  */
 export async function undoDuplicateCheckout(uid: string, customerId: string, subscriptionId: string | null,
-  paymentIntent: string | null): Promise<'app_store' | 'web' | null> {
+  paymentIntent: string | null, sessionId: string): Promise<'app_store' | 'web' | null> {
   if (!subscriptionId) return null;
   const st = stripe();
+  const db = proDb();
   const [u, subs] = await Promise.all([
-    proDb().collection('users').doc(uid).get(),
+    db.collection('users').doc(uid).get(),
     st.subscriptions.list({ customer: customerId, status: 'all', limit: 20 }),
   ]);
   const others = subs.data.filter((x) => x.id !== subscriptionId && ['active', 'trialing', 'past_due'].includes(x.status));
   const why = duplicateReason(payingOnAppStore(u.data() || {}), others.length);
   if (!why) return null;
+
+  const alert = async (step: string, e: unknown) => {
+    const a = {
+      kind: 'duplicate_checkout_undo_failed', step, why, sessionId, subscriptionId, paymentIntent,
+      error: String((e as Error)?.message || e).slice(0, 300), at: Timestamp.now(),
+    };
+    await Promise.all([
+      db.collection('users').doc(uid).set({ webPro: { billingAlert: a } }, { merge: true }),
+      db.collection('webSales').doc(sessionId).set({ alert: a }, { merge: true }),
+    ]);
+    console.error(`[pro] duplicate checkout uid=${uid.slice(0, 6)}: ${step} refused by Stripe, recorded for Admin: ${a.error}`);
+  };
+
   const mine = subs.data.find((x) => x.id === subscriptionId);
-  if (mine && !['canceled', 'incomplete_expired'].includes(mine.status)) await st.subscriptions.cancel(subscriptionId);
-  if (paymentIntent) {
-    await st.refunds.create(
-      { payment_intent: paymentIntent, reason: 'duplicate', metadata: { gunner: DUPLICATE_REFUND_TAG, subscription: subscriptionId, uid } },
-      { idempotencyKey: `gunner_dup_refund_${subscriptionId}` },
-    );
+  if (mine && !['canceled', 'incomplete_expired'].includes(mine.status)) {
+    try {
+      await st.subscriptions.cancel(subscriptionId);
+    } catch (e) {
+      if (!refusedByStripe((e as { statusCode?: unknown }).statusCode)) throw e;
+      await alert('cancel', e);
+    }
   }
-  console.warn(`[pro] duplicate checkout uid=${uid.slice(0, 6)} already ${why}: canceled ${subscriptionId}, refunded ${paymentIntent || 'nothing (no payment found)'}`);
+  let refunded = 'nothing (no payment found)';
+  if (paymentIntent) {
+    const charge = await chargeOfPayment(paymentIntent);
+    if (charge?.refunded) {
+      refunded = `${paymentIntent} (already refunded)`;
+    } else {
+      try {
+        await st.refunds.create(
+          { payment_intent: paymentIntent, reason: 'duplicate', metadata: { gunner: DUPLICATE_REFUND_TAG, subscription: subscriptionId, uid } },
+          { idempotencyKey: `gunner_dup_refund_${subscriptionId}` },
+        );
+        refunded = paymentIntent;
+      } catch (e) {
+        if (!refusedByStripe((e as { statusCode?: unknown }).statusCode)) throw e;
+        await alert('refund', e);
+        refunded = `${paymentIntent} (refused, see the alert)`;
+      }
+    }
+  }
+  console.warn(`[pro] duplicate checkout uid=${uid.slice(0, 6)} already ${why}: canceled ${subscriptionId}, refunded ${refunded}`);
   return why;
 }
 

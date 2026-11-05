@@ -20,14 +20,14 @@ type View = EarningsView & { ok: boolean; error?: string };
 type Tone = 'hold' | 'ok' | 'paid' | 'bad' | 'mute';
 
 function statusOf(r: EarningsRowView): { label: string; tone: Tone } {
+  if (r.waiting === 'year_cap_hold') return { label: 'Pays in January', tone: 'hold' };
+  if (r.waiting === 'monthly_budget') return { label: 'Pays next month', tone: 'hold' };
   switch (r.status) {
-    case 'pending':
-      if (r.reason === 'monthly_budget') return { label: 'Pays next month', tone: 'hold' };
-      return { label: r.payableMs ? `On hold to ${fmtDate(r.payableMs)}` : 'On hold', tone: 'hold' };
+    case 'pending': return { label: r.payableMs ? `On hold to ${fmtDate(r.payableMs)}` : 'On hold', tone: 'hold' };
     case 'payable': return { label: 'Payable', tone: 'ok' };
     case 'paid': return { label: r.paidMs ? `Paid ${fmtDate(r.paidMs)}` : 'Paid', tone: 'paid' };
-    case 'reversed': return { label: r.afterPayout ? 'Refunded after payout' : 'Refunded', tone: 'bad' };
-    case 'forfeited': return { label: r.reason === 'year_cap' ? 'Over the yearly cap' : 'Forfeited', tone: 'mute' };
+    case 'reversed': return { label: r.paidMs ? 'Refunded after payout' : 'Refunded', tone: 'bad' };
+    case 'forfeited': return { label: 'Forfeited', tone: 'mute' };
     case 'skipped': return { label: 'Not eligible', tone: 'mute' };
     default: return { label: r.status, tone: 'mute' };
   }
@@ -153,11 +153,11 @@ export default function Earnings() {
       <div className="pro-stack">
         <div className="ern-tiles">
           <div className="ern-tile"><span className="ern-k">ON HOLD</span><span className="ern-v">{fmtUsd(t.pendingCents)}</span></div>
-          <div className="ern-tile"><span className="ern-k">PAYABLE</span><span className="ern-v ern-ok">{fmtUsd(t.nextCents)}</span></div>
+          <div className="ern-tile"><span className="ern-k">PAYABLE</span><span className="ern-v ern-ok">{fmtUsd(Math.max(0, t.payableCents - t.owedBackCents))}</span></div>
           <div className="ern-tile"><span className="ern-k">PAID</span><span className="ern-v">{fmtUsd(t.paidCents)}</span></div>
         </div>
-        {t.owedCents > 0 && (
-          <p className="pro-fine">A friend refunded after you were paid, so {fmtUsd(t.owedCents)} comes off your next payout.</p>
+        {t.owedBackCents > 0 && (
+          <p className="pro-fine">A friend refunded after you were paid, so {fmtUsd(t.owedBackCents)} comes off your next payout.</p>
         )}
 
         <h2 className="ern-h">How you get paid</h2>
@@ -233,10 +233,10 @@ export default function Earnings() {
             {view.rows.map((r, i) => {
               const s = statusOf(r);
               return (
-                <li key={`${r.firstPaidMs}-${i}`} className="ern-row">
+                <li key={i} className="ern-row">
                   <span className="ern-who">
                     <span className="ern-name">{r.name}</span>
-                    <span className="ern-sub">{PLAN_LABEL[r.plan || ''] || 'PRO'}{r.firstPaidMs ? ` · JOINED ${fmtDate(r.firstPaidMs).toUpperCase()}` : ''}</span>
+                    <span className="ern-sub">{PLAN_LABEL[r.plan || ''] || 'PRO'}</span>
                   </span>
                   <span className="ern-amt">
                     <span className="ern-c">{r.cents > 0 ? fmtUsd(r.cents) : ''}</span>

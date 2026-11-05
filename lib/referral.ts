@@ -124,17 +124,15 @@ export function reversalFields(
 
 export type EarningRow = { status: string; cents: number; paidAt?: unknown; deductedInRun?: string | null };
 
+/** The same totals the app's my_referral_rewards callable returns (functions/main.py). */
 export type EarningsTotals = {
-  /** Friends who paid with the code, every row. */
+  /** Friends whose reward still stands: pending, payable or paid. */
   friends: number;
   pendingCents: number;
   payableCents: number;
-  /** Money that went out, including rows a later refund took back. */
   paidCents: number;
   /** Rows refunded after payout, not yet netted off a payout (0057 item 3). */
-  owedCents: number;
-  /** What the next cash payout would send: payable less owed, never below 0. */
-  nextCents: number;
+  owedBackCents: number;
 };
 
 /** A row reversed after its payout went out: it keeps paidAt until a run nets it. */
@@ -143,19 +141,23 @@ export function refundedAfterPayout(r: EarningRow): boolean {
 }
 
 export function earningsTotals(rows: EarningRow[]): EarningsTotals {
-  const t: EarningsTotals = { friends: rows.length, pendingCents: 0, payableCents: 0, paidCents: 0, owedCents: 0, nextCents: 0 };
+  const t: EarningsTotals = { friends: 0, pendingCents: 0, payableCents: 0, paidCents: 0, owedBackCents: 0 };
   for (const r of rows) {
     const c = Math.max(0, r.cents || 0);
-    if (r.status === 'pending') t.pendingCents += c;
-    else if (r.status === 'payable') t.payableCents += c;
-    else if (r.status === 'paid') t.paidCents += c;
-    else if (refundedAfterPayout(r)) {
-      t.paidCents += c;
-      if (!r.deductedInRun) t.owedCents += c;
+    if (r.status === 'pending' || r.status === 'payable' || r.status === 'paid') {
+      t[`${r.status}Cents` as 'pendingCents' | 'payableCents' | 'paidCents'] += c;
+      t.friends += 1;
+    } else if (refundedAfterPayout(r) && !r.deductedInRun) {
+      t.owedBackCents += c;
     }
   }
-  t.nextCents = Math.max(0, t.payableCents - t.owedCents);
   return t;
+}
+
+/** Why a reward is held, the only reasons a sharer is shown (review M5/N3): the monthly
+ *  budget, or the yearly cap until January. Skip reasons never leave the server. */
+export function waitingOf(reason: unknown): 'monthly_budget' | 'year_cap_hold' | null {
+  return reason === 'monthly_budget' || reason === 'year_cap_hold' ? reason : null;
 }
 
 // ---- the monthly payout run ----
@@ -270,6 +272,30 @@ export function monthsPayout(run: Pick<Run, 'id'>, line: RunLine): Payout {
 export function monthsFrom(live: LiveLine): { months: number; deductUsed: LiveRow[] } {
   const deductUsed = live.deduct.slice(0, live.pay.length);
   return { months: live.pay.length - deductUsed.length, deductUsed };
+}
+
+/**
+ * Close the payout recipients of deleted accounts (review m4, N5). A close is
+ * irreversible, so isGone must be sure (the server checks Firebase Auth and the users
+ * doc). One failure never stops the rest: errors are collected and returned.
+ */
+export async function closeOrphans(
+  recipients: { id: string; uid: string | null }[],
+  isGone: (uid: string) => Promise<boolean>,
+  close: (r: { id: string; uid: string }) => Promise<void>,
+): Promise<{ closed: string[]; errors: string[] }> {
+  const out = { closed: [] as string[], errors: [] as string[] };
+  for (const r of recipients) {
+    if (!r.uid) continue;
+    try {
+      if (!(await isGone(r.uid))) continue;
+      await close({ id: r.id, uid: r.uid });
+      out.closed.push(r.id);
+    } catch (e) {
+      out.errors.push(`${r.id}: ${message(e)}`);
+    }
+  }
+  return out;
 }
 
 /** Sends one cash payout. Must be idempotent by payout.id (the Stripe idempotency key).

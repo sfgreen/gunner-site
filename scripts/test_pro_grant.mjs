@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 import {
   DAY_MS, GRACE_MS, liveSub, webExpiresMs, manualMs, mergedMs, appStoreActive,
   normalizeCode, couponLabel, studentCodeForm, chiefCodeForm, extendManualMs, PRO_MONTH_DAYS, checkoutReturn,
-  duplicateReason, DUPLICATE_REFUND_TAG,
+  duplicateReason, DUPLICATE_REFUND_TAG, refusedByStripe,
 } from '../lib/proGrant.ts';
 import { reversalFields } from '../lib/referral.ts';
 
@@ -136,4 +136,12 @@ test('a checkout that completes for an account already paying is undone (review 
   assert.equal(duplicateReason(true, 1), 'app_store');
   assert.equal(duplicateReason(false, 0), null, 'a first plan stands');
   assert.equal(DUPLICATE_REFUND_TAG, 'duplicate_checkout', 'the refund webhook matches on this tag');
+});
+
+test('a Stripe refusal is recorded once, an outage is retried (review N6)', () => {
+  assert.equal(refusedByStripe(400), true, 'charge_already_refunded after the 24-hour key window');
+  assert.equal(refusedByStripe(404), true);
+  assert.equal(refusedByStripe(429), false, 'rate limited: let Stripe retry');
+  assert.equal(refusedByStripe(500), false);
+  assert.equal(refusedByStripe(undefined), false, 'a network error has no status: retry');
 });

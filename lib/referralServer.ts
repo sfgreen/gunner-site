@@ -5,7 +5,7 @@ import type { NextApiRequest } from 'next';
 import { ORIGIN, ProError, chargeOfPayment, grantFields, proDb, referralConfigFor, statusFor, stripe, toMs, ts } from './proServer';
 import { extendManualMs, manualMs, mergedMs, PRO_MONTH_DAYS, type Plan } from './proGrant';
 import {
-  earningsTotals, isCashCountry, monthsFrom, paymentTakenBack, refundedAfterPayout, SETTLE_WINDOW_MS,
+  closeOrphans, earningsTotals, isCashCountry, monthsFrom, paymentTakenBack, SETTLE_WINDOW_MS, waitingOf,
   type EarningsTotals, type LiveLine, type OnboardingStatus, type Payout, type PayoutPorts, type Preference,
   type Recipient, type ReferralConfig, type Run, type RunLine, type RunResult,
 } from './referral';
@@ -68,18 +68,17 @@ async function refreshRecipient(r: Recipient, client: GlobalPayouts): Promise<Re
 
 // ---- /earnings ----
 
+/** One friend as the sharer sees it: the same fields the app's my_referral_rewards
+ *  callable returns. No friend uid, rail, purchase date, amount paid, transaction id or
+ *  skip reason (review N3). */
 export type EarningsRowView = {
   name: string;
   plan: Plan | null;
-  rail: string;
-  cents: number;
   status: string;
-  reason: string | null;
-  /** Reversed after its payout went out (it comes off the next one). */
-  afterPayout: boolean;
-  firstPaidMs: number | null;
+  cents: number;
   payableMs: number | null;
   paidMs: number | null;
+  waiting: 'monthly_budget' | 'year_cap_hold' | null;
 };
 
 export type EarningsView = {
@@ -117,22 +116,19 @@ export async function earningsFor(uid: string, country: string | null, refresh: 
   let rec = recipientFrom(uid, recSnap.data());
   if (rec && client && (refresh || rec.onboardingStatus !== 'complete')) rec = await refreshRecipient(rec, client);
 
-  const docs = rowsSnap.docs.map((x) => x.data());
+  const docs = rowsSnap.docs.map((x) => x.data()).sort((a, b) => (toMs(b.firstPaidAt) ?? 0) - (toMs(a.firstPaidAt) ?? 0));
   const friends = docs.length
     ? await db.getAll(...docs.map((d) => db.collection('users').doc(String(d.friendUid || '') || '_')))
     : [];
   const rows: EarningsRowView[] = docs.map((d, i) => ({
     name: friendName(friends[i]?.data()),
     plan: d.plan === 'yearly' || d.plan === 'monthly' ? d.plan : null,
-    rail: String(d.rail || 'web'),
-    cents: Number(d.cents) || 0,
     status: String(d.status || ''),
-    reason: typeof d.reason === 'string' ? d.reason : null,
-    afterPayout: refundedAfterPayout({ status: String(d.status || ''), cents: 0, paidAt: d.paidAt }),
-    firstPaidMs: toMs(d.firstPaidAt),
+    cents: Math.max(0, Number(d.cents) || 0),
     payableMs: toMs(d.payableAt),
     paidMs: toMs(d.paidAt),
-  })).sort((a, b) => (b.firstPaidMs ?? 0) - (a.firstPaidMs ?? 0));
+    waiting: waitingOf(d.reason),
+  }));
 
   const where = rec?.country || country;
   return {
@@ -202,24 +198,32 @@ export async function payoutSetupLink(uid: string, country: string | null): Prom
 }
 
 /**
- * Close every Step Gunner recipient whose account is gone (review m4): a recipient holds
- * bank details, and delete_account removes only payoutRecipients/{uid}, so the list
- * comes from Stripe. Returns how many were closed.
+ * Close every Step Gunner recipient whose account is gone (review m4, N5): a recipient
+ * holds bank details, and delete_account removes only payoutRecipients/{uid}, so the list
+ * comes from Stripe. Gone means both: no Firebase Auth user and no users doc. Errors are
+ * logged per recipient and the rest still run.
  */
-export async function closeOrphanRecipients(client: GlobalPayouts): Promise<number> {
+export async function closeOrphanRecipients(client: GlobalPayouts): Promise<{ closed: string[]; errors: string[] }> {
   const db = proDb();
-  const all = await client.listRecipients();
-  const owned = all.filter((r) => r.uid);
-  const users = owned.length ? await db.getAll(...owned.map((r) => db.collection('users').doc(String(r.uid)))) : [];
-  let closed = 0;
-  for (let i = 0; i < owned.length; i += 1) {
-    if (users[i].exists) continue;
-    await client.closeRecipient(owned[i].id);
-    await db.collection('payoutRecipients').doc(String(owned[i].uid)).delete();
-    console.log(`[payouts] closed recipient ${owned[i].id}: account ${String(owned[i].uid).slice(0, 6)} is deleted`);
-    closed += 1;
-  }
-  return closed;
+  const out = await closeOrphans(
+    await client.listRecipients(),
+    async (uid) => {
+      try {
+        await getAuth().getUser(uid);
+        return false;
+      } catch (e) {
+        if ((e as { code?: string }).code !== 'auth/user-not-found') throw e;
+      }
+      return !(await db.collection('users').doc(uid).get()).exists;
+    },
+    async (r) => {
+      await client.closeRecipient(r.id);
+      await db.collection('payoutRecipients').doc(r.uid).delete();
+      console.log(`[payouts] closed recipient ${r.id}: account ${r.uid.slice(0, 6)} is deleted`);
+    },
+  );
+  for (const e of out.errors) console.warn(`[payouts] closing a deleted account's recipient failed: ${e}`);
+  return out;
 }
 
 // ---- the payout run's Firestore side ----

@@ -34,7 +34,7 @@ async function onCheckout(s: Stripe.Checkout.Session): Promise<void> {
   const paymentIntent = s.payment_status === 'paid' ? await firstPaymentIntent(s) : null;
   // The checkout guard ran when the session opened; the account may have started paying
   // since (another tab, or the App Store while Stripe's page was open). Ask again.
-  const duplicate = uid ? await undoDuplicateCheckout(uid, customer, subscriptionId, paymentIntent) : null;
+  const duplicate = uid ? await undoDuplicateCheckout(uid, customer, subscriptionId, paymentIntent, s.id) : null;
   await syncCustomer(customer, duplicate ? 'duplicate_checkout' : 'checkout');
   if (uid) await proDb().collection('users').doc(uid).set({ webPro: { openSessionId: FieldValue.delete() } }, { merge: true });
   await proDb().collection('webSales').doc(s.id).set({

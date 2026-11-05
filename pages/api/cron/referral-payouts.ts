@@ -26,12 +26,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const client = payoutsProvider();
     const out = await executeRuns(firestorePayoutPorts(client), client, { nowMs: Date.now(), dryRun, runId });
-    let closedRecipients = 0;
+    let closedRecipients: { closed: string[]; errors: string[] } = { closed: [], errors: [] };
     if (client && !dryRun) {
       try {
         closedRecipients = await closeOrphanRecipients(client);
       } catch (e) {
-        console.warn(`[payouts] closing deleted accounts' recipients failed: ${(e as Error).message}`);
+        // Listing recipients failed; the payout run above already finished.
+        console.warn(`[payouts] listing recipients to close failed: ${(e as Error).message}`);
+        closedRecipients.errors.push(`list: ${(e as Error).message}`);
       }
     }
     console.log(`[payouts] cron dryRun=${dryRun} provider=${client ? 'global_payouts' : 'off'} settled=${JSON.stringify(out.settled)} runs=${JSON.stringify(out.runs.map((r) => ({ id: r.runId, outcome: r.outcome, result: r.result })))}`);

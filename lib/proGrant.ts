@@ -170,3 +170,9 @@ export function duplicateReason(appStorePaying: boolean, otherLiveWebSubscriptio
   if (otherLiveWebSubscriptions > 0) return 'web';
   return null;
 }
+
+/** A Stripe refusal a webhook retry cannot change (4xx other than 429): record it and
+ *  answer 200, rather than a 500 that Stripe retries for 3 days (review N6). */
+export function refusedByStripe(statusCode: unknown): boolean {
+  return typeof statusCode === 'number' && statusCode >= 400 && statusCode < 500 && statusCode !== 429;
+}

@@ -9,6 +9,7 @@ import assert from 'node:assert/strict';
 import {
   REFERRAL_DEFAULTS, referralConfig, earningsTotals, refundedAfterPayout, cashPayout, monthsPayout, monthsFrom,
   executeRuns, payoutIdFor, isCashCountry, rewardCents, sharedCardReason, paymentTakenBack, SETTLE_WINDOW_MS,
+  waitingOf, closeOrphans,
 } from '../lib/referral.ts';
 import { extendManualMs } from '../lib/proGrant.ts';
 import { globalPayouts, onboardingStatusOf, GP_API_VERSION } from '../lib/globalPayouts.ts';
@@ -42,7 +43,7 @@ test('config/referral falls back to the 0057 defaults key by key', () => {
 
 // ---- earnings totals ----
 
-test('earnings totals: on hold, payable less refunds after payout, paid', () => {
+test('earnings totals match the app callable: on hold, payable, paid, owed back', () => {
   const t = earningsTotals([
     { status: 'pending', cents: 1500 },
     { status: 'pending', cents: 500 },
@@ -55,16 +56,36 @@ test('earnings totals: on hold, payable less refunds after payout, paid', () => 
     { status: 'skipped', cents: 0 },
     { status: 'forfeited', cents: 0 },
   ]);
-  assert.equal(t.friends, 10);
-  assert.equal(t.pendingCents, 2000);
-  assert.equal(t.payableCents, 3000);
-  assert.equal(t.paidCents, 3500, 'money that went out, rows refunded after payout included');
-  assert.equal(t.owedCents, 500, 'only the refund no run has netted yet');
-  assert.equal(t.nextCents, 2500);
-  assert.equal(earningsTotals([{ status: 'reversed', cents: 1500, paidAt: NOW }]).nextCents, 0, 'never below zero');
+  assert.deepEqual(t, { friends: 5, pendingCents: 2000, payableCents: 3000, paidCents: 1500, owedBackCents: 500 });
   assert.equal(refundedAfterPayout({ status: 'reversed', cents: 0, paidAt: NOW }), true);
   assert.equal(refundedAfterPayout({ status: 'reversed', cents: 0 }), false, 'refunded inside the hold: nothing went out');
-  assert.deepEqual(earningsTotals([]), { friends: 0, pendingCents: 0, payableCents: 0, paidCents: 0, owedCents: 0, nextCents: 0 });
+  assert.deepEqual(earningsTotals([]), { friends: 0, pendingCents: 0, payableCents: 0, paidCents: 0, owedBackCents: 0 });
+});
+
+test('the sharer sees why a reward waits, never why a friend was skipped (review N3)', () => {
+  assert.equal(waitingOf('monthly_budget'), 'monthly_budget');
+  assert.equal(waitingOf('year_cap_hold'), 'year_cap_hold');
+  for (const r of ['other_offer', 'paid_before', 'shared_card', 'sharer_subscription', 'refund_before_row', 'refund', 'sandbox', undefined]) {
+    assert.equal(waitingOf(r), null, String(r));
+  }
+});
+
+test('closing a deleted account\'s recipient: only when gone, and one failure never stops the rest (review N5)', async () => {
+  const closed = [];
+  const out = await closeOrphans(
+    [{ id: 'acct_a', uid: 'gone_a' }, { id: 'acct_b', uid: 'alive' }, { id: 'acct_c', uid: 'gone_c' }, { id: 'acct_d', uid: 'gone_d' }, { id: 'acct_e', uid: null }],
+    async (uid) => {
+      if (uid === 'gone_c') throw new Error('auth unavailable');
+      return uid.startsWith('gone');
+    },
+    async (r) => {
+      if (r.id === 'acct_a') throw new Error('already closed');
+      closed.push(r.id);
+    },
+  );
+  assert.deepEqual(closed, ['acct_d'], 'alive and unowned are never closed; errors skip only themselves');
+  assert.deepEqual(out.closed, ['acct_d']);
+  assert.deepEqual(out.errors, ['acct_a: already closed', 'acct_c: auth unavailable']);
 });
 
 // ---- one line of an approved run ----
