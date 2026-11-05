@@ -21,6 +21,8 @@ export type RawStripe = {
 
 export type RecipientState = {
   onboardingStatus: OnboardingStatus;
+  /** identity.country as Stripe holds it, uppercase ISO alpha-2. */
+  country: string | null;
   /** bank_accounts.ach capability status as Stripe reports it. */
   capability: string | null;
   payoutMethodId: string | null;
@@ -29,9 +31,13 @@ export type RecipientState = {
 };
 
 export interface GlobalPayouts extends PayoutsClient {
-  createRecipient(r: { uid: string; email: string; name: string }): Promise<string>;
+  createRecipient(r: { uid: string; email: string; name: string; country: string }): Promise<string>;
   onboardingLink(recipientId: string, kind: 'account_onboarding' | 'account_update', urls: { returnUrl: string; refreshUrl: string }): Promise<string>;
   recipientState(recipientId: string): Promise<RecipientState>;
+  /** Every open Step Gunner recipient, with the uid it was made for. */
+  listRecipients(): Promise<{ id: string; uid: string | null }[]>;
+  /** Close a recipient (it holds bank details), e.g. after the account was deleted. */
+  closeRecipient(recipientId: string): Promise<void>;
 }
 
 /** A Stripe refusal that a retry cannot fix (4xx other than 429) is permanent. */
@@ -84,7 +90,7 @@ export function globalPayouts(st: RawStripe, o: { financialAccount?: string | nu
       const acct = await st.rawRequest('POST', '/v2/core/accounts', {
         contact_email: r.email,
         display_name: r.name.slice(0, 100),
-        identity: { country: 'us', entity_type: 'individual' },
+        identity: { country: r.country.toLowerCase(), entity_type: 'individual' },
         configuration: { recipient: { capabilities: { bank_accounts: { ach: { requested: true } } } } },
         metadata: { app: 'stepgunner', uid: r.uid },
         include: ['identity', 'configuration.recipient', 'requirements'],
@@ -101,7 +107,7 @@ export function globalPayouts(st: RawStripe, o: { financialAccount?: string | nu
     },
 
     async recipientState(recipientId) {
-      const acct = await st.rawRequest('GET', `/v2/core/accounts/${encodeURIComponent(recipientId)}${query({ include: ['configuration.recipient', 'defaults'] })}`, null, v).catch(classify);
+      const acct = await st.rawRequest('GET', `/v2/core/accounts/${encodeURIComponent(recipientId)}${query({ include: ['configuration.recipient', 'defaults', 'identity'] })}`, null, v).catch(classify);
       const capability = acct?.configuration?.recipient?.capabilities?.bank_accounts?.ach?.status || null;
       const list = await st.rawRequest('GET', '/v2/money_management/payout_methods', null, { ...v, stripeContext: recipientId }).catch(classify);
       const methods: PayoutMethodObj[] = (list?.data || []).filter(usable);
@@ -109,10 +115,28 @@ export function globalPayouts(st: RawStripe, o: { financialAccount?: string | nu
       const m = methods.find((x) => x.id === preferred) || methods[0] || null;
       return {
         onboardingStatus: onboardingStatusOf(capability, !!m),
+        country: typeof acct?.identity?.country === 'string' ? acct.identity.country.toUpperCase() : null,
         capability,
         payoutMethodId: m ? m.id : null,
         destination: m ? `${m.bank_account?.bank_name || 'Bank'} ••${m.bank_account?.last4 || ''}`.trim() : null,
       };
+    },
+
+    async listRecipients() {
+      const out: { id: string; uid: string | null }[] = [];
+      let path: string | null = `/v2/core/accounts${query({ applied_configurations: ['recipient'] })}&limit=100`;
+      while (path) {
+        const page = await st.rawRequest('GET', path, null, v).catch(classify);
+        for (const a of page?.data || []) {
+          if (a?.metadata?.app === 'stepgunner') out.push({ id: String(a.id), uid: typeof a.metadata.uid === 'string' ? a.metadata.uid : null });
+        }
+        path = typeof page?.next_page_url === 'string' && page.next_page_url ? page.next_page_url : null;
+      }
+      return out;
+    },
+
+    async closeRecipient(recipientId) {
+      await st.rawRequest('POST', `/v2/core/accounts/${encodeURIComponent(recipientId)}/close`, { applied_configurations: ['recipient'] }, v).catch(classify);
     },
 
     async send(p: Payout) {

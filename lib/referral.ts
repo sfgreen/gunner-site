@@ -70,35 +70,33 @@ export function isCashCountry(country: string | null | undefined, cfg: Pick<Refe
 
 // ---- one friend's reward ----
 
-export const FRIEND_PAYOUT_CENTS: Record<Plan, number> = { yearly: REFERRAL_DEFAULTS.centsYearly, monthly: REFERRAL_DEFAULTS.centsMonthly };
-export const FRIEND_YEAR_CAP_CENTS = REFERRAL_DEFAULTS.yearCapCents;
-export const FRIEND_HOLD_MS = holdMs(REFERRAL_DEFAULTS);
-
-/** A referralRewards row, read for the cap. */
-export type RewardRow = { status: string; cents: number; firstPaidMs: number | null };
-
 const EARNING = new Set(['pending', 'payable', 'paid']);
 
-/** Cents a sharer has earned from friends whose first payment fell in this calendar
- *  year (UTC). Reversed, skipped and forfeited rows do not count. */
-export function earnedInYearCents(rows: RewardRow[], nowMs: number): number {
-  const year = new Date(nowMs).getUTCFullYear();
-  let sum = 0;
-  for (const r of rows) {
-    if (!EARNING.has(r.status)) continue;
-    if (r.firstPaidMs != null && new Date(r.firstPaidMs).getUTCFullYear() !== year) continue;
-    sum += Math.max(0, r.cents || 0);
-  }
-  return sum;
+/** What one paying friend earns the sharer, at full amount: the backend applies the
+ *  yearly cap when it writes a payout run, by the calendar year of payout. */
+export function rewardCents(plan: Plan, cfg: Pick<ReferralConfig, 'centsYearly' | 'centsMonthly'>): number {
+  return plan === 'yearly' ? cfg.centsYearly : cfg.centsMonthly;
 }
 
-/** Cents one more paying friend earns: the plan's amount, what is left under the cap, or 0. */
-export function friendPayoutCents(
-  plan: Plan, earnedCents: number,
-  cfg: Pick<ReferralConfig, 'centsYearly' | 'centsMonthly' | 'yearCapCents'> = REFERRAL_DEFAULTS,
-): number {
-  const amount = plan === 'yearly' ? cfg.centsYearly : cfg.centsMonthly;
-  return Math.max(0, Math.min(amount, cfg.yearCapCents - Math.max(0, earnedCents)));
+/**
+ * The same card behind two rewards is one person farming them (review M6): the first
+ * payment's card fingerprint already on another friend's row (any sharer), or among
+ * the sharer's own payments, makes the new row skipped, reason shared_card.
+ */
+export function sharedCardReason(
+  fingerprint: string | null, onOtherFriendRow: boolean, sharerFingerprints: Set<string>,
+): 'shared_card' | null {
+  if (!fingerprint) return null;
+  return onOtherFriendRow || sharerFingerprints.has(fingerprint) ? 'shared_card' : null;
+}
+
+/** A first payment Stripe later refunded in full or that is disputed: the reward goes
+ *  (review M9, the check before any payout). Partial refunds are goodwill and keep it. */
+export function paymentTakenBack(charge: { refunded?: boolean | null; disputed?: boolean | null } | null): 'refund' | 'dispute' | null {
+  if (!charge) return null;
+  if (charge.disputed) return 'dispute';
+  if (charge.refunded) return 'refund';
+  return null;
 }
 
 /**
@@ -224,7 +222,7 @@ export type Payout = {
   stripeStatus: string | null;
 };
 
-export type SkipReason = 'cash_off' | 'recipient_incomplete' | 'nothing_payable' | 'failed_earlier';
+export type SkipReason = 'cash_off' | 'recipient_incomplete' | 'nothing_payable' | 'under_minimum' | 'failed_earlier';
 
 export function payoutIdFor(runId: string, sharerUid: string): string {
   return `${runId}_${sharerUid}`;
@@ -232,8 +230,8 @@ export function payoutIdFor(runId: string, sharerUid: string): string {
 
 /**
  * The payout for one cash line, from its rows as they stand now: only rows still
- * payable, less the deductions still owed, never more than the line Admin approved.
- * A skip reason when it cannot go out today.
+ * payable, less the deductions still owed, never more than the line Admin approved
+ * and never under minPayoutCents. A skip reason when it cannot go out today.
  */
 export function cashPayout(
   run: Pick<Run, 'id'>, line: RunLine, live: LiveLine, r: Recipient | null, cfg: ReferralConfig,
@@ -244,6 +242,8 @@ export function cashPayout(
   const deduct = live.deduct.reduce((sum, x) => sum + Math.max(0, x.cents), 0);
   const cents = Math.min(gross - deduct, Math.max(0, line.cents));
   if (!live.pay.length || cents <= 0) return 'nothing_payable';
+  // A refund since approval can drop a line under the minimum: its rows wait for a later run.
+  if (cents < cfg.minPayoutCents) return 'under_minimum';
   return {
     id: payoutIdFor(run.id, line.sharerUid), runId: run.id, sharerUid: line.sharerUid,
     method: 'stripe_global_payouts', status: 'sending', cents, grossCents: gross, deductCents: deduct, months: 0,
@@ -288,8 +288,10 @@ export interface PayoutPorts {
   /** approved -> running, or take over a running run whose lease ran out. False if another invocation holds it. */
   claimRun(runId: string, nowMs: number): Promise<boolean>;
   finishRun(runId: string, result: RunResult, done: boolean): Promise<void>;
-  /** The line's rows now: pay = still payable and unpaid; deduct = reversed after payout, not yet netted. */
-  liveLine(line: RunLine): Promise<LiveLine>;
+  /** The line's rows now: pay = still payable and unpaid; deduct = reversed after payout, not
+   *  yet netted. A web row whose first payment Stripe has since refunded in full or seen
+   *  disputed is left out, and reversed when write is true (never on a dry run). */
+  liveLine(line: RunLine, write: boolean): Promise<LiveLine>;
   /** refresh: ask Stripe where the recipient stands first and write it back. */
   recipient(uid: string, refresh: boolean): Promise<Recipient | null>;
   payout(id: string): Promise<Payout | null>;
@@ -302,9 +304,11 @@ export interface PayoutPorts {
   /** In one transaction, only from granting: the manual grant moves 30 days per month
    *  (monthsFrom on the rows as they stand), rows go paid, deductions netted, payout granted. */
   grantMonths(p: Payout, nowMs: number): Promise<void>;
-  /** Cash payouts Stripe has not posted yet (status sent). */
-  sentPayouts(): Promise<Payout[]>;
-  /** posted: record it; failed: the payout goes returned, its rows back to payable, its deductions owed again. */
+  /** Cash payouts still settling: sent, or posted less than SETTLE_WINDOW_MS ago (a bank
+   *  can return an ACH credit after it posts). */
+  openPayouts(nowMs: number): Promise<Payout[]>;
+  /** posted: record when; failed: the payout goes returned, its rows back to payable, its
+   *  deductions owed again, and the run doc gets an alert. */
   settle(p: Payout, state: 'posted' | 'failed', stripeStatus: string): Promise<void>;
 }
 
@@ -335,6 +339,9 @@ function message(e: unknown): string {
 
 const DONE_OR_IN_FLIGHT = new Set<PayoutStatus>(['sending', 'sent', 'posted', 'granting', 'granted']);
 
+/** How long a posted payout is still watched for a return (review M2). */
+export const SETTLE_WINDOW_MS = 60 * DAY_MS;
+
 /** Check cash payouts still in flight, then execute every approved (or interrupted) run. */
 export async function executeRuns(
   ports: PayoutPorts,
@@ -343,11 +350,11 @@ export async function executeRuns(
 ): Promise<{ settled: { posted: number; returned: number }; runs: RunReport[] }> {
   const settled = { posted: 0, returned: 0 };
   if (client && !o.dryRun) {
-    for (const p of await ports.sentPayouts()) {
+    for (const p of await ports.openPayouts(o.nowMs)) {
       if (!p.stripeId) continue;
       try {
         const out = await client.outcome(p.stripeId);
-        if (out.state === 'open') continue;
+        if (out.state === 'open' || (out.state === 'posted' && p.status === 'posted')) continue;
         if (out.state === 'failed') await client.cancel(p.stripeId).catch((e) => console.warn(`[payouts] cancel ${p.id}: ${message(e)}`));
         await ports.settle(p, out.state, out.stripeStatus);
         if (out.state === 'posted') settled.posted += 1;
@@ -382,9 +389,12 @@ export async function executeRuns(
         if (existing) {
           p = existing;
         } else if (line.method === 'pro_months') {
+          // The grant re-reads the rows in its transaction; this first drops any whose
+          // payment Stripe took back since the run was written.
+          await ports.liveLine(line, !o.dryRun);
           p = monthsPayout(run, line);
         } else {
-          const planned = cashPayout(run, line, await ports.liveLine(line), await ports.recipient(line.sharerUid, !o.dryRun && !!client), cfg);
+          const planned = cashPayout(run, line, await ports.liveLine(line, !o.dryRun), await ports.recipient(line.sharerUid, !o.dryRun && !!client), cfg);
           if (typeof planned === 'string') {
             plan.push({ sharerUid: line.sharerUid, method: line.method, skip: planned });
             result.skipped[planned] = (result.skipped[planned] || 0) + 1;

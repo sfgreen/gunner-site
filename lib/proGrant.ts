@@ -154,3 +154,19 @@ export function couponLabel(
 function trimNum(n: number): string {
   return Number.isInteger(n) ? String(n) : n.toFixed(1);
 }
+
+/** Stripe metadata on a refund the site issues for a duplicate checkout, so the refund
+ *  webhook leaves the account's real plan and its friend reward alone. */
+export const DUPLICATE_REFUND_TAG = 'duplicate_checkout';
+
+/**
+ * Why a checkout that just completed would bill an account twice (review M7): the
+ * account already pays through the App Store, or has another live web subscription.
+ * A checkout guard alone misses a second open tab or an App Store purchase made while
+ * the Stripe page was open; the webhook asks again and refunds the newcomer.
+ */
+export function duplicateReason(appStorePaying: boolean, otherLiveWebSubscriptions: number): 'app_store' | 'web' | null {
+  if (appStorePaying) return 'app_store';
+  if (otherLiveWebSubscriptions > 0) return 'web';
+  return null;
+}

@@ -10,7 +10,7 @@ import { api, fmtDate, fmtUsd, useWebAccount } from '../lib/webAccount';
 
 // stepgunner.com/earnings: a sharer's friend rewards (decision 0057, amended
 // 2026-11-04, stories S2 to S6). Signed in with the app's account: Google on the web,
-// or the app's handoff link /earnings?h=CODE (no second sign-in). Shows each friend
+// or the app's handoff link /earnings#h=CODE (no second sign-in). Shows each friend
 // (first name or handle only), the totals, and how the sharer is paid: cash to a US
 // bank through Stripe's hosted form, or a free month of Pro per friend. Payouts run on
 // the 1st (pages/api/cron/referral-payouts.ts). No em or en dashes in copy.
@@ -147,7 +147,8 @@ export default function Earnings() {
   } else {
     const t = view.totals;
     const p = view.payout;
-    const pref = p.cashEligible ? p.preference : 'pro_months';
+    // Only what is saved shows as chosen (review M3): a sharer who never picked is not paid.
+    const pref = p.preference;
     panel = (
       <div className="pro-stack">
         <div className="ern-tiles">
@@ -169,7 +170,7 @@ export default function Earnings() {
             </span>
           </button>
         ) : (
-          <p className="pro-fine">Cash goes to US bank accounts for now. Outside the US, each paying friend gives you a free month of Pro.</p>
+          <p className="pro-muted">Outside the US, your rewards come as Pro: a free month for each paying friend. Cash goes to US bank accounts for now.</p>
         )}
         <button type="button" className={`pro-plan${pref === 'pro_months' ? ' on' : ''}`} aria-pressed={pref === 'pro_months'} disabled={!!busy} onClick={() => choose('pro_months')}>
           <span className="pro-radio"><span /></span>
@@ -222,7 +223,9 @@ export default function Earnings() {
               : 'Each paying friend adds a free month of Pro to this account on the 1st.'}
           </p>
         )}
-        {!pref && <p className="pro-fine">Pick one to get paid on the 1st.</p>}
+        {!pref && (
+          <p className="pro-fine">{p.cashEligible ? 'Pick one to get paid on the 1st.' : 'Tap A free month of Pro to confirm it.'}</p>
+        )}
 
         <h2 className="ern-h">Friends</h2>
         {view.rows.length ? (

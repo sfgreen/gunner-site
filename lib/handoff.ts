@@ -1,10 +1,11 @@
 import { createHash, randomBytes } from 'crypto';
 
 // App-to-web handoff (decision 0057 amendment, S2): the app trades its Firebase ID
-// token for a one-time code, opens stepgunner.com/earnings?h=CODE (or /pro), and the
+// token for a one-time code, opens stepgunner.com/earnings#h=CODE (or /pro), and the
 // page trades the code for a custom token, so the student is signed in on the web
-// with no second sign-in and no Apple Services ID. Only the code's SHA-256 is
-// stored (authHandoffs/{hash}); it works once, for 2 minutes.
+// with no second sign-in and no Apple Services ID. The code rides in the fragment, which
+// browsers never send to a server, a log or a Referer. Only its SHA-256 is stored
+// (authHandoffs/{hash}); it works once, for 2 minutes.
 
 export const HANDOFF_TTL_MS = 2 * 60_000;
 export const HANDOFF_PAGES = ['earnings', 'pro'] as const;
@@ -23,6 +24,10 @@ export function isHandoffCode(v: unknown): v is string {
 
 export function handoffKey(code: string): string {
   return createHash('sha256').update(code).digest('hex');
+}
+
+export function handoffUrl(origin: string, to: HandoffPage, code: string): string {
+  return `${origin}/${to}#h=${code}`;
 }
 
 export function handoffPage(v: unknown): HandoffPage {

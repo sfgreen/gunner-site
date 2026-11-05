@@ -47,6 +47,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const st = stripe();
+    // One open checkout per account (review M7): a session left open in another tab or
+    // in Safari could otherwise be paid after this one.
+    const previous = typeof doc.webPro?.openSessionId === 'string' ? doc.webPro.openSessionId : null;
+    if (previous) {
+      try {
+        const old = await st.checkout.sessions.retrieve(previous);
+        if (old.status === 'open') await st.checkout.sessions.expire(previous);
+      } catch (e) {
+        console.warn(`[pro] could not expire session ${previous}: ${(e as Error).message}`);
+      }
+    }
     let customer: string | undefined = doc.webPro?.customerId || undefined;
     if (customer) {
       // Paid a moment ago and the webhook has not landed yet: ask Stripe, not the doc.
@@ -82,6 +93,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ...checkoutReturn(origin, ORIGIN),
     });
     if (!session.url) throw new ProError(502, 'stripe', 'Checkout did not open. Try again.');
+    await proDb().collection('users').doc(me.uid).set({ webPro: { openSessionId: session.id } }, { merge: true });
     console.log(`[pro] checkout ${origin} uid=${me.uid.slice(0, 6)} plan=${plan} code=${meta.codeKind || 'none'} session=${session.id}`);
     return res.status(200).json({ ok: true, url: session.url, id: session.id });
   } catch (e) {

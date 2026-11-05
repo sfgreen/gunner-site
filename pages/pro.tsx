@@ -10,7 +10,7 @@ import { api, fmtDate, useWebAccount } from '../lib/webAccount';
 // stepgunner.com/pro: buy Pro on the web, unlock it on the phone (gunner repo,
 // decision 0051; the approved "Pro on the web" board of the Step Gunner Web mock).
 // Sign in with the app's own account (Apple or Google, or the app's handoff link
-// /pro?h=CODE), pick a plan, pay on Stripe's page; the webhook writes the server
+// /pro#h=CODE), pick a plan, pay on Stripe's page; the webhook writes the server
 // grant the app already reads.
 
 type Plan = 'yearly' | 'monthly';

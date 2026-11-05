@@ -8,12 +8,12 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   REFERRAL_DEFAULTS, referralConfig, earningsTotals, refundedAfterPayout, cashPayout, monthsPayout, monthsFrom,
-  executeRuns, payoutIdFor, isCashCountry,
+  executeRuns, payoutIdFor, isCashCountry, rewardCents, sharedCardReason, paymentTakenBack, SETTLE_WINDOW_MS,
 } from '../lib/referral.ts';
 import { extendManualMs } from '../lib/proGrant.ts';
 import { globalPayouts, onboardingStatusOf, GP_API_VERSION } from '../lib/globalPayouts.ts';
 import {
-  HANDOFF_TTL_MS, newHandoffCode, isHandoffCode, handoffKey, handoffPage, handoffRefusal,
+  HANDOFF_TTL_MS, newHandoffCode, isHandoffCode, handoffKey, handoffPage, handoffRefusal, handoffUrl,
 } from '../lib/handoff.ts';
 
 const DAY = 86_400_000;
@@ -91,9 +91,9 @@ test('a cash line pays the rows still payable, less the refunds it nets, never m
   assert.deepEqual(p.deductRowIds, ['r0']);
   assert.equal(p.recipientId, 'acct_sam');
   assert.equal(p.payoutMethodId, 'usba_sam');
-  const refunded = cashPayout(RUN, cashLine('sam'), live([['f1', 1500]]), cash('sam'), CFG);
-  assert.equal(refunded.cents, 1500, 'a friend refunded since approval drops out; the line still pays the rest');
-  assert.deepEqual(refunded.rowIds, ['f1']);
+  const refunded = cashPayout(RUN, cashLine('sam', { rowIds: ['f1', 'f2', 'f3'], cents: 4500 }), live([['f1', 1500], ['f3', 1500]]), cash('sam'), CFG);
+  assert.equal(refunded.cents, 3000, 'a friend refunded since approval drops out; the line still pays the rest');
+  assert.deepEqual(refunded.rowIds, ['f1', 'f3']);
   const capped = cashPayout(RUN, cashLine('sam', { cents: 2000 }), live([['f1', 1500], ['f2', 1500]]), cash('sam'), CFG);
   assert.equal(capped.cents, 2000, 'never more than the line Admin approved');
 });
@@ -107,6 +107,9 @@ test('a cash line waits when cash is off, setup is not complete, or nothing is l
   assert.equal(cashPayout(RUN, l, rows, cash('sam', { country: 'GB' }), CFG), 'recipient_incomplete', 'cash only where cashCountries allows');
   assert.equal(cashPayout(RUN, l, live([]), cash('sam'), CFG), 'nothing_payable');
   assert.equal(cashPayout(RUN, l, live([['f1', 500]], [['r0', 1500]]), cash('sam'), CFG), 'nothing_payable', 'refunds ate it');
+  const four = cashLine('sam', { rowIds: ['a', 'b', 'c', 'd'], cents: 2000 });
+  assert.equal(cashPayout(RUN, four, live([['a', 500], ['b', 500], ['c', 500]]), cash('sam'), CFG), 'under_minimum',
+    'approved at $20, one friend refunded since: $15 waits for a later run (review m1)');
 });
 
 test('Pro months: one per paying friend, no minimum, each refund after payout takes one back', () => {
@@ -133,6 +136,7 @@ function ledger({ rows = {}, recipients = {}, users = {}, runs = {}, payouts = {
     cfg,
     refreshed: [],
     failNextFinish: 0,
+    charges: new Map(), // firstPaymentIntent -> { refunded, disputed } as Stripe reports now
   };
   const livePay = (r) => r && r.status === 'payable' && !r.payoutId;
   const liveDeduct = (r) => r && r.status === 'reversed' && r.paidAt && !r.deductedInRun;
@@ -149,10 +153,20 @@ function ledger({ rows = {}, recipients = {}, users = {}, runs = {}, payouts = {
       const r = db.runs.get(id);
       Object.assign(r, { result, leaseUntil: null }, done ? { status: 'done' } : { lastError: result.errors[0] });
     },
-    liveLine: async (line) => ({
-      pay: line.rowIds.filter((id) => livePay(db.rows.get(id))).map((id) => ({ id, cents: db.rows.get(id).cents })),
-      deduct: line.deductRowIds.filter((id) => liveDeduct(db.rows.get(id))).map((id) => ({ id, cents: db.rows.get(id).cents })),
-    }),
+    liveLine: async (line, write) => {
+      const pay = [];
+      for (const id of line.rowIds) {
+        const r = db.rows.get(id);
+        if (!livePay(r)) continue;
+        const gone = r.rail === 'web' && r.firstPaymentIntent ? paymentTakenBack(db.charges.get(r.firstPaymentIntent) || null) : null;
+        if (gone) {
+          if (write) Object.assign(r, { status: 'reversed', reversedFrom: 'payable', reason: gone });
+          continue;
+        }
+        pay.push({ id, cents: r.cents });
+      }
+      return { pay, deduct: line.deductRowIds.filter((id) => liveDeduct(db.rows.get(id))).map((id) => ({ id, cents: db.rows.get(id).cents })) };
+    },
     recipient: async (uid, refresh) => { db.refreshed.push(refresh); return db.recipients.get(uid) || null; },
     payout: async (id) => (db.payouts.has(id) ? { ...db.payouts.get(id) } : null),
     beginPayout: async (p) => {
@@ -185,11 +199,15 @@ function ledger({ rows = {}, recipients = {}, users = {}, runs = {}, payouts = {
       for (const id of pay) Object.assign(db.rows.get(id), { status: 'paid', paidAt: now, payoutId: p.id });
       for (const d of m.deductUsed) db.rows.get(d.id).deductedInRun = p.runId;
     },
-    sentPayouts: async () => [...db.payouts.values()].filter((p) => p.status === 'sent').map((p) => ({ ...p })),
+    openPayouts: async (now) => [...db.payouts.values()]
+      .filter((p) => p.status === 'sent' || (p.status === 'posted' && (p.postedAtMs ?? 0) > now - SETTLE_WINDOW_MS))
+      .map((p) => ({ ...p })),
     settle: async (p, state, stripeStatus) => {
       const c = db.payouts.get(p.id);
-      if (state === 'posted') { Object.assign(c, { status: 'posted', stripeStatus }); return; }
+      if (state === 'posted') { Object.assign(c, { status: 'posted', stripeStatus, postedAtMs: NOW }); return; }
       Object.assign(c, { status: 'returned', stripeStatus });
+      const run = db.runs.get(p.runId) || {};
+      db.runs.set(p.runId, { ...run, alerts: [...(run.alerts || []), { kind: 'payout_returned', payoutId: p.id, cents: p.cents }] });
       for (const id of p.rowIds) {
         const r = db.rows.get(id);
         if (r.payoutId === p.id && r.status === 'paid') Object.assign(r, { status: 'payable', payoutId: undefined, paidAt: undefined });
@@ -223,18 +241,21 @@ function fakeStripe({ permanentFor = [], flakyFor = [], outcomes = {} } = {}) {
 
 const r15 = (sharerUid, o = {}) => ({ sharerUid, cents: 1500, status: 'payable', payableAt: NOW - 2 * DAY, ...o });
 
-// The run the backend would write on Dec 1: sam cash ($30 less a $5 refund after payout),
+// The run the backend would write on Dec 1: sam cash ($45 less a $5 refund after payout),
 // gb Pro months (2 friends), and a line for ann whose setup is not finished.
 function world() {
   return ledger({
     rows: {
-      f1: r15('sam'), f2: r15('sam'), r0: { sharerUid: 'sam', cents: 500, status: 'reversed', reversedFrom: 'paid', paidAt: NOW - 40 * DAY },
-      g1: r15('gb'), g2: r15('gb', { cents: 500 }), a1: r15('ann'), a2: r15('ann'), late: r15('sam'),
+      f1: r15('sam', { rail: 'web', firstPaymentIntent: 'pi_f1' }), f2: r15('sam', { rail: 'web', firstPaymentIntent: 'pi_f2' }),
+      f3: r15('sam', { rail: 'web', firstPaymentIntent: 'pi_f3' }),
+      r0: { sharerUid: 'sam', cents: 500, status: 'reversed', reversedFrom: 'paid', paidAt: NOW - 40 * DAY },
+      g1: r15('gb', { rail: 'web', firstPaymentIntent: 'pi_g1' }), g2: r15('gb', { cents: 500, rail: 'appstore' }),
+      a1: r15('ann'), a2: r15('ann'), late: r15('sam'),
     },
     recipients: { sam: cash('sam'), gb: months('gb'), ann: cash('ann', { onboardingStatus: 'pending' }) },
     users: { sam: { manualMs: null }, gb: { manualMs: NOW + 10 * DAY } },
     runs: { '2026-12': { status: 'approved', lines: [
-      cashLine('sam', { rowIds: ['f1', 'f2'], deductRowIds: ['r0'], cents: 2500 }),
+      cashLine('sam', { rowIds: ['f1', 'f2', 'f3'], deductRowIds: ['r0'], cents: 4000 }),
       monthsLine('gb', { rowIds: ['g1', 'g2'] }),
       cashLine('ann', { rowIds: ['a1', 'a2'] }),
     ] } },
@@ -245,7 +266,7 @@ test('an approved run pays its lines once, grants Pro months, flips the rows and
   const { db, ports } = world();
   const s = fakeStripe();
   const out = await executeRuns(ports, s.client, { nowMs: NOW, dryRun: false });
-  assert.deepEqual(s.calls, [['send', '2026-12_sam', 2500]]);
+  assert.deepEqual(s.calls, [['send', '2026-12_sam', 4000]]);
   const sam = db.payouts.get('2026-12_sam');
   assert.equal(sam.status, 'sent');
   assert.equal(sam.stripeId, 'poi_test_1');
@@ -260,7 +281,7 @@ test('an approved run pays its lines once, grants Pro months, flips the rows and
   assert.equal(db.rows.get('a1').status, 'payable', 'ann never finished setup: her rows wait');
   assert.equal(db.payouts.has('2026-12_ann'), false);
   assert.equal(db.runs.get('2026-12').status, 'done');
-  assert.deepEqual(out.runs[0].result, { sharers: 2, rows: 4, cashCents: 2500, proMonths: 2, skipped: { recipient_incomplete: 1 }, failed: 0, errors: [] });
+  assert.deepEqual(out.runs[0].result, { sharers: 2, rows: 5, cashCents: 4000, proMonths: 2, skipped: { recipient_incomplete: 1 }, failed: 0, errors: [] });
   assert.deepEqual(db.refreshed, [true, true], 'cash recipients are re-checked with Stripe before money moves');
 
   const again = await executeRuns(ports, s.client, { nowMs: NOW + 60_000, dryRun: false });
@@ -275,7 +296,7 @@ test('rows refunded after approval drop out of the line', async () => {
   db.rows.get('g1').status = 'reversed';
   const s = fakeStripe();
   await executeRuns(ports, s.client, { nowMs: NOW, dryRun: false });
-  assert.deepEqual(s.calls, [['send', '2026-12_sam', 1000]], '$15 less the $5 owed');
+  assert.deepEqual(s.calls, [['send', '2026-12_sam', 2500]], '$30 less the $5 owed');
   assert.equal(db.rows.get('f2').status, 'reversed');
   assert.equal(db.rows.get('f2').payoutId, undefined);
   assert.equal(db.payouts.get('2026-12_gb').months, 1);
@@ -302,7 +323,7 @@ test('a crash after Stripe took the money resumes without paying twice', async (
   assert.equal(second.runs[0].outcome, 'done');
   assert.equal(s.byKey.size, 1, 'Stripe saw one payout: the retry reused the idempotency key');
   assert.deepEqual(s.calls.map((c) => c[1]), ['2026-12_sam', '2026-12_sam']);
-  assert.deepEqual(s.calls.map((c) => c[2]), [2500, 2500], 'the stored amount, not a new plan');
+  assert.deepEqual(s.calls.map((c) => c[2]), [4000, 4000], 'the stored amount, not a new plan');
   assert.equal(db.rows.get('f2').status, 'paid');
   assert.equal(db.users.get('gb').manualMs, NOW + 70 * DAY, 'the Pro months were granted once');
 });
@@ -351,7 +372,7 @@ test('dry run plans without writing or sending', async () => {
   const out = await executeRuns(ports, s.client, { nowMs: NOW, dryRun: true });
   assert.equal(out.runs[0].outcome, 'dry_run');
   assert.deepEqual(out.runs[0].plan.map((x) => [x.sharerUid, x.skip || (x.payout.method === 'pro_months' ? `${x.payout.months}mo` : x.payout.cents)]),
-    [['sam', 2500], ['gb', '2mo'], ['ann', 'recipient_incomplete']]);
+    [['sam', 4000], ['gb', '2mo'], ['ann', 'recipient_incomplete']]);
   assert.equal(s.calls.length, 0);
   assert.equal(db.payouts.size, 0);
   assert.equal(db.runs.get('2026-12').status, 'approved');
@@ -396,6 +417,82 @@ test('a payout that bounces puts its rows back to payable and its refund back to
   assert.equal(db.payouts.get('2026-11_amy').status, 'posted');
 });
 
+test('before paying, a web row whose first payment Stripe refunded or saw disputed is reversed, not paid (review M9)', async () => {
+  const { db, ports } = world();
+  db.charges.set('pi_f2', { refunded: true, disputed: false });
+  db.charges.set('pi_g1', { refunded: false, disputed: true });
+  const s = fakeStripe();
+  await executeRuns(ports, s.client, { nowMs: NOW, dryRun: false });
+  assert.deepEqual(s.calls, [['send', '2026-12_sam', 2500]], 'f1 and f3 less the $5 owed; f2 dropped');
+  assert.equal(db.rows.get('f2').status, 'reversed');
+  assert.equal(db.rows.get('f2').reason, 'refund');
+  assert.equal(db.rows.get('g1').reason, 'dispute');
+  assert.equal(db.payouts.get('2026-12_gb').months, 1, 'the disputed friend earns no month');
+  assert.equal(db.users.get('gb').manualMs, NOW + 40 * DAY);
+
+  const dry = world();
+  dry.db.charges.set('pi_f2', { refunded: true });
+  const out = await executeRuns(dry.ports, fakeStripe().client, { nowMs: NOW, dryRun: true });
+  assert.equal(out.runs[0].plan[0].payout.cents, 2500, 'a dry run plans without the refunded row');
+  assert.equal(dry.db.rows.get('f2').status, 'payable', '...and writes nothing');
+});
+
+test('a payout that posts and then bounces is still caught inside the settle window (review M2)', async () => {
+  const sent = { id: '2026-11_sam', runId: '2026-11', sharerUid: 'sam', method: 'stripe_global_payouts', cents: 2500, rowIds: ['a', 'b'], deductRowIds: ['r'], stripeId: 'poi_test_9' };
+  const make = (payout) => ledger({
+    rows: {
+      a: { ...r15('sam'), status: 'paid', payoutId: '2026-11_sam', paidAt: NOW - 30 * DAY },
+      b: { ...r15('sam'), status: 'paid', payoutId: '2026-11_sam', paidAt: NOW - 30 * DAY },
+      r: { sharerUid: 'sam', cents: 500, status: 'reversed', reversedFrom: 'paid', paidAt: NOW - 60 * DAY, deductedInRun: '2026-11' },
+    },
+    runs: { '2026-11': { status: 'done', lines: [] } },
+    payouts: { '2026-11_sam': payout },
+  });
+  assert.ok(SETTLE_WINDOW_MS >= 10 * DAY, 'at least 10 days');
+
+  const a = make({ ...sent, status: 'posted', postedAtMs: NOW - 5 * DAY });
+  const returned = fakeStripe({ outcomes: { poi_test_9: { state: 'failed', stripeStatus: 'requires_action:account_closed' } } });
+  const out = await executeRuns(a.ports, returned.client, { nowMs: NOW, dryRun: false });
+  assert.deepEqual(out.settled, { posted: 0, returned: 1 });
+  assert.equal(a.db.payouts.get('2026-11_sam').status, 'returned');
+  assert.equal(a.db.rows.get('a').status, 'payable', 'back in the next run');
+  assert.equal(a.db.rows.get('r').deductedInRun, undefined, 'the refund is owed again');
+  assert.deepEqual(a.db.runs.get('2026-11').alerts, [{ kind: 'payout_returned', payoutId: '2026-11_sam', cents: 2500 }], 'Danny sees it on the run');
+
+  const b = make({ ...sent, status: 'posted', postedAtMs: NOW - 5 * DAY });
+  const still = fakeStripe({ outcomes: { poi_test_9: { state: 'posted', stripeStatus: 'posted' } } });
+  const quiet = await executeRuns(b.ports, still.client, { nowMs: NOW, dryRun: false });
+  assert.deepEqual(quiet.settled, { posted: 0, returned: 0 }, 'still posted: nothing to write');
+  assert.equal(b.db.payouts.get('2026-11_sam').postedAtMs, NOW - 5 * DAY, 'the posted time is kept, so the window ends');
+
+  const c = make({ ...sent, status: 'posted', postedAtMs: NOW - SETTLE_WINDOW_MS - DAY });
+  const late = fakeStripe({ outcomes: { poi_test_9: { state: 'failed', stripeStatus: 'requires_action:account_closed' } } });
+  await executeRuns(c.ports, late.client, { nowMs: NOW, dryRun: false });
+  assert.equal(c.db.payouts.get('2026-11_sam').status, 'posted', 'past the window it is no longer polled');
+});
+
+test('rewards are written at full amount; the yearly cap is the backend run\'s job', () => {
+  assert.equal(rewardCents('yearly', REFERRAL_DEFAULTS), 1500);
+  assert.equal(rewardCents('monthly', REFERRAL_DEFAULTS), 500);
+  assert.equal(rewardCents('yearly', referralConfig({ centsYearly: 2000 })), 2000, 'config/referral wins');
+});
+
+test('one card behind two friends earns nothing the second time (review M6)', () => {
+  const none = new Set();
+  assert.equal(sharedCardReason('fp_1', false, none), null, 'a new card');
+  assert.equal(sharedCardReason('fp_1', true, none), 'shared_card', 'already on another friend\'s row, any sharer');
+  assert.equal(sharedCardReason('fp_1', false, new Set(['fp_1'])), 'shared_card', 'the sharer pays with it');
+  assert.equal(sharedCardReason(null, true, new Set(['x'])), null, 'no card to compare (another payment method)');
+});
+
+test('a first payment refunded in full or disputed is taken back; a partial refund is not', () => {
+  assert.equal(paymentTakenBack({ refunded: true, disputed: false }), 'refund');
+  assert.equal(paymentTakenBack({ refunded: false, disputed: true }), 'dispute');
+  assert.equal(paymentTakenBack({ refunded: true, disputed: true }), 'dispute');
+  assert.equal(paymentTakenBack({ refunded: false, disputed: false }), null, 'a partial refund leaves charge.refunded false');
+  assert.equal(paymentTakenBack(null), null);
+});
+
 // ---- Global Payouts requests, against a mocked Stripe ----
 
 function rawStripe(responses = {}) {
@@ -417,7 +514,7 @@ function rawStripe(responses = {}) {
 test('a recipient is a US individual with ACH, made once per account', async () => {
   const m = rawStripe({ 'POST /v2/core/accounts': { id: 'acct_test_1' } });
   const gp = globalPayouts(m.st);
-  assert.equal(await gp.createRecipient({ uid: 'u1', email: 'sam@example.com', name: 'Sam' }), 'acct_test_1');
+  assert.equal(await gp.createRecipient({ uid: 'u1', email: 'sam@example.com', name: 'Sam', country: 'US' }), 'acct_test_1');
   const c = m.calls[0];
   assert.equal(c.options.apiVersion, GP_API_VERSION);
   assert.equal(c.options.idempotencyKey, 'gunner_recipient_u1');
@@ -449,18 +546,40 @@ test('a recipient is complete with ACH active and a usable bank; the default ban
     { id: 'card_1', type: 'card', usage_status: { payments: 'eligible' } },
   ] };
   const m = rawStripe({
-    'GET /v2/core/accounts/acct_1': { configuration: { recipient: { capabilities: { bank_accounts: { ach: { status: 'active' } } } } }, defaults: { payout_methods: { usd: 'usba_b' } } },
+    'GET /v2/core/accounts/acct_1': { identity: { country: 'us' }, configuration: { recipient: { capabilities: { bank_accounts: { ach: { status: 'active' } } } } }, defaults: { payout_methods: { usd: 'usba_b' } } },
     'GET /v2/money_management/payout_methods': methods,
   });
   const s = await globalPayouts(m.st).recipientState('acct_1');
-  assert.deepEqual(s, { onboardingStatus: 'complete', capability: 'active', payoutMethodId: 'usba_b', destination: 'Ally ••4321' });
-  assert.equal(m.calls[0].path, '/v2/core/accounts/acct_1?include[0]=configuration.recipient&include[1]=defaults');
+  assert.deepEqual(s, { onboardingStatus: 'complete', country: 'US', capability: 'active', payoutMethodId: 'usba_b', destination: 'Ally ••4321' });
+  assert.equal(m.calls[0].path, '/v2/core/accounts/acct_1?include[0]=configuration.recipient&include[1]=defaults&include[2]=identity');
   assert.equal(m.calls[1].options.stripeContext, 'acct_1', 'payout methods are read as the recipient');
   assert.equal(onboardingStatusOf('active', false), 'pending', 'ACH on but no bank yet');
   assert.equal(onboardingStatusOf('pending', true), 'pending');
   assert.equal(onboardingStatusOf('restricted', true), 'restricted');
   assert.equal(onboardingStatusOf('unsupported', false), 'restricted');
   assert.equal(onboardingStatusOf(null, false), 'pending');
+});
+
+test('recipients are created in the sharer\'s own country and closed when the account is gone', async () => {
+  const m = rawStripe({
+    'POST /v2/core/accounts': { id: 'acct_ca' },
+    'GET /v2/core/accounts': (params, o) => ({ data: [] }),
+    'POST /v2/core/accounts/acct_9/close': { id: 'acct_9' },
+  });
+  const gp = globalPayouts(m.st);
+  await gp.createRecipient({ uid: 'u2', email: 'a@b.c', name: 'A', country: 'CA' });
+  assert.deepEqual(m.calls[0].params.identity, { country: 'ca', entity_type: 'individual' }, 'never a hardcoded US');
+  await gp.closeRecipient('acct_9');
+  assert.deepEqual(m.calls[1].params, { applied_configurations: ['recipient'] });
+  const pages = [
+    { data: [{ id: 'acct_1', metadata: { app: 'stepgunner', uid: 'u1' } }, { id: 'acct_x', metadata: { app: 'other' } }], next_page_url: '/v2/core/accounts?page=p2&limit=100' },
+    { data: [{ id: 'acct_2', metadata: { app: 'stepgunner', uid: 'u2' } }], next_page_url: null },
+  ];
+  let n = 0;
+  const lister = globalPayouts({ async rawRequest(method, path) { m.calls.push({ method, path }); return pages[n++]; } });
+  assert.deepEqual(await lister.listRecipients(), [{ id: 'acct_1', uid: 'u1' }, { id: 'acct_2', uid: 'u2' }], 'every page, ours only');
+  assert.equal(m.calls.at(-2).path, '/v2/core/accounts?applied_configurations[0]=recipient&limit=100');
+  assert.equal(m.calls.at(-1).path, '/v2/core/accounts?page=p2&limit=100');
 });
 
 test('a payout is one PayoutIntent from the open financial account, keyed by the payout id', async () => {
@@ -532,6 +651,8 @@ test('handoff codes: 256 random bits, stored only as a hash, good once for 2 min
   assert.equal(handoffRefusal({ uid: 'u', expiresAtMs: NOW }, NOW), 'expired');
   assert.equal(handoffRefusal({ uid: '', expiresAtMs: NOW + 1 }, NOW), 'used_or_unknown');
   assert.equal(handoffRefusal({ uid: 'u', expiresAtMs: NOW + HANDOFF_TTL_MS }, NOW), null);
+  assert.equal(handoffUrl('https://stepgunner.com', 'earnings', a), `https://stepgunner.com/earnings#h=${a}`,
+    'in the fragment: never sent to a server, a log or a Referer');
   assert.equal(handoffPage('pro'), 'pro');
   assert.equal(handoffPage('admin'), 'earnings', 'only the two pages');
 });

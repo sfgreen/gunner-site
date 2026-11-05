@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type Stripe from 'stripe';
 import { FieldValue } from 'firebase-admin/firestore';
-import { cancelLive, firstPaymentIntent, idOf, isPlan, proDb, reverseReward, rewardReferrer, stripe, syncCustomer } from '../../../lib/proServer';
+import {
+  cancelLive, firstPaymentIntent, idOf, isDuplicateRefund, isPlan, proDb, reverseReward, rewardReferrer, stripe, syncCustomer,
+  undoDuplicateCheckout,
+} from '../../../lib/proServer';
 
 // POST /api/pro/webhook: Stripe's events for the Step Gunner account (decision
 // 0051). Verified by signature, so it reads the raw body. Every event re-syncs the
@@ -25,10 +28,17 @@ async function rawBody(req: NextApiRequest): Promise<Buffer> {
 async function onCheckout(s: Stripe.Checkout.Session): Promise<void> {
   const customer = idOf(s.customer);
   if (!customer || s.metadata?.app !== 'stepgunner') return;
-  await syncCustomer(customer, 'checkout');
   const m = s.metadata || {};
+  const uid = m.uid || s.client_reference_id || null;
+  const subscriptionId = idOf(s.subscription);
+  const paymentIntent = s.payment_status === 'paid' ? await firstPaymentIntent(s) : null;
+  // The checkout guard ran when the session opened; the account may have started paying
+  // since (another tab, or the App Store while Stripe's page was open). Ask again.
+  const duplicate = uid ? await undoDuplicateCheckout(uid, customer, subscriptionId, paymentIntent) : null;
+  await syncCustomer(customer, duplicate ? 'duplicate_checkout' : 'checkout');
+  if (uid) await proDb().collection('users').doc(uid).set({ webPro: { openSessionId: FieldValue.delete() } }, { merge: true });
   await proDb().collection('webSales').doc(s.id).set({
-    uid: m.uid || s.client_reference_id || null,
+    uid,
     plan: m.plan || null,
     code: m.code || null,
     codeKind: m.codeKind || null,
@@ -36,17 +46,18 @@ async function onCheckout(s: Stripe.Checkout.Session): Promise<void> {
     amountTotal: s.amount_total ?? null,
     currency: s.currency || null,
     paymentStatus: s.payment_status,
-    subscriptionId: idOf(s.subscription),
+    subscriptionId,
+    duplicateOf: duplicate,
     livemode: s.livemode,
     at: FieldValue.serverTimestamp(),
   }, { merge: true });
+  if (duplicate) return;
   // Only a real payment earns the sharer a reward (0057): a first bill a coupon took
   // to $0 ("no_payment_required") does not.
-  if (m.codeKind === 'friend' && m.referrerUid && m.uid && s.payment_status === 'paid' && isPlan(m.plan)) {
+  if (m.codeKind === 'friend' && m.referrerUid && uid && s.payment_status === 'paid' && isPlan(m.plan)) {
     const out = await rewardReferrer({
-      sharerUid: m.referrerUid, friendUid: m.uid, code: m.code || null, plan: m.plan,
-      sessionId: s.id, subscriptionId: idOf(s.subscription), paymentIntent: await firstPaymentIntent(s),
-      paidCents: s.amount_total ?? null,
+      sharerUid: m.referrerUid, friendUid: uid, code: m.code || null, plan: m.plan,
+      sessionId: s.id, subscriptionId, paymentIntent, paidCents: s.amount_total ?? null,
     });
     console.log(`[pro] friend reward: ${out} session=${s.id}`);
   }
@@ -94,7 +105,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // refund is a goodwill credit and leaves the plan alone.
         const ch = event.data.object as Stripe.Charge;
         const c = idOf(ch.customer);
-        if (c && ch.refunded) {
+        if (c && ch.refunded && (await isDuplicateRefund(ch.id))) {
+          // Our own refund of a duplicate checkout: that subscription is already canceled,
+          // and the account's real plan and friend reward stand.
+          await syncCustomer(c, 'duplicate_refund');
+        } else if (c && ch.refunded) {
           const n = await cancelLive(c);
           console.log(`[pro] full refund: canceled ${n} subscription(s)`);
           const r = await syncCustomer(c, 'refund');

@@ -14,10 +14,11 @@
 // referralRewards/{friendUid}: one row per friend, ever (0057 item 10)
 //   sharerUid, friendUid, code, rail ('web' | 'appstore'), plan ('yearly' | 'monthly'),
 //   firstPaidAt, firstPaidCents, txnRef (web: Stripe subscription id; App Store:
-//   originalTransactionId), cents (centsYearly or centsMonthly, trimmed to the yearly
-//   cap with centsBeforeCap), payableAt (firstPaidAt + holdDays; the flip resets it to
-//   the time it turned payable), reason, at. Web rows add sessionId and
-//   firstPaymentIntent (what a refund is matched against); App Store rows add
+//   originalTransactionId), cents (centsYearly or centsMonthly at full amount; the
+//   backend applies the yearly cap when it writes a run, by calendar year of payout),
+//   payableAt (firstPaidAt + holdDays; the flip resets it to the time it turned
+//   payable), reason, at. Web rows add sessionId, firstPaymentIntent (what a refund is
+//   matched against) and cardFingerprint (the first payment's card); App Store rows add
 //   firstTransactionId, currency, productId, offerType, offerIdentifier, environment.
 //   status:
 //     pending    in the hold (reason 'monthly_budget' when the budget pushed it a month)
@@ -26,8 +27,9 @@
 //     reversed   the first payment was refunded or disputed: reason ('refund' | 'dispute'
 //                | 'revoke'), reversedAt, reversedFrom (the status it had). reversedFrom
 //                'paid' keeps paidAt; a later run nets it and stamps deductedInRun
-//     skipped    never qualified, cents 0: reason 'same_card', 'sandbox', 'self',
-//                'paid_before', 'other_offer', ...
+//     skipped    never qualified, cents 0: reason 'shared_card' (that card already paid
+//                for another friend's row, or the sharer pays with it), 'sandbox',
+//                'self', 'paid_before', 'other_offer', ...
 //     forfeited  cents 0 or never paid: reason 'year_cap' (the yearly cap left
 //                nothing, by the year of the friend's first payment) or 'sharer_deleted'
 //
@@ -40,19 +42,23 @@
 //   waiting[]: the same with a reason, not paid this run
 //   totals {lines, cashLines, cashCents, proMonthLines, proMonths, deductCents, rows,
 //     waitingLines, waitingCents}
-//   the site adds startedAt, leaseUntil, finishedAt, lastError and
-//   result {sharers, rows, cashCents, proMonths, skipped {reason: n}, failed, errors}
+//   the site adds startedAt, leaseUntil, finishedAt, lastError,
+//   result {sharers, rows, cashCents, proMonths, skipped {reason: n}, failed, errors}, and
+//   alerts[] {kind 'payout_returned', payoutId, sharerUid, cents, stripeStatus, at} when a
+//   payout bounces, even after the run is done
 //
 // referralPayouts/{runId}_{sharerUid}: one per executed line (the site writes these)
 //   sharerUid, runId, method, cents (cash sent: rows less deductions; 0 for Pro
 //   months), grossCents, deductCents, months, rowIds, deductRowIds, recipientId,
 //   payoutMethodId, destination ('Chase ••6789'), stripeId (PayoutIntent poi_...),
-//   stripeStatus, error, createdAt, paidAt, settledAt
+//   stripeStatus, error, createdAt, paidAt, postedAt, settledAt
 //   status:
 //     sending | granting   written before the money or the grant moves, so a crash resumes
-//     sent                 Stripe accepted it (rows paid); posted: the money left our account
+//     sent                 Stripe accepted it (rows paid); posted: the money left our account.
+//                          Both are re-checked daily until 60 days after posting
 //     failed               Stripe refused it; the rows stay payable for a later run
-//     returned             it bounced after sending; rows back to payable, deductions owed again
+//     returned             it bounced, before or after posting; rows back to payable,
+//                          deductions owed again, alert on the run
 //     granted              Pro months added to proGrantManualExpiresAt
 //
 // payoutRecipients/{uid}
@@ -65,8 +71,15 @@
 //   cashCountries, centsYearly, centsMonthly; defaults in lib/referral.ts REFERRAL_DEFAULTS
 //   (the same as functions/main.py REFERRAL_CONFIG_DEFAULTS)
 //
+// referralCodes/{CODE}: written by the backend (server-claimed, unique), uid = the owner.
+//   The only way the site resolves a friend code (CODE is the stored FIRSTWORD-XXXX form);
+//   a code without a doc is not found.
+//
+// users/{uid}.webPro.openSessionId: the account's open Checkout session; a new checkout
+//   expires it, a completed one clears it.
+//
 // authHandoffs/{sha256 of the code}: uid, to ('earnings' | 'pro'), createdAt, expiresAt
-//   (2 minutes); deleted when used (lib/handoff.ts)
+//   (2 minutes); deleted when used. The code travels as /earnings#h=CODE (lib/handoff.ts).
 
 import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getAuth } from 'firebase-admin/auth';
@@ -74,11 +87,11 @@ import { getFirestore, FieldValue, Timestamp, type DocumentData, type Firestore 
 import Stripe from 'stripe';
 import type { NextApiRequest } from 'next';
 import {
-  appStoreActive, chiefCodeForm, couponLabel, liveSub, manualMs, mergedMs, normalizeCode, studentCodeForm, webExpiresMs,
-  type GrantFields, type Plan, type SubLite,
+  appStoreActive, chiefCodeForm, couponLabel, DUPLICATE_REFUND_TAG, duplicateReason, liveSub, manualMs, mergedMs,
+  normalizeCode, studentCodeForm, webExpiresMs, type GrantFields, type Plan, type SubLite,
 } from './proGrant';
 import {
-  earnedInYearCents, friendPayoutCents, holdMs, referralConfig, reversalFields, type ReferralConfig, type RewardRow,
+  holdMs, paymentTakenBack, referralConfig, reversalFields, rewardCents, sharedCardReason, type ReferralConfig,
 } from './referral';
 import { HANDOFF_TTL_MS, handoffKey, handoffRefusal, newHandoffCode, type HandoffPage } from './handoff';
 
@@ -328,14 +341,34 @@ async function subscriptionCard(subscriptionId: string | null): Promise<string |
   }
 }
 
-/** Every card fingerprint saved on a customer. */
-async function customerCards(customerId: string): Promise<Set<string>> {
-  const list = await stripe().customers.listPaymentMethods(customerId, { type: 'card', limit: 20 });
-  return new Set(list.data.map((p) => p.card?.fingerprint).filter((f): f is string => !!f));
+/** Every card fingerprint on a customer: saved cards and the cards of its past charges. */
+async function customerFingerprints(customerId: string | null | undefined): Promise<Set<string>> {
+  if (!customerId) return new Set();
+  const st = stripe();
+  const [pms, charges] = await Promise.all([
+    st.customers.listPaymentMethods(customerId, { type: 'card', limit: 20 }),
+    st.charges.list({ customer: customerId, limit: 100 }),
+  ]);
+  return new Set([
+    ...pms.data.map((p) => p.card?.fingerprint),
+    ...charges.data.map((c) => c.payment_method_details?.card?.fingerprint),
+  ].filter((f): f is string => !!f));
 }
 
-function rewardRow(d: DocumentData): RewardRow {
-  return { status: String(d.status || ''), cents: Number(d.cents) || 0, firstPaidMs: toMs(d.firstPaidAt) };
+export type ChargeFacts = { fingerprint: string | null; refunded: boolean; disputed: boolean };
+
+/** What a payment's charge says now, or null when Stripe no longer has it (a customer's
+ *  data deletion request removes it). */
+export async function chargeOfPayment(paymentIntent: string): Promise<ChargeFacts | null> {
+  try {
+    const pi = await stripe().paymentIntents.retrieve(paymentIntent, { expand: ['latest_charge'] });
+    const ch = pi.latest_charge;
+    if (!ch || typeof ch === 'string') return null;
+    return { fingerprint: ch.payment_method_details?.card?.fingerprint || null, refunded: !!ch.refunded, disputed: !!ch.disputed };
+  } catch (e) {
+    if ((e as { statusCode?: number }).statusCode === 404) return null;
+    throw e;
+  }
 }
 
 /** The PaymentIntent of a Checkout Session's first invoice, so a refund can be matched to it. */
@@ -358,9 +391,11 @@ export async function referralConfigFor(): Promise<ReferralConfig> {
 
 /**
  * A friend code's reward (decision 0057): a row in referralRewards/{friendUid}, one per
- * friend, ever. centsYearly or centsMonthly ($15 / $5) under the yearly cap, payable
- * holdDays (30) after this first payment. This never moves money: the monthly run pays
- * it (lib/referral.ts). No reward when the friend paid with a card the sharer has saved.
+ * friend, ever, at full amount (centsYearly or centsMonthly, $15 / $5; the backend
+ * applies the yearly cap when it writes a payout run), payable holdDays (30) after this
+ * first payment. This never moves money: an approved run pays it (lib/referral.ts).
+ * The row keeps the first payment's card fingerprint; a card already behind another
+ * friend's row, or one the sharer pays with, earns nothing (skipped, shared_card).
  */
 export async function rewardReferrer(r: {
   sharerUid: string; friendUid: string; code: string | null; plan: Plan;
@@ -373,32 +408,33 @@ export async function rewardReferrer(r: {
   if (!u0.exists) return 'sharer has no account';
   const d = u0.data() || {};
   const now = Date.now();
+  const charge = r.paymentIntent ? await chargeOfPayment(r.paymentIntent) : null;
+  const fingerprint = charge?.fingerprint || (await subscriptionCard(r.subscriptionId));
+  const [others, sharerCards] = await Promise.all([
+    fingerprint ? db.collection('referralRewards').where('cardFingerprint', '==', fingerprint).limit(3).get() : Promise.resolve(null),
+    customerFingerprints(d.webPro?.customerId),
+  ]);
   const base = {
     sharerUid: r.sharerUid, friendUid: r.friendUid, code: r.code, rail: 'web', plan: r.plan,
     sessionId: r.sessionId, txnRef: r.subscriptionId, firstPaymentIntent: r.paymentIntent,
-    firstPaidCents: r.paidCents, firstPaidAt: Timestamp.fromMillis(now),
+    firstPaidCents: r.paidCents, firstPaidAt: Timestamp.fromMillis(now), cardFingerprint: fingerprint || null,
     payableAt: Timestamp.fromMillis(now + holdMs(cfg)), at: FieldValue.serverTimestamp(),
   };
-  const card = await subscriptionCard(r.subscriptionId);
-  if (card && d.webPro?.customerId && (await customerCards(d.webPro.customerId)).has(card)) {
-    await mark.create({ ...base, status: 'skipped', reason: 'same_card', cents: 0 });
-    return "skipped: the friend paid with the sharer's card";
-  }
-  const rows = await db.collection('referralRewards').where('sharerUid', '==', r.sharerUid).get();
-  const full = r.plan === 'yearly' ? cfg.centsYearly : cfg.centsMonthly;
-  const cents = friendPayoutCents(r.plan, earnedInYearCents(rows.docs.map((x) => rewardRow(x.data())), now), cfg);
-  // The same row the App Store writer makes (functions/main.py): no room under the
-  // yearly cap forfeits it, partial room trims it and keeps the full amount.
-  const row = cents > 0
-    ? { status: 'pending', cents, ...(cents < full ? { centsBeforeCap: full } : {}) }
-    : { status: 'forfeited', reason: 'year_cap', cents: 0 };
+  const shared = sharedCardReason(fingerprint, !!others && others.docs.some((x) => x.id !== r.friendUid), sharerCards);
+  const takenBack = paymentTakenBack(charge);
+  const cents = rewardCents(r.plan, cfg);
+  let row: Record<string, unknown>;
+  if (shared) row = { status: 'skipped', reason: shared, cents: 0 };
+  // Refunded or disputed before this webhook ran: the refund event found no row to reverse.
+  else if (takenBack) row = { status: 'reversed', reversedFrom: 'pending', reason: takenBack, reversedAt: FieldValue.serverTimestamp(), cents };
+  else row = { status: 'pending', cents };
   try {
     await mark.create({ ...base, ...row });
   } catch (e) {
     if ((e as { code?: number }).code === 6) return 'already handled'; // ALREADY_EXISTS: a parallel delivery won
     throw e;
   }
-  return cents > 0 ? `pending ${cents}` : 'forfeited: year_cap';
+  return `${row.status}${row.reason ? ` (${row.reason})` : ''} ${cents}`;
 }
 
 /** A refund or dispute of the friend's first payment takes the reward back (0057).
@@ -424,18 +460,23 @@ export function codeRefusal(r: CodeResult): string | null {
   return r.ok ? null : (r as { reason: string }).reason;
 }
 
-/** A Chief code (chiefs/{code}, decision 0041) or a student's referralCode. */
+/**
+ * A Chief code (chiefs/{code}, decision 0041) or a student's code. A student code's
+ * owner comes only from the server-claimed index referralCodes/{CODE} (uid), never
+ * from users.referralCode, which a client can set to anyone's code (review B1). A code
+ * the index does not hold yet is not found. Codes match with or without the hyphen:
+ * the index key is the stored form, FIRSTWORD-XXXX.
+ */
 export async function resolveCode(raw: unknown, plan: Plan, me: { uid: string; doc: DocumentData }): Promise<CodeResult> {
   const code = normalizeCode(raw);
   if (!code) return { ok: false, reason: "That isn't a code." };
   const db = proDb();
   if (!(await neverPaid(me.uid, me.doc))) return { ok: false, reason: 'Codes are for a first subscription.' };
 
-  const own = (me.doc.referralCode || '').toString().trim().toUpperCase();
   const student = studentCodeForm(code);
-  if (own && (own === student || chiefCodeForm(own) === chiefCodeForm(code))) {
-    return { ok: false, reason: "That's your own code. Share it with a friend." };
-  }
+  const claim = await db.collection('referralCodes').doc(student).get();
+  const ownerUid = typeof claim.get('uid') === 'string' && claim.get('uid') ? String(claim.get('uid')) : null;
+  if (ownerUid === me.uid) return { ok: false, reason: "That's your own code. Share it with a friend." };
 
   const chiefId = chiefCodeForm(code);
   const chief = await db.collection('chiefs').doc(chiefId).get();
@@ -452,14 +493,12 @@ export async function resolveCode(raw: unknown, plan: Plan, me: { uid: string; d
     if (!c.fromReferralCode) return { ok: false, reason: 'A Chief code works on the yearly plan.' };
   }
 
-  const hits = await db.collection('users').where('referralCode', '==', student).limit(2).get();
-  if (hits.empty) return { ok: false, reason: "We couldn't find that code." };
+  if (!ownerUid || !(await db.collection('users').doc(ownerUid).get()).exists) {
+    return { ok: false, reason: "We couldn't find that code." };
+  }
   const coupon = plan === 'yearly' ? process.env.STRIPE_COUPON_FRIEND_YEARLY : process.env.STRIPE_COUPON_FRIEND_MONTHLY;
   if (!coupon) return { ok: false, reason: 'Codes are not set up yet.' };
-  // Two students with the same code (they are made on the phone): the discount
-  // still applies, but nobody can be credited with certainty, so no reward.
-  const referrerUid = hits.size === 1 && hits.docs[0].id !== me.uid ? hits.docs[0].id : undefined;
-  return { ok: true, kind: 'friend', code: student, coupon, label: await labelOf(coupon, plan), referrerUid };
+  return { ok: true, kind: 'friend', code: student, coupon, label: await labelOf(coupon, plan), referrerUid: ownerUid };
 }
 
 async function labelOf(couponId: string, plan: Plan): Promise<string> {
@@ -527,6 +566,41 @@ export function sendError(res: { status: (n: number) => { json: (b: unknown) => 
   }
   console.error('[pro] unexpected', e);
   res.status(500).json({ ok: false, code: 'server', error: 'Something went wrong. Try again.' });
+}
+
+/**
+ * A completed checkout for an account that already pays (App Store, or another live web
+ * subscription): cancel the new subscription and refund its first payment in full, now.
+ * Returns why, or null when the checkout stands. Idempotent: the refund is keyed by the
+ * subscription, and a canceled subscription is not live.
+ */
+export async function undoDuplicateCheckout(uid: string, customerId: string, subscriptionId: string | null,
+  paymentIntent: string | null): Promise<'app_store' | 'web' | null> {
+  if (!subscriptionId) return null;
+  const st = stripe();
+  const [u, subs] = await Promise.all([
+    proDb().collection('users').doc(uid).get(),
+    st.subscriptions.list({ customer: customerId, status: 'all', limit: 20 }),
+  ]);
+  const others = subs.data.filter((x) => x.id !== subscriptionId && ['active', 'trialing', 'past_due'].includes(x.status));
+  const why = duplicateReason(payingOnAppStore(u.data() || {}), others.length);
+  if (!why) return null;
+  const mine = subs.data.find((x) => x.id === subscriptionId);
+  if (mine && !['canceled', 'incomplete_expired'].includes(mine.status)) await st.subscriptions.cancel(subscriptionId);
+  if (paymentIntent) {
+    await st.refunds.create(
+      { payment_intent: paymentIntent, reason: 'duplicate', metadata: { gunner: DUPLICATE_REFUND_TAG, subscription: subscriptionId, uid } },
+      { idempotencyKey: `gunner_dup_refund_${subscriptionId}` },
+    );
+  }
+  console.warn(`[pro] duplicate checkout uid=${uid.slice(0, 6)} already ${why}: canceled ${subscriptionId}, refunded ${paymentIntent || 'nothing (no payment found)'}`);
+  return why;
+}
+
+/** True when a refunded charge's refund is one the site made for a duplicate checkout. */
+export async function isDuplicateRefund(chargeId: string): Promise<boolean> {
+  const list = await stripe().refunds.list({ charge: chargeId, limit: 10 });
+  return list.data.some((r) => r.metadata?.gunner === DUPLICATE_REFUND_TAG);
 }
 
 /** Cancel every live subscription a customer has, now (refunds and disputes). */

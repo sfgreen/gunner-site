@@ -1,13 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { executeRuns } from '../../../lib/referral';
-import { firestorePayoutPorts, payoutsProvider } from '../../../lib/referralServer';
+import { closeOrphanRecipients, firestorePayoutPorts, payoutsProvider } from '../../../lib/referralServer';
 
 // The friend-reward payout run (decision 0057 amendment, S4 and D2). The backend
 // (functions/main.py referral_payout_run) writes referralPayoutRuns/{YYYY-MM} with one
 // line per sharer, and Admin (or autoPayout) approves it. This only executes approved
 // (or interrupted) runs: per line, one PayoutIntent from the rows still payable less
 // the refunds it nets, or Pro months. It also checks payouts still in flight and puts
-// a bounced one's rows back to payable. It never flips rows or creates runs.
+// a bounced one's rows back to payable (sent, or posted within the settle window).
+// It never flips rows or creates runs. With payouts on, it also closes the Stripe
+// recipient of any account that was deleted.
 //
 // Daily (vercel.json) so a run approved after the 1st still goes out that day; a day
 // with no approved run is one query. On demand: the same URL with CRON_SECRET,
@@ -24,8 +26,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const client = payoutsProvider();
     const out = await executeRuns(firestorePayoutPorts(client), client, { nowMs: Date.now(), dryRun, runId });
+    let closedRecipients = 0;
+    if (client && !dryRun) {
+      try {
+        closedRecipients = await closeOrphanRecipients(client);
+      } catch (e) {
+        console.warn(`[payouts] closing deleted accounts' recipients failed: ${(e as Error).message}`);
+      }
+    }
     console.log(`[payouts] cron dryRun=${dryRun} provider=${client ? 'global_payouts' : 'off'} settled=${JSON.stringify(out.settled)} runs=${JSON.stringify(out.runs.map((r) => ({ id: r.runId, outcome: r.outcome, result: r.result })))}`);
-    return res.status(200).json({ ok: true, dryRun, provider: client ? 'global_payouts' : null, ...out });
+    return res.status(200).json({ ok: true, dryRun, provider: client ? 'global_payouts' : null, closedRecipients, ...out });
   } catch (e) {
     console.error('[payouts] cron failed', e);
     return res.status(500).json({ error: 'payout run failed' });

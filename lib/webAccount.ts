@@ -6,7 +6,7 @@ import { HANDOFF_STORAGE_KEY } from './handoffStrip';
 // NEXT_PUBLIC_PRO_APPLE=1), or the app's one-time handoff (lib/handoff.ts). Firebase
 // loads only after paint, and only on the pages that call this.
 //
-// The handoff code arrives as ?h=CODE; lib/handoffStrip.ts has already moved it into
+// The handoff code arrives as #h=CODE; lib/handoffStrip.ts has already moved it into
 // sessionStorage.
 
 export type ApiResult<T> = T & { ok: boolean; error?: string; code?: string };
@@ -48,13 +48,10 @@ function takeHandoffCode(): string {
   } catch (err) {
     // Storage blocked (private mode on old Safari): fall back to the URL.
   }
-  const url = new URL(window.location.href);
-  const h = url.searchParams.get('h') || '';
-  if (h) {
-    url.searchParams.delete('h');
-    window.history.replaceState(window.history.state, '', url.pathname + url.search + url.hash);
-  }
-  return h;
+  const m = /^#h=([A-Za-z0-9_-]+)$/.exec(window.location.hash);
+  if (!m) return '';
+  window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search);
+  return m[1];
 }
 
 // One redemption per page load, shared by every mount (React runs effects twice in dev).

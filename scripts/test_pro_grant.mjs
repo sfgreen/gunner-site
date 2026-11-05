@@ -6,10 +6,9 @@ import assert from 'node:assert/strict';
 import {
   DAY_MS, GRACE_MS, liveSub, webExpiresMs, manualMs, mergedMs, appStoreActive,
   normalizeCode, couponLabel, studentCodeForm, chiefCodeForm, extendManualMs, PRO_MONTH_DAYS, checkoutReturn,
+  duplicateReason, DUPLICATE_REFUND_TAG,
 } from '../lib/proGrant.ts';
-import {
-  FRIEND_PAYOUT_CENTS, FRIEND_YEAR_CAP_CENTS, FRIEND_HOLD_MS, earnedInYearCents, friendPayoutCents, reversalFields,
-} from '../lib/referral.ts';
+import { reversalFields } from '../lib/referral.ts';
 
 const NOW = Date.UTC(2026, 9, 30, 15);
 const sub = (o) => ({ id: 's', status: 'active', periodEndMs: NOW + 30 * DAY_MS, cancelAtPeriodEnd: false, plan: 'monthly', ...o });
@@ -58,27 +57,6 @@ test('the grant is the later of comp and web; a cancel never erases a comp', () 
   assert.equal(mergedMs(comp, null), comp, 'web canceled, comp stays');
   assert.equal(mergedMs(NOW + DAY_MS, NOW + 30 * DAY_MS), NOW + 30 * DAY_MS, 'a short comp never cuts a payer short');
   assert.equal(mergedMs(null, null), null);
-});
-
-test('a yearly friend earns the sharer $15, a monthly one $5, stacking up to the yearly cap', () => {
-  assert.deepEqual(FRIEND_PAYOUT_CENTS, { yearly: 1500, monthly: 500 });
-  assert.equal(FRIEND_YEAR_CAP_CENTS, 199500, 'under the $2,000 1099 line');
-  assert.equal(FRIEND_HOLD_MS, 30 * DAY_MS);
-  assert.equal(friendPayoutCents('yearly', 0), 1500);
-  assert.equal(friendPayoutCents('monthly', 0), 500);
-  assert.equal(friendPayoutCents('yearly', 4500), 1500, 'three friends in, the fourth still earns the full amount');
-  assert.equal(friendPayoutCents('yearly', FRIEND_YEAR_CAP_CENTS - 700), 700, 'the last friend under the cap earns what is left');
-  assert.equal(friendPayoutCents('monthly', FRIEND_YEAR_CAP_CENTS), 0);
-  assert.equal(friendPayoutCents('yearly', -100), 1500, 'a bad negative sum never raises the reward');
-});
-
-test('the cap counts this calendar year, and only rows still earning', () => {
-  const row = (o) => ({ status: 'pending', cents: 1500, firstPaidMs: NOW - DAY_MS, ...o });
-  assert.equal(earnedInYearCents([row(), row({ status: 'payable' }), row({ status: 'paid' })], NOW), 4500);
-  assert.equal(earnedInYearCents([row({ firstPaidMs: Date.UTC(2025, 11, 31) })], NOW), 0, 'last year');
-  assert.equal(earnedInYearCents([row({ status: 'reversed' }), row({ status: 'reversed', paidAt: NOW })], NOW), 0);
-  assert.equal(earnedInYearCents([row({ status: 'skipped', cents: 0 }), row({ status: 'forfeited', cents: 0 })], NOW), 0);
-  assert.equal(earnedInYearCents([row({ firstPaidMs: null })], NOW), 1500, 'a row without a time yet counts');
 });
 
 test('only a refund of the first payment takes a reward back', () => {
@@ -150,4 +128,12 @@ test('checkout from the app returns to the universal link with the app-to-web pa
   const web = checkoutReturn('web', 'https://stepgunner.com');
   assert.deepEqual(web, { success_url: 'https://stepgunner.com/pro?paid={CHECKOUT_SESSION_ID}', cancel_url: 'https://stepgunner.com/pro?canceled=1' });
   assert.equal('origin_context' in web, false, 'the web keeps the default Checkout page');
+});
+
+test('a checkout that completes for an account already paying is undone (review M7)', () => {
+  assert.equal(duplicateReason(true, 0), 'app_store', 'bought in the App Store while the Stripe page was open');
+  assert.equal(duplicateReason(false, 1), 'web', 'a second tab paid too');
+  assert.equal(duplicateReason(true, 1), 'app_store');
+  assert.equal(duplicateReason(false, 0), null, 'a first plan stands');
+  assert.equal(DUPLICATE_REFUND_TAG, 'duplicate_checkout', 'the refund webhook matches on this tag');
 });

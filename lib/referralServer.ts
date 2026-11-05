@@ -2,10 +2,10 @@ import { getAuth } from 'firebase-admin/auth';
 import { FieldValue, Timestamp, type DocumentData, type DocumentReference } from 'firebase-admin/firestore';
 import Stripe from 'stripe';
 import type { NextApiRequest } from 'next';
-import { ORIGIN, ProError, grantFields, proDb, referralConfigFor, statusFor, stripe, toMs, ts } from './proServer';
+import { ORIGIN, ProError, chargeOfPayment, grantFields, proDb, referralConfigFor, statusFor, stripe, toMs, ts } from './proServer';
 import { extendManualMs, manualMs, mergedMs, PRO_MONTH_DAYS, type Plan } from './proGrant';
 import {
-  earningsTotals, isCashCountry, monthsFrom, refundedAfterPayout,
+  earningsTotals, isCashCountry, monthsFrom, paymentTakenBack, refundedAfterPayout, SETTLE_WINDOW_MS,
   type EarningsTotals, type LiveLine, type OnboardingStatus, type Payout, type PayoutPorts, type Preference,
   type Recipient, type ReferralConfig, type Run, type RunLine, type RunResult,
 } from './referral';
@@ -54,9 +54,12 @@ async function refreshRecipient(r: Recipient, client: GlobalPayouts): Promise<Re
     const s = await client.recipientState(r.stripeRecipientId);
     await proDb().collection('payoutRecipients').doc(r.uid).set({
       onboardingStatus: s.onboardingStatus, capability: s.capability, payoutMethodId: s.payoutMethodId,
-      destination: s.destination, updatedAt: FieldValue.serverTimestamp(),
+      destination: s.destination, ...(s.country ? { country: s.country } : {}), updatedAt: FieldValue.serverTimestamp(),
     }, { merge: true });
-    return { ...r, onboardingStatus: s.onboardingStatus, payoutMethodId: s.payoutMethodId, destination: s.destination };
+    return {
+      ...r, onboardingStatus: s.onboardingStatus, payoutMethodId: s.payoutMethodId, destination: s.destination,
+      country: s.country || r.country,
+    };
   } catch (e) {
     console.warn(`[payouts] recipient refresh uid=${r.uid.slice(0, 6)} failed: ${(e as Error).message}`);
     return r;
@@ -176,15 +179,16 @@ export async function payoutSetupLink(uid: string, country: string | null): Prom
   const ref = db.collection('payoutRecipients').doc(uid);
   const rec = recipientFrom(uid, (await ref.get()).data());
   const where = rec?.country || country;
-  if (where && !isCashCountry(where, cfg)) throw new ProError(403, 'not_cash_country', 'Cash payouts are for US bank accounts for now.');
+  if (!where) throw new ProError(400, 'no_country', "We couldn't tell which country you're in. Open this page on your phone and try again.");
+  if (!isCashCountry(where, cfg)) throw new ProError(403, 'not_cash_country', 'Cash payouts are for US bank accounts for now.');
 
   let id = rec?.stripeRecipientId || null;
   if (!id) {
     const [user, doc] = await Promise.all([getAuth().getUser(uid), db.collection('users').doc(uid).get()]);
     if (!user.email) throw new ProError(400, 'no_email', 'Your account has no email for Stripe to reach you. Write to support from the app.');
-    id = await client.createRecipient({ uid, email: user.email, name: String(doc.data()?.displayName || user.email) });
+    id = await client.createRecipient({ uid, email: user.email, name: String(doc.data()?.displayName || user.email), country: where });
     await ref.set({
-      stripeRecipientId: id, onboardingStatus: 'pending', country: 'US', preference: 'cash',
+      stripeRecipientId: id, onboardingStatus: 'pending', country: where, preference: 'cash',
       createdAt: FieldValue.serverTimestamp(), updatedAt: FieldValue.serverTimestamp(),
     }, { merge: true });
     console.log(`[payouts] recipient created uid=${uid.slice(0, 6)}`);
@@ -195,6 +199,27 @@ export async function payoutSetupLink(uid: string, country: string | null): Prom
     returnUrl: `${ORIGIN}/earnings?payouts=return`,
     refreshUrl: `${ORIGIN}/earnings?payouts=refresh`,
   });
+}
+
+/**
+ * Close every Step Gunner recipient whose account is gone (review m4): a recipient holds
+ * bank details, and delete_account removes only payoutRecipients/{uid}, so the list
+ * comes from Stripe. Returns how many were closed.
+ */
+export async function closeOrphanRecipients(client: GlobalPayouts): Promise<number> {
+  const db = proDb();
+  const all = await client.listRecipients();
+  const owned = all.filter((r) => r.uid);
+  const users = owned.length ? await db.getAll(...owned.map((r) => db.collection('users').doc(String(r.uid)))) : [];
+  let closed = 0;
+  for (let i = 0; i < owned.length; i += 1) {
+    if (users[i].exists) continue;
+    await client.closeRecipient(owned[i].id);
+    await db.collection('payoutRecipients').doc(String(owned[i].uid)).delete();
+    console.log(`[payouts] closed recipient ${owned[i].id}: account ${String(owned[i].uid).slice(0, 6)} is deleted`);
+    closed += 1;
+  }
+  return closed;
 }
 
 // ---- the payout run's Firestore side ----
@@ -286,13 +311,40 @@ export function firestorePayoutPorts(client: GlobalPayouts | null): PayoutPorts 
       }, { merge: true });
     },
 
-    async liveLine(line): Promise<LiveLine> {
+    async liveLine(line, write): Promise<LiveLine> {
       const ids = line.rowIds.concat(line.deductRowIds);
       const snaps = ids.length ? await db.getAll(...refs(ids)) : [];
-      const row = (s: (typeof snaps)[number]) => ({ id: s.id, cents: Number(s.get('cents')) || 0 });
-      const pay = snaps.slice(0, line.rowIds.length).filter((s) => isLivePay(s.data()) && s.get('sharerUid') === line.sharerUid);
-      const deduct = snaps.slice(line.rowIds.length).filter((s) => isLiveDeduct(s.data()) && s.get('sharerUid') === line.sharerUid);
-      return { pay: pay.map(row), deduct: deduct.map(row) };
+      const row = (x: (typeof snaps)[number]) => ({ id: x.id, cents: Number(x.get('cents')) || 0 });
+      const pay = [];
+      for (const x of snaps.slice(0, line.rowIds.length)) {
+        if (!isLivePay(x.data()) || x.get('sharerUid') !== line.sharerUid) continue;
+        // The safety net under the refund webhook (review M9): ask Stripe about the
+        // friend's first payment before paying for it.
+        const pi = x.get('rail') === 'web' ? x.get('firstPaymentIntent') : null;
+        if (typeof pi === 'string' && pi) {
+          const charge = await chargeOfPayment(pi);
+          if (!charge) {
+            console.warn(`[payouts] ${x.id}: Stripe no longer has ${pi}; the row waits`);
+            continue;
+          }
+          const gone = paymentTakenBack(charge);
+          if (gone) {
+            if (write) {
+              await db.runTransaction(async (tx) => {
+                const cur = await tx.get(x.ref);
+                if (isLivePay(cur.data())) {
+                  tx.update(x.ref, { status: 'reversed', reversedFrom: 'payable', reason: gone, reversedAt: FieldValue.serverTimestamp() });
+                }
+              });
+            }
+            console.warn(`[payouts] ${x.id}: first payment ${gone === 'refund' ? 'refunded' : 'disputed'}, ${write ? 'reversed' : 'would reverse'}`);
+            continue;
+          }
+        }
+        pay.push(row(x));
+      }
+      const deduct = snaps.slice(line.rowIds.length).filter((x) => isLiveDeduct(x.data()) && x.get('sharerUid') === line.sharerUid);
+      return { pay, deduct: deduct.map(row) };
     },
 
     async recipient(uid, refresh) {
@@ -383,15 +435,17 @@ export function firestorePayoutPorts(client: GlobalPayouts | null): PayoutPorts 
       if (months != null) console.log(`[payouts] granted ${p.id} months=${months}`);
     },
 
-    async sentPayouts() {
-      const snap = await payouts.where('status', '==', 'sent').get();
-      return snap.docs.map((x) => payoutFrom(x.id, x.data()));
+    async openPayouts(nowMs) {
+      const snap = await payouts.where('status', 'in', ['sent', 'posted']).get();
+      return snap.docs
+        .filter((x) => x.get('status') === 'sent' || (toMs(x.get('postedAt')) ?? 0) > nowMs - SETTLE_WINDOW_MS)
+        .map((x) => payoutFrom(x.id, x.data()));
     },
 
     async settle(p, state, stripeStatus) {
       const ref = payouts.doc(p.id);
       if (state === 'posted') {
-        await ref.set({ status: 'posted', stripeStatus, settledAt: FieldValue.serverTimestamp() }, { merge: true });
+        await ref.set({ status: 'posted', stripeStatus, postedAt: FieldValue.serverTimestamp() }, { merge: true });
         return;
       }
       await db.runTransaction(async (tx) => {
@@ -410,8 +464,14 @@ export function firestorePayoutPorts(client: GlobalPayouts | null): PayoutPorts 
         for (const d of deducts) {
           if (d.get('deductedInRun') === p.runId) tx.update(d.ref, { deductedInRun: FieldValue.delete() });
         }
+        // Danny sees it on the run in Admin; the backend's run email does not cover it.
+        tx.set(runs.doc(p.runId), {
+          alerts: FieldValue.arrayUnion({
+            kind: 'payout_returned', payoutId: p.id, sharerUid: p.sharerUid, cents: p.cents, stripeStatus, at: Timestamp.now(),
+          }),
+        }, { merge: true });
       });
-      console.warn(`[payouts] returned ${p.id} ${stripeStatus}: rows back to payable`);
+      console.warn(`[payouts] returned ${p.id} ${stripeStatus}: rows back to payable, alert on run ${p.runId}`);
     },
   };
 }
