@@ -68,6 +68,19 @@ export function isCashCountry(country: string | null | undefined, cfg: Pick<Refe
   return !!country && cfg.cashCountries.includes(country.toUpperCase());
 }
 
+/**
+ * The preference to save for a sharer who has none (decision 0057 item 6): outside the
+ * cash countries Pro months are the only choice, and the backend pays Pro months only
+ * from a stored preference, so it is saved for them. Null when nothing should be saved:
+ * a saved choice stands, and an unknown country is never guessed.
+ */
+export function defaultPreference(
+  stored: Preference | null, country: string | null, cfg: Pick<ReferralConfig, 'cashCountries'>,
+): 'pro_months' | null {
+  if (stored || !country) return null;
+  return isCashCountry(country, cfg) ? null : 'pro_months';
+}
+
 // ---- one friend's reward ----
 
 const EARNING = new Set(['pending', 'payable', 'paid']);

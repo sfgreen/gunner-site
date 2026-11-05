@@ -9,7 +9,7 @@ import assert from 'node:assert/strict';
 import {
   REFERRAL_DEFAULTS, referralConfig, earningsTotals, refundedAfterPayout, cashPayout, monthsPayout, monthsFrom,
   executeRuns, payoutIdFor, isCashCountry, rewardCents, sharedCardReason, paymentTakenBack, SETTLE_WINDOW_MS,
-  waitingOf, closeOrphans,
+  waitingOf, closeOrphans, defaultPreference,
 } from '../lib/referral.ts';
 import { extendManualMs } from '../lib/proGrant.ts';
 import { globalPayouts, onboardingStatusOf, GP_API_VERSION } from '../lib/globalPayouts.ts';
@@ -39,6 +39,16 @@ test('config/referral falls back to the 0057 defaults key by key', () => {
   assert.equal(isCashCountry('us', c), true);
   assert.equal(isCashCountry('GB', c), false);
   assert.equal(isCashCountry(null, c), false);
+});
+
+test('a sharer outside the cash countries gets Pro months saved for them; nobody else is decided for', () => {
+  assert.equal(defaultPreference(null, 'GB', REFERRAL_DEFAULTS), 'pro_months', 'the only choice, saved so the backend pays it');
+  assert.equal(defaultPreference(null, 'gb', REFERRAL_DEFAULTS), 'pro_months');
+  assert.equal(defaultPreference(null, 'US', REFERRAL_DEFAULTS), null, 'a US sharer picks cash or Pro months');
+  assert.equal(defaultPreference(null, null, REFERRAL_DEFAULTS), null, 'an unknown country is never guessed');
+  assert.equal(defaultPreference('cash', 'GB', REFERRAL_DEFAULTS), null, 'a saved choice stands');
+  assert.equal(defaultPreference('pro_months', 'GB', REFERRAL_DEFAULTS), null, 'already saved');
+  assert.equal(defaultPreference(null, 'CA', referralConfig({ cashCountries: ['US', 'CA'] })), null, 'cashCountries is config');
 });
 
 // ---- earnings totals ----

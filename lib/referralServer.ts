@@ -5,7 +5,7 @@ import type { NextApiRequest } from 'next';
 import { ORIGIN, ProError, chargeOfPayment, grantFields, proDb, referralConfigFor, statusFor, stripe, toMs, ts } from './proServer';
 import { extendManualMs, manualMs, mergedMs, PRO_MONTH_DAYS, type Plan } from './proGrant';
 import {
-  closeOrphans, earningsTotals, isCashCountry, monthsFrom, paymentTakenBack, SETTLE_WINDOW_MS, waitingOf,
+  closeOrphans, defaultPreference, earningsTotals, isCashCountry, monthsFrom, paymentTakenBack, SETTLE_WINDOW_MS, waitingOf,
   type EarningsTotals, type LiveLine, type OnboardingStatus, type Payout, type PayoutPorts, type Preference,
   type Recipient, type ReferralConfig, type Run, type RunLine, type RunResult,
 } from './referral';
@@ -115,6 +115,8 @@ export async function earningsFor(uid: string, country: string | null, refresh: 
   const client = payoutsProvider();
   let rec = recipientFrom(uid, recSnap.data());
   if (rec && client && (refresh || rec.onboardingStatus !== 'complete')) rec = await refreshRecipient(rec, client);
+  const auto = defaultPreference(rec?.preference || null, rec?.country || country, cfg);
+  if (auto) rec = await saveDefaultPreference(uid, auto, (rec?.country || country) as string) || rec;
 
   const docs = rowsSnap.docs.map((x) => x.data()).sort((a, b) => (toMs(b.firstPaidAt) ?? 0) - (toMs(a.firstPaidAt) ?? 0));
   const friends = docs.length
@@ -151,6 +153,22 @@ export async function earningsFor(uid: string, country: string | null, refresh: 
       centsYearly: cfg.centsYearly, centsMonthly: cfg.centsMonthly,
     },
   };
+}
+
+/** Save Pro months for a sharer outside the cash countries, once: a choice saved
+ *  meanwhile (another tab) wins. Returns the recipient as stored. */
+async function saveDefaultPreference(uid: string, preference: 'pro_months', country: string): Promise<Recipient | null> {
+  const db = proDb();
+  const ref = db.collection('payoutRecipients').doc(uid);
+  const after = await db.runTransaction(async (tx) => {
+    const d = (await tx.get(ref)).data() || {};
+    if (d.preference) return d;
+    const next = { preference, country: d.country || country, updatedAt: FieldValue.serverTimestamp() };
+    tx.set(ref, next, { merge: true });
+    console.log(`[payouts] preference uid=${uid.slice(0, 6)} pro_months by default (country ${next.country})`);
+    return { ...d, ...next };
+  });
+  return recipientFrom(uid, after);
 }
 
 export async function setPreference(uid: string, preference: unknown, country: string | null): Promise<Preference> {

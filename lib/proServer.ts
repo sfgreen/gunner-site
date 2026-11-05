@@ -63,7 +63,10 @@
 //
 // payoutRecipients/{uid}
 //   stripeRecipientId (v2 Account acct_...), onboardingStatus (pending | complete |
-//   restricted), country (ISO 3166 alpha-2), preference (cash | pro_months), updatedAt;
+//   restricted), country (ISO 3166 alpha-2), preference (cash | pro_months), updatedAt.
+//   /earnings saves preference pro_months (and the country) on first load for a sharer
+//   whose country is outside cashCountries and who has none, since the backend pays Pro
+//   months only from a stored preference;
 //   the site also keeps capability (the ACH status), payoutMethodId, destination
 //
 // config/referral
