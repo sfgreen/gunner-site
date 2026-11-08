@@ -4,7 +4,7 @@ import qrcode from 'qrcode-generator';
 import { AppShell, ArticleHeader, Hero, NumberedSteps, StoreButton } from '../../components/app';
 import { ResearchStyles } from '../../components/app/research';
 import { referrerHost, track } from '../../lib/analytics';
-import { normalizeInviteCode } from '../../lib/invite';
+import { buddyToken, normalizeInviteCode } from '../../lib/invite';
 
 // /r/[code]: the invite link the app shares (Share my climb, decision 0058).
 // - App installed, link tapped in Messages, Mail or Safari: iOS opens the app
@@ -18,6 +18,10 @@ import { normalizeInviteCode } from '../../lib/invite';
 //   steps tell the friend to allow it). Typing the code in Profile always works.
 // - A laptop: a QR code to finish on the phone. Android: Step Gunner is iPhone
 //   and iPad only, said plainly.
+// - A Study Buddy invite adds ?b=TOKEN (decision 0062). The page reads it in the
+//   browser only (the server HTML and its cache never see it) and carries it in
+//   the clipboard link, the Open Step Gunner link and the QR code, so the rope
+//   survives an install.
 // - Any device: "Claim 40% off on the web" goes to /pro?code=CODE, which takes the
 //   code at Stripe Checkout (decision 0057 amendment, F1 and F5).
 // Server-rendered so Messages, WhatsApp and the rest unfurl it with the invite
@@ -39,6 +43,11 @@ export default function Invite({ code }: Props) {
   // Decided after mount so the server HTML is the same for every device (the
   // iPhone layout is the default: it is what most friends see).
   const [device, setDevice] = useState<Device>('ios');
+  const [buddy, setBuddy] = useState('');
+  useEffect(() => {
+    setBuddy(buddyToken(new URLSearchParams(window.location.search).get('b')));
+  }, []);
+  const bq = buddy ? `b=${buddy}` : '';
   useEffect(() => {
     const ua = navigator.userAgent;
     const ios = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
@@ -46,7 +55,7 @@ export default function Invite({ code }: Props) {
   }, []);
 
   useEffect(() => {
-    track('invite_link_view', { code, has_code: !!code, ref: referrerHost() });
+    track('invite_link_view', { code, has_code: !!code, has_buddy: !!buddyToken(new URLSearchParams(window.location.search).get('b')), ref: referrerHost() });
   }, [code]);
 
   // Any App Store tap on this page puts the invite link on the clipboard; the
@@ -56,20 +65,20 @@ export default function Invite({ code }: Props) {
     const onClick = (e: MouseEvent) => {
       const a = (e.target as HTMLElement | null)?.closest?.('a[href*="apps.apple.com"]');
       if (!a) return;
-      try { navigator.clipboard?.writeText(`https://stepgunner.com/?ref=${code}`); } catch (err) { /* typing it in Profile still works */ }
-      track('invite_store_tap', { code });
+      try { navigator.clipboard?.writeText(`https://stepgunner.com/?ref=${code}${bq ? `&${bq}` : ''}`); } catch (err) { /* typing it in Profile still works */ }
+      track('invite_store_tap', { code, has_buddy: !!bq });
     };
     document.addEventListener('click', onClick, true);
     return () => document.removeEventListener('click', onClick, true);
-  }, [code]);
+  }, [code, bq]);
 
   const qrSvg = useMemo(() => {
     if (!code) return '';
     const qr = qrcode(0, 'M');
-    qr.addData(`https://stepgunner.com/r/${code}`);
+    qr.addData(`https://stepgunner.com/r/${code}${bq ? `?${bq}` : ''}`);
     qr.make();
     return qr.createSvgTag({ cellSize: 5, margin: 3, scalable: true });
-  }, [code]);
+  }, [code, bq]);
 
   const copy = async () => {
     try {
@@ -155,7 +164,7 @@ export default function Invite({ code }: Props) {
               ]} />
 
               {code && device === 'ios' ? (
-                <p className="rs-fine">Already have the app? <a href={`stepgunner://r/${code}`} onClick={() => track('invite_open_app', { code })}>Open Step Gunner</a> and the code comes along.</p>
+                <p className="rs-fine">Already have the app? <a href={`stepgunner://r/${code}${bq ? `?${bq}` : ''}`} onClick={() => track('invite_open_app', { code, has_buddy: !!bq })}>Open Step Gunner</a> and {bq ? 'your rope comes along' : 'the code comes along'}.</p>
               ) : null}
             </div>
           </div>
