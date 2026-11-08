@@ -10,9 +10,39 @@ export default function ProStyles() {
         .pro-lede { margin: 0; max-width: 46ch; font-size: 18px; line-height: 1.55; color: var(--ink-2); }
         .pro-feats { list-style: none; margin: 0; padding: 0; max-width: 520px; }
         .pro-feats li { display: flex; gap: 14px; padding: 14px 0; border-top: 1px solid var(--line); color: var(--wards); }
+        .pro-feats li > svg { flex: none; }
         .pro-feats li > div { display: flex; flex-direction: column; gap: 4px; }
         .pro-feat-t { font: 600 13px/1.3 var(--f-mono); letter-spacing: .12em; color: var(--ink); }
         .pro-feat-d { font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+
+        /* The Pro video (components/ProVideo.tsx) beside the list it shows: side by side
+           once the column fits 288 + 24 + 272, else stacked with the video centered.
+           Its own stage is dark, so the frame is a dark island in both themes, the same
+           elevation as .pro-card. The 9:16 box is reserved before the poster loads. */
+        .pro-show { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px; }
+        .pro-show > .pro-feats { flex: 1 1 272px; min-width: 0; max-width: none; }
+        .pro-vid { flex: none; width: 288px; max-width: 100%; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px 12px; align-items: center; }
+        .pro-vid-frame { grid-column: 1 / -1; position: relative; aspect-ratio: 9 / 16; border-radius: var(--r-lg); overflow: hidden; isolation: isolate;
+          background: var(--st-bg); box-shadow: 0 40px 80px -24px var(--st-shadow); }
+        .pro-vid-frame::after { content: ""; position: absolute; inset: 0; z-index: 2; border-radius: inherit; box-shadow: inset 0 0 0 1px var(--st-line-2); pointer-events: none; }
+        .pro-vid-v { position: absolute; inset: 0; display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; border-radius: inherit; background: var(--st-bg); }
+        .pro-vid-play { position: absolute; left: 50%; top: 50%; z-index: 1; width: 72px; height: 72px; margin: -36px 0 0 -36px; padding: 0 0 0 4px;
+          display: grid; place-items: center; border: 0; border-radius: 50%; cursor: pointer; color: var(--st-screen); background: var(--st-white);
+          box-shadow: 0 0 0 8px var(--st-line), 0 16px 40px -8px var(--st-shadow); transition: background-color var(--d-micro) var(--ease); }
+        .pro-vid-play:hover { background: var(--st-ink); }
+        .pro-vid-play:focus-visible { border-radius: 50%; outline: 2px solid var(--st-blue); outline-offset: 4px; }
+        .pro-vid-play.is-init { display: none; }
+        .pro-vid-pp { grid-column: 2; grid-row: 2; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%;
+          cursor: pointer; color: var(--ink); background: var(--card); box-shadow: inset 0 0 0 1px var(--line-2); transition: box-shadow var(--d-micro) var(--ease); }
+        .pro-vid-pp:hover { box-shadow: inset 0 0 0 1px var(--ctl); }
+        .pro-vid-pp:focus-visible { border-radius: 50%; }
+        .pro-vid-cap { grid-column: 1; grid-row: 2; min-height: 44px; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+        .pro-vid-k { font: 600 12px/1.3 var(--f-mono); letter-spacing: .14em; color: var(--ink-3); }
+        .pro-vid-l { font-size: 15px; line-height: 1.45; color: var(--ink-2); text-wrap: balance; }
+        /* Before hydration, Reduced Motion visitors already see the Play button. */
+        @media (prefers-reduced-motion: reduce) {
+          .pro-vid-play.is-init { display: grid; }
+        }
 
         .pro-card { flex: 1 1 400px; max-width: 480px; min-width: 0; display: flex; flex-direction: column; gap: 20px; padding: 28px;
           border-radius: 20px; color: var(--st-ink);

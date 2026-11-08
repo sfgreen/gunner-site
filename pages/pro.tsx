@@ -4,6 +4,7 @@ import type { User } from 'firebase/auth';
 import { AppShell } from '../components/app';
 import ProSignIn, { APPLE_ON } from '../components/ProSignIn';
 import ProStyles from '../components/ProStyles';
+import ProVideo from '../components/ProVideo';
 import { track } from '../lib/analytics';
 import { api, fmtDate, useWebAccount } from '../lib/webAccount';
 
@@ -34,11 +35,12 @@ const PLANS: { id: Plan; name: string; sub: string; price: string }[] = [
 
 // The app's paywall labels (scripts/config_copy.json in the gunner repo).
 const FEATURES = [
-  { t: 'YOUR PLAN TO TEST DAY', d: 'Every task, every day, ranked and phased to your exam date.' },
-  { t: 'WHERE YOUR POINTS ARE', d: "Each system's share of your points, weakest and highest yield first." },
-  { t: 'NBME INTELLIGENCE', d: 'Every practice test you log sharpens the range and plans your next one.' },
-  { t: "WHAT'S IN VISUAL DX", d: 'EKGs, films, scans and skin, read the way the exam shows them.' },
-  { t: 'UNLIMITED CRAM', d: 'No daily cap on drills.' },
+  { t: 'NBME INTELLIGENCE', d: 'Every NBME you log plants a flag on your climb, and Pro ranks the leaks that move it.' },
+  { t: 'VISUAL DX', d: '892 questions on 532 images: H&E, skin, smears, Gram stains, ECGs and CT.' },
+  { t: 'RETENTION FORECAST', d: 'What fades before your exam, and the reviews a day that hold it.' },
+  { t: 'YOUR PLAN TO TEST DAY', d: 'Every day ranked by your weakest systems and what Step 2 tests most.' },
+  { t: 'WHERE YOUR POINTS ARE', d: 'Every system ranked by the points it holds, each with a one-tap Drill 10.' },
+  { t: 'NO DAILY CAPS', d: 'Unlimited cram, all nine LFX formats and ED Pathways.' },
 ];
 
 export default function ProPage() {
@@ -326,14 +328,17 @@ export default function ProPage() {
           <span className="pro-eyebrow">STEP GUNNER PRO</span>
           <h1>Your plan to test day.</h1>
           <p className="pro-lede">Ranked by your weakest systems and what Step 2 tests most. Buy it here, and it's on your phone, on the same account.</p>
-          <ul className="pro-feats">
-            {FEATURES.map((f) => (
-              <li key={f.t}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
-                <div><span className="pro-feat-t">{f.t}</span><span className="pro-feat-d">{f.d}</span></div>
-              </li>
-            ))}
-          </ul>
+          <div className="pro-show">
+            <ProVideo />
+            <ul className="pro-feats">
+              {FEATURES.map((f) => (
+                <li key={f.t}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+                  <div><span className="pro-feat-t">{f.t}</span><span className="pro-feat-d">{f.d}</span></div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         <section className="pro-card" aria-label="Checkout">
