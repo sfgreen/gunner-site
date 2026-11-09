@@ -56,6 +56,10 @@ export default function ProPage() {
   const [busyOn, setBusy] = useState<'' | 'code' | 'checkout' | 'portal'>('');
   const [paid, setPaid] = useState<'' | 'confirming' | 'on' | 'slow'>('');
   const urlCode = useRef('');
+  // The marketing site links here with the plan its visitor was looking at (?plan=monthly).
+  useEffect(() => {
+    if (router.isReady && router.query.plan === 'monthly') setPlan('monthly');
+  }, [router.isReady, router.query.plan]);
   const busy = busyOn || (account.busy ? 'signin' : '');
   const err = pageErr || account.err;
 

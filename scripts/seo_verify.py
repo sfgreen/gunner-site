@@ -52,6 +52,9 @@ SITEMAP_EXCLUDED = {
     "/admin",     # operator surface
     "/readiness/paste",  # internal tool for answering score threads, noindex
     "/chiefs/me",  # a Chief's private stats, token-gated, noindex
+    "/pro",       # web checkout, noindex
+    "/pro/done",  # post-checkout confirmation, noindex
+    "/earnings",  # a sharer's own earnings, signed in, noindex
 }
 
 TITLE_MAX = 65

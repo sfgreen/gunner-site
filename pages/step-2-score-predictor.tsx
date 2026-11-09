@@ -13,6 +13,7 @@ import {
   AppShell, ArticleBody, ArticleHeader, Callout, EndBand, Faq, Hero, Icon, Section, Stage, StickyStoreBar,
 } from '../components/app';
 import { BeatPitch } from '../components/app/tools/asks';
+import ProNext from '../components/app/ProNext';
 
 // /step-2-score-predictor in the app look: the one-form converter in a dark Stage band
 // (inputs beside the answer, like the ABG interpreter), the specialty read under it once
@@ -290,6 +291,8 @@ export default function Predictor() {
                 </div>
               </div>
             </section>
+
+            {valid && <ProNext mostLikely={mid} location="predictor" forms="this" />}
 
             {valid && (
               <section className="sheet dark-card pd-spec" aria-labelledby="pd-spec-h">

@@ -9,7 +9,7 @@ import { CARDS, FREE, LOCS } from '../../lib/app/chrome';
 // (lib/app/chromeClient.js, which tracks the nav and footer links) never counts them twice.
 
 /** GA4 store_click `location`: one value per slot on a page. Same enum as lib/wards/site.json `locs`. */
-export type StoreLoc = 'nav' | 'hero' | 'top' | 'result' | 'after_copy' | 'quiz' | 'inline' | 'end' | 'sticky' | 'case' | 'footer' | 'mid' | 'toc';
+export type StoreLoc = 'nav' | 'hero' | 'top' | 'result' | 'after_copy' | 'quiz' | 'inline' | 'end' | 'sticky' | 'case' | 'footer' | 'mid' | 'toc' | 'pro';
 
 export type StoreCtxValue = { ct: string; page: string; type: string };
 export const StoreCtx = createContext<StoreCtxValue>({ ct: 'web', page: 'unknown', type: 'page' });

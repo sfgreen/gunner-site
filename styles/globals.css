@@ -175,6 +175,32 @@
 }
 @media (min-width: 960px) { :root { --nav-h: 72px; } }
 
+/* Step Gunner Pro (stepgunner.com home band, nav panel, footer bar, tool cards). Pro surfaces
+   are dark and gold in BOTH themes, like a stage, so these do not flip. The gold gradient is
+   for the button and the numbers; dark text on gold is --pro-on-gold (13:1). Gold is the Pro
+   accent only: the blue action stays the store button. styles/pro.css reads these. */
+:root {
+  --pro-bg: #060a14;
+  --pro-panel-a: #0f1828;
+  --pro-panel-b: #0a101d;
+  --pro-ink: #eef2f8;
+  --pro-ink-2: #b4bfd0;
+  --pro-ink-3: #9aa6b8;
+  --pro-ink-4: #8592a6;
+  --pro-line: rgba(255,255,255,0.08);
+  --pro-line-2: rgba(255,255,255,0.16);
+  --pro-gold: #ffc83d;
+  --pro-gold-hi: #ffe27a;
+  --pro-gold-lo: #f0a800;
+  --pro-gold-pale: #ffe9a8;
+  --pro-on-gold: #1a1400;
+  --pro-edge: rgba(255,200,61,0.22);
+  --pro-edge-2: rgba(255,200,61,0.45);
+  --pro-btn: linear-gradient(180deg, #ffe27a 0%, #ffc83d 48%, #f0a800 100%);
+  --pro-text: linear-gradient(92deg, #ffe9a8 0%, #ffc83d 38%, #f2a900 100%);
+  --pro-btn-glow: 0 16px 36px -12px rgba(255,180,0,0.55);
+}
+
 /* Score Report names, retired 2026-10-22: each one points at the app token with the
    same job. --bg and --ink already meant the same thing in both registers. --bg-2 was
    the raised white surface there (67 uses), so it is the card here; the app look has

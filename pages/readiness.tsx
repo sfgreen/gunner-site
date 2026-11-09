@@ -11,6 +11,7 @@ import { track, referrerHost } from '../lib/analytics';
 import { AppShell, ArticleHeader, Hero, Icon, Stage } from '../components/app';
 import { BeatPitch, ToolStickyBar } from '../components/app/tools/asks';
 import { RangeGauge, Trajectory } from '../components/app/tools/ReadinessViz';
+import ProNext from '../components/app/ProNext';
 
 // /readiness, the site's main conversion surface, in the app look: the header on the
 // page, the tool in a dark Stage band like the home page's readiness block (the inputs,
@@ -294,6 +295,10 @@ export default function Readiness({ og }: { og: OG }) {
                 )}
               </div>
             </section>
+
+            {proj && !actualValid && (
+              <ProNext mostLikely={proj.center} location="readiness" forms={entries.filter((e) => e.score !== '').length > 1 ? 'these' : 'this'} />
+            )}
 
             <p className="fine ry-saved">
               Your entries stay on this device and are saved anonymously (no name or email) to sharpen these projections.{' '}

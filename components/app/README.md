@@ -20,6 +20,7 @@ import { AppShell, Hero, ArticleHeader, CtaCard, Stage, DrillCard, ArticleBody, 
 | Nav, footer, sprite, store button as HTML strings (wards pages and AppShell share them) | `lib/app/chrome.js` |
 | Chrome behavior: dropdowns, phone menu, `store_click` for nav/footer, sticky bar, TOC pill | `lib/app/chromeClient.js` |
 | The blocks | `components/app/AppShell.tsx`, `store.tsx`, `blocks.tsx` |
+| Step Gunner Pro: nav item and panel, footer bar and column, home band (HTML strings), tool card (`ProNext.tsx`); styles `styles/pro.css`, tokens `--pro-*`; GA4 `pro_click {location, item}` | `lib/app/pro.js`, `components/app/ProNext.tsx` |
 
 ## Rules
 
