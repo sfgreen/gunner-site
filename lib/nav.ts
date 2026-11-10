@@ -55,7 +55,7 @@ export const NAV: NavItem[] = [
     ] },
     { t: 'Your plan', links: [
       ['Study schedule', 'The dedicated calendar, week by week', '/research/dedicated-calendar'],
-      ['Free 120', 'Your own PDF in the real interface', '/free120'],
+      ['Free 120', 'Timed, with a score range at the end', '/free120'],
       ['ED study guide', 'The next best step, presentation by presentation', '/step-2-ck-emergency-medicine'],
       ['ED Pathways', 'Each ED presentation, fork by fork', '/pathways'],
     ] },

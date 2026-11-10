@@ -8,6 +8,12 @@ const nextConfig = {
     // capture_nbme / score_report / unsubscribe). Proxy the whole path space so
     // one link domain serves both stacks.
     return [
+      // Newer Free 120 years people type or link (2022 to 2029, and 2020) used to 404. They get
+      // a page that points to the built-in 2021 and 2019 forms and the bring-your-PDF hub.
+      {
+        source: '/free120step:year(2020|202[2-9])',
+        destination: '/free120/newer.html',
+      },
       {
         source: '/score/:path*',
         destination: 'https://stepgunner-79ae7.web.app/score/:path*',

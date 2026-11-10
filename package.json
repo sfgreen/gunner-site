@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/build_free120_readiness.mjs",
     "build": "next build",
     "start": "next start",
     "verify:seo": "python3 scripts/seo_verify.py",

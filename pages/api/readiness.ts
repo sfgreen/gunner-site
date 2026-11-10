@@ -20,6 +20,22 @@ interface Body {
   visitor?: { id?: unknown; session?: unknown; firstSeen?: unknown } | null; // anonymous uuids
   specialty?: unknown; // target specialty picked on the predictor (NRMP key)
   examInDays?: unknown; // signed days until the exam (negative = already taken)
+  // Sent from the Free 120 results page (source 'free120'): the student's own Free 120 beside
+  // their NBMEs. These pairs are what a later fit of the Free 120 into the model needs.
+  free120?: { form?: unknown; mode?: unknown; pct?: unknown; correct?: unknown; total?: unknown } | null;
+}
+
+function cleanFree120(v: Body['free120']) {
+  if (!v || typeof v !== 'object') return null;
+  const n = (x: unknown, lo: number, hi: number) => {
+    const k = Number(x);
+    return x == null || x === '' || !Number.isFinite(k) ? null : Math.max(lo, Math.min(hi, Math.round(k)));
+  };
+  const form = typeof v.form === 'string' && /^\d{4}$/.test(v.form) ? v.form : null;
+  const mode = v.mode === 'test' || v.mode === 'short' || v.mode === 'tutor' ? v.mode : null;
+  const pct = n(v.pct, 0, 100);
+  if (!form || pct == null) return null;
+  return { form, mode, pct, correct: n(v.correct, 0, 120), total: n(v.total, 1, 120) };
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -72,6 +88,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       visitorFirstSeen: num(body.visitor?.firstSeen),
       specialty: typeof body.specialty === 'string' ? body.specialty.slice(0, 40) : null,
       examInDays: num(body.examInDays),
+      free120: cleanFree120(body.free120),
       ref: (req.headers['referer'] || '').toString().slice(0, 200),
       ua: (req.headers['user-agent'] || '').toString().slice(0, 200),
       createdAt: Timestamp.now(),
