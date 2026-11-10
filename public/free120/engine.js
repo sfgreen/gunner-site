@@ -1223,9 +1223,9 @@
   function stopBreak() { if (breakHandle) { clearInterval(breakHandle); breakHandle = null; } }
 
   /* ───────────────────────── results ───────────────────────── */
-  // The App Store video shows Study Buddy, which ships in 3.0. Flip to true the day 3.0 is
-  // LIVE (RELEASES.md), not before: a page may only show features students can use.
-  var APP_VIDEO_LIVE = false;
+  // The App Store video shows Study Buddy (3.0). On since 2026-11-10: 3.0 LIVE and
+  // config/social.buddyEnabled true. Turn it off again if Study Buddy is switched off.
+  var APP_VIDEO_LIVE = true;
 
   function buildRows(prog, m) {
     var rows = [], per = MODES[m || settings.mode].per;
