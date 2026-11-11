@@ -13,13 +13,13 @@
    "IV bicarbonate"
   ],
   "whyRight": "DKA management: fluids FIRST. Patients are profoundly dehydrated (average 6-9L deficit). Insulin without fluids → cardiovascular collapse. Insulin starts after the first liter once the potassium is confirmed at or above 3.5 mmol/L (the 2024 ADA/EASD consensus threshold; older sources say 3.3, so recognise both).",
-  "whyWrong": "Insulin without fluids → cardiovascular collapse. Bicarbonate is considered only below a pH of 6.9 and does nothing about ongoing ketogenesis; at 7.15 it mainly drives potassium into cells and deepens the deficit.",
-  "trap": null,
+  "whyWrong": "Insulin without fluids → cardiovascular collapse. Bicarbonate is considered only below a pH of 7.0 and does nothing about ongoing ketogenesis; at 7.15 it mainly drives potassium into cells and deepens the deficit.",
+  "trap": "K+ of 5.8 reflects potassium shifted out of cells; total body potassium is depleted, and once insulin starts the level falls fast. Above 5.0, give no potassium yet and recheck in 2 hours.",
   "chain": [
    "Give an IV normal saline bolus (1 L over the first hour)",
    "Start an IV regular insulin infusion at 0.1 unit/kg/h",
-   "Add potassium to the fluids once K+ falls below 5.2",
-   "Add dextrose to the fluids when glucose falls below 250 and continue insulin until the gap closes",
+   "Add potassium to the fluids once K+ falls below 5.0",
+   "Add dextrose below a glucose of 250 and keep insulin running until ketones are under 0.6",
    "Transition to subcutaneous basal insulin, overlapping 1 to 2 hours before stopping the drip",
    "Identify and treat the precipitant (infection, missed insulin)"
   ],
@@ -43,8 +43,8 @@
    ],
    [
     "Stop the IV drip as soon as he can eat, then cover meals with rapid-acting doses alone",
-    "Switch to an oral metformin regimen once he is eating and the gap has closed",
-    "Keep him on the IV drip for a further 48 hours after the anion gap has fully closed"
+    "Switch to an oral metformin regimen once he is eating and the DKA is over",
+    "Keep him on the IV drip for a further 48 hours after the ketones have fully cleared"
    ],
    [
     "Start empiric broad-spectrum antibiotics",
@@ -130,15 +130,15 @@
    "Give IV bicarbonate",
    "Switch to subcutaneous insulin"
   ],
-  "whyRight": "K+ <3.5 = HOLD insulin until potassium is repleted. Insulin drives K+ into cells → can cause fatal arrhythmias. The 2024 ADA/EASD consensus moved this threshold from 3.3 to 3.5 mmol/L; older sources still say 3.3, so recognise both.",
+  "whyRight": "K+ 3.1 on the drip: pause the insulin and give IV potassium, then resume once K+ is back above 3.5. Insulin drives K+ into cells and can cause fatal arrhythmias and respiratory muscle weakness. The 2024 ADA/EASD consensus states the 3.5 hold for a low potassium on admission (older US sources: 3.3); for a fall below it during the infusion, US teaching applies the same hold, while JBDS (UK) keeps the infusion running with senior review and more concentrated potassium.",
   "whyWrong": "Alkalinization shifts potassium into cells and would worsen the very problem at hand, and the acidosis resolves once ketogenesis stops. Changing the route does not change the physiology, since subcutaneous insulin also drives potassium into cells, and absorption is unreliable in a volume-depleted patient.",
-  "trap": "Never continue insulin when K+ is critically low. The hypokalemia will kill the patient before the acidosis does.",
+  "trap": "Continuing the drip with only the usual potassium in the bags lets the level keep falling; at 3.1 the potassium comes first.",
   "chain": [
    "Hold the insulin infusion and give IV potassium chloride",
    "Check magnesium and replete it, since hypomagnesemia makes hypokalemia refractory",
    "Recheck potassium hourly and continue fluids with potassium added",
    "Resume the insulin infusion once potassium is at or above 3.5",
-   "Add dextrose when glucose falls below 250 and continue insulin until the anion gap closes",
+   "Add dextrose below a glucose of 250 and keep insulin running until ketones are under 0.6",
    "Transition to subcutaneous basal insulin with a 1 to 2 hour overlap"
   ],
   "chainAnswer": 0,
@@ -166,7 +166,7 @@
    ],
    [
     "Stop the drip when the patient eats and give sliding-scale doses alone",
-    "Keep the IV drip running for a full day after the gap has closed",
+    "Keep the IV drip running for a full day after the ketones have cleared",
     "Discharge on a mealtime-only regimen without a long-acting dose"
    ]
   ],
