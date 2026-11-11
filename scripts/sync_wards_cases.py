@@ -21,9 +21,10 @@ OUT = HERE / 'lib' / 'wards' / 'cases.json'
 CASE_IDS = {'abg': 1020, 'soap': 1021}
 KEEP = ('id', 'world', 'diagnosis', 'triggerMarked', 'question', 'correctAnswer', 'choices', 'whyRight',
         'whyWrong', 'trap', 'chain', 'chainAnswer', 'chainDistractors', 'vitalsStrip', 'evidence')
-# NBS 1020's trap calls the K+ of 5.8 "falsely elevated"; it is a true transcellular shift
-# (total-body potassium is low). Held off the site until the card wording is settled.
-HELD_TRAPS = {'abg'}
+# A trap listed here is left off the site until the card's wording is settled. Empty since
+# content v393 (2026-11-11): NBS 1020's trap now calls the K+ of 5.8 a shift out of cells with
+# total-body potassium depleted, which is what held it.
+HELD_TRAPS = set()
 
 
 def main() -> int:
