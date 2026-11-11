@@ -107,6 +107,17 @@ export default function ProStyles() {
         .pro-who { padding-top: 12px; border-top: 1px solid var(--st-line); overflow-wrap: anywhere; }
         .pro-foot { max-width: 1200px; margin: 0 auto; padding: 16px 16px 40px; font-size: 13px; color: var(--ink-3); }
 
+        /* /pro only: headline, then the checkout card, then the video and features, so the
+           sign-in sits right under the headline on a phone. From 960px the card moves to
+           its own column beside both, as before. The DOM is in the phone's order. */
+        .pro-buy { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "head" "card" "show"; gap: 32px; }
+        .pro-buy > .pro-head { grid-area: head; }
+        .pro-buy > .pro-show { grid-area: show; }
+        .pro-buy > .pro-card { grid-area: card; width: 100%; }
+        @media (min-width: 960px) {
+          .pro-buy { grid-template-columns: minmax(0, 1fr) minmax(0, 480px); grid-template-areas: "head card" "show card"; column-gap: 48px; row-gap: 24px; align-items: start; }
+        }
+
         @media (min-width: 760px) {
           .pro-wrap, .pro-foot { padding-left: 40px; padding-right: 40px; }
         }
