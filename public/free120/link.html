@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<!-- stepgunner.com/f/<code> (next.config.js rewrite). A Free 120 knockout list carried
+     from the results page: the code holds the form and which questions were missed
+     (f120link.js). This page lists them, sends the student to the App Store, and,
+     once the importing app build is live, opens the list in the app. -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LDKSK4Z5DW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-LDKSK4Z5DW');
+  var SG = (function () {
+    var STORE = 'https://apps.apple.com/us/app/step-gunner/id6761317357';
+    var PT = '128505861';
+    var CT = 'free120_link';
+    function storeUrl() { return STORE + '?pt=' + PT + '&ct=' + encodeURIComponent(CT) + '&mt=8'; }
+    function track(event, params) { try { if (window.gtag) window.gtag('event', event, params || {}); } catch (e) {} }
+    return { storeUrl: storeUrl, track: track, CT: CT };
+  })();
+</script>
+<title>Your Free 120 knockout list · Step Gunner</title>
+<meta name="description" content="Your missed Free 120 decisions and the Step Gunner questions that test them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@500..700&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="/free120/engine.css">
+<style>
+  .fl-wrap { box-sizing:border-box; width:100%; max-width:720px; margin:0 auto; padding:32px max(16px, env(safe-area-inset-right, 0px)) 64px max(16px, env(safe-area-inset-left, 0px)); display:flex; flex-direction:column; gap:20px; }
+  .fl-brand { display:flex; align-items:center; gap:8px; font:700 13px var(--fx-mono); letter-spacing:.14em; color:var(--fx-ink); text-decoration:none; }
+  .fl-brand .d { width:9px; height:9px; border-radius:50%; background:#30d158; }
+  .fl-head h1 { margin:6px 0 0; font-size:clamp(26px, 6vw, 34px); line-height:1.12; font-weight:800; letter-spacing:-.03em; text-wrap:balance; }
+  .fl-head p { margin:10px 0 0; font-size:16px; line-height:1.55; color:var(--fx-ink-2); }
+  .fl-cta { display:flex; flex-direction:column; gap:10px; padding:20px; border-radius:20px; background:var(--fx-card); box-shadow:var(--fx-sh), inset 0 0 0 1px var(--fx-line); }
+  .fl-cta .fx-btn { width:100%; }
+  .fl-cta .alt { display:inline-flex; justify-content:center; min-height:44px; align-items:center; border-radius:12px; font-weight:700; color:var(--fx-act); text-decoration:none; box-shadow:inset 0 0 0 1px var(--fx-line-2); }
+  .fl-sys { border-radius:16px; background:var(--fx-card); box-shadow:inset 0 0 0 1px var(--fx-line); padding:14px 16px; }
+  .fl-sys .sn { display:flex; justify-content:space-between; gap:8px; font-weight:700; }
+  .fl-sys .sn i { font:600 11px var(--fx-mono); font-style:normal; letter-spacing:.06em; color:var(--fx-red-ink); white-space:nowrap; }
+  .fl-sys ul { margin:8px 0 0; padding-left:18px; display:flex; flex-direction:column; gap:4px; color:var(--fx-ink-2); font-size:14.5px; line-height:1.4; }
+  .fl-sys li span { color:var(--fx-ink-3); font:600 11px var(--fx-mono); margin-left:6px; white-space:nowrap; }
+  .fl-list { display:flex; flex-direction:column; gap:10px; }
+</style>
+<script src="/free120/knockout.js"></script>
+<script src="/free120/f120link.js"></script>
+</head>
+<body style="margin:0">
+<div class="fx fx-view"><main class="fl-wrap" id="fl"></main></div>
+<noscript><p style="padding:24px;font:16px sans-serif">This page needs JavaScript turned on.</p></noscript>
+<script>
+(function () {
+  // Flip with engine.js IMPORT_LIVE once the importing app build is live.
+  var IMPORT_LIVE = false;
+  var FORM_PAGES = { '2021': '/free120step2021', '2019': '/free120step2019' };
+  var SYS_NAME = { 'Reproductive/OB-GYN': 'OB-GYN', 'Renal/GU': 'Renal and GU', 'Musculoskeletal/Rheumatology': 'Musculoskeletal',
+    'Multisystem/General': 'Multisystem', 'Heme/Onc': 'Heme and onc', 'Infectious Disease': 'Infectious disease', 'Gastrointestinal': 'GI' };
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  var main = document.getElementById('fl');
+  var code = decodeURIComponent((location.pathname.split('/f/')[1] || '').replace(/\/+$/, ''));
+  var d = window.F120Link && window.F120Link.decode(code);
+  var brand = '<a class="fl-brand" href="/"><span class="d" aria-hidden="true"></span>STEP GUNNER</a>';
+  if (!d) {
+    main.innerHTML = brand + '<div class="fl-head"><span class="fx-kick">FREE 120</span><h1>This link does not hold a Free 120 list.</h1>' +
+      '<p>It may have been cut short when it was copied. Open your results again on the computer where you took the Free 120 and send a new one.</p></div>' +
+      '<div class="fl-cta"><a class="fx-btn" href="/free120step2021">Go to the Free 120</a></div>';
+    SG.track('free120_link_view', { valid: 'no' });
+    return;
+  }
+  var K = window.F120Link.knockout(d.form, d.missed);
+  var iphone = /iPhone|iPod|iPad/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var android = /Android/i.test(navigator.userAgent);
+  var right = 120 - d.missed.length;
+  var cta;
+  if (iphone) {
+    cta = '<a class="fx-btn" id="fl-store" href="' + esc(SG.storeUrl()) + '">Get Step Gunner free</a>' +
+      (IMPORT_LIVE
+        ? '<a class="alt" id="fl-open" href="' + esc(window.F120Link.appUrl(code)) + '">I have it: open my list in the app</a>' +
+          '<p class="fx-fine">After installing, come back to this page and tap the second button. Your list loads with every question.</p>'
+        : '<p class="fx-fine">One-tap import of this list comes in the next app update. This page keeps your list: bookmark it, or keep the link.</p>');
+  } else if (android) {
+    cta = '<p style="margin:0;font-weight:700">Step Gunner is iPhone only for now.</p><p class="fx-fine">This page keeps your list: bookmark it and use it as your study list.</p>';
+  } else {
+    cta = '<a class="fx-btn" id="fl-store" href="' + esc(SG.storeUrl()) + '">Get Step Gunner on the App Store</a>' +
+      '<p class="fx-fine">Step Gunner is a free iPhone app. Open this link on your iPhone to take the list with you.</p>';
+  }
+  var sys = K.systems.map(function (g) {
+    return '<div class="fl-sys"><div class="sn"><span>' + esc(SYS_NAME[g.system] || g.system) + '</span><i>' + g.topics.length + ' missed</i></div><ul>' +
+      g.topics.map(function (t) { return '<li>' + esc(t.topic) + '<span>' + t.count + ' Q</span></li>'; }).join('') + '</ul></div>';
+  }).join('');
+  main.innerHTML = brand +
+    '<div class="fl-head"><span class="fx-kick">YOUR FREE 120 · ' + esc(d.form) + ' FORM · ' + right + ' OF 120</span>' +
+    '<h1>' + K.missed + ' missed ' + (K.missed === 1 ? 'decision' : 'decisions') + '. ' + K.questions + ' Step Gunner questions test exactly these.</h1>' +
+    '<p>Every question on the form is matched by hand to the app questions that ask the same decision. Knock them out before test day.</p></div>' +
+    '<div class="fl-cta">' + cta + '</div>' +
+    '<div class="fl-list">' + sys + '</div>' +
+    '<p class="fx-fine">Built from your answers on <a href="' + (FORM_PAGES[d.form] || '/free120step2021') + '">the Free 120</a>. The link holds only which questions you missed: no name, no account.</p>';
+  SG.track('free120_link_view', { valid: 'yes', form: d.form, missed: K.missed, device: iphone ? 'iphone' : android ? 'android' : 'other', import_live: IMPORT_LIVE ? 'yes' : 'no' });
+  var st = document.getElementById('fl-store'); if (st) st.addEventListener('click', function () { SG.track('free120_link_store', { form: d.form }); });
+  var op = document.getElementById('fl-open'); if (op) op.addEventListener('click', function () { SG.track('free120_link_open_app', { form: d.form }); });
+})();
+</script>
+</body>
+</html>

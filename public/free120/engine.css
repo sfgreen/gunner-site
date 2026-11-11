@@ -851,3 +851,25 @@
     .fx-app.novid .wrap .media { display:none; }
     .fx-app .copy { padding-bottom:28px; }
   }
+
+  /* Knockout list (the Free 120 misses mapped to the app questions that test them) */
+  .fx-ko { display:flex; flex-wrap:wrap; border-radius:24px; overflow:hidden; background:var(--fx-card); box-shadow:var(--fx-sh), inset 0 0 0 1px var(--fx-line); }
+  .fx-ko .body { flex:2 1 480px; min-width:0; display:flex; flex-direction:column; gap:12px; padding:28px 32px; }
+  .fx-ko h2 { margin:0; font-size:clamp(21px, 2.6vw, 26px); line-height:1.2; font-weight:800; letter-spacing:-.02em; text-wrap:balance; }
+  .fx-ko .body > p { margin:0; font-size:15px; line-height:1.55; color:var(--fx-ink-2); max-width:62ch; }
+  .fx-ko .list { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap:12px; margin-top:4px; }
+  .fx-ko .sys { min-width:0; border-radius:14px; background:var(--fx-card-2); padding:12px 14px; }
+  .fx-ko .sn { display:flex; align-items:baseline; justify-content:space-between; gap:8px; font-weight:700; font-size:14px; }
+  .fx-ko .sn i { font:600 11px var(--fx-mono); font-style:normal; letter-spacing:.06em; color:var(--fx-red-ink); white-space:nowrap; }
+  .fx-ko ul { margin:8px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:5px; }
+  .fx-ko li { font-size:13.5px; line-height:1.35; color:var(--fx-ink-2); }
+  .fx-ko li.ko-more { color:var(--fx-ink-3); font-size:12.5px; }
+  .fx-ko .send { flex:1 1 240px; min-width:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:28px 28px;
+    background:var(--fx-soft); box-shadow:inset 1px 0 0 var(--fx-line); text-align:center; }
+  .fx-ko .send .qr { width:176px; height:176px; padding:8px; border-radius:14px; background:#fff; box-shadow:inset 0 0 0 1px var(--fx-line); }
+  .fx-ko .send .qr svg { width:100%; height:100%; display:block; }
+  .fx-ko .send .cap { font:600 11px/1.4 var(--fx-mono); letter-spacing:.14em; color:var(--fx-ink-3); }
+  .fx-ko .send .fx-fine { max-width:32ch; }
+  .fx-ko .ko-copy { border:0; background:none; padding:4px 6px; font:600 13px var(--fx-sans); color:var(--fx-act); cursor:pointer; }
+  .fx-ko .ko-copy:focus-visible { outline:2px solid var(--fx-focus); outline-offset:2px; border-radius:6px; }
+  @media (max-width: 640px) { .fx-ko .body { padding:22px 20px; } .fx-ko .send { padding:22px 20px; box-shadow:inset 0 1px 0 var(--fx-line); } }

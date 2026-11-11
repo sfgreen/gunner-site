@@ -1424,6 +1424,9 @@
     }
     html += '</div></section>';
 
+    // The knockout list, right under the score (before any install ask)
+    html += knockoutCard(R);
+
     // NBME / UWSA box (the same model as /readiness)
     if (window.F120R && window.F120R.computeReadiness) html += readinessBox();
 
@@ -1458,6 +1461,7 @@
     renderSysCard();
     renderChart(R, currentNbme());
     wireResults();
+    wireKnockout();
   }
 
   function renderSysCard() {
@@ -1533,6 +1537,69 @@
       h += '</div>';
     }
     return h;
+  }
+
+  /* ───────────────────────── knockout list ───────────────────────── */
+  // The misses become a knockout list: the app questions mapped by hand to the
+  // same decisions (scripts/build_free120_maps.py in the app repo), shown here
+  // before any install and carried to the phone by a self-contained link
+  // (/f/<code>, f120link.js). IMPORT_LIVE turns on "open in the app" once the
+  // app build that imports /f/ links is live and the AASA claims /f/*; until then
+  // the link page shows the list and the App Store.
+  var IMPORT_LIVE = false;
+  function onPhone() {
+    try { return /iPhone|iPod|Android/i.test(navigator.userAgent) || window.matchMedia('(pointer: coarse) and (max-width: 820px)').matches; }
+    catch (e) { return false; }
+  }
+  function knockoutCard(R) {
+    if (!window.F120Link || !window.F120_KNOCKOUT || !window.F120_KNOCKOUT[FORM]) return '';
+    var missed = R.rows.filter(function (r) { return r.res !== 'right'; }).map(function (r) { return r.n; });
+    if (!missed.length) return '';
+    var K = window.F120Link.knockout(FORM, missed), code = window.F120Link.encode(FORM, missed);
+    if (!K || !code) return '';
+    resState.ko = { code: code, K: K };
+    var shown = K.systems.slice(0, 3), listed = 0;
+    var list = shown.map(function (g) {
+      var ts = g.topics.slice(0, 4); listed += ts.length;
+      return '<div class="sys"><div class="sn"><span>' + esc(sysName(g.system)) + '</span><i>' + g.topics.length + ' missed</i></div><ul>' +
+        ts.map(function (t) { return '<li>' + esc(t.topic) + '</li>'; }).join('') +
+        (g.topics.length > ts.length ? '<li class="ko-more">+' + (g.topics.length - ts.length) + ' more</li>' : '') + '</ul></div>';
+    }).join('');
+    var others = K.systems.length - shown.length;
+    var rest = others > 0 ? '<p class="fx-fine">Plus ' + (K.missed - shown.reduce(function (a, g) { return a + g.topics.length; }, 0)) + ' more in ' + others + ' other ' + (others === 1 ? 'system' : 'systems') + '. The link has them all.</p>' : '';
+    var phone = onPhone();
+    var send = phone
+      ? '<a class="fx-btn" href="/f/' + code + '" id="ko-open">Open my list on this phone</a>'
+      : '<div class="qr" id="ko-qr" role="img" aria-label="QR code that opens your knockout list on your phone"></div>' +
+        '<span class="cap">SCAN WITH YOUR IPHONE CAMERA</span>';
+    var note = IMPORT_LIVE
+      ? 'Opens in Step Gunner with every question loaded, or the App Store if you do not have it yet. Free.'
+      : 'Step Gunner is free on iPhone. One-tap import of this list comes in the next app update; the link keeps your list until then.';
+    return '<section class="fx-ko" id="knockout" aria-label="Your knockout list"><div class="body"><span class="fx-kick">YOUR KNOCKOUT LIST</span>' +
+      '<h2>' + K.missed + ' missed ' + (K.missed === 1 ? 'decision' : 'decisions') + '. ' + K.questions + ' Step Gunner questions test exactly these.</h2>' +
+      '<p>Every question on this form is matched by hand to the app questions that ask the same decision. Knock them out before test day.</p>' +
+      '<div class="list">' + list + '</div>' + rest + '</div>' +
+      '<div class="send">' + send + '<p class="fx-fine">' + note + '</p>' +
+      '<button type="button" class="ko-copy" id="ko-copy">Copy the link</button></div></section>';
+  }
+  function wireKnockout() {
+    var ko = resState.ko;
+    if (!ko || !$('knockout')) return;
+    var url = window.F120Link.url(ko.code);
+    if (!ko.tracked) { ko.tracked = true; track('free120_knockout_view', { form: FORM, missed: ko.K.missed, questions: ko.K.questions }); }
+    var box = $('ko-qr');
+    if (box && window.qrcode) {
+      try { var q = window.qrcode(0, 'M'); q.addData(url); q.make(); box.innerHTML = q.createSvgTag({ cellSize: 4, margin: 2, scalable: true }); }
+      catch (e) { box.style.display = 'none'; }
+    }
+    var open = $('ko-open'); if (open) open.addEventListener('click', function () { track('free120_send_tap', { form: FORM, via: 'phone' }); });
+    var cp = $('ko-copy');
+    if (cp) cp.addEventListener('click', function () {
+      track('free120_send_tap', { form: FORM, via: 'copy' });
+      var done = function () { cp.textContent = 'Copied'; setTimeout(function () { cp.textContent = 'Copy the link'; }, 1600); };
+      try { navigator.clipboard.writeText(url).then(done, function () { window.prompt('Copy your list link', url); }); }
+      catch (e) { window.prompt('Copy your list link', url); }
+    });
   }
 
   function appCard(R) {
