@@ -3,8 +3,9 @@
    window.SG (GA4 + the attributed store link), loads its data, then this file.
 
    What changed in the 2026-11 overhaul (docs/decisions in the app repo, "Free 120 overhaul"):
-   - Three ways to sit it: test day (3 x 40, 60 min, a 45 min break bank), short blocks
-     (6 x 20, 30 min) and tutor (no clock, the explanation right after each answer, no range).
+   - Three ways to sit it: test day (6 x 20, 30 min, a 55 min break bank: the real exam's
+     blocks since May 7, 2026), short blocks (the same 6 x 20, any days, no bank) and tutor
+     (no clock, the explanation right after each answer, no range).
    - Progress is saved per form AND per mode. Before this, 2021, 2019 and the hub all wrote
      the same localStorage keys, so one form's answers showed up as done on the other.
      claimLegacy() moves the old keys to the form they belong to (see there).
@@ -99,11 +100,13 @@
 
   /* ───────────────────────── constants ───────────────────────── */
   var MODES = {
-    test: { per: 40, min: 60, clock: true, range: true, label: 'Test day', long: 'test day mode' },
+    // USMLE: sixteen 30-minute blocks of at most 20 questions from May 7, 2026 (eight 60-minute
+    // blocks of at most 40 before), and at least 55 minutes of break (45 before). usmle.org.
+    test: { per: 20, min: 30, clock: true, range: true, label: 'Test day', long: 'test day mode' },
     short: { per: 20, min: 30, clock: true, range: true, label: 'Short blocks', long: 'short blocks' },
     tutor: { per: 40, min: 0, clock: false, range: false, label: 'Tutor', long: 'tutor mode' }
   };
-  var BREAK_BANK = 45 * 60;
+  var BREAK_BANK = 55 * 60;
   var FORMS = [
     { id: '2021', href: '/free120step2021', name: '2021 form' },
     { id: '2019', href: '/free120step2019', name: '2019 form' }
@@ -298,6 +301,74 @@
       if (ip) lsSet(K(FORM, L[3], 'inprog'), ip);
       claims[L[0]] = FORM;
       lsSet('free120:legacyClaim', claims);
+    });
+    splitOldTestDay();
+  }
+
+  /* Test day used the real exam's old blocks (40 questions, 60 minutes) until 2026-11-11.
+     A sitting saved that way is split once: old block b becomes blocks 2b and 2b+1. Every
+     field is keyed by question number, and question n sits at position n - 1 in both forms,
+     so this needs no form data. A sitting already in blocks of 20 never looks like the old
+     layout, so running this again changes nothing. */
+  var BY_N = ['answers', 'marks', 'strikes', 'timeOnItem', 'changes', 'firstAnswer', 'highlights'];
+  function outsideBlock(rec, lo, hi) {
+    return BY_N.some(function (f) {
+      return Object.keys(rec[f] || {}).some(function (n) { var p = +n - 1; return p < lo || p >= hi; });
+    });
+  }
+  function sliceItems(rec, lo, hi) {
+    var out = {};
+    BY_N.forEach(function (f) {
+      if (!rec[f]) return;
+      out[f] = {};
+      Object.keys(rec[f]).forEach(function (n) { var p = +n - 1; if (p >= lo && p < hi) out[f][n] = rec[f][n]; });
+    });
+    return out;
+  }
+  function itemSeconds(rec) {
+    var t = 0;
+    Object.keys(rec.timeOnItem || {}).forEach(function (n) { t += rec.timeOnItem[n] || 0; });
+    return t;
+  }
+  function splitOldTestDay() {
+    var per = MODES.test.per, keys = lsKeys('free120:');
+    keys.forEach(function (k) {
+      if (!/^free120:[^:]+:test:prog$/.test(k)) return;
+      var prog = lsGet(k, null), idx = Object.keys(prog || {});
+      if (!idx.length || idx.some(function (b) { return +b >= 3; })) return;
+      if (!idx.some(function (b) { return outsideBlock(prog[b] || {}, per * b, per * b + per); })) return;
+      var out = {};
+      idx.forEach(function (b) {
+        var rec = prog[b] || {}, lo = 2 * per * b, ts = rec.timeSpent || 0;
+        var halves = [sliceItems(rec, lo, lo + per), sliceItems(rec, lo + per, lo + 2 * per)];
+        var t0 = itemSeconds(halves[0]), t1 = itemSeconds(halves[1]);
+        var first = t0 + t1 ? Math.round(ts * t0 / (t0 + t1)) : Math.round(ts / 2);
+        halves.forEach(function (h, i) {
+          h.completed = !!rec.completed; h.when = rec.when; h.timeSpent = i ? ts - first : first;
+          out[2 * b + i] = h;
+        });
+      });
+      lsSet(k, out);
+    });
+    keys.forEach(function (k) {
+      var m = k.match(/^free120:([^:]+):test:inprog$/);
+      if (!m) return;
+      var ip = lsGet(k, null);
+      if (!ip || ip.blockIdx == null) return;
+      var b = ip.blockIdx;
+      if (!((ip.itemIdx || 0) >= per || ip.remaining > MODES.test.min * 60 || outsideBlock(ip, per * b, per * b + per))) return;
+      var half = (ip.itemIdx || 0) >= per ? 1 : 0, lo = 2 * per * b + per * half;
+      var next = Object.assign({}, ip, sliceItems(ip, lo, lo + per), { blockIdx: 2 * b + half, itemIdx: (ip.itemIdx || 0) - per * half });
+      if (ip.remaining != null) next.remaining = Math.min(ip.remaining, MODES.test.min * 60);
+      if (half) {
+        // They were past the first 20, so those count as a finished block.
+        var pk = 'free120:' + m[1] + ':test:prog', prog = lsGet(pk, {}) || {}, done = sliceItems(ip, 2 * per * b, 2 * per * b + per);
+        delete done.strikes; delete done.highlights;
+        done.completed = true; done.when = ip.when; done.timeSpent = itemSeconds(done);
+        prog[2 * b] = done;
+        lsSet(pk, prog);
+      }
+      lsSet(k, next);
     });
   }
 
@@ -528,8 +599,8 @@
     if (FORM) {
       // 02 Choose how to sit it
       html += '<section class="fx-sec"><h2 class="fx-h2"><span class="n">02</span>Choose how to sit it</h2><div class="fx-cards" role="radiogroup" aria-label="How to sit it">' +
-        modeCard('test', 'CLOSEST TO THE REAL THING', '3 blocks of 40, 60 minutes each. A 45 minute break bank between blocks, like the real day. Answers stay hidden until the end.') +
-        modeCard('short', 'OVER A FEW DAYS', '6 blocks of 20, 30 minutes each. Same 90 seconds a question, in sittings that fit around rotations.') +
+        modeCard('test', 'CLOSEST TO THE REAL THING', '6 blocks of 20, 30 minutes each, the blocks the real exam uses now. A 55 minute break bank between blocks, like the real day. Answers stay hidden until the end.') +
+        modeCard('short', 'OVER A FEW DAYS', 'The same 6 blocks of 20, 30 minutes each, one sitting at a time on any days you like. No break bank. Fits around rotations.') +
         modeCard('tutor', 'FOR A SECOND PASS', 'Answer, then read the explanation right away. No clock. Good for a form you have already sat.') +
         '</div></section>';
 
@@ -1182,7 +1253,7 @@
       '</div></div></section>';
   }
 
-  // Test day gives 45 minutes of break across the whole exam. It runs only while resting.
+  // Test day gives 55 minutes of break across the whole exam. It runs only while resting.
   function paintBank(next, running) {
     var meta = loadMeta(), used = Math.min(BREAK_BANK, meta.breakUsed || 0), left = BREAK_BANK - used;
     var C = 2 * Math.PI * 58, off = C * (1 - left / BREAK_BANK);
@@ -1193,8 +1264,8 @@
         '<circle class="fg" cx="68" cy="68" r="58" fill="none" stroke-width="10" stroke-linecap="round" stroke-dasharray="' + C.toFixed(1) + '" stroke-dashoffset="' + off.toFixed(1) + '" transform="rotate(-90 68 68)"></circle>' +
         '<text x="68" y="70" text-anchor="middle" style="font-weight:700;font-size:28px" id="bank-t">' + fmtTime(left) + '</text>' +
         '<text class="l" x="68" y="92" text-anchor="middle" style="font-weight:600;font-size:10px;letter-spacing:.14em">' + (running ? 'ON BREAK' : 'LEFT') + '</text></svg>' +
-      '<div class="t"><h2>Break bank</h2><p>' + (empty ? 'The 45 minutes are used up. On test day the clock would now come out of your block time.'
-        : 'Test day gives you 45 minutes of break across the whole exam. Take some now; whatever you leave carries to the next break. The clock only runs while you rest.') + '</p>' +
+      '<div class="t"><h2>Break bank</h2><p>' + (empty ? 'The 55 minutes are used up. On test day the clock would now come out of your block time.'
+        : 'Test day gives you 55 minutes of break across the whole exam. Take some now; whatever you leave carries to the next break. The clock only runs while you rest.') + '</p>' +
       '<div class="acts">' + (running
         ? '<button type="button" class="primary" id="bk-end">End break, start block ' + (next + 1) + '</button>'
         : (empty ? '' : '<button type="button" class="primary" id="bk-start">' + icRaw('clock', 16) + 'Start break</button>') +
@@ -1964,6 +2035,7 @@
 
   /* ───────────────────────── boot ───────────────────────── */
   function boot() {
+    splitOldTestDay();
     injectShell();
     applySettings();
     wireExam();
