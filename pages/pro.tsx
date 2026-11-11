@@ -327,23 +327,15 @@ export default function ProPage() {
         noindex: true,
       }}
     >
-      <div className="pro-wrap">
-        <section className="pro-pitch">
+      {/* Headline, then checkout, then the video and features: on a phone the sign-in
+          button sits right under the headline instead of below the whole pitch. From
+          960px the card moves to its own column beside them (ProStyles, .pro-buy). */}
+      <div className="pro-wrap pro-buy">
+        <header className="pro-pitch pro-head">
           <span className="pro-eyebrow">STEP GUNNER PRO</span>
           <h1>Your plan to test day.</h1>
           <p className="pro-lede">Ranked by your weakest systems and what Step 2 tests most. Buy it here, and it's on your phone, on the same account.</p>
-          <div className="pro-show">
-            <ProVideo />
-            <ul className="pro-feats">
-              {FEATURES.map((f) => (
-                <li key={f.t}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
-                  <div><span className="pro-feat-t">{f.t}</span><span className="pro-feat-d">{f.d}</span></div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
+        </header>
 
         <section className="pro-card" aria-label="Checkout">
           <ol className="pro-steps" aria-label="Steps">
@@ -363,6 +355,18 @@ export default function ProPage() {
             </p>
           )}
         </section>
+
+        <div className="pro-show">
+          <ProVideo />
+          <ul className="pro-feats">
+            {FEATURES.map((f) => (
+              <li key={f.t}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+                <div><span className="pro-feat-t">{f.t}</span><span className="pro-feat-d">{f.d}</span></div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
       <p className="pro-foot">Already pay through the App Store? You're set. Nothing to buy here.</p>
 
