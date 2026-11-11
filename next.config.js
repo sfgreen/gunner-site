@@ -18,6 +18,15 @@ const nextConfig = {
         source: '/score/:path*',
         destination: 'https://stepgunner-79ae7.web.app/score/:path*',
       },
+      // The ChatGPT app's MCP server (decision 0065 in the app repo). OpenAI
+      // requires the submitted URL to sit on the domain being verified, and the
+      // server itself is a Firebase Function, so this proxies the same way
+      // /score/* does: through the Firebase Hosting rewrite, not straight at
+      // cloudfunctions.net. POST only; the server answers JSON-RPC.
+      {
+        source: '/mcp',
+        destination: 'https://stepgunner-79ae7.web.app/mcp',
+      },
     ];
   },
   async headers() {
