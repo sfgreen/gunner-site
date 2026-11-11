@@ -14,6 +14,12 @@ const nextConfig = {
         source: '/free120step:year(2020|202[2-9])',
         destination: '/free120/newer.html',
       },
+      // A Free 120 knockout list carried from the results page (public/free120/f120link.js).
+      // The code is the whole payload, so the page is static and reads it from the path.
+      {
+        source: '/f/:code',
+        destination: '/free120/link.html',
+      },
       {
         source: '/score/:path*',
         destination: 'https://stepgunner-79ae7.web.app/score/:path*',
