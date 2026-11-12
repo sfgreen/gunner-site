@@ -1546,7 +1546,7 @@
   // (/f/<code>, f120link.js). IMPORT_LIVE turns on "open in the app" once the
   // app build that imports /f/ links is live and the AASA claims /f/*; until then
   // the link page shows the list and the App Store.
-  var IMPORT_LIVE = false;
+  var IMPORT_LIVE = true;
   function onPhone() {
     try { return /iPhone|iPod|Android/i.test(navigator.userAgent) || window.matchMedia('(pointer: coarse) and (max-width: 820px)').matches; }
     catch (e) { return false; }
