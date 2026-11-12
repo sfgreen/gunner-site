@@ -7,7 +7,8 @@
           { "/": "/", "?": { "ref": "*" }, "comment": "referral deep link: stepgunner.com/?ref=CODE opens the app" },
           { "/": "/partner", "?": { "code": "*" }, "comment": "study-partner invite: stepgunner.com/partner?code=CODE opens the accept sheet (decision 0017)" },
           { "/": "/r/*", "comment": "short referral links (reserved for future use)" },
-          { "/": "/pro/done*", "comment": "Stripe Checkout started in the app returns here and reopens it (decision 0057 amendment); pages/pro/done.tsx is the fallback" }
+          { "/": "/pro/done*", "comment": "Stripe Checkout started in the app returns here and reopens it (decision 0057 amendment); pages/pro/done.tsx is the fallback" },
+          { "/": "/f/*", "comment": "Free 120 knockout list: stepgunner.com/f/CODE opens the import sheet (decision 0067, app 3.1+); public/free120/link.html is the fallback" }
         ]
       }
     ]
