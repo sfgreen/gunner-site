@@ -4,7 +4,7 @@ export default function Privacy() {
   return (
     <DocLayout
       title="Privacy Policy"
-      subtitle="Step Gunner by Rezumab LLC · Effective April 2026"
+      subtitle="Step Gunner by Rezumab LLC · Effective November 15, 2026"
       metaTitle="Privacy Policy | Step Gunner | Rezumab LLC"
       metaDesc="Privacy Policy for Step Gunner by Rezumab LLC. Your study data stays on your device."
     >
@@ -46,7 +46,7 @@ export default function Privacy() {
         <li>Location data</li>
         <li>Cookies or tracking technologies for advertising</li>
       </ul>
-      <p>We do not use any advertising networks or social media SDKs. We use Google Analytics only to understand anonymous, aggregate usage (which screens are opened) so we can improve the app.</p>
+      <p>We do not use any advertising networks or social media SDKs. We use Google Analytics only to understand anonymous, aggregate usage so we can improve the app: which screens are opened, and the words typed into the app&apos;s search (lowercased, at most 60 characters, and never anything that looks like an email address or phone number), so we can see which topics students look for.</p>
 
       <h2>Question Reports</h2>
       <p>When you flag a question using the in-app report feature, the following information is sent to help us improve question quality:</p>
