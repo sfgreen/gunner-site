@@ -7,6 +7,7 @@ import ProStyles from '../components/ProStyles';
 import ProVideo from '../components/ProVideo';
 import { track } from '../lib/analytics';
 import { api, fmtDate, useWebAccount } from '../lib/webAccount';
+import { gaClientId } from '../lib/journey';
 
 // stepgunner.com/pro: buy Pro on the web, unlock it on the phone (gunner repo,
 // decision 0051; the approved "Pro on the web" board of the Step Gunner Web mock).
@@ -177,7 +178,7 @@ export default function ProPage() {
     setBusy('checkout');
     setErr('');
     track('pro_web_checkout', { plan, code_kind: code?.kind || 'none' });
-    const r = await api<{ url: string }>(user, '/api/pro/checkout', { plan, code: code?.code });
+    const r = await api<{ url: string }>(user, '/api/pro/checkout', { plan, code: code?.code, gaClientId: await gaClientId() });
     if (r.ok && r.url) {
       window.location.assign(r.url);
       return;

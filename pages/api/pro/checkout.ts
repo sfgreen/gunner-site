@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type Stripe from 'stripe';
 import { checkoutReturn } from '../../../lib/proGrant';
+import { validClientId } from '../../../lib/journey';
 import {
   ORIGIN, ProError, caller, codeRefusal, isPlan, priceFor, proDb, resolveCode, sendError, statusFor, stripe, syncCustomer,
   type CodeOk,
@@ -34,6 +35,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const meta: Record<string, string> = { app: 'stepgunner', uid: me.uid, plan, origin };
+    // Journeys (gunner decision 0081): the buyer's GA client id, so the purchase joins their visits.
+    if (validClientId(req.body?.gaClientId)) meta.gaClientId = req.body.gaClientId;
     let discounts: Stripe.Checkout.SessionCreateParams.Discount[] | undefined;
     if (typeof req.body?.code === 'string' && req.body.code.trim()) {
       const res0 = await resolveCode(req.body.code, plan, { uid: me.uid, doc });

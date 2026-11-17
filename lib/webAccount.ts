@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Auth, User } from 'firebase/auth';
 import { HANDOFF_STORAGE_KEY } from './handoffStrip';
+import { gaClientId, setGaUser } from './journey';
 
 // The student's app account on a web page (/pro, /earnings): Google (Apple once
 // NEXT_PUBLIC_PRO_APPLE=1), or the app's one-time handoff (lib/handoff.ts). Firebase
@@ -54,6 +55,9 @@ function takeHandoffCode(): string {
   return m[1];
 }
 
+// Accounts already linked to this browser's analytics on this page load.
+const linked = new Set<string>();
+
 // One redemption per page load, shared by every mount (React runs effects twice in dev).
 let handoff: Promise<{ error: string; used: boolean }> | null = null;
 
@@ -100,6 +104,18 @@ export function useWebAccount() {
     })();
     return () => { live = false; unsub(); };
   }, []);
+
+  // Journeys (gunner decision 0081): once per account per page load, tie this browser's
+  // analytics to the account. Never blocks or breaks the page.
+  useEffect(() => {
+    if (!user || user.isAnonymous) return;
+    if (linked.has(user.uid)) return;
+    linked.add(user.uid);
+    setGaUser(user.uid);
+    gaClientId().then((clientId) => {
+      if (clientId) api(user, '/api/journey/link', { clientId, page: window.location.pathname }).catch(() => undefined);
+    });
+  }, [user]);
 
   const signIn = useCallback(async (provider: 'apple' | 'google', onTrack?: () => void) => {
     const auth = authRef.current;
