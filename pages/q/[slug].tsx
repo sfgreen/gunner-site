@@ -19,8 +19,14 @@ import { loadShareQuestions } from '../../lib/shareQuestionServer';
 // so the sender is "a friend". The page is only reachable from a shared link and the
 // app offers the link only after a right answer, so "your friend got it" holds.
 //
+// The app is on the first screen at every step (Danny 2026-11-18): the nav's "Get the
+// app" shows on phones here (the site hides it below 960 px), an app row sits right
+// under the verdict, and answering scrolls the verdict to the top when that row would
+// be below the fold. Mock: https://claude.ai/artifact/QMwzz5X2GCtBbLDjMu9foN
+//
 // GA4 (lib/analytics): q_view {slug, deck, has_ref}, q_answer {slug, deck, correct},
-// q_cta {slug, target: app | pro | copy_code}, plus the site's store_click.
+// q_cta {slug, target: app | app_verdict | pro | copy_code}, plus the site's store_click
+// (location nav, verdict or result).
 
 type Props = { q: ShareQuestion };
 
@@ -44,6 +50,7 @@ export default function SharedQuestion({ q }: Props) {
   const [why, setWhy] = useState<'clamped' | 'open' | 'fits'>('clamped');
   const viewed = useRef(false);
   const verdictRef = useRef<HTMLDivElement>(null);
+  const appRowRef = useRef<HTMLElement>(null);
   const whyRef = useRef<HTMLDivElement>(null);
   const codeRef = useRef<HTMLSpanElement>(null);
   const copyTimer = useRef<ReturnType<typeof setTimeout>>();
@@ -87,11 +94,16 @@ export default function SharedQuestion({ q }: Props) {
     if (done && el && el.scrollHeight <= el.clientHeight + 1) setWhy('fits');
   }, [done]);
 
-  // Bring the verdict into view if the answer pushed it below the fold.
+  // After an answer, the verdict and the app row under it should share the screen.
+  // When the row would sit below the fold (a phone), the verdict goes to the top, under
+  // the sticky nav (its scroll-margin); when it already fits (a laptop), nothing moves.
   useEffect(() => {
-    if (!done || !verdictRef.current) return;
+    const vd = verdictRef.current;
+    if (!done || !vd) return;
+    const row = appRowRef.current?.getBoundingClientRect();
+    if (row && row.bottom <= window.innerHeight - 8) return;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    verdictRef.current.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+    vd.scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' });
   }, [done]);
 
   const choose = (i: number) => {
@@ -198,6 +210,15 @@ export default function SharedQuestion({ q }: Props) {
                 </p>
                 <p className="sq-vd-f">Your friend: got it</p>
               </div>
+              <section className="sq-app" ref={appRowRef} aria-label="Step Gunner for iPhone">
+                <div className="sq-app-t">
+                  <p className="sq-app-n">{q.deckCount ? `${q.deckCount.toLocaleString('en-US')} more like this` : 'More like this'}</p>
+                  <p className="sq-app-s">{q.deckLabel} questions in the iPhone app</p>
+                </div>
+                <div onClick={() => track('q_cta', { slug: q.slug, target: 'app_verdict' })}>
+                  <StoreButton loc="verdict" params={{ slug: q.slug }}>Get the app</StoreButton>
+                </div>
+              </section>
               <div className="sq-why" id="sq-why" ref={whyRef} data-clamp={why === 'clamped' || undefined}>
                 {paras(q.explanation).map((p, i) => <p key={i}>{p}</p>)}
               </div>
@@ -279,6 +300,23 @@ export default function SharedQuestion({ q }: Props) {
         .mk .sq .sq-vd-t { font-size: 19px; line-height: 1.35; font-weight: 600; color: var(--st-gold); }
         .mk .sq .sq-vd-t[data-ok] { color: var(--st-green); }
         .mk .sq .sq-vd-f { font: 600 13px/1.4 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--st-ink-3); white-space: nowrap; }
+        /* The app row under the verdict: the app's green action, inside the dark band. */
+        .mk .sq .sq-app { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 14px 14px 14px 16px; border-radius: 14px;
+          background: linear-gradient(180deg, var(--st-card), var(--st-card-2)); box-shadow: inset 0 0 0 1px var(--glow-green), 0 18px 36px -24px var(--st-shadow); }
+        .mk .sq .sq-app-n { font-size: 16px; line-height: 1.3; font-weight: 600; color: var(--st-ink); }
+        .mk .sq .sq-app-s { margin-top: 2px; font-size: 14px; line-height: 1.4; color: var(--st-ink-3); }
+        .mk .sq .sq-app .btn { min-height: 44px; padding-inline: 16px; font-size: 15px; font-weight: 700; white-space: nowrap;
+          background: var(--st-green); color: var(--st-on-green); box-shadow: none; }
+        .mk .sq .sq-app .btn:hover { filter: brightness(1.08); }
+
+        /* The nav's Get the app: hidden on phones site-wide, shown on this page. */
+        .mk .sn .sn-cta { display: inline-flex; margin-left: auto; min-height: 36px; padding: 0 12px; font-size: 15px; font-weight: 600;
+          background: transparent; color: var(--ok); box-shadow: inset 0 0 0 1px var(--ok); }
+        .mk .sn .sn-cta:hover { background: var(--card-2); }
+        .mk .sn .sn-cta + .burger { margin-left: 0; }
+        @media (max-width: 359px) { .mk .sn .sn-cta { display: none; } .mk .sn .sn-cta + .burger { margin-left: auto; } }
+        @media (min-width: 960px) { .mk .sn .sn-cta { min-height: 44px; padding: 0 16px; } }
+
         .mk .sq .sq-why { font-size: 16px; line-height: 1.55; color: var(--st-ink-2); }
         .mk .sq .sq-why p + p { margin-top: 12px; }
         .mk .sq .sq-why[data-clamp] { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 6; overflow: hidden; }
