@@ -21,6 +21,7 @@
 //   config/webStudy    {enabled, dailyMax, minGapMs, blockSize}; absent = STUDY_DEFAULTS
 import { FieldValue, Timestamp, type DocumentData, type Firestore } from 'firebase-admin/firestore';
 import { ProError, proDb, statusFor, toMs } from '../proServer';
+import { addAnswer, capHitsSince, reasons as guardReasons, throttled, GUARD, type GuardDay, type GuardState } from './guard';
 import {
   SR_DOC_VERSION, UNSEEN, applyAnswer, intervalDaysFor, mergeMaps, selectRound, shardDocName, shuffled, srKey,
   xpFor, type PoolCard, type Progress,
@@ -31,6 +32,7 @@ export const STUDY_DEFAULTS = {
   dailyMax: 300, // questions served per Central day per account
   minGapMs: 2500, // between two served questions
   blockSize: 20, // a Step 2 block: 20 questions, 30 minutes
+  guard: true, // the scraping flags (guard.ts); config/webStudy.guard false turns them off
 };
 export type StudyConfig = typeof STUDY_DEFAULTS;
 
@@ -169,6 +171,7 @@ export async function studyConfig(db: Firestore): Promise<StudyConfig> {
     dailyMax: num(d.dailyMax, STUDY_DEFAULTS.dailyMax, 0, 5000),
     minGapMs: num(d.minGapMs, STUDY_DEFAULTS.minGapMs, 0, 60_000),
     blockSize: num(d.blockSize, STUDY_DEFAULTS.blockSize, 5, 40),
+    guard: d.guard !== false,
   };
 }
 
@@ -379,15 +382,23 @@ export async function serveCurrent(db: Firestore, uid: string, cfg: StudyConfig,
     const now = Date.now();
     const today = centralDay(now);
     const servedToday = d.servedOn === today ? Number(d.servedToday) || 0 : 0;
-    if (servedToday >= cfg.dailyMax) {
-      throw new ProError(429, 'daily_limit', `That is ${cfg.dailyMax} questions on the web today. Your phone keeps going.`);
+    // A flagged account keeps studying, slower (guard.ts).
+    const lim = cfg.guard ? throttled(d.guard as GuardState | undefined, cfg.dailyMax, cfg.minGapMs) : { dailyMax: cfg.dailyMax, minGapMs: cfg.minGapMs };
+    if (servedToday >= lim.dailyMax) {
+      throw new ProError(429, 'daily_limit', `That is ${lim.dailyMax} questions on the web today. The iPhone app keeps going.`);
     }
-    if (typeof d.lastServedMs === 'number' && now - d.lastServedMs < cfg.minGapMs) {
+    if (typeof d.lastServedMs === 'number' && now - d.lastServedMs < lim.minGapMs) {
       throw new ProError(429, 'too_fast', 'One moment.');
     }
     const order = shuffled(card.choices, Math.random);
     block.served = { key, ms: now, order };
-    t.set(ref, { block, servedOn: today, servedToday: servedToday + 1, lastServedMs: now, updatedAt: FieldValue.serverTimestamp() }, { merge: true });
+    const write: Record<string, unknown> = { block, servedOn: today, servedToday: servedToday + 1, lastServedMs: now, updatedAt: FieldValue.serverTimestamp() };
+    // The day the full cap was reached counts toward the daily_cap flag.
+    if (servedToday + 1 >= cfg.dailyMax) {
+      const caps = (Array.isArray(d.capDays) ? d.capDays : []).filter((x: unknown) => typeof x === 'string' && x !== today);
+      write.capDays = [...caps, today].slice(-7);
+    }
+    t.set(ref, write, { merge: true });
     return { block, question: questionOf(block, card, order) };
   });
 }
@@ -432,7 +443,11 @@ async function noteBuddyDay(db: Firestore, uid: string, day: string, nowMs: numb
   }
 }
 
-export async function answerCurrent(db: Firestore, uid: string, blockId: string, key: string, pickIndex: number): Promise<Reveal> {
+/** Where an answer came from, for the scraping flags only (guard.ts): never stored raw. */
+export type AnswerMeta = { net?: string; agent?: string };
+
+export async function answerCurrent(db: Firestore, uid: string, blockId: string, key: string, pickIndex: number,
+                                    meta: AnswerMeta = {}, cfg: StudyConfig = STUDY_DEFAULTS): Promise<Reveal> {
   const b = await getBank(db);
   const ref = db.collection('webStudy').doc(uid);
   const now = Date.now();
@@ -459,13 +474,39 @@ export async function answerCurrent(db: Firestore, uid: string, blockId: string,
     block.streak = streak;
     block.i += 1;
     block.served = null;
-    t.set(ref, {
+    const write: Record<string, unknown> = {
       block, days,
       answered: FieldValue.increment(1),
       correct: FieldValue.increment(correct ? 1 : 0),
       xpBanked: FieldValue.increment(xp),
       updatedAt: FieldValue.serverTimestamp(),
-    }, { merge: true });
+    };
+    // 1b. The scraping flags (guard.ts): this answer joins the day's signals; a scripted-looking
+    // day flags the account (sticky until Danny clears it) and leaves a row in studyFlags.
+    if (cfg.guard) {
+      const gdays = (d.guardDays && typeof d.guardDays === 'object' ? d.guardDays : {}) as Record<string, GuardDay>;
+      const hour = new Date(now + (Number(block.tz) || 0) * 60_000).getUTCHours();
+      const gd = addAnswer(gdays[day], now - served.ms, correct, hour, meta.net || '', meta.agent || '');
+      gdays[day] = gd;
+      for (const k of Object.keys(gdays).sort().slice(0, -GUARD.keepDays)) delete gdays[k];
+      write.guardDays = gdays;
+      const guard = (d.guard || {}) as GuardState;
+      const live = guard.flagged && !guard.cleared;
+      const clearedToday = guard.cleared && typeof guard.clearedAtMs === 'number' && localDay(guard.clearedAtMs, Number(block.tz) || 0) === day;
+      const why = guardReasons(gd, capHitsSince(d.capDays, centralDay(now)));
+      if (why.length && !live && !clearedToday) {
+        const flag = { flagged: true, cleared: false, reasons: why, atMs: now, day };
+        write.guard = flag;
+        t.set(db.collection('studyFlags').doc(uid), {
+          uid, ...flag, answersToday: gd.n, correctToday: gd.correct, fastToday: gd.fast,
+          meanSeconds: gd.n ? Math.round((gd.dwellSum / gd.n) * 10) / 10 : 0, hours: gd.hours.length,
+          networks: gd.nets.length, browsers: gd.agents.length, answeredAllTime: (Number(d.answered) || 0) + 1,
+          createdAt: FieldValue.serverTimestamp(),
+        });
+        console.warn(`[study] FLAG uid=${uid.slice(0, 6)} reasons=${why.join(',')} n=${gd.n} fast=${gd.fast} acc=${gd.n ? Math.round((100 * gd.correct) / gd.n) : 0}%`);
+      }
+    }
+    t.set(ref, write, { merge: true });
     return { card, pick, correct, streak, xp, block, day, buddyDay: d.buddyDay };
   });
   // 2. The schedule the phone reads.
