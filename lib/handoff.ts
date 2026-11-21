@@ -8,7 +8,7 @@ import { createHash, randomBytes } from 'crypto';
 // (authHandoffs/{hash}); it works once, for 2 minutes.
 
 export const HANDOFF_TTL_MS = 2 * 60_000;
-export const HANDOFF_PAGES = ['earnings', 'pro'] as const;
+export const HANDOFF_PAGES = ['earnings', 'pro', 'study'] as const;
 export type HandoffPage = (typeof HANDOFF_PAGES)[number];
 
 const CODE_RE = /^[A-Za-z0-9_-]{43}$/;
