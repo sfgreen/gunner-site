@@ -64,6 +64,14 @@ function nextLine(r: Reveal): string {
 
 export type StudyCall = <T>(user: User, path: string, body?: unknown) => Promise<ApiResult<T>>;
 
+type DeskSale = { name: string; price: string; endsAtMs: number };
+
+/** h:mm:ss left, for the sale line on the Pro card. */
+function saleLeft(ms: number): string {
+  const t = Math.max(0, Math.floor(ms / 1000));
+  return `${Math.floor(t / 3600)}:${String(Math.floor((t % 3600) / 60)).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}`;
+}
+
 /** The desk. `account` and `call` come from the page (the real account and API) or a test harness. */
 export default function StudyDesk({ account, call }: { account: ReturnType<typeof useWebAccount>; call: StudyCall }) {
   const api = call;
@@ -85,11 +93,22 @@ export default function StudyDesk({ account, call }: { account: ReturnType<typeo
   const [blockXp, setBlockXp] = useState(0);
   const [done, setDone] = useState(false);
   const started = useRef(false);
+  // The store sale this account can have (gunner decision 0085 amendment 3), for the Pro card.
+  const [sale, setSale] = useState<DeskSale | null>(null);
 
   useEffect(() => {
     const t = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(t);
   }, []);
+
+  useEffect(() => {
+    if (gate !== 'not_pro' || !user) return undefined;
+    let stop = false;
+    api<{ status: { sale: DeskSale | null } }>(user, '/api/pro/status').then((r) => {
+      if (!stop && r.ok) setSale(r.status?.sale || null);
+    });
+    return () => { stop = true; };
+  }, [gate, user, api]);
 
   const fail = useCallback((code: string | undefined, msg: string | undefined) => {
     const known = ['anonymous', 'not_pro', 'paused', 'daily_limit'];
@@ -301,7 +320,10 @@ export default function StudyDesk({ account, call }: { account: ReturnType<typeo
               <div className="sd-card sd-narrow">
                 <h2>The study desk is part of Pro</h2>
                 <p className="sd-muted">CK Gold in 20-question blocks, with lab values beside every question, on a laptop or an Android phone. Pro on the web also turns Pro on in the iPhone app.</p>
-                <a className="pro-btn" href="/pro?from=study" onClick={() => track('pro_click', { location: 'study' })}>See Pro</a>
+                {sale && now < sale.endsAtMs && (
+                  <p className="sd-sale">{sale.name}: half off your first year, {sale.price}. Your price ends in <span className="sd-sale-clock">{saleLeft(sale.endsAtMs - now)}</span></p>
+                )}
+                <a className="pro-btn" href="/pro?from=study" onClick={() => track('pro_click', { location: 'study', sale: sale ? 1 : 0 })}>See Pro</a>
                 <p className="sd-fine">Already Pro on your phone? Make sure you signed in here with the same account.</p>
               </div>
             )}
@@ -562,6 +584,8 @@ export default function StudyDesk({ account, call }: { account: ReturnType<typeo
         .sd-narrow { max-width: 460px; width: 100%; display: flex; flex-direction: column; gap: 12px; }
         .sd-narrow h2 { margin: 0; font-size: 22px; text-wrap: balance; }
         .sd-muted { color: var(--st-ink-3); }
+        .sd-sale { margin: 0; padding: 10px 12px; border-radius: 10px; box-shadow: inset 0 0 0 1px var(--st-gold); color: var(--st-ink); font-size: 14px; line-height: 1.45; }
+        .sd-sale-clock { color: var(--st-gold); font-family: var(--f-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
         .sd-fine { margin: 0; font-size: 12.5px; line-height: 1.5; color: var(--st-ink-3); }
         .sd-err { margin: 0; font-size: 13px; color: var(--st-red); }
         .sd-grid { max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px; padding: 20px 0; }

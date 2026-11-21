@@ -3,8 +3,8 @@ import type Stripe from 'stripe';
 import { checkoutReturn } from '../../../lib/proGrant';
 import { validClientId } from '../../../lib/journey';
 import {
-  ORIGIN, ProError, caller, codeRefusal, isPlan, priceFor, proDb, resolveCode, sendError, statusFor, stripe, syncCustomer,
-  type CodeOk,
+  ORIGIN, ProError, caller, codeRefusal, countryOf, isPlan, isSaleCode, priceFor, proDb, resolveCode, saleCheck, sendError,
+  statusFor, stripe, syncCustomer, type CodeOk,
 } from '../../../lib/proServer';
 
 // POST /api/pro/checkout {plan, code?, origin?} -> {url, id}: a Stripe Checkout session
@@ -38,8 +38,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Journeys (gunner decision 0081): the buyer's GA client id, so the purchase joins their visits.
     if (validClientId(req.body?.gaClientId)) meta.gaClientId = req.body.gaClientId;
     let discounts: Stripe.Checkout.SessionCreateParams.Discount[] | undefined;
-    if (typeof req.body?.code === 'string' && req.body.code.trim()) {
-      const res0 = await resolveCode(req.body.code, plan, { uid: me.uid, doc });
+    // The store sale (gunner decision 0085 amendment 3): this student's live sale price
+    // takes the yearly plan, typed code or not. Opening checkout counts as a first look.
+    const country = countryOf(req);
+    const check = plan === 'yearly' ? await saleCheck(me.uid, doc, country, plan, true) : null;
+    const sale = check?.sale || null;
+    const typed = typeof req.body?.code === 'string' && req.body.code.trim() ? req.body.code : '';
+    if (typed && (await isSaleCode(typed))) {
+      if (!sale) throw new ProError(400, 'code', check?.refusal || (await saleCheck(me.uid, doc, country, plan, false)).refusal || "That code didn't work.");
+    } else if (typed) {
+      const res0 = await resolveCode(typed, plan, { uid: me.uid, doc });
       const refusal = codeRefusal(res0);
       if (refusal != null) throw new ProError(400, 'code', refusal);
       const r = res0 as CodeOk;
@@ -47,6 +55,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       meta.code = r.code;
       meta.codeKind = r.kind;
       if (r.referrerUid) meta.referrerUid = r.referrerUid;
+    }
+    if (sale) {
+      discounts = [{ coupon: sale.coupon }];
+      meta.sale = sale.code;
+      if (!meta.codeKind) {
+        meta.code = sale.code;
+        meta.codeKind = 'sale';
+      }
     }
 
     const st = stripe();
@@ -97,7 +113,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
     if (!session.url) throw new ProError(502, 'stripe', 'Checkout did not open. Try again.');
     await proDb().collection('users').doc(me.uid).set({ webPro: { openSessionId: session.id } }, { merge: true });
-    console.log(`[pro] checkout ${origin} uid=${me.uid.slice(0, 6)} plan=${plan} code=${meta.codeKind || 'none'} session=${session.id}`);
+    console.log(`[pro] checkout ${origin} uid=${me.uid.slice(0, 6)} plan=${plan} code=${meta.codeKind || 'none'} sale=${meta.sale || 'none'} session=${session.id}`);
     return res.status(200).json({ ok: true, url: session.url, id: session.id });
   } catch (e) {
     return sendError(res, e);

@@ -42,6 +42,7 @@ async function onCheckout(s: Stripe.Checkout.Session): Promise<void> {
     plan: m.plan || null,
     code: m.code || null,
     codeKind: m.codeKind || null,
+    sale: m.sale || null,
     origin: m.origin || 'web',
     amountTotal: s.amount_total ?? null,
     currency: s.currency || null,

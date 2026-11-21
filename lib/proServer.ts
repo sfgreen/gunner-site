@@ -101,6 +101,7 @@ import {
   holdMs, paymentTakenBack, referralConfig, reversalFields, rewardCents, sharedCardReason, type ReferralConfig,
 } from './referral';
 import { HANDOFF_TTL_MS, handoffKey, handoffRefusal, newHandoffCode, type HandoffPage } from './handoff';
+import { countrySkipped, saleCode, webSaleFor, type WebSale } from './saleRule';
 
 // Pro on the web (gunner repo, decision 0051), server half. Imported only by API
 // routes and crons, never by a component, so firebase-admin and the Stripe key stay
@@ -258,6 +259,58 @@ export async function neverPaid(uid: string, d: DocumentData): Promise<boolean> 
 }
 
 export const ts = (ms: number | null) => (ms == null ? null : Timestamp.fromMillis(ms));
+
+// ---- the store sale on the web (gunner decision 0085 amendment 3) ----
+// The same config/sale the app and the backend read (rule: lib/saleRule.ts). The first
+// look writes users/{uid}.saleSeen.<code>, the field the app writes, so a student gets one
+// hold across the app and the web, from whichever they saw first.
+
+/** The visitor's country (alpha-2) from Vercel's edge, '' when unknown (local runs). */
+export function countryOf(req: NextApiRequest): string {
+  const h = req.headers['x-vercel-ip-country'];
+  return String((Array.isArray(h) ? h[0] : h) || '').trim().toUpperCase();
+}
+
+export type SaleCheck = { sale: WebSale; refusal?: undefined } | { sale?: undefined; refusal: string };
+
+/**
+ * Can this account have the sale price on the web now? Yearly only and never-paid only,
+ * like the app. `stamp` writes the first look (the status read and checkout do; a code
+ * preview of a refused account does not).
+ */
+export async function saleCheck(uid: string, doc: DocumentData, country: string, plan: Plan, stamp: boolean): Promise<SaleCheck> {
+  const cfg = (await proDb().collection('config').doc('sale').get()).data() || {};
+  const name = typeof cfg.name === 'string' && cfg.name.trim() ? cfg.name.trim() : 'Black Friday';
+  const now = Date.now();
+  const sale = webSaleFor(cfg, doc, country, now);
+  if (!sale) {
+    const running = cfg.active === true && typeof cfg.webCoupon === 'string' && cfg.webCoupon
+      && now >= Number(cfg.startEpoch) * 1000 && now < Number(cfg.endEpoch) * 1000;
+    if (!running) return { refusal: `The ${name} price isn't running right now.` };
+    if (countrySkipped(cfg, country)) return { refusal: `The ${name} price isn't offered in your country.` };
+    return { refusal: "Your sale price ended. It doesn't come back." };
+  }
+  if (plan !== 'yearly') return { refusal: `The ${name} price is on the yearly plan.` };
+  if (!(await neverPaid(uid, doc))) return { refusal: `The ${name} price is for a first subscription.` };
+  if (sale.firstLook && stamp) {
+    await proDb().collection('users').doc(uid).set({ saleSeen: { [sale.code]: Math.floor(now / 1000) } }, { merge: true });
+    console.log(`[pro] sale ${sale.code} first look uid=${uid.slice(0, 6)} country=${country || '?'}`);
+  }
+  return { sale };
+}
+
+/** Is this typed code the sale's code (BF50)? */
+export async function isSaleCode(raw: unknown): Promise<boolean> {
+  const code = saleCode(raw);
+  if (!code) return false;
+  const cfg = (await proDb().collection('config').doc('sale').get()).data() || {};
+  return saleCode(cfg.code) === code;
+}
+
+/** What the page shows for a live sale (never the coupon id). */
+export function publicSale(s: WebSale | null | undefined) {
+  return s ? { code: s.code, name: s.name, price: s.price, endsAtMs: s.endsAtMs } : null;
+}
 
 // ---- Stripe -> users/{uid} ----
 

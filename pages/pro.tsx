@@ -26,8 +26,19 @@ type Status = {
   answered: number | null;
   streak: number | null;
   savedCode: string | null;
+  /** The store sale this account can have now (gunner decision 0085 amendment 3): yearly only. */
+  sale: { code: string; name: string; price: string; endsAtMs: number } | null;
 };
-type Code = { code: string; label: string; kind: 'friend' | 'chief'; rewards: boolean };
+type Code = { code: string; label: string; kind: 'friend' | 'chief' | 'sale'; rewards: boolean };
+
+/** h:mm:ss left, for the sale's clock. */
+function left(ms: number): string {
+  const t = Math.max(0, Math.floor(ms / 1000));
+  const h = Math.floor(t / 3600);
+  const m = Math.floor((t % 3600) / 60);
+  const sec = t % 60;
+  return `${h}:${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+}
 
 const PLANS: { id: Plan; name: string; sub: string; price: string }[] = [
   { id: 'yearly', name: 'Yearly', sub: 'BEST VALUE · $8.33 A MONTH', price: '$99.99' },
@@ -57,6 +68,7 @@ export default function ProPage() {
   const [busyOn, setBusy] = useState<'' | 'code' | 'checkout' | 'portal'>('');
   const [paid, setPaid] = useState<'' | 'confirming' | 'on' | 'slow'>('');
   const urlCode = useRef('');
+  const [now, setNow] = useState(() => Date.now());
   // The marketing site links here with the plan its visitor was looking at (?plan=monthly).
   useEffect(() => {
     if (router.isReady && router.query.plan === 'monthly') setPlan('monthly');
@@ -67,6 +79,16 @@ export default function ProPage() {
   useEffect(() => {
     track('pro_web_view', {});
   }, []);
+
+  // The sale's clock: this student's own end. At zero the status read drops the sale.
+  const saleEnds = status?.sale?.endsAtMs ?? 0;
+  useEffect(() => {
+    if (!saleEnds) return undefined;
+    track('pro_web_sale_view', { code: status?.sale?.code || '' });
+    const id = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [saleEnds]);
 
   const loadStatus = useCallback(async (u: User) => {
     const r = await api<{ status: Status }>(u, '/api/pro/status');
@@ -124,7 +146,7 @@ export default function ProPage() {
     if (!user || !codeText.trim()) return;
     setBusy('code');
     setCodeErr('');
-    const r = await api<{ code: string; label: string; kind: 'friend' | 'chief'; rewards: boolean }>(user, '/api/pro/code', { code: codeText, plan });
+    const r = await api<{ code: string; label: string; kind: 'friend' | 'chief' | 'sale'; rewards: boolean }>(user, '/api/pro/code', { code: codeText, plan });
     setBusy('');
     if (r.ok) setCode({ code: r.code, label: r.label, kind: r.kind, rewards: r.rewards });
     else {
@@ -200,6 +222,17 @@ export default function ProPage() {
     setErr(r.error || 'Could not open your plan. Try again.');
   };
 
+  // One re-read when this student's clock hits zero (a visitor clock ahead of the server
+  // would otherwise ask every second).
+  const saleRefreshed = useRef(0);
+  useEffect(() => {
+    if (user && saleEnds && now >= saleEnds && saleRefreshed.current !== saleEnds) {
+      saleRefreshed.current = saleEnds;
+      loadStatus(user);
+    }
+  }, [user, saleEnds, now, loadStatus]);
+
+  const sale = status?.sale && now < status.sale.endsAtMs ? status.sale : null;
   const anonymous = !!user && user.isAnonymous;
   const step = !user || anonymous ? 0 : paid || status?.source === 'web' ? 2 : 1;
   const steps = ['1 · SIGN IN', '2 · PLAN', '3 · PAY'];
@@ -279,20 +312,34 @@ export default function ProPage() {
         {status.source === 'grant' && (
           <p className="pro-fine">You have Pro until {fmtDate(status.grantEndMs)}. A plan bought now starts billing today and keeps Pro on after that.</p>
         )}
-        <h2>Pick a plan</h2>
-        {PLANS.map((p) => (
-          <button key={p.id} type="button" className={`pro-plan${plan === p.id ? ' on' : ''}`} aria-pressed={plan === p.id} onClick={() => pickPlan(p.id)}>
-            <span className="pro-radio"><span /></span>
-            <span className="pro-plan-txt">
-              <span className="pro-plan-name">{p.name}</span>
-              <span className="pro-plan-sub">{p.sub}</span>
+        {sale && (
+          <div className="pro-sale" role="status">
+            <span className="pro-sale-pill">{sale.name.toUpperCase()}</span>
+            <span className="pro-sale-txt">
+              Half off your first year. Your price ends in <span className="pro-mono pro-sale-clock">{left(sale.endsAtMs - now)}</span>
             </span>
-            <span className="pro-plan-price">{p.price}</span>
-          </button>
-        ))}
+          </div>
+        )}
+        <h2>Pick a plan</h2>
+        {PLANS.map((p) => {
+          const onSale = !!sale && p.id === 'yearly';
+          return (
+            <button key={p.id} type="button" className={`pro-plan${plan === p.id ? ' on' : ''}`} aria-pressed={plan === p.id} onClick={() => pickPlan(p.id)}>
+              <span className="pro-radio"><span /></span>
+              <span className="pro-plan-txt">
+                <span className="pro-plan-name">{p.name}</span>
+                <span className="pro-plan-sub">{onSale ? 'HALF OFF · YOUR FIRST YEAR' : p.sub}</span>
+              </span>
+              <span className="pro-plan-price">
+                {onSale ? <><s className="pro-was">{p.price}</s> <span className="pro-now">{sale.price}</span></> : p.price}
+              </span>
+            </button>
+          );
+        })}
+        {sale && plan === 'monthly' && <p className="pro-fine">Half off is on the yearly plan.</p>}
         <form className="pro-code" onSubmit={(e) => { e.preventDefault(); applyCode(); }}>
           <div className="pro-code-field">
-            <label htmlFor="pro-code">Chief or friend code</label>
+            <label htmlFor="pro-code">{sale ? 'Chief, friend or sale code' : 'Chief or friend code'}</label>
             <input id="pro-code" type="text" autoComplete="off" autoCapitalize="characters" spellCheck={false} placeholder="e.g. ALEX-7Q2"
               value={codeText} onChange={(e) => { setCodeText(e.target.value); setCode(null); setCodeErr(''); }} />
           </div>

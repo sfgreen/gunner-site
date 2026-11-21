@@ -25,7 +25,8 @@
     "coupons": {
       "chief": "gunner_chief_40",
       "friendYearly": "gunner_friend_40pct",
-      "friendMonthly": "gunner_friend_500c"
+      "friendMonthly": "gunner_friend_500c",
+      "sale": "gunner_bf50_yearly"
     },
     "portalConfig": "bpc_1UYGLTLO2wGrao9aG14isMm4",
     "webhookEndpoint": "we_1UYGLTLO2wGrao9anvosCXtX",

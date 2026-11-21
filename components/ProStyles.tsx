@@ -91,6 +91,14 @@ export default function ProStyles() {
         .pro-plan-name { font-size: 16px; font-weight: 600; }
         .pro-plan-sub { font: 500 11.5px/1.2 var(--f-mono); letter-spacing: .06em; color: var(--st-ink-3); }
         .pro-plan-price { font: 500 18px/1 var(--f-mono); color: var(--st-white); font-variant-numeric: tabular-nums; }
+        .pro-was { color: var(--st-ink-3); font-size: 14px; }
+        .pro-now { color: var(--st-gold); }
+        .pro-sale { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 12px 14px; border-radius: 12px;
+          background: var(--st-card-2); box-shadow: inset 0 0 0 1px var(--st-gold); font-size: 14px; line-height: 1.4; color: var(--st-ink); }
+        .pro-sale-pill { flex: none; font: 700 11px/1 var(--f-mono); letter-spacing: .12em; padding: 5px 8px; border-radius: 6px;
+          color: var(--st-gold); box-shadow: inset 0 0 0 1px var(--st-gold); }
+        .pro-sale-txt { flex: 1; min-width: 0; }
+        .pro-sale-clock { color: var(--st-gold); font-variant-numeric: tabular-nums; white-space: nowrap; }
 
         .pro-code { display: flex; gap: 8px; align-items: flex-end; margin: 0; }
         .pro-code-field { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
