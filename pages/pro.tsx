@@ -239,10 +239,11 @@ export default function ProPage() {
         <h2 className="pro-h2-lg">Pro is on.</h2>
         <p className="pro-muted">
           {paid === 'on'
-            ? 'Close Step Gunner on your phone and open it again: Pro is on the same account. A receipt is on its way to your email.'
+            ? 'On iPhone, close Step Gunner and open it again: Pro is on the same account. On a laptop or an Android phone, study here on the web. A receipt is on its way to your email.'
             : `Your ${status.plan || ''} plan ${status.cancelAtPeriodEnd ? 'ends' : 'renews'} ${fmtDate(status.periodEndMs)}.`}
         </p>
         <div className="pro-row">
+          <a className="pro-btn pro-auto" href="/study" onClick={() => track('pro_click', { location: 'pro_done_study' })}>Study on the web</a>
           <button type="button" className="pro-btn pro-ghost pro-auto" disabled={!!busy} onClick={portal}>
             {busy === 'portal' ? 'Opening...' : 'Manage plan'}
           </button>
@@ -335,7 +336,7 @@ export default function ProPage() {
         <header className="pro-pitch pro-head">
           <span className="pro-eyebrow">STEP GUNNER PRO</span>
           <h1>Your plan to test day.</h1>
-          <p className="pro-lede">Ranked by your weakest systems and what Step 2 tests most. Buy it here, and it's on your phone, on the same account.</p>
+          <p className="pro-lede">Ranked by your weakest systems and what Step 2 tests most. Buy it here, and it's on your iPhone on the same account, and on the web at stepgunner.com/study for a laptop or an Android phone.</p>
         </header>
 
         <section className="pro-card" aria-label="Checkout">
