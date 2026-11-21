@@ -200,3 +200,22 @@ test('why-right drops the why-wrong sentences it repeats (the app does the same)
   assert.equal(whyRightOnly(right, null), right);
   assert.deepEqual(sentences('Na 11.8 mEq/L. E. coli grows. Done!'), ['Na 11.8 mEq/L.', 'E. coli grows.', 'Done!']);
 });
+
+test('a web-only account (no phone, no schedule, no rope, no user doc) studies from new cards', async () => {
+  const db = seeded();
+  const W = 'android1';
+  const block = await openBlock(db, W, CFG, TZ, false);
+  assert.equal(block.keys.length, 20, 'a full block of new cards');
+  assert.ok(block.keys.every((k) => /^ck:\d+$/.test(k) && k !== 'ck:90' && k !== 'ck:91'));
+  const { question } = await serveCurrent(db, W, CFG, block.id);
+  assert.ok(question && !('correctAnswer' in question) && !('answer' in question));
+  const r = await answerCurrent(db, W, block.id, question.key, question.choices.indexOf(`Right ${question.key.slice(3)}`));
+  assert.equal(r.correct, true);
+  assert.equal(r.fromBox, 0, 'unseen');
+  assert.equal(r.toBox, 2, 'first right answer from unseen goes to Box 2, as on the phone');
+  const p = db.read(`users/${W}/srProgress/${shardDocName(question.key)}`).progressMap[question.key];
+  assert.deepEqual([p.box, p.totalAttempts, p.totalCorrect], [2, 1, 1]);
+  assert.equal(db.read(`users/${W}/srProgress/data`), undefined, 'no legacy doc is made up');
+  assert.equal(db.read(`ropeIndex/${W}`), undefined, 'no rope is made up');
+  assert.equal(db.read(`webStudy/${W}`).answered, 1);
+});

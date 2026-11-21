@@ -245,7 +245,7 @@ export default function StudyDesk({ account, call }: { account: ReturnType<typeo
     <>
       <Head>
         <title>Study desk | Step Gunner</title>
-        <meta name="description" content="Your Step Gunner review queue on a laptop: 20-question blocks, lab values beside the question, and every answer saved to the schedule your phone reads." />
+        <meta name="description" content="Step Gunner on the web, for a laptop or an Android phone: 20-question CK Gold blocks, lab values beside the question, and every answer saved to the same review schedule as the iPhone app." />
         <meta name="robots" content="noindex" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </Head>
@@ -279,8 +279,8 @@ export default function StudyDesk({ account, call }: { account: ReturnType<typeo
             {signedOut && (
               <div className="sd-card sd-narrow">
                 <ProSignIn
-                  title="Your review queue, on a laptop."
-                  lede="Sign in with the account you use in the Step Gunner app. Every answer here lands in the same review schedule as your phone."
+                  title="Study Step Gunner on the web."
+                  lede="On a laptop or an Android phone. Use the iPhone app too? Sign in with the same account and every answer here lands in the same review schedule."
                   busy={account.busy}
                   onSignIn={(p) => account.signIn(p, () => track('study_signin', { provider: p }))}
                 >
@@ -300,7 +300,7 @@ export default function StudyDesk({ account, call }: { account: ReturnType<typeo
             {gate === 'not_pro' && (
               <div className="sd-card sd-narrow">
                 <h2>The study desk is part of Pro</h2>
-                <p className="sd-muted">Your review queue on a laptop, in 20-question blocks with lab values beside every question. Pro on the web also turns Pro on in the app.</p>
+                <p className="sd-muted">CK Gold in 20-question blocks, with lab values beside every question, on a laptop or an Android phone. Pro on the web also turns Pro on in the iPhone app.</p>
                 <a className="pro-btn" href="/pro?from=study" onClick={() => track('pro_click', { location: 'study' })}>See Pro</a>
                 <p className="sd-fine">Already Pro on your phone? Make sure you signed in here with the same account.</p>
               </div>
@@ -512,13 +512,35 @@ export default function StudyDesk({ account, call }: { account: ReturnType<typeo
           <span><b>M</b> mark</span>
           <span><b>L</b> labs</span>
           <span><b>ENTER</b> submit, next</span>
-          <span className="sd-sync"><i aria-hidden="true" />Saved to your review schedule. Your phone picks it up the next time it opens.</span>
+          <span className="sd-sync"><i aria-hidden="true" />Saved to your review schedule. The iPhone app picks it up the next time it opens.</span>
         </footer>
       </div>
 
       <style jsx global>{`
         body { background: var(--st-bg); }
-        .sd { min-height: 100vh; color: var(--st-ink); background: radial-gradient(1100px 420px at 50% -120px, rgba(90,200,250,0.12), rgba(90,200,250,0) 70%), var(--st-bg);
+        /* The desk's own colors: the app's night look, and Dawn (the app's light mode) on a light system. */
+        .sd { --d-stem: #E2E5EC; --d-strong: #ffffff; --d-main-a: rgba(19,23,30,0.92); --d-main-b: rgba(14,17,23,0.92);
+          --d-choice: rgba(19,23,30,0.55); --d-disabled: #1a2029; --d-body: #d5d9e1; --d-label: #c9ced8;
+          --d-hover: rgba(255,255,255,0.05); --d-dotted: rgba(255,255,255,0.35); --d-shadow: rgba(0,0,0,0.45);
+          --d-glow: rgba(90,200,250,0.12); --d-glow-0: rgba(90,200,250,0); --d-warn: #ff9f0a;
+          --d-act-t08: rgba(10,132,255,0.08); --d-act-t10: rgba(10,132,255,0.10); --d-act-t16: rgba(10,132,255,0.16);
+          --d-act-t25: rgba(10,132,255,0.25); --d-act-t50: rgba(10,132,255,0.5); --d-gold-line: rgba(255,214,10,0.6);
+          --d-ok-line: rgba(48,209,88,0.45); --d-ok-line2: rgba(48,209,88,0.6); --d-ok-wash: rgba(48,209,88,0.08);
+          --d-bad-line: rgba(255,107,98,0.45); --d-bad-line2: rgba(255,69,58,0.6); --d-bad-wash: rgba(255,69,58,0.08); --d-bad-fill: #ff453a; --d-on-green: #04110a; }
+        @media (prefers-color-scheme: light) {
+          :root:root { --st-bg: #f5f6f8; --st-bg-2: #eef1f7; --st-card: #ffffff; --st-card-2: #ffffff; --st-line: #dfe4ee; --st-line-2: #c3ccdd;
+            --st-ctl: #5a6585; --st-ink: #0e1530; --st-ink-2: #334063; --st-ink-3: #5a6585; --st-act: #3a5bbf; --st-act-hov: #24427f;
+            --st-on-act: #ffffff; --st-blue: #3a5bbf; --st-green: #108048; --st-gold: #9a6a00; --st-red: #c62828;
+            --st-ok-tint: rgba(16,128,72,0.10); --st-bad-tint: rgba(198,40,40,0.08); --st-bezel: #eef1f7; color-scheme: light; }
+          .sd { --d-stem: #1c2647; --d-strong: #0e1530; --d-main-a: #ffffff; --d-main-b: #ffffff; --d-choice: #f7f8fb; --d-disabled: #e6e9f0;
+            --d-body: #334063; --d-label: #46526f; --d-hover: rgba(14,21,48,0.04); --d-dotted: rgba(14,21,48,0.35); --d-shadow: rgba(20,30,70,0.10);
+            --d-glow: rgba(58,91,191,0.08); --d-glow-0: rgba(58,91,191,0); --d-warn: #a86200;
+            --d-act-t08: rgba(58,91,191,0.06); --d-act-t10: rgba(58,91,191,0.08); --d-act-t16: rgba(58,91,191,0.12);
+            --d-act-t25: rgba(58,91,191,0.22); --d-act-t50: rgba(58,91,191,0.45); --d-gold-line: rgba(154,106,0,0.45);
+            --d-ok-line: rgba(16,128,72,0.40); --d-ok-line2: rgba(16,128,72,0.55); --d-ok-wash: rgba(16,128,72,0.07);
+            --d-bad-line: rgba(198,40,40,0.40); --d-bad-line2: rgba(198,40,40,0.55); --d-bad-wash: rgba(198,40,40,0.06); --d-bad-fill: #c62828; --d-on-green: #ffffff; }
+        }
+        .sd { min-height: 100vh; color: var(--st-ink); background: radial-gradient(1100px 420px at 50% -120px, var(--d-glow), var(--d-glow-0) 70%), var(--st-bg);
           font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', Inter, system-ui, sans-serif;
           padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
         .sd-mono, .sd-h, .sd-clock, .sd-chip, .sd-letter, .sd-tag, .sd-foot { font-family: 'SF Mono', 'JetBrains Mono', ui-monospace, Menlo, monospace; }
@@ -531,10 +553,10 @@ export default function StudyDesk({ account, call }: { account: ReturnType<typeo
         .sd-topr { margin-left: auto; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
         .sd-chip { font-size: 12.5px; color: var(--st-ink-2); padding: 6px 10px; border-radius: 8px; border: 1px solid var(--st-line); background: var(--st-card-2); }
         .sd-ghost { font: inherit; font-size: 12.5px; height: 32px; padding: 0 11px; border-radius: 8px; border: 1px solid var(--st-line-2); background: transparent; color: var(--st-ink-2); cursor: pointer; }
-        .sd-ghost:hover { background: rgba(255,255,255,0.05); }
+        .sd-ghost:hover { background: var(--d-hover); }
         .sd-small { height: 30px; }
-        .sd-on-gold { color: var(--st-gold); border-color: rgba(255,214,10,0.6); }
-        .sd-on-blue { color: var(--st-blue); border-color: rgba(10,132,255,0.5); background: rgba(10,132,255,0.08); }
+        .sd-on-gold { color: var(--st-gold); border-color: var(--d-gold-line); }
+        .sd-on-blue { color: var(--st-blue); border-color: var(--d-act-t50); background: var(--d-act-t08); }
         .sd-gate { max-width: 1440px; margin: 0 auto; padding: 48px 0; display: flex; justify-content: center; }
         .sd-card { border-radius: 16px; border: 1px solid var(--st-line); background: var(--st-card-2); padding: 20px; }
         .sd-narrow { max-width: 460px; width: 100%; display: flex; flex-direction: column; gap: 12px; }
@@ -544,7 +566,7 @@ export default function StudyDesk({ account, call }: { account: ReturnType<typeo
         .sd-err { margin: 0; font-size: 13px; color: var(--st-red); }
         .sd-grid { max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px; padding: 20px 0; }
         .sd-left { flex: 1 1 220px; min-width: 0; display: flex; flex-direction: column; gap: 22px; }
-        .sd-main { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; border-radius: 16px; border: 1px solid var(--st-line); background: linear-gradient(180deg, rgba(19,23,30,0.92), rgba(14,17,23,0.92)); box-shadow: 0 30px 60px rgba(0,0,0,0.45); }
+        .sd-main { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; border-radius: 16px; border: 1px solid var(--st-line); background: linear-gradient(180deg, var(--d-main-a), var(--d-main-b)); box-shadow: 0 30px 60px var(--d-shadow); }
         .sd-right { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
         .sd-sec { display: flex; flex-direction: column; gap: 10px; }
         .sd-h { margin: 0; font-size: 10.5px; font-weight: 600; letter-spacing: 0.14em; color: var(--st-ink-3); }
@@ -555,9 +577,9 @@ export default function StudyDesk({ account, call }: { account: ReturnType<typeo
         .sd-stats span { font-size: 11.5px; color: var(--st-ink-3); }
         .sd-map { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
         .sd-cell { position: relative; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-family: 'SF Mono', ui-monospace, Menlo, monospace; font-size: 12px; border: 1px solid var(--st-line); color: var(--st-ink-3); }
-        .sd-ok { background: var(--st-ok-tint); border-color: rgba(48,209,88,0.45); color: var(--st-green); }
-        .sd-bad { background: var(--st-bad-tint); border-color: rgba(255,107,98,0.45); color: var(--st-red); }
-        .sd-cur { background: rgba(10,132,255,0.16); border-color: var(--st-act); color: #fff; }
+        .sd-ok { background: var(--st-ok-tint); border-color: var(--d-ok-line); color: var(--st-green); }
+        .sd-bad { background: var(--st-bad-tint); border-color: var(--d-bad-line); color: var(--st-red); }
+        .sd-cur { background: var(--d-act-t16); border-color: var(--st-act); color: var(--d-strong); }
         .sd-flag { position: absolute; top: 4px; right: 4px; width: 5px; height: 5px; border-radius: 50%; background: var(--st-gold); }
         .sd-sys { display: flex; flex-direction: column; gap: 5px; font-size: 12.5px; }
         .sd-bar { height: 4px; border-radius: 2px; background: var(--st-line); overflow: hidden; }
@@ -567,43 +589,43 @@ export default function StudyDesk({ account, call }: { account: ReturnType<typeo
         .sd-tools { display: flex; gap: 6px; margin-left: auto; letter-spacing: 0; }
         .sd-clock { font-size: 13px; color: var(--st-ink); padding: 6px 10px; border-radius: 8px; background: var(--st-bezel); border: 1px solid var(--st-line); letter-spacing: 0; }
         .sd-q { padding: 26px clamp(16px, 3vw, 34px) 8px; display: flex; flex-direction: column; gap: 20px; }
-        .sd-stem { margin: 0; max-width: 70ch; font-size: 17px; line-height: 1.68; color: #E2E5EC; }
+        .sd-stem { margin: 0; max-width: 70ch; font-size: 17px; line-height: 1.68; color: var(--d-stem); }
         .sd-pos { background: transparent; color: var(--st-gold); font-weight: 600; }
-        .sd-neg { background: transparent; color: var(--st-ink-2); text-decoration: underline dotted rgba(255,255,255,0.35); text-underline-offset: 3px; }
-        .sd-lead { margin: 0; font-size: 17px; font-weight: 600; color: #fff; }
+        .sd-neg { background: transparent; color: var(--st-ink-2); text-decoration: underline dotted var(--d-dotted); text-underline-offset: 3px; }
+        .sd-lead { margin: 0; font-size: 17px; font-weight: 600; color: var(--d-strong); }
         .sd-choices { display: flex; flex-direction: column; gap: 9px; max-width: 780px; }
-        .sd-ch { display: flex; align-items: stretch; border-radius: 12px; border: 1px solid var(--st-line); background: rgba(19,23,30,0.55); }
+        .sd-ch { display: flex; align-items: stretch; border-radius: 12px; border: 1px solid var(--st-line); background: var(--d-choice); }
         .sd-chb { flex: 1; min-width: 0; display: flex; align-items: center; gap: 14px; padding: 12px 14px; background: transparent; border: 0; text-align: left; color: var(--st-ink); font: inherit; cursor: pointer; }
         .sd-chb:disabled { cursor: default; }
         .sd-ch:hover:not(.sd-ch-ans):not(.sd-ch-bad):not(.sd-ch-dim) { border-color: var(--st-line-2); }
         .sd-letter { flex: none; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; border-radius: 7px; font-size: 13px; font-weight: 700; border: 1px solid var(--st-line-2); color: var(--st-ink-2); }
         .sd-chtext { flex: 1; min-width: 0; font-size: 15.5px; line-height: 1.45; }
         .sd-chtag { flex: none; font-family: 'SF Mono', ui-monospace, Menlo, monospace; font-size: 10.5px; letter-spacing: 0.12em; }
-        .sd-ch-pick { border-color: var(--st-act); background: rgba(10,132,255,0.10); }
+        .sd-ch-pick { border-color: var(--st-act); background: var(--d-act-t10); }
         .sd-ch-pick .sd-letter { background: var(--st-act); border-color: var(--st-act); color: #fff; }
         .sd-ch-struck .sd-chtext { text-decoration: line-through; opacity: 0.45; }
-        .sd-ch-ans { border-color: rgba(48,209,88,0.6); background: rgba(48,209,88,0.08); }
-        .sd-ch-ans .sd-letter { background: var(--st-green); border-color: var(--st-green); color: #04110a; }
-        .sd-ch-bad { border-color: rgba(255,69,58,0.6); background: rgba(255,69,58,0.08); }
-        .sd-ch-bad .sd-letter { background: #ff453a; border-color: #ff453a; color: #fff; }
+        .sd-ch-ans { border-color: var(--d-ok-line2); background: var(--d-ok-wash); }
+        .sd-ch-ans .sd-letter { background: var(--st-green); border-color: var(--st-green); color: var(--d-on-green); }
+        .sd-ch-bad { border-color: var(--d-bad-line2); background: var(--d-bad-wash); }
+        .sd-ch-bad .sd-letter { background: var(--d-bad-fill); border-color: var(--d-bad-fill); color: #fff; }
         .sd-ch-dim .sd-chtext { color: var(--st-ink-3); }
         .sd-strike { flex: none; width: 44px; display: inline-flex; align-items: center; justify-content: center; background: transparent; border: 0; border-left: 1px solid var(--st-line); color: var(--st-ink-3); cursor: pointer; border-radius: 0 12px 12px 0; }
         .sd-strike[aria-pressed='true'] { color: var(--st-red); }
         .sd-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 18px clamp(16px, 3vw, 34px) 24px; }
         .sd-qclock { margin-left: auto; font-size: 12px; }
-        .sd-primary { height: 44px; padding: 0 22px; border-radius: 11px; border: 0; background: var(--st-act); color: #fff; font: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer; box-shadow: 0 8px 24px rgba(10,132,255,0.25); }
-        .sd-primary:disabled { background: #1a2029; color: var(--st-ink-3); box-shadow: none; cursor: default; }
+        .sd-primary { height: 44px; padding: 0 22px; border-radius: 11px; border: 0; background: var(--st-act); color: #fff; font: inherit; font-size: 14.5px; font-weight: 600; cursor: pointer; box-shadow: 0 8px 24px var(--d-act-t25); }
+        .sd-primary:disabled { background: var(--d-disabled); color: var(--st-ink-3); box-shadow: none; cursor: default; }
         .sd-reveal { display: flex; flex-direction: column; gap: 16px; }
         .sd-verdict { margin: 0; display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 15px; }
         .sd-xp { margin-left: auto; font-family: 'SF Mono', ui-monospace, Menlo, monospace; font-size: 12px; color: var(--st-gold); }
         .sd-ok-t { color: var(--st-green); }
         .sd-bad-t { color: var(--st-red); }
-        .sd-warn-t { color: #ff9f0a; }
+        .sd-warn-t { color: var(--d-warn); }
         .sd-blue-t { color: var(--st-blue); }
         .sd-blk { display: flex; flex-direction: column; gap: 6px; }
-        .sd-blk p { margin: 0; font-size: 14px; line-height: 1.6; color: #d5d9e1; }
-        .sd-dx { font-size: 17px; font-weight: 600; color: #fff; }
-        .sd-hook { padding: 14px; border-radius: 12px; background: rgba(10,132,255,0.08); border: 1px solid rgba(10,132,255,0.25); }
+        .sd-blk p { margin: 0; font-size: 14px; line-height: 1.6; color: var(--d-body); }
+        .sd-dx { font-size: 17px; font-weight: 600; color: var(--d-strong); }
+        .sd-hook { padding: 14px; border-radius: 12px; background: var(--d-act-t08); border: 1px solid var(--d-act-t25); }
         .sd-hook p { color: var(--st-ink); font-weight: 500; }
         .sd-move { margin: 0; font-size: 11px; letter-spacing: 0.1em; color: var(--st-ink-3); border-top: 1px solid var(--st-line); padding-top: 12px; }
         .sd-pace { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
@@ -613,13 +635,13 @@ export default function StudyDesk({ account, call }: { account: ReturnType<typeo
         .sd-labg { display: flex; flex-direction: column; }
         .sd-labt { font-size: 11px; color: var(--st-ink-3); padding-bottom: 4px; }
         .sd-lab { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; padding: 4px 0; border-top: 1px solid var(--st-line); }
-        .sd-lab span:first-child { color: #c9ced8; }
+        .sd-lab span:first-child { color: var(--d-label); }
         .sd-lab .sd-mono { font-size: 12px; color: var(--st-ink); text-align: right; }
         .sd-done { padding: 36px clamp(16px, 3vw, 34px); display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
-        .sd-big { margin: 0; font-family: 'SF Mono', ui-monospace, Menlo, monospace; font-size: 44px; font-weight: 700; color: #fff; }
+        .sd-big { margin: 0; font-family: 'SF Mono', ui-monospace, Menlo, monospace; font-size: 44px; font-weight: 700; color: var(--d-strong); }
         .sd-pad { padding: 28px; }
         .sd-foot { max-width: 1440px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px; padding: 12px 0 calc(18px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--st-line); font-size: 11.5px; color: var(--st-ink-3); }
-        .sd-foot b { color: #c9ced8; font-weight: 500; }
+        .sd-foot b { color: var(--d-label); font-weight: 500; }
         .sd-sync { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
         .sd-sync i { width: 6px; height: 6px; border-radius: 50%; background: var(--st-green); box-shadow: 0 0 8px rgba(48,209,88,0.8); }
         @media (max-width: 900px) { .sd-main { order: -1; } }
