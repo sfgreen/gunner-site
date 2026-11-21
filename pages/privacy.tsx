@@ -4,7 +4,7 @@ export default function Privacy() {
   return (
     <DocLayout
       title="Privacy Policy"
-      subtitle="Step Gunner by Rezumab LLC · Effective November 17, 2026"
+      subtitle="Step Gunner by Rezumab LLC · Effective November 21, 2026"
       metaTitle="Privacy Policy | Step Gunner | Rezumab LLC"
       metaDesc="Privacy Policy for Step Gunner by Rezumab LLC. Your study data stays on your device."
     >
@@ -60,16 +60,26 @@ export default function Privacy() {
       </ul>
       <p>These reports are used solely to identify and fix incorrect or unclear questions.</p>
 
+      <h2>AI Features (Pro)</h2>
+      <p>In version 3.5 and later, Pro students can use Ask Gunner, the tutor after a missed question, and the score report reader. Each runs only after you allow it in the app, and only when you use it:</p>
+      <ul>
+        <li><strong>Ask Gunner:</strong> the question you type, and the Step Gunner cards it is answered from, are sent to Anthropic to write the answer.</li>
+        <li><strong>The tutor:</strong> the question you missed and the answer you picked are sent to Anthropic.</li>
+        <li><strong>The score report reader:</strong> the screenshot you choose is sent to Anthropic to be read. It is not stored; only the numbers you confirm are saved to your account.</li>
+      </ul>
+      <p>Your name and email are not sent. Anthropic does not train its models on this data and keeps it for up to 30 days, longer only if it is flagged for a policy violation. We keep a daily count of your AI requests to apply the daily limits.</p>
+
       <h2>Third-Party Services</h2>
       <p>The App uses the following third-party services:</p>
       <ul>
         <li><strong>Firebase Authentication</strong> (Google LLC): for sign-in via Google and Apple</li>
         <li><strong>Cloud Firestore</strong> (Google LLC): for securely storing user profiles, study progress, and leaderboard data</li>
+        <li><strong>Anthropic</strong> (Claude): for the Pro AI features described above</li>
         <li><strong>Apple Foundation Models</strong>: for on-device AI explanations (processed entirely on your device, no data sent to external servers)</li>
       </ul>
 
       <h2>Data Storage &amp; Security</h2>
-      <p>Your data is stored securely using Google Firebase infrastructure. Study progress is also cached locally on your device for offline use. All data is transmitted over HTTPS. We do not sell, rent, or share your personal data with third parties.</p>
+      <p>Your data is stored securely using Google Firebase infrastructure. Study progress is also cached locally on your device for offline use. All data is transmitted over HTTPS. We do not sell or rent your personal data, and we share it only with the service providers listed above, to run the App.</p>
 
       <h2>Data Retention &amp; Deletion</h2>
       <p>We retain your data as long as your account is active. You can delete your account at any time from the Profile tab in the app, which permanently removes all your data from our servers. Deleting the app from your device removes all locally stored data.</p>
