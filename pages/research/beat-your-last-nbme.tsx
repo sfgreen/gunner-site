@@ -3,7 +3,7 @@
 // Step Gunner users whose real score Danny reviewed by hand on 2026-11-15 (66
 // kept, 36 with a three-digit form before the exam). Ninth in the series. The
 // numbers are a snapshot from read-only pulls on 2026-11-23 (gunner repo:
-// analysis/real_scores_2026-11-23/, aggregates only, no cell under 10 students).
+// analysis/real_scores_2026-11-23/climb.py, aggregates only, no cell under 10 students).
 // Built from the app-look blocks (components/app/README.md).
 // No em or en dashes anywhere in the copy (site rule).
 import Link from 'next/link';
@@ -75,7 +75,7 @@ export default function BeatYourLastNbme() {
             meta={[`Published ${PUBLISHED}`, '239 r/step2 posters, 36 app users', 'About 6 minutes']}
           />
           <Summary>
-            <p>Of 199 r/step2 posters with a dated last form, 72% scored higher on the real Step 2 CK than on that form, by 7.0 points on average (95% interval 5.6 to 8.4). Of 36 Step Gunner users whose real score I checked by hand, 19 beat their last form and the average gain was 0.9 points (minus 3.8 to plus 4.8). The split is form count. App users with four or more forms gained 4.9 on average and 11 of 18 beat their last form; the score projection landed an average of 4.5 points from their real score, and 14 of 18 landed inside the range it showed. App users with one to three forms lost 3.2 on average, only 8 of 18 beat their last form, and the projection ran 12.3 points high for them, because it assumes the climb.</p>
+            <p>Of 199 r/step2 posters with a dated last form, 72% scored higher on the real Step 2 CK than on that form, by 7.0 points on average (95% interval 5.6 to 8.5). Of 36 Step Gunner users whose real score I checked by hand, 19 beat their last form and the average gain was 0.9 points (minus 3.8 to plus 4.8). The split is form count. App users with four or more forms gained 4.9 on average and 11 of 18 beat their last form; the score projection landed an average of 4.5 points from their real score, and 14 of 18 landed inside the range it showed. App users with one to three forms lost 3.2 on average, only 8 of 18 beat their last form, and the projection ran 12.3 points high for them, because it assumes the climb.</p>
           </Summary>
           <Pitch
             placement="top"
@@ -101,9 +101,9 @@ export default function BeatYourLastNbme() {
               head={['r/step2', 'n', 'vs last form', 'beat it']}
               num={[1, 2, 3]}
               rows={[
-                ['all, dated', '199', V('+7.0', '5.6 to 8.4'), '72%'],
+                ['all, dated', '199', V('+7.0', '5.6 to 8.5'), '72%'],
                 ['4+ forms', '180', V('+7.1', '5.7 to 8.6'), '73%'],
-                ['1 to 3 forms', '19', V('+6.2', '0.3 to 11.7'), '68%'],
+                ['1 to 3 forms', '19', V('+6.2', '0.3 to 11.8'), '68%'],
               ]}
             />
             </div>
@@ -119,7 +119,7 @@ export default function BeatYourLastNbme() {
               num={[1, 2, 3]}
               hl={[1]}
               rows={[
-                ['r/step2', '199', V('+7.0', '5.6 to 8.4'), '72%'],
+                ['r/step2', '199', V('+7.0', '5.6 to 8.5'), '72%'],
                 ['app users', '36', V('+0.9', '-3.8 to 4.8'), '19 of 36'],
               ]}
             />
@@ -135,8 +135,8 @@ export default function BeatYourLastNbme() {
               num={[1, 2, 3]}
               hl={[1]}
               rows={[
-                ['4+ forms', '18', V('+4.9', '0.8 to 9.2'), '11 of 18'],
-                ['1 to 3 forms', '18', V('-3.2', '-10.6 to 2.9'), '8 of 18'],
+                ['4+ forms', '18', V('+4.9', '1.0 to 9.1'), '11 of 18'],
+                ['1 to 3 forms', '18', V('-3.2', '-11.2 to 3.3'), '8 of 18'],
               ]}
             />
             </div>
@@ -154,11 +154,11 @@ export default function BeatYourLastNbme() {
               hl={[1]}
               rows={[
                 ['4+ forms', V('4.5', '3.0 to 6.2'), 'centred', '14 of 18'],
-                ['1 to 3', V('13.4', '8.4 to 19.2'), '12.3 high', '6 of 18'],
+                ['1 to 3', V('13.4', '8.5 to 19.4'), '12.3 high', '6 of 18'],
               ]}
             />
             </div>
-            <p className="prs">The projection is the same model as the converter on this site, run on each student&apos;s forms dated before the exam. For students with four or more forms it projected about 5 points above their last form, they climbed about 5, and it landed an average of 4.5 points from the real score. For students with one to three it projected about 9 above their last form, they did not climb, and it ran 12.3 points high on average (95% interval 6.8 to 18.6). 15 of those 18 scored below their projection.</p>
+            <p className="prs">The projection is the same model as the converter on this site, run on each student&apos;s forms dated before the exam. For students with four or more forms it projected about 5 points above their last form, they climbed about 5, and it landed an average of 4.5 points from the real score. For students with one to three it projected about 9 above their last form, they did not climb, and it ran 12.3 points high on average (95% interval 6.6 to 18.7). 15 of those 18 scored below their projection.</p>
             <p className="prs">One more comparison is worth stating plainly. Across all 36, the projection missed by 8.9 points on average and simply taking the last form at face value missed by 9.0. For a student with a thin history, the converter&apos;s extra points did not help.</p>
             <Pitch
               kicker="Where your forms stand"
