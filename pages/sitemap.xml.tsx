@@ -22,6 +22,7 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     urlNode('/guides', 'weekly', '0.8'),
     urlNode('/research', 'weekly', '0.8'),
     urlNode('/research/nbme-to-step-2', 'weekly', '0.9'),
+    urlNode('/research/beat-your-last-nbme', 'monthly', '0.9'),
     // The published dataset behind the research cluster and the form pages.
     urlNode('/data/nbme-step2', 'monthly', '0.9'),
     urlNode('/research/free-120-to-step-2', 'monthly', '0.9'),

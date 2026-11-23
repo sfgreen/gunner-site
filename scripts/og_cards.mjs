@@ -167,6 +167,7 @@ if (live.length) {
 // so a retitled page cannot keep a stale card.
 const PAGES = [
   { page: 'pages/research/index.tsx', out: 'research/index.png', cat: 'step2', eyebrow: 'Research', title: 'Step 2 folklore, checked against data', url: 'stepgunner.com/research' },
+  { page: 'pages/research/beat-your-last-nbme.tsx', out: 'research/beat-your-last-nbme.png', cat: 'step2', eyebrow: 'Research', title: 'Will you beat your last NBME?', url: 'stepgunner.com/research' },
   { page: 'pages/research/nbme-to-step-2.tsx', out: 'research/nbme-to-step-2.png', cat: 'step2', eyebrow: 'Research', title: 'What actually predicts your Step 2 score', url: 'stepgunner.com/research' },
   { page: 'pages/research/free-120-to-step-2.tsx', out: 'research/free-120-to-step-2.png', cat: 'step2', eyebrow: 'Research', title: 'What a Free 120 percentage is actually worth', url: 'stepgunner.com/research' },
   { page: 'pages/research/dedicated-calendar.tsx', out: 'research/dedicated-calendar.png', cat: 'step2', eyebrow: 'Research', title: 'The dedicated schedule nobody wrote down', url: 'stepgunner.com/research' },

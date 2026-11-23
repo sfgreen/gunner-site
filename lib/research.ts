@@ -12,6 +12,13 @@ export type ResearchEntry = {
 
 export const RESEARCH: ResearchEntry[] = [
   {
+    href: '/research/beat-your-last-nbme',
+    title: 'Will you beat your last NBME?',
+    finding: 'Most r/step2 posters beat their last form by about 7 points; app users with one to three forms did not climb at all, and every converter assumes they will.',
+    sample: '239 r/step2 posters and 36 app users with real scores',
+    published: '2026-11-23',
+  },
+  {
     href: '/research/which-nbme-is-most-predictive',
     title: 'Which NBME is the real you?',
     finding: 'One student’s forms land a median 23 points apart, much of it noise; no single form predicts better, and when your best form misleads you.',
