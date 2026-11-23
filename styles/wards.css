@@ -763,10 +763,6 @@
 .mk .c-red { --wc: var(--st-red); }
 .mk .app-band .wrap { position: relative; z-index: 1; }
 .mk .walk-aura { position: absolute; top: 0; right: -20%; width: 900px; height: 900px; max-width: 120vw; border-radius: 50%; background: var(--wc); opacity: .16; filter: blur(140px); pointer-events: none; transition: background-color 800ms var(--ease); }
-.mk .tapkey { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; color: var(--st-ink); }
-.mk .tapring { position: relative; width: 16px; height: 16px; border-radius: 50%; box-shadow: inset 0 0 0 2px var(--st-blue); flex: none; }
-.mk .tapring::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; box-shadow: 0 0 0 2px var(--st-blue); opacity: 0; animation: tap-pulse 1600ms var(--ease) infinite; }
-@keyframes tap-pulse { 0% { transform: scale(.6); opacity: .9; } 100% { transform: scale(1.6); opacity: 0; } }
 .mk .walk-g { display: grid; gap: 32px; margin-top: 32px; }
 .mk .walk-steps { position: relative; z-index: 2; display: grid; gap: 8px; }
 .mk .walk-st { position: relative; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 0 12px; width: 100%; min-height: 44px; padding: 20px; border: 0; border-radius: var(--r-md); background: transparent; color: var(--st-ink-2); text-align: left; cursor: pointer; overflow: hidden; transition: background-color var(--d-move) var(--ease), box-shadow var(--d-move) var(--ease); }
@@ -844,7 +840,7 @@
   .mk .rl:hover::after { opacity: .9; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .mk .tapring::after, .mk .walk-hud .rec { animation: none; }
+  .mk .walk-hud .rec { animation: none; }
   .mk .walk-dev, .mk .rl { transition: none; }
   .mk .rl:hover { transform: rotate(var(--r)) translateY(var(--y)); }
 }
@@ -878,11 +874,23 @@
 }
 .mk .walk-ghost, .mk .walk-flip .walk-ghost { display: none; }
 .mk .walk-win .dv::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; height: 14%; background: linear-gradient(transparent, var(--st-screen)); pointer-events: none; }
+/* the home walkthrough is the App Store preview: its whole 9:19.5 frame, captions and all, in a phone-shaped window */
+.mk .walk-tall .walk-win { max-width: 300px; border-radius: 44px; }
+.mk .walk-tall .walk-win .dv { aspect-ratio: 640 / 1386; border-radius: 34px; }
+.mk .walk-tall .walk-win .dv::after { display: none; }
+@media (min-width: 960px) {
+  .mk .walk-tall .walk-g { grid-template-columns: minmax(0, 1fr) minmax(0, 400px); }
+  .mk .walk-tall .walk-win { width: 330px; max-width: 330px; }
+}
 
 /* ---------- app windows: the hero, readiness and hub stills ---------- */
 .mk .win { position: relative; z-index: 1; width: 100%; max-width: 340px; margin: 0; padding: 10px; border-radius: 36px; background: linear-gradient(160deg, var(--st-bezel-top), var(--st-bezel) 40%); box-shadow: inset 0 0 0 1px var(--st-bezel-hi), 0 40px 80px -20px var(--st-shadow), 0 0 160px -40px var(--st-glow-a); }
 .mk .win .dv { position: relative; overflow: hidden; aspect-ratio: 4 / 5; border-radius: 26px; background: var(--st-screen); }
 .mk .win .dv::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 14%; background: linear-gradient(transparent, var(--st-screen)); pointer-events: none; }
+/* Dawn stills (the App Store frames): the screen is light in both site themes, so the fade ends on it */
+.mk .win-dawn { --win-screen: #eceaf1; }
+.mk .win-dawn .dv { background: var(--win-screen); }
+.mk .win-dawn .dv::after { background: linear-gradient(transparent, var(--win-screen)); }
 .mk .win img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .mk .hero-win { max-width: 360px; transform: perspective(1800px) rotateY(-6deg) rotateX(2deg); }
 .mk .rd-dev .win { max-width: 340px; }
