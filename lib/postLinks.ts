@@ -3,7 +3,7 @@ import { appStoreUrl } from './analytics';
 // Tracked post links (Danny 2026-11-24: "i want a cta for all post writeups from now on and a way to
 // track it. Download Step Gunner now"). Every post ends with stepgunner.com/get/<source>, e.g.
 // /get/reddit-buddy. The server counts the visit (postLinksServer.ts), then an iPhone goes to the
-// App Store with ct=post_<source> and everyone else lands on the home page with UTM tags. Apple
+// App Store with ct=post_<source>; a laptop or Android phone gets the landing page (pages/get). Apple
 // does not attribute first downloads to ct at our volume (gunner-apple-attribution-limits), so the
 // visit count is the number to read per post. Pure helpers here; node --test drives them.
 
@@ -31,7 +31,14 @@ export function deviceOf(ua: string | undefined): Device {
   return 'desktop';
 }
 
-/** Where a visit goes: the App Store on an iPhone or iPad, the home page anywhere else. */
+/** The landing page's story: the post's topic when the page has one, else the app. */
+export type Topic = 'buddy' | 'app';
+export function topicOf(source: string): Topic {
+  return /(^|-)buddy($|-)/.test(source) ? 'buddy' : 'app';
+}
+
+/** Where an iPhone or iPad goes (the App Store). Elsewhere the page renders; the home page with
+ *  UTM tags stays as the fallback. */
 export function destination(source: string, device: Device): string {
   if (device === 'ios') return appStoreUrl(`post_${source}`);
   const q = new URLSearchParams({ utm_source: 'post', utm_medium: 'link', utm_campaign: source });

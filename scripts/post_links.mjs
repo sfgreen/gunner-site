@@ -22,7 +22,7 @@ for (const r of rows) {
   const days = r.days || {};
   const first = Object.keys(days).sort()[0];
   const refs = Object.entries(r.refs || {}).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([h, n]) => `${h.replace(/_/g, '.')} ${n}`).join(', ');
-  console.log(`\n${r.source}: ${r.total || 0} visits (iPhone ${r.ios || 0}, Android ${r.android || 0}, desktop ${r.desktop || 0})`);
+  console.log(`\n${r.source}: ${r.total || 0} visits (iPhone ${r.ios || 0}, Android ${r.android || 0}, desktop ${r.desktop || 0}; ${r.qr || 0} of the iPhone visits scanned the laptop page's QR)`);
   console.log(`  last 7 days: ${last7.map((d) => days[d] || 0).join(' ')}   first ${first}, last ${fmt(r.lastAt)}`);
   if (refs) console.log(`  from: ${refs}`);
 }

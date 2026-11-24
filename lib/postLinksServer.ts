@@ -13,8 +13,10 @@ if (!getApps().length && process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
   }
 }
 
-/** One visit: the total, the device, the Central day, the referring host. */
-export async function countVisit(source: string, device: Device, refHost: string, now = Date.now()): Promise<boolean> {
+/** One visit: the total, the device, the Central day, the referring host; `qr` when a phone
+ *  scanned the landing page's code (that scan is also counted as an iPhone visit). */
+export async function countVisit(source: string, device: Device, refHost: string, opts: { qr?: boolean } = {},
+  now = Date.now()): Promise<boolean> {
   if (!getApps().length) return false;
   const day = centralDay(now);
   const ref = refHost.replace(/[^a-z0-9.-]/gi, '').slice(0, 60) || 'direct';
@@ -22,6 +24,7 @@ export async function countVisit(source: string, device: Device, refHost: string
     source,
     total: FieldValue.increment(1),
     [device]: FieldValue.increment(1),
+    ...(opts.qr ? { qr: FieldValue.increment(1) } : {}),
     days: { [day]: FieldValue.increment(1) },
     refs: { [ref.replace(/\./g, '_')]: FieldValue.increment(1) },
     lastAt: now,   // the first visit's day is the earliest key in `days`

@@ -2,7 +2,7 @@
 //   node --experimental-transform-types --no-warnings --import ./scripts/ts-resolve.mjs --test scripts/test_post_links.mjs
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cleanSource, isBot, deviceOf, destination, centralDay } from '../lib/postLinks.ts';
+import { cleanSource, isBot, deviceOf, destination, centralDay, topicOf } from '../lib/postLinks.ts';
 
 const IPHONE = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.1 Mobile/15E148 Safari/604.1';
 const REDDIT_APP = 'Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Reddit/Version 2024.45.0/Build 123/iOS Version 18.1';
@@ -41,4 +41,11 @@ test('days are Central', () => {
   // 2026-11-25 03:30 UTC is still Nov 24 in Chicago (CST, UTC-6).
   assert.equal(centralDay(Date.UTC(2026, 10, 25, 3, 30)), '2026-11-24');
   assert.equal(centralDay(Date.UTC(2026, 10, 25, 7, 0)), '2026-11-25');
+});
+
+test('the landing page tells the post its topic', () => {
+  assert.equal(topicOf('reddit-buddy'), 'buddy');
+  assert.equal(topicOf('tiktok-buddy-hardclimb'), 'buddy');
+  assert.equal(topicOf('reddit-readiness'), 'app');
+  assert.equal(topicOf('buddyx'), 'app');
 });
