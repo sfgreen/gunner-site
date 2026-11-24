@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
-import { FORMS, computeReadiness, percentile, ordinal, shortTier, type Entry } from '../lib/readiness';
+import { FORM_CHOICES, computeReadiness, percentile, ordinal, shortTier, type Entry } from '../lib/readiness';
 import { track } from '../lib/analytics';
 import { Icon } from './app/blocks';
 
@@ -41,7 +41,7 @@ export default function ReadinessCheck({ surface, initial, title = 'Your practic
                     <td>
                       <label className="sel"><span className="sr">Form {i + 1}</span>
                         <select className="inp" value={r.form} onChange={(e) => set(i, 'form', e.target.value)}>
-                          {FORMS.map((f) => <option key={f} value={f}>{f}</option>)}
+                          {FORM_CHOICES.map((f) => <option key={f} value={f}>{f}</option>)}
                         </select><Icon name="chev" sm />
                       </label>
                     </td>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 import { useState, useEffect, useRef } from 'react';
 import {
-  PASS, PASS_COMFORT, FORMS,
+  PASS, PASS_COMFORT, FORM_CHOICES,
   percentile, ordinal, computeReadiness, decodeShare, buildCardCore, ogMeta, SHARE_BASE,
   type Entry, smartDays, examDaysUntil, TAKEN_OPTS, takenIsExact, takenSource, MODEL_VERSION, visitorIdentity } from '../lib/readiness';
 import ScoreShareCard from '../components/ScoreShareCard';
@@ -171,7 +171,7 @@ export default function Readiness({ og }: { og: OG }) {
                           <span className="sel">
                             <select className={'inp' + (e.form === '' ? ' ry-empty' : '')} value={e.form} onChange={(ev) => setEntry(i, { form: ev.target.value })}>
                               <option value="">Form</option>
-                              {FORMS.map((f) => <option key={f} value={f}>{f}</option>)}
+                              {FORM_CHOICES.map((f) => <option key={f} value={f}>{f}</option>)}
                             </select>
                             <Icon name="chev" sm />
                           </span>

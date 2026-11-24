@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
 import {
-  FORMS, CAL, formOffset, correctedScore, calibratedCenter, bandHalfWidth,
+  FORM_CHOICES, CAL, formOffset, correctedScore, calibratedCenter, bandHalfWidth,
   percentile, ordinal, smartDays, TAKEN_OPTS, takenIsExact, takenSource, MODEL_VERSION, visitorIdentity,
 } from '../lib/readiness';
 import { track, referrerHost } from '../lib/analytics';
@@ -210,7 +210,7 @@ export default function Predictor() {
                       <span className="lbl">Form</span>
                       <span className="sel">
                         <select className="inp" value={form} onChange={(e) => { setForm(e.target.value); }}>
-                          {FORMS.map((f) => <option key={f} value={f}>{f}</option>)}
+                          {FORM_CHOICES.map((f) => <option key={f} value={f}>{f}</option>)}
                         </select>
                         <Icon name="chev" sm />
                       </span>

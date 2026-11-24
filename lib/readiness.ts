@@ -19,8 +19,17 @@ export const PASS_COMFORT = 230;
 export const MEAN = 250; // US LCME first-taker Step 2 CK mean, 2024-2025 (SD 15)
 export const GMIN = 205,
   GMAX = 275; // range-gauge scale
+// Every form a student can enter. APPEND-ONLY: a share link stores each form as its index
+// here (encodeShare), so a new form goes at the end or every older link decodes the wrong
+// form. NBME 17 released November 2026 (Danny 2026-11-20; the app has offered it since 3.4).
 export const FORMS = [
   'NBME 9', 'NBME 10', 'NBME 11', 'NBME 12', 'NBME 13', 'NBME 14', 'NBME 15', 'NBME 16',
+  'UWSA 1', 'UWSA 2', 'UWSA 3',
+  'NBME 17',
+];
+/** The same forms in reading order, for pickers: the NBMEs oldest to newest, then the UWSAs. */
+export const FORM_CHOICES = [
+  'NBME 9', 'NBME 10', 'NBME 11', 'NBME 12', 'NBME 13', 'NBME 14', 'NBME 15', 'NBME 16', 'NBME 17',
   'UWSA 1', 'UWSA 2', 'UWSA 3',
 ];
 
@@ -40,7 +49,7 @@ export const CAL = {
 // enters the anchor. Only three forms carry one (fit on 160 students / 1,043
 // dated forms with person + timing controls): ancient NBME 9 prints ~5.5 low
 // (credited back), UWSA 2 prints ~4.8 hot, UWSA 3 ~6.3 low (thin n, shrunk).
-// Modern NBMEs (10-16) are vendor-equated: zero by policy, and a printed NBME
+// Modern NBMEs (10-17) are vendor-equated: zero by policy, and a printed NBME
 // score is never DISPLAYED reduced anywhere; the translation lives in the math.
 // Mirrors ReadinessEstimate.formOffset / correctedScore.
 export const FORM_OFFSETS: Record<string, number> = {

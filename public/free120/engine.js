@@ -1667,7 +1667,7 @@
   }
   function readinessBox() {
     var R5 = window.F120R, rows = nbmeRows();
-    var formOpts = function (v) { return '<option value="">Form</option>' + R5.FORMS.map(function (f) { return '<option' + (f === v ? ' selected' : '') + '>' + f + '</option>'; }).join(''); };
+    var formOpts = function (v) { return '<option value="">Form</option>' + (R5.FORM_CHOICES || R5.FORMS).map(function (f) { return '<option' + (f === v ? ' selected' : '') + '>' + f + '</option>'; }).join(''); };
     var takenOpts = function (v) { return R5.TAKEN_OPTS.filter(function (o) { return o[0] !== 'x'; }).map(function (o) { return '<option value="' + o[0] + '"' + (o[0] === v ? ' selected' : '') + '>' + (o[0] === '' ? 'When? (optional)' : o[1]) + '</option>'; }).join(''); };
     var h = '<section class="fx-ready" id="fx-ready"><div class="hd"><div class="t"><span class="fx-kick">ONE MORE STEP</span><h2>Add your NBME and UWSA scores</h2>' +
       '<p>The band above is students like you. Your own practice tests are more personal: add them and both land on one scale. Same model as the readiness check, which missed real scores by 4.1 points on average in a blind test of 32 score reports.</p></div></div>' +

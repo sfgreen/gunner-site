@@ -6,6 +6,11 @@ export const GMIN = 205, GMAX = 275;
 export const FORMS = [
     'NBME 9', 'NBME 10', 'NBME 11', 'NBME 12', 'NBME 13', 'NBME 14', 'NBME 15', 'NBME 16',
     'UWSA 1', 'UWSA 2', 'UWSA 3',
+    'NBME 17',
+];
+export const FORM_CHOICES = [
+    'NBME 9', 'NBME 10', 'NBME 11', 'NBME 12', 'NBME 13', 'NBME 14', 'NBME 15', 'NBME 16', 'NBME 17',
+    'UWSA 1', 'UWSA 2', 'UWSA 3',
 ];
 export const CAL = {
     mean: 250,

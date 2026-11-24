@@ -27,7 +27,8 @@ import {
 import {
   BodyCont, ChoicePair, PageHead, Pitch, ResearchStyles, StageHead, Summary, W820,
 } from '../../components/app/research';
-import { FORMS, FORM_OFFSETS, ordinal } from '../../lib/readiness';
+import { FORM_CHOICES, FORM_OFFSETS, ordinal } from '../../lib/readiness';
+import { FORM_PAGES } from '../../lib/forms';
 import { track } from '../../lib/analytics';
 import CALC from '../../lib/which_nbme_calc.json';
 
@@ -88,7 +89,7 @@ function SpreadCheck() {
   const [isExample, setIsExample] = useState(true);
   const fired = useRef(false);
 
-  const entered = useMemo(() => FORMS
+  const entered = useMemo(() => FORM_CHOICES
     .map((form) => ({ form, raw: (vals[form] || '').trim() }))
     .filter((e) => e.raw !== ''), [vals]);
   const valid = entered
@@ -174,7 +175,7 @@ function SpreadCheck() {
           <div className="abg-in">
             <p className="rs-sc-help">{isExample ? 'Example scores below. Replace them with yours, ' : 'Type the three-digit score for each form you sat, '}and leave the rest blank.</p>
             <div className="rs-sc-in">
-              {FORMS.map((form) => (
+              {FORM_CHOICES.map((form) => (
                 <div key={form} className="fld">
                   <label htmlFor={`rs-sc-${formSlug(form)}`}>{form}</label>
                   <input id={`rs-sc-${formSlug(form)}`} className="inp" inputMode="numeric" autoComplete="off" placeholder="score" value={vals[form] || ''} onChange={(e) => set(form, e.target.value)} />
@@ -367,7 +368,7 @@ export default function WhichNbme() {
             <p className="prs"><strong>It is when, not which.</strong> The small differences in how each form prints are real, and each form has its own page with its conversion table:</p>
             <div className="mk isl">
               <div className="gjump">
-                {FORMS.map((form) => (
+                {FORM_PAGES.map((p) => p.form).map((form) => (
                   <Link key={form} href={`/step-2-score-predictor/${formSlug(form)}`} onClick={() => track('form_page_click', { surface: CAMPAIGN, form })}>{form}</Link>
                 ))}
               </div>
