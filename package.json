@@ -14,7 +14,8 @@
     "test:pro": "node --test scripts/test_pro_grant.mjs scripts/test_referral.mjs scripts/test_sale_rule.mjs",
     "stripe:setup": "node scripts/stripe_setup.mjs",
     "stripe:dev": "node scripts/stripe_dev.mjs",
-    "test:study": "node --test scripts/test_study_srs.mjs && node --experimental-transform-types --no-warnings --import ./scripts/ts-resolve.mjs --test scripts/test_study_server.mjs && node --experimental-transform-types --no-warnings --import ./scripts/ts-resolve.mjs --test scripts/test_study_guard.mjs"
+    "test:study": "node --test scripts/test_study_srs.mjs && node --experimental-transform-types --no-warnings --import ./scripts/ts-resolve.mjs --test scripts/test_study_server.mjs && node --experimental-transform-types --no-warnings --import ./scripts/ts-resolve.mjs --test scripts/test_study_guard.mjs",
+    "test:links": "node --experimental-transform-types --no-warnings --import ./scripts/ts-resolve.mjs --test scripts/test_post_links.mjs"
   },
   "dependencies": {
     "firebase": "^12.19.0",
