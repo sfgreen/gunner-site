@@ -4,7 +4,7 @@ export default function Privacy() {
   return (
     <DocLayout
       title="Privacy Policy"
-      subtitle="Step Gunner by Rezumab LLC · Effective November 21, 2026"
+      subtitle="Step Gunner by Rezumab LLC · Effective November 24, 2026"
       metaTitle="Privacy Policy | Step Gunner | Rezumab LLC"
       metaDesc="Privacy Policy for Step Gunner by Rezumab LLC. Your study data stays on your device."
     >
@@ -68,6 +68,15 @@ export default function Privacy() {
         <li><strong>The score report reader:</strong> the screenshot you choose is sent to Anthropic to be read. It is not stored; only the numbers you confirm are saved to your account.</li>
       </ul>
       <p>Your name and email are not sent. Anthropic does not train its models on this data and keeps it for up to 30 days, longer only if it is flagged for a policy violation. We keep a daily count of your AI requests to apply the daily limits.</p>
+
+      <h2>Step Gunner Companion (browser extension)</h2>
+      <p>The optional Step Gunner Companion extension for Chrome, Edge and Brave works only on UWorld pages you open. For each question you get wrong or mark for review, it turns the question&apos;s topic label into a one-way code inside your browser and sends that code, with whether you missed or marked the question, to your own Step Gunner account, where the matching Step Gunner questions go on TODAY.</p>
+      <ul>
+        <li><strong>Never read or sent:</strong> the question, the answer choices, the explanation, the images, your answers, the topic text, or anything from any other website.</li>
+        <li><strong>Connecting:</strong> scanning the code with the app stores a token in the extension and the browser&apos;s name (for example &quot;Chrome on Mac&quot;) on your account, so you can see and disconnect the laptop in Settings.</li>
+        <li><strong>Removing it:</strong> disconnect the laptop or clear your UWorld list in Settings, remove the extension, or delete your account; each removes what it stored.</li>
+      </ul>
+      <p>Step Gunner is not affiliated with, endorsed by or sponsored by UWorld.</p>
 
       <h2>Third-Party Services</h2>
       <p>The App uses the following third-party services:</p>
